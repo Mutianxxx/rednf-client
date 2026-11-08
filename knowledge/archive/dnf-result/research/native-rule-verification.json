@@ -1,0 +1,110 @@
+{
+  "status": "pass",
+  "scope": "isolated imported Android ARM functions; synthetic memory; services stubbed",
+  "elf_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+  "instruction_literal_records_matched": 330,
+  "tests": [
+    {
+      "rule": "getHeroJobIndex",
+      "cases": 256,
+      "status": "pass"
+    },
+    {
+      "rule": "getCount",
+      "cases": 256,
+      "status": "pass"
+    },
+    {
+      "rule": "checkRequire raw predicates",
+      "cases": 2401,
+      "status": "pass",
+      "outcomes_by_type": {
+        "0": [
+          1
+        ],
+        "1": [
+          0,
+          1
+        ],
+        "2": [
+          0,
+          1
+        ],
+        "3": [
+          0,
+          1
+        ],
+        "4": [
+          0,
+          1
+        ],
+        "5": [
+          0,
+          1
+        ],
+        "6": [
+          0,
+          1
+        ],
+        "7": [
+          0,
+          1
+        ],
+        "8": [
+          0,
+          1
+        ],
+        "9": [
+          0,
+          1
+        ],
+        "10": [
+          1
+        ],
+        "11": [
+          1
+        ],
+        "12": [
+          0,
+          1
+        ],
+        "13": [
+          0,
+          1
+        ],
+        "14": [
+          1
+        ],
+        "15": [
+          0,
+          1
+        ],
+        "16": [
+          1
+        ],
+        "17": [
+          0,
+          1
+        ],
+        "18": [
+          1
+        ],
+        "19": [
+          1
+        ]
+      }
+    }
+  ],
+  "evidence": [
+    "imports/android/native/functions/2480-getCount.asm",
+    "imports/android/native/functions/2123-getHeroJobIndex.asm",
+    "imports/android/native/functions/2100-checkRequire.asm"
+  ],
+  "unresolved": [
+    "Type 15 reads offset 96 across the inferred 96-byte active-record boundary; field ownership not established.",
+    "Ignored types in checkRequire may have consumers elsewhere.",
+    "No-match returns true in this function; quest lifecycle callers must enforce presence.",
+    "MS949 Java display is not evidence of native custom-glyph encoding.",
+    "These Android rules are not PC formulas."
+  ]
+}

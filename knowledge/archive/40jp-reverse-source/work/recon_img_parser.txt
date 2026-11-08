@@ -1,0 +1,454 @@
+### 0x418CD0 的调用者
+  00418E96 in 00418E20
+  00419654 in 00419550
+
+// ===== IMG 图像数据读取 sub_419550 @ 00419550 =====
+char __thiscall sub_419550(int this, size_t *Block, unsigned int ArgList)
+{
+  char v4; // cl
+  bool v5; // al
+  size_t *v6; // edi
+  char *v7; // eax
+  FILE *v8; // ebx
+  const char *v9; // edi
+  int v10; // eax
+  int v11; // edi
+  int v12; // eax
+  unsigned int v13; // ecx
+  int v14; // ecx
+  int v15; // eax
+  int v16; // eax
+  const char *v17; // eax
+  const char *v18; // eax
+  int v20; // [esp+14h] [ebp-11Ch]
+  int Buffer; // [esp+1Ch] [ebp-114h] BYREF
+  _DWORD *v22; // [esp+20h] [ebp-110h] BYREF
+  char v23; // [esp+27h] [ebp-109h]
+  char FileName[260]; // [esp+28h] [ebp-108h] BYREF
+  int v25; // [esp+12Ch] [ebp-4h]
+
+  v25 = dword_796E50;
+  sub_404F40(dword_796E50, 0);
+  v4 = *(_BYTE *)(*(_DWORD *)(this + 96) + 12);
+  v23 = 1;
+  v5 = v4 == 1 && (_BYTE)ArgList == 0;
+  v6 = Block;
+  *(_BYTE *)(this + 100) = v5;
+  if ( byte_8F77DC != 0 )
+  {
+    if ( v6[6] < 0x10 )
+      v7 = (char *)(v6 + 1);
+    else
+      v7 = (char *)v6[1];
+    sub_419D40(FileName, v7, 0x104u, 1);
+    if ( *(_BYTE *)(this + 100) == 1 )
+    {
+      if ( sub_40E3E0((int *)&Block, (int *)&ArgList, FileName, 0) != nullptr )
+        sub_4015C0(v6, FileName, strlen(FileName));
+    }
+    else if ( _access(FileName, 0) == 0 )
+    {
+      sub_4015C0(v6, FileName, strlen(FileName));
+    }
+  }
+  sub_4014D0((size_t *)(this + 20), v6, 0, 0xFFFFFFFF);
+  v8 = sub_418CD0((_BYTE *)this, (int)v6);
+  if ( v8 != nullptr )
+  {
+    if ( *(_DWORD *)(this + 88) == 1 )
+    {
+      LOBYTE(v20) = 0;
+      sub_4193D0((int *)(this + 48), *(_DWORD *)(this + 92), 0, 0, v20);
+      v11 = 0;
+      ArgList = 0;
+      while ( 1 )
+      {
+        v12 = *(_DWORD *)(this + 52);
+        if ( v12 == 0 || ArgList >= (*(_DWORD *)(this + 56) - v12) / 12 )
+          break;
+        Buffer = 0;
+        sub_66BD5A(&Buffer, 4u, 1u, v8);
+        if ( Buffer == 17 )
+        {
+          Block = nullptr;
+          sub_66BD5A(&Block, 4u, 1u, v8);
+          *(_DWORD *)(v11 + *(_DWORD *)(this + 52) + 4) = *(_DWORD *)(*(_DWORD *)(this + 52) + 12 * (_DWORD)Block + 4);
+          *(_BYTE *)(v11 + *(_DWORD *)(this + 52) + 8) = 1;
+          v13 = ArgList + 1;
+          *(_DWORD *)(v11 + *(_DWORD *)(this + 52)) = *(_DWORD *)(*(_DWORD *)(this + 52) + 12 * (_DWORD)Block);
+          ArgList = v13;
+          v11 += 12;
+        }
+        else
+        {
+          v14 = *(_DWORD *)(this + 96);
+          v22 = nullptr;
+          if ( (*(int (__thiscall **)(int, int, _DWORD **))(*(_DWORD *)v14 + 8))(v14, Buffer, &v22) < 0 )
+          {
+            if ( *(_DWORD *)(this + 44) < 0x10u )
+              v17 = (const char *)(this + 24);
+            else
+              v17 = *(const char **)(this + 24);
+            v10 = off_77F3FC("CNImagePackEx::Load - %s, CreateImage(%d) failed", v17, ArgList);
+            v23 = 0;
+            goto LABEL_38;
+          }
+          if ( sub_410750(v22, this, ArgList) < 0 )
+          {
+            v10 = off_77F3FC("CNImagePackEx::Load - SetImagePackEx(%d) failed", ArgList);
+            v23 = 0;
+            goto LABEL_38;
+          }
+          *(_DWORD *)(v11 + *(_DWORD *)(this + 52) + 4) = v22;
+          Block = (size_t *)(v11 + *(_DWORD *)(this + 52));
+          v15 = ftell(v8);
+          *Block = v15;
+          v16 = (*(int (__thiscall **)(_DWORD *, FILE *))(*v22 + 116))(v22, v8);
+          fseek(v8, v16 + *(_DWORD *)(v11 + *(_DWORD *)(this + 52)), 0);
+          ++ArgList;
+          v11 += 12;
+        }
+      }
+    }
+    if ( *(_DWORD *)(this + 44) < 0x10u )
+      v18 = (const char *)(this + 24);
+    else
+      v18 = *(const char **)(this + 24);
+    v10 = off_77F3FC("CNImagePackEx::Load - %s", v18);
+    LOBYTE(v10) = *(_BYTE *)(this + 100);
+    if ( (_BYTE)v10 == 0 )
+      v10 = fclose(v8);
+  }
+  else
+  {
+    if ( v6[6] < 0x10 )
+      v9 = (const char *)(v6 + 1);
+    else
+      v9 = (const char *)v6[1];
+    v10 = off_77F3FC("CNImagePackEx::Load - open_file failed %s", v9);
+    v23 = 0;
+  }
+LABEL_38:
+  sub_404F80(v10, 0, 0);
+  return v23;
+}
+
+
+// ===== IMG sub_418E20 (延迟加载) @ 00418E20 =====
+int __thiscall sub_418E20(int this, unsigned int a2)
+{
+  unsigned int v2; // edi
+  int v4; // ecx
+  int v5; // ebx
+  int v6; // eax
+  FILE *v7; // eax
+  FILE *v8; // ebx
+  int v10; // edi
+  int *v11; // eax
+  unsigned int v12; // [esp+Ch] [ebp-8h]
+  FILE *v13; // [esp+10h] [ebp-4h]
+  FILE *v14; // [esp+1Ch] [ebp+8h]
+
+  v2 = a2;
+  v4 = *(_DWORD *)(this + 52);
+  v5 = *(_DWORD *)(v4 + 12 * a2 + 4);
+  v13 = (FILE *)v5;
+  if ( v4 == 0 || a2 >= (*(_DWORD *)(this + 56) - v4) / 12 || v5 == 0 )
+    return sub_419F00();
+  v6 = sub_41A510(this + 8);
+  LOBYTE(v6) = *(_BYTE *)(v5 + 4);
+  if ( (_BYTE)v6 != 1 )
+  {
+    sub_404F40(v6, 0);
+    v7 = sub_418CD0((_BYTE *)this, this + 20);
+    v8 = v7;
+    if ( v7 == nullptr )
+      return sub_419F00();
+    if ( dword_77F488 == 1 )
+    {
+      v14 = (FILE *)(a2 + 1);
+    }
+    else
+    {
+      v2 = 0;
+      v7 = (FILE *)sub_418CB0((int *)this);
+      v14 = v7;
+    }
+    v12 = v2;
+    if ( v2 < (unsigned int)v14 )
+    {
+      v10 = 12 * v2;
+      while ( 1 )
+      {
+        v11 = (int *)(v10 + *(_DWORD *)(this + 52));
+        if ( *(_BYTE *)(v11[1] + 4) == 0 && *(_DWORD *)(this + 88) == 1 )
+        {
+          fseek(v8, *v11, 0);
+          if ( (*(int (__thiscall **)(_DWORD, FILE *))(**(_DWORD **)(v10 + *(_DWORD *)(this + 52) + 4) + 108))(
+                 *(_DWORD *)(v10 + *(_DWORD *)(this + 52) + 4),
+                 v8) < 0 )
+            break;
+        }
+        v7 = (FILE *)(v12 + 1);
+        v10 += 12;
+        if ( ++v12 >= (unsigned int)v14 )
+          goto LABEL_19;
+      }
+      v7 = (FILE *)sub_419F00();
+      v13 = v7;
+    }
+LABEL_19:
+    sub_404F80((int)v7, 0, 0);
+    if ( *(_BYTE *)(this + 100) == 0 )
+      fclose(v8);
+  }
+  return (int)v13;
+}
+
+
+### 0x419xxx-0x41Axxx 函数列表
+  00418FD0 size=160
+  00419070 size=685
+  00419320 size=171
+  004193D0 size=166
+  00419480 size=156
+  00419520 size=33
+  00419550 size=843
+  004198A0 size=249
+  004199A0 size=402
+  00419B40 size=55
+  00419B80 size=185
+  00419C40 size=55
+  00419C80 size=5
+  00419C90 size=53
+  00419CD0 size=21
+  00419CF0 size=68
+  00419D40 size=336
+  00419E90 size=26
+  00419EB0 size=36
+  00419EE0 size=30
+  00419F00 size=9
+  00419F10 size=133
+  00419FA0 size=128
+  0041A020 size=231
+  0041A110 size=53
+  0041A150 size=29
+  0041A170 size=187
+  0041A230 size=33
+  0041A260 size=111
+  0041A2D0 size=100
+  0041A340 size=336
+  0041A490 size=125
+  0041A510 size=101
+  0041A580 size=13
+  0041A590 size=66
+  0041A5E0 size=73
+  0041A630 size=188
+  0041A6F0 size=48
+  0041A720 size=61
+  0041A760 size=41
+  0041A790 size=38
+  0041A7C0 size=100
+// ===== IMG lazy load @ 00418E20 =====
+int __thiscall sub_418E20(int this, unsigned int a2)
+{
+  unsigned int v2; // edi
+  int v4; // ecx
+  int v5; // ebx
+  int v6; // eax
+  FILE *v7; // eax
+  FILE *v8; // ebx
+  int v10; // edi
+  int *v11; // eax
+  unsigned int v12; // [esp+Ch] [ebp-8h]
+  FILE *v13; // [esp+10h] [ebp-4h]
+  FILE *v14; // [esp+1Ch] [ebp+8h]
+
+  v2 = a2;
+  v4 = *(_DWORD *)(this + 52);
+  v5 = *(_DWORD *)(v4 + 12 * a2 + 4);
+  v13 = (FILE *)v5;
+  if ( v4 == 0 || a2 >= (*(_DWORD *)(this + 56) - v4) / 12 || v5 == 0 )
+    return sub_419F00();
+  v6 = sub_41A510(this + 8);
+  LOBYTE(v6) = *(_BYTE *)(v5 + 4);
+  if ( (_BYTE)v6 != 1 )
+  {
+    sub_404F40(v6, 0);
+    v7 = sub_418CD0((_BYTE *)this, this + 20);
+    v8 = v7;
+    if ( v7 == nullptr )
+      return sub_419F00();
+    if ( dword_77F488 == 1 )
+    {
+      v14 = (FILE *)(a2 + 1);
+    }
+    else
+    {
+      v2 = 0;
+      v7 = (FILE *)sub_418CB0((int *)this);
+      v14 = v7;
+    }
+    v12 = v2;
+    if ( v2 < (unsigned int)v14 )
+    {
+      v10 = 12 * v2;
+      while ( 1 )
+      {
+        v11 = (int *)(v10 + *(_DWORD *)(this + 52));
+        if ( *(_BYTE *)(v11[1] + 4) == 0 && *(_DWORD *)(this + 88) == 1 )
+        {
+          fseek(v8, *v11, 0);
+          if ( (*(int (__thiscall **)(_DWORD, FILE *))(**(_DWORD **)(v10 + *(_DWORD *)(this + 52) + 4) + 108))(
+                 *(_DWORD *)(v10 + *(_DWORD *)(this + 52) + 4),
+                 v8) < 0 )
+            break;
+        }
+        v7 = (FILE *)(v12 + 1);
+        v10 += 12;
+        if ( ++v12 >= (unsigned int)v14 )
+          goto LABEL_19;
+      }
+      v7 = (FILE *)sub_419F00();
+      v13 = v7;
+    }
+LABEL_19:
+    sub_404F80((int)v7, 0, 0);
+    if ( *(_BYTE *)(this + 100) == 0 )
+      fclose(v8);
+  }
+  return (int)v13;
+}
+
+
+// ===== IMG data read @ 00419550 =====
+char __thiscall sub_419550(int this, size_t *Block, unsigned int ArgList)
+{
+  char v4; // cl
+  bool v5; // al
+  size_t *v6; // edi
+  char *v7; // eax
+  FILE *v8; // ebx
+  const char *v9; // edi
+  int v10; // eax
+  int v11; // edi
+  int v12; // eax
+  unsigned int v13; // ecx
+  int v14; // ecx
+  int v15; // eax
+  int v16; // eax
+  const char *v17; // eax
+  const char *v18; // eax
+  int v20; // [esp+14h] [ebp-11Ch]
+  int Buffer; // [esp+1Ch] [ebp-114h] BYREF
+  _DWORD *v22; // [esp+20h] [ebp-110h] BYREF
+  char v23; // [esp+27h] [ebp-109h]
+  char FileName[260]; // [esp+28h] [ebp-108h] BYREF
+  int v25; // [esp+12Ch] [ebp-4h]
+
+  v25 = dword_796E50;
+  sub_404F40(dword_796E50, 0);
+  v4 = *(_BYTE *)(*(_DWORD *)(this + 96) + 12);
+  v23 = 1;
+  v5 = v4 == 1 && (_BYTE)ArgList == 0;
+  v6 = Block;
+  *(_BYTE *)(this + 100) = v5;
+  if ( byte_8F77DC != 0 )
+  {
+    if ( v6[6] < 0x10 )
+      v7 = (char *)(v6 + 1);
+    else
+      v7 = (char *)v6[1];
+    sub_419D40(FileName, v7, 0x104u, 1);
+    if ( *(_BYTE *)(this + 100) == 1 )
+    {
+      if ( sub_40E3E0((int *)&Block, (int *)&ArgList, FileName, 0) != nullptr )
+        sub_4015C0(v6, FileName, strlen(FileName));
+    }
+    else if ( _access(FileName, 0) == 0 )
+    {
+      sub_4015C0(v6, FileName, strlen(FileName));
+    }
+  }
+  sub_4014D0((size_t *)(this + 20), v6, 0, 0xFFFFFFFF);
+  v8 = sub_418CD0((_BYTE *)this, (int)v6);
+  if ( v8 != nullptr )
+  {
+    if ( *(_DWORD *)(this + 88) == 1 )
+    {
+      LOBYTE(v20) = 0;
+      sub_4193D0((int *)(this + 48), *(_DWORD *)(this + 92), 0, 0, v20);
+      v11 = 0;
+      ArgList = 0;
+      while ( 1 )
+      {
+        v12 = *(_DWORD *)(this + 52);
+        if ( v12 == 0 || ArgList >= (*(_DWORD *)(this + 56) - v12) / 12 )
+          break;
+        Buffer = 0;
+        sub_66BD5A(&Buffer, 4u, 1u, v8);
+        if ( Buffer == 17 )
+        {
+          Block = nullptr;
+          sub_66BD5A(&Block, 4u, 1u, v8);
+          *(_DWORD *)(v11 + *(_DWORD *)(this + 52) + 4) = *(_DWORD *)(*(_DWORD *)(this + 52) + 12 * (_DWORD)Block + 4);
+          *(_BYTE *)(v11 + *(_DWORD *)(this + 52) + 8) = 1;
+          v13 = ArgList + 1;
+          *(_DWORD *)(v11 + *(_DWORD *)(this + 52)) = *(_DWORD *)(*(_DWORD *)(this + 52) + 12 * (_DWORD)Block);
+          ArgList = v13;
+          v11 += 12;
+        }
+        else
+        {
+          v14 = *(_DWORD *)(this + 96);
+          v22 = nullptr;
+          if ( (*(int (__thiscall **)(int, int, _DWORD **))(*(_DWORD *)v14 + 8))(v14, Buffer, &v22) < 0 )
+          {
+            if ( *(_DWORD *)(this + 44) < 0x10u )
+              v17 = (const char *)(this + 24);
+            else
+              v17 = *(const char **)(this + 24);
+            v10 = off_77F3FC("CNImagePackEx::Load - %s, CreateImage(%d) failed", v17, ArgList);
+            v23 = 0;
+            goto LABEL_38;
+          }
+          if ( sub_410750(v22, this, ArgList) < 0 )
+          {
+            v10 = off_77F3FC("CNImagePackEx::Load - SetImagePackEx(%d) failed", ArgList);
+            v23 = 0;
+            goto LABEL_38;
+          }
+          *(_DWORD *)(v11 + *(_DWORD *)(this + 52) + 4) = v22;
+          Block = (size_t *)(v11 + *(_DWORD *)(this + 52));
+          v15 = ftell(v8);
+          *Block = v15;
+          v16 = (*(int (__thiscall **)(_DWORD *, FILE *))(*v22 + 116))(v22, v8);
+          fseek(v8, v16 + *(_DWORD *)(v11 + *(_DWORD *)(this + 52)), 0);
+          ++ArgList;
+          v11 += 12;
+        }
+      }
+    }
+    if ( *(_DWORD *)(this + 44) < 0x10u )
+      v18 = (const char *)(this + 24);
+    else
+      v18 = *(const char **)(this + 24);
+    v10 = off_77F3FC("CNImagePackEx::Load - %s", v18);
+    LOBYTE(v10) = *(_BYTE *)(this + 100);
+    if ( (_BYTE)v10 == 0 )
+      v10 = fclose(v8);
+  }
+  else
+  {
+    if ( v6[6] < 0x10 )
+      v9 = (const char *)(v6 + 1);
+    else
+      v9 = (const char *)v6[1];
+    v10 = off_77F3FC("CNImagePackEx::Load - open_file failed %s", v9);
+    v23 = 0;
+  }
+LABEL_38:
+  sub_404F80(v10, 0, 0);
+  return v23;
+}
+

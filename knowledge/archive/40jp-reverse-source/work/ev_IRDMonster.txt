@@ -1,0 +1,3489 @@
+
+
+############## +96 (0x60) : 634 sites
+-- src\cnrd\CNRDObject.cpp:69
+   int CNRDObject_vmt2C(int* this) { return this[24]; }   // +96
+     // 0x42A540 vmt2C / 0x42A550 vmt30 / 0x42A560 vmt34 —— 取 x/y/z
+-- src\cnrd\CNRDObject.cpp:124
+   return (nArg2 & this[24]) == nArg2;        // +96 条件位集
+     // 0x498DE0 vmt28 —— ★ 条件位掩码测试（研究第 20 轮直证: 273/529/17/65 均出自此）
+-- src\cnrd\CNRDObject.h:84
+   // 0x498DE0   vmt28   条件查询: (a2 & this+96)==a2 位掩码测试（研究第 20 轮直证）
+     // 0x42A6A0   vmt8    与目标(a2)的方向/邻近计算 → sub_499240
+     // 0x498DE0   vmt28   条件查询: (a2 & this+96)==a2 位掩码测试（研究第 20 轮直证）
+     // 0x42A510   vmt20   设置坐标三元组 (this+100 = a2[0..2])
+     // 0x42A530   vmt24   取坐标三元组指针 (this+100)
+     // 0x42A540   vmt2C   取三元的 x
+     // 0x42A550   vmt30   取三元的 y
+     // 0x42A560   vmt34   取三元的 z
+     // 0x42A570   vmt38   取 y|z<<16 组合
+     // 0x42A580   vmt3C   取 this+112（默认共享组件/兜底观察者 —— 研究第 12 轮直证）
+     // 0x49A590   vmt48   ★ 全体时钟换域广播（含 sub_699070 —— 会话 1 新发现函数的调用者）
+     // 0x42A590   vmt4C   设置 this+116
+     // 0x42A5A0   vmt50   取 this+116
+     // 0x42A5B0   vmt54   设置 this+156 (byte)
+     // 0x42A5C0   vmt58   取 this+156 (byte)
+-- src\combat\bigfunc_583B90_sub_583B90.cpp:657
+   //   失败支 switch(错误码)：21 → 串 694、8 → 串 2040 → 弹窗；否则清 +16 对象的 +96
+-- src\combat\bigfunc_583B90_sub_583B90.cpp:674
+   *(uint8_t *)(*(uint32_t *)(pArg1 + 16) + 96) = 0;
+-- src\combat\bigfunc_583B90_sub_583B90.cpp:786
+   *(uint8_t *)(v41[4] + 96) = 0;
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:533
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:580
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:684
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:698
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:829
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:934
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1088
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1275
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1289
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1360
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1374
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1560
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1641
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1752
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1766
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1890
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1926
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1986
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:2057
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:2097
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:2111
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:2125
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:2436
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:2450
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:622
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:647
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:820
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:833
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:870
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:883
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1124
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1216
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1249
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1275
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1419
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1434
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1449
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1464
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1645
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1679
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1869
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1884
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:2158
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:2259
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:2272
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:2308
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\combat\breakable_map.cpp:354
+   //    置 +700=0 与 +96=545（单位/动画标识），取 +348 表首项*0.01 为比例，sub_4922F0 两次分别统设全帧与盒缩放（nArg2 未用）。
+     // 0x620540 sub_620540 —— 滚石帧率/缩放重置
+     //    置 +700=0 与 +96=545（单位/动画标识），取 +348 表首项*0.01 为比例，sub_4922F0 两次分别统设全帧与盒缩放（nArg2 未用）。
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:363
+   *(uint32_t *)(this + 96) = 545;
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:2625
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:2666
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:4914
+   //    置 +676=1、+96=545 标识、开门位与 +1104 时钟清零，重放状态 2 演出与 204(200,表+72)；new(0x12C) 由虚 672 链取串经 sub_4C3640 重建 +1108 挂件；
+     // 0x625C40 CNGoblinBunker__vmt2E4 —— 掩体重置 vmt2E4
+     //    置 +676=1、+96=545 标识、开门位与 +1104 时钟清零，重放状态 2 演出与 204(200,表+72)；new(0x12C) 由虚 672 链取串经 sub_4C3640 重建 +1108 挂件；
+     //    虚 372(100) 后清 +1112/+1120 列表并虚 472(6,0,1,1)。
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:4926
+   *(uint32_t *)(this + 96) = 545;
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:5661
+   //    阶段(+972)自增后经虚 196 应用帧表(+144) 第 i 项(旧阶段值)；新阶段<3 时虚 208 应用表[新+2]、虚 204(100, 表[新+3])，新阶段==3 时置 +96=33 并仅虚 208 应用表[5]，
+     // 0x626A20 CNSeaGrass__vmt200 —— 【海草】受击阶段推进与反击 vmt200
+     //    阶段(+972)自增后经虚 196 应用帧表(+144) 第 i 项(旧阶段值)；新阶段<3 时虚 208 应用表[新+2]、虚 204(100, 表[新+3])，新阶段==3 时置 +96=33 并仅虚 208 应用表[5]，
+     //    再以虚 212 播 +712 句柄名。来客为 529 类且 RTTI 认作 CNSpaceFishHead(空骨鱼头部) 时：以其虚 740 取值×0.25 造 CNChangeHp(sub_4D6810) 经虚 56 附着并 sub_4DB130(24) 播表现；
+     //    否则把 +976 件按虚 120/124/128 定位后经 sub_4600B0 播演；末尾统一走基类 sub_600AF0。
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:5824
+   //    置 +96=545 与阶段 0，经 sub_41ACF0 取 +712 句柄名、以 SSO 串(+364) 走 sub_4C3640 建 +976 挂件并虚 204(100, 表[3]) 设层帧；
+     // 0x626D30 sub_626D30 —— 【海草】子件与冒泡粒子建立
+     //    置 +96=545 与阶段 0，经 sub_41ACF0 取 +712 句柄名、以 SSO 串(+364) 走 sub_4C3640 建 +976 挂件并虚 204(100, 表[3]) 设层帧；
+     //    再 new(0x12C) 由 sub_428F30 载 BreakableObject/Particle/SeaGrassBubble.ptl 存 +980，坐标按自身高(虚 192)×0.5 与虚 128 对齐后经虚 40/12 应用。
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:5851
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:6003
+   v9 = (*(int (/*thiscall*/ **)(int *))(*pDwArg1 + 96))(pDwArg1);
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:6096
+   if ( v3 == (*(int (/*thiscall*/ **)(uint32_t *))(*this + 96))(this)
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:7186
+   pThis_60 = (*(int (/*thiscall*/ **)(int))(*(uint32_t *)this + 96))(this);
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:7189
+   pThis_602 = (*(int (/*thiscall*/ **)(int))(*(uint32_t *)this + 96))(this);
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:7248
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:9123
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:9419
+   //    置 +96=545（动画/单位标识），虚 372(100) 回待机，并置 +1100=5（可掷颅次数）。
+     // 0x62A9D0 CNSkeletonPile__vmt2E4 —— 【骸骨堆】初始化 vmt2E4
+     //    置 +96=545（动画/单位标识），虚 372(100) 回待机，并置 +1100=5（可掷颅次数）。
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:9546
+   //    置 +96=545 与虚 372(100)，清 +1112（已放怪标志，供同族 vmt200 判只放一次）。
+     // 0x62AB70 CNSpiderSpawn__vmt2E4 —— 【蜘蛛巢】初始化 vmt2E4
+     //    置 +96=545 与虚 372(100)，清 +1112（已放怪标志，供同族 vmt200 判只放一次）。
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:10552
+   //    置 +676=1 与 +96=545（单位/动画标识）、清 +1100，记 clock_now 入 +1104 并 sub_62B7B0 重放状态 2；new(0x12C)：由虚 672 链取 +32 表 +24 句柄(sub_41ACF0)与自身名（SSO +364 或指针）经 sub_4C3640 建 +1108 挂件；
+     // 0x62BB60 CNGrenselosBunker__vmt2E4 —— 【掩体·格伦】重置 vmt2E4
+     //    置 +676=1 与 +96=545（单位/动画标识）、清 +1100，记 clock_now 入 +1104 并 sub_62B7B0 重放状态 2；new(0x12C)：由虚 672 链取 +32 表 +24 句柄(sub_41ACF0)与自身名（SSO +364 或指针）经 sub_4C3640 建 +1108 挂件；
+     //    再虚 372(100)、释放 +1120 队列并清 +1112 与 +1120..+1128，末虚 472(6,0,1,1)。
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:10565
+   *(uint32_t *)(this + 96) = 545;
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:11587
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:11629
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:12705
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:14050
+   //    以全局 UI 件(dword_99FCC8+20) 的 +96/+60/+44 字段经 sub_43C410 建 4 个 CNButton（贴图组 0/1/2/3、12/13/14、4/4/5、6/6/7）存 +36/+40/+204/+208；sub_43C4D0 建 CNSlider 存 +212，sub_43C630 建 CNVScroll（含 +204/+208/+212 三件）存 +216。
+     // 0x62F700 sub_62F700 —— 合成窗口控件构建
+     //    以全局 UI 件(dword_99FCC8+20) 的 +96/+60/+44 字段经 sub_43C410 建 4 个 CNButton（贴图组 0/1/2/3、12/13/14、4/4/5、6/6/7）存 +36/+40/+204/+208；sub_43C4D0 建 CNSlider 存 +212，sub_43C630 建 CNVScroll（含 +204/+208/+212 三件
+     //    经虚 44(126,2048) 设标志，sub_69C460(1)/sub_69C480(-16777216)/sub_69C420(2) 设全局文本，末初始化字节 +148..+151 与 +160..+199 布局字段。
+     // ------------------------------------------------------------
+-- src\combat\breakable_map.cpp:14070
+   *(this + 11) = *(uint32_t *)(*(uint32_t *)(dword_99FCC8 + 20) + 96);
+     // ------------------------------------------------------------
+-- src\combat\fighter_skills.cpp:175
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_4B3C90 sub_47EF20
+-- src\combat\fighter_skills.cpp:251
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_4B3C90 sub_47EF20
+-- src\combat\fighter_skills.cpp:283
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_4B3C90 sub_47EF20
+-- src\combat\fighter_skills.cpp:301
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_4B3C90 sub_47EF20
+-- src\combat\fighter_skills.cpp:319
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_4B3C90 sub_47EF20
+-- src\combat\fighter_skills.cpp:713
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 调: sub_5E09B0 sub_47E9D0 sub_5DD040 sub_47EF20 sub_422E70
+-- src\combat\fighter_skills.cpp:2916
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 调: sub_4049C0 sub_4AED20
+-- src\combat\passive_object.cpp:1985
+   // 附着器字段复位：清 +80/+84/+88/+92 四字与 +96 字节（时长/计时/进度/动画句柄组，·0x602200 消费）——MP 恢复精灵出生初值。
+     // 0x602070 sub_602070 —— 精灵字段复位
+     // 附着器字段复位：清 +80/+84/+88/+92 四字与 +96 字节（时长/计时/进度/动画句柄组，·0x602200 消费）——MP 恢复精灵出生初值。
+     // ------------------------------------------------------------
+-- src\combat\passive_object.cpp:1993
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\combat\passive_object.cpp:2031
+   *((uint8_t *)this + 96) = 0;
+     // ------------------------------------------------------------
+     // MP 恢复 PO 周期槽（vmt1C）：sub_496010 周期检查到点 → sub_4D7960 飘出恢复数字（飘字咽喉，§1.1）。
+     // 对应资源：Common/CommonEffect/Animation/MpUp.ani（出生动画，在 0x602380 构造群）+ MP_RECOVERED 音效 TAG（0x602200）。
+-- src\combat\passive_object.cpp:2150
+   if ( fld_5C != 0 && *(int *)(fld_5C + 148) >= 4 && *(uint8_t *)(this + 96) == 0 )
+     // ------------------------------------------------------------
+     // MP 恢复 PO 激活/生成（vmt4）：字符串证据「MP_RECOVERED」（音效 TAG，走 vt+212 播音链）。
+     // 流程：lerp 渐变（sub_4049C0）+ sub_4600B0 演播层入列 + sub_699000 clock_now 计时（P9 时间域）+ sub_5E5260 字符串释放。
+     // 语义：蓝色 MP 精灵拾取后的恢复演出编排。
+-- src\combat\passive_object.cpp:2173
+   *(uint8_t *)(this + 96) = 1;
+     // ------------------------------------------------------------
+     // MP 恢复 PO 激活/生成（vmt4）：字符串证据「MP_RECOVERED」（音效 TAG，走 vt+212 播音链）。
+     // 流程：lerp 渐变（sub_4049C0）+ sub_4600B0 演播层入列 + sub_699000 clock_now 计时（P9 时间域）+ sub_5E5260 字符串释放。
+     // 语义：蓝色 MP 精灵拾取后的恢复演出编排。
+-- src\combat\passive_object.cpp:2501
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 析构链：本类 vtable → 释放 +88 向量 → 降级 vftbl_IRDAppendage（sub_5F6640 基类析构）→ nengine::IObject。
+     // 直证本族类层次：CNRemoveActiveStatus 等 Stackable 族派生自 IRDAppendage（装备附加器），并非 PassiveObject 本体。
+-- src\combat\passive_object.cpp:5656
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 霸体状态辅助：sub_42AF90（动画对象操作）+ sub_657740（资源/音效释放【推断】）——
+     // CNSuperArmor 状态切换的公共收尾（被 vmt1C/vmt20/vmt14 多处调用）。
+-- src\combat\passive_object.cpp:9166
+   // 0x609A90 sub_609A90 —— 字段初值装配（+96=1057）
+     // ------------------------------------------------------------
+     // 0x609A90 sub_609A90 —— 字段初值装配（+96=1057）
+     // 对象字段复位：+96=1057 常量（与 ·sub_60AA00 同款——对象类型标记【推断】），+972..+1000 状态区清零（其中 +996 档写 4）。
+     // ------------------------------------------------------------
+-- src\combat\passive_object.cpp:9167
+   // 对象字段复位：+96=1057 常量（与 ·sub_60AA00 同款——对象类型标记【推断】），+972..+1000 状态区清零（其中 +996 档写 4）。
+     // 0x609A90 sub_609A90 —— 字段初值装配（+96=1057）
+     // 对象字段复位：+96=1057 常量（与 ·sub_60AA00 同款——对象类型标记【推断】），+972..+1000 状态区清零（其中 +996 档写 4）。
+     // ------------------------------------------------------------
+-- src\combat\passive_object.cpp:9171
+   *(uint32_t *)(this + 96) = 1057;
+     // ------------------------------------------------------------
+-- src\combat\passive_object.cpp:9723
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // 草丛/物件资源装载（72 行）：sub_41ACF0（资源管理器）+ sub_42FD40 + sub_493A60 + sub_4C3640（动画对象构造，
+     // 与 0x600C20 生成工厂同款的 0x12C 构造）——【推断：草丛动画实例化】。
+-- src\combat\passive_object.cpp:10103
+   *(uint32_t *)(this + 96) = 1057;
+     // ------------------------------------------------------------
+     // 地图物件辅助：sub_41BFE0 ——【推断：物件资源/属性查询】。
+-- src\combat\passive_object.cpp:19540
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // 火浪粒子四件套：字符串证据「Particle/FireWaveParticle.ptl | FireWaveParticleTail.ptl |
+     // FireWaveParticleLight.ptl | FireWaveParticleFloor.ptl」+「FIREWAVE_CREATE」（音效 TAG）——
+     // 本体/拖尾/光晕/地面层四发射器（P36 发射器组合的典型布局）。
+-- src\combat\passive_object.cpp:19552
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // 火浪粒子四件套：字符串证据「Particle/FireWaveParticle.ptl | FireWaveParticleTail.ptl |
+     // FireWaveParticleLight.ptl | FireWaveParticleFloor.ptl」+「FIREWAVE_CREATE」（音效 TAG）——
+     // 本体/拖尾/光晕/地面层四发射器（P36 发射器组合的典型布局）。
+-- src\combat\passive_object.cpp:19564
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // 火浪粒子四件套：字符串证据「Particle/FireWaveParticle.ptl | FireWaveParticleTail.ptl |
+     // FireWaveParticleLight.ptl | FireWaveParticleFloor.ptl」+「FIREWAVE_CREATE」（音效 TAG）——
+     // 本体/拖尾/光晕/地面层四发射器（P36 发射器组合的典型布局）。
+-- src\combat\passive_object.cpp:19576
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // 火浪粒子四件套：字符串证据「Particle/FireWaveParticle.ptl | FireWaveParticleTail.ptl |
+     // FireWaveParticleLight.ptl | FireWaveParticleFloor.ptl」+「FIREWAVE_CREATE」（音效 TAG）——
+     // 本体/拖尾/光晕/地面层四发射器（P36 发射器组合的典型布局）。
+-- src\combat\passive_object.cpp:21987
+   v23 = (uint32_t *)(*(int (/*thiscall*/ **)(uint32_t))(*(uint32_t *)*Block2 + 96))(*Block2);
+     // ------------------------------------------------------------
+     // 珠体粒子装载（112 行）：字符串证据「Character/Mage/Effect/Particle/Chaser%s%d.ptl」——
+     // 按属性+等级格式化的粒子路径模板（光/暗/冰/火 × 编号）。
+     // sub_428F30（发射器）+ sub_5CC5A0 + dword_73C3E0 —— 变换珠四属性粒子矩阵（dword_796E50 路径根）。
+-- src\combat\passive_object.cpp:23254
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // CNLaunchFrostHead 命中表现槽（vmt1F4）：字符串证据「Animation/LaunchFrostHeadHit.ani」。
+     // sub_44B6C0 + sub_45FE80 —— 撞击碎裂演出。
+-- src\combat\passive_object.cpp:23328
+   if ( *((uint32_t *)pszArg1 + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // CNLaunchFrostHead 主循环槽（vmt14C）：字符串证据「Animation/LaunchFrostHeadJumpEffect.ani」+
+     // 「FROSTHEAD」（音效 TAG）。sub_4926A0（定时器）+ sub_619460 —— 魔偶头弹跳推进。
+-- src\combat\passive_object.cpp:23405
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // CNLaunchFrostHead 消亡联动槽（vmt12C）：字符串证据「Animation/LaunchFrostHeadDisappear.ani」——
+     // 魔偶头消失动画。
+-- src\combat\passive_object.cpp:24746
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 地面火海四件套（157 行）：字符串证据「Animation/NapalmBombAreaFire1.ani | AreaFire2.ani | %s%d.ani |
+     // Animation/NapalmBombFireLight | Particle/NapalmBombAreaFireLight.ptl」——双动画层 + 编号动画模板 + 光粒子。
+     // sub_445D00（156B 粒子分配，P36 直证）+ sub_499240（vmt8 方向/邻近计算）+ sub_4924C0 ——
+     // 落点周围按方向铺设火海（方向性燃烧圈）。
+-- src\combat\passive_object.cpp:24771
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 地面火海四件套（157 行）：字符串证据「Animation/NapalmBombAreaFire1.ani | AreaFire2.ani | %s%d.ani |
+     // Animation/NapalmBombFireLight | Particle/NapalmBombAreaFireLight.ptl」——双动画层 + 编号动画模板 + 光粒子。
+     // sub_445D00（156B 粒子分配，P36 直证）+ sub_499240（vmt8 方向/邻近计算）+ sub_4924C0 ——
+     // 落点周围按方向铺设火海（方向性燃烧圈）。
+-- src\combat\passive_object.cpp:24804
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 地面火海四件套（157 行）：字符串证据「Animation/NapalmBombAreaFire1.ani | AreaFire2.ani | %s%d.ani |
+     // Animation/NapalmBombFireLight | Particle/NapalmBombAreaFireLight.ptl」——双动画层 + 编号动画模板 + 光粒子。
+     // sub_445D00（156B 粒子分配，P36 直证）+ sub_499240（vmt8 方向/邻近计算）+ sub_4924C0 ——
+     // 落点周围按方向铺设火海（方向性燃烧圈）。
+-- src\combat\passive_object.cpp:24828
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // 地面火海四件套（157 行）：字符串证据「Animation/NapalmBombAreaFire1.ani | AreaFire2.ani | %s%d.ani |
+     // Animation/NapalmBombFireLight | Particle/NapalmBombAreaFireLight.ptl」——双动画层 + 编号动画模板 + 光粒子。
+     // sub_445D00（156B 粒子分配，P36 直证）+ sub_499240（vmt8 方向/邻近计算）+ sub_4924C0 ——
+     // 落点周围按方向铺设火海（方向性燃烧圈）。
+-- src\combat\passive_object.cpp:25122
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // CNTargetItBall 命中表现槽（vmt1F4）：字符串证据「Particle/TargetItBallPaint.ptl」（涂装粒子）+
+     // sub_5DDBA0 + dword_9B9410 —— 标记球（TargetItBall）命中目标时的涂色标记【推断：标记类 PO】。
+-- src\combat\passive_object.cpp:28518
+   // +96=545（【推断】对象/攻击类型号）、+992/+996/+1000 清零、+1004=4 —— 与 ·0x61FC70（vmt288 读 +1000/+1004 比对）配套的地雷陷阱（MineTrap）初值。
+     // 0x61FC40 sub_61FC40 —— 地雷陷阱初值
+     // +96=545（【推断】对象/攻击类型号）、+992/+996/+1000 清零、+1004=4 —— 与 ·0x61FC70（vmt288 读 +1000/+1004 比对）配套的地雷陷阱（MineTrap）初值。
+     // ------------------------------------------------------------
+-- src\combat\passive_object.cpp:28522
+   *(uint32_t *)(this + 96) = 545;
+     // ------------------------------------------------------------
+-- src\combat\swordman_skills.cpp:1512
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5F6FB0 sub_41A5E0
+-- src\combat\swordman_skills.cpp:1643
+   if ( *(float *)(this + 96) != 0.0 )
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_41A590
+-- src\combat\swordman_skills.cpp:1647
+   * *(float *)(this + 96));
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_41A590
+-- src\combat\swordman_skills.cpp:1650
+   fld_94 = *(float *)(this + 148) * *(float *)(this + 96);
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_41A590
+-- src\combat\swordman_skills.cpp:1653
+   fld_98 = (double)*(int *)(this + 152) * *(float *)(this + 96) * 0.001;
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_41A590
+-- src\combat\swordman_skills.cpp:1656
+   fld_9C = (double)*(int *)(this + 156) * *(float *)(this + 96) * 0.001;
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_41A590
+-- src\combat\swordman_skills.cpp:1659
+   fld_9C2 = (double)*(int *)(this + 156) * *(float *)(this + 96) * 0.001;
+     // ------------------------------------------------------------
+     // 调: sub_41A5E0 sub_41A590
+-- src\combat\swordman_skills.cpp:1819
+   if ( *(uint32_t *)(this + 96) == 4 )
+     // ------------------------------------------------------------
+     // 证: 叶子函数（12 行，无外调无字符串）
+-- src\combat\swordman_skills.cpp:1838
+   if ( *(uint32_t *)(this + 96) == 4 )
+     // ------------------------------------------------------------
+     // 证: "BUFF_SHOWTIME_LOOP"
+-- src\combat\swordman_skills.cpp:2286
+   fld_60 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+     // 调: sub_699000 sub_4938F0 sub_4049C0 sub_491F80 sub_491D00
+-- src\combat\swordman_skills.cpp:2533
+   fld_60 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+     // 调: sub_4600B0 sub_4E77D0 sub_5E5260
+-- src\combat\swordman_skills.cpp:3335
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5F9510
+-- src\combat\swordman_skills.cpp:3400
+   fld_60 = (float)*(int *)(this + 96);
+     // ------------------------------------------------------------
+     // 调: sub_432E50 sub_699000 sub_4049C0 sub_423AB0 sub_4049F0
+-- src\combat\swordman_skills.cpp:3413
+   fld_602 = (float)*(int *)(this + 96);
+     // ------------------------------------------------------------
+     // 调: sub_432E50 sub_699000 sub_4049C0 sub_423AB0 sub_4049F0
+-- src\combat\swordman_skills.cpp:3501
+   *(uint32_t *)(this + 96) = (*(int (/*thiscall*/ **)(uint8_t *))(*(uint32_t *)fld_502 + 152))(fld_502) != 0 ? 128 : -128;
+     // ------------------------------------------------------------
+     // 证: "LIFT_UP"
+     // 调: sub_699070
+-- src\combat\swordman_skills.cpp:3583
+   (*(void (/*thiscall*/ **)(char *, int))(v18 + 112))(v19, *(uint32_t *)(this + 96) + v14);
+     // ------------------------------------------------------------
+     // 证: "Common/HitEffect/Animation/KnockSmall.ani" | "BBQ_STUCK"
+     // 调: sub_699000 sub_42FCB0 sub_431860 sub_44B6C0 sub_44E1F0
+-- src\combat\swordman_skills.cpp:3745
+   if ( *(uint32_t *)(this + 96) != 17 )
+     // ------------------------------------------------------------
+     // 调: sub_45E5A0
+-- src\combat\swordman_skills.cpp:3753
+   *(uint32_t *)(pArg2 + 4 * v9 + 24) = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+     // 调: sub_45E5A0
+-- src\combat\swordman_skills.cpp:3759
+   if ( *v10 == *(uint32_t *)(this + 96) )
+     // ------------------------------------------------------------
+     // 调: sub_45E5A0
+-- src\combat\swordman_skills.cpp:3824
+   *(uint32_t *)(this + 96) = 11;
+     // ------------------------------------------------------------
+     // 调: sub_5F9DD0 sub_47E720 sub_47EF20 sub_431230
+-- src\combat\swordman_skills.cpp:3869
+   *(uint32_t *)(this + 96) = 11;
+     // ------------------------------------------------------------
+     // 调: sub_5F9DD0 sub_47E720 sub_47EF20 sub_431230
+-- src\combat\swordman_skills.cpp:3881
+   *(uint32_t *)(this + 96) = 3;
+     // ------------------------------------------------------------
+     // 调: sub_5F9DD0 sub_47E720 sub_47EF20 sub_431230
+-- src\combat\swordman_skills.cpp:3887
+   *(uint32_t *)(this + 96) = 6;
+     // ------------------------------------------------------------
+     // 调: sub_5F9DD0 sub_47E720 sub_47EF20 sub_431230
+-- src\combat\swordman_skills.cpp:5445
+   v9 = (uint32_t *)(*(int (/*thiscall*/ **)(uint32_t))(*(uint32_t *)*Block2 + 96))(*Block2);
+     // ------------------------------------------------------------
+     // 调: sub_5FBE20 sub_4920E0 sub_4600B0
+-- src\combat\swordman_skills.cpp:5529
+   v8 = (uint32_t *)(*(int (/*thiscall*/ **)(uint32_t))(*(uint32_t *)*Block2 + 96))(*Block2);
+     // ------------------------------------------------------------
+     // 证: "STONE_DIE"
+     // 调: sub_5FC010 sub_4920E0 sub_4600B0
+-- src\combat\swordman_skills.cpp:6009
+   if ( *(uint8_t *)(this + 74) != 0 && *(uint8_t *)(this + 96) == 0 )
+     // ------------------------------------------------------------
+     // 调: sub_5FC900 sub_698FE0 sub_699030 sub_431230 sub_5E5260
+-- src\combat\swordman_skills.cpp:6359
+   v24 = (uint32_t *)(*(int (**)(void))(**(uint32_t **)v23 + 96))();
+     // ------------------------------------------------------------
+     // 证: "Common/ActiveStatus/Animation/FreezeDie.ani" | "FROZEN_DIE"
+     // 调: sub_5FCE10 sub_42FCB0 sub_431860 sub_4920E0 sub_44B6C0
+-- src\combat\swordman_skills.cpp:6422
+   if ( v4 != 0 && *(uint8_t *)(pArg1 + 96) == 0 )
+     // ------------------------------------------------------------
+     // 调: sub_5FABA0 sub_5FCA50 sub_698FE0 sub_699030 sub_4600B0
+-- src\combat\swordman_skills.cpp:6658
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5FD600
+-- src\combat\swordman_skills.cpp:6692
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 证: 叶子函数（10 行，无外调无字符串）
+-- src\combat\swordman_skills.cpp:6877
+   if ( *(uint8_t *)(pArg1 + 96) == 0 && *(uint8_t *)(pArg1 + 88) != 0 )
+     // ------------------------------------------------------------
+     // 调: sub_433F60 sub_699000
+-- src\combat\swordman_skills.cpp:6884
+   *(uint8_t *)(pArg1 + 96) = 1;
+     // ------------------------------------------------------------
+     // 调: sub_433F60 sub_699000
+-- src\combat\swordman_skills.cpp:7045
+   v64 = (*(int (/*thiscall*/ **)(int))(*(uint32_t *)pObj8 + 96))(pObj8);
+     // ------------------------------------------------------------
+     // 调: sub_433F60 sub_699000
+-- src\combat\swordman_skills.cpp:7921
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5FEEB0
+-- src\combat\swordman_skills.cpp:8547
+   *(uint32_t *)(this + 96) = 33;
+     // ------------------------------------------------------------
+     // 调: sub_5FF8E0
+-- src\game\anim_parser.cpp:1603
+   LOBYTE(fld_94) = *(uint8_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:5354
+   result = this + 96 * nArg2;
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:6079
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:6509
+   //   仅在 +96 状态变更时生效：按 pszArg2 冻结（·sub_699030）或解冻（·sub_698FE0）本对象 +60 处时钟，
+     // 0x4973B0 sub_4973B0 —— 暂停/恢复级联（按模式号分派子动画链）
+     //   仅在 +96 状态变更时生效：按 pszArg2 冻结（·sub_699030）或解冻（·sub_698FE0）本对象 +60 处时钟，
+     //   再按模式号 *(this+8) 把播放/暂停经 ·sub_4939E0 广播到 +20..+28 的 1~3 条子动画链（模式 1 三条、3/5 两条、0/6/8/12/15 单条或双条、16 三条，模式 7 走 ·sub_497190，其余不处理）。
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:6522
+   if ( *(uint8_t *)(this + 96) != pszArg2 )
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:6524
+   *(uint8_t *)(this + 96) = pszArg2;
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:6918
+   // 0x497E40 sub_497E40 —— 双虚转发 vt+96 与 vt+4
+     // ------------------------------------------------------------
+     // 0x497E40 sub_497E40 —— 双虚转发 vt+96 与 vt+4
+     //   先把 nArg4 交 vt+96 槽，再把 (nArg2, nArg3) 转发 vt+4 槽并返回其结果；属 §K 状态应用族的薄壳入口。
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:6919
+   //   先把 nArg4 交 vt+96 槽，再把 (nArg2, nArg3) 转发 vt+4 槽并返回其结果；属 §K 状态应用族的薄壳入口。
+     // 0x497E40 sub_497E40 —— 双虚转发 vt+96 与 vt+4
+     //   先把 nArg4 交 vt+96 槽，再把 (nArg2, nArg3) 转发 vt+4 槽并返回其结果；属 §K 状态应用族的薄壳入口。
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:6923
+   (*(void (/*thiscall*/ **)(void *, int))(*(uint32_t *)this + 96))(this, nArg4);
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:7745
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:11960
+   *(uint32_t *)(this + 96) = 12;
+     // ------------------------------------------------------------
+-- src\game\anim_parser.cpp:13187
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\bigfunc_4C9950_sub_4C9950.cpp:1668
+   fld_e96 = (unsigned int)*(this + 96) < 0x10 ? (const char *)(this + 91) : (const char *)*(this + 91);
+-- src\game\bigfunc_4C9950_sub_4C9950.cpp:1683
+   fld_e962 = (unsigned int)*(this + 96) < 0x10 ? (const char *)(this + 91) : (const char *)*(this + 91);
+-- src\game\bigfunc_4C9950_sub_4C9950.cpp:2986
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\game\bigfunc_4C9950_sub_4C9950.cpp:3018
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\game\bigfunc_4C9950_sub_4C9950.cpp:3625
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\game\bigfunc_4C9950_sub_4C9950.cpp:3650
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\game\bigfunc_4C9950_sub_4C9950.cpp:3698
+   if ( (unsigned int)*(this + 96) < 0x10 )
+-- src\game\broadcast_debug.cpp:3732
+   *(uint32_t *)(pArg1 + 96) = -1;
+     // ------------------------------------------------------------
+     // 【评价值复位】+556/+900/+592(+609/610)/+628(+645/646) 清零、+1252 = 8（模式复位值）。
+     //   被 0x42B7E0 构造器调用。
+-- src\game\broadcast_debug.cpp:4815
+   // 返回 (+96−+95)>>5 与 (+92−+91)>>5 之比（元素槽 32 字节）；
+     // 0x424FF0 sub_424FF0 —— 列数换算
+     // 返回 (+96−+95)>>5 与 (+92−+91)>>5 之比（元素槽 32 字节）；
+     // 被 ·0x425570 用于 120× 列宽钳位，空容器返回 0。
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:4830
+   fld_e96 = (*(this + 96) - fld_e95) >> 5;
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:5117
+   *(uint32_t *)(this + 96) = -1;
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:5417
+   // new 12 字节：prev/next 自指成环；·0x426BD0 取作控件子表头（+96）。
+     // 0x425940 sub_425940 —— 链表哨兵节点
+     // new 12 字节：prev/next 自指成环；·0x426BD0 取作控件子表头（+96）。
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:6325
+   // +96 = ·0x425940 哨兵链、+100 = 0；收尾 vmt4/vmt10 —— 被 ·0x4290D0 两次 new(0x68) 使用。
+     // 0x426BD0 sub_426BD0 —— nengine::IControl 构造
+     // 虚表 IControl(+0) 与 CNString(+72) 挂表，sub_402A50 基类初始化；
+     // +96 = ·0x425940 哨兵链、+100 = 0；收尾 vmt4/vmt10 —— 被 ·0x4290D0 两次 new(0x68) 使用。
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:6364
+   // vmt14 摘链 → sub_6569D0(+92 组) → free(+96 哨兵) → +72 CNString 析构（sub_402A60）；
+     // 0x426C90 sub_426C90 —— nengine::IControl 析构本体
+     // vmt14 摘链 → sub_6569D0(+92 组) → free(+96 哨兵) → +72 CNString 析构（sub_402A60）；
+     // +72/+0 改挂 vftbl_nengine__IObject、+76/+4 清零。
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:8947
+   //   +56..+92 十槽全置 0xFFFF（空槽标记）；+52/+96/+100/+108/+112 清零；首尾各清一次串缓冲。
+     // 0x429DC0 sub_429DC0 —— CNUser 槽组复位（0xFFFF 空槽）
+     // 【CNUser 复位】+28=4、+32=0、+36=1 状态字；+37 处 clong 经 ·sub_41A590 清零；
+     //   +56..+92 十槽全置 0xFFFF（空槽标记）；+52/+96/+100/+108/+112 清零；首尾各清一次串缓冲。
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:8969
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:10550
+   // 0x42B5F0 sub_42B5F0 —— 时钟归零（+96 钟）
+     // ------------------------------------------------------------
+     // 0x42B5F0 sub_42B5F0 —— 时钟归零（+96 钟）
+     // 标志 +108 置 1、+109/+110 清 0 → ·sub_698F90(+96, 0, 0) 把时长与起点归零（对照 ·0x42B480 同构）。
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:10551
+   // 标志 +108 置 1、+109/+110 清 0 → ·sub_698F90(+96, 0, 0) 把时长与起点归零（对照 ·0x42B480 同构）。
+     // 0x42B5F0 sub_42B5F0 —— 时钟归零（+96 钟）
+     // 标志 +108 置 1、+109/+110 清 0 → ·sub_698F90(+96, 0, 0) 把时长与起点归零（对照 ·0x42B480 同构）。
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:10558
+   pThis_60 = (int)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:12770
+   // 【主体复位】两 std::string 赋空（·sub_4015C0(szPassword)）、+96=0xFFFF、+108..+160 置 -1 → 释 +168 与 +184 缓冲
+     // 0x42DE20 sub_42DE20 —— 主体复位
+     // 【主体复位】两 std::string 赋空（·sub_4015C0(szPassword)）、+96=0xFFFF、+108..+160 置 -1 → 释 +168 与 +184 缓冲
+     // （16 字节条目组）→ ·0x42C250 复位 +196 界面块 → +464 与 +468 与 +472 清零。
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:12855
+   *(uint32_t *)(this + 96) = 0xFFFF;
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:13537
+   *(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:13850
+   *(uint32_t *)(this + 96) = 18;
+     // ------------------------------------------------------------
+     // 【评价 HUD 状态复位】+556 值/+560 钟/+584 窗、+592/+596/+620、+628/+632/+656 全组
+     //   清零，+636 = -1【推断：评价 HUD 的关卡进出复位；位于 VirtualCharacter 虚表区，
+     //   字段布局与 0x426820 的 this 同构】。
+-- src\game\broadcast_debug.cpp:16631
+   pThis_4 = *(this + 4 * pArg2 + 96);
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:25473
+   // 【聊天行插入】pArg2 为频道/窗口号：等于 4 时以 +96 行池基线（·sub_69C500）计量，·sub_69C440/·sub_69C4A0/·sub_69C360 追加，行数大于 8 时 ·sub_43B9D0 裁剪；
+     // 0x43BD50 sub_43BD50 —— 聊天行插入
+     // 【聊天行插入】pArg2 为频道/窗口号：等于 4 时以 +96 行池基线（·sub_69C500）计量，·sub_69C440/·sub_69C4A0/·sub_69C360 追加，行数大于 8 时 ·sub_43B9D0 裁剪；
+     //   新增行逐个写 clock_now(this+148) 时间戳入 +172 起。否则先比对 +72/+56 控件内容变化（·sub_69C690/·sub_69C6A0），追加后若 pArg2 为当前频道 +144 则按 +1474 取 20/8 边距重设滚动条（负归零）并在变化时刷新。
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:25497
+   fld_60 = sub_69C500(*(uint32_t *)(this + 96));
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:25501
+   fld_602 = sub_69C500(*(uint32_t *)(this + 96));
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:25513
+   *(uint32_t *)(this + 4 * (v12 + sub_69C500(*(uint32_t *)(this + 96)))) = pThis_94;
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:25994
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:27447
+   *(uint32_t *)(this + 96) = v35;
+     // ------------------------------------------------------------
+-- src\game\broadcast_debug.cpp:27454
+   sub_69A840(*(uint32_t *)(this + 96));
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:136
+   *(uint32_t *)(this + 96) = 15;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:368
+   // this+4 似乎是个子对象头（先取 sub_425940(this+4) 存入 +8）；+40/+52/+84/+96 处
+     // 0x4D1680 sub_4D1680
+     // 数据对象构造器（对象工厂 case 0..14 家族成员）：整对象清零 + 成员初始化，返回 this。
+     // this+4 似乎是个子对象头（先取 sub_425940(this+4) 存入 +8）；+40/+52/+84/+96 处
+     // 各挂一个空链表哨兵（sub_4CE710/730/750/770 = 分配 8 字节环形链表头节点，
+     // 配对析构 0x4D1860 里 next=prev=自身 的初始化可证）；+284/+312 两个 std::string；
+     // +344 起 3 组×4 dword 清零；+396 处对象经 sub_4CE9F0
+     // 构造后其指针回填 +424（链表/容器头指向自身首元素）；尾调 sub_4D13A0 三段初始化。
+     // 【定案】对象工厂 case 7 构造器（0x4D2D60 case 7：new 0x1D8 → 本函数 → 解析器
+     // sub_5078C0；析构分派 → 0x4D1860）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:397
+   *(uint32_t *)(this + 96) = sub_4CE770();
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:462
+   // （+96/+84/+52/+40/+8）先 next=prev=自身 断链，再沿 next 逐节点 free
+     // 0x4D1860 sub_4D1860
+     // 对象工厂 case 7 类的析构器（0x4D2B30 分派表 case 7 可证；构造器 = 0x4D1680）：
+     // 先析构 +428 处 3 个"内含 std::string 的小对象"数组元素，再按套路拆掉各容器——
+     // vector（+268/+172/+144/+128/+64）先逐元素析构再 free 存储块；环形链表
+     // （+96/+84/+52/+40/+8）先 next=prev=自身 断链，再沿 next 逐节点 free
+     //（+84/+40 节点内还有 std::string 要 tidy）；散字符串（+400/+312/+284）按 SSO
+     // 惯例 cap>=0x10 才 free；裸堆块（+460/+444/+204/+188/+108/+24）直接 free。无返回值。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:622
+   fld_60 = *(void ***)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:625
+   *(uint32_t *)(*(uint32_t *)(this + 96) + 4) = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:626
+   bListEmpty = pNodeWalk96 == *(void ***)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:641
+   while ( pNextNode96 != *(void ***)(this + 96) );
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:643
+   j__free(*(void **)(this + 96));
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:644
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:1163
+   // sub_4FD040；析构 → sub_4D1DB0）：4 个 std::string（+8/+36/+64/+112）+ +96 处一个环形链表
+     // 0x4D2640 sub_4D2640
+     // 【定案】对象工厂 case 0xC 构造器（0x4D2D60 case 0xC：new 0x88 → 本函数 → 解析器
+     // sub_4FD040；析构 → sub_4D1DB0）：4 个 std::string（+8/+36/+64/+112）+ +96 处一个环形链表
+     // （sub_4CE790 分配 72+ 字节哨兵节点，+69 置 1，next/prev/第3指针均指自身），
+     // 尾调 sub_4D1020 二段初始化。返回 this。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:1181
+   pThis_60 = this + 96;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:1589
+   j__free(*(void **)(pObj + 96));
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:1592
+   *(uint8_t *)(pObj + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:2675
+   // this+96=17（状态槽计数）；this+1557..1573（word 下标） = +6228..6292 十七个异常状态槽清零；
+     // 0x4D46C0 sub_4D46C0 —— ★ ActiveObject 构造初始化（研究 20 §13 定案）
+     // this+96=17（状态槽计数）；this+1557..1573（word 下标） = +6228..6292 十七个异常状态槽清零；
+     // this+1617..1634（word 下标）= +6468..6536 十八个观察者槽清零；
+     // +6552 霸体字节、+6556 大状态、+6664/+6668 计时、+6752 标志；
+     // this[1663]=this[1664]=1000 —— 研究 §13 的"计时字段默认 1000/1000"直证；
+     // 循环 v2<2 段 = 两组伤害窗描述符（每组 5 个字段，末位 4 = 默认槽数，研究 §13）。
+     // 调用者：对象工厂 sub_4D2D60 的 case 0 之外的 ActiveObject 派发路径。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11206
+   // +96=529（条件 id）、+608=100、+7148 大状态=0、+7632/7636 窗口=-1、骑乘/名牌/
+     // 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+     // 懒加载 Monster/FlyingMonsterMark.img 与 Monster/SummonMonsterMark.img
+     //（dword_9A05D4 引用计数，dword_8F84B8 资源管理器 vt+60）；随后清怪物侧字段：
+     // +96=529（条件 id）、+608=100、+7148 大状态=0、+7632/7636 窗口=-1、骑乘/名牌/
+     // 拾取族（+7808/+7828 起 29 类 × 16 字节文案表 = 0x4DB130 的条目侧、+8300..8364、
+     // +8516/+8520=-1、+8528 文案串、+8584/8588 随机区间），尾段 +7732=200。
+     // 【推断】怪物生成/复位的扩展段（0x4DB410 MONSTER CREATE 路径下游）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11235
+   *(uint32_t *)(this + 96) = 529;
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:2551
+   *(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:5730
+   LOBYTE(v31) = (uint8_t)v28 + 96;
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:10886
+   // 0x4BCCA0 sub_4BCCA0 —— 摆摊驴/物件状态复位（+96 置 66 默认状态）
+     // ------------------------------------------------------------
+     // 0x4BCCA0 sub_4BCCA0 —— 摆摊驴/物件状态复位（+96 置 66 默认状态）
+     //   写 +96 = 66（默认状态码）、+284/+285/+286/+304/+340/+341 字节位清 0、+308/+312 = 4、
+     //   +336/+348 记 timeGetTime、+356/+360/+372/+376 = -1 哨兵；返回 -1。
+     //   【推断：+96 = 66 为物件默认状态（vmt+96 状态槽）】
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:10887
+   //   写 +96 = 66（默认状态码）、+284/+285/+286/+304/+340/+341 字节位清 0、+308/+312 = 4、
+     // 0x4BCCA0 sub_4BCCA0 —— 摆摊驴/物件状态复位（+96 置 66 默认状态）
+     //   写 +96 = 66（默认状态码）、+284/+285/+286/+304/+340/+341 字节位清 0、+308/+312 = 4、
+     //   +336/+348 记 timeGetTime、+356/+360/+372/+376 = -1 哨兵；返回 -1。
+     //   【推断：+96 = 66 为物件默认状态（vmt+96 状态槽）】
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:10889
+   //   【推断：+96 = 66 为物件默认状态（vmt+96 状态槽）】
+     // 0x4BCCA0 sub_4BCCA0 —— 摆摊驴/物件状态复位（+96 置 66 默认状态）
+     //   写 +96 = 66（默认状态码）、+284/+285/+286/+304/+340/+341 字节位清 0、+308/+312 = 4、
+     //   +336/+348 记 timeGetTime、+356/+360/+372/+376 = -1 哨兵；返回 -1。
+     //   【推断：+96 = 66 为物件默认状态（vmt+96 状态槽）】
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:10893
+   *(uint32_t *)(this + 96) = 66;
+     // ------------------------------------------------------------
+-- src\game\gunner_skills.cpp:1325
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // ★ CNDragonHeadSideFlame 构造器（侧龙首-火焰）【资源实证】：new(0x12C) 粒子发射器 →
+     // sub_4C3640("Particle/FlameThrower.ptl", this)（P36 发射器挂接）→ +280 存发射器、+281=80、+282=50 参数
+-- src\game\gunner_skills.cpp:1843
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // ★ CNFreezingLuna 构造器（冰冻露娜，冰属性地面）【资源实证】：vmt2F4 附属 +
+     // sub_4C3640("Particle/steam.ptl")（蒸汽粒子发射器）→ +282 存储
+-- src\game\gunner_skills.cpp:3542
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // ★ CNTreasureBox__vmt2E0 破坏演出（宝箱）：池化四件套（P33）
+     // 动画名 = +364/+91 字符串 + sub_41ACF0(+178→+24)（图集 id）→ sub_431920 生成 →
+     // 入演播层 2 → 位置 = vt+128/124/120 自身坐标 → 委托 CNMapObject__vmt2E0
+-- src\game\gunner_skills.cpp:3595
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // ★ CNUrn__vmt2E0 破坏演出（罐/瓮）：与宝箱同构，图集 id 取 +178→+8 → 委托 CNMapObject__vmt2E0
+-- src\game\gunner_skills.cpp:4084
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // ★ QuestCage 背景板生成【资源实证】：池化四件套 sub_431920(池, 图集, "../Trap/Animation/CageBack.ani")
+     // → sub_45FE80 层 2 → 定位 (vt+128-1, vt+124-1) → vt+372(100)/vt+596(0)/vt+604(0)
+-- src\game\gunner_state.cpp:1423
+   if ( fld_e30 == *(uint32_t *)(fld_e1554 + 96) )
+     // ------------------------------------------------------------
+     // 调: sub_4C17C0 sub_41A5E0
+-- src\game\gunner_state.cpp:2192
+   v4 = *(uint32_t *)(v3 + 96);
+     // ------------------------------------------------------------
+     // 证: "BOWGUN_DRAW1" | "GUN_LOAD" | "BOWGUN_LOAD" | "GUN_DRAW1"
+     // 调: sub_4C23A0 sub_4CE8A0 sub_406D60 sub_4C2020 sub_4015C0
+-- src\game\gunner_state.cpp:2215
+   sub_4C2020(v7, *(uint32_t *)(v3 + 96));
+     // ------------------------------------------------------------
+     // 证: "BOWGUN_DRAW1" | "GUN_LOAD" | "BOWGUN_LOAD" | "GUN_DRAW1"
+     // 调: sub_4C23A0 sub_4CE8A0 sub_406D60 sub_4C2020 sub_4015C0
+-- src\game\gunner_state.cpp:2218
+   v5 = *(uint32_t *)(v3 + 96);
+     // ------------------------------------------------------------
+     // 证: "BOWGUN_DRAW1" | "GUN_LOAD" | "BOWGUN_LOAD" | "GUN_DRAW1"
+     // 调: sub_4C23A0 sub_4CE8A0 sub_406D60 sub_4C2020 sub_4015C0
+-- src\game\gunner_state.cpp:4119
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // 证: "Effect/Animation/SubWeapon/SubWeaponFrontOnc" | "Effect/Animation/SubWeapon/SubWeaponFrontRap" |
+     //  "Effect/Animation/SubWeapon/SubWeaponUpOnce1a" | "Effect/Animation/SubWeapon/SubWeaponUpOnce1b"
+     // 调: sub_4C4890 sub_4015C0 sub_406D60 sub_42FCB0 sub_4319E0
+-- src\game\gunner_state.cpp:4138
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+     // 证: "Effect/Animation/SubWeapon/SubWeaponFrontOnc" | "Effect/Animation/SubWeapon/SubWeaponFrontRap" |
+     //  "Effect/Animation/SubWeapon/SubWeaponUpOnce1a" | "Effect/Animation/SubWeapon/SubWeaponUpOnce1b"
+     // 调: sub_4C4890 sub_4015C0 sub_406D60 sub_42FCB0 sub_4319E0
+-- src\game\gunner_state.cpp:5640
+   if ( *(uint32_t *)(this + 96) >= 0x10u )
+     // ------------------------------------------------------------
+     // 调: sub_4CF8F0 sub_4017E0
+-- src\game\gunner_state.cpp:5642
+   *(uint32_t *)(this + 96) = 15;
+     // ------------------------------------------------------------
+     // 调: sub_4CF8F0 sub_4017E0
+-- src\game\hiteff_monster.cpp:2025
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2046
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2067
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2094
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2121
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2142
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2163
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2184
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2222
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\game\hiteff_monster.cpp:2279
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\game\hiteff_monster.cpp:2315
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\game\hiteff_monster.cpp:2342
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\game\hiteff_monster.cpp:2372
+   if ( *((uint32_t *)this + 96) < 0x10u )
+-- src\game\hiteff_monster.cpp:4738
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:5685
+   //   this+96 = 1（动作子对象存在标志）
+     // 0x4E7160 sub_4E7160 —— 受击/动作字段复位（研究 §1.2 字段表坐标逐个可读）
+     // 置位分布（本工程研究文档字段表交叉验证）：
+     //   this+96 = 1（动作子对象存在标志）
+     //   this+572 = 0 / **this+568 = −1（★ 最后受击时刻复位 —— 研究 §1.1 字段表 +568）**
+     //   this+576 = 1（车主/归属 id 哨兵）/ +580/+584 = 0 / +588/+592 = −1
+     //   this+608 = 0（**受击盒使能** —— 研究 P35：this+641 是另一路；+608 见 P29 攻防门）
+     //   **this+636 = 0（★ 反应优先级复位 —— 研究 §15 三层状态的优先级字段）**
+     //   **this+642 = 0（★ 碰撞盒快照标志，§1.2 表现壳的 this+642/644）** / +644 = 0（盒快照槽）
+     //   this+668/+672 = 0
+     //   **this+612 = 1（★ 动作使能字节 —— 研究 §1.2 vt+556 = 该字节 setter、setState 门）**
+     //   **this+616 = −1（★ 反应态复位为 −1 哨兵 —— 研究 §15 反应态字段）**
+     //   **this+640 = 1（★ 攻击盒使能 —— 研究 P29 攻/防使能门 vt+600/608 = this+640/641）**
+     //   **this+641 = 1（★ 受击盒使能 = 无敌开关 —— 研究 P35 vt+604 广播目标）**
+     // 返回 −1（"未初始化/无参照"哨兵）。
+-- src\game\hiteff_monster.cpp:5700
+   *(uint32_t *)(this + 96) = 1;
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:11828
+   sub_41A590((unsigned int)(this + 38), v20, *(uint32_t *)(fld_e3339 + 96));
+     // ------------------------------------------------------------
+-- src\game\login_channel.cpp:2814
+   result = *(int ***)(pArg3 + 96);
+     // ------------------------------------------------------------
+     // 物品数据装载 II（同上自证串）【推断】
+-- src\game\login_channel.cpp:2933
+   v7 = *v8 == *(uint32_t *)(pArg3 + 96);
+     // ------------------------------------------------------------
+     // 物品数据装载 II（同上自证串）【推断】
+-- src\game\login_channel.cpp:9634
+   *((uint8_t *)this + 96) = 0;
+     // ------------------------------------------------------------
+     // CNRDGuildManager 构造：vftbl 置位 + 条目表清空 + string 成员
+     // （+20 SSO cap=15）复位
+-- src\game\login_channel.cpp:9666
+   *((uint8_t *)this + 96) = 0;
+     // ------------------------------------------------------------
+     // CNRDGuildManager::vmt0 析构前段：IObject vftbl 链 + string 成员/
+     // 条目表清空
+-- src\game\login_channel.cpp:9729
+   *((uint8_t *)this + 96) = 1;
+     // ------------------------------------------------------------
+     // CNRDMemberManager 构造：vftbl 置位 + 条目表/string 成员复位
+-- src\game\missing_misc_a.cpp:1236
+   return (*(int (/*thiscall*/ **)(void *))(*(uint32_t *)this + 96))(this);
+     // ------------------------------------------------------------
+     // 薄转发（→ sub_497E30）
+-- src\game\missing_misc_a.cpp:1822
+   return *(this + 96);
+     // ------------------------------------------------------------
+     // 桩（3L）
+-- src\game\missing_misc_b.cpp:4202
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+     // ★ 机枪弹壳 PO 处理（56L）【资源实证 G_MACHINEGUNA + Particle/ViperBulletShell.ptl】：
+     // vt+212 播 "G_MACHINEGUNA"（P32）→ sub_4C3640("Particle/ViperBulletShell.ptl") 弹壳粒子
+     // 发射器挂接（P36 发射器）—— 拦截射弹/机枪抛壳演出
+-- src\game\pvp_ui.cpp:1950
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 写信框输入处理（34L）
+-- src\game\pvp_ui.cpp:2708
+   result = *(uint32_t **)(pArg1 + 96);
+     // ------------------------------------------------------------
+     // ★ 窗口关闭链（182L usercall）【音效 TAG 实证】：关闭确认 →
+     // sub_432EA0("UI_COMMAND_CLOSE")（P32 TAG）
+-- src\game\pvp_ui.cpp:2867
+   *(uint32_t *)(this + 96) = fld_D812;
+     // ------------------------------------------------------------
+     // UI 命令主处理 A（238L：拖拽/放置逻辑）
+-- src\game\pvp_ui.cpp:3392
+   sub_69A5F0(*(uint32_t **)(this + 96), v151, v152 + 21 * (fld_9812 + 1));
+-- src\game\pvp_ui.cpp:3393
+   *(uint8_t *)(*(uint32_t *)(this + 96) + 16) = 1;
+-- src\game\pvp_ui.cpp:6369
+   // 粒子复位：+1..+35 清零，+89..+96 = −1 哨兵（无限寿命标记）
+     // ------------------------------------------------------------
+     // 粒子复位：+1..+35 清零，+89..+96 = −1 哨兵（无限寿命标记）
+-- src\game\pvp_ui.cpp:6802
+   *(this + 96) = -1;
+     // ------------------------------------------------------------
+     // 房间槽位快照重建（80L：+89..96 = −1 起逐槽填 dword_99FEC0 状态）
+-- src\game\pvp_ui.cpp:6857
+   if ( *(this + 96) == -1 )
+     // ------------------------------------------------------------
+     // 房间槽位快照重建（80L：+89..96 = −1 起逐槽填 dword_99FEC0 状态）
+-- src\game\pvp_ui.cpp:6858
+   *(this + 96) = v4;
+     // ------------------------------------------------------------
+     // 房间槽位快照重建（80L：+89..96 = −1 起逐槽填 dword_99FEC0 状态）
+-- src\game\pvp_ui.cpp:7419
+   else if ( (uint8_t)sub_43BCB0(*(uint32_t *)(pArg1 + 96)) != 0 )
+     // ------------------------------------------------------------
+     // ★ CNRDPVPInterface__vmt0 构造（402L userpurge ecx/edi）：PVP 界面宿主初始化
+     // （子控件逐个 new + 布局 + 房间列表容器），dword_99FEC0 管理器挂接
+-- src\game\rtti_core.cpp:18
+   //   - 0x4AEDD0 写 +96 = 273（条件位集初值）—— 与 CNRDObject_vmt28（0x498DE0）的
+-- src\game\rtti_core.cpp:2570
+   j__free(*(void **)(this + 96));
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:2573
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:3084
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:4194
+   *(this + 96) = 15;
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:11223
+   //   写入: +96 = 273（条件位集，与 CNRDObject_vmt28 的 273 掩码直证对应！）、
+     // ------------------------------------------------------------
+     // 【解读】
+     //   【推断】★ IRDActiveObject 状态区大重置（vmt10 类初始化链的核心，109 行）。
+     //   写入: +96 = 273（条件位集，与 CNRDObject_vmt28 的 273 掩码直证对应！）、
+     //   +608 归零、+7512 = -1、+7516..+7608 连续清零、+7760 = 4（模式）、+7836 = 1000（千分基准）、
+     //   +7924 = 1、+7728/+7730 标志、+8172 区 5×2 循环清 20 个 DWORD、+7428/+8212 收尾。
+     //   **+96 = 273 是条件位掩码的初始值（受击态条件位）—— 与 docs/14 §2 "vt+40 条件位掩码"闭环。**
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:11226
+   //   **+96 = 273 是条件位掩码的初始值（受击态条件位）—— 与 docs/14 §2 "vt+40 条件位掩码"闭环。**
+     // ------------------------------------------------------------
+     // 【解读】
+     //   【推断】★ IRDActiveObject 状态区大重置（vmt10 类初始化链的核心，109 行）。
+     //   写入: +96 = 273（条件位集，与 CNRDObject_vmt28 的 273 掩码直证对应！）、
+     //   +608 归零、+7512 = -1、+7516..+7608 连续清零、+7760 = 4（模式）、+7836 = 1000（千分基准）、
+     //   +7924 = 1、+7728/+7730 标志、+8172 区 5×2 循环清 20 个 DWORD、+7428/+8212 收尾。
+     //   **+96 = 273 是条件位掩码的初始值（受击态条件位）—— 与 docs/14 §2 "vt+40 条件位掩码"闭环。**
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:11236
+   *(uint32_t *)(this + 96) = 273;
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:610
+   v30 = sub_69C500(*(uint32_t *)(pArg1 + 96)) - 1;
+     // ------------------------------------------------------------
+     // 【推断】RDARScriptStringManager 词条表操作 II（usercall，ecx/edi/esi 三隐参）
+-- src\game\script_string.cpp:622
+   sub_69C340(*(uint8_t **)(pArg1 + 96), v30 + 1);
+     // ------------------------------------------------------------
+     // 【推断】RDARScriptStringManager 词条表操作 II（usercall，ecx/edi/esi 三隐参）
+-- src\game\script_string.cpp:6424
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:6840
+   *(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:6858
+   // ·sub_476C50 清理后两定时器虚表降级 IObject，+96/+12 字节清零
+     // 0x44B160 sub_44B160 —— CNRDResult 析构
+     // ·sub_476C50 清理后两定时器虚表降级 IObject，+96/+12 字节清零
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:6865
+   *((uint8_t *)this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:7873
+   v3 = *(uint32_t **)(v2 + 96);
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:10317
+   // 取摊位列表（+80 对象 → +96 向量）第 uArg2 项 → ·sub_44E340 组参数 → ·sub_5634F0 购买执行
+     // 0x44F190 sub_44F190 —— 摊位物品点击购入
+     // 取摊位列表（+80 对象 → +96 向量）第 uArg2 项 → ·sub_44E340 组参数 → ·sub_5634F0 购买执行
+     // 成功分支：GUI 走 ·sub_540DE0（摊位列表）或 ·sub_44E8D0 包 0x13，否则 ·sub_563410 确认参数
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:10335
+   v5 = *(uint32_t *)(fld_50 + 96);
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:10754
+   if ( *(uint32_t *)(this + 96) != 0 )
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:10755
+   j__free(*(void **)(this + 96));
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:10756
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\script_string.cpp:10782
+   *(this + 96) = 1;
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:4779
+   //   析构 +104 字符串（·sub_4017E0），free +92 缓冲（+96/+100 清零），再析构 +80/+76/+20/+16/+12/+8 六处字符串。
+     // 0x485870 sub_485870 —— 子结构析构（字符串与向量族）
+     //   析构 +104 字符串（·sub_4017E0），free +92 缓冲（+96/+100 清零），再析构 +80/+76/+20/+16/+12/+8 六处字符串。
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:4787
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:5031
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:6169
+   //   qmemcpy 拷 0x4C 字节后重建内嵌 std::string（+100 容量 15、+96 长度 0，经 ·sub_4014D0 从源 +76 起赋值），并复制源 +104/+108/+112 三字段。
+     // 0x487470 sub_487470 —— 房间记录拷贝（0x4C 字节 + 内嵌字符串 + 尾部 3 字段）
+     //   qmemcpy 拷 0x4C 字节后重建内嵌 std::string（+100 容量 15、+96 长度 0，经 ·sub_4014D0 从源 +76 起赋值），并复制源 +104/+108/+112 三字段。
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:6175
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:6188
+   //   +0 与 +68/+72/+108/+112 清零；+4..+32 八个 dword 置 255、+36..+64 八个 dword 置 0xFFFF；+76 字符串置空（+96=0、+100=15）并置 +104 = -1。
+     // 0x4874D0 sub_4874D0 —— CNPvpRoom 字段清零（8 组槽位表 + 空串）
+     //   +0 与 +68/+72/+108/+112 清零；+4..+32 八个 dword 置 255、+36..+64 八个 dword 置 0xFFFF；+76 字符串置空（+96=0、+100=15）并置 +104 = -1。
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:6566
+   //   +4 初始化标志为 0 时清 +12..+40 各字段并置 +44 = -1、+92 = 0、+96 = 2、+128 = 0。【推断：gfx_texture 战场模块构造尾部同址调用】
+     // 0x487AB0 sub_487AB0 —— CNChaosModule 状态块初始化
+     //   +4 初始化标志为 0 时清 +12..+40 各字段并置 +44 = -1、+92 = 0、+96 = 2、+128 = 0。【推断：gfx_texture 战场模块构造尾部同址调用】
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:6582
+   *(uint32_t *)(this + 96) = 2;
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:6607
+   //   +112 使能时按 +96 方向：1 由 0 插值到 255，0 由 255 插回 0 并在时钟越过 +124 时置 +96 = 2 并关闭；结果写 dword_8F8528+2484 供渲染【推断：转场白闪】。
+     // 0x487B00 sub_487B00 —— 屏幕白闪淡入淡出（0↔255 插值）
+     //   +112 使能时按 +96 方向：1 由 0 插值到 255，0 由 255 插回 0 并在时钟越过 +124 时置 +96 = 2 并关闭；结果写 dword_8F8528+2484 供渲染【推断：转场白闪】。
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:6622
+   LODWORD(v2) = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:6640
+   *(uint32_t *)(this + 96) = 2;
+     // ------------------------------------------------------------
+-- src\game\skill_load_tutorial.cpp:10846
+   fld_e96 = (*(this + 96) - fld_e95) >> 5;
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:3654
+   fld_60 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:3816
+   *(uint8_t *)(*(uint32_t *)(this + 96) + 16) = *(uint32_t *)(dword_8F7A24 + 12) == 3 && v52 != 2;
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:7757
+   if ( pArg2 != *(uint32_t *)(this + 96) )
+-- src\game\ui_icon_perf.cpp:8476
+   *(uint32_t *)(this + 96) = pMem162;
+-- src\game\ui_icon_perf.cpp:8478
+   *(uint32_t *)(*(uint32_t *)(this + 96) + 68) = this;
+-- src\game\ui_icon_perf.cpp:8479
+   *(uint8_t *)(*(uint32_t *)(this + 96) + 16) = 0;
+-- src\game\ui_icon_perf.cpp:8480
+   result = sub_69A840(*(uint32_t *)(this + 96));
+-- src\game\ui_icon_perf.cpp:8493
+   // 对 this+8、+12 起 6 件、+36 起一批、+96 等持有控件逐个以 vt 槽 0（析构，实参 1）释放并写 0。
+     // 0x46ABB0 sub_46ABB0 —— 界面管理器逐槽析构清理
+     // 对 this+8、+12 起 6 件、+36 起一批、+96 等持有控件逐个以 vt 槽 0（析构，实参 1）释放并写 0。
+     // 其中含 sub_42AF90 帧对象析构（帧数组与元素数组）。
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:8650
+   pThis_60 = *(int (/*thiscall*/ ****)(uint32_t, int))(this + 96);
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:8653
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:8698
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:9206
+   else if ( nArg2 == *(uint32_t *)(this + 96) )
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:9334
+   // nArg3 非 0，或 +96 未锁且 nArg2 小于列表项数时：sub_423200(dword_8F7B08,4) 开包、sub_423290 写槽号、sub_423380 发包。
+     // 0x46BCB0 sub_46BCB0 —— 频道选定提交（发包与配置写入）
+     // nArg3 非 0，或 +96 未锁且 nArg2 小于列表项数时：sub_423200(dword_8F7B08,4) 开包、sub_423290 写槽号、sub_423380 发包。
+     // sub_48B7C0(11, nArg2) 写调试配置、+96=1、dword_8F7A24+288 = +92。
+     // 并把 (this+80 + 144*nArg2) 项的名称串经 off_77F3FC 分发。
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:9335
+   // sub_48B7C0(11, nArg2) 写调试配置、+96=1、dword_8F7A24+288 = +92。
+     // 0x46BCB0 sub_46BCB0 —— 频道选定提交（发包与配置写入）
+     // nArg3 非 0，或 +96 未锁且 nArg2 小于列表项数时：sub_423200(dword_8F7B08,4) 开包、sub_423290 写槽号、sub_423380 发包。
+     // sub_48B7C0(11, nArg2) 写调试配置、+96=1、dword_8F7A24+288 = +92。
+     // 并把 (this+80 + 144*nArg2) 项的名称串经 off_77F3FC 分发。
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:9347
+   || (LOBYTE(v4) = *(uint8_t *)(this + 96), (uint8_t)v4 == 0)
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:9356
+   *(uint8_t *)(this + 96) = 1;
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:9687
+   *(uint32_t *)(this + 96) = *(uint32_t *)(pArg2 + 96);
+     // ------------------------------------------------------------
+-- src\game\ui_icon_perf.cpp:10947
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // CNEntranceChannel 复位：+12=6（服务器型数上限）/+16=5（频道型数上限）——
+     // 与 connectServer 校验阈值一致；其余状态/页签槽清零
+-- src\game\worldmap_reward.cpp:1805
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\worldmap_reward.cpp:2156
+   *(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 【推断】地图词条/路径辅助
+-- src\game\worldmap_reward.cpp:9068
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\worldmap_reward.cpp:10877
+   // 未命中查房间对象(·sub_4CE8A0)+96 的条目（缺则 aCriticalError_7），以 ·sub_452B60 依条目标识建 0x208。
+     // 0x45C770 sub_45C770 —— 按 (地图, 索引) 取/建 0x208 关卡对象
+     // 键 = ArgList 高 16 位 + Block 低 16 位，查树 ·+64（·sub_472E30/登记 ·sub_45BE60）；
+     // 未命中查房间对象(·sub_4CE8A0)+96 的条目（缺则 aCriticalError_7），以 ·sub_452B60 依条目标识建 0x208。
+     // ------------------------------------------------------------
+-- src\game\worldmap_reward.cpp:10900
+   sub_45B660((int **)(v6 + 96), &v12, &Block);
+     // ------------------------------------------------------------
+-- src\game\worldmap_reward.cpp:10941
+   // 管理器激活(·+96)时顺带触发 ·sub_45C400 归属重建。
+     // 0x45C8C0 sub_45C8C0 —— 按 (地图, 索引) 取/建 0xA0 战斗条目
+     // 树 ·+52 未命中：·sub_42D590 建条目、·sub_45C770 取关卡并 ·sub_4602C0 初始化其 +476，再登记；
+     // 管理器激活(·+96)时顺带触发 ·sub_45C400 归属重建。
+     // ------------------------------------------------------------
+-- src\game\worldmap_reward.cpp:10968
+   if ( *(uint32_t *)(this + 96) != 0 )
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:2136
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:2163
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:3622
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:6043
+   // 0x5B8B80 sub_5B8B80 —— 信徒加载槽清位（this[1905]+96 字节置 0）
+     // ------------------------------------------------------------
+     // 0x5B8B80 sub_5B8B80 —— 信徒加载槽清位（this[1905]+96 字节置 0）
+     // 仅 uArg3==nullptr 时有效：把 this[1905] 资源对象 +96 偏移处字节清 0（加载/待机旗标）。
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:6044
+   // 仅 uArg3==nullptr 时有效：把 this[1905] 资源对象 +96 偏移处字节清 0（加载/待机旗标）。
+     // 0x5B8B80 sub_5B8B80 —— 信徒加载槽清位（this[1905]+96 字节置 0）
+     // 仅 uArg3==nullptr 时有效：把 this[1905] 资源对象 +96 偏移处字节清 0（加载/待机旗标）。
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:6053
+   result = (uint8_t *)(*(this + 1905) + 96);
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:6063
+   // 0x5B8BA0 sub_5B8BA0 —— 分身收尾（nArg3==0 时 this+7620 资源 +96 置 1）
+     // ------------------------------------------------------------
+     // 0x5B8BA0 sub_5B8BA0 —— 分身收尾（nArg3==0 时 this+7620 资源 +96 置 1）
+     // 先跑 ·sub_5B7D60 清参数面；nArg3==0 时把 this+7620 资源对象 +96 偏移处字节置 1。
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:6064
+   // 先跑 ·sub_5B7D60 清参数面；nArg3==0 时把 this+7620 资源对象 +96 偏移处字节置 1。
+     // 0x5B8BA0 sub_5B8BA0 —— 分身收尾（nArg3==0 时 this+7620 资源 +96 置 1）
+     // 先跑 ·sub_5B7D60 清参数面；nArg3==0 时把 this+7620 资源对象 +96 偏移处字节置 1。
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:6074
+   result = (uint8_t *)(*(uint32_t *)(v4 + 7620) + 96);
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:8052
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:8064
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:8093
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:8105
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:8134
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:10569
+   // new 0x12C 经 ·sub_4C3640 以 this+91 处字符串池装载 Particle/KissHeart.ptl（SSO 分支：this+96 <16 走内联缓冲）。
+     // 0x5BDF80 sub_5BDF80 —— 爱心特效装载（KissHeart.ptl 挂 this+2167）
+     // new 0x12C 经 ·sub_4C3640 以 this+91 处字符串池装载 Particle/KissHeart.ptl（SSO 分支：this+96 <16 走内联缓冲）。
+     // 对象句柄写入 this+2167，供 ·0x5BE570 吻杀编排中 vt+12/vt+40/vt+92 二次驱动。
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:10578
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:904
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:1051
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:1059
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:1086
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:1549
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:2093
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:2263
+   // 8612 双元槽写 1000/1600，清 8723 与 +1905 对象 +96 位，8840 时钟按 1000ms 起计时。
+     // 0x5D25D0 sub_5D25D0 —— 自动守卫参数装载（vt+384 出场参数面 0..10 号）
+     // vt+1308 复位后按索引 0..10 读 vt+384，写入 8968..9008 参数面（8968/8988 两处 ×0.01 缩放）。
+     // 8612 双元槽写 1000/1600，清 8723 与 +1905 对象 +96 位，8840 时钟按 1000ms 起计时。
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:2310
+   pThis_771 = (uint8_t *)(*((uint32_t *)this + 1905) + 96);
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:2325
+   // 段号递增至 3 时归零并清 7620+96/8953/8954、按 9008 重排 8940；否则 vt+820(1) 收尾。
+     // 0x5D2710 sub_5D2710 —— 锤王三连段播报（HAMMER_KING_01/02/03）
+     // 透传 ·sub_5D19C0 后，姿态 8 且 vt+908==3 时按 8932 段号选语音 TAG（0/1/其余）经 vt+212 播报、
+     // ·sub_4DB130(24, 8934) 触发表情，并清 8924/8881/8882、8868 时钟归零、vt+888(4,4,1000,1000)、
+     // 6216 帧游标复位（·sub_4926A0）、vt+51 写 ·0x5D28D0 排程（8992 与子链 vt+672(3)+872 换算段时长）。
+     // 段号递增至 3 时归零并清 7620+96/8953/8954、按 9008 重排 8940；否则 vt+820(1) 收尾。
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:2383
+   *(uint8_t *)(v15 + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:3210
+   // vt+1172 返回值按 >0/5/10/15/20 分档，逐级清 *(this+1905) 子对象内 +32/+64/+96/+128/+160
+     // 0x5D3640 sub_5D3640 —— 编队档位清位（vt+1172 档位 → 子对象 +32..+160 五槽）
+     // vt+1172 返回值按 >0/5/10/15/20 分档，逐级清 *(this+1905) 子对象内 +32/+64/+96/+128/+160
+     // 五个相位位；返回值直接回传。·0x5D5A60 以其 >5 选择 vt+384 参数 0 或 1 作为编队规模档。
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:3243
+   *(uint8_t *)(*(this + 1905) + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:3960
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:4506
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:4984
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:5290
+   // 相位 A：血比 this+2247 阈值下时钟到点置 this+1905 子对象 +96 阶段旗标；相位 B：姿态非 5 时按 RTTI
+     // 0x5D5F10 sub_5D5F10 —— 锤王大地崩三相位主处理（R_HAMMER_KING 语音 + 双 PassiveObject 震地）
+     // 相位 A：血比 this+2247 阈值下时钟到点置 this+1905 子对象 +96 阶段旗标；相位 B：姿态非 5 时按 RTTI
+     // 统计 CNTinSwordManExpeller 数 < this+2245 则 vt+152/376/592 生成 705 号随从并播 R_HAMMER_KING；
+     // 相位 C：姿态 ==8 且 vt+908 ==3 时生成 EarthQuake/EarthQuakeRing 双段 + ·sub_4E4A50(30312) 散射 +
+     // ·sub_424120 范围打击 + HAMMER_KING_CRASH 文案并 setState(8)。
+     // 【推断】this+2241/2243/2246/2249..2251 = WZ 表冷却/时长/半径档（与 ·0x5D6590 vt+384 读同面）
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:5374
+   *(uint8_t *)(*(this + 1905) + 96) = 1;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:5850
+   // （this+96 小串优化分支），再经 vt+384(0..15) 十六连读导入 this+2218..2234；随后写 this+2188 = 1.0f
+     // 0x5D6AF0 sub_5D6AF0 —— 火守卫参数装载（Particle/TrackingFire.ptl 追踪火 + ksguard_flame.ani）
+     // vt+1308 清相位后 new 0x12C 并调 ·sub_4C3640 生成 Particle/TrackingFire.ptl 追踪火粒子存 idx2214
+     // （this+96 小串优化分支），再经 vt+384(0..15) 十六连读导入 this+2218..2234；随后写 this+2188 = 1.0f
+     // （缩放因子，·0x5D5F10 按朝向复用此值）与 this+2207 = 0，末装载 ksguard_flame.ani。
+     // 四属性守卫中参数面最长、唯一带粒子发射器的一支
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:5877
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:7436
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:12414
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:289
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:313
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:2593
+   // 帧阈值清 buff 标志：帧数>0 清 +64/+96/+128 位（分档 >5/>10/>15，逐步清更多 buff 位）
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:2596
+   // vt+1172 帧数>0 时清 this+1905 数组内偏移 +64 位；帧数>5 再清 +96 位；
+     // 0x593340 sub_593340 —— 帧阈值分级清 buff 标志（>0/>5/>10 逐档多清一位）
+     // vt+1172 帧数>0 时清 this+1905 数组内偏移 +64 位；帧数>5 再清 +96 位；
+     // 帧数>10 再清 +128 位；帧数>15 不动（分档解除攻击/受击相关 buff 位【推断】）
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:2619
+   *(uint8_t *)(*(this + 1905) + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:3912
+   result = fld_e1905 + 96;
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:4504
+   result = fld_1DC4 + 96;
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:5567
+   result = fld_e1905 + 96;
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:8402
+   // 清序：前 5 帧 +32，随游标推进依次 +64、+96、+128（>20 帧后不再清）【推断：随帧关闭攻击判定窗】
+     // 0x59A220 sub_59A220 —— 帧游标分档清标志：vt+1172 游标越小清得越多（速度对象 this+7620）
+     // 清序：前 5 帧 +32，随游标推进依次 +64、+96、+128（>20 帧后不再清）【推断：随帧关闭攻击判定窗】
+     // 由 ·0x59A490 在 8696 快照为 0 时调用一次
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:8423
+   *(uint8_t *)(*(this + 1905) + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\missing_monster.cpp:1134
+   result = *(uint8_t *)(fld_e1905 + 96);
+     // ------------------------------------------------------------
+     // 调: sub_5B6000
+-- src\game\creature\missing_monster.cpp:1135
+   *(uint8_t *)(fld_e1905 + 96) = result == 0;
+     // ------------------------------------------------------------
+     // 调: sub_5B6000
+-- src\game\creature\missing_monster.cpp:1343
+   *(uint8_t *)(*(this + 1905) + 96) = 1;
+     // ------------------------------------------------------------
+     // 调: sub_5C4F00 sub_4926A0 sub_41A5E0 sub_41A590
+-- src\game\creature\missing_monster.cpp:2836
+   *(uint8_t *)(*(this + 1905) + 96) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5C5020 sub_4926A0 sub_41A5E0 sub_41A590
+-- src\game\creature\missing_monster.cpp:4180
+   result = *(uint8_t *)(fld_e1905 + 96);
+     // ------------------------------------------------------------
+     // 调: sub_5B5F90
+-- src\game\creature\missing_monster.cpp:4181
+   *(uint8_t *)(fld_e1905 + 96) = result == 0;
+     // ------------------------------------------------------------
+     // 调: sub_5B5F90
+-- src\game\creature\spider_trap.cpp:2789
+   //   （this+96 判长串以取 this+91 内联缓冲或堆指针），vt+12 复位后 vt+40 定位到本体
+     // 0x5C37C0 sub_5C37C0 —— 机动炮怪自爆：EXS_Boom 爆点 + 40002 号效果
+     // 首次调用（this+2160 空）new 0x12C 字节粒子对象并 ·sub_4C3640 绑定 particle/EXS_Boom.ptl
+     //   （this+96 判长串以取 this+91 内联缓冲或堆指针），vt+12 复位后 vt+40 定位到本体
+     //   vt+120/124/128（高度 +30），vt+92 取包围盒，·sub_4600B0(fld_e29,2,…) 登记特效。
+     // 尾段 vt+308 玩家校验通过则 ·sub_4E4A50(this, 40002, this+2164, 位姿…, vt+152 朝向) 请求效果。
+     // ------------------------------------------------------------
+-- src\game\creature\spider_trap.cpp:2819
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\spider_trap.cpp:7230
+   //   写 +48=500；nArg2==nArg3 分支用 +128 帧与 dword_730CA0 / +96 与 dword_730C80，尾写 +48=70。
+     // 0x5C9BE0 sub_5C9BE0 —— 触手硬直联动（±4 段配对）
+     //   nArg2==nArg3+4 时对 this[1554]+4*(pArg3+28) 帧经 vt+208/vt+204(dword_730C90[pArg3]) 写入；
+     //   this[2159] == -1 时追加 +4*pArg3+80 帧与 dword_730C70[pArg3] 后 sub_4924C0(0) 复位帧游标并
+     //   写 +48=500；nArg2==nArg3 分支用 +128 帧与 dword_730CA0 / +96 与 dword_730C80，尾写 +48=70。
+     // ------------------------------------------------------------
+-- src\game\creature\spider_trap.cpp:7288
+   (*(void (/*thiscall*/ **)(uint32_t *, uint32_t))(*this + 208))(this, *(uint32_t *)(4 * pArg3 + 96 + *(this + 1554)));
+     // ------------------------------------------------------------
+-- src\game\creature\spider_trap.cpp:7289
+   fld_e1554 = (uint32_t *)(4 * pArg3 + 96 + *(this + 1554));
+     // ------------------------------------------------------------
+-- src\game\creature\spider_trap.cpp:8474
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:1482
+   if ( (unsigned int)*(this + 96) < 0x10 )
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:6654
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:6672
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:6867
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:6885
+   if ( *(this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:9496
+   // （按 +364 起短字符串容量 +96 < 0x10 走内部缓冲，否则用 +364 长指针）写 this+8604 粒句柄，
+     // 0x5ACE30 sub_5ACE30 —— 飞龙火息装载（FLYDRAGON_HIT/DMG + FDRG_DIE 语音 + FireBreath 粒子）
+     // ·0x4015C0 构造 FLYDRAGON_HIT/FLYDRAGON_DMG/FDRG_DIE 三字符串；this+8600 清零后 vt+688 清场；
+     // ·0x4EB2C0(1.5) 伤害修正族 1.5；new 0x12C 经 ·0x4C3640 构造 Particle/FireBreath.ptl
+     // （按 +364 起短字符串容量 +96 < 0x10 走内部缓冲，否则用 +364 长指针）写 this+8604 粒句柄，
+     // vt+112 挂接；this+8608 = clock_now；末 ·0x4E1390(196612, 100000) 登记倒计时/播报
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:9517
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:10106
+   // 0x5AD7E0 sub_5AD7E0 —— 速率槽调整（减向变体：清 1905 对象 +96 字节）
+     // ------------------------------------------------------------
+     // 0x5AD7E0 sub_5AD7E0 —— 速率槽调整（减向变体：清 1905 对象 +96 字节）
+     // 与 ·0x5AD3E0 同构（差异：速率 −1.0 且 *(this+1905)+96 写 0）
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:10107
+   // 与 ·0x5AD3E0 同构（差异：速率 −1.0 且 *(this+1905)+96 写 0）
+     // 0x5AD7E0 sub_5AD7E0 —— 速率槽调整（减向变体：清 1905 对象 +96 字节）
+     // 与 ·0x5AD3E0 同构（差异：速率 −1.0 且 *(this+1905)+96 写 0）
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:10122
+   *(uint8_t *)(*(this + 1905) + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:10134
+   // 0x5AD850 sub_5AD850 —— 与 ·0x5AD7E0 同构（差异：速率 +1.0 且 1905+96 写 1、1899 写 50）
+     // ------------------------------------------------------------
+     // 0x5AD850 sub_5AD850 —— 与 ·0x5AD7E0 同构（差异：速率 +1.0 且 1905+96 写 1、1899 写 50）
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:10149
+   *(uint8_t *)(*(this + 1905) + 96) = 1;
+     // ------------------------------------------------------------
+-- src\game\parsers\item_parser.cpp:3238
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\parsers\item_parser.cpp:3695
+   //   逐槽 sub_41BFE0 置空串后，释放 +96/+112 两段指针数组（sub_41B010 + free）并清计数。
+     // 0x4F4F30 sub_4F4F30 —— 80 字节元素数组销毁（串槽清空 + 两段堆回收）
+     //   逐槽 sub_41BFE0 置空串后，释放 +96/+112 两段指针数组（sub_41B010 + free）并清计数。
+     // ------------------------------------------------------------
+-- src\game\parsers\item_parser.cpp:4065
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\parsers\item_parser.cpp:4282
+   //   [applying range]（+96）；物品大类枚举子串 [waste]/[material]/[recipe]/[throw]/[set]/[legacy]/
+     // 0x4F5B90 sub_4F5B90 —— ★ 可堆叠物品(stackable)定义解析器（39 标签）
+     //   标签族：文本 [name]/[name2]/[explain]/[flavor text]；品级 [grade]（+20）；
+     //   绑定 [attach type] 子枚举 [free]=0/[trade]=1/[trade delete]=2/[sealing]=3（+24）；
+     //   [creation rate]（+28）/[rarity]（+32）/[weight]（+56）；
+     //   职业 [usable job]（子串查表 → 每职业一字节 a1+60 起；全职业 4 → a1+60=0x01010101 且 +152=1）；
+     //   [stackable type]；使用限制 [minimum level]（+64）/[cool time]（+68）/[cooltime group]（+72）/
+     //   [party cooltime]（+76）；资源 [icon]（+80）/[field image]（+88）；
+     //   价值 [price]（+36）/[value]（+52）/[finish point price]（+40）/[cash]（+44）/[medal]（+48）；
+     //   音效 [move wav]（+104）/[use wav]（+116）；[int data]（+120 表）/[string data]（+136 表）；
+     //   [applying range]（+96）；物品大类枚举子串 [waste]/[material]/[recipe]/[throw]/[set]/[legacy]/
+     //   [quest]/[etc]。
+     // ------------------------------------------------------------
+-- src\game\parsers\item_parser.cpp:4509
+   *(uint32_t *)(pArg1 + 96) = sub_4423D0(nullptr);
+     // ------------------------------------------------------------
+-- src\game\parsers\item_parser.cpp:5387
+   //   [sub type]（+96）/[durability]（+100）；价值 [price]（+20）/[value]（+36）/
+     // 0x4F7C60 sub_4F7C60 —— ★★ 装备(equipment/avatar)定义解析器（81 标签，全库单函数标签数第一）
+     //   本体属性块：文本 [name]/[name2]/[explain]/[flavor text]/[fullset explain]/[set name]；
+     //   品级绑定 [grade]（+4）/[attach type]（+8 起，同 [free]/[trade]/[trade delete]/[sealing] 枚举）/
+     //   [creation rate]（+12）/[rarity]（+16）/[weight]（+40）；
+     //   资源 [icon]（+60）/[field image]（+68）/[custom animation]（+76 表）；
+     //   准入 [usable job]/[minimum level]（+48）/[required skill]（+52）/[cool time]（+56）；
+     //   部位枚举 [equipment type]（子串：[weapon]/[coat]/[shoulder]/[pants]/[shoes]/[waist]/[amulet]/
+     //   [wrist]/[ring]/[title name]）；时装部位 [hat/hair/face/coat/pants/shoes/breast/waist avatar]（8）；
+     //   [sub type]（+96）/[durability]（+100）；价值 [price]（+20）/[value]（+36）/
+     //   [finish point price]（+32）/[cash]（+24）/[medal]（+28）；
+     //   ★ 属性内联：其余标签直接转发 sub_4F6790(i, &v53, v2) —— 装备属性表复用属性解析器；
+     //   动作表 [LAYER] 与 23 项动作（[waiting motion]/[move motion]/[sit motion]/[damage motion 1-2]/
+     //   [down motion]/[overturn motion]/[jump motion]/[jumpattack motion]/[rest motion]/
+     //   [throw motion 1-1..4-2]（8）/  [dash motion]/[dashattack motion]/[getitem motion]/[buff motion]/
+-- src\game\parsers\item_parser.cpp:5706
+   *(uint32_t *)(pArg1 + 96) = sub_4423D0(nullptr);
+     // ------------------------------------------------------------
+-- src\game\parsers\item_parser.cpp:6371
+   v9 = (int *)(pArg1 + 4 * v2 + 96);
+     // ------------------------------------------------------------
+-- src\game\parsers\monster_parser.cpp:125
+   float *pfPartyDrop; // esi  [party user number drop bonusrate] → +96 float[4]
+     // ------------------------------------------------------------
+-- src\game\parsers\monster_parser.cpp:239
+   pfPartyDrop = (float *)(pCfg + 96);  // → 对象+0x60 float[4]
+     // ------------------------------------------------------------
+-- src\game\parsers\monster_parser.cpp:11620
+   sub_5E5260((void *)(pArg1 + 96));
+     // ------------------------------------------------------------
+-- src\game\parsers\monster_parser.cpp:12260
+   *(uint32_t *)(pArg1 + 96) = sub_4423D0(nullptr);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:75
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:79
+   *(uint32_t *)(this + 96) = dword_99FCCC;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:1791
+   v27 + 96,
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:2092
+   *(uint32_t *)(this + 96) = 1600;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:2094
+   *(uint32_t *)(this + 96) = 100;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:3728
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:3958
+   *(uint32_t *)(this + 96) = 1600;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:7819
+   sub_4E4A50(*(uint32_t *)(this + 36), 42003, *(uint32_t *)(this + 96), 0, 0, 0, 1, 0, v19, v11);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:7953
+   sub_4E4A50(*(uint32_t *)(this + 36), 42005, *(uint32_t *)(this + 96), 0, 0, 0, 1, 0, v21, v12);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:10268
+   sub_4E4A50(*(uint32_t *)(this + 36), 42004, *(uint32_t *)(this + 96), 0, 0, 0, 1, 0, v19, v11);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:11306
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:11428
+   if ( *(uint32_t *)(this + 96) == 0 )
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:11437
+   *(uint32_t *)(this + 96) = fld_42;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:11442
+   fld_60 = **(uint32_t **)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:11446
+   (*(void (/*thiscall*/ **)(uint32_t, int))(fld_60 + 40))(*(uint32_t *)(this + 96), v9);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:11448
+   fld_602 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:11507
+   *(uint32_t *)(this + 96),
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:11531
+   *(uint32_t *)(this + 96),
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12137
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12205
+   *(float *)(this + 96) = (double)result * 0.001;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12338
+   *(uint32_t *)(this + 96) = sub_47EF20(3, nArg3, -1, -1, 11);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12472
+   *(float *)(v9 + 4) = (*(float *)(this + 96) + 1.0) * *(float *)(v9 + 4);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12483
+   *(float *)(v13 + 4) = (*(float *)(this + 96) + 1.0) * *(float *)(v13 + 4);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12490
+   *(float *)(v16 + 4) = (*(float *)(this + 96) + 1.0) * *(float *)(v16 + 4);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12500
+   v20 = *(uint32_t *)(fld_505 + 7620) + v6 + 96;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12504
+   *(float *)(v20 + 4) = (*(float *)(this + 96) + 1.0) * *(float *)(v20 + 4);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12522
+   *(float *)(v24 + 4) = (*(float *)(this + 96) + 1.0) * *(float *)(v24 + 4);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12590
+   *(float *)(v9 + 4) = *(float *)(v9 + 4) / (*(float *)(this + 96) + 1.0);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12601
+   *(float *)(v13 + 4) = *(float *)(v13 + 4) / (*(float *)(this + 96) + 1.0);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12608
+   *(float *)(v16 + 4) = *(float *)(v16 + 4) / (*(float *)(this + 96) + 1.0);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12618
+   v20 = *(uint32_t *)(fld_505 + 7620) + v6 + 96;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12622
+   *(float *)(v20 + 4) = *(float *)(v20 + 4) / (*(float *)(this + 96) + 1.0);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12640
+   *(float *)(result + 4) = *(float *)(result + 4) / (*(float *)(this + 96) + 1.0);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12728
+   *(uint32_t *)(v5 + 72) -= *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12782
+   v19 = fld_4[1905] + v9 + 96;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:12999
+   *(uint32_t *)(v3 + 72) += *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:13053
+   v17 = v7 + fld_4[1905] + 96;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:14214
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:14289
+   *(uint32_t *)(pArg1 + 96) = -1;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:14309
+   v29 = (*(int (/*thiscall*/ **)(int, int))(*(uint32_t *)pObj2 + 120))(pObj2, *(uint32_t *)(pArg1 + 96) + v28);
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:14336
+   *(uint32_t *)(pArg1 + 96) = -1;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:14363
+   *(uint32_t *)(pArg1 + 96) = -1;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:14377
+   *(uint32_t *)(pArg1 + 96) = -1;
+     // ------------------------------------------------------------
+-- src\game\ui\aura_create.cpp:14395
+   *(uint32_t *)(pArg1 + 96) = -1;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:1360
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：任务文本辅助 2：36 行。
+-- src\game\ui\cashshop.cpp:2038
+   v43 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+     // 大白话：任务信息页绘制：43C250/426BD0/69C780/69C7B0/69CA20/69CA50/43C630 +
+     // 69A5F0/69A840 + 69C2D0 控件系 + 50EAD0/50F1C0（322 行）。
+-- src\game\ui\cashshop.cpp:3375
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：任务页绘制：43C250/43C410/69A840 + 426BD0/69C780/69C7B0 + 69A5F0/
+     // 69C2D0 控件系/69CA20/69CA50/69C5D0/69CD70（184 行）。
+-- src\game\ui\cashshop.cpp:4884
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:4935
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:4975
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5026
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5073
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5106
+   result = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5109
+   result = DeleteObject(*(HGDIOBJ *)(this + 96));
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5110
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5124
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5230
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5314
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5669
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:5753
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6123
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6156
+   result = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6159
+   result = DeleteObject(*(HGDIOBJ *)(this + 96));
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6160
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6174
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6602
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6653
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6697
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6748
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6864
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6915
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:6957
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7054
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7105
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7171
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7224
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7294
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7358
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7489
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7544
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7591
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7641
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7686
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7741
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7808
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7863
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7902
+   *(uint32_t *)(this + 96) = 1600;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:7977
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8061
+   sub_44CA70((int *)(this + 96));
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8125
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8200
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8241
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8335
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8480
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8562
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8618
+   *(uint32_t *)(this + 96) = 1600;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8712
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8758
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8813
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:8944
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:9069
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：战争房间清理：62DED0/49F750（86 行）。
+-- src\game\ui\cashshop.cpp:9130
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：技能信息关闭回调：5548B0 + 5702F0。
+-- src\game\ui\cashshop.cpp:9298
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：物品信息关闭回调：5548B0 + 572040。
+-- src\game\ui\cashshop.cpp:9596
+   *(uint32_t *)(this + 96) = 1600;
+     // ------------------------------------------------------------
+     // 大白话：PVP 房间列表关闭回调：5548B0 + 433A80/6428A0/642420。
+-- src\game\ui\cashshop.cpp:9720
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：PVP 房间列表清理：6421A0/438820。
+-- src\game\ui\cashshop.cpp:14640
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：新版商城主窗口逻辑（778 行·本文件最大）：读取 Etc/NewCashShop.etc 配置
+     // （4FB180 解析）分页装配商品（426BD0/423B30/43C410/43C4D0/43C630/69A5F0/69A840/
+     // 69C780/69C7B0/418DD0 + 69CE10/69CF50/69CF80/69CFB0 控件组），联动 560360 分页/
+     // 55F810·55FB40·55FC80 刷新/55F4D0 购买券/698F90 延时/560610·5604F0·5600A0 选择。
+     // SELECT_CHARACTER 事件贯穿本函数；NewCashShop.etc 即"新版商城"布局配置。
+-- src\game\ui\cashshop.cpp:16380
+   sub_69A5F0(*(uint32_t **)(this + 96), 155, 132);
+     // ------------------------------------------------------------
+     // 大白话：修理窗绘制（250 行）：426BD0/69A840/43C410/69A5F0 + 69CE10/69CF50/69C780/
+     // 69CF80/69CFB0/69C7B0 控件组。
+-- src\game\ui\cashshop.cpp:16939
+   v7 = pDwArg1[12] * (*(int (/*thiscall*/ **)(int, int, int))(*(uint32_t *)pDwArg1[11] + 96))(pDwArg1[11], nArg3, nArg2);
+     // ------------------------------------------------------------
+     // 大白话：出售确认窗文案装配：422E70 + 69C340/69C440/69C360/69C500/69A5F0。
+-- src\game\ui\cashshop.cpp:17684
+   && ((v24 = *(uint32_t *)(this + 96)) == 0 || v23 >= (*(uint32_t *)(this + 100) - v24) >> 2
+     // ------------------------------------------------------------
+     // 大白话：道具商店窗逐帧 Update（166 行）：CLICK_BUTTON2/DISSOLVE_ITEM 分解事件 +
+     // 69C690/69C400 焦点 + 5515A0 文本 + 69C340 控件系滚动 + 44ABE0/44F400/564710/
+     // 564600/44E8D0/44E850/484ED0/422E70/486E00 操作。
+-- src\game\ui\cashshop.cpp:18913
+   fld_60 = *(void **)(this + 96);
+     // ------------------------------------------------------------
+     // 大白话：商品/任务文本打字机（207 行）：WRITE_CHAR_LOOP 事件 + 4CE8A0 基类 +
+     // 5651C0/56CFE0/565EE0/472E30/522300/41A5E0/4E9C00/445150/5660C0/565E20 + 69C 控件系。
+-- src\game\ui\cashshop.cpp:18916
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：商品/任务文本打字机（207 行）：WRITE_CHAR_LOOP 事件 + 4CE8A0 基类 +
+     // 5651C0/56CFE0/565EE0/472E30/522300/41A5E0/4E9C00/445150/5660C0/565E20 + 69C 控件系。
+-- src\game\ui\cashshop.cpp:18933
+   fld_602 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+     // 大白话：商品/任务文本打字机（207 行）：WRITE_CHAR_LOOP 事件 + 4CE8A0 基类 +
+     // 5651C0/56CFE0/565EE0/472E30/522300/41A5E0/4E9C00/445150/5660C0/565E20 + 69C 控件系。
+-- src\game\ui\cashshop.cpp:18999
+   fld_603 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+     // 大白话：商品/任务文本打字机（207 行）：WRITE_CHAR_LOOP 事件 + 4CE8A0 基类 +
+     // 5651C0/56CFE0/565EE0/472E30/522300/41A5E0/4E9C00/445150/5660C0/565E20 + 69C 控件系。
+-- src\game\ui\cashshop.cpp:19011
+   fld_604 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+     // 大白话：商品/任务文本打字机（207 行）：WRITE_CHAR_LOOP 事件 + 4CE8A0 基类 +
+     // 5651C0/56CFE0/565EE0/472E30/522300/41A5E0/4E9C00/445150/5660C0/565E20 + 69C 控件系。
+-- src\game\ui\cashshop.cpp:20073
+   *(uint32_t *)(this + 96) = 34;
+     // ------------------------------------------------------------
+     // 大白话：13 行小辅助（NPC）。
+-- src\game\ui\cashshop.cpp:21356
+   qmemcpy((void *)(this + 96), (const void *)(pArg2 + 96), 0x28u);
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:21373
+   *(uint32_t *)(this + 96) = *(uint32_t *)(pArg2 + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:24548
+   if ( *(uint32_t *)(this + 96) >= 0x10u )
+     // ------------------------------------------------------------
+     // 大白话：频道负载联动：56BBA0/56B740。
+-- src\game\ui\cashshop.cpp:24550
+   *(uint32_t *)(this + 96) = 15;
+     // ------------------------------------------------------------
+     // 大白话：频道负载联动：56BBA0/56B740。
+-- src\game\ui\cashshop.cpp:24623
+   j__free(*(void **)(this + 96));
+     // ------------------------------------------------------------
+     // 大白话：频道负载联动 2：56BBA0/56B740。
+-- src\game\ui\cashshop.cpp:24626
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：频道负载联动 2：56BBA0/56B740。
+-- src\game\ui\cashshop.cpp:24661
+   *(uint32_t *)(this + 96) = 15;
+     // ------------------------------------------------------------
+     // 大白话：频道条目 11：433AC0/56B070/56BCA0。
+-- src\game\ui\cashshop.cpp:24715
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：频道条目 12：433AC0/56B070/4FE0B0。
+-- src\game\ui\cashshop.cpp:26627
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：社区关闭清理：56DB90/56DC30/56DCB0/5542F0。
+-- src\game\ui\cashshop.cpp:27059
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：社区页绘制总入口：43C410/69A5F0/69A840/423B30 + 56E7E0/56EA90/56EC20。
+-- src\game\ui\cashshop.cpp:27063
+   *(uint32_t *)(this + 96) = dword_99FCCC;
+     // ------------------------------------------------------------
+     // 大白话：社区页绘制总入口：43C410/69A5F0/69A840/423B30 + 56E7E0/56EA90/56EC20。
+-- src\game\ui\cashshop.cpp:27142
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+     // 大白话：社区页部件：5542C0/5548B0/422E70/56F090。
+-- src\game\ui\cashshop.cpp:27608
+   v22 + 96,
+     // ------------------------------------------------------------
+     // 大白话：社区好友页装配：56F460/418DD0/69C690/56E120/479240/42B340/4B0EC0/
+     // 56E000/491530/491630。
+-- src\game\ui\http_item_info.cpp:90
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:978
+   v32 = *(uint32_t *)(v79 + 96) - v31;
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:1346
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:5533
+   pThis_60 = *((uint32_t *)this + 96) < 0x10u;
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:5553
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:5565
+   if ( *((uint32_t *)this + 96) < 0x10u )
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:5966
+   sub_4ED3F0(pThis + 96, (int)(v4 + 30));
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:6122
+   *(uint32_t *)(pArg1 + 96) = 289;
+     // ------------------------------------------------------------
+-- src\game\ui\trade_shop.cpp:733
+   // (541A30/541B20)，来源 2 走挂件(+1→+80)的数组(+96..+100)，其余按 +11 从
+     // ------------------------------------------------------------
+     // 大白话：按当前页签(+10)与来源(+11)取第 +13 行的条目：来源 5 走摆摊单例列表
+     // (541A30/541B20)，来源 2 走挂件(+1→+80)的数组(+96..+100)，其余按 +11 从
+     // 432F00 全局窗口表取数组；越界一律返回 0。
+-- src\game\ui\trade_shop.cpp:761
+   v9 = *(uint32_t *)(fld_e1 + 96);
+     // ------------------------------------------------------------
+     // 大白话：按当前页签(+10)与来源(+11)取第 +13 行的条目：来源 5 走摆摊单例列表
+     // (541A30/541B20)，来源 2 走挂件(+1→+80)的数组(+96..+100)，其余按 +11 从
+     // 432F00 全局窗口表取数组；越界一律返回 0。
+-- src\game\ui\trade_shop.cpp:1316
+   (*(void (/*thiscall*/ **)(int, uint32_t, int))(*(uint32_t *)pObj4 + 96))(pObj4, *((uint32_t *)this + 13), v5);
+     // ------------------------------------------------------------
+-- src\game\ui\trade_shop.cpp:3037
+   (*(void (/*thiscall*/ **)(uint32_t *, int, int))(*this + 96))(this, v5, 1);
+     // ------------------------------------------------------------
+-- src\game\ui\trade_shop.cpp:9507
+   v34 = v24 + 96;
+     // ------------------------------------------------------------
+     // 大白话：交易窗构造：42B340/4924C0/4938F0/491D00 部件 + 54A0E0/50EB40 数据（154 行）。
+-- src\game\ui\trade_shop.cpp:9719
+   *(uint32_t *)(this + 96) = 6;
+     // ------------------------------------------------------------
+     // 大白话：交易就绪页绘制：加载 Interface/ItemTradeWindowReady.img，43C250/43C410/69A5F0/69A840
+     // 布件 + 499960，双方确认后切换到该页。
+-- src\game\ui\trade_shop.cpp:13635
+   *(uint32_t *)(this + 96) = 12;
+     // ------------------------------------------------------------
+     // 大白话：结算触发：426BD0/423B30 + 54F540。
+-- src\game\ui\window_party.cpp:923
+   *((uint8_t *)this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:1702
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:1711
+   *(uint32_t *)(this + 96) = 1;
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:4924
+   v18 = sub_418DD0(v16 + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:5756
+   v40[0] = *(this + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:8652
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:8656
+   *(uint32_t *)(this + 96) = dword_99FCCC;
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:10521
+   pObj4 = sub_418DD0(v13 + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:12393
+   *(uint32_t *)(this + 44) = *(uint32_t *)(*(uint32_t *)(dword_99FCC8 + 20) + 96);
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:12411
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\window_party.cpp:12416
+   *(uint32_t *)(this + 96) = dword_99FCCC;
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:918
+   // 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+     // ------------------------------------------------------------
+     // 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+     //   格式 7 专属：缩放比 = 目标/源矩形之比，中心 = (this+96>>1, this+100>>1)，交 vt+20；
+     //   nArg6 颜色同经 FF00FF00 通道重排。
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:919
+   //   格式 7 专属：缩放比 = 目标/源矩形之比，中心 = (this+96>>1, this+100>>1)，交 vt+20；
+     // 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+     //   格式 7 专属：缩放比 = 目标/源矩形之比，中心 = (this+96>>1, this+100>>1)，交 vt+20；
+     //   nArg6 颜色同经 FF00FF00 通道重排。
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:959
+   fld_60 = *(int *)(this + 96) >> 1;
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:1034
+   fld_60 = *(int *)(this + 96) >> 1;
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:3483
+   pThis_60 = (uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:3493
+   //   this+44 防重入检查后调 this+104 对象 vt+36(this+96, 0, 0)，置 this+44 = 1。
+     // 0x413840 sub_413840 —— 图像加锁（vt+36）
+     //   this+44 防重入检查后调 this+104 对象 vt+36(this+96, 0, 0)，置 this+44 = 1。
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:3501
+   this + 96,
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:4257
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:8636
+   //   遍历 12B 目录: 非别名项(+8 == 0)且对象非空 → 经 this+96 管理器 vt+12 归还；再 free 目录矢量；
+     // 0x418FD0 sub_418FD0 —— CNImagePackEx 资源释放（目录归还 + 名字串清理）
+     //   遍历 12B 目录: 非别名项(+8 == 0)且对象非空 → 经 this+96 管理器 vt+12 归还；再 free 目录矢量；
+     //   名字串 erase（·0x401230）后经 ·0x41A260 从全局延迟加载 deque 注销 this+8 子对象。
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:8652
+   (*(void (/*thiscall*/ **)(uint32_t, int))(**(uint32_t **)(this + 96) + 12))(*(uint32_t *)(this + 96), i + 4);
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:8890
+   //     +84 独立文件标志(this+21)、+22(this+88?) 就绪位、this+100 磁盘态标志；+96(24) = a2 类型。
+     // ------------------------------------------------------------
+     // 【解读】
+     //   CNImagePackEx 构造: IObject 头 → off_6C2A64 vftable → 名字串(this+24, 容量15) →
+     //     目录矢量(this+52..60 三指针) → 标志组: +88 加载模式、+92/96 设备/管理器、
+     //     +84 独立文件标志(this+21)、+22(this+88?) 就绪位、this+100 磁盘态标志；+96(24) = a2 类型。
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:8978
+   fld_60 = *(uint8_t *)(*(uint32_t *)(this + 96) + 12);
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:9030
+   fld_602 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:12190
+   *(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:12229
+   *((uint8_t *)this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:13660
+   *((uint32_t *)this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:14490
+   //   vftable + this+64 哨兵 map；两组同型控件块（+96 与 +156 的 off_6C2B88 头/可见标志/矢量）；
+     // 0x41EDD0 sub_41EDD0 —— CNWarRoomModule 构造
+     //   vftable + this+64 哨兵 map；两组同型控件块（+96 与 +156 的 off_6C2B88 头/可见标志/矢量）；
+     //   0x42B4C0 玩家实体字段复位 + 0x42EBD0 惰性初始化。
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:14564
+   //   this+156/this+96 归位 IObject vftable。
+     //   0x42F0D0 模块销毁；释放 this+140 矢量；this+64 map 经 0x41DA40 擦除 + free 表头；
+     //   this+156/this+96 归位 IObject vftable。
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:14585
+   *(uint32_t *)(this + 96) = &nengine::IObject::`vftable';
+     // ------------------------------------------------------------
+-- src\nengine\gfx_texture.cpp:15076
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:2440
+   *(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:2498
+   *((uint8_t *)this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:14424
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:14583
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:69
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:111
+   // 0x6500E0 sub_6500E0 —— 状态块复位（+80..+96，+84 置 -1）
+     // ------------------------------------------------------------
+     // 0x6500E0 sub_6500E0 —— 状态块复位（+80..+96，+84 置 -1）
+     //   复位 +80/+84/+88/+92/+96 五字段，其中 +84=-1 为无来源哨兵，返回 0 —— 与 ·sub_650340/·sub_650800 同族。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:112
+   //   复位 +80/+84/+88/+92/+96 五字段，其中 +84=-1 为无来源哨兵，返回 0 —— 与 ·sub_650340/·sub_650800 同族。
+     // 0x6500E0 sub_6500E0 —— 状态块复位（+80..+96，+84 置 -1）
+     //   复位 +80/+84/+88/+92/+96 五字段，其中 +84=-1 为无来源哨兵，返回 0 —— 与 ·sub_650340/·sub_650800 同族。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:128
+   //   件状态(vt+840)==24 且宿主==9 时，经宿主 vt+200 取当前命中件驱动 ·sub_4938F0；件 +148 变化时按 <9 / ==9 / >9 三档写竖直偏移 +88=±80/±37/±58、+92=-1、+96 按高度钳制（65-高 与 113-高，下限 0/20）。
+     // 0x650100 sub_650100 —— 命中落位（攻击件状态 24 档）
+     //   件状态(vt+840)==24 且宿主==9 时，经宿主 vt+200 取当前命中件驱动 ·sub_4938F0；件 +148 变化时按 <9 / ==9 / >9 三档写竖直偏移 +88=±80/±37/±58、+92=-1、+96 按高度钳制（65-高 与 113-高，下限 0/20）。
+     //   随后 vt+152 经 ·sub_432E50 关系码对调写朝向（vt+60 块 +52 字节），vt+128/124/120 层次合成 +96/+92/+88 后 vt+112 落位。
+     //   收尾 vt+612(1,1) 与 vt+820(0)，再对宿主 vt+200 件二次 ·sub_4938F0 —— 与 ·sub_650360/·sub_650D50 同族。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:129
+   //   随后 vt+152 经 ·sub_432E50 关系码对调写朝向（vt+60 块 +52 字节），vt+128/124/120 层次合成 +96/+92/+88 后 vt+112 落位。
+     // 0x650100 sub_650100 —— 命中落位（攻击件状态 24 档）
+     //   件状态(vt+840)==24 且宿主==9 时，经宿主 vt+200 取当前命中件驱动 ·sub_4938F0；件 +148 变化时按 <9 / ==9 / >9 三档写竖直偏移 +88=±80/±37/±58、+92=-1、+96 按高度钳制（65-高 与 113-高，下限 0/20）。
+     //   随后 vt+152 经 ·sub_432E50 关系码对调写朝向（vt+60 块 +52 字节），vt+128/124/120 层次合成 +96/+92/+88 后 vt+112 落位。
+     //   收尾 vt+612(1,1) 与 vt+820(0)，再对宿主 vt+200 件二次 ·sub_4938F0 —— 与 ·sub_650360/·sub_650D50 同族。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:197
+   *(uint32_t *)(pArg1 + 96) = v12;
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:203
+   *(uint32_t *)(pArg1 + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:213
+   v19 = (*(int (/*thiscall*/ **)(int, int))(*(uint32_t *)pObj + 124))(pObj, *(uint32_t *)(pArg1 + 96) + v18);
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:234
+   //   状态块 +84=-1 / +88..+96=0 后走同一 vt+776(3) 门控重应用。
+     // 0x6502E0 sub_6502E0 —— 与 ·sub_650030 同构（差异：+84 置 -1）
+     //   状态块 +84=-1 / +88..+96=0 后走同一 vt+776(3) 门控重应用。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:260
+   //   复位 +80 / +84=-1 / +88=-1 / +92 / +96 / +100 后返回 0 —— 状态块更全的清零变体。
+     // 0x650340 sub_650340 —— 与 ·sub_6500E0 同构（差异：+88 亦置 -1、共六字段）
+     //   复位 +80 / +84=-1 / +88=-1 / +92 / +96 / +100 后返回 0 —— 状态块更全的清零变体。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:277
+   //   件状态(vt+840)==10、宿主==9，以 +84/+88 双键记录 件状态与 v6[37]；件状态非 0 时 +92=0 / +96=1 / +100=max(40, 93-宿主高/2)，为 0 时 +92=±60（vt+152 朝向）/ +96=-1 / +100=max(0, 65-高)。
+     // 0x650360 sub_650360 —— 命中落位（攻击件状态 10 档·双键）
+     //   件状态(vt+840)==10、宿主==9，以 +84/+88 双键记录 件状态与 v6[37]；件状态非 0 时 +92=0 / +96=1 / +100=max(40, 93-宿主高/2)，为 0 时 +92=±60（vt+152 朝向）/ +96=-1 / +100=max(0, 65-高)。
+     //   尾段与 ·sub_650100 同构：·sub_432E50 朝向 → vt+120/124/128 层次合成 → vt+112 落位 → vt+612/vt+820 → ·sub_4938F0。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:318
+   *(uint32_t *)(pArg1 + 96) = 1;
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:330
+   *(uint32_t *)(pArg1 + 96) = -1;
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:346
+   v14 = (*(int (/*thiscall*/ **)(int, int))(*(uint32_t *)pObj + 120))(pObj, *(uint32_t *)(pArg1 + 96) + v13);
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:366
+   //   写 +80=17 / +84..+88=0 / +92=0 / +93=1 / +96..+100=0；+93 为 ·sub_6507C0 挂接刷新使能字节。
+     // 0x650540 sub_650540 —— 状态块初始化（+80=17 默认态、+93 使能）
+     //   写 +80=17 / +84..+88=0 / +92=0 / +93=1 / +96..+100=0；+93 为 ·sub_6507C0 挂接刷新使能字节。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:375
+   *(uint32_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:454
+   //   缓存键 = 被观察对象(+96，经宿主 vt+200) 与 vt+792(8)/vt+1084(8) 件状态；键变化时清 +104 vector 重建。
+     // 0x650650 sub_650650 —— 重建挂接件索引表（+104 vector）
+     //   缓存键 = 被观察对象(+96，经宿主 vt+200) 与 vt+792(8)/vt+1084(8) 件状态；键变化时清 +104 vector 重建。
+     //   遍历宿主 vt+248 件表（步长 124）在件链 (+204) 中按 v9[2] 匹配件键，命中经 ·sub_42AC90 把 v9[3] 收进 vector —— 挂接件收集器。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:479
+   if ( *(uint32_t *)(this + 96) != (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 4) + 200))(*(uint32_t *)(this + 4)) )
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:482
+   *(uint32_t *)(pThis + 96) = (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(pThis + 4) + 200))(*(uint32_t *)(pThis + 4));
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:505
+   if ( *(uint32_t *)(pThis + 96) != 0 )
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:515
+   v7 = *(uint32_t *)(pThis + 96) + 200;
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:517
+   v8 = *(uint32_t **)(*(uint32_t *)(pThis + 96) + 204);
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:577
+   //   复位 +80/+84/+88/+92/+96，无 -1 哨兵写法（写序 +80/+84/+92/+88/+96）。
+     // 0x650800 sub_650800 —— 与 ·sub_6500E0 同构（差异：+84 亦清零）
+     //   复位 +80/+84/+88/+92/+96，无 -1 哨兵写法（写序 +80/+84/+92/+88/+96）。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:593
+   //   v14=vt+736×100、v15=v14/vt+740 得百分比；+80≥v15 时以 +84/+88 与 +92/+96 为起止值经 ·sub_4049C0 插值（进度 0..+80），分别累加进 pArg2 的 +60 与 +466 浮点槽（·sub_41A5E0/·sub_41A590）。
+     // 0x650820 sub_650820 —— 百分比插值（宿主 vt+736 / vt+740）【推断：进度/蓄力条】
+     //   v14=vt+736×100、v15=v14/vt+740 得百分比；+80≥v15 时以 +84/+88 与 +92/+96 为起止值经 ·sub_4049C0 插值（进度 0..+80），分别累加进 pArg2 的 +60 与 +466 浮点槽（·sub_41A5E0/·sub_41A590）。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:641
+   //   经 ·sub_47E720(0,19) 取表，首项 +80 由 ·sub_47E9D0 求默认，其余 +84..+96 为 ·sub_47EF20(0..3, nArg2, 11 号表)。
+     // 0x650950 sub_650950 —— 参数装配（19 号表 → 11 号参数表）
+     //   经 ·sub_47E720(0,19) 取表，首项 +80 由 ·sub_47E9D0 求默认，其余 +84..+96 为 ·sub_47EF20(0..3, nArg2, 11 号表)。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:700
+   //   +96 再逐个累加进 pArg2+284 起 16 个属性槽（步长 14），·sub_497040==17 的槽跳过 —— 与 ·sub_652430 相反对偶。
+     // 0x650A10 sub_650A10 —— 属性累加 tick（6 浮点槽 + 16 属性槽）
+     //   自身量 +80/+100/+84/+104 与 +88×0.001/+92×0.001 分别累加进宿主 pArg2 的 +60/+1054/+116/+1110/+830/+858 浮点槽（·sub_41A5E0 读 / ·sub_41A590 写）。
+     //   +96 再逐个累加进 pArg2+284 起 16 个属性槽（步长 14），·sub_497040==17 的槽跳过 —— 与 ·sub_652430 相反对偶。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:751
+   fld_60 = *(uint32_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:766
+   //   第 0/1 项写 +44/+80，第 2/3 项 ×-0.01【推断：毫秒转秒】写 +100/+104，第 4 项取负写 +84，第 5/6/7 项写 +88/+92/+96。
+     // 0x650B50 sub_650B50 —— 与 ·sub_650950 同构（差异：40 号表 8 项）
+     //   第 0/1 项写 +44/+80，第 2/3 项 ×-0.01【推断：毫秒转秒】写 +100/+104，第 4 项取负写 +84，第 5/6/7 项写 +88/+92/+96。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:781
+   *(uint32_t *)(this + 96) = result;
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:1585
+   (*(void (/*thiscall*/ **)(uint32_t))(*(uint32_t *)*Block2 + 96))(*Block2);
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:2360
+   //   按朝向码 *pDwArg3==0 令 pArg2[0] 取反、类型 pDwArg3[1]==2 令 pArg2[1] 取反，随后把两组值写入 +84..+96。
+     // 0x6524C0 sub_6524C0 —— 风场参数初始化（CNWindSimulation）
+     //   按朝向码 *pDwArg3==0 令 pArg2[0] 取反、类型 pDwArg3[1]==2 令 pArg2[1] 取反，随后把两组值写入 +84..+96。
+     //   由 CNWindSimulation 构造 ·0x6214D0（breakable_map.cpp）调用 —— 风机受力方向初值。
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:2748
+   (*(void (/*stdcall*/ **)(int, uint32_t))(*(uint32_t *)pObj2 + 96))(pObj2, 0);
+     // ------------------------------------------------------------
+-- src\nengine\zlib_inflate.cpp:7030
+   //   出参清零后经 ·sub_658C10 取通道对象五字段（+84/+96/+156/+100/+108）写入 a3..a7，再输出全局丢弃标记 dword_796900 与通道计数 dword_9B9D58[516*a1]。
+     // 0x6568F0 sub_6568F0 —— 通道统计快照导出（·0x4611D0 性能面板取数）
+     //   出参清零后经 ·sub_658C10 取通道对象五字段（+84/+96/+156/+100/+108）写入 a3..a7，再输出全局丢弃标记 dword_796900 与通道计数 dword_9B9D58[516*a1]。
+     //   ·0x4611D0 延迟面板取用（配合 ·sub_656850 延迟值分行绘制）。
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:2085
+   pThis_60 = (uint8_t *)(this + 96);
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:3307
+   j__free(*(void **)(this + 96));
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:3310
+   *(uint8_t *)(this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:12133
+   *(uint32_t *)(Arguments + 96) |= 1u;
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:12135
+   *(uint32_t *)(Arguments + 96) = *(uint32_t *)(Arguments + 96) & 0xFFFFFFE1 | 2;
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:12474
+   v3 = *(UINT **)(_getptd() + 96);
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:21578
+   // 0x663E20 sub_663E20 —— 属性对象构造：置 -1 哨兵与 off_7433C0，清 +32..+96 字段
+     // ------------------------------------------------------------
+     // 0x663E20 sub_663E20 —— 属性对象构造：置 -1 哨兵与 off_7433C0，清 +32..+96 字段
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:36647
+   if ( *(uint8_t *)(v13 + 96) == 0 )
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:37451
+   *((uint8_t *)this + 96) = 0;
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:44190
+   dword_9D3C042 = *(uint32_t **)(v0 + 96);
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:44195
+   *(uint32_t *)(v0 + 96) = dword_9D3C04;
+     // ------------------------------------------------------------
+-- src\platform\missing_tail.cpp:45556
+   v26 = __getlocaleinfo(1, Locale, 0x4Eu, (char **)(pArg1 + 96)) | v25;
+     // ------------------------------------------------------------
+-- src\platform\socket_ime.cpp:6629
+   fld_60 = *(uint32_t **)(this + 96);
+     // ------------------------------------------------------------
+     // 【L1】CNUIObject::HitTest 递归：深度优先命中矩形(+20/+24/+28/+32)，
+     // dword_89D26C 分派 1/8/16（左键/拖动/滚轮）：命中后按子类型(+8: 2=子容器递归删插、
+     // 8=焦点 id dword_79BE54)写 dword_79BE3C/34/38/44/4C/50/54/58/5C/60/64 状态组
+-- src\platform\socket_ime.cpp:6642
+   if ( fld_60 == **(uint32_t ***)(this + 96) )
+     // ------------------------------------------------------------
+     // 【L1】CNUIObject::HitTest 递归：深度优先命中矩形(+20/+24/+28/+32)，
+     // dword_89D26C 分派 1/8/16（左键/拖动/滚轮）：命中后按子类型(+8: 2=子容器递归删插、
+     // 8=焦点 id dword_79BE54)写 dword_79BE3C/34/38/44/4C/50/54/58/5C/60/64 状态组
+-- src\platform\socket_ime.cpp:9085
+   // 【L1】标签页 SelectTab(a2)：遍历子链(+96)给每项 +132 写选中布尔（==a2 判定），
+     // ------------------------------------------------------------
+     // 【L1】标签页 SelectTab(a2)：遍历子链(+96)给每项 +132 写选中布尔（==a2 判定），
+     // +104=a2，+108=1
+-- src\platform\socket_ime.cpp:9103
+   fld_60 = *(uint32_t **)(this + 96);
+     // ------------------------------------------------------------
+     // 【L1】标签页 SelectTab(a2)：遍历子链(+96)给每项 +132 写选中布尔（==a2 判定），
+     // +104=a2，+108=1
+-- src\platform\socket_ime.cpp:9115
+   while ( fld_64 != *(uint32_t **)(this + 96) );
+     // ------------------------------------------------------------
+     // 【L1】标签页 SelectTab(a2)：遍历子链(+96)给每项 +132 写选中布尔（==a2 判定），
+     // +104=a2，+108=1
+-- src\platform\socket_ime.cpp:9142
+   fld_60 = *(uint32_t **)(this + 96);
+     // ------------------------------------------------------------
+     // 【L1】标签页 DeselectAll：子链全部 +132=0，+104=-1
+-- src\platform\socket_ime.cpp:9151
+   while ( fld_64 != *(uint32_t **)(this + 96) );
+     // ------------------------------------------------------------
+     // 【L1】标签页 DeselectAll：子链全部 +132=0，+104=-1
+-- src\platform\socket_ime.cpp:9182
+   fld_60 = *(uint32_t **)(this + 96);
+     // ------------------------------------------------------------
+     // 【L1】标签页::dword_79BE58 联动：全局选择 id 命中本页时清 dword_79BE58，
+     // 按 dword_79BE64 查找对应子项并 SelectTab
+-- src\platform\socket_ime.cpp:9191
+   if ( v1 == *(uint32_t **)(this + 96) )
+     // ------------------------------------------------------------
+     // 【L1】标签页::dword_79BE58 联动：全局选择 id 命中本页时清 dword_79BE58，
+     // 按 dword_79BE64 查找对应子项并 SelectTab
+-- src\platform\socket_ime.cpp:9718
+   // 【L1】文本列表 Flush：+28 就绪时 渲染器 vt+72 Begin → vt+96 取 HDC →
+     // ------------------------------------------------------------
+     // 【L1】文本列表 Flush：+28 就绪时 渲染器 vt+72 Begin → vt+96 取 HDC →
+     // sub_69D210 逐行画 → vt+76 End
+-- src\platform\socket_ime.cpp:9729
+   fld_8 = (HDC)(*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 8) + 96))(*(uint32_t *)(this + 8));
+     // ------------------------------------------------------------
+     // 【L1】文本列表 Flush：+28 就绪时 渲染器 vt+72 Begin → vt+96 取 HDC →
+     // sub_69D210 逐行画 → vt+76 End
+
+
+
+############## +7632 (0x1DD0) : 15 sites
+-- src\game\combat_core.cpp:7221
+   // vt+1288(this, nArg5, nArg4) 前置，nArg2/nArg3 != -2 时分别写 this+7632/7636
+     // 0x4D9790 sub_4D9790 —— 坐标窗口直写（vt+1288/vt+1292 对）
+     // vt+1288(this, nArg5, nArg4) 前置，nArg2/nArg3 != -2 时分别写 this+7632/7636
+     //（X/Y 窗口，-2 = 保持不变），尾调 vt+1292(this, nArg3, nArg2)。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11206
+   // +96=529（条件 id）、+608=100、+7148 大状态=0、+7632/7636 窗口=-1、骑乘/名牌/
+     // 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+     // 懒加载 Monster/FlyingMonsterMark.img 与 Monster/SummonMonsterMark.img
+     //（dword_9A05D4 引用计数，dword_8F84B8 资源管理器 vt+60）；随后清怪物侧字段：
+     // +96=529（条件 id）、+608=100、+7148 大状态=0、+7632/7636 窗口=-1、骑乘/名牌/
+     // 拾取族（+7808/+7828 起 29 类 × 16 字节文案表 = 0x4DB130 的条目侧、+8300..8364、
+     // +8516/+8520=-1、+8528 文案串、+8584/8588 随机区间），尾段 +7732=200。
+     // 【推断】怪物生成/复位的扩展段（0x4DB410 MONSTER CREATE 路径下游）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11252
+   *(uint32_t *)(this + 7632) = -1;
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:1630
+   // 0x4B1870 sub_4B1870 —— 当前项 +7632 数组取值（缺省 4）
+     // ------------------------------------------------------------
+     // 0x4B1870 sub_4B1870 —— 当前项 +7632 数组取值（缺省 4）
+     //   需 +6500 组件存在且 vt+1096 索引有效；越界返回缺省 4。
+     // ------------------------------------------------------------
+-- src\game\worldmap_reward.cpp:13052
+   // 以 ·dword_8F8520 组 34/2 头，遍历 ·+120 表取 ·vt+40(529) 可动对象，·vt+1124 坐标与缓存(+7632/+7636) 不同
+     // 0x45EDB0 sub_45EDB0 —— 位置同步节流（每 1000ms）
+     // 以 ·dword_8F8520 组 34/2 头，遍历 ·+120 表取 ·vt+40(529) 可动对象，·vt+1124 坐标与缓存(+7632/+7636) 不同
+     // 即发 id 对与坐标；末尾写 0xFFFF 收尾并 ·vt+60(1, -1) 提交。
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:5115
+   // this+8668 冷却≤0、this+7632 空槽；rand%300<5 时经 vt+560 进 14/蓄力架招。
+     // 0x5B7CC0 sub_5B7CC0 —— 架招自启（5/300 概率 setState 14）
+     // 先跑 ·sub_5B77F0 行为字节拍；门链=vt+308 目标、vt+840 大状态 0、this+8607 非指挥态、
+     // this+8668 冷却≤0、this+7632 空槽；rand%300<5 时经 vt+560 进 14/蓄力架招。
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:5136
+   result = *(uint32_t *)(this + 7632);
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:2774
+   *(uint32_t *)(pArg1 + 7632) != 0 ? 100 : 130,
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:2923
+   // 中段 sub_4E33D0 事件继续转发；尾段按大状态分派：0 且 this+7632/8660 门开 →
+     // 0x593840 sub_593840 —— 彼诺修狂气化动画事件处理器（大状态 this+6556 驱动，130L 演出）
+     // 入口按块参/大状态收尾：块参==16 或大状态 15 → sub_593230 恢复 buff 标志数组；
+     // 大状态 14（狂气攻击阶段）按相位 this+8612 分派：0=sub_593710 挑衅撒播、
+     // 1=sub_4DB200(24,3)+sub_592F50 前跳试探、2=sub_4DB200(24,rand%2)+sub_592FB0 瞬移绕背；
+     // 中段 sub_4E33D0 事件继续转发；尾段按大状态分派：0 且 this+7632/8660 门开 →
+     // sub_64BBF0(180,3000,25) 生成狂气光环粒子（0x8C 对象）+ vt+212 播 AURA_FURY +
+     // 置 this+8660=1；8 → vt+212 播 SOR_SPIN；14 → 落地预备（vt+876 播音效 ×2 /
+     // vt+196 面向 this+6216→+4 / sub_4926A0 帧游标复位 / vt+888 位移锁定）；
+     // 15 → sub_5930F0 跳跃着陆（高度/状态参取自 fArg3 解引）
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:2982
+   result = *(uint32_t *)(this + 7632);
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:5953
+   // 10%/5% 概率（this+7632 非零时减半）经 vt+580 广播表现 48003（附带 this+8608 计数）；
+     // 0x5970A0 sub_5970A0 —— vmt200 命中处理器覆写（受击特效）
+     // 10%/5% 概率（this+7632 非零时减半）经 vt+580 广播表现 48003（附带 this+8608 计数）；
+     // 尾调 sub_4DA3B0 命中包分发前置
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:8447
+   // 尾段：主状态 0 且 this+7632/7636 均空时 1% 播 vt+1104(20) + ·0x4D84F0 气泡 + ·0x49C5F0(12,0,0,500)
+     // 0x59A290 sub_59A290 —— 大状态机（this+7148）：0 待机 / 4 概率突进 / 5 突进超时退出 / 13-15 归位
+     // 相位 4：有目标且 rand < this+8616 时 ·0x59A080 突进；相位 5：this+8612 置位且 ·0x699000 时钟
+     // 超 this+7704 戳 3000ms 则 ·0x59A100 退出，无目标则 vt+1104(13)；13-15 有目标转 vt+1104(4)
+     // 尾段：主状态 0 且 this+7632/7636 均空时 1% 播 vt+1104(20) + ·0x4D84F0 气泡 + ·0x49C5F0(12,0,0,500)
+     // 【推断：闲时小动作】；·0x4E0120 每帧前置调用
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:7002
+   if ( *(uint32_t *)(this + 7632) != 0 )
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:7003
+   j__free(*(void **)(this + 7632));
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:7004
+   *(uint32_t *)(this + 7632) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7636 (0x1DD4) : 5 sites
+-- src\game\combat_core.cpp:11253
+   *(uint32_t *)(this + 7636) = -1;
+     // ------------------------------------------------------------
+-- src\game\worldmap_reward.cpp:13052
+   // 以 ·dword_8F8520 组 34/2 头，遍历 ·+120 表取 ·vt+40(529) 可动对象，·vt+1124 坐标与缓存(+7632/+7636) 不同
+     // 0x45EDB0 sub_45EDB0 —— 位置同步节流（每 1000ms）
+     // 以 ·dword_8F8520 组 34/2 头，遍历 ·+120 表取 ·vt+40(529) 可动对象，·vt+1124 坐标与缓存(+7632/+7636) 不同
+     // 即发 id 对与坐标；末尾写 0xFFFF 收尾并 ·vt+60(1, -1) 提交。
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:4694
+   // 基线 ·sub_4DA3B0 命中包分发；本地门且 this+7636==2 时按 this+8664 概率触发嵌入对象(this+8600)
+     // 0x5B7400 sub_5B7400 —— vmt200 命中覆写：随机护盾 proc + 8668 计数到期回卷
+     // 基线 ·sub_4DA3B0 命中包分发；本地门且 this+7636==2 时按 this+8664 概率触发嵌入对象(this+8600)
+     // 的 vt+0(this+8600, this, this+7256)；this+8668 计数递减至 0 时把动画块 +466 帧推进 -100000 回卷
+     // 并清 this+8621/8622【推断：护盾/受击段到期复位】。
+     // ------------------------------------------------------------
+-- src\game\creature\goblin_fox.cpp:5708
+   // 距离/状态门（vt+128>60、|dx|<100、宿主 vt+840∈{6,7}）且概率 15%/30%（this+7636 门）
+     // 0x596B70 sub_596B70 —— 每帧相位机：治愈/呼喊决策
+     // 相位 this+1787：0 → vt+1284 出场；4 → 50% 概率分岔：未中签走 ·0x596400 治愈尝试，
+     // 中签且自身存活（vt+308）、无架招（vt+840==0）、宿主 this+7252 满足类型 17 与
+     // 距离/状态门（vt+128>60、|dx|<100、宿主 vt+840∈{6,7}）且概率 15%/30%（this+7636 门）
+     // → 打包 {4} 走 vt+560 setState 8【推断：号召/吼叫】；无宿主 → vt+1104 切相位 13、
+     // 相位 13/14/15 有宿主切回 4
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:7005
+   *(uint32_t *)(this + 7636) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7668 (0x1DF4) : 4 sites
+-- src\game\combat_core.cpp:6680
+   // 同槽）：a2 = 新对象。流程 = this+7668 记 now+2000（【推断】2 秒切换保护窗）→
+     // 0x4D8F00 sub_4D8F00
+     // 关联对象切换（this+7260 = 当前关联/宿主对象指针，与下行包 0x4D8CE0 的 id 匹配字段
+     // 同槽）：a2 = 新对象。流程 = this+7668 记 now+2000（【推断】2 秒切换保护窗）→
+     // 新对象 ≠ 旧对象时：若新对象是本地玩家 dword_8F7C04，先取 vt+60() 快照缓冲，
+     // 把 +4 起 0x31 字节复制到 +53，再经 sub_49FFC0(buf, +102, +53, 1, 0) 登记一份
+     //（【推断】玩家侧数据快照/上报）；然后写 this+7260 = 新对象；若 this+7776 标志
+     // 未置 → 置 1 并调 vt+1116()（【推断】首次关联初始化）。返回 vt+1116() 或标志值。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:7800
+   // this+7156 名字串) 上载 → 清 this+7252..7276 与 +7668 全部参照/窗口字段；
+     // 0x4DA130 sub_4DA130
+     // 完全复位（死亡/退场清理）：0x4D6970（出生/复活重置）→ vt+1024(状态块首值,
+     // this+7156 名字串) 上载 → 清 this+7252..7276 与 +7668 全部参照/窗口字段；
+     // 宿主（this+116）+153 标志且 vt+376()==100 时 vt+732(0,0,1) 直接归零 HP。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11237
+   *(uint32_t *)(this + 7668) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:6995
+   *(uint32_t *)(this + 7668) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7672 (0x1DF8) : 5 sites
+-- src\game\combat_core.cpp:6501
+   // dword —— v12 = {+7272−now(动作结束倒计时), +7148, +7676, +7672, +7684, +7680}
+     // 0x4D8C60 sub_4D8C60
+     // 技能时间窗同步包（上行）：先写本地玩家（dword_8F7C04）vt+52 的 id，再打包 6 个
+     // dword —— v12 = {+7272−now(动作结束倒计时), +7148, +7676, +7672, +7684, +7680}
+     // 共 24 字节。与 0x4D8CE0（下行回填）配对，为服务器校验的时间窗快照【推断】。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:7513
+   // 先记 nArg3/nArg4 到 +7676/+7672（目标点窗口），再 vt+1104(nArg1) 切换。
+     // 0x4D9D80 sub_4D9D80
+     // 大状态变更（带坐标窗口，stdcall）：pArg2 当前大状态（+7148）≠ nArg1 才生效；
+     // 先记 nArg3/nArg4 到 +7676/+7672（目标点窗口），再 vt+1104(nArg1) 切换。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:7582
+   // 大状态 25 直接设置：+7676=nArg2、+7672=nArg3（目标点），+7684/+7680 = 当前
+     // 0x4D9E80 sub_4D9E80
+     // 大状态 25 直接设置：+7676=nArg2、+7672=nArg3（目标点），+7684/+7680 = 当前
+     // x/y，vt+1104(25)。与 0x4D9DB0 同族（无参照对象检查的直设版）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11240
+   *(uint32_t *)(this + 7672) = -1;
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:6996
+   *(uint32_t *)(this + 7672) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7676 (0x1DFC) : 6 sites
+-- src\game\combat_core.cpp:6501
+   // dword —— v12 = {+7272−now(动作结束倒计时), +7148, +7676, +7672, +7684, +7680}
+     // 0x4D8C60 sub_4D8C60
+     // 技能时间窗同步包（上行）：先写本地玩家（dword_8F7C04）vt+52 的 id，再打包 6 个
+     // dword —— v12 = {+7272−now(动作结束倒计时), +7148, +7676, +7672, +7684, +7680}
+     // 共 24 字节。与 0x4D8CE0（下行回填）配对，为服务器校验的时间窗快照【推断】。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:7513
+   // 先记 nArg3/nArg4 到 +7676/+7672（目标点窗口），再 vt+1104(nArg1) 切换。
+     // 0x4D9D80 sub_4D9D80
+     // 大状态变更（带坐标窗口，stdcall）：pArg2 当前大状态（+7148）≠ nArg1 才生效；
+     // 先记 nArg3/nArg4 到 +7676/+7672（目标点窗口），再 vt+1104(nArg1) 切换。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:7582
+   // 大状态 25 直接设置：+7676=nArg2、+7672=nArg3（目标点），+7684/+7680 = 当前
+     // 0x4D9E80 sub_4D9E80
+     // 大状态 25 直接设置：+7676=nArg2、+7672=nArg3（目标点），+7684/+7680 = 当前
+     // x/y，vt+1104(25)。与 0x4D9DB0 同族（无参照对象检查的直设版）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:8503
+   // 视野值×0.5（sub_4D8FE0 视野，0x4D8FE0 盲眼=10）写 +7676 停点，最后 vt+1104(11)
+     // 0x4DAD70 sub_4DAD70
+     // AI 侧移/绕后走位掷（50% 概率）：大状态 7 或 sub_4DAB60(11) 不成立时退出；
+     // 参照对象（this+7252）存在时，按自身 X 与参照 vt+120(nArg2) 比较取参照 X ∓
+     // 视野值×0.5（sub_4D8FE0 视野，0x4D8FE0 盲眼=10）写 +7676 停点，最后 vt+1104(11)
+     // 切大状态。【推断】怪物 AI 的绕背/保持距离走位。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:8512
+   double fStopX; // st7 —— 停点 X（写 +7676）
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11241
+   *(uint32_t *)(this + 7676) = -1;
+     // ------------------------------------------------------------
+
+
+
+############## +7688 (0x1E08) : 2 sites
+-- src\game\combat_core.cpp:11238
+   *(uint32_t *)(this + 7688) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:6991
+   *(uint32_t *)(this + 7688) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7708 (0x1E1C) : 2 sites
+-- src\game\combat_core.cpp:6399
+   // this+7708 时刻戳；当反应主状态一致（vt+200 == 状态块 +4）、vt+840()==0 且
+     // 0x4D8A80 sub_4D8A80
+     // 发呆（idle）检测：非 hold(16) 时，x/y/z（vt+120/124/128）任一变化就刷新
+     // this+7708 时刻戳；当反应主状态一致（vt+200 == 状态块 +4）、vt+840()==0 且
+     // 1000ms 无位移时：放 Question 气泡（0x4D8600）并把大状态切 21（vt+1104）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11245
+   *(uint32_t *)(this + 7708) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7712 (0x1E20) : 1 sites
+-- src\game\combat_core.cpp:11244
+   *(uint32_t *)(this + 7712) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7716 (0x1E24) : 1 sites
+-- src\game\combat_core.cpp:11243
+   *(uint32_t *)(this + 7716) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7720 (0x1E28) : 3 sites
+-- src\game\combat_core.cpp:11242
+   *(uint32_t *)(this + 7720) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\cashshop.cpp:10391
+   *(uint32_t *)(this + 4 * (*(uint32_t *)(this + 7588) + 8 * fld_26E0) + 7720) + 1);
+     // ------------------------------------------------------------
+     // 大白话：商城对象基件：418DD0/422E70/4938F0/491D00 搭建主面板（96 行）。
+-- src\game\ui\http_item_info.cpp:6985
+   *(uint32_t *)(this + 7720) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7732 (0x1E34) : 3 sites
+-- src\game\combat_core.cpp:11208
+   // +8516/+8520=-1、+8528 文案串、+8584/8588 随机区间），尾段 +7732=200。
+     // 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+     // 懒加载 Monster/FlyingMonsterMark.img 与 Monster/SummonMonsterMark.img
+     //（dword_9A05D4 引用计数，dword_8F84B8 资源管理器 vt+60）；随后清怪物侧字段：
+     // +96=529（条件 id）、+608=100、+7148 大状态=0、+7632/7636 窗口=-1、骑乘/名牌/
+     // 拾取族（+7808/+7828 起 29 类 × 16 字节文案表 = 0x4DB130 的条目侧、+8300..8364、
+     // +8516/+8520=-1、+8528 文案串、+8584/8588 随机区间），尾段 +7732=200。
+     // 【推断】怪物生成/复位的扩展段（0x4DB410 MONSTER CREATE 路径下游）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11330
+   *(uint32_t *)(this + 7732) = 200;
+     // ------------------------------------------------------------
+-- src\game\creature\tau_golem.cpp:9035
+   // 与 FLYDRAGON_CRY 四字符串；vt+384 出场参数面写 this+8600 与 this+7732；清 this+8608、
+     // 0x5AC500 sub_5AC500 —— 飞龙语音装载（FLYDRAGON_HIT/DMG/DIE + FLYDRAGON_CRY 龙吟）
+     // this+6792..6808 写 2,2,2,3,4（伤害类型/音效映射），·0x4015C0 构造 FLYDRAGON_HIT/DMG/DIE
+     // 与 FLYDRAGON_CRY 四字符串；vt+384 出场参数面写 this+8600 与 this+7732；清 this+8608、
+     // this+8692 两相位字节，this+8616/8620 写 2；末 ·0x4DE5E0 装载文案条目（5000/10000 倒计时）
+     // ------------------------------------------------------------
+
+
+
+############## +7764 (0x1E54) : 6 sites
+-- src\game\combat_core.cpp:11247
+   *(uint8_t *)(this + 7764) = 0;
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:6544
+   if ( *((uint8_t *)a1 + 7764) != 0 && *(uint8_t *)(a1[1942] + 170) != 0 )
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:7507
+   if ( pszArg2 != 0 && *(this + 7764) != 0 )
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:7509
+   *(this + 7764) = pszArg2;
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:11268
+   *(uint8_t *)(this + 7764) = 0;
+     // ------------------------------------------------------------
+-- src\game\ui\http_item_info.cpp:6866
+   return *(this + 7764);
+     // ------------------------------------------------------------
+
+
+
+############## +7768 (0x1E58) : 7 sites
+-- src\game\combat_core.cpp:11248
+   *(uint32_t *)(this + 7768) = 0;
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:6122
+   //   经各自 vt0 位 4 释放（+7692/+7696 另有 ·0x45F1E0 特例）；+7768 三槽、+7784 二槽与
+     // 0x4B7110 sub_4B7110 —— 角色演出资源释放（宿主 +7428..+8172 大段槽清理）
+     //   18 槽（+7516 起）+ 单槽 +7592/+7692/+7696/+7800/+7968/+7976/+7980/+7984/+8000/+8068
+     //   经各自 vt0 位 4 释放（+7692/+7696 另有 ·0x45F1E0 特例）；+7768 三槽、+7784 二槽与
+     //   +8172 区 2×5 组经 ·0x42AF90 + ·0x657740(228) 回收；末释放 +7428 并清空各槽。
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:6208
+   pThis_1E58 = (void ***)(this + 7768);
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:7512
+   pThis_1E58 = this + 7768;
+     // ------------------------------------------------------------
+-- src\game\equ_buff.cpp:7541
+   pThis_1E582 = this + 7768;
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2499
+   // 新态 a2：3 → ·sub_4DB200(21)；5 → ·sub_4DB200(22) + 时值 ·this+7768（PVP 场景 = 1000ms，否则 rand → ·sub_423A80(100,250,…,100)）+ 碎击件 ·sub_4DF0C0 + ·sub_45FE80 + 定位；
+     // 0x4E33D0 sub_4E33D0 —— 大状态切换表现分发（惊叹气泡/文案/日志/变身/碎击件）
+     // 旧态 ·this+6556：2 → ·sub_4D83E0 惊叹气泡；4 且 a2==1 → ·sub_4DB200(28) + vt+1068；5 → 错误日志 off_77F3FC(aCriticalErrorI,…)；8/10 → ·sub_4D93D0 / ·this+8288 = -1；
+     // 新态 a2：3 → ·sub_4DB200(21)；5 → ·sub_4DB200(22) + 时值 ·this+7768（PVP 场景 = 1000ms，否则 rand → ·sub_423A80(100,250,…,100)）+ 碎击件 ·sub_4DF0C0 + ·sub_45FE80 + 定位；
+     // 8 → ·sub_4D9360 + ·sub_4DB200；10 → 写 ·this+8288；13 变身：vt+196(·this+1540) 换外观件、vt+596/604(0) 关双盒、载 Unsummon.ani 缩放 0.008 → vt+204 播；尾调 vt+1D8(·sub_58E920)
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:11271
+   *(uint32_t *)(this + 7768) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7776 (0x1E60) : 5 sites
+-- src\game\combat_core.cpp:6683
+   //（【推断】玩家侧数据快照/上报）；然后写 this+7260 = 新对象；若 this+7776 标志
+     // 0x4D8F00 sub_4D8F00
+     // 关联对象切换（this+7260 = 当前关联/宿主对象指针，与下行包 0x4D8CE0 的 id 匹配字段
+     // 同槽）：a2 = 新对象。流程 = this+7668 记 now+2000（【推断】2 秒切换保护窗）→
+     // 新对象 ≠ 旧对象时：若新对象是本地玩家 dword_8F7C04，先取 vt+60() 快照缓冲，
+     // 把 +4 起 0x31 字节复制到 +53，再经 sub_49FFC0(buf, +102, +53, 1, 0) 登记一份
+     //（【推断】玩家侧数据快照/上报）；然后写 this+7260 = 新对象；若 this+7776 标志
+     // 未置 → 置 1 并调 vt+1116()（【推断】首次关联初始化）。返回 vt+1116() 或标志值。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:6714
+   LOBYTE(nNewPeer) = *((uint8_t *)this + 7776);
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:6718
+   *((uint8_t *)this + 7776) = 1;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11250
+   *(uint8_t *)(this + 7776) = 0;
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:11273
+   *(uint32_t *)(this + 7776) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +7801 (0x1E79) : 13 sites
+-- src\game\bigfunc_4471E0_sub_4471E0.cpp:1447
+   // case 0x16 ——【推断】实体批量生成 II（带数据 blob）：sub_4ABE10 创建(+7801 头目标记)、vt+1164/1168/372/148/136/140/112/1112；aCriticalError_3 自证
+-- src\game\bigfunc_4471E0_sub_4471E0.cpp:1537
+   *(uint8_t *)(v208 + 7801) = 1;
+-- src\game\combat_core.cpp:8269
+   // 分支 A（byte_77F280 != 0 或 +7801 == 0）：条件 308 成立则 vt+312(0) 后打日志
+     // 0x4DA980 sub_4DA980 —— 死亡/淘汰确认包（type 42；off_77F3FC 日志双分支）
+     // 分支 A（byte_77F280 != 0 或 +7801 == 0）：条件 308 成立则 vt+312(0) 后打日志
+     // 分支 B（PVP 场景 6 且 +1032 容器 +24 车主条件 273）→ 取车主 id
+     //   写包：v11 = vt+52 → sub_423290(&v11, 2)；v11 = v4（车主 id）→ 同上；sub_423380 提交
+     //   this+264 = 1（已上报标志）
+     // 与 0x4DB130/0x4DB200（随机语音/表情触发）同属"淘汰/胜负"表现族。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:8301
+   if ( byte_77F280 != 0 || *(this + 7801) == 0 )
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11251
+   *(uint8_t *)(this + 7801) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:1318
+   // this+2175=-1，vt+212 播报字符串槽 this+8760（+8780 SSO 门）；this+7801 非零且 this+8723==1 则 ·sub_4DB130(24, 0) 随机语音。
+     // 0x5D14D0 sub_5D14D0 —— 变身/变身解除三相位机（this+2175: -1→0→1→2）
+     // 相位 0：this+8668==1 且 this+2175==0 时经 vt+144 触发形态切换，对 vt+200 子链 ·sub_493400 应用帧 1、·sub_4939E0 播放级联，
+     // 再 ·sub_4E7F30(200,200,0) 判定非零则清 this+8685/8686 并挂 2000 单位时钟（this+8672）、this+2175=1。
+     // 相位 1：等 this+2174 时长到点（·sub_699000 读）置 2175=2，子链 ·sub_4926A0 帧游标复位并 ·sub_4939E0(子链, 0) 停播。
+     // 相位 2：vt+200 状态块 +170==1 时遍历 this+8624 起 8 槽经 vt+784（.equ 挂装）调 vt+4(obj, 1) 收尾，this+8669 置 1（正式激活）、
+     // this+2175=-1，vt+212 播报字符串槽 this+8760（+8780 SSO 门）；this+7801 非零且 this+8723==1 则 ·sub_4DB130(24, 0) 随机语音。
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:1394
+   if ( *((uint8_t *)pDwArg1 + 7801) != 0 && *((uint8_t *)pDwArg1 + 8723) == 1 )
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:2429
+   LOBYTE(v3) = *(uint8_t *)(pArg1 + 7801);
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:2441
+   && *(uint8_t *)(pArg1 + 7801) == 1
+     // ------------------------------------------------------------
+-- src\game\creature\spider_trap.cpp:12013
+   //   先转 ·sub_4D8F90 基类绘制垫片；通道 nArg2==1（附着层）在 this+7801==1 且 vt+940==0 时，把 2209 绑定对象经 ·sub_4938F0 播放驱动 + ·sub_4924C0 取帧后，以 ·sub_491D00 在本体左移 6、上移 30 处下发图层。
+     // 0x5CF520 sub_5CF520 —— 法术层绘制（通道 1 附着 / 通道 0 闪烁）
+     //   先转 ·sub_4D8F90 基类绘制垫片；通道 nArg2==1（附着层）在 this+7801==1 且 vt+940==0 时，把 2209 绑定对象经 ·sub_4938F0 播放驱动 + ·sub_4924C0 取帧后，以 ·sub_491D00 在本体左移 6、上移 30 处下发图层。
+     //   通道 0（主层）在姿态 8、子状态 vt+908<4 且 2203 子槽==1、2208 门开、距 this+1777 时刻 >1000ms 时以 rand 作 ±4 抖动，经 ·sub_491DE0 纯 STENCIL 变体加绘闪烁（色 0xFF0000FF 蓝、透明度 0xC8 即 200【位型直读】）。
+     // ------------------------------------------------------------
+-- src\game\creature\spider_trap.cpp:12028
+   if ( *((uint8_t *)this + 7801) == 1 )
+     // ------------------------------------------------------------
+-- src\game\creature\spider_trap.cpp:12165
+   //   this+7801==1（外观/激活标记【推断】）时转 ·sub_499FF0 主播放驱动 usercall 变体，否则直返 —— 与 ·sub_5CF520 附着层同一 7801 门。
+     // 0x5CF7E0 sub_5CF7E0 —— 播放驱动转发（7801 门）
+     //   this+7801==1（外观/激活标记【推断】）时转 ·sub_499FF0 主播放驱动 usercall 变体，否则直返 —— 与 ·sub_5CF520 附着层同一 7801 门。
+     // ------------------------------------------------------------
+-- src\game\creature\spider_trap.cpp:12171
+   if ( *(this + 7801) == 1 )
+     // ------------------------------------------------------------
+
+
+
+############## +8288 (0x2060) : 12 sites
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1221
+   //   18 态超时（+8288）→ 包 0；19 态按 +8324/+8333 与动画 Y 负值判定退出
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1252
+   if ( *(uint32_t *)(pArg1 + 6556) == 18 && sub_699000(pArg1 + 6560) >= *(uint32_t *)(pArg1 + 8288) )  // 【clock_now(clk)】
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1003
+   *(uint32_t *)(this + 8288) = v80;
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1023
+   fld_2060 = sub_47EF20(v262, v263, v264, v265, LODWORD(v266)) + *(uint32_t *)(this + 8288);
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1025
+   *(uint32_t *)(this + 8288) = fld_2060;
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:407
+   //   else：回挂 +8288 起 2 件（vt+208）
+     // ------------------------------------------------------------
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:426
+   pThis_2060 = this + 8288;
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:864
+   pThis_20602 = this + 8288;
+-- src\combat\fighter_skills.cpp:3515
+   *(uint32_t *)(this + 8288) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\combat_core.cpp:11299
+   *(uint32_t *)(this + 8288) = -1;
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2498
+   // 旧态 ·this+6556：2 → ·sub_4D83E0 惊叹气泡；4 且 a2==1 → ·sub_4DB200(28) + vt+1068；5 → 错误日志 off_77F3FC(aCriticalErrorI,…)；8/10 → ·sub_4D93D0 / ·this+8288 = -1；
+     // 0x4E33D0 sub_4E33D0 —— 大状态切换表现分发（惊叹气泡/文案/日志/变身/碎击件）
+     // 旧态 ·this+6556：2 → ·sub_4D83E0 惊叹气泡；4 且 a2==1 → ·sub_4DB200(28) + vt+1068；5 → 错误日志 off_77F3FC(aCriticalErrorI,…)；8/10 → ·sub_4D93D0 / ·this+8288 = -1；
+     // 新态 a2：3 → ·sub_4DB200(21)；5 → ·sub_4DB200(22) + 时值 ·this+7768（PVP 场景 = 1000ms，否则 rand → ·sub_423A80(100,250,…,100)）+ 碎击件 ·sub_4DF0C0 + ·sub_45FE80 + 定位；
+     // 8 → ·sub_4D9360 + ·sub_4DB200；10 → 写 ·this+8288；13 变身：vt+196(·this+1540) 换外观件、vt+596/604(0) 关双盒、载 Unsummon.ani 缩放 0.008 → vt+204 播；尾调 vt+1D8(·sub_58E920)
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2500
+   // 8 → ·sub_4D9360 + ·sub_4DB200；10 → 写 ·this+8288；13 变身：vt+196(·this+1540) 换外观件、vt+596/604(0) 关双盒、载 Unsummon.ani 缩放 0.008 → vt+204 播；尾调 vt+1D8(·sub_58E920)
+     // 0x4E33D0 sub_4E33D0 —— 大状态切换表现分发（惊叹气泡/文案/日志/变身/碎击件）
+     // 旧态 ·this+6556：2 → ·sub_4D83E0 惊叹气泡；4 且 a2==1 → ·sub_4DB200(28) + vt+1068；5 → 错误日志 off_77F3FC(aCriticalErrorI,…)；8/10 → ·sub_4D93D0 / ·this+8288 = -1；
+     // 新态 a2：3 → ·sub_4DB200(21)；5 → ·sub_4DB200(22) + 时值 ·this+7768（PVP 场景 = 1000ms，否则 rand → ·sub_423A80(100,250,…,100)）+ 碎击件 ·sub_4DF0C0 + ·sub_45FE80 + 定位；
+     // 8 → ·sub_4D9360 + ·sub_4DB200；10 → 写 ·this+8288；13 变身：vt+196(·this+1540) 换外观件、vt+596/604(0) 关双盒、载 Unsummon.ani 缩放 0.008 → vt+204 播；尾调 vt+1D8(·sub_58E920)
+     // ------------------------------------------------------------
+
+
+
+############## +8292 (0x2064) : 12 sites
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:525
+   // ── [段 6] case 0x12：★ 抓取投掷的「受击者变色 + 投掷」—— +8292 起手 ──
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:528
+   if ( *(uint8_t *)(pArg1 + 8292) != 0 )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:350
+   // ── [段 4] 大状态 case 18：vt+604(1) 收招；+8292 抓取标志非 0 则跳 LABEL_62（磨能充能收束）──
+     // ------------------------------------------------------------
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:353
+   if ( *(uint8_t *)(this + 8292) != 0 )
+     // ------------------------------------------------------------
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:986
+   //   尾部 vt+344(+556+456) 动画基 + 音效 FT_HOLD + +8468 技能对象门控写 +8292 与 +464
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1065
+   // ── [段 21] case 18 收尾：+8468 技能对象门控写 +8292 抓取标志，成立时 +464=-998637568（-1000.0f）──
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1066
+   *(uint8_t *)(this + 8292) = v90;
+-- src\combat\fighter_skills.cpp:810
+   *(uint8_t *)(this + 8292) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5E44C0
+-- src\combat\fighter_skills.cpp:3517
+   *(uint32_t *)(this + 8292) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\combat_core.cpp:11306
+   *(uint32_t *)(this + 8292) = 1000;
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:5705
+   // 0x5B8550 sub_5B8550 —— 大状态退出副作用（nArg2==25 时 this+8292=1000 并置位）
+     // ------------------------------------------------------------
+     // 0x5B8550 sub_5B8550 —— 大状态退出副作用（nArg2==25 时 this+8292=1000 并置位）
+     // 先调 ·sub_4DBC20（大状态退出副作用处理器，0x4DBA80 的还原对偶）；
+     // nArg2==25 时写 this+8292=1000（时长/桩数）并经 vt+1040 取桩位后 [8]=1 置位。
+     // ------------------------------------------------------------
+-- src\game\creature\dragonman.cpp:5707
+   // nArg2==25 时写 this+8292=1000（时长/桩数）并经 vt+1040 取桩位后 [8]=1 置位。
+     // 0x5B8550 sub_5B8550 —— 大状态退出副作用（nArg2==25 时 this+8292=1000 并置位）
+     // 先调 ·sub_4DBC20（大状态退出副作用处理器，0x4DBA80 的还原对偶）；
+     // nArg2==25 时写 this+8292=1000（时长/桩数）并经 vt+1040 取桩位后 [8]=1 置位。
+     // ------------------------------------------------------------
+
+
+
+############## +8324 (0x2084) : 25 sites
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:583
+   if ( *(uint8_t *)(pArg1 + 8324) == 0 )
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:682
+   //   再按 +8324/+8325 两标志与动画 Y/状态位选「落地」支路
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:683
+   if ( *(uint8_t *)(pArg1 + 8324) != 0 )
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:724
+   //   收尾：+8324 时 vt+876 清双动画 + 循环 vt+208 卸两件 + vt+216 + vt+212 播 SPIRE_CRASH；否则按 vt+1140(22) 播 SUPLEX_CRASH
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:726
+   if ( *(uint8_t *)(pArg1 + 8324) != 0 )
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:788
+   v72 = *(uint8_t *)(pArg1 + 8324) != 0 ? 18 : 9;
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:819
+   LOBYTE(v81) = *(uint8_t *)(pArg1 + 8324);
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:834
+   //   +8324 未置且 vt+1140(11)>0 时：sub_605840 打包 + sub_4E4A50(21011, 动作 11) 二次上报
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:835
+   if ( *(uint8_t *)(pArg1 + 8324) == 0 && (*(int (/*thiscall*/ **)(int, int))(*(uint32_t *)pArg1 + 1140))(pArg1, 11) > 0 )
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1221
+   //   18 态超时（+8288）→ 包 0；19 态按 +8324/+8333 与动画 Y 负值判定退出
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1257
+   if ( *(uint8_t *)(pArg1 + 8324) != 0 )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:451
+   *(uint8_t *)(this + 8324) != 0 ? 18 : 9);
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:456
+   if ( *(uint8_t *)(this + 8324) != 0 && *(uint8_t *)(this + 8334) != 0 )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1569
+   //   +8316 存朝向（vt+152）、+8324 与 +8325 由 pArg3[1][2]/[3] 灌入；
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1572
+   //   sub_4920E0 逐件施缩放；+8324 否则走 FT_SUPLEX / FT_SUPLEX_CRASH（vt+1140(22)>0 判分型）+ G_(BACK_)SUPLEX_START；
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1594
+   *(uint8_t *)(this + 8324) = pArg3[1][2] != 0;
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1611
+   *(uint8_t *)(this + 8324));
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1625
+   if ( *(uint8_t *)(this + 8324) != 0 )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1749
+   if ( *(uint8_t *)(this + 8324) != 0 )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1754
+   fld_20842 = *(uint8_t *)(this + 8324) != 0 ? 18 : 9;
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:603
+   if ( sub_699000(pArg1 + 6560) < *(uint32_t *)(pArg1 + 8324) )  // 【clock_now(clk)】
+-- src\combat\fighter_skills.cpp:818
+   *(uint8_t *)(this + 8324) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5E44C0
+-- src\combat\fighter_skills.cpp:3525
+   *(uint32_t *)(this + 8324) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\combat_core.cpp:11302
+   *(uint32_t *)(this + 8324) = -1;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8822
+   *(uint32_t *)(this + 8324) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +8328 (0x2088) : 19 sites
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:669
+   //   随后 +8326 分型：+8333 未置且过 +8328+100ms 时 sub_4A0550(40)（重力写速）+ sub_4AECE0(7)（动画切 7）
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:672
+   if ( *(uint8_t *)(pArg1 + 8333) == 0 && sub_699000(pArg1 + 6560) >= *(uint32_t *)(pArg1 + 8328) + 100 )  // 【clock_now(clk)】
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:871
+   // ── [段 8] case 0x13 尾部：+8326 置位 + +8328 记当前节拍（本态完成时间戳） ──
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:873
+   *(uint32_t *)(pArg1 + 8328) = sub_699000(pArg1 + 6560);
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1590
+   *(uint32_t *)(this + 8328) = 0;
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:545
+   //   0x12 支：+8308<2 时按 +8328+200ms 节拍取 dword_8F8270[vt+924(this,2)] 对象，
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:547
+   //   sub_4600B0(2, 0, buf) 提交并记 +8328 时刻；另一条按 +8316/+8320 窗口与目标帧 2 决定收束
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:557
+   if ( sub_699000(pArg1 + 6560) >= *(uint32_t *)(pArg1 + 8328) + 200 )  // 【clock_now(clk)】
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:582
+   *(uint32_t *)(pArg1 + 8328) = sub_699000(pArg1 + 6560);
+-- src\combat\fighter_skills.cpp:821
+   *(uint32_t *)(this + 8328) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5E44C0
+-- src\combat\fighter_skills.cpp:3526
+   *(uint32_t *)(this + 8328) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\combat_core.cpp:11301
+   *(uint32_t *)(this + 8328) = -1;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8811
+   *(uint32_t *)(this + 8328) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:12048
+   // ·先 vt[0](obj,1) 释放 this+8232/8236/8240/8248 四挂件指针；this+8276 起 4x2 与 this+8328 起 5x3 两组
+     // 0x5DDCA0 sub_5DDCA0 —— CNMage 白魔字段块总析构（this+8232..8564 全槽清理，由·0x579F10 构造链对偶调用）：
+     // ·先 vt[0](obj,1) 释放 this+8232/8236/8240/8248 四挂件指针；this+8276 起 4x2 与 this+8328 起 5x3 两组
+     // ·经·sub_42AF90+·sub_657740(obj,228) 双段回收（228 为对象池/尺寸码）并逐槽清零；
+     // ·再处理 +8372/8380、+8396 起 2x4 块（含 vt[0] 与·sub_42AF90 混合）、+8448/8452、+8456 起 2、+8464、+8468 起 3、
+     // ·+8480 起 2、+8492、+8500、+8524、+8544、+8552、+8556 起 2、+8564 各组【推断：+8396..8420 与·0x5DD470 的 HandHit 粒子槽对应】
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:12129
+   pThis_2088 = (void ***)(this + 8328);
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:7473
+   *(uint32_t *)(this + 8328) = -1;
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:7786
+   // 按 +8328 设备索引取 17292 步长表项（+8336 基址）；+8296 记模式（1 全屏 / 2 窗口）、+8284 记宽高，窗口分支另取 GetWindowLongA(-16/-20) 存 +184040/+184044，末调 ·sub_414090(+8276)
+     // 0x408FA0 sub_408FA0 —— 全屏/窗口切换（nArg2 0/1）
+     // 按 +8328 设备索引取 17292 步长表项（+8336 基址）；+8296 记模式（1 全屏 / 2 窗口）、+8284 记宽高，窗口分支另取 GetWindowLongA(-16/-20) 存 +184040/+184044，末调 ·sub_414090(+8276)
+     // ★ 发布指令直证：broadcast_debug 的 //full → ·0x408FA0(1)、//normal → ·0x408FA0(0)。
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:7798
+   fld_2088 = 17292 * *(uint32_t *)(this + 8328);
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:8119
+   fld_2088 = 17292 * *(uint32_t *)(this + 8328);
+     // ------------------------------------------------------------
+
+
+
+############## +8332 (0x208C) : 21 sites
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:581
+   //   vt+148==2 支：+8332 分型 —— 上抛（Y 速度 0<v<300 时反向加速度 sub_494F20(2,-v)）
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:588
+   if ( *(uint8_t *)(pArg1 + 8332) != 0 )
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:625
+   //   否则（+8332 未置）：vt+1140 建 18 号包 → vt+1160 关联 → sub_494F20 设速率 → vt+212 播 SPIRE_UP
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:637
+   *(uint8_t *)(pArg1 + 8332) = 1;
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:648
+   //   +8332 已置且 Y >= 0：收招播 SPIRE_UP（第三支，11 号优先级）
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:657
+   *(uint8_t *)(pArg1 + 8332) = 1;
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:685
+   if ( *(uint8_t *)(pArg1 + 8332) == 0 )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1591
+   *(uint8_t *)(this + 8332) = 0;
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1387
+   //   +8332 与 +8333 分别为两段「已播」标志；两段都调 vt+212 播音效 + vt+1172 取动作串；
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1390
+   if ( *(uint8_t *)(pArg1 + 8332) == 0 && *(int *)(*(uint32_t *)(pArg1 + 120) + 148) >= 2 )
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1401
+   *(uint8_t *)(pArg1 + 8332) = 1;
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1151
+   *(this + 8332) = 0;
+-- src\combat\fighter_skills.cpp:822
+   *(uint8_t *)(this + 8332) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5E44C0
+-- src\combat\fighter_skills.cpp:3527
+   *(uint8_t *)(this + 8332) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\combat_core.cpp:11300
+   *(uint32_t *)(this + 8332) = -1;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8814
+   *(uint32_t *)(this + 8332) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:7474
+   *(uint32_t *)(this + 8332) = 0;
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:8470
+   v73 = 17292 * *(uint32_t *)(*(uint32_t *)ArgList + 8332) + *(uint32_t *)ArgList + 8336;
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:8702
+   ++*(uint32_t *)(*(uint32_t *)ArgList + 8332);
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:8711
+   if ( *(uint32_t *)(*(uint32_t *)ArgList + 8332) == 0 )
+     // ------------------------------------------------------------
+-- src\nengine\log_dump.cpp:8716
+   if ( (unsigned int)++v51 >= *(uint32_t *)(*(uint32_t *)ArgList + 8332) )
+     // ------------------------------------------------------------
+
+
+
+############## +8344 (0x2098) : 18 sites
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:892
+   if ( *(uint32_t *)(pArg1 + 8344) != 1 || *(uint32_t *)(*(uint32_t *)(pArg1 + 120) + 148) != 0 )
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1499
+   //   +8344==0：+8356 目标存活则按 +170 决定 ++ 包 20（[1,0xFFFF,0xFFFF]）或包 0 退出
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1503
+   if ( *(uint32_t *)(pArg1 + 8344) == 0 )
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1530
+   //   +8344!=0：+170 且 +8348 < +8352 时 ++ 包 20（[1,0xFFFF,0xFFFF]）；否则包 0
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1776
+   //   +8344 取 pArg3[1][0]；非 0 时 vt+196(+6216+32/36/40 按 +8348 奇偶)；
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1779
+   //   +8344==1 维持支：+++8348 计数，本机时 sub_4E5F70(this+? 对象, this, 被骑体, 3 浮点坐标, 1, 1) 同步
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1782
+   *(uint32_t *)(this + 8344) = v119;
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1882
+   if ( *(uint32_t *)(this + 8344) == 1 )
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1420
+   //   21 支：vt+1140(21) → 12 参 vt+560 提交并置 +8344=1；LABEL_106 为置位出口
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1436
+   if ( *(int *)(*(uint32_t *)(pArg1 + 120) + 148) < 4 || *(uint8_t *)(pArg1 + 8344) != 0 )
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1479
+   *(uint8_t *)(pArg1 + 8344) = 1;
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1483
+   *(uint8_t *)(pArg1 + 8344) = 1;
+-- src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:1167
+   *(this + 8344) = 0;
+-- src\combat\fighter_skills.cpp:827
+   *(uint32_t *)(this + 8344) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5E44C0
+-- src\combat\fighter_skills.cpp:3531
+   *(uint8_t *)(this + 8344) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\combat_core.cpp:11310
+   *(uint32_t *)(this + 8344) = 0;
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:4807
+   *(uint32_t *)(this + 8344) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8823
+   *(uint32_t *)(this + 8344) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +8348 (0x209C) : 23 sites
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1530
+   //   +8344!=0：+170 且 +8348 < +8352 时 ++ 包 20（[1,0xFFFF,0xFFFF]）；否则包 0
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1533
+   if ( *(uint32_t *)(pArg1 + 8348) >= *(uint32_t *)(pArg1 + 8352) )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1776
+   //   +8344 取 pArg3[1][0]；非 0 时 vt+196(+6216+32/36/40 按 +8348 奇偶)；
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1777
+   //   fld_199C != 20（新进）时清 +8348/+8360 并记当前 XY 到 +8364/+8368，抓被骑对象（+8356，vt+776(3) 判可骑）
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1779
+   //   +8344==1 维持支：+++8348 计数，本机时 sub_4E5F70(this+? 对象, this, 被骑体, 3 浮点坐标, 1, 1) 同步
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1786
+   if ( *(uint32_t *)(this + 8348) % 2 != 0 )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1817
+   *(uint32_t *)(this + 8348) = 0;
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1885
+   ++*(uint32_t *)(this + 8348);
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1417
+   // ── [段 23] 大状态 0x14（20）：★ 投掷/跃起 —— 回挂 +8348 动画 + 按 +8340 技能号分 20/22/21 三支 ──
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1418
+   //   +8348 对象帧 170 非 0 时 vt+208 回挂；动画帧归零且 sub_4910A0 达 +8360 时 sub_4AECE0(1)+vt+204 挂载；
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1422
+   if ( *(uint8_t *)(*(uint32_t *)(pArg1 + 8348) + 170) != 0 )
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1423
+   (*(void (/*thiscall*/ **)(int, uint32_t))(*(uint32_t *)pArg1 + 208))(pArg1, *(uint32_t *)(pArg1 + 8348));
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1430
+   *(uint32_t *)(pArg1 + 8348),
+-- src\combat\fighter_skills.cpp:828
+   *(uint32_t *)(this + 8348) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5E44C0
+-- src\combat\fighter_skills.cpp:3532
+   *(uint32_t *)(this + 8348) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\bigfunc_4C5250_sub_4C5250.cpp:573
+   //   尾段 sub_423340(+8348, szPassword) 判定后按 +8372 是否 <0x10 择内联/堆指针播技能名，最后清 +8560=-1
+-- src\game\bigfunc_4C5250_sub_4C5250.cpp:807
+   if ( (uint8_t)sub_423340(pArg1 + 8348, szPassword) != 0 )
+-- src\game\bigfunc_4C5250_sub_4C5250.cpp:1019
+   if ( (uint8_t)sub_423340(28 * (v52 != 1) + pArg1 + 8348, szPassword) != 0 )
+-- src\game\bigfunc_4C5250_sub_4C5250.cpp:1510
+   if ( (uint8_t)sub_423340(pArg1 + 8348, szPassword) != 0 )
+-- src\game\bigfunc_4C5250_sub_4C5250.cpp:2906
+   if ( (uint8_t)sub_423340(pArg1 + 8348, szPassword) != 0 )
+-- src\game\combat_core.cpp:11311
+   *(uint32_t *)(this + 8348) = 0;
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:4808
+   *(uint32_t *)(this + 8348) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8812
+   *(uint32_t *)(this + 8348) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +8364 (0x20AC) : 12 sites
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:468
+   //   再按本帧位置与 +8364/+8368 存位比对（vt+136 判可站立）决定是否 vt+112 复位坐标
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:513
+   *(uint32_t *)(this + 8364),
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1777
+   //   fld_199C != 20（新进）时清 +8348/+8360 并记当前 XY 到 +8364/+8368，抓被骑对象（+8356，vt+776(3) 判可骑）
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:1819
+   *(uint32_t *)(this + 8364) = (*(int (/*thiscall*/ **)(int))(v122 + 120))(this);
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:824
+   if ( *(uint32_t *)(pArg1 + 6556) == 20 && sub_699000(pArg1 + 6560) >= *(uint32_t *)(pArg1 + 8364) )  // 【clock_now(clk)】
+-- src\combat\fighter_skills.cpp:832
+   *(uint32_t *)(this + 8364) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5E44C0
+-- src\combat\fighter_skills.cpp:3536
+   *(uint32_t *)(this + 8364) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\combat_core.cpp:11315
+   *(uint32_t *)(this + 8364) = 0;
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2470
+   // 释放 this+7820 / +8360 / +8364（帧对象 ·sub_42AF90 + ·sub_657740(228)）→ --dword_9A05D4
+     // 0x4E3360 sub_4E3360 —— 怪物资源侧析构（释放三块 + 全局怪物计数递减）
+     // 释放 this+7820 / +8360 / +8364（帧对象 ·sub_42AF90 + ·sub_657740(228)）→ --dword_9A05D4
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2483
+   fld_20AC = *(void ***)(this + 8364);
+     // ------------------------------------------------------------
+-- src\game\hiteff_monster.cpp:2490
+   *(uint32_t *)(this + 8364) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8824
+   *(uint32_t *)(this + 8364) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +8472 (0x2118) : 15 sites
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1696
+   //   24 态退出：+8472 表参 1 且 +170 → 包 0；表参 0 且动作 +148>=8 → 包 0
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1699
+   v217 = *(uint32_t *)(pArg1 + 8472);
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1814
+   // ── [段 17] case 0x18：★ 燃烧抓取爆炸（GrabExplosion1/2/3.ani + BURN_ATK）—— +8472==1 起 ──
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1817
+   if ( *(uint32_t *)(pArg1 + 8472) == 1 )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:530
+   // ── [段 8] 大状态 case 24：vt+604(1) 收招；+8472==1 时调 sub_5E6640（24 态收束例程）──
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:533
+   if ( *(uint32_t *)(this + 8472) == 1 )
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:2073
+   // ── [段 37] 第三重 case 24：★ SKYRADE_SWING（空掠斩）—— +8472 分 0 / 非 0 两支 ──
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:2078
+   *(uint32_t *)(this + 8472) = *pArg3[1];
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:2090
+   if ( *(uint32_t *)(this + 8472) != 0 )
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1213
+   if ( sub_699000(pArg1 + 6560) >= *(uint32_t *)(pArg1 + 8472) && *(uint32_t *)(pArg1 + 8476) == 2 )  // 【clock_now(clk)】
+-- src\combat\fighter_skills.cpp:856
+   *(uint32_t *)(this + 8472) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5E44C0
+-- src\combat\fighter_skills.cpp:3565
+   *(uint32_t *)(this + 8472) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\combat_core.cpp:7295
+   // +900 += 表，最后把表值写 this+8472。off_77F3FC("Applydifficult", 旧, 新) 记日志。
+     // 0x4D98A0 sub_4D98A0
+     // ★ 副本难度系数施加（日志标签 aApplydifficult 可证）：宿主对象（pArg1[2088] 车主）
+     // 处于条件 273（受击/在场）时，按全局难度下标 dword_99FB8C（0..3）从 11 张 4 元素
+     // float 表取系数，对属性块批量修正：+466 += 表、+4(最大HP) ×表、HP 写回 vt+732、
+     // +7520/+7592 += 表、16 个技能条目（+284 步长 14 dword）各 += 表、+844 ×表、
+     // +816 += 表、物理/魔法攻击 (+1012/+1068) ×表、防/魔防 (+1040/+1096) ×表、
+     // +900 += 表，最后把表值写 this+8472。off_77F3FC("Applydifficult", 旧, 新) 记日志。
+     // pArg1 无车主或车主不在场 → 只做 +466/+4/HP/技能/其余同样的修正（另一分支同表）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11316
+   *(uint32_t *)(this + 8472) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8851
+   *(uint32_t *)(this + 8472) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +8476 (0x211C) : 14 sites
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1954
+   //   动作 +148==13 且 +8476 未置：★ 终段——按朝向 ±59 算落点 → sub_605840 打包 → vt+580(21014) 发伤害包
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1955
+   //   → vt+1160(3, this, -1) 关联自身 → sub_47DCD0(3,3) → sub_5E6640 收尾 → +8476 置位
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1956
+   if ( *(uint32_t *)(*(uint32_t *)(pArg1 + 120) + 148) == 13 && *(uint8_t *)(pArg1 + 8476) == 0 )
+-- src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:2008
+   *(uint8_t *)(pArg1 + 8476) = 1;
+-- src\combat\bigfunc_5EA970_sub_5EA970.cpp:2126
+   *(uint8_t *)(this + 8476) = 0;
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1213
+   if ( sub_699000(pArg1 + 6560) >= *(uint32_t *)(pArg1 + 8472) && *(uint32_t *)(pArg1 + 8476) == 2 )  // 【clock_now(clk)】
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1531
+   //   +8448==1 时对 +8456 对象（vt+80 判定）与 +8476 计时器两支处理；
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1550
+   v66 = *(uint32_t *)(pArg1 + 8476);
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1630
+   *(uint32_t *)(pArg1 + 8476) = 2;
+-- src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1670
+   *(uint32_t *)(pArg1 + 8476) = 1;
+-- src\combat\fighter_skills.cpp:858
+   *(uint8_t *)(this + 8476) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5E44C0
+-- src\combat\fighter_skills.cpp:3566
+   *(uint32_t *)(this + 8476) = 0;
+     // ------------------------------------------------------------
+     // 调: sub_5EDDC0
+-- src\game\combat_core.cpp:11317
+   *(uint32_t *)(this + 8476) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8852
+   *(uint32_t *)(this + 8476) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +8569 (0x2179) : 6 sites
+-- src\game\combat_core.cpp:8080
+   // this+8556；到期（now ≥ +8580）→ vt+212 放 this+8532 字符串、清 +8569/+8570
+     // 0x4DA730 sub_4DA730
+     // 随机间隔喊话：this+8584(最小间隔)/8588(最大间隔)/8580(下次时刻) + 时钟
+     // this+8556；到期（now ≥ +8580）→ vt+212 放 this+8532 字符串、清 +8569/+8570
+     // 标志、重新 countdown = +8584 + rand%(+8588−+8584)。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:8106
+   *((uint8_t *)this + 8569) = 0;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11134
+   // 清 +8569/+8570 标志后 sub_698F90 给 this+8556 时钟设 [a9, a10) 随机倒计时；
+     // 0x4DE5E0 sub_4DE5E0 —— 文案条目装载 + 随机倒计时（0x4DE410 的配套件）
+     // sub_4014D0 把 a2 文案挂 this+8528，a9/a10 记 this+8584/8588（随机区间），
+     // 清 +8569/+8570 标志后 sub_698F90 给 this+8556 时钟设 [a9, a10) 随机倒计时；
+     // a8 >= 0x10 时 free 文案块（SSO 堆释放约定）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11157
+   *(uint8_t *)(this + 8569) = 0;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11328
+   *(uint8_t *)(this + 8569) = 0;
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:4765
+   *(this + 8569) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +8570 (0x217A) : 6 sites
+-- src\game\combat_core.cpp:8080
+   // this+8556；到期（now ≥ +8580）→ vt+212 放 this+8532 字符串、清 +8569/+8570
+     // 0x4DA730 sub_4DA730
+     // 随机间隔喊话：this+8584(最小间隔)/8588(最大间隔)/8580(下次时刻) + 时钟
+     // this+8556；到期（now ≥ +8580）→ vt+212 放 this+8532 字符串、清 +8569/+8570
+     // 标志、重新 countdown = +8584 + rand%(+8588−+8584)。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:8107
+   *((uint8_t *)this + 8570) = 0;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11134
+   // 清 +8569/+8570 标志后 sub_698F90 给 this+8556 时钟设 [a9, a10) 随机倒计时；
+     // 0x4DE5E0 sub_4DE5E0 —— 文案条目装载 + 随机倒计时（0x4DE410 的配套件）
+     // sub_4014D0 把 a2 文案挂 this+8528，a9/a10 记 this+8584/8588（随机区间），
+     // 清 +8569/+8570 标志后 sub_698F90 给 this+8556 时钟设 [a9, a10) 随机倒计时；
+     // a8 >= 0x10 时 free 文案块（SSO 堆释放约定）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11158
+   *(uint8_t *)(this + 8570) = 0;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11329
+   *(uint8_t *)(this + 8570) = 0;
+     // ------------------------------------------------------------
+-- src\game\rtti_core.cpp:4764
+   *(this + 8570) = 0;
+     // ------------------------------------------------------------
+
+
+
+############## +8584 (0x2188) : 18 sites
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1209
+   //   门 this+1953 非空即返回；+2144 存时长(ms)、+2142 存充能组、+2143 存到期时刻、+8584 存快速投掷标志
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1257
+   *((uint8_t *)this + 8584) = v134;
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1510
+   pThis_2188 = *((uint8_t *)this + 8584);
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1515
+   if ( *((uint8_t *)this + 8584) != 0 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:1533
+   if ( *((uint8_t *)this + 8584) != 0 )
+-- src\combat\bigfunc_5E1000_sub_5E1000.cpp:2572
+   if ( *(this + 1952) == (uint32_t *)1 && *((uint8_t *)this + 8584) != 0 && *((uint8_t *)this + 8585) != 0 )
+-- src\game\combat_core.cpp:8079
+   // 随机间隔喊话：this+8584(最小间隔)/8588(最大间隔)/8580(下次时刻) + 时钟
+     // 0x4DA730 sub_4DA730
+     // 随机间隔喊话：this+8584(最小间隔)/8588(最大间隔)/8580(下次时刻) + 时钟
+     // this+8556；到期（now ≥ +8580）→ vt+212 放 this+8532 字符串、清 +8569/+8570
+     // 标志、重新 countdown = +8584 + rand%(+8588−+8584)。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:8081
+   // 标志、重新 countdown = +8584 + rand%(+8588−+8584)。
+     // 0x4DA730 sub_4DA730
+     // 随机间隔喊话：this+8584(最小间隔)/8588(最大间隔)/8580(下次时刻) + 时钟
+     // this+8556；到期（now ≥ +8580）→ vt+212 放 this+8532 字符串、清 +8569/+8570
+     // 标志、重新 countdown = +8584 + rand%(+8588−+8584)。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11133
+   // sub_4014D0 把 a2 文案挂 this+8528，a9/a10 记 this+8584/8588（随机区间），
+     // 0x4DE5E0 sub_4DE5E0 —— 文案条目装载 + 随机倒计时（0x4DE410 的配套件）
+     // sub_4014D0 把 a2 文案挂 this+8528，a9/a10 记 this+8584/8588（随机区间），
+     // 清 +8569/+8570 标志后 sub_698F90 给 this+8556 时钟设 [a9, a10) 随机倒计时；
+     // a8 >= 0x10 时 free 文案块（SSO 堆释放约定）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11155
+   *(uint32_t *)(this + 8584) = a9;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11159
+   nRangeStart = *(uint32_t *)(this + 8584);
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11208
+   // +8516/+8520=-1、+8528 文案串、+8584/8588 随机区间），尾段 +7732=200。
+     // 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+     // 懒加载 Monster/FlyingMonsterMark.img 与 Monster/SummonMonsterMark.img
+     //（dword_9A05D4 引用计数，dword_8F84B8 资源管理器 vt+60）；随后清怪物侧字段：
+     // +96=529（条件 id）、+608=100、+7148 大状态=0、+7632/7636 窗口=-1、骑乘/名牌/
+     // 拾取族（+7808/+7828 起 29 类 × 16 字节文案表 = 0x4DB130 的条目侧、+8300..8364、
+     // +8516/+8520=-1、+8528 文案串、+8584/8588 随机区间），尾段 +7732=200。
+     // 【推断】怪物生成/复位的扩展段（0x4DB410 MONSTER CREATE 路径下游）。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11326
+   *(uint32_t *)(this + 8584) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8879
+   *(uint8_t *)(this + 8584) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:9038
+   // AI 字段访问（this+8584）
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:9041
+   // 子相位 且 +8584 标志位时，以 dword_9B9344 弧度常量经 vt+272 触发转向/击退【推断】）
+     // 0x5DA6F0 sub_5DA6F0 —— 受击联动（·sub_4D54E0 受击包后：+1639==10 主状态镜像 且 +1953==0/+1954==15
+     // 子相位 且 +8584 标志位时，以 dword_9B9344 弧度常量经 vt+272 触发转向/击退【推断】）
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:9054
+   LOBYTE(fld_e1953) = *((uint8_t *)this + 8584);
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:13046
+   && *(uint8_t *)(this + 8584) != 0
+
+
+
+############## +8588 (0x218C) : 5 sites
+-- src\game\combat_core.cpp:8081
+   // 标志、重新 countdown = +8584 + rand%(+8588−+8584)。
+     // 0x4DA730 sub_4DA730
+     // 随机间隔喊话：this+8584(最小间隔)/8588(最大间隔)/8580(下次时刻) + 时钟
+     // this+8556；到期（now ≥ +8580）→ vt+212 放 this+8532 字符串、清 +8569/+8570
+     // 标志、重新 countdown = +8584 + rand%(+8588−+8584)。
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11156
+   *(uint32_t *)(this + 8588) = nRangeEnd;
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11161
+   sub_698F90(this + 8556, nRangeStart + nRand % (*(uint32_t *)(this + 8588) - nRangeStart), 0);  // 【clock_set_countdown(clk, duration=a2, star…】
+     // ------------------------------------------------------------
+-- src\game\combat_core.cpp:11327
+   *(uint32_t *)(this + 8588) = 0;
+     // ------------------------------------------------------------
+-- src\game\creature\expeller_guard.cpp:8881
+   *(uint32_t *)(this + 8588) = 0;
+     // ------------------------------------------------------------
+

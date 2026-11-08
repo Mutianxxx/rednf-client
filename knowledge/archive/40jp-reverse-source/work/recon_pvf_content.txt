@@ -1,0 +1,163 @@
+// ===== PVF 内容读取+解密 sub_528650 @ 00528650 =====
+int __thiscall sub_528650(_DWORD *this, char *a2, void *Buffer, unsigned int a4)
+{
+  char *v5; // ecx
+  int v6; // ebx
+  char v7; // al
+  int v8; // edx
+  int *v9; // esi
+  const char *v10; // eax
+  int *v11; // edi
+  int v12; // ecx
+  _DWORD *v14; // esi
+  int v15; // edi
+  int v16; // [esp-14h] [ebp-194h]
+  int v17; // [esp-10h] [ebp-190h]
+  int v18; // [esp+Ch] [ebp-174h] BYREF
+  size_t v19; // [esp+10h] [ebp-170h] BYREF
+  void *Block; // [esp+14h] [ebp-16Ch]
+  int v21; // [esp+24h] [ebp-15Ch]
+  unsigned int v22; // [esp+28h] [ebp-158h]
+  int v23; // [esp+2Ch] [ebp-154h]
+  int v24; // [esp+30h] [ebp-150h]
+  int v25; // [esp+34h] [ebp-14Ch]
+  int *v26; // [esp+38h] [ebp-148h] BYREF
+  int *v27; // [esp+3Ch] [ebp-144h]
+  _DWORD *v28; // [esp+40h] [ebp-140h]
+  char v29[260]; // [esp+44h] [ebp-13Ch] BYREF
+  size_t v30; // [esp+148h] [ebp-38h] BYREF
+  void *v31; // [esp+14Ch] [ebp-34h]
+  int v32; // [esp+15Ch] [ebp-24h]
+  unsigned int v33; // [esp+160h] [ebp-20h]
+  int v34; // [esp+164h] [ebp-1Ch]
+  int v35; // [esp+168h] [ebp-18h]
+  int v36; // [esp+16Ch] [ebp-14h]
+  int v37; // [esp+170h] [ebp-10h]
+  int v38; // [esp+17Ch] [ebp-4h]
+  int v39; // [esp+188h] [ebp+8h]
+
+  v37 = dword_796E50;
+  v28 = this;
+  v33 = 15;
+  v32 = 0;
+  LOBYTE(v31) = 0;
+  v38 = 0;
+  sub_528470(a2, v29, nullptr);
+  v5 = v29;
+  v6 = 5381;
+  if ( v29[0] != 0 )
+  {
+    do
+    {
+      v7 = *v5;
+      v8 = *v5++;
+      v6 = v8 + 33 * v6;
+    }
+    while ( v7 != 0 );
+  }
+  v18 = v6;
+  v22 = 15;
+  v21 = 0;
+  LOBYTE(Block) = 0;
+  sub_4014D0(&v19, &v30, 0, 0xFFFFFFFF);
+  v23 = v34;
+  v24 = v35;
+  v25 = v36;
+  v17 = *(this + 4);
+  v16 = *(this + 3);
+  LOBYTE(v38) = 1;
+  sub_527CE0(&v26, v16, v17, &v18, sub_527AA0);
+  v9 = v26;
+  LOBYTE(v38) = 0;
+  if ( v22 >= 0x10 )
+    j__free(Block);
+  if ( *v9 != v6 )
+  {
+    if ( v33 < 0x10 )
+      return 0;
+LABEL_15:
+    j__free(v31);
+    return 0;
+  }
+  v10 = (const char *)(v9 + 2);
+  v11 = v9;
+  v27 = (int *)v28[4];
+  v39 = (int)(v9 + 2);
+  while ( 1 )
+  {
+    if ( v11 == v27 )
+    {
+LABEL_14:
+      if ( v33 < 0x10 )
+        return 0;
+      goto LABEL_15;
+    }
+    if ( *((_DWORD *)v10 + 5) >= 0x10u )
+      v10 = *(const char **)v10;
+    if ( strcmp(v10, v29) == 0 )
+      break;
+    v12 = v11[11];
+    v11 += 11;
+    v10 = (const char *)(v39 + 44);
+    v39 += 44;
+    if ( v12 != v6 )
+      goto LABEL_14;
+  }
+  if ( a4 < v11[9] + 1 || (v14 = v28, fseek((FILE *)v28[6], v11[8] + *v28 + v28[1], 0) != 0) )
+  {
+    if ( v33 < 0x10 )
+      return 0;
+    goto LABEL_15;
+  }
+  if ( sub_66BD5A(Buffer, (v11[9] + 3) & 0xFFFFFFFC, 1u, (FILE *)v14[6]) == 0
+    || !sub_527AC0((v11[9] + 3) & 0xFFFFFFFC, v11[8], v11[10], v11[10], (unsigned int *)Buffer) )
+  {
+    sub_501490(&v30);
+    return 0;
+  }
+  *((_BYTE *)Buffer + v11[9]) = 0;
+  v15 = v11[9];
+  sub_501490(&v30);
+  return v15;
+}
+
+
+// ===== PVF sub_528300 (相邻，可能是内容定位) @ 00528300 =====
+int __cdecl sub_528220(int a1, int a2, _DWORD *a3)
+{
+  int v3; // edi
+  int result; // eax
+  _DWORD v5[6]; // [esp+0h] [ebp-24h] BYREF
+  int v6; // [esp+20h] [ebp-4h]
+
+  v3 = a1;
+  v5[5] = v5;
+  v5[4] = a1;
+  v6 = 0;
+  while ( 1 )
+  {
+    result = a2;
+    if ( a2 == 0 )
+      break;
+    v5[3] = v3;
+    LOBYTE(v6) = 1;
+    if ( v3 != 0 )
+    {
+      *(_DWORD *)v3 = *a3;
+      *(_DWORD *)(v3 + 28) = 15;
+      *(_DWORD *)(v3 + 24) = 0;
+      *(_BYTE *)(v3 + 8) = 0;
+      sub_4014D0((size_t *)(v3 + 4), a3 + 1, 0, 0xFFFFFFFF);
+      *(_DWORD *)(v3 + 32) = a3[8];
+      *(_DWORD *)(v3 + 36) = a3[9];
+      *(_DWORD *)(v3 + 40) = a3[10];
+    }
+    v3 += 44;
+    LOBYTE(v6) = 0;
+    --a2;
+  }
+  return result;
+}
+
+
+sub_528650 被调: 004014D0, 00501490, 00527AC0, 00527CE0, 00528470, 0066AA7D, 0066B49B, 0066BAD5, 0066BD5A

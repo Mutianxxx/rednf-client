@@ -1,0 +1,114 @@
+00527AC0  push    ebp
+00527AC1  mov     ebp, esp
+00527AC3  push    ebx
+00527AC4  mov     ebx, eax
+00527AC6  test    bl, 3
+00527AC9  push    esi
+00527ACA  mov     esi, ecx
+00527ACC  jz      short loc_527AD4
+00527ACE  pop     esi
+00527ACF  xor     eax, eax
+00527AD1  pop     ebx
+00527AD2  pop     ebp
+00527AD3  retn
+00527AD4  mov     eax, dword_9B927C
+00527AD9  test    eax, eax
+00527ADB  jnz     short loc_527AE2
+00527ADD  call    sub_57A1C0
+00527AE2  mov     ecx, [ebp+arg_8]
+00527AE5  shr     ebx, 2
+00527AE8  push    edi
+00527AE9  lea     edi, [ecx+ebx*4]
+00527AEC  cmp     ecx, edi
+00527AEE  not     esi
+00527AF0  jz      short loc_527B71
+00527AF2  mov     edx, [ecx]
+00527AF4  xor     edx, [ebp+arg_4]
+00527AF7  mov     eax, edx
+00527AF9  shr     edx, 6
+00527AFC  shl     eax, 1Ah
+00527AFF  or      eax, edx
+00527B01  xor     edx, edx
+00527B03  mov     dl, al
+00527B05  mov     [ecx], eax
+00527B07  mov     eax, esi
+00527B09  shr     eax, 8
+00527B0C  add     ecx, 4
+00527B0F  xor     edx, esi
+00527B11  and     edx, 0FFh
+00527B17  mov     esi, dword_9B8E80[edx*4]
+00527B1E  xor     edx, edx
+00527B20  mov     dl, [ecx-3]
+00527B23  xor     eax, esi
+00527B25  xor     edx, eax
+00527B27  and     edx, 0FFh
+00527B2D  mov     esi, dword_9B8E80[edx*4]
+00527B34  xor     edx, edx
+00527B36  mov     dl, [ecx-2]
+00527B39  shr     eax, 8
+00527B3C  xor     eax, esi
+00527B3E  xor     edx, eax
+00527B40  and     edx, 0FFh
+00527B46  mov     esi, dword_9B8E80[edx*4]
+00527B4D  xor     edx, edx
+00527B4F  mov     dl, [ecx-1]
+00527B52  shr     eax, 8
+00527B55  xor     eax, esi
+00527B57  xor     edx, eax
+00527B59  and     edx, 0FFh
+00527B5F  mov     esi, dword_9B8E80[edx*4]
+00527B66  shr     eax, 8
+00527B69  xor     eax, esi
+00527B6B  cmp     ecx, edi
+00527B6D  mov     esi, eax
+00527B6F  jnz     short loc_527AF2
+00527B71  mov     eax, esi
+00527B73  mov     esi, [ebp+arg_0]
+00527B76  not     eax
+00527B78  sub     eax, esi
+00527B7A  neg     eax
+00527B7C  pop     edi
+00527B7D  sbb     eax, eax
+00527B7F  pop     esi
+00527B80  inc     eax
+00527B81  pop     ebx
+00527B82  pop     ebp
+00527B83  retn
+00527B84  align 10h
+00527B90  mov     eax, [ecx+4]
+00527B93  test    eax, eax
+00527B95  jnz     short loc_527B98
+00527B97  retn
+00527B98  mov     ecx, [ecx+8]
+00527B9B  sub     ecx, eax
+00527B9D  mov     eax, 2E8BA2E9h
+00527BA2  imul    ecx
+00527BA4  sar     edx, 3
+00527BA7  mov     eax, edx
+00527BA9  shr     eax, 1Fh
+00527BAC  add     eax, edx
+00527BAE  retn
+00527BAF  align 10h
+00527BB0  push    ebp
+00527BB1  mov     ebp, esp
+00527BB3  mov     edx, [ebp+arg_8]
+00527BB6  mov     ecx, [ebp+arg_4]
+00527BB9  sub     edx, ecx
+00527BBB  mov     eax, 2E8BA2E9h
+00527BC0  imul    edx
+00527BC2  sar     edx, 3
+00527BC5  push    ebx
+00527BC6  mov     ebx, edx
+00527BC8  shr     ebx, 1Fh
+00527BCB  add     ebx, edx
+00527BCD  test    ebx, ebx
+00527BCF  jle     short loc_527C19
+00527BD1  push    esi
+00527BD2  push    edi
+00527BD3  jmp     short loc_527BD8
+00527BD5  mov     ecx, [ebp+arg_4]
+00527BD8  mov     eax, ebx
+00527BDA  cdq
+00527BDB  sub     eax, edx
+00527BDD  mov     edi, eax
+00527BDF  mov     eax, [ebp+arg_C]

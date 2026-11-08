@@ -1,0 +1,236 @@
+{
+  "plan_version": "v1.1",
+  "source_files": [
+    {
+      "id": "E01",
+      "workspace_relative_path": "agent.md",
+      "kind": "instruction",
+      "purpose": "用户长期约定与本轮优先级",
+      "bytes": 20228,
+      "sha256": "c38e35a0fcc421915f14e64a976c45d958330d480b0c19132e93fb82e15dd0c7",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E02",
+      "workspace_relative_path": "dnf-native-demo/AGENTS.md",
+      "kind": "instruction",
+      "purpose": "工程边界与协作约定",
+      "bytes": 5104,
+      "sha256": "e3b0a3f6a0455f7003bedff5e64101ebe52e0c431600ed377332ae55f3189c45",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E03",
+      "workspace_relative_path": "dnf-native-demo/CURRENT_TASK.md",
+      "kind": "handoff",
+      "purpose": "当前候选和实际缺口，历史hash不是本轮二进制重验",
+      "bytes": 65961,
+      "sha256": "c5de322ef1942ecfce73997309de4ed2aa25ae67b5783a630dceac63311a0c24",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E04",
+      "workspace_relative_path": "dnf-native-demo/include/dnf/resources.hpp",
+      "kind": "source-interface",
+      "purpose": "来源、动画与资源现有接口",
+      "bytes": 4425,
+      "sha256": "36ffbdd5b5d1299f1fe73fec47c2cc1e05052c21b87dee67e080e8ba49a2643d",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E05",
+      "workspace_relative_path": "dnf-native-demo/include/dnf/character.hpp",
+      "kind": "source-interface",
+      "purpose": "角色及技能身份与来源",
+      "bytes": 7583,
+      "sha256": "3eeb6aedeb3ffd154e7b885e26ab7ae77f4677fd034a596a0c9bf073ff1fa9f6",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E06",
+      "workspace_relative_path": "dnf-native-demo/include/dnf/character_controller.hpp",
+      "kind": "source-interface",
+      "purpose": "运行资格与旧confirmed gate",
+      "bytes": 8059,
+      "sha256": "7316962273b64e31b728d015c9b65cda58d5c8de7ad56a643cf94c2405b1227e",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E07",
+      "workspace_relative_path": "dnf-native-demo/include/dnf/skill_data.hpp",
+      "kind": "source-interface",
+      "purpose": "SKL模式/等级表读取",
+      "bytes": 1672,
+      "sha256": "41f103d0a6f42f2121dd8a58d8dcdf256b13bd22f6355bfa12cce039b406e0c2",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E08",
+      "workspace_relative_path": "dnf-native-demo/include/dnf/equipment_motion.hpp",
+      "kind": "source-interface",
+      "purpose": "EQU/LAY来源绑定",
+      "bytes": 1843,
+      "sha256": "49735806c04dd082918d747da665eec5dfbcd2b9ca714ea0c5da738f8de3763e",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E09",
+      "workspace_relative_path": "dnf-native-demo/include/dnf/objects.hpp",
+      "kind": "source-interface",
+      "purpose": "已存在物件三层和pending事件",
+      "bytes": 6392,
+      "sha256": "aacdc51dd67af7b0ca67a3f9b301e8e1cf59a92febaecd905711d25b62a4bba8",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E10",
+      "workspace_relative_path": "dnf-native-demo/include/dnf/region.hpp",
+      "kind": "source-interface",
+      "purpose": "世界目录/拓扑模型",
+      "bytes": 3518,
+      "sha256": "33727040842d3565c020c956bc2f4ab66c51e70473880c25f721d213b80eec5a",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E11",
+      "workspace_relative_path": "dnf-native-demo/include/dnf/progression.hpp",
+      "kind": "source-interface",
+      "purpose": "现有业务窄接口",
+      "bytes": 3198,
+      "sha256": "2b1c4995c344da7ce6da182cf949b0b3bceb938dd9051f5c6d069f5a4419f9f6",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E12",
+      "workspace_relative_path": "dnf-native-demo/src/storage.cpp",
+      "kind": "source-code",
+      "purpose": "现有20槽及原子保存",
+      "bytes": 9081,
+      "sha256": "7eb89da1fa5adb5c5155736b390a9adc71a7c6ab6925e00b2c00c0bed5f9b89b",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E13",
+      "workspace_relative_path": "dnf-native-demo/src/session.cpp",
+      "kind": "source-code",
+      "purpose": "当前恢复和布局策略",
+      "bytes": 10970,
+      "sha256": "100719dbe9d6f6a9d4967c65a3173ca525e6d80f97df34a6c01d3ff00dfe5e1d",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E14",
+      "workspace_relative_path": "dnf-native-demo/CMakeLists.txt",
+      "kind": "source-code",
+      "purpose": "核心和平台构建边界",
+      "bytes": 3623,
+      "sha256": "39bc16dd6cc8b27cd75f6064c5deb6073a43808a08aeb1b3c8855e8c50ffa69c",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E15",
+      "workspace_relative_path": "dnf-native-demo/tools/build.py",
+      "kind": "source-code",
+      "purpose": "D盘构建和运行保护",
+      "bytes": 2364,
+      "sha256": "cdaa5c485ba2cae48747eea25decb2343594908f23284079228f4f6d0fc26ff6",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E16",
+      "workspace_relative_path": "dnf-result/README.md",
+      "kind": "research",
+      "purpose": "全量资料索引及范围限制",
+      "bytes": 7801,
+      "sha256": "9d7c9bf29af7d84358a9b58c785e512d5d8342f4687d74ec95a3db45e8ae21d8",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E17",
+      "workspace_relative_path": "dnf-result/research/new-version-readiness.json",
+      "kind": "research",
+      "purpose": "25类系统完整覆盖基准",
+      "bytes": 33439,
+      "sha256": "cf7ef95773c34fd46957620d629a8635eb2ec442deee52da4a81d7ec02111332",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E18",
+      "workspace_relative_path": "dnf-result/docs/12-server-and-revised-android.md",
+      "kind": "research",
+      "purpose": "服务端候选规则与26/27差异",
+      "bytes": 7507,
+      "sha256": "8fbf61bf512a586a3d9ca34b3e3a0d1d82dd349d236f51802d40e93a91497dde",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E19",
+      "workspace_relative_path": "dnf-result/docs/13-readiness-and-supplement-validation.md",
+      "kind": "research",
+      "purpose": "已知未决与验证边界",
+      "bytes": 5841,
+      "sha256": "f9c227f1fbd40df7665c178d45d06fefd6c26e2c8ec6a7c168680787011af2ad",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E20",
+      "workspace_relative_path": "dnf-result/docs/14-android-gunner-and-dfq-mechanics.md",
+      "kind": "research",
+      "purpose": "安卓修改版/DFQ机制范围",
+      "bytes": 19232,
+      "sha256": "b7422423690b43ae497b0823eaa79111d389aee5db4841d78be27f2668bf65aa",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E21",
+      "workspace_relative_path": "dnf-result/research/pc-native-host-api.json",
+      "kind": "research",
+      "purpose": "宿主API导航，不是已实现API",
+      "bytes": 1291118,
+      "sha256": "b80324ea8fbca9ca3c97347b8ddc66789d0128a2f2bfc73d7bbeff06d18cf189",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E22",
+      "workspace_relative_path": "逆向部分结果参考/技能调用效果实现文档/dnf-skill-combat-handoff-v1/README.md",
+      "kind": "handoff",
+      "purpose": "技能参考包与版本边界",
+      "bytes": 4616,
+      "sha256": "5de49ec3f0710324a3234ccbc110e00dac1def3517706750c3001e848c3e5555",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E23",
+      "workspace_relative_path": "逆向部分结果参考/1031怪物受击死亡效果实现文档/dnf1031-monster-effects/README.md",
+      "kind": "handoff",
+      "purpose": "另一PVF怪物效果包",
+      "bytes": 36018,
+      "sha256": "b0d483fabcb519367907cfa7ea4b0d9f2db3d40374cd9619838ab90a1c3c51a8",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    },
+    {
+      "id": "E24",
+      "workspace_relative_path": "逆向部分结果参考/1031-UI渲染交接包/1031-UI渲染交接包/ui_lab_1031/docs/1031-UI层跨项目复刻规范.md",
+      "kind": "handoff",
+      "purpose": "另一PVF的UI规则/Qt候选边界",
+      "bytes": 41434,
+      "sha256": "d3ad81d95a4dbdd927f33d9a07cd828374dfe1d480bdf6396ab7f9f95f75d831",
+      "verification_scope": "referenced_file_bytes_only_not_native_runtime"
+    }
+  ],
+  "historical_content_claims": [
+    {
+      "origin": "current handoff",
+      "pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d"
+    },
+    {
+      "origin": "UI and monster handoffs",
+      "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f"
+    }
+  ],
+  "original_client_rehashed_this_task": false,
+  "excluded_inputs": [
+    "frozen GBA implementation and derived assets",
+    "DFQ UI"
+  ]
+}

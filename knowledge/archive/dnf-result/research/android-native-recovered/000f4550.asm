@@ -1,0 +1,44 @@
+000f4550: 30b5	push	{r4, r5, lr}
+000f4552: 8568	ldr	r5, [r0, #8]
+000f4554: 0169	ldr	r1, [r0, #0x10]
+000f4556: 031c	adds	r3, r0, #0
+000f4558: 1033	adds	r3, #0x10
+000f455a: 0162	str	r1, [r0, #0x20]
+000f455c: 6918	adds	r1, r5, r1
+000f455e: ca0f	lsrs	r2, r1, #0x1f
+000f4560: 5118	adds	r1, r2, r1
+000f4562: 0268	ldr	r2, [r0]
+000f4564: 4910	asrs	r1, r1, #1
+000f4566: 8161	str	r1, [r0, #0x18]
+000f4568: aa18	adds	r2, r5, r2
+000f456a: d50f	lsrs	r5, r2, #0x1f
+000f456c: aa18	adds	r2, r5, r2
+000f456e: 5210	asrs	r2, r2, #1
+000f4570: 8260	str	r2, [r0, #8]
+000f4572: 5218	adds	r2, r2, r1
+000f4574: d10f	lsrs	r1, r2, #0x1f
+000f4576: 8a18	adds	r2, r1, r2
+000f4578: 5210	asrs	r2, r2, #1
+000f457a: 0261	str	r2, [r0, #0x10]
+000f457c: 5a68	ldr	r2, [r3, #4]
+000f457e: 041c	adds	r4, r0, #0
+000f4580: 0834	adds	r4, #8
+000f4582: 4262	str	r2, [r0, #0x24]
+000f4584: 6568	ldr	r5, [r4, #4]
+000f4586: a918	adds	r1, r5, r2
+000f4588: ca0f	lsrs	r2, r1, #0x1f
+000f458a: 5118	adds	r1, r2, r1
+000f458c: 4268	ldr	r2, [r0, #4]
+000f458e: 4910	asrs	r1, r1, #1
+000f4590: c161	str	r1, [r0, #0x1c]
+000f4592: aa18	adds	r2, r5, r2
+000f4594: d00f	lsrs	r0, r2, #0x1f
+000f4596: 8218	adds	r2, r0, r2
+000f4598: 5210	asrs	r2, r2, #1
+000f459a: 6260	str	r2, [r4, #4]
+000f459c: 5218	adds	r2, r2, r1
+000f459e: d10f	lsrs	r1, r2, #0x1f
+000f45a0: 8a18	adds	r2, r1, r2
+000f45a2: 5210	asrs	r2, r2, #1
+000f45a4: 5a60	str	r2, [r3, #4]
+000f45a6: 30bd	pop	{r4, r5, pc}

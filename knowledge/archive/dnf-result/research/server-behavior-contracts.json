@@ -1,0 +1,573 @@
+[
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "skill.can-learn"
+    },
+    "authority": {
+      "sample_sha256": "3b17217a5328ae1690d9d9f935e8e30216e29c4a2ad8fb0acc9673fe30b5d966",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/can_learn.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "skill.can-learn",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/can_learn.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/get_type_max_level.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/get_second_growtype_max_level.inc",
+          "research/server-rule-verification.json"
+        ],
+        "value": "Base/second-grow cap; second-grow cap 0 falls back to base; target>=1; min(cap, level-limit+1)>=target; limit+interval*(target-1)<=level. Second grow outside 1..2 returns -1.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-b1e18f09b0ecb3a8c2c9"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "skill.maximum-level"
+    },
+    "authority": {
+      "sample_sha256": "adedff85651d64074e8a262454517aeb1cef4cd2255b188f97f73a271479ef33",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/getMaxSkillLevel.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "skill.maximum-level",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/getMaxSkillLevel.inc",
+          "research/server-rule-verification.json"
+        ],
+        "value": "cap==0 returns -1; otherwise min(level-limit+1, cap, trunc((level-limit)/interval)+1), negative result becomes 0. Callers must guarantee interval!=0 and valid base index.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-3699f7c7ea9384243cf3"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "quest.level-penalty"
+    },
+    "authority": {
+      "sample_sha256": "0e3b92b3f641a811d01e8857e4f62a6f1caf910c87b11b97cb568aa7e1af2cf2",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_level_penalty.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "quest.level-penalty",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_level_penalty.inc",
+          "research/server-rule-verification.json"
+        ],
+        "value": "delta<=6:100; 6<delta<=11:green-level parameter; delta>11:grey-level parameter.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-12e879bd497ae67915cb"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "economy.repair-price"
+    },
+    "authority": {
+      "sample_sha256": "2a804e42d0a82dfad3b6490602fa979866eabfad279cf4e8d73ad6f8dd2af104",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Store/getEquipmentRepairPrice.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "economy.repair-price",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/Store/getEquipmentRepairPrice.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/InitScriptProducers_4/InitEquipmentScript.inc",
+          "research/server-rule-verification.json"
+        ],
+        "value": "max==0 or current==max =>0; float(trunc((grade+5)*base/10))*repairCost/max*(max-current)*rate, cast to int. flag parameter unused in this function.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-6efe40ff2403f2370f5e"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "quest.reward-tables"
+    },
+    "authority": {
+      "sample_sha256": "d7bb812b37a35c469e8f0afcac4439ef4626a1a4766d76316bb5bbf56bf59949",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/RDARScriptQuestParameter/importQuestParameterScript.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "quest.reward-tables",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/RDARScriptQuestParameter/importQuestParameterScript.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_Data/getRewardExp.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_Data/getRewardGold.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_Data/getRewardWeight.inc"
+        ],
+        "value": "EXP/gold tables read at most 200 integers; lookup vector.at(level), not level-1. Difficulty map first-character key; missing weight defaults 100. Out-of-range vector access throws.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-bdde53217dfc69ccc8cd"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "quest.base-experience"
+    },
+    "authority": {
+      "sample_sha256": "03581ff660bf2664656cc941c6c15192d535747b50db15fc8e5d1e20e2f1c64d",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_quest_basic_reward_exp.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "quest.base-experience",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_quest_basic_reward_exp.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/set_quest.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/STQuestScript.cpp"
+        ],
+        "value": "Quest.m_type category4 ([normaly repeat] from [grade], not m_triggerType) returns0. [event] or [ignore quest level 4 exp] selects character-level table index; otherwise minimum quest level. Apply difficulty weight then level penalty with integer truncation; premium0x4f and growth high-byte bonus are separate additions.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-14815373b4423e1f1123"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "quest.base-gold"
+    },
+    "authority": {
+      "sample_sha256": "6cbe3d12f6f91d09ae44e54cccf08145dd2e3f278949688d00028ee0d48c7a0c",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_quest_basic_reward_gold.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "quest.base-gold",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_quest_basic_reward_gold.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/set_quest.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/STQuestScript.cpp"
+        ],
+        "value": "Only reward types0/25 and a reward entry itemID0 generate this gold. Ignore-level flag selects player index and bypasses penalty; otherwise quest-minimum index. gold*penalty/100*[gold multiple]/100 with two integer divisions.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-d11c8fd6a3a7ba51c9b7"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "quest.target-identity"
+    },
+    "authority": {
+      "sample_sha256": "1a38222c342591222524efa2bce70354e0e90d0f02879ea842aa60be72bf1252",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/checkMatchedGrowType.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "quest.target-identity",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/checkMatchedGrowType.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/check_clear_item.inc"
+        ],
+        "value": "Target tuple: job11 wildcard, firstGrow=-1 wildcard, secondGrow=-1 wildcard. Clear-item dungeon=-1 wildcard; empty target/item list returns false in these specific predicates.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-f0a624f09cc3d7fa2d09"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "quest.acceptance"
+    },
+    "authority": {
+      "sample_sha256": "2a89ddab251cdf0f8c6ecc9edb7a08c9b9cff4bd60057a7ba56b043bff5da966",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/check_possible.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "quest.acceptance",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/check_possible.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/checkAcceptableQuest.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/accept_quest.inc"
+        ],
+        "value": "Acceptance combines job/grow, inclusive min/max level, prerequisite/anti-quest lists, daily-training and expert-job checks, duplicate/cleared flags and inventory operations. GM bypasses selected checks; not all lifecycle checks.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-91ae7f5f215620e0cb7d"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "quest.condition-dispatch"
+    },
+    "authority": {
+      "sample_sha256": "350b0fa810356ad1c5d1ca5804da3ec3ae61352cc05495f115f9e587adf3cfb3",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_quest_condition.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "quest.condition-dispatch",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_quest_condition.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_quest_type_condition.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_quest_subtype_condition.inc"
+        ],
+        "value": "Separate type/subtype dispatch plus authentication state; subtype7 passes individual comparisons but falls through to default false in this supplied source. Preserve this behavior as a version/reconstruction question.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-23cc88463dcfddd726da"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "quest.lifecycle"
+    },
+    "authority": {
+      "sample_sha256": "bdf874e44075ec5bad96bec6ced1f7d39b04f579cdbdf26558aaf55120c6a476",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_cond_clear.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "quest.lifecycle",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_cond_clear.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/finish_quest.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/giveup_quest.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/set_trigger.inc"
+        ],
+        "value": "20 active slots in this server. Finish requires trigger0; clears slot and nonrepeatable completion bit, resets urgent type8. Return0x16 incomplete,0x13 not active. Missing quest after lookup may be dereferenced; inspect callers, do not silently patch research evidence.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-3353605201dfc0b51013"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "combat.damage-constants"
+    },
+    "authority": {
+      "sample_sha256": "8960bff2b2bcd14e2847a52a1b7621d385bd7abbf9a0d64b0ed190988e33efb9",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/ScriptDepsB/importEtcParameterScriptForServer.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "combat.damage-constants",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/ScriptDepsB/importEtcParameterScriptForServer.inc"
+        ],
+        "value": "Reads 26 ordered floats after [damage fomula constant]; local PC PVF has27 values. Export positional candidates and unconsumed tail; do not guess the 27th meaning.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-fee2ab2efdf523c07cae"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "combat.damage-pipeline"
+    },
+    "authority": {
+      "sample_sha256": "1f77fb8ddf74e60cdc163ab4d02ebd7398de44f27210d578c6f4708383d5032f",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Dispatchers/computeHpDamageSDC.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "combat.damage-pipeline",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/Dispatchers/computeHpDamageSDC.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/Dispatchers/computeHpDamageSDC_1.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/SDCLink/getDamageInflict.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/SDCLink/getDefenseRateDamager.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/STComputeDamageVariable.h"
+        ],
+        "value": "Complete supplied functions retained: attack object dispatch, critical/element/defense/conversion/status stages and packed0x1fc working structure. Field names and reconstructed layouts require original-ELF/client version validation.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-d11b110b34a6a467ac63"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "combat.collision-object-component"
+    },
+    "authority": {
+      "sample_sha256": "e98605adfbd2be502406ce89942990d10bc47e99aef80809ad52b9bc02cd2ec8",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/SDCLink/getDamageInflictCollisionObject.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "combat.collision-object-component",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/SDCLink/getDamageInflictCollisionObject.inc"
+        ],
+        "value": "Physical/magical stat term is s2/DamageRateConst+1. Source records prior reversed-division bug. Object types4/5 bypass one conversion stage; additional type0 conversion and m_f047 factor still apply.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-fb9667178cc5091eff3b"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "crafting.upgrade-parser"
+    },
+    "authority": {
+      "sample_sha256": "b5eb492d0ae227888a6f7b42846836a12970668a105d4c8b47c5175a0d76e73b",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/ScriptLeafA2/importUpgradeTable.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "crafting.upgrade-parser",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/ScriptLeafA2/importUpgradeTable.inc",
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/CItemUpgrade/getUpgradeItemRepairCostRate.inc"
+        ],
+        "value": "Upgrade table loader and repair multiplier getter retained with original branches/counts. This does not by itself prove all random chances, protection/consumption and success/failure transactions.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-6cf35cdf2b9d66769b0b"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "rednf-server",
+      "namespace": "supplied-reconstruction.function-rule",
+      "key": "services.packet-dispatch"
+    },
+    "authority": {
+      "sample_sha256": "df2311d703da51dd76d096512fe95c9e1422bbc3b583c3cebc3d70cf3eac70bf",
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/PacketDispatcher/PacketDispatcher.inc",
+      "status": "source-code"
+    },
+    "rules": [
+      {
+        "name": "services.packet-dispatch",
+        "status": "source-verified",
+        "evidence": [
+          "imports/rednf/remake/source/DNFServer/GameServer/Game/PacketDispatcher/PacketDispatcher.inc"
+        ],
+        "value": "Every literal m_dispatchers[index]=new Class registration exported with source line and class method candidates. This is server slot evidence, not proof of matching PC wire opcode/framing.",
+        "unit": "unresolved",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original server ELF and same-version PC/PVF correspondence",
+        "impact": "Cannot install these rules as exact PC defaults merely because the source is named1031.",
+        "acceptance": "Hash-bind original server ELF/PVF and compare consumers, rounding, state writers and original runtime outcomes.",
+        "gap_id": "G-6e0a6d29b730fdac7e3d"
+      }
+    ],
+    "runtime_equivalence_verified": false
+  }
+]

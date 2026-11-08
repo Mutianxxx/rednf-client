@@ -1,0 +1,134 @@
+{
+  "status": "pass",
+  "mode": "static-consolidation-and-full-research-validation; isolated-native tests; no new game runtime tests",
+  "timestamp_utc": "2026-10-16T11:55:35.141074+00:00",
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "checks": [
+    {
+      "check": "byte-identical-imports-and-optional-input-hashes",
+      "status": "pass",
+      "errors": [],
+      "files": 141621,
+      "original_inputs_rechecked": true
+    },
+    {
+      "check": "complete-android-snapshot-file-set",
+      "status": "pass",
+      "errors": [],
+      "files": 55850
+    },
+    {
+      "check": "additional-revision-and-server-snapshots",
+      "status": "pass",
+      "errors": [],
+      "revision_files": 2441,
+      "server_files": 36439
+    },
+    {
+      "check": "bundled-PC-PVF-hash",
+      "status": "pass",
+      "errors": [],
+      "sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d"
+    },
+    {
+      "check": "all-canonical-files-rechecked-against-bundled-PC-PVF",
+      "status": "pass",
+      "errors": [],
+      "files": 21228
+    },
+    {
+      "check": "PC-source-manifest-hashes",
+      "status": "pass",
+      "errors": [],
+      "checked": 2732,
+      "external_inputs_rechecked": true
+    },
+    {
+      "check": "mislabelled-CHR-hash-correction",
+      "status": "pass",
+      "errors": []
+    },
+    {
+      "check": "all-PC-quests-token-roundtrip-and-lossless-list-export",
+      "status": "pass",
+      "errors": [],
+      "quests": 3222,
+      "unsupported_auxiliary_lists": [
+        {
+          "path": "n_quest/dailyrandomquest.lst",
+          "error": "Odd token list: n_quest/dailyrandomquest.lst"
+        },
+        {
+          "path": "n_quest/epicquest.lst",
+          "error": "Unknown list row: n_quest/epicquest.lst:0"
+        },
+        {
+          "path": "n_quest/trainingquest.lst",
+          "error": "Unknown list row: n_quest/trainingquest.lst:0"
+        }
+      ]
+    },
+    {
+      "check": "original-Android-quest-reparse",
+      "status": "pass",
+      "errors": [],
+      "records": 530,
+      "binary_stride": 225
+    },
+    {
+      "check": "conflict-decision-evidence-references",
+      "status": "pass",
+      "errors": [],
+      "decisions": 26
+    },
+    {
+      "check": "new-document-local-links",
+      "status": "pass",
+      "errors": [],
+      "links": 115
+    },
+    {
+      "check": "new-tool-syntax",
+      "status": "pass",
+      "errors": [],
+      "scripts": 35
+    },
+    {
+      "check": "conversion-regression-tests",
+      "status": "pass",
+      "errors": [],
+      "log": "inventory/unit-tests.txt",
+      "exit_code": 0
+    },
+    {
+      "check": "full-sample-research-and-native-verification-reports",
+      "status": "pass",
+      "errors": [],
+      "evidence": [
+        "research/verification-full-byte-report.json",
+        "research/verification-report.json",
+        "research/native-rule-verification.json",
+        "research/server-rule-verification.json",
+        "research/server-contract-build-report.json",
+        "research/android-revision-merge-report.json"
+      ],
+      "PC_entries": 334927,
+      "Android_BNV_entries": 3041
+    },
+    {
+      "check": "all-new-artifact-JSON-and-JSONL-parse",
+      "status": "pass",
+      "errors": [],
+      "hashed_artifacts": 21739
+    }
+  ],
+  "imported_files": 141621,
+  "new_or_generated_artifact_files": 21739,
+  "bundle_bytes": 5112709757,
+  "boundaries": [
+    "Legacy selected-scope reports remain unchanged. Full PC/Android/code audit and auxiliary list structures are indexed in research/; runtime semantics are separately tracked.",
+    "All quest records are display/export ready; execution_ready=false.",
+    "Android and PC game runtime equivalence not tested.",
+    "Historical imported document links and tool absolute paths unchanged."
+  ]
+}

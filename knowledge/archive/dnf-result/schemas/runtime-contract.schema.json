@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:dnf-research:runtime-contract:1",
+  "title": "Source-backed runtime contract, separate from platform policy",
+  "type": "object",
+  "required": [
+    "schema",
+    "identity",
+    "authority",
+    "rules",
+    "unknowns",
+    "runtime_equivalence_verified"
+  ],
+  "properties": {
+    "schema": {
+      "const": "dnf.runtime-contract.v1"
+    },
+    "identity": {
+      "type": "object",
+      "required": [
+        "source",
+        "namespace",
+        "key"
+      ],
+      "properties": {
+        "source": {
+          "enum": [
+            "pc",
+            "lua-reference",
+            "android",
+            "rednf-server",
+            "dfq-mechanics"
+          ]
+        },
+        "namespace": {
+          "type": "string"
+        },
+        "key": {
+          "type": [
+            "string",
+            "integer"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "required": [
+        "sample_sha256",
+        "path",
+        "status"
+      ],
+      "properties": {
+        "sample_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "path": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "source-structure",
+            "source-code",
+            "isolated-execution",
+            "game-runtime-verified"
+          ]
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "line": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "status",
+          "evidence",
+          "value"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "observed",
+              "source-verified",
+              "isolated-execution-verified",
+              "unknown"
+            ]
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "value": {},
+          "unit": {
+            "enum": [
+              "source-pixel",
+              "millisecond",
+              "source-tick",
+              "ratio",
+              "integer",
+              "source-enum",
+              "unresolved"
+            ]
+          },
+          "applies_to_pc": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "question",
+          "impact",
+          "acceptance"
+        ],
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "impact": {
+            "type": "string"
+          },
+          "acceptance": {
+            "type": "string"
+          },
+          "gap_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "runtime_equivalence_verified": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

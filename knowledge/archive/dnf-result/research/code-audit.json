@@ -1,0 +1,29 @@
+{
+  "files": {
+    "lua-reference": 30,
+    "android-java": 360,
+    "pc-squirrel": 189,
+    "android-native": 3968
+  },
+  "units": {
+    "lua-reference": 267,
+    "android-java": 2959,
+    "pc-squirrel": 1591,
+    "android-native": 4163
+  },
+  "unclassified_units": {
+    "lua-reference": 77,
+    "android-java": 2425,
+    "pc-squirrel": 901,
+    "android-native": 2027
+  },
+  "patch_functions": 48,
+  "patch_entry_sites": 108,
+  "patch_instruction_nodes": 1529,
+  "caveats": [
+    "Function/call/domain index is lexical navigation, not verified semantics.",
+    "Lua next-declaration ranges may contain nested/local scopes; full raw source retained.",
+    "Native symbols include libraries; unclassified units are explicitly retained.",
+    "Appended segment contains mixed code and data; CFG is candidate control flow with unresolved indirect transfers."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "archives": 1654,
+  "albums": 90848,
+  "frames": 11775732,
+  "statuses": {
+    "ogg-container": 10386,
+    "structural": 80390,
+    "structural-with-issues": 72
+  },
+  "versions": {
+    "1": 136,
+    "2": 80326
+  },
+  "pixel_types": {
+    "14": 1781275,
+    "16": 8093117,
+    "15": 7800,
+    "17": 1893540
+  },
+  "issues": 97,
+  "verify_pixels": true,
+  "limitations": [
+    "Ogg containers only identified, not audio-decoded.",
+    "IMG structural/pixel byte validation is not PC blend/draw-order equivalence.",
+    "External archive bytes remain read-only and hash-bound."
+  ]
+}

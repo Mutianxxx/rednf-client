@@ -1,0 +1,155 @@
+{
+  "format_version": 1,
+  "date": "2026-10-20",
+  "scope": "60US integration implementation; evidence and user acceptance tracked separately",
+  "handoff_root": "../../reverse-60us",
+  "release_id": "20261020-01",
+  "start_here": "../../reverse-60us/CURRENT_TASK.md",
+  "next_task": "R60-04",
+  "runtime_integration": "R60-03_skill_release_crashfix_automated_pass_user_retest_pending",
+  "damage_priority": "deferred_until_rendering_lifecycle_work",
+  "source_profiles": {
+    "60us": {
+      "pvf_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "static_exe_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "installed_exe_sha256": "bdd14a558658dd0b20def0aa9fa4b355b98855075a05ba6de7f60c4da695495e",
+      "registered_characters": 6,
+      "registered_skills": 688,
+      "resolved_skill_names": 688,
+      "partial_skill_fragments": 5,
+      "complete_skill_controllers": 0
+    },
+    "1031": {
+      "pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+      "final_non_creator_characters": 10,
+      "cross_version_behavior_verified": false
+    }
+  },
+  "write_ownership": {
+    "reverse_workspace": "D:/dnf/60US: client RE, source evidence, new releases",
+    "integration_workspace": "D:/dnf-rebuild: adapters, runtime implementation, candidate builds and integration reports",
+    "immutable": [
+      "reverse-60us/releases/20261020-01",
+      "reverse-60us/handoff/workspace-before"
+    ],
+    "shared_rule": "One integration owner edits common entry points, plans and build directories"
+  },
+  "tasks": [
+    {
+      "id": "R60-00",
+      "title": "源码证据交接与复制后核对",
+      "depends_on": [],
+      "parent_tasks": [
+        "P00",
+        "P01",
+        "P02"
+      ],
+      "status": "handoff_delivered",
+      "owner": "reverse_workspace",
+      "verification": "../../reverse-60us/handoff/verification.json",
+      "exit": "File identities, dependency closure, copied preview APIs and workspace-before backups verified"
+    },
+    {
+      "id": "R60-01",
+      "title": "现有实现与60US证据差异审查",
+      "depends_on": [
+        "R60-00"
+      ],
+      "parent_tasks": [
+        "P02",
+        "P03",
+        "P16"
+      ],
+      "status": "completed",
+      "owner": "integration_workspace",
+      "exit": "Adoption matrix names code locations, source profiles, confirmed differences and unresolved cross-version behavior",
+      "verification": "../../reverse-60us/integration/R60-01-ADOPTION-MATRIX.json"
+    },
+    {
+      "id": "R60-02",
+      "title": "名称图标与通用渲染接入",
+      "depends_on": [
+        "R60-01"
+      ],
+      "parent_tasks": [
+        "P02",
+        "P03",
+        "P16"
+      ],
+      "status": "automated_pass_user_comparison_pending",
+      "owner": "integration_workspace",
+      "exit": "Version-bound naming and pose/render implementation, relevant source/edge checks, isolated built candidate",
+      "verification": "../../reverse-60us/integration/R60-02-VERIFICATION.json",
+      "progress": "../../reverse-60us/integration/R60-02-PROGRESS.md"
+    },
+    {
+      "id": "R60-03",
+      "title": "原生ANI时钟动作速率与附层",
+      "depends_on": [
+        "R60-02"
+      ],
+      "parent_tasks": [
+        "P03",
+        "P05",
+        "P06"
+      ],
+      "status": "automated_pass_user_comparison_pending",
+      "owner": "integration_workspace",
+      "evidence_owner": "reverse_workspace",
+      "exit": "Explicit source delay/game clock mapping, shared and independent clocks, pause/hit pause and cleanup behavior",
+      "progress": "../../reverse-60us/integration/R60-03-PROGRESS.md",
+      "runtime_consumers_complete": true,
+      "verification": "../../reverse-60us/integration/R60-03-VERIFICATION.json"
+    },
+    {
+      "id": "R60-04",
+      "title": "技能阶段与视觉实体生命周期",
+      "depends_on": [
+        "R60-03"
+      ],
+      "parent_tasks": [
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "status": "planned",
+      "owner": "integration_workspace",
+      "evidence_owner": "reverse_workspace",
+      "exit": "Per-fragment resource consumers, spawn/end/remove timing, ordinary input and interruption cleanup; no template-as-native claims"
+    },
+    {
+      "id": "R60-05",
+      "title": "怪物受击死亡及场景破坏显示",
+      "depends_on": [
+        "R60-03"
+      ],
+      "parent_tasks": [
+        "P06",
+        "P07",
+        "P13",
+        "P14"
+      ],
+      "status": "planned",
+      "owner": "integration_workspace",
+      "evidence_owner": "reverse_workspace",
+      "exit": "Geometry separated from acceptance; reaction/death/ACT/PTL/removal boundaries tested with existing reward idempotency preserved"
+    },
+    {
+      "id": "R60-06",
+      "title": "完整伤害数值扩展",
+      "depends_on": [
+        "R60-04",
+        "R60-05"
+      ],
+      "parent_tasks": [
+        "P05",
+        "P07"
+      ],
+      "status": "deferred",
+      "owner": "integration_workspace",
+      "exit": "Schedule after rendering/lifecycle candidate; retain prior evidence and final full-content gates"
+    }
+  ],
+  "standalone_preview_maintenance": "discontinued_by_user_2026-10-20_history_preserved",
+  "crashfix_verification": "../../dnf-native-demo/reports/r60-03-skill-crashfix/VERIFICATION.json"
+}

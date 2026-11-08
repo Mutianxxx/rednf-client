@@ -1,0 +1,69 @@
+{
+  "status": "pass",
+  "scope": "full static source integrity and model accounting; no PC or target game runtime equivalence assertion",
+  "all_bytes": false,
+  "checks": [
+    {
+      "check": "all-PC-entries-accounted",
+      "status": "pass",
+      "errors": [],
+      "entries": 334927
+    },
+    {
+      "check": "all-Android-BNV-entries-accounted",
+      "status": "pass",
+      "errors": [],
+      "entries": 3041
+    },
+    {
+      "check": "exact-archived-byte-integrity",
+      "status": "pass",
+      "errors": [],
+      "checked": {
+        "android-bnv": 3041,
+        "rednf-server": 22945,
+        "rednf-expanded": 198
+      },
+      "every_PC_byte": false
+    },
+    {
+      "check": "complete-token-stream-byte-roundtrip",
+      "status": "pass",
+      "errors": [],
+      "files": 0,
+      "performed": false
+    },
+    {
+      "check": "all-loader-traces-accounted-with-explicit-source-anomaly",
+      "status": "pass",
+      "errors": []
+    },
+    {
+      "check": "every-split-native-assembly-indexed",
+      "status": "pass",
+      "errors": [],
+      "files": 3968
+    },
+    {
+      "check": "system-contracts-have-ledger-and-evidence",
+      "status": "pass",
+      "errors": []
+    },
+    {
+      "check": "native-symbols-without-original-split-assembly-recovered",
+      "status": "pass",
+      "errors": []
+    },
+    {
+      "check": "all-skill-files-retained-including-unregistered",
+      "status": "pass",
+      "errors": [],
+      "files": 2008
+    },
+    {
+      "check": "SQLite-integrity",
+      "status": "pass",
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:dnf-result:quest-list:v1",
+  "title": "PC-derived Android-readable quest list (not APK binary data)",
+  "type": "object",
+  "required": ["schema", "quests"],
+  "properties": {
+    "schema": {"const": "dnf.quest.android-list.v1"},
+    "quests": {"type": "array", "items": {"$ref": "#/$defs/quest"}}
+  },
+  "$defs": {
+    "field": {
+      "type": "object",
+      "required": ["tag", "values", "token_index", "offset"],
+      "properties": {
+        "tag": {"type": "string"},
+        "values": {"type": "array"},
+        "token_index": {"type": "integer", "minimum": 0},
+        "offset": {"type": "integer", "minimum": 2}
+      }
+    },
+    "quest": {
+      "type": "object",
+      "required": ["schema", "id", "pc_ids", "source", "display", "pc_descriptors", "original_fields", "unresolved_string_links", "execution"],
+      "properties": {
+        "schema": {"const": "dnf.quest.android-list.v1"},
+        "id": {"type": "string", "pattern": "^pc:[a-f0-9]{64}:.+\\.qst$"},
+        "pc_ids": {"type": "array", "items": {"type": "object", "required": ["list", "id"]}},
+        "source": {
+          "type": "object",
+          "required": ["path", "pvf_sha256", "raw_sha256", "raw_path", "canonical_path", "canonical_line"],
+          "properties": {
+            "pvf_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+            "raw_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+            "canonical_line": {"type": "integer", "minimum": 1}
+          }
+        },
+        "display": {"type": "object", "required": ["title", "objective_text"]},
+        "pc_descriptors": {"type": "object"},
+        "original_fields": {"type": "array", "items": {"$ref": "#/$defs/field"}},
+        "unresolved_string_links": {"type": "array"},
+        "execution": {
+          "type": "object",
+          "required": ["engine", "ready", "required"],
+          "properties": {
+            "engine": {"const": "pc-pvf-quest-v1"},
+            "ready": {"const": false},
+            "required": {"type": "string"}
+          }
+        }
+      }
+    }
+  }
+}

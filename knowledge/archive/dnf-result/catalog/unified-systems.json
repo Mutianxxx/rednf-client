@@ -1,0 +1,86 @@
+[
+  {
+    "domain": "assets",
+    "authority": "PC/PVF for content; unknown PC behavior remains unknown",
+    "pc": "NPK/IMG + PVF source references",
+    "android": "bnv-resources; PAK/FRA/ACT",
+    "gba": "quantization, scale, OBJ/tile limits",
+    "evidence": [
+      "catalog/pc-source-files.jsonl",
+      "imports/android/inventory/bnv-container.json"
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "domain": "quests",
+    "authority": "PC/PVF for content; unknown PC behavior remains unknown",
+    "pc": "PC ordered tags, all conditions/reward descriptors",
+    "android": "530 fixed 225-byte definitions + native consumers",
+    "gba": "material-free/reduced quest policy",
+    "evidence": [
+      "canonical/pc/quests.jsonl",
+      "adapters/android-quests/conversion-report.json"
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "domain": "maps",
+    "authority": "PC/PVF for content; unknown PC behavior remains unknown",
+    "pc": "DGN/MAP/TIL/TWN/OBJ original topology and coordinates",
+    "android": "46 ZON; FIE/DS incomplete semantics",
+    "gba": "static composition, 1/3 geometry, room selection",
+    "evidence": [
+      "imports/gba-workspace/dnf-gba/content/source/region-manifest.json",
+      "imports/android/data/zones.json"
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "domain": "combat",
+    "authority": "PC/PVF for content; unknown PC behavior remains unknown",
+    "pc": "SKL/CHR/ANI/ATK parameters; controllers/formulas incomplete",
+    "android": "native damage/AI/state call chains; formulas incomplete",
+    "gba": "84 exposed actions; platform timings/defense policy",
+    "evidence": [
+      "canonical/pc/player-skills.json",
+      "imports/android/docs/03-gameplay-logic.md"
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "domain": "audio",
+    "authority": "PC/PVF for content; unknown PC behavior remains unknown",
+    "pc": "audio.xml IDs, original OGG/ANI sound events",
+    "android": "Java audio/native sound bridge",
+    "gba": "resample/IMA ADPCM and mapped roles",
+    "evidence": [
+      "sources/pc/audio.xml",
+      "imports/android/docs/02-client-features.md"
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "domain": "persistence",
+    "authority": "PC/PVF for content; unknown PC behavior remains unknown",
+    "pc": "PC server persistence not in PVF/NPK",
+    "android": "Hero/Quest/Slot local saves and extension transactions",
+    "gba": "20 slots and atomic SRAM journal",
+    "evidence": [
+      "imports/android/docs/07-save-and-extension-bridge.md",
+      "imports/gba-workspace/dnf-gba/docs/save-format.md"
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "domain": "timing-input-ui",
+    "authority": "PC/PVF for content; unknown PC behavior remains unknown",
+    "pc": "Original content milliseconds, image/layout IDs; complete PC behavior not recovered",
+    "android": "33ms initial callback, touch/extensions",
+    "gba": "59.73Hz, physical buttons and 240x160",
+    "evidence": [
+      "docs/04-actions-combat-audio.md",
+      "docs/06-platform-boundaries.md"
+    ],
+    "runtime_equivalence_verified": false
+  }
+]

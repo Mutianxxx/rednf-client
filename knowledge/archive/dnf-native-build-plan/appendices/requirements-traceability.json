@@ -1,0 +1,321 @@
+{
+  "plan_version": "v1.1",
+  "requirements": [
+    {
+      "id": "U01",
+      "requirement": "独立客户端基于PVF和1031资源",
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "01-architecture-and-contracts.md",
+        "02-content-loading-and-versioning.md"
+      ],
+      "tasks": [
+        "P01",
+        "P02"
+      ],
+      "acceptance": [
+        "A-SOURCE",
+        "A-RELEASE"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U02",
+      "requirement": "通用逻辑与特殊处理登记",
+      "documents": [
+        "01-architecture-and-contracts.md",
+        "02-content-loading-and-versioning.md",
+        "04-characters-skills-and-script-host.md",
+        "06-world-dungeons-and-collision.md"
+      ],
+      "tasks": [
+        "P02",
+        "P06",
+        "P13"
+      ],
+      "acceptance": [
+        "A-ARCH",
+        "A-CHAR"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U03",
+      "requirement": "地图UI优先来源证据渲染",
+      "documents": [
+        "02-content-loading-and-versioning.md",
+        "06-world-dungeons-and-collision.md",
+        "09-rendering-ui-and-audio.md"
+      ],
+      "tasks": [
+        "P02",
+        "P13",
+        "P16"
+      ],
+      "acceptance": [
+        "A-SOURCE",
+        "A-UI"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U04",
+      "requirement": "更换PVF及资源版本兼容",
+      "documents": [
+        "02-content-loading-and-versioning.md",
+        "10-persistence-and-migration.md",
+        "12-platform-build-and-release.md"
+      ],
+      "tasks": [
+        "P01",
+        "P02",
+        "P04"
+      ],
+      "acceptance": [
+        "A-SOURCE",
+        "A-SAVE"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U05",
+      "requirement": "核心完整且前台由用户测试",
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "tasks": [
+        "P18",
+        "P19"
+      ],
+      "acceptance": [
+        "A-FLOW",
+        "A-DOC"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U06",
+      "requirement": "明确版本完成未完成及后续适配",
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "12-platform-build-and-release.md",
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "tasks": [
+        "P00",
+        "P18",
+        "P19"
+      ],
+      "acceptance": [
+        "A-RELEASE",
+        "A-DOC"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U07",
+      "requirement": "v0.x beta独立测试窗口",
+      "documents": [
+        "11-beta-tools-and-rule-strategies.md",
+        "12-platform-build-and-release.md"
+      ],
+      "tasks": [
+        "P17",
+        "P19"
+      ],
+      "acceptance": [
+        "A-DEBUG",
+        "A-RELEASE"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U08",
+      "requirement": "等级属性装备攻速伤害通用计算",
+      "documents": [
+        "04-characters-skills-and-script-host.md",
+        "05-stats-equipment-and-combat.md"
+      ],
+      "tasks": [
+        "P05",
+        "P07"
+      ],
+      "acceptance": [
+        "A-STATS",
+        "A-HIT"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U09",
+      "requirement": "多种推理可切换及反馈",
+      "documents": [
+        "05-stats-equipment-and-combat.md",
+        "11-beta-tools-and-rule-strategies.md"
+      ],
+      "tasks": [
+        "P05",
+        "P07",
+        "P17"
+      ],
+      "acceptance": [
+        "A-DEBUG",
+        "A-STATS"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U10",
+      "requirement": "允许有依据经验推理推进",
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "04-characters-skills-and-script-host.md",
+        "11-beta-tools-and-rule-strategies.md"
+      ],
+      "tasks": [
+        "P00",
+        "P06",
+        "P17"
+      ],
+      "acceptance": [
+        "A-DOC",
+        "A-SCRIPT"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "U11",
+      "requirement": "可玩商店交互战斗副本任务",
+      "documents": [
+        "04-characters-skills-and-script-host.md",
+        "05-stats-equipment-and-combat.md",
+        "06-world-dungeons-and-collision.md",
+        "07-monsters-objects-and-particles.md",
+        "08-npc-quests-economy-and-services.md",
+        "10-persistence-and-migration.md",
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "tasks": [
+        "P07",
+        "P13",
+        "P14",
+        "P15",
+        "P18"
+      ],
+      "acceptance": [
+        "A-FLOW",
+        "A-QUEST",
+        "A-ECONOMY"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "C01",
+      "requirement": "保留十非Creator完整职业最终门槛",
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "04-characters-skills-and-script-host.md",
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "tasks": [
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P18"
+      ],
+      "acceptance": [
+        "A-CHAR",
+        "A-FLOW"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "C02",
+      "requirement": "按能力开放全部区域",
+      "documents": [
+        "02-content-loading-and-versioning.md",
+        "06-world-dungeons-and-collision.md",
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "tasks": [
+        "P02",
+        "P13"
+      ],
+      "acceptance": [
+        "A-WORLD"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "C03",
+      "requirement": "技能装备优先精细UI暂缓",
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "09-rendering-ui-and-audio.md",
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "tasks": [
+        "P05",
+        "P07",
+        "P16"
+      ],
+      "acceptance": [
+        "A-CHAR",
+        "A-UI"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "C04",
+      "requirement": "完整方案分模块落盘且查漏补缺含伪代码",
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "01-architecture-and-contracts.md",
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "tasks": [
+        "P00"
+      ],
+      "acceptance": [
+        "A-DOC"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    },
+    {
+      "id": "C05",
+      "requirement": "保留原始资料及多端限制D盘产物",
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "12-platform-build-and-release.md"
+      ],
+      "tasks": [
+        "P00",
+        "P19"
+      ],
+      "acceptance": [
+        "A-PORT",
+        "A-RELEASE"
+      ],
+      "plan_status": "documented",
+      "runtime_verification": "pending"
+    }
+  ]
+}

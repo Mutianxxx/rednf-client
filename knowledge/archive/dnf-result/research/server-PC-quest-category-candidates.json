@@ -1,0 +1,59 @@
+{
+  "source": "imports/rednf/remake/source/DNFServer/GameServer/Game/STQuestScript.cpp",
+  "sha256": "e2825d50e1fa8487b59317737ab269806cf0fd44f06f55fa0298aa783ac7bcbc",
+  "enum_namespace": "QuestScript.m_questType / Quest.m_type; PVF [grade]; not trigger type",
+  "mappings": [
+    {
+      "label": "[normaly repeat]",
+      "server_enum": 4,
+      "line": 333
+    },
+    {
+      "label": "[common unique]",
+      "server_enum": 5,
+      "line": 337
+    },
+    {
+      "label": "[epic]",
+      "server_enum": 0,
+      "line": 341
+    },
+    {
+      "label": "[achievement]",
+      "server_enum": 2,
+      "line": 345
+    },
+    {
+      "label": "[training]",
+      "server_enum": 1,
+      "line": 349
+    },
+    {
+      "label": "[special]",
+      "server_enum": 6,
+      "line": 353
+    },
+    {
+      "label": "[urgent]",
+      "server_enum": 8,
+      "line": 357
+    },
+    {
+      "label": "[daily]",
+      "server_enum": 3,
+      "line": 361
+    },
+    {
+      "label": "[special daily]",
+      "server_enum": 3,
+      "line": 366
+    },
+    {
+      "label": "[title]",
+      "server_enum": 7,
+      "line": 383
+    }
+  ],
+  "extraction": "Direct literal branches only; nested/other category branches remain in preserved source.",
+  "version_match_verified": false
+}

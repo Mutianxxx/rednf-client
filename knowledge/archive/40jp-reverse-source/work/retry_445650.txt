@@ -1,0 +1,77 @@
+func: OK size=112
+=== DISASM ===
+00445650  call    sub_656710
+00445655  mov     eax, [eax+28h]
+00445658  test    eax, eax
+0044565A  jl      short loc_4456BA
+0044565C  mov     ecx, dword_8F7A24
+00445662  mov     ecx, [ecx+0Ch]
+00445665  cmp     ecx, 4
+00445668  jnz     short loc_445681
+0044566A  cmp     eax, 8
+0044566D  jge     short loc_4456BA
+0044566F  mov     ecx, dword_99FEC0
+00445675  test    ecx, ecx
+00445677  jz      short loc_4456BA
+00445679  push    eax
+0044567A  call    sub_48F690
+0044567F  jmp     short loc_4456AC
+00445681  cmp     ecx, 6
+00445684  jnz     short loc_44569D
+00445686  cmp     eax, 8
+00445689  jge     short loc_4456BA
+0044568B  mov     ecx, dword_99FF08
+00445691  test    ecx, ecx
+00445693  jz      short loc_4456BA
+00445695  push    eax
+00445696  call    sub_578E80
+0044569B  jmp     short loc_4456AC
+0044569D  cmp     eax, 4
+004456A0  jge     short loc_4456BA
+004456A2  mov     edx, dword_8F850C
+004456A8  mov     eax, [edx+eax*4+10h]
+004456AC  test    eax, eax
+004456AE  jz      short loc_4456BA
+004456B0  mov     eax, [eax+0C4h]
+004456B6  test    eax, eax
+004456B8  jnz     short locret_4456BF
+004456BA  mov     eax, dword_8F7C04
+004456BF  retn
+
+=== DECOMPILE ===
+int sub_445650()
+{
+  int v0; // eax
+  int v1; // ecx
+  int v2; // eax
+  int result; // eax
+
+  v0 = *(_DWORD *)(sub_656710() + 40);
+  if ( v0 < 0 )
+    return dword_8F7C04;
+  v1 = *(_DWORD *)(dword_8F7A24 + 12);
+  if ( v1 == 4 )
+  {
+    if ( v0 >= 8 || dword_99FEC0 == 0 )
+      return dword_8F7C04;
+    v2 = sub_48F690(v0);
+  }
+  else if ( v1 == 6 )
+  {
+    if ( v0 >= 8 || dword_99FF08 == 0 )
+      return dword_8F7C04;
+    v2 = sub_578E80(v0);
+  }
+  else
+  {
+    if ( v0 >= 4 )
+      return dword_8F7C04;
+    v2 = *(_DWORD *)(dword_8F850C + 4 * v0 + 16);
+  }
+  if ( v2 == 0 )
+    return dword_8F7C04;
+  result = *(_DWORD *)(v2 + 196);
+  if ( result == 0 )
+    return dword_8F7C04;
+  return result;
+}

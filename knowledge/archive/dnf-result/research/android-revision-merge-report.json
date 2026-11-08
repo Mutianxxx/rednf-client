@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "archived_PC_examples_checked": 1257,
+  "rule_evidence_hashes_checked": 24,
+  "implementation_rules": 12,
+  "source_scan_entries": 117062,
+  "source_scan_is_subset_of_full_PC_audit": true,
+  "game_runtime_verified": false,
+  "snapshot_revision": "inventory/android-revision-summary.json",
+  "errors": []
+}

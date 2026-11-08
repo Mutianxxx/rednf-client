@@ -1,0 +1,25 @@
+{
+  "elf_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+  "files": 1279,
+  "statuses": {
+    "ds:consumer-traced": 716,
+    "fie:consumer-traced": 169,
+    "fra:consumer-traced": 393,
+    "fra:consumer-traced-with-issues": 1
+  },
+  "issues": [
+    {
+      "path": "30037.fra",
+      "status": "consumer-traced-with-issues",
+      "unread_byte_ranges": [
+        [
+          6,
+          38
+        ]
+      ],
+      "oob": [],
+      "error": null
+    }
+  ],
+  "scope": "executed native loader reads; synthetic memory services; no game runtime or semantic equivalence assertion"
+}

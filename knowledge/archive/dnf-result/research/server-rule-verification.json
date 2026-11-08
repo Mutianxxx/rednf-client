@@ -1,0 +1,77 @@
+{
+  "status": "pass",
+  "cases": {
+    "run_skill": 6000,
+    "run_max": 6000,
+    "run_penalty": 201,
+    "run_repair": 3000
+  },
+  "total": 15201,
+  "outcomes": {
+    "run_skill": {
+      "min": 0,
+      "max": 1,
+      "true": 450,
+      "false": 5550
+    },
+    "run_max": {
+      "min": -1,
+      "max": 50,
+      "true": 675,
+      "false": 3178
+    }
+  },
+  "errors": [],
+  "compiler_sha256": "61e688e069ca1a5d1c0763e9852ebcac6f80c5f88dd6eb2fc000b943a632a040",
+  "compiler_version": "arm-none-eabi-g++.exe (xPack GNU Arm Embedded GCC x86_64) 15.2.1 20251203",
+  "command": [
+    "D:\\dnf-rebuild\\dnf-gba\\third_party\\xpack-arm-none-eabi-gcc-15.2.1-1.1\\bin\\arm-none-eabi-g++.exe",
+    "-mcpu=arm7tdmi",
+    "-marm",
+    "-O1",
+    "-ffreestanding",
+    "-fno-exceptions",
+    "-fno-rtti",
+    "-nostdlib",
+    "-Wl,-Ttext=0x10000,--entry=run_skill",
+    "-o",
+    "D:\\dnf-rebuild\\dnf-result\\research\\server-isolated\\rules.elf",
+    "D:\\dnf-rebuild\\dnf-result\\research\\server-isolated\\rules.cpp",
+    "-lgcc"
+  ],
+  "elf_sha256": "7c69b49cc71f094721c65230b771fe3da0fe52531e5a2c671d4b292007a947db",
+  "wrapper_sha256": "855b2554287b9fe4bd7c93c75c70ae4171dfb55bddee8349055274d0f07a89fa",
+  "untouched_included_sources": [
+    {
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/can_learn.inc",
+      "sha256": "3b17217a5328ae1690d9d9f935e8e30216e29c4a2ad8fb0acc9673fe30b5d966"
+    },
+    {
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/get_type_max_level.inc",
+      "sha256": "3ca165da3992105dc1edb331398dc2053862b3c940a49a3cb6bfbe6eaa13fe87"
+    },
+    {
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/get_second_growtype_max_level.inc",
+      "sha256": "de6338f87e3c944d74264ff400d21e59947cdbe224e24b192ad20cfeaf3d4a0e"
+    },
+    {
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/getMaxSkillLevel.inc",
+      "sha256": "adedff85651d64074e8a262454517aeb1cef4cd2255b188f97f73a271479ef33"
+    },
+    {
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Store/getEquipmentRepairPrice.inc",
+      "sha256": "2a804e42d0a82dfad3b6490602fa979866eabfad279cf4e8d73ad6f8dd2af104"
+    },
+    {
+      "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_level_penalty.inc",
+      "sha256": "0e3b92b3f641a811d01e8857e4f62a6f1caf910c87b11b97cb568aa7e1af2cf2"
+    }
+  ],
+  "execution": "Compiled supplied C++ source, ARM7TDMI soft-float, Unicorn; isolated host fields.",
+  "original_x86_ELF_verified": false,
+  "PC_PVF_version_equivalence_verified": false,
+  "limits": [
+    "No invalid first-grow array index, signed arithmetic overflow, interval=0, or out-of-range float conversion.",
+    "Binary32 ARM result does not establish original x87 intermediate precision or packet/game runtime behavior."
+  ]
+}

@@ -1,0 +1,545 @@
+[
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 1
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s16(getCountConsumeItem(u8(arg1),u8(arg2))) >= u8(count)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 2
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s8(active[12]) >= u8(count)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 3
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s8(active[13+slot]) >= u16(arg2)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 4
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s16(active[88:90]) <= u16(arg1)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 5
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s32(getGold()) >= u16(arg1)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 6
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s8(active[90]) <= u16(arg1)+1",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 7
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s16(active[92:94]) != 0",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 8
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s8(active[94]) >= u16(arg1)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 9
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "u8(active[95]) >= u16(arg1)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 12
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s8(getQuestState(u16(arg2))) == u16(arg1)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 13
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s32(getCount(u8(hero_data[0x19c5]))) >= u16(arg1)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 15
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "u8(active[96]) != 0",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      },
+      {
+        "question": "Ownership of byte at offset 96 beyond inferred 96-byte record",
+        "impact": "Adjacent record may affect completion; do not normalize layout.",
+        "acceptance": "Trace allocation, writers and boundary conditions in the original quest lifecycle."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "checkRequire.runtime-requirement-type",
+      "key": 17
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2100-checkRequire.asm",
+      "status": "isolated-execution",
+      "offset": 866548
+    },
+    "rules": [
+      {
+        "name": "completion-predicate",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2100-checkRequire.asm",
+          "research/native-rule-verification.json",
+          "tools/behavior_models.py"
+        ],
+        "value": "s32(getCount(u32(hero_data[32:36]))) >= u16(arg1)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "Original PC quest-condition identity and event-counter meaning",
+        "impact": "No direct injection or PC rule replacement is justified.",
+        "acceptance": "Confirm runtime field writers, ID mapping and PC consumer semantics."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "native.function",
+      "key": "getHeroJobIndex"
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2123-getHeroJobIndex.asm",
+      "status": "isolated-execution",
+      "offset": 876172
+    },
+    "rules": [
+      {
+        "name": "getHeroJobIndex",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2123-getHeroJobIndex.asm",
+          "research/native-rule-verification.json"
+        ],
+        "value": "b = u8(hero_data[50]); b <= 4 ? b : u8(b-4)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "PC equivalent consumer",
+        "impact": "Android local enumeration/obfuscation is platform-specific.",
+        "acceptance": "Use PC namespace and original PC rule when implementing another port."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  },
+  {
+    "schema": "dnf.runtime-contract.v1",
+    "identity": {
+      "source": "android",
+      "namespace": "native.function",
+      "key": "getCount"
+    },
+    "authority": {
+      "sample_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+      "path": "imports/android/native/functions/2480-getCount.asm",
+      "status": "isolated-execution",
+      "offset": 935488
+    },
+    "rules": [
+      {
+        "name": "getCount",
+        "status": "isolated-execution-verified",
+        "evidence": [
+          "imports/android/native/functions/2480-getCount.asm",
+          "research/native-rule-verification.json"
+        ],
+        "value": "u32(encoded_value - global_obfuscation_offset)",
+        "unit": "integer",
+        "applies_to_pc": false
+      }
+    ],
+    "unknowns": [
+      {
+        "question": "PC equivalent consumer",
+        "impact": "Android local enumeration/obfuscation is platform-specific.",
+        "acceptance": "Use PC namespace and original PC rule when implementing another port."
+      }
+    ],
+    "runtime_equivalence_verified": false
+  }
+]

@@ -1,0 +1,630 @@
+[
+ {
+  "va": "0x50C140",
+  "name": "sub_50C140",
+  "extra": "",
+  "start": 12,
+  "tags": []
+ },
+ {
+  "va": "0x50C1F0",
+  "name": "sub_50C1F0",
+  "extra": "",
+  "start": 45,
+  "tags": []
+ },
+ {
+  "va": "0x50C260",
+  "name": "sub_50C260",
+  "extra": "",
+  "start": 70,
+  "tags": []
+ },
+ {
+  "va": "0x50C290",
+  "name": "sub_50C290",
+  "extra": "",
+  "start": 84,
+  "tags": [
+   "[job]",
+   "[growtype name]",
+   "[width]",
+   "[jump speed]",
+   "[initial value]",
+   "[growtype 1]",
+   "[growtype 2]",
+   "[growtype 3]",
+   "[growtype 4]",
+   "[growtype 5]",
+   "[HP MAX]",
+   "[MP MAX]",
+   "[physical attack]",
+   "[physical defense]",
+   "[magical attack]",
+   "[magical defense]",
+   "[fire resistance]",
+   "[water resistance]",
+   "[dark resistance]",
+   "[light resistance]",
+   "[inventory limit]",
+   "[HP regen speed]",
+   "[MP regen speed]",
+   "[move speed]",
+   "[attack speed]",
+   "[cast speed]",
+   "[hit recovery]",
+   "[jump power]",
+   "[weight]",
+   "[skill]",
+   "[category]",
+   "[waiting motion]",
+   "[move motion]",
+   "[sit motion]",
+   "[damage motion 1]",
+   "[damage motion 2]",
+   "[down motion]",
+   "[overturn motion]",
+   "[jump motion]",
+   "[jumpattack motion]",
+   "[rest motion]",
+   "[throw motion 1-1]",
+   "[throw motion 1-2]",
+   "[throw motion 2-1]",
+   "[throw motion 2-2]",
+   "[throw motion 3-1]",
+   "[throw motion 3-2]",
+   "[throw motion 4-1]",
+   "[throw motion 4-2]",
+   "[dash motion]",
+   "[dashattack motion]",
+   "[getitem motion]",
+   "[buff motion]",
+   "[attack motion]",
+   "[etc motion]",
+   "[jumpattack info]",
+   "[dashattack info]",
+   "[attack info]",
+   "[etc attack info]",
+   "[weapon wav]",
+   "[weapon hit info]",
+   "[blow]",
+   "[cut]",
+   "[burn]",
+   "[etc]",
+   "[no blood]",
+   "[blood]"
+  ]
+ },
+ {
+  "va": "0x50D260",
+  "name": "sub_50D260",
+  "extra": "",
+  "start": 556,
+  "tags": []
+ },
+ {
+  "va": "0x50D4E0",
+  "name": "sub_50D4E0",
+  "extra": "",
+  "start": 675,
+  "tags": []
+ },
+ {
+  "va": "0x50D4F0",
+  "name": "IRDPopupWindow__vmt4",
+  "extra": "",
+  "start": 686,
+  "tags": []
+ },
+ {
+  "va": "0x50D520",
+  "name": "sub_50D520",
+  "extra": "",
+  "start": 700,
+  "tags": []
+ },
+ {
+  "va": "0x50D570",
+  "name": "sub_50D570",
+  "extra": "",
+  "start": 711,
+  "tags": []
+ },
+ {
+  "va": "0x50D610",
+  "name": "CNRDStorageWindow__vmt10",
+  "extra": "",
+  "start": 752,
+  "tags": []
+ },
+ {
+  "va": "0x50D660",
+  "name": "sub_50D660",
+  "extra": "",
+  "start": 769,
+  "tags": []
+ },
+ {
+  "va": "0x50D710",
+  "name": "sub_50D710",
+  "extra": "",
+  "start": 794,
+  "tags": []
+ },
+ {
+  "va": "0x50D8F0",
+  "name": "sub_50D8F0",
+  "extra": "",
+  "start": 896,
+  "tags": []
+ },
+ {
+  "va": "0x50D910",
+  "name": "sub_50D910",
+  "extra": "",
+  "start": 906,
+  "tags": []
+ },
+ {
+  "va": "0x50D920",
+  "name": "sub_50D920",
+  "extra": "",
+  "start": 916,
+  "tags": []
+ },
+ {
+  "va": "0x50D980",
+  "name": "sub_50D980",
+  "extra": "",
+  "start": 947,
+  "tags": []
+ },
+ {
+  "va": "0x50D9A0",
+  "name": "CNRDStorageWindow__vmt0",
+  "extra": "",
+  "start": 960,
+  "tags": []
+ },
+ {
+  "va": "0x50DED0",
+  "name": "sub_50DED0",
+  "extra": "",
+  "start": 1162,
+  "tags": []
+ },
+ {
+  "va": "0x50DF30",
+  "name": "CNRDStorageWindow__vmtC",
+  "extra": "",
+  "start": 1175,
+  "tags": []
+ },
+ {
+  "va": "0x50DF60",
+  "name": "sub_50DF60",
+  "extra": "",
+  "start": 1188,
+  "tags": []
+ },
+ {
+  "va": "0x50E060",
+  "name": "CNRDStorageWindow__vmt8",
+  "extra": "",
+  "start": 1255,
+  "tags": []
+ },
+ {
+  "va": "0x50E380",
+  "name": "CNRDStorageWindow__vmt4",
+  "extra": "",
+  "start": 1435,
+  "tags": []
+ },
+ {
+  "va": "0x50E3B0",
+  "name": "sub_50E3B0",
+  "extra": "",
+  "start": 1448,
+  "tags": []
+ },
+ {
+  "va": "0x50E5F0",
+  "name": "nengine__CNButton__vmt0",
+  "extra": "",
+  "start": 1572,
+  "tags": []
+ },
+ {
+  "va": "0x50E650",
+  "name": "sub_50E650",
+  "extra": "",
+  "start": 1595,
+  "tags": []
+ },
+ {
+  "va": "0x50E730",
+  "name": "sub_50E730",
+  "extra": "",
+  "start": 1628,
+  "tags": []
+ },
+ {
+  "va": "0x50E750",
+  "name": "sub_50E750",
+  "extra": "",
+  "start": 1643,
+  "tags": []
+ },
+ {
+  "va": "0x50E7E0",
+  "name": "sub_50E7E0",
+  "extra": "",
+  "start": 1676,
+  "tags": []
+ },
+ {
+  "va": "0x50E8D0",
+  "name": "sub_50E8D0",
+  "extra": "",
+  "start": 1737,
+  "tags": []
+ },
+ {
+  "va": "0x50E950",
+  "name": "sub_50E950",
+  "extra": "",
+  "start": 1758,
+  "tags": []
+ },
+ {
+  "va": "0x50E9B0",
+  "name": "sub_50E9B0",
+  "extra": "",
+  "start": 1786,
+  "tags": []
+ },
+ {
+  "va": "0x50EA00",
+  "name": "sub_50EA00",
+  "extra": "",
+  "start": 1815,
+  "tags": []
+ },
+ {
+  "va": "0x50EAA0",
+  "name": "sub_50EAA0",
+  "extra": "",
+  "start": 1847,
+  "tags": []
+ },
+ {
+  "va": "0x50EAD0",
+  "name": "sub_50EAD0",
+  "extra": "",
+  "start": 1866,
+  "tags": []
+ },
+ {
+  "va": "0x50EAF0",
+  "name": "sub_50EAF0",
+  "extra": "",
+  "start": 1885,
+  "tags": []
+ },
+ {
+  "va": "0x50EB10",
+  "name": "sub_50EB10",
+  "extra": "",
+  "start": 1902,
+  "tags": []
+ },
+ {
+  "va": "0x50EB40",
+  "name": "sub_50EB40",
+  "extra": "",
+  "start": 1923,
+  "tags": []
+ },
+ {
+  "va": "0x50EF20",
+  "name": "sub_50EF20",
+  "extra": "",
+  "start": 2131,
+  "tags": []
+ },
+ {
+  "va": "0x50F040",
+  "name": "sub_50F040",
+  "extra": "",
+  "start": 2212,
+  "tags": []
+ },
+ {
+  "va": "0x50F0B0",
+  "name": "sub_50F0B0",
+  "extra": "",
+  "start": 2235,
+  "tags": []
+ },
+ {
+  "va": "0x50F120",
+  "name": "nengine__CNText__vmt0",
+  "extra": "",
+  "start": 2252,
+  "tags": []
+ },
+ {
+  "va": "0x50F150",
+  "name": "sub_50F150",
+  "extra": "",
+  "start": 2265,
+  "tags": []
+ },
+ {
+  "va": "0x50F1C0",
+  "name": "sub_50F1C0",
+  "extra": "",
+  "start": 2283,
+  "tags": []
+ },
+ {
+  "va": "0x50F270",
+  "name": "sub_50F270",
+  "extra": "",
+  "start": 2314,
+  "tags": []
+ },
+ {
+  "va": "0x50F2D0",
+  "name": "CNChangeMp__vmt0",
+  "extra": "",
+  "start": 2328,
+  "tags": []
+ },
+ {
+  "va": "0x50F300",
+  "name": "sub_50F300",
+  "extra": "",
+  "start": 2341,
+  "tags": []
+ },
+ {
+  "va": "0x50F360",
+  "name": "sub_50F360",
+  "extra": "",
+  "start": 2359,
+  "tags": []
+ },
+ {
+  "va": "0x50F3D0",
+  "name": "sub_50F3D0",
+  "extra": "",
+  "start": 2382,
+  "tags": []
+ },
+ {
+  "va": "0x50F440",
+  "name": "sub_50F440",
+  "extra": "",
+  "start": 2404,
+  "tags": []
+ },
+ {
+  "va": "0x50F690",
+  "name": "sub_50F690",
+  "extra": "",
+  "start": 2526,
+  "tags": []
+ },
+ {
+  "va": "0x50F710",
+  "name": "CNActiveStatusStackable__vmt4",
+  "extra": "",
+  "start": 2543,
+  "tags": []
+ },
+ {
+  "va": "0x50F740",
+  "name": "sub_50F740",
+  "extra": "",
+  "start": 2556,
+  "tags": []
+ },
+ {
+  "va": "0x50F7C0",
+  "name": "sub_50F7C0",
+  "extra": "",
+  "start": 2574,
+  "tags": []
+ },
+ {
+  "va": "0x50F7F0",
+  "name": "sub_50F7F0",
+  "extra": "",
+  "start": 2586,
+  "tags": []
+ },
+ {
+  "va": "0x50F810",
+  "name": "CNItemScreamOfHysma__vmt4",
+  "extra": "",
+  "start": 2598,
+  "tags": []
+ },
+ {
+  "va": "0x50F840",
+  "name": "sub_50F840",
+  "extra": "",
+  "start": 2611,
+  "tags": []
+ },
+ {
+  "va": "0x50F850",
+  "name": "sub_50F850",
+  "extra": "",
+  "start": 2622,
+  "tags": []
+ },
+ {
+  "va": "0x50F8E0",
+  "name": "CNAppendageStackable__vmt4",
+  "extra": "",
+  "start": 2643,
+  "tags": []
+ },
+ {
+  "va": "0x50F910",
+  "name": "sub_50F910",
+  "extra": "",
+  "start": 2656,
+  "tags": []
+ },
+ {
+  "va": "0x50F990",
+  "name": "sub_50F990",
+  "extra": "",
+  "start": 2673,
+  "tags": []
+ },
+ {
+  "va": "0x50FA30",
+  "name": "sub_50FA30",
+  "extra": "",
+  "start": 2694,
+  "tags": []
+ },
+ {
+  "va": "0x50FA50",
+  "name": "CNCoinOfFortune__vmt4",
+  "extra": "",
+  "start": 2706,
+  "tags": []
+ },
+ {
+  "va": "0x50FA80",
+  "name": "sub_50FA80",
+  "extra": "",
+  "start": 2719,
+  "tags": []
+ },
+ {
+  "va": "0x50FA90",
+  "name": "sub_50FA90",
+  "extra": "",
+  "start": 2730,
+  "tags": []
+ },
+ {
+  "va": "0x50FAB0",
+  "name": "CNTouchOfRemy__vmt88",
+  "extra": "",
+  "start": 2742,
+  "tags": []
+ },
+ {
+  "va": "0x50FBC0",
+  "name": "CNTouchOfRemy__vmt4",
+  "extra": "",
+  "start": 2782,
+  "tags": []
+ },
+ {
+  "va": "0x50FBF0",
+  "name": "sub_50FBF0",
+  "extra": "",
+  "start": 2795,
+  "tags": []
+ },
+ {
+  "va": "0x50FC00",
+  "name": "sub_50FC00",
+  "extra": "",
+  "start": 2806,
+  "tags": []
+ },
+ {
+  "va": "0x50FC40",
+  "name": "CNRateHpMp__vmt88",
+  "extra": "",
+  "start": 2821,
+  "tags": []
+ },
+ {
+  "va": "0x50FE30",
+  "name": "CNRateHpMp__vmt4",
+  "extra": "",
+  "start": 2918,
+  "tags": []
+ },
+ {
+  "va": "0x50FE60",
+  "name": "sub_50FE60",
+  "extra": "",
+  "start": 2931,
+  "tags": []
+ },
+ {
+  "va": "0x50FE70",
+  "name": "sub_50FE70",
+  "extra": "",
+  "start": 2942,
+  "tags": []
+ },
+ {
+  "va": "0x50FE90",
+  "name": "CNCallStorageBird__vmt88",
+  "extra": "",
+  "start": 2954,
+  "tags": []
+ },
+ {
+  "va": "0x50FEF0",
+  "name": "CNCallStorageBird__vmt4",
+  "extra": "",
+  "start": 2987,
+  "tags": []
+ },
+ {
+  "va": "0x50FF20",
+  "name": "sub_50FF20",
+  "extra": "",
+  "start": 3000,
+  "tags": []
+ },
+ {
+  "va": "0x50FF30",
+  "name": "sub_50FF30",
+  "extra": "",
+  "start": 3011,
+  "tags": []
+ },
+ {
+  "va": "0x50FF70",
+  "name": "CNOmozzaOfWorld__vmt4",
+  "extra": "",
+  "start": 3026,
+  "tags": []
+ },
+ {
+  "va": "0x50FFA0",
+  "name": "sub_50FFA0",
+  "extra": "",
+  "start": 3039,
+  "tags": []
+ },
+ {
+  "va": "0x50FFB0",
+  "name": "sub_50FFB0",
+  "extra": "",
+  "start": 3050,
+  "tags": []
+ },
+ {
+  "va": "0x50FFD0",
+  "name": "CNIncreaseStatusStackable__vmt4",
+  "extra": "",
+  "start": 3062,
+  "tags": []
+ }
+]

@@ -1,0 +1,444 @@
+{
+  "plan_version": "v1.1",
+  "modules": [
+    {
+      "domain": "source-build",
+      "title": "版本、完整来源与构建",
+      "source_required_capabilities": "哈希、许可证、ABI、工具链、数据迁移、复现和来源权限",
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "02-content-loading-and-versioning.md",
+        "12-platform-build-and-release.md"
+      ],
+      "tasks": [
+        "P01",
+        "P02",
+        "P19"
+      ],
+      "scope": "required",
+      "scope_reason": "来源、兼容与构建是所有内容的基础",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "assets-rendering",
+      "title": "图像、动画与合成",
+      "source_required_capabilities": "原分辨率、层序、纸娃娃、调色板、透明度、混合、镜像、旋转、插值、裁剪、相机、视差和光效",
+      "documents": [
+        "02-content-loading-and-versioning.md",
+        "05-stats-equipment-and-combat.md",
+        "09-rendering-ui-and-audio.md"
+      ],
+      "tasks": [
+        "P02",
+        "P05",
+        "P16"
+      ],
+      "scope": "required",
+      "scope_reason": "源资源与人物外观必须实际消费",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "audio-timing",
+      "title": "音频与时间",
+      "source_required_capabilities": "声音ID、语音随机组、NPC距离、环境声、BGM、循环、音量优先级、命中停顿、逻辑/显示时钟",
+      "documents": [
+        "03-simulation-input-and-actions.md",
+        "09-rendering-ui-and-audio.md"
+      ],
+      "tasks": [
+        "P03",
+        "P16"
+      ],
+      "scope": "required",
+      "scope_reason": "声音事件和独立时间域",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "input-movement",
+      "title": "输入与移动",
+      "source_required_capabilities": "键位、方向序列、双击奔跑、跳跃、冲刺攻击、后跳、组合技能、缓冲、取消和不同设备刷新率",
+      "documents": [
+        "03-simulation-input-and-actions.md"
+      ],
+      "tasks": [
+        "P03",
+        "P07"
+      ],
+      "scope": "required",
+      "scope_reason": "正常输入与移动是可玩门槛",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "classes-progression",
+      "title": "所有角色与成长",
+      "source_required_capabilities": "11个注册角色的可用性、性别、转职、觉醒、经验、基础属性、技能资格和成长上限",
+      "documents": [
+        "04-characters-skills-and-script-host.md",
+        "05-stats-equipment-and-combat.md",
+        "10-persistence-and-migration.md"
+      ],
+      "tasks": [
+        "P05",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ],
+      "scope": "required",
+      "scope_reason": "十非Creator职业及实际分支完整；Creator只延期运行时",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "skills-controllers",
+      "title": "全部技能控制器",
+      "source_required_capabilities": "主动/被动/觉醒、输入阶段、MP/CD起点、连发、蓄力、多段、持续实体、命中/空放、武器层、召唤物",
+      "documents": [
+        "03-simulation-input-and-actions.md",
+        "04-characters-skills-and-script-host.md",
+        "05-stats-equipment-and-combat.md"
+      ],
+      "tasks": [
+        "P06",
+        "P07",
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12"
+      ],
+      "scope": "required",
+      "scope_reason": "主动被动及其依赖不能用禁用绕过最终门槛",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "combat-formulas",
+      "title": "战斗公式与判定",
+      "source_required_capabilities": "物魔/独立伤害、防御、属性、抗性、暴击、命中、回避、等级差、整数截断、攻速、攻距和Z轴判定",
+      "documents": [
+        "05-stats-equipment-and-combat.md"
+      ],
+      "tasks": [
+        "P05",
+        "P07"
+      ],
+      "scope": "required",
+      "scope_reason": "成长、装备、攻速与完整伤害阶段",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "combat-status",
+      "title": "状态与保护",
+      "source_required_capabilities": "硬直、浮空、倒地、抓取、霸体、无敌帧、异常、驱散、叠加、死亡/复活和换场清理",
+      "documents": [
+        "03-simulation-input-and-actions.md",
+        "05-stats-equipment-and-combat.md",
+        "07-monsters-objects-and-particles.md"
+      ],
+      "tasks": [
+        "P07",
+        "P13"
+      ],
+      "scope": "required",
+      "scope_reason": "保护、异常、抓取、死亡复活与清理",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "world-topology",
+      "title": "世界与副本",
+      "source_required_capabilities": "全部TWN/DGN/MAP、坐标系、所有候选房间、门方向/颜色、入口选关、难度、准入、隐藏/任务/活动房间",
+      "documents": [
+        "06-world-dungeons-and-collision.md"
+      ],
+      "tasks": [
+        "P13"
+      ],
+      "scope": "required",
+      "scope_reason": "按能力开放全部区域；合法候选完整预检",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "collision-objects",
+      "title": "碰撞与动态物件",
+      "source_required_capabilities": "TIL通行、虚拟区域、天空边界、碰撞形状、门可达、障碍、可破坏物、机关和事件触发",
+      "documents": [
+        "06-world-dungeons-and-collision.md",
+        "07-monsters-objects-and-particles.md"
+      ],
+      "tasks": [
+        "P13",
+        "P14"
+      ],
+      "scope": "required",
+      "scope_reason": "通行与XYZ受击分开，物件payload闭环",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "monster-ai",
+      "title": "怪物与首领AI",
+      "source_required_capabilities": "MOB/AI/ACT/PTL/ATK状态、目标选择、仇恨、技能条件、概率、召唤、阶段切换、跟随和联网同步",
+      "documents": [
+        "07-monsters-objects-and-particles.md"
+      ],
+      "tasks": [
+        "P06",
+        "P13"
+      ],
+      "scope": "required",
+      "scope_reason": "来源行为与关键首领阶段完整",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "npc-dialogue",
+      "title": "NPC与对话",
+      "source_required_capabilities": "站位、朝向、菜单、交易、距离语音、任务对话、剧情、导师和城镇事件",
+      "documents": [
+        "08-npc-quests-economy-and-services.md",
+        "09-rendering-ui-and-audio.md"
+      ],
+      "tasks": [
+        "P15",
+        "P16"
+      ],
+      "scope": "required",
+      "scope_reason": "真实交互与业务服务",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "quests",
+      "title": "全部任务与剧情",
+      "source_required_capabilities": "全部前置、接受/完成/失败/放弃、计数、随机日常、史诗章节、训练任务、默认奖励和转职联动",
+      "documents": [
+        "08-npc-quests-economy-and-services.md"
+      ],
+      "tasks": [
+        "P15",
+        "P18"
+      ],
+      "scope": "required",
+      "scope_reason": "全部分类，必需普通/转职/觉醒任务链完整",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "items-equipment",
+      "title": "物品与装备",
+      "source_required_capabilities": "所有槽位/武器/时装/套装、品级、属性、层序、耐久、锁定、装备限制、快捷栏和消耗品",
+      "documents": [
+        "05-stats-equipment-and-combat.md",
+        "08-npc-quests-economy-and-services.md"
+      ],
+      "tasks": [
+        "P05",
+        "P15"
+      ],
+      "scope": "required",
+      "scope_reason": "实例、资格、属性、外观及物品事务",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "economy-drops",
+      "title": "经济与掉落",
+      "source_required_capabilities": "掉落表、权重、难度、独立掉落、拾取/归属、金币、商店、价格、买卖/回购和结算抽奖",
+      "documents": [
+        "08-npc-quests-economy-and-services.md",
+        "10-persistence-and-migration.md"
+      ],
+      "tasks": [
+        "P04",
+        "P15"
+      ],
+      "scope": "required",
+      "scope_reason": "买卖维修掉落结算及幂等",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "crafting",
+      "title": "制作与装备加工",
+      "source_required_capabilities": "强化、增幅、附魔、锻造、分解、合成、配方、材料、失败/保护和副职业；区分客户端参数与服务端执行",
+      "documents": [
+        "05-stats-equipment-and-combat.md",
+        "08-npc-quests-economy-and-services.md"
+      ],
+      "tasks": [
+        "P05",
+        "P15"
+      ],
+      "scope": "conditional",
+      "scope_reason": "源支持的本地加工按能力；必需成长/任务依赖提升为required，不虚构远程业务",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "companions",
+      "title": "宠物与召唤同伴",
+      "source_required_capabilities": "CRE/PET、宠物成长/饥饿/技能、召唤AI、佣兵、APC和归属规则",
+      "documents": [
+        "04-characters-skills-and-script-host.md",
+        "07-monsters-objects-and-particles.md",
+        "08-npc-quests-economy-and-services.md"
+      ],
+      "tasks": [
+        "P07",
+        "P11",
+        "P13",
+        "P15"
+      ],
+      "scope": "conditional",
+      "scope_reason": "技能召唤/APC必需；独立宠物按实际字段和本地能力",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "ui-localization",
+      "title": "完整界面与文字",
+      "source_required_capabilities": "全部UI、HUD、菜单、地图、选角、起名、中文编码/字形、基线、样式、工具提示和焦点",
+      "documents": [
+        "09-rendering-ui-and-audio.md",
+        "11-beta-tools-and-rule-strategies.md"
+      ],
+      "tasks": [
+        "P16",
+        "P17"
+      ],
+      "scope": "required",
+      "scope_reason": "必要业务与中文输入必需，精细全UI像素复现暂缓",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "persistence",
+      "title": "存档与迁移",
+      "source_required_capabilities": "角色/任务/装备/仓库/设置状态、稳定ID、版本迁移、原子提交、损坏回退、断电和事务边界",
+      "documents": [
+        "10-persistence-and-migration.md"
+      ],
+      "tasks": [
+        "P04",
+        "P18"
+      ],
+      "scope": "required",
+      "scope_reason": "同代保存、恢复和迁移",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "services",
+      "title": "联网与原服务端边界",
+      "source_required_capabilities": "鉴权、协议、服务端权威、组队、副本同步、延迟补偿、断线和本地单机替代契约",
+      "documents": [
+        "01-architecture-and-contracts.md",
+        "08-npc-quests-economy-and-services.md",
+        "10-persistence-and-migration.md"
+      ],
+      "tasks": [
+        "P04",
+        "P15"
+      ],
+      "scope": "deferred_boundary",
+      "scope_reason": "实现LocalGameServices；远程登录/组队协议不在本轮，接口与来源保留",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "social",
+      "title": "社交与交易",
+      "source_required_capabilities": "公会、好友、邮件、聊天、拍卖、摆摊、个人交易、排行和屏蔽；仅有UI不等于规则可用",
+      "documents": [
+        "08-npc-quests-economy-and-services.md",
+        "09-rendering-ui-and-audio.md"
+      ],
+      "tasks": [
+        "P15",
+        "P16"
+      ],
+      "scope": "deferred_boundary",
+      "scope_reason": "好友公会邮件拍卖等远程业务禁用/诊断，不伪可用",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "pvp",
+      "title": "PvP与特殊模式",
+      "source_required_capabilities": "竞技场、PvP平衡、练习、塔/生存/挑战、房间规则和PvE数据隔离",
+      "documents": [
+        "02-content-loading-and-versioning.md",
+        "06-world-dungeons-and-collision.md",
+        "08-npc-quests-economy-and-services.md"
+      ],
+      "tasks": [
+        "P02",
+        "P13",
+        "P15"
+      ],
+      "scope": "conditional",
+      "scope_reason": "模式数据隔离；竞技远程服务不实现，特殊单机模式仅能力完整时开放",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "events-cash",
+      "title": "活动、商城与时效",
+      "source_required_capabilities": "EVT、节日、商城、抽奖、限时规则、日历、每日重置和在线奖励",
+      "documents": [
+        "08-npc-quests-economy-and-services.md",
+        "10-persistence-and-migration.md"
+      ],
+      "tasks": [
+        "P04",
+        "P15"
+      ],
+      "scope": "conditional",
+      "scope_reason": "本地周期/时效明确建模；在线活动和真实支付延期边界",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "platform-performance",
+      "title": "平台与性能",
+      "source_required_capabilities": "原画保留、显存/内存/带宽、流式加载、资源银行、压缩/复用、输入/屏幕、存储和目标端限制",
+      "documents": [
+        "01-architecture-and-contracts.md",
+        "12-platform-build-and-release.md"
+      ],
+      "tasks": [
+        "P03",
+        "P19"
+      ],
+      "scope": "required",
+      "scope_reason": "本轮Windows，未来平台数据完整保留，不宣称其他端通过",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    },
+    {
+      "domain": "verification",
+      "title": "回归与保真验收",
+      "source_required_capabilities": "逐对象数据校验、原生函数测试、场景/动作录像对照、实际设备输入/音频/存档/性能和长流程",
+      "documents": [
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "tasks": [
+        "P18",
+        "P19"
+      ],
+      "scope": "required",
+      "scope_reason": "来源/实现/自动/用户/原版对照分别验证",
+      "plan_coverage": "documented",
+      "runtime_status": "not_revalidated_in_documentation_task"
+    }
+  ]
+}

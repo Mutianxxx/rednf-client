@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DNF v0.1 beta per-skill coverage record",
+  "description": "Schema for future implementation reports; this file contains no claim that a skill is implemented.",
+  "type": "object",
+  "required": ["schemaVersion", "contentProfileId", "identity", "skillKey", "role", "sourceRefs", "implementation", "evidence", "verification", "requiredCapabilities", "lifecycle", "limitations"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "contentProfileId": {"type": "string", "minLength": 1},
+    "buildId": {"type": ["string", "null"]},
+    "ruleProfileId": {"type": ["string", "null"]},
+    "identity": {
+      "type": "object", "required": ["jobId", "growtype", "awakening"],
+      "properties": {"jobId": {"type": "integer", "minimum": 0}, "growtype": {"type": "integer", "minimum": 0}, "awakening": {"type": "integer", "minimum": 0}}
+    },
+    "skillKey": {
+      "type": "object", "required": ["jobId", "skillId"],
+      "properties": {"jobId": {"type": "integer", "minimum": 0}, "skillId": {"type": "integer", "minimum": 0}}
+    },
+    "role": {"enum": ["learnable_active", "learnable_passive", "automatic", "advancement_granted", "internal", "system", "not_open_in_source", "unresolved"]},
+    "sourceRefs": {"type": "array", "items": {"$ref": "#/$defs/source"}},
+    "implementation": {"enum": ["unsupported", "partial", "complete", "deferred_by_user"]},
+    "evidence": {"type": "array", "items": {"type": "object", "required": ["classification", "claim", "references"], "properties": {"classification": {"enum": ["confirmed", "inferred", "unknown", "user-tuning"]}, "claim": {"type": "string", "minLength": 1}, "references": {"type": "array", "items": {"type": "string"}}}}},
+    "verification": {
+      "type": "object", "required": ["automated", "user", "originalComparison"],
+      "properties": {"automated": {"$ref": "#/$defs/check"}, "user": {"$ref": "#/$defs/check"}, "originalComparison": {"$ref": "#/$defs/check"}}
+    },
+    "requiredCapabilities": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "lifecycle": {
+      "type": "object", "required": ["qualification", "inputRequest", "stateCommit", "actionAndAttack", "contactAndEffects", "continuation", "exitCleanup", "passiveConsumer", "persistence"],
+      "properties": {
+        "qualification": {"$ref": "#/$defs/stage"}, "inputRequest": {"$ref": "#/$defs/stage"}, "stateCommit": {"$ref": "#/$defs/stage"}, "actionAndAttack": {"$ref": "#/$defs/stage"}, "contactAndEffects": {"$ref": "#/$defs/stage"}, "continuation": {"$ref": "#/$defs/stage"}, "exitCleanup": {"$ref": "#/$defs/stage"}, "passiveConsumer": {"$ref": "#/$defs/stage"}, "persistence": {"$ref": "#/$defs/stage"}
+      }
+    },
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "pendingTasks": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "source": {"type": "object", "required": ["path", "sha256"], "properties": {"path": {"type": "string", "minLength": 1}, "sha256": {"type": "string", "pattern": "^[0-9a-fA-F]{64}$"}, "offset": {"type": "integer", "minimum": 0}, "scope": {"type": "string"}, "ordinal": {"type": "integer", "minimum": 0}}},
+    "check": {"type": "object", "required": ["status", "artifacts"], "properties": {"status": {"enum": ["not_run", "passed", "failed", "partial"]}, "buildId": {"type": ["string", "null"]}, "artifacts": {"type": "array", "items": {"type": "string"}}}},
+    "stage": {"type": "object", "required": ["status", "reason"], "properties": {"status": {"enum": ["missing", "partial", "complete", "not_applicable"]}, "reason": {"type": "string", "minLength": 1}, "consumer": {"type": "string"}, "evidenceRefs": {"type": "array", "items": {"type": "string"}}}}
+  },
+  "$comment": "Release auditor must additionally check identity.jobId==skillKey.jobId, current build/profile binding, complete lifecycle (N/A only with justified role), passive consumer, actual open branches and user-authorized deferrals; JSON Schema alone cannot establish runtime completeness."
+}

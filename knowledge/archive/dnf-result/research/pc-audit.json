@@ -1,0 +1,330 @@
+{
+  "schema": "dnf.full-pc-audit.v1",
+  "pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+  "files": 334927,
+  "decrypted_bytes": 150005227,
+  "formats": {
+    "pc-token5:structural": 147267,
+    "pc-ani:structural": 187352,
+    "text:decoded-text": 227,
+    "pc-ani:unsupported": 44,
+    "opaque:raw-preserved": 36,
+    "pc-string-table:structural": 1
+  },
+  "extensions": {
+    ".equ": 68499,
+    ".ani": 187396,
+    ".act": 19087,
+    ".ptl": 4438,
+    ".key": 5864,
+    ".dgn": 346,
+    ".ai": 7105,
+    ".atk": 6394,
+    ".stk": 10346,
+    ".map": 2948,
+    ".mob": 2070,
+    ".obj": 6867,
+    ".gdata": 76,
+    ".qst": 3222,
+    ".skl": 2008,
+    ".als": 1179,
+    ".ui": 322,
+    ".til": 3561,
+    ".msn": 121,
+    ".aic": 544,
+    ".npc": 198,
+    ".etc": 564,
+    ".rep": 484,
+    ".co": 34,
+    ".apd": 294,
+    ".nut": 189,
+    ".tbl": 57,
+    ".cre": 136,
+    ".wrd": 117,
+    ".emo": 36,
+    ".evt": 80,
+    ".dat": 4,
+    ".exj": 4,
+    ".cmb": 1,
+    ".lst": 53,
+    ".ora": 12,
+    ".sd": 15,
+    ".pos": 9,
+    ".str": 26,
+    ".rgn": 4,
+    ".chr": 11,
+    ".shp": 80,
+    ".bt": 13,
+    ".wdm": 26,
+    ".lay": 10,
+    ".twn": 17,
+    ".mm": 4,
+    ".ani__": 1,
+    ".info": 2,
+    ".vm": 3,
+    ".cbt": 8,
+    ".rtf": 12,
+    ".bm": 5,
+    ".stm": 1,
+    ".hsp": 6,
+    ".txt": 5,
+    ".pet": 1,
+    ".xml": 2,
+    ".gdata_": 1,
+    ".evn": 1,
+    ".bin": 1,
+    ".dl": 1,
+    ".blu": 1,
+    "": 1,
+    ".als__": 1,
+    ".glist": 1,
+    ".ani_new": 1,
+    ".tlk": 1
+  },
+  "token_types": {
+    "5": 3815888,
+    "9": 291485,
+    "10": 291485,
+    "2": 8629394,
+    "7": 2726938,
+    "4": 127637,
+    "6": 2493,
+    "8": 1721,
+    "3": 8
+  },
+  "tag_types": 4586,
+  "tag_occurrences": 3815888,
+  "references": {
+    "external-asset": 253081,
+    "unresolved": 67442,
+    "dynamic": 109644,
+    "resolved": 267905,
+    "audio-namespace": 1874
+  },
+  "registrations": 96071,
+  "auxiliary_lists": 4,
+  "errors": [
+    {
+      "path": "monster/act8/woodendoll_ng/animation/weapon/swordman_attack2.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_ng/animation/swordman_attack2.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_np/animation/ball/swordman_attack1.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl/invader/animation/casteffect.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/aganzo/sinead/animation/weapon/attack1_wp.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/casteffectglow.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl/invader/animation/buster.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl_breeding/flare_spawn/animation/starfisheggblast2.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/bloodbutterfly/bloodbutterflynamed/animation/lastaction.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/dummytank/animation/smoke.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/cyclops/animation/sd_attack4.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_ng/animation/weapon/swordman_attack2.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/dummytank/animation/attackcylinder.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/mj/animation/sit.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/buster.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/ranjerus/rx78/animation/bodyoverturn.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/riding/masaccio/animation/jumpchainattacknormal_upper_effect.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/towerofultimate/firezombie/animation/move2.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/towerofultimate/firezombie/animation/stay2.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl/invader/animation/casteffectglow.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/act8/woodendoll_np/animation/ball_eff/swordman_attack1.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "passiveobject/actionobject/monster/yen/animation/dummy.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/act8/blackscalemoussambani/animation/wind_bullet_ready2.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/shonan/hajin/animation/wing/wingdodge.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "passiveobject/actionobject/monster/dimensiongate/bakal/itrenog/animation/crash.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/heaven/specialforce/animation/motorcycle/die.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/bloodbutterfly/bloodbutterfly/animation/lastaction.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/act8/woodendoll_np/animation/ball/swordman_attack1.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/act8/chiefmong/animation/effect/attack.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/event/clown/animation/tripofire.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "passiveobject/actionobject/monster/haze/enjosipho/animation/macgee_bullet.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/leshphon/hyungteo/animation/wp/p_down.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/crimebuffalo/grim_crimebuffalo/animation/sit.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/casteffect.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/ranjerus/rx78/animation/bodydown.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/cyclops/animation/die.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/act8/woodendoll_ng/animation/swordman_attack2.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl_breeding/dendroid_elder/animation/damage1.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "aicharacter/atfighter/roychan/animation/throwwebdoublethrow.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/heaven/specialforce/animation/die.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/shonan/hajin/animation/weapon/stay2.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/riding/masaccio_quest/animation/jumpchainattacknormal_upper_effect.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "passiveobject/actionobject/map/dimentiongate/cosmofiend/animation/cube3_ball_effect1.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    },
+    {
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_np/animation/ball_eff/swordman_attack1.ani",
+      "format": "pc-ani",
+      "error": "truncated need 2 at 0"
+    }
+  ],
+  "encoding_warnings": [],
+  "semantic_status": "structural inventory; consumer behavior and default formulas require separate proof"
+}

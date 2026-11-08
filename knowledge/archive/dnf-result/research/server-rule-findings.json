@@ -1,0 +1,598 @@
+{
+  "rules": [
+    {
+      "id": "skill.can-learn",
+      "domain": "skills-controllers",
+      "claim": "Base/second-grow cap; second-grow cap 0 falls back to base; target>=1; min(cap, level-limit+1)>=target; limit+interval*(target-1)<=level. Second grow outside 1..2 returns -1.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/can_learn.inc",
+          "sha256": "3b17217a5328ae1690d9d9f935e8e30216e29c4a2ad8fb0acc9673fe30b5d966",
+          "functions": [
+            {
+              "name": "CSkill::can_learn",
+              "start": 1,
+              "end": 50
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/get_type_max_level.inc",
+          "sha256": "3ca165da3992105dc1edb331398dc2053862b3c940a49a3cb6bfbe6eaa13fe87",
+          "functions": [
+            {
+              "name": "CSkill::get_type_max_level",
+              "start": 1,
+              "end": 4
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/get_second_growtype_max_level.inc",
+          "sha256": "de6338f87e3c944d74264ff400d21e59947cdbe224e24b192ad20cfeaf3d4a0e",
+          "functions": [
+            {
+              "name": "CSkill::get_second_growtype_max_level",
+              "start": 1,
+              "end": 14
+            }
+          ]
+        }
+      ],
+      "verification": "compiled-source-isolated",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-b1e18f09b0ecb3a8c2c9"
+    },
+    {
+      "id": "skill.maximum-level",
+      "domain": "skills-controllers",
+      "claim": "cap==0 returns -1; otherwise min(level-limit+1, cap, trunc((level-limit)/interval)+1), negative result becomes 0. Callers must guarantee interval!=0 and valid base index.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CSkill/getMaxSkillLevel.inc",
+          "sha256": "adedff85651d64074e8a262454517aeb1cef4cd2255b188f97f73a271479ef33",
+          "functions": [
+            {
+              "name": "CSkill::getMaxSkillLevel",
+              "start": 1,
+              "end": 51
+            }
+          ]
+        }
+      ],
+      "verification": "compiled-source-isolated",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-3699f7c7ea9384243cf3"
+    },
+    {
+      "id": "quest.level-penalty",
+      "domain": "quests",
+      "claim": "delta<=6:100; 6<delta<=11:green-level parameter; delta>11:grey-level parameter.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_level_penalty.inc",
+          "sha256": "0e3b92b3f641a811d01e8857e4f62a6f1caf910c87b11b97cb568aa7e1af2cf2",
+          "functions": [
+            {
+              "name": "CUser::compute_level_penalty",
+              "start": 6,
+              "end": 16
+            }
+          ]
+        }
+      ],
+      "verification": "compiled-source-isolated",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-12e879bd497ae67915cb"
+    },
+    {
+      "id": "economy.repair-price",
+      "domain": "economy-drops",
+      "claim": "max==0 or current==max =>0; float(trunc((grade+5)*base/10))*repairCost/max*(max-current)*rate, cast to int. flag parameter unused in this function.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Store/getEquipmentRepairPrice.inc",
+          "sha256": "2a804e42d0a82dfad3b6490602fa979866eabfad279cf4e8d73ad6f8dd2af104",
+          "functions": [
+            {
+              "name": "getEquipmentRepairPrice",
+              "start": 1,
+              "end": 12
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/InitScriptProducers_4/InitEquipmentScript.inc",
+          "sha256": "2c10fac0c79cf1845254a3324c2580855a12608b687634959b92a1690e578a15",
+          "functions": [
+            {
+              "name": "InitEquipmentScript",
+              "start": 5,
+              "end": 45
+            }
+          ]
+        }
+      ],
+      "verification": "compiled-source-isolated",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-6efe40ff2403f2370f5e"
+    },
+    {
+      "id": "quest.reward-tables",
+      "domain": "quests",
+      "claim": "EXP/gold tables read at most 200 integers; lookup vector.at(level), not level-1. Difficulty map first-character key; missing weight defaults 100. Out-of-range vector access throws.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/RDARScriptQuestParameter/importQuestParameterScript.inc",
+          "sha256": "d7bb812b37a35c469e8f0afcac4439ef4626a1a4766d76316bb5bbf56bf59949",
+          "functions": [
+            {
+              "name": "importQuestParameterScript",
+              "start": 11,
+              "end": 146
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_Data/getRewardExp.inc",
+          "sha256": "58006bfa21fcc9db7928b1787395fab017cfea93ae5aee5b1ad3da0d5a59ccd2",
+          "functions": [
+            {
+              "name": "QuestParameterScript::getRewardExp",
+              "start": 1,
+              "end": 4
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_Data/getRewardGold.inc",
+          "sha256": "a6e33379d3b6570d2eb19c8f3541d9ae94b8c809e2407dc5ec048703df120064",
+          "functions": [
+            {
+              "name": "QuestParameterScript::getRewardGold",
+              "start": 1,
+              "end": 4
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_Data/getRewardWeight.inc",
+          "sha256": "042e8c2276cc366d87c920263a6af29387717e2f848bb3d4a62b1ae126a4154d",
+          "functions": [
+            {
+              "name": "QuestParameterScript::getRewardWeight",
+              "start": 3,
+              "end": 11
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-bdde53217dfc69ccc8cd"
+    },
+    {
+      "id": "quest.base-experience",
+      "domain": "quests",
+      "claim": "Quest.m_type category4 ([normaly repeat] from [grade], not m_triggerType) returns0. [event] or [ignore quest level 4 exp] selects character-level table index; otherwise minimum quest level. Apply difficulty weight then level penalty with integer truncation; premium0x4f and growth high-byte bonus are separate additions.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_quest_basic_reward_exp.inc",
+          "sha256": "03581ff660bf2664656cc941c6c15192d535747b50db15fc8e5d1e20e2f1c64d",
+          "functions": [
+            {
+              "name": "CUser::compute_quest_basic_reward_exp",
+              "start": 13,
+              "end": 80
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/set_quest.inc",
+          "sha256": "f39cee5520041919728a231132ac8880db92f9100d186d072d69ff0cb7343d9a",
+          "functions": [
+            {
+              "name": "Quest::set_quest",
+              "start": 7,
+              "end": 110
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/STQuestScript.cpp",
+          "sha256": "e2825d50e1fa8487b59317737ab269806cf0fd44f06f55fa0298aa783ac7bcbc",
+          "functions": [
+            {
+              "name": "QuestData",
+              "start": 191,
+              "end": 201
+            },
+            {
+              "name": "~QuestData",
+              "start": 203,
+              "end": 205
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-14815373b4423e1f1123"
+    },
+    {
+      "id": "quest.base-gold",
+      "domain": "quests",
+      "claim": "Only reward types0/25 and a reward entry itemID0 generate this gold. Ignore-level flag selects player index and bypasses penalty; otherwise quest-minimum index. gold*penalty/100*[gold multiple]/100 with two integer divisions.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/LinkClosureA_User/compute_quest_basic_reward_gold.inc",
+          "sha256": "6cbe3d12f6f91d09ae44e54cccf08145dd2e3f278949688d00028ee0d48c7a0c",
+          "functions": [
+            {
+              "name": "CUser::compute_quest_basic_reward_gold",
+              "start": 13,
+              "end": 76
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/set_quest.inc",
+          "sha256": "f39cee5520041919728a231132ac8880db92f9100d186d072d69ff0cb7343d9a",
+          "functions": [
+            {
+              "name": "Quest::set_quest",
+              "start": 7,
+              "end": 110
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/STQuestScript.cpp",
+          "sha256": "e2825d50e1fa8487b59317737ab269806cf0fd44f06f55fa0298aa783ac7bcbc",
+          "functions": [
+            {
+              "name": "QuestData",
+              "start": 191,
+              "end": 201
+            },
+            {
+              "name": "~QuestData",
+              "start": 203,
+              "end": 205
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-d11c8fd6a3a7ba51c9b7"
+    },
+    {
+      "id": "quest.target-identity",
+      "domain": "quests",
+      "claim": "Target tuple: job11 wildcard, firstGrow=-1 wildcard, secondGrow=-1 wildcard. Clear-item dungeon=-1 wildcard; empty target/item list returns false in these specific predicates.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/checkMatchedGrowType.inc",
+          "sha256": "1a38222c342591222524efa2bce70354e0e90d0f02879ea842aa60be72bf1252",
+          "functions": [
+            {
+              "name": "Quest::checkMatchedGrowType",
+              "start": 1,
+              "end": 19
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/check_clear_item.inc",
+          "sha256": "8aeda15423fcd5006f0f2bb725a0fd2793c1bc45099291b0eced2585b513496b",
+          "functions": [
+            {
+              "name": "Quest::check_clear_item",
+              "start": 1,
+              "end": 24
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-f0a624f09cc3d7fa2d09"
+    },
+    {
+      "id": "quest.acceptance",
+      "domain": "quests",
+      "claim": "Acceptance combines job/grow, inclusive min/max level, prerequisite/anti-quest lists, daily-training and expert-job checks, duplicate/cleared flags and inventory operations. GM bypasses selected checks; not all lifecycle checks.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Quest/check_possible.inc",
+          "sha256": "2a89ddab251cdf0f8c6ecc9edb7a08c9b9cff4bd60057a7ba56b043bff5da966",
+          "functions": [
+            {
+              "name": "Quest::check_possible",
+              "start": 5,
+              "end": 103
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/checkAcceptableQuest.inc",
+          "sha256": "ef062f352eb2660757e2707d4d4f79c6c831843c4dca51433ad971610dd81f10",
+          "functions": [
+            {
+              "name": "checkAcceptableQuest",
+              "start": 1,
+              "end": 27
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/accept_quest.inc",
+          "sha256": "15283a3d27350b6a995b618f6e882c4ac4ed9020f3768471b9a7d5f3652eda4e",
+          "functions": [
+            {
+              "name": "UserQuest::accept_quest",
+              "start": 1,
+              "end": 127
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-91ae7f5f215620e0cb7d"
+    },
+    {
+      "id": "quest.condition-dispatch",
+      "domain": "quests",
+      "claim": "Separate type/subtype dispatch plus authentication state; subtype7 passes individual comparisons but falls through to default false in this supplied source. Preserve this behavior as a version/reconstruction question.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_quest_condition.inc",
+          "sha256": "350b0fa810356ad1c5d1ca5804da3ec3ae61352cc05495f115f9e587adf3cfb3",
+          "functions": [
+            {
+              "name": "UserQuest::check_quest_condition",
+              "start": 1,
+              "end": 12
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_quest_type_condition.inc",
+          "sha256": "824511534aaa00c81a2d8599f4b51a9b26f2e87259ade63b1f06b4df735931af",
+          "functions": [
+            {
+              "name": "UserQuest::check_quest_type_condition",
+              "start": 1,
+              "end": 45
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_quest_subtype_condition.inc",
+          "sha256": "2e5749da766796c734871de8c8b71d3ed12af0113a598aba5c7052957750a60a",
+          "functions": [
+            {
+              "name": "UserQuest::check_quest_subtype_condition",
+              "start": 1,
+              "end": 91
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-23cc88463dcfddd726da"
+    },
+    {
+      "id": "quest.lifecycle",
+      "domain": "quests",
+      "claim": "20 active slots in this server. Finish requires trigger0; clears slot and nonrepeatable completion bit, resets urgent type8. Return0x16 incomplete,0x13 not active. Missing quest after lookup may be dereferenced; inspect callers, do not silently patch research evidence.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/check_cond_clear.inc",
+          "sha256": "bdf874e44075ec5bad96bec6ced1f7d39b04f579cdbdf26558aaf55120c6a476",
+          "functions": [
+            {
+              "name": "UserQuest::check_cond_clear",
+              "start": 1,
+              "end": 18
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/finish_quest.inc",
+          "sha256": "f78185c4a541f112355df4b62a8cd63eb649425b6cc88cf8d1de90f02cfd3194",
+          "functions": [
+            {
+              "name": "UserQuest::finish_quest",
+              "start": 1,
+              "end": 27
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/giveup_quest.inc",
+          "sha256": "0ea57f091d8d9bf15f3d96065c2ee71a6d1b462d2b25e6d108a5fa55a5951ad4",
+          "functions": [
+            {
+              "name": "UserQuest::giveup_quest",
+              "start": 1,
+              "end": 48
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/UserQuest/set_trigger.inc",
+          "sha256": "ee8ece6365e659e7e1806683778e1e0be3de32a40f7ceb1aab19aa9f28af75af",
+          "functions": [
+            {
+              "name": "UserQuest::set_trigger",
+              "start": 1,
+              "end": 41
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-3353605201dfc0b51013"
+    },
+    {
+      "id": "combat.damage-constants",
+      "domain": "combat-formulas",
+      "claim": "Reads 26 ordered floats after [damage fomula constant]; local PC PVF has27 values. Export positional candidates and unconsumed tail; do not guess the 27th meaning.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/ScriptDepsB/importEtcParameterScriptForServer.inc",
+          "sha256": "8960bff2b2bcd14e2847a52a1b7621d385bd7abbf9a0d64b0ed190988e33efb9",
+          "functions": [
+            {
+              "name": "importEtcParameterScriptForServer",
+              "start": 12,
+              "end": 57
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-fee2ab2efdf523c07cae"
+    },
+    {
+      "id": "combat.damage-pipeline",
+      "domain": "combat-formulas",
+      "claim": "Complete supplied functions retained: attack object dispatch, critical/element/defense/conversion/status stages and packed0x1fc working structure. Field names and reconstructed layouts require original-ELF/client version validation.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Dispatchers/computeHpDamageSDC.inc",
+          "sha256": "1f77fb8ddf74e60cdc163ab4d02ebd7398de44f27210d578c6f4708383d5032f",
+          "functions": []
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/Dispatchers/computeHpDamageSDC_1.inc",
+          "sha256": "7aa43cd79b5ba396d67d0437e4640c6a23fed19166619d6268cec8c0541056bb",
+          "functions": [
+            {
+              "name": "computeHpDamageSDC",
+              "start": 5,
+              "end": 212
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/SDCLink/getDamageInflict.inc",
+          "sha256": "ed5117f2ddffa031364ec32b202cd326e93559cd059e4734fe229a262efc461a",
+          "functions": [
+            {
+              "name": "getDamageInflict",
+              "start": 7,
+              "end": 14
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/SDCLink/getDefenseRateDamager.inc",
+          "sha256": "0681c8c9174aff4ae4d3f3ea227eafdb09e560011fec84437e8bbbcae35b8e93",
+          "functions": [
+            {
+              "name": "getDefenseRateDamager",
+              "start": 17,
+              "end": 78
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/STComputeDamageVariable.h",
+          "sha256": "6ac76c2352a27830d354c3adc8093b1f9af92f83121ab8e1fe9e742cabed8dd9",
+          "functions": [
+            {
+              "name": "STComputeDamageVariable",
+              "start": 40,
+              "end": 142
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-d11b110b34a6a467ac63"
+    },
+    {
+      "id": "combat.collision-object-component",
+      "domain": "combat-formulas",
+      "claim": "Physical/magical stat term is s2/DamageRateConst+1. Source records prior reversed-division bug. Object types4/5 bypass one conversion stage; additional type0 conversion and m_f047 factor still apply.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/SDCLink/getDamageInflictCollisionObject.inc",
+          "sha256": "e98605adfbd2be502406ce89942990d10bc47e99aef80809ad52b9bc02cd2ec8",
+          "functions": [
+            {
+              "name": "getDamageInflictCollisionObject",
+              "start": 12,
+              "end": 44
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-fb9667178cc5091eff3b"
+    },
+    {
+      "id": "crafting.upgrade-parser",
+      "domain": "crafting",
+      "claim": "Upgrade table loader and repair multiplier getter retained with original branches/counts. This does not by itself prove all random chances, protection/consumption and success/failure transactions.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/ScriptLeafA2/importUpgradeTable.inc",
+          "sha256": "b5eb492d0ae227888a6f7b42846836a12970668a105d4c8b47c5175a0d76e73b",
+          "functions": [
+            {
+              "name": "importUpgradeTable",
+              "start": 2,
+              "end": 528
+            }
+          ]
+        },
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/CItemUpgrade/getUpgradeItemRepairCostRate.inc",
+          "sha256": "ebeacd3a2260671a98333cec5de163587513d40c4082a5b22f27801b07544118",
+          "functions": [
+            {
+              "name": "CItemUpgrade::getUpgradeItemRepairCostRate",
+              "start": 1,
+              "end": 26
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-6cf35cdf2b9d66769b0b"
+    },
+    {
+      "id": "services.packet-dispatch",
+      "domain": "services",
+      "claim": "Every literal m_dispatchers[index]=new Class registration exported with source line and class method candidates. This is server slot evidence, not proof of matching PC wire opcode/framing.",
+      "evidence": [
+        {
+          "path": "imports/rednf/remake/source/DNFServer/GameServer/Game/PacketDispatcher/PacketDispatcher.inc",
+          "sha256": "df2311d703da51dd76d096512fe95c9e1422bbc3b583c3cebc3d70cf3eac70bf",
+          "functions": [
+            {
+              "name": "PacketDispatcher::PacketDispatcher",
+              "start": 1,
+              "end": 435
+            }
+          ]
+        }
+      ],
+      "verification": "source-read",
+      "PC_equivalence_verified": false,
+      "gap_id": "G-6e0a6d29b730fdac7e3d"
+    }
+  ],
+  "original_binary_verified": false
+}

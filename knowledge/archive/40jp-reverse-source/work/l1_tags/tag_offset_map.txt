@@ -1,0 +1,625 @@
+========================================================================
+GROUP item
+------------------------------------------------------------------------
+004F1A20 (dump_full_2.txt L27921, 600 lines)
+  [minimap image]                    v53 = (unsigned int)(v3 + 120); | sub_443370();
+  [worldmap info]                    v4 = (int *)(v3 + 148); | for ( i = 2; i != 0; --i )
+  [minimum required level]           *((_DWORD *)v3 + 48) = sub_4423D0(nullptr); | goto LABEL_189;
+  [required item]                    v7 = sub_4423D0(nullptr); | v52 = nullptr;
+  [coin limit]                       *((_DWORD *)v3 + 52) = sub_4423D0(nullptr); | goto LABEL_189;
+  [basis level]                      *((_DWORD *)v3 + 53) = sub_4423D0(nullptr); | goto LABEL_189;
+  [experience increasing point]      *((float *)v3 + 54) = sub_442480(nullptr); | goto LABEL_189;
+  [champion]                         break; | v9 = (int *)(a1 + 220);
+  [item]                             sub_5E5260((void **)v3 + 59); | for ( m = sub_4423D0(&v75); v75 != 0; m = sub_4423D0(&v75) )
+  [pathgate object]                  v12 = (int *)(a1 + 252); | for ( n = 3; n != 0; --n )
+  [maze info]                        if ( v73 != 0 ) | sub_4F1990(&v57);
+  [size]                             v57 = sub_4423D0(nullptr); | v58 = sub_4423D0(nullptr);
+  [greed]                            if ( (unsigned __int8)sub_423300(&v83, "[map specification]") != 0 ) | v29 = sub_4423D0(nullptr);
+  [map specification]                v29 = sub_4423D0(nullptr); | v30 = (void **)((char *)v59 + 36 * v29 + 36 * v57 * sub_4423D0(nullptr) + 4);
+  [boss map specification]           v31 = sub_4423D0(nullptr); | v32 = (void **)((char *)v59 + 36 * v31 + 36 * v57 * sub_4423D0(nullptr) + 20);
+  [start map]                        sub_5E5260(&v62); | for ( nn = sub_4423D0(&v75); v75 != 0; nn = sub_4423D0(&v75) )
+  [boss map]                         sub_5E5260(&v66); | for ( i1 = sub_4423D0(&v75); v75 != 0; i1 = sub_4423D0(&v75) )
+  [warroom map index]                *((_DWORD *)v3 + 104) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[monster type spawn prob]") != 0 )
+  [monster type spawn prob]          v35 = (int *)(a1 + 612); | for ( i2 = 4; i2 != 0; --i2 )
+  [monster type spawn cost]          v37 = (int *)(a1 + 628); | for ( i3 = 4; i3 != 0; --i3 )
+  [monster type spawn interval rate] v39 = (float *)(a1 + 652); | for ( i4 = 4; i4 != 0; --i4 )
+  [monster spawn base interval]      *((_DWORD *)v3 + 167) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[monster spawn random interval]") != 0 )
+  [monster spawn random interval]    *((_DWORD *)v3 + 168) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[fatigue]") != 0 )
+  [fatigue]                          *((_DWORD *)v3 + 169) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[fatigue result]") != 0 )
+  [fatigue result]                   *((_DWORD *)v3 + 170) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[max monster]") != 0 )
+  [max monster]                      *((_DWORD *)v3 + 162) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[player kc]") != 0 )
+  [player kc]                        *((_DWORD *)v3 + 161) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[spawn common monster index]") != 0 )
+  [spawn common monster index]       sub_5E5260((void **)v3 + 105); | for ( mm = sub_4423D0(&v75); v75 != 0; mm = sub_4423D0(&v75) )
+  [spawn common champion index]      sub_5E5260((void **)v3 + 109); | for ( mm = sub_4423D0(&v75); v75 != 0; mm = sub_4423D0(&v75) )
+  [spawn super champion index]       sub_5E5260((void **)v3 + 113); | for ( mm = sub_4423D0(&v75); v75 != 0; mm = sub_4423D0(&v75) )
+  [spawn boss index]                 sub_5E5260((void **)v3 + 117); | for ( mm = sub_4423D0(&v75); v75 != 0; mm = sub_4423D0(&v75) )
+  [spawn step max]                   *((_DWORD *)v3 + 125) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[spawn step resource pool]") != 0 )
+  [spawn step resource pool]         sub_5E5260((void **)v3 + 121); | for ( i5 = sub_4423D0(&v75); v75 != 0; i5 = sub_4423D0(&v75) )
+  [kill count const]                 *((float *)v3 + 152) = sub_442480(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[join cost gold]") != 0 )
+  [join cost gold]                   *((_DWORD *)v3 + 126) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[gold drop prob]") != 0 )
+  [gold drop prob]                   *((_DWORD *)v3 + 127) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[common monster item drop prob]") != 0 )
+  [common monster item drop prob]    *((_DWORD *)v3 + 128) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[common champion item drop prob]") != 0 )
+  [common champion item drop prob]   *((_DWORD *)v3 + 129) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[super champion item drop prob]") != 0 )
+  [super champion item drop prob]    *((_DWORD *)v3 + 130) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[boss item drop prob]") != 0 )
+  [boss item drop prob]              *((_DWORD *)v3 + 131) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[common monster exp const]") != 0 )
+  [common monster exp const]         *((_DWORD *)v3 + 148) = 5 * sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[common champion exp const]") != 0 )
+  [common champion exp const]        *((_DWORD *)v3 + 149) = 5 * sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[super champion exp const]") != 0 )
+  [super champion exp const]         *((_DWORD *)v3 + 150) = 5 * sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[boss exp const]") != 0 )
+  [boss exp const]                   *((_DWORD *)v3 + 151) = 5 * sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v83, "[common monster item drop list]") != 0 )
+  [common monster item drop list]    sub_5E5260((void **)v3 + 132); | for ( mm = sub_4423D0(&v75); v75 != 0; mm = sub_4423D0(&v75) )
+  [common champion item drop list]   sub_5E5260((void **)v3 + 136); | for ( mm = sub_4423D0(&v75); v75 != 0; mm = sub_4423D0(&v75) )
+  [super champion item drop list]    sub_5E5260((void **)v3 + 136); | for ( mm = sub_4423D0(&v75); v75 != 0; mm = sub_4423D0(&v75) )
+  [boss item drop list]              sub_5E5260((void **)v3 + 144); | for ( mm = sub_4423D0(&v75); v75 != 0; mm = sub_4423D0(&v75) )
+  [ancient dungeon]                  v3[684] = sub_4423D0(nullptr) != 0; | else
+------------------------------------------------------------------------
+004F5B90 (dump_full_2.txt L28521, 282 lines)
+  [grade]                            *(_DWORD *)(a1 + 20) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[attach type]") != 0 )
+  [attach type]                      j = &v12; | sub_442E10();
+  [creation rate]                    *(_DWORD *)(a1 + 28) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[rarity]") != 0 )
+  [rarity]                           *(_DWORD *)(a1 + 32) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[weight]") != 0 )
+  [weight]                           *(_DWORD *)(a1 + 56) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[usable job]") != 0 )
+  [usable job]                       for ( j = &v12; sub_442E10() != 0; j = &v12 ) | v4 = sub_41ACF0(&v12);
+  [stackable type]                   j = &v12; | sub_442E10();
+  [minimum level]                    *(_DWORD *)(a1 + 64) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[cool time]") != 0 )
+  [cool time]                        *(_DWORD *)(a1 + 68) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[cooltime group]") != 0 )
+  [cooltime group]                   *(_DWORD *)(a1 + 72) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[party cooltime]") != 0 )
+  [party cooltime]                   *(_BYTE *)(a1 + 76) = sub_4423D0(nullptr) != 0; | else if ( (unsigned __int8)sub_423300(&v13, "[icon]") != 0 )
+  [icon]                             j = (void **)(a1 + 80); | sub_442E10();
+  [field image]                      j = (void **)(a1 + 88); | sub_442E10();
+  [price]                            *(_DWORD *)(a1 + 36) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[value]") != 0 )
+  [value]                            *(_DWORD *)(a1 + 52) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[finish point price]") != 0 )
+  [finish point price]               *(_DWORD *)(a1 + 40) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[cash]") != 0 )
+  [cash]                             *(_DWORD *)(a1 + 44) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[medal]") != 0 )
+  [medal]                            *(_DWORD *)(a1 + 48) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v13, "[move wav]") != 0 )
+  [move wav]                         j = (void **)(a1 + 104); | sub_442E10();
+  [use wav]                          j = (void **)(a1 + 116); | sub_442E10();
+  [int data]                         sub_5E5260((void **)(a1 + 120)); | for ( k = (void ***)sub_4423D0(&i); i != 0; k = (void ***)sub_4423D0(&i) )
+  [string data]                      sub_4017E0(a1 + 136); | for ( j = &v12; sub_442E10() != 0; j = &v12 )
+  [applying range]                   *(_DWORD *)(a1 + 96) = sub_4423D0(nullptr); | else
+------------------------------------------------------------------------
+004F6790 (dump_full_1.txt L25924, 341 lines)
+  [physical defense]                 if ( (unsigned __int8)sub_423300(a2, "[magical attack]") != 0 | || (unsigned __int8)sub_423300(a2, "[magical defense]") != 0
+  [magical attack]                   || (unsigned __int8)sub_423300(a2, "[magical defense]") != 0 | || (unsigned __int8)sub_423300(a2, "[equipment physical attack]") != 0
+  [magical defense]                  || (unsigned __int8)sub_423300(a2, "[equipment physical attack]") != 0 | || (unsigned __int8)sub_423300(a2, "[equipment physical defense]") != 0
+  [equipment physical attack]        || (unsigned __int8)sub_423300(a2, "[equipment physical defense]") != 0 | || (unsigned __int8)sub_423300(a2, "[equipment magical attack]") != 0
+  [equipment physical defense]       || (unsigned __int8)sub_423300(a2, "[equipment magical attack]") != 0 | || (unsigned __int8)sub_423300(a2, "[equipment magical defense]") != 0
+  [equipment magical attack]         || (unsigned __int8)sub_423300(a2, "[equipment magical defense]") != 0 | || (unsigned __int8)sub_423300(a2, "[physical absolute damage]") != 0
+  [equipment magical defense]        || (unsigned __int8)sub_423300(a2, "[physical absolute damage]") != 0 | || (unsigned __int8)sub_423300(a2, "[physical damage reduce]") != 0 )
+  [physical absolute damage]         || (unsigned __int8)sub_423300(a2, "[physical damage reduce]") != 0 ) | goto LABEL_115;
+  [physical damage reduce]           goto LABEL_115; | if ( (unsigned __int8)sub_423300(a2, "[physical absolute defense]") != 0 )
+  [physical absolute defense]        LABEL_125: | v17 = sub_442480(0);
+  [magical absolute damage]          || (unsigned __int8)sub_423300(a2, "[magical damage reduce]") != 0 ) | goto LABEL_115;
+  [magical damage reduce]            goto LABEL_115; | if ( (unsigned __int8)sub_423300(a2, "[magical absolute defense]") != 0 )
+  [magical absolute defense]         goto LABEL_125; | if ( (unsigned __int8)sub_423300(a2, "[fire resistance]") != 0
+  [fire resistance]                  || (unsigned __int8)sub_423300(a2, "[water resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[dark resistance]") != 0
+  [water resistance]                 || (unsigned __int8)sub_423300(a2, "[dark resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[light resistance]") != 0
+  [dark resistance]                  || (unsigned __int8)sub_423300(a2, "[light resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[all elemental resistance]") != 0
+  [light resistance]                 || (unsigned __int8)sub_423300(a2, "[all elemental resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[slow resistance]") != 0
+  [all elemental resistance]         || (unsigned __int8)sub_423300(a2, "[slow resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[freeze resistance]") != 0
+  [slow resistance]                  || (unsigned __int8)sub_423300(a2, "[freeze resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[poison resistance]") != 0
+  [freeze resistance]                || (unsigned __int8)sub_423300(a2, "[poison resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[stun resistance]") != 0
+  [poison resistance]                || (unsigned __int8)sub_423300(a2, "[stun resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[curse resistance]") != 0
+  [stun resistance]                  || (unsigned __int8)sub_423300(a2, "[curse resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[blind resistance]") != 0
+  [curse resistance]                 || (unsigned __int8)sub_423300(a2, "[blind resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[lightning resistance]") != 0
+  [blind resistance]                 || (unsigned __int8)sub_423300(a2, "[lightning resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[stone resistance]") != 0
+  [lightning resistance]             || (unsigned __int8)sub_423300(a2, "[stone resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[sleep resistance]") != 0
+  [stone resistance]                 || (unsigned __int8)sub_423300(a2, "[sleep resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[burn resistance]") != 0
+  [sleep resistance]                 || (unsigned __int8)sub_423300(a2, "[burn resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[deadlystrike resistance]") != 0
+  [burn resistance]                  || (unsigned __int8)sub_423300(a2, "[deadlystrike resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[bleeding resistance]") != 0
+  [deadlystrike resistance]          || (unsigned __int8)sub_423300(a2, "[bleeding resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[all activestatus resistance]") != 0
+  [bleeding resistance]              || (unsigned __int8)sub_423300(a2, "[all activestatus resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[piercing resistance]") != 0
+  [all activestatus resistance]      || (unsigned __int8)sub_423300(a2, "[piercing resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[stuck resistance]") != 0
+  [piercing resistance]              || (unsigned __int8)sub_423300(a2, "[stuck resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[confuse resistance]") != 0
+  [stuck resistance]                 || (unsigned __int8)sub_423300(a2, "[confuse resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[hold resistance]") != 0
+  [confuse resistance]               || (unsigned __int8)sub_423300(a2, "[hold resistance]") != 0 | || (unsigned __int8)sub_423300(a2, "[inventory limit]") != 0
+  [hold resistance]                  || (unsigned __int8)sub_423300(a2, "[inventory limit]") != 0 | || (unsigned __int8)sub_423300(a2, "[HP regen speed]") != 0
+  [inventory limit]                  || (unsigned __int8)sub_423300(a2, "[HP regen speed]") != 0 | || (unsigned __int8)sub_423300(a2, "[MP regen speed]") != 0 )
+  [HP regen speed]                   || (unsigned __int8)sub_423300(a2, "[MP regen speed]") != 0 ) | goto LABEL_115;
+  [MP regen speed]                   goto LABEL_115; | if ( (unsigned __int8)sub_423300(a2, "[MP regen speed rate]") != 0 )
+  [MP regen speed rate]              goto LABEL_125; | if ( (unsigned __int8)sub_423300(a2, "[move speed]") != 0
+  [move speed]                       || (unsigned __int8)sub_423300(a2, "[attack speed]") != 0 | || (unsigned __int8)sub_423300(a2, "[cast speed]") != 0
+  [attack speed]                     || (unsigned __int8)sub_423300(a2, "[cast speed]") != 0 | || (unsigned __int8)sub_423300(a2, "[hit recovery]") != 0
+  [cast speed]                       || (unsigned __int8)sub_423300(a2, "[hit recovery]") != 0 | || (unsigned __int8)sub_423300(a2, "[jump power]") != 0 )
+  [hit recovery]                     || (unsigned __int8)sub_423300(a2, "[jump power]") != 0 ) | LABEL_115:
+  [jump power]                       LABEL_115: | v5 = sub_4423D0(0);
+  [elemental property]               sub_443370(); | *(_DWORD *)(a1 + 772) = sub_442710(Block);
+  [active status]                    sub_443370(); | if ( (unsigned __int8)sub_423300(v23, "[none]") != 0 )
+  [none]                             *(_DWORD *)(a1 + 776) = 17; | else if ( (unsigned __int8)sub_423300(v23, "[slow]") != 0 )
+  [slow]                             *(_DWORD *)(a1 + 776) = 0; | else if ( (unsigned __int8)sub_423300(v23, "[freeze]") != 0 )
+  [freeze]                           *(_DWORD *)(a1 + 776) = 1; | else if ( (unsigned __int8)sub_423300(v23, "[poison]") != 0 )
+  [poison]                           *(_DWORD *)(a1 + 776) = 2; | else if ( (unsigned __int8)sub_423300(v23, "[stun]") != 0 )
+  [stun]                             *(_DWORD *)(a1 + 776) = 3; | else if ( (unsigned __int8)sub_423300(v23, "[curse]") != 0 )
+  [curse]                            *(_DWORD *)(a1 + 776) = 4; | else if ( (unsigned __int8)sub_423300(v23, "[blind]") != 0 )
+  [blind]                            *(_DWORD *)(a1 + 776) = 5; | else if ( (unsigned __int8)sub_423300(v23, "[lightning]") != 0 )
+  [lightning]                        *(_DWORD *)(a1 + 776) = 6; | else if ( (unsigned __int8)sub_423300(v23, "[stone]") != 0 )
+  [stone]                            *(_DWORD *)(a1 + 776) = 7; | else if ( (unsigned __int8)sub_423300(v23, "[sleep]") != 0 )
+  [sleep]                            *(_DWORD *)(a1 + 776) = 8; | else if ( (unsigned __int8)sub_423300(v23, "[burn]") != 0 )
+  [burn]                             *(_DWORD *)(a1 + 776) = 9; | else if ( (unsigned __int8)sub_423300(v23, "[deadlystrike]") != 0 )
+  [deadlystrike]                     *(_DWORD *)(a1 + 776) = 10; | else if ( (unsigned __int8)sub_423300(v23, "[bleeding]") != 0 )
+  [bleeding]                         *(_DWORD *)(a1 + 776) = 11; | else if ( (unsigned __int8)sub_423300(v23, "[haste]") != 0 )
+  [haste]                            *(_DWORD *)(a1 + 776) = 12; | else if ( (unsigned __int8)sub_423300(v23, "[bless]") != 0 )
+  [bless]                            *(_DWORD *)(a1 + 776) = 13; | else if ( (unsigned __int8)sub_423300(v23, "[element]") != 0 )
+  [element]                          *(_DWORD *)(a1 + 776) = 14; | else if ( (unsigned __int8)sub_423300(v23, "[hold]") != 0 )
+  [hold]                             *(_DWORD *)(a1 + 776) = 16; | else if ( (unsigned __int8)sub_423300(v23, "[confuse]") != 0 )
+  [confuse]                          *(_DWORD *)(a1 + 776) = 15; | v16 = sub_442480(0);
+  [push aside]                       goto LABEL_115; | if ( (unsigned __int8)sub_423300(a2, "[physical critical hit]") != 0
+  [physical critical hit]            || (unsigned __int8)sub_423300(a2, "[magical critical hit]") != 0 | || (unsigned __int8)sub_423300(a2, "[stuck]") != 0 )
+  [magical critical hit]             || (unsigned __int8)sub_423300(a2, "[stuck]") != 0 ) | goto LABEL_125;
+  [stuck]                            goto LABEL_125; | if ( (unsigned __int8)sub_423300(a2, "[ignore defense]") != 0 )
+  [ignore defense]                   *(_BYTE *)(a1 + 850) = sub_4423D0(0) != 0; | goto LABEL_3;
+  [human damage rate]                || (unsigned __int8)sub_423300(a2, "[fort damage rate]") != 0 ) | goto LABEL_125;
+  [fort damage rate]                 goto LABEL_125; | if ( (unsigned __int8)sub_423300(a2, "[HP drain]") != 0 )
+  [HP drain]                         *(_BYTE *)(a1 + 879) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(a2, "[MP drain]") != 0 )
+  [MP drain]                         *(_BYTE *)(a1 + 880) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(a2, "[skill levelup]") != 0 )
+  [skill levelup]                    sub_434140(a1 + 884); | sub_4F4B60(&v19);
+  [common]                           v19 = 4; | else
+  [avatar select ability]            LABEL_165: | sub_501490(v23);
+  [common]                           v22 = 4; | else
+------------------------------------------------------------------------
+004F7C60 (dump_full_0.txt L23386, 612 lines)
+  [fullset explain]                  j = (void **)(a1 + 2132); | sub_442E10();
+  [set name]                         j = (void **)(a1 + 1104); | sub_442E10();
+  [grade]                            *(_DWORD *)(a1 + 4) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[attach type]") != 0 )
+  [attach type]                      j = &v49; | sub_442E10();
+  [creation rate]                    *(_DWORD *)(a1 + 12) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[rarity]") != 0 )
+  [rarity]                           *(_DWORD *)(a1 + 16) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[weight]") != 0 )
+  [weight]                           *(_DWORD *)(a1 + 40) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[icon]") != 0 )
+  [icon]                             j = (void **)(a1 + 60); | sub_442E10();
+  [field image]                      j = (void **)(a1 + 68); | sub_442E10();
+  [custom animation]                 sub_4017E0(a1 + 76); | for ( j = &v49; sub_442E10() != 0; j = &v49 )
+  [usable job]                       for ( j = &v49; sub_442E10() != 0; j = &v49 ) | v5 = sub_41ACF0(&v49);
+  [minimum level]                    *(_DWORD *)(a1 + 48) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[required skill]") != 0 )
+  [required skill]                   *(_DWORD *)(a1 + 52) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[cool time]") != 0 )
+  [cool time]                        *(_DWORD *)(a1 + 56) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[equipment type]") != 0 )
+  [equipment type]                   j = &v49; | sub_442E10();
+  [sub type]                         *(_DWORD *)(a1 + 96) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[durability]") != 0 )
+  [durability]                       *(_DWORD *)(a1 + 100) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[price]") != 0 )
+  [price]                            *(_DWORD *)(a1 + 20) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[value]") != 0 )
+  [value]                            *(_DWORD *)(a1 + 36) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[finish point price]") != 0 )
+  [finish point price]               *(_DWORD *)(a1 + 32) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[cash]") != 0 )
+  [cash]                             *(_DWORD *)(a1 + 24) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[medal]") != 0 )
+  [medal]                            *(_DWORD *)(a1 + 28) = sub_4423D0(nullptr); | else if ( sub_4F6790(i, (unsigned int *)&v53, v2) == 0 )
+  [LAYER]                            if ( v17 != 0 ) | sub_4F7BD0(&v17);
+  [waiting motion]                   j = (void **)&v18; | sub_442E10();
+  [move motion]                      j = (void **)&v19; | sub_442E10();
+  [sit motion]                       j = (void **)&v20; | sub_442E10();
+  [damage motion 1]                  j = (void **)&v21; | sub_442E10();
+  [damage motion 2]                  j = (void **)&v22; | sub_442E10();
+  [down motion]                      j = (void **)&v23; | sub_442E10();
+  [overturn motion]                  j = (void **)&v24; | sub_442E10();
+  [jump motion]                      j = (void **)&v25; | sub_442E10();
+  [jumpattack motion]                j = (void **)&v26; | sub_442E10();
+  [rest motion]                      j = (void **)&v27; | sub_442E10();
+  [throw motion 1-1]                 j = (void **)&v28; | sub_442E10();
+  [throw motion 1-2]                 j = (void **)&v32; | sub_442E10();
+  [throw motion 2-1]                 j = (void **)&v29; | sub_442E10();
+  [throw motion 2-2]                 j = (void **)&v33; | sub_442E10();
+  [throw motion 3-1]                 j = (void **)&v30; | sub_442E10();
+  [throw motion 3-2]                 j = (void **)&v34; | sub_442E10();
+  [throw motion 4-1]                 j = (void **)&v31; | sub_442E10();
+  [throw motion 4-2]                 j = (void **)&v35; | sub_442E10();
+  [dash motion]                      j = (void **)&v36; | sub_442E10();
+  [dashattack motion]                j = (void **)&v37; | sub_442E10();
+  [getitem motion]                   j = (void **)&v38; | sub_442E10();
+  [buff motion]                      j = (void **)&v39; | sub_442E10();
+  [attack motion]                    v7 = (void **)Block; | if ( Block != nullptr )
+  [etc motion]                       v9 = (void **)v43; | if ( v43 != nullptr )
+  [move wav]                         j = (void **)(a1 + 1068); | sub_442E10();
+  [custom wav]                       sub_4017E0(a1 + 1072); | for ( j = &v49; sub_442E10() != 0; j = &v49 )
+  [variation]                        v11 = sub_4423D0(nullptr); | v15 = nullptr;
+  [set item]                         sub_5E5260((void **)(a1 + 1108)); | for ( n = (void **)sub_4423D0(&v48); v48 != 0; n = (void **)sub_4423D0(&v48) )
+  [set ability]                      i = a1 + 1124; | else if ( (unsigned __int8)sub_423300(&v53, "[set item master]") != 0 )
+  [set item master]                  *(_DWORD *)(a1 + 2072) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v53, "[int data]") != 0 )
+  [int data]                         sub_5E5260((void **)(a1 + 2076)); | for ( n = (void **)sub_4423D0(&v48); v48 != 0; n = (void **)sub_4423D0(&v48) )
+  [string data]                      sub_4017E0(a1 + 2092); | for ( j = &v49; sub_442E10() != 0; j = &v49 )
+------------------------------------------------------------------------
+004F8E20 (dump_parsers.txt L4142, 53 lines)
+------------------------------------------------------------------------
+004F8FE0 (dump_full_1.txt L26265, 110 lines)
+------------------------------------------------------------------------
+004F9240 (dump_full_2.txt L28916, 143 lines)
+------------------------------------------------------------------------
+004FA630 (dump_parsers.txt L5236, 89 lines)
+------------------------------------------------------------------------
+004FA820 (dump_parsers.txt L5325, 99 lines)
+------------------------------------------------------------------------
+004FAA40 (dump_full_2.txt L29059, 114 lines)
+------------------------------------------------------------------------
+004FAC40 (dump_full_0.txt L24108, 156 lines)
+  [notice]                           v22 = COERCE_FLOAT(sub_4423D0(&v26)); | if ( v26 == 0 )
+------------------------------------------------------------------------
+004FB180 (dump_full_1.txt L26497, 167 lines)
+------------------------------------------------------------------------
+004FBA70 (dump_full_0.txt L24264, 142 lines)
+========================================================================
+GROUP monster
+------------------------------------------------------------------------
+004FC1E0 (dump_full_2.txt L29295, 274 lines)
+  [party user number exp bonusrate]  v5 = (float *)(v3 + 12); | for ( i = 4; i != 0; --i )
+  [dungeon difficulty exp bonusrate] v7 = (float *)(v3 + 28); | for ( j = 4; j != 0; --j )
+  [clear rank exp bonusrate]         v9 = (float *)(v3 + 44); | for ( k = 5; k != 0; --k )
+  [drop prob number]                 if ( (unsigned __int8)sub_423300(&v46, "[drop prob]") != 0 ) | v12 = 0;
+  [drop prob]                        v12 = 0; | if ( sub_45E580(v3 + 64) > 0 )
+  [dungeon difficulty drop bonusrate] v19 = (float *)(v3 + 80); | for ( m = 4; m != 0; --m )
+  [party user number drop bonusrate] v21 = (float *)(v3 + 96); | for ( n = 4; n != 0; --n )
+  [drop bonusrate of monster kind]   v23 = (float *)(v3 + 112); | for ( ii = 4; ii != 0; --ii )
+  [result reward prob number]        if ( (unsigned __int8)sub_423300(&v46, "[result reward prob]") != 0 ) | v25 = 0;
+  [result reward prob]               v25 = 0; | if ( sub_45E580(v3 + 128) > 0 )
+  [dungeon difficulty reward bonusrate] v30 = (float *)(v3 + 144); | for ( jj = 4; jj != 0; --jj )
+  [party user number reward bonusrate] v32 = (float *)(v3 + 160); | for ( kk = 4; kk != 0; --kk )
+  [basis of item dicision]           *(_DWORD *)(v3 + 176) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v46, "[basis of equipment rarity dicision]") != 0 )
+  [basis of equipment rarity dicision] v34 = (int *)(v3 + 180); | for ( mm = 4; mm != 0; --mm )
+  [basis of stackable rarity dicision] v36 = (int *)(v3 + 196); | for ( nn = 4; nn != 0; --nn )
+  [stamina recovery cost]            sub_5E5260((void **)(v3 + 212)); | for ( i1 = (void ***)sub_4423D0(&v45); v45 != 0; i1 = (void ***)sub_4423D0(&v45) )
+  [guild create cost]                *(_DWORD *)(v3 + 228) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v46, "[guild levelup cost]") != 0 )
+  [guild levelup cost]               *(_DWORD *)(v3 + 232) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v46, "[guild point acquirement ratio]") != 0 )
+  [guild point acquirement ratio]    *(_DWORD *)(v3 + 236) = sub_4423D0(nullptr); | else
+------------------------------------------------------------------------
+004FD040 (dump_full_1.txt L26784, 202 lines)
+  [gate]                             v25 = 1; | else if ( (unsigned __int8)sub_423300(v29, "[fishing place]") != 0 )
+  [fishing place]                    v25 = 2; | else if ( (unsigned __int8)sub_423300(v29, "[pub]") != 0 )
+  [pub]                              v25 = 3; | else if ( (unsigned __int8)sub_423300(v29, "[dungeon gate]") != 0 )
+  [dungeon gate]                     v25 = 4; | else
+------------------------------------------------------------------------
+004FD4C0 (dump_full_2.txt L29569, 155 lines)
+------------------------------------------------------------------------
+004FE770 (dump_full_2.txt L29724, 280 lines)
+  [field wav]                        i = (int *)(v3 + 184); | sub_443370();
+  [popup wav]                        i = (int *)(v3 + 212); | sub_443370();
+  [look around]                      *(_BYTE *)(v3 + 268) = sub_4423D0(nullptr) != 0; | else if ( (unsigned __int8)sub_423300(&v29, "[role]") != 0 )
+  [role]                             for ( i = (int *)v25; sub_443370() != 0; *v7 = v8 ) | j = 0;
+  [item shop]                        j = 0; | else if ( (unsigned __int8)sub_423300(v25, "[recover stamina]") != 0 )
+  [recover stamina]                  j = 1; | else if ( (unsigned __int8)sub_423300(v25, "[sera shop]") != 0 )
+  [sera shop]                        j = 2; | else if ( (unsigned __int8)sub_423300(v25, "[guild]") != 0 )
+  [guild]                            j = 3; | else if ( (unsigned __int8)sub_423300(v25, "[upgrade item]") != 0 )
+  [upgrade item]                     j = 4; | else if ( (unsigned __int8)sub_423300(v25, "[disjoint item]") != 0 )
+  [disjoint item]                    j = 5; | else if ( (unsigned __int8)sub_423300(v25, "[product item]") != 0 )
+  [product item]                     j = 6; | else if ( (unsigned __int8)sub_423300(v25, "[item storage]") != 0 )
+  [item storage]                     j = 7; | else if ( (unsigned __int8)sub_423300(v25, "[post box]") != 0 )
+  [post box]                         j = 8; | v7 = (int *)sub_4FE030(&j);
+  [quest speech]                     i = (int *)(v3 + 288); | sub_443370();
+  [skill]                            i = (int *)v25; | sub_443370();
+  [common]                           v9 = 4; | else
+  [speech]                           sub_4FDF40((char *)v21); | LOBYTE(v34) = 2;
+  [chaos team]                       i = (int *)v25; | sub_443370();
+  [red team]                         *(_DWORD *)(v3 + 272) = 0; | else if ( (unsigned __int8)sub_423300(v25, "[blue team]") != 0 )
+  [blue team]                        *(_DWORD *)(v3 + 272) = 1; | else if ( (unsigned __int8)sub_423300(v25, "[neutral team]") != 0 )
+  [neutral team]                     *(_DWORD *)(v3 + 272) = 200; | else
+------------------------------------------------------------------------
+004FF870 (dump_full_1.txt L27098, 378 lines)
+  [npc index]                        a1[31] = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v40, "[complete npc index]") != 0 )
+  [complete npc index]               a1[32] = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v40, "[job]") != 0 )
+  [job]                              v18 = v36; | sub_443370();
+  [grow type]                        a1[34] = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v40, "[exceptional grow type]") != 0 )
+  [exceptional grow type]            sub_5E5260((void **)a1 + 35); | for ( i = (void **)sub_4423D0(&v35); v35 != 0; i = (void **)sub_4423D0(&v35) )
+  [level]                            v8 = sub_4423D0(nullptr); | v17 = nullptr;
+  [pre required quest]               memset(&v20[1], 0, 12); | LOBYTE(v45) = 2;
+  [collision quest]                  sub_5E5260((void **)a1 + 45); | for ( i = (void **)sub_4423D0(&v35); v35 != 0; i = (void **)sub_4423D0(&v35) )
+  [PVP RANK]                         a1[49] = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v40, "[effect after clear quest]") != 0 )
+  [effect after clear quest]         *((_BYTE *)a1 + 200) = sub_4423D0(nullptr) != 0; | else if ( (unsigned __int8)sub_423300(&v40, "[delete npc index]") != 0 )
+  [delete npc index]                 a1[51] = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v40, "[clear reward item]") != 0 )
+  [clear reward item]                sub_5E5260((void **)a1 + 52); | while ( 1 )
+  [monster reward item]              sub_5E5260((void **)a1 + 56); | while ( 1 )
+  [appear map]                       v9 = sub_4423D0(nullptr); | v17 = nullptr;
+  [depend give item]                 sub_5E5260((void **)a1 + 64); | for ( j = sub_4423D0(&v35); v35 != 0; j = sub_4423D0(&v35) )
+  [type]                             v18 = v36; | sub_443370();
+  [seeking]                          a1[68] = 0; | else if ( (unsigned __int8)sub_423300(v36, "[condition under clear]") != 0 )
+  [condition under clear]            a1[68] = 1; | else if ( (unsigned __int8)sub_423300(v36, "[hunt monster]") != 0 )
+  [hunt monster]                     a1[68] = 2; | else if ( (unsigned __int8)sub_423300(v36, "[clear map]") != 0 )
+  [clear map]                        a1[68] = 3; | else if ( (unsigned __int8)sub_423300(v36, "[meet npc]") != 0 )
+  [meet npc]                         a1[68] = 4; | else if ( (unsigned __int8)sub_423300(v36, "[pvp rank]") != 0 )
+  [pvp rank]                         a1[68] = 5; | else if ( (unsigned __int8)sub_423300(&v40, "[sub type]") != 0 )
+  [sub type]                         a1[69] = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v40, "[int data]") != 0 )
+  [int data]                         sub_5E5260((void **)a1 + 70); | for ( i = (void **)sub_4423D0(&v35); v35 != 0; i = (void **)sub_4423D0(&v35) )
+  [reward type]                      v18 = v36; | sub_443370();
+  [item]                             a1[74] = 0; | else if ( (unsigned __int8)sub_423300(v36, "[grow type]") != 0 )
+  [grow type]                        a1[74] = 1; | else if ( (unsigned __int8)sub_423300(&v40, "[reward int data]") != 0 )
+  [reward int data]                  sub_5E5260((void **)a1 + 75); | for ( i = (void **)sub_4423D0(&v35); v35 != 0; i = (void **)sub_4423D0(&v35) )
+  [relation quest]                   a1[79] = sub_4423D0(nullptr); | else
+  [common unique]                    a1[29] = 1; | else if ( (unsigned __int8)sub_423300(v36, "[epic]") != 0 )
+  [epic]                             a1[29] = 2; | else
+------------------------------------------------------------------------
+00500330 (dump_full_2.txt L30004, 198 lines)
+------------------------------------------------------------------------
+00500B30 (dump_full_1.txt L27476, 349 lines)
+  [move type]                        j = v29; | sub_443370();
+  [stop]                             *(_BYTE *)(v3 + a1 + 12) = 0; | else if ( (unsigned __int8)sub_423300(v29, "[straight line]") != 0 )
+  [straight line]                    *(_BYTE *)(v3 + a1 + 12) = 1; | else if ( (unsigned __int8)sub_423300(v29, "[sin]") != 0 )
+  [sin]                              *(_BYTE *)(v3 + a1 + 12) = 2; | else if ( (unsigned __int8)sub_423300(v29, "[cos]") != 0 )
+  [cos]                              *(_BYTE *)(v3 + a1 + 12) = 3; | else if ( (unsigned __int8)sub_423300(&v33, "[move variable 1]") != 0 )
+  [move variable 1]                  v6 = sub_4423D0(nullptr); | v22 = nullptr;
+  [move variable 2]                  v7 = sub_4423D0(nullptr); | v22 = nullptr;
+  [changing term]                    *(_DWORD *)(a1 + 63) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v33, "[changing type]") != 0 )
+  [changing type]                    j = v29; | sub_443370();
+  [keep changing]                    *(_BYTE *)(a1 + 67) = 0; | else if ( (unsigned __int8)sub_423300(v29, "[keep last value]") != 0 )
+  [keep last value]                  *(_BYTE *)(a1 + 67) = 1; | else if ( (unsigned __int8)sub_423300(v29, "[ping pong]") != 0 )
+  [ping pong]                        *(_BYTE *)(a1 + 67) = 2; | else if ( (unsigned __int8)sub_423300(&v33, "[gravity]") != 0 )
+  [gravity]                          *(_DWORD *)(a1 + 68) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v33, "[rotation angle]") != 0 )
+  [rotation angle]                   v8 = sub_4423D0(nullptr); | v22 = nullptr;
+  [life time]                        *(_DWORD *)(a1 + 85) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v33, "[landing type]") != 0 )
+  [landing type]                     j = v29; | sub_443370();
+  [pierce]                           *(_BYTE *)(a1 + 89) = 0; | else if ( (unsigned __int8)sub_423300(v29, "[slide]") != 0 )
+  [slide]                            *(_BYTE *)(a1 + 89) = 1; | else if ( (unsigned __int8)sub_423300(v29, "[stop]") != 0 )
+  [stop]                             *(_BYTE *)(a1 + 89) = 2; | else if ( (unsigned __int8)sub_423300(v29, "[vanish]") != 0 )
+  [vanish]                           *(_BYTE *)(a1 + 89) = 3; | else if ( (unsigned __int8)sub_423300(&v33, "[transparent value]") != 0 )
+  [transparent value]                v10 = sub_4423D0(nullptr); | v22 = nullptr;
+  [creation frequency]               *(float *)(a1 + 100) = sub_442480(nullptr); | else if ( (unsigned __int8)sub_423300(&v33, "[maximum create number]") != 0 )
+  [maximum create number]            *(_DWORD *)(a1 + 104) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v33, "[maximum create time]") != 0 )
+  [maximum create time]              *(_DWORD *)(a1 + 108) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v33, "[create area size]") != 0 )
+  [create area size]                 v11 = sub_4423D0(nullptr); | v22 = nullptr;
+  [create area rotation angle]       v13 = sub_4423D0(nullptr); | v22 = nullptr;
+  [rotation angle range type]        j = v29; | sub_443370();
+  [rectangle]                        *(_DWORD *)(a1 + 136) = 0; | else if ( (unsigned __int8)sub_423300(v29, "[circle]") != 0 )
+  [circle]                           *(_DWORD *)(a1 + 136) = 1; | else if ( (unsigned __int8)sub_423300(&v33, "[rotation angle variable]") != 0 )
+  [rotation angle variable]          v15 = sub_4423D0(nullptr); | v22 = nullptr;
+  [random range]                     *(_DWORD *)(a1 + 148) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v33, "[display effect rate]") != 0 )
+  [display effect rate]              v16 = (int *)(a1 + 156); | for ( i = 3; i != 0; --i )
+  [create pos correct]               *(_BYTE *)(a1 + 152) = sub_4423D0(nullptr) != 0; | else if ( (unsigned __int8)sub_423300(&v33, "[object type]") != 0 )
+  [object type]                      j = v29; | sub_443370();
+  [animation]                        *(_DWORD *)(a1 + 172) = 2; | else if ( (unsigned __int8)sub_423300(v29, "[passive object]") != 0 )
+  [passive object]                   *(_DWORD *)(a1 + 172) = 33; | else if ( (unsigned __int8)sub_423300(&v33, "[how to create object]") != 0 )
+  [how to create object]             j = v29; | sub_443370();
+  [randomize]                        *(_BYTE *)(a1 + 168) = 1; | else if ( (unsigned __int8)sub_423300(v29, "[in order]") != 0 )
+  [in order]                         *(_BYTE *)(a1 + 168) = 0; | else if ( (unsigned __int8)sub_423300(&v33, "[object]") != 0 )
+  [object]                           sub_428480(a1 + 180); | for ( j = v29; sub_443370() != 0; j = v29 )
+  [layer]                            j = v29; | sub_443370();
+------------------------------------------------------------------------
+00502F00 (dump_full_1.txt L28053, 454 lines)
+  [purchase cost]                    sub_5E5260((void *)(a1 + 20)); | for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+  [required level]                   *(_DWORD *)(a1 + 36) = sub_4423D0(0); | else if ( (unsigned __int8)sub_423300(&v63, "[required level range]") != 0 )
+  [required level range]             *(_DWORD *)(a1 + 40) = sub_4423D0(0); | else if ( (unsigned __int8)sub_423300(&v63, "[pre required skill]") != 0 )
+  [pre required skill]               sub_5E5260((void *)(a1 + 44)); | sub_5E5260((void *)(a1 + 60));
+  [steel learning skill]             v4 = sub_4423D0(0); | v38 = 0;
+  [type]                             sub_443370(v59); | if ( (unsigned __int8)sub_423300(v59, "[active]") != 0 )
+  [active]                           *(_DWORD *)(a1 + 76) = 0; | else if ( (unsigned __int8)sub_423300(v59, "[passive]") != 0 )
+  [passive]                          *(_DWORD *)(a1 + 76) = 1; | else if ( (unsigned __int8)sub_423300(&v63, "[skill class]") != 0 )
+  [skill class]                      *(_DWORD *)(a1 + 80) = sub_4423D0(0); | else if ( (unsigned __int8)sub_423300(&v63, "[growtype fitness]") != 0 )
+  [growtype fitness]                 v7 = (_DWORD *)(a1 + 84); | for ( j = 5; j != 0; --j )
+  [casting time]                     v9 = (_DWORD *)(a1 + 132); | for ( k = 2; k != 0; --k )
+  [growtype maximum level]           v11 = (_DWORD *)(a1 + 104); | for ( m = 5; m != 0; --m )
+  [skill fitness growtype]           sub_5E5260((void *)(a1 + 304)); | for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+  [consume MP]                       v13 = a1 + 124; | for ( n = 2; n != 0; --n )
+  [consume item]                     v48 = 0; | v49 = 0;
+  [cool time]                        v15 = (_DWORD *)(a1 + 156); | for ( jj = 2; jj != 0; --jj )
+  [skill under cooltime effect]      sub_5E5260((void *)(a1 + 164)); | for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+  [auto cooltime apply]              *(_BYTE *)(a1 + 180) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v63, "[icon]") != 0 )
+  [icon]                             sub_442E10(a1 + 184); | v17 = sub_4423D0(0);
+  [command key explain]              sub_442E10(a1 + 244); | else if ( (unsigned __int8)sub_423300(&v63, "[command]") != 0 )
+  [command]                          v51 = 0; | v52 = 0;
+  [static data]                      sub_5E5260((void *)(a1 + 248)); | for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+  [level info]                       sub_42D540(a1 + 264); | v20 = sub_4423D0(0);
+  [level property]                   v22 = sub_4423D0(&v57); | if ( v57 == 0 )
+  [shake screen]                     v26 = sub_4423D0(0); | v38 = 0;
+------------------------------------------------------------------------
+00503BA0 (dump_full_2.txt L30423, 261 lines)
+  [weapon damage apply]              *(_BYTE *)(a1 + 16) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v16, "[attack myself]") != 0 )
+  [attack myself]                    *(_BYTE *)(a1 + 17) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v16, "[attack friend]") != 0 )
+  [attack friend]                    *(_BYTE *)(a1 + 18) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v16, "[attack enemy]") != 0 )
+  [attack enemy]                     *(_BYTE *)(a1 + 19) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v16, "[elemental property]") != 0 )
+  [elemental property]               sub_443370(v12); | p_Block = Block;
+  [active status]                    sub_443370(v12); | if ( *(_DWORD *)(a1 + 24) != 17 )
+  [damage reaction]                  sub_443370(v12); | if ( (unsigned __int8)sub_423300(v12, "[none]") != 0 )
+  [none]                             *(_DWORD *)(a1 + 60) = 0; | else if ( (unsigned __int8)sub_423300(v12, "[damage]") != 0 )
+  [damage]                           *(_DWORD *)(a1 + 60) = 1; | else if ( (unsigned __int8)sub_423300(v12, "[down]") != 0 )
+  [down]                             *(_DWORD *)(a1 + 60) = 2; | else if ( (unsigned __int8)sub_423300(&v16, "[push aside]") != 0 )
+  [push aside]                       *(_DWORD *)(a1 + 64) = sub_4423D0(0); | else if ( (unsigned __int8)sub_423300(&v16, "[lift up]") != 0 )
+  [lift up]                          *(_DWORD *)(a1 + 68) = sub_4423D0(0); | else if ( (unsigned __int8)sub_423300(&v16, "[critical hit]") != 0 )
+  [critical hit]                     *(float *)(a1 + 72) = sub_442480(0); | else if ( (unsigned __int8)sub_423300(&v16, "[stuck]") != 0 )
+  [stuck]                            *(float *)(a1 + 76) = sub_442480(0); | else if ( (unsigned __int8)sub_423300(&v16, "[stuck prob increase]") != 0 )
+  [stuck prob increase]              *(_BYTE *)(a1 + 80) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v16, "[knuck back]") != 0 )
+  [knuck back]                       *(_BYTE *)(a1 + 81) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v16, "[ignore defense]") != 0 )
+  [ignore defense]                   *(_BYTE *)(a1 + 82) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v16, "[human damage rate]") != 0 )
+  [human damage rate]                *(float *)(a1 + 84) = sub_442480(0); | else if ( (unsigned __int8)sub_423300(&v16, "[fort damage rate]") != 0 )
+  [fort damage rate]                 *(float *)(a1 + 88) = sub_442480(0); | else if ( (unsigned __int8)sub_423300(&v16, "[HP drain]") != 0 )
+  [HP drain]                         *(_BYTE *)(a1 + 140) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v16, "[MP drain]") != 0 )
+  [MP drain]                         *(_BYTE *)(a1 + 141) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(&v16, "[hit wav]") != 0 )
+  [hit wav]                          sub_443370(a1 + 92); | else if ( (unsigned __int8)sub_423300(&v16, "[attack direction]") != 0 )
+  [attack direction]                 sub_443370(v12); | if ( (unsigned __int8)sub_423300(v12, "[hit lift up]") != 0 )
+  [hit lift up]                      *(_DWORD *)(a1 + 120) = 0; | else if ( (unsigned __int8)sub_423300(v12, "[hit horizon]") != 0 )
+  [hit horizon]                      *(_DWORD *)(a1 + 120) = 1; | else if ( (unsigned __int8)sub_423300(v12, "[hit down]") != 0 )
+  [hit down]                         *(_DWORD *)(a1 + 120) = 2; | else if ( (unsigned __int8)sub_423300(&v16, "[hit info]") != 0 )
+  [hit info]                         sub_443370(v12); | if ( (unsigned __int8)sub_423300(v12, "[blow]") != 0 )
+  [blow]                             *(_DWORD *)(a1 + 124) = 0; | else if ( (unsigned __int8)sub_423300(v12, "[cut]") != 0 )
+  [cut]                              *(_DWORD *)(a1 + 124) = 1; | else if ( (unsigned __int8)sub_423300(v12, "[burn]") != 0 )
+  [burn]                             *(_DWORD *)(a1 + 124) = 2; | else if ( (unsigned __int8)sub_423300(v12, "[etc]") != 0 )
+  [etc]                              *(_DWORD *)(a1 + 124) = 3; | sub_443370(v12);
+  [no blood]                         *(_BYTE *)(a1 + 128) = 0; | else if ( (unsigned __int8)sub_423300(v12, "[blood]") != 0 )
+  [blood]                            *(_BYTE *)(a1 + 128) = 1; | v6 = sub_4423D0(0);
+  [physic]                           *(_DWORD *)(a1 + 12) = 0; | else if ( (unsigned __int8)sub_423300(v12, "[magic]") != 0 )
+  [magic]                            *(_DWORD *)(a1 + 12) = 1; | else if ( (unsigned __int8)sub_423300(v12, "[ignore defense]") != 0 )
+  [ignore defense]                   *(_DWORD *)(a1 + 12) = 2;
+------------------------------------------------------------------------
+00504500 (dump_parsers.txt L10755, 55 lines)
+------------------------------------------------------------------------
+00507690 (dump_parsers.txt L12990, 101 lines)
+------------------------------------------------------------------------
+005078C0 (dump_full_2.txt L30921, 722 lines)
+  [dungeon]                          v10 = v3 + 4; | sub_6569D0(v3 + 4);
+  [type]                             j = (int)&v103; | sub_442E10();
+  [greed]                            break; | if ( (unsigned __int8)sub_423300(&v119, "[tile]") != 0 )
+  [tile]                             sub_4017E0(v3 + 124); | for ( j = (int)&v103; sub_442E10() != 0; j = (int)&v103 )
+  [extended tile]                    sub_4017E0(v3 + 140); | for ( j = (int)&v103; sub_442E10() != 0; j = (int)&v103 )
+  [elemental property]               j = (int)&v103; | sub_442E10();
+  [far sight scroll]                 *(_DWORD *)(v3 + 156) = sub_4423D0(nullptr); | goto LABEL_164;
+  [middle sight scroll]              *(_DWORD *)(v3 + 160) = sub_4423D0(nullptr); | goto LABEL_164;
+  [near sight scroll]                *(_DWORD *)(v3 + 164) = sub_4423D0(nullptr); | goto LABEL_164;
+  [background animation]             sub_4D09E0(v3 + 168); | sub_504B90(v105);
+  [town movable area]                sub_5E5260((void **)(v3 + 184)); | for ( k = sub_4423D0(&v104); v104 != 0; k = sub_4423D0(&v104) )
+  [virtual movable area]             sub_5E5260((void **)(v3 + 200)); | for ( m = sub_4423D0(&v104); v104 != 0; m = sub_4423D0(&v104) )
+  [pathgate pos]                     v30 = (int *)(a1 + 216); | for ( n = 4; n != 0; --n )
+  [dungeon start area]               v33 = sub_4423D0(nullptr); | v56 = nullptr;
+  [sound]                            sub_4017E0(v3 + 264); | for ( j = (int)&v103; sub_442E10() != 0; j = (int)&v103 )
+  [animation]                        sub_4CFEA0(v3 + 36); | for ( j = (int)v108; sub_443370() != 0; j = (int)v108 )
+  [passive object]                   sub_6569D0(v3 + 48); | for ( jj = sub_4423D0(&v104); v104 != 0; jj = sub_4423D0(&v104) )
+  [monster]                          if ( (unsigned __int8)sub_423300(&v119, "[champion]") != 0 ) | *(_DWORD *)(v3 + 76) = sub_4423D0(nullptr);
+  [champion]                         *(_DWORD *)(v3 + 76) = sub_4423D0(nullptr); | else if ( (unsigned __int8)sub_423300(&v119, "[item]") != 0 )
+  [item]                             sub_4D1310(v3 + 80); | for ( kk = sub_4423D0(&v104); v104 != 0; kk = sub_4423D0(&v104) )
+  [special passive object]           sub_507510(v3 + 80); | LOBYTE(v124) = 8;
+  [NPC]                              sub_5E5260((void **)(v3 + 104)); | for ( i2 = sub_4423D0(&v104); v104 != 0; i2 = sub_4423D0(&v104) )
+  [monster spawn pos]                sub_5E5260((void **)(v3 + 440)); | v47 = sub_4423D0(nullptr);
+  [chaos zone]                       sub_5E5260((void **)(v3 + 456)); | v102 = 0;
+------------------------------------------------------------------------
+00509C90 (dump_full_1.txt L28861, 538 lines)
+  [category]                         sub_5E5260((void *)(a1 + 48)); | while ( sub_442E10() != 0 )
+  [ability category]                 v33 = 0; | v31 = 13;
+  [ability table]                    *(_DWORD *)(a1 + 144) = sub_4423D0(0); | else
+  [summon skill status up rate]      v6 = (float *)(a1 + 148); | for ( i = 10; i != 0; --i )
+  [level]                            *(_DWORD *)(a1 + 188) = sub_4423D0(0); | *(_DWORD *)(a1 + 192) = sub_4423D0(0);
+  [fire resistance]                  *(_DWORD *)(a1 + 196) = sub_4423D0(0); | *(_DWORD *)(a1 + 200) = sub_4423D0(0);
+  [water resistance]                 *(_DWORD *)(a1 + 204) = sub_4423D0(0); | *(_DWORD *)(a1 + 208) = sub_4423D0(0);
+  [dark resistance]                  *(_DWORD *)(a1 + 212) = sub_4423D0(0); | *(_DWORD *)(a1 + 216) = sub_4423D0(0);
+  [light resistance]                 *(_DWORD *)(a1 + 220) = sub_4423D0(0); | *(_DWORD *)(a1 + 224) = sub_4423D0(0);
+  [HP regen speed]                   *(_DWORD *)(a1 + 356) = sub_4423D0(0); | *(_DWORD *)(a1 + 360) = sub_4423D0(0);
+  [MP regen speed]                   *(_DWORD *)(a1 + 364) = sub_4423D0(0); | *(_DWORD *)(a1 + 368) = sub_4423D0(0);
+  [move speed]                       *(_DWORD *)(a1 + 372) = sub_4423D0(0); | *(_DWORD *)(a1 + 376) = sub_4423D0(0);
+  [attack speed]                     *(_DWORD *)(a1 + 380) = sub_4423D0(0); | *(_DWORD *)(a1 + 384) = sub_4423D0(0);
+  [cast speed]                       *(_DWORD *)(a1 + 388) = sub_4423D0(0); | *(_DWORD *)(a1 + 392) = sub_4423D0(0);
+  [hit recovery]                     *(_DWORD *)(a1 + 396) = sub_4423D0(0); | *(_DWORD *)(a1 + 400) = sub_4423D0(0);
+  [jump power]                       *(_DWORD *)(a1 + 404) = sub_4423D0(0); | *(_DWORD *)(a1 + 408) = sub_4423D0(0);
+  [jump speed]                       *(_DWORD *)(a1 + 412) = sub_4423D0(0); | *(_DWORD *)(a1 + 416) = sub_4423D0(0);
+  [weight]                           *(_DWORD *)(a1 + 420) = sub_4423D0(0); | *(_DWORD *)(a1 + 424) = sub_4423D0(0);
+  [superarmor on attack]             *(_BYTE *)(a1 + 500) = sub_4423D0(0) != 0; | *(_DWORD *)(a1 + 504) = sub_4423D0(0);
+  [sight]                            *(_DWORD *)(a1 + 444) = sub_4423D0(0); | else if ( (unsigned __int8)sub_423300(v39, "[targeting time term]") != 0 )
+  [targeting time term]              *(_DWORD *)(a1 + 448) = sub_4423D0(0); | else if ( (unsigned __int8)sub_423300(v39, "[targeting on attack]") != 0 )
+  [targeting on attack]              *(_BYTE *)(a1 + 452) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(v39, "[targeting on damage]") != 0 )
+  [targeting on damage]              *(_BYTE *)(a1 + 453) = sub_4423D0(0) != 0; | else
+  [targeting high level]             if ( sub_4423D0(0) != 0 ) | *(_DWORD *)(a1 + 456) = 2;
+  [targeting low level]              if ( sub_4423D0(0) != 0 ) | *(_DWORD *)(a1 + 456) = 1;
+  [targeting high HP]                if ( sub_4423D0(0) != 0 ) | *(_DWORD *)(a1 + 460) = 2;
+  [targeting low HP]                 if ( sub_4423D0(0) != 0 ) | *(_DWORD *)(a1 + 460) = 1;
+  [targeting nearest]                *(_BYTE *)(a1 + 468) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(v39, "[targeting attacker]") != 0 )
+  [targeting attacker]               *(_BYTE *)(a1 + 469) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(v39, "[targeting from direction]") != 0 )
+  [targeting from direction]         *(_BYTE *)(a1 + 470) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(v39, "[targeting low physical attack]") != 0 )
+  [targeting low physical attack]    *(_DWORD *)(a1 + 472) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(v39, "[targeting low physical defense]") != 0 )
+  [targeting low physical defense]   *(_DWORD *)(a1 + 476) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(v39, "[targeting low magical attack]") != 0 )
+  [targeting low magical attack]     *(_DWORD *)(a1 + 480) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(v39, "[targeting low magical defense]") != 0 )
+  [targeting low magical defense]    *(_DWORD *)(a1 + 484) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(v39, "[targeting downed]") != 0 )
+  [targeting downed]                 *(_BYTE *)(a1 + 488) = sub_4423D0(0) != 0; | else if ( (unsigned __int8)sub_423300(v39, "[warlike]") != 0 )
+  [warlike]                          *(_DWORD *)(a1 + 492) = sub_4423D0(0); | else if ( (unsigned __int8)sub_423300(v39, "[attack delay]") != 0 )
+  [attack delay]                     *(_DWORD *)(a1 + 496) = sub_4423D0(0); | else if ( (unsigned __int8)sub_423300(v39, "[stuckbonus on damage]") != 0 )
+  [stuckbonus on damage]             *(_DWORD *)(a1 + 428) = sub_4423D0(0); | *(_DWORD *)(a1 + 432) = sub_4423D0(0);
+  [item]                             sub_5E5260((void *)(a1 + 64)); | for ( j = sub_4423D0(&m); m != 0; j = sub_4423D0(&m) )
+  [common champion drop item]        sub_5E5260((void *)(a1 + 80)); | for ( k = sub_4423D0(&m); m != 0; k = sub_4423D0(&m) )
+  [common champion elemental property] sub_5E5260((void *)(a1 + 1420)); | for ( m = sub_442E10(); m != 0; m = sub_442E10() )
+  [super champion drop item]         sub_5E5260((void *)(a1 + 96)); | for ( n = sub_4423D0(&m); m != 0; n = sub_4423D0(&m) )
+  [attack kind]                      sub_5E5260((void *)(a1 + 900)); | while ( 1 )
+  [die effect]                       *(_DWORD *)(a1 + 916) = sub_4423D0(0); | *(_DWORD *)(a1 + 920) = sub_4423D0(0);
+  [face image]                       if ( (unsigned __int8)sub_423300(v39, "[waiting motion]") == 0 | && (unsigned __int8)sub_423300(v39, "[move motion]") == 0
+  [waiting motion]                   && (unsigned __int8)sub_423300(v39, "[move motion]") == 0 | && (unsigned __int8)sub_423300(v39, "[sit motion]") == 0
+  [move motion]                      && (unsigned __int8)sub_423300(v39, "[sit motion]") == 0 | && (unsigned __int8)sub_423300(v39, "[damage motion 1]") == 0
+  [sit motion]                       && (unsigned __int8)sub_423300(v39, "[damage motion 1]") == 0 | && (unsigned __int8)sub_423300(v39, "[damage motion 2]") == 0
+  [damage motion 1]                  && (unsigned __int8)sub_423300(v39, "[damage motion 2]") == 0 | && (unsigned __int8)sub_423300(v39, "[down motion]") == 0
+  [damage motion 2]                  && (unsigned __int8)sub_423300(v39, "[down motion]") == 0 | && (unsigned __int8)sub_423300(v39, "[overturn motion]") == 0
+  [down motion]                      && (unsigned __int8)sub_423300(v39, "[overturn motion]") == 0 | && (unsigned __int8)sub_423300(v39, "[jump motion]") == 0
+  [overturn motion]                  && (unsigned __int8)sub_423300(v39, "[jump motion]") == 0 | && (unsigned __int8)sub_423300(v39, "[jumpattack motion]") == 0 )
+  [jump motion]                      && (unsigned __int8)sub_423300(v39, "[jumpattack motion]") == 0 ) | if ( (unsigned __int8)sub_423300(v39, "[attack motion]") != 0 )
+  [jumpattack motion]                if ( (unsigned __int8)sub_423300(v39, "[attack motion]") != 0 ) | sub_4017E0(a1 + 792);
+  [attack motion]                    sub_4017E0(a1 + 792); | while ( sub_442E10() != 0 )
+  [etc motion]                       sub_4017E0(a1 + 808); | while ( sub_442E10() != 0 )
+  [jumpattack info]                  if ( (unsigned __int8)sub_423300(v39, "[attack info]") != 0 ) | sub_4017E0(a1 + 852);
+  [attack info]                      sub_4017E0(a1 + 852); | while ( sub_442E10() != 0 )
+  [etc attack info]                  sub_4017E0(a1 + 868); | while ( sub_442E10() != 0 )
+  [int data]                         sub_5E5260((void *)(a1 + 884)); | for ( ii = sub_4423D0(&m); m != 0; ii = sub_4423D0(&m) )
+  [speech on situation]              sub_432D20(&v34); | LOBYTE(v44) = 2;
+  [spawn prob]                       *(_DWORD *)(a1 + 1436) = sub_4423D0(0); | else
+------------------------------------------------------------------------
+0050AF40 (dump_full_2.txt L31643, 157 lines)
+  [pass type]                        sub_442E10(); | if ( sub_43BCF0(&v8, "[pass all]") )
+  [piercing power]                   *(_DWORD *)(a1 + 52) = sub_4423D0(nullptr); | continue;
+  [category]                         sub_5E5260((void **)(a1 + 56)); | while ( sub_442E10() != 0 )
+  [basic motion]                     goto LABEL_36; | if ( (unsigned __int8)sub_423300(v9, "[etc motion]") != 0 )
+  [etc motion]                       sub_4017E0(a1 + 100); | while ( sub_442E10() != 0 )
+  [destroy particle]                 || (unsigned __int8)sub_423300(v9, "[attack info]") != 0 ) | goto LABEL_36;
+  [attack info]                      goto LABEL_36; | if ( (unsigned __int8)sub_423300(v9, "[etc attack info]") != 0 )
+  [etc attack info]                  sub_4017E0(a1 + 172); | while ( sub_442E10() != 0 )
+  [int data]                         sub_5E5260((void **)(a1 + 188)); | for ( i = sub_4423D0(&v7); v7 != 0; i = sub_4423D0(&v7) )
+  [string data]                      sub_4017E0(a1 + 204); | while ( sub_442E10() != 0 )
+------------------------------------------------------------------------
+0050B400 (dump_full_0.txt L25639, 155 lines)
+  [move speed]                       *(_DWORD *)(a1 + 56) = sub_4423D0(nullptr); | *(_DWORD *)(a1 + 60) = sub_4423D0(nullptr);
+  [gravity]                          *(_DWORD *)(a1 + 76) = sub_4423D0(nullptr); | else
+  [basic motion]                     goto LABEL_11; | if ( (unsigned __int8)sub_423300(v12, "[etc motion]") != 0 )
+  [etc motion]                       sub_4017E0(a1 + 108); | while ( sub_442E10() != 0 )
+  [attack info]                      sub_4017E0(a1 + 124); | while ( sub_442E10() != 0 )
+  [int data]                         sub_5E5260((void **)(a1 + 140)); | for ( i = sub_4423D0(&v11); v11 != 0; i = sub_4423D0(&v11) )
+  [string data]                      sub_4017E0(a1 + 156); | while ( sub_442E10() != 0 )
+------------------------------------------------------------------------
+0050B840 (dump_full_1.txt L29399, 174 lines)
+  [direction correct]                *(_BYTE *)(a1 + 56) = sub_4423D0(nullptr) != 0; | continue;
+  [move speed]                       *(_DWORD *)(a1 + 60) = sub_4423D0(nullptr); | *(_DWORD *)(a1 + 64) = sub_4423D0(nullptr);
+  [gravity]                          *(_DWORD *)(a1 + 80) = sub_4423D0(nullptr); | continue;
+  [start level]                      *(_DWORD *)(a1 + 84) = sub_4423D0(nullptr); | continue;
+  [permission level]                 *(_DWORD *)(a1 + 88) = sub_4423D0(nullptr); | continue;
+  [artifact slot]                    *(_DWORD *)(a1 + 92) = sub_4423D0(nullptr); | continue;
+  [learn overskill level]            *(_DWORD *)(a1 + 96) = sub_4423D0(nullptr); | continue;
+  [basic motion]                     || (unsigned __int8)sub_423300(v12, "[walk motion]") != 0 | || (unsigned __int8)sub_423300(v12, "[run motion]") != 0
+  [walk motion]                      || (unsigned __int8)sub_423300(v12, "[run motion]") != 0 | || (unsigned __int8)sub_423300(v12, "[skill motion]") != 0
+  [run motion]                       || (unsigned __int8)sub_423300(v12, "[skill motion]") != 0 | || (unsigned __int8)sub_423300(v12, "[over skill motion]") != 0
+  [skill motion]                     || (unsigned __int8)sub_423300(v12, "[over skill motion]") != 0 | || (unsigned __int8)sub_423300(v12, "[response motion]") != 0 )
+  [over skill motion]                || (unsigned __int8)sub_423300(v12, "[response motion]") != 0 ) | LABEL_45:
+  [response motion]                  LABEL_45: | sub_443370();
+  [etc motion]                       sub_4017E0(a1 + 268); | while ( sub_442E10() != 0 )
+  [attack info]                      sub_4017E0(a1 + 284); | while ( sub_442E10() != 0 )
+  [int data]                         sub_5E5260((void **)(a1 + 300)); | for ( i = sub_4423D0(&v11); v11 != 0; i = sub_4423D0(&v11) )
+  [string data]                      sub_4017E0(a1 + 316); | while ( sub_442E10() != 0 )
+========================================================================
+GROUP attackinfo
+------------------------------------------------------------------------
+0050C290 (dump_full_0.txt L25794, 471 lines)
+  [initial value]                    v42 = a1 + 152; | v40 = (void *)(a1 + 628);
+  [growtype 1]                       v42 = a1 + 231; | v40 = (void *)(a1 + 644);
+  [growtype 2]                       v42 = a1 + 310; | v40 = (void *)(a1 + 660);
+  [growtype 3]                       v42 = a1 + 389; | v40 = (void *)(a1 + 676);
+  [growtype 4]                       v42 = a1 + 468; | v40 = (void *)(a1 + 692);
+  [growtype 5]                       v42 = a1 + 547; | v40 = (void *)(a1 + 708);
+  [HP MAX]                           v15 = sub_442480(nullptr) * 10.0; | *(_DWORD *)v3 = sub_432F40(v15);
+  [MP MAX]                           v16 = sub_442480(nullptr) * 10.0; | *(_DWORD *)(v3 + 4) = sub_432F40(v16);
+  [physical attack]                  v17 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 8) = sub_432F40(v17);
+  [physical defense]                 v18 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 10) = sub_432F40(v18);
+  [magical attack]                   v19 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 12) = sub_432F40(v19);
+  [magical defense]                  v20 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 14) = sub_432F40(v20);
+  [fire resistance]                  v21 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 16) = sub_432F40(v21);
+  [water resistance]                 v22 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 18) = sub_432F40(v22);
+  [dark resistance]                  v23 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 20) = sub_432F40(v23);
+  [light resistance]                 v24 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 22) = sub_432F40(v24);
+  [inventory limit]                  v25 = sub_442480(nullptr) * 10.0; | *(_DWORD *)(v3 + 56) = sub_432F40(v25);
+  [HP regen speed]                   v26 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 60) = sub_432F40(v26);
+  [MP regen speed]                   v27 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 62) = sub_432F40(v27);
+  [move speed]                       v28 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 64) = sub_432F40(v28);
+  [attack speed]                     v29 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 66) = sub_432F40(v29);
+  [cast speed]                       v30 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 68) = sub_432F40(v30);
+  [hit recovery]                     v31 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 70) = sub_432F40(v31);
+  [jump power]                       v32 = sub_442480(nullptr) * 10.0; | *(_WORD *)(v3 + 72) = sub_432F40(v32);
+  [weight]                           v33 = sub_442480(nullptr) * 10.0; | *(_DWORD *)(v3 + 74) = sub_432F40(v33);
+  [skill]                            sub_5E5260((void **)v40); | for ( i = sub_4423D0(&v44); v44 != 0; i = sub_4423D0(&v44) )
+  [category]                         sub_5E5260((void **)v41); | if ( sub_442E10() != 0 )
+  [waiting motion]                   || (unsigned __int8)sub_423300(v46, "[move motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[sit motion]") != 0
+  [move motion]                      || (unsigned __int8)sub_423300(v46, "[sit motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[damage motion 1]") != 0
+  [sit motion]                       || (unsigned __int8)sub_423300(v46, "[damage motion 1]") != 0 | || (unsigned __int8)sub_423300(v46, "[damage motion 2]") != 0
+  [damage motion 1]                  || (unsigned __int8)sub_423300(v46, "[damage motion 2]") != 0 | || (unsigned __int8)sub_423300(v46, "[down motion]") != 0
+  [damage motion 2]                  || (unsigned __int8)sub_423300(v46, "[down motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[overturn motion]") != 0
+  [down motion]                      || (unsigned __int8)sub_423300(v46, "[overturn motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[jump motion]") != 0
+  [overturn motion]                  || (unsigned __int8)sub_423300(v46, "[jump motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[jumpattack motion]") != 0
+  [jump motion]                      || (unsigned __int8)sub_423300(v46, "[jumpattack motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[rest motion]") != 0
+  [jumpattack motion]                || (unsigned __int8)sub_423300(v46, "[rest motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[throw motion 1-1]") != 0
+  [rest motion]                      || (unsigned __int8)sub_423300(v46, "[throw motion 1-1]") != 0 | || (unsigned __int8)sub_423300(v46, "[throw motion 1-2]") != 0
+  [throw motion 1-1]                 || (unsigned __int8)sub_423300(v46, "[throw motion 1-2]") != 0 | || (unsigned __int8)sub_423300(v46, "[throw motion 2-1]") != 0
+  [throw motion 1-2]                 || (unsigned __int8)sub_423300(v46, "[throw motion 2-1]") != 0 | || (unsigned __int8)sub_423300(v46, "[throw motion 2-2]") != 0
+  [throw motion 2-1]                 || (unsigned __int8)sub_423300(v46, "[throw motion 2-2]") != 0 | || (unsigned __int8)sub_423300(v46, "[throw motion 3-1]") != 0
+  [throw motion 2-2]                 || (unsigned __int8)sub_423300(v46, "[throw motion 3-1]") != 0 | || (unsigned __int8)sub_423300(v46, "[throw motion 3-2]") != 0
+  [throw motion 3-1]                 || (unsigned __int8)sub_423300(v46, "[throw motion 3-2]") != 0 | || (unsigned __int8)sub_423300(v46, "[throw motion 4-1]") != 0
+  [throw motion 3-2]                 || (unsigned __int8)sub_423300(v46, "[throw motion 4-1]") != 0 | || (unsigned __int8)sub_423300(v46, "[throw motion 4-2]") != 0
+  [throw motion 4-1]                 || (unsigned __int8)sub_423300(v46, "[throw motion 4-2]") != 0 | || (unsigned __int8)sub_423300(v46, "[dash motion]") != 0
+  [throw motion 4-2]                 || (unsigned __int8)sub_423300(v46, "[dash motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[dashattack motion]") != 0
+  [dash motion]                      || (unsigned __int8)sub_423300(v46, "[dashattack motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[getitem motion]") != 0
+  [dashattack motion]                || (unsigned __int8)sub_423300(v46, "[getitem motion]") != 0 | || (unsigned __int8)sub_423300(v46, "[buff motion]") != 0 )
+  [getitem motion]                   || (unsigned __int8)sub_423300(v46, "[buff motion]") != 0 ) | LABEL_122:
+  [buff motion]                      LABEL_122: | sub_443370();
+  [attack motion]                    sub_4017E0(a1 + 1440); | while ( sub_442E10() != 0 )
+  [etc motion]                       sub_4017E0(a1 + 1456); | while ( sub_442E10() != 0 )
+  [jumpattack info]                  || (unsigned __int8)sub_423300(v46, "[dashattack info]") != 0 ) | goto LABEL_122;
+  [dashattack info]                  goto LABEL_122; | if ( (unsigned __int8)sub_423300(v46, "[attack info]") != 0 )
+  [attack info]                      sub_4017E0(a1 + 1528); | while ( sub_442E10() != 0 )
+  [etc attack info]                  sub_4017E0(a1 + 1544); | while ( sub_442E10() != 0 )
+  [weapon wav]                       v11 = nullptr; | v37 = nullptr;
+  [weapon hit info]                  sub_5E5260((void **)(a1 + 1576)); | sub_5E5260((void **)(a1 + 1592));

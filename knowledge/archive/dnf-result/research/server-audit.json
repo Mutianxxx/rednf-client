@@ -1,0 +1,31 @@
+{
+  "files": 36439,
+  "bytes": 219672886,
+  "roles": {
+    "build-doc-data": 112,
+    "project-code": 22833,
+    "third-party": 13494
+  },
+  "encodings": {
+    "utf-8-sig": 22945,
+    "None": 13494
+  },
+  "lexical_function_candidates": 36269,
+  "pvf_string_occurrences": 5681,
+  "pc_tag_candidates": 2363,
+  "includes": {
+    "ambiguous": 7283,
+    "missing-or-toolchain": 347,
+    "resolved-relative": 33057,
+    "unique-suffix-candidate": 1937
+  },
+  "original_runtime_files": 0,
+  "original_runtime_equivalence_verified": false,
+  "game_or_services_started": false,
+  "license": "Original contributions: CC BY-NC-SA 4.0 per supplied README/LICENSE; third-party licenses retained.",
+  "limitations": [
+    "C/C++ lexical navigation, not full AST/preprocessor expansion or gameplay proof.",
+    "remake/README.md has outdated status claims; actual CMake/source includes game. Prior comparison reports are claims, not local reruns.",
+    "Third-party files retained and classified separately; not counted as recovered game rules."
+  ]
+}

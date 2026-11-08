@@ -1,0 +1,171 @@
+{
+  "source": "imports/rednf/remake/source/DNFServer/GameServer/Game/STQuestScript.cpp",
+  "sha256": "e2825d50e1fa8487b59317737ab269806cf0fd44f06f55fa0298aa783ac7bcbc",
+  "enum_namespace": "QuestScript.m_triggerType / Quest.m_triggerType; PVF [type]; distinct from [grade] category",
+  "mappings": [
+    {
+      "label": "[seeking]",
+      "server_enum": 0,
+      "line": 806,
+      "PC_occurrences": 1079
+    },
+    {
+      "label": "[condition under clear]",
+      "server_enum": 1,
+      "line": 817,
+      "PC_occurrences": 849
+    },
+    {
+      "label": "[hunt monster]",
+      "server_enum": 2,
+      "line": 828,
+      "PC_occurrences": 153
+    },
+    {
+      "label": "[clear map]",
+      "server_enum": 3,
+      "line": 839,
+      "PC_occurrences": 71
+    },
+    {
+      "label": "[meet npc]",
+      "server_enum": 4,
+      "line": 850,
+      "PC_occurrences": 362
+    },
+    {
+      "label": "[pvp rank]",
+      "server_enum": 5,
+      "line": 861,
+      "PC_occurrences": 0
+    },
+    {
+      "label": "[hunt enemy]",
+      "server_enum": 6,
+      "line": 872,
+      "PC_occurrences": 580
+    },
+    {
+      "label": "[powerwar win]",
+      "server_enum": 7,
+      "line": 883,
+      "PC_occurrences": 0
+    },
+    {
+      "label": "[powerwar point]",
+      "server_enum": 8,
+      "line": 894,
+      "PC_occurrences": 0
+    },
+    {
+      "label": "[mobile]",
+      "server_enum": 9,
+      "line": 905,
+      "PC_occurrences": 0
+    },
+    {
+      "label": "[use item]",
+      "server_enum": 10,
+      "line": 916,
+      "PC_occurrences": 16
+    },
+    {
+      "label": "[get score]",
+      "server_enum": 11,
+      "line": 927,
+      "PC_occurrences": 6
+    },
+    {
+      "label": "[clear quest]",
+      "server_enum": 12,
+      "line": 938,
+      "PC_occurrences": 49
+    },
+    {
+      "label": "[check time]",
+      "server_enum": 13,
+      "line": 949,
+      "PC_occurrences": 2
+    },
+    {
+      "label": "[check life]",
+      "server_enum": 14,
+      "line": 960,
+      "PC_occurrences": 0
+    },
+    {
+      "label": "[amplify item]",
+      "server_enum": 15,
+      "line": 971,
+      "PC_occurrences": 4
+    },
+    {
+      "label": "[disjoint item]",
+      "server_enum": 16,
+      "line": 982,
+      "PC_occurrences": 3
+    },
+    {
+      "label": "[equipped item]",
+      "server_enum": 17,
+      "line": 993,
+      "PC_occurrences": 5
+    },
+    {
+      "label": "[get item]",
+      "server_enum": 18,
+      "line": 1004,
+      "PC_occurrences": 2
+    },
+    {
+      "label": "[custom quest]",
+      "server_enum": 19,
+      "line": 1015,
+      "PC_occurrences": 35
+    },
+    {
+      "label": "[send chatting]",
+      "server_enum": 20,
+      "line": 1026,
+      "PC_occurrences": 1
+    },
+    {
+      "label": "[turn gold card]",
+      "server_enum": 21,
+      "line": 1037,
+      "PC_occurrences": 0
+    },
+    {
+      "label": "[use fortune coin]",
+      "server_enum": 22,
+      "line": 1048,
+      "PC_occurrences": 1
+    },
+    {
+      "label": "[meet secret npc]",
+      "server_enum": 23,
+      "line": 1059,
+      "PC_occurrences": 0
+    },
+    {
+      "label": "[ui click]",
+      "server_enum": 24,
+      "line": 1070,
+      "PC_occurrences": 1
+    },
+    {
+      "label": "[seek n meet npc]",
+      "server_enum": 25,
+      "line": 1081,
+      "PC_occurrences": 2
+    },
+    {
+      "label": "[assault count]",
+      "server_enum": 26,
+      "line": 1092,
+      "PC_occurrences": 1
+    }
+  ],
+  "unmatched_PC_types": {},
+  "version_match_verified": false
+}

@@ -1,0 +1,13 @@
+{
+  "index_field": "4e6b75601f4c15fdef9f9c3e70c162c89dab195fde12b7d2785e659f40787729",
+  "current_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+  "swordman_chr_sha256": "4e6b75601f4c15fdef9f9c3e70c162c89dab195fde12b7d2785e659f40787729",
+  "index_hash_matches_chr": true,
+  "index_hash_matches_pvf": false,
+  "evidence": [
+    "imports/gba-workspace/dnf-gba/tools/audit_progression.ts",
+    "imports/gba-workspace/dnf-gba/content/source/progression/index.json",
+    "canonical/pc/pvf/character/swordman/swordman.chr"
+  ],
+  "correction": "The old index sha256 is the CHR entry hash, not a whole-PVF hash. It does not establish a different PVF version."
+}

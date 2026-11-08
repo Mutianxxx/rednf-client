@@ -1,0 +1,15 @@
+{
+  "wrd": 117,
+  "map_specifications": 1585,
+  "room_candidates": 1929,
+  "unsupported_map_specifications": 1,
+  "dgn": 346,
+  "map": 2948,
+  "til": 3561,
+  "rgn": 4,
+  "town_areas": 77,
+  "twn": 17,
+  "wdm": 26,
+  "scope": "all source files; includes test/event/internal content; registration is not release eligibility",
+  "runtime_status": "not a scene renderer or pathfinding validation"
+}

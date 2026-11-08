@@ -1,0 +1,530 @@
+[
+  {
+    "id": "C01",
+    "subject": "旧成长索引哈希被解释为另一个整包 PVF",
+    "decision": "实测与 `character/swordman/swordman.chr` 一致；是对象标注错误，不构成不同版本证据。撤回安卓旧 provenance/验证报告相关版本推断。",
+    "classification": "factual-correction",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "catalog/provenance-correction.json",
+      "imports/android/pc-reference/provenance-status.json",
+      "imports/gba-workspace/dnf-gba/tools/audit_progression.ts"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C02",
+    "subject": "解析器通用文档写 Big5、自动猜测编码",
+    "decision": "本客户端明确 GBK。394,982 条字符串与本轮任务解析未发生 GBK 替换；保留原字节，其他客户端另建编码配置。",
+    "classification": "factual-correction",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "tools/pvf_reader.py",
+      "catalog/pc-quest-analysis.json",
+      "imports/gba-workspace/npk-pvf解析器/docs/pvf-format.md"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C03",
+    "subject": "PC 标签任务与安卓固定记录",
+    "decision": "统一内容使用 PC 有序字段；新端可读取导出的 JSON 列表并执行 PC 规则。继续用现 APK 必须另外编译到 225 字节结构并处理容量/语义缺口。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "canonical/pc/quests.jsonl",
+      "imports/android/data/quests.json",
+      "adapters/android-quests/legacy-225-assessment.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C04",
+    "subject": "《铁匠林纳斯》同名任务条件、奖励不同",
+    "decision": "Android4 的320经验/30金币及前置任务3属于 APK。PC 保留 meet npc、等级1..99、NPC2→1、gold multiple10、reward int data0/100；不可将100直接解释为最终金币。",
+    "classification": "identity-or-coverage-boundary",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "canonical/pc/pvf/n_quest/elvengard/lorien/epic_1_lorien_1.qst",
+      "imports/android/data/quests.json",
+      "adapters/android-quests/name-candidates.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C05",
+    "subject": "GBA 十六转职、Android 鬼剑士与 PC 特殊分支",
+    "decision": "原 CHR/SKL 原样保留，包括鬼剑士成长名中的“剑魔”；文件存在不证明正式开放。四基础职业十六分支是 GBA 运行范围，不能作为完整 PC 职业全集。",
+    "classification": "identity-or-coverage-boundary",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "canonical/pc/player-classes.json",
+      "canonical/pc/player-skills.json",
+      "imports/android/docs/03-gameplay-logic.md"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C06",
+    "subject": "ANI 毫秒、ACT 调用阈值、GBA 帧数",
+    "decision": "共同动作保留原毫秒。Android 的33ms显示初值和计数更新、GBA59.73Hz转换各自记录；不得直接提高回调频率来冒充等时长高帧率。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "imports/android/docs/05-resources-timing.md",
+      "imports/gba-workspace/dnf-gba/docs/portability.md"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C07",
+    "subject": "PC 图块/迷宫和 Android ZON/FIE/DS",
+    "decision": "原 DGN/MAP/TIL/TWN 为地图基准。ZON 存储轴和格子码未全部解释；暂不建立按数字或文件数对应的地图映射。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "imports/android/data/zones.json",
+      "imports/gba-workspace/dnf-gba/content/source/region-manifest.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C08",
+    "subject": "GBA 门缩放、天空扩展地面修复",
+    "decision": "原门 OBJ 参数对、完整装饰和原图层为共同事实；两 OBJ、省略树木、1/3坐标和静态合成是 GBA 策略。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "imports/gba-workspace/dnf-gba/content/source/dungeon-portals.json",
+      "imports/gba-workspace/dnf-gba/content/gba-portals.json",
+      "docs/03-world-and-maps.md"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C09",
+    "subject": "NPK/IMG 与 BNV/PAK 的资源入口",
+    "decision": "保存共同图像语义及原编号，平台转换器重新编码。NPK 不能更名覆盖 PAK；替换图片不会补齐动作/判定控制器。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "imports/android/inventory/bnv-container.json",
+      "imports/gba-workspace/gba-research/reports/npk-catalog.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C10",
+    "subject": "技能、任务、物品等数值 ID",
+    "decision": "包含样本哈希与列表/类别命名空间；同名只作候选。4职业712条技能和 APK75个目录项不计算“还原率”。",
+    "classification": "identity-or-coverage-boundary",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "catalog/pc-quest-ids.jsonl",
+      "adapters/android-quests/name-candidates.json",
+      "imports/android/data/apk-json/items.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C11",
+    "subject": "GBA 免材料、低CD、区域装备与 APK 辅助功能",
+    "decision": "全部留在平台配置；原任务材料、技能冷却、道具/装备和准入参数继续保留 PC 值。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "imports/gba-workspace/dnf-gba/content/gba-progression.json",
+      "imports/android/docs/02-client-features.md"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C12",
+    "subject": "GBA 霸体/无敌配方与原动作保护",
+    "decision": "两种能力分别处理，原 ANI damageType 与技能控制器赋予的保护分开。GBA 配方不当作 PC 每技能每帧时段。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "imports/gba-workspace/dnf-gba/content/gba-defense.json",
+      "docs/04-actions-combat-audio.md"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C13",
+    "subject": "技能声效、怪物/NPC声线与混音",
+    "decision": "PC audio.xml ID、ANI事件和原OGG为基准；GBA手选声组及重采样是近似配置。Android声音桥独立保存。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "sources/pc/audio.xml",
+      "imports/gba-workspace/dnf-gba/assets-generated/audio/manifest.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C14",
+    "subject": "本地存档与 PC 持久化",
+    "decision": "PVF/NPK 不提供完整 PC 服务端存档实现。GBA SRAM、Android Hero/Quest/Slot 分别作为参考，统一存档需新 schema 和稳定 ID。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "imports/gba-workspace/dnf-gba/docs/save-format.md",
+      "imports/android/docs/07-save-and-extension-bridge.md"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C15",
+    "subject": "64MiB 与分辨率",
+    "decision": "GBA标准32MiB单卡为当前可玩实现；Matrix只通过特定mGBA探针，完整游戏及实体卡未验证。容量增加不会改变240×160屏幕。",
+    "classification": "platform-implementation-difference",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "imports/gba-workspace/dnf-gba/docs/rom-capacity.md",
+      "imports/gba-workspace/dnf-gba/build/rom64-matrix-probe/report.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C16",
+    "subject": "资料数量被当成完成度",
+    "decision": "解析、编译、运行和测试分开。PC3222任务是脚本覆盖；APK530任务是静态解析；GBA84动作不能称为PC全部技能。",
+    "classification": "identity-or-coverage-boundary",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "inventory/pc-consolidation-summary.json",
+      "imports/android/inventory/validation-report.json",
+      "imports/gba-workspace/dnf-gba/build/validation-summary.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C17",
+    "subject": "旧 IMG 按改头连续索引处理",
+    "decision": "本地 136 个 version 1 IMG 实测为帧记录与像素交错。直接解析原字节；不得将 GBA 改头连续索引策略推广为 PC 格式。21,444 帧已通过完整边界及像素长度验证。",
+    "classification": "full-audit-correction",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "tools/pc_assets.py",
+      "research/pc-assets-audit.json",
+      "imports/gba-workspace/dnf-gba/tools/packed.ts"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C18",
+    "subject": "四职业子集被误作全 PC 内容",
+    "decision": "旧 712 条源技能、四 CHR 和选定区域保持历史范围。新版本规划使用全 334,927 个条目、11 个角色定义和 2,008 个 SKL，未注册与内部记录仍保留。",
+    "classification": "full-audit-correction",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "research/pc-audit.json",
+      "research/all-skill-files.jsonl",
+      "research/all-player-classes.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C19",
+    "subject": "辅助任务 LST 均视为普通配对或不可读取",
+    "decision": "日常随机、史诗、训练以及 APC operatingvalue 配置按完整 token／容器保留；结构可读取，具体规则仍需消费者，不生成伪 ID 映射。",
+    "classification": "full-audit-correction",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "research/pc-auxiliary-quest-lists.json",
+      "tools/audit_pc.py"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C20",
+    "subject": "Android FIE／DS 只有未命名原数据",
+    "decision": "已用本地 ELF 逐文件执行全部 885 个 FIE／DS 加载路径，记录原字节读取与运行结构。结构读取进展不等同字段语义或 PC 地图行为一致。",
+    "classification": "full-audit-correction",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "research/android-loader-audit.json",
+      "tools/trace_android_loaders.py"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C21",
+    "subject": "顶层音频 ID／FILE 可完整表达声音表",
+    "decision": "必须保留 RANDOM／GROUP 的 5,002 个子 ITEM、TAG 关系与 PROB 权重，不能丢弃随机语音组。",
+    "classification": "full-audit-correction",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "research/audio-events.json",
+      "tests/test_research.py",
+      "sources/pc/audio.xml"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C22",
+    "subject": "外部安卓分析更新与历史快照",
+    "decision": "新增2432文件和修改9文件单独固定；保留旧55850文件快照；当前源清单逐项选择旧快照或新修订，不覆盖历史证据。",
+    "classification": "supplemental-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "inventory/android-revision-summary.json",
+      "research/android-revision-merge-report.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C23",
+    "subject": "rednf源码与本地PC是否天然同版",
+    "decision": "rednf是重建源码；.origin_1031为空，仓库旧README状态与当前CMake不一致。完整源码保留，既有binary identical报告仅作来源声明，尚未本地重做原ELF对照。",
+    "classification": "supplemental-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "research/server-audit.json",
+      "imports/rednf/docs/df_binaries_identical.md"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C24",
+    "subject": "伤害常量26与27项差异",
+    "decision": "当前服务端加载器读取26个float，本地PC该段27项。逐位置导出候选字段和尾值，保留版本/消费者缺口；不猜第27项。",
+    "classification": "supplemental-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "research/server-PC-damage-constant-candidates.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C25",
+    "subject": "隔离编译通过与原版一致性",
+    "decision": "编译原服务端函数的15201用例只验证提供的源码和整理模型；ARM软浮点不证明原x86/x87、全部调用者或当前PC玩法一致。",
+    "classification": "supplemental-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "research/server-rule-verification.json",
+      "research/server-behavior-contracts.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C26",
+    "subject": "源码聚合器被当作缺失函数或空桩",
+    "decision": "部分函数签名和函数体跨.cpp/.inc。保留原include，并对可唯一解析的.inc展开，给每行原路径/行号；不是完整预处理器或AST。",
+    "classification": "supplemental-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "evidence": [
+      "research/server-expanded-functions.json",
+      "tools/expand_server_aggregators.py"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C27",
+    "subject": "女枪手与鬼剑士安卓容器及动作布局",
+    "decision": "女枪手采用10字节包装及LZMA；ACT矩形为signed16位且帧字段8字节。分别解析，不覆盖旧版。",
+    "classification": "versioned-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "female_gunner_apk_sha256": "78ac780fc114979596ce073712b1877e714b489ce2653974ad9c91404ed995c0",
+    "evidence": [
+      "docs/14-android-gunner-and-dfq-mechanics.md",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C28",
+    "subject": "安卓任务225/292字节",
+    "decision": "鬼剑士225字节与女枪手292字节均为版本特定表示；后者548条且4个可选奖励槽。PC完整JSON保持共同模型，二进制注入需另做适配。",
+    "classification": "versioned-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "female_gunner_apk_sha256": "78ac780fc114979596ce073712b1877e714b489ce2653974ad9c91404ed995c0",
+    "evidence": [
+      "docs/14-android-gunner-and-dfq-mechanics.md",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C29",
+    "subject": "女枪手技能编号与效果资源",
+    "decision": "BD文件ID、技能名数组位置、job action index、9950/10050效果ID分开。同名仅候选，不能直接拼编号宣称技能已恢复。",
+    "classification": "versioned-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "female_gunner_apk_sha256": "78ac780fc114979596ce073712b1877e714b489ce2653974ad9c91404ed995c0",
+    "evidence": [
+      "docs/14-android-gunner-and-dfq-mechanics.md",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C30",
+    "subject": "DFQ参考范围",
+    "decision": "只使用碰撞、动作及技能控制源码与配置；禁止其UI设计、资源、布局。DFQ倍率、公式、输入窗口仅为实现参考，内容以PC/PVF为准。",
+    "classification": "versioned-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "female_gunner_apk_sha256": "78ac780fc114979596ce073712b1877e714b489ce2653974ad9c91404ed995c0",
+    "evidence": [
+      "docs/14-android-gunner-and-dfq-mechanics.md",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C31",
+    "subject": "女枪手APK的修改菜单与官方规则",
+    "decision": "当前样本含com.dnf.mod.ModMenu及mod_items/mod_quest；包名和版本号不足以认定数值和辅助功能为官方规则。",
+    "classification": "versioned-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "female_gunner_apk_sha256": "78ac780fc114979596ce073712b1877e714b489ce2653974ad9c91404ed995c0",
+    "evidence": [
+      "docs/14-android-gunner-and-dfq-mechanics.md",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C32",
+    "subject": "女枪手原生加载追踪与游戏验证",
+    "decision": "2773份ACT/FRA/DS/FIE/DAT执行实际加载器，2772份读取通过，20127.dat尾443字节未消费；解压、分配、颜色转换等使用声明的替身，不能称完整APK或PC验证。",
+    "classification": "versioned-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "female_gunner_apk_sha256": "78ac780fc114979596ce073712b1877e714b489ce2653974ad9c91404ed995c0",
+    "evidence": [
+      "docs/14-android-gunner-and-dfq-mechanics.md",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C33",
+    "subject": "保留DAT裁剪原点与未解释渲染",
+    "decision": "完整导出22614片位图的signed原点和像素索引；原生颜色转换委托回调，透明度和混合仍须渲染器证据，不能统一脚底对齐或把索引0当PC事实。",
+    "classification": "versioned-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "female_gunner_apk_sha256": "78ac780fc114979596ce073712b1877e714b489ce2653974ad9c91404ed995c0",
+    "evidence": [
+      "docs/14-android-gunner-and-dfq-mechanics.md",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  },
+  {
+    "id": "C34",
+    "subject": "女枪手异名与重复数值字段",
+    "decision": "安卓玛丽莲玫瑰与PC后撩踢只列人工核对候选；PC多重爆头两个cool time及重复level info保留有序上下文，不以单个安卓值覆盖。",
+    "classification": "versioned-source-reconciliation",
+    "content_authority": "local-PC-client-and-PVF",
+    "status": "documented-and-applied-to-merged-model",
+    "pc_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "android_apk_sha256": "ce97f050e1d9a956cd83d56fa19a9196c6a1619c5294f768291c4bfea83ff3a6",
+    "female_gunner_apk_sha256": "78ac780fc114979596ce073712b1877e714b489ce2653974ad9c91404ed995c0",
+    "evidence": [
+      "docs/14-android-gunner-and-dfq-mechanics.md",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json"
+    ],
+    "cross_platform_runtime_equivalence_verified": false
+  }
+]

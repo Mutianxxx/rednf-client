@@ -1,0 +1,63 @@
+#### item_parser.cpp
+0x4F1A20 sub_4F1A20 (53): [name] [explain] [entering title] [cutscene image] [minimap image] [worldmap info] [minimum required level] [required item] [coin limit] [basis level] [experience increasing point] [champion] [item] [pathgate object] [maze info] [size] [greed] [map specification] [boss map specification] [start map] [boss map] [warroom map index] [monster type spawn prob] [monster type spawn cost] [monster type spawn interval rate] [monster spawn base interval] [monster spawn random interval] [fatigue] [fatigue result] [max monster] [player kc] [spawn common monster index] [spawn common champion index] [spawn super champion index] [spawn boss index] [spawn step max] [spawn step resource pool] [kill count const] [join cost gold] [gold drop prob] [common monster item drop prob] [common champion item drop prob] [super champion item drop prob] [boss item drop prob] [common monster exp const] [common champion exp const] [super champion exp const] [boss exp const] [common monster item drop list] [common champion item drop list] [super champion item drop list] [boss item drop list] [ancient dungeon]
+
+0x4F5B90 sub_4F5B90 (39): [name] [name2] [explain] [flavor text] [grade] [attach type] [free] [trade] [trade delete] [sealing] [creation rate] [rarity] [weight] [usable job] [stackable type] [waste] [material] [recipe] [throw] [set] [legacy] [quest] [etc] [minimum level] [cool time] [cooltime group] [party cooltime] [icon] [field image] [price] [value] [finish point price] [cash] [medal] [move wav] [use wav] [int data] [string data] [applying range]
+
+0x4F6790 sub_4F6790 (80): [HP MAX] [MP MAX] [physical attack] [physical defense] [magical attack] [magical defense] [equipment physical attack] [equipment physical defense] [equipment magical attack] [equipment magical defense] [physical absolute damage] [physical damage reduce] [physical absolute defense] [magical absolute damage] [magical damage reduce] [magical absolute defense] [fire resistance] [water resistance] [dark resistance] [light resistance] [all elemental resistance] [slow resistance] [freeze resistance] [poison resistance] [stun resistance] [curse resistance] [blind resistance] [lightning resistance] [stone resistance] [sleep resistance] [burn resistance] [deadlystrike resistance] [bleeding resistance] [all activestatus resistance] [piercing resistance] [stuck resistance] [confuse resistance] [hold resistance] [inventory limit] [HP regen speed] [MP regen speed] [MP regen speed rate] [move speed] [attack speed] [cast speed] [hit recovery] [jump power] [elemental property] [active status] [none] [slow] [freeze] [poison] [stun] [curse] [blind] [lightning] [stone] [sleep] [burn] [deadlystrike] [bleeding] [haste] [bless] [element] [hold] [confuse] [push aside] [lift up] [physical critical hit] [magical critical hit] [stuck] [ignore defense] [human damage rate] [fort damage rate] [HP drain] [MP drain] [skill levelup] [common] [avatar select ability]
+
+0x4F7C60 sub_4F7C60 (81): [name] [name2] [explain] [flavor text] [fullset explain] [set name] [grade] [attach type] [free] [trade] [trade delete] [sealing] [creation rate] [rarity] [weight] [icon] [field image] [custom animation] [usable job] [minimum level] [required skill] [cool time] [equipment type] [hat avatar] [hair avatar] [face avatar] [coat avatar] [pants avatar] [shoes avatar] [breast avatar] [waist avatar] [weapon] [title name] [coat] [shoulder] [pants] [shoes] [waist] [amulet] [wrist] [ring] [sub type] [durability] [price] [value] [finish point price] [cash] [medal] [LAYER] [waiting motion] [move motion] [sit motion] [damage motion 1] [damage motion 2] [down motion] [overturn motion] [jump motion] [jumpattack motion] [rest motion] [throw motion 1-1] [throw motion 1-2] [throw motion 2-1] [throw motion 2-2] [throw motion 3-1] [throw motion 3-2] [throw motion 4-1] [throw motion 4-2] [dash motion] [dashattack motion] [getitem motion] [buff motion] [attack motion] [etc motion] [move wav] [custom wav] [variation] [set item] [set ability] [set item master] [int data] [string data]
+
+0x4F8E20 sub_4F8E20 (1): [gold limit from level]
+
+0x4F8FE0 sub_4F8FE0 (1): [PVP CHANNEL INFO]
+
+0x4F9240 sub_4F9240 (3): [time table] [door fee] [counter]
+
+0x4FA630 sub_4FA630 (1): [EMOTICON TAG]
+
+0x4FA820 sub_4FA820 (1): [SLANG]
+
+0x4FAA40 sub_4FAA40 (3): [rarity weight] [extended rarity weight] [grade]
+
+0x4FAC40 sub_4FAC40 (5): [table] [rarity] [type] [cost] [notice]
+
+0x4FB180 sub_4FB180 (4): [npc info] [avatar] [coin] [item]
+
+0x4FBA70 sub_4FBA70 (2): [warroom equalization] [warroom slave hp equalization]
+
+#### monster_parser.cpp
+0x4FC1E0 sub_4FC1E0 (23): [nation code] [version] [clear exp bonusrate] [monster exp bonusrate] [party user number exp bonusrate] [dungeon difficulty exp bonusrate] [clear rank exp bonusrate] [drop prob number] [drop prob] [dungeon difficulty drop bonusrate] [party user number drop bonusrate] [drop bonusrate of monster kind] [result reward prob number] [result reward prob] [dungeon difficulty reward bonusrate] [party user number reward bonusrate] [basis of item dicision] [basis of equipment rarity dicision] [basis of stackable rarity dicision] [stamina recovery cost] [guild create cost] [guild levelup cost] [guild point acquirement ratio]
+
+0x4FD040 sub_4FD040 (10): [name] [entering title] [cutscene image] [dungeon what must be cleared] [area] [normal] [gate] [fishing place] [pub] [dungeon gate]
+
+0x4FD4C0 sub_4FD4C0 (3): [name] [map image] [dungeon]
+
+0x4FE770 sub_4FE770 (27): [name] [field name] [small face] [big face] [popup face] [field animation] [field wav] [popup wav] [look around] [role] [item shop] [recover stamina] [sera shop] [guild] [upgrade item] [disjoint item] [product item] [item storage] [post box] [quest speech] [skill] [common] [speech] [chaos team] [red team] [blue team] [neutral team]
+
+0x4FF870 sub_4FF870 (37): [name] [depend message] [condition message] [solve message] [grade] [job change quest] [npc index] [complete npc index] [job] [grow type] [exceptional grow type] [level] [pre required quest] [collision quest] [PVP RANK] [effect after clear quest] [delete npc index] [clear reward item] [monster reward item] [appear map] [depend give item] [type] [seeking] [condition under clear] [hunt monster] [clear map] [meet npc] [pvp rank] [sub type] [int data] [reward type] [item] [reward int data] [relation quest] [normaly repeat] [common unique] [epic]
+
+0x500330 sub_500330 (8): [NPC] [message] [type] [only buy] [sell item] [etc shop] [weapon shop] [disjoint shop]
+
+0x500B30 sub_500B30 (44): [creation pos] [x axis] [y axis] [z axis] [move type] [stop] [straight line] [sin] [cos] [move variable 1] [move variable 2] [changing term] [changing type] [keep changing] [keep last value] [ping pong] [gravity] [rotation angle] [life time] [landing type] [pierce] [slide] [vanish] [transparent value] [creation frequency] [maximum create number] [maximum create time] [create area size] [create area rotation angle] [rotation angle range type] [rectangle] [circle] [rotation angle variable] [random range] [display effect rate] [create pos correct] [object type] [animation] [passive object] [how to create object] [randomize] [in order] [object] [layer]
+
+0x502F00 sub_502F00 (29): [name] [name2] [explain] [maximum level] [purchase cost] [required level] [required level range] [pre required skill] [steel learning skill] [type] [active] [passive] [skill class] [growtype fitness] [casting time] [growtype maximum level] [skill fitness growtype] [consume MP] [consume item] [cool time] [skill under cooltime effect] [auto cooltime apply] [icon] [command key explain] [command] [static data] [level info] [level property] [shake screen]
+
+0x503BA0 sub_503BA0 (38): [damage] [absolute damage] [damage bonus] [attack type] [weapon damage apply] [attack myself] [attack friend] [attack enemy] [elemental property] [active status] [damage reaction] [none] [down] [push aside] [lift up] [critical hit] [stuck] [stuck prob increase] [knuck back] [ignore defense] [human damage rate] [fort damage rate] [HP drain] [MP drain] [hit wav] [attack direction] [hit lift up] [hit horizon] [hit down] [hit info] [blow] [cut] [burn] [etc] [no blood] [blood] [physic] [magic]
+
+0x504500 sub_504500 (4): [monster] [trap] [item] [quest]
+
+0x507690 sub_507690 (5): [IMAGE] [tile type] [pass type] [basic] [extended]
+
+0x5078C0 sub_5078C0 (39): [map name] [player number] [pvp start area] [shadow type] [mirror] [more darker] [dungeon] [type] [normal] [boss] [greed] [tile] [extended tile] [elemental property] [far sight scroll] [middle sight scroll] [near sight scroll] [background animation] [below] [town movable area] [virtual movable area] [pathgate pos] [dungeon start area] [sound] [animation] [passive object] [monster] [champion] [item] [special passive object] [NPC] [left] [right] [monster spawn pos] [chaos zone] [fixed] [half] [ratio] [super champion]
+
+0x509C90 sub_509C90 (75): [name] [width] [floating height] [layer] [category] [ability category] [ability table] [summon skill status up rate] [level] [fire resistance] [water resistance] [dark resistance] [light resistance] [HP regen speed] [MP regen speed] [move speed] [attack speed] [cast speed] [hit recovery] [jump power] [jump speed] [weight] [superarmor on attack] [sight] [targeting time term] [targeting on attack] [targeting on damage] [targeting high level] [targeting low level] [targeting high HP] [targeting low HP] [targeting nearest] [targeting attacker] [targeting from direction] [targeting low physical attack] [targeting low physical defense] [targeting low magical attack] [targeting low magical defense] [targeting downed] [warlike] [attack delay] [stuckbonus on damage] [item] [common champion drop item] [common champion elemental property] [super champion drop item] [attack kind] [die effect] [face image] [waiting motion] [move motion] [sit motion] [damage motion 1] [damage motion 2] [down motion] [overturn motion] [jump motion] [jumpattack motion] [attack motion] [etc motion] [jumpattack info] [attack info] [etc attack info] [int data] [speech on situation] [on attack] [on damage] [on die] [on revenge] [on etc] [on appear] [on disappear] [on go to help] [on stand] [spawn prob]
+
+0x50AF40 sub_50AF40 (17): [name] [width] [floating height] [layer] [pass type] [pass all] [pass only float type] [do not pass] [piercing power] [category] [basic motion] [etc motion] [destroy particle] [attack info] [etc attack info] [int data] [string data]
+
+0x50B400 sub_50B400 (13): [name] [width] [floating height] [layer] [recovery time] [direction correct] [move speed] [gravity] [basic motion] [etc motion] [attack info] [int data] [string data]
+
+0x50B840 sub_50B840 (23): [name] [width] [floating height] [layer] [skill recovery time] [over skill recovery time] [direction correct] [move speed] [gravity] [start level] [permission level] [artifact slot] [learn overskill level] [basic motion] [walk motion] [run motion] [skill motion] [over skill motion] [response motion] [etc motion] [attack info] [int data] [string data]
+
+#### attackinfo_parser.cpp
+0x50C290 sub_50C290 (67): [job] [growtype name] [width] [jump speed] [initial value] [growtype 1] [growtype 2] [growtype 3] [growtype 4] [growtype 5] [HP MAX] [MP MAX] [physical attack] [physical defense] [magical attack] [magical defense] [fire resistance] [water resistance] [dark resistance] [light resistance] [inventory limit] [HP regen speed] [MP regen speed] [move speed] [attack speed] [cast speed] [hit recovery] [jump power] [weight] [skill] [category] [waiting motion] [move motion] [sit motion] [damage motion 1] [damage motion 2] [down motion] [overturn motion] [jump motion] [jumpattack motion] [rest motion] [throw motion 1-1] [throw motion 1-2] [throw motion 2-1] [throw motion 2-2] [throw motion 3-1] [throw motion 3-2] [throw motion 4-1] [throw motion 4-2] [dash motion] [dashattack motion] [getitem motion] [buff motion] [attack motion] [etc motion] [jumpattack info] [dashattack info] [attack info] [etc attack info] [weapon wav] [weapon hit info] [blow] [cut] [burn] [etc] [no blood] [blood]
+

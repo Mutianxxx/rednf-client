@@ -1,0 +1,14 @@
+{
+  "files": 102725,
+  "bytes": 1616249992,
+  "groups": {
+    "android": 55850,
+    "gba-workspace": 46873,
+    "pc": 2
+  },
+  "source_roots": {
+    "workspace": "D:\\dnf-rebuild",
+    "android": "D:\\dnf安卓优化\\android-dnf-result"
+  },
+  "strategy": "byte-identical copies; no input files modified; different existing output refused"
+}

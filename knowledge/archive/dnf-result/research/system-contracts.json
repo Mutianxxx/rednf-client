@@ -1,0 +1,581 @@
+[
+  {
+    "domain": "source-build",
+    "title": "版本、完整来源与构建",
+    "required_capabilities": "哈希、许可证、ABI、工具链、数据迁移、复现和来源权限",
+    "evidence": [
+      "sources/pc/Script.pvf",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-8fcd0325a49fe578cefd",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "gunner.resource-wrapper"
+    ]
+  },
+  {
+    "domain": "assets-rendering",
+    "title": "图像、动画与合成",
+    "required_capabilities": "原分辨率、层序、纸娃娃、调色板、透明度、混合、镜像、旋转、插值、裁剪、相机、视差和光效",
+    "evidence": [
+      "research/pc-assets-audit.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-54b0bd42b8d39de487b1",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "gunner.action-layout",
+      "gunner.bitmap-origins",
+      "gunner.weapon-layer"
+    ]
+  },
+  {
+    "domain": "audio-timing",
+    "title": "音频与时间",
+    "required_capabilities": "声音ID、语音随机组、NPC距离、环境声、BGM、循环、音量优先级、命中停顿、逻辑/显示时钟",
+    "evidence": [
+      "sources/pc/audio.xml",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-ceed7f9a00f70f08f852",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "gunner.audio-bridge",
+      "dfq.animation-timing"
+    ]
+  },
+  {
+    "domain": "input-movement",
+    "title": "输入与移动",
+    "required_capabilities": "键位、方向序列、双击奔跑、跳跃、冲刺攻击、后跳、组合技能、缓冲、取消和不同设备刷新率",
+    "evidence": [
+      "research/pc-tag-vocabulary.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-aac5bd7bbd3eecc6138e",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "dfq.grid-movement",
+      "dfq.direction-control"
+    ]
+  },
+  {
+    "domain": "classes-progression",
+    "title": "所有角色与成长",
+    "required_capabilities": "11个注册角色的可用性、性别、转职、觉醒、经验、基础属性、技能资格和成长上限",
+    "evidence": [
+      "research/all-player-classes.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-dc366c306f744ee318ac",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "gunner.skills-table"
+    ]
+  },
+  {
+    "domain": "skills-controllers",
+    "title": "全部技能控制器",
+    "required_capabilities": "主动/被动/觉醒、输入阶段、MP/CD起点、连发、蓄力、多段、持续实体、命中/空放、武器层、召唤物",
+    "evidence": [
+      "research/all-registered-skills.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-656e6d8a511263e6a2b3",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [
+      "skill.can-learn",
+      "skill.maximum-level"
+    ],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "gunner.effect-loading",
+      "gunner.bullet-anchor",
+      "dfq.state-transition",
+      "dfq.skill-cooldown-combo",
+      "dfq.triple-slash-stage",
+      "dfq.projectile-lifecycle"
+    ]
+  },
+  {
+    "domain": "combat-formulas",
+    "title": "战斗公式与判定",
+    "required_capabilities": "物魔/独立伤害、防御、属性、抗性、暴击、命中、回避、等级差、整数截断、攻速、攻距和Z轴判定",
+    "evidence": [
+      "research/pc-squirrel-behavior-observations.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-17af271788e47806882f",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [
+      "combat.damage-constants",
+      "combat.damage-pipeline",
+      "combat.collision-object-component"
+    ],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "combat-status",
+    "title": "状态与保护",
+    "required_capabilities": "硬直、浮空、倒地、抓取、霸体、无敌帧、异常、驱散、叠加、死亡/复活和换场清理",
+    "evidence": [
+      "research/pc-tag-vocabulary.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-9b8530aaf2fe0c2769b6",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "dfq.hit-window",
+      "dfq.armor-vs-invincibility"
+    ]
+  },
+  {
+    "domain": "world-topology",
+    "title": "世界与副本",
+    "required_capabilities": "全部TWN/DGN/MAP、坐标系、所有候选房间、门方向/颜色、入口选关、难度、准入、隐藏/任务/活动房间",
+    "evidence": [
+      "catalog/pc-pvf-files.jsonl",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-b8871712ecbe90f25fc9",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "gunner.map-consumers"
+    ]
+  },
+  {
+    "domain": "collision-objects",
+    "title": "碰撞与动态物件",
+    "required_capabilities": "TIL通行、虚拟区域、天空边界、碰撞形状、门可达、障碍、可破坏物、机关和事件触发",
+    "evidence": [
+      "research/pc-audit.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-28c72a00c1e9e9470b4d",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "dfq.collision-projections",
+      "dfq.collision-groups",
+      "dfq.dynamic-obstacles"
+    ]
+  },
+  {
+    "domain": "monster-ai",
+    "title": "怪物与首领AI",
+    "required_capabilities": "MOB/AI/ACT/PTL/ATK状态、目标选择、仇恨、技能条件、概率、召唤、阶段切换、跟随和联网同步",
+    "evidence": [
+      "research/pc-audit.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-31c2897f1e6a5e7aafd2",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "npc-dialogue",
+    "title": "NPC与对话",
+    "required_capabilities": "站位、朝向、菜单、交易、距离语音、任务对话、剧情、导师和城镇事件",
+    "evidence": [
+      "research/pc-audit.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-8f22619a1a5868ed4ee5",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "quests",
+    "title": "全部任务与剧情",
+    "required_capabilities": "全部前置、接受/完成/失败/放弃、计数、随机日常、史诗章节、训练任务、默认奖励和转职联动",
+    "evidence": [
+      "canonical/pc/quests.jsonl",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/mechanics-findings.json",
+      "supplements/android-gunner-dfq-20261017/data/runtime-contracts.json",
+      "supplements/android-gunner-dfq-20261017/data/portable-action-contract.json",
+      "docs/14-android-gunner-and-dfq-mechanics.md"
+    ],
+    "gap_id": "G-8dddcaf1f0d3b76c2e62",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [
+      "quest.level-penalty",
+      "quest.reward-tables",
+      "quest.base-experience",
+      "quest.base-gold",
+      "quest.target-identity",
+      "quest.acceptance",
+      "quest.condition-dispatch",
+      "quest.lifecycle"
+    ],
+    "original_runtime_equivalence_verified": false,
+    "gunner_dfq_findings": [
+      "gunner.quest-layout"
+    ]
+  },
+  {
+    "domain": "items-equipment",
+    "title": "物品与装备",
+    "required_capabilities": "所有槽位/武器/时装/套装、品级、属性、层序、耐久、锁定、装备限制、快捷栏和消耗品",
+    "evidence": [
+      "research/pc-audit.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-2d60c39de961bc8a6707",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "economy-drops",
+    "title": "经济与掉落",
+    "required_capabilities": "掉落表、权重、难度、独立掉落、拾取/归属、金币、商店、价格、买卖/回购和结算抽奖",
+    "evidence": [
+      "research/pc-tag-vocabulary.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-c2e91b7790ebf014b0a0",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [
+      "economy.repair-price"
+    ],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "crafting",
+    "title": "制作与装备加工",
+    "required_capabilities": "强化、增幅、附魔、锻造、分解、合成、配方、材料、失败/保护和副职业；区分客户端参数与服务端执行",
+    "evidence": [
+      "research/pc-tag-vocabulary.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-2549c3db89a8d7e95544",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [
+      "crafting.upgrade-parser"
+    ],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "companions",
+    "title": "宠物与召唤同伴",
+    "required_capabilities": "CRE/PET、宠物成长/饥饿/技能、召唤AI、佣兵、APC和归属规则",
+    "evidence": [
+      "research/pc-audit.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-ccf49843d3396cc06b00",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "ui-localization",
+    "title": "完整界面与文字",
+    "required_capabilities": "全部UI、HUD、菜单、地图、选角、起名、中文编码/字形、基线、样式、工具提示和焦点",
+    "evidence": [
+      "research/pc-audit.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-d3cec20b18e596f01a3f",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "persistence",
+    "title": "存档与迁移",
+    "required_capabilities": "角色/任务/装备/仓库/设置状态、稳定ID、版本迁移、原子提交、损坏回退、断电和事务边界",
+    "evidence": [
+      "imports/android/docs/07-save-and-extension-bridge.md",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-2734c945bfe41af2d2ee",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "services",
+    "title": "联网与原服务端边界",
+    "required_capabilities": "鉴权、协议、服务端权威、组队、副本同步、延迟补偿、断线和本地单机替代契约",
+    "evidence": [
+      "catalog/pc-source-files.jsonl",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-10ba14fa8396da06480f",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [
+      "services.packet-dispatch"
+    ],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "social",
+    "title": "社交与交易",
+    "required_capabilities": "公会、好友、邮件、聊天、拍卖、摆摊、个人交易、排行和屏蔽；仅有UI不等于规则可用",
+    "evidence": [
+      "research/pc-tag-vocabulary.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-ed2c1c6d14b5bdc2417e",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "pvp",
+    "title": "PvP与特殊模式",
+    "required_capabilities": "竞技场、PvP平衡、练习、塔/生存/挑战、房间规则和PvE数据隔离",
+    "evidence": [
+      "research/pc-audit.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-bc712b982f81830c5fa4",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "events-cash",
+    "title": "活动、商城与时效",
+    "required_capabilities": "EVT、节日、商城、抽奖、限时规则、日历、每日重置和在线奖励",
+    "evidence": [
+      "research/pc-tag-vocabulary.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-44d75ae6dfc207d5d43d",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "platform-performance",
+    "title": "平台与性能",
+    "required_capabilities": "原画保留、显存/内存/带宽、流式加载、资源银行、压缩/复用、输入/屏幕、存储和目标端限制",
+    "evidence": [
+      "docs/06-platform-boundaries.md",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-30e2f47bb94c41bed12f",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  },
+  {
+    "domain": "verification",
+    "title": "回归与保真验收",
+    "required_capabilities": "逐对象数据校验、原生函数测试、场景/动作录像对照、实际设备输入/音频/存档/性能和长流程",
+    "evidence": [
+      "research/native-rule-verification.json",
+      "research/pc-audit.json",
+      "research/code-audit.json",
+      "research/android-loader-audit.json",
+      "research/server-audit.json",
+      "research/server-rule-findings.json",
+      "research/android-revision-findings.json"
+    ],
+    "gap_id": "G-97ac22eb9e1aedb83f9d",
+    "status": "research-indexed; complete PC runtime contract not verified",
+    "platform_policies_separate": true,
+    "server_rule_ids": [],
+    "original_runtime_equivalence_verified": false
+  }
+]

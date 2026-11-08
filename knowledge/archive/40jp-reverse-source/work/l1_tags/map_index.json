@@ -1,0 +1,158 @@
+{
+ "item": {
+  "004F1A20": {
+   "file": "dump_full_2.txt",
+   "line": 27921,
+   "nlines": 600
+  },
+  "004F5B90": {
+   "file": "dump_full_2.txt",
+   "line": 28521,
+   "nlines": 282
+  },
+  "004F6790": {
+   "file": "dump_full_1.txt",
+   "line": 25924,
+   "nlines": 341
+  },
+  "004F7C60": {
+   "file": "dump_full_0.txt",
+   "line": 23386,
+   "nlines": 612
+  },
+  "004F8E20": {
+   "file": "dump_parsers.txt",
+   "line": 4142,
+   "nlines": 53
+  },
+  "004F8FE0": {
+   "file": "dump_full_1.txt",
+   "line": 26265,
+   "nlines": 110
+  },
+  "004F9240": {
+   "file": "dump_full_2.txt",
+   "line": 28916,
+   "nlines": 143
+  },
+  "004FA630": {
+   "file": "dump_parsers.txt",
+   "line": 5236,
+   "nlines": 89
+  },
+  "004FA820": {
+   "file": "dump_parsers.txt",
+   "line": 5325,
+   "nlines": 99
+  },
+  "004FAA40": {
+   "file": "dump_full_2.txt",
+   "line": 29059,
+   "nlines": 114
+  },
+  "004FAC40": {
+   "file": "dump_full_0.txt",
+   "line": 24108,
+   "nlines": 156
+  },
+  "004FB180": {
+   "file": "dump_full_1.txt",
+   "line": 26497,
+   "nlines": 167
+  },
+  "004FBA70": {
+   "file": "dump_full_0.txt",
+   "line": 24264,
+   "nlines": 142
+  }
+ },
+ "monster": {
+  "004FC1E0": {
+   "file": "dump_full_2.txt",
+   "line": 29295,
+   "nlines": 274
+  },
+  "004FD040": {
+   "file": "dump_full_1.txt",
+   "line": 26784,
+   "nlines": 202
+  },
+  "004FD4C0": {
+   "file": "dump_full_2.txt",
+   "line": 29569,
+   "nlines": 155
+  },
+  "004FE770": {
+   "file": "dump_full_2.txt",
+   "line": 29724,
+   "nlines": 280
+  },
+  "004FF870": {
+   "file": "dump_full_1.txt",
+   "line": 27098,
+   "nlines": 378
+  },
+  "00500330": {
+   "file": "dump_full_2.txt",
+   "line": 30004,
+   "nlines": 198
+  },
+  "00500B30": {
+   "file": "dump_full_1.txt",
+   "line": 27476,
+   "nlines": 349
+  },
+  "00502F00": {
+   "file": "dump_full_1.txt",
+   "line": 28053,
+   "nlines": 454
+  },
+  "00503BA0": {
+   "file": "dump_full_2.txt",
+   "line": 30423,
+   "nlines": 261
+  },
+  "00504500": {
+   "file": "dump_parsers.txt",
+   "line": 10755,
+   "nlines": 55
+  },
+  "00507690": {
+   "file": "dump_parsers.txt",
+   "line": 12990,
+   "nlines": 101
+  },
+  "005078C0": {
+   "file": "dump_full_2.txt",
+   "line": 30921,
+   "nlines": 722
+  },
+  "00509C90": {
+   "file": "dump_full_1.txt",
+   "line": 28861,
+   "nlines": 538
+  },
+  "0050AF40": {
+   "file": "dump_full_2.txt",
+   "line": 31643,
+   "nlines": 157
+  },
+  "0050B400": {
+   "file": "dump_full_0.txt",
+   "line": 25639,
+   "nlines": 155
+  },
+  "0050B840": {
+   "file": "dump_full_1.txt",
+   "line": 29399,
+   "nlines": 174
+  }
+ },
+ "attackinfo": {
+  "0050C290": {
+   "file": "dump_full_0.txt",
+   "line": 25794,
+   "nlines": 471
+  }
+ }
+}

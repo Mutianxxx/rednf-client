@@ -1,0 +1,201 @@
+{
+  "pc_path": "etc/etcparameter.etc",
+  "pc_sha256": "3cec454d943e729925133320aa56caf4799b49eeb4661ef973b5b96455298011",
+  "tag_offset": 152,
+  "server_consumer": "imports/rednf/remake/source/DNFServer/GameServer/Game/ScriptDepsB/importEtcParameterScriptForServer.inc",
+  "server_sha256": "8960bff2b2bcd14e2847a52a1b7621d385bd7abbf9a0d64b0ed190988e33efb9",
+  "PC_value_count": 27,
+  "server_read_count": 26,
+  "fields": [
+    {
+      "position": 0,
+      "value": 250.0,
+      "pc_value_offset": 157,
+      "candidate_field": "g_physicalDamageRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 1,
+      "value": 10000,
+      "pc_value_offset": 162,
+      "candidate_field": "g_physicalDamageAddConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 2,
+      "value": 200.0,
+      "pc_value_offset": 167,
+      "candidate_field": "g_physicalReduceRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 3,
+      "value": 10000,
+      "pc_value_offset": 172,
+      "candidate_field": "g_physicalReduceAddConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 4,
+      "value": 3.0,
+      "pc_value_offset": 177,
+      "candidate_field": "g_physicalRandomBaseConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 5,
+      "value": 0.2800000011920929,
+      "pc_value_offset": 182,
+      "candidate_field": "g_physicalRandomRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 6,
+      "value": 250.0,
+      "pc_value_offset": 187,
+      "candidate_field": "g_magicalDamageRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 7,
+      "value": 10000,
+      "pc_value_offset": 192,
+      "candidate_field": "g_magicalDamageAddConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 8,
+      "value": 200.0,
+      "pc_value_offset": 197,
+      "candidate_field": "g_magicalReduceRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 9,
+      "value": 10000,
+      "pc_value_offset": 202,
+      "candidate_field": "g_magicalReduceAddConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 10,
+      "value": 3.0,
+      "pc_value_offset": 207,
+      "candidate_field": "g_magicalRandomBaseConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 11,
+      "value": 0.2800000011920929,
+      "pc_value_offset": 212,
+      "candidate_field": "g_magicalRandomRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 12,
+      "value": 105.0,
+      "pc_value_offset": 217,
+      "candidate_field": "g_commonElementBaseConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 13,
+      "value": 0.44999998807907104,
+      "pc_value_offset": 222,
+      "candidate_field": "g_commonElementRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 14,
+      "value": 0.30000001192092896,
+      "pc_value_offset": 227,
+      "candidate_field": "g_commonElementRateConstInPVP_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 15,
+      "value": 0.30000001192092896,
+      "pc_value_offset": 232,
+      "candidate_field": "g_commonElementRateConstInLadderPVP_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 16,
+      "value": 250,
+      "pc_value_offset": 237,
+      "candidate_field": "g_hpIncreaseRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 17,
+      "value": 0,
+      "pc_value_offset": 242,
+      "candidate_field": "g_hpRegenRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 18,
+      "value": 250,
+      "pc_value_offset": 247,
+      "candidate_field": "g_mpIncreaseRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 19,
+      "value": 0,
+      "pc_value_offset": 252,
+      "candidate_field": "g_mpRegenRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 20,
+      "value": 2,
+      "pc_value_offset": 257,
+      "candidate_field": "g_activeStatusDamageRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 21,
+      "value": 4,
+      "pc_value_offset": 262,
+      "candidate_field": "g_activeStatusDefenseRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 22,
+      "value": 5.0,
+      "pc_value_offset": 267,
+      "candidate_field": "g_physicalDefenseAddConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 23,
+      "value": 5.0,
+      "pc_value_offset": 272,
+      "candidate_field": "g_magicalDefenseAddConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 24,
+      "value": 0.004000000189989805,
+      "pc_value_offset": 277,
+      "candidate_field": "g_hpRegenRateAddRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 25,
+      "value": 0.004000000189989805,
+      "pc_value_offset": 282,
+      "candidate_field": "g_mpRegenRateAddRateConst_",
+      "status": "positional-source-candidate"
+    },
+    {
+      "position": 26,
+      "value": 0.009999999776482582,
+      "pc_value_offset": 287,
+      "candidate_field": null,
+      "status": "unconsumed-by-this-server-loader"
+    }
+  ],
+  "version_match_verified": false
+}

@@ -1,0 +1,27 @@
+test_all_real_tasks_can_reconstruct_original_token_bytes (test_quest_conversion.QuestConversionTests.test_all_real_tasks_can_reconstruct_original_token_bytes) ... ok
+test_pc_and_android_identity_not_inferred_from_name (test_quest_conversion.QuestConversionTests.test_pc_and_android_identity_not_inferred_from_name) ... ok
+test_real_pc_task_retains_reward_descriptors (test_quest_conversion.QuestConversionTests.test_real_pc_task_retains_reward_descriptors) ... ok
+test_unknown_and_repeated_fields_are_preserved (test_quest_conversion.QuestConversionTests.test_unknown_and_repeated_fields_are_preserved) ... ok
+test_unresolved_link_blocks_native_export (test_quest_conversion.QuestConversionTests.test_unresolved_link_blocks_native_export) ... ok
+test_audio_random_groups_and_weights_preserved (test_research.DeliveryModelRegression.test_audio_random_groups_and_weights_preserved) ... ok
+test_read_only_http_search_raw_and_png (test_research.DeliveryModelRegression.test_read_only_http_search_raw_and_png) ... ok
+test_native_report_bound_to_actual_elf (test_research.NativeModelRegression.test_native_report_bound_to_actual_elf) ... ok
+test_signed_progress_and_cross_record_byte (test_research.NativeModelRegression.test_signed_progress_and_cross_record_byte) ... ok
+test_all_room_candidates_and_duplicate_map_ids (test_research.ParserRegression.test_all_room_candidates_and_duplicate_map_ids) ... ok
+test_ani_repeated_properties_and_explicit_sound (test_research.ParserRegression.test_ani_repeated_properties_and_explicit_sound) ... ok
+test_comments_do_not_create_lua_calls (test_research.ParserRegression.test_comments_do_not_create_lua_calls) ... ok
+test_legacy_interleaved_img_and_color_order (test_research.ParserRegression.test_legacy_interleaved_img_and_color_order) ... ok
+test_compiled_source_report_hash_binding_and_schema (test_server_supplement.ServerRules.test_compiled_source_report_hash_binding_and_schema) ... ok
+test_quest_wildcards_and_twenty_slot_boundary (test_server_supplement.ServerRules.test_quest_wildcards_and_twenty_slot_boundary) ... ok
+test_repair_integer_predivision_and_full_durability (test_server_supplement.ServerRules.test_repair_integer_predivision_and_full_durability) ... ok
+test_reward_boundaries_and_integer_stage_order (test_server_supplement.ServerRules.test_reward_boundaries_and_integer_stage_order) ... ok
+test_current_android_revision_preserves_history (test_server_supplement.SupplementalEvidence.test_current_android_revision_preserves_history) ... ok
+test_full_quest_types_and_damage_constant_mismatch (test_server_supplement.SupplementalEvidence.test_full_quest_types_and_damage_constant_mismatch) ... ok
+test_host_call_sites_exclude_function_declarations (test_server_supplement.SupplementalEvidence.test_host_call_sites_exclude_function_declarations) ... ok
+test_plain_cpp_body_is_lexical_not_comments (test_server_supplement.SupplementalEvidence.test_plain_cpp_body_is_lexical_not_comments) ... ok
+test_service_search_and_split_signature_provenance (test_server_supplement.SupplementalEvidence.test_service_search_and_split_signature_provenance) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 3.142s
+
+OK

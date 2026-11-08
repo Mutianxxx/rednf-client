@@ -1,0 +1,335 @@
+{
+  "plan_version": "v1.1",
+  "tasks": [
+    {
+      "id": "P00",
+      "title": "方案与证据基线",
+      "depends_on": [],
+      "documents": [
+        "00-scope-baseline-and-evidence.md",
+        "01-architecture-and-contracts.md",
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "acceptance": [
+        "A-DOC"
+      ],
+      "status": "documentation_delivered"
+    },
+    {
+      "id": "P01",
+      "title": "内容配置与身份",
+      "depends_on": [
+        "P00"
+      ],
+      "documents": [
+        "01-architecture-and-contracts.md",
+        "02-content-loading-and-versioning.md"
+      ],
+      "acceptance": [
+        "A-SOURCE",
+        "A-ARCH"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P02",
+      "title": "全量来源语义与能力",
+      "depends_on": [
+        "P01"
+      ],
+      "documents": [
+        "02-content-loading-and-versioning.md"
+      ],
+      "acceptance": [
+        "A-SOURCE",
+        "A-WORLD"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P03",
+      "title": "模拟输入实体",
+      "depends_on": [
+        "P01"
+      ],
+      "documents": [
+        "03-simulation-input-and-actions.md"
+      ],
+      "acceptance": [
+        "A-TIME",
+        "A-ARCH"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P04",
+      "title": "事务与存档基础",
+      "depends_on": [
+        "P01",
+        "P03"
+      ],
+      "documents": [
+        "10-persistence-and-migration.md"
+      ],
+      "acceptance": [
+        "A-SAVE"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P05",
+      "title": "成长属性装备",
+      "depends_on": [
+        "P02",
+        "P04"
+      ],
+      "documents": [
+        "05-stats-equipment-and-combat.md"
+      ],
+      "acceptance": [
+        "A-STATS",
+        "A-CHAR"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P06",
+      "title": "行为与脚本宿主",
+      "depends_on": [
+        "P02",
+        "P03"
+      ],
+      "documents": [
+        "04-characters-skills-and-script-host.md",
+        "07-monsters-objects-and-particles.md"
+      ],
+      "acceptance": [
+        "A-SCRIPT"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P07",
+      "title": "通用战斗与技能事务",
+      "depends_on": [
+        "P05",
+        "P06"
+      ],
+      "documents": [
+        "04-characters-skills-and-script-host.md",
+        "05-stats-equipment-and-combat.md"
+      ],
+      "acceptance": [
+        "A-HIT",
+        "A-STATS"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P08",
+      "title": "鬼剑士迁移及完整分支",
+      "depends_on": [
+        "P07"
+      ],
+      "documents": [
+        "04-characters-skills-and-script-host.md"
+      ],
+      "acceptance": [
+        "A-CHAR"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P09",
+      "title": "女格斗男法师样板",
+      "depends_on": [
+        "P07"
+      ],
+      "documents": [
+        "04-characters-skills-and-script-host.md"
+      ],
+      "acceptance": [
+        "A-CHAR",
+        "A-SCRIPT"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P10",
+      "title": "男女枪手",
+      "depends_on": [
+        "P07",
+        "P09"
+      ],
+      "documents": [
+        "04-characters-skills-and-script-host.md"
+      ],
+      "acceptance": [
+        "A-CHAR"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P11",
+      "title": "女法师圣职者",
+      "depends_on": [
+        "P07",
+        "P09"
+      ],
+      "documents": [
+        "04-characters-skills-and-script-host.md",
+        "07-monsters-objects-and-particles.md"
+      ],
+      "acceptance": [
+        "A-CHAR",
+        "A-ENTITY"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P12",
+      "title": "暗夜男格斗黑暗武士",
+      "depends_on": [
+        "P07",
+        "P09"
+      ],
+      "documents": [
+        "04-characters-skills-and-script-host.md"
+      ],
+      "acceptance": [
+        "A-CHAR"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P13",
+      "title": "通用世界与怪物",
+      "depends_on": [
+        "P02",
+        "P06",
+        "P07"
+      ],
+      "documents": [
+        "06-world-dungeons-and-collision.md",
+        "07-monsters-objects-and-particles.md"
+      ],
+      "acceptance": [
+        "A-WORLD",
+        "A-ENTITY"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P14",
+      "title": "物件粒子与环境",
+      "depends_on": [
+        "P04",
+        "P06",
+        "P13"
+      ],
+      "documents": [
+        "07-monsters-objects-and-particles.md"
+      ],
+      "acceptance": [
+        "A-ENTITY",
+        "A-SAVE"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P15",
+      "title": "NPC任务经济",
+      "depends_on": [
+        "P04",
+        "P05",
+        "P13"
+      ],
+      "documents": [
+        "08-npc-quests-economy-and-services.md"
+      ],
+      "acceptance": [
+        "A-QUEST",
+        "A-ECONOMY"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P16",
+      "title": "必要UI音频",
+      "depends_on": [
+        "P02",
+        "P05",
+        "P15"
+      ],
+      "documents": [
+        "09-rendering-ui-and-audio.md"
+      ],
+      "acceptance": [
+        "A-UI",
+        "A-AUDIO"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P17",
+      "title": "Beta工具",
+      "depends_on": [
+        "P03",
+        "P05"
+      ],
+      "documents": [
+        "11-beta-tools-and-rule-strategies.md"
+      ],
+      "acceptance": [
+        "A-DEBUG"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P18",
+      "title": "完整审计与流程",
+      "depends_on": [
+        "P08",
+        "P09",
+        "P10",
+        "P11",
+        "P12",
+        "P13",
+        "P14",
+        "P15",
+        "P16",
+        "P17"
+      ],
+      "documents": [
+        "13-execution-plan-and-acceptance.md"
+      ],
+      "acceptance": [
+        "A-FLOW",
+        "A-CHAR",
+        "A-SAVE"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "P19",
+      "title": "独立候选与发布",
+      "depends_on": [
+        "P18"
+      ],
+      "documents": [
+        "12-platform-build-and-release.md"
+      ],
+      "acceptance": [
+        "A-RELEASE",
+        "A-PORT"
+      ],
+      "status": "planned"
+    }
+  ],
+  "integration_note": "P17早期接入，P18复核完整工具；职业任务在P15后由P18完成实际流程整合；基础接口不依赖最终消费者。",
+  "current_priority_overlay": {
+    "date": "2026-10-20",
+    "path": "60us-integration-tasks.json",
+    "scope": "60US证据交接与渲染优先接入；保留P00-P19最终门槛，完整伤害扩展暂后置。"
+  }
+}

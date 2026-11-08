@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "rules": 16,
+  "compiled_source_rules": 4,
+  "packet_registrations": 428,
+  "quest_type_mappings": 27,
+  "unmatched_PC_quest_types": 0,
+  "damage_constants": {
+    "PC": 27,
+    "server": 26
+  },
+  "original_runtime_verified": false
+}

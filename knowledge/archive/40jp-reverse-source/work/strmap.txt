@@ -1,0 +1,62 @@
+004F0690 sub_4F0690 | vector<T> too long
+004F1A20 sub_4F1A20 | %s%s
+004F2CE0 sub_4F2CE0 | NONE
+004F32A0 sub_4F32A0 | Item/FieldImage.img
+004F34F0 sub_4F34F0 | vector<T> too long
+004F36B0 sub_4F36B0 |   / %d%s
+004F3960 sub_4F3960 | Item/AttachIcon.img / Etc/Disjoint.etc
+004F3D60 sub_4F3D60 | %s%s
+004F41A0 sub_4F41A0 | deque<T> too long
+004F43D0 sub_4F43D0 | vector<T> too long
+004F5B90 sub_4F5B90 | [name] / [name2] / [explain] / [flavor text] / [grade] / [attach type] / [free] / [trade] / [trade delete] / [sealing] / [creation rate] / [rarity]
+004F6790 sub_4F6790 | [HP MAX] / [MP MAX] / [physical attack] / [physical defense] / [magical attack] / [magical defense] / [equipment physical attack] / [equipment physical defense] / [equipment magical attack] / [equipment magical defense] / [physical absolute damage] / [physical damage reduce]
+004F7C60 sub_4F7C60 | %s%s / [name] / [name2] / [explain] / [flavor text] / [fullset explain]
+004F8E20 sub_4F8E20 | Etc/GoldLimitByLevel.etc / [gold limit from level]
+004F8FE0 sub_4F8FE0 | [PVP CHANNEL INFO]
+004F9240 sub_4F9240 | Etc/WarArea.etc / [time table] / [door fee]
+004F9500 sub_4F9500 | invalid vector<T> subscript
+004F9570 sub_4F9570 | vector<T> too long
+004FA630 sub_4FA630 | [EMOTICON TAG] / $END
+004FA820 sub_4FA820 | [SLANG]
+004FAA40 sub_4FAA40 | [rarity weight] / [extended rarity weight] / [grade] / importResealTable - invalid extended rarity table / importResealTable - invalid rarity table
+004FAC40 sub_4FAC40 | [table] / [rarity] / [type] / [cost] / [notice] / importUpgradeTable - invalid notice tag / importUpgradeTable - invalid gold table / importUpgradeTable - invalid type table
+004FB180 sub_4FB180 | [npc info] / [avatar] / [coin] / [item]
+004FBA70 sub_4FBA70 | etc/WarRoomEqualize.tbl / [warroom equalization] / [warroom slave hp equalization]
+004FC1E0 sub_4FC1E0 | [nation code] / [version] / [clear exp bonusrate] / [monster exp bonusrate] / [party user number exp bonusrate] / [dungeon difficulty exp bonusrate] / [clear rank exp bonusrate] / [drop prob number] / [drop prob]
+004FCB60 sub_4FCB60 | map/set<T> too long
+004FD040 sub_4FD040 | %s%s / [name] / [entering title] / [cutscene image] / [dungeon what must be cleared] / [area]
+004FD4C0 sub_4FD4C0 | [name] / [map image] / [dungeon] / SCRIPT TAG ERROR! [%s] %s
+004FDA80 sub_4FDA80 | map/set<T> too long
+004FE2E0 sub_4FE2E0 | map/set<T> too long
+004FE770 sub_4FE770 | %s%s / [name] / [field name] / [small face] / [big face] / [popup face] / [field animation] / [field wav] / [popup wav]
+004FF870 sub_4FF870 | [name] / [depend message] / [condition message] / [solve message] / [grade] / [job change quest]
+00500330 sub_500330 | [NPC] / [message] / [type] / [only buy] / [sell item]
+00500B30 sub_500B30 | [creation pos] / [x axis] / [y axis] / [z axis] / [move type] / [stop] / [straight line] / [sin] / [cos] / [move variable 1] / [move variable 2]
+005019F0 sub_5019F0 | invalid map/set<T> iterator
+00501E20 sub_501E20 | map/set<T> too long
+00502B30 sub_502B30 | RDARKeyIndex.dat
+00502F00 sub_502F00 | [name] / [name2] / [explain] / [maximum level] / [purchase cost] / [required level]
+00503BA0 sub_503BA0 | [damage] / [absolute damage] / [damage bonus] / [attack type] / [weapon damage apply] / [attack myself] / [attack friend] / [attack enemy] / [elemental property] / [active status] / [damage reaction] / [none]
+00504500 sub_504500 | [monster] / [trap] / [item] / [quest]
+005046D0 sub_5046D0 | list<T> too long
+00504760 sub_504760 | list<T> too long
+005047F0 sub_5047F0 | list<T> too long
+00504880 sub_504880 | vector<T> too long
+005048F0 sub_5048F0 | list<T> too long
+00507690 sub_507690 | [IMAGE] / [tile type] / [pass type] / [basic] / [extended] / TILE LOAD FAIL! [%s]
+00508F60 sub_508F60 | vector<T> too long
+00509C90 sub_509C90 | %s%s / [name] / [width] / [floating height] / [layer] / [category] / [ability category]
+0050AF40 sub_50AF40 | %s%s / [name] / [width] / [floating height] / [layer] / [pass type] / [pass all] / [pass only float type] / [do not pass] / [piercing power] / [category]
+0050B400 sub_50B400 | %s%s / [name] / [width] / [floating height] / [layer] / [recovery time] / [direction correct] / [move speed] / [gravity] / [basic motion] / [etc motion] / [attack info]
+0050B840 sub_50B840 | %s%s / [name] / [width] / [floating height] / [layer] / [skill recovery time] / [over skill recovery time] / [direction correct] / [move speed] / [gravity]
+0050C290 sub_50C290 | %s%s / [job] / [growtype name] / [width] / [jump speed] / [initial value]
+0050D610 CNRDStorageWindow__vmt10 | SAFE_CLOSE
+0050D710 sub_50D710 | CNRDStorageWindow::process_move() - Unsupported move
+0050D920 sub_50D920 | CNRDStorageWindow::set_storage_type - Abnormal storage type %d
+0050D9A0 CNRDStorageWindow__vmt0 | CNRDStorageWindow::Proc - Too many lines %d
+0050DF30 CNRDStorageWindow__vmtC | SAFE_OPEN
+0050E060 CNRDStorageWindow__vmt8 | CLICK_BUTTON2
+0050E7E0 sub_50E7E0 | $END
+0050E8D0 sub_50E8D0 | Common/Emoticon/EmoBalloonS.ani
+0050F040 sub_50F040 | vector<T> too long
+0050F360 sub_50F360 | vector<T> too long

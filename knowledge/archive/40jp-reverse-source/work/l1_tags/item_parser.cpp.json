@@ -1,0 +1,1451 @@
+[
+ {
+  "va": "0x4F0600",
+  "name": "sub_4F0600",
+  "extra": "",
+  "start": 12,
+  "tags": []
+ },
+ {
+  "va": "0x4F0690",
+  "name": "sub_4F0690",
+  "extra": "",
+  "start": 25,
+  "tags": []
+ },
+ {
+  "va": "0x4F0700",
+  "name": "sub_4F0700",
+  "extra": "",
+  "start": 48,
+  "tags": []
+ },
+ {
+  "va": "0x4F0750",
+  "name": "sub_4F0750",
+  "extra": "",
+  "start": 71,
+  "tags": []
+ },
+ {
+  "va": "0x4F07B0",
+  "name": "sub_4F07B0",
+  "extra": "",
+  "start": 84,
+  "tags": []
+ },
+ {
+  "va": "0x4F0800",
+  "name": "sub_4F0800",
+  "extra": "",
+  "start": 110,
+  "tags": []
+ },
+ {
+  "va": "0x4F0850",
+  "name": "sub_4F0850",
+  "extra": "",
+  "start": 138,
+  "tags": []
+ },
+ {
+  "va": "0x4F08D0",
+  "name": "sub_4F08D0",
+  "extra": "",
+  "start": 165,
+  "tags": []
+ },
+ {
+  "va": "0x4F08F0",
+  "name": "sub_4F08F0",
+  "extra": "",
+  "start": 175,
+  "tags": []
+ },
+ {
+  "va": "0x4F0930",
+  "name": "sub_4F0930",
+  "extra": "",
+  "start": 196,
+  "tags": []
+ },
+ {
+  "va": "0x4F0950",
+  "name": "sub_4F0950",
+  "extra": "",
+  "start": 206,
+  "tags": []
+ },
+ {
+  "va": "0x4F0A30",
+  "name": "sub_4F0A30",
+  "extra": "",
+  "start": 238,
+  "tags": []
+ },
+ {
+  "va": "0x4F0A90",
+  "name": "sub_4F0A90",
+  "extra": "",
+  "start": 268,
+  "tags": []
+ },
+ {
+  "va": "0x4F0B70",
+  "name": "sub_4F0B70",
+  "extra": "",
+  "start": 300,
+  "tags": []
+ },
+ {
+  "va": "0x4F0B90",
+  "name": "sub_4F0B90",
+  "extra": "",
+  "start": 310,
+  "tags": []
+ },
+ {
+  "va": "0x4F0D10",
+  "name": "sub_4F0D10",
+  "extra": "",
+  "start": 375,
+  "tags": []
+ },
+ {
+  "va": "0x4F0D90",
+  "name": "sub_4F0D90",
+  "extra": "",
+  "start": 419,
+  "tags": []
+ },
+ {
+  "va": "0x4F0DE0",
+  "name": "sub_4F0DE0",
+  "extra": "",
+  "start": 439,
+  "tags": []
+ },
+ {
+  "va": "0x4F0E80",
+  "name": "sub_4F0E80",
+  "extra": "",
+  "start": 468,
+  "tags": []
+ },
+ {
+  "va": "0x4F0EB0",
+  "name": "sub_4F0EB0",
+  "extra": "",
+  "start": 479,
+  "tags": []
+ },
+ {
+  "va": "0x4F0F10",
+  "name": "sub_4F0F10",
+  "extra": "",
+  "start": 509,
+  "tags": []
+ },
+ {
+  "va": "0x4F1220",
+  "name": "sub_4F1220",
+  "extra": "",
+  "start": 633,
+  "tags": []
+ },
+ {
+  "va": "0x4F1290",
+  "name": "sub_4F1290",
+  "extra": "",
+  "start": 648,
+  "tags": []
+ },
+ {
+  "va": "0x4F12E0",
+  "name": "sub_4F12E0",
+  "extra": "",
+  "start": 671,
+  "tags": []
+ },
+ {
+  "va": "0x4F1300",
+  "name": "sub_4F1300",
+  "extra": "",
+  "start": 681,
+  "tags": []
+ },
+ {
+  "va": "0x4F13E0",
+  "name": "sub_4F13E0",
+  "extra": "",
+  "start": 727,
+  "tags": []
+ },
+ {
+  "va": "0x4F14B0",
+  "name": "sub_4F14B0",
+  "extra": "",
+  "start": 754,
+  "tags": []
+ },
+ {
+  "va": "0x4F14E0",
+  "name": "sub_4F14E0",
+  "extra": "",
+  "start": 768,
+  "tags": []
+ },
+ {
+  "va": "0x4F15B0",
+  "name": "sub_4F15B0",
+  "extra": "",
+  "start": 794,
+  "tags": []
+ },
+ {
+  "va": "0x4F15E0",
+  "name": "sub_4F15E0",
+  "extra": "",
+  "start": 805,
+  "tags": []
+ },
+ {
+  "va": "0x4F1920",
+  "name": "sub_4F1920",
+  "extra": "",
+  "start": 935,
+  "tags": []
+ },
+ {
+  "va": "0x4F1990",
+  "name": "sub_4F1990",
+  "extra": "",
+  "start": 955,
+  "tags": []
+ },
+ {
+  "va": "0x4F1A20",
+  "name": "sub_4F1A20",
+  "extra": "",
+  "start": 983,
+  "tags": [
+   "[name]",
+   "[explain]",
+   "[entering title]",
+   "[cutscene image]",
+   "[minimap image]",
+   "[worldmap info]",
+   "[minimum required level]",
+   "[required item]",
+   "[coin limit]",
+   "[basis level]",
+   "[experience increasing point]",
+   "[champion]",
+   "[item]",
+   "[pathgate object]",
+   "[maze info]",
+   "[size]",
+   "[greed]",
+   "[map specification]",
+   "[boss map specification]",
+   "[start map]",
+   "[boss map]",
+   "[warroom map index]",
+   "[monster type spawn prob]",
+   "[monster type spawn cost]",
+   "[monster type spawn interval rate]",
+   "[monster spawn base interval]",
+   "[monster spawn random interval]",
+   "[fatigue]",
+   "[fatigue result]",
+   "[max monster]",
+   "[player kc]",
+   "[spawn common monster index]",
+   "[spawn common champion index]",
+   "[spawn super champion index]",
+   "[spawn boss index]",
+   "[spawn step max]",
+   "[spawn step resource pool]",
+   "[kill count const]",
+   "[join cost gold]",
+   "[gold drop prob]",
+   "[common monster item drop prob]",
+   "[common champion item drop prob]",
+   "[super champion item drop prob]",
+   "[boss item drop prob]",
+   "[common monster exp const]",
+   "[common champion exp const]",
+   "[super champion exp const]",
+   "[boss exp const]",
+   "[common monster item drop list]",
+   "[common champion item drop list]",
+   "[super champion item drop list]",
+   "[boss item drop list]",
+   "[ancient dungeon]"
+  ]
+ },
+ {
+  "va": "0x4F2B90",
+  "name": "sub_4F2B90",
+  "extra": "",
+  "start": 1584,
+  "tags": []
+ },
+ {
+  "va": "0x4F2BC0",
+  "name": "sub_4F2BC0",
+  "extra": "",
+  "start": 1599,
+  "tags": []
+ },
+ {
+  "va": "0x4F2BE0",
+  "name": "sub_4F2BE0",
+  "extra": "",
+  "start": 1614,
+  "tags": []
+ },
+ {
+  "va": "0x4F2C10",
+  "name": "sub_4F2C10",
+  "extra": "",
+  "start": 1630,
+  "tags": []
+ },
+ {
+  "va": "0x4F2C60",
+  "name": "IRDItem__vmt14",
+  "extra": "",
+  "start": 1647,
+  "tags": []
+ },
+ {
+  "va": "0x4F2C80",
+  "name": "IRDItem__vmt28",
+  "extra": "",
+  "start": 1657,
+  "tags": []
+ },
+ {
+  "va": "0x4F2CE0",
+  "name": "sub_4F2CE0",
+  "extra": "",
+  "start": 1682,
+  "tags": []
+ },
+ {
+  "va": "0x4F2D40",
+  "name": "sub_4F2D40",
+  "extra": "",
+  "start": 1704,
+  "tags": []
+ },
+ {
+  "va": "0x4F2D60",
+  "name": "sub_4F2D60",
+  "extra": "",
+  "start": 1714,
+  "tags": []
+ },
+ {
+  "va": "0x4F2DA0",
+  "name": "sub_4F2DA0",
+  "extra": "",
+  "start": 1736,
+  "tags": []
+ },
+ {
+  "va": "0x4F2DF0",
+  "name": "sub_4F2DF0",
+  "extra": "",
+  "start": 1761,
+  "tags": []
+ },
+ {
+  "va": "0x4F2E40",
+  "name": "sub_4F2E40",
+  "extra": "",
+  "start": 1784,
+  "tags": []
+ },
+ {
+  "va": "0x4F2E80",
+  "name": "sub_4F2E80",
+  "extra": "",
+  "start": 1801,
+  "tags": []
+ },
+ {
+  "va": "0x4F2F70",
+  "name": "IRDItem__vmt60",
+  "extra": "",
+  "start": 1848,
+  "tags": []
+ },
+ {
+  "va": "0x4F3010",
+  "name": "IRDItem__vmt64",
+  "extra": "",
+  "start": 1875,
+  "tags": []
+ },
+ {
+  "va": "0x4F3050",
+  "name": "IRDItem__vmt18",
+  "extra": "",
+  "start": 1890,
+  "tags": []
+ },
+ {
+  "va": "0x4F30B0",
+  "name": "IRDItem__vmt48",
+  "extra": "",
+  "start": 1912,
+  "tags": []
+ },
+ {
+  "va": "0x4F30E0",
+  "name": "IRDItem__vmt8",
+  "extra": "",
+  "start": 1923,
+  "tags": []
+ },
+ {
+  "va": "0x4F32A0",
+  "name": "sub_4F32A0",
+  "extra": "",
+  "start": 2008,
+  "tags": []
+ },
+ {
+  "va": "0x4F3360",
+  "name": "sub_4F3360",
+  "extra": "",
+  "start": 2052,
+  "tags": []
+ },
+ {
+  "va": "0x4F33A0",
+  "name": "sub_4F33A0",
+  "extra": "",
+  "start": 2075,
+  "tags": []
+ },
+ {
+  "va": "0x4F3460",
+  "name": "sub_4F3460",
+  "extra": "",
+  "start": 2116,
+  "tags": []
+ },
+ {
+  "va": "0x4F34F0",
+  "name": "sub_4F34F0",
+  "extra": "",
+  "start": 2146,
+  "tags": []
+ },
+ {
+  "va": "0x4F3560",
+  "name": "sub_4F3560",
+  "extra": "",
+  "start": 2169,
+  "tags": []
+ },
+ {
+  "va": "0x4F3610",
+  "name": "sub_4F3610",
+  "extra": "",
+  "start": 2212,
+  "tags": []
+ },
+ {
+  "va": "0x4F36B0",
+  "name": "sub_4F36B0",
+  "extra": "",
+  "start": 2229,
+  "tags": []
+ },
+ {
+  "va": "0x4F3880",
+  "name": "sub_4F3880",
+  "extra": "",
+  "start": 2293,
+  "tags": []
+ },
+ {
+  "va": "0x4F38C0",
+  "name": "sub_4F38C0",
+  "extra": "",
+  "start": 2311,
+  "tags": []
+ },
+ {
+  "va": "0x4F3960",
+  "name": "sub_4F3960",
+  "extra": "",
+  "start": 2328,
+  "tags": []
+ },
+ {
+  "va": "0x4F3B10",
+  "name": "sub_4F3B10",
+  "extra": "",
+  "start": 2371,
+  "tags": []
+ },
+ {
+  "va": "0x4F3B70",
+  "name": "sub_4F3B70",
+  "extra": "",
+  "start": 2401,
+  "tags": []
+ },
+ {
+  "va": "0x4F3BA0",
+  "name": "sub_4F3BA0",
+  "extra": "",
+  "start": 2417,
+  "tags": []
+ },
+ {
+  "va": "0x4F3D60",
+  "name": "sub_4F3D60",
+  "extra": "",
+  "start": 2498,
+  "tags": []
+ },
+ {
+  "va": "0x4F3DD0",
+  "name": "sub_4F3DD0",
+  "extra": "",
+  "start": 2513,
+  "tags": []
+ },
+ {
+  "va": "0x4F3E90",
+  "name": "CNAnimationLoader__vmt30",
+  "extra": "",
+  "start": 2549,
+  "tags": []
+ },
+ {
+  "va": "0x4F3F30",
+  "name": "CNAnimationLoader__vmt34",
+  "extra": "",
+  "start": 2590,
+  "tags": []
+ },
+ {
+  "va": "0x4F3F80",
+  "name": "HttpFileJob__vmt18",
+  "extra": "",
+  "start": 2610,
+  "tags": []
+ },
+ {
+  "va": "0x4F3FF0",
+  "name": "sub_4F3FF0",
+  "extra": "",
+  "start": 2647,
+  "tags": []
+ },
+ {
+  "va": "0x4F4030",
+  "name": "sub_4F4030",
+  "extra": "",
+  "start": 2663,
+  "tags": []
+ },
+ {
+  "va": "0x4F40A0",
+  "name": "sub_4F40A0",
+  "extra": "",
+  "start": 2704,
+  "tags": []
+ },
+ {
+  "va": "0x4F41A0",
+  "name": "sub_4F41A0",
+  "extra": "",
+  "start": 2746,
+  "tags": []
+ },
+ {
+  "va": "0x4F4210",
+  "name": "sub_4F4210",
+  "extra": "",
+  "start": 2769,
+  "tags": []
+ },
+ {
+  "va": "0x4F4280",
+  "name": "sub_4F4280",
+  "extra": "",
+  "start": 2790,
+  "tags": []
+ },
+ {
+  "va": "0x4F43D0",
+  "name": "sub_4F43D0",
+  "extra": "",
+  "start": 2863,
+  "tags": []
+ },
+ {
+  "va": "0x4F4440",
+  "name": "sub_4F4440",
+  "extra": "",
+  "start": 2886,
+  "tags": []
+ },
+ {
+  "va": "0x4F44C0",
+  "name": "sub_4F44C0",
+  "extra": "",
+  "start": 2918,
+  "tags": []
+ },
+ {
+  "va": "0x4F46A0",
+  "name": "sub_4F46A0",
+  "extra": "",
+  "start": 3029,
+  "tags": []
+ },
+ {
+  "va": "0x4F4710",
+  "name": "sub_4F4710",
+  "extra": "",
+  "start": 3054,
+  "tags": []
+ },
+ {
+  "va": "0x4F4800",
+  "name": "sub_4F4800",
+  "extra": "",
+  "start": 3111,
+  "tags": []
+ },
+ {
+  "va": "0x4F4970",
+  "name": "sub_4F4970",
+  "extra": "",
+  "start": 3202,
+  "tags": []
+ },
+ {
+  "va": "0x4F49C0",
+  "name": "sub_4F49C0",
+  "extra": "",
+  "start": 3228,
+  "tags": []
+ },
+ {
+  "va": "0x4F4B60",
+  "name": "sub_4F4B60",
+  "extra": "",
+  "start": 3321,
+  "tags": []
+ },
+ {
+  "va": "0x4F4BE0",
+  "name": "sub_4F4BE0",
+  "extra": "",
+  "start": 3343,
+  "tags": []
+ },
+ {
+  "va": "0x4F4D50",
+  "name": "sub_4F4D50",
+  "extra": "",
+  "start": 3393,
+  "tags": []
+ },
+ {
+  "va": "0x4F4E90",
+  "name": "sub_4F4E90",
+  "extra": "",
+  "start": 3437,
+  "tags": []
+ },
+ {
+  "va": "0x4F4F30",
+  "name": "sub_4F4F30",
+  "extra": "",
+  "start": 3483,
+  "tags": []
+ },
+ {
+  "va": "0x4F5090",
+  "name": "sub_4F5090",
+  "extra": "",
+  "start": 3548,
+  "tags": []
+ },
+ {
+  "va": "0x4F50F0",
+  "name": "sub_4F50F0",
+  "extra": "",
+  "start": 3573,
+  "tags": []
+ },
+ {
+  "va": "0x4F5170",
+  "name": "sub_4F5170",
+  "extra": "",
+  "start": 3616,
+  "tags": []
+ },
+ {
+  "va": "0x4F5190",
+  "name": "sub_4F5190",
+  "extra": "",
+  "start": 3626,
+  "tags": []
+ },
+ {
+  "va": "0x4F5220",
+  "name": "sub_4F5220",
+  "extra": "",
+  "start": 3654,
+  "tags": []
+ },
+ {
+  "va": "0x4F5290",
+  "name": "sub_4F5290",
+  "extra": "",
+  "start": 3674,
+  "tags": []
+ },
+ {
+  "va": "0x4F5450",
+  "name": "sub_4F5450",
+  "extra": "",
+  "start": 3732,
+  "tags": []
+ },
+ {
+  "va": "0x4F55A0",
+  "name": "sub_4F55A0",
+  "extra": "",
+  "start": 3783,
+  "tags": []
+ },
+ {
+  "va": "0x4F55E0",
+  "name": "sub_4F55E0",
+  "extra": "",
+  "start": 3807,
+  "tags": []
+ },
+ {
+  "va": "0x4F5770",
+  "name": "sub_4F5770",
+  "extra": "",
+  "start": 3854,
+  "tags": []
+ },
+ {
+  "va": "0x4F57A0",
+  "name": "sub_4F57A0",
+  "extra": "",
+  "start": 3865,
+  "tags": []
+ },
+ {
+  "va": "0x4F5AB0",
+  "name": "sub_4F5AB0",
+  "extra": "",
+  "start": 3987,
+  "tags": []
+ },
+ {
+  "va": "0x4F5AE0",
+  "name": "sub_4F5AE0",
+  "extra": "",
+  "start": 4002,
+  "tags": []
+ },
+ {
+  "va": "0x4F5B00",
+  "name": "sub_4F5B00",
+  "extra": "",
+  "start": 4012,
+  "tags": []
+ },
+ {
+  "va": "0x4F5B90",
+  "name": "sub_4F5B90",
+  "extra": "",
+  "start": 4039,
+  "tags": [
+   "[name]",
+   "[name2]",
+   "[explain]",
+   "[flavor text]",
+   "[grade]",
+   "[attach type]",
+   "[free]",
+   "[trade]",
+   "[trade delete]",
+   "[sealing]",
+   "[creation rate]",
+   "[rarity]",
+   "[weight]",
+   "[usable job]",
+   "[stackable type]",
+   "[waste]",
+   "[material]",
+   "[recipe]",
+   "[throw]",
+   "[set]",
+   "[legacy]",
+   "[quest]",
+   "[etc]",
+   "[minimum level]",
+   "[cool time]",
+   "[cooltime group]",
+   "[party cooltime]",
+   "[icon]",
+   "[field image]",
+   "[price]",
+   "[value]",
+   "[finish point price]",
+   "[cash]",
+   "[medal]",
+   "[move wav]",
+   "[use wav]",
+   "[int data]",
+   "[string data]",
+   "[applying range]"
+  ]
+ },
+ {
+  "va": "0x4F6390",
+  "name": "sub_4F6390",
+  "extra": "",
+  "start": 4322,
+  "tags": []
+ },
+ {
+  "va": "0x4F6540",
+  "name": "sub_4F6540",
+  "extra": "",
+  "start": 4450,
+  "tags": []
+ },
+ {
+  "va": "0x4F6600",
+  "name": "sub_4F6600",
+  "extra": "",
+  "start": 4505,
+  "tags": []
+ },
+ {
+  "va": "0x4F6670",
+  "name": "sub_4F6670",
+  "extra": "",
+  "start": 4525,
+  "tags": []
+ },
+ {
+  "va": "0x4F6700",
+  "name": "sub_4F6700",
+  "extra": "",
+  "start": 4553,
+  "tags": []
+ },
+ {
+  "va": "0x4F6790",
+  "name": "sub_4F6790",
+  "extra": "",
+  "start": 4578,
+  "tags": [
+   "[HP MAX]",
+   "[MP MAX]",
+   "[physical attack]",
+   "[physical defense]",
+   "[magical attack]",
+   "[magical defense]",
+   "[equipment physical attack]",
+   "[equipment physical defense]",
+   "[equipment magical attack]",
+   "[equipment magical defense]",
+   "[physical absolute damage]",
+   "[physical damage reduce]",
+   "[physical absolute defense]",
+   "[magical absolute damage]",
+   "[magical damage reduce]",
+   "[magical absolute defense]",
+   "[fire resistance]",
+   "[water resistance]",
+   "[dark resistance]",
+   "[light resistance]",
+   "[all elemental resistance]",
+   "[slow resistance]",
+   "[freeze resistance]",
+   "[poison resistance]",
+   "[stun resistance]",
+   "[curse resistance]",
+   "[blind resistance]",
+   "[lightning resistance]",
+   "[stone resistance]",
+   "[sleep resistance]",
+   "[burn resistance]",
+   "[deadlystrike resistance]",
+   "[bleeding resistance]",
+   "[all activestatus resistance]",
+   "[piercing resistance]",
+   "[stuck resistance]",
+   "[confuse resistance]",
+   "[hold resistance]",
+   "[inventory limit]",
+   "[HP regen speed]",
+   "[MP regen speed]",
+   "[MP regen speed rate]",
+   "[move speed]",
+   "[attack speed]",
+   "[cast speed]",
+   "[hit recovery]",
+   "[jump power]",
+   "[elemental property]",
+   "[active status]",
+   "[none]",
+   "[slow]",
+   "[freeze]",
+   "[poison]",
+   "[stun]",
+   "[curse]",
+   "[blind]",
+   "[lightning]",
+   "[stone]",
+   "[sleep]",
+   "[burn]",
+   "[deadlystrike]",
+   "[bleeding]",
+   "[haste]",
+   "[bless]",
+   "[element]",
+   "[hold]",
+   "[confuse]",
+   "[push aside]",
+   "[lift up]",
+   "[physical critical hit]",
+   "[magical critical hit]",
+   "[stuck]",
+   "[ignore defense]",
+   "[human damage rate]",
+   "[fort damage rate]",
+   "[HP drain]",
+   "[MP drain]",
+   "[skill levelup]",
+   "[common]",
+   "[avatar select ability]"
+  ]
+ },
+ {
+  "va": "0x4F7800",
+  "name": "sub_4F7800",
+  "extra": "",
+  "start": 4920,
+  "tags": []
+ },
+ {
+  "va": "0x4F7830",
+  "name": "sub_4F7830",
+  "extra": "",
+  "start": 4931,
+  "tags": []
+ },
+ {
+  "va": "0x4F7B60",
+  "name": "sub_4F7B60",
+  "extra": "",
+  "start": 5045,
+  "tags": []
+ },
+ {
+  "va": "0x4F7BD0",
+  "name": "sub_4F7BD0",
+  "extra": "",
+  "start": 5065,
+  "tags": []
+ },
+ {
+  "va": "0x4F7C60",
+  "name": "sub_4F7C60",
+  "extra": "",
+  "start": 5090,
+  "tags": [
+   "[name]",
+   "[name2]",
+   "[explain]",
+   "[flavor text]",
+   "[fullset explain]",
+   "[set name]",
+   "[grade]",
+   "[attach type]",
+   "[free]",
+   "[trade]",
+   "[trade delete]",
+   "[sealing]",
+   "[creation rate]",
+   "[rarity]",
+   "[weight]",
+   "[icon]",
+   "[field image]",
+   "[custom animation]",
+   "[usable job]",
+   "[minimum level]",
+   "[required skill]",
+   "[cool time]",
+   "[equipment type]",
+   "[hat avatar]",
+   "[hair avatar]",
+   "[face avatar]",
+   "[coat avatar]",
+   "[pants avatar]",
+   "[shoes avatar]",
+   "[breast avatar]",
+   "[waist avatar]",
+   "[weapon]",
+   "[title name]",
+   "[coat]",
+   "[shoulder]",
+   "[pants]",
+   "[shoes]",
+   "[waist]",
+   "[amulet]",
+   "[wrist]",
+   "[ring]",
+   "[sub type]",
+   "[durability]",
+   "[price]",
+   "[value]",
+   "[finish point price]",
+   "[cash]",
+   "[medal]",
+   "[LAYER]",
+   "[waiting motion]",
+   "[move motion]",
+   "[sit motion]",
+   "[damage motion 1]",
+   "[damage motion 2]",
+   "[down motion]",
+   "[overturn motion]",
+   "[jump motion]",
+   "[jumpattack motion]",
+   "[rest motion]",
+   "[throw motion 1-1]",
+   "[throw motion 1-2]",
+   "[throw motion 2-1]",
+   "[throw motion 2-2]",
+   "[throw motion 3-1]",
+   "[throw motion 3-2]",
+   "[throw motion 4-1]",
+   "[throw motion 4-2]",
+   "[dash motion]",
+   "[dashattack motion]",
+   "[getitem motion]",
+   "[buff motion]",
+   "[attack motion]",
+   "[etc motion]",
+   "[move wav]",
+   "[custom wav]",
+   "[variation]",
+   "[set item]",
+   "[set ability]",
+   "[set item master]",
+   "[int data]",
+   "[string data]"
+  ]
+ },
+ {
+  "va": "0x4F8D70",
+  "name": "sub_4F8D70",
+  "extra": "",
+  "start": 5703,
+  "tags": []
+ },
+ {
+  "va": "0x4F8D90",
+  "name": "sub_4F8D90",
+  "extra": "",
+  "start": 5718,
+  "tags": []
+ },
+ {
+  "va": "0x4F8DC0",
+  "name": "sub_4F8DC0",
+  "extra": "",
+  "start": 5739,
+  "tags": []
+ },
+ {
+  "va": "0x4F8DF0",
+  "name": "sub_4F8DF0",
+  "extra": "",
+  "start": 5764,
+  "tags": []
+ },
+ {
+  "va": "0x4F8E20",
+  "name": "sub_4F8E20",
+  "extra": "",
+  "start": 5791,
+  "tags": [
+   "[gold limit from level]"
+  ]
+ },
+ {
+  "va": "0x4F8F40",
+  "name": "sub_4F8F40",
+  "extra": "",
+  "start": 5846,
+  "tags": []
+ },
+ {
+  "va": "0x4F8FE0",
+  "name": "sub_4F8FE0",
+  "extra": "",
+  "start": 5871,
+  "tags": [
+   "[PVP CHANNEL INFO]"
+  ]
+ },
+ {
+  "va": "0x4F9240",
+  "name": "sub_4F9240",
+  "extra": "",
+  "start": 5982,
+  "tags": [
+   "[time table]",
+   "[door fee]",
+   "[counter]"
+  ]
+ },
+ {
+  "va": "0x4F9470",
+  "name": "sub_4F9470",
+  "extra": "",
+  "start": 6126,
+  "tags": []
+ },
+ {
+  "va": "0x4F9500",
+  "name": "sub_4F9500",
+  "extra": "",
+  "start": 6158,
+  "tags": []
+ },
+ {
+  "va": "0x4F9570",
+  "name": "sub_4F9570",
+  "extra": "",
+  "start": 6181,
+  "tags": []
+ },
+ {
+  "va": "0x4F95E0",
+  "name": "sub_4F95E0",
+  "extra": "",
+  "start": 6204,
+  "tags": []
+ },
+ {
+  "va": "0x4F9660",
+  "name": "sub_4F9660",
+  "extra": "",
+  "start": 6230,
+  "tags": []
+ },
+ {
+  "va": "0x4F96A0",
+  "name": "sub_4F96A0",
+  "extra": "",
+  "start": 6254,
+  "tags": []
+ },
+ {
+  "va": "0x4F9750",
+  "name": "sub_4F9750",
+  "extra": "",
+  "start": 6281,
+  "tags": []
+ },
+ {
+  "va": "0x4F9790",
+  "name": "sub_4F9790",
+  "extra": "",
+  "start": 6296,
+  "tags": []
+ },
+ {
+  "va": "0x4F9A40",
+  "name": "sub_4F9A40",
+  "extra": "",
+  "start": 6399,
+  "tags": []
+ },
+ {
+  "va": "0x4F9C20",
+  "name": "sub_4F9C20",
+  "extra": "",
+  "start": 6510,
+  "tags": []
+ },
+ {
+  "va": "0x4F9CC0",
+  "name": "sub_4F9CC0",
+  "extra": "",
+  "start": 6542,
+  "tags": []
+ },
+ {
+  "va": "0x4F9CF0",
+  "name": "sub_4F9CF0",
+  "extra": "",
+  "start": 6557,
+  "tags": []
+ },
+ {
+  "va": "0x4F9D10",
+  "name": "sub_4F9D10",
+  "extra": "",
+  "start": 6567,
+  "tags": []
+ },
+ {
+  "va": "0x4F9E90",
+  "name": "sub_4F9E90",
+  "extra": "",
+  "start": 6629,
+  "tags": []
+ },
+ {
+  "va": "0x4F9F40",
+  "name": "sub_4F9F40",
+  "extra": "",
+  "start": 6657,
+  "tags": []
+ },
+ {
+  "va": "0x4FA000",
+  "name": "sub_4FA000",
+  "extra": "",
+  "start": 6688,
+  "tags": []
+ },
+ {
+  "va": "0x4FA070",
+  "name": "sub_4FA070",
+  "extra": "",
+  "start": 6708,
+  "tags": []
+ },
+ {
+  "va": "0x4FA0C0",
+  "name": "sub_4FA0C0",
+  "extra": "",
+  "start": 6736,
+  "tags": []
+ },
+ {
+  "va": "0x4FA120",
+  "name": "sub_4FA120",
+  "extra": "",
+  "start": 6772,
+  "tags": []
+ },
+ {
+  "va": "0x4FA1B0",
+  "name": "sub_4FA1B0",
+  "extra": "",
+  "start": 6797,
+  "tags": []
+ },
+ {
+  "va": "0x4FA1E0",
+  "name": "sub_4FA1E0",
+  "extra": "",
+  "start": 6808,
+  "tags": []
+ },
+ {
+  "va": "0x4FA210",
+  "name": "sub_4FA210",
+  "extra": "",
+  "start": 6823,
+  "tags": []
+ },
+ {
+  "va": "0x4FA510",
+  "name": "sub_4FA510",
+  "extra": "",
+  "start": 6946,
+  "tags": []
+ },
+ {
+  "va": "0x4FA550",
+  "name": "sub_4FA550",
+  "extra": "",
+  "start": 6967,
+  "tags": []
+ },
+ {
+  "va": "0x4FA570",
+  "name": "sub_4FA570",
+  "extra": "",
+  "start": 6977,
+  "tags": []
+ },
+ {
+  "va": "0x4FA630",
+  "name": "sub_4FA630",
+  "extra": "",
+  "start": 7008,
+  "tags": [
+   "[EMOTICON TAG]"
+  ]
+ },
+ {
+  "va": "0x4FA820",
+  "name": "sub_4FA820",
+  "extra": "",
+  "start": 7099,
+  "tags": [
+   "[SLANG]"
+  ]
+ },
+ {
+  "va": "0x4FAA40",
+  "name": "sub_4FAA40",
+  "extra": "",
+  "start": 7200,
+  "tags": [
+   "[rarity weight]",
+   "[extended rarity weight]",
+   "[grade]"
+  ]
+ },
+ {
+  "va": "0x4FAC40",
+  "name": "sub_4FAC40",
+  "extra": "",
+  "start": 7315,
+  "tags": [
+   "[table]",
+   "[rarity]",
+   "[type]",
+   "[cost]",
+   "[notice]"
+  ]
+ },
+ {
+  "va": "0x4FAF80",
+  "name": "sub_4FAF80",
+  "extra": "",
+  "start": 7472,
+  "tags": []
+ },
+ {
+  "va": "0x4FAFF0",
+  "name": "sub_4FAFF0",
+  "extra": "",
+  "start": 7492,
+  "tags": []
+ },
+ {
+  "va": "0x4FB030",
+  "name": "sub_4FB030",
+  "extra": "",
+  "start": 7518,
+  "tags": []
+ },
+ {
+  "va": "0x4FB0F0",
+  "name": "sub_4FB0F0",
+  "extra": "",
+  "start": 7548,
+  "tags": []
+ },
+ {
+  "va": "0x4FB180",
+  "name": "sub_4FB180",
+  "extra": "",
+  "start": 7573,
+  "tags": [
+   "[npc info]",
+   "[avatar]",
+   "[coin]",
+   "[item]"
+  ]
+ },
+ {
+  "va": "0x4FB630",
+  "name": "sub_4FB630",
+  "extra": "",
+  "start": 7741,
+  "tags": []
+ },
+ {
+  "va": "0x4FB660",
+  "name": "sub_4FB660",
+  "extra": "",
+  "start": 7752,
+  "tags": []
+ },
+ {
+  "va": "0x4FB970",
+  "name": "sub_4FB970",
+  "extra": "",
+  "start": 7875,
+  "tags": []
+ },
+ {
+  "va": "0x4FB9E0",
+  "name": "sub_4FB9E0",
+  "extra": "",
+  "start": 7895,
+  "tags": []
+ },
+ {
+  "va": "0x4FBA70",
+  "name": "sub_4FBA70",
+  "extra": "",
+  "start": 7923,
+  "tags": [
+   "[warroom equalization]",
+   "[warroom slave hp equalization]"
+  ]
+ },
+ {
+  "va": "0x4FBD40",
+  "name": "sub_4FBD40",
+  "extra": "",
+  "start": 8066,
+  "tags": []
+ },
+ {
+  "va": "0x4FBD90",
+  "name": "sub_4FBD90",
+  "extra": "",
+  "start": 8093,
+  "tags": []
+ },
+ {
+  "va": "0x4FBDE0",
+  "name": "sub_4FBDE0",
+  "extra": "",
+  "start": 8116,
+  "tags": []
+ },
+ {
+  "va": "0x4FBE30",
+  "name": "sub_4FBE30",
+  "extra": "",
+  "start": 8142,
+  "tags": []
+ }
+]

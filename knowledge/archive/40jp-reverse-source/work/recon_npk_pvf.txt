@@ -1,0 +1,472 @@
+### 1. 关键字符串定位
+NeoplePack_Bill -> 006C2720
+Script.pvf -> 006C5D64
+_ScriptPacks -> 006C5D80
+!ScriptPacks -> 006C5D70
+_ImagePacks -> 006C3698
+!ImagePacks -> 006C368C
+ImagePacks2/ -> 006C367C
+
+### 2. NPK 加载器
+  str 006C2720 <- ref 0040EA37 in func 0040E9E0
+
+// ==================== NPK @ 0040E3E0 ====================
+FILE *__cdecl sub_40E3E0(int *a1, int *a2, char *FileName, int a4)
+{
+  FILE *v5; // eax
+  FILE *v6; // esi
+  int v7; // eax
+
+  if ( dword_8A76D4[4 * a4] != 0 )
+    return sub_40DED0((int ***)&unk_8A76C8 + 4 * a4, a1, a2, FileName);
+  v5 = fopen(FileName, "rb");
+  v6 = v5;
+  if ( v5 == nullptr )
+    return nullptr;
+  v7 = _fileno(v5);
+  *a2 = _filelength(v7);
+  *a1 = 0;
+  return v6;
+}
+
+
+// ==================== NPK @ 0040E9E0 ====================
+int __thiscall sub_40E9E0(int *this, FILE *Stream)
+{
+  size_t *v4; // eax
+  bool v5; // sf
+  bool v6; // of
+  _BYTE v7[8]; // [esp+8h] [ebp-1B0h] BYREF
+  _BYTE v8[4]; // [esp+10h] [ebp-1A8h] BYREF
+  void *v9; // [esp+14h] [ebp-1A4h]
+  int v10; // [esp+24h] [ebp-194h]
+  unsigned int v11; // [esp+28h] [ebp-190h]
+  void *v12; // [esp+38h] [ebp-180h]
+  int v13; // [esp+48h] [ebp-170h]
+  unsigned int v14; // [esp+4Ch] [ebp-16Ch]
+  size_t v15; // [esp+50h] [ebp-168h] BYREF
+  void *v16; // [esp+54h] [ebp-164h]
+  int v17; // [esp+64h] [ebp-154h]
+  unsigned int v18; // [esp+68h] [ebp-150h]
+  int *v19; // [esp+6Ch] [ebp-14Ch]
+  int Buffer; // [esp+70h] [ebp-148h] BYREF
+  char Src[256]; // [esp+74h] [ebp-144h] BYREF
+  char Str2[16]; // [esp+174h] [ebp-44h] BYREF
+  int v23; // [esp+184h] [ebp-34h] BYREF
+  _BYTE v24[8]; // [esp+188h] [ebp-30h] BYREF
+  void *Block; // [esp+190h] [ebp-28h]
+  int v26; // [esp+1A0h] [ebp-18h]
+  unsigned int v27; // [esp+1A4h] [ebp-14h]
+  int v28; // [esp+1A8h] [ebp-10h]
+  int v29; // [esp+1B4h] [ebp-4h]
+  FILE *Streama; // [esp+1C0h] [ebp+8h]
+
+  v28 = dword_796E50;
+  v19 = this;
+  v27 = 15;
+  v26 = 0;
+  LOBYTE(Block) = 0;
+  v29 = 0;
+  sub_66BD5A(Str2, 0x10u, 1u, Stream);
+  if ( strncmp("NeoplePack_Bill", Str2, 0x10u) == 0 )
+  {
+    sub_66BD5A(&Buffer, 4u, 1u, Stream);
+    Streama = nullptr;
+    if ( Buffer > 0 )
+    {
+      do
+      {
+        sub_66BD5A(&v23, 4u, 1u, Stream);
+        sub_66BD5A(v24, 4u, 1u, Stream);
+        sub_66BD5A(Src, 0x100u, 1u, Stream);
+        Src[255] = 0;
+        v18 = 15;
+        v17 = 0;
+        LOBYTE(v16) = 0;
+        sub_4015C0(&v15, Src, strlen(Src));
+        LOBYTE(v29) = 1;
+        v4 = (size_t *)sub_40DB60((int)v8, &v15, &v23);
+        LOBYTE(v29) = 2;
+        sub_40E700(v19, (int)v7, v4);
+        if ( v14 >= 0x10 )
+          j__free(v12);
+        v14 = 15;
+        v13 = 0;
+        LOBYTE(v12) = 0;
+        if ( v11 >= 0x10 )
+          j__free(v9);
+        v11 = 15;
+        v10 = 0;
+        LOBYTE(v9) = 0;
+        LOBYTE(v29) = 0;
+        if ( v18 >= 0x10 )
+          j__free(v16);
+        v6 = __OFSUB__((char *)&Streama->_ptr + 1, Buffer);
+        v5 = (int)&Streama->_ptr - Buffer + 1 < 0;
+        v18 = 15;
+        v17 = 0;
+        LOBYTE(v16) = 0;
+        Streama = (FILE *)((char *)Streama + 1);
+      }
+      while ( v5 != v6 );
+    }
+    if ( v27 >= 0x10 )
+      j__free(Block);
+    return 1;
+  }
+  else
+  {
+    if ( v27 >= 0x10 )
+      j__free(Block);
+    return 0;
+  }
+}
+
+
+### 3. PVF 解析器
+  str 006C5D64 (Script.pvf) <- func 004422C0
+  str 006C5D80 (_ScriptPacks) <- func 004422C0
+  str 006C5D70 (!ScriptPacks) <- func 004422C0
+  一级被调: 00528DB0, 0066C9F6
+
+// ==================== PVF-callee @ 00528DB0 ====================
+int __thiscall sub_528DB0(FILE **this, char *FileName)
+{
+  int result; // eax
+  size_t v4; // edi
+  unsigned int v5; // edx
+  _DWORD *v6; // edi
+  size_t *v7; // eax
+  size_t *v8; // ebx
+  int v9; // esi
+  size_t v10; // eax
+  int v11; // ecx
+  size_t *v12; // esi
+  size_t *v13; // ebx
+  size_t v14; // edx
+  _DWORD *v15; // ebx
+  size_t v16; // eax
+  unsigned int v17; // eax
+  bool v18; // cf
+  FILE *v19; // [esp-2Ch] [ebp-154h]
+  size_t v20; // [esp-18h] [ebp-140h]
+  FILE *v21; // [esp-10h] [ebp-138h]
+  int v22; // [esp+4h] [ebp-124h] BYREF
+  size_t *v23; // [esp+8h] [ebp-120h]
+  size_t *v24; // [esp+Ch] [ebp-11Ch]
+  _DWORD *v25; // [esp+10h] [ebp-118h]
+  size_t v26; // [esp+14h] [ebp-114h]
+  int v27; // [esp+18h] [ebp-110h]
+  unsigned int v28; // [esp+1Ch] [ebp-10Ch] BYREF
+  char Buffer[260]; // [esp+20h] [ebp-108h] BYREF
+  int v30; // [esp+124h] [ebp-4h]
+  unsigned int FileNamea; // [esp+130h] [ebp+8h]
+
+  v30 = dword_796E50;
+  result = (int)_fsopen(FileName, "rb", 16);
+  *(this + 6) = (FILE *)result;
+  if ( result != 0 )
+  {
+    v4 = strlen(off_7930CC);
+    *this = (FILE *)((char *)*this + v4);
+    sub_66BD5A(Buffer, v4, 1u, (FILE *)result);
+    Buffer[v4] = 0;
+    if ( strcmp(Buffer, off_7930CC) != 0 )
+      return 0;
+    sub_66BD5A(this + 1, 4u, 1u, *(this + 6));
+    *this = (FILE *)((char *)*this + 4);
+    sub_66BD5A(&v22, 4u, 1u, *(this + 6));
+    v19 = *(this + 6);
+    *this = (FILE *)((char *)*this + 4);
+    sub_66BD5A(&v28, 4u, 1u, v19);
+    v5 = v28;
+    v6 = this + 2;
+    *this = (FILE *)((char *)*this + 4);
+    v25 = this + 2;
+    sub_528D50(v5);
+    v7 = (size_t *)operator new((size_t)*(this + 1));
+    v21 = *(this + 6);
+    v8 = v7;
+    v20 = (size_t)*(this + 1);
+    v24 = v7;
+    if ( sub_66BD5A(v7, v20, 1u, v21) == 0 )
+      return 0;
+    if ( sub_527AC0(v22, v22, v8) != 0 )
+    {
+      FileNamea = 0;
+      if ( v28 != 0 )
+      {
+        v27 = 0;
+        while ( 1 )
+        {
+          v9 = v6[1];
+          if ( v9 == 0
+            || (v6[2] - v9) / 44 <= FileNamea
+            || (v10 = *v8, v11 = v6[1], v12 = (size_t *)(v27 + v9 + 4), v13 = v8 + 1, v23 = v12, v26 = v10, v11 == 0)
+            || (v6[2] - v11) / 44 <= FileNamea )
+          {
+            sub_527DB0(v6);
+          }
+          *(_DWORD *)(v27 + v11) = v26;
+          v12[7] = *v13;
+          v14 = v13[1];
+          v15 = v13 + 1;
+          v12[8] = v14;
+          v16 = v15[1];
+          ++v15;
+          v12[9] = v16;
+          v17 = v15[1];
+          v15 += 2;
+          qmemcpy(Buffer, v15, v17);
+          v8 = (_DWORD *)((char *)v15 + v17);
+          Buffer[v17] = 0;
+          sub_4015C0(v23, Buffer, strlen(Buffer));
+          v18 = ++FileNamea < v28;
+          v27 += 44;
+          if ( !v18 )
+            break;
+          v6 = v25;
+        }
+        v8 = v24;
+      }
+      j__free(v8);
+      return 1;
+    }
+    else
+    {
+      return 0;
+    }
+  }
+  return result;
+}
+
+
+// ==================== PVF-callee @ 0066C9F6 ====================
+int __cdecl _access(const char *FileName, int AccessMode)
+{
+  DWORD FileAttributesA; // eax
+  DWORD LastError; // eax
+
+  FileAttributesA = GetFileAttributesA(FileName);
+  if ( FileAttributesA == -1 )
+  {
+    LastError = GetLastError();
+    _dosmaperr(LastError);
+    return -1;
+  }
+  if ( (FileAttributesA & 1) != 0 && (AccessMode & 2) != 0 )
+  {
+    *_errno() = 13;
+    *__doserrno() = 5;
+    return -1;
+  }
+  return 0;
+}
+
+
+### 4. 包名表 off_790928 dump
+  [0] ENUM_CMDPACKET_CHECK_CONNECTION
+  [1] ENUM_CMDPACKET_LOGIN
+  [2] ENUM_CMDPACKET_SET_UDP_IP_PORT
+  [3] ENUM_CMDPACKET_EXIT
+  [4] ENUM_CMDPACKET_SELECT_CHARACTER
+  [5] ENUM_CMDPACKET_CREATE_CHARACTER
+  [6] ENUM_CMDPACKET_DELETE_CHARACTER
+  [7] ENUM_CMDPACKET_RETURN_SELECT_CHARACTER
+  [8] ENUM_CMDPACKET_GET_USERINFO
+  [9] ENUM_CMDPACKET_RECOVER_STAMINA
+  [10] ENUM_CMDPACKET_REQUEST_PEER
+  [11] ENUM_CMDPACKET_RESPONSE_PEER
+  [12] ENUM_CMDPACKET_SET_PARTY_INFO
+  [13] ENUM_CMDPACKET_LEAVE_PARTY
+  [14] ENUM_CMDPACKET_WALKOUT_PARTY_MEMBER
+  [15] ENUM_CMDPACKET_START_GAME
+  [16] ENUM_CMDPACKET_SELECT_DUNGEON
+  [17] ENUM_CMDPACKET_SEND_MESSAGE
+  [18] ENUM_CMDPACKET_DELETE_ITEM
+  [19] ENUM_CMDPACKET_MOVE_ITEMSPACE
+  [20] ENUM_CMDPACKET_SORT_ITEM
+  [21] ENUM_CMDPACKET_BUY_ITEM
+  [22] ENUM_CMDPACKET_RENT_AVATAR
+  [23] ENUM_CMDPACKET_EXTEND_AVATAR
+  [24] ENUM_CMDPACKET_SELL_ITEM
+  [25] ENUM_CMDPACKET_REPAIR_EQUIPMENT
+  [26] ENUM_CMDPACKET_SET_ITEMTRADE_STATE
+  [27] ENUM_CMDPACKET_COMPOUND_ITEM
+  [28] ENUM_CMDPACKET_DISJOINT_ITEM
+  [29] ENUM_CMDPACKET_USE_LOTTERY_ITEM
+  [30] ENUM_CMDPACKET_CHANGE_SKILLSLOT
+  [31] ENUM_CMDPACKET_BUY_SKILL
+  [32] ENUM_CMDPACKET_INCREASE_STATUS
+  [33] ENUM_CMDPACKET_ACCEPT_QUEST
+  [34] ENUM_CMDPACKET_GIVEUP_QUEST
+  [35] ENUM_CMDPACKET_SET_QUEST_TRIGGER
+  [36] ENUM_CMDPACKET_FINISH_QUEST
+  [37] ENUM_CMDPACKET_SET_USER_POSITION
+  [38] ENUM_CMDPACKET_SET_USER_AREA
+  [39] ENUM_CMDPACKET_FISHING
+  [40] ENUM_CMDPACKET_FINISH_LOADING
+  [41] ENUM_CMDPACKET_USE_SKILL
+  [42] ENUM_CMDPACKET_DIE_MONSTER
+  [43] ENUM_CMDPACKET_DIE_CHARACTER
+  [44] ENUM_CMDPACKET_USE_COIN
+  [45] ENUM_CMDPACKET_GIVEUP_GAME
+  [46] ENUM_CMDPACKET_GET_ITEM
+  [47] ENUM_CMDPACKET_USE_STACKABLE
+  [48] ENUM_CMDPACKET_MOVE_MAP
+  [49] ENUM_CMDPACKET_SET_PLAY_RESULT
+  [50] ENUM_CMDPACKET_DROP_ITEM
+  [51] ENUM_CMDPACKET_DECREASE_DURABILITY
+  [52] ENUM_CMDPACKET_REPORT_BAD_P2P_USER
+  [53] ENUM_CMDPACKET_MAKE_PVP_ROOM
+  [54] ENUM_CMDPACKET_ENTER_PVP_ROOM
+  [55] ENUM_CMDPACKET_SET_PVP_SEAT_STATE
+  [56] ENUM_CMDPACKET_SET_PVP_READY_STATE
+  [57] ENUM_CMDPACKET_SET_PVP_TEAM_MODE
+  [58] ENUM_CMDPACKET_DIE_PVP_CHARACTER
+  [59] ENUM_CMDPACKET_PVP_TIME_OUT
+  [60] ENUM_CMDPACKET_END_PVP_RESULT
+  [61] ENUM_CMDPACKET_RES_PVP_RANK
+  [62] ENUM_CMDPACKET_SET_PVP_MAP_INDEX
+  [63] ENUM_CMDPACKET_ADD_FRIEND
+  [64] ENUM_CMDPACKET_REMOVE_FRIEND
+  [65] ENUM_CMDPACKET_DEBUG_COMMAND
+  [66] ENUM_CMDPACKET_CERA
+  [67] ENUM_CMDPACKET_BUY_CERASHOP_ITEM
+  [68] ENUM_CMDPACKET_GEN_CERATICKET
+  [69] ENUM_CMDPACKET_REQUEST_PVPEXP_OF_WEEK
+  [70] ENUM_CMDPACKET_GUILD_MEMER_LIST
+  [71] ENUM_CMDPACKET_CALL_GUILD_CREATE_RIGHT
+  [72] ENUM_CMDPACKET_SCORE_SCROLL_STATE
+  [73] ENUM_CMDPACKET_CARD_SELECT_RIGHT_STATE
+  [74] ENUM_CMDPACKET_SELECT_CARD
+  [75] ENUM_CMDPACKET_EPLP_COMMAND
+  [76] ENUM_CMDPACKET_CALL_GUILD_LEVEL_UP
+  [77] ENUM_CMDPACKET_GUILD_INFO
+  [78] ENUM_CMDPACKET_REQUEST_GUILD_ENTER
+  [79] ENUM_CMDPACKET_REQUEST_MEMBER_ENTER
+  [80] ENUM_CMDPACKET_MEMBER_ENTER_REPLY
+  [81] ENUM_CMDPACKET_MEMBER_SECEDE
+  [82] ENUM_CMDPACKET_CALL_MEMER_LIST
+  [83] ENUM_CMDPACKET_UPGRADE_ITEM
+  [84] ENUM_CMDPACKET_RESET_ITEM_ATTR
+  [85] ENUM_CMDPACKET_BUY_PRIVATE_STORE_ITEM
+  [86] ENUM_CMDPACKET_ENTER_PRIVATE_STORE
+  [87] ENUM_CMDPACKET_EXIT_PRIVATE_STORE
+  [88] ENUM_CMDPACKET_CREATE_PRIVATE_STORE
+  [89] ENUM_CMDPACKET_REMOVE_PRIVATE_STORE
+  [90] ENUM_CMDPACKET_COMPLETE_DISPLAY
+  [91] ENUM_CMDPACKET_MOVE_TO_GATE
+  [92] ENUM_CMDPACKET_MAKE_WARROOM_TEMP
+  [93] ENUM_CMDPACKET_ENTER_WARROOM
+  [94] ENUM_CMDPACKET_SET_WARROOM_SEAT_STATE
+  [95] ENUM_CMDPACKET_DIE_WARROOM_CHARACTER
+  [96] ENUM_CMDPACKET_START_WARROOM_TEMP
+  [97] ENUM_CMDPACKET_MAILBOX_SEND
+  [98] ENUM_CMDPACKET_MAILBOX_EXTRACT_ITEM
+  [99] ENUM_CMDPACKET_MAILBOX_OPEN
+  [100] ENUM_CMDPACKET_PEER_CONNECT_RESULT
+  [101] ENUM_CMDPACKET_QUICK_JOIN_ROOM
+  [102] ENUM_CMDPACKET_CHAOS_BUY_FP_ITEM
+  [103] ENUM_CMDPACKET_CHAOS_ZONE_OWNERSHIP
+  [104] ENUM_CMDPACKET_CHAOS_GAME_CLEAR
+  [105] ENUM_CMDPACKET_GATHERING_PARTY_STATUS
+  [106] invalid ptr 00000001 -> stop
+
+### 5. 发包类型穷举 (sub_423200 的调用者 + 前置 push)
+  type 0x01 : 1 处  例: 0041C2D5(in 0041C2B0)
+  type 0x02 : 2 处  例: 0045D97B(in 0045D890)
+  type 0x03 : 2 处  例: 0041C88E(in 0041C860)
+  type 0x04 : 1 处  例: 0046BCEB(in 0046BCB0)
+  type 0x05 : 1 处  例: 0046C9B7(in 0046C300)
+  type 0x06 : 1 处  例: 0063484D(in 006347E0)
+  type 0x07 : 1 处  例: 005622DC(in 00562210)
+  type 0x08 : 2 处  例: 0041D4DB(in 0041D320)
+  type 0x09 : 1 处  例: 006381F3(in 006381B0)
+  type 0x0A : 5 处  例: 004414CD(in 00440F90)
+  type 0x0B : 2 处  例: 004567AC(in 00456690)
+  type 0x0C : 1 处  例: 00636DD9(in 00636B30)
+  type 0x0D : 5 处  例: 004413C1(in 00440F90)
+  type 0x0E : 1 处  例: 00525807(in 00525760)
+  type 0x0F : 3 处  例: 00458486(in 00458400)
+  type 0x10 : 1 处  例: 004546CD(in 00454680)
+  type 0x11 : 1 处  例: 0043EF7E(in 0043ED90)
+  type 0x12 : 3 处  例: 004860E0(in 00486070)
+  type 0x13 : 5 处  例: 00484A1C(in 004848E0)
+  type 0x14 : 1 处  例: 00486CFB(in 00486C40)
+  type 0x15 : 2 处  例: 0056341B(in 00563410)
+  type 0x18 : 1 处  例: 00563F43(in 00563E90)
+  type 0x19 : 2 处  例: 005641F3(in 005641E0)
+  type 0x1A : 4 处  例: 004845A1(in 004844E0)
+  type 0x1B : 1 处  例: 0062F5A0(in 0062F530)
+  type 0x1C : 1 处  例: 00486E3B(in 00486E00)
+  type 0x1D : 1 处  例: 0063D497(in 0063D440)
+  type 0x1E : 1 处  例: 00483ED2(in 00483E70)
+  type 0x1F : 1 处  例: 0047F8AD(in 0047F890)
+  type 0x20 : 1 处  例: 0048703B(in 00487000)
+  type 0x21 : 2 处  例: 004407F8(in 0043F740)
+  type 0x22 : 1 处  例: 0047B8A3(in 0047B820)
+  type 0x23 : 1 处  例: 0047B987(in 0047B8D0)
+  type 0x24 : 1 处  例: 0047BA6B(in 0047B9E0)
+  type 0x25 : 1 处  例: 0042F882(in 0042F820)
+  type 0x26 : 1 处  例: 0045CF94(in 0045CB30)
+  type 0x28 : 2 处  例: 00444D49(in 00444C60)
+  type 0x29 : 1 处  例: 004B4E7E(in 004B49B0)
+  type 0x2A : 2 处  例: 004406FE(in 0043F740)
+  type 0x2B : 1 处  例: 004AF81D(in 004AF7F0)
+  type 0x2C : 1 处  例: 00486DC6(in 00486D40)
+  type 0x2D : 1 处  例: 00562376(in 00562210)
+  type 0x2E : 1 处  例: 004864DC(in 00486470)
+  type 0x2F : 1 处  例: 00486BE6(in 00486B40)
+  type 0x30 : 1 处  例: 0048C6D3(in 0048C680)
+  type 0x31 : 1 处  例: 0057E406(in 0057A980)
+  type 0x32 : 2 处  例: 004863B8(in 00486330)
+  type 0x33 : 1 处  例: 004EA0A7(in 004EA000)
+  type 0x34 : 1 处  例: 00445FB5(in 00445EF0)
+  type 0x35 : 1 处  例: 0063548E(in 00635310)
+  type 0x36 : 1 处  例: 00635BF4(in 00635B50)
+  type 0x37 : 1 处  例: 0048F538(in 0048F500)
+  type 0x38 : 1 处  例: 0052BFDE(in 0052BBB0)
+  type 0x39 : 2 处  例: 0052BD41(in 0052BBB0)
+  type 0x3A : 1 处  例: 004AF83F(in 004AF7F0)
+  type 0x3B : 1 处  例: 004526B9(in 00452690)
+  type 0x3C : 1 处  例: 00453972(in 00453250)
+  type 0x3D : 1 处  例: 00581D15(in 0057A980)
+  type 0x3E : 1 处  例: 0052B0C3(in 0052B090)
+  type 0x3F : 1 处  例: 004793A8(in 00479340)
+  type 0x40 : 1 处  例: 0047940C(in 004793D0)
+  type 0x41 : 14 处  例: 0043FC96(in 0043F740)
+  type 0x42 : 1 处  例: 0055C848(in 0055C840)
+  type 0x43 : 2 处  例: 0055D26F(in 0055D210)
+  type 0x44 : 1 处  例: 0055E2E5(in 0055E2D0)
+  type 0x45 : 1 处  例: 00469C04(in 00469170)
+  type 0x46 : 1 处  例: 00478EEC(in 00478EA0)
+  type 0x48 : 1 处  例: 00478850(in 00477B60)
+  type 0x49 : 1 处  例: 004577CB(in 004577C0)
+  type 0x4A : 1 处  例: 00458E63(in 00458E00)
+  type 0x4B : 1 处  例: 00457F24(in 00457EC0)
+  type 0x4C : 1 处  例: 00638B17(in 00638AD0)
+  type 0x4D : 1 处  例: 004BEA33(in 004BE990)
+  type 0x4E : 1 处  例: 005259C9(in 00525760)
+  type 0x4F : 1 处  例: 0047946B(in 00479430)
+  type 0x50 : 2 处  例: 00639E3C(in 00639E30)
+  type 0x51 : 1 处  例: 004794CC(in 00479490)
+  type 0x52 : 1 处  例: 00478F8C(in 00478F40)
+  type 0x53 : 1 处  例: 00486EBC(in 00486E80)
+  type 0x54 : 1 处  例: 00486F7C(in 00486F40)
+  type 0x55 : 1 处  例: 00541F4B(in 00541F40)
+  type 0x56 : 1 处  例: 00541EDB(in 00541ED0)
+  type 0x57 : 1 处  例: 00541FD8(in 00541FD0)
+  type 0x58 : 1 处  例: 00541E0A(in 00541D80)
+  type 0x59 : 1 处  例: 00541FA8(in 00541FA0)
+  type 0x5A : 1 处  例: 00542E26(in 00542E10)
+  type 0x5B : 1 处  例: 00541F18(in 00541F10)
+  type 0x5D : 1 处  例: 0063CB7B(in 0063CAC0)
+  type 0x5E : 1 处  例: 0048FC54(in 0048FC30)
+  type 0x5F : 1 处  例: 004AF861(in 004AF7F0)
+  type 0x61 : 1 处  例: 00522D81(in 00522D60)
+  type 0x62 : 1 处  例: 00522D2B(in 00522D20)
+  type 0x63 : 1 处  例: 00522E28(in 00522E20)
+  type 0x65 : 2 处  例: 0062E7E6(in 0062E640)
+  type 0x69 : 2 处  例: 004462F9(in 004461F0)
+  type ? : 3 处  例: 00440DAD(in 0043F740)

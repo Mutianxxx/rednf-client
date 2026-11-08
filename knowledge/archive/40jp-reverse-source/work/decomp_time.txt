@@ -1,0 +1,382 @@
+// ===== tick_domains_init @ 004051A0 =====
+int sub_4051A0()
+{
+  dword_79D140 = timeGetTime();
+  dword_79D080 = 0;
+  dword_79D100[0] = 0;
+  dword_79D084 = 0;
+  dword_79D104 = 0;
+  dword_79D088 = 0;
+  dword_79D108 = 0;
+  dword_79D08C = 0;
+  dword_79D10C = 0;
+  dword_79D0C0 = 100;
+  dword_79D0C4 = 100;
+  dword_79D0C8 = 100;
+  dword_79D0CC = 100;
+  dword_79D090 = 0;
+  dword_79D0D0 = 100;
+  dword_79D110 = 0;
+  dword_79D094 = 0;
+  dword_79D0D4 = 100;
+  dword_79D114 = 0;
+  dword_79D098 = 0;
+  dword_79D0D8 = 100;
+  dword_79D118 = 0;
+  dword_79D09C = 0;
+  dword_79D0DC = 100;
+  dword_79D11C = 0;
+  dword_79D0A0 = 0;
+  dword_79D0E0 = 100;
+  dword_79D120 = 0;
+  dword_79D0A4 = 0;
+  dword_79D0E4 = 100;
+  dword_79D124 = 0;
+  dword_79D0A8 = 0;
+  dword_79D0E8 = 100;
+  dword_79D128 = 0;
+  dword_79D0AC = 0;
+  dword_79D0EC = 100;
+  dword_79D12C = 0;
+  dword_79D0B0 = 0;
+  dword_79D0F0 = 100;
+  dword_79D130 = 0;
+  dword_79D0B4 = 0;
+  dword_79D0F4 = 100;
+  dword_79D134 = 0;
+  dword_79D0B8 = 0;
+  dword_79D0F8 = 100;
+  dword_79D138 = 0;
+  dword_79D0BC = 0;
+  dword_79D0FC = 100;
+  dword_79D13C = 0;
+  return 0;
+}
+
+
+// ===== tick_domains_step @ 004052D0 =====
+DWORD sub_4052D0()
+{
+  double v0; // st7
+  int i; // esi
+  double v2; // st6
+  DWORD result; // eax
+  int v4; // [esp+8h] [ebp-4h]
+
+  v0 = (double)(int)(timeGetTime() - dword_79D140);
+  for ( i = 0; i < 16; *(float *)(i * 4 + 7983228) = v2 - (double)v4 )
+  {
+    v2 = (double)dword_79D0C0[i] * v0 * 0.0099999998 + *(float *)(i * 4 + 7983232);
+    v4 = (unsigned __int64)v2;
+    dword_79D100[i++] += v4;
+  }
+  result = timeGetTime();
+  dword_79D140 = result;
+  return result;
+}
+
+
+// ===== engine_dt_consumer @ 00444C60 =====
+char __thiscall CNMainGameModule__vmt4(int this)
+{
+  int v3; // eax
+  int v4; // edx
+  unsigned __int64 v5; // rax
+  int v6; // eax
+  int v7; // eax
+  int v8; // eax
+  float v10; // [esp+4h] [ebp-4h]
+
+  sub_4AEB30(&unk_9A02B0);
+  sub_433690();
+  if ( *(_DWORD *)(this + 20) != 0 )
+  {
+    sub_699030(this + 92);
+  }
+  else
+  {
+    if ( *(_BYTE *)(this + 106) != 0 )
+      sub_698FE0(this + 92);
+    v3 = sub_699000(this + 92);
+    v4 = *(_DWORD *)(this + 120);
+    *(_DWORD *)(this + 120) = v3;
+    v10 = (double)(v3 - v4) * 0.001;
+    sub_655A90(v10);
+  }
+  switch ( *(_DWORD *)(dword_8F8548 + 8) )
+  {
+    case 0:
+      sub_424EA0(*(float **)(this + 16), 0.0);
+      break;
+    case 1:
+      sub_424EA0(*(float **)(this + 16), 0.30000001);
+      break;
+    case 2:
+      sub_424EA0(*(float **)(this + 16), 0.69999999);
+      break;
+    case 3:
+      sub_424EA0(*(float **)(this + 16), 1.0);
+      break;
+    default:
+      break;
+  }
+  sub_4294E0(*(_DWORD *)(this + 16));
+  LODWORD(v5) = *(_DWORD *)(this + 20);
+  if ( (_DWORD)v5 != 0 )
+  {
+    switch ( (_DWORD)v5 )
+    {
+      case 1:
+        if ( *(_DWORD *)(this + 60) == 255 )
+        {
+          sub_475810(*(int **)(*(_DWORD *)(this + 16) + 108), this, *(_DWORD *)(this + 52), *(_DWORD *)(this + 56));
+          sub_4284C0(*(_DWORD *)(this + 52), *(_DWORD *)(this + 56));
+          sub_423200(dword_8F7B08, 40);
+          sub_423380(dword_8F7B08);
+          *(_DWORD *)(this + 20) = 2;
+          *(_BYTE *)(this + 37) = 0;
+          *(_BYTE *)(this + 38) = 0;
+          LOBYTE(v5) = sub_698F90(this + 24, 0, 0);
+          *(_DWORD *)(this + 60) = 0;
+        }
+        else
+        {
+          v6 = sub_699000(this + 24);
+          v5 = (unsigned __int64)sub_4049C0(0.0, 255.0, v6, 250);
+          *(_DWORD *)(this + 60) = v5;
+          *((_DWORD *)dword_8F8528 + 621) = v5;
+        }
+        break;
+      case 2:
+LABEL_27:
+        break;
+      case 3:
+        v7 = sub_699000(this + 24);
+        v5 = (unsigned __int64)sub_4049C0(255.0, 0.0, v7, 250);
+        *(_DWORD *)(this + 60) = v5;
+        *((_DWORD *)dword_8F8528 + 621) = v5;
+        LODWORD(v5) = *(_DWORD *)(this + 60);
+        if ( (_DWORD)v5 == 0 )
+          LOBYTE(v5) = sub_444B30(0);
+        break;
+      case 4:
+        if ( *(_DWORD *)(this + 60) == 255 )
+        {
+          LOBYTE(v5) = sub_41D300(1);
+        }
+        else
+        {
+          v8 = sub_699000(this + 24);
+          LODWORD(v5) = sub_423A80(0, 255, v8, 500);
+          *(_DWORD *)(this + 60) = v5;
+          *((_DWORD *)dword_8F8528 + 621) = v5;
+        }
+        break;
+      default:
+        goto LABEL_27;
+    }
+  }
+  return v5;
+}
+
+
+// ===== clock_region @ 00698DC0 =====
+int __thiscall sub_698DC0(int this, int optval, int a3)
+{
+  char *v5; // eax
+  int v6; // edx
+  char v7; // cl
+  int v8; // eax
+  u_short v9; // ax
+  unsigned int v10; // eax
+  SOCKET v11; // [esp-1Ch] [ebp-34h]
+  SOCKET v12; // [esp-1Ch] [ebp-34h]
+  SOCKET v13; // [esp-10h] [ebp-28h]
+  struct sockaddr name; // [esp+4h] [ebp-14h] BYREF
+  int v15; // [esp+14h] [ebp-4h]
+
+  v15 = dword_796E50;
+  if ( *(_BYTE *)(this + 4) == 0 )
+    return -2147483647;
+  if ( *(_BYTE *)(this + 8) != 0 )
+    return -2147483565;
+  v5 = (char *)optval;
+  v6 = this + 416 - optval;
+  do
+  {
+    v7 = *v5;
+    v5[v6] = *v5;
+    ++v5;
+  }
+  while ( v7 != 0 );
+  *(_DWORD *)(this + 432) = a3;
+  v8 = socket(2, 1, 6);
+  *(_DWORD *)(this + 436) = v8;
+  if ( v8 >= 0 )
+  {
+    optval = 100000;
+    setsockopt(v8, 0xFFFF, 4097, (const char *)&optval, 4);
+    v11 = *(_DWORD *)(this + 436);
+    optval = (int)&unk_989680;
+    setsockopt(v11, 0xFFFF, 4098, (const char *)&optval, 4);
+    v12 = *(_DWORD *)(this + 436);
+    a3 = 1;
+    if ( setsockopt(v12, 0xFFFF, 1, (const char *)&a3, 4) == -1 )
+    {
+      sub_6989F0(this);
+      return -2147483647;
+    }
+    else if ( WSAAsyncSelect(*(_DWORD *)(this + 436), *(HWND *)(this + 12), 0x464u, 16) == -1 )
+    {
+      return 0x80000000;
+    }
+    else
+    {
+      v9 = *(_WORD *)(this + 432);
+      memset(&name.sa_data[2], 0, 12);
+      name.sa_family = 2;
+      *(_WORD *)name.sa_data = htons(v9);
+      v10 = inet_addr((const char *)(this + 416));
+      v13 = *(_DWORD *)(this + 436);
+      *(_DWORD *)&name.sa_data[2] = v10;
+      if ( connect(v13, &name, 16) == -1 )
+        WSAGetLastError();
+      return 1;
+    }
+  }
+  else
+  {
+    sub_6989F0(this);
+    return -2147483567;
+  }
+}
+
+
+// ===== clock_region @ 00698F80 =====
+int __stdcall sub_698F80(int a1, int a2, int a3, int a4)
+{
+  return sub_698CA0(a1, a2, a3, a4);
+}
+
+
+// ===== clock_region @ 00698F90 =====
+char __thiscall sub_698F90(int this, int a2, int a3)
+{
+  char result; // al
+
+  result = *(_BYTE *)(this + 12);
+  if ( result != 0 )
+  {
+    result = *(_BYTE *)(this + 13);
+    if ( result == 0 )
+    {
+      result = *(_BYTE *)(this + 14);
+      *(_BYTE *)(this + 13) = 1;
+      if ( result != 0 )
+        *(_DWORD *)(this + 20) = a3;
+      else
+        *(_DWORD *)(this + 16) = a3 - dword_79D100[*(_DWORD *)(this + 8)];
+      *(_DWORD *)(this + 24) = a2;
+      if ( result != 0 )
+        *(_DWORD *)(this + 20) = a3;
+    }
+  }
+  return result;
+}
+
+
+// ===== clock_region @ 00698FE0 =====
+char __thiscall sub_698FE0(int this)
+{
+  int v1; // eax
+  int v2; // edx
+  int v3; // eax
+
+  LOBYTE(v1) = *(_BYTE *)(this + 14);
+  if ( (_BYTE)v1 != 0 )
+  {
+    v2 = *(_DWORD *)(this + 8);
+    v3 = *(_DWORD *)(this + 20);
+    *(_BYTE *)(this + 14) = 0;
+    v1 = v3 - dword_79D100[v2];
+    *(_DWORD *)(this + 16) = v1;
+  }
+  return v1;
+}
+
+
+// ===== clock_region @ 00699000 =====
+int __thiscall sub_699000(int this)
+{
+  if ( *(_BYTE *)(this + 12) == 0 || *(_BYTE *)(this + 13) == 0 )
+    return 0;
+  if ( *(_BYTE *)(this + 14) != 0 )
+    return *(_DWORD *)(this + 20);
+  return *(_DWORD *)(this + 16) + dword_79D100[*(_DWORD *)(this + 8)];
+}
+
+
+// ===== clock_region @ 00699030 =====
+char __thiscall sub_699030(int this)
+{
+  int v1; // eax
+
+  LOBYTE(v1) = *(_BYTE *)(this + 14);
+  if ( (_BYTE)v1 == 0 )
+  {
+    if ( *(_BYTE *)(this + 12) != 0 && *(_BYTE *)(this + 13) != 0 )
+    {
+      v1 = *(_DWORD *)(this + 16) + dword_79D100[*(_DWORD *)(this + 8)];
+      *(_DWORD *)(this + 20) = v1;
+      *(_BYTE *)(this + 14) = 1;
+    }
+    else
+    {
+      *(_DWORD *)(this + 20) = 0;
+      *(_BYTE *)(this + 14) = 1;
+      LOBYTE(v1) = 0;
+    }
+  }
+  return v1;
+}
+
+
+// ===== clock_region @ 00699070 =====
+void __thiscall sub_699070(int this, unsigned int a2)
+{
+  int v2; // eax
+  bool v3; // zf
+
+  if ( a2 < 0x10 )
+  {
+    if ( *(_BYTE *)(this + 12) != 0 && *(_BYTE *)(this + 13) != 0 )
+    {
+      if ( *(_BYTE *)(this + 14) != 0 )
+        v2 = *(_DWORD *)(this + 20);
+      else
+        v2 = *(_DWORD *)(this + 16) + dword_79D100[*(_DWORD *)(this + 8)];
+    }
+    else
+    {
+      v2 = 0;
+    }
+    v3 = *(_BYTE *)(this + 14) == 0;
+    *(_DWORD *)(this + 8) = a2;
+    if ( v3 )
+      *(_DWORD *)(this + 16) = v2 - dword_79D100[a2];
+    else
+      *(_DWORD *)(this + 20) = v2;
+  }
+}
+
+
+// ===== clock_region @ 006990D0 =====
+int __thiscall sub_6990D0(int this, int a2)
+{
+  if ( *(_BYTE *)(this + 4) != 0 )
+    return -2147483646;
+  *(_DWORD *)(this + 8) = a2;
+  *(_BYTE *)(this + 4) = 1;
+  return 1;
+}
+
