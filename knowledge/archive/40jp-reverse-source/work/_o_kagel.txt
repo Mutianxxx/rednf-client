@@ -1,0 +1,41 @@
+===== +324 (0x144) reads=20 writes=30
+  [R] src\combat\breakable_map.cpp:11191  fld_144 = (*(int (/*thiscall*/ **)(int, uint32_t))(*(uint32_t *)this + 124))(this, *(uint32_t *)(this + 324));
+        fn: 0x62C510 CNFairy__vmt14C
+  [R] src\game\anim_parser.cpp:8884  (*(void (/*thiscall*/ **)(uint8_t *, uint32_t, int, int, uint8_t))(*(uint32_t *)this + 324))(
+        fn: 0x499C70 sub_499C70 —— ★主播放驱动
+  [R] src\game\anim_parser.cpp:8979  result = (*(int (/*thiscall*/ **)(uint8_t *, int, int, int, uint8_t))(*(uint32_t *)this + 324))(
+        fn: 0x499C70 sub_499C70 —— ★主播放驱动
+  [R] src\game\broadcast_debug.cpp:26511  v28 = v26 + pArg1 + 324;
+        fn: 0x43CC10 CNRDChatting__vmt0 —— 聊天界面绘制主函数
+===== +8616 (0x21A8) reads=11 writes=60
+  [R] src\game\bigfunc_4C5250_sub_4C5250.cpp:575  v84 = *(uint32_t *)(pArg1 + 8616);
+        fn: 0x4C5250 sub_4C5250  size=18096
+  [R] src\game\rtti_core.cpp:5757  j__free(*(void **)(this + 8616));
+        fn: 0x4A6380 sub_4A6380
+  [R] src\game\rtti_core.cpp:9436  `eh vector constructor iterator'(this + 8616, 0x1Cu, 2, (void (/*thiscall*/ *)(void *))sub_40C120, sub_501490);
+        fn: 0x4AA280 sub_4AA280
+  [R] src\game\creature\dragonman.cpp:954  pDwArg1[2154] = pFxObj1;  // this+8616 幻觉特效1对象槽(事件16销毁用)
+        fn: 0x5B0D10 sub_5B0D10 —— 龙人·动作事件总分发（大状态 × 事件码二维派发）
+===== +8620 (0x21AC) reads=12 writes=49
+  [R] src\game\bigfunc_4C5250_sub_4C5250.cpp:586  v86 = *(uint32_t *)(pArg1 + 8620) - sub_41A5E0(pArg1 + 8262);
+        fn: 0x4C5250 sub_4C5250  size=18096
+  [R] src\game\bigfunc_4C5250_sub_4C5250.cpp:606  if ( *(int *)(pArg1 + 8620) < 0 )
+        fn: 0x4C5250 sub_4C5250  size=18096
+  [R] src\game\creature\dragonman.cpp:7599  (*(void (/*thiscall*/ **)(uint32_t, uint32_t))(**(uint32_t **)(pArg1 + 8620) + 12))(*(uint32_t *)(pArg1 + 8620), 0);
+        fn: 0x5BA570 sub_5BA570 —— 激光炮/龙炮共用·攻击态映射与播报组
+  [R] src\game\creature\dragonman.cpp:8324  pFlameFx = **(uint32_t **)(pArg1 + 8620);
+        fn: 0x5BB130 sub_5BB130 —— 载具·武器开火分段总控（喷火/激光/龙炮四段）
+===== +8657 (0x21D1) reads=0 writes=9
+  [W] src\game\rtti_core.cpp:6277  *((uint8_t *)this + 8657) = 0;
+        fn: 0x4A6DE0 sub_4A6DE0
+  [W] src\game\creature\expeller_guard.cpp:8662  *(uint8_t *)(this + 8657) = 0;
+        fn: 0x5D9F50 sub_5D9F50 —— CNEvilEye 主构造（邪眼）
+  [W] src\game\creature\goblin_fox.cpp:12253  *((uint8_t *)pArg1 + 8657) = 0;
+        fn: 0x59E790 sub_59E790 —— 瞄准炸弹 AI（AimingBomb.ptl 弹道引信）
+===== +8658 (0x21D2) reads=0 writes=9
+  [W] src\game\rtti_core.cpp:6276  *((uint8_t *)this + 8658) = 0;
+        fn: 0x4A6DE0 sub_4A6DE0
+  [W] src\game\creature\expeller_guard.cpp:8661  *(uint8_t *)(this + 8658) = 0;
+        fn: 0x5D9F50 sub_5D9F50 —— CNEvilEye 主构造（邪眼）
+  [W] src\game\creature\goblin_fox.cpp:12254  *((uint8_t *)pArg1 + 8658) = 0;
+        fn: 0x59E790 sub_59E790 —— 瞄准炸弹 AI（AimingBomb.ptl 弹道引信）

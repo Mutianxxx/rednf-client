@@ -1,0 +1,9 @@
+CLASS .?AVCNRDPartyListWindow@@  slots=14  fields_candidate=6
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0024 uint32_t   5  00631980  fld_24 = *(uint32_t *)(this + 36);
++0x0030 uint32_t   2  00631980  *(uint8_t *)(*(uint32_t *)(this + 48) + 16) = 0;
++0x0034 uint32_t   2  00631980  *(uint8_t *)(*(uint32_t *)(this + 52) + 16) = 0;
++0x0038 uint32_t   2  00631980  *(uint8_t *)(*(uint32_t *)(this + 56) + 16) = 0;
++0x0058 uint32_t   2  00631980  *(uint8_t *)(*(uint32_t *)(this + 88) + 16) = 1;
++0x005C uint32_t   2  00631980  *(uint8_t *)(*(uint32_t *)(this + 92) + 16) = 1;

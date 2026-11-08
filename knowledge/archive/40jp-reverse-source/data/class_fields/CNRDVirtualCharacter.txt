@@ -1,0 +1,24 @@
+CLASS .?AVCNRDVirtualCharacter@@  slots=104  fields_candidate=21
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0078 uint32_t   4  00499020  fld_78 = *(uint32_t *)(this + 120);
++0x00A0 uint32_t   1  00432640  *(uint32_t *)(this + 160) = sub_4918E0(v14, 2);
++0x00E8 uint8_t    2  00499020  result = *(uint8_t *)(this + 232);
++0x00EC uint32_t   1  00499020  *(uint32_t *)(this + 236) = nArg3;
++0x00F0 uint32_t   1  00499020  *(uint32_t *)(this + 240) = nArg4;
++0x00F4 float      4  00499080  if ( *(float *)(this + 244) == 0.0 || fArg32 != 0.0 )
++0x00F8 uint8_t    1  0042A8D0  *(uint8_t *)(this + 248) = pszArg2;
++0x00FC uint32_t   1  0042A8D0  *(uint32_t *)(this + 252) = nArg3;
++0x0100 uint8_t    1  0042A8D0  *(uint8_t *)(this + 256) = pszArg4;
++0x0104 uint32_t   1  0042A8D0  *(uint32_t *)(this + 260) = nArg5;
++0x011C uint32_t   2  00432640  if ( ArgList != *(uint32_t *)(this + 284) )
++0x0120 uint32_t   1  00432640  *(uint32_t *)(this + 288) = -1;
++0x0128 uint32_t   1  00432640  *(uint32_t *)(this + 296) = v9;
++0x012C uint32_t   1  00432640  *(uint32_t *)(this + 300) = v11;
++0x0130 uint32_t   1  00432640  *(uint32_t *)(this + 304) = v13;
++0x0154 uint32_t   1  00432640  pThis_154 = (uint32_t *)(this + 340);
++0x0220 uint32_t   2  00432640  if ( *(uint32_t *)(this + 544) != 0 )
++0x0224 uint32_t   1  00432640  *(uint32_t *)(this + 548) = 0;
++0x0228 uint32_t   1  00432640  *(uint32_t *)(this + 552) = 0;
++0x0240 uint32_t   4  00432640  *(uint32_t *)(this + 576) = 2;
++0x0244 uint32_t   4  00432640  *(uint32_t *)(this + 580) = 91;

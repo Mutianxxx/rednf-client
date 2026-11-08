@@ -1,0 +1,39 @@
+CLASS .?AVCNTauTangas@@  slots=327  fields_candidate=36
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0049 char       1  004DE410  pThis_49 = (char *)(this + 73);
++0x0078 uint32_t   6  00499020  fld_78 = *(uint32_t *)(this + 120);
++0x00E8 uint8_t    2  00499020  result = *(uint8_t *)(this + 232);
++0x00EC uint32_t   1  00499020  *(uint32_t *)(this + 236) = nArg3;
++0x00F0 uint32_t   1  00499020  *(uint32_t *)(this + 240) = nArg4;
++0x00F4 float      4  00499080  if ( *(float *)(this + 244) == 0.0 || fArg32 != 0.0 )
++0x00F8 uint8_t    1  0042A8D0  *(uint8_t *)(this + 248) = pszArg2;
++0x00FC uint32_t   1  0042A8D0  *(uint32_t *)(this + 252) = nArg3;
++0x0100 uint8_t    1  0042A8D0  *(uint8_t *)(this + 256) = pszArg4;
++0x0104 uint32_t   1  0042A8D0  *(uint32_t *)(this + 260) = nArg5;
++0x0282 uint8_t    5  004E5C10  result = *(uint8_t *)(this + 642);
++0x0284 uint32_t   4  004E5C10  *(uint32_t *)(this + 644) = nArg3;
++0x029C uint32_t   1  004D94A0  *(uint32_t *)(this + 668) = fld_20A0;
++0x02A0 uint32_t   1  004D94A0  *(uint32_t *)(this + 672) = 1;
++0x1BB8 uint32_t   1  004D5A90  *(uint32_t *)(this + 7096) = sub_699000(this + 36);
++0x1BBC uint32_t   1  004D5A90  *(uint32_t *)(this + 7100) = nArg2;
++0x1BC0 uint8_t    1  004D5A90  *(uint8_t *)(this + 7104) = pszArg3;
++0x1BEC uint32_t   1  004DB480  nBigState = *(uint32_t *)(this + 7148);
++0x1D60 uint32_t   1  004A41C0  *(uint32_t *)(this + 7520) = *(uint32_t *)pArg2;
++0x1D64 uint32_t   1  004A41C0  *(uint32_t *)(this + 7524) = *(uint32_t *)(pArg2 + 4);
++0x1D68 uint8_t    1  004A41C0  *(uint8_t *)(this + 7528) = *(uint8_t *)(pArg2 + 8);
++0x1D69 uint8_t    2  004DB480  if ( *(uint8_t *)(this + 7529) != 0 )
++0x1D6A uint8_t    1  004A41C0  *(uint8_t *)(this + 7530) = *(uint8_t *)(pArg2 + 10);
++0x1D6B uint8_t    1  004A41C0  *(uint8_t *)(this + 7531) = *(uint8_t *)(pArg2 + 11);
++0x1D6C uint8_t    1  004A41C0  *(uint8_t *)(this + 7532) = *(uint8_t *)(pArg2 + 12);
++0x1D6D uint8_t    1  004A41C0  *(uint8_t *)(this + 7533) = *(uint8_t *)(pArg2 + 13);
++0x1D6E uint8_t    1  004A41C0  *(uint8_t *)(this + 7534) = *(uint8_t *)(pArg2 + 14);
++0x1D6F uint8_t    1  004A41C0  *(uint8_t *)(this + 7535) = *(uint8_t *)(pArg2 + 15);
++0x1D70 uint8_t    1  004A41C0  *(uint8_t *)(this + 7536) = *(uint8_t *)(pArg2 + 16);
++0x1D71 uint8_t    1  004A41C0  *(uint8_t *)(this + 7537) = *(uint8_t *)(pArg2 + 17);
++0x1D72 uint8_t    1  004A41C0  *(uint8_t *)(this + 7538) = *(uint8_t *)(pArg2 + 18);
++0x1D73 uint8_t    1  004A41C0  pThis_1D73 = (uint8_t *)(this + 7539);
++0x1E5C uint32_t   1  004DB480  nCounterState = *(uint32_t *)(this + 7772);
++0x20A0 uint32_t   1  004D94A0  fld_20A0 = *(uint32_t *)(this + 8352);
++0x20A4 uint32_t   2  004D94A0  *(uint32_t *)(this + 8356) = uArg3;
++0x20A8 uint32_t   5  004D94A0  if ( *(uint32_t *)(this + 8360) == 0 )

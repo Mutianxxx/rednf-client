@@ -1,0 +1,12 @@
+CLASS .?AVCNRDCharacterTalkBox@@  slots=4  fields_candidate=9
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   2  0049B3F0  if ( nArg2 == *(uint32_t *)(this + 4) )
++0x0008 uint8_t    3  0049B3F0  result = *(uint8_t *)(this + 8);
++0x000C size_t     1  0049B570  return sub_4015C0((size_t *)(this + 12), szPassword, 0);  // 【std::str
++0x0028 uint32_t   2  0049B570  *(uint32_t *)(this + 40) = -1;
++0x0030 uint32_t   5  0049B570  fld_30 = *(uint32_t *)(this + 48);
++0x0034 uint32_t   2  0049B570  if ( fld_30 == 0 || i >= (*(uint32_t *)(this + 52) - fld_30) >> 2 )
++0x0038 uint32_t   1  0049B570  *(uint32_t *)(this + 56) = 0;
++0x0049 uint8_t    1  0049B570  *(uint8_t *)(this + 73) = 0;
++0x004A uint8_t    1  0049B570  *(uint8_t *)(this + 74) = 0;

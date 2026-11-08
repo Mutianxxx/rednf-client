@@ -1,0 +1,10 @@
+CLASS .?AV?$basic_filebuf@DU?$char_traits@D@std@@@std@@  slots=13  fields_candidate=7
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x003C uint32_t   5  006693DB  if ( *(uint32_t *)(this + 60) != 0 )
++0x0040 uint32_t   2  0066915D  *(uint32_t *)(this + 64) = *(uint32_t *)(this + 80);
++0x0044 uint8_t    1  00668DF1  pThis_44 = (uint8_t *)(this + 68);
++0x0048 uint32_t   3  0066915D  fld_483 = *(uint32_t *)(this + 72);
++0x004C uint8_t    1  006693DB  *(uint8_t *)(this + 76) = 1;
++0x0050 uint32_t   5  0066915D  *(uint32_t *)(this + 64) = *(uint32_t *)(this + 80);
++0x0058 uint32_t   5  006693DB  if ( *(uint32_t *)(this + 88) != 0 )

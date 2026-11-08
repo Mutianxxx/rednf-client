@@ -1,0 +1,9 @@
+CLASS .?AVCNRDPopupMenu@@  slots=1  fields_candidate=6
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0018 uint32_t   1  00525AD0  pThis_18 = *(uint32_t *)(this + 24);
++0x002C uint32_t   1  00525AD0  else if ( *(uint32_t *)(this + 44) < 0x10u )
++0x0030 uint32_t   1  00525AD0  if ( pArg2 == *(uint32_t *)(this + 48) )
++0x0094 uint32_t   1  00525AD0  fld_94 = *(uint32_t *)(this + 148);
++0x0098 uint32_t   1  00525AD0  if ( fld_94 == 0 || i >= (*(uint32_t *)(this + 152) - fld_94) >> 2 )
++0x00A0 uint32_t   1  00525AD0  if ( i == *(uint32_t *)(this + 160) )

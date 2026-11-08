@@ -1,0 +1,10 @@
+CLASS .?AVCNWhipped@@  slots=30  fields_candidate=7
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   4  0064DB50  fld_4 = (uint32_t **)(*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t *
++0x0050 uint8_t    2  0064E6A0  if ( *(uint8_t *)(this + 80) != 0 && fld_4 != nullptr )
++0x005C float     10  0064E6A0  *(float *)(v9 + 4) = (*(float *)(this + 92) + 1.0) * *(float *)(v9 + 4
++0x0060 uint32_t   2  0064E6A0  *(uint32_t *)(v3 + 72) += *(uint32_t *)(this + 96);
++0x0064 uint32_t   2  0064E6A0  *v4 += *(uint32_t *)(this + 100);
++0x0068 uint32_t   1  0064DB50  fld_68 = *(uint32_t *)(this + 104);
++0x006C uint32_t   5  0064E1A0  (*(void (/*thiscall*/ **)(uint32_t))(fld_6C + 40))(*(uint32_t *)(pThis

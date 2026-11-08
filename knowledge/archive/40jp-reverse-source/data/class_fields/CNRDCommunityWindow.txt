@@ -1,0 +1,4 @@
+CLASS .?AVCNRDCommunityWindow@@  slots=14  fields_candidate=1
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x002C int        2  0056E0D0  if ( *(int *)(this + 44) >= 3 )

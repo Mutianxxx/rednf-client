@@ -1,0 +1,4 @@
+CLASS .?AVstrstreambuf@std@@  slots=13  fields_candidate=1
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0044 uint32_t  10  00669F06  if ( *fld_24 != 0 && *(uint32_t *)(this + 68) < v6 )

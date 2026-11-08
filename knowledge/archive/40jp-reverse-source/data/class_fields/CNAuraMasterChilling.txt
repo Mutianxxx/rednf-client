@@ -1,0 +1,5 @@
+CLASS .?AVCNAuraMasterChilling@@  slots=37  fields_candidate=2
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   7  0064A790  if ( (*(uint8_t (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 4)
++0x0080 float      4  0064AEE0  fld_80 = *(float *)(this + 128) - 1.0;

@@ -1,0 +1,6 @@
+CLASS .?AVCNRobotics@@  slots=30  fields_candidate=3
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   4  005FA680  fld_4 = *(uint32_t *)(this + 4);
++0x0054 uint32_t   1  005FA680  if ( *(uint32_t *)sub_4BE520(v17, &pObj32) == *(uint32_t *)(this + 84)
++0x005C uint32_t   1  005FA680  (*(void (/*thiscall*/ **)(int, int))(v14 + 732))(pObj3, *(uint32_t *)(

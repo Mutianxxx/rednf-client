@@ -1,0 +1,19 @@
+CLASS .?AVCNDOTArea@@  slots=38  fields_candidate=16
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t  12  0064A190  LOBYTE(fld_7C) = (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(t
++0x0054 uint32_t   1  00651000  *(uint32_t *)(this + 84) = nArg2;
++0x007C uint32_t   2  0064A190  fld_7C = *(uint32_t *)(this + 124);
++0x0080 uint32_t   1  00651000  *(uint32_t *)(this + 128) = nArg3;
++0x0084 uint32_t   1  006511E0  *(uint32_t *)(this + 132) = 0;
++0x0088 uint32_t   1  006511E0  *(uint32_t *)(this + 136) = 0;
++0x008C float      2  006510D0  fld_90 = *(float *)(this + 140);
++0x0090 float      2  006510D0  fld_90 = *(float *)(this + 144);
++0x0094 uint32_t   1  00651000  *(uint32_t *)(this + 148) = nArg6;
++0x0098 float      2  00651000  fld_98 = v7 / *(float *)(this + 152);
++0x009C uint32_t   1  006511E0  pThis_9C = (uint32_t *)(this + 156);
++0x00A0 uint32_t   1  00651000  pThis_A0 = (uint32_t *)(this + 160);
++0x00AC uint32_t   6  006511E0  if ( *(uint32_t *)(this + 172) != 0 )
++0x00B0 uint32_t   6  006511E0  *(uint32_t *)(this + 176) = 0;
++0x00B4 uint32_t   3  006511E0  *(uint32_t *)(this + 180) = 0;
++0x00B8 uint8_t    2  00651260  *(uint8_t *)(this + 184) = 0;

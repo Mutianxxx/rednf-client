@@ -1,0 +1,7 @@
+CLASS .?AVCNRDItemProductWindow@@  slots=14  fields_candidate=4
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x000C uint32_t   1  00540360  return sub_44AB50(*(uint32_t **)(this + 8), *(uint32_t *)(this + 12), 
++0x0014 uint32_t   2  00566640  fld_14 = 16 * *(uint32_t *)(*(uint32_t *)(this + 20) + 104) + this + 1
++0x0038 uint32_t   1  00567430  result = *(uint32_t *)(this + 56);
++0x0048 uint32_t   1  00566640  *(uint32_t *)(this + 72),

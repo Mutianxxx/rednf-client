@@ -1,0 +1,5 @@
+CLASS .?AVCNSuperArmor@@  slots=31  fields_candidate=2
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0015 char       1  00605D10  v10 = (char *)(pThis + 21);
++0x0050 uint32_t   1  00605A70  return sub_4939E0(*(uint32_t *)(this + 80), pszArg2);

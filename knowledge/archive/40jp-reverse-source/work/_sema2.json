@@ -1,0 +1,3482 @@
+{
+"sub_510F30": [
+"510F30",
+"src/combat/bigfunc_510F30_sub_510F30.cpp",
+"size=10754"
+],
+"sub_51BA00": [
+"51BA00",
+"src/combat/bigfunc_51BA00_sub_51BA00.cpp",
+"size=25733 | bad sp value at call has been detected, the output may be wrong!"
+],
+"sub_53A220": [
+"53A220",
+"src/combat/bigfunc_53A220_sub_53A220.cpp",
+"size=17574"
+],
+"sub_57A980": [
+"57A980",
+"src/combat/bigfunc_57A980_sub_57A980.cpp",
+"size=36584"
+],
+"sub_583B90": [
+"583B90",
+"src/combat/bigfunc_583B90_sub_583B90.cpp",
+"size=27453"
+],
+"sub_5E1000": [
+"5E1000",
+"src/combat/bigfunc_5E1000_sub_5E1000.cpp",
+"size=13379"
+],
+"sub_5E78C0": [
+"5E78C0",
+"src/combat/bigfunc_5E78C0_sub_5E78C0.cpp",
+"size=12390"
+],
+"sub_62DFD0": [
+"62DFD0",
+"src/combat/breakable_map.cpp",
+"按钮按下标志写入 | 把字节 pszArg2 写入 +44 件偏移 17（按钮按下标志）。"
+],
+"sub_62E460": [
+"62E460",
+"src/combat/breakable_map.cpp",
+"列表刷新（重建行缓与分页） | uArg2=0 时按 +224+500ms 节流并复位字节 +213/+214；以 sub_49EA30 取场景槽，槽变则 sub_49F750 删旧树、sub_62E370 克隆。 | 遍历 +192 树，状态位(sub_48FD50(node+16))=1 者的 node+12 值经 sub_430C80 追加进 +168 队列；按 6 行/页算页数写 +184、页面 +180 越界回退，并在 +168 队列不含 dword_795D44 时 sub_44E850(+16 件,63)。"
+],
+"sub_5E09B0": [
+"5E09B0",
+"src/combat/fighter_skills.cpp",
+"调: sub_5E09B0 sub_47E9D0 sub_5DD040 sub_47EF20 sub_422E70"
+],
+"sub_5E5220": [
+"5E5220",
+"src/combat/fighter_skills.cpp",
+"调: sub_5E5220"
+],
+"sub_5E5260": [
+"5E5260",
+"src/combat/fighter_skills.cpp",
+"调: sub_5E5260"
+],
+"sub_5E6640": [
+"5E6640",
+"src/combat/fighter_skills.cpp",
+"调: sub_5E6640 sub_430C80"
+],
+"sub_5E6920": [
+"5E6920",
+"src/combat/fighter_skills.cpp",
+"调: sub_5E6920 sub_431230 sub_47E9D0 sub_47EFD0"
+],
+"sub_602BC0": [
+"602BC0",
+"src/combat/passive_object.cpp",
+"记录追加薄封装（16B） | 记录追加薄封装：把 (nArg2,nArg3,nArg4,pszArg5) 打包成 16 字节栈记录交 ·sub_602960 尾插（this+164 表）——状态附加器参量装载入口。"
+],
+"sub_602DA0": [
+"602DA0",
+"src/combat/passive_object.cpp",
+"参量三元写入 | 参量三元写入：+180=nArg2、+184= fArg3×100（百分化存浮点）、+188=nArg4——与 ·sub_602430 同族的带浮点版 setter。"
+],
+"sub_6048E0": [
+"6048E0",
+"src/combat/passive_object.cpp",
+"概率组写入 | 概率组写入：第 nArg2 组（步长 3）写 +343=阈值/+344=概率/+345=分母（·0x604920 的 rand()%分母 < 概率 判定消费）——活动装备概率参数装载。"
+],
+"sub_6055A0": [
+"6055A0",
+"src/combat/passive_object.cpp",
+"记录追加（0 档） | 6 字段记录追加（档位字节 0）：(nArg2..nArg5,pszArg6,nArg7) 入 +1356 表——与 ·0x6055F0/·0x605650 构成 0/1/2 三档装载器组。"
+],
+"sub_6055F0": [
+"6055F0",
+"src/combat/passive_object.cpp",
+"记录追加（1 档） | 6 字段记录追加（档位字节 1）：先经 uArg6 的 vt+64 取件并清其 +36 字节，再入表——三档装载器组的中间档。"
+],
+"sub_605650": [
+"605650",
+"src/combat/passive_object.cpp",
+"记录追加（2 档） | 6 字段记录追加（档位字节 2）——与 ·sub_6055A0 同构（差异：字段排布与多收 nArg8）。"
+],
+"sub_605840": [
+"605840",
+"src/combat/passive_object.cpp",
+"30 字节全局包 | 全局 30 字节包装配（哨兵 dword_9B937C&1 一次性清零）：写 word_9B935C/9B935E（vt+48/vt+52）与 dword_9B9360..9B9374（pDwArg3 六字段）、 | byte_9B9378=pszArg4，*uArg1=30 回填包长——·0x604920 广播备用的全局缓冲（返回 word_9B935C 首址）。"
+],
+"sub_610960": [
+"610960",
+"src/combat/passive_object.cpp",
+"CNCurseBomb 构造（PO 基类 + 虚表回切） | 诅咒炸弹构造器：·sub_52EA60（CNRDPassiveObject 构造 + ·sub_6011B0 工厂按索引注册）→ 切 vftbl_CNCurseBomb → +972 存 id → ·sub_5FF8E0（数值槽初始化）——PO 派生类构造样板。"
+],
+"sub_61E4C0": [
+"61E4C0",
+"src/combat/passive_object.cpp",
+"头骨子体构造 | 基类 ·sub_52EA60 → 挂 vftbl_CNGhoulSkullSub → +243/+244 两子体清 0 → ·sub_61C860（爆炸播音 TAG 装配）—— 头骨子体（GhoulSkullSub）生成链。"
+],
+"sub_61F7D0": [
+"61F7D0",
+"src/combat/passive_object.cpp",
+"邪眼大激光构造 | 基类 ·sub_52EA60 → 挂 vftbl_CNEvilEyeLOLLaser → ·sub_5FF8E0 → 立即跑一次 ·CNEvilEyeLOLLaser__vmt2C4 建立统计初值。"
+],
+"sub_61F8B0": [
+"61F8B0",
+"src/combat/passive_object.cpp",
+"邪眼飞弹构造 | 基类 → 挂 vftbl_CNEvilEyeMissile → ·sub_5FF8E0 → vt+204 两次（-1 号启用 +4 槽、1 号启用 +0 槽）完成双发射器接线。"
+],
+"sub_61F9F0": [
+"61F9F0",
+"src/combat/passive_object.cpp",
+"邪眼小激光构造 | 基类 → +972=0 → 挂 vftbl_CNEvilEyeSmallLaser → ·CNRDObject__vmtCC(+144+4 子对象接线)。"
+],
+"sub_61FAD0": [
+"61FAD0",
+"src/combat/passive_object.cpp",
+"邪眼震地构造 | 基类 → 挂 vftbl_CNEvilEyeQuake → ·sub_5FF8E0 → ·sub_61F720 双粒子发射器初始化。"
+],
+"sub_4900E0": [
+"4900E0",
+"src/game/anim_parser.cpp",
+"§A 0x4900E0-0x490880 角色对象联动族（槽位切换 @@SET HOST / LADDER_DOWN） | 角色槽位/物件状态切换总入口 | @@SET HOST 宿主转移、LADDER_DOWN 音效、新对象 vtable+372 广播(模式 0..2)、 | 尾调 sub_49CA80(dword_8F8528[9]) 刷新。"
+],
+"sub_4910A0": [
+"4910A0",
+"src/game/anim_parser.cpp",
+"沿 +212 同步源链上溯，返回链尾对象的累计播放时刻（+32） | 链尾即无同步源的根动画；帧推进 ·0x493840 用它取时间基准。 | 与 ·0x4910C0（同链取 +169 暂停位）同构，仅取样字段不同。"
+],
+"sub_4910C0": [
+"4910C0",
+"src/game/anim_parser.cpp",
+"沿 +212 同步源链上溯，返回链尾对象的 +169（暂停/冻结位） | 与 ·0x4910A0 同构；调用方 ·0x4910E0 用它决定是否还刷新时间。"
+],
+"sub_491C70": [
+"491C70",
+"src/game/anim_parser.cpp",
+"★帧时刻换算：第 a2 帧累计时刻 = Σ 帧+48(DELAY)×100/速率(+164)（研究§26）"
+],
+"sub_491F80": [
+"491F80",
+"src/game/anim_parser.cpp",
+"RGBA 设置（打包于 +92；-1=保留原通道；a6≠0 时广播子链 +204）"
+],
+"sub_4922F0": [
+"4922F0",
+"src/game/anim_parser.cpp",
+"全帧缩放与盒缩放统一乘算（帧 +20/+24 与 +60/+76 盒 ×fArg2） | 与 ·0x4921E0 同构（差异：不递归子链、不查容量，纯就地乘算）。"
+],
+"sub_4924C0": [
+"4924C0",
+"src/game/anim_parser.cpp",
+"按索引取帧并确保图像就绪（帧+4 → 管理器 vtable+56 → sub_418DD0 → 帧+0）"
+],
+"sub_4939E0": [
+"4939E0",
+"src/game/anim_parser.cpp",
+"播放/暂停级联（递归子链 +204）"
+],
+"sub_493A60": [
+"493A60",
+"src/game/anim_parser.cpp",
+"时间推进包装（累计 +32；+212 同步源优先）"
+],
+"sub_494F20": [
+"494F20",
+"src/game/anim_parser.cpp",
+"属性浮点槽写入（槽号 pArg2，落 this+pArg2+4） | this+0 对象经 vt+308 校验（有效性门），值变化才写并置 +196 失效标志。 | 被动画/技能以 sub_494F20(2, 速率或缩放) 形式批量下发。"
+],
+"sub_495500": [
+"495500",
+"src/game/anim_parser.cpp",
+"槽对乘积读取（+844/+858） | 与 sub_4954C0 同构（差异：槽对为 +844/+858）。"
+],
+"sub_495890": [
+"495890",
+"src/game/anim_parser.cpp",
+"模式选择式方位设置（1/2/其他 三分支） | 模式号写 +1665 后求值：1 → 宿主 +1324 加 +1669 偏移再减 1500；2 → ·sub_4957F0(0) 比例折算；其余直接取 nArg3。 | 值变化时写入 *(this+28) 子对象 +36 槽（槽号 2），置 +196 并经 ·0x494F60 广播。"
+],
+"sub_495C80": [
+"495C80",
+"src/game/anim_parser.cpp",
+"百分比分档（105/95/85/70/55/45/40/35） | 读 +976 处浮点值（前五档经 ·0x41A5E0、后三档经 ·0x43B5A0 取值）按固定阈值降序分档， | 返回 105/95/85/70/55/45/40/35/0 之一。【推断】该槽为血量百分比，供外观/特效档位切换。"
+],
+"sub_495DA0": [
+"495DA0",
+"src/game/anim_parser.cpp",
+"96 字节元素双槽清零（+24/+72） | 以 96 字节步长定位第 nArg2 个元素，把其 +24 与 +72 两槽清零并返回元素地址。"
+],
+"sub_4968E0": [
+"4968E0",
+"src/game/anim_parser.cpp",
+"对象三段清零 + 双 40 字节链释放 + 槽默认值 | 先把对象前 0x300 与 +768..+816 清零；按全局域号 dword_8F7A24+12（4/6 与其余）分派两组 0 与 -1.0f 槽默认值（+864..+990 九槽）； | 释放 +1012 与 +1028 两条 40 字节元素链（逐元素 ·sub_5014C0 析构后 free）并清三指针； | 最后把 +964/+968/+972 置默认值 -956156672（0xC7023500）。"
+],
+"sub_496BD0": [
+"496BD0",
+"src/game/anim_parser.cpp",
+"异常演出节点入链（按类型分流 +252/+256） | 取 pArg2 宿主 id（vt+376）与全局 dword_8F7C04 比对，不一致才组装节点：先 ·sub_4963E0 初始化， | 再填 id 三槽（vt+1032 结果的 +68、vt+340 结果的首槽与 +4 起字符串）； | 按 pArg2[1943] 分流：3 → 追加 this+252 链，1/2 → this+256 链（均经 ·sub_496B40），尾段释放临时串。"
+],
+"sub_499240": [
+"499240",
+"src/game/anim_parser.cpp",
+"像素距离（y 差值按 dword_7930D4 折算） | 求两点欧氏距离；pszArg5 为 0 时把 y 方向差值乘 100/dword_7930D4[0] 做宽高比折算。 | 【推断】dword_7930D4[0] 为纵向像素基准比，与 ·sub_499280 同源。"
+],
+"sub_49BDB0": [
+"49BDB0",
+"src/game/anim_parser.cpp",
+"COUNT_DOWN 设置（+100 模式 + 时钟复位 + 子控件可见切换） | 时钟基 this+72 经 ·0x698F90 复位、+85/+86 标志清零； | 模式非 0 → 子控件（this+8 指针）+16 可见 = 1，否则 0；+104 上次数置 -1。"
+],
+"sub_49C5F0": [
+"49C5F0",
+"src/game/anim_parser.cpp",
+"命令记录写入包装（回调指针 ·sub_49C5A0 + this+4 关联 id） | 转调 ·sub_49C4A0(&dword_9A02C0, ·sub_49C5A0, nArg5, this+4, nArg2, nArg3, nArg4)。"
+],
+"sub_49C620": [
+"49C620",
+"src/game/anim_parser.cpp",
+"命令下发包装（组 id = this+4，值重复两遍） | 转调 ·sub_49C510(nArg2, this+4, this+4, nArg3, nArg4)。"
+],
+"sub_49D920": [
+"49D920",
+"src/game/anim_parser.cpp",
+"房间列表刷新（按差值排序建临时链 + 收集进 +8 数组 + 释放节点） | this+24 子件 +16 使能时执行：清空 this+8 指针数组， | sub_429830(word_77F804) 取本场景对象、sub_41A5E0(+53) 读值、sub_4A2CF0 建临时链； | 按 abs(值差) 递增插入（sub_52DAA0 建节点 + sub_430C80 收集）后释放全部临时节点。"
+],
+"sub_49E050": [
+"49E050",
+"src/game/anim_parser.cpp",
+"M_RESULT 演出（结算上下文 sub_65DC70、音效 sub_432EA0）"
+],
+"sub_49EDC0": [
+"49EDC0",
+"src/game/anim_parser.cpp",
+"红黑树多槽查表（槽内 lower_bound，命中返回条目 +16） | 槽数组 this+4、槽数 this+8；每槽 12 字节（+4 = header，其 +4 = 树根）； | pDwArg3 == -1 → 从槽 0 起逐槽查，命中返回节点 +16（条目载荷地址）； | 否则只查指定槽 (12 × 槽号)；全未命中返回 0。"
+],
+"sub_49F7D0": [
+"49F7D0",
+"src/game/anim_parser.cpp",
+"槽条目改写或新建插入（未命中则建载荷再插） | 先用 ·sub_49EDC0 按槽号定位：命中直接返回条目 +16； | 未命中时 new(0x9C) 载荷（CNWarRoom vftable + ·sub_49E990 初值）后 ·sub_49F330 插入槽， | 再以 lower_bound 重取并返回条目指针。"
+],
+"sub_422E70": [
+"422E70",
+"src/game/broadcast_debug.cpp",
+"【CStringManager::getStr(id)】懒加载：sub_421300 解包提取失败 → \"String Table | extraction failed\"/\"Fatal Error\" + exit(1)；sub_422BD0 装载失败 → \"String Table | load failed\" + 删临时文件 lpFileName。命中返回串体；未命中 sprintf | \"CStringManager::getStr(%d) == NULL\" 至 byte_8F7A88。全工程取串总入口 | （net_socket.cpp 与各播报点均引用）。"
+],
+"sub_423020": [
+"423020",
+"src/game/broadcast_debug.cpp",
+"§5 游戏 Socket —— 两步式发包（0x423020-0x423340） Begin(0x423200) / Append(0x423290) / Commit(0x423380) ★ 已精修版见 src/nengine/net_socket.cpp（含字段表与协议注解） | 时间字段辅助·月 | _localtime64 取 tm_mon + 1，失败返回 0。同族 0x423040/0x423060/0x423080 分别取日、时、分； | 发包日志（0x423380）的 (MMDD-HH:MM:SS) 时间戳即由这四件拼出。"
+],
+"sub_423040": [
+"423040",
+"src/game/broadcast_debug.cpp",
+"时间字段辅助·日 | 与 0x423020 同构（差异：取 tm_mday）。"
+],
+"sub_423060": [
+"423060",
+"src/game/broadcast_debug.cpp",
+"时间字段辅助·时 | 与 0x423020 同构（差异：取 tm_hour，失败返回 -1）。"
+],
+"sub_423080": [
+"423080",
+"src/game/broadcast_debug.cpp",
+"时间字段辅助·分 | 与 0x423020 同构（差异：取 tm_min，失败返回 -1）。"
+],
+"sub_423200": [
+"423200",
+"src/game/broadcast_debug.cpp",
+"【发包 Begin(type) · 两步式第一步】★已精修：src/nengine/net_socket.cpp packet_send_begin | 未连接 → 0x80000004；上一包未提交 → asc_6C37C8 日志 + 0x80000000； | 申领发送上下文(+452) + 12 字节包头框架 {01,type}（sub_698C80）。"
+],
+"sub_423290": [
+"423290",
+"src/game/broadcast_debug.cpp",
+"【发包 Append(buf,len)】校验连接/参数 → +448 计数累加 + sub_698C80 包体入队。"
+],
+"sub_4232E0": [
+"4232E0",
+"src/game/broadcast_debug.cpp",
+"取当前时间 | _time64(nullptr) 写回 uArg1；与 0x423020 四件套共用发包时间戳来源。"
+],
+"sub_423340": [
+"423340",
+"src/game/broadcast_debug.cpp",
+"串首比较判定（不等） | 与 0x423300 同构（差异：结果不等于 0 判真）。"
+],
+"sub_423380": [
+"423380",
+"src/game/broadcast_debug.cpp",
+"【发包 Commit() · 两步式第二步】★已精修：src/nengine/net_socket.cpp packet_send_commit | 'SendLock ' 检查(+466) → 包总长(ctx+2)/序号(ctx+10, +464 自增)/校验和 sub_48BE40 → | 包体拷贝 sub_48BD40 → '[-> COMMAND PACKET]' 日志（包名表 off_790928 + 时间戳）→ | type==3 置发送锁 → sub_698A50 实发，失败 → 串145 播报（sub_44E8D0, id 0x1B）。"
+],
+"sub_423970": [
+"423970",
+"src/game/broadcast_debug.cpp",
+"双虚槽取参后转状态应用 | 先 vt+124(nArg1)、再 vt+120(nArg1) 取值，一并转 sub_48C0A0（状态应用族，passive_object 同证）。 | 【推断】异常状态索引与层数两点取值。"
+],
+"sub_423A80": [
+"423A80",
+"src/game/broadcast_debug.cpp",
+"区间线性插值取整 | sub_4049C0（float 插值全库通用件）算得后 _ftol2 截断为 int64 返回；数据总装与演出换算小工具。"
+],
+"sub_424120": [
+"424120",
+"src/game/broadcast_debug.cpp",
+"屏幕震动启动 | 写震幅 +200 = a2、窗 +204 = a3，清 +221/+222 标志并复位 +208 钟； | a2==0 时抖动 +236/+240 归零 —— 与 ·0x4241E0 tick 配对。"
+],
+"sub_424310": [
+"424310",
+"src/game/broadcast_debug.cpp",
+"当前目标角色选取 | 模式 3：pArg2/dword_8F850C 槽（+196）有效即取，否则 16..32 槽中取 vt+1032→+48 最大者； | 模式 4/6：遍历 sub_48F660(0..7) 按 vt+376 组队 id 匹配（退化取首个未死亡 vt+1196）； | +8052 标志分支直接返回 +13 锚定。"
+],
+"sub_424A40": [
+"424A40",
+"src/game/broadcast_debug.cpp",
+"锚定角色 setter | 写 +13 = a2；+11 容器存在且 a2 非空时 sub_48C500 登记（与 ·0x4284C0 的登记同链）。"
+],
+"sub_425050": [
+"425050",
+"src/game/broadcast_debug.cpp",
+"总宽换算 | 224 × ((+92−+91)>>5)：列宽 224 与根数相乘；·0x425570 钳位用。"
+],
+"sub_425100": [
+"425100",
+"src/game/broadcast_debug.cpp",
+"容器长度（+30 组） | 与 ·0x4250E0 同构（差异：取 +30/+31 槽）。"
+],
+"sub_425A00": [
+"425A00",
+"src/game/broadcast_debug.cpp",
+"元素取值（+30 组） | 与 ·0x4259D0 同构（差异：取 +30/+31 槽）。"
+],
+"sub_426820": [
+"426820",
+"src/game/broadcast_debug.cpp",
+"★★【播报层总入口】（研究 §12 定案：HUD 三轴评价横幅系统） | case0/1/2 横幅模式切换：基宽 sub_418DD0(87/86/85)+20、×1.5 锁存、200/500/200ms、 | 模式锁存 this+1252 = 0/1/2（复位值 8 由 0x423C10 写；读者未见于本文件【待验证】）； | case2 需 dword_8F7C04 就绪 | case3 HK_ATTACKED：this+556 += a3（伤害累积），1500ms，语音 \"HK_ATTACKED\" | case4 死亡播报：→ sub_424D80(4)"
+],
+"sub_428430": [
+"428430",
+"src/game/broadcast_debug.cpp",
+"STL 内联 vector push_back（4B 元素） | 快路径 *+8++ 直写；满则 ·0x428220 插入 1 个（2 倍扩容）。"
+],
+"sub_4296C0": [
+"4296C0",
+"src/game/broadcast_debug.cpp",
+"STL 内联键比较 | 返回 *this != *uArg2（红黑树键不等式）—— map/set 内联比较【推断】。"
+],
+"sub_429780": [
+"429780",
+"src/game/broadcast_debug.cpp",
+"STL 内联迭代器后置自增 | 旧节点写入 uArg2，sub_41C5E0(this) 推进节点（_Rb_tree_increment）。"
+],
+"sub_429830": [
+"429830",
+"src/game/broadcast_debug.cpp",
+"表按键查找（uint16） | sub_472E30(&v4, &key) 定位，命中返回节点 +16 值，等于 end 则 0； | 被 ·0x428AD0 以 word_77F804 查询。"
+],
+"sub_429900": [
+"429900",
+"src/game/broadcast_debug.cpp",
+"本机槽实体查询（word_77F804 键） | 【本机玩家取用】以配置槽号 word_77F804 经 ·sub_472E30 在本表定位：命中取节点值 +16 对象， | 再返回其 +120 字段（实体指针）；未命中或值为空返回 0。调用面 ·sub_4BF0F0 与本机 UI。"
+],
+"sub_429E30": [
+"429E30",
+"src/game/broadcast_debug.cpp",
+"CNUser 构造（串 + clong 初始化） | 【CNUser 构造】两个内嵌 std::string 初始化（+4/+20/+24 与 +120/+136/+140 三件套）； | ·sub_41A630 构造 +37 处 clong 并写 clong 虚表；尾调 ·0x429DC0 复位全槽。"
+],
+"sub_429FC0": [
+"429FC0",
+"src/game/broadcast_debug.cpp",
+"玩家槽位清除（四槽表 + 本表联动） | 【槽位清除】先在 dword_8F850C+16 起 4 项槽表按 +4 槽号匹配（命中即 ·sub_456300 解绑该槽）； | 再以槽号为键查本表，命中则虚槽 0 自毁节点值（+16 对象）并经 ·0x429950 删节点。与 ·0x42A100 配对。"
+],
+"sub_42A100": [
+"42A100",
+"src/game/broadcast_debug.cpp",
+"CNUser 取或建（槽号索引） | 【取或建】以槽号查本表，命中且 +16 非空即返回该 CNUser；否则 new 0x0C8 经 ·0x429EB0 构造 | （槽号写入 +4）并经 ·0x42A040 以槽号为键插入本表。"
+],
+"sub_42A380": [
+"42A380",
+"src/game/broadcast_debug.cpp",
+"四字节号格式化（四段十进制） | 【四段号打印】pszArg2 非 0 取 +41 槽，否则 +40；四字节按 %d.%d.%d.%d 写入全局 byte_8F7C20 | 并返回。调用面为脚本取串（bigfunc 取 0/1 两槽）【推断：版本或地址四段】。"
+],
+"sub_42A3D0": [
+"42A3D0",
+"src/game/broadcast_debug.cpp",
+"本机实体绑定（dword_8F7C04） | 【本机实体绑定】写 +196 = 实体，并把本槽号（+4）回写实体（虚槽 +36 → +4）；本槽号等于 | word_77F804（操控槽）时同步全局 dword_8F7C04 —— 本机玩家指针来源之一。"
+],
+"sub_42B0F0": [
+"42B0F0",
+"src/game/broadcast_debug.cpp",
+"CNRDVirtualCharacter 构造（10×16 子对象） | 【构造】·0x42AAB0 基构造 → CNRDVirtualCharacter 虚表 → +284=4、+288=-1 → EH 向量构造 | （+380 起 10 个 0x10 字节子对象）→ +544 组与 +588 串清零 → ·0x42F250 全组复位（评价轴， | 研究 §12 的 tick 宿主）。"
+],
+"sub_42B340": [
+"42B340",
+"src/game/broadcast_debug.cpp",
+"虚拟角色惰性创建（0x294 字节） | 【惰性创建】+192 为空则 new 0x294 经 ·0x42B0F0 构造虚拟角色 → 写 +192；本槽号（+4）等于 | word_77F804 时同步全局 dword_8F7C08 → 虚槽 +348 传入 +16 配置 → 回写槽号到实体。"
+],
+"sub_42B420": [
+"42B420",
+"src/game/broadcast_debug.cpp",
+"往返插值（三角波） | 【周期往返】按 nArg3 对 2×nArg4 取模分相：前段自 nArg1 插至 nArg2、后段折回，经 ·sub_4049C0 | 区间线性插值后取整 —— 横幅呼吸/往返动画节奏。"
+],
+"sub_42B480": [
+"42B480",
+"src/game/broadcast_debug.cpp",
+"倒计时启动（+1184 钟） | 【倒计时】标志 +1196 置 1、+1197/+1198 清 0 → ·sub_698F90(+1184 钟, 时长 nArg3, 起点负 nArg2)； | 调用面 bigfunc 以起点 -500 与 1000/5000ms 时长驱动。"
+],
+"sub_42B510": [
+"42B510",
+"src/game/broadcast_debug.cpp",
+"场景类别判定（+32 属 2/3/4） | 读 +32 场景/状态类别，属 2/3/4 返回真；·0x42B530 为其取反、·0x42B560 为子集；宿主多为 | dword_8F7A24+40（本机玩家）。"
+],
+"sub_42B5F0": [
+"42B5F0",
+"src/game/broadcast_debug.cpp",
+"时钟归零（+96 钟） | 标志 +108 置 1、+109/+110 清 0 → ·sub_698F90(+96, 0, 0) 把时长与起点归零（对照 ·0x42B480 同构）。"
+],
+"sub_42B7C0": [
+"42B7C0",
+"src/game/broadcast_debug.cpp",
+"三字段写（+124..+132） | 写 +124=nArg2、+128=nArg3、+132=0 并返回 nArg2。"
+],
+"sub_42C570": [
+"42C570",
+"src/game/broadcast_debug.cpp",
+"提示播报（按类别选串） | 【提示播报】·sub_48B740(6) 系统选项门控；·sub_49EDC0(ArgList, -1) 多槽查表命中后按 nArg2 是否 -1 与 nArg3 类别（-1 与 0 与 1 与 4）选串 | 1920-1923，用 ·sub_48FE30 取条目数值 sprintf → ·sub_43BEE0 上屏（色 -6567706）；未命中走 ·sub_422E70(10033) 与 byte_6C3F6C 日志。"
+],
+"sub_42C6A0": [
+"42C6A0",
+"src/game/broadcast_debug.cpp",
+"提示串直取（同构） | 与 ·0x42C570 同构（仅返回串）：查表命中返 ·sub_422E70(10033)，未命中走 &byte_6C3F9C 日志。"
+],
+"sub_42C9A0": [
+"42C9A0",
+"src/game/broadcast_debug.cpp",
+"缓冲释清（+140 组） | 【缓冲释清（+140 组）】free +140 后清 +140/+144/+148（同族 ·0x42C960）。"
+],
+"sub_42E230": [
+"42E230",
+"src/game/broadcast_debug.cpp",
+"24B 条目入队封装 | 【24B 条目入队封装】7 参打包为 6 dword（Block）→ ·0x42DD10 尾插至 this+136 队列。"
+],
+"sub_42F160": [
+"42F160",
+"src/game/broadcast_debug.cpp",
+"决斗场状态机 | 【决斗场状态机】写 +32 状态并复位时钟（·sub_698F90(+36, 0, nArg3)）→ 不大于 1 时换绑本机（·sub_424A40）→ 按 -1 与 0 与 1 与 2 与 3 与 4 | 分派 ·0x42F050 与 ·0x42BF10 与 ·0x42C000 与 ·0x42E270 与 ·0x42B610 与 ·0x42C820。"
+],
+"sub_42F240": [
+"42F240",
+"src/game/broadcast_debug.cpp",
+"取动画对象 id | 【取动画对象 id】返回 +104 槽对象首字段；空槽返 -1。"
+],
+"sub_42FBB0": [
+"42FBB0",
+"src/game/broadcast_debug.cpp",
+"个人商店准备 | 【个人商店准备】【推断：+648 为摆摊组件槽】组件存在 → ·sub_4BD440(nArg2..nArg5)；否则日志 Cannot prepare private store.。"
+],
+"sub_42FBE0": [
+"42FBE0",
+"src/game/broadcast_debug.cpp",
+"商店复位 | 【商店复位】+648 组件 +284 与 +285 与 +340 三标志清零。"
+],
+"sub_42FBF0": [
+"42FBF0",
+"src/game/broadcast_debug.cpp",
+"商店标志消解 | 【商店标志消解】+284 与 +285 均置位时清 +285。"
+],
+"sub_42FC00": [
+"42FC00",
+"src/game/broadcast_debug.cpp",
+"商店操作转发 | 【商店操作转发】+648 组件存在 → 清 +285 → ·sub_4BD690(pArg2)。"
+],
+"sub_42FC30": [
+"42FC30",
+"src/game/broadcast_debug.cpp",
+"商店状态字写入（+652） | 【商店状态字写入（+652）】写 this+652 = nArg2；+648 组件存在 → ·sub_4BD500(nArg2) 应用。"
+],
+"sub_42FC90": [
+"42FC90",
+"src/game/broadcast_debug.cpp",
+"88B 元素计数（+44 组） | 与 ·0x42FC70 同构（+44 组基址）。"
+],
+"sub_42FCB0": [
+"42FCB0",
+"src/game/broadcast_debug.cpp",
+"CRT 一次性初始化 | 【CRT 一次性初始化】首建全局容器 &unk_8F8130（·sub_657800(实参, 256) 与 atexit ·sub_6BF450）→ 转 ·sub_6578B0(nArg1)。"
+],
+"sub_430230": [
+"430230",
+"src/game/broadcast_debug.cpp",
+"个人商店开店定位 | 【个人商店开店定位】·sub_4BD470 取目标（槽 v6 与对象 v5 与坐标 v7 与 v8）并与场景（dword_8F7A24+20）当前槽（+100）比对 → 命中写 | vt+112 与 vt+372（[93]）定位 → ·sub_4BD4B0 通知 → +652 置位时 ·0x42FC30 清除；无组件走 Cannot create private store. 日志。"
+],
+"sub_430C80": [
+"430C80",
+"src/game/broadcast_debug.cpp",
+"uint32 vector 区间插入（同值填充） | 【uint32 vector 区间插入（同值填充）】在 Src 位置插入 uArg3 个 pDwArg4 值：容量足则三段搬移（·sub_55E7F0/·sub_5DAF70/·sub_49A9D0 填充/·sub_523700 填值），不足先扩容（new 两倍 + memcpy）；返回元素数。"
+],
+"sub_431160": [
+"431160",
+"src/game/broadcast_debug.cpp",
+"【驴子开关】Block=1：已存在 → off_77F3FC(\"Donkey exist already\")，否则 new CNRDDonkey | (0x431080) 挂 +162；Block=0：vt+0(1) 析构释放并清槽。"
+],
+"sub_431230": [
+"431230",
+"src/game/broadcast_debug.cpp",
+"uint32 vector push_back | 【uint32 vector push_back】槽内存位直接写 +8 游标，满则转 ·sub_430C80(this, 游标, 1, uArg2) 扩容（全工程 733 处调用）。"
+],
+"sub_431820": [
+"431820",
+"src/game/broadcast_debug.cpp",
+"雪花触发条件包装 | 【雪花触发条件包装】场景类型 1 且 dword_8F7A24+292 计数为 1 时：pszArg5 非零 → ·sub_431670(…, 1)；否则 ·sub_42FB00(…, 1)。"
+],
+"sub_431920": [
+"431920",
+"src/game/broadcast_debug.cpp",
+"动画件构造（文件名版） | 【动画件构造（文件名版）】与 ·0x431860 同构（差异：pArg2 文件名走 ·sub_4F3D60 分支）。"
+],
+"sub_432E50": [
+"432E50",
+"src/game/broadcast_debug.cpp",
+"关系码对调映射 | 【关系码对调映射】0 与 1 互换与 2 与 3 互换，其余返回 4（63 处战斗态调用）【推断：阵营与敌对关系表索引】。"
+],
+"sub_432EA0": [
+"432EA0",
+"src/game/broadcast_debug.cpp",
+"音效播放包装（非空判定） | 【音效播放包装】Src 非空串（与空串比较）时 ·sub_65FE10(Src, 0, nArg3, nArg4, 0, 0xFFFF, nArg2)（50 声道分发）。"
+],
+"sub_432F00": [
+"432F00",
+"src/game/broadcast_debug.cpp",
+"按类型取全局列表对象 | 【按类型取全局列表对象】case 0/1/2/4 → dword_8F852C 与 dword_8F8534 与 dword_8F8530 与 dword_8F8538+16，其余空【推断：技能与物品来源槽列表】。"
+],
+"sub_4337E0": [
+"4337E0",
+"src/game/broadcast_debug.cpp",
+"§22 物品播报与 PVP 房间（0x4337E0-0x434CB0） | 【物品获得播报】串 1179/1180 格式化（本体/带强化者两版）→ CNRDStackable RTTI 且 | subtype==6 → 紫 -16715009，否则物品品质色 → sub_43BEE0 上屏；a4≠-1 时回调 +1268。"
+],
+"sub_435020": [
+"435020",
+"src/game/broadcast_debug.cpp",
+"uint32 向量整体赋值 | 【uint32 向量整体赋值】按源 size（(pArg2[2]-pArg2[1])>>2，零指针取 0）经 ·sub_42AA50 预留容量， | 再由 ·sub_497E70 逐元素拷到 this+4 起并写回 +8 尾；返回 this。被 bigfunc_51BA00 副本包解析 20 余处调用。"
+],
+"sub_43B4C0": [
+"43B4C0",
+"src/game/broadcast_debug.cpp",
+"§27 聊天文本工具（0x43B4C0-0x43C150） | 发包字段（Append 4 字节） | 【发包字段】以 (连接上下文, 实参地址, 4) 调 ·sub_423290（Append）写入发送缓冲。调用面 0x57A980 命中主处理器的字段序列化（float/int 原样）。"
+],
+"sub_43B880": [
+"43B880",
+"src/game/broadcast_debug.cpp",
+"面板索引条件设定 | 【条件设定】nArg2=1 需玩家对象（dword_8F8500 按 word_77F804 查得）的 +184 槽非空；nArg2=2 需 +120 槽非空；满足则 this+288 = nArg2。0x43CC10 按 +288 切 tab。"
+],
+"sub_43BA20": [
+"43BA20",
+"src/game/broadcast_debug.cpp",
+"tab 切换（4 页） | 【tab 切换】+144 = pArg2 → 四组组件 (+76,+28)/(+80,+32)/(+84,+36)/(+88,+40) 按 等于 n 与 不等于 n 配对置显隐 → 取当前组件可视高度差 | （·sub_69C3A0 与 ·sub_69C500）→ 经 +1474（宽窄屏）选 +72 或 +56 滚动条以 vt+32 设范围（负归零）→ ·sub_69C6A0/·sub_69C680 刷新。"
+],
+"sub_43BB10": [
+"43BB10",
+"src/game/broadcast_debug.cpp",
+"组件显隐置位 | 【置位】置 this + 4×pArg2 + 28 所指组件的 +17 = pszArg3 并返回索引。"
+],
+"sub_43BD50": [
+"43BD50",
+"src/game/broadcast_debug.cpp",
+"聊天行插入 | 【聊天行插入】pArg2 为频道/窗口号：等于 4 时以 +96 行池基线（·sub_69C500）计量，·sub_69C440/·sub_69C4A0/·sub_69C360 追加，行数大于 8 时 ·sub_43B9D0 裁剪； | 新增行逐个写 clock_now(this+148) 时间戳入 +172 起。否则先比对 +72/+56 控件内容变化（·sub_69C690/·sub_69C6A0），追加后若 pArg2 为当前频道 +144 则按 +1474 取 20/8 边距重设滚动条（负归零）并在变化时刷新。"
+],
+"sub_43BEE0": [
+"43BEE0",
+"src/game/broadcast_debug.cpp",
+"【播报上屏】(聊天窗宿主, 文本, 颜色, 0, -1) —— 物品/GM/系统消息的统一上屏出口。"
+],
+"sub_43D900": [
+"43D900",
+"src/game/broadcast_debug.cpp",
+"§30 聊天/杂项大函数（0x43D900-0x43F210） | 聊天消息出口（含链接） | 【消息出口】非 1 号频道或非本机名时先转 ·sub_43C960 分发；再按场景模式把文本投到玩家对象 +192（模式 1/2）或 +196（模式 3/4/6）显示通道 | （vt+64/vt+68 配对 + ·sub_50EF20/·sub_50EAA0）→ 按 dword_8F8538（战场通道）二次投递 → 尾段经 ·sub_4BE170 与 ·sub_4BE190 取模式串，3 号场景下 strstr 命中即调 vt+4（链接动作）【推断】。"
+],
+"sub_4D6810": [
+"4D6810",
+"src/game/combat_core.cpp",
+"★ CNChangeHp 构造（研究 §2⑦ 的\"延滞伤\"分支） | 命中主处理器 0x4D71B0 判 attackinfo+124 == 2（burn/延滞伤）时 new 本对象 | （伤害值, 1000ms, …）—— 研究 §2⑦ 已定案\"new CNChangeHp(伤害, 1000ms, …)\"； | 本体 = sub_4B1030 基类 + CNChangeHp::vftable + sub_5FD600/5FD630 参数装载。"
+],
+"sub_4B12B0": [
+"4B12B0",
+"src/game/equ_buff.cpp",
+"§C 0x4B12B0-0x4B15E0 事件分发 | 事件分发（音效 sub_422E70/43BEE0、sub_4BF300）"
+],
+"sub_4B1C40": [
+"4B1C40",
+"src/game/equ_buff.cpp",
+"14 字节表按 1 基索引取值 | 基址 *(this+79)、14 字节/条；nArg2==-1 时改用 +510 当前值。"
+],
+"sub_4B2580": [
+"4B2580",
+"src/game/equ_buff.cpp",
+"目标搜索 + 瞄准角输出 | 遍历对象列表(vt+80 的 +120 向量)：经标志 17 与 ·0x4E4630 敌我判定过滤，按 |x-a4| 用 ·0x4B07E0 | 选最近命中者；命中则 atan2 求 yaw/pitch（夹在 ±a9/±a10）写回 a1/a2。"
+],
+"sub_4B3DF0": [
+"4B3DF0",
+"src/game/equ_buff.cpp",
+"CNChangeStatus 构造（六参） | 与 ·0x4B3C90 同构（差异：六参数经 ·0x5F7720 应用）。"
+],
+"sub_4B7430": [
+"4B7430",
+"src/game/equ_buff.cpp",
+"升级演出装配（LevelNormalizeLibra.ani + LevelNormalize.ptl；LEVELING_OFF/FLASH；PVP_KO）"
+],
+"sub_4B89D0": [
+"4B89D0",
+"src/game/equ_buff.cpp",
+"§L 0x4B89D0-0x4B9280 跑步地面循环 + 蓄气/霸体特效 | 跑步地面循环 + 蓄气/霸体特效 | G_RUN_FLOOR_LOOP/RUN_GRASS/SOIL/STONE_LOOP 按 +212 地形选播（sub_491C70 时刻换算）； | BuffChargeGlow.ani+BuffChargeParticle.ptl 挂子链 +204；MOON_CURTAIN_LIGHT。"
+],
+"sub_4BA610": [
+"4BA610",
+"src/game/equ_buff.cpp",
+"魔能充能动画选择（Character/Mage/Effect/Animation/MagicOnCharge%d%d.ani / MagicFullCharge%d%d.ani）"
+],
+"sub_4BA730": [
+"4BA730",
+"src/game/equ_buff.cpp",
+"魔能充能驱动（+204/+208/+216 槽；sub_493D00 变速；ENERGY_CHARGE/ENERGY_CHARGE_END）"
+],
+"sub_4BE1D0": [
+"4BE1D0",
+"src/game/equ_buff.cpp",
+"标志读取（this+12） | 返回 *(this+12)；写入侧见 ·0x4BE1E0。"
+],
+"sub_4BE1E0": [
+"4BE1E0",
+"src/game/equ_buff.cpp",
+"标志字节写侧（this+12） | 置 this+12 并回传新值，读侧见 ·0x4BE1D0。 | 该字节即 on_receive_guild_info（·0x4BE2B0）写入的公会等级【推断】。"
+],
+"sub_4BE2B0": [
+"4BE2B0",
+"src/game/equ_buff.cpp",
+"公会信息到达（on_receive_guild_info） | 入参为公会等级：> 2 记 CNRDGuildInfo::on_receive_guild_info - guild level is too big 并置失败态 6； | 等级存 +12，非 0 置状态 1 立即下载（·0x4BE220），为 0 亦置 6。"
+],
+"sub_4BE470": [
+"4BE470",
+"src/game/equ_buff.cpp",
+"徽章清理与重试重启 | 状态 +4 为 4/5/6 且 +12 非 0 时：虚调释放已载入图像（+16）、DeleteFileA 删已下载文件 | （+76 串）、清 +33/+34，置状态 3 并复位重试时钟（+20，·0x698F90）。"
+],
+"sub_4BE6B0": [
+"4BE6B0",
+"src/game/equ_buff.cpp",
+"模式字节设置（+0） | 与 +0 现值不同才先整体清空映射（·0x4BE620）再写入新值；用于切换登记集合【推断】。"
+],
+"sub_4BF1B0": [
+"4BF1B0",
+"src/game/equ_buff.cpp",
+"按工会 id 查值指针 | 键为 0 或未命中回 0，否则回值槽（节点 +16）所存对象指针。"
+],
+"sub_4BFBC0": [
+"4BFBC0",
+"src/game/equ_buff.cpp",
+"列表登记与状态判定 | 在 +84 列表找载荷（节点 +8）等于 pArg2 的项；未找到且 pszArg3 为 0 时经 ·vmt+116 登记； | 随后要求记录 +40 非 0 且 +36 == 1 才回 1。"
+],
+"sub_4BFC10": [
+"4BFC10",
+"src/game/equ_buff.cpp",
+"全称判定（8 字节元素表） | 对 pArg2 的 8 字节元素向量（+4/+8）逐项调 ·vmt+48，全真回 1（空表回 1），否则 0。"
+],
+"sub_535AD0": [
+"535AD0",
+"src/game/gunner_skills.cpp",
+"CNMineTrap 构造器（地雷）：CNRDTrap 基座 + 双 vftbl（+0/+972）+ sub_61FC40/sub_620090 解析"
+],
+"sub_535C50": [
+"535C50",
+"src/game/gunner_skills.cpp",
+"CNRollingStone 构造器（滚石陷阱）：+992/+996 两个 szPassword 字符串槽 + sub_6201B0/620540"
+],
+"sub_535DB0": [
+"535DB0",
+"src/game/gunner_skills.cpp",
+"CNTrapCage 构造器（陷阱笼）"
+],
+"sub_535E90": [
+"535E90",
+"src/game/gunner_skills.cpp",
+"CNChandelier 构造器（吊灯，可击落破坏物）：+244..246 清零"
+],
+"sub_535FC0": [
+"535FC0",
+"src/game/gunner_skills.cpp",
+"CNWindShaker 构造器（摇风机/风扇机关）"
+],
+"sub_5360F0": [
+"5360F0",
+"src/game/gunner_skills.cpp",
+"CNSpiner 构造器（旋转刺/转盘机关）"
+],
+"sub_5361D0": [
+"5361D0",
+"src/game/gunner_skills.cpp",
+"CNSpaceFishLair 构造器（天空鱼巢，spawn 点）：+276 清零 + vmt2F4 装附属"
+],
+"sub_5362F0": [
+"5362F0",
+"src/game/gunner_skills.cpp",
+"CNExplosiveOil 构造器（爆炸油桶，可引爆破坏物）"
+],
+"sub_536350": [
+"536350",
+"src/game/gunner_skills.cpp",
+"CNHallucinationFlower 构造器（幻觉花）"
+],
+"sub_536430": [
+"536430",
+"src/game/gunner_skills.cpp",
+"CNSwamp 构造器（沼泽，减速/束缚地面）：+1112 计时位、+1108 CNTimer、+1096 标志、+276=a5 类型"
+],
+"sub_5364E0": [
+"5364E0",
+"src/game/gunner_skills.cpp",
+"CNStarFishEggRequid 构造器（海星卵-鱿鱼变体）：CNSwamp(17,2) 参数化"
+],
+"sub_536510": [
+"536510",
+"src/game/gunner_skills.cpp",
+"CNMagmaSwamp 构造器（岩浆沼泽）：CNSwamp 全参透传"
+],
+"sub_536590": [
+"536590",
+"src/game/gunner_skills.cpp",
+"CNFloorNiddle 构造器（地刺机关）"
+],
+"sub_536630": [
+"536630",
+"src/game/gunner_skills.cpp",
+"CNGoblinBunker 构造器（哥布林碉堡）：+280 清零 + vmt2E4 附属"
+],
+"sub_536770": [
+"536770",
+"src/game/gunner_skills.cpp",
+"CNTwistFootHold 构造器（扭转立足点）"
+],
+"sub_536850": [
+"536850",
+"src/game/gunner_skills.cpp",
+"CNSeaGrass 构造器（海草，缠绕系）"
+],
+"sub_536930": [
+"536930",
+"src/game/gunner_skills.cpp",
+"CNEntangleVineTrigger 构造器（藤蔓触发器）：+980 CNTimer、+992 使能、+996..1024 参数区"
+],
+"sub_536A60": [
+"536A60",
+"src/game/gunner_skills.cpp",
+"CNEntangleVine 构造器（缠绕藤蔓本体）：+246 清零"
+],
+"sub_536B40": [
+"536B40",
+"src/game/gunner_skills.cpp",
+"CNStarfishEgg 构造器（海星卵，孵化巢）：+972 CNTimer、+984 使能"
+],
+"sub_536C30": [
+"536C30",
+"src/game/gunner_skills.cpp",
+"CNSweepingLegOfLotus 构造器（横扫莲花腿）：基座 sub_534E50 + sub_628260"
+],
+"sub_536CC0": [
+"536CC0",
+"src/game/gunner_skills.cpp",
+"CNPassiveObjectTrigger 构造器（通用 PO 触发器）"
+],
+"sub_536D60": [
+"536D60",
+"src/game/gunner_skills.cpp",
+"CNBellForZealots 构造器（狂信者之钟）：vmt2E4 附属"
+],
+"sub_536E00": [
+"536E00",
+"src/game/gunner_skills.cpp",
+"CNGravityChanger 构造器（重力反转区域）"
+],
+"sub_536EE0": [
+"536EE0",
+"src/game/gunner_skills.cpp",
+"CNDroppingRockTrigger 构造器（落石触发器）"
+],
+"sub_536F80": [
+"536F80",
+"src/game/gunner_skills.cpp",
+"CNDroppingRock 构造器（落石本体）"
+],
+"sub_537020": [
+"537020",
+"src/game/gunner_skills.cpp",
+"CNFlappingBanner 构造器（飘扬旗帜，装饰破坏物）"
+],
+"sub_537130": [
+"537130",
+"src/game/gunner_skills.cpp",
+"CNBehemothHelipad 构造器（贝希摩斯停机坪）：CNRDObject__vmtCC(100, 图像ID, 0,0,0,0) 设定显示"
+],
+"sub_5371E0": [
+"5371E0",
+"src/game/gunner_skills.cpp",
+"CNDragonHeadSide 构造器（侧面龙首炮台基类）：vmt2E4 附属"
+],
+"sub_5372C0": [
+"5372C0",
+"src/game/gunner_skills.cpp",
+"★ CNDragonHeadSideFlame 构造器（侧龙首-火焰）【资源实证】：new(0x12C) 粒子发射器 → | sub_4C3640(\"Particle/FlameThrower.ptl\", this)（P36 发射器挂接）→ +280 存发射器、+281=80、+282=50 参数"
+],
+"sub_537400": [
+"537400",
+"src/game/gunner_skills.cpp",
+"CNDragonHeadSideNentan 构造器（侧龙首-燃烧弹 Nentan）"
+],
+"sub_5374E0": [
+"5374E0",
+"src/game/gunner_skills.cpp",
+"CNDragonHeadSideGas 构造器（侧龙首-毒瓦斯）"
+],
+"sub_5375C0": [
+"5375C0",
+"src/game/gunner_skills.cpp",
+"★ CNDragonHeadFrontFlame 构造器（正面龙首-火焰）【资源实证】：sub_4C3640( | \"Particle/FlameThrowerVertical.ptl\")（垂直喷射粒子）→ +1120 存发射器、+1124=42、+1128=55"
+],
+"sub_5376C0": [
+"5376C0",
+"src/game/gunner_skills.cpp",
+"CNDragonHeadFrontNentan 构造器（正面龙首-燃烧弹）"
+],
+"sub_537730": [
+"537730",
+"src/game/gunner_skills.cpp",
+"CNDragonHeadFrontGas 构造器（正面龙首-毒瓦斯）"
+],
+"sub_5377A0": [
+"5377A0",
+"src/game/gunner_skills.cpp",
+"CNCystalPillar 构造器（水晶柱，RTTI 原名拼写 Cystal）"
+],
+"sub_537840": [
+"537840",
+"src/game/gunner_skills.cpp",
+"CNEyeofObserver 构造器（观察者之眼，巨型雕像炮台）"
+],
+"sub_537920": [
+"537920",
+"src/game/gunner_skills.cpp",
+"CNActiveObserver 构造器（活动观察者，可动炮台）"
+],
+"sub_537A00": [
+"537A00",
+"src/game/gunner_skills.cpp",
+"CNLightBulb 构造器（灯泡破坏物）"
+],
+"sub_537AE0": [
+"537AE0",
+"src/game/gunner_skills.cpp",
+"CNWaterDrop 构造器（水滴机关）"
+],
+"sub_537BC0": [
+"537BC0",
+"src/game/gunner_skills.cpp",
+"★ CNFreezingLuna 构造器（冰冻露娜，冰属性地面）【资源实证】：vmt2F4 附属 + | sub_4C3640(\"Particle/steam.ptl\")（蒸汽粒子发射器）→ +282 存储"
+],
+"sub_537D30": [
+"537D30",
+"src/game/gunner_skills.cpp",
+"CNTreeCross 构造器（十字树/路标）"
+],
+"sub_537E10": [
+"537E10",
+"src/game/gunner_skills.cpp",
+"CNSkeletonPile 构造器（骸骨堆破坏物）"
+],
+"sub_537EF0": [
+"537EF0",
+"src/game/gunner_skills.cpp",
+"CNSpiderSpawn 构造器（蜘蛛卵/蜘蛛巢）"
+],
+"sub_537FD0": [
+"537FD0",
+"src/game/gunner_skills.cpp",
+"CN2StoryBox 构造器（双层箱破坏物）"
+],
+"sub_5380B0": [
+"5380B0",
+"src/game/gunner_skills.cpp",
+"CNGrenselosBunker 构造器（格伦塞洛斯碉堡）：+280 清零"
+],
+"sub_5381D0": [
+"5381D0",
+"src/game/gunner_skills.cpp",
+"CNQuestCage 构造器（任务笼）：+1100 演出未播位、+276 背景板槽清零"
+],
+"sub_5384F0": [
+"5384F0",
+"src/game/gunner_skills.cpp",
+"CNHPFairy 构造器（HP 精灵）"
+],
+"sub_5385A0": [
+"5385A0",
+"src/game/gunner_skills.cpp",
+"CNMPFairy 构造器（MP 精灵）"
+],
+"sub_538650": [
+"538650",
+"src/game/gunner_skills.cpp",
+"CNHPMPFairy 构造器（HP/MP 双回复精灵）"
+],
+"sub_538700": [
+"538700",
+"src/game/gunner_skills.cpp",
+"CNSuperArmorFairy 构造器（霸体精灵）"
+],
+"sub_5387B0": [
+"5387B0",
+"src/game/gunner_skills.cpp",
+"CNHasteFairy 构造器（加速精灵）"
+],
+"sub_538860": [
+"538860",
+"src/game/gunner_skills.cpp",
+"CNBlessFairy 构造器（祝福精灵）"
+],
+"sub_538910": [
+"538910",
+"src/game/gunner_skills.cpp",
+"CNInvinsibleFairy 构造器（无敌精灵，RTTI 原名拼写 Invinsible）"
+],
+"sub_5389C0": [
+"5389C0",
+"src/game/gunner_skills.cpp",
+"CNFairyFactory 构造器（精灵工厂，按表刷精灵）"
+],
+"sub_538AA0": [
+"538AA0",
+"src/game/gunner_skills.cpp",
+"CNActionTree 构造器（剧情互动树，CNMapObject 系）"
+],
+"sub_538B90": [
+"538B90",
+"src/game/gunner_skills.cpp",
+"CNSoundFloor 构造器（音效地板/踩踏发声板）：+1100 szPassword 字符串槽（音名?）、+1096 使能"
+],
+"sub_538CA0": [
+"538CA0",
+"src/game/gunner_skills.cpp",
+"CNFountain 构造器（喷泉装饰）"
+],
+"sub_538D90": [
+"538D90",
+"src/game/gunner_skills.cpp",
+"CNCircleAppendageENCHANTWEAPON 构造器（武器附魔光圈附件）：+248 清零"
+],
+"sub_538EB0": [
+"538EB0",
+"src/game/gunner_skills.cpp",
+"CNCircleAppendageCHANGE_WEAPON_ELEMENT 构造器（武器属性变更附件）"
+],
+"sub_538F70": [
+"538F70",
+"src/game/gunner_skills.cpp",
+"CNCircleAppendageCHANGESTATE 构造器（状态变更附件）：+1001 清零"
+],
+"sub_5390B0": [
+"5390B0",
+"src/game/gunner_skills.cpp",
+"CNCircleAppendageDISENCHANT 构造器（解除附魔附件）"
+],
+"sub_539140": [
+"539140",
+"src/game/gunner_skills.cpp",
+"CNGravityChangeBack 构造器（重力恢复区域，与 GravityChanger 配对）"
+],
+"sub_539220": [
+"539220",
+"src/game/gunner_skills.cpp",
+"CNStorageBird 构造器（仓储鸟，搬运/储物机关）"
+],
+"sub_539300": [
+"539300",
+"src/game/gunner_skills.cpp",
+"CNFallingStorage 构造器（坠落仓储）"
+],
+"sub_5393E0": [
+"5393E0",
+"src/game/gunner_skills.cpp",
+"CNStorageSub 构造器（仓储子体）"
+],
+"sub_539480": [
+"539480",
+"src/game/gunner_skills.cpp",
+"CNEPLPCampFire 构造器（EPLP 营火，回复点装饰）"
+],
+"sub_539520": [
+"539520",
+"src/game/gunner_skills.cpp",
+"CNPoisonBug 构造器（毒虫机关）：+976 CNTimer、+988 使能、+992..1000 参数区"
+],
+"sub_539650": [
+"539650",
+"src/game/gunner_skills.cpp",
+"CNAuxoRoot 构造器（荆棘根/藤蔓攻击体）"
+],
+"sub_5397C0": [
+"5397C0",
+"src/game/gunner_skills.cpp",
+"CNFireBallCommon 构造器（通用火球投射体）"
+],
+"sub_53A1B0": [
+"53A1B0",
+"src/game/gunner_skills.cpp",
+"CNOlreksExplosiveOil 构造器（奥尔克爆炸油桶，CNExplosiveOil 派生）"
+],
+"sub_4C1070": [
+"4C1070",
+"src/game/gunner_state.cpp",
+"调: sub_4C1070"
+],
+"sub_4CE550": [
+"4CE550",
+"src/game/gunner_state.cpp",
+"§C 弹尘与特效 | 调: sub_4CE550"
+],
+"sub_4CE5F0": [
+"4CE5F0",
+"src/game/gunner_state.cpp",
+"调: sub_4CE5F0"
+],
+"sub_4CE8A0": [
+"4CE8A0",
+"src/game/gunner_state.cpp",
+"调: sub_4CE8A0 sub_442D00"
+],
+"sub_4E2130": [
+"4E2130",
+"src/game/hiteff_monster.cpp",
+"CNRDItemObject 构造（掉落物/道具对象） | ·0x4E1E70 基类 → vftable(CNRDItemObject) → 内嵌两组 clong（+1016 / +1032 区）·sub_41A630 构造并置初值； | ·sub_578740(this) 粒子动画辅助 → ·sub_578D50(a2,a3,a4) 掉落物初始化（物理 + 4D33A0/4D5xxx 族）"
+],
+"sub_4E4630": [
+"4E4630",
+"src/game/hiteff_monster.cpp",
+"★ 敌我关系判定辅助（研究 §8 攻方冻结豁免门的组成件） | 语义：true = \"是敌人/不同阵营\"。两段： | ① 若场景 == 6（战场）且双方 vt+376（阵营/队伍号）均落在 0..11 → | 沿车主链 vt+576 上溯（条件 529 时取 v4[2088]，即\"召唤主/变形主\"链）跳过非战斗宿主； | 终宿主条件 273（受击态）成立且 sub_4B09A0(v4) == 0 → 返回 **false**（同阵营判定为友） | ② 兜底：`this->vt+376 != a2->vt+376`（阵营号不同 = 敌人） | 研究 §8 定案：\"vt+360 = 敌我关系判定（阵营比较 vs this+544）—— 攻方冻结豁免： | 打队友不卡肉\"；本函数是 vt+360 实现族的辅助（PVP/战场场景特化 + 召唤主上溯）。"
+],
+"sub_4E4A50": [
+"4E4A50",
+"src/game/hiteff_monster.cpp",
+"动作/技能发布打包（发包 type 21，双实体 id 对 + 动作 id） | 门：a2 非空且 (vt+316 禁用 或 vt+88 动作使能==0) → 返回 0xFFFF； | 发 ·dword_8F8520(type 21, 2 子字段, a1) → 写 a2 与 a9 的 vt+48/52（空则 0xFFFF/0）→ 1、a3(动作 id)、a4、 | 本地玩家 vt+1220、·sub_460230(缓冲 +104)、0/a8、a5/a6/a7 → vt+52(a11,a10) + 提交 vt+60(1,-1)；返回 v23"
+],
+"sub_4E5F70": [
+"4E5F70",
+"src/game/hiteff_monster.cpp",
+"★ 硬直率掷（研究 §5.1 第 14 轮定案：同构于暴击掷） | 研究 §5.1 原文：\"硬直率掷（sub_4E5F70）同构（rand()%10000 < 率×100）， | 掷完把结果+rand 种机打包发服务器背书\"。 | 调用点：本地扫掠 sub_4E82B0 命中后（`sub_4E5F70(a1, v5, v27, 1, 1)`）—— | 即本地命中即刻把\"硬直掷结果\"上报服务端（客户端信任伤害架构，研究 §11 第 14 轮）。"
+],
+"sub_4E9A50": [
+"4E9A50",
+"src/game/hiteff_monster.cpp",
+"四内联 clong 构造 + 初值（0/0/-1/0） | 四段各自 ·sub_41A630 + 设 vftable(clong)，再 ·sub_41A590 写 0/0/-1/0；*this = 0"
+],
+"sub_4E9B10": [
+"4E9B10",
+"src/game/hiteff_monster.cpp",
+"与 ·0x4E9A50 同构（差异：随后按 5 参赋初值） | 赋 *this = a2、+4 = a3 & 0x1F、+18 = 0、+8 = a5、+46 = a3 >> 5"
+],
+"sub_4E9FA0": [
+"4E9FA0",
+"src/game/hiteff_monster.cpp",
+"四 clong 防篡拷贝（pArg2 → this） | 逐槽 ·sub_41A5E0 读 + ·sub_41A590 写"
+],
+"sub_472F90": [
+"472F90",
+"src/game/login_channel.cpp",
+"全局 map dword_99FBA4 查找（sub_472E30 lower_bound，int 键 nArg1）： | 命中返回节点 dword#4（+16），未命中返回 0"
+],
+"sub_474950": [
+"474950",
+"src/game/login_channel.cpp",
+"vector 尾插 1 条（8 字节/条目）：容量够则原地构造，不够走 | sub_473A80 扩容插入"
+],
+"sub_4755F0": [
+"4755F0",
+"src/game/login_channel.cpp",
+"按关卡尺寸（+168 处 w*h）扩容三张全局表（dword_99FBB0 36B 条目、 | dword_99FBC0 int 表、dword_99FBD0 对象指针表 0xA0/个）"
+],
+"sub_476B60": [
+"476B60",
+"src/game/login_channel.cpp",
+"选区角色数据查找（座位表 sub_453DD0 所用；+80/+84 名字串）"
+],
+"sub_477260": [
+"477260",
+"src/game/login_channel.cpp",
+"加载进度查询（触发条件 case 3 所用：sub_477260×100/sub_43B5C0）"
+],
+"sub_477280": [
+"477280",
+"src/game/login_channel.cpp",
+"读 this+906 处 float 返回（进度/计数值访问器，与 sub_477260 同族）"
+],
+"sub_4772A0": [
+"4772A0",
+"src/game/login_channel.cpp",
+"结算事件：M_RESULT 打开结算界面（6339 行附近）"
+],
+"sub_478EA0": [
+"478EA0",
+"src/game/login_channel.cpp",
+"列表滚动状态机（一）：nArg2==1 复位 +56/+60；+60==1 且 +92 计时 | >=10 秒时进入下一状态（长驻超时）"
+],
+"sub_478F20": [
+"478F20",
+"src/game/login_channel.cpp",
+"滚动状态复位（一）：+56=0/+60=1，清 +77/+78 旗标，+92 计时器清零"
+],
+"sub_478F40": [
+"478F40",
+"src/game/login_channel.cpp",
+"列表滚动状态机（二）：与 sub_478EA0 同构（+48/+52 与 +84 计时器）"
+],
+"sub_478FC0": [
+"478FC0",
+"src/game/login_channel.cpp",
+"滚动状态复位（二）：+48=0/+52=1，清 +69/+70，+84 计时器清零"
+],
+"sub_4794F0": [
+"4794F0",
+"src/game/login_channel.cpp",
+"按名找到条目后置其 +40 旗标为 uArg3（在线/成员状态标记）"
+],
+"sub_479520": [
+"479520",
+"src/game/login_channel.cpp",
+"按名找到条目后清其 +40 旗标（置 -1）"
+],
+"sub_479850": [
+"479850",
+"src/game/login_channel.cpp",
+"遍历 180 字节条目表做名次/位置统计（按 +40 旗标等计数，返回计数值）"
+],
+"sub_47A980": [
+"47A980",
+"src/game/login_channel.cpp",
+"按名字删除条目：sub_479290 求下标 → sub_47A930 删除"
+],
+"sub_47B150": [
+"47B150",
+"src/game/login_channel.cpp",
+"添加好友/成员申请（名字 Src）：查对象 dword_8F8500 校验（nArg4<4） | 后入表【推断：社交添加链】"
+],
+"sub_47B380": [
+"47B380",
+"src/game/login_channel.cpp",
+"好友上线提示：sub_47B200(Src,1) 成功后弹 671 号提示串"
+],
+"sub_47B400": [
+"47B400",
+"src/game/login_channel.cpp",
+"好友下线提示：sub_47B200(Src,0) 成功后弹 670 号提示串"
+],
+"sub_47BAA0": [
+"47BAA0",
+"src/game/login_channel.cpp",
+"开/关对账（0x47CD00/0x47D060 的联动收尾）：遍历 20 字节条目表，型别 | (+272)==5 的条目经 sub_429830 场景对象 + sub_463F10 实例数判定：需求值 | (**(+284)) 大于当前值(场景+116) 且无实例→sub_47B8D0(ID,1) 开启一次； | 否则按实例数逐个 sub_47B8D0(ID,0) 关断"
+],
+"sub_47BBE0": [
+"47BBE0",
+"src/game/login_channel.cpp",
+"触发条件评估器：遍历条件对象（+68 表，20 字节/项），按条目[69] 型别： | 0=计时器（dword_8F8520 vt+120 时钟 +164）/ 1=|Y| 阈值（dword_99FD58+948）/ | 2=百分比（+906/+920 ×100）/ 3=加载进度（sub_477260×100/sub_43B5C0）/ | 4=旗标（+120 非零）/ 5=座位号比对 sub_456390 / 6=恒真 / 7=进度值 sub_495C80； | 不满足 → sub_47B8D0(对象, 0) 关断"
+],
+"sub_47BEE0": [
+"47BEE0",
+"src/game/login_channel.cpp",
+"批量关断：型别(+272)==2 且参数三元组(+284) 与 (nArg2,nArg3,nArg4) 全等 | （-1=通配）的条目逐个 sub_47B8D0(ID,0) 关断"
+],
+"sub_47C540": [
+"47C540",
+"src/game/login_channel.cpp",
+"在 20 字节条目表（this+8/12）中按首 DWORD==nArg2 查找，找到则经 0x47C290 | 弹出该条目并返回其内容指针（找不到返回 nullptr）"
+],
+"sub_47C8F0": [
+"47C8F0",
+"src/game/login_channel.cpp",
+"在 20 字节条目表（pArg1+8/12）中按首 DWORD==nArg3 查找并改写其字符串成员 | （+4，sub_41A590）；nArg4==0 时弹 463 号提示（条件 sub_546080）、置条目 | 对象 +320 旗标，对象 +204 有挂接 ID 时从管理器 map 删除并刷新 sub_45C400"
+],
+"sub_47CD00": [
+"47CD00",
+"src/game/login_channel.cpp",
+"逐条处理型别 fld[68]==0 的条件条目：为已注册（sub_463F10 != -1）者建空红黑 | 树（sub_433AC0），收集 fld[71]/[72] 的 8 字节对（半数，sub_4682D0）；再对 | dword_8F852C 列表与 dword_8F7C04 的 18 个槽（vt+792）扣减计数（节点[4] 减 | vt+44 值，不够则 sub_41D610 摘除）；余量>0 → sub_47B8D0(ID,1) 开启，否则 | 按实例数逐个 sub_47B8D0(ID,0) 关断，最后从 map 摘除【推断：条件达成结算】"
+],
+"sub_47D060": [
+"47D060",
+"src/game/login_channel.cpp",
+"登记条件条目：表满 3 条 / sub_4CE8A0 解析失败 / 已存在 → 返回 0；否则构造 | {ID, clong 串} 压表（0x47CFD0），nArg3==0 时置对象 +320 旗标，随后 | 经 0x47CD00 重算 + 0x47BAA0 对账开关；nArg3!=0 且对象 +204 有效时写入管理器 | map（dword_8F7A24+20 → +22）并 sub_45C400 刷新；返回对象指针"
+],
+"sub_47D1E0": [
+"47D1E0",
+"src/game/login_channel.cpp",
+"按 ID uArg2 注销：sub_4CE8A0 解析出对象后经 sub_44E2F0 从表 this+5 移除 | （0x47D060 的反向操作）；对象不存在返回 0"
+],
+"sub_47D9D0": [
+"47D9D0",
+"src/game/login_channel.cpp",
+"条件旗标重算（+320 开/关）：遍历 this[6]/[7] 指针表，按条目 +124 键经 | 经 0x47D210 分桶汇总建临时 map（0x47D920 写入）；再中序遍历之，对每组成员 | 置 +320 =（型别+116==2 或旗标 +120 非零），已登记于 this[10] map 的键则 | 跳过其 vector(+20/+24) 已含的成员；最后把临时 map 克隆回 this+9 成员 map"
+],
+"sub_47DC90": [
+"47DC90",
+"src/game/login_channel.cpp",
+"薄分发：取当前场景对象（dword_8F8500 按地图 word_77F804 查）的 +44， | 转调 0x47E720(句柄, nArg1)"
+],
+"sub_47DCD0": [
+"47DCD0",
+"src/game/login_channel.cpp",
+"经 nArg2 对象 vt+80 取其 +132 资源，调 sub_424120(资源, this+114, 档位)； | nArg3==-1 时用 this+115 作档位（资源播放/设置辅助）"
+],
+"sub_47DEC0": [
+"47DEC0",
+"src/game/login_channel.cpp",
+"写第 nArg2 条的 clong 串（sub_41A590 赋值）：地址 = this + 14×nArg2 + 496"
+],
+"sub_47E2B0": [
+"47E2B0",
+"src/game/login_channel.cpp",
+"全局重置：遍历 dword_99FC34→dword_99FC74 的 4 个对象指针 vector（头步进 | 16 字节），对每个对象清 +540、按 nArg2 重写 +496/+510 两个 clong 串"
+],
+"sub_47E4F0": [
+"47E4F0",
+"src/game/login_channel.cpp",
+"技能参数刷新（错误串自证 CNRDSkill::flushSkillParameter）：按 dword_8F7C04 | vt+1032 选 unk_99FC30+16×槽 的对象 vector，重置各对象 +496 串并写 1.0f； | 再对 18 个槽（vt+792，缺则 vt+1084）两轮遍历 vt+176/vt+228 链上的 | {技能ID, 数量} 对（32 字节步进），型别==4 或==当前槽时按上限(+32)封顶写入 | 技能对象 +510；最后调 vt+1164 收尾"
+],
+"sub_47E9D0": [
+"47E9D0",
+"src/game/login_channel.cpp",
+"取 this+103/104 的 14 字节条目表中第 uArg2 条的 clong 值； | 越界则退回 sub_461750(0) 默认对象取值"
+],
+"sub_47EF20": [
+"47EF20",
+"src/game/login_channel.cpp",
+"技能数值查表：this+107/108 的 16 字节条目（+4=14 字节子表 begin、+8=end） | 中第 uArg2 项的第 nArg3 级值；nArg6!=11 且 nArg4!=nArg5 时经 sub_432FD0 | 做单位换算（nArg4→nArg5），否则原值；越界/空表返回 0"
+],
+"sub_47EFD0": [
+"47EFD0",
+"src/game/login_channel.cpp",
+"技能表槽位设置（越界打 aCriticalError_8；+87 处 14 字节/项表）【推断】"
+],
+"sub_5226E0": [
+"5226E0",
+"src/game/missing_misc_b.cpp",
+"薄转发 → sub_5226E0"
+],
+"sub_523390": [
+"523390",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（30L）【语义未逐行展开】"
+],
+"sub_52EA60": [
+"52EA60",
+"src/game/missing_misc_b.cpp",
+"★ CNRDTrap 构造基座（陷阱 PO 底座）：gunner_skills.cpp 全部机关 PO 构造器的第一调用"
+],
+"sub_52EBF0": [
+"52EBF0",
+"src/game/missing_misc_b.cpp",
+"CNCutableGrass 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_531420": [
+"531420",
+"src/game/missing_misc_b.cpp",
+"CNIceWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_531500": [
+"531500",
+"src/game/missing_misc_b.cpp",
+"CNSuplexSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5315E0": [
+"5315E0",
+"src/game/missing_misc_b.cpp",
+"CNEnergyBall 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5316C0": [
+"5316C0",
+"src/game/missing_misc_b.cpp",
+"CNEnergyBallSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_531A80": [
+"531A80",
+"src/game/missing_misc_b.cpp",
+"CNEnergyField 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_531B90": [
+"531B90",
+"src/game/missing_misc_b.cpp",
+"CNBlastBlood 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_531CA0": [
+"531CA0",
+"src/game/missing_misc_b.cpp",
+"CNBlastBloodSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_531DB0": [
+"531DB0",
+"src/game/missing_misc_b.cpp",
+"CNGhost 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_531F30": [
+"531F30",
+"src/game/missing_misc_b.cpp",
+"CNFireWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532010": [
+"532010",
+"src/game/missing_misc_b.cpp",
+"CNSpiralNen 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532120": [
+"532120",
+"src/game/missing_misc_b.cpp",
+"CNClosePunchSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532250": [
+"532250",
+"src/game/missing_misc_b.cpp",
+"CNGunnerBullet 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532330": [
+"532330",
+"src/game/missing_misc_b.cpp",
+"CNGunnerSubWeaponBullet 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532440": [
+"532440",
+"src/game/missing_misc_b.cpp",
+"CNExsViperBullet 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5336C0": [
+"5336C0",
+"src/game/missing_misc_b.cpp",
+"CNThrowWeb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_533C10": [
+"533C10",
+"src/game/missing_misc_b.cpp",
+"CNHalloweenBuster 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_533CF0": [
+"533CF0",
+"src/game/missing_misc_b.cpp",
+"CNHalloweenBusterSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_533DD0": [
+"533DD0",
+"src/game/missing_misc_b.cpp",
+"【音效 TAG 实证 SUN_BURST】9L：阳光爆发 PO 触发音（联动 gunner_skills.cpp CNSunBurst）"
+],
+"sub_5348A0": [
+"5348A0",
+"src/game/missing_misc_b.cpp",
+"CNKagelBombSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534990": [
+"534990",
+"src/game/missing_misc_b.cpp",
+"CNSpaceFishBug 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534A90": [
+"534A90",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（7L）【语义未逐行展开】"
+],
+"sub_5351F0": [
+"5351F0",
+"src/game/missing_misc_b.cpp",
+"CNDendroidNeedle 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_535560": [
+"535560",
+"src/game/missing_misc_b.cpp",
+"CNGhoulSkullBomb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_522E50": [
+"522E50",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（12L）【语义未逐行展开】"
+],
+"sub_523760": [
+"523760",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（33L）【语义未逐行展开】"
+],
+"sub_52EB00": [
+"52EB00",
+"src/game/missing_misc_b.cpp",
+"CNRDPooledPassiveObject 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_52ED60": [
+"52ED60",
+"src/game/missing_misc_b.cpp",
+"★ CNPassiveObject/CNMapObject 构造基座（与 0x52EA60 平行的第二底座）"
+],
+"sub_52EF60": [
+"52EF60",
+"src/game/missing_misc_b.cpp",
+"CNTreasureBox 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_52FE30": [
+"52FE30",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（7L）【语义未逐行展开】"
+],
+"sub_52FF20": [
+"52FF20",
+"src/game/missing_misc_b.cpp",
+"CNBouncer 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530010": [
+"530010",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（7L）【语义未逐行展开】"
+],
+"sub_531810": [
+"531810",
+"src/game/missing_misc_b.cpp",
+"CNThrowSand 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5318F0": [
+"5318F0",
+"src/game/missing_misc_b.cpp",
+"CNRoarStun 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_5326C0": [
+"5326C0",
+"src/game/missing_misc_b.cpp",
+"CNGunnerLaser 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532760": [
+"532760",
+"src/game/missing_misc_b.cpp",
+"CNNenGuard 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532900": [
+"532900",
+"src/game/missing_misc_b.cpp",
+"CNTombStoneRain 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5329E0": [
+"5329E0",
+"src/game/missing_misc_b.cpp",
+"CNTombStone 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532AC0": [
+"532AC0",
+"src/game/missing_misc_b.cpp",
+"CNDropBomb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532BA0": [
+"532BA0",
+"src/game/missing_misc_b.cpp",
+"CNTreadShootSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532CD0": [
+"532CD0",
+"src/game/missing_misc_b.cpp",
+"CNAshenForkSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532DB0": [
+"532DB0",
+"src/game/missing_misc_b.cpp",
+"CNGrabBlastBlood 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_532E90": [
+"532E90",
+"src/game/missing_misc_b.cpp",
+"【音效 TAG 实证 WAVE_CANCLE】7L：波/机关取消时播 \"WAVE_CANCLE\"（原拼写如此）"
+],
+"sub_5337D0": [
+"5337D0",
+"src/game/missing_misc_b.cpp",
+"CNLaunchBlackCat 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5338B0": [
+"5338B0",
+"src/game/missing_misc_b.cpp",
+"★ CNVoid 构造器【音效 TAG 实证 VOID】：基座 → vtbl_CNVoid → sub_49A7B0(1, 图像ID,...) | → sub_4015C0(+229, \"VOID\", 4)（音效名槽写入）"
+],
+"sub_5343B0": [
+"5343B0",
+"src/game/missing_misc_b.cpp",
+"CNNapalmBomb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534AF0": [
+"534AF0",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（5L）【语义未逐行展开】"
+],
+"sub_534F40": [
+"534F40",
+"src/game/missing_misc_b.cpp",
+"CNGrabbingLegOfLotus 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5352D0": [
+"5352D0",
+"src/game/missing_misc_b.cpp",
+"CNOntoLandMakePassiveObject 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_523340": [
+"523340",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（21L）【语义未逐行展开】"
+],
+"sub_523800": [
+"523800",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（22L）【语义未逐行展开】"
+],
+"sub_52EF90": [
+"52EF90",
+"src/game/missing_misc_b.cpp",
+"CNBlueBallBox 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52F040": [
+"52F040",
+"src/game/missing_misc_b.cpp",
+"CNUrn 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_52F0B0": [
+"52F0B0",
+"src/game/missing_misc_b.cpp",
+"CNPathGate 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_52F1E0": [
+"52F1E0",
+"src/game/missing_misc_b.cpp",
+"CNFireMissile 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52F2C0": [
+"52F2C0",
+"src/game/missing_misc_b.cpp",
+"CNFireExplosion 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52F3F0": [
+"52F3F0",
+"src/game/missing_misc_b.cpp",
+"CNIceMissile 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52F4D0": [
+"52F4D0",
+"src/game/missing_misc_b.cpp",
+"CNThunderBolt 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52F5C0": [
+"52F5C0",
+"src/game/missing_misc_b.cpp",
+"CNParticleFactory 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52F6A0": [
+"52F6A0",
+"src/game/missing_misc_b.cpp",
+"CNBlast 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52F780": [
+"52F780",
+"src/game/missing_misc_b.cpp",
+"CNEarthQuake 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52F860": [
+"52F860",
+"src/game/missing_misc_b.cpp",
+"CNDangerousGas 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52F950": [
+"52F950",
+"src/game/missing_misc_b.cpp",
+"CNIceNiddleGroup 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52FA30": [
+"52FA30",
+"src/game/missing_misc_b.cpp",
+"CNIceNiddle 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_52FAD0": [
+"52FAD0",
+"src/game/missing_misc_b.cpp",
+"CNEarthFire 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52FBC0": [
+"52FBC0",
+"src/game/missing_misc_b.cpp",
+"CNShootingStar 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52FCA0": [
+"52FCA0",
+"src/game/missing_misc_b.cpp",
+"CNShootingStarExp 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_52FD90": [
+"52FD90",
+"src/game/missing_misc_b.cpp",
+"CNThrowItemDestroyable 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_530040": [
+"530040",
+"src/game/missing_misc_b.cpp",
+"CNCreateOnDestroyObject 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530130": [
+"530130",
+"src/game/missing_misc_b.cpp",
+"CNFlyBombSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_5301D0": [
+"5301D0",
+"src/game/missing_misc_b.cpp",
+"CNSunkenRock 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530270": [
+"530270",
+"src/game/missing_misc_b.cpp",
+"CNRedRock 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530350": [
+"530350",
+"src/game/missing_misc_b.cpp",
+"CNDollMasterBubble 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530430": [
+"530430",
+"src/game/missing_misc_b.cpp",
+"CNMagicTargetWarning 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530500": [
+"530500",
+"src/game/missing_misc_b.cpp",
+"CNTemporaryHit 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5305E0": [
+"5305E0",
+"src/game/missing_misc_b.cpp",
+"CNForceField 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530710": [
+"530710",
+"src/game/missing_misc_b.cpp",
+"CNCircleAppendageMaker 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530800": [
+"530800",
+"src/game/missing_misc_b.cpp",
+"散装补漏小函数（5L）【语义未逐行展开】"
+],
+"sub_530970": [
+"530970",
+"src/game/missing_misc_b.cpp",
+"CNToothSFish 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530A60": [
+"530A60",
+"src/game/missing_misc_b.cpp",
+"CNToothKurokuta 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530B50": [
+"530B50",
+"src/game/missing_misc_b.cpp",
+"CNCurseBombSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530C40": [
+"530C40",
+"src/game/missing_misc_b.cpp",
+"CNSummonMonsterWithEffect 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530D50": [
+"530D50",
+"src/game/missing_misc_b.cpp",
+"CNBodyHit 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_530E30": [
+"530E30",
+"src/game/missing_misc_b.cpp",
+"CNTrackingIceWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_531060": [
+"531060",
+"src/game/missing_misc_b.cpp",
+"CNSingleIceWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_531190": [
+"531190",
+"src/game/missing_misc_b.cpp",
+"CNEventBarrier 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5312C0": [
+"5312C0",
+"src/game/missing_misc_b.cpp",
+"【音效 TAG 实证 WAVE_CREATE】7L：机关/技能 PO 触发时播 \"WAVE_CREATE\""
+],
+"sub_532F70": [
+"532F70",
+"src/game/missing_misc_b.cpp",
+"CNGrandWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_533050": [
+"533050",
+"src/game/missing_misc_b.cpp",
+"CNDecoy 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_533130": [
+"533130",
+"src/game/missing_misc_b.cpp",
+"CNChaser 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_533220": [
+"533220",
+"src/game/missing_misc_b.cpp",
+"CNMagicMissile 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_533300": [
+"533300",
+"src/game/missing_misc_b.cpp",
+"CNLaunchJOL 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5333E0": [
+"5333E0",
+"src/game/missing_misc_b.cpp",
+"CNLaunchFrostHead 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5334C0": [
+"5334C0",
+"src/game/missing_misc_b.cpp",
+"【音效 TAG 实证 LAUNCH_FLUORESCENT】9L：荧光发射机关音效"
+],
+"sub_5340A0": [
+"5340A0",
+"src/game/missing_misc_b.cpp",
+"【音效 TAG 实证 QUICK_TURN】8L：快速转身 PO 音效（枪手 QUICK_TURN 指令）"
+],
+"sub_534580": [
+"534580",
+"src/game/missing_misc_b.cpp",
+"CNTargetItBall 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534660": [
+"534660",
+"src/game/missing_misc_b.cpp",
+"CNHunterSpittle 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534700": [
+"534700",
+"src/game/missing_misc_b.cpp",
+"CNZombieEye 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5347A0": [
+"5347A0",
+"src/game/missing_misc_b.cpp",
+"CNZombieEyeExplode 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534840": [
+"534840",
+"src/game/missing_misc_b.cpp",
+"CNKagelBomb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534B20": [
+"534B20",
+"src/game/missing_misc_b.cpp",
+"CNLOLLaser 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534BC0": [
+"534BC0",
+"src/game/missing_misc_b.cpp",
+"CNBronzeGolemBullets 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534C60": [
+"534C60",
+"src/game/missing_misc_b.cpp",
+"CNIceWaveUp 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534D40": [
+"534D40",
+"src/game/missing_misc_b.cpp",
+"CNStoneBlade 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_534EB0": [
+"534EB0",
+"src/game/missing_misc_b.cpp",
+"CNPierceHeadLegOfLotus 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_534FA0": [
+"534FA0",
+"src/game/missing_misc_b.cpp",
+"CNZepplinBullet 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_535010": [
+"535010",
+"src/game/missing_misc_b.cpp",
+"CNDendroidSeed 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_5353D0": [
+"5353D0",
+"src/game/missing_misc_b.cpp",
+"CNRisingShuriken 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_535450": [
+"535450",
+"src/game/missing_misc_b.cpp",
+"CNFallingShuriken 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_535520": [
+"535520",
+"src/game/missing_misc_b.cpp",
+"CNGhoulSkull 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_535600": [
+"535600",
+"src/game/missing_misc_b.cpp",
+"CNCobWeb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_535670": [
+"535670",
+"src/game/missing_misc_b.cpp",
+"★ 蜘蛛 BOSS 导弹烟雾（37L）【资源实证】：sub_4C3640(\"PassiveObject/Monster/Spider/ | Particle/BossMissileSmog.ptl\")（P36 发射器）"
+],
+"sub_535850": [
+"535850",
+"src/game/missing_misc_b.cpp",
+"CNAraclothoSpark 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无"
+],
+"sub_5358C0": [
+"5358C0",
+"src/game/missing_misc_b.cpp",
+"CNSpectressBat 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_5359F0": [
+"5359F0",
+"src/game/missing_misc_b.cpp",
+"CNEvilEyeSmallLOLLaser 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx"
+],
+"sub_510000": [
+"510000",
+"src/game/po_effects.cpp",
+"CNItemAreaStackable 构造器（区域放置型消耗品）：+41=状态参数a3、+298=数据长度a5、本体数据 qmemcpy 至 +42"
+],
+"sub_510140": [
+"510140",
+"src/game/po_effects.cpp",
+"CNChangeWeaponElement 构造器（武器属性变更 PO）：sub_4DF1B0(a2,a3,a4,-1) 属性参数包"
+],
+"sub_5101B0": [
+"5101B0",
+"src/game/po_effects.cpp",
+"CNChangeStatus 构造器（状态变更 PO，0x7C 字节）：+21..30 清零，sub_5F76F0/5F7750 装参数包 a2..a5； | 被 0x510960 族状态初始化器与 0x51 区大量装备 PO 实例化"
+],
+"sub_510230": [
+"510230",
+"src/game/po_effects.cpp",
+"CNChangeActiveProperty 构造器（激活属性变更 PO）：nullsub_3 + sub_6038D0(a2,a3,a4)"
+],
+"sub_510350": [
+"510350",
+"src/game/po_effects.cpp",
+"CNChangeElementTolerance 构造器（元素抗性变更 PO）：a6=标签串存 +27 字符串（+32=容量15）； | bigfunc_510F30 护符 PO 以 (2,0,10,60000,1,\"CHARM_FIRE_USE\") 等四系调用它注册属性珠"
+],
+"sub_5104B0": [
+"5104B0",
+"src/game/po_effects.cpp",
+"CNSummonMonsterStackable 构造器（召唤怪物消耗品）：+41=怪物ID、+42/+43=数量区间"
+],
+"sub_510640": [
+"510640",
+"src/game/po_effects.cpp",
+"CNActiveStatusStackable 构造器（主动状态消耗品）：sub_602430/602440 装参数"
+],
+"sub_510E40": [
+"510E40",
+"src/game/po_effects.cpp",
+"CNAntiFreezePotion 构造器（防冻药水）：CNActiveStatusStackable 基类 + sub_602430/602440"
+],
+"sub_513B10": [
+"513B10",
+"src/game/po_effects.cpp",
+"金币事件对 (a2,a3) 压入 +337 事件 vector"
+],
+"sub_5141B0": [
+"5141B0",
+"src/game/po_effects.cpp",
+"CNSpecificEnemyEquipment 构造器（对特定敌人装备基类）：+1352..1376 计数区 + +1380/+2328 双容器； | a4/a5 = 目标敌我标志（下游子类以 (1,0)/(0,1) 区分对敌/对己）"
+],
+"sub_514350": [
+"514350",
+"src/game/po_effects.cpp",
+"CNSpecificStateEquipment 构造器（特定状态下生效装备基类）：+1364 容器"
+],
+"sub_5144A0": [
+"5144A0",
+"src/game/po_effects.cpp",
+"CNEventEquipment 构造器（事件触发装备基类）：+340/+361 双 vector"
+],
+"sub_514520": [
+"514520",
+"src/game/po_effects.cpp",
+"CNEventEquipment 构造器重载：+1440 额外数组 sub_4ED3F0(a4)"
+],
+"sub_514680": [
+"514680",
+"src/game/po_effects.cpp",
+"CNEquipmentSummonOnDamage 构造器（受击召唤装备）"
+],
+"sub_514940": [
+"514940",
+"src/game/po_effects.cpp",
+"CNEquipmentDragonicSkin 构造器（HP 门限状态维持装备）：调 0x510960 装状态初始化器 A"
+],
+"sub_514B80": [
+"514B80",
+"src/game/po_effects.cpp",
+"CNEquipmentSchwarzKreisCoat 构造器（黑圈外套，CNSpecificStateEquipment 系）"
+],
+"sub_514C60": [
+"514C60",
+"src/game/po_effects.cpp",
+"CNEquipmentJetBlackBertesCoat 构造器（漆黑贝尔特斯外套）"
+],
+"sub_514DE0": [
+"514DE0",
+"src/game/po_effects.cpp",
+"CNEquipmentBasaltMarkCoat 构造器（玄武纹外套，CNEventEquipment 系）"
+],
+"sub_514EF0": [
+"514EF0",
+"src/game/po_effects.cpp",
+"CNEquipmentDualBowGun 构造器（双弩枪）"
+],
+"sub_5150B0": [
+"5150B0",
+"src/game/po_effects.cpp",
+"CNEquipmentThunderGhostSlashMuske 构造器（雷鬼斩肩甲）"
+],
+"sub_5151B0": [
+"5151B0",
+"src/game/po_effects.cpp",
+"CNEquipmentKnuckleofChiefSign 构造器（首领之证拳套）"
+],
+"sub_515410": [
+"515410",
+"src/game/po_effects.cpp",
+"CNEquipmentVestofScreamGlass 构造器（惊叫玻璃衣）"
+],
+"sub_515520": [
+"515520",
+"src/game/po_effects.cpp",
+"CNEquipmentBabyBlue 构造器（淡蓝，CNSpecificEnemyEquipment(1,0) 系）"
+],
+"sub_5156B0": [
+"5156B0",
+"src/game/po_effects.cpp",
+"CNEquipmentMesseQuadratCoat 构造器（梅西二次方外套）"
+],
+"sub_515870": [
+"515870",
+"src/game/po_effects.cpp",
+"CNEquipmentUltraAlloyGoratusCoat 构造器（超合金哥拉图斯外套）"
+],
+"sub_515950": [
+"515950",
+"src/game/po_effects.cpp",
+"CNEquipmentBeinenFluchCoat 构造器（拜嫩诅咒外套）"
+],
+"sub_515A50": [
+"515A50",
+"src/game/po_effects.cpp",
+"CNEquipmentGoblinBoneMedal 构造器（哥布林骨勋章）"
+],
+"sub_515CA0": [
+"515CA0",
+"src/game/po_effects.cpp",
+"CNEquipmentGileimo 构造器（吉莱莫）"
+],
+"sub_515E80": [
+"515E80",
+"src/game/po_effects.cpp",
+"CNEquipmentSteelListguard 构造器（钢制利斯特护具）"
+],
+"sub_515F20": [
+"515F20",
+"src/game/po_effects.cpp",
+"CNEquipmentHalgisBoneRing 构造器（哈尔吉斯骨戒）"
+],
+"sub_5160B0": [
+"5160B0",
+"src/game/po_effects.cpp",
+"CNEquipmentVestofTauMane 构造器（牛头王鬃毛衣）"
+],
+"sub_516300": [
+"516300",
+"src/game/po_effects.cpp",
+"CNEquipmentEmbossingShoulderPad 构造器（压纹肩垫）"
+],
+"sub_5163B0": [
+"5163B0",
+"src/game/po_effects.cpp",
+"CNEquipmentHeavyResponsibility 构造器（沉重责任）：+364 状态槽清零"
+],
+"sub_516610": [
+"516610",
+"src/game/po_effects.cpp",
+"CNEquipmentSnakeArmlet 构造器（蛇手镯）"
+],
+"sub_5166D0": [
+"5166D0",
+"src/game/po_effects.cpp",
+"CNEquipmentDressofEternalFlame 构造器（永恒之焰长裙）"
+],
+"sub_5167E0": [
+"5167E0",
+"src/game/po_effects.cpp",
+"CNEquipmentFlammSkulder 构造器（弗拉姆肩甲）"
+],
+"sub_516980": [
+"516980",
+"src/game/po_effects.cpp",
+"CNEquipmentKaloaSnake 构造器（卡洛亚之蛇）"
+],
+"sub_516A90": [
+"516A90",
+"src/game/po_effects.cpp",
+"CNEquipmentHatefulBeastCoat 构造器（憎恨兽外套）：+1456 nengine__CNTimer + +1460 状态位"
+],
+"sub_516DE0": [
+"516DE0",
+"src/game/po_effects.cpp",
+"CNEquipmentMadeInHeaven 构造器（天堂制造）"
+],
+"sub_516F30": [
+"516F30",
+"src/game/po_effects.cpp",
+"CNEquipmentLalaMisYong 构造器（啦啦咪勇）：+1460 nengine__CNTimer"
+],
+"sub_517200": [
+"517200",
+"src/game/po_effects.cpp",
+"CNEquipmentAntiGravityLifter 构造器（反重力升降装置，CNSpecificEnemyEquipment(1,0) 系）"
+],
+"sub_517360": [
+"517360",
+"src/game/po_effects.cpp",
+"CNEquipmentAssaultAttackerCoat 构造器（突击攻击者外套）"
+],
+"sub_517570": [
+"517570",
+"src/game/po_effects.cpp",
+"CNEquipmentMagistrate 构造器（行政官）"
+],
+"sub_5177B0": [
+"5177B0",
+"src/game/po_effects.cpp",
+"CNEquipmentShootingStarDrop 构造器（流星坠落）"
+],
+"sub_517940": [
+"517940",
+"src/game/po_effects.cpp",
+"CNEquipmentFrostbringer 构造器（冰霜使者）"
+],
+"sub_517A60": [
+"517A60",
+"src/game/po_effects.cpp",
+"CNEquipmentBloodsoul 构造器（血魂）"
+],
+"sub_517C10": [
+"517C10",
+"src/game/po_effects.cpp",
+"CNEquipmentNovaCraft 构造器（新星工艺，CNEventEquipment 重载系）"
+],
+"sub_517D90": [
+"517D90",
+"src/game/po_effects.cpp",
+"CNEquipmentSpiritCall 构造器（精灵召唤）：Block 非空则 sub_4ED3F0 装数组"
+],
+"sub_518010": [
+"518010",
+"src/game/po_effects.cpp",
+"CNEquipmentCoatofStarRocker 构造器（星辰摇滚衣）"
+],
+"sub_518100": [
+"518100",
+"src/game/po_effects.cpp",
+"CNEquipmentQuattroMephist 构造器（四重梅菲斯特）"
+],
+"sub_518360": [
+"518360",
+"src/game/po_effects.cpp",
+"CNEquipmentPureGuardian 构造器（纯粹守护者，62 行大构造）"
+],
+"sub_5186C0": [
+"5186C0",
+"src/game/po_effects.cpp",
+"CNEquipmentDarkPrayer 构造器（暗黑祈祷，81 行大构造）"
+],
+"sub_518B20": [
+"518B20",
+"src/game/po_effects.cpp",
+"CNEquipmentTeachingofGoraBoldness 构造器（戈拉的勇气教导，58 行）"
+],
+"sub_518DE0": [
+"518DE0",
+"src/game/po_effects.cpp",
+"CNEquipmentDispellizer 构造器（驱散者）"
+],
+"sub_518FB0": [
+"518FB0",
+"src/game/po_effects.cpp",
+"CNEquipmentMirageWand 构造器（幻影魔杖）"
+],
+"sub_519080": [
+"519080",
+"src/game/po_effects.cpp",
+"CNEquipmentManaholickerCoat 构造器（玛那嗜者外套）"
+],
+"sub_519190": [
+"519190",
+"src/game/po_effects.cpp",
+"CNEquipmentShadowVeilCoat 构造器（暗影面纱外套）"
+],
+"sub_519310": [
+"519310",
+"src/game/po_effects.cpp",
+"CNEquipmentLightKingsGuard 构造器（光之城主护卫）"
+],
+"sub_519440": [
+"519440",
+"src/game/po_effects.cpp",
+"CNEquipmentIceKingsGuard 构造器（冰之王护卫）"
+],
+"sub_519560": [
+"519560",
+"src/game/po_effects.cpp",
+"CNEquipmentCrisisScepter 构造器（危机权杖）：调 sub_510BF0 装状态初始化器 D"
+],
+"sub_519770": [
+"519770",
+"src/game/po_effects.cpp",
+"CNEquipmentMusingRegaliaRob 构造器（沉思法衣）"
+],
+"sub_519910": [
+"519910",
+"src/game/po_effects.cpp",
+"CNEquipmentZiegGarbCoat 构造器（赛格哈特外套）：+364 状态槽清零"
+],
+"sub_519BF0": [
+"519BF0",
+"src/game/po_effects.cpp",
+"CNEquipmentSilentFreyjaRobe 构造器（寂静弗雷娅法袍）：+sub_50F3D0"
+],
+"sub_519D30": [
+"519D30",
+"src/game/po_effects.cpp",
+"CNEquipmentAirVintageCoat 构造器（复古空气外套）：+sub_50F3D0"
+],
+"sub_519EF0": [
+"519EF0",
+"src/game/po_effects.cpp",
+"CNEquipmentManaLamellaRobe 构造器（玛那薄片法袍）"
+],
+"sub_51A0C0": [
+"51A0C0",
+"src/game/po_effects.cpp",
+"CNEquipmentBlackLunaTunic 构造器（黑色月神束衣）"
+],
+"sub_51A330": [
+"51A330",
+"src/game/po_effects.cpp",
+"CNEquipmentAceAdventCoat 构造器（王牌降临外套）：调 sub_510CD0 装状态初始化器 E"
+],
+"sub_51A520": [
+"51A520",
+"src/game/po_effects.cpp",
+"CNEquipmentTheEightyMasters 构造器（八十大师）"
+],
+"sub_51A670": [
+"51A670",
+"src/game/po_effects.cpp",
+"CNEquipmentNobleDignity 构造器（贵族威严）"
+],
+"sub_51A920": [
+"51A920",
+"src/game/po_effects.cpp",
+"CNEquipmentArtiMarpissaCoat 构造器（阿蒂马皮萨外套）"
+],
+"sub_51AA20": [
+"51AA20",
+"src/game/po_effects.cpp",
+"CNEquipmentPlatanicCombatantCoat 构造器（普拉坦战士外套）"
+],
+"sub_51AB20": [
+"51AB20",
+"src/game/po_effects.cpp",
+"CNEquipmentCurseArmorTodpursResist 构造器（诅咒铠甲-托德普斯抗性）：调 sub_510DB0 装状态初始化器 F"
+],
+"sub_51AD20": [
+"51AD20",
+"src/game/po_effects.cpp",
+"CNEquipmentHyperJammer 构造器（超级干扰器）"
+],
+"sub_51ADF0": [
+"51ADF0",
+"src/game/po_effects.cpp",
+"CNEquipmentDestroyHeart 构造器（毁灭之心）"
+],
+"sub_51AF20": [
+"51AF20",
+"src/game/po_effects.cpp",
+"CNEquipmentDevilByPassImpact 构造器（恶魔贯穿冲击）"
+],
+"sub_51B050": [
+"51B050",
+"src/game/po_effects.cpp",
+"CNEquipmentSleepySpring 构造器（嗜睡之泉）：operator new(0x80) → sub_4D6810(1120403456=100.0f,1000,1,1) 状态对象"
+],
+"sub_51B2A0": [
+"51B2A0",
+"src/game/po_effects.cpp",
+"CNEquipmentSilverKnifeOfEmily 构造器（艾米莉银刀）：防篡读(this+81)×0.5 → 防篡写 this+373（P24）"
+],
+"sub_51B380": [
+"51B380",
+"src/game/po_effects.cpp",
+"CNEquipmentCurseOfKhazan 构造器（哈赞诅咒）：同上 ×0.5 → this+373"
+],
+"sub_51B460": [
+"51B460",
+"src/game/po_effects.cpp",
+"CNEquipmentVermote 构造器（维尔莫特）：防篡读 ×0.2 → this+373"
+],
+"sub_51B540": [
+"51B540",
+"src/game/po_effects.cpp",
+"CNEquipmentBreathOfSelion 构造器（塞里昂之息）"
+],
+"sub_51B740": [
+"51B740",
+"src/game/po_effects.cpp",
+"CNEquipmentHwakEyes 构造器（鹰眼，RTTI 原名拼写）：防篡读 ×0.2 → this+373"
+],
+"sub_51B900": [
+"51B900",
+"src/game/po_effects.cpp",
+"CNEquipmentQuicksilverSolJacket 构造器（水银索尔夹克）"
+],
+"sub_522300": [
+"522300",
+"src/game/pvp_ui.cpp",
+"★ PO 工厂分发器（0x51 区物品/装备 PO 统一 new 入口）：sub_510F30(护符 PO) → | sub_51BA00(0x51 区巨函数) → sub_442DA0 装备判定 → new(0x544)+sub_5140A0 建 CNRDEquipment； | 否则按物品类型 switch：case 3/4=new(0xA4)+0x5106C0 CNThrowStackable / case 2=0x5107A0 | CNRecipeStackable / case 5=0x510880 CNLotteryStackable / 默认=0x50F740 CNRDStackable | → vt+20(1) 激活 + vt+40(a2) 参数注入 + 类型!=3 标志写入"
+],
+"sub_524160": [
+"524160",
+"src/game/pvp_ui.cpp",
+"容器扩容/访问辅助（15L）"
+],
+"sub_524330": [
+"524330",
+"src/game/pvp_ui.cpp",
+"全局构造（20L：邮件窗口单例 new）"
+],
+"sub_524760": [
+"524760",
+"src/game/pvp_ui.cpp",
+"cdecl 回调（8L）"
+],
+"sub_524790": [
+"524790",
+"src/game/pvp_ui.cpp",
+"cdecl 列表构建（21L）"
+],
+"sub_524B80": [
+"524B80",
+"src/game/pvp_ui.cpp",
+"发送邮件主逻辑（39L：7 参数打包）"
+],
+"sub_525130": [
+"525130",
+"src/game/pvp_ui.cpp",
+"全局辅助（13L）"
+],
+"sub_525740": [
+"525740",
+"src/game/pvp_ui.cpp",
+"辅助（9L）"
+],
+"sub_52C590": [
+"52C590",
+"src/game/pvp_ui.cpp",
+"房间 UI 重置（141L：按钮组/列表/滚动条复位）"
+],
+"sub_52D970": [
+"52D970",
+"src/game/pvp_ui.cpp",
+"光环事件构造辅助（60L usercall edi：不在 docs/15 清单，L2 注释待深挖）"
+],
+"sub_52E320": [
+"52E320",
+"src/game/pvp_ui.cpp",
+"容器辅助（13L cdecl）"
+],
+"sub_52E3B0": [
+"52E3B0",
+"src/game/pvp_ui.cpp",
+"容器辅助（13L cdecl）"
+],
+"sub_52E440": [
+"52E440",
+"src/game/pvp_ui.cpp",
+"惰性初始化表（13L：dword_9B93A4/dword_9B802C 标志 + atexit(sub_6BFDD0)）"
+],
+"sub_4A0550": [
+"4A0550",
+"src/game/rtti_core.cpp",
+"【解读】 | 【推断】重力/抛物线速度写入器。this+36 保存重力系数（int）， | a2 = 施加系数；v5 = a2*grav 为负时取 v6 = sqrt(-2*v5)（v = sqrt(2gh)）， | 写动画对象 this+24（浮点）+ 脏标记 +196。a2<0 时取负根 —— 上行/下坠两向。 | 【待验证】用途可能是击退抛物线的初速计算。"
+],
+"sub_4AECE0": [
+"4AECE0",
+"src/game/rtti_core.cpp",
+"【解读】 | 【推断】动画切换: sub_491C70(a2) 取动画资源 → sub_493A60(this, res) 应用。"
+],
+"sub_442DF0": [
+"442DF0",
+"src/game/script_string.cpp",
+"map 迭代器前进并回旧值 | 先存旧值于 *uArg2 再 ·sub_40BEA0 前进 —— 迭代器 advance（后置 ++ 语义）"
+],
+"sub_444B30": [
+"444B30",
+"src/game/script_string.cpp",
+"fade 状态机复位 | 写 fade 状态（+20）= nArg2、复位 +24 计时器与 +60 alpha；CNMainGameModule::vmt4 case 3 淡出支调用"
+],
+"sub_444E70": [
+"444E70",
+"src/game/script_string.cpp",
+"【分区 5】战斗分发器共享工具（0x444E70-0x4451F0） 被 bigfunc_4471E0（sub_4471E0 = CNRDUdpModule::vmt0）直接调用： | fade 启动 + 播放广播 | 置 +20=1、记 +52/+56、复位 +24 与 +60；进临界区 ·sub_65DC70 后 ·sub_425960(1) 级联播放广播（+16 对象 +44/+104 两表）"
+],
+"sub_444ED0": [
+"444ED0",
+"src/game/script_string.cpp",
+"fade 收尾（暂停广播） | ·sub_425960(0) 暂停广播后状态 +20 置 3，复位 +24/+60"
+],
+"sub_445150": [
+"445150",
+"src/game/script_string.cpp",
+"分发器 case 0xA 收尾：装备同步资源清理（v306 结构池回收）"
+],
+"sub_445830": [
+"445830",
+"src/game/script_string.cpp",
+"槽快照区复位 | 写 +1048944 旗标；置位时清 8 组 28 字节记录（两标志位 + 计时器复位）"
+],
+"sub_44A980": [
+"44A980",
+"src/game/script_string.cpp",
+"带界索引 getter | nArg2 ≥ [2]（计数）返回 0，否则返回 ·[3]（数组）+ 4·nArg2 项【推断：窗口子件取用】"
+],
+"sub_44AB50": [
+"44AB50",
+"src/game/script_string.cpp",
+"页签切换 | 读页索引 [26+pArg2]（12 = 空页）；非空则取旧页对象 [14+旧索引]，经 ·sub_69A580 注销其资源后 | 写新索引 [26+pArg2]=nArg3，并以旧页对象 vtbl+16 收尾【推断：面板显隐切换】"
+],
+"sub_44B6C0": [
+"44B6C0",
+"src/game/script_string.cpp",
+"CRT 一次性池初始化 2（池 &unk_98B6F8） | —— 与 ·sub_445D00 同构（差异：池 &unk_98B6F8 / atexit ·sub_6BF5C0）"
+],
+"sub_44BBA0": [
+"44BBA0",
+"src/game/script_string.cpp",
+"窗口显示切换（WINDOW_SHOW 音效） | 页索引 [26+pArg2] 比对：已选中且 uArg3 置位 → ·sub_44AB50(_,12) 收起；否则改写索引并 | ·sub_69A840 登记 5 处资源，播 WINDOW_SHOW 音效（·sub_432EA0）"
+],
+"sub_44E1F0": [
+"44E1F0",
+"src/game/script_string.cpp",
+"CNRDPooledObject 构造（虚表覆盖壳） | 转发 ·sub_44E0D0 后改写 vftbl_CNRDPooledObject（与 ·sub_44E0D0 同构，差异：派生虚表）"
+],
+"sub_44E340": [
+"44E340",
+"src/game/script_string.cpp",
+"8 字节元素容器尾插单值 | 有空位 ·sub_63A7C0 就地构造 +8 前移；否则 ·sub_44D240 扩容插入"
+],
+"sub_44E850": [
+"44E850",
+"src/game/script_string.cpp",
+"按池号批量回收活动对象 | pArg2=71 时对 0..70 全池递归；否则遍历该池活动表逐项 ·sub_44E3E0 入空闲表 | byte_9D3BE4 为非 0 即跳过（全局标志）【推断】"
+],
+"sub_44E8D0": [
+"44E8D0",
+"src/game/script_string.cpp",
+"对象池借出（按池号取可用对象） | 活动数不足阈值 dword_724A98[池] 时从空闲表弹栈，否则回收活动表首项复用；无可用则 ·sub_55B070 新建 | 虚表 +12 初始化失败即归还；成功 ·sub_69A840 通知并返回对象"
+],
+"sub_44F080": [
+"44F080",
+"src/game/script_string.cpp",
+"界面切换收尾（关当前子窗 + 批量回收池） | 按 +104/+108 槽位表关子窗（虚表 +48 取句柄交 ·sub_69A580，虚表 +16 关闭）；·sub_525740 释放 | 批量回收池 17/46/15/16/13/14/19/20/22/23/37；末 ·sub_546730 引导步骤推进"
+],
+"sub_483DA0": [
+"483DA0",
+"src/game/skill_load_tutorial.cpp",
+"技能槽交换（交换 nArg2/nArg3 两槽，计数先减 1） | 先对 this+8 计数减 1，再校验两下标并互换 this+4 数组两项；由 ·0x483E70 在 byte_77F280 置位时本地先行交换。"
+],
+"sub_483E30": [
+"483E30",
+"src/game/skill_load_tutorial.cpp",
+"技能槽数组整体清空（非空槽 ·sub_47ECE0 后置 0） | 逐项对非空槽先 ·sub_47ECE0 解除引用再写 0；与 ·0x483DF0 的清点版本区别在于末尾不减计数。"
+],
+"sub_4842B0": [
+"4842B0",
+"src/game/skill_load_tutorial.cpp",
+"技能槽对象查询与结果收集（+392 二级列表 / 回退全局槽表） | 匹配键为槽对象 +4（·sub_41A5E0 读值）等于 nArg2 且 +544 非 0，来源标记取 ·sub_47E340；主路径从 +392 列表项（标记为 0 时取后一项）末尾 24 字节元素的内嵌指针列表逐项 ·sub_437140 解析（哨兵 dword_8F857C 映射为 0，否则加 16）后经 ·sub_484240 追加。 | 回退路径按 dword_99FC9C 的 6 格掩码从 8*v4+0x77FCD8 表（·0x483CF0 遍历的同表）取项追加。"
+],
+"sub_4844B0": [
+"4844B0",
+"src/game/skill_load_tutorial.cpp",
+"技能槽记录初始化（两内部缓冲析构） | 转 ·sub_485020 处理 +16/+20 两处缓冲，并把 +4 置 0xFFFF、+8/+12 清零；与 ·0x4847F0 构造配套。"
+],
+"sub_484710": [
+"484710",
+"src/game/skill_load_tutorial.cpp",
+"技能槽状态写入（两字段组合播报） | 写 this[+8+4*pArg2] = nArg3；pArg2 为 0 且 nArg3 为 1 时经 ·sub_540960、·sub_44AC80 刷新输入框；两状态均为 1 时播报 0x42，否则依次 ·sub_44E850(66)、·sub_44E850(27)。"
+],
+"sub_484D50": [
+"484D50",
+"src/game/skill_load_tutorial.cpp",
+"技能槽清空（按槽类型分流） | 通用槽（*this 非 0 且非 4，或下标不小于 3）走虚表 +4 释放并置 0 后由 ·sub_484D00 重算；0 与 4 类的前 3 槽仅调虚表 +40 置空。"
+],
+"sub_484E80": [
+"484E80",
+"src/game/skill_load_tutorial.cpp",
+"按类型查找下标（同一匹配规则，未命中 -1） | 与 ·0x484E00 匹配规则一致，差别在于仅定位下标而不取虚表 +44 值。"
+],
+"sub_484F40": [
+"484F40",
+"src/game/skill_load_tutorial.cpp",
+"技能槽装载（写槽 + 虚表 +28 反向绑定 + 重算） | 写 this+12 数组第 nArg2 项为 nArg3，并调 nArg3 虚表 +28 建立反向引用，随后 ·sub_484D00 重算；pszArg4 为 1 且 *this 为 0 且 nArg3 非空时调 ·sub_5473D0（物品栏辅助）。"
+],
+"sub_484FA0": [
+"484FA0",
+"src/game/skill_load_tutorial.cpp",
+"全局时间系数计算（+732 与 +746 相乘） | 经 dword_8F7C04 虚表 +672(3) 取对象，读 +732 与 +746 两值（·sub_41A5E0）相乘；dword_8F7C04 为空时返回 -1；结果被 ·0x484640 用作包 op 10 的时间差字段。"
+],
+"sub_484FF0": [
+"484FF0",
+"src/game/skill_load_tutorial.cpp",
+"4 字节列表尾部弹出（终点回退 4，返回弹出前项数） | this+20{+24} 为 4 字节元素列表；弹出即终点减 4，仅当列表非空时生效。"
+],
+"sub_485020": [
+"485020",
+"src/game/skill_load_tutorial.cpp",
+"技能槽容器整体释放（模式 0/4 跳过前 3 槽） | 模式 *this 为 0 或 4 时从下标 3 起，否则从 0 起：逐个把非空槽对象经虚表 +4 释放并置 0，+1 选中项清零。 | 模式 0/4 另对前 3 槽虚表 +40 复位，末尾 free +5 命令等待队列缓冲（+6/+7 清零）。"
+],
+"sub_4850B0": [
+"4850B0",
+"src/game/skill_load_tutorial.cpp",
+"本地命令 0 执行：槽值设置或扣减（op 18） | 先弹出等待队列尾项；槽有效时对象虚表 +44 剩余量 <= uArg3 即整槽清空（·sub_484D50），否则虚表 +52 把值设为 uArg3；成功返回 1。"
+],
+"sub_485150": [
+"485150",
+"src/game/skill_load_tutorial.cpp",
+"本地命令 0 批量执行（op 18 槽数组） | pArg2 为 8 字节 (槽号, 值) 对数组：任一项槽空或虚表 +44 < 值即整批拒绝返回 0。 | 通过后逐项应用——模式 0/4 且槽号 < 3 走虚表 +40 复位，否则释放槽对象并 ·sub_484D00 汇总统计；值不足的项由虚表 +52 设置。"
+],
+"sub_485270": [
+"485270",
+"src/game/skill_load_tutorial.cpp",
+"本地命令：两槽内容交换 | 两下标须都小于槽数；目标槽非空时先经该对象虚表 +56 取值并 ·sub_432EA0 播报音效；随后互换 this+3 数组两项并返回 1。【推断：技能栏拖拽换位】"
+],
+"sub_485330": [
+"485330",
+"src/game/skill_load_tutorial.cpp",
+"§F 0x485330-0x487310 技能命令/施放处理（ALERT_1） | 技能槽命令处理（+44/+48/+52/+56 槽位字段；音效 sub_432EA0）"
+],
+"sub_485510": [
+"485510",
+"src/game/skill_load_tutorial.cpp",
+"本地命令：装备技能装配（op 19 · 装备来源） | 槽对象经 __RTDynamicCast 取 CNRDEquipment，未命中则改走本地玩家 dword_8F7C04 虚表 +792/788 从 pArg4 部位取装备。 | 与原对象不同则先虚表 +100 卸下旧装备，写回槽并 ·sub_484D00 汇总；场景 dword_8F7A24+12 == 3 且 pArg4 <= 9 时把技能 id 写入快捷栏表（·sub_429830 基址 + 4*pArg4 + 56）并通知 dword_8F7C08 虚表 +348 与 ·sub_5603E0。"
+],
+"sub_4856E0": [
+"4856E0",
+"src/game/skill_load_tutorial.cpp",
+"本地命令：技能值置 1（卸下） | 先弹队列尾项；槽有效时虚表 +44 剩余 <= 1 即整槽清空（·sub_484D50），否则虚表 +52 置 1。"
+],
+"sub_485DA0": [
+"485DA0",
+"src/game/skill_load_tutorial.cpp",
+"CNRDMoney 构造（金币掉落物） | ·sub_485D30 构造基类后改挂 CNRDMoney 虚表，nullsub_3，并 ·sub_578680(nArg2) 初始化金币掉落表现资源（Item/FieldImage）。"
+],
+"sub_486330": [
+"486330",
+"src/game/skill_load_tutorial.cpp",
+"请求 op 50（含本地玩家两字段）【推断：宠物/召唤或技能升阶】 | 前置：本地玩家 dword_8F7C04 虚表 +80 通过且 *this == 0；包体 = 玩家虚表 +120、+124 各 2 字节 + 模式字节 + 槽号 2 + 值 4；压入本地命令 1。"
+],
+"sub_486820": [
+"486820",
+"src/game/skill_load_tutorial.cpp",
+"施放拒绝提示（ALERT_1 音效 + sub_485510）"
+],
+"sub_487420": [
+"487420",
+"src/game/skill_load_tutorial.cpp",
+"按键取节点载荷（未命中返回 0） | ·sub_487390 定位后取节点 +16 载荷地址；落在哨兵（== this+2）时返回 0。"
+],
+"sub_487670": [
+"487670",
+"src/game/skill_load_tutorial.cpp",
+"按键取节点载荷（未命中走错误通道） | 与 ·0x487420 同构（差异：未命中时经 off_77F3FC(aCriticalError_9, 键) 报错；命中经 ·sub_436940 取值）。"
+],
+"sub_4879B0": [
+"4879B0",
+"src/game/skill_load_tutorial.cpp",
+"按键取房间对象（缺则新建） | ·sub_487420 命中即返回载荷；否则 new 0x78 CNPvpRoom（·sub_487560）经 ·sub_4878F0 插入树，回传新节点 +16 载荷。"
+],
+"sub_488D90": [
+"488D90",
+"src/game/skill_load_tutorial.cpp",
+"§I 0x488D90-0x489800 网络包收发基础 | 28 字节记录构造（6 dword + 1 字节 + 1 dword） | 依次写 +0..+16 五个参数、+20 字节 pszArg7、+24 nArg8。【推断：技能/物品条目与包记录共用此布局】"
+],
+"sub_489580": [
+"489580",
+"src/game/skill_load_tutorial.cpp",
+"28 字节元素尾插 | 容量足够时经 ·sub_4FF0A0 原位构造并推进 this+2；否则回落 ·sub_489370 插入。"
+],
+"sub_4896B0": [
+"4896B0",
+"src/game/skill_load_tutorial.cpp",
+"全局键表 dword_99FBA4 建键写值 | 取键 nArg1 的载荷（缺则插入）后写值 nArg2，返回载荷指针；即该表的写入器。"
+],
+"sub_48B970": [
+"48B970",
+"src/game/skill_load_tutorial.cpp",
+"216 项开关表读盘并逐项下发 | ·sub_57A120（CBIniFile 桩）把 lpszKey 键下 0xD8 = 216 字节整表读入 byte_99FDD0， | 再对存在的项 i 调 ·sub_47E7A0(byte_99FDD0[i], 0) 下发【推断：逐项应用/重排】。"
+],
+"sub_48BA80": [
+"48BA80",
+"src/game/skill_load_tutorial.cpp",
+"控制台输出 \"CH %s %s %d %d\"（频道/角色名调试）"
+],
+"sub_48BC90": [
+"48BC90",
+"src/game/skill_load_tutorial.cpp",
+"读流游标取 4 字节长度并拷贝其载荷 | ·sub_404AD0 从读游标 dword_79D060 读 4 字节长度，·sub_404AF0 再拷同样多字节到 pArg1，返回长度。"
+],
+"sub_48BCC0": [
+"48BCC0",
+"src/game/skill_load_tutorial.cpp",
+"限量串读入或 strncpy 回退 | 先探读游标长度 v4（0 < v4 < uArg2 时）拷 v4 字节并补 0；Source 为空写空串，非空回落 strncpy 截到 uArg2-1。"
+],
+"sub_48F580": [
+"48F580",
+"src/game/skill_load_tutorial.cpp",
+"座位/就绪表置位并刷新房间列表 | 写座位/就绪字节表 dword_99FEB8 加 槽号 = 值，随后 ·sub_52AF20(dword_8F8528[8]) 刷新房间列表。"
+],
+"sub_48F690": [
+"48F690",
+"src/game/skill_load_tutorial.cpp",
+"槽 id 解析·第二组（偏移 +10） | —— 与 ·sub_48F660 同构（差异：字段偏移 +10）。"
+],
+"sub_48F700": [
+"48F700",
+"src/game/skill_load_tutorial.cpp",
+"LADDER_DOWN 处理（梯子/下落状态、sub_452630/4529B0）"
+],
+"sub_48F890": [
+"48F890",
+"src/game/skill_load_tutorial.cpp",
+"宿主切换 @@SET HOST %d 输出（sub_48F5A0 槽位、sub_4529B0 转移）"
+],
+"sub_48FA30": [
+"48FA30",
+"src/game/skill_load_tutorial.cpp",
+"宿主切换·对象侧（@@SET HOST、LADDER_DOWN）"
+],
+"sub_48FB60": [
+"48FB60",
+"src/game/skill_load_tutorial.cpp",
+"槽按键查找（回填槽号） | 8 槽内 ·sub_48F660(this+1, 槽) 取槽对象，比对 +4 处 int16 等于 nArg2；命中回槽地址并可回填槽号，未中回 0。"
+],
+"sub_48FCA0": [
+"48FCA0",
+"src/game/skill_load_tutorial.cpp",
+"自身座位下标查找（表 dword_99FF08） | —— 与 ·sub_48F5A0 同构（差异：表换 dword_99FF08）。"
+],
+"sub_48FD80": [
+"48FD80",
+"src/game/skill_load_tutorial.cpp",
+"空槽计数（+144..+151 中为 0 的字节数） | 8 字节槽区（+144..+151）统计为 0 的槽数；COUNT_DOWN 事件（·sub_49BEF0）与退场复位族消费【推断】。"
+],
+"sub_48FE80": [
+"48FE80",
+"src/game/skill_load_tutorial.cpp",
+"宿主/UDP 联动收尾（@@SET HOST、sub_42F160）"
+],
+"sub_4600B0": [
+"4600B0",
+"src/game/ui_icon_perf.cpp",
+"批量对象注册：源表逐 id 调 worldmap_reward 0x45FE80 入场景表"
+],
+"sub_461170": [
+"461170",
+"src/game/ui_icon_perf.cpp",
+"字节标志 setter（+1240） | 单字节写 +1240 并原样返回（会员/服务双标志之一，配对见 ·sub_461180）。"
+],
+"sub_461180": [
+"461180",
+"src/game/ui_icon_perf.cpp",
+"与 ·sub_461170 同构（差异：偏移 +1241） | 同为单字节标志 setter 并原样返回；两标志由 ·sub_461190 联合判定后清 +1244。"
+],
+"sub_461190": [
+"461190",
+"src/game/ui_icon_perf.cpp",
+"条件清除计时状态 +1244 | sub_41C590(dword_8F7A24) 不为 1 且 +1240/+1241 任一置位时，把 +1244 清 0。"
+],
+"sub_461520": [
+"461520",
+"src/game/ui_icon_perf.cpp",
+"对战计数与 2.6 秒定时 | 置 +1416=1，this+1404 定时器 2600ms（+1417/+1418 清零）， | 并把会话 dword_8F7A24+40 的 +132 计数自增 1。"
+],
+"sub_4617A0": [
+"4617A0",
+"src/game/ui_icon_perf.cpp",
+"称号路阶文本拼接 | nArg2 为 1/2/3 分别取 EXPERT ROAD、MASTER ROAD、KING ROAD 三段称号（串自证）， | 与本对象首字段串以短横拼接后 sprintf 进全局 byte_98B778；称号为空则不留分隔符。"
+],
+"sub_4632D0": [
+"4632D0",
+"src/game/ui_icon_perf.cpp",
+"席位表快照与排序 | dword_99FF08 表 +80 起 8 个值写入 this+335 起（成对 序号加图像值），255 记为 -1。 | 随后 qsort(this+335, 8, 8, ·sub_461550) 按第 2 字段升序。"
+],
+"sub_4633B0": [
+"4633B0",
+"src/game/ui_icon_perf.cpp",
+"std::string 取数据指针（SSO 判定） | 容量字段 this+78 小于 0x10 时数据在栈内 this+73，否则取堆指针。"
+],
+"sub_467600": [
+"467600",
+"src/game/ui_icon_perf.cpp",
+"36 字节网格坐标换算 | 返回 dword_99FBB4 + 36*(pArg2 + nArg3 * 表宽)，表宽取自 this[42] 的第 dword_99FB78 项 +8。"
+],
+"sub_468BA0": [
+"468BA0",
+"src/game/ui_icon_perf.cpp",
+"map 查找或插入（下标语义） | 自 _Myhead[1] 下探：key 不小于目标走左否则走右，命中返回节点 +16。 | 未命中以 (key,0) 调 ·sub_468390 插入后取 +16。"
+],
+"sub_46B150": [
+"46B150",
+"src/game/ui_icon_perf.cpp",
+"频道栏选中恢复与提示文本 | +276 标志（取消或回滚）时列表非空选末项、否则选 -1。 | 否则读调试配置 sub_48B740(11) 决定选中，再 sub_568A70(byte_99FCD0, byte_99FCD1) 组装条目。"
+],
+"sub_46BCB0": [
+"46BCB0",
+"src/game/ui_icon_perf.cpp",
+"【分区 8】选角输入（0x46BCB0-0x46C300） 键盘导航 0x46BD70（SELECT_CHARACTER/CLICK_BUTTON4 自证）。 | 频道选定提交（发包与配置写入） | nArg3 非 0，或 +96 未锁且 nArg2 小于列表项数时：sub_423200(dword_8F7B08,4) 开包、sub_423290 写槽号、sub_423380 发包。 | sub_48B7C0(11, nArg2) 写调试配置、+96=1、dword_8F7A24+288 = +92。 | 并把 (this+80 + 144*nArg2) 项的名称串经 off_77F3FC 分发。"
+],
+"sub_46C0E0": [
+"46C0E0",
+"src/game/ui_icon_perf.cpp",
+"频道与角色页签切换 | +11 记 nArg2。为 0 分支：+52 对象显示、+176 隐藏、+172=-1、+108 对象 +17=0、+112 对象 +16=0、sub_44E850(30)。 | 为 1 分支：+13 隐藏、+176 显示、sub_46BA60(this, +45) 重设频道页签、sub_44E850(30)。"
+],
+"sub_46C250": [
+"46C250",
+"src/game/ui_icon_perf.cpp",
+"与 ·sub_46C180 同构（差异：浅拷贝域不同） | 差异：+37 处 clong 走 sub_41A5E0 与 sub_41A590 而非 ·sub_46B080； | +52..+112 逐字段复制替代 qmemcpy 且含 +108 字节，无 +20/+24 预置。"
+],
+"sub_46D1A0": [
+"46D1A0",
+"src/game/ui_icon_perf.cpp",
+"选角资源数组释放与状态复位 | this+64 指针数组逐项经 vt 析构(1) 后 j__free；+80..+84 区间逐项 sub_41CBF0 析构后释放 +80。 | 末段复位 +92=-1、+108 对象 +17=0、+112 对象 +16=0、sub_44E850(dword_8F8528,30)、+104 对象 +17=1。"
+],
+"sub_46D280": [
+"46D280",
+"src/game/ui_icon_perf.cpp",
+"追加条目与提示阈值 | this+60 向量（4 字节项）有余量则原位写 nArg2，否则 sub_4BBBA0 定点插入。 | 再 sub_46D110(this+76, nArg3) 追加另一向量；本向量长度达 8 时把 +104 对象 +17 清 0（隐藏提示条）。"
+],
+"sub_453050": [
+"453050",
+"src/game/worldmap_reward.cpp",
+"阶段切换主控 | nArg3 case 0..4：clock_set_countdown + 帧游标复位(4926A0/44E850) + 槽快照(445830)， | case 3 全员 vmt1200/vmt320 收拢；case 0 走 452DF0 复原【推断：PVP 房间阶段机】。"
+],
+"sub_453B10": [
+"453B10",
+"src/game/worldmap_reward.cpp",
+"地图消失处理 | MAP_DISAPPEAR 自证：置 +148/+165/+166 消失标记，经 dword_8F7A24+28 链换锚定对象并 vmt+124 通知主管理器， | 末尾 424A40 解绑角色。"
+],
+"sub_453B80": [
+"453B80",
+"src/game/worldmap_reward.cpp",
+"按钮点击登记 | CLICK_BUTTON2 自证：记录 nArg2..nArg4 到 +220/+224/+228（+232 置 1）， | +300 存 nArg2、+304 存 dword_99FB8C 时刻、+180 置忙。"
+],
+"sub_453BE0": [
+"453BE0",
+"src/game/worldmap_reward.cpp",
+"启动门判定 | clock_now(clk+40) > 20300 判定【推断：界面出现后的延时门槛】。"
+],
+"sub_454680": [
+"454680",
+"src/game/worldmap_reward.cpp",
+"房间选择确认 | 按房间 id 定位槽 → 454610 提交；发包 op 16 = 房间 id(u16) + 类型(u8)【推断：进入房间请求】， | 置 +180 忙、熄四按钮，收尾触发事件 55。"
+],
+"sub_456340": [
+"456340",
+"src/game/worldmap_reward.cpp",
+"槽位绑定（按 id 版） | 429830 查表（0xFFFF → 0）；其余同 ·0x456300。"
+],
+"sub_456390": [
+"456390",
+"src/game/worldmap_reward.cpp",
+"座位号查询（本地玩家 → 座位 index；触发条件评估器 case 5 所用）"
+],
+"sub_456420": [
+"456420",
+"src/game/worldmap_reward.cpp",
+"座位查找（docs/13 §3：进 2 = MAP_APPEAR + 座位 sub_456420）： | 本地角色在 +4 起的 4 槽中定位 → 0..3，未找到 -1"
+],
+"sub_456460": [
+"456460",
+"src/game/worldmap_reward.cpp",
+"本地座位号设置 | 写 +8；dword_8F7A24+12 == 2 时联动 4542A0 按钮刷新。"
+],
+"sub_456480": [
+"456480",
+"src/game/worldmap_reward.cpp",
+"座位号（PVP/WARROOM 场景恒 -1；其余取 +8）"
+],
+"sub_456850": [
+"456850",
+"src/game/worldmap_reward.cpp",
+"队伍槽重置 | 4 槽 +188 解锁清空 → 自身（429830 查 word_77F804）填入 +4 → +8 清 0；场景 2 联动 4542A0。"
+],
+"sub_4569F0": [
+"4569F0",
+"src/game/worldmap_reward.cpp",
+"队员槽查询 | 472E30 查键命中取节点 +16 值，未命中 0。"
+],
+"sub_456D70": [
+"456D70",
+"src/game/worldmap_reward.cpp",
+"队员移除 | 472E30 定位 → 4 槽 +184 反查清空（429830）→ 对象 vt[1] 销毁 → 4341B0 树摘除。"
+],
+"sub_456EB0": [
+"456EB0",
+"src/game/worldmap_reward.cpp",
+"队伍条目取或建 | 472E30 命中即回；否则 new 0x40 走 456C70 → 456DF0 插入。"
+],
+"sub_4577F0": [
+"4577F0",
+"src/game/worldmap_reward.cpp",
+"奖励箱开启 —— REWARD_OPEN1 + CLICK_BUTTON2 自证： | +127 槽空且 a3 有效 → 记箱号/时刻；与本地主角 vt+1216 比对 → +135 命中标记 | （CLICK_BUTTON2）否则 +146=-1 → 按钮熄灭 → REWARD_OPEN1"
+],
+"sub_457FB0": [
+"457FB0",
+"src/game/worldmap_reward.cpp",
+"开箱模式切换显示 | 记 +151/+152 并按 byte_6C6E98 提示；非自身时逐行配色 69C980（基表 unk_6C6E2C，命中 ArgList 行用 4×pArg3 偏移表）； | pArg3==1 记 +160/+161/+162 并打 479..481 文案。"
+],
+"sub_458120": [
+"458120",
+"src/game/worldmap_reward.cpp",
+"奖励箱开启循环（REWARD_OPEN1 自证）【推断：多箱批量推进】"
+],
+"sub_45A420": [
+"45A420",
+"src/game/worldmap_reward.cpp",
+"CNRDReward 状态机入口（·+4 = 状态 n） | 登记进入时刻(+192+4n)并复位时钟后按状态分发：0 全清(·sub_459D30)、1 隐主控件、2 装载划分(·sub_45A3D0)并显示、 | 7 隐四按钮(+524..+536)、9 亮三按钮(+588..+596) 并按 380x76 与 ·unk_6C6E14 坐标表排布、 | 8 遍历 ·dword_8F850C 四玩家槽定位本机对象，镜头横向位夹取 [200, 内部宽-200] 后下发 ·sub_4E4A50 子命令 48026。"
+],
+"sub_45A750": [
+"45A750",
+"src/game/worldmap_reward.cpp",
+"向第 nArg4 组追加一条 52 字节玩家条目 | 默认构造(·sub_459700)后取值：·sub_4F33A0(+4)、·sub_4015C0 名串(+8)、·sub_4F2DF0(+36)、 | +40 = nArg3、·sub_4F2DA0(+44)，尾插 ·+440+16*nArg4 组。"
+],
+"sub_45A820": [
+"45A820",
+"src/game/worldmap_reward.cpp",
+"REWARD_DIVIDE_SET —— 划分按钮逐格排布 | 字符串自证：切状态 6 后按 ·+436 划分计数把按钮(+524+i*4) 依 ·dword_6C6E00[count] + 158*i 排开（y = 163）并点亮。"
+],
+"sub_45B140": [
+"45B140",
+"src/game/worldmap_reward.cpp",
+"刷新 ·+108 悬停记录 | 主控件(·+44) 的 +44 标志置位且 ·dword_8F7C08 存在时，按坐标取覆盖矩形记录 ·sub_48C860。"
+],
+"sub_45D190": [
+"45D190",
+"src/game/worldmap_reward.cpp",
+"【分区 12】对象管理器（0x45D190-0x45FB20） UDP 接收泵 0x45E1A0（docs/13 §2 主帧循环调用）；id 对→对象查找 0x45EBE0 （分发器全 case 共用）；0x45ED80/0x45EF30 = 分发器 case 0x21/0x22 落点。 | 进入/切换房间（DOOR_SHUT 自证） | 旧地图经 ·sub_45F4D0(18) 清场后登记 ·+100 房间 id 与 ·+104 关卡记录；·sub_45C770/45C8C0 建关卡与战斗条目， | ·sub_425500 换绑、·sub_424100 关联旧地图对象；再按房间名串 ·sub_431920 重建 +60 地图层，密码命中经 | ·dword_8F84B8 取 +64 资源；末置地图出现态 ·+172 = 0，双方同 kind 1 时响 ·DOOR_SHUT。"
+],
+"sub_45DA30": [
+"45DA30",
+"src/game/worldmap_reward.cpp",
+"net_type 非 0 时重发识别回执 | 以自身为地址/端口参数转 ·sub_45D890，返回 1（net_type 为 0 返回 0）。"
+],
+"sub_45DB20": [
+"45DB20",
+"src/game/worldmap_reward.cpp",
+"NAT 类型探测（SNAT 系列日志自证） | ·+72 == 3 时按 4 服务器端口计数 0x907/0x908 交替 sendto 探针，收包解析公网映射地址/端口写记录 +168； | 随后以 2 号包上报 net_type / 记录 +160/+164 / htons(+168) / MTU(·+444)。"
+],
+"sub_45E680": [
+"45E680",
+"src/game/worldmap_reward.cpp",
+"对象表归属判定 | nArg2 是否在 ·+8 向量内（1/0），供 ·sub_45B1C0 等做失联剔除。"
+],
+"sub_45EBE0": [
+"45EBE0",
+"src/game/worldmap_reward.cpp",
+"id 对 → 对象查找（战斗分发器全 case 共用解析器）： | 遍历 +2 对象表，vt+48/vt+52 返回值与 (a2,a3) 双字匹配 → 返回对象，未中 0"
+],
+"sub_45F1E0": [
+"45F1E0",
+"src/game/worldmap_reward.cpp",
+"对象注销/退场（递归，含 ELVEN_GATE 检查） | ·vt+40(18) 先递归载体；类型 33 命中经 ·sub_48C990 存在性查找 + ·sub_48DA40 清地图阻挡；随后向 ·+8 表其余对象 | 广播 ·vt+300，并从 ·+8、所属分组(·+24+16n) 与 ·+120 表摘除、·vt+76(0) 解挂； | ·+152 == 1 时扫 ·+120 查有无留守（·vt+376 同队或类型 33 且 +676 = 1），无人则复位并响 ·ELVEN_GATE（自证）。"
+],
+"sub_45FE80": [
+"45FE80",
+"src/game/worldmap_reward.cpp",
+"对象注册（场景对象表插入）—— 分发器 case 0x15/0x16 与 | ui_icon_perf 0x4600B0 的注册链入口；参数 (容器, 源表, a2, a3, 对象, 0, 0)"
+],
+"sub_5DA1E0": [
+"5DA1E0",
+"src/game/creature/expeller_guard.cpp",
+"AI 字段访问 | 索引→组号映射（nArg1>=55 归 4，否则查表 dword_738048；与 ·0x5DACE0 同表） | 供 4 组帧区（本轮序 4 组上限）取组号，超界统一折叠到组 4"
+],
+"sub_5DA920": [
+"5DA920",
+"src/game/creature/expeller_guard.cpp",
+"AI 相位辅助 | 主状态→组号映射（6/7/8/9 → 0/1/2/3，其余归 4） | 与 ·0x5DA1E0 的 dword_738048 表映射互为印证（两条索引→组号路径）"
+],
+"sub_5DA9B0": [
+"5DA9B0",
+"src/game/creature/expeller_guard.cpp",
+"AI 字段访问 | 表包含查询（nArg1 在 unk_737FFC..dword_738020 区间表内返回 1） | 与 ·0x5DA980 同表区（737FFC..738020，四项）—— 本函数只判包含不取值"
+],
+"sub_5DACE0": [
+"5DACE0",
+"src/game/creature/expeller_guard.cpp",
+"数据表+变速换锚 AI（sub_47EF20+sub_493D00, 39L） | 换锚重定（主状态镜像 +1639 为 0/11 且 this+2142 表参非 -1 时） | 经 vt+1140 查 38 号表项 + vt+1160 恢复 → ·sub_47EF20 查表；vt+888 速率双轴写入 | （v5*pArg1[1663]/1000 千分制换算）；·0x5DA1E0 同一 dword_738048 组表取组号后 | this+2043 组区 2 项帧对经 ·sub_493D00 速率复位至 100.0（变速撤离锚点）【推断】"
+],
+"sub_5DADE0": [
+"5DADE0",
+"src/game/creature/expeller_guard.cpp",
+"AI 字段访问（this+8628） | 死亡/移除锚定（vt+216 事件 11 + +8628 帧索引清零 + vt+212 播报 nArg2； | +2148 时刻槽取 dword_79D100 时钟快照 —— 与 ·0x5DA490 的 -1 复位及后续到点比较配对）【推断】"
+],
+"sub_5DAE20": [
+"5DAE20",
+"src/game/creature/expeller_guard.cpp",
+"AI 相位辅助 | 内联尾插（this[0]=容量上限、this[1]=基址、this[2]=游标；越界转·off_77F3FC 断言） | ·被 0x5E1000 / aura_create / passive_object 直接喂 dword_9B9344 等 AI 相位槽值【推断】"
+],
+"sub_5DBBD0": [
+"5DBBD0",
+"src/game/creature/expeller_guard.cpp",
+"语音注册（sub_4015C0; this+8628） | 延时播报登记（this+8592 时刻槽非 -1 时生效）：dword_79D100 时钟未到 nArg3+起点则挂起 | ·this+8596 存到期时刻、sub_4015C0 拷贝 Src 文案、this+8628 置忙位 1；已到则立即 vt+216(this,11)+vt+212 播报； | ·无论何种分支末尾 this+8592 复位 -1（与·0x5DADE0 清零、·0x5DAF10 到点触发构成三件套）"
+],
+"sub_5DC480": [
+"5DC480",
+"src/game/creature/expeller_guard.cpp",
+"AI 相位辅助 | 追击弹发射（vt+308 存活门）：·sub_5DC170 收集现存弹，数量 < vt+1160(this,5) 表值·sub_47E9D0(vt,1) 才发射 | ·序号取末弹 +1004+1（pszArg3 非 0 再加 10000 偏置），经 vt+580(this, dword_737FB0[nArg2], 序号, ...) 发射调用； | ·满额则经 dword_8F8528[7] + ·sub_422E70(1205) + ·sub_43BEE0 挂提示；nArg2 为 dword_737FB0 弹种表索引"
+],
+"sub_5DCF20": [
+"5DCF20",
+"src/game/creature/expeller_guard.cpp",
+"追击弹爆炸：CHASER_EXPLOSION 播报（81L） | 追击弹爆炸总清理：·sub_5DC170 收集后逐弹（vt+308 存活者）以 sub_430C80 登记 v4 偏移 | ·（步长 +80）再 vt+560(弹,4,包,0,0) 触发第 4 相位；全部处理完 vt+212 播报 CHASER_EXPLOSION 并统一 j__free 释放收集块"
+],
+"sub_5C6A90": [
+"5C6A90",
+"src/game/creature/missing_monster.cpp",
+"调: sub_5C6A90"
+],
+"sub_50D920": [
+"50D920",
+"src/game/parsers/attackinfo_parser.cpp",
+"仓储栏类型设置（非法档位报错） | 遍历档位表（步长 8）比对 nArg1，命中且仍在 [dword_9B7C90, dword_9B7D10) 区内时写回 dword_9B7D10； | 否则按 CNRDStorageWindow::set_storage_type - Abnormal storage type 文案报错。"
+],
+"sub_50D980": [
+"50D980",
+"src/game/parsers/attackinfo_parser.cpp",
+"当前档位行数读取 | 返回 dword_9B7C90[8×当前档位]（每档 8 双字记录）。"
+],
+"sub_50F270": [
+"50F270",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNChangeMp 构造（vftbl_CNChangeMp + sub_602070 基类 + sub_602380 初值）"
+],
+"sub_50F740": [
+"50F740",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNRDStackable 基类构造（物品核心 + 掉落动画） | ·sub_485CC0（IRDItem 核心构造）后挂 vftbl_CNRDStackable，+148=8/+152=-1 等槽初值， | ·sub_577FF0、·sub_578610(ArgList) 掉落物动画驱动。"
+],
+"sub_50F7C0": [
+"50F7C0",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNIncreaseStatusStackable 构造 | ·sub_50F740 基类后挂 vftbl_CNIncreaseStatusStackable。"
+],
+"sub_50F7F0": [
+"50F7F0",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNItemScreamOfHysma 构造 | ·sub_50F740 基类后挂 vftbl_CNItemScreamOfHysma。"
+],
+"sub_50F850": [
+"50F850",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNAppendageStackable 构造（记录追加初始化） | ·sub_50F740 后挂 vftbl_CNAppendageStackable，+168..+188 槽初值（+180=17 类型字、+192=1）， | ·sub_602E40 释放旧段、·sub_6032D0(nArg3,nArg4) 追加记录。"
+],
+"sub_50F990": [
+"50F990",
+"src/game/parsers/attackinfo_parser.cpp",
+"与 ·0x50F850 同构（差异：末步 ·sub_603300 三参追加）"
+],
+"sub_50FA30": [
+"50FA30",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNCoinOfFortune 构造 | ·sub_50F740 基类后挂 vftbl_CNCoinOfFortune。"
+],
+"sub_50FA90": [
+"50FA90",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNTouchOfRemy 构造 | ·sub_50F740 基类后挂 vftbl_CNTouchOfRemy。"
+],
+"sub_50FC00": [
+"50FC00",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNRateHpMp 构造（模式 + 回复率 + 时长） | ·sub_50F740 后挂 vftbl_CNRateHpMp；+164=nArg3（模式 0 HP/1 MP/2 双）、+168=nArg4（回复率）、+172=nArg5（时长）。"
+],
+"sub_50FE70": [
+"50FE70",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNCallStorageBird 构造 | ·sub_50F740 基类后挂 vftbl_CNCallStorageBird。"
+],
+"sub_50FF30": [
+"50FF30",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNOmozzaOfWorld 构造 | ·sub_50F740 后挂 vftbl_CNOmozzaOfWorld；+164/+168 存两参、+172 存标志。"
+],
+"sub_50FFB0": [
+"50FFB0",
+"src/game/parsers/attackinfo_parser.cpp",
+"CNUsableStackable 构造 | ·sub_50F740 基类后挂 vftbl_CNUsableStackable。"
+],
+"sub_4F2CE0": [
+"4F2CE0",
+"src/game/parsers/item_parser.cpp",
+"按物品 id 取名称串：查模板表（sub_4CE8A0）取 +4/+2120 处串； | id=0 → 全局串 868；未登记 → \"NONE\"。"
+],
+"sub_4F2D40": [
+"4F2D40",
+"src/game/parsers/item_parser.cpp",
+"模板登记判定：物品 id 在模板表（sub_4CE8A0）命中 → 2，否则 1。"
+],
+"sub_4F3460": [
+"4F3460",
+"src/game/parsers/item_parser.cpp",
+"物品资源管理全局重置：dword_9B8DBC/9B8DC8 两棵树清空（sub_4F3360）+ | dword_9B08EC 起的配对表清零。"
+],
+"sub_642410": [
+"642410",
+"src/game/ui/aura_create.cpp",
+"PVP 房间列表数据 2（14 行）"
+],
+"sub_642990": [
+"642990",
+"src/game/ui/aura_create.cpp",
+"PVP 房间列表重建（162 行：699000/698F90 + 438820/642900/430C80/4332F0/44E850）"
+],
+"sub_648D40": [
+"648D40",
+"src/game/ui/aura_create.cpp",
+"版本信息数据 3（19 行）"
+],
+"sub_648D80": [
+"648D80",
+"src/game/ui/aura_create.cpp",
+"版本信息数据 4（22 行）"
+],
+"sub_648DD0": [
+"648DD0",
+"src/game/ui/aura_create.cpp",
+"版本信息数据 5（20 行）"
+],
+"sub_648F10": [
+"648F10",
+"src/game/ui/aura_create.cpp",
+"版本信息转发（648E10）"
+],
+"sub_550020": [
+"550020",
+"src/game/ui/cashshop.cpp",
+"【分区 1】PVP 结算联动与技能购买窗（0x550020-0x550420） 结算入队 0x550020（→trade_shop 0x54FFB0）；结算应用 0x5500B0（108 行）； 结果应用（108 行）；0x550300=PVP 结果数据。 | PVP 结算入队转发：按对象槽 8052 过滤后 54FFB0 入队（遍历 48F690 对象池 8 槽） | 大白话：PVP 结算联动转发：遍历 48F690 对象池 8 槽找到 +4 编号匹配且 +196 | 有效、+8052 未挂结算的对象，把(编号,参数,槽,虚表+376 值)打包 54FFB0 入队结算窗。"
+],
+"sub_5500B0": [
+"5500B0",
+"src/game/ui/cashshop.cpp",
+"PVP 结算结果应用（48F690 对象 + 4BF340/54F610/54FE50，108 行） | 大白话：PVP 结算结果应用：48F690 取对象后经 4BF340/54F610/54FE50 完成结算窗 | 显示与收尾（108 行）。"
+],
+"sub_553FB0": [
+"553FB0",
+"src/game/ui/cashshop.cpp",
+"任务 NPC 查询（47CC80/47CA40） | 大白话：任务 NPC 查询：47CC80/47CA40。"
+],
+"sub_55CB10": [
+"55CB10",
+"src/game/ui/cashshop.cpp",
+"商城状态（44E8D0） | 大白话：商城状态：44E8D0 登记对象。"
+],
+"sub_55E820": [
+"55E820",
+"src/game/ui/cashshop.cpp",
+"商城条目（26 行） | 大白话：商城条目：26 行。"
+],
+"sub_55F7B0": [
+"55F7B0",
+"src/game/ui/cashshop.cpp",
+"全局窗口获取（430C80） | 大白话：全局窗口获取：430C80。"
+],
+"sub_560140": [
+"560140",
+"src/game/ui/cashshop.cpp",
+"商品列表显示（698F90/55FDB0/44BBA0） | 大白话：商品列表显示：698F90 起延时 + 55FDB0 刷新 + 44BBA0 显示。"
+],
+"sub_5601C0": [
+"5601C0",
+"src/game/ui/cashshop.cpp",
+"礼赠流程主函数（55E8B0/44E8D0/44E850/55CB60/4015C0/63EF60/55F7B0，60 行） | 大白话：礼赠流程主函数：55E8B0 取条目 + 44E8D0/44E850 状态 + 55CB60/4015C0 | 文案 + 63EF60 确认框 + 55F7B0 收尾（60 行）。"
+],
+"sub_5603E0": [
+"5603E0",
+"src/game/ui/cashshop.cpp",
+"商城对象更新（46C180/42B0F0/4939E0/41CBF0） | 大白话：商城对象更新：46C180/42B0F0/4939E0/41CBF0（选中角色模型/试穿展示【推断】）。"
+],
+"sub_568A70": [
+"568A70",
+"src/game/ui/cashshop.cpp",
+"频道条目组装（568940/568800）"
+],
+"sub_56A6B0": [
+"56A6B0",
+"src/game/ui/cashshop.cpp",
+"频道对象辅助 2（429830） | 大白话：频道对象辅助 2：429830。"
+],
+"sub_583A40": [
+"583A40",
+"src/game/ui/char_server_info.cpp",
+"【分区 1】角色创建/服务器数据主流程配套辅助（0x583A40-0x583B50） 主流程 0x583B90 在 src/combat/bigfunc_583B90_sub_583B90.cpp； 本区是它的字符串槽清理 / 数据槽 setter / 结构拷贝 / 查表 / 全局缓冲释放。 | 清空对象 +588 起的字符串槽（+601/+602 字节置 0，尾调 698F90 析构字符串）"
+],
+"sub_583A60": [
+"583A60",
+"src/game/ui/char_server_info.cpp",
+"读取 this+79 槽位（非 0 时调 0x5512D0 = 任务文本设置），0x583B90 流程取任务名用"
+],
+"sub_583A80": [
+"583A80",
+"src/game/ui/char_server_info.cpp",
+"数值槽 setter：+50 标志为真直写 +56，否则写 +52 = a2 - 基址表 dword_79D100[+44]"
+],
+"sub_583AB0": [
+"583AB0",
+"src/game/ui/char_server_info.cpp",
+"4 段缓冲拷贝构造（this+0/+18/+8/+46 ← a2 同偏移，46B080=内存复制）"
+],
+"sub_583B30": [
+"583B30",
+"src/game/ui/char_server_info.cpp",
+"按 this+72 下标查 this+69 表（16字节/项），-1 则返回 -1"
+],
+"sub_583B50": [
+"583B50",
+"src/game/ui/char_server_info.cpp",
+"释放全局缓冲 dword_9B9468 并清零 9B946C/9B9470（服务器列表缓存）【推断】"
+],
+"sub_579F90": [
+"579F90",
+"src/game/ui/http_item_info.cpp",
+"职业构造分发：调 579A60(剑士)/579B40(格斗)/579C80(枪手)/579E70(法师)——按职业 id 走对应后段"
+],
+"sub_57A280": [
+"57A280",
+"src/game/ui/http_item_info.cpp",
+"INI/字符串小桩（15 行）"
+],
+"sub_57A2B0": [
+"57A2B0",
+"src/game/ui/http_item_info.cpp",
+"字符串小桩（12 行 return）"
+],
+"sub_57A2D0": [
+"57A2D0",
+"src/game/ui/http_item_info.cpp",
+"字符串小桩（12 行 return）"
+],
+"sub_57A2F0": [
+"57A2F0",
+"src/game/ui/http_item_info.cpp",
+"std::string 构造辅助（41A5E0/41A590）"
+],
+"sub_57A310": [
+"57A310",
+"src/game/ui/http_item_info.cpp",
+"std::string 构造辅助 2（41A5E0/41A590）"
+],
+"sub_57A330": [
+"57A330",
+"src/game/ui/http_item_info.cpp",
+"字符串小桩（699030）"
+],
+"sub_57A340": [
+"57A340",
+"src/game/ui/http_item_info.cpp",
+"std::string 析构辅助（698F90/698FE0）"
+],
+"sub_57A360": [
+"57A360",
+"src/game/ui/http_item_info.cpp",
+"字符串辅助（578C40 掉落物理复用）"
+],
+"sub_57A380": [
+"57A380",
+"src/game/ui/http_item_info.cpp",
+"13 行小函数"
+],
+"sub_57A3A0": [
+"57A3A0",
+"src/game/ui/http_item_info.cpp",
+"std::string 构造辅助 3（698F90）"
+],
+"sub_57A3C0": [
+"57A3C0",
+"src/game/ui/http_item_info.cpp",
+"对象/控件辅助（47DC90/483D50）"
+],
+"sub_57A3F0": [
+"57A3F0",
+"src/game/ui/http_item_info.cpp",
+"std::string 构造辅助 4（41A5E0/41A590）"
+],
+"sub_57A410": [
+"57A410",
+"src/game/ui/http_item_info.cpp",
+"std::string 构造辅助 5（41A5E0/41A590）"
+],
+"sub_57A430": [
+"57A430",
+"src/game/ui/http_item_info.cpp",
+"std::string 构造辅助 6（698F90）"
+],
+"sub_57A460": [
+"57A460",
+"src/game/ui/http_item_info.cpp",
+"11 行小函数"
+],
+"sub_57A480": [
+"57A480",
+"src/game/ui/http_item_info.cpp",
+"字符串辅助 7（41A5E0）"
+],
+"sub_57A4F0": [
+"57A4F0",
+"src/game/ui/http_item_info.cpp",
+"14 行小函数"
+],
+"sub_57A590": [
+"57A590",
+"src/game/ui/http_item_info.cpp",
+"转发 57A520"
+],
+"sub_57A8F0": [
+"57A8F0",
+"src/game/ui/http_item_info.cpp",
+"转发 57A880 + 655A40 收尾"
+],
+"sub_578E80": [
+"578E80",
+"src/game/ui/missing_ui_login.cpp",
+"§B 0x57-0x58 补漏 | 调: sub_578E80 sub_48F660"
+],
+"sub_541AE0": [
+"541AE0",
+"src/game/ui/missing_ui_login.cpp",
+"调: sub_541AE0 sub_44AC10"
+],
+"sub_5419F0": [
+"5419F0",
+"src/game/ui/trade_shop.cpp",
+"摊位动画辅助（429830）"
+],
+"sub_541A30": [
+"541A30",
+"src/game/ui/trade_shop.cpp",
+"摊位条目名取串（10 行） | 大白话：取当前活动摆摊子窗口指针（解引用单例 dword_9B8038）。"
+],
+"sub_541A60": [
+"541A60",
+"src/game/ui/trade_shop.cpp",
+"摊位子页切换（44AB50 + 44E850 + 44BBA0） | 大白话：切换摆摊子页：44AB50(全局窗,0,12) 页签切换；dword_9B8038 ← dword_9B8034[nArg1] | （nArg1=0/1/2 对应展示/收购/出售【推断】）；byte_9B804C = (nArg1==1)， | 非 1 时调新子窗 vmt+76 登记；44E850(71) 解除 71 号对象、44BBA0(全局,9,0) 显示 9 号页。"
+],
+"sub_541B30": [
+"541B30",
+"src/game/ui/trade_shop.cpp",
+"摊位条目详情（4F2CE0/422E70 取串 + 44E8D0） | 大白话：条目详情弹窗：4F2CE0 解析物品、用串表 1338 的格式串 sprintf 详情文本； | 临时把活动子窗切到 dword_9B8034[1]（展示页）调 vmt+68 登记条目，扫描 14 格 | （两列）统计上架数、为 0 时调 vmt+84 收起；44E8D0 消息 0x1B 弹出文本后恢复原子窗。"
+],
+"sub_541C60": [
+"541C60",
+"src/game/ui/trade_shop.cpp",
+"摊位登记提交（522300/4F2D40/484F40 + 47CD00 音效） | 大白话：上架条目本地登记：522300 生成条目对象；4F2D40 判类型 2 且数量(虚表+172) | <=7 时选 dword_8F8534 为目标列表（否则 dword_8F852C）；槽位有效则放入 | （虚表+60 同类合并→虚表+48 改数量，合并不上走日志 off_77F3FC），无效槽走 484F40； | 最后按条目音效名(虚表+56)播 432EA0、ArgList>=9 时全局窗 +14 控件 +56 写分页号 | (ArgList-9)/32【推断】，47CD00 播收尾音。"
+],
+"sub_542000": [
+"542000",
+"src/game/ui/trade_shop.cpp",
+"摊位条目查询（422E70 取串 + 44E8D0，46 行） | 大白话：摆摊错误码弹提示：按服务器错误码 nArg1 查串表取文案 | （53→1325、52→1326、17→1327、22→1328、10→1329、4→1330、1→1331、55→1342、 | 21→1355），再 44E8D0 消息 0x1B 弹出（0x1B=弹消息框【推断】）。"
+],
+"sub_5420A0": [
+"5420A0",
+"src/game/ui/trade_shop.cpp",
+"摊位条目查询 2（+43BEE0 图标 + 44ABE0） | 大白话：另一组摆摊错误码：53→1321、20→1322 弹消息(0x1B)并写日志；51→1323 时 | 43BEE0 以色值 -6567706 打公告横幅并 44ABE0(16) 收起面板；57→1351、58→1352 弹消息。"
+],
+"sub_542190": [
+"542190",
+"src/game/ui/trade_shop.cpp",
+"摊位条目查询 3（+44AB50 页切换） | 大白话：摆摊错误码 53/54 弹消息(0x1B, 串 1325/1326)；错误码 22 时先 | 44AB50(全局窗,1,12) 切子页 1，再以消息 0x40 弹串 1324（0x40=确认框【推断】）。"
+],
+"sub_542220": [
+"542220",
+"src/game/ui/trade_shop.cpp",
+"摊位条目查询 4（28 行） | 大白话：摆摊错误码 53→1325、52→1326、17→1332 弹消息(0x1B)。"
+],
+"sub_542AD0": [
+"542AD0",
+"src/game/ui/trade_shop.cpp",
+"摊位页切换（44AB50 + 542940，60 行） | 大白话：摆摊页签复位：当前活动子窗(*dword_9B8038)为 dword_9B8034[2] 时弹串 1336； | 为 dword_9B8034[1] 时清空 dword_9B8044/dword_9B8048 两条挂链清单（542940 释放 | 节点、头结点自指、计数归零）；最后 44AB50(全局窗,1,12) 切回页签 1。"
+],
+"sub_545730": [
+"545730",
+"src/game/ui/trade_shop.cpp",
+"输入框打开（41C590 + 545610 + 49EC10 + 69A5F0 定位） | 大白话：输入框打开：41C590 建控件、545610 刷新、49EC10 挂载、69A5F0 定位。"
+],
+"sub_546620": [
+"546620",
+"src/game/ui/trade_shop.cpp",
+"引导步骤查询（47B8D0 + 698F90） | 大白话：引导步骤查询：47B8D0 取当前步骤 + 698F90。"
+],
+"sub_546680": [
+"546680",
+"src/game/ui/trade_shop.cpp",
+"引导辅助 2（698F90） | 大白话：引导辅助 2：698F90 清理（变体）。"
+],
+"sub_546E10": [
+"546E10",
+"src/game/ui/trade_shop.cpp",
+"引导步骤推进（472F90/472E30/47C080/47B6F0/461730/47B560，59 行） | 大白话：引导步骤推进实现：472F90/472E30/47C080/47B6F0/461730/47B560 系列状态调用。"
+],
+"sub_54D2B0": [
+"54D2B0",
+"src/game/ui/trade_shop.cpp",
+"21 行小辅助 | 大白话：21 行小辅助（工具窗）。"
+],
+"sub_54DF30": [
+"54DF30",
+"src/game/ui/trade_shop.cpp",
+"13 行小辅助 | 大白话：13 行小辅助（结算）。"
+],
+"sub_54E160": [
+"54E160",
+"src/game/ui/trade_shop.cpp",
+"17 行小辅助 | 大白话：17 行小辅助（结算）。"
+],
+"sub_54F540": [
+"54F540",
+"src/game/ui/trade_shop.cpp",
+"结算动画事件：MAP_APPEAR/M_RESULT/RESULT_COME 标签（432EE0/65DC70/432EA0） | 大白话：结算动画事件：MAP_APPEAR/M_RESULT/RESULT_COME 标签（432EE0/65DC70/432EA0）。"
+],
+"sub_630750": [
+"630750",
+"src/game/ui/window_party.cpp",
+"组队列表页绘制（456480/429830/456390/69C980，25 行）"
+],
+"sub_6312F0": [
+"6312F0",
+"src/game/ui/window_party.cpp",
+"组队列表重建（251 行：4A2CF0 + 56A720/56A680 成员 + 52DAA0/468240/430C80 候选）"
+],
+"sub_631630": [
+"631630",
+"src/game/ui/window_party.cpp",
+"组队列表刷新入口（630750 绘制 + 6312F0 重建）"
+],
+"sub_632D40": [
+"632D40",
+"src/game/ui/window_party.cpp",
+"推荐用户列表重建（178 行：4A2CF0 + 52DAA0/468240/430C80）"
+],
+"sub_63B040": [
+"63B040",
+"src/game/ui/window_party.cpp",
+"强化结果动画转发（63AFD0）"
+],
+"sub_63B3C0": [
+"63B3C0",
+"src/game/ui/window_party.cpp",
+"物品盒数据 5（32 行）"
+],
+"sub_63DFB0": [
+"63DFB0",
+"src/game/ui/window_party.cpp",
+"奖励文本拼装（459700/4014D0/63DF50 + 477AF0 + 45A340，112 行）"
+],
+"sub_63EDD0": [
+"63EDD0",
+"src/game/ui/window_party.cpp",
+"交易结果文本（459700/4015C0/422E70/45A340/477AF0，69 行）"
+],
+"sub_63F2F0": [
+"63F2F0",
+"src/game/ui/window_party.cpp",
+"合成结果文本（459700/4015C0/422E70/45A340/69A5F0/477AF0，75 行）"
+],
+"sub_63F7E0": [
+"63F7E0",
+"src/game/ui/window_party.cpp",
+"任务奖励文本（459700/4015C0/422E70/45A340/69A5F0/477AF0，75 行）"
+],
+"sub_41A5E0": [
+"41A5E0",
+"src/nengine/gfx_texture.cpp",
+"crypt4byte 解密校验（·0x41A590 逆运算） | 由 +4/+13 查 dword_8F7808 密钥表，与 +5/+9 两校验字对 pArg1 高低 16 位重构明文；双式相等 → ++dword_8F7A10 返回明文， | 否则 byte_77F48C=0 并返回 0（篡改/调试检测）。"
+],
+"sub_41ACF0": [
+"41ACF0",
+"src/nengine/gfx_texture.cpp",
+"驻留串句柄 → 字符串指针 | 句柄或全局池 dword_8F7A14 寻址失败 → 返回空串 szPassword；否则返回 0x41AC90(池, 槽码) 的串指针。"
+],
+"sub_41C0E0": [
+"41C0E0",
+"src/nengine/gfx_texture.cpp",
+"发送缓冲写入（长度 2 版本）【推断】 | 转发 0x423290(&pszArg1, 2) —— 与 ·0x41C0C0 构成同一包字段的写入原语对。"
+],
+"sub_41C150": [
+"41C150",
+"src/nengine/gfx_texture.cpp",
+"crypt4byte 初始化转发（0x41A590） | 直接转发 0x41A590(uArg1, nArg2, nArg3) 并返回 nArg3，便于调用点链式使用。"
+],
+"sub_41C190": [
+"41C190",
+"src/nengine/gfx_texture.cpp",
+"级联通知转发（this+44 / this+104 作上下文）【推断】 | 以 (nArg2, *(this+44), *(this+104)) 调 0x425960（播放/暂停级联广播）。"
+],
+"sub_41C1B0": [
+"41C1B0",
+"src/nengine/gfx_texture.cpp",
+"按全局键 word_77F804 查表取对象 | 0x429830 表按键查找（uint16）；返回 0 表示当前无对应管理器/界面实例。【推断】"
+],
+"sub_41C1E0": [
+"41C1E0",
+"src/nengine/gfx_texture.cpp",
+""
+],
+"sub_41C210": [
+"41C210",
+"src/nengine/gfx_texture.cpp",
+"状态判定（三路或）【推断】 | 模块态 this+12 == 3 → 1；== 4 且 *(*(this+32)+36) == 3 → 1；== 6 且 0x42B510(this+40)（场景类别 +32 属 2/3/4）非 0 → 1。"
+],
+"sub_41C270": [
+"41C270",
+"src/nengine/gfx_texture.cpp",
+"对 this+248 子对象做 crypt4byte 初始化 | 转发 0x41A590(pArg1 + 248, nArg2, uArg3)。"
+],
+"sub_41C2B0": [
+"41C2B0",
+"src/nengine/gfx_texture.cpp",
+"★ 进入频道请求组包 | 调试日志 off_77F3FC(byte_6C2B70, this+113)；0x423200(…, 1) 开包 → 写串 this+113、串 this+177（各 64B 级，长度+内容）、 | 写 4B（this+262..）与 16B（nArg2）→ 0x423380 发包；随后置 this+92=1（等待应答）、93/94=0、0x698F90(this+80) 归零计时、this+76=0。"
+],
+"sub_41C3C0": [
+"41C3C0",
+"src/nengine/gfx_texture.cpp",
+"字段 setter（this+292 = nArg2）"
+],
+"sub_41C470": [
+"41C470",
+"src/nengine/gfx_texture.cpp",
+"字节数组 setter（this + pArg2 + 297 = pszArg3）"
+],
+"sub_41C490": [
+"41C490",
+"src/nengine/gfx_texture.cpp",
+"dword 数组 setter（this + pArg2 + 77 = nArg3）"
+],
+"sub_41C4B0": [
+"41C4B0",
+"src/nengine/gfx_texture.cpp",
+"索引取字符串资源（文本表）【推断】 | 1..5 → 资源 845..849；7/8 → 1950/1951；其余返回空串 szPassword —— 等级/名号等固定文本。"
+],
+"sub_41C5A0": [
+"41C5A0",
+"src/nengine/gfx_texture.cpp",
+"vector<T 4B> 大小查询（空返回 0）"
+],
+"sub_41C860": [
+"41C860",
+"src/nengine/gfx_texture.cpp",
+"断线/超时退出判定（重试上限 5） | 0x4461F0(dword_8F8520) 上报（PVP ping/SNAT 日志，包 105）；若未连接（8F7B08+8 == 0）或重试计数 this+108 > 5 → | 0x41C1E0 退出清理（__noreturn）；否则 ++this+108 并发包 3 后 flush。"
+],
+"sub_41C9E0": [
+"41C9E0",
+"src/nengine/gfx_texture.cpp",
+"字段 setter（this+296），变更时 0x41C3D0 刷新提示"
+],
+"sub_41CBF0": [
+"41CBF0",
+"src/nengine/gfx_texture.cpp",
+"成员析构（两个 std::string + crypt4byte 子对象） | this+140 串（容量 ≥ 16 走堆 free）复位；0x41A580 复位 crypt4byte(this+37)；this+24 串释放并置空。"
+],
+"sub_41D300": [
+"41D300",
+"src/nengine/gfx_texture.cpp",
+"模块切换 setter → 0x41CC80(onChangeModule) 转发 | 先存旧模块号 this+12，写新值后以 (旧, 新) 触发切换总控。"
+],
+"sub_41D320": [
+"41D320",
+"src/nengine/gfx_texture.cpp",
+"★ 登出/回主界面资源卸载链 | 进临界区；旧模块 != 5 → this+12 = 0 且 onChangeModule(旧→0)；清 STL map(0x4297A0) 与红黑树(0x4878B0)， | NPC 容器 +164 置 0 并清链(0x41CA60)、重建归属(0x45C400)、锚定对象换绑(0x425500/0x424100)； | 批量全局管理器卸载 + 观察者树清空(0x41CA20)；自身字段 +297..+348 复位；切到 0 态时发包 8（0xFFFF + 0x02）并 flush。"
+],
+"sub_404A90": [
+"404A90",
+"src/nengine/log_dump.cpp",
+"游标读 1 字节（*uArg1 取值，游标 +1） | 与 ·0x404AB0/·0x404AD0 同构（差异: 读取宽度 1/2/4 字节）。"
+],
+"sub_404AB0": [
+"404AB0",
+"src/nengine/log_dump.cpp",
+"游标读 2 字节 | 与 ·0x404A90 同构（差异: uint16）。"
+],
+"sub_404AD0": [
+"404AD0",
+"src/nengine/log_dump.cpp",
+"游标读 4 字节 | 与 ·0x404A90 同构（差异: uint32）；skill_load_tutorial.cpp 0x48BC90 用它读取长度前缀。"
+],
+"sub_404AF0": [
+"404AF0",
+"src/nengine/log_dump.cpp",
+"游标读 n 字节到目标缓冲（qmemcpy 批量版） | 与 ·0x404A90 族同源，返回拷贝字节数。"
+],
+"sub_406D60": [
+"406D60",
+"src/nengine/log_dump.cpp",
+"std::string 从 C 串赋值（strlen 定长后转发 ·sub_4015C0） | ·sub_4015C0 = 跨文件登记的 std::string 构造赋值具名。"
+],
+"sub_40BE20": [
+"40BE20",
+"src/nengine/log_dump.cpp",
+"【解读】 | _DEBUG 控制台单行输出: _access 探测控制台状态 + GetStdHandle/WriteConsoleA。 | 全引擎调试打印的最终出口（0x655A90/0x657120 等都转发到这里）。"
+],
+"sub_6567F0": [
+"6567F0",
+"src/nengine/zlib_inflate.cpp",
+"会话频道号全局写入口 | 把 nArg1 写入全局 dword_79693C 并原样返回；该值由发送侧 ·sub_658350/·sub_657FD0 填进 UDP 包头 +4 —— 频道/会话标识【推断：写入点为 ·0x583B90 channelType 解析链】。"
+],
+"sub_656710": [
+"656710",
+"src/platform/missing_tail.cpp",
+"取全局单例地址（返回 unk_9BD5D0）"
+],
+"sub_6989F0": [
+"6989F0",
+"src/platform/socket_ime.cpp",
+"【L1】★ ISocket::Close：断开连接（\"Disconnect %d\" 自证串） | 流程: off_77F3FC 日志 → closesocket(+436) → SOCKET=0 → | 发送环(+444)与接收环(+440)读/写指针(+16/+20)清零 → +8 已连接=0。返回 1。"
+],
+"sub_698F90": [
+"698F90",
+"src/platform/socket_ime.cpp",
+"dword_9D3BD8 字体引擎(vt+16 测宽/+24 适配截断) dword_89D26C 鼠标消息态(1=按下/8/16) dword_9D3BCC 控件 id 分配器 dword_79BE3C/40/44/54/58/5C/60/64 按下/拖动/悬停/焦点控件 id 组 | 【L1】光标闪烁对象·焦点获得：+12 基准有效(+13=1)时记录锚点 | +16 = a3 - dword_79D100[bank(+8)]；拖动分支(+14)记 +20=a3、+24=a2。 | NCEdit 于 +132 内嵌此对象（sub_69AB90 Create 时 sub_698F90(this+132,1,0)）。"
+],
+"sub_699000": [
+"699000",
+"src/platform/socket_ime.cpp",
+"【L1】光标闪烁·取当前节拍：+14 置位返回 +20，否则 +16 + dword_79D100[bank]"
+],
+"sub_699030": [
+"699030",
+"src/platform/socket_ime.cpp",
+"【L1】光标闪烁·刷新：按 +16+dword_79D100[bank] 重算 +20 并置 +14=1"
+]
+}

@@ -1,0 +1,17 @@
+CLASS .?AVCNRDObjectParticleCreater@@  slots=31  fields_candidate=14
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   2  00490370  *(uint32_t *)(this + 220) = *(uint32_t *)(this + 4);
++0x0008 uint32_t   1  00490370  fld_8 = *(uint32_t *)(this + 8);
++0x000C uint32_t   1  00490370  result = *(uint32_t *)(this + 12);
++0x0068 void       1  00425230  qmemcpy((void *)(this + 104), pArg2, 0x48u);
++0x00BD uint8_t    1  00490370  *(uint8_t *)(this + 189) = 0;
++0x00BE uint8_t    1  00490370  *(uint8_t *)(this + 190) = 0;
++0x00CC uint32_t   1  00490370  *(uint32_t *)(this + 204) = nArg2;
++0x00D0 uint32_t   1  00490370  *(uint32_t *)(this + 208) = 0;
++0x00D4 uint32_t   1  00490370  *(uint32_t *)(this + 212) = 0;
++0x00D8 uint8_t    1  00490370  *(uint8_t *)(this + 216) = 0;
++0x00DC uint32_t   1  00490370  *(uint32_t *)(this + 220) = *(uint32_t *)(this + 4);
++0x00E0 uint32_t   1  00490370  *(uint32_t *)(this + 224) = fld_8;
++0x00E4 uint32_t   1  00490370  *(uint32_t *)(this + 228) = result;
++0x00E8 uint32_t   1  00490370  *(uint32_t *)(this + 232) = -1;

@@ -1,0 +1,5 @@
+CLASS .?AVCNAuraMasterATDFSPEEDUp@@  slots=37  fields_candidate=2
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   2  0064A790  if ( (*(uint8_t (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 4)
++0x007C uint32_t   2  0064A190  fld_7C = *(uint32_t *)(this + 124);

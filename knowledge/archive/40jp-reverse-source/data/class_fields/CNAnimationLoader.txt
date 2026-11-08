@@ -1,0 +1,7 @@
+CLASS .?AVCNAnimationLoader@@  slots=14  fields_candidate=4
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   1  00697B30  *(uint32_t *)(this + 4) = nArg2;
++0x0007 uint16_t   1  00697B30  pThis_7 = (uint16_t *)(this + 7);
++0x0008 char       1  00697B30  strcpy((char *)(this + 8), pArg3);
++0x0108 uint32_t   2  00697B30  *(uint32_t *)(this + 264) = nArg4;

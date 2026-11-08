@@ -1,0 +1,6 @@
+CLASS .?AVCNRDCashShopBuyWindow@@  slots=2  fields_candidate=3
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x000C uint32_t   1  00648C10  if ( *(uint8_t *)(*(uint32_t *)(this + 12) + 16) != 0 && *(uint8_t *)(
++0x0028 uint32_t   1  00648C10  *(uint8_t *)(*(uint32_t *)(this + 40) + 17) = 1;
++0x0804 uint8_t    1  00648C10  if ( *(uint8_t *)(*(uint32_t *)(this + 12) + 16) != 0 && *(uint8_t *)(

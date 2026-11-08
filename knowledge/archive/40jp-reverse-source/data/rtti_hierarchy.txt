@@ -1,0 +1,2229 @@
+CLASS IUnknown
+  TD=00791EDC primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS std__ctype_base
+  TD=00796B6C primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS iNetworkTimeEventSender
+  TD=0077FB3C primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS std_H__Iosb
+  TD=00796AF0 primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS std_std_D_DU?$char_traits_basic_filebuf
+  TD=00796C58 primaryVT=007440D4 bases(root->derived): std_std_D_DU?$char_traits_basic_filebuf <- std_std_D_DU?$char_traits_basic_streambuf
+  cols=2 vts=2 slots=13
+CLASS std_std_D_DU?$char_traits_basic_ios
+  TD=00796B8C primaryVT=0074406C bases(root->derived): std_std_D_DU?$char_traits_basic_ios <- std_std_D_DU?$char_traits_basic_ios <- std__ios_base <- std_H__Iosb
+  cols=3 vts=3 slots=1
+CLASS std_std_D_DU?$char_traits_basic_istream
+  TD=00796CD4 primaryVT=none bases(root->derived): (root)
+  cols=2 vts=2 slots=0
+CLASS std_std_D_DU?$char_traits_basic_ostream
+  TD=00796BC4 primaryVT=none bases(root->derived): (root)
+  cols=2 vts=2 slots=0
+CLASS std_std_D_DU?$char_traits_basic_streambuf
+  TD=00796C1C primaryVT=0074409C bases(root->derived): std_std_D_DU?$char_traits_basic_streambuf
+  cols=2 vts=2 slots=13
+CLASS std_DDH_codecvt
+  TD=00796CB4 primaryVT=00744114 bases(root->derived): std_DDH_codecvt <- std_DDH_codecvt <- std__codecvt_base <- std__locale__facet
+  cols=1 vts=1 slots=0
+CLASS std_D_ctype
+  TD=00796C00 primaryVT=00744074 bases(root->derived): std_D_ctype <- std_D_ctype <- std__ctype_base <- std__locale__facet
+  cols=2 vts=2 slots=9
+CLASS CBIniFile
+  TD=007953B4 primaryVT=007281C4 bases(root->derived): CBIniFile
+  cols=2 vts=2 slots=1
+CLASS CFileVersionInfo
+  TD=00795E04 primaryVT=0073E3A0 bases(root->derived): CFileVersionInfo
+  cols=2 vts=2 slots=1
+CLASS CN2StoryBox
+  TD=0079440C primaryVT=0071F494 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNATDFSPEEDUpFromAura
+  TD=00795F6C primaryVT=0073EB7C bases(root->derived): CNATDFSPEEDUpFromAura <- CNATDFSPEEDUpFromAura <- CNRDAuraMinion <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNAbom
+  TD=00791B20 primaryVT=006F4844 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNActionTree
+  TD=00794560 primaryVT=0072184C bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNActiveObserver
+  TD=0079433C primaryVT=0071E064 bases(root->derived): CNActiveObserver <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=178
+CLASS CNActiveStatusStackable
+  TD=00792110 primaryVT=006FD23C bases(root->derived): CNActiveStatusStackable <- CNActiveStatusStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNAdor
+  TD=00791A4C primaryVT=006F1ED4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNAerialGatlinged
+  TD=00791C78 primaryVT=006F6E04 bases(root->derived): CNAerialGatlinged <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNAimVitalPoint
+  TD=00795BA4 primaryVT=0073B9F4 bases(root->derived): CNAimVitalPoint <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNAnimationLoader
+  TD=0077FC44 primaryVT=006C4A04 bases(root->derived): CNAnimationLoader <- IFileResourceManager
+  cols=2 vts=2 slots=14
+CLASS CNAntiFreezePotion
+  TD=00792384 primaryVT=006FDCA4 bases(root->derived): CNAntiFreezePotion <- CNAntiFreezePotion <- CNAntiFreezePotion <- CNActiveStatusStackable <- CNActiveStatusStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNAppendageStackable
+  TD=00792184 primaryVT=006FD404 bases(root->derived): CNAppendageStackable <- CNAppendageStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNAppendageTimerFireDamage
+  TD=0079553C primaryVT=0072F7CC bases(root->derived): CNAppendageTimerFireDamage <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNAraclothoMissile
+  TD=00793E20 primaryVT=00716DD4 bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNAraclothoSpark
+  TD=00793E44 primaryVT=0071709C bases(root->derived): CNAraclothoSpark <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNAraclothoSpider
+  TD=00791938 primaryVT=006EEAF4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=330
+CLASS CNArmorMastery
+  TD=00791B9C primaryVT=006F5F3C bases(root->derived): CNArmorMastery <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNAshenForkSub
+  TD=007938E4 primaryVT=0070F584 bases(root->derived): CNAshenForkSub <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNAtlas
+  TD=00791B50 primaryVT=006F5294 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNAttackUpFromBattleAura
+  TD=00795F44 primaryVT=0073EAEC bases(root->derived): CNAttackUpFromBattleAura <- CNAttackUpFromBattleAura <- CNRDAuraMinion <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNAuraBoss
+  TD=00795AA4 primaryVT=0073A95C bases(root->derived): CNAuraBoss <- CNAuraBoss <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraChangeStatusMaster
+  TD=007955B0 primaryVT=00730E24 bases(root->derived): CNAuraChangeStatusMaster <- CNAuraChangeStatusMaster <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraChangeStatusMasterSpikeKing
+  TD=007955D8 primaryVT=00730EBC bases(root->derived): CNAuraChangeStatusMasterSpikeKing <- CNAuraChangeStatusMasterSpikeKing <- CNAuraChangeStatusMasterSpikeKing <- CNAuraChangeStatusMaster <- CNAuraChangeStatusMaster <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraHunter_Sius
+  TD=0079153C primaryVT=006E3A2C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNAuraMasterATDFSPEEDUp
+  TD=007954BC primaryVT=0072DD24 bases(root->derived): CNAuraMasterATDFSPEEDUp <- CNAuraMasterATDFSPEEDUp <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraMasterATDFSPEEDUpFather
+  TD=00795568 primaryVT=0072F8C4 bases(root->derived): CNAuraMasterATDFSPEEDUpFather <- CNAuraMasterATDFSPEEDUpFather <- CNAuraMasterATDFSPEEDUpFather <- CNAuraMasterATDFSPEEDUp <- CNAuraMasterATDFSPEEDUp <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraMasterATDFSPEEDUp_KingGalok
+  TD=007954E4 primaryVT=0072DDBC bases(root->derived): CNAuraMasterATDFSPEEDUp_KingGalok <- CNAuraMasterATDFSPEEDUp_KingGalok <- CNAuraMasterATDFSPEEDUp_KingGalok <- CNAuraMasterATDFSPEEDUp <- CNAuraMasterATDFSPEEDUp <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraMasterBattle
+  TD=0079546C primaryVT=0072DBF4 bases(root->derived): CNAuraMasterBattle <- CNAuraMasterBattle <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraMasterBattleGoblinKinol
+  TD=00795490 primaryVT=0072DC8C bases(root->derived): CNAuraMasterBattleGoblinKinol <- CNAuraMasterBattleGoblinKinol <- CNAuraMasterBattleGoblinKinol <- CNAuraMasterBattle <- CNAuraMasterBattle <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraMasterChilling
+  TD=00795ED4 primaryVT=0073E864 bases(root->derived): CNAuraMasterChilling <- CNAuraMasterChilling <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraMasterCurse
+  TD=00795EB4 primaryVT=0073E674 bases(root->derived): CNAuraMasterCurse <- CNAuraMasterCurse <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraMasterFlame
+  TD=00795F24 primaryVT=0073E994 bases(root->derived): CNAuraMasterFlame <- CNAuraMasterFlame <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraMasterIce
+  TD=00795E94 primaryVT=0073E574 bases(root->derived): CNAuraMasterIce <- CNAuraMasterIce <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraMasterSlow
+  TD=00795FB4 primaryVT=0073ECAC bases(root->derived): CNAuraMasterSlow <- CNAuraMasterSlow <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNAuraShield
+  TD=0079588C primaryVT=007382E4 bases(root->derived): CNAuraShield <- IRDAppendage
+  cols=2 vts=2 slots=31
+CLASS CNAuxoRoot
+  TD=0079472C primaryVT=00723D24 bases(root->derived): CNAuxoRoot <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNAxeExpeller
+  TD=00795764 primaryVT=007343D4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=341
+CLASS CNAxionExpeller
+  TD=007957DC primaryVT=0073690C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNBat
+  TD=007957FC primaryVT=007373BC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNBattlIngram
+  TD=00791834 primaryVT=006EBC44 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNBehemothHelipad
+  TD=007941D8 primaryVT=0071C294 bases(root->derived): CNBehemothHelipad <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBellForZealots
+  TD=00794134 primaryVT=0071B47C bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNBlackLugaru
+  TD=00790DCC primaryVT=006CF4E4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNBlast
+  TD=0079327C primaryVT=007061C4 bases(root->derived): CNBlast <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBlastBlood
+  TD=00793720 primaryVT=0070CBAC bases(root->derived): CNBlastBlood <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBlastBloodSub
+  TD=0079373C primaryVT=0070CE74 bases(root->derived): CNBlastBloodSub <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBlessFairy
+  TD=00794504 primaryVT=00720F84 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNBloodLugaru
+  TD=00790E1C primaryVT=006D0444 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNBlueBallBox
+  TD=007931B8 primaryVT=00704B24 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNBodyHit
+  TD=007935B0 primaryVT=0070AA1C bases(root->derived): CNBodyHit <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBombMine
+  TD=00793510 primaryVT=00709C34 bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBoomerang
+  TD=00793390 primaryVT=00707ACC bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBouncer
+  TD=007933AC primaryVT=00707D94 bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBouncerLooseSerimalion
+  TD=007933C4 primaryVT=0070805C bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBremenAppendage
+  TD=00795BE4 primaryVT=0073C0E4 bases(root->derived): CNBremenAppendage <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNBronzeGolemBullets
+  TD=00793C3C primaryVT=007143AC bases(root->derived): CNBronzeGolemBullets <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNBulletBuff
+  TD=00791C44 primaryVT=006F6CEC bases(root->derived): CNBulletBuff <- IRDAppendage
+  cols=2 vts=2 slots=36
+CLASS CNBunker_Woker
+  TD=00790ED0 primaryVT=006D2344 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNBurningHela
+  TD=007914C8 primaryVT=006E2594 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS nengine__CNButton
+  TD=0078FE98 primaryVT=006C5630 bases(root->derived): nengine__CNButton <- nengine__CNButton <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS CNCallStorageBird
+  TD=00792200 primaryVT=006FD664 bases(root->derived): CNCallStorageBird <- CNCallStorageBird <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNCannonZepplin
+  TD=00791868 primaryVT=006EC69C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=333
+CLASS CNCatapult
+  TD=007917D8 primaryVT=006EACCC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNChandelier
+  TD=00793F04 primaryVT=00718154 bases(root->derived): CNChandelier <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNChangeActiveProperty
+  TD=007922A8 primaryVT=006FD944 bases(root->derived): CNChangeActiveProperty <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNChangeDamageBonusRate
+  TD=00795514 primaryVT=0072EE04 bases(root->derived): CNChangeDamageBonusRate <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNChangeElementTolerance
+  TD=007922D0 primaryVT=006FD9C4 bases(root->derived): CNChangeElementTolerance <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNChangeHp
+  TD=00791D0C primaryVT=006F8714 bases(root->derived): CNChangeHp <- IRDAppendage
+  cols=2 vts=2 slots=31
+CLASS CNChangeMp
+  TD=007920F4 primaryVT=006FD1BC bases(root->derived): CNChangeMp <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNChangeStatus
+  TD=00791BC0 primaryVT=006F6044 bases(root->derived): CNChangeStatus <- IRDAppendage
+  cols=2 vts=2 slots=33
+CLASS CNChangeWeaponElement
+  TD=00792284 primaryVT=006FD8C4 bases(root->derived): CNChangeWeaponElement <- CNChangeWeaponElement <- CNEnchantWeapon <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNChaosModule
+  TD=0077F5F0 primaryVT=006C2E1C bases(root->derived): CNChaosModule <- CNChaosModule <- CNChaosModule <- nengine__IModule <- nengine__IObject <- nengine__IAppendDraw
+  cols=3 vts=3 slots=5
+CLASS CNChaser
+  TD=00793974 primaryVT=0071036C bases(root->derived): CNChaser <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS nengine__CNCheckBox
+  TD=007905CC primaryVT=006C80A0 bases(root->derived): nengine__CNCheckBox <- nengine__CNCheckBox <- nengine__CNCheckBox <- nengine__CNButton <- nengine__CNButton <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS CNCircleAppendageCHANGESTATE
+  TD=0079461C primaryVT=007226D4 bases(root->derived): CNCircleAppendageMaker <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=179
+CLASS CNCircleAppendageCHANGE_WEAPON_ELEMENT
+  TD=007945E4 primaryVT=00722404 bases(root->derived): CNCircleAppendageMaker <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=179
+CLASS CNCircleAppendageDISENCHANT
+  TD=00794648 primaryVT=007229A4 bases(root->derived): CNCircleAppendageMaker <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=179
+CLASS CNCircleAppendageENCHANTWEAPON
+  TD=007945B4 primaryVT=00722134 bases(root->derived): CNCircleAppendageMaker <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=179
+CLASS CNCircleAppendageMaker
+  TD=007934E8 primaryVT=00709964 bases(root->derived): CNCircleAppendageMaker <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=179
+CLASS CNClayMaster
+  TD=007912AC primaryVT=006DCDE4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNClosePunchSub
+  TD=007937AC primaryVT=0070D994 bases(root->derived): CNClosePunchSub <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNCobWeb
+  TD=00793E08 primaryVT=00716ACC bases(root->derived): CNCobWeb <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNCoinOfFortune
+  TD=007921A8 primaryVT=006FD49C bases(root->derived): CNCoinOfFortune <- CNCoinOfFortune <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNCoinOfFortuneAppendage
+  TD=007923A8 primaryVT=006FDD84 bases(root->derived): CNCoinOfFortuneAppendage <- CNCoinOfFortuneAppendage <- CNDelayedProc <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNCommandChecker
+  TD=0077FBE0 primaryVT=006C490C bases(root->derived): CNCommandChecker
+  cols=2 vts=2 slots=31
+CLASS CNCowardGoblin
+  TD=007910A8 primaryVT=006D70E4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=327
+CLASS CNCraxy
+  TD=007916E4 primaryVT=006E82F4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=330
+CLASS CNCreateOnDestroyObject
+  TD=007933EC primaryVT=00708324 bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNCrokutaJoint
+  TD=00793C00 primaryVT=00713DFC bases(root->derived): CNRDJoint <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=183
+CLASS CNCurseBomb
+  TD=00795BC4 primaryVT=0073BAA4 bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNCurseBombSub
+  TD=00793568 primaryVT=0070A48C bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNCutableGrass
+  TD=0079317C primaryVT=0070425C bases(root->derived): CNCutableGrass <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=181
+CLASS CNCystalPillar
+  TD=007942FC primaryVT=0071DA94 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNDOTArea
+  TD=00795A70 primaryVT=00739994 bases(root->derived): CNDOTArea <- CNDOTArea <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=38
+CLASS CNDangerousGas
+  TD=007932B0 primaryVT=00706754 bases(root->derived): CNDangerousGas <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNDarkDamageFromCurseAura
+  TD=00795E6C primaryVT=0073E4E4 bases(root->derived): CNDarkDamageFromCurseAura <- CNDarkDamageFromCurseAura <- CNRDAuraMinion <- IRDAppendage
+  cols=2 vts=2 slots=31
+CLASS CNDecoy
+  TD=0079395C primaryVT=007100A4 bases(root->derived): CNDecoy <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNDelayedProc
+  TD=007923D0 primaryVT=006FDE04 bases(root->derived): CNDelayedProc <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNDendroid
+  TD=007919CC primaryVT=006F04BC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNDendroidBasic
+  TD=007919AC primaryVT=006EFF84 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNDendroidNeedle
+  TD=00793D40 primaryVT=00715A04 bases(root->derived): CNDendroidNeedle <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNDendroidSeed
+  TD=00793D20 primaryVT=0071573C bases(root->derived): CNDendroidSeed <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNDollMaster
+  TD=00791258 primaryVT=006DBE6C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNDollMasterBubble
+  TD=00793464 primaryVT=00708E44 bases(root->derived): CNDollMasterBubble <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNDracoLakius
+  TD=00791520 primaryVT=006E3504 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNDracoMirkius
+  TD=00791500 primaryVT=006E2FDC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNDraconian
+  TD=007914E4 primaryVT=006E2AB4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNDragonHeadFrontFlame
+  TD=00794288 primaryVT=0071D194 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNDragonHeadFrontGas
+  TD=007942D8 primaryVT=0071D794 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNDragonHeadFrontNentan
+  TD=007942B0 primaryVT=0071D494 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=191
+CLASS CNDragonHeadSide
+  TD=007941F8 primaryVT=0071C55C bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNDragonHeadSideFlame
+  TD=00794218 primaryVT=0071C874 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNDragonHeadSideGas
+  TD=00794264 primaryVT=0071CE74 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNDragonHeadSideNentan
+  TD=0079423C primaryVT=0071CB74 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=191
+CLASS CNDrakeHarseSerimalion
+  TD=00791368 primaryVT=006DED0C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNDrakeLooseSerimalion
+  TD=00791340 primaryVT=006DE7E4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNDrakeSelionTheFireBreather
+  TD=00791390 primaryVT=006DF234 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNDrakeSerimalion
+  TD=00791320 primaryVT=006DE284 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNDropBomb
+  TD=007938A8 primaryVT=0070EFF4 bases(root->derived): CNDropBomb <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNDroppingRock
+  TD=00794198 primaryVT=0071BD04 bases(root->derived): CNDroppingRock <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNDroppingRockTrigger
+  TD=00794174 primaryVT=0071BA3C bases(root->derived): CNDroppingRockTrigger <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEPLPCampFire
+  TD=007946F0 primaryVT=00723794 bases(root->derived): CNEPLPCampFire <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEarthFire
+  TD=0079330C primaryVT=00706FAC bases(root->derived): CNEarthFire <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEarthQuake
+  TD=00793294 primaryVT=0070648C bases(root->derived): CNEarthQuake <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS nengine__CNEdit
+  TD=0078FE38 primaryVT=006C55B8 bases(root->derived): nengine__CNEdit <- nengine__CNEdit <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS CNEliteGoblin
+  TD=00790EF0 primaryVT=006D2874 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNEnchantActiveStatus
+  TD=007959AC primaryVT=007390F4 bases(root->derived): CNEnchantActiveStatus <- IRDAppendage
+  cols=2 vts=2 slots=31
+CLASS CNEnchantWeapon
+  TD=00791DFC primaryVT=006F921C bases(root->derived): CNEnchantWeapon <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNEnergyBall
+  TD=00793678 primaryVT=0070BDC4 bases(root->derived): CNEnergyBall <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEnergyBallSub
+  TD=00793694 primaryVT=0070C08C bases(root->derived): CNEnergyBallSub <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEnergyField
+  TD=00793704 primaryVT=0070C8E4 bases(root->derived): CNEnergyField <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEntangleVine
+  TD=007940AC primaryVT=0071A95C bases(root->derived): CNEntangleVine <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEntangleVineTrigger
+  TD=00794088 primaryVT=0071A694 bases(root->derived): CNEntangleVineTrigger <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEntranceChannel
+  TD=0077F550 primaryVT=006C2D08 bases(root->derived): CNEntranceChannel <- CNEntranceChannel <- CNEntranceChannel <- nengine__IModule <- nengine__IObject <- nengine__IAppendDraw
+  cols=3 vts=3 slots=5
+CLASS CNEntranceModule
+  TD=0077F5B0 primaryVT=006C2DDC bases(root->derived): CNEntranceModule <- CNEntranceModule <- CNEntranceModule <- nengine__IModule <- nengine__IObject <- nengine__IAppendDraw
+  cols=3 vts=3 slots=5
+CLASS CNEquipmentAceAdventCoat
+  TD=00792D28 primaryVT=0070252C bases(root->derived): CNEquipmentAceAdventCoat <- CNEquipmentAceAdventCoat <- CNEquipmentAceAdventCoat <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentAirVintageCoat
+  TD=00792CAC primaryVT=0070216C bases(root->derived): CNEquipmentAirVintageCoat <- CNEquipmentAirVintageCoat <- CNEquipmentAirVintageCoat <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentAntiGravityLifter
+  TD=007928E8 primaryVT=00700464 bases(root->derived): CNEquipmentAntiGravityLifter <- CNEquipmentAntiGravityLifter <- CNEquipmentAntiGravityLifter <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentArtiMarpissaCoat
+  TD=00792DC0 primaryVT=0070296C bases(root->derived): CNEquipmentArtiMarpissaCoat <- CNEquipmentArtiMarpissaCoat <- CNEquipmentArtiMarpissaCoat <- CNSpecificStateEquipment <- CNSpecificStateEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNEquipmentAssaultAttackerCoat
+  TD=00792914 primaryVT=007005A4 bases(root->derived): CNEquipmentAssaultAttackerCoat <- CNEquipmentAssaultAttackerCoat <- CNEquipmentAssaultAttackerCoat <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentBabyBlue
+  TD=007925F4 primaryVT=006FEE04 bases(root->derived): CNEquipmentBabyBlue <- CNEquipmentBabyBlue <- CNEquipmentBabyBlue <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentBasaltMarkCoat
+  TD=00792520 primaryVT=006FE7C4 bases(root->derived): CNEquipmentBasaltMarkCoat <- CNEquipmentBasaltMarkCoat <- CNEquipmentBasaltMarkCoat <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentBeinenFluchCoat
+  TD=00792674 primaryVT=006FF1AC bases(root->derived): CNEquipmentBeinenFluchCoat <- CNEquipmentBeinenFluchCoat <- CNEquipmentBeinenFluchCoat <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=80
+CLASS CNEquipmentBlackLunaTunic
+  TD=00792D00 primaryVT=007023EC bases(root->derived): CNEquipmentBlackLunaTunic <- CNEquipmentBlackLunaTunic <- CNEquipmentBlackLunaTunic <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentBloodsoul
+  TD=007929BC primaryVT=00700AA4 bases(root->derived): CNEquipmentBloodsoul <- CNEquipmentBloodsoul <- CNEquipmentBloodsoul <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentBreathOfSelion
+  TD=00792F6C primaryVT=007035BC bases(root->derived): CNEquipmentBreathOfSelion <- CNEquipmentBreathOfSelion <- CNEquipmentBreathOfSelion <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentCoatofStarRocker
+  TD=00792A40 primaryVT=00700E64 bases(root->derived): CNEquipmentCoatofStarRocker <- CNEquipmentCoatofStarRocker <- CNEquipmentCoatofStarRocker <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentCrisisScepter
+  TD=00792C04 primaryVT=00701C54 bases(root->derived): CNEquipmentCrisisScepter <- CNEquipmentCrisisScepter <- CNEquipmentCrisisScepter <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentCurseArmorTodpursResist
+  TD=00792E1C primaryVT=00702BDC bases(root->derived): CNEquipmentCurseArmorTodpursResist <- CNEquipmentCurseArmorTodpursResist <- CNEquipmentCurseArmorTodpursResist <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentCurseOfKhazan
+  TD=00792F20 primaryVT=0070334C bases(root->derived): CNEquipmentCurseOfKhazan <- CNEquipmentCurseOfKhazan <- CNEquipmentCurseOfKhazan <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentDarkPrayer
+  TD=00792ABC primaryVT=0070122C bases(root->derived): CNEquipmentDarkPrayer <- CNEquipmentDarkPrayer <- CNEquipmentDarkPrayer <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=80
+CLASS CNEquipmentDestroyHeart
+  TD=00792E78 primaryVT=00702E54 bases(root->derived): CNEquipmentDestroyHeart <- CNEquipmentDestroyHeart <- CNEquipmentDestroyHeart <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentDevilByPassImpact
+  TD=00792EA0 primaryVT=00702F9C bases(root->derived): CNEquipmentDevilByPassImpact <- CNEquipmentDevilByPassImpact <- CNEquipmentDevilByPassImpact <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentDispellizer
+  TD=00792B10 primaryVT=007014BC bases(root->derived): CNEquipmentDispellizer <- CNEquipmentDispellizer <- CNEquipmentDispellizer <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=80
+CLASS CNEquipmentDragonicSkin
+  TD=00792484 primaryVT=006FE41C bases(root->derived): CNEquipmentDragonicSkin <- CNEquipmentDragonicSkin <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNEquipmentDressofEternalFlame
+  TD=007927F0 primaryVT=006FFCE4 bases(root->derived): CNEquipmentDressofEternalFlame <- CNEquipmentDressofEternalFlame <- CNEquipmentDressofEternalFlame <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentDualBowGun
+  TD=00792548 primaryVT=006FE904 bases(root->derived): CNEquipmentDualBowGun <- CNEquipmentDualBowGun <- CNEquipmentDualBowGun <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentEmbossingShoulderPad
+  TD=00792768 primaryVT=006FF924 bases(root->derived): CNEquipmentEmbossingShoulderPad <- CNEquipmentEmbossingShoulderPad <- CNEquipmentEmbossingShoulderPad <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentFlammSkulder
+  TD=00792820 primaryVT=006FFE24 bases(root->derived): CNEquipmentFlammSkulder <- CNEquipmentFlammSkulder <- CNEquipmentFlammSkulder <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentFrostbringer
+  TD=00792994 primaryVT=00700964 bases(root->derived): CNEquipmentFrostbringer <- CNEquipmentFrostbringer <- CNEquipmentFrostbringer <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentGileimo
+  TD=007926CC primaryVT=006FF434 bases(root->derived): CNEquipmentGileimo <- CNEquipmentGileimo <- CNEquipmentGileimo <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentGoblinBoneMedal
+  TD=007926A0 primaryVT=006FF2F4 bases(root->derived): CNEquipmentGoblinBoneMedal <- CNEquipmentGoblinBoneMedal <- CNEquipmentGoblinBoneMedal <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentHalgisBoneRing
+  TD=00792718 primaryVT=006FF6AC bases(root->derived): CNEquipmentHalgisBoneRing <- CNEquipmentHalgisBoneRing <- CNEquipmentHalgisBoneRing <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentHatefulBeastCoat
+  TD=0079286C primaryVT=007000A4 bases(root->derived): CNEquipmentHatefulBeastCoat <- CNEquipmentHatefulBeastCoat <- CNEquipmentHatefulBeastCoat <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentHeavyResponsibility
+  TD=00792798 primaryVT=006FFA64 bases(root->derived): CNEquipmentHeavyResponsibility <- CNEquipmentHeavyResponsibility <- CNEquipmentHeavyResponsibility <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentHwakEyes
+  TD=00792F94 primaryVT=007036FC bases(root->derived): CNEquipmentHwakEyes <- CNEquipmentHwakEyes <- CNEquipmentHwakEyes <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentHyperJammer
+  TD=00792E50 primaryVT=00702D1C bases(root->derived): CNEquipmentHyperJammer <- CNEquipmentHyperJammer <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNEquipmentIceKingsGuard
+  TD=00792BDC primaryVT=00701B14 bases(root->derived): CNEquipmentIceKingsGuard <- CNEquipmentIceKingsGuard <- CNEquipmentIceKingsGuard <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentJetBlackBertesCoat
+  TD=007924F4 primaryVT=006FE68C bases(root->derived): CNEquipmentJetBlackBertesCoat <- CNEquipmentJetBlackBertesCoat <- CNEquipmentJetBlackBertesCoat <- CNSpecificStateEquipment <- CNSpecificStateEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNEquipmentKaloaSnake
+  TD=00792848 primaryVT=006FFF64 bases(root->derived): CNEquipmentKaloaSnake <- CNEquipmentKaloaSnake <- CNEquipmentKaloaSnake <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentKnuckleofChiefSign
+  TD=0079259C primaryVT=006FEB84 bases(root->derived): CNEquipmentKnuckleofChiefSign <- CNEquipmentKnuckleofChiefSign <- CNEquipmentKnuckleofChiefSign <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentLalaMisYong
+  TD=007928C0 primaryVT=00700324 bases(root->derived): CNEquipmentLalaMisYong <- CNEquipmentLalaMisYong <- CNEquipmentLalaMisYong <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentLightKingsGuard
+  TD=00792BB0 primaryVT=007019D4 bases(root->derived): CNEquipmentLightKingsGuard <- CNEquipmentLightKingsGuard <- CNEquipmentLightKingsGuard <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentMadeInHeaven
+  TD=00792898 primaryVT=007001E4 bases(root->derived): CNEquipmentMadeInHeaven <- CNEquipmentMadeInHeaven <- CNEquipmentMadeInHeaven <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentMagistrate
+  TD=00792944 primaryVT=007006E4 bases(root->derived): CNEquipmentMagistrate <- CNEquipmentMagistrate <- CNEquipmentMagistrate <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentManaLamellaRobe
+  TD=00792CD4 primaryVT=007022AC bases(root->derived): CNEquipmentManaLamellaRobe <- CNEquipmentManaLamellaRobe <- CNEquipmentManaLamellaRobe <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentManaholickerCoat
+  TD=00792B5C primaryVT=0070174C bases(root->derived): CNEquipmentManaholickerCoat <- CNEquipmentManaholickerCoat <- CNEquipmentManaholickerCoat <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=80
+CLASS CNEquipmentMesseQuadratCoat
+  TD=00792618 primaryVT=006FEF3C bases(root->derived): CNEquipmentMesseQuadratCoat <- CNEquipmentMesseQuadratCoat <- CNEquipmentMesseQuadratCoat <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentMirageWand
+  TD=00792B38 primaryVT=00701604 bases(root->derived): CNEquipmentMirageWand <- CNEquipmentMirageWand <- CNEquipmentMirageWand <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=80
+CLASS CNEquipmentMusingRegaliaRob
+  TD=00792C2C primaryVT=00701D94 bases(root->derived): CNEquipmentMusingRegaliaRob <- CNEquipmentMusingRegaliaRob <- CNEquipmentMusingRegaliaRob <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentNobleDignity
+  TD=00792D7C primaryVT=007027AC bases(root->derived): CNEquipmentNobleDignity <- CNEquipmentNobleDignity <- CNEquipmentNobleDignity <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentNovaCraft
+  TD=007929E0 primaryVT=00700BE4 bases(root->derived): CNEquipmentNovaCraft <- CNEquipmentNovaCraft <- CNEquipmentNovaCraft <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentPlatanicCombatantCoat
+  TD=00792DEC primaryVT=00702AA4 bases(root->derived): CNEquipmentPlatanicCombatantCoat <- CNEquipmentPlatanicCombatantCoat <- CNEquipmentPlatanicCombatantCoat <- CNSpecificStateEquipment <- CNSpecificStateEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNEquipmentPureGuardian
+  TD=00792A94 primaryVT=007010E4 bases(root->derived): CNEquipmentPureGuardian <- CNEquipmentPureGuardian <- CNEquipmentPureGuardian <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=80
+CLASS CNEquipmentQuattroMephist
+  TD=00792A6C primaryVT=00700FA4 bases(root->derived): CNEquipmentQuattroMephist <- CNEquipmentQuattroMephist <- CNEquipmentQuattroMephist <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentQuicksilverSolJacket
+  TD=00792FB8 primaryVT=00703834 bases(root->derived): CNEquipmentQuicksilverSolJacket <- CNEquipmentQuicksilverSolJacket <- CNEquipmentQuicksilverSolJacket <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentSchwarzKreisCoat
+  TD=007924AC primaryVT=006FE554 bases(root->derived): CNEquipmentSchwarzKreisCoat <- CNEquipmentSchwarzKreisCoat <- CNEquipmentSchwarzKreisCoat <- CNSpecificStateEquipment <- CNSpecificStateEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNEquipmentShadowVeilCoat
+  TD=00792B88 primaryVT=00701894 bases(root->derived): CNEquipmentShadowVeilCoat <- CNEquipmentShadowVeilCoat <- CNEquipmentShadowVeilCoat <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentShootingStarDrop
+  TD=00792968 primaryVT=00700824 bases(root->derived): CNEquipmentShootingStarDrop <- CNEquipmentShootingStarDrop <- CNEquipmentShootingStarDrop <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentSilentFreyjaRobe
+  TD=00792C80 primaryVT=0070202C bases(root->derived): CNEquipmentSilentFreyjaRobe <- CNEquipmentSilentFreyjaRobe <- CNEquipmentSilentFreyjaRobe <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentSilverKnifeOfEmily
+  TD=00792EF4 primaryVT=00703214 bases(root->derived): CNEquipmentSilverKnifeOfEmily <- CNEquipmentSilverKnifeOfEmily <- CNEquipmentSilverKnifeOfEmily <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentSleepySpring
+  TD=00792ECC primaryVT=007030DC bases(root->derived): CNEquipmentSleepySpring <- CNEquipmentSleepySpring <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNEquipmentSnakeArmlet
+  TD=007927C8 primaryVT=006FFBA4 bases(root->derived): CNEquipmentSnakeArmlet <- CNEquipmentSnakeArmlet <- CNEquipmentSnakeArmlet <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentSpiritCall
+  TD=00792A1C primaryVT=00700D24 bases(root->derived): CNEquipmentSpiritCall <- CNEquipmentSpiritCall <- CNEquipmentSpiritCall <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentSteelListguard
+  TD=007926F0 primaryVT=006FF574 bases(root->derived): CNEquipmentSteelListguard <- CNEquipmentSteelListguard <- CNEquipmentSteelListguard <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentSummonOnDamage
+  TD=0079245C primaryVT=006FE2E4 bases(root->derived): CNEquipmentSummonOnDamage <- CNEquipmentSummonOnDamage <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNEquipmentTeachingofGoraBoldness
+  TD=00792AE0 primaryVT=00701374 bases(root->derived): CNEquipmentTeachingofGoraBoldness <- CNEquipmentTeachingofGoraBoldness <- CNEquipmentTeachingofGoraBoldness <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=80
+CLASS CNEquipmentTheEightyMasters
+  TD=00792D50 primaryVT=0070266C bases(root->derived): CNEquipmentTheEightyMasters <- CNEquipmentTheEightyMasters <- CNEquipmentTheEightyMasters <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentThunderGhostSlashMuske
+  TD=0079256C primaryVT=006FEA44 bases(root->derived): CNEquipmentThunderGhostSlashMuske <- CNEquipmentThunderGhostSlashMuske <- CNEquipmentThunderGhostSlashMuske <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentUltraAlloyGoratusCoat
+  TD=00792644 primaryVT=006FF074 bases(root->derived): CNEquipmentUltraAlloyGoratusCoat <- CNEquipmentUltraAlloyGoratusCoat <- CNEquipmentUltraAlloyGoratusCoat <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentVermote
+  TD=00792F48 primaryVT=00703484 bases(root->derived): CNEquipmentVermote <- CNEquipmentVermote <- CNEquipmentVermote <- CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNEquipmentVestofScreamGlass
+  TD=007925C8 primaryVT=006FECC4 bases(root->derived): CNEquipmentVestofScreamGlass <- CNEquipmentVestofScreamGlass <- CNEquipmentVestofScreamGlass <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentVestofTauMane
+  TD=00792740 primaryVT=006FF7E4 bases(root->derived): CNEquipmentVestofTauMane <- CNEquipmentVestofTauMane <- CNEquipmentVestofTauMane <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEquipmentZiegGarbCoat
+  TD=00792C58 primaryVT=00701ED4 bases(root->derived): CNEquipmentZiegGarbCoat <- CNEquipmentZiegGarbCoat <- CNEquipmentZiegGarbCoat <- CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEvangelistOfDark
+  TD=0079179C primaryVT=006EA274 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=330
+CLASS CNEvangelistOfDawn
+  TD=0079172C primaryVT=006E92B4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=330
+CLASS CNEvangelistOfLight
+  TD=00791750 primaryVT=006E97F4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=330
+CLASS CNEvangelistOfTwilight
+  TD=00791774 primaryVT=006E9D34 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=330
+CLASS CNEventBarrier
+  TD=00793608 primaryVT=0070B274 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNEventEquipment
+  TD=0079243C primaryVT=006FE1A4 bases(root->derived): CNEventEquipment <- CNEventEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=79
+CLASS CNEvilEye
+  TD=00795810 primaryVT=00737A8C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNEvilEyeLOLLaser
+  TD=00795C78 primaryVT=0073CBE4 bases(root->derived): CNEvilEyeLOLLaser <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=178
+CLASS CNEvilEyeMissile
+  TD=00795C98 primaryVT=0073CEB4 bases(root->derived): CNEvilEyeMissile <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEvilEyeQuake
+  TD=00795CDC primaryVT=0073D444 bases(root->derived): CNEvilEyeQuake <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEvilEyeSmallLOLLaser
+  TD=00793E84 primaryVT=0071762C bases(root->derived): CNEvilEyeSmallLOLLaser <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEvilEyeSmallLaser
+  TD=00795CB8 primaryVT=0073D17C bases(root->derived): CNEvilEyeSmallLaser <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNExpeller
+  TD=007957C0 primaryVT=007363B4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNExplosiveOil
+  TD=00793F74 primaryVT=00718CAC bases(root->derived): CNExplosiveOil <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=178
+CLASS CNExsViperBullet
+  TD=00793814 primaryVT=0070E1EC bases(root->derived): CNExsViperBullet <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNEyeofObserver
+  TD=0079431C primaryVT=0071DD94 bases(root->derived): CNEyeofObserver <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=178
+CLASS CNFairy
+  TD=00794464 primaryVT=0071FD84 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNFairyFactory
+  TD=00794540 primaryVT=00721584 bases(root->derived): CNFairyFactory <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFallingShuriken
+  TD=00793DAC primaryVT=00716274 bases(root->derived): CNFallingShuriken <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFallingStorage
+  TD=007946B4 primaryVT=00723204 bases(root->derived): CNFallingStorage <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFather
+  TD=007916FC primaryVT=006E8834 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=330
+CLASS CNFighter
+  TD=007936EC primaryVT=0072720C bases(root->derived): IRDCharacter <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=226
+CLASS CNFighterIllusion
+  TD=00790D0C primaryVT=006CD0EC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNFireBallCommon
+  TD=00794748 primaryVT=0072400C bases(root->derived): CNFireBallCommon <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFireBomb
+  TD=00795628 primaryVT=0073EDD4 bases(root->derived): CNFireBomb <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNFireExplosion
+  TD=00793204 primaryVT=007056A4 bases(root->derived): CNFireExplosion <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFireMissile
+  TD=007931E8 primaryVT=007053DC bases(root->derived): CNFireMissile <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFireWave
+  TD=00793774 primaryVT=0070D404 bases(root->derived): CNFireWave <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFlameCatapult
+  TD=00791814 primaryVT=006EB71C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNFlameDamageFromFlameAura
+  TD=00795EF8 primaryVT=0073E914 bases(root->derived): CNFlameDamageFromFlameAura <- CNFlameDamageFromFlameAura <- CNRDAuraMinion <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNFlappingBanner
+  TD=007941B8 primaryVT=0071BFCC bases(root->derived): CNFlappingBanner <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFloorNiddle
+  TD=00794010 primaryVT=00719B44 bases(root->derived): CNFloorNiddle <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFlyBombSub
+  TD=00793414 primaryVT=007085EC bases(root->derived): CNFlyBombSub <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFlyDragon
+  TD=00791304 primaryVT=006DDD5C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNFollowMe
+  TD=00795870 primaryVT=00738264 bases(root->derived): CNFollowMe <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNForceField
+  TD=007934CC primaryVT=0070969C bases(root->derived): CNForceField <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNFountain
+  TD=00794598 primaryVT=00721E3C bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS nengine__CNFrame
+  TD=0078FE58 primaryVT=006C55E0 bases(root->derived): nengine__CNFrame <- nengine__CNFrame <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS CNFreezingLuna
+  TD=00794394 primaryVT=0071E8DC bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNGameSocket
+  TD=0077F6C0 primaryVT=006C37B4 bases(root->derived): CNGameSocket <- CNGameSocket <- nengine__ISocket <- nengine__IObject
+  cols=1 vts=1 slots=2
+CLASS CNGardener_Ral
+  TD=00790DAC primaryVT=006CEFB4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNGhost
+  TD=0079375C primaryVT=0070D13C bases(root->derived): CNGhost <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGhoul
+  TD=00790C94 primaryVT=0072BE94 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=1 vts=1 slots=331
+CLASS CNGhoulMorgan
+  TD=00795428 primaryVT=0072CECC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=331
+CLASS CNGhoulNoMercy
+  TD=00795408 primaryVT=0072C8FC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=331
+CLASS CNGhoulOilSellerOlrek
+  TD=00790CCC primaryVT=006CBAC4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=1 vts=1 slots=332
+CLASS CNGhoulSkull
+  TD=00793DCC primaryVT=0071653C bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGhoulSkullBomb
+  TD=00793DE8 primaryVT=00716804 bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGhoulSkullSub
+  TD=00795C58 primaryVT=0073C77C bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGhoulThrower
+  TD=00790CAC primaryVT=0072C3C4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=1 vts=1 slots=332
+CLASS CNGoblinAssaulter
+  TD=00790E78 primaryVT=006D13BC bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=327
+CLASS CNGoblinBombKagel
+  TD=00791024 primaryVT=006D5C2C bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNGoblinBullsEye
+  TD=00791068 primaryVT=006D668C bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNGoblinBunker
+  TD=0079402C primaryVT=00719E0C bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNGoblinCommon
+  TD=00790BE8 primaryVT=006CBA78 bases(root->derived): CNGoblinCommon
+  cols=3 vts=3 slots=1
+CLASS CNGoblinGero
+  TD=00790F28 primaryVT=006D32D4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=327
+CLASS CNGoblinGoblin
+  TD=00790E58 primaryVT=006D0E94 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=327
+CLASS CNGoblinHodor
+  TD=00790E98 primaryVT=006D18E4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNGoblinIslandGab
+  TD=00790F80 primaryVT=006D424C bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=0
+CLASS CNGoblinKagelBase
+  TD=00790FE4 primaryVT=006D51CC bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNGoblinKinol
+  TD=00790EB4 primaryVT=006D1E14 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNGoblinLupete
+  TD=00790FA0 primaryVT=006D4774 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=0
+CLASS CNGoblinMountainGab
+  TD=00790F5C primaryVT=006D3D24 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=0
+CLASS CNGoblinSharedo
+  TD=00791004 primaryVT=006D56FC bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNGoblinSharedoBase
+  TD=00790FC0 primaryVT=006D4C9C bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNGoblinStoner
+  TD=00790E38 primaryVT=006D096C bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=2 vts=2 slots=0
+CLASS CNGoblinSurikenKagel
+  TD=00791044 primaryVT=006D615C bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNGolem
+  TD=00791170 primaryVT=006D9524 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNGolemBronze
+  TD=007911C0 primaryVT=006DA4A4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNGolemClay
+  TD=007911DC primaryVT=006DA9CC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNGolemGold
+  TD=007911F8 primaryVT=006DAEF4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNGolemPlatany
+  TD=00791214 primaryVT=006DB41C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNGolemSteel
+  TD=007911A4 primaryVT=006D9F7C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNGolemStone
+  TD=00791188 primaryVT=006D9A54 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNGoliath
+  TD=00791B38 primaryVT=006F4D6C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNGoliden
+  TD=007919E8 primaryVT=006F09F4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNGrabBlastBlood
+  TD=00793904 primaryVT=0070F84C bases(root->derived): CNGrabBlastBlood <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGrabbedBlastBlood
+  TD=00795A4C primaryVT=00739884 bases(root->derived): CNGrabbedBlastBlood <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNGrabbedExplosion
+  TD=0079596C primaryVT=00738FF4 bases(root->derived): CNGrabbedExplosion <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNGrabbingLegOfLotus
+  TD=00793CDC primaryVT=007151AC bases(root->derived): CNLegOfLotus <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGrandWave
+  TD=00793940 primaryVT=0070FDDC bases(root->derived): CNGrandWave <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGravityChangeBack
+  TD=00794674 primaryVT=00722C74 bases(root->derived): CNGravityChangeBack <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGravityChanger
+  TD=00794154 primaryVT=0071B774 bases(root->derived): CNGravityChanger <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGrenselosBunker
+  TD=00794428 primaryVT=0071F794 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNGuardBlock
+  TD=0079572C primaryVT=00733924 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNGuardFire
+  TD=00795748 primaryVT=00733E7C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNGuardIce
+  TD=00795710 primaryVT=007333CC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNGuardLight
+  TD=007956D8 primaryVT=0073291C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNGuardWind
+  TD=007956F4 primaryVT=00732E74 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNGunner
+  TD=0079539C primaryVT=0072774C bases(root->derived): IRDCharacter <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=334
+CLASS CNGunnerBullet
+  TD=007937CC primaryVT=0070DC5C bases(root->derived): CNGunnerBullet <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGunnerLaser
+  TD=00793834 primaryVT=0070E4D4 bases(root->derived): CNGunnerLaser <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNGunnerSubWeaponBullet
+  TD=007937EC primaryVT=0070DF24 bases(root->derived): CNGunnerSubWeaponBullet <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNHPFairy
+  TD=0079447C primaryVT=00720084 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNHPMPFairy
+  TD=007944AC primaryVT=00720684 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNHalloweenBuster
+  TD=00793A60 primaryVT=007119AC bases(root->derived): CNHalloweenBuster <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNHalloweenBusterSub
+  TD=00793A80 primaryVT=00711C74 bases(root->derived): CNHalloweenBusterSub <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNHallucinationFlower
+  TD=00793F94 primaryVT=00718F7C bases(root->derived): CNHallucinationFlower <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNHammerKing
+  TD=007956BC primaryVT=007323C4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNHasteFairy
+  TD=007944E8 primaryVT=00720C84 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNHeavenExpeller
+  TD=00795780 primaryVT=0073492C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNHunter
+  TD=007913BC primaryVT=006DF754 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNHunterAlex
+  TD=007913F4 primaryVT=006E01A4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNHunterHunter
+  TD=00791410 primaryVT=006E06CC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNHunterMaster
+  TD=007913D4 primaryVT=006DFC7C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNHunterSpittle
+  TD=00793B24 primaryVT=00712A6C bases(root->derived): CNHunterSpittle <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNIceDamageFromIceAura
+  TD=00795E44 primaryVT=0073E464 bases(root->derived): CNIceDamageFromIceAura <- CNIceDamageFromIceAura <- CNRDAuraMinion <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNIceDoll_Sharedo
+  TD=007912E4 primaryVT=006DD834 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNIceMissile
+  TD=00793224 primaryVT=0070596C bases(root->derived): CNIceMissile <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNIceNiddle
+  TD=007932F0 primaryVT=00706CE4 bases(root->derived): CNIceNiddle <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNIceNiddleGroup
+  TD=007932D0 primaryVT=00706A1C bases(root->derived): CNIceNiddleGroup <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNIceWave
+  TD=00793644 primaryVT=0070B834 bases(root->derived): CNIceWave <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNIceWaveUp
+  TD=00793C60 primaryVT=00714674 bases(root->derived): CNIceWaveUp <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNImageLoader
+  TD=00791BEC primaryVT=006F67FC bases(root->derived): CNImageLoader <- IFileResourceManager
+  cols=2 vts=2 slots=17
+CLASS nengine__CNImagePackList
+  TD=0077F60C primaryVT=006C2E34 bases(root->derived): nengine__CNImagePackList <- nengine__IObject
+  cols=2 vts=2 slots=1
+CLASS CNIncreaseStatusStackable
+  TD=00792138 primaryVT=006FD2D4 bases(root->derived): CNIncreaseStatusStackable <- CNIncreaseStatusStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNInvinsibleFairy
+  TD=00794520 primaryVT=00721284 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNItemAreaStackable
+  TD=00792260 primaryVT=006FD82C bases(root->derived): CNItemAreaStackable <- CNItemAreaStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNItemScreamOfHysma
+  TD=00792160 primaryVT=006FD36C bases(root->derived): CNItemScreamOfHysma <- CNItemScreamOfHysma <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNKagelBomb
+  TD=00793B84 primaryVT=007132C4 bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNKagelBombSub
+  TD=00793BA0 primaryVT=0071358C bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNKalkazak
+  TD=007914AC primaryVT=006E2074 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNKeraha
+  TD=00790D4C primaryVT=006CDB2C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNKingGalok
+  TD=00790F0C primaryVT=006D2DA4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=329
+CLASS CNKingGuard
+  TD=007956A0 primaryVT=00731E6C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNLOLLaser
+  TD=00793C20 primaryVT=007140DC bases(root->derived): CNLOLLaser <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=178
+CLASS CNLaserCatapult
+  TD=007917F4 primaryVT=006EB1F4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNLaunchBlackCat
+  TD=00793A28 primaryVT=0071141C bases(root->derived): CNLaunchBlackCat <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNLaunchFluorescent
+  TD=007939E8 primaryVT=00710E8C bases(root->derived): CNLaunchFluorescent <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNLaunchFrostHead
+  TD=007939C8 primaryVT=00710BC4 bases(root->derived): CNLaunchFrostHead <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNLaunchJOL
+  TD=007939AC primaryVT=007108FC bases(root->derived): CNLaunchJOL <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNLegOfLotus
+  TD=00793C98 primaryVT=00714C1C bases(root->derived): CNLegOfLotus <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNLegionExpeller
+  TD=00795680 primaryVT=00734E84 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNLightBulb
+  TD=0079435C primaryVT=0071E334 bases(root->derived): CNLightBulb <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNLightningKinol
+  TD=00791088 primaryVT=006D6BBC bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=327
+CLASS CNLordofLight
+  TD=0079157C primaryVT=006E447C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNLordofLightBase
+  TD=0079155C primaryVT=006E3F54 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNLotteryStackable
+  TD=00792360 primaryVT=006FDC0C bases(root->derived): CNLotteryStackable <- CNLotteryStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNLotus
+  TD=00791ACC primaryVT=006F38D4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNLotusBasic
+  TD=00791AB0 primaryVT=006F33B4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNLugaru
+  TD=00790D94 primaryVT=006CEA94 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNLuis
+  TD=00790D7C primaryVT=006CE56C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNMPFairy
+  TD=00794494 primaryVT=00720384 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNMage
+  TD=00792A04 primaryVT=00727C8C bases(root->derived): IRDCharacter <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=333
+CLASS CNMagicMissile
+  TD=0079398C primaryVT=00710634 bases(root->derived): CNMagicMissile <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNMagicTargetWarning
+  TD=00793488 primaryVT=0070910C bases(root->derived): CNMagicTargetWarning <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNMagmaGhoul
+  TD=00790CF0 primaryVT=006CBFFC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=331
+CLASS CNMagmaSwamp
+  TD=00793FF4 primaryVT=00719844 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNMainGameModule
+  TD=0077F530 primaryVT=006C2B98 bases(root->derived): CNMainGameModule <- CNMainGameModule <- CNMainGameModule <- nengine__IModule <- nengine__IObject <- nengine__IAppendDraw
+  cols=2 vts=2 slots=5
+CLASS CNMapObject
+  TD=007905F0 primaryVT=00704534 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNMasterDogri
+  TD=007912C8 primaryVT=006DD30C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNMineTrap
+  TD=00793EAC primaryVT=007178FC bases(root->derived): CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNRDTrap
+  cols=2 vts=2 slots=177
+CLASS CNMonsterFlower
+  TD=00791AE4 primaryVT=006F3DF4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNMonsterFriendShip
+  TD=00790C08 primaryVT=006CBA80 bases(root->derived): CNMonsterFriendShip
+  cols=3 vts=3 slots=3
+CLASS CNMovementController
+  TD=00791DB4 primaryVT=006F8EBC bases(root->derived): CNMovementController <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNNaias
+  TD=00791A34 primaryVT=006F199C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNNapalmBomb
+  TD=00793AE8 primaryVT=007124CC bases(root->derived): CNNapalmBomb <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNNenGuard
+  TD=00793850 primaryVT=0070E79C bases(root->derived): CNNenGuard <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNNormalWave
+  TD=00793628 primaryVT=0070B56C bases(root->derived): CNNormalWave <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNNormalZepplin
+  TD=00791888 primaryVT=006ECBD4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=331
+CLASS nengine__CNNumberSet
+  TD=0077F700 primaryVT=006C38FC bases(root->derived): nengine__CNNumberSet <- nengine__IObject
+  cols=2 vts=2 slots=1
+CLASS CNOlreksExplosiveOil
+  TD=00794768 primaryVT=007243C4 bases(root->derived): CNExplosiveOil <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=178
+CLASS CNOmozzaOfWorld
+  TD=00792220 primaryVT=006FD6FC bases(root->derived): CNOmozzaOfWorld <- CNOmozzaOfWorld <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNOntoLandMakePassiveObject
+  TD=00793D60 primaryVT=00715CE4 bases(root->derived): CNOntoLandMakePassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNPVPModule
+  TD=0077F594 primaryVT=006C2DBC bases(root->derived): CNPVPModule <- CNPVPModule <- CNPVPModule <- nengine__IModule <- nengine__IObject <- nengine__IAppendDraw
+  cols=3 vts=3 slots=5
+CLASS CNParticleFactory
+  TD=0079325C primaryVT=00705EFC bases(root->derived): CNParticleFactory <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNPassiveObjectTrigger
+  TD=0079410C primaryVT=0071B1B4 bases(root->derived): CNPassiveObjectTrigger <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNPathGate
+  TD=0079060C primaryVT=00705114 bases(root->derived): CNPathGate <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNPenril
+  TD=00790E04 primaryVT=006CFF24 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNPieceDestroyEffect
+  TD=00791DD8 primaryVT=006F90C4 bases(root->derived): CNPieceDestroyEffect <- CNPieceDestroyEffect <- CNPieceDestroyEffect <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=84
+CLASS CNPierceHeadLegOfLotus
+  TD=00793CB4 primaryVT=00714EE4 bases(root->derived): CNLegOfLotus <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNPinchPowerUp
+  TD=00795A10 primaryVT=00739784 bases(root->derived): CNPinchPowerUp <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNPoisonBug
+  TD=00794710 primaryVT=00723A5C bases(root->derived): CNPoisonBug <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNPoisonSpider
+  TD=00791918 primaryVT=006EE5C4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=330
+CLASS CNPope
+  TD=00791714 primaryVT=006E8D74 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=330
+CLASS CNPrag
+  TD=00790F44 primaryVT=006D37FC bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNGoblinCommon
+  cols=3 vts=3 slots=0
+CLASS CNProvocationDoll
+  TD=00790D2C primaryVT=006CD60C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNProvocationDollAura
+  TD=00795444 primaryVT=0072D5D4 bases(root->derived): CNProvocationDollAura <- CNProvocationDollAura <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=38
+CLASS CNProvocationDollCreater
+  TD=00793AC0 primaryVT=00712204 bases(root->derived): CNProvocationDollCreater <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNProvocationed
+  TD=00795B84 primaryVT=0073B974 bases(root->derived): CNProvocationed <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNPvpRoom
+  TD=0077FAE0 primaryVT=006C4660 bases(root->derived): CNPvpRoom
+  cols=2 vts=2 slots=1
+CLASS CNPvpRoomManager
+  TD=0077FC84 primaryVT=006C4A48 bases(root->derived): CNPvpRoomManager
+  cols=2 vts=2 slots=1
+CLASS CNQuestCage
+  TD=00794448 primaryVT=0071FA8C bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNRDAStar
+  TD=0077F9C0 primaryVT=006C45F4 bases(root->derived): CNRDAStar
+  cols=2 vts=2 slots=1
+CLASS CNRDActiveStatus
+  TD=00791CEC primaryVT=006F86AC bases(root->derived): CNRDActiveStatus
+  cols=2 vts=2 slots=22
+CLASS CNRDAuraMaster
+  TD=0079478C primaryVT=0072D53C bases(root->derived): CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNRDAuraMinion
+  TD=00795E24 primaryVT=0073E3E4 bases(root->derived): CNRDAuraMinion <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNRDAvatarInventoryWindow
+  TD=00790160 primaryVT=006C6604 bases(root->derived): CNRDAvatarInventoryWindow <- CNRDAvatarInventoryWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDBaseInterface
+  TD=007902FC primaryVT=006C68D8 bases(root->derived): CNRDBaseInterface <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDBuddyManager
+  TD=00790628 primaryVT=006C88B0 bases(root->derived): CNRDBuddyManager
+  cols=2 vts=2 slots=4
+CLASS CNRDCashShop
+  TD=007904E0 primaryVT=006C6BCC bases(root->derived): CNRDCashShop <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDCashShopBuyConfirmWindow
+  TD=00794BF8 primaryVT=007251D4 bases(root->derived): CNRDCashShopBuyConfirmWindow <- CNRDCashShopBuyConfirmWindow <- CNRDCashShopBuyConfirmWindow <- CNRDYesNoConfirmWindow <- CNRDYesNoConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=17
+CLASS CNRDCashShopBuyWindow
+  TD=007952E8 primaryVT=00725F30 bases(root->derived): CNRDCashShopBuyWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=2
+CLASS CNRDCashShopDoubleEventWindow
+  TD=00794D14 primaryVT=00725378 bases(root->derived): CNRDCashShopDoubleEventWindow <- CNRDCashShopDoubleEventWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDCashShopLevelLimitConfirmWindow
+  TD=00794C24 primaryVT=0072521C bases(root->derived): CNRDCashShopLevelLimitConfirmWindow <- CNRDCashShopLevelLimitConfirmWindow <- CNRDCashShopLevelLimitConfirmWindow <- CNRDYesNoConfirmWindow <- CNRDYesNoConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=17
+CLASS CNRDCashShopNoDoubleEventConfirmWindow
+  TD=00794C58 primaryVT=00725264 bases(root->derived): CNRDCashShopNoDoubleEventConfirmWindow <- CNRDCashShopNoDoubleEventConfirmWindow <- CNRDCashShopNoDoubleEventConfirmWindow <- CNRDYesNoConfirmWindow <- CNRDYesNoConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=17
+CLASS CNRDCharacterDeleteConfirmWindow
+  TD=00794974 primaryVT=00724E14 bases(root->derived): CNRDCharacterDeleteConfirmWindow <- CNRDCharacterDeleteConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDCharacterTalkBox
+  TD=0079031C primaryVT=006C68E0 bases(root->derived): CNRDCharacterTalkBox <- nengine__IAppendDraw
+  cols=2 vts=2 slots=4
+CLASS CNRDChatting
+  TD=007902A0 primaryVT=006C68C0 bases(root->derived): CNRDChatting <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDClassChangeWindow
+  TD=00795094 primaryVT=00725904 bases(root->derived): CNRDClassChangeWindow <- CNRDClassChangeWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDCommunityMenu
+  TD=007900A4 primaryVT=006C65A0 bases(root->derived): CNRDCommunityMenu <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDCommunityWindow
+  TD=00795350 primaryVT=00726318 bases(root->derived): CNRDCommunityWindow <- CNRDCommunityWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDCompoundItemWindow
+  TD=007951C4 primaryVT=00725B38 bases(root->derived): CNRDCompoundItemWindow <- CNRDCompoundItemWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDCompoundResultWindow
+  TD=00795024 primaryVT=00725850 bases(root->derived): CNRDCompoundResultWindow <- CNRDCompoundResultWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDConfigFile
+  TD=0077F988 primaryVT=006C45D8 bases(root->derived): CNRDConfigFile
+  cols=2 vts=2 slots=1
+CLASS CNRDCountDown
+  TD=007900E0 primaryVT=006C65B0 bases(root->derived): CNRDCountDown <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDCursor
+  TD=00790088 primaryVT=006C6598 bases(root->derived): CNRDCursor <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDDialogueWindow
+  TD=0079504C primaryVT=0072588C bases(root->derived): CNRDDialogueWindow <- CNRDDialogueWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDDonkey
+  TD=0077F8E0 primaryVT=006C42AC bases(root->derived): CNRDDonkey <- CNRDDonkey <- CNRDDonkey <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=85
+CLASS CNRDDungeonInfoWindow
+  TD=00794D88 primaryVT=0072542C bases(root->derived): CNRDDungeonInfoWindow <- CNRDDungeonInfoWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=16
+CLASS CNRDDungeonMap
+  TD=00795D4C primaryVT=0073E118 bases(root->derived): CNRDDungeonMap <- CNRDDungeonMap <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDEquipment
+  TD=0078FF80 primaryVT=006F6664 bases(root->derived): CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNRDFriendAddRemoveWindow
+  TD=00794B4C primaryVT=007250E4 bases(root->derived): CNRDFriendAddRemoveWindow <- CNRDFriendAddRemoveWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDFriendListWindow
+  TD=00795134 primaryVT=007259F4 bases(root->derived): CNRDFriendListWindow <- CNRDFriendListWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDFriendManager
+  TD=00790648 primaryVT=006C88C4 bases(root->derived): CNRDFriendManager <- CNRDBuddyManager
+  cols=2 vts=2 slots=4
+CLASS CNRDFriendRemoveConfirmWindow
+  TD=00794B9C primaryVT=0072515C bases(root->derived): CNRDFriendRemoveConfirmWindow <- CNRDFriendRemoveConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDGuildConfirmWindow
+  TD=00794D60 primaryVT=007253F0 bases(root->derived): CNRDGuildConfirmWindow <- CNRDGuildConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDGuildInfo
+  TD=00791C28 primaryVT=006F6B14 bases(root->derived): CNRDGuildInfo <- HttpFileCallBack
+  cols=2 vts=2 slots=4
+CLASS CNRDGuildListWindow
+  TD=00795D8C primaryVT=0073E1E4 bases(root->derived): CNRDGuildListWindow <- CNRDGuildListWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDGuildManager
+  TD=00790668 primaryVT=006C88D8 bases(root->derived): CNRDGuildManager <- CNRDBuddyManager
+  cols=2 vts=2 slots=4
+CLASS CNRDGuildWindow
+  TD=00794D40 primaryVT=007253B4 bases(root->derived): CNRDGuildWindow <- CNRDGuildWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDImportantItemUseConfirmWindow
+  TD=00794C90 primaryVT=007252AC bases(root->derived): CNRDImportantItemUseConfirmWindow <- CNRDImportantItemUseConfirmWindow <- CNRDImportantItemUseConfirmWindow <- CNRDYesNoConfirmWindow <- CNRDYesNoConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=17
+CLASS CNRDInformCashShopWindow
+  TD=00794CEC primaryVT=0072533C bases(root->derived): CNRDInformCashShopWindow <- CNRDInformCashShopWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDInterfaceManager
+  TD=0077FAF8 primaryVT=006C4668 bases(root->derived): CNRDInterfaceManager <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDItemBoxWindow
+  TD=00794EB0 primaryVT=007255E4 bases(root->derived): CNRDItemBoxWindow <- CNRDItemBoxWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=15
+CLASS CNRDItemBuyConfirmWindow
+  TD=00790434 primaryVT=00725750 bases(root->derived): CNRDItemBuyConfirmWindow <- CNRDItemBuyConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemDeleteConfirmWindow
+  TD=00794878 primaryVT=00724CA4 bases(root->derived): CNRDItemDeleteConfirmWindow <- CNRDItemDeleteConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemDisjointConfirmWindow
+  TD=00794F54 primaryVT=007256D8 bases(root->derived): CNRDItemDisjointConfirmWindow <- CNRDItemDisjointConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemDisjointResultWindow
+  TD=00794FA4 primaryVT=0072578C bases(root->derived): CNRDItemDisjointResultWindow <- CNRDItemDisjointResultWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemInfoWindow
+  TD=007951A0 primaryVT=00725AF4 bases(root->derived): CNRDItemInfoWindow <- CNRDItemInfoWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=16
+CLASS CNRDItemInventoryWindow
+  TD=00790138 primaryVT=006C65C8 bases(root->derived): CNRDItemInventoryWindow <- CNRDItemInventoryWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemObject
+  TD=00790570 primaryVT=006F9594 bases(root->derived): CNRDItemObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNRDItemProductWindow
+  TD=00790480 primaryVT=006C6B80 bases(root->derived): CNRDItemProductWindow <- CNRDItemProductWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemRepairConfirmWindow
+  TD=007948A4 primaryVT=00724CE0 bases(root->derived): CNRDItemRepairConfirmWindow <- CNRDItemRepairConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemSealRemoveConfirmWindow
+  TD=007948D0 primaryVT=00724D1C bases(root->derived): CNRDItemSealRemoveConfirmWindow <- CNRDItemSealRemoveConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemSellConfirmWindow
+  TD=00794850 primaryVT=00724C68 bases(root->derived): CNRDItemSellConfirmWindow <- CNRDItemSellConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemShopWindow
+  TD=0079045C primaryVT=006C6B44 bases(root->derived): CNRDItemShopWindow <- CNRDItemShopWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemToolWindow
+  TD=007901F4 primaryVT=006C66F4 bases(root->derived): CNRDItemToolWindow <- CNRDItemToolWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemTradeModule
+  TD=0077F9DC primaryVT=006C460C bases(root->derived): CNRDItemTradeModule
+  cols=2 vts=2 slots=1
+CLASS CNRDItemTradeResultWindow
+  TD=00794FFC primaryVT=00725814 bases(root->derived): CNRDItemTradeResultWindow <- CNRDItemTradeResultWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDItemTradeWindow
+  TD=00790188 primaryVT=006C6640 bases(root->derived): CNRDItemTradeWindow <- CNRDItemTradeWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDJoint
+  TD=00793164 primaryVT=00703F7C bases(root->derived): CNRDJoint <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=183
+CLASS CNRDLotteryItemWindow
+  TD=00794F80 primaryVT=00725714 bases(root->derived): CNRDLotteryItemWindow <- CNRDLotteryItemWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS mail__CNRDMailWindow
+  TD=007930A8 primaryVT=00703A30 bases(root->derived): mail__CNRDMailWindow <- mail__CNRDMailWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDMakePriceWindow
+  TD=00790368 primaryVT=006C6908 bases(root->derived): CNRDMakePriceWindow <- CNRDMakePriceWindow <- CNRDMakePriceWindow <- nengine__CNFrame <- nengine__CNFrame <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS CNRDMemberAddRemoveWindow
+  TD=00794B74 primaryVT=00725120 bases(root->derived): CNRDMemberAddRemoveWindow <- CNRDMemberAddRemoveWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDMemberManager
+  TD=00790688 primaryVT=006C88EC bases(root->derived): CNRDMemberManager <- CNRDBuddyManager
+  cols=2 vts=2 slots=4
+CLASS CNRDMemberRemoveConfirmWindow
+  TD=00794E0C primaryVT=007254E8 bases(root->derived): CNRDMemberRemoveConfirmWindow <- CNRDMemberRemoveConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDMoney
+  TD=007906C0 primaryVT=006C8B34 bases(root->derived): CNRDMoney <- CNRDMoney <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNRDMoveToHomeConfirmWindow
+  TD=00794DAC primaryVT=00725470 bases(root->derived): CNRDMoveToHomeConfirmWindow <- CNRDMoveToHomeConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDNoticeMessageWindow
+  TD=007949A4 primaryVT=00724E50 bases(root->derived): CNRDNoticeMessageWindow <- CNRDNoticeMessageWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDNpc
+  TD=00790518 primaryVT=006C7464 bases(root->derived): CNRDNpc <- CNRDNpc <- CNRDNpc <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=87
+CLASS CNRDObject
+  TD=0077F844 primaryVT=006C3B7C bases(root->derived): CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=1 vts=1 slots=84
+CLASS CNRDObjectParticleCreater
+  TD=0077F7B0 primaryVT=006C3AAC bases(root->derived): CNRDObjectParticleCreater <- CNRDParticleCreater
+  cols=2 vts=2 slots=31
+CLASS CNRDOptionWindow
+  TD=00794AB8 primaryVT=00724FF4 bases(root->derived): CNRDOptionWindow <- CNRDOptionWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPVPChannelListWindow
+  TD=00794A6C primaryVT=00724F7C bases(root->derived): CNRDPVPChannelListWindow <- CNRDPVPChannelListWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPVPInterface
+  TD=007904A4 primaryVT=006C6BBC bases(root->derived): CNRDPVPInterface <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDPVPResult
+  TD=0079038C primaryVT=006C6930 bases(root->derived): CNRDPVPResult <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDPVPRoomCreateWindow
+  TD=00794A20 primaryVT=00724F04 bases(root->derived): CNRDPVPRoomCreateWindow <- CNRDPVPRoomCreateWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPVPRoomInfoWindow
+  TD=00794A48 primaryVT=00724F40 bases(root->derived): CNRDPVPRoomInfoWindow <- CNRDPVPRoomInfoWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPVPRoomListWindow
+  TD=007951EC primaryVT=00725B74 bases(root->derived): CNRDPVPRoomListWindow <- CNRDPVPRoomListWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPVPWarRoomInviteWindow
+  TD=007950E4 primaryVT=0072597C bases(root->derived): CNRDPVPWarRoomInviteWindow <- CNRDPVPWarRoomInviteWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDParticle
+  TD=0078FF64 primaryVT=006C606C bases(root->derived): CNRDParticle
+  cols=2 vts=2 slots=19
+CLASS CNRDParticleCreater
+  TD=0077F724 primaryVT=006C390C bases(root->derived): CNRDParticleCreater
+  cols=2 vts=2 slots=23
+CLASS CNRDParty
+  TD=00790500 primaryVT=006C6DFC bases(root->derived): CNRDParty
+  cols=2 vts=2 slots=1
+CLASS CNRDPartyCreateWindow
+  TD=00794AFC primaryVT=0072506C bases(root->derived): CNRDPartyCreateWindow <- CNRDPartyCreateWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPartyInfoWindow
+  TD=00794AD8 primaryVT=00725030 bases(root->derived): CNRDPartyInfoWindow <- CNRDPartyInfoWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPartyLeaveSuggestWindow
+  TD=00794B20 primaryVT=007250A8 bases(root->derived): CNRDPartyLeaveSuggestWindow <- CNRDPartyLeaveSuggestWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPartyListWindow
+  TD=00795110 primaryVT=007259B8 bases(root->derived): CNRDPartyListWindow <- CNRDPartyListWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPartyManager
+  TD=0077FBC0 primaryVT=006C4904 bases(root->derived): CNRDPartyManager
+  cols=2 vts=2 slots=1
+CLASS CNRDPartyRecommendUserWindow
+  TD=007950B8 primaryVT=00725940 bases(root->derived): CNRDPartyRecommendUserWindow <- CNRDPartyRecommendUserWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPassiveObject
+  TD=0077F8A4 primaryVT=006F92CC bases(root->derived): CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNRDPayWebWindow
+  TD=00795D6C primaryVT=0073E190 bases(root->derived): CNRDPayWebWindow <- CNRDPayWebWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPlayDungeonResultWindow
+  TD=00794FD0 primaryVT=007257CC bases(root->derived): CNRDPlayDungeonResultWindow <- CNRDPlayDungeonResultWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=17
+CLASS CNRDPooledObject
+  TD=007903F0 primaryVT=006C69B4 bases(root->derived): CNRDPooledObject <- CNRDPooledObject <- CNRDPooledObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=84
+CLASS CNRDPooledPassiveObject
+  TD=0079313C primaryVT=00703CB4 bases(root->derived): CNRDPooledPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNRDPopupMenu
+  TD=007902E0 primaryVT=006C68D0 bases(root->derived): CNRDPopupMenu <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDPopupMessageWindow
+  TD=00794900 primaryVT=00724D58 bases(root->derived): CNRDPopupMessageWindow <- CNRDPopupMessageWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPopupTextBoxOnly
+  TD=00794928 primaryVT=00724D94 bases(root->derived): CNRDPopupTextBoxOnly <- CNRDPopupTextBoxOnly <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPrivateStoreItemBuyConfirmWindow
+  TD=00794DD8 primaryVT=007254AC bases(root->derived): CNRDPrivateStoreItemBuyConfirmWindow <- CNRDPrivateStoreItemBuyConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDPrivateStoreWindow
+  TD=00790060 primaryVT=006C6514 bases(root->derived): CNRDPrivateStoreWindow <- CNRDPrivateStoreWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=1 vts=1 slots=29
+CLASS CNRDPrivateStoreWindow_Buy
+  TD=00790274 primaryVT=006C6824 bases(root->derived): CNRDPrivateStoreWindow_Buy <- CNRDPrivateStoreWindow_Buy <- CNRDPrivateStoreWindow_Buy <- CNRDPrivateStoreWindow <- CNRDPrivateStoreWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=29
+CLASS CNRDPrivateStoreWindow_Display
+  TD=00790218 primaryVT=006C6734 bases(root->derived): CNRDPrivateStoreWindow_Display <- CNRDPrivateStoreWindow_Display <- CNRDPrivateStoreWindow_Display <- CNRDPrivateStoreWindow <- CNRDPrivateStoreWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=29
+CLASS CNRDPrivateStoreWindow_Sell
+  TD=00790248 primaryVT=006C67AC bases(root->derived): CNRDPrivateStoreWindow_Sell <- CNRDPrivateStoreWindow_Sell <- CNRDPrivateStoreWindow_Sell <- CNRDPrivateStoreWindow <- CNRDPrivateStoreWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=29
+CLASS CNRDQuestGiveupConfirmWindow
+  TD=007949CC primaryVT=00724E8C bases(root->derived): CNRDQuestGiveupConfirmWindow <- CNRDQuestGiveupConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDQuestInfoWindow
+  TD=007903CC primaryVT=006C6974 bases(root->derived): CNRDQuestInfoWindow <- CNRDQuestInfoWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDQuestListWindow
+  TD=00790410 primaryVT=006C6B08 bases(root->derived): CNRDQuestListWindow <- CNRDQuestListWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDQuestModule
+  TD=0077FC64 primaryVT=006C4A40 bases(root->derived): CNRDQuestModule
+  cols=2 vts=2 slots=1
+CLASS CNRDQuestRewardWindow
+  TD=00795070 primaryVT=007258C8 bases(root->derived): CNRDQuestRewardWindow <- CNRDQuestRewardWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDResetOrResealConfirmWindow
+  TD=00794ED0 primaryVT=00725624 bases(root->derived): CNRDResetOrResealConfirmWindow <- CNRDResetOrResealConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDResponseMemberWindow
+  TD=00794E38 primaryVT=00725524 bases(root->derived): CNRDResponseMemberWindow <- CNRDResponseMemberWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=16
+CLASS CNRDResponsePeerWindow
+  TD=0079494C primaryVT=00724DD4 bases(root->derived): CNRDResponsePeerWindow <- CNRDResponsePeerWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=15
+CLASS CNRDResult
+  TD=0079011C primaryVT=006C65C0 bases(root->derived): CNRDResult <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDReward
+  TD=007904C4 primaryVT=006C6BC4 bases(root->derived): CNRDReward <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDSelectWarRoomArea
+  TD=0078FFD0 primaryVT=006C64F8 bases(root->derived): CNRDSelectWarRoomArea <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDSeriasPresentListWindow
+  TD=0077FA80 primaryVT=00725A30 bases(root->derived): CNRDSeriasPresentListWindow <- CNRDSeriasPresentListWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDSkill
+  TD=007906A8 primaryVT=006C89D4 bases(root->derived): CNRDSkill
+  cols=2 vts=2 slots=4
+CLASS CNRDSkillBuyConfirmWindow
+  TD=00794828 primaryVT=00724C2C bases(root->derived): CNRDSkillBuyConfirmWindow <- CNRDSkillBuyConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDSkillBuyWindow
+  TD=007903A8 primaryVT=006C6938 bases(root->derived): CNRDSkillBuyWindow <- CNRDSkillBuyWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDSkillInfoWindow
+  TD=0079517C primaryVT=00725AAC bases(root->derived): CNRDSkillInfoWindow <- CNRDSkillInfoWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=16
+CLASS CNRDSkillInventoryWindow
+  TD=007901AC primaryVT=006C667C bases(root->derived): CNRDSkillInventoryWindow <- CNRDSkillInventoryWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDStackNumberSet
+  TD=0079003C primaryVT=006C6500 bases(root->derived): CNRDStackNumberSet <- CNRDStackNumberSet <- IRDStackCountSender <- IRDStackableProcess
+  cols=1 vts=1 slots=4
+CLASS CNRDStackable
+  TD=0077FAC4 primaryVT=006C8A9C bases(root->derived): CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNRDStage
+  TD=0077F88C primaryVT=006C3EE0 bases(root->derived): CNRDStage <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDStaminaRecoverConfirmWindow
+  TD=00794BC8 primaryVT=00725198 bases(root->derived): CNRDStaminaRecoverConfirmWindow <- CNRDStaminaRecoverConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDStatusWindow
+  TD=007901D4 primaryVT=006C66B8 bases(root->derived): CNRDStatusWindow <- CNRDStatusWindow <- IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDStorageWindow
+  TD=00792054 primaryVT=006FCE80 bases(root->derived): CNRDStorageWindow <- CNRDStorageWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDTradeLastConfirmWindow
+  TD=00794CC0 primaryVT=007252F4 bases(root->derived): CNRDTradeLastConfirmWindow <- CNRDTradeLastConfirmWindow <- CNRDTradeLastConfirmWindow <- CNRDYesNoConfirmWindow <- CNRDYesNoConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=17
+CLASS CNRDTrap
+  TD=00793124 primaryVT=00703C58 bases(root->derived): CNRDTrap
+  cols=3 vts=3 slots=1
+CLASS CNRDTutorial
+  TD=007900C4 primaryVT=006C65A8 bases(root->derived): CNRDTutorial <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDTutorialTip
+  TD=0077F654 primaryVT=006C366C bases(root->derived): CNRDTutorialTip <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDTutorialWindow
+  TD=00794A94 primaryVT=00724FB8 bases(root->derived): CNRDTutorialWindow <- CNRDTutorialWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDUdpModule
+  TD=0077FB88 primaryVT=006C46B4 bases(root->derived): CNRDUdpModule <- CNRDUdpModule <- CNRDUdpModule <- UdpPacketHandler <- iRelayPacketReciever <- iNetworkTimeEventSender
+  cols=3 vts=3 slots=45
+CLASS CNRDUpgradeConfirmWindow
+  TD=00794E60 primaryVT=00725568 bases(root->derived): CNRDUpgradeConfirmWindow <- CNRDUpgradeConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDUpgradeResultWindow
+  TD=00794E88 primaryVT=007255A4 bases(root->derived): CNRDUpgradeResultWindow <- CNRDUpgradeResultWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDVirtualCharacter
+  TD=0077F860 primaryVT=006C3CD4 bases(root->derived): CNRDVirtualCharacter <- CNRDVirtualCharacter <- CNRDVirtualCharacter <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=104
+CLASS CNRDWalkoutConfirmWindow
+  TD=007949F8 primaryVT=00724EC8 bases(root->derived): CNRDWalkoutConfirmWindow <- CNRDWalkoutConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDWarRoomBattleTalkBox
+  TD=00790340 primaryVT=006C68F4 bases(root->derived): CNRDWarRoomBattleTalkBox <- CNRDWarRoomBattleTalkBox <- CNRDCharacterTalkBox <- nengine__IAppendDraw
+  cols=2 vts=2 slots=4
+CLASS CNRDWarRoomDifficultListWindow
+  TD=00794F00 primaryVT=00725660 bases(root->derived): CNRDWarRoomDifficultListWindow <- CNRDWarRoomDifficultListWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDWarRoomInfoWindow
+  TD=00794F30 primaryVT=0072569C bases(root->derived): CNRDWarRoomInfoWindow <- CNRDWarRoomInfoWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDWarRoomInterface
+  TD=007902BC primaryVT=006C68C8 bases(root->derived): CNRDWarRoomInterface <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDWarRoomListWindow
+  TD=00795158 primaryVT=00725A6C bases(root->derived): CNRDWarRoomListWindow <- CNRDWarRoomListWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS CNRDWarRoomResult
+  TD=007900FC primaryVT=006C65B8 bases(root->derived): CNRDWarRoomResult <- nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS CNRDYesNoConfirmWindow
+  TD=007947E0 primaryVT=00724BBC bases(root->derived): CNRDYesNoConfirmWindow <- CNRDYesNoConfirmWindow <- IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=17
+CLASS nengine__CNRadioButton
+  TD=007905A8 primaryVT=006C8078 bases(root->derived): nengine__CNRadioButton <- nengine__CNRadioButton <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS CNRateHpMp
+  TD=007921E4 primaryVT=006FD5CC bases(root->derived): CNRateHpMp <- CNRateHpMp <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNRaxy_A
+  TD=007916B4 primaryVT=006E7874 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=330
+CLASS CNRaxy_B
+  TD=007916CC primaryVT=006E7DB4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=330
+CLASS CNRecipeStackable
+  TD=00792340 primaryVT=006FDB74 bases(root->derived): CNRecipeStackable <- CNRecipeStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNReckless
+  TD=00795A30 primaryVT=00739804 bases(root->derived): CNReckless <- IRDAppendage
+  cols=2 vts=2 slots=31
+CLASS CNRedRock
+  TD=0079344C primaryVT=00708B7C bases(root->derived): CNRedRock <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNReleaseWave
+  TD=00793924 primaryVT=0070FB14 bases(root->derived): CNReleaseWave <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNRemoveActiveStatus
+  TD=00795B60 primaryVT=0073AF04 bases(root->derived): CNRemoveActiveStatus <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNRisingShuriken
+  TD=00793D8C primaryVT=00715FAC bases(root->derived): CNRisingShuriken <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNRoarStun
+  TD=007936D0 primaryVT=0070C61C bases(root->derived): CNRoarStun <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNRobotExs
+  TD=00791990 primaryVT=006EFA64 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNRobotEz8
+  TD=00791974 primaryVT=006EF544 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNRobotRX78
+  TD=00791958 primaryVT=006EF024 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNRobotics
+  TD=00791CB8 primaryVT=006F6FEC bases(root->derived): CNRobotics <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNRock_Moud
+  TD=0079111C primaryVT=006D85A4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNTauFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=327
+CLASS CNRodinglo
+  TD=00791A00 primaryVT=006F0F2C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNRollingSpider
+  TD=007918F8 primaryVT=006EE094 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=330
+CLASS CNRollingStone
+  TD=00793EC8 primaryVT=00717BC4 bases(root->derived): CNRollingStone <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNRoomListModule
+  TD=0077F634 primaryVT=006C3640 bases(root->derived): CNRoomListModule <- CNRoomListModule <- CNRoomListModule <- nengine__IModule <- nengine__IObject <- nengine__IAppendDraw
+  cols=3 vts=3 slots=5
+CLASS CNSandorExpeller
+  TD=007957A0 primaryVT=007353DC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=341
+CLASS CNScriptLoader
+  TD=0077FC24 primaryVT=006C49C8 bases(root->derived): CNScriptLoader <- IFileResourceManager
+  cols=2 vts=2 slots=14
+CLASS nengine__CNScroll
+  TD=0078FEF8 primaryVT=006C56B8 bases(root->derived): nengine__CNScroll <- nengine__CNScroll <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS CNSeaGrass
+  TD=0079406C primaryVT=0071A3CC bases(root->derived): CNSeaGrass <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSelectDungeonModule
+  TD=0077F570 primaryVT=006C2D28 bases(root->derived): CNSelectDungeonModule <- CNSelectDungeonModule <- CNSelectDungeonModule <- nengine__IModule <- nengine__IObject <- nengine__IAppendDraw
+  cols=3 vts=3 slots=5
+CLASS CNShootingStar
+  TD=00793328 primaryVT=00707274 bases(root->derived): CNShootingStar <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNShootingStarExp
+  TD=00793348 primaryVT=0070753C bases(root->derived): CNShootingStarExp <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSingleIceWave
+  TD=007935E8 primaryVT=0070AFAC bases(root->derived): CNSingleIceWave <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSkeletonPile
+  TD=007943D0 primaryVT=0071EEA4 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNSlangTextFilter
+  TD=0077FB1C primaryVT=006C4670 bases(root->derived): CNSlangTextFilter <- CNSlangTextFilter <- ITextFilter <- IAbstractInterface
+  cols=2 vts=2 slots=7
+CLASS nengine__CNSlider
+  TD=0078FEB8 primaryVT=006C5658 bases(root->derived): nengine__CNSlider <- nengine__CNSlider <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=11
+CLASS CNSlowAndLowJump
+  TD=00795D1C primaryVT=0073D95C bases(root->derived): CNSlowAndLowJump <- CNSlowAndLowJump <- CNChangeStatus <- IRDAppendage
+  cols=2 vts=2 slots=33
+CLASS CNSlowFromSlowAura
+  TD=00795F90 primaryVT=0073EC2C bases(root->derived): CNSlowFromSlowAura <- CNSlowFromSlowAura <- CNRDAuraMinion <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNSoldier
+  TD=00795644 primaryVT=00731914 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNSoulEter
+  TD=00791A64 primaryVT=006F240C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNSoundFloor
+  TD=0079457C primaryVT=00721B44 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNSpaceFishBug
+  TD=00793BC0 primaryVT=00713854 bases(root->derived): CNSpaceFishBug <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSpaceFishCrocuta
+  TD=007915F8 primaryVT=006E591C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNSpaceFishHead
+  TD=00791598 primaryVT=006E49A4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNSpaceFishJoint
+  TD=00793BE0 primaryVT=00713B1C bases(root->derived): CNRDJoint <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=183
+CLASS CNSpaceFishLair
+  TD=00793F54 primaryVT=007189AC bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNSpaceFishLong
+  TD=007915D8 primaryVT=006E53F4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNSpaceFishShort
+  TD=007915B8 primaryVT=006E4ECC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNSpecificEnemyEquipment
+  TD=007923EC primaryVT=006FDF34 bases(root->derived): CNSpecificEnemyEquipment <- CNSpecificEnemyEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=77
+CLASS CNSpecificStateEquipment
+  TD=00792414 primaryVT=006FE06C bases(root->derived): CNSpecificStateEquipment <- CNSpecificStateEquipment <- CNRDEquipment <- IRDItem
+  cols=2 vts=2 slots=76
+CLASS CNSpectressBat
+  TD=00793E64 primaryVT=00717364 bases(root->derived): CNSpectressBat <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSpeedControl
+  TD=00791D94 primaryVT=006F8E3C bases(root->derived): CNSpeedControl <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNSpider
+  TD=007918E0 primaryVT=006EDB64 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=330
+CLASS CNSpiderSpawn
+  TD=007943F0 primaryVT=0071F19C bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNSpikeKing
+  TD=00791B04 primaryVT=006F431C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNSpiner
+  TD=00793F3C primaryVT=007186E4 bases(root->derived): CNSpiner <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSpiralNen
+  TD=00793790 primaryVT=0070D6CC bases(root->derived): CNSpiralNen <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSpirit
+  TD=00791A1C primaryVT=006F1464 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNStalker
+  TD=00791A80 primaryVT=006F2944 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNStarFish
+  TD=0079161C primaryVT=006E5E54 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNStarFishFriendShip <- CNMonsterFriendShip
+  cols=2 vts=2 slots=328
+CLASS CNStarFishDevourer
+  TD=00791658 primaryVT=006E68C4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNStarFishFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=328
+CLASS CNStarFishEggRequid
+  TD=00793FD0 primaryVT=00719544 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNStarFishFriendShip
+  TD=00790C70 primaryVT=006CBAB0 bases(root->derived): CNStarFishFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=3
+CLASS CNStarFishKing
+  TD=0079167C primaryVT=006E6DFC bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNStarFishFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=328
+CLASS CNStarFishRukuku
+  TD=00791638 primaryVT=006E638C bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNStarFishFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=328
+CLASS CNStarfishEgg
+  TD=007940CC primaryVT=0071AC24 bases(root->derived): CNStarfishEgg <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSteelMaster
+  TD=00791290 primaryVT=006DC8BC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNStoneBlade
+  TD=00793C7C primaryVT=0071493C bases(root->derived): CNStoneBlade <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNStoneBlade_Razor
+  TD=00791234 primaryVT=006DB944 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNStoneMaster
+  TD=00791274 primaryVT=006DC394 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=329
+CLASS CNStorageBird
+  TD=00794698 primaryVT=00722F3C bases(root->derived): CNStorageBird <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNStorageSub
+  TD=007946D4 primaryVT=007234CC bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS nengine__CNString
+  TD=0077F6E0 primaryVT=006C38F4 bases(root->derived): nengine__CNString <- nengine__IObject
+  cols=2 vts=2 slots=1
+CLASS CNSummonMonsterAura
+  TD=007958A8 primaryVT=0073837C bases(root->derived): CNSummonMonsterAura <- CNSummonMonsterAura <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=38
+CLASS CNSummonMonsterStackable
+  TD=007922F8 primaryVT=006FDA44 bases(root->derived): CNSummonMonsterStackable <- CNSummonMonsterStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNSummonMonsterWithEffect
+  TD=00793588 primaryVT=0070A754 bases(root->derived): CNSummonMonsterWithEffect <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSunBurst
+  TD=00793AA4 primaryVT=00711F3C bases(root->derived): CNSunBurst <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSunkenRock
+  TD=00793430 primaryVT=007088B4 bases(root->derived): CNSunkenRock <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSuperArmor
+  TD=00792DA4 primaryVT=007028EC bases(root->derived): CNSuperArmor <- IRDAppendage
+  cols=2 vts=2 slots=31
+CLASS CNSuperArmorFairy
+  TD=007944C8 primaryVT=00720984 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNSuplexSub
+  TD=0079365C primaryVT=0070BAFC bases(root->derived): CNSuplexSub <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSuplexed
+  TD=00795950 primaryVT=00738F6C bases(root->derived): CNSuplexed <- IRDAppendage
+  cols=2 vts=2 slots=32
+CLASS CNSwamp
+  TD=00793FB8 primaryVT=00719244 bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=190
+CLASS CNSweepingLegOfLotus
+  TD=007940E8 primaryVT=0071AEEC bases(root->derived): CNLegOfLotus <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNSwordman
+  TD=007924D8 primaryVT=00726CD4 bases(root->derived): IRDCharacter <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=333
+CLASS CNTargetIt
+  TD=007958CC primaryVT=0073841C bases(root->derived): CNTargetIt <- CNTargetIt <- CNRDAuraMaster <- IRDAppendage
+  cols=2 vts=2 slots=37
+CLASS CNTargetItBall
+  TD=00793B04 primaryVT=007127A4 bases(root->derived): CNTargetItBall <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNTauArmy
+  TD=007910C8 primaryVT=006D7614 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNTauFriendShip <- CNMonsterFriendShip
+  cols=2 vts=2 slots=327
+CLASS CNTauAssaulter
+  TD=007910FC primaryVT=006D8074 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNTauFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=327
+CLASS CNTauBeast
+  TD=007910E0 primaryVT=006D7B44 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNTauFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=327
+CLASS CNTauFriendShip
+  TD=00790C2C primaryVT=006CBA90 bases(root->derived): CNTauFriendShip <- CNMonsterFriendShip
+  cols=2 vts=2 slots=3
+CLASS CNTauGuard
+  TD=00791138 primaryVT=006D8AD4 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNTauFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=327
+CLASS CNTauTangas
+  TD=00791154 primaryVT=006D9004 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNTauFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=327
+CLASS CNTemporaryHit
+  TD=007934AC primaryVT=007093D4 bases(root->derived): CNTemporaryHit <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS nengine__CNText
+  TD=007920D4 primaryVT=006FD1B0 bases(root->derived): nengine__CNText <- nengine__IObject
+  cols=2 vts=2 slots=1
+CLASS nengine__CNTextBox
+  TD=0078FE78 primaryVT=006C5608 bases(root->derived): nengine__CNTextBox <- nengine__CNTextBox <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS CNThrowItemDestroyable
+  TD=00793368 primaryVT=00707804 bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNThrowNoMercyGrabEnemy
+  TD=007953E0 primaryVT=0072BDDC bases(root->derived): CNThrowNoMercyGrabEnemy <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNThrowSand
+  TD=007936B4 primaryVT=0070C354 bases(root->derived): CNThrowSand <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNThrowStackable
+  TD=00792320 primaryVT=006FDADC bases(root->derived): CNThrowStackable <- CNThrowStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNThrowWeb
+  TD=00793A0C primaryVT=00711154 bases(root->derived): CNThrowWeb <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNThrownEnemy
+  TD=00795990 primaryVT=00739074 bases(root->derived): CNThrownEnemy <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNThunderBolt
+  TD=00793240 primaryVT=00705C34 bases(root->derived): CNThunderBolt <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS nengine__CNTimer
+  TD=0077F510 primaryVT=006C2B88 bases(root->derived): nengine__CNTimer <- nengine__IObject
+  cols=2 vts=2 slots=0
+CLASS CNTinSwordManExpeller
+  TD=0079565C primaryVT=00736E64 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=340
+CLASS CNTitan
+  TD=00791B68 primaryVT=006F57BC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNTombStone
+  TD=0079388C primaryVT=0070ED2C bases(root->derived): CNTombStone <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNTombStoneRain
+  TD=0079386C primaryVT=0070EA64 bases(root->derived): CNTombStoneRain <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNToothKurokuta
+  TD=00793548 primaryVT=0070A1C4 bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNToothSFish
+  TD=0079352C primaryVT=00709EFC bases(root->derived): CNThrowItemDestroyable <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNTouchOfRemy
+  TD=007921C8 primaryVT=006FD534 bases(root->derived): CNTouchOfRemy <- CNTouchOfRemy <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNTrackingIceWave
+  TD=007935C8 primaryVT=0070ACE4 bases(root->derived): CNTrackingIceWave <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNTrapCage
+  TD=00793EE8 primaryVT=00717E8C bases(root->derived): CNTrapCage <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNTreadShootSub
+  TD=007938C4 primaryVT=0070F2BC bases(root->derived): CNTreadShootSub <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNTreasureBox
+  TD=0079319C primaryVT=0070482C bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNTreeCross
+  TD=007943B4 primaryVT=0071EBDC bases(root->derived): CNTreeCross <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNTrodden
+  TD=00791C60 primaryVT=006F6D84 bases(root->derived): CNTrodden <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNTwistFootHold
+  TD=0079404C primaryVT=0071A104 bases(root->derived): CNTwistFootHold <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNUrn
+  TD=007931D4 primaryVT=00704E1C bases(root->derived): CNMapObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=189
+CLASS CNUsableStackable
+  TD=00792240 primaryVT=006FD794 bases(root->derived): CNUsableStackable <- CNUsableStackable <- CNRDStackable <- IRDItem
+  cols=2 vts=2 slots=36
+CLASS CNUser
+  TD=0077F7EC primaryVT=006C3B58 bases(root->derived): CNUser
+  cols=2 vts=2 slots=1
+CLASS CNUserManager
+  TD=0077FBA4 primaryVT=006C48FC bases(root->derived): CNUserManager
+  cols=2 vts=2 slots=1
+CLASS nengine__CNVScroll
+  TD=0078FF18 primaryVT=006C56E0 bases(root->derived): nengine__CNVScroll <- nengine__CNVScroll <- nengine__CNVScroll <- nengine__CNScroll <- nengine__CNScroll <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=10
+CLASS nengine__CNVSlider
+  TD=0078FED8 primaryVT=006C5688 bases(root->derived): nengine__CNVSlider <- nengine__CNVSlider <- nengine__CNVSlider <- nengine__CNSlider <- nengine__CNSlider <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=11
+CLASS CNVehicle
+  TD=007917C0 primaryVT=006EA7A4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=328
+CLASS CNVinoshu
+  TD=00790D64 primaryVT=006CE04C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNVoid
+  TD=00793A48 primaryVT=007116E4 bases(root->derived): CNVoid <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNWarRoom
+  TD=00790BD0 primaryVT=006CBA60 bases(root->derived): CNWarRoom
+  cols=2 vts=2 slots=1
+CLASS CNWarRoomManager
+  TD=0077F950 primaryVT=006C45C8 bases(root->derived): CNWarRoomManager
+  cols=1 vts=1 slots=1
+CLASS CNWarRoomModule
+  TD=0077F5D0 primaryVT=006C2DFC bases(root->derived): CNWarRoomModule <- CNWarRoomModule <- CNWarRoomModule <- nengine__IModule <- nengine__IObject <- nengine__IAppendDraw
+  cols=3 vts=3 slots=5
+CLASS CNWaterDrop
+  TD=00794378 primaryVT=0071E5FC bases(root->derived): CNWaterDrop <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNWeaponMastery
+  TD=00791C98 primaryVT=006F6F64 bases(root->derived): CNWeaponMastery <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNWebTextFilter
+  TD=0077FA40 primaryVT=006C4634 bases(root->derived): CNWebTextFilter <- CNWebTextFilter <- ITextFilter <- IAbstractInterface
+  cols=2 vts=2 slots=7
+CLASS CNWhipped
+  TD=00795858 primaryVT=007381E4 bases(root->derived): CNWhipped <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS CNWhiteLugaru
+  TD=00790DE8 primaryVT=006CFA04 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNWindShaker
+  TD=00793F20 primaryVT=0071841C bases(root->derived): CNWindShaker <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNWindSimulation
+  TD=00795CFC primaryVT=0073D794 bases(root->derived): CNWindSimulation <- IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS nengine__CNWindow
+  TD=00794808 primaryVT=00724C04 bases(root->derived): nengine__CNWindow <- nengine__CNWindow <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS CNWisp
+  TD=00791A98 primaryVT=006F2E7C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=332
+CLASS CNWraith
+  TD=007918A8 primaryVT=006ED104 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=330
+CLASS CNWraithSpectress
+  TD=007918C0 primaryVT=006ED634 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=330
+CLASS CNYoungSpider
+  TD=00795594 primaryVT=00730074 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNZealot
+  TD=0079169C primaryVT=006E7334 bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger <- CNZealotFriendShip <- CNMonsterFriendShip
+  cols=2 vts=2 slots=330
+CLASS CNZealotFriendShip
+  TD=00790C4C primaryVT=006CBAA0 bases(root->derived): CNZealotFriendShip <- CNMonsterFriendShip
+  cols=3 vts=3 slots=3
+CLASS CNZepplin
+  TD=00791850 primaryVT=006EC16C bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=331
+CLASS CNZepplinBullet
+  TD=00793D00 primaryVT=00715474 bases(root->derived): CNZepplinBullet <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNZombie
+  TD=00791430 primaryVT=006E0BF4 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNZombieEye
+  TD=00793B44 primaryVT=00712D34 bases(root->derived): CNZombieEye <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNZombieEyeExplode
+  TD=00793B60 primaryVT=00712FFC bases(root->derived): CNZombieEyeExplode <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- CNRDPassiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=177
+CLASS CNZombieGhoulgwish
+  TD=00791488 primaryVT=006E1B54 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNZombieHollowEye
+  TD=00791468 primaryVT=006E1634 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS CNZombieZombie
+  TD=00791448 primaryVT=006E1114 bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=327
+CLASS Camera
+  TD=0077F9A8 primaryVT=006C45E0 bases(root->derived): Camera
+  cols=2 vts=2 slots=4
+CLASS mail__CreateMailFrame
+  TD=00793084 primaryVT=00703A08 bases(root->derived): mail__CreateMailFrame <- mail__CreateMailFrame <- mail__CreateMailFrame <- mail__CreateMailFrame <- mail__CreateMailFrame <- nengine__CNFrame <- nengine__CNFrame <- nengine__IControl <- nengine__IObject <- IRDStackCountReceiver <- IRDStackableProcess
+  cols=2 vts=2 slots=9
+CLASS CMsgCell__Exception
+  TD=00796908 primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS GenericHTTPClient
+  TD=0079537C primaryVT=00726628 bases(root->derived): GenericHTTPClient
+  cols=2 vts=2 slots=1
+CLASS HttpFileCallBack
+  TD=00791C08 primaryVT=006F69F0 bases(root->derived): HttpFileCallBack
+  cols=2 vts=2 slots=4
+CLASS HttpFileJob
+  TD=00791F18 primaryVT=006FA7EC bases(root->derived): HttpFileJob <- HttpFileJob <- IBindStatusCallback <- IUnknown
+  cols=1 vts=1 slots=11
+CLASS IAbstractInterface
+  TD=0077FA00 primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS nengine__IAppendDraw
+  TD=0077F4EC primaryVT=006C2B6C bases(root->derived): nengine__IAppendDraw
+  cols=2 vts=2 slots=1
+CLASS nengine__IControl
+  TD=0077F78C primaryVT=006C399C bases(root->derived): nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=8
+CLASS nengine__IControlState
+  TD=007906DC primaryVT=006C8C08 bases(root->derived): nengine__IControlState <- nengine__IObject
+  cols=2 vts=2 slots=2
+CLASS IFileResourceManager
+  TD=0077FC00 primaryVT=006C498C bases(root->derived): IFileResourceManager
+  cols=2 vts=2 slots=14
+CLASS nengine__IModule
+  TD=0077F4CC primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS nengine__IObject
+  TD=0077F4AC primaryVT=006C2B64 bases(root->derived): nengine__IObject
+  cols=2 vts=2 slots=1
+CLASS IRDActiveObject
+  TD=0077F76C primaryVT=006CC7CC bases(root->derived): IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=1 vts=1 slots=255
+CLASS IRDAppendage
+  TD=00791B80 primaryVT=006F5EBC bases(root->derived): IRDAppendage
+  cols=2 vts=2 slots=30
+CLASS IRDCharacter
+  TD=0078FF9C primaryVT=0072679C bases(root->derived): IRDCharacter <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=333
+CLASS IRDCollisionObject
+  TD=0077F748 primaryVT=006CC52C bases(root->derived): IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=2 vts=2 slots=167
+CLASS IRDItem
+  TD=0077FAAC primaryVT=006C8A14 bases(root->derived): IRDItem
+  cols=2 vts=2 slots=32
+CLASS IRDMonster
+  TD=0077F8C4 primaryVT=006CCBCC bases(root->derived): IRDMonster <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDActiveObject <- IRDCollisionObject <- IRDCollisionObject <- IRDCollisionObject <- CNRDObject <- CNRDObject <- KGameMessenger <- KMessenger
+  cols=1 vts=1 slots=327
+CLASS IRDPopupWindow
+  TD=0077FA60 primaryVT=006FCD94 bases(root->derived): IRDPopupWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS IRDStackCountReceiver
+  TD=00792FE8 primaryVT=00703974 bases(root->derived): IRDStackCountReceiver <- IRDStackableProcess
+  cols=2 vts=2 slots=4
+CLASS IRDStackableProcess
+  TD=0078FFF4 primaryVT=none bases(root->derived): (root)
+  cols=3 vts=3 slots=0
+CLASS IRDWindow
+  TD=0078FFB8 primaryVT=006C64BC bases(root->derived): IRDWindow <- nengine__IAppendDraw
+  cols=2 vts=2 slots=14
+CLASS nengine__ISocket
+  TD=0077F6A0 primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS ITextFilter
+  TD=0077FA24 primaryVT=006C4614 bases(root->derived): ITextFilter <- IAbstractInterface
+  cols=1 vts=1 slots=7
+CLASS mail__InboxFrame
+  TD=00793064 primaryVT=007039CC bases(root->derived): mail__InboxFrame <- mail__InboxFrame <- mail__InboxFrame <- nengine__CNFrame <- nengine__CNFrame <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS KGameMessenger
+  TD=0077F824 primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS KMessenger
+  TD=0077F808 primaryVT=006C3B60 bases(root->derived): KMessenger
+  cols=2 vts=2 slots=2
+CLASS mail__Mail
+  TD=00793010 primaryVT=00703990 bases(root->derived): mail__Mail
+  cols=2 vts=2 slots=1
+CLASS mail__MailBox
+  TD=00793028 primaryVT=00703998 bases(root->derived): mail__MailBox
+  cols=2 vts=2 slots=1
+CLASS mail__MailFrame
+  TD=00793044 primaryVT=007039A0 bases(root->derived): mail__MailFrame <- mail__MailFrame <- mail__MailFrame <- nengine__CNFrame <- nengine__CNFrame <- nengine__IControl <- nengine__IObject
+  cols=2 vts=2 slots=9
+CLASS NDebugOut
+  TD=00796940 primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS UdpPacketHandler
+  TD=0077F930 primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS std__locale___Locimp
+  TD=00796ACC primaryVT=00743FF0 bases(root->derived): std__locale___Locimp <- std__locale__facet
+  cols=2 vts=2 slots=1
+CLASS __non_rtti_object
+  TD=00796E10 primaryVT=00744224 bases(root->derived): __non_rtti_object <- __non_rtti_object <- bad_typeid <- exception
+  cols=3 vts=3 slots=2
+CLASS _com_error
+  TD=0079BE18 primaryVT=00749D70 bases(root->derived): _com_error
+  cols=3 vts=3 slots=1
+CLASS std__bad_alloc
+  TD=00796D50 primaryVT=007441B0 bases(root->derived): std__bad_alloc <- exception
+  cols=3 vts=3 slots=2
+CLASS bad_cast
+  TD=00795338 primaryVT=0074420C bases(root->derived): bad_cast <- exception
+  cols=3 vts=3 slots=2
+CLASS bad_typeid
+  TD=00796DF4 primaryVT=00744218 bases(root->derived): bad_typeid <- exception
+  cols=2 vts=2 slots=2
+CLASS cfloat
+  TD=0077F970 primaryVT=006C45D0 bases(root->derived): cfloat <- crypt4byte
+  cols=2 vts=2 slots=1
+CLASS clong
+  TD=0077F7D8 primaryVT=006C3B50 bases(root->derived): clong <- crypt4byte
+  cols=2 vts=2 slots=1
+CLASS std__codecvt_base
+  TD=00796C94 primaryVT=none bases(root->derived): (root)
+  cols=1 vts=1 slots=0
+CLASS crypt4byte
+  TD=0077F490 primaryVT=006C2B38 bases(root->derived): crypt4byte
+  cols=1 vts=1 slots=1
+CLASS exception
+  TD=0077F28C primaryVT=007441EC bases(root->derived): exception
+  cols=3 vts=3 slots=2
+CLASS std__locale__facet
+  TD=00795318 primaryVT=00726244 bases(root->derived): std__locale__facet
+  cols=2 vts=2 slots=1
+CLASS std__ios_base__failure
+  TD=00796B48 primaryVT=00744010 bases(root->derived): std__ios_base__failure <- std__ios_base__failure <- std__runtime_error <- exception
+  cols=2 vts=2 slots=2
+CLASS std__ios_base
+  TD=00796B0C primaryVT=00743FFC bases(root->derived): std__ios_base <- std_H__Iosb
+  cols=2 vts=2 slots=1
+CLASS std__istrstream
+  TD=00796D30 primaryVT=none bases(root->derived): (root)
+  cols=2 vts=2 slots=0
+CLASS std__length_error
+  TD=0077F2C4 primaryVT=006C2B4C bases(root->derived): std__length_error <- std__length_error <- std__logic_error <- exception
+  cols=2 vts=2 slots=2
+CLASS std__logic_error
+  TD=0077F2A4 primaryVT=006C2B40 bases(root->derived): std__logic_error <- exception
+  cols=1 vts=1 slots=2
+CLASS nmodule__nMinimizeWindows
+  TD=0077F674 primaryVT=006C36A8 bases(root->derived): nmodule__nMinimizeWindows
+  cols=2 vts=2 slots=1
+CLASS std__out_of_range
+  TD=0077F408 primaryVT=006C2B58 bases(root->derived): std__out_of_range <- std__out_of_range <- std__logic_error <- exception
+  cols=3 vts=3 slots=2
+CLASS std__runtime_error
+  TD=00796B28 primaryVT=00744004 bases(root->derived): std__runtime_error <- exception
+  cols=3 vts=3 slots=2
+CLASS std__strstreambuf
+  TD=00796D10 primaryVT=00744170 bases(root->derived): std__strstreambuf <- std_std_D_DU?$char_traits_basic_streambuf
+  cols=2 vts=2 slots=13
+CLASS type_info
+  TD=00796E30 primaryVT=00744230 bases(root->derived): type_info
+  cols=2 vts=2 slots=1

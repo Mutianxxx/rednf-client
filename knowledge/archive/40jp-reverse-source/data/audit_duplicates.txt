@@ -1,0 +1,423 @@
+# Duplicate VA coverage (header markers only) — tree md5=1e28b9bc0e95fd28fda71d29a82ab8be @ 2026-10-06T17:39:38
+# VAs with >1 header marker: 137 ; total header marker occurrences: 12315 ; extra occurrences: 142
+# L1 = src/nengine|cnrd|game/module ; L2 = rest. CROSS-LAYER = intended dual coverage.
+#   CROSS-LAYER(L1+L2)	113
+#   SAME-FILE	19
+#   CROSS-FILE(L1)	5
+
+004049C0	CROSS-FILE(L1)	cnt=2
+    src/nengine/camera_fx.cpp:28 (lines=10, nonblank=9) 
+    src/nengine/log_dump.cpp:3242 (lines=14, nonblank=11) 
+004051A0	CROSS-FILE(L1)	cnt=2
+    src/nengine/log_dump.cpp:3833 (lines=59, nonblank=56) 
+    src/nengine/time_system.cpp:18 (lines=14, nonblank=13) 
+004052D0	CROSS-FILE(L1)	cnt=2
+    src/nengine/log_dump.cpp:3892 (lines=25, nonblank=21) 
+    src/nengine/time_system.cpp:32 (lines=25, nonblank=22) 
+0041C1E0	CROSS-FILE(L1)	cnt=2
+    src/game/module/CNMainGameModule.cpp:487 (lines=11, nonblank=11) 
+    src/nengine/gfx_texture.cpp:11197 (lines=14, nonblank=11) 
+0041CC80	CROSS-FILE(L1)	cnt=2
+    src/game/module/CNMainGameModule.cpp:295 (lines=192, nonblank=187) 
+    src/nengine/gfx_texture.cpp:11939 (lines=252, nonblank=249) 
+00423200	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:2874 (lines=29, nonblank=25) 
+    src/nengine/net_socket.cpp:40 (lines=19, nonblank=18) 
+00423380	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:2949 (lines=115, nonblank=112) 
+    src/nengine/net_socket.cpp:59 (lines=41, nonblank=35) 
+004238E0	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:3243 (lines=17, nonblank=13) 
+    src/nengine/camera_fx.cpp:326 (lines=10, nonblank=9) 
+00423910	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:3260 (lines=14, nonblank=11) 
+    src/nengine/camera_fx.cpp:317 (lines=9, nonblank=8) 
+00423A80	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:3385 (lines=17, nonblank=13) 
+    src/nengine/camera_fx.cpp:38 (lines=10, nonblank=8) 
+00424120	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:3745 (lines=24, nonblank=20) 
+    src/nengine/camera_fx.cpp:48 (lines=17, nonblank=16) 
+00424170	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:3769 (lines=29, nonblank=25) 
+    src/nengine/camera_fx.cpp:65 (lines=19, nonblank=17) 
+00424270	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:3833 (lines=24, nonblank=20) 
+    src/nengine/camera_fx.cpp:84 (lines=22, nonblank=20) 
+00424530	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:3982 (lines=65, nonblank=61) 
+    src/nengine/camera_fx.cpp:244 (lines=46, nonblank=43) 
+00424680	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4047 (lines=30, nonblank=26) 
+    src/nengine/camera_fx.cpp:392 (lines=17, nonblank=16) 
+00424760	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4077 (lines=105, nonblank=101) 
+    src/nengine/camera_fx.cpp:409 (lines=44, nonblank=42) 
+00424980	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4182 (lines=56, nonblank=52) 
+    src/nengine/camera_fx.cpp:453 (lines=22, nonblank=22) 
+00424AB0	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4270 (lines=33, nonblank=29) 
+    src/nengine/camera_fx.cpp:141 (lines=20, nonblank=18) 
+00424B40	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4303 (lines=28, nonblank=24) 
+    src/nengine/camera_fx.cpp:161 (lines=14, nonblank=13) 
+00424BB0	CROSS-LAYER(L1+L2)	cnt=3
+    src/game/broadcast_debug.cpp:4331 (lines=26, nonblank=22) 
+    src/nengine/camera_fx.cpp:175 (lines=22, nonblank=21) 
+    src/nengine/camera_fx.cpp:198 (lines=31, nonblank=29) 
+00424C50	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4357 (lines=53, nonblank=49) 
+    src/nengine/camera_fx.cpp:197 (lines=1, nonblank=1) 
+00424D80	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4410 (lines=18, nonblank=14) 
+    src/nengine/camera_fx.cpp:106 (lines=10, nonblank=9) 
+00424EA0	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4485 (lines=17, nonblank=13) 
+    src/nengine/camera_fx.cpp:229 (lines=15, nonblank=13) 
+00424F00	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4502 (lines=48, nonblank=44) 
+    src/nengine/camera_fx.cpp:290 (lines=27, nonblank=26) 
+004253E0	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4813 (lines=31, nonblank=27) 
+    src/nengine/camera_fx.cpp:116 (lines=25, nonblank=23) 
+00425570	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:4905 (lines=216, nonblank=213) 
+    src/nengine/camera_fx.cpp:336 (lines=56, nonblank=51) 
+0042A510	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:55 (lines=10, nonblank=9) 
+    src/game/broadcast_debug.cpp:8990 (lines=18, nonblank=14) 
+0042A5B0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:83 (lines=4, nonblank=3) 
+    src/game/broadcast_debug.cpp:9008 (lines=11, nonblank=8) 
+0042A5D0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:87 (lines=10, nonblank=9) 
+    src/game/broadcast_debug.cpp:9029 (lines=18, nonblank=14) 
+0042A5F0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:109 (lines=5, nonblank=4) 
+    src/game/broadcast_debug.cpp:9047 (lines=10, nonblank=7) 
+0042A640	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:172 (lines=14, nonblank=13) 
+    src/game/broadcast_debug.cpp:9069 (lines=13, nonblank=9) 
+0042A6E0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:289 (lines=14, nonblank=13) 
+    src/game/broadcast_debug.cpp:9114 (lines=13, nonblank=10) 
+0042A7F0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:460 (lines=6, nonblank=5) 
+    src/game/broadcast_debug.cpp:9181 (lines=10, nonblank=7) 
+0042A810	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:466 (lines=6, nonblank=5) 
+    src/game/broadcast_debug.cpp:9191 (lines=10, nonblank=7) 
+0042A830	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:472 (lines=12, nonblank=10) 
+    src/game/broadcast_debug.cpp:9201 (lines=10, nonblank=7) 
+0042A930	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:100 (lines=9, nonblank=8) 
+    src/game/broadcast_debug.cpp:9268 (lines=16, nonblank=12) 
+00433690	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/broadcast_debug.cpp:17080 (lines=52, nonblank=48) 
+    src/game/module/CNMainGameModule.cpp:251 (lines=44, nonblank=38) 
+00444C20	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/module/CNMainGameModule.cpp:238 (lines=13, nonblank=12) 
+    src/game/script_string.cpp:3273 (lines=14, nonblank=11) 
+00444C60	CROSS-LAYER(L1+L2)	cnt=2
+    src/game/module/CNMainGameModule.cpp:152 (lines=86, nonblank=81) 
+    src/game/script_string.cpp:3287 (lines=107, nonblank=103) 
+00494FA0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:348 (lines=24, nonblank=22) 
+    src/game/anim_parser.cpp:4335 (lines=30, nonblank=26) 
+00495010	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:372 (lines=26, nonblank=25) 
+    src/game/anim_parser.cpp:4365 (lines=120, nonblank=117) 
+004951F0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:398 (lines=23, nonblank=21) 
+    src/game/anim_parser.cpp:4485 (lines=27, nonblank=23) 
+00495250	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:309 (lines=15, nonblank=14) 
+    src/game/anim_parser.cpp:4512 (lines=23, nonblank=19) 
+00495290	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:292 (lines=17, nonblank=16) 
+    src/game/anim_parser.cpp:4535 (lines=20, nonblank=17) 
+00495310	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:181 (lines=15, nonblank=14) 
+    src/game/anim_parser.cpp:4555 (lines=24, nonblank=20) 
+00495380	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:196 (lines=8, nonblank=7) 
+    src/game/anim_parser.cpp:4579 (lines=14, nonblank=10) 
+004953B0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:324 (lines=24, nonblank=23) 
+    src/game/anim_parser.cpp:4593 (lines=37, nonblank=33) 
+00495600	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:253 (lines=39, nonblank=38) 
+    src/game/anim_parser.cpp:4750 (lines=59, nonblank=55) 
+00495740	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:204 (lines=28, nonblank=27) 
+    src/game/anim_parser.cpp:4809 (lines=40, nonblank=36) 
+00495A10	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:232 (lines=21, nonblank=20) 
+    src/game/anim_parser.cpp:4969 (lines=34, nonblank=30) 
+00498DE0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:121 (lines=6, nonblank=5) 
+    src/game/anim_parser.cpp:7552 (lines=10, nonblank=7) 
+00498F00	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:127 (lines=20, nonblank=19) 
+    src/game/anim_parser.cpp:7644 (lines=31, nonblank=27) 
+00498F40	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:147 (lines=11, nonblank=10) 
+    src/game/anim_parser.cpp:7675 (lines=18, nonblank=14) 
+00498F70	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:161 (lines=11, nonblank=9) 
+    src/game/anim_parser.cpp:7693 (lines=11, nonblank=8) 
+00499110	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:534 (lines=9, nonblank=8) 
+    src/game/anim_parser.cpp:7808 (lines=23, nonblank=19) 
+00499170	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:543 (lines=11, nonblank=9) 
+    src/game/anim_parser.cpp:7831 (lines=13, nonblank=9) 
+004991D0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:554 (lines=17, nonblank=16) 
+    src/game/anim_parser.cpp:7864 (lines=28, nonblank=24) 
+00499280	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:186 (lines=25, nonblank=24) 
+    src/game/anim_parser.cpp:7907 (lines=48, nonblank=44) 
+00499330	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:211 (lines=14, nonblank=13) 
+    src/game/anim_parser.cpp:7955 (lines=23, nonblank=19) 
+004993B0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:225 (lines=50, nonblank=49) 
+    src/game/anim_parser.cpp:7978 (lines=93, nonblank=89) 
+004995F0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:275 (lines=14, nonblank=13) 
+    src/game/anim_parser.cpp:8112 (lines=27, nonblank=23) 
+004996F0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:303 (lines=16, nonblank=15) 
+    src/game/anim_parser.cpp:8175 (lines=17, nonblank=13) 
+00499AD0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:571 (lines=17, nonblank=15) 
+    src/game/anim_parser.cpp:8379 (lines=22, nonblank=18) 
+00499B50	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:588 (lines=24, nonblank=23) 
+    src/game/anim_parser.cpp:8411 (lines=43, nonblank=39) 
+00499C70	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:628 (lines=13, nonblank=12) 
+    src/game/anim_parser.cpp:8477 (lines=171, nonblank=168) 
+0049A320	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:352 (lines=108, nonblank=103) 
+    src/game/anim_parser.cpp:8802 (lines=152, nonblank=149) 
+0049A590	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:326 (lines=26, nonblank=25) 
+    src/game/anim_parser.cpp:8954 (lines=30, nonblank=26) 
+0049A6B0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:510 (lines=24, nonblank=22) 
+    src/game/anim_parser.cpp:9009 (lines=33, nonblank=29) 
+0049A7B0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/CNRDObject.cpp:484 (lines=26, nonblank=25) 
+    src/game/anim_parser.cpp:9075 (lines=49, nonblank=45) 
+004A0C80	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:69 (lines=7, nonblank=6) 
+    src/game/rtti_core.cpp:700 (lines=10, nonblank=7) 
+004A0F00	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:76 (lines=5, nonblank=4) 
+    src/game/rtti_core.cpp:842 (lines=10, nonblank=7) 
+004A0F30	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:87 (lines=8, nonblank=7) 
+    src/game/rtti_core.cpp:872 (lines=10, nonblank=7) 
+004A0F50	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:81 (lines=3, nonblank=2) 
+    src/game/rtti_core.cpp:892 (lines=10, nonblank=7) 
+004A0F70	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:84 (lines=3, nonblank=2) 
+    src/game/rtti_core.cpp:902 (lines=10, nonblank=7) 
+004A0F90	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:95 (lines=11, nonblank=9) 
+    src/game/rtti_core.cpp:912 (lines=10, nonblank=7) 
+004A1030	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:116 (lines=10, nonblank=9) 
+    src/game/rtti_core.cpp:979 (lines=14, nonblank=10) 
+004A10D0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:126 (lines=8, nonblank=7) 
+    src/game/rtti_core.cpp:1003 (lines=12, nonblank=9) 
+004A1110	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:106 (lines=10, nonblank=9) 
+    src/game/rtti_core.cpp:1015 (lines=10, nonblank=7) 
+004A1CA0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:421 (lines=9, nonblank=8) 
+    src/game/rtti_core.cpp:1427 (lines=15, nonblank=11) 
+004A1CE0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:430 (lines=8, nonblank=7) 
+    src/game/rtti_core.cpp:1442 (lines=15, nonblank=11) 
+004A1D20	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:438 (lines=12, nonblank=11) 
+    src/game/rtti_core.cpp:1457 (lines=13, nonblank=9) 
+004A1E20	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:450 (lines=1, nonblank=1) NOBODY
+    src/game/rtti_core.cpp:1539 (lines=10, nonblank=7) 
+004A2B80	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:171 (lines=10, nonblank=8) 
+    src/game/rtti_core.cpp:2060 (lines=10, nonblank=7) 
+004A2BB0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:289 (lines=26, nonblank=25) 
+    src/game/rtti_core.cpp:2070 (lines=30, nonblank=26) 
+004A2D70	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:149 (lines=22, nonblank=21) 
+    src/game/rtti_core.cpp:2213 (lines=34, nonblank=30) 
+004A4570	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:315 (lines=9, nonblank=8) 
+    src/game/rtti_core.cpp:3842 (lines=11, nonblank=8) 
+004D33A0	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:1502 (lines=3, nonblank=3) NOBODY
+    src/game/combat_core.cpp:1513 (lines=22, nonblank=18) 
+004D3400	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:1505 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:1535 (lines=36, nonblank=32) 
+004D3470	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:1506 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:1571 (lines=30, nonblank=26) 
+004D3720	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:1507 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:1705 (lines=72, nonblank=68) 
+004D39F0	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:1508 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:1818 (lines=85, nonblank=81) 
+004D3C30	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:1509 (lines=4, nonblank=3) NOBODY
+    src/game/combat_core.cpp:1945 (lines=100, nonblank=96) 
+004D46C0	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:14 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:2436 (lines=122, nonblank=119) TRUNC
+004D49A0	CROSS-LAYER(L1+L2)	cnt=3
+    src/cnrd/IRDActiveObject.cpp:134 (lines=15, nonblank=13) 
+    src/game/combat_core.cpp:20 (lines=14, nonblank=11) NOBODY
+    src/game/combat_core.cpp:2558 (lines=19, nonblank=15) 
+004D49E0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:54 (lines=15, nonblank=13) 
+    src/game/combat_core.cpp:2577 (lines=20, nonblank=16) 
+004D4A20	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:28 (lines=14, nonblank=13) 
+    src/game/combat_core.cpp:2597 (lines=29, nonblank=25) 
+004D4A80	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDActiveObject.cpp:42 (lines=12, nonblank=11) 
+    src/game/combat_core.cpp:2626 (lines=23, nonblank=19) 
+004D4D40	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:12 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:2762 (lines=123, nonblank=119) 
+004D5170	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:16 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:2998 (lines=38, nonblank=34) 
+004D6A80	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:15 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:4387 (lines=42, nonblank=38) 
+004D6D90	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:11 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:4573 (lines=51, nonblank=47) 
+004D71B0	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:10 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:4803 (lines=378, nonblank=375) 
+004D7960	SAME-FILE	cnt=3
+    src/game/combat_core.cpp:13 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:5181 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:5190 (lines=185, nonblank=182) 
+004D7C60	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:5182 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:5375 (lines=93, nonblank=89) 
+004D7F30	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:5183 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:5468 (lines=113, nonblank=109) 
+004D8170	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:5184 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:5581 (lines=71, nonblank=67) 
+004D82D0	SAME-FILE	cnt=3
+    src/game/combat_core.cpp:5185 (lines=5, nonblank=4) NOBODY
+    src/game/combat_core.cpp:5652 (lines=1, nonblank=1) NOBODY
+    src/game/combat_core.cpp:5657 (lines=47, nonblank=43) 
+004D84F0	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:5653 (lines=4, nonblank=3) NOBODY
+    src/game/combat_core.cpp:5751 (lines=47, nonblank=43) 
+004D9F20	SAME-FILE	cnt=2
+    src/game/combat_core.cpp:17 (lines=3, nonblank=3) NOBODY
+    src/game/combat_core.cpp:7184 (lines=17, nonblank=13) 
+004E5410	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:330 (lines=29, nonblank=29) 
+    src/game/hiteff_monster.cpp:3856 (lines=46, nonblank=42) 
+004E54D0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:27 (lines=23, nonblank=22) 
+    src/game/hiteff_monster.cpp:3902 (lines=25, nonblank=21) 
+004E5560	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:50 (lines=75, nonblank=72) 
+    src/game/hiteff_monster.cpp:3927 (lines=97, nonblank=93) 
+004E57E0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:125 (lines=42, nonblank=41) 
+    src/game/hiteff_monster.cpp:4048 (lines=74, nonblank=70) 
+004E5920	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:167 (lines=46, nonblank=45) 
+    src/game/hiteff_monster.cpp:4122 (lines=55, nonblank=51) 
+004E7040	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:269 (lines=20, nonblank=19) 
+    src/game/hiteff_monster.cpp:5289 (lines=31, nonblank=27) 
+004E7440	CROSS-LAYER(L1+L2)	cnt=3
+    src/cnrd/IRDCollisionObject.cpp:213 (lines=13, nonblank=12) 
+    src/cnrd/IRDCollisionObject.cpp:324 (lines=6, nonblank=5) NOBODY
+    src/game/hiteff_monster.cpp:5520 (lines=17, nonblank=13) 
+004E7480	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:226 (lines=23, nonblank=22) 
+    src/game/hiteff_monster.cpp:5537 (lines=29, nonblank=25) 
+004E8080	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/IRDCollisionObject.cpp:249 (lines=20, nonblank=19) 
+    src/game/hiteff_monster.cpp:6272 (lines=34, nonblank=30) 
+0052D550	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:42 (lines=16, nonblank=15) 
+    src/game/pvp_ui.cpp:8523 (lines=29, nonblank=25) 
+0052D5A0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:58 (lines=38, nonblank=36) 
+    src/game/pvp_ui.cpp:8552 (lines=52, nonblank=48) 
+0052D6D0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:96 (lines=14, nonblank=12) 
+    src/game/pvp_ui.cpp:8604 (lines=21, nonblank=17) 
+0052D720	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:110 (lines=38, nonblank=37) 
+    src/game/pvp_ui.cpp:8625 (lines=53, nonblank=49) 
+0052D860	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:148 (lines=26, nonblank=24) 
+    src/game/pvp_ui.cpp:8678 (lines=34, nonblank=30) 
+0052D8F0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:368 (lines=10, nonblank=9) 
+    src/game/pvp_ui.cpp:8712 (lines=17, nonblank=13) 
+0052D920	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:378 (lines=9, nonblank=8) 
+    src/game/pvp_ui.cpp:8729 (lines=16, nonblank=12) 
+0052D940	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:387 (lines=13, nonblank=13) 
+    src/game/pvp_ui.cpp:8745 (lines=22, nonblank=18) 
+0052DAD0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:174 (lines=31, nonblank=30) 
+    src/game/pvp_ui.cpp:8855 (lines=33, nonblank=29) 
+0052DBC0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:205 (lines=25, nonblank=23) 
+    src/game/pvp_ui.cpp:8888 (lines=29, nonblank=25) 
+0052DC70	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:230 (lines=45, nonblank=44) 
+    src/game/pvp_ui.cpp:8917 (lines=125, nonblank=122) 
+0052DE60	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:275 (lines=38, nonblank=36) 
+    src/game/pvp_ui.cpp:9042 (lines=145, nonblank=142) 
+0052E020	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:313 (lines=34, nonblank=33) 
+    src/game/pvp_ui.cpp:9187 (lines=70, nonblank=66) 
+0052E1C0	CROSS-LAYER(L1+L2)	cnt=2
+    src/cnrd/ActiveObjectEquipment.cpp:347 (lines=21, nonblank=19) 
+    src/game/pvp_ui.cpp:9289 (lines=27, nonblank=23) 
+00698F90	CROSS-LAYER(L1+L2)	cnt=2
+    src/nengine/time_system.cpp:57 (lines=25, nonblank=23) 
+    src/platform/socket_ime.cpp:4845 (lines=29, nonblank=25) 
+00698FE0	CROSS-LAYER(L1+L2)	cnt=2
+    src/nengine/time_system.cpp:82 (lines=12, nonblank=11) 
+    src/platform/socket_ime.cpp:4874 (lines=23, nonblank=19) 
+00699000	CROSS-LAYER(L1+L2)	cnt=2
+    src/nengine/time_system.cpp:94 (lines=16, nonblank=15) 
+    src/platform/socket_ime.cpp:4897 (lines=14, nonblank=11) 
+00699030	CROSS-LAYER(L1+L2)	cnt=2
+    src/nengine/time_system.cpp:110 (lines=21, nonblank=19) 
+    src/platform/socket_ime.cpp:4911 (lines=28, nonblank=24) 
+00699070	CROSS-LAYER(L1+L2)	cnt=2
+    src/nengine/time_system.cpp:131 (lines=29, nonblank=27) 
+    src/platform/socket_ime.cpp:4939 (lines=32, nonblank=28) 

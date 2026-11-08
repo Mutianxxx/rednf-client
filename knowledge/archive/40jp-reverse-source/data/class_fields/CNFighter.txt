@@ -1,0 +1,114 @@
+CLASS .?AVCNFighter@@  slots=226  fields_candidate=111
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0070 uint32_t   3  005EA970  fld_70 = (uint64_t)fabs(*(float *)(*(uint32_t *)(this + 112) + 16));
++0x0078 uint32_t   7  00499020  fld_78 = *(uint32_t *)(this + 120);
++0x00E8 uint8_t    2  00499020  result = *(uint8_t *)(this + 232);
++0x00EC uint32_t   1  00499020  *(uint32_t *)(this + 236) = nArg3;
++0x00F0 uint32_t   1  00499020  *(uint32_t *)(this + 240) = nArg4;
++0x00F4 float      4  00499080  if ( *(float *)(this + 244) == 0.0 || fArg32 != 0.0 )
++0x00F8 uint8_t    1  0042A8D0  *(uint8_t *)(this + 248) = pszArg2;
++0x00FC uint32_t   1  0042A8D0  *(uint32_t *)(this + 252) = nArg3;
++0x0100 uint8_t    1  0042A8D0  *(uint8_t *)(this + 256) = pszArg4;
++0x0104 uint32_t   1  0042A8D0  *(uint32_t *)(this + 260) = nArg5;
++0x016C uint32_t   8  005EA970  pThis_6C = sub_431920(*(uint32_t *)(this + 364), (char)"Effect/Animati
++0x0180 uint32_t   8  005EA970  else if ( *(uint32_t *)(this + 384) < 0x10u )
++0x0184 float     13  005EA970  *(float *)(this + 388) = (float)(int)Block;
++0x018C uint32_t   1  005EA970  *(uint32_t *)(this + 396) = 0;
++0x01A8 float      1  005EA970  *(float *)(this + 424) = (double)(int)v44 * 0.1;
++0x01B4 uint32_t   1  005EA970  *(uint32_t *)(this + 436) = v45;
++0x01C4 uint32_t   1  005EA970  *(uint32_t *)(this + 452) = sub_47EF20(0, pThis_4748, -1, -1, 11);
++0x01C8 uint32_t   2  005EA970  *(uint32_t *)(this + 456) = v218;
++0x01CC float      2  005EA970  *(float *)(this + 460) = (double)(int)Block + *(float *)(this + 460);
++0x01D0 uint32_t   1  005EA970  *(uint32_t *)(this + 464) = -998637568;
++0x020C float      2  005E47A0  *(float *)(this + 524) = *(float *)(this + 8460) * *(float *)(this + 5
++0x022C uint32_t  12  005EA970  (*(void (/*thiscall*/ **)(int, uint32_t))(*(uint32_t *)this + 344))(th
++0x0282 uint8_t    5  004E5C10  result = *(uint8_t *)(this + 642);
++0x0284 uint32_t   4  004E5C10  *(uint32_t *)(this + 644) = nArg3;
++0x1848 uint32_t  15  005EA970  (*(void (/*thiscall*/ **)(int, uint32_t))(*(uint32_t *)this + 196))(th
++0x199C uint32_t   1  005EA970  fld_199C = *(uint32_t *)(this + 6556);
++0x19FC uint32_t   1  005EA970  2 * *(uint32_t *)(this + 6652),
++0x1A00 uint32_t   2  005EA970  / *(uint32_t *)(this + 6656);
++0x1AEC uint32_t   1  005EA970  result = *(uint32_t *)(this + 6892);
++0x1AF0 uint32_t   1  005EA970  ++*(uint32_t *)(this + 6896);
++0x1E80 uint32_t   7  005EA970  if ( *(uint32_t *)(this + 7808) != 0 )
++0x1E84 uint32_t   3  005EA970  if ( *(uint32_t *)(this + 7812) == 0 )
++0x1E88 uint32_t   4  005EA970  fld_1E88 = *(uint32_t *)(this + 7816);
++0x1E8C int        1  005EA970  *(int *)(this + 7820) /= 2;
++0x1E90 int        1  005EA970  *(int *)(this + 7824) /= 2;
++0x1F1C uint32_t   1  005EA970  result = *(uint32_t *)(this + 7964);
++0x2018 uint32_t   4  005EA970  *(uint32_t *)(this + 8216) = v214;
++0x201C uint32_t   3  005EA970  *(uint32_t *)(this + 8220) = result;
++0x2020 uint32_t   1  005EA970  *(uint32_t *)(this + 8224) = 0;
++0x2024 uint8_t    1  005EA970  *(uint8_t *)(this + 8228) = 0;
++0x2028 uint32_t   1  005EA970  *(uint32_t *)(this + 8232) = sub_47EF20(0, pThis_4742, -1, -1, 11);
++0x2030 uint32_t   3  005EA970  *(uint32_t *)(this + 8240) = v259;
++0x2034 uint32_t   6  005EA970  if ( *(uint32_t *)(this + 8244) == 1 && *(uint32_t *)(this + 8248) == 
++0x2038 uint32_t   3  005EA970  if ( *(uint32_t *)(this + 8244) == 1 && *(uint32_t *)(this + 8248) == 
++0x203C uint32_t   2  005EA970  *(uint32_t *)(this + 8252) = pArg3[1][2];
++0x2040 uint32_t   1  005EA970  *(uint32_t *)(this + 8256) = pArg3[1][3];
++0x2044 uint32_t   2  005EA970  fld_2044 = *(uint32_t *)(this + 8260);
++0x2048 uint32_t   3  005EA970  fld_2048 = *(uint32_t *)(this + 8264);
++0x204C uint32_t   4  005EA970  pThis_204C = (uint32_t *)(this + 8268);
++0x2050 uint32_t   2  005EA970  *(uint32_t *)(this + 8272) = pThis_6C2;
++0x2054 uint8_t    1  005EA970  *(uint8_t *)(this + 8276) = 0;
++0x2058 uint32_t   4  005EA970  if ( *(uint32_t *)(this + 8280) == 0 )
++0x205C uint32_t   3  005EA970  *(uint32_t *)(this + 8284) = v260;
++0x2060 uint32_t   3  005EA970  *(uint32_t *)(this + 8288) = v80;
++0x2064 uint8_t    2  005EA970  if ( *(uint8_t *)(this + 8292) != 0 )
++0x2068 uint32_t   1  005EA970  *(uint32_t *)(this + 8296) = -250;
++0x206C uint32_t  28  005EA970  fld_206C = *(uint32_t *)(this + 8300);
++0x2070 uint32_t   4  005EA970  *(uint32_t *)(this + 8304),
++0x2074 uint32_t   4  005EA970  *(uint32_t *)(this + 8308),
++0x2078 uint32_t   4  005EA970  *(uint32_t *)(this + 8312));
++0x207C uint32_t   4  005EA970  if ( *(uint32_t *)(this + 8316) != 0 )
++0x2080 uint32_t   6  005EA970  fld_2080 = *(uint32_t *)(this + 8320);
++0x2084 uint8_t    7  005EA970  *(uint8_t *)(this + 8324) != 0 ? 18 : 9);
++0x2085 uint8_t    6  005EA970  if ( *(uint8_t *)(this + 8325) != 0 )
++0x2086 uint8_t    1  005EA970  *(uint8_t *)(this + 8326) = 0;
++0x2088 uint32_t   1  005EA970  *(uint32_t *)(this + 8328) = 0;
++0x208C uint8_t    1  005EA970  *(uint8_t *)(this + 8332) = 0;
++0x208D uint8_t    1  005EA970  *(uint8_t *)(this + 8333) = 0;
++0x208E uint8_t    3  005EA970  if ( *(uint8_t *)(this + 8324) != 0 && *(uint8_t *)(this + 8334) != 0 
++0x2090 uint32_t   2  005EA970  pThis_2090 = (uint32_t *)(this + 8336);
++0x2094 uint32_t   1  005EA970  *(uint32_t *)(this + 8340) = pThis_6C6;
++0x2098 uint32_t   2  005EA970  *(uint32_t *)(this + 8344) = v119;
++0x209C uint32_t   3  005EA970  if ( *(uint32_t *)(this + 8348) % 2 != 0 )
++0x20A0 uint32_t   1  005EA970  *(uint32_t *)(this + 8352) = sub_47E9D0(pThis_4886, 0);
++0x20A4 uint32_t  14  005EA970  fld_20A4 = *(uint32_t *)(this + 8356);
++0x20A8 uint8_t    1  005EA970  *(uint8_t *)(this + 8360) = 0;
++0x20AC uint32_t   2  005EA970  *(uint32_t *)(this + 8364),
++0x20B0 uint32_t   2  005EA970  *(uint32_t *)(this + 8368),
++0x20B4 uint32_t   4  005EA970  *(uint32_t *)(this + 8372) = v129 - v130;
++0x20B8 uint8_t    1  005EA970  *(uint8_t *)(this + 8376) = 0;
++0x20B9 uint8_t    1  005EA970  *(uint8_t *)(this + 8377) = 0;
++0x20BC uint32_t   8  005EA970  (*(void (/*stdcall*/ **)(uint32_t))(v8 + 208))(*(uint32_t *)(this + 83
++0x20C0 uint8_t    2  005EA970  *(uint8_t *)(this + 8384) = 0;
++0x20C4 uint32_t   4  005EA970  (*(void (/*stdcall*/ **)(uint32_t))(v8 + 208))(*(uint32_t *)(this + 83
++0x20C8 uint8_t    1  005EA970  *(uint8_t *)(this + 8392) = 0;
++0x20CC uint32_t   1  005EA970  *(uint32_t *)(this + 8396) = (*(int (/*thiscall*/ **)(int, const char 
++0x20D0 uint32_t   1  005EA970  fld_20D0 = *(uint32_t *)(this + 8400);
++0x20D4 uint32_t   1  005EA970  *(uint32_t *)(this + 8404) = 0;
++0x20D8 uint32_t   3  005EA970  if ( *(uint32_t *)(this + 8408) == 0 )
++0x20DC uint32_t   4  005EA970  (*(void (/*thiscall*/ **)(int, uint32_t))(*(uint32_t *)this + 208))(th
++0x20E4 uint32_t   2  005EA970  if ( *(uint32_t *)(this + 8420) != 0 )
++0x20E8 uint32_t   1  005EA970  *(uint32_t *)(this + 8424) = 0;
++0x20EC uint32_t   1  005EA970  *(uint32_t *)(this + 8428) = 0;
++0x20F0 uint32_t   1  005EA970  *(uint32_t *)(this + 8432) = 0;
++0x20F4 uint8_t    1  005EA970  *(uint8_t *)(this + 8436) = 0;
++0x20F5 uint8_t    1  005EA970  *(uint8_t *)(this + 8437) = 0;
++0x20FC uint32_t   5  005EA970  if ( nArg2 != 21 && nArg2 != 6 && *(int *)(this + 8444) > 0 )
++0x2100 uint32_t   1  005EA970  *(uint32_t *)(this + 8448) = result;
++0x2108 uint32_t   1  005E47A0  fld_2108 = *(uint32_t *)(this + 8456);
++0x210C float      1  005E47A0  *(float *)(this + 524) = *(float *)(this + 8460) * *(float *)(this + 5
++0x2114 uint32_t   1  005EA970  fld_2114 = *(uint32_t *)(this + 8468);
++0x2118 uint32_t   3  005EA970  if ( *(uint32_t *)(this + 8472) == 1 )
++0x211C uint8_t    1  005EA970  *(uint8_t *)(this + 8476) = 0;
++0x211D uint8_t    1  005EA970  *(uint8_t *)(this + 8477) = 0;
++0x2120 uint32_t   3  005EA970  if ( *(uint32_t *)(this + 8480) == 0 )
++0x2130 uint32_t   3  005EA970  fld_2130 = *(uint32_t *)(this + 8496);
++0x2134 uint32_t   4  005EA970  if ( *(uint32_t *)(this + 8500) >= dword_9B9348 )
++0x2138 uint32_t   1  005EA970  *(uint32_t *)(this + 8504) = -200;
++0x213C uint32_t   1  005EA970  *(uint32_t *)(this + 8508) = 0;
++0x2140 uint32_t   4  005EA970  (*(void (/*thiscall*/ **)(int, uint32_t))(*(uint32_t *)this + 208))(th
++0x2144 uint32_t   1  005EA970  *(uint32_t *)(this + 8516) = 0;

@@ -1,0 +1,4 @@
+CLASS .?AVCNRDQuestListWindow@@  slots=14  fields_candidate=1
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x000C uint32_t   1  00540360  return sub_44AB50(*(uint32_t **)(this + 8), *(uint32_t *)(this + 12), 

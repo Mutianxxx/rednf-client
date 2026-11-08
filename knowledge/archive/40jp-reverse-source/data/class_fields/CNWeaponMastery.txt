@@ -1,0 +1,12 @@
+CLASS .?AVCNWeaponMastery@@  slots=30  fields_candidate=9
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   2  005F9CA0  *(uint32_t *)(this + 4),
++0x0058 uint32_t   1  005F9CA0  if ( v13 != *(uint32_t *)(this + 88) )
++0x0060 uint32_t   3  005F9CA0  if ( *(uint32_t *)(this + 96) != 17 )
++0x0064 uint32_t   2  005F9CA0  *(uint32_t *)(pArg2 + 4 * v9 + 36) = *(uint32_t *)(this + 100);
++0x0068 uint32_t   2  005F9CA0  fld_68 = *(uint32_t *)(this + 104);
++0x006C float      2  005F9B40  fld_6C = *(float *)(this + 108);
++0x0070 float      1  005F9B40  fld_70 = *(float *)(this + 112);
++0x0074 float      1  005F9CA0  *(float *)(pArg2 + 136) = *(float *)(this + 116) * *(float *)(pArg2 + 
++0x0078 float      2  005F9B40  if ( *(float *)(this + 120) != 0.0

@@ -1,0 +1,19 @@
+CLASS .?AVCNRDBaseInterface@@  slots=1  fields_candidate=16
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   2  00469170  if ( *(uint32_t *)(dword_8F7A24 + 12) == 3 && *(int *)(*(uint32_t *)(*
++0x0008 uint32_t   1  00469170  if ( pArg2 == *(uint32_t *)(this + 8) )
++0x0060 uint32_t   1  00469170  if ( pArg2 != *(uint32_t *)(this + 96) )
++0x01FC uint8_t    1  00469170  if ( *(uint8_t *)(this + 508) == 1 )
++0x020C uint8_t    1  00469170  if ( *(uint8_t *)(this + 524) != 0 && (fld_218 = *(uint32_t *)(this + 
++0x0218 uint32_t   1  00469170  if ( *(uint8_t *)(this + 524) != 0 && (fld_218 = *(uint32_t *)(this + 
++0x0228 uint8_t    1  00469170  if ( *(uint8_t *)(this + 552) == 0 || (uint8_t)sub_41C6E0(this + 540) 
++0x0238 uint32_t   1  00469170  if ( *(uint32_t *)(this + 568) != v38 )
++0x03C4 uint32_t   1  00469170  if ( pArg2 == *(uint32_t *)(this + 964) )
++0x03E4 uint8_t    1  00469170  if ( *(uint8_t *)(this + 996) != 0 )
++0x04C4 uint32_t   4  00469170  fld_4C4 = *(uint32_t *)(this + 1220);
++0x04C8 uint32_t   1  00469170  fld_4C8 = *(uint32_t *)(this + 1224);
++0x04CC uint8_t    2  00469170  if ( *(uint8_t *)(this + 1228) == 0 )
++0x04D0 uint32_t   3  00469170  if ( pArg2 == *(uint32_t *)(this + 1232) )
++0x04D4 uint32_t   2  00469170  fld_4D4 = *(uint32_t *)(this + 1236);
++0x04DC uint32_t   1  00469170  if ( *(uint32_t *)(this + 1244) != -1 )

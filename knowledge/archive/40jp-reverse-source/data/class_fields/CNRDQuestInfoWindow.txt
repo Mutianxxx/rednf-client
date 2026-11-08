@@ -1,0 +1,16 @@
+CLASS .?AVCNRDQuestInfoWindow@@  slots=14  fields_candidate=13
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   1  00551D10  if ( nArg2 == *(uint32_t *)(this + 4) )
++0x0008 uint32_t   1  005517A0  *(uint32_t *)(*(uint32_t *)(*(uint32_t *)(this + 8) + 84) + 180) = -1;
++0x000C uint32_t   1  00540360  return sub_44AB50(*(uint32_t **)(this + 8), *(uint32_t *)(this + 12), 
++0x0010 uint32_t   2  00551D10  fld_10 = *(uint32_t *)(this + 16);
++0x0014 uint32_t   1  00551D10  fld_14 = *(uint32_t *)(this + 20);
++0x001C uint8_t    1  005517A0  if ( *(uint8_t *)(this + 28) != 0 )
++0x007C uint32_t   1  00551D10  fld_10 = *(uint32_t *)(this + 124);
++0x00BC uint32_t   2  00551D10  fld_BC = *(uint32_t *)(this + 188);
++0x00C0 uint32_t   2  00551D10  if ( fld_BC != *(uint32_t *)(this + 192) )
++0x00C8 uint32_t   1  00551D10  fld_C8 = *(uint32_t *)(this + 200);
++0x00CC uint32_t   1  00551D10  else if ( nArg2 == *(uint32_t *)(this + 204) )
++0x00D0 uint32_t   2  00551D10  if ( fld_103 != *(uint32_t *)(this + 208) )
++0x00D4 uint32_t   1  00551D10  sub_50EF20(*(uint32_t *)(this + 212), Buffer, 4, -1);

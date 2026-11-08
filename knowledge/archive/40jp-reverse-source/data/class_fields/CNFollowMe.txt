@@ -1,0 +1,8 @@
+CLASS .?AVCNFollowMe@@  slots=30  fields_candidate=5
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0050 uint32_t   5  0064DA00  fld_50 = *(uint32_t *)((*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t
++0x0058 float      1  0064DA00  fld_58 = *(float *)(this + 88);
++0x005C float      1  0064DA00  fld_5C = *(float *)(this + 92);
++0x006C uint32_t   1  0064DA00  result = *(uint32_t *)(this + 108);
++0x0074 uint32_t   1  0064DAF0  sub_4938F0(*(uint32_t *)(this + 4 * (*(uint8_t *)(*(uint32_t *)(this +

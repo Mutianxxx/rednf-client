@@ -1,0 +1,138 @@
+0x4e0000	fld_e1550	-	类=? 偏移+0x1838 无字段名
+0x4e0000	fld_e1905	-	类=? 偏移+0x1DC4 无字段名
+0x4e0000	fld_e15502	-	类=? 偏移+0x1838 无字段名
+0x4e0000	fld_e1551	-	无偏移证据
+0x4e0000	fld_e1625	-	类=? 偏移+0x1964 无字段名
+0x4e0120	fld_e1812	-	无偏移证据
+0x4e0120	fld_e1940	-	类=? 偏移+0x1E50 无字段名
+0x4e0120	fld_e19402	-	类=? 偏移+0x1E50 无字段名
+0x4e0560	fld_e1550	-	类=? 偏移+0x1838 无字段名
+0x4e0560	fld_e1900	-	无偏移证据
+0x4e0560	fld_e1905	-	类=? 偏移+0x1DC4 无字段名
+0x4e06d0	fld_e29	-	类=? 偏移+0x74 无字段名
+0x4e0a40	fld_e29	-	类=? 偏移+0x74 无字段名
+0x4e0a40	fld_e292	-	类=? 偏移+0x74 无字段名
+0x4e0e30	fld_e1891	-	类=CNGhoulOilSellerOlrek 偏移+0x1D8C 无字段名
+0x4e1780	fld_e1639	-	类=IRDMonster 偏移+0x199C 无字段名
+0x4e1780	fld_e16392	-	无偏移证据
+0x4e1780	fld_e16393	-	类=IRDMonster 偏移+0x199C 无字段名
+0x4e1780	fld_e16393	-	类=IRDMonster 偏移+0x199C 无字段名
+0x4e1780	fld_e16393	-	类=IRDMonster 偏移+0x199C 无字段名
+0x4e1be0	fld_e1891	-	类=CNGhoulOilSellerOlrek 偏移+0x1D8C 无字段名
+0x4e1be0	fld_e29	-	类=CNGhoulOilSellerOlrek 偏移+0x74 无字段名
+0x4e1be0	fld_e292	-	类=CNGhoulOilSellerOlrek 偏移+0x74 无字段名
+0x4e1be0	fld_e18132	-	无偏移证据
+0x4e38f0	fld_e2148	-	类=CNRDPooledObject 偏移+0x2190 无字段名
+0x4e38f0	fld_e21482	-	无偏移证据
+0x4e38f0	fld_e21483	-	类=CNRDPooledObject 偏移+0x2190 无字段名
+0x4e38f0	fld_e21484	-	类=CNRDPooledObject 偏移+0x2190 无字段名
+0x4e4950	fld_e29	-	无偏移证据
+0x4e5410	fld_e148	-	类=IRDCollisionObject 偏移+0x250 无字段名
+0x4e59c0	fld_e145	-	无偏移证据
+0x4e6520	fld_e164	-	类=? 偏移+0x290 无字段名
+0x4e6770	fld_e14	-	无偏移证据
+0x4e6fd0	fld_e164	-	类=? 偏移+0x290 无字段名
+0x4e7200	fld_e1	-	无偏移证据
+0x4e7200	fld_e14	-	类=? 偏移+0x4 无字段名
+0x4e7200	fld_e16	-	无偏移证据
+0x4e7200	fld_e15	-	无偏移证据
+0x4e75f0	fld_4	-	类=? 偏移+0x4 无字段名
+0x4e75f0	fld_8	-	无偏移证据
+0x4e75f0	fld_82	-	无偏移证据
+0x4e75f0	fld_85	-	无偏移证据
+0x4e75f0	fld_86	-	无偏移证据
+0x4e75f0	fld_43	-	类=? 偏移+0x4 无字段名
+0x4e75f0	fld_87	-	无偏移证据
+0x4e77d0	fld_8	-	无偏移证据
+0x4e77d0	fld_42	-	类=? 偏移+0x4 无字段名
+0x4e77d0	fld_C	-	无偏移证据
+0x4e77d0	fld_82	-	无偏移证据
+0x4e7ba0	fld_e1	-	类=? 偏移+0x4 无字段名
+0x4e7ba0	fld_e2	-	无偏移证据
+0x4e7bf0	fld_4	-	类=? 偏移+0x4 无字段名
+0x4e7bf0	fld_8	-	无偏移证据
+0x4e7da0	fld_e1	-	无偏移证据
+0x4e7da0	fld_e2	-	无偏移证据
+0x4e7f30	fld_e29	-	类=? 偏移+0x74 无字段名
+0x4e7f30	fld_e292	-	类=? 偏移+0x74 无字段名
+0x4ea0e0	fld_e290	-	类=CNRDEquipment 偏移+0x488 无字段名
+0x4ea0e0	fld_e2902	-	无偏移证据
+0x4ead80	fld_e14	-	无偏移证据
+0x4eade0	fld_e290	-	类=? 偏移+0x488 无字段名
+0x4eade0	fld_e290	-	类=? 偏移+0x488 无字段名
+0x4eb2c0	fld_e12	-	类=? 偏移+0x4 无字段名
+0x4eb2c0	fld_e22	-	类=? 偏移+0x8 无字段名
+0x4eb2c0	fld_e11	-	无偏移证据
+0x4eb2c0	fld_e52	-	类=? 偏移+0x14 无字段名
+0x4eb2c0	fld_e62	-	类=? 偏移+0x18 无字段名
+0x4eb2c0	fld_e72	-	类=? 偏移+0x1C 无字段名
+0x4eb2c0	fld_e82	-	类=? 偏移+0x20 无字段名
+0x4eb2c0	fld_e10	-	类=? 偏移+0x28 无字段名
+0x4eb2c0	fld_e102	-	无偏移证据
+0x4eb2c0	fld_e14	-	类=? 偏移+0x38 无字段名
+0x4eb2c0	fld_e142	-	无偏移证据
+0x4eb2c0	fld_e11	-	无偏移证据
+0x4eb4b0	fld_e1	-	类=? 偏移+0x4 无字段名
+0x4eb4b0	fld_e2	-	类=? 偏移+0x8 无字段名
+0x4eb4b0	fld_e11	-	无偏移证据
+0x4eb4b0	fld_e5	-	类=? 偏移+0x14 无字段名
+0x4eb4b0	fld_e6	-	类=? 偏移+0x18 无字段名
+0x4eb4b0	fld_e7	-	类=? 偏移+0x1C 无字段名
+0x4eb4b0	fld_e8	-	类=? 偏移+0x20 无字段名
+0x4eb4b0	fld_e10	-	类=? 偏移+0x28 无字段名
+0x4eb4b0	fld_e102	-	无偏移证据
+0x4eb4b0	fld_e14	-	类=? 偏移+0x38 无字段名
+0x4eb4b0	fld_e142	-	无偏移证据
+0x4eb4b0	fld_e11	-	无偏移证据
+0x4eb6a0	fld_e323	-	类=? 偏移+0x50C 无字段名
+0x4eb6e0	fld_e323	-	类=? 偏移+0x50C 无字段名
+0x4eb900	fld_e2302	-	无偏移证据
+0x4ebdb0	fld_e2302	-	无偏移证据
+0x4ed080	fld_4	-	类=? 偏移+0x4 无字段名
+0x4ed080	fld_8	-	无偏移证据
+0x4ed080	fld_C	-	无偏移证据
+0x4ed080	fld_82	-	无偏移证据
+0x4ed080	fld_87	-	无偏移证据
+0x4ed080	fld_88	-	无偏移证据
+0x4ed080	fld_43	-	类=? 偏移+0x4 无字段名
+0x4ed080	fld_89	-	无偏移证据
+0x4ed080	fld_86	-	无偏移证据
+0x4ed080	fld_42	-	类=? 偏移+0x4 无字段名
+0x4ed080	fld_85	-	类=? 偏移+0x8 无字段名
+0x4ed080	fld_84	-	无偏移证据
+0x4ed3f0	fld_8	-	无偏移证据
+0x4ed3f0	fld_42	-	类=? 偏移+0x4 无字段名
+0x4ed3f0	fld_C	-	无偏移证据
+0x4ed3f0	fld_82	-	无偏移证据
+0x4ed540	fld_e2	-	无偏移证据
+0x4ed540	fld_e12	-	类=? 偏移+0x4 无字段名
+0x4ed540	fld_e3	-	无偏移证据
+0x4ed540	fld_e22	-	无偏移证据
+0x4ee120	fld_4	-	类=? 偏移+0x4 无字段名
+0x4ee120	fld_8	-	无偏移证据
+0x4ee300	fld_e2302	-	无偏移证据
+0x4ee580	fld_e3333	-	无偏移证据
+0x4ee580	fld_e3335	-	无偏移证据
+0x4ee580	fld_e29	-	类=? 偏移+0x74 无字段名
+0x4ee580	fld_e30	-	无偏移证据
+0x4ee580	fld_e3334	-	无偏移证据
+0x4ee580	fld_e3336	-	无偏移证据
+0x4ee580	fld_e33311	-	无偏移证据
+0x4ee9e0	fld_8	-	无偏移证据
+0x4ee9e0	fld_42	-	类=? 偏移+0x4 无字段名
+0x4ee9e0	fld_C	-	无偏移证据
+0x4ef0b0	fld_e3172	-	类=? 偏移+0x4F4 无字段名
+0x4ef0b0	fld_e317	-	类=? 偏移+0x4F4 无字段名
+0x4ef270	fld_e328	-	无偏移证据
+0x4ef5a0	fld_4	-	类=? 偏移+0x4 无字段名
+0x4ef5a0	fld_C	-	无偏移证据
+0x4ef5a0	fld_8	-	无偏移证据
+0x4ef5a0	fld_82	-	无偏移证据
+0x4ef5a0	fld_87	-	无偏移证据
+0x4ef5a0	fld_43	-	类=? 偏移+0x4 无字段名
+0x4ef5a0	fld_86	-	无偏移证据
+0x4ef5a0	fld_84	-	无偏移证据
+0x4ef9d0	fld_534322	-	无偏移证据
+0x4ef9d0	fld_534202	-	无偏移证据
+0x4ef9d0	fld_53432	-	无偏移证据
+0x4ef9d0	fld_52C112	-	无偏移证据

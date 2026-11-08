@@ -1,0 +1,47 @@
+sub_41A5E0 [src/nengine/gfx_texture.cpp] crypt4byte 解密校验（·0x41A590 逆运算） | 由 +4/+13 查 dword_8F7808 密钥表，与 +5/+9 两校验字对 pArg1 高低 16 位重构明文；双式相等 → ++dword_8F7A10 返回明文， | 否则 byte_77F48C=0 并返回 0（篡改/调试检测）。
+sub_423970 [src/game/broadcast_debug.cpp] 双虚槽取参后转状态应用 | 先 vt+124(nArg1)、再 vt+120(nArg1) 取值，一并转 sub_48C0A0（状态应用族，passive_object 同证）。 | 【推断】异常状态索引与层数两点取值。
+sub_424120 [src/game/broadcast_debug.cpp] 屏幕震动启动 | 写震幅 +200 = a2、窗 +204 = a3，清 +221/+222 标志并复位 +208 钟； | a2==0 时抖动 +236/+240 归零 —— 与 ·0x4241E0 tick 配对。
+sub_42B420 [src/game/broadcast_debug.cpp] 往返插值（三角波） | 【周期往返】按 nArg3 对 2×nArg4 取模分相：前段自 nArg1 插至 nArg2、后段折回，经 ·sub_4049C0 | 区间线性插值后取整 —— 横幅呼吸/往返动画节奏。
+sub_42FC90 [src/game/broadcast_debug.cpp] 88B 元素计数（+44 组） | 与 ·0x42FC70 同构（+44 组基址）。
+sub_42FCB0 [src/game/broadcast_debug.cpp] CRT 一次性初始化 | 【CRT 一次性初始化】首建全局容器 &unk_8F8130（·sub_657800(实参, 256) 与 atexit ·sub_6BF450）→ 转 ·sub_6578B0(nArg1)。
+sub_430C80 [src/game/broadcast_debug.cpp] uint32 vector 区间插入（同值填充） | 【uint32 vector 区间插入（同值填充）】在 Src 位置插入 uArg3 个 pDwArg4 值：容量足则三段搬移（·sub_55E7F0/·sub_5DAF70/·sub_49A9D0 填充/·sub_523700 填值），不足先扩容（new 两倍 + memcpy）；返回元素数。
+sub_431230 [src/game/broadcast_debug.cpp] uint32 vector push_back | 【uint32 vector push_back】槽内存位直接写 +8 游标，满则转 ·sub_430C80(this, 游标, 1, uArg2) 扩容（全工程 733 处调用）。
+sub_431920 [src/game/broadcast_debug.cpp] 动画件构造（文件名版） | 【动画件构造（文件名版）】与 ·0x431860 同构（差异：pArg2 文件名走 ·sub_4F3D60 分支）。
+sub_432E50 [src/game/broadcast_debug.cpp] 关系码对调映射 | 【关系码对调映射】0 与 1 互换与 2 与 3 互换，其余返回 4（63 处战斗态调用）【推断：阵营与敌对关系表索引】。
+sub_44A980 [src/game/script_string.cpp] 带界索引 getter | nArg2 ≥ [2]（计数）返回 0，否则返回 ·[3]（数组）+ 4·nArg2 项【推断：窗口子件取用】
+sub_44B6C0 [src/game/script_string.cpp] CRT 一次性池初始化 2（池 &unk_98B6F8） | —— 与 ·sub_445D00 同构（差异：池 &unk_98B6F8 / atexit ·sub_6BF5C0）
+sub_44E1F0 [src/game/script_string.cpp] CNRDPooledObject 构造（虚表覆盖壳） | 转发 ·sub_44E0D0 后改写 vftbl_CNRDPooledObject（与 ·sub_44E0D0 同构，差异：派生虚表）
+sub_45FE80 [src/game/worldmap_reward.cpp] 对象注册（场景对象表插入）—— 分发器 case 0x15/0x16 与 | ui_icon_perf 0x4600B0 的注册链入口；参数 (容器, 源表, a2, a3, 对象, 0, 0)
+sub_4600B0 [src/game/ui_icon_perf.cpp] 批量对象注册：源表逐 id 调 worldmap_reward 0x45FE80 入场景表
+sub_47DCD0 [src/game/login_channel.cpp] 经 nArg2 对象 vt+80 取其 +132 资源，调 sub_424120(资源, this+114, 档位)； | nArg3==-1 时用 this+115 作档位（资源播放/设置辅助）
+sub_47E9D0 [src/game/login_channel.cpp] 取 this+103/104 的 14 字节条目表中第 uArg2 条的 clong 值； | 越界则退回 sub_461750(0) 默认对象取值
+sub_47EF20 [src/game/login_channel.cpp] 技能数值查表：this+107/108 的 16 字节条目（+4=14 字节子表 begin、+8=end） | 中第 uArg2 项的第 nArg3 级值；nArg6!=11 且 nArg4!=nArg5 时经 sub_432FD0 | 做单位换算（nArg4→nArg5），否则原值；越界/空表返回 0
+sub_47EFD0 [src/game/login_channel.cpp] 技能表槽位设置（越界打 aCriticalError_8；+87 处 14 字节/项表）【推断】
+sub_4842B0 [src/game/skill_load_tutorial.cpp] 技能槽对象查询与结果收集（+392 二级列表 / 回退全局槽表） | 匹配键为槽对象 +4（·sub_41A5E0 读值）等于 nArg2 且 +544 非 0，来源标记取 ·sub_47E340；主路径从 +392 列表项（标记为 0 时取后一项）末尾 24 字节元素的内嵌指针列表逐项 ·sub_437140 解析（哨兵 dword_8F857C 映射为 0，否则加 16）后经 ·sub_484240 追加。 | 回退路径按 dword_99FC9C 的 6 格掩码从 8*v4+0x77FCD8 表（·0x483
+sub_484E80 [src/game/skill_load_tutorial.cpp] 按类型查找下标（同一匹配规则，未命中 -1） | 与 ·0x484E00 匹配规则一致，差别在于仅定位下标而不取虚表 +44 值。
+sub_4910A0 [src/game/anim_parser.cpp] 沿 +212 同步源链上溯，返回链尾对象的累计播放时刻（+32） | 链尾即无同步源的根动画；帧推进 ·0x493840 用它取时间基准。 | 与 ·0x4910C0（同链取 +169 暂停位）同构，仅取样字段不同。
+sub_4910C0 [src/game/anim_parser.cpp] 沿 +212 同步源链上溯，返回链尾对象的 +169（暂停/冻结位） | 与 ·0x4910A0 同构；调用方 ·0x4910E0 用它决定是否还刷新时间。
+sub_491C70 [src/game/anim_parser.cpp] ★帧时刻换算：第 a2 帧累计时刻 = Σ 帧+48(DELAY)×100/速率(+164)（研究§26）
+sub_4924C0 [src/game/anim_parser.cpp] 按索引取帧并确保图像就绪（帧+4 → 管理器 vtable+56 → sub_418DD0 → 帧+0）
+sub_4939E0 [src/game/anim_parser.cpp] 播放/暂停级联（递归子链 +204）
+sub_493A60 [src/game/anim_parser.cpp] 时间推进包装（累计 +32；+212 同步源优先）
+sub_494F20 [src/game/anim_parser.cpp] 属性浮点槽写入（槽号 pArg2，落 this+pArg2+4） | this+0 对象经 vt+308 校验（有效性门），值变化才写并置 +196 失效标志。 | 被动画/技能以 sub_494F20(2, 速率或缩放) 形式批量下发。
+sub_4A0550 [src/game/rtti_core.cpp] 【解读】 | 【推断】重力/抛物线速度写入器。this+36 保存重力系数（int）， | a2 = 施加系数；v5 = a2*grav 为负时取 v6 = sqrt(-2*v5)（v = sqrt(2gh)）， | 写动画对象 this+24（浮点）+ 脏标记 +196。a2<0 时取负根 —— 上行/下坠两向。 | 【待验证】用途可能是击退抛物线的初速计算。
+sub_4AECE0 [src/game/rtti_core.cpp] 【解读】 | 【推断】动画切换: sub_491C70(a2) 取动画资源 → sub_493A60(this, res) 应用。
+sub_4B1C40 [src/game/equ_buff.cpp] 14 字节表按 1 基索引取值 | 基址 *(this+79)、14 字节/条；nArg2==-1 时改用 +510 当前值。
+sub_4B7430 [src/game/equ_buff.cpp] 升级演出装配（LevelNormalizeLibra.ani + LevelNormalize.ptl；LEVELING_OFF/FLASH；PVP_KO）
+sub_4BA730 [src/game/equ_buff.cpp] 魔能充能驱动（+204/+208/+216 槽；sub_493D00 变速；ENERGY_CHARGE/ENERGY_CHARGE_END）
+sub_4BFBC0 [src/game/equ_buff.cpp] 列表登记与状态判定 | 在 +84 列表找载荷（节点 +8）等于 pArg2 的项；未找到且 pszArg3 为 0 时经 ·vmt+116 登记； | 随后要求记录 +40 非 0 且 +36 == 1 才回 1。
+sub_4BFC10 [src/game/equ_buff.cpp] 全称判定（8 字节元素表） | 对 pArg2 的 8 字节元素向量（+4/+8）逐项调 ·vmt+48，全真回 1（空表回 1），否则 0。
+sub_4C1070 [src/game/gunner_state.cpp] 调: sub_4C1070
+sub_4E4630 [src/game/hiteff_monster.cpp] ★ 敌我关系判定辅助（研究 §8 攻方冻结豁免门的组成件） | 语义：true = "是敌人/不同阵营"。两段： | ① 若场景 == 6（战场）且双方 vt+376（阵营/队伍号）均落在 0..11 → | 沿车主链 vt+576 上溯（条件 529 时取 v4[2088]，即"召唤主/变形主"链）跳过非战斗宿主； | 终宿主条件 273（受击态）成立且 sub_4B09A0(v4) == 0 → 返回 **false**（同阵营判定为友） | ② 兜底：`this->vt+376 != a2->vt+376`（
+sub_4E4A50 [src/game/hiteff_monster.cpp] 动作/技能发布打包（发包 type 21，双实体 id 对 + 动作 id） | 门：a2 非空且 (vt+316 禁用 或 vt+88 动作使能==0) → 返回 0xFFFF； | 发 ·dword_8F8520(type 21, 2 子字段, a1) → 写 a2 与 a9 的 vt+48/52（空则 0xFFFF/0）→ 1、a3(动作 id)、a4、 | 本地玩家 vt+1220、·sub_460230(缓冲 +104)、0/a8、a5/a6/a7 → vt+52(a11,a10) + 提交 vt+60(
+sub_4E5F70 [src/game/hiteff_monster.cpp] ★ 硬直率掷（研究 §5.1 第 14 轮定案：同构于暴击掷） | 研究 §5.1 原文："硬直率掷（sub_4E5F70）同构（rand()%10000 < 率×100）， | 掷完把结果+rand 种机打包发服务器背书"。 | 调用点：本地扫掠 sub_4E82B0 命中后（`sub_4E5F70(a1, v5, v27, 1, 1)`）—— | 即本地命中即刻把"硬直掷结果"上报服务端（客户端信任伤害架构，研究 §11 第 14 轮）。
+sub_4F3460 [src/game/parsers/item_parser.cpp] 物品资源管理全局重置：dword_9B8DBC/9B8DC8 两棵树清空（sub_4F3360）+ | dword_9B08EC 起的配对表清零。
+sub_5E5220 [src/combat/fighter_skills.cpp] 调: sub_5E5220
+sub_5E5260 [src/combat/fighter_skills.cpp] 调: sub_5E5260
+sub_5E6640 [src/combat/fighter_skills.cpp] 调: sub_5E6640 sub_430C80
+sub_5E6920 [src/combat/fighter_skills.cpp] 调: sub_5E6920 sub_431230 sub_47E9D0 sub_47EFD0
+sub_5E78C0 [src/combat/bigfunc_5E78C0_sub_5E78C0.cpp] size=12390
+sub_605840 [src/combat/passive_object.cpp] 30 字节全局包 | 全局 30 字节包装配（哨兵 dword_9B937C&1 一次性清零）：写 word_9B935C/9B935E（vt+48/vt+52）与 dword_9B9360..9B9374（pDwArg3 六字段）、 | byte_9B9378=pszArg4，*uArg1=30 回填包长——·0x604920 广播备用的全局缓冲（返回 word_9B935C 首址）。
+sub_699000 [src/platform/socket_ime.cpp] 【L1】光标闪烁·取当前节拍：+14 置位返回 +20，否则 +16 + dword_79D100[bank]

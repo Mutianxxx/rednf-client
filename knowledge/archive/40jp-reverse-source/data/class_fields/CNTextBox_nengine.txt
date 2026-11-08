@@ -1,0 +1,23 @@
+CLASS .?AVCNTextBox@nengine@@  slots=9  fields_candidate=20
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint8_t    3  0069C2E0  *(uint8_t *)(this + 4) = 0;
++0x0008 uint32_t   2  0069C2E0  *(uint32_t *)(this + 8) = 9;
++0x000C uint32_t   1  0069A520  *(uint32_t *)(this + 12) = dword_9D3BCC;
++0x0010 uint8_t    2  0069A520  *(uint8_t *)(this + 16) = 1;
++0x0011 uint8_t    1  0069A520  *(uint8_t *)(this + 17) = 1;
++0x0012 uint8_t    1  0069A520  *(uint8_t *)(this + 18) = 0;
++0x0014 uint32_t   2  0069A520  *(uint32_t *)(this + 20) = 0;
++0x0018 uint32_t   2  0069A520  *(uint32_t *)(this + 24) = 0;
++0x001C uint32_t   1  0069A520  *(uint32_t *)(this + 28) = 0;
++0x0020 uint32_t   1  0069A520  *(uint32_t *)(this + 32) = 0;
++0x0024 uint32_t   1  0069A520  *(uint32_t *)(this + 36) = 0;
++0x0028 uint32_t   1  0069A520  *(uint32_t *)(this + 40) = 0;
++0x002C uint32_t   1  0069A520  *(uint32_t *)(this + 44) = 0;
++0x0030 uint32_t   1  0069A520  *(uint32_t *)(this + 48) = 0;
++0x0034 uint32_t   1  0069A520  *(uint32_t *)(this + 52) = 0;
++0x0038 uint32_t   1  0069A520  *(uint32_t *)(this + 56) = 0;
++0x003C uint32_t   1  0069A520  *(uint32_t *)(this + 60) = 0;
++0x0040 uint8_t    1  0069A520  *(uint8_t *)(this + 64) = 1;
++0x0044 uint32_t   1  0069A520  *(uint32_t *)(this + 68) = 0;
++0x0068 uint32_t   4  0069C2E0  *(uint32_t *)(this + 104) = 0;

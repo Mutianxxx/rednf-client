@@ -1,0 +1,100 @@
+载入: slots VA=3662 | 字段表=557 类 | 继承链=727 | 证据VA=365 | cfVA=403 | 族字典段=MONSTER=491/PO=41 | 调用目标=3112 | 实体基类偏移=221
+
+=== src/nengine/gfx_texture.cpp
+   回填 0 / 声明 343（0.0%）  跳过 skip_noclass=343
+
+=== src/platform/missing_tail.cpp
+   回填 0 / 声明 296（0.0%）  跳过 skip_noclass=296
+
+=== src/game/parsers/monster_parser.cpp
+   回填 0 / 声明 270（0.0%）  跳过 skip_noclass=270
+
+=== src/game/ui_icon_perf.cpp
+   回填 38 / 声明 232（16.4%）  跳过 skip_noclass=184 skip_offabsent=10
+   L7360 [slots/body]
+     - int fld_4D4; // eax
+     + int fld_4D4; // eax  | +0x04D4 → 0x469170 读取槽（与 +1232 角色名标签同段，语义未定）（CNRDBaseInterface；va=00469170）
+   L7385 [slots/name]
+     - int fld_218; // esi
+     + int fld_218; // esi  | +0x0218 → ★ 倒计时截止时刻（CNRDBaseInterface；va=00469170）
+   L7399 [slots/body]
+     - int fld_4C4; // eax
+     + int fld_4C4; // eax  | +0x04C4 → ★ 等级标签控件（0x469170: sprintf(Lv.%d) 后按其 +20/+24 定位绘制）（CNRDBaseInterface；va=00469170）
+
+=== src/game/ui/window_party.cpp
+   回填 35 / 声明 198（17.7%）  跳过 skip_noclass=142 skip_offabsent=21
+   L1396 [slots/body]
+     - int fld_24; // eax
+     + int fld_24; // eax  | +0x0024 → 列表模式（CNRDPartyListWindow；va=00631980）
+   L1984 [slots/body]
+     - int fld_28; // eax
+     + int fld_28; // eax  | +0x0028 → 关闭/返回按钮（CNRDPVPChannelListWindow；va=00632540）
+   L2721 [slots/body]
+     - int fld_54; // edi
+     + int fld_54; // edi  | +0x0054 → 道具 id（0x6330F0: fld_54=*(this+84)；与 vt+16()+4 比对）（CNRDImportantItemUseConfirmWindow；va=006330F0）
+
+=== src/game/parsers/item_parser.cpp
+   回填 1 / 声明 143（0.7%）  跳过 skip_noclass=140 skip_offabsent=2
+   L2067 [slots/body]
+     - int fld_e9; // eax
+     + int fld_e9; // eax  | +0x0024 → 物品状态字（0x4859F0: ==0 直通 / ==3 时须 +40 字节标志非 0）（IRDItem；va=004859F0）
+
+=== src/platform/socket_ime.cpp
+   回填 2 / 声明 130（1.5%）  跳过 skip_noclass=128
+   L3875 [slots/body]
+     - int fld_e66; // ebp
+     + int fld_e66; // ebp  | +0x0108 → 资源句柄/值（0x697B30: *(this+264)=nArg4）（IFileResourceManager；va=00697B30）
+   L4322 [slots/body]
+     - int fld_e1; // eax
+     + int fld_e1; // eax  | +0x0004 → 资源键/序号（0x697B30 映射节点构造: *(this+4)=nArg2 入槽）（IFileResourceManager；va=00697B30）
+
+=== src/nengine/zlib_inflate.cpp
+   回填 19 / 声明 103（18.4%）  跳过 skip_famweak=1 skip_noclass=82 skip_offabsent=1
+   L63 [slots/body]
+     - int fld_4; // ecx
+     + int fld_4; // ecx  | +0x0004 → 宿主对象指针（CNSuplexed；va=00650030）
+   L714 [slots/body]
+     - int fld_50; // [esp+Ch] [ebp-4h]
+     + int fld_50; // [esp+Ch] [ebp-4h]  | +0x0050 → 参数槽 B（0x650B50: *(this+80)=表项[1]；0x650A10 累加进宿主 +60）（CNReckless；va=00650A10）
+   L715 [slots/body]
+     - float fld_64; // [esp+Ch] [ebp-4h]
+     + float fld_64; // [esp+Ch] [ebp-4h]  | +0x0064 → 攻击百分比（CNReckless；va=00650A10）
+
+=== src/game/combat_core.cpp
+   回填 27 / 声明 73（37.0%）  跳过 skip_famweak=3 skip_noclass=35 skip_offabsent=8
+   L1977 [slots/body]
+     - int fld_20; // eax
+     + int fld_20; // eax  | +0x0020 → 条目数（0x4D3950: *(this+32) 循环上界；0x4D39F0 SJIS 匹配）（CNSlangTextFilter；va=004D3950）
+   L1979 [slots/body]
+     - int fld_1C; // edx
+     + int fld_1C; // edx  | +0x001C → value 表指针数组（0x4D3950: *(this+28) 同组 free）（CNSlangTextFilter；va=004D3950）
+   L2115 [slots/body]
+     - int fld_20; // [esp+8h] [ebp-4h]
+     + int fld_20; // [esp+8h] [ebp-4h]  | +0x0020 → 条目数（0x4D3950: *(this+32) 循环上界；0x4D39F0 SJIS 匹配）（CNSlangTextFilter；va=004D3950）
+
+=== src/combat/bigfunc_5E1000_sub_5E1000.cpp
+   回填 45 / 声明 65（69.2%）  跳过 skip_offabsent=20
+   L25 [slots/body]
+     - int fld_e1954; // eax
+     + int fld_e1954; // eax  | +0x1E88 → ★ 子状态 B（0x5DE690: +7816==11 判据）（CNMage；va=005DE690）
+   L34 [slots/body]
+     - int fld_e2142; // eax
+     + int fld_e2142; // eax  | +0x2178 → ★ 相位组索引（CNMage；va=005DE690）
+   L39 [slots/body]
+     - int fld_e91; // ecx
+     + int fld_e91; // ecx  | +0x016C → ★ 场景动画池指针（CNMage；va=005DE690）
+
+=== src/game/po_effects.cpp
+   回填 0 / 声明 32（0.0%）  跳过 skip_noclass=4 skip_offabsent=28
+
+=== src/game/bigfunc_4471E0_sub_4471E0.cpp
+   回填 0 / 声明 28（0.0%）  跳过 skip_noclass=28
+
+######## 汇总（dry-run） ########
+  hit              167
+  hit_body         162
+  hit_name         5
+  skip_famweak     4
+  skip_noclass     1652
+  skip_offabsent   90
+  声明总计 1913 | 回填 167 | 跳过 1746 | 命中率 8.7%

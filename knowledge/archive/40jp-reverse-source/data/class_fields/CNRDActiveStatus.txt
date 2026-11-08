@@ -1,0 +1,14 @@
+CLASS .?AVCNRDActiveStatus@@  slots=22  fields_candidate=11
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t  35  005FAFC0  LOBYTE(fld_8) = (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(th
++0x0008 uint32_t   8  004973B0  switch ( *(uint32_t *)(this + 8) )
++0x0014 uint32_t  15  004973B0  sub_4939E0(*(uint32_t *)(this + 20), 1);
++0x0018 uint32_t   6  004973B0  sub_4939E0(*(uint32_t *)(this + 24), pszArg2);
++0x001C uint32_t   3  004973B0  sub_4939E0(*(uint32_t *)(this + 28), pszArg2);
++0x0049 uint8_t    1  005FA7E0  *(uint8_t *)(this + 73) = 0;
++0x004A uint8_t    1  005FA7E0  *(uint8_t *)(this + 74) = 0;
++0x0054 uint32_t   2  005FA7E0  fld_54 = *(uint32_t *)(this + 84);
++0x0058 uint32_t   3  005FA7E0  fld_58 = *(uint32_t *)(this + 88) + 500;
++0x0060 uint8_t    2  004973B0  if ( *(uint8_t *)(this + 96) != pszArg2 )
++0x0061 uint8_t   11  005FAFC0  LOBYTE(fld_8) = *(uint8_t *)(this + 97);

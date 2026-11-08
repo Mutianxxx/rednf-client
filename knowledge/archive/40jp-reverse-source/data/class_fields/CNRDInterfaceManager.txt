@@ -1,0 +1,14 @@
+CLASS .?AVCNRDInterfaceManager@@  slots=1  fields_candidate=11
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   1  0044BA00  if ( *(uint32_t *)(this + 4) != 0 || nArg2 != *(uint32_t *)(this + 112
++0x0010 uint32_t   1  0044BA00  return sub_464C60(*(uint32_t *)(this + 16));
++0x0070 uint32_t   1  0044BA00  if ( *(uint32_t *)(this + 4) != 0 || nArg2 != *(uint32_t *)(this + 112
++0x0990 uint32_t   1  0044BA00  if ( nArg2 == *(uint32_t *)(this + 2448) )
++0x0994 uint32_t   1  0044BA00  fld_994 = *(uint32_t *)(this + 2452);
++0x09A4 uint8_t    1  0044BA00  if ( *(uint8_t *)(this + 2468) != 0 )
++0x09B0 uint32_t   1  0044BA00  fld_9B0 = *(uint32_t *)(this + 2480);
++0x09B4 uint32_t   2  0044BA00  if ( *(uint32_t *)(this + 2484) != 0
++0x09B8 uint32_t   1  0044BA00  fld_9B8 = *(uint32_t *)(this + 2488);
++0x09BC uint32_t   2  0044BA00  result = *(uint32_t *)(this + 2492);
++0x09C0 uint32_t   1  0044BA00  fld_9C0 = *(uint32_t *)(this + 2496);

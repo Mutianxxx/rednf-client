@@ -1,0 +1,6 @@
+CLASS .?AVCNRDCursor@@  slots=1  fields_candidate=3
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   1  00545290  if ( nArg2 == *(uint32_t *)(this + 4) )
++0x0028 uint32_t   1  00545290  fld_28 = *(uint32_t *)(this + 40);
++0x002C uint8_t    1  00545290  result = *(uint8_t *)(this + 44);

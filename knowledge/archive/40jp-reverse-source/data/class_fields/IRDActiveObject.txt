@@ -1,0 +1,40 @@
+CLASS .?AVIRDActiveObject@@  slots=255  fields_candidate=37
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0070 uint32_t   1  004D6970  pHostObj = *(uint32_t *)(this + 112);
++0x0078 uint32_t   6  00499020  fld_78 = *(uint32_t *)(this + 120);
++0x00A2 uint8_t    2  0058E920  if ( fld_e16393 != 4 || (*(uint8_t *)(this + 162) & 2) == 0 )
++0x00E8 uint8_t    2  00499020  result = *(uint8_t *)(this + 232);
++0x00EC uint32_t   1  00499020  *(uint32_t *)(this + 236) = nArg3;
++0x00F0 uint32_t   1  00499020  *(uint32_t *)(this + 240) = nArg4;
++0x00F4 float      4  00499080  if ( *(float *)(this + 244) == 0.0 || fArg32 != 0.0 )
++0x00F8 uint8_t    1  0042A8D0  *(uint8_t *)(this + 248) = pszArg2;
++0x00FC uint32_t   1  0042A8D0  *(uint32_t *)(this + 252) = nArg3;
++0x0100 uint8_t    1  0042A8D0  *(uint8_t *)(this + 256) = pszArg4;
++0x0104 uint32_t   1  0042A8D0  *(uint32_t *)(this + 260) = nArg5;
++0x0144 uint32_t   1  004D6970  *(uint32_t *)(this + 6664) = *(uint32_t *)(this + 324) != 0 ? 0 : 0xFF
++0x0282 uint8_t    5  004E5C10  result = *(uint8_t *)(this + 642);
++0x0284 uint32_t   4  004E5C10  *(uint32_t *)(this + 644) = nArg3;
++0x069C char       1  004D71B0  pCueName = (char *)(this + 1692);
++0x181C uint32_t   1  004D6970  if ( *(uint32_t *)(this + 6172) == 0 || *(uint32_t *)(this + 6176) == 
++0x1820 uint32_t   1  004D6970  if ( *(uint32_t *)(this + 6172) == 0 || *(uint32_t *)(this + 6176) == 
++0x1824 uint32_t   1  004D6970  if ( *(uint32_t *)(this + 6172) == 0 || *(uint32_t *)(this + 6176) == 
++0x19BC uint32_t   1  004D6970  *(uint32_t *)(this + 6588) = nClockNow;
++0x19C0 uint32_t   1  004D6970  *(uint32_t *)(this + 6592) = 0;
++0x19C4 uint32_t   1  004D6970  *(uint32_t *)(this + 6596) = 0;
++0x1A08 uint32_t   1  004D6970  *(uint32_t *)(this + 6664) = *(uint32_t *)(this + 324) != 0 ? 0 : 0xFF
++0x1A10 uint32_t   1  004D6970  *(uint32_t *)(this + 6672) = 0;
++0x1A18 uint8_t    1  004D6970  *(uint8_t *)(this + 6680) = 0;
++0x1A1A uint8_t    1  004D6970  *(uint8_t *)(this + 6682) = 0;
++0x1A1C uint32_t   1  004D6970  *(uint32_t *)(this + 6684) = 0;
++0x1A20 uint32_t   1  004D6970  *(uint32_t *)(this + 6688) = -1;
++0x1A24 uint32_t   1  004D6970  *(uint32_t *)(this + 6692) = -1;
++0x1A3C uint32_t   1  004D6970  pszSoundBuf = *(uint32_t *)(this + 6716);
++0x1A50 uint32_t   1  004D6970  if ( *(uint32_t *)(this + 6736) < 0x10u )
++0x1A54 uint8_t    1  004D6970  *(uint8_t *)(this + 6740) = 0;
++0x1BB8 uint32_t   1  004D5A90  *(uint32_t *)(this + 7096) = sub_699000(this + 36);
++0x1BBC uint32_t   1  004D5A90  *(uint32_t *)(this + 7100) = nArg2;
++0x1BC0 uint8_t    1  004D5A90  *(uint8_t *)(this + 7104) = pszArg3;
++0x1BC1 uint8_t    1  004D6970  *(uint8_t *)(this + 7105) = 0;
++0x1BC4 uint32_t   1  004D6970  *(uint32_t *)(this + 7108) = -1;
++0x1BC8 uint32_t   1  004D6970  *(uint32_t *)(this + 7112) = 0;

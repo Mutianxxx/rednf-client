@@ -1,0 +1,11 @@
+CLASS .?AVCNRDGuildManager@@  slots=4  fields_candidate=8
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0030 uint32_t   1  0047AAF0  *(uint32_t *)(this + 48) = 0;
++0x0034 uint32_t   1  0047AAF0  *(uint32_t *)(this + 52) = 0;
++0x0038 uint32_t   1  0047AAF0  *(uint32_t *)(this + 56) = 0;
++0x003C uint32_t   1  0047AAF0  *(uint32_t *)(this + 60) = 0;
++0x004D uint8_t    1  0047AAF0  *(uint8_t *)(this + 77) = 0;
++0x004E uint8_t    1  0047AAF0  *(uint8_t *)(this + 78) = 0;
++0x0069 uint8_t    1  0047AAF0  *(uint8_t *)(this + 105) = 0;
++0x006A uint8_t    1  0047AAF0  *(uint8_t *)(this + 106) = 0;

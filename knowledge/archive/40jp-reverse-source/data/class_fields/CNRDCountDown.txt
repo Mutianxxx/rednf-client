@@ -1,0 +1,6 @@
+CLASS .?AVCNRDCountDown@@  slots=1  fields_candidate=3
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   1  0049BEF0  if ( nArg2 != *(uint32_t *)(this + 8) )
++0x0064 uint32_t   2  0049BEF0  fld_64 = *(uint32_t *)(this + 100);
++0x0068 uint32_t   2  0049BEF0  if ( *(uint32_t *)(this + 104) != pThis_48 )

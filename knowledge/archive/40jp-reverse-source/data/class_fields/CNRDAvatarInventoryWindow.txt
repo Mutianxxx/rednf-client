@@ -1,0 +1,14 @@
+CLASS .?AVCNRDAvatarInventoryWindow@@  slots=14  fields_candidate=11
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   5  005497A0  if ( pArg2 == *(uint32_t *)(this + 4) )
++0x0008 uint32_t   3  005497A0  && (*(uint32_t *)((fld_8 = *(uint32_t *)(this + 8)) + 2504) == 2
++0x000C uint32_t   1  00540360  return sub_44AB50(*(uint32_t **)(this + 8), *(uint32_t *)(this + 12), 
++0x0010 uint32_t   1  00549580  fld_10 = *(uint32_t *)(this + 16);
++0x0014 uint32_t   1  00549580  fld_14 = *(uint32_t *)(this + 20);
++0x0018 uint32_t   1  00549580  result = *(uint32_t *)(this + 24);
++0x001C uint32_t   1  00549580  fld_1C = *(uint32_t *)(this + 28);
++0x0020 uint32_t   1  00549580  fld_20 = *(uint32_t *)(this + 32);
++0x0028 uint32_t   2  00549580  *(uint32_t *)(this + 48) = sub_69C690(*(uint32_t *)(this + 40));
++0x002C uint32_t   6  005497A0  fld_2C = (*(int (/*thiscall*/ **)(uint32_t, int))(**(uint32_t **)(this
++0x0030 uint32_t   4  005497A0  fld_30 = 7 * *(uint32_t *)(this + 48);

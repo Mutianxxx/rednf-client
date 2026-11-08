@@ -1,0 +1,5 @@
+CLASS .?AVCNRDCashShopNoDoubleEventConfirmWindow@@  slots=17  fields_candidate=2
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0050 uint32_t   1  00633410  *(uint32_t *)(this + 80) = nArg2;
++0x0054 uint8_t    1  00633410  *(uint8_t *)(this + 84) = nArg3 == 0;

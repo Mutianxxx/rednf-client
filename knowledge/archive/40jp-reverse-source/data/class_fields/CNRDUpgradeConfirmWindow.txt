@@ -1,0 +1,6 @@
+CLASS .?AVCNRDUpgradeConfirmWindow@@  slots=14  fields_candidate=3
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   2  0063A4C0  (unsigned int)(640 - *(uint32_t *)(*(uint32_t *)(this + 8) + 28)) >> 1
++0x0064 uint32_t   1  0063A4C0  *(uint32_t *)(this + 100) = nArg2;
++0x0068 uint8_t    1  0063A4C0  *(uint8_t *)(this + 104) = nArg3 == 1;

@@ -1,0 +1,7 @@
+CLASS .?AVCNAimVitalPoint@@  slots=30  fields_candidate=4
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   1  00652300  fld_4 = (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 4) 
++0x0050 float      1  006522A0  fld_50 = *(float *)(this + 80);
++0x0054 uint32_t   1  006522A0  fld_54 = *(uint32_t *)(this + 84);
++0x0058 uint32_t   1  00652300  sub_4938F0(*(uint32_t *)(this + 88));

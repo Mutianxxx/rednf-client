@@ -1,0 +1,9 @@
+CLASS .?AVCNEnchantActiveStatus@@  slots=31  fields_candidate=6
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x002C uint32_t   1  005E5C90  *(uint32_t *)(this + 44) = nArg6;
++0x0050 uint32_t   1  005E5C90  *(uint32_t *)(this + 80) = nArg2;
++0x0054 float      1  005E5C90  *(float *)(this + 84) = (float)nArg3;
++0x0058 uint32_t   1  005E5C90  *(uint32_t *)(this + 88) = nArg4;
++0x005C uint8_t    1  005E5C90  *(uint8_t *)(this + 92) = pszArg5;
++0x005D uint8_t    2  006507C0  if ( pszArg2 == 0 && *(uint8_t *)(this + 93) != 0 )

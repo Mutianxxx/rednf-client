@@ -1,0 +1,38 @@
+CLASS .?AVCNGunner@@  slots=334  fields_candidate=35
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0078 uint32_t   6  00499020  fld_78 = *(uint32_t *)(this + 120);
++0x00E8 uint8_t    2  00499020  result = *(uint8_t *)(this + 232);
++0x00EC uint32_t   1  00499020  *(uint32_t *)(this + 236) = nArg3;
++0x00F0 uint32_t   1  00499020  *(uint32_t *)(this + 240) = nArg4;
++0x00F4 float      4  00499080  if ( *(float *)(this + 244) == 0.0 || fArg32 != 0.0 )
++0x00F8 uint8_t    1  0042A8D0  *(uint8_t *)(this + 248) = pszArg2;
++0x00FC uint32_t   1  0042A8D0  *(uint32_t *)(this + 252) = nArg3;
++0x0100 uint8_t    1  0042A8D0  *(uint8_t *)(this + 256) = pszArg4;
++0x0104 uint32_t   1  0042A8D0  *(uint32_t *)(this + 260) = nArg5;
++0x0200 uint32_t   2  004AF8E0  if ( *(uint32_t *)(this + 512) == 4 )
++0x0204 uint8_t    1  004AF8E0  *(uint8_t *)(this + 516) = (*(int (/*thiscall*/ **)(int))(*(uint32_t *
++0x0208 uint32_t   5  004AF8E0  if ( *(uint32_t *)(this + 520) == -1 )
++0x020C uint32_t   2  004AF8E0  if ( *(uint32_t *)(this + 524) == -1082130432 )
++0x0282 uint8_t    5  004E5C10  result = *(uint8_t *)(this + 642);
++0x0284 uint32_t   4  004E5C10  *(uint32_t *)(this + 644) = nArg3;
++0x1964 uint32_t   3  004C2360  fld_1964 = *(uint32_t *)(this + 6500);
++0x199C uint32_t   1  004C0A30  fld_199C = *(uint32_t *)(this + 6556);
++0x1BB8 uint32_t   1  004D5A90  *(uint32_t *)(this + 7096) = sub_699000(this + 36);
++0x1BBC uint32_t   1  004D5A90  *(uint32_t *)(this + 7100) = nArg2;
++0x1BC0 uint8_t    1  004D5A90  *(uint8_t *)(this + 7104) = pszArg3;
++0x1BEC uint32_t   2  005796C0  pThis_1BEC = (uint32_t *)(this + 7148);
++0x1BF0 uint32_t   1  005796C0  *(uint32_t *)(this + 7152) = *(uint32_t *)(pArg2 + 4);
++0x1BF4 uint8_t    1  005796C0  *(uint8_t *)(this + 7156) = *(uint8_t *)(pArg2 + 8);
++0x1CF8 uint32_t   1  004B4EE0  return sub_4B2BF0((uint32_t *)(this + 7416), &nArg2, nArg3);
++0x1CFC uint32_t   1  004B4EE0  if ( nArg3 != *(uint32_t *)(this + 7420) )
++0x1E32 uint8_t    1  004C0A30  LOBYTE(fld_199C) = *(uint8_t *)(this + 7730);
++0x201C size_t     1  004C2360  sub_4C1C80(v4, (size_t *)(this + 8220), *(uint32_t *)(this + 6500));
++0x2144 uint32_t   1  004C0A30  if ( *(uint32_t *)(this + 8516) == 12 && *(uint32_t *)(this + 8968) ==
++0x2195 uint8_t    1  004C0760  else if ( *(uint8_t *)(this + 8597) != 0 )
++0x21B4 uint32_t   1  004C39D0  *(uint32_t *)(this + 8628) = result;
++0x21D0 uint32_t   6  004C39D0  if ( *(uint32_t *)(this + 8656) == 0 )
++0x21D4 uint32_t   4  004C39D0  if ( *(uint32_t *)(this + 8660) == 0 )
++0x2300 uint8_t    1  004C0760  if ( *(uint8_t *)(this + 8960) != 0 )
++0x2304 uint32_t   1  004C0760  fld_2304 = *(uint32_t *)(this + 8964);
++0x2308 uint32_t   1  004C0A30  if ( *(uint32_t *)(this + 8516) == 12 && *(uint32_t *)(this + 8968) ==

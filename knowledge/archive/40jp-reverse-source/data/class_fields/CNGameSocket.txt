@@ -1,0 +1,6 @@
+CLASS .?AVCNGameSocket@@  slots=2  fields_candidate=3
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint8_t    1  004235A0  if ( *(uint8_t *)(this + 8) != 0 )
++0x01B4 uint32_t   2  004235A0  off_77F3FC("SOCKET CLOSE %d", *(uint32_t *)(this + 436));
++0x01C8 uint32_t   1  004235A0  fld_1C8 = *(uint32_t *)(this + 456);

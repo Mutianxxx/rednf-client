@@ -1,0 +1,326 @@
+0x650030 sub_650030 [30L]
+  CALL: sub_650030
+0x6500A0 sub_6500A0 [21L]
+  CALL: sub_6500A0
+0x6500E0 sub_6500E0 [15L]
+  CALL: sub_6500E0
+0x650100 sub_650100 [103L]
+  CALL: eax>, sub_4938F0, sub_432E50
+0x6502E0 sub_6502E0 [25L]
+  CALL: sub_6502E0
+0x650340 sub_650340 [16L]
+  CALL: sub_650340
+0x650360 sub_650360 [87L]
+  CALL: eax>, sub_4938F0, sub_432E50
+0x650540 sub_650540 [17L]
+  CALL: sub_650540
+0x650560 sub_650560 [18L]
+  CALL: sub_650560
+0x6505A0 sub_6505A0 [28L]
+  CALL: sub_6505A0
+0x6505F0 sub_6505F0 [21L]
+  CALL: sub_6505F0, sub_699000, sub_42B420, sub_491690
+0x650650 sub_650650 [103L]
+  CALL: sub_650650, j__free, sub_42AC90
+0x6507C0 sub_6507C0 [17L]
+  CALL: sub_6507C0, sub_650650, sub_6505F0
+0x650800 sub_650800 [15L]
+  CALL: sub_650800
+0x650820 sub_650820 [47L]
+  CALL: sub_650820, sub_4049C0, sub_41A5E0, sub_41A590
+0x650950 sub_650950 [20L]
+  CALL: sub_650950, sub_47E720, sub_47E9D0, sub_47EF20
+0x6509D0 sub_6509D0 [18L]
+  CALL: sub_6509D0
+0x6509F0 sub_6509F0 [17L]
+  CALL: sub_6509F0
+0x650A10 sub_650A10 [65L]
+  CALL: sub_650A10, sub_41A5E0, sub_41A590, COERCE_FLOAT, sub_497040
+0x650B50 sub_650B50 [22L]
+  CALL: sub_650B50, sub_47E720, sub_47EF20
+0x650C30 sub_650C30 [52L]
+  STR: Common/CommonEffect/Particle/AttackPowerUp.ptl
+  CALL: sub_650C30, sub_5F66C0, new, sub_428F30, sub_4600B0, j__free
+0x650D20 sub_650D20 [14L]
+  CALL: sub_650D20
+0x650D30 sub_650D30 [12L]
+  CALL: sub_650D30
+0x650D50 sub_650D50 [62L]
+  CALL: eax>, sub_432E50, sub_4938F0
+0x650E80 sub_650E80 [35L]
+  CALL: sub_650E80
+0x650F20 sub_650F20 [21L]
+  CALL: sub_650F20
+0x650F70 sub_650F70 [21L]
+  CALL: sub_650F70
+0x650FA0 sub_650FA0 [13L]
+  CALL: sub_650FA0, sub_4E4630
+0x651000 sub_651000 [43L]
+  CALL: sub_651000
+0x6510A0 sub_6510A0 [19L]
+  STR: QUAKE_WAVE_READY_LOOP
+  CALL: sub_6510A0
+0x6510D0 sub_6510D0 [41L]
+  CALL: sub_6510D0, new, sub_4D6810, LODWORD, sub_4684F0
+0x6511B0 sub_6511B0 [16L]
+  CALL: sub_6511B0
+0x6511E0 sub_6511E0 [32L]
+  STR: QUAKE_WAVE_READY_LOOP
+  CALL: sub_6511E0, sub_64A570, j__free
+0x651260 sub_651260 [51L]
+  STR: SM_GHOSTSTEP
+  CALL: sub_651260, sub_64A360, __RTDynamicCast, j__free
+0x651350 sub_651350 [72L]
+  CALL: sub_651350, __RTDynamicCast
+0x651450 sub_651450 [46L]
+  CALL: sub_651450, sub_64A5E0, j__free, memcpy_0
+0x651510 sub_651510 [120L]
+  CALL: sub_651510, sub_42CB90, sub_55E7F0, sub_5DAF70, sub_6511B0, sub_497E70, new, memcpy_0, j__free
+0x651760 sub_651760 [154L]
+  STR: QUAKE_WAVE_LOOP
+  CALL: sub_651760, sub_64A790, sub_699000, sub_4922F0, sub_651510, sub_4600B0, j__free
+0x6519E0 sub_6519E0 [35L]
+  STR: Character/Swordman/Effect/Particle/DOTAreaQuake.ptl | Character/Swordman/Effect/Particle/DOTAreaRock.ptl | Character/Swordman/Effect/Particle/DOTAreaDust.ptl
+  CALL: sub_6519E0, new, sub_428F30
+0x651AF0 sub_651AF0 [17L]
+  CALL: sub_651AF0
+0x651B10 sub_651B10 [17L]
+  CALL: sub_651B10
+0x651B30 sub_651B30 [21L]
+  CALL: sub_651B30
+0x651B60 sub_651B60 [27L]
+  CALL: sub_651B60
+0x651B90 sub_651B90 [11L]
+  CALL: sub_651B90, sub_651B60
+0x651BC0 sub_651BC0 [51L]
+  CALL: sub_651BC0, sub_5F66C0, sub_4600B0, j__free
+0x651CC0 sub_651CC0 [122L]
+  CALL: sub_651CC0, sub_6024A0, sub_497E70, sub_651B90, sub_49A9D0, sub_651B30, new, sub_651B60, j__free
+0x651F00 sub_651F00 [28L]
+  CALL: sub_651F00, sub_651B60, sub_651CC0
+0x651F70 sub_651F70 [33L]
+  STR: Common/CommonEffect/Particle/RemoveActiveStatus.ptl
+  CALL: sub_651F70, sub_651F00, new, sub_428F30
+0x652010 sub_652010 [12L]
+  CALL: sub_652010
+0x652030 sub_652030 [18L]
+  CALL: sub_652030, COERCE_FLOAT, sub_41A5E0, sub_41A590
+0x652070 sub_652070 [27L]
+  CALL: sub_652070, LOBYTE, __RTDynamicCast
+0x6520B0 sub_6520B0 [68L]
+  STR: Character/Fighter/Effect/Animation/Provocationed.ani
+  CALL: sub_6520B0, __RTDynamicCast, sub_42FCB0, sub_431860, sub_44B6C0, sub_44E0D0, sub_45FE80, sub_4A06D0
+0x652220 sub_652220 [13L]
+  CALL: sub_652220
+0x652230 sub_652230 [17L]
+  CALL: sub_652230, sub_47E720, sub_47EF20
+0x6522A0 sub_6522A0 [24L]
+  CALL: sub_6522A0, COERCE_FLOAT, sub_41A5E0, sub_41A590
+0x652300 sub_652300 [20L]
+  CALL: sub_652300, sub_4938F0, sub_491D00
+0x652350 sub_652350 [20L]
+  CALL: sub_652350, sub_42AF90, sub_657740
+0x652380 sub_652380 [20L]
+  STR: Character/Fighter/Effect/Animation/AimedVitalPoint.ani
+  CALL: sub_652380, sub_42FCB0, sub_431860, sub_4926A0
+0x652400 sub_652400 [12L]
+  CALL: sub_652400
+0x652420 sub_652420 [11L]
+  CALL: sub_652420, sub_5F66C0
+0x652430 sub_652430 [48L]
+  CALL: sub_652430, sub_41A5E0, sub_41A590, sub_497040
+0x6524C0 sub_6524C0 [21L]
+  CALL: sub_6524C0
+0x652500 sub_652500 [43L]
+  CALL: al>, sub_698F90
+0x6525A0 sub_6525A0 [10L]
+  CALL: sub_6525A0
+0x6525B0 sub_6525B0 [10L]
+  CALL: sub_6525B0
+0x6525C0 sub_6525C0 [11L]
+  CALL: sub_6525C0
+0x6525E0 sub_6525E0 [10L]
+  CALL: sub_6525E0
+0x6525F0 sub_6525F0 [30L]
+  CALL: sub_6525F0
+0x652670 sub_652670 [11L]
+  CALL: sub_652670
+0x652690 sub_652690 [21L]
+  CALL: sub_652690, GetClientRect
+0x6526F0 sub_6526F0 [11L]
+  CALL: sub_6526F0
+0x652720 sub_652720 [20L]
+  CALL: sub_652720
+0x6527B0 sub_6527B0 [10L]
+  CALL: sub_6527B0
+0x6527C0 sub_6527C0 [10L]
+  CALL: sub_6527C0
+0x6527D0 sub_6527D0 [10L]
+  CALL: sub_6527D0
+0x6527E0 sub_6527E0 [10L]
+  CALL: sub_6527E0
+0x6527F0 sub_6527F0 [36L]
+  STR: ************** NAVIGATION START **************\n | ************** NAVIGATION END **************\n
+  CALL: sub_6527F0, PostMessageA, OutputDebugStringA
+0x652880 sub_652880 [24L]
+  CALL: sub_652880, GetWindowLongA, GlobalFree, SetWindowLongA
+0x6528C0 sub_6528C0 [75L]
+  CALL: sub_6528C0, GlobalAlloc, OleCreate, GlobalFree, SetWindowLongA, GetClientRect, OleSetContainedObject, sub_652880
+0x652A70 sub_652A70 [46L]
+  CALL: sub_652A70, GetWindowLongA, VariantInit, MultiByteToWideChar, GlobalAlloc, SysAllocString, GlobalFree, VariantClear
+0x652B50 sub_652B50 [76L]
+  CALL: sub_652B50, sub_6528C0, sub_652880, OleUninitialize, GetParent, SetFocus, EnableWindow, GetWindowLongA, DefWindowProcA
+0x652CC0 sub_652CC0 [26L]
+  CALL: sub_652CC0, GetWindowLongA
+0x652D30 sub_652D30 [36L]
+  STR: Browser Example | NEOPLE_WEB
+  CALL: sub_652D30, OleInitialize, RegisterClassExA, CreateWindowExA, EnableWindow
+0x652DE0 sub_652DE0 [10L]
+  CALL: sub_652DE0, sub_652A70
+0x652E00 sub_652E00 [46L]
+  STR: 1.2.3
+  CALL: sub_652E00, sub_652FE0, sub_653120, sub_654750
+0x652EB0 sub_652EB0 [35L]
+  CALL: sub_652EB0
+0x652F10 sub_652F10 [52L]
+  CALL: sub_652F10, sub_652EB0
+0x652FE0 sub_652FE0 [10L]
+  CALL: sub_652FE0, sub_652F10
+0x653000 sub_653000 [78L]
+  CALL: eax>
+0x653120 sub_653120 [1477L]
+  STR: incorrect header check | unknown compression method | invalid window size | unknown header flags set | header crc mismatch | `\a | invalid block type | invalid stored block lengths
+  CALL: sub_653120, sub_655990, LOWORD, sub_655460, BYTE1, BYTE2, LOBYTE, HIBYTE, sub_654F70, HIWORD, sub_6547D0, SBYTE1, sub_653000
+0x654750 sub_654750 [27L]
+  CALL: sub_654750, v2
+0x6547A0 sub_6547A0 [10L]
+  CALL: sub_6547A0, malloc
+0x6547C0 sub_6547C0 [10L]
+  CALL: sub_6547C0, free
+0x6548D8 sub_6548D8 [555L]
+  STR: invalid distance code | invalid distance too far back | invalid literal/length code
+  CALL: eax>, __readeflags, LOBYTE, BYTE1, SBYTE1, BYTE2, HIWORD, __writeeflags, _m_empty, _mm_cvtsi32_si64, _m_psrlq, _m_psllqi, _m_por, _mm_cvtsi64_si32
+0x654F70 sub_654F70 [286L]
+  CALL: sub_654F70, LOBYTE, HIWORD, BYTE1
+0x655460 sub_655460 [223L]
+  CALL: sub_655460, HIWORD
+0x6556B0 sub_6556B0 [109L]
+  CALL: eax>, HIBYTE, BYTE1, BYTE2
+0x655990 sub_655990 [13L]
+  CALL: sub_655990, sub_6556B0
+0x6559B0 sub_6559B0 [10L]
+  CALL: sub_6559B0
+0x6559D0 sub_6559D0 [10L]
+  CALL: sub_6559D0
+0x6559F0 sub_6559F0 [10L]
+  CALL: sub_6559F0
+0x655A00 sub_655A00 [22L]
+  CALL: sub_655A00
+0x655A40 sub_655A40 [33L]
+  CALL: sub_655A40
+0x655A90 sub_655A90 [178L]
+  STR: -------------%d---------------\n | %d enduranceTime_=>%f waitTime_=>%f elapsedTime=>%f\n
+  CALL: sub_655A90, sub_40BE20
+0x655DB0 sub_655DB0 [26L]
+  CALL: sub_655DB0
+0x655E10 sub_655E10 [26L]
+  CALL: sub_655E10
+0x655E70 sub_655E70 [10L]
+  CALL: sub_655E70
+0x655E90 sub_655E90 [14L]
+  CALL: sub_655E90
+0x655EB0 sub_655EB0 [28L]
+  CALL: sub_655EB0
+0x655F20 sub_655F20 [44L]
+  CALL: sub_655F20, sub_655E10
+0x655FA0 sub_655FA0 [45L]
+  CALL: sub_655FA0
+0x656030 sub_656030 [23L]
+  CALL: sub_656030, sub_655DB0
+0x656080 sub_656080 [10L]
+  CALL: sub_656080, sub_655F20
+0x656090 sub_656090 [15L]
+  CALL: sub_656090, sub_655FA0
+0x6560A0 sub_6560A0 [19L]
+  CALL: sub_6560A0, j__free, sub_655FA0
+0x6560D0 sub_6560D0 [23L]
+  STR: vector<T> too long
+  CALL: sub_6560D0, sub_4015C0, sub_401740, _CxxThrowException
+0x656140 sub_656140 [121L]
+  CALL: sub_656140, sub_6560D0, sub_4FBDE0, sub_57A4A0, sub_655A00, sub_57A4C0, sub_45E580, new, sub_655A40, j__free
+0x656400 sub_656400 [20L]
+  CALL: sub_656400, sub_656140
+0x656470 sub_656470 [26L]
+  CALL: sub_656470, j__free
+0x6564D0 sub_6564D0 [25L]
+  CALL: sub_6564D0, sub_656400, sub_655A40
+0x656560 sub_656560 [52L]
+  CALL: sub_656560, sub_6564D0, sub_655FA0
+0x656630 sub_656630 [52L]
+  CALL: sub_656630, sub_6564D0
+0x656720 sub_656720 [21L]
+  CALL: sub_656720
+0x656790 sub_656790 [11L]
+  CALL: sub_656790
+0x6567B0 sub_6567B0 [14L]
+  CALL: sub_6567B0, sub_658CB0, sub_657970, GetTickCount
+0x6567F0 sub_6567F0 [11L]
+  CALL: sub_6567F0
+0x656800 sub_656800 [10L]
+  CALL: sub_656800
+0x656810 ?SweepUnstructured@ContextBase@details@Concurrency@@QAEXP6A_NPAV_UnrealizedChore@23@PAX@Z12@Z [13L]
+  CALL: Concurrency::details::ContextBase::SweepUnstructured, bool, sub_658C80
+0x656820 ?SweepUnstructured@ContextBase@details@Concurrency@@QAEXP6A_NPAV_UnrealizedChore@23@PAX@Z12@Z_0 [13L]
+  CALL: Concurrency::details::ContextBase::SweepUnstructured, bool, sub_6588B0
+0x656830 ?SweepUnstructured@ContextBase@details@Concurrency@@QAEXP6A_NPAV_UnrealizedChore@23@PAX@Z12@Z_1 [13L]
+  CALL: Concurrency::details::ContextBase::SweepUnstructured, bool, sub_6588C0
+0x656840 sub_656840 [10L]
+  CALL: sub_656840
+0x656850 sub_656850 [15L]
+  CALL: sub_656850, LODWORD, sub_658770
+0x656880 sub_656880 [19L]
+  CALL: sub_656880, sub_659510
+0x6568C0 sub_6568C0 [21L]
+  CALL: sub_6568C0, sub_659600
+0x6568F0 sub_6568F0 [25L]
+  CALL: sub_6568F0, sub_658C10
+0x656950 sub_656950 [11L]
+  CALL: sub_656950
+0x656970 sub_656970 [28L]
+  CALL: sub_656970, sub_657FD0
+0x6569D0 sub_6569D0 [31L]
+  CALL: sub_6569D0, j__free
+0x656A10 sub_656A10 [50L]
+  CALL: sub_656A10, sub_659600, sub_658900, j__free
+0x656AA0 sub_656AA0 [104L]
+  CALL: sub_656AA0, j__free, LOBYTE, sub_6585C0, sub_658850, GetTickCount, sub_656970, sub_657A90, sub_657B80
+0x656D00 sub_656D00 [20L]
+  CALL: sub_656D00, sub_656A10, sub_6569D0, j__free
+0x656D70 sub_656D70 [40L]
+  CALL: sub_656D70, sub_425940, new, sub_6596B0
+0x656E20 sub_656E20 [32L]
+  STR: list<T> too long
+  CALL: sub_656E20, sub_4015C0, sub_401740, _CxxThrowException
+0x656EB0 sub_656EB0 [19L]
+  CALL: sub_656EB0, sub_40C0F0, sub_656E20
+0x656EF0 sub_656EF0 [66L]
+  CALL: sub_656EF0, new, sub_659790, sub_6597C0, sub_40C0F0, LOBYTE, sub_656E20, sub_656720, sub_657FD0, sub_658350
+0x657070 sub_657070 [19L]
+  CALL: sub_657070, _CxxThrowException
+0x6570D0 sub_6570D0 [25L]
+  CALL: sub_6570D0, timeGetTime, LOBYTE, sub_667430, sub_666F00
+0x657120 sub_657120 [17L]
+  STR: \nstartup[%s] :%d  \n\n | \ninitialize(getIP(),getPort())\n\n
+  CALL: sub_657120, sub_40BE20, sub_667970, ninitialize, getIP, getPort, sub_667670
+0x6571C0 sub_6571C0 [22L]
+  STR: \nDisconnected\n\n
+  CALL: sub_6571C0, sub_40BE20, sub_6676C0, closesocket
+0x657200 sub_657200 [14L]
+  CALL: sub_657200
+0x657230 sub_657230 [20L]
+  CALL: sub_657230, sub_6676C0, closesocket
+0x657260 sub_657260 [29L]
+  CALL: sub_657260, sub_698F90
+0x6572C0 sub_6572C0 [33L]
+  STR: \n\nCould not create a UDP socket : %d\n | \nconnected to Relayserver\n\n
+  CALL: sub_6572C0, sub_667430, sub_666F00, socket, GetLastError, sub_40BE20, htons, inet_addr

@@ -1,0 +1,182 @@
+sub_52EA60 [missing_misc_b.cpp] ★ CNRDTrap 构造基座（陷阱 PO 底座）：gunner_skills.cpp 全部机关 PO 构造器的第一调用
+sub_52EB00 [missing_misc_b.cpp] CNRDPooledPassiveObject 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_52EBF0 [missing_misc_b.cpp] CNCutableGrass 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52ED60 [missing_misc_b.cpp] ★ CNPassiveObject/CNMapObject 构造基座（与 0x52EA60 平行的第二底座）
+sub_52EF60 [missing_misc_b.cpp] CNTreasureBox 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_52EF90 [missing_misc_b.cpp] CNBlueBallBox 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52F040 [missing_misc_b.cpp] CNUrn 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_52F0B0 [missing_misc_b.cpp] CNPathGate 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_52F1E0 [missing_misc_b.cpp] CNFireMissile 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52F2C0 [missing_misc_b.cpp] CNFireExplosion 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52F3F0 [missing_misc_b.cpp] CNIceMissile 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52F4D0 [missing_misc_b.cpp] CNThunderBolt 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52F5C0 [missing_misc_b.cpp] CNParticleFactory 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52F6A0 [missing_misc_b.cpp] CNBlast 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52F780 [missing_misc_b.cpp] CNEarthQuake 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52F860 [missing_misc_b.cpp] CNDangerousGas 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52F950 [missing_misc_b.cpp] CNIceNiddleGroup 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52FA30 [missing_misc_b.cpp] CNIceNiddle 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_52FAD0 [missing_misc_b.cpp] CNEarthFire 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52FBC0 [missing_misc_b.cpp] CNShootingStar 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52FCA0 [missing_misc_b.cpp] CNShootingStarExp 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_52FD90 [missing_misc_b.cpp] CNThrowItemDestroyable 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_52FE30 [missing_misc_b.cpp] 散装补漏小函数（7L）【语义未逐行展开】
+sub_52FF20 [missing_misc_b.cpp] CNBouncer 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530010 [missing_misc_b.cpp] 散装补漏小函数（7L）【语义未逐行展开】
+sub_530040 [missing_misc_b.cpp] CNCreateOnDestroyObject 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530130 [missing_misc_b.cpp] CNFlyBombSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_5301D0 [missing_misc_b.cpp] CNSunkenRock 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530270 [missing_misc_b.cpp] CNRedRock 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530350 [missing_misc_b.cpp] CNDollMasterBubble 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530430 [missing_misc_b.cpp] CNMagicTargetWarning 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530500 [missing_misc_b.cpp] CNTemporaryHit 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5305E0 [missing_misc_b.cpp] CNForceField 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530710 [missing_misc_b.cpp] CNCircleAppendageMaker 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530800 [missing_misc_b.cpp] 散装补漏小函数（5L）【语义未逐行展开】
+sub_530970 [missing_misc_b.cpp] CNToothSFish 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530A60 [missing_misc_b.cpp] CNToothKurokuta 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530B50 [missing_misc_b.cpp] CNCurseBombSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530C40 [missing_misc_b.cpp] CNSummonMonsterWithEffect 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530D50 [missing_misc_b.cpp] CNBodyHit 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_530E30 [missing_misc_b.cpp] CNTrackingIceWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_531060 [missing_misc_b.cpp] CNSingleIceWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_531190 [missing_misc_b.cpp] CNEventBarrier 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5312C0 [missing_misc_b.cpp] 【音效 TAG 实证 WAVE_CREATE】7L：机关/技能 PO 触发时播 "WAVE_CREATE"
+sub_531420 [missing_misc_b.cpp] CNIceWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_531500 [missing_misc_b.cpp] CNSuplexSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5315E0 [missing_misc_b.cpp] CNEnergyBall 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5316C0 [missing_misc_b.cpp] CNEnergyBallSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_531810 [missing_misc_b.cpp] CNThrowSand 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5318F0 [missing_misc_b.cpp] CNRoarStun 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_531A80 [missing_misc_b.cpp] CNEnergyField 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_531B90 [missing_misc_b.cpp] CNBlastBlood 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_531CA0 [missing_misc_b.cpp] CNBlastBloodSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_531DB0 [missing_misc_b.cpp] CNGhost 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_531F30 [missing_misc_b.cpp] CNFireWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532010 [missing_misc_b.cpp] CNSpiralNen 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532120 [missing_misc_b.cpp] CNClosePunchSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532250 [missing_misc_b.cpp] CNGunnerBullet 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532330 [missing_misc_b.cpp] CNGunnerSubWeaponBullet 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532440 [missing_misc_b.cpp] CNExsViperBullet 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5326C0 [missing_misc_b.cpp] CNGunnerLaser 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532760 [missing_misc_b.cpp] CNNenGuard 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532900 [missing_misc_b.cpp] CNTombStoneRain 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5329E0 [missing_misc_b.cpp] CNTombStone 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532AC0 [missing_misc_b.cpp] CNDropBomb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532BA0 [missing_misc_b.cpp] CNTreadShootSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532CD0 [missing_misc_b.cpp] CNAshenForkSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532DB0 [missing_misc_b.cpp] CNGrabBlastBlood 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_532E90 [missing_misc_b.cpp] 【音效 TAG 实证 WAVE_CANCLE】7L：波/机关取消时播 "WAVE_CANCLE"（原拼写如此）
+sub_532F70 [missing_misc_b.cpp] CNGrandWave 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_533050 [missing_misc_b.cpp] CNDecoy 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_533130 [missing_misc_b.cpp] CNChaser 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_533220 [missing_misc_b.cpp] CNMagicMissile 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_533300 [missing_misc_b.cpp] CNLaunchJOL 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5333E0 [missing_misc_b.cpp] CNLaunchFrostHead 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5334C0 [missing_misc_b.cpp] 【音效 TAG 实证 LAUNCH_FLUORESCENT】9L：荧光发射机关音效
+sub_5336C0 [missing_misc_b.cpp] CNThrowWeb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_5337D0 [missing_misc_b.cpp] CNLaunchBlackCat 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5338B0 [missing_misc_b.cpp] ★ CNVoid 构造器【音效 TAG 实证 VOID】：基座 → vtbl_CNVoid → sub_49A7B0(1, 图像ID,...) | → sub_4015C0(+229, "VOID", 4)（音效名槽写入）
+sub_533C10 [missing_misc_b.cpp] CNHalloweenBuster 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_533CF0 [missing_misc_b.cpp] CNHalloweenBusterSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_533DD0 [missing_misc_b.cpp] 【音效 TAG 实证 SUN_BURST】9L：阳光爆发 PO 触发音（联动 gunner_skills.cpp CNSunBurst）
+sub_5340A0 [missing_misc_b.cpp] 【音效 TAG 实证 QUICK_TURN】8L：快速转身 PO 音效（枪手 QUICK_TURN 指令）
+sub_5343B0 [missing_misc_b.cpp] CNNapalmBomb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534580 [missing_misc_b.cpp] CNTargetItBall 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534660 [missing_misc_b.cpp] CNHunterSpittle 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534700 [missing_misc_b.cpp] CNZombieEye 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5347A0 [missing_misc_b.cpp] CNZombieEyeExplode 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534840 [missing_misc_b.cpp] CNKagelBomb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5348A0 [missing_misc_b.cpp] CNKagelBombSub 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534990 [missing_misc_b.cpp] CNSpaceFishBug 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534A90 [missing_misc_b.cpp] 散装补漏小函数（7L）【语义未逐行展开】
+sub_534AF0 [missing_misc_b.cpp] 散装补漏小函数（5L）【语义未逐行展开】
+sub_534B20 [missing_misc_b.cpp] CNLOLLaser 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534BC0 [missing_misc_b.cpp] CNBronzeGolemBullets 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534C60 [missing_misc_b.cpp] CNIceWaveUp 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534D40 [missing_misc_b.cpp] CNStoneBlade 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_534EB0 [missing_misc_b.cpp] CNPierceHeadLegOfLotus 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534F40 [missing_misc_b.cpp] CNGrabbingLegOfLotus 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_534FA0 [missing_misc_b.cpp] CNZepplinBullet 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_535010 [missing_misc_b.cpp] CNDendroidSeed 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_5351F0 [missing_misc_b.cpp] CNDendroidNeedle 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_5352D0 [missing_misc_b.cpp] CNOntoLandMakePassiveObject 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_5353D0 [missing_misc_b.cpp] CNRisingShuriken 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_535450 [missing_misc_b.cpp] CNFallingShuriken 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_535520 [missing_misc_b.cpp] CNGhoulSkull 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_535560 [missing_misc_b.cpp] CNGhoulSkullBomb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_535600 [missing_misc_b.cpp] CNCobWeb 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_535670 [missing_misc_b.cpp] ★ 蜘蛛 BOSS 导弹烟雾（37L）【资源实证】：sub_4C3640("PassiveObject/Monster/Spider/ | Particle/BossMissileSmog.ptl")（P36 发射器）
+sub_535850 [missing_misc_b.cpp] CNAraclothoSpark 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 无
+sub_5358C0 [missing_misc_b.cpp] CNSpectressBat 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_5359F0 [missing_misc_b.cpp] CNEvilEyeSmallLOLLaser 构造器（PO 类，虚表名直证）：基座 sub_52EA60/52ED60 系 → 数据解析 sub_6xxxxx
+sub_535AD0 [gunner_skills.cpp] CNMineTrap 构造器（地雷）：CNRDTrap 基座 + 双 vftbl（+0/+972）+ sub_61FC40/sub_620090 解析
+sub_535C50 [gunner_skills.cpp] CNRollingStone 构造器（滚石陷阱）：+992/+996 两个 szPassword 字符串槽 + sub_6201B0/620540
+sub_535DB0 [gunner_skills.cpp] CNTrapCage 构造器（陷阱笼）
+sub_535E90 [gunner_skills.cpp] CNChandelier 构造器（吊灯，可击落破坏物）：+244..246 清零
+sub_535FC0 [gunner_skills.cpp] CNWindShaker 构造器（摇风机/风扇机关）
+sub_5360F0 [gunner_skills.cpp] CNSpiner 构造器（旋转刺/转盘机关）
+sub_5361D0 [gunner_skills.cpp] CNSpaceFishLair 构造器（天空鱼巢，spawn 点）：+276 清零 + vmt2F4 装附属
+sub_5362F0 [gunner_skills.cpp] CNExplosiveOil 构造器（爆炸油桶，可引爆破坏物）
+sub_536350 [gunner_skills.cpp] CNHallucinationFlower 构造器（幻觉花）
+sub_536430 [gunner_skills.cpp] CNSwamp 构造器（沼泽，减速/束缚地面）：+1112 计时位、+1108 CNTimer、+1096 标志、+276=a5 类型
+sub_5364E0 [gunner_skills.cpp] CNStarFishEggRequid 构造器（海星卵-鱿鱼变体）：CNSwamp(17,2) 参数化
+sub_536510 [gunner_skills.cpp] CNMagmaSwamp 构造器（岩浆沼泽）：CNSwamp 全参透传
+sub_536590 [gunner_skills.cpp] CNFloorNiddle 构造器（地刺机关）
+sub_536630 [gunner_skills.cpp] CNGoblinBunker 构造器（哥布林碉堡）：+280 清零 + vmt2E4 附属
+sub_536770 [gunner_skills.cpp] CNTwistFootHold 构造器（扭转立足点）
+sub_536850 [gunner_skills.cpp] CNSeaGrass 构造器（海草，缠绕系）
+sub_536930 [gunner_skills.cpp] CNEntangleVineTrigger 构造器（藤蔓触发器）：+980 CNTimer、+992 使能、+996..1024 参数区
+sub_536A60 [gunner_skills.cpp] CNEntangleVine 构造器（缠绕藤蔓本体）：+246 清零
+sub_536B40 [gunner_skills.cpp] CNStarfishEgg 构造器（海星卵，孵化巢）：+972 CNTimer、+984 使能
+sub_536C30 [gunner_skills.cpp] CNSweepingLegOfLotus 构造器（横扫莲花腿）：基座 sub_534E50 + sub_628260
+sub_536CC0 [gunner_skills.cpp] CNPassiveObjectTrigger 构造器（通用 PO 触发器）
+sub_536D60 [gunner_skills.cpp] CNBellForZealots 构造器（狂信者之钟）：vmt2E4 附属
+sub_536E00 [gunner_skills.cpp] CNGravityChanger 构造器（重力反转区域）
+sub_536EE0 [gunner_skills.cpp] CNDroppingRockTrigger 构造器（落石触发器）
+sub_536F80 [gunner_skills.cpp] CNDroppingRock 构造器（落石本体）
+sub_537020 [gunner_skills.cpp] CNFlappingBanner 构造器（飘扬旗帜，装饰破坏物）
+sub_537130 [gunner_skills.cpp] CNBehemothHelipad 构造器（贝希摩斯停机坪）：CNRDObject__vmtCC(100, 图像ID, 0,0,0,0) 设定显示
+sub_5371E0 [gunner_skills.cpp] CNDragonHeadSide 构造器（侧面龙首炮台基类）：vmt2E4 附属
+sub_5372C0 [gunner_skills.cpp] ★ CNDragonHeadSideFlame 构造器（侧龙首-火焰）【资源实证】：new(0x12C) 粒子发射器 → | sub_4C3640("Particle/FlameThrower.ptl", this)（P36 发射器挂接）→ +280 存发射器、+281=80、+282=50 参数
+sub_537400 [gunner_skills.cpp] CNDragonHeadSideNentan 构造器（侧龙首-燃烧弹 Nentan）
+sub_5374E0 [gunner_skills.cpp] CNDragonHeadSideGas 构造器（侧龙首-毒瓦斯）
+sub_5375C0 [gunner_skills.cpp] ★ CNDragonHeadFrontFlame 构造器（正面龙首-火焰）【资源实证】：sub_4C3640( | "Particle/FlameThrowerVertical.ptl")（垂直喷射粒子）→ +1120 存发射器、+1124=42、+1128=55
+sub_5376C0 [gunner_skills.cpp] CNDragonHeadFrontNentan 构造器（正面龙首-燃烧弹）
+sub_537730 [gunner_skills.cpp] CNDragonHeadFrontGas 构造器（正面龙首-毒瓦斯）
+sub_5377A0 [gunner_skills.cpp] CNCystalPillar 构造器（水晶柱，RTTI 原名拼写 Cystal）
+sub_537840 [gunner_skills.cpp] CNEyeofObserver 构造器（观察者之眼，巨型雕像炮台）
+sub_537920 [gunner_skills.cpp] CNActiveObserver 构造器（活动观察者，可动炮台）
+sub_537A00 [gunner_skills.cpp] CNLightBulb 构造器（灯泡破坏物）
+sub_537AE0 [gunner_skills.cpp] CNWaterDrop 构造器（水滴机关）
+sub_537BC0 [gunner_skills.cpp] ★ CNFreezingLuna 构造器（冰冻露娜，冰属性地面）【资源实证】：vmt2F4 附属 + | sub_4C3640("Particle/steam.ptl")（蒸汽粒子发射器）→ +282 存储
+sub_537D30 [gunner_skills.cpp] CNTreeCross 构造器（十字树/路标）
+sub_537E10 [gunner_skills.cpp] CNSkeletonPile 构造器（骸骨堆破坏物）
+sub_537EF0 [gunner_skills.cpp] CNSpiderSpawn 构造器（蜘蛛卵/蜘蛛巢）
+sub_537FD0 [gunner_skills.cpp] CN2StoryBox 构造器（双层箱破坏物）
+sub_5380B0 [gunner_skills.cpp] CNGrenselosBunker 构造器（格伦塞洛斯碉堡）：+280 清零
+sub_5381D0 [gunner_skills.cpp] CNQuestCage 构造器（任务笼）：+1100 演出未播位、+276 背景板槽清零
+sub_5384F0 [gunner_skills.cpp] CNHPFairy 构造器（HP 精灵）
+sub_5385A0 [gunner_skills.cpp] CNMPFairy 构造器（MP 精灵）
+sub_538650 [gunner_skills.cpp] CNHPMPFairy 构造器（HP/MP 双回复精灵）
+sub_538700 [gunner_skills.cpp] CNSuperArmorFairy 构造器（霸体精灵）
+sub_5387B0 [gunner_skills.cpp] CNHasteFairy 构造器（加速精灵）
+sub_538860 [gunner_skills.cpp] CNBlessFairy 构造器（祝福精灵）
+sub_538910 [gunner_skills.cpp] CNInvinsibleFairy 构造器（无敌精灵，RTTI 原名拼写 Invinsible）
+sub_5389C0 [gunner_skills.cpp] CNFairyFactory 构造器（精灵工厂，按表刷精灵）
+sub_538AA0 [gunner_skills.cpp] CNActionTree 构造器（剧情互动树，CNMapObject 系）
+sub_538B90 [gunner_skills.cpp] CNSoundFloor 构造器（音效地板/踩踏发声板）：+1100 szPassword 字符串槽（音名?）、+1096 使能
+sub_538CA0 [gunner_skills.cpp] CNFountain 构造器（喷泉装饰）
+sub_538D90 [gunner_skills.cpp] CNCircleAppendageENCHANTWEAPON 构造器（武器附魔光圈附件）：+248 清零
+sub_538EB0 [gunner_skills.cpp] CNCircleAppendageCHANGE_WEAPON_ELEMENT 构造器（武器属性变更附件）
+sub_538F70 [gunner_skills.cpp] CNCircleAppendageCHANGESTATE 构造器（状态变更附件）：+1001 清零
+sub_5390B0 [gunner_skills.cpp] CNCircleAppendageDISENCHANT 构造器（解除附魔附件）
+sub_539140 [gunner_skills.cpp] CNGravityChangeBack 构造器（重力恢复区域，与 GravityChanger 配对）
+sub_539220 [gunner_skills.cpp] CNStorageBird 构造器（仓储鸟，搬运/储物机关）
+sub_539300 [gunner_skills.cpp] CNFallingStorage 构造器（坠落仓储）
+sub_5393E0 [gunner_skills.cpp] CNStorageSub 构造器（仓储子体）
+sub_539480 [gunner_skills.cpp] CNEPLPCampFire 构造器（EPLP 营火，回复点装饰）
+sub_539520 [gunner_skills.cpp] CNPoisonBug 构造器（毒虫机关）：+976 CNTimer、+988 使能、+992..1000 参数区
+sub_539650 [gunner_skills.cpp] CNAuxoRoot 构造器（荆棘根/藤蔓攻击体）
+sub_5397C0 [gunner_skills.cpp] CNFireBallCommon 构造器（通用火球投射体）
+sub_53A1B0 [gunner_skills.cpp] CNOlreksExplosiveOil 构造器（奥尔克爆炸油桶，CNExplosiveOil 派生）

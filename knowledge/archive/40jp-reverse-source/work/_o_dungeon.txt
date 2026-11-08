@@ -1,0 +1,45 @@
+===== +197 (0xC5) reads=4 writes=16
+  [R] src\game\broadcast_debug.cpp:3916  fld_e197 = (void (/*thiscall*/ ***)(uint32_t, int))*(this + 197);
+        fn: 0x423FD0 sub_423FD0 —— HUD 资源析构
+  [R] src\game\rtti_core.cpp:1398  sub_41A590((unsigned int)(pArg1 + 197), v21, 0);
+        fn: 0x4A1210 sub_4A1210
+  [R] src\game\rtti_core.cpp:1492  sub_41A630((unsigned int)(this + 197));
+        fn: 0x4A1670 sub_4A1670
+  [R] src\game\rtti_core.cpp:1853  sub_41A580(this + 197);
+        fn: 0x4A1F00 sub_4A1F00
+===== +198 (0xC6) reads=7 writes=18
+  [R] src\game\broadcast_debug.cpp:3920  fld_e198 = (void (/*thiscall*/ ***)(uint32_t, int))*(this + 198);
+        fn: 0x423FD0 sub_423FD0 —— HUD 资源析构
+  [R] src\game\pvp_ui.cpp:7271  sub_40FC80(dword_7931182 + 198, v11 - 1, v19);
+        fn: 0x52B100 CNRDPVPInterface__vmt0
+  [R] src\game\rtti_core.cpp:11483  (unsigned int)(this + 198),
+        fn: 0x4AF330 sub_4AF330
+  [R] src\game\ui_icon_perf.cpp:3583  pThis_C6 = (uint8_t *)(this + 198);
+        fn: 0x463FB0 sub_463FB0 —— 快捷栏逐帧刷新（悬停/点击/商店/任务）
+===== +216 (0xD8) reads=209 writes=63
+  [R] src\cnrd\ActiveObjectEquipment.cpp:395  result = (*(int(**)(void))(*(int*)result + 216))();
+        fn: 0x52D940 vmt320 —— 18 观察者 vt+216 全广播
+  [R] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:615  (*(void (/*thiscall*/ **)(int, int))(*(uint32_t *)pArg1 + 216))(pArg1, 11);
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+  [R] src\combat\bigfunc_5EA970_sub_5EA970.cpp:461  (*(void (/*thiscall*/ **)(int, int))(*(uint32_t *)this + 216))(this, 11);
+        fn: 0x5EA970 sub_5EA970  size=10856
+  [R] src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:484  (*(void (/*thiscall*/ **)(char *, int))(*(uint32_t *)this + 216))(this, 12);
+        fn: 0x5F39F0 sub_5F39F0  size=11125
+===== +253 (0xFD) reads=32 writes=16
+  [R] src\combat\breakable_map.cpp:6285  pThis_FD = this + 253;
+        fn: 0x627480 sub_627480 —— 登记表去重追加
+  [R] src\combat\passive_object.cpp:7113  fld_e253 = (int (/*thiscall*/ ***)(uint32_t, int))*(this + 253);
+        fn: 0x6073C0 sub_6073C0 —— 句柄释放 thunk
+  [R] src\combat\passive_object.cpp:7815  fld_e253 = (int *)*(this + 253);
+        fn: 0x607E70 CNGunnerBullet__vmt14C
+  [R] src\combat\passive_object.cpp:7822  (*(void (/*thiscall*/ **)(uint32_t, int))(v25 + 40))(*(this + 253), v28);
+        fn: 0x607E70 CNGunnerBullet__vmt14C
+===== +254 (0xFE) reads=30 writes=19
+  [R] src\combat\breakable_map.cpp:6026  fld_e254 = *(this + 254);
+        fn: 0x627060 sub_627060 —— 登记表按值删除
+  [R] src\combat\breakable_map.cpp:6029  if ( nArg2 == *(uint32_t *)(*(this + 254) + 4 * i) )
+        fn: 0x627060 sub_627060 —— 登记表按值删除
+  [R] src\combat\breakable_map.cpp:6032  (void *)(*(this + 254) + 4 * i),
+        fn: 0x627060 sub_627060 —— 登记表按值删除
+  [R] src\combat\breakable_map.cpp:6033  (const void *)(*(this + 254) + 4 * i + 4),
+        fn: 0x627060 sub_627060 —— 登记表按值删除

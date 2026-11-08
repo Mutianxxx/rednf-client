@@ -1,0 +1,499 @@
+========== 0x655DB0 (line 6230)
+// 0x655DB0 sub_655DB0 —— 记录表态查询（全 3 或 1 型）
+//   遍历 ·this+48 起 20 字节记录（至 +52）：全为 3 或 1 型返回 1【推断：等待态全就绪】。
+// ------------------------------------------------------------
+char /*thiscall*/ sub_655DB0(uint32_t *this)
+{
+  int fld_e12; // edi
+  unsigned int v2; // esi
+  int v3; // ebx
+  int fld_e122; // edx
+
+  fld_e12 = *(this + 12);
+  v2 = 0;
+  v3 = 0;
+  while ( fld_e12 != 0 && v2 < (*(this + 13) - fld_e12) / 20 )
+  {
+    fld_e122 = *(uint32_t *)(*(this + 12) + v3);
+    if ( fld_e122 != 3 && fld_e122 != 1 )
+      return 0;
+    ++v2;
+    v3 += 20;
+  }
+  return 1;
+}
+
+
+
+// ------------------------------------------------------------
+========== 0x656560 (line 6724)
+// 0x656560 sub_656560 —— 槽位失效（置 3 免复位 + 全表复位统计）
+//   确保表长 ≥ pArg2+1 后把第 pArg2 条置 3 型（·sub_655FA0 对 3 型记录跳过清零），再整表复位并统计非 3 条数写 +40、清 +36、索引归 0。
+//   CNRDUdpModule vmt68 派发链末端 ·0x4457A0 调用 —— UDP 槽位表初始化。
+// ------------------------------------------------------------
+unsigned int /*thiscall*/ sub_656560(int *this, int pArg2)
+{
+  int fld_e12; // eax
+  int *pThis_B; // esi
+  uint32_t *fld_e122; // eax
+  unsigned int v7; // edi
+  unsigned int result; // eax
+  uint32_t Block[5]; // [esp+Ch] [ebp-14h] BYREF
+  int v10; // [esp+28h] [ebp+8h]
+  int i; // [esp+28h] [ebp+8h]
+
+  fld_e12 = *(this + 12);
+  pThis_B = this + 11;
+  if ( fld_e12 != 0 )
+    fld_e12 = (*(this + 13) - fld_e12) / 20;
+  if ( fld_e12 < pArg2 + 1 )
+  {
+    v10 = pArg2 + 1 - fld_e12;
+    do
+    {
+      sub_6564D0(pThis_B, Block);
+      --v10;
+    }
+    while ( v10 != 0 );
+  }
+  fld_e122 = (uint32_t *)(*(this + 12) + 20 * pArg2);
+  if ( *fld_e122 != 3 )
+    *fld_e122 = 3;
+  sub_655FA0((int)this);
+  v7 = 0;
+  *(this + 10) = 0;
+  for ( i = 0; ; i += 20 )
+  {
+    result = pThis_B[1];
+    if ( result == 0 )
+      break;
+========== 0x656630 (line 6778)
+// 0x656630 sub_656630 —— 单条复位（+4 置 60.0 + 统计非 3 条数）
+//   确保表长后把第 pArg2 条类型/超时(60.0)/累积/标志全部重置，再统计非 3 条数写 +40 —— 与 ·sub_656560 同族（差异：不整表复位，CNMainGameModule 逐槽调用）。
+// ------------------------------------------------------------
+unsigned int /*thiscall*/ sub_656630(int *this, int pArg2)
+{
+  int fld_e12; // eax
+  int *pThis_B; // ebx
+  unsigned int v6; // edi
+  unsigned int result; // eax
+  uint32_t Block[5]; // [esp+Ch] [ebp-14h] BYREF
+  int v9; // [esp+28h] [ebp+8h]
+  int i; // [esp+28h] [ebp+8h]
+
+  fld_e12 = *(this + 12);
+  pThis_B = this + 11;
+  if ( fld_e12 != 0 )
+    fld_e12 = (*(this + 13) - fld_e12) / 20;
+  if ( fld_e12 < pArg2 + 1 )
+  {
+    v9 = pArg2 + 1 - fld_e12;
+    do
+    {
+      sub_6564D0(pThis_B, Block);
+      --v9;
+    }
+    while ( v9 != 0 );
+  }
+  *(uint32_t *)(*(this + 12) + 20 * pArg2 + 4) = 1114636288;
+  *(uint32_t *)(20 * pArg2 + *(this + 12) + 8) = 0;
+  *(uint32_t *)(20 * pArg2 + *(this + 12) + 12) = 0;
+  *(uint8_t *)(20 * pArg2 + *(this + 12) + 16) = 0;
+  *(uint32_t *)(20 * pArg2 + *(this + 12)) = 0;
+  *(uint32_t *)(20 * pArg2 + *(this + 12) + 8) = 0;
+  *(this + 10) = 0;
+  v6 = 0;
+  for ( i = 0; ; i += 20 )
+  {
+    result = pThis_B[1];
+    if ( result == 0 )
+      break;
+========== 0x656E20 (line 7358)
+// 0x656E20 sub_656E20 [串: "list<T> too long"]
+// ------------------------------------------------------------
+int /*thiscall*/ sub_656E20(uint32_t *this, unsigned int uArg2)
+{
+  int fld_e2; // eax
+  int result; // eax
+  void **pExceptionObject; // [esp+4h] [ebp-50h] BYREF
+  uint8_t v5[20]; // [esp+2Ch] [ebp-28h] BYREF
+  int v6; // [esp+40h] [ebp-14h]
+  int v7; // [esp+44h] [ebp-10h]
+  int v8; // [esp+50h] [ebp-4h]
+
+  fld_e2 = *(this + 2);
+  if ( 0x3FFFFFFF - fld_e2 < uArg2 )
+  {
+    v7 = 15;
+    v6 = 0;
+    v5[4] = 0;
+    sub_4015C0("list<T> too long", 0x10u);
+    v8 = 0;
+    sub_401740(v5);
+    pExceptionObject = &std::length_error::`vftable';
+    _CxxThrowException(&pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+  }
+  result = uArg2 + fld_e2;
+  *(this + 2) = result;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+========== 0x656720 (line 6831)
+// 0x656720 sub_656720 —— 载荷追加（int16 长度前缀 + 数据）
+//   写 int16 长度再 qmemcpy 数据到宿主写缓冲（游标 +2048、上限 +2060），空间不足返回 0 —— 与 ·sub_657070 同族的打包写入器【推断】。
+// ------------------------------------------------------------
+char /*thiscall*/ sub_656720(uint32_t *this, const void *pArg2, int16_t uArg3)
+{
+  int fld_e512; // ecx
+  int fld_e5122; // ecx
+
+  fld_e512 = *(this + 512);
+  if ( fld_e512 + uArg3 > *(this + 515) )
+    return 0;
+  *(uint16_t *)((char *)this + fld_e512) = uArg3;
+  fld_e5122 = *(this + 512) + 2;
+  *(this + 512) = fld_e5122;
+  qmemcpy((char *)this + fld_e5122, pArg2, uArg3);
+  *(this + 512) += uArg3;
+  return 1;
+}
+
+
+
+// ------------------------------------------------------------
+========== 0x6569D0 (line 7099)
+// 0x6569D0 sub_6569D0
+// ------------------------------------------------------------
+// 【解读】
+//   通用双向链表清空器: free 全部节点 + 哨兵自指 + 计数清零。
+//   全引擎复用（0x40/0x41 区大量析构链调用）。
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_6569D0(uint32_t *this)
+{
+  uint32_t **fld_e1; // ecx
+  uint32_t *result; // eax
+  bool fld_e12; // zf
+  uint32_t *v5; // edi
+
+  fld_e1 = (uint32_t **)*(this + 1);
+  result = *fld_e1;
+  *fld_e1 = fld_e1;
+  *(uint32_t *)(*(this + 1) + 4) = *(this + 1);
+  fld_e12 = result == (uint32_t *)*(this + 1);
+  *(this + 2) = 0;
+  if ( !fld_e12 )
+  {
+    do
+    {
+      v5 = (uint32_t *)*result;
+      j__free(result);
+      result = v5;
+    }
+    while ( v5 != (uint32_t *)*(this + 1) );
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+========== 0x656A10 (line 7134)
+// 0x656A10 sub_656A10 —— 通道全清 + 网络对象关闭
+//   8 槽逐一对端释放（·sub_659600）并清长度/计数，再 ·sub_658900 停监听（+1084/+1120 门 + socket 排空），最后清 this+52 待分发链（哨兵自指 + free 全部节点）。
+//   ·sub_656D00 析构链首步；·CNRDUdpModule__vmt98 收尾亦调用。
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_656A10(uint32_t *this)
+{
+  uint32_t *pThis; // edi
+  int16_t *v3; // esi
+  uint32_t **fld_e13; // ecx
+  uint32_t *result; // eax
+  bool fld_e132; // zf
+  uint32_t *v7; // esi
+
+  pThis = this;
+  v3 = &word_9B9D50;
+  do
+  {
+    if ( *pThis != -1 )
+    {
+      sub_659600(*pThis);
+      *pThis = 0;
+      *pThis = -1;
+    }
+    *((uint32_t *)v3 + 1) = 0;
+    *(uint32_t *)v3 = 0;
+    v3 += 1032;
+    ++pThis;
+  }
+  while ( (int)v3 < (int)word_9BDDD0 );
+  sub_658900(*(this + 8));
+  fld_e13 = (uint32_t **)*(this + 13);
+  result = *fld_e13;
+  *fld_e13 = fld_e13;
+  *(uint32_t *)(*(this + 13) + 4) = *(this + 13);
+  fld_e132 = result == (uint32_t *)*(this + 13);
+  *(this + 14) = 0;
+  if ( !fld_e132 )
+  {
+    do
+    {
+========== 0x656AA0 (line 7186)
+// 0x656AA0 sub_656AA0 —— 主 tick（收包分发 + 可靠流重组）
+//   先清 this+52 待分发链：逐节点以回调 *(this+36)(编号, 载荷+4, 长度+2052) 投递后 free。
+//   监听门 *(this+32)+1120 打开时：·sub_6585C0 通道保活/重传打点、·sub_658850 通道超时 tick、每超 60ms ·sub_656970 冲刷缓冲，再以 ·sub_657A90（MTUPD::
+//   可靠流按 int16 长度前缀在 word_7960F8 重组，超 dword_796904 上限置 dword_796900 丢弃标记 —— CNMainGameModule 逐帧声音通道 tick。
+// ------------------------------------------------------------
+char /*thiscall*/ sub_656AA0(int this)
+{
+  uint32_t *fld_34; // eax
+  uint32_t *v3; // edi
+  int v4; // esi
+  uint32_t **fld_342; // ecx
+  uint32_t *v6; // eax
+  bool fld_343; // zf
+  uint32_t *v8; // esi
+  uint16_t k; // ax
+  uint16_t j; // ax
+  int v11; // edx
+  int dword_7968FC2; // eax
+  int16_t v13; // cx
+  int v14; // eax
+  uint32_t *i; // [esp+Ch] [ebp-810h]
+  uint8_t v17[6]; // [esp+10h] [ebp-80Ch] BYREF
+  char v18; // [esp+16h] [ebp-806h] BYREF
+  uint8_t v19; // [esp+17h] [ebp-805h] BYREF
+  uint8_t v20[2048]; // [esp+18h] [ebp-804h] BYREF
+  int dword_796E502; // [esp+818h] [ebp-4h]
+
+  dword_796E502 = dword_796E50;
+  fld_34 = *(uint32_t **)(this + 52);
+  v3 = (uint32_t *)*fld_34;
+  for ( i = fld_34; v3 != i; v3 = (uint32_t *)*v3 )
+  {
+    v4 = v3[2];
+    v18 = *(uint8_t *)(v4 + 2069);
+    v19 = *(uint8_t *)(v4 + 2068);
+    (***(void (/*thiscall*/ ****)(uint32_t, uint32_t, int, uint32_t))(this + 36))(
+      *(uint32_t *)(this + 36),
+      v19,
+      v4 + 4,
+      *(uint16_t *)(v4 + 2052));
+========== 0x656EF0 (line 7410)
+// 0x656EF0 sub_656EF0 —— 载荷投递（本机入环 / 远端缓冲 / 不可靠直发）
+//   Block==-1 取默认通道 this+10；与当前索引 *(this+8)+1096 相同则 new 2072B 载荷（·sub_659790 + ·sub_6597C0 写入长度/数据/标志）挂入 this+52 待分发环并
+//   远端通道句柄非 -1 时：nArg5!=0 经 ·sub_656720 追加发送缓冲（满则 ·sub_657FD0 冲刷重试），否则 ·sub_658350 不可靠直发（MTUPD::UnreliableSendTo）。
+// ------------------------------------------------------------
+char /*thiscall*/ sub_656EF0(int *this, const void *pArg2, int nArg3, int Block, int nArg5)
+{
+  int fld_e10; // ebx
+  void *pMem; // eax
+  int v8; // eax
+  int fld_e13; // esi
+  int v10; // ebx
+  int v11; // eax
+  uint32_t *v12; // esi
+
+  fld_e10 = Block;
+  if ( Block == -1 )
+    fld_e10 = *(this + 10);
+  if ( *(uint32_t *)(*(this + 8) + 1096) == fld_e10 )
+  {
+    pMem = operator new(0x818u);
+    Block = (int)pMem;
+    if ( pMem != nullptr )
+      v8 = sub_659790(pMem);
+    else
+      v8 = 0;
+    Block = v8;
+    sub_6597C0(0, 0, nArg3, pArg2, fld_e10, 0);
+    fld_e13 = *(this + 13);
+    v10 = sub_40C0F0(fld_e13, *(uint32_t *)(fld_e13 + 4), &Block);
+    LOBYTE(v11) = sub_656E20(this + 12, 1u);
+    *(uint32_t *)(fld_e13 + 4) = v10;
+    **(uint32_t **)(v10 + 4) = v10;
+  }
+  else
+  {
+    v11 = *(this + fld_e10);
+    if ( v11 != -1 )
+    {
+      if ( nArg5 != 0 )
+      {
+========== 0x657070 (line 7478)
+// 0x657070 sub_657070 —— 有界缓冲追加（越界抛 CMsgCell）
+//   uint16 长度 + 写游标 this+14 超过容量 this+8 时抛 CMsgCell 异常，否则 qmemcpy 到缓冲 this+4 并推进游标 —— SendByTCP 组包链写入器（容量 0x2000 由调用式样自
+// ------------------------------------------------------------
+int /*thiscall*/ sub_657070(int this, const void *pArg2, int nArg3)
+{
+  int result; // eax
+  int fld_E; // edx
+
+  result = this;
+  fld_E = *(uint16_t *)(this + 14);
+  if ( (uint16_t)nArg3 + fld_E > *(uint32_t *)(this + 8) )
+    _CxxThrowException((char *)&nArg3 + 3, (_ThrowInfo *)&_TI1_AVException_CMsgCell__);
+  qmemcpy((void *)(fld_E + *(uint32_t *)(this + 4)), pArg2, (uint16_t)nArg3);
+  *(uint16_t *)(this + 14) += nArg3;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+========== 0x651F00 (line 1968)
+// 0x651F00 sub_651F00 —— vector(uint32) 尾插单元
+//   空间足够直写（·sub_651B60，步长 1），否则走 ·sub_651CC0 增长插入。
+// ------------------------------------------------------------
+void /*thiscall*/ sub_651F00(int *this, uint32_t *uArg2)
+{
+  int fld_e1; // edx
+  unsigned int fld_e2; // ecx
+  uint32_t *fld_e22; // edi
+
+  fld_e1 = *(this + 1);
+  if ( fld_e1 != 0 )
+    fld_e2 = (*(this + 2) - fld_e1) >> 2;
+  else
+    fld_e2 = 0;
+  if ( fld_e1 != 0 && fld_e2 < (*(this + 3) - fld_e1) >> 2 )
+  {
+    fld_e22 = (uint32_t *)*(this + 2);
+    sub_651B60(fld_e22, (uint32_t *)1, uArg2);
+    *(this + 2) = (int)(fld_e22 + 1);
+  }
+  else
+  {
+    sub_651CC0((int)this, *(this + 2), 1u, uArg2);
+  }
+}
+
+
+
+// ------------------------------------------------------------
+========== 0x6520B0 (line 2093)
+// 0x6520B0 sub_6520B0
+// ------------------------------------------------------------
+// 【解读】
+//   应用 Character/Fighter/Effect/Animation/Provocationed.ani（斗气爆发）—— 格斗家演出切换（__RTDynamicCast + 动画接口族）。
+// ------------------------------------------------------------
+int /*thiscall*/ sub_6520B0(int *this)
+{
+  int v1; // ebx
+  int fld_e1; // esi
+  char *v4; // eax
+  char *v5; // edi
+  int v6; // eax
+  int v7; // ebx
+  int v8; // edi
+  int v9; // eax
+  int v10; // eax
+  int result; // eax
+  int v12; // [esp-4h] [ebp-2Ch]
+  int fld_e9; // [esp+10h] [ebp-18h]
+  int pObj; // [esp+14h] [ebp-14h]
+  char *pObj2; // [esp+18h] [ebp-10h]
+
+  v1 = 0;
+  fld_e1 = *(this + 1);
+  pObj = __RTDynamicCast(fld_e1, 0, &IRDActiveObject `RTTI Type Descriptor', &IRDMonster `RTTI Type Descriptor', 0);
+  fld_e9 = __RTDynamicCast(
+          *(this + 9),
+          0,
+          &IRDCollisionObject `RTTI Type Descriptor',
+          &IRDActiveObject `RTTI Type Descriptor',
+          0);
+  if ( sub_42FCB0(228) != 0 )
+    v1 = sub_431860((char)"Character/Fighter/Effect/Animation/Provocationed.ani", 1);
+  v4 = (char *)sub_44B6C0(284);
+  v5 = v4;
+  if ( v4 != nullptr )
+  {
+    sub_44E0D0(v4, v1, 1);
+    *(uint32_t *)v5 = &CNRDPooledObject::`vftable';
+  }
+========== 0x650820 (line 592)
+// 0x650820 sub_650820 —— 百分比插值（宿主 vt+736 / vt+740）【推断：进度/蓄力条】
+//   v14=vt+736×100、v15=v14/vt+740 得百分比；+80≥v15 时以 +84/+88 与 +92/+96 为起止值经 ·sub_4049C0 插值（进度 0..+80），分别累加进 pArg2 的 +60 与
+// ------------------------------------------------------------
+void /*thiscall*/ sub_650820(uint32_t *this, int pArg2)
+{
+  int fld_e1; // edi
+  int fld_e20; // ebx
+  int v5; // eax
+  int v6; // edx
+  double fld_e202; // st7
+  int v8; // eax
+  int v9; // edx
+  float fld_e21; // [esp+0h] [ebp-28h]
+  float fld_e23; // [esp+0h] [ebp-28h]
+  float fld_e22; // [esp+4h] [ebp-24h]
+  float fld_e24; // [esp+4h] [ebp-24h]
+  float v14; // [esp+20h] [ebp-8h]
+  float v15; // [esp+24h] [ebp-4h]
+
+  fld_e1 = *(this + 1);
+  v14 = (double)(*(int (/*fastcall*/ **)(int))(*(uint32_t *)fld_e1 + 736))(fld_e1) * 100.0;
+  v15 = v14 / (double)(*(int (/*thiscall*/ **)(int))(*(uint32_t *)fld_e1 + 740))(fld_e1);
+  if ( (double)(int)*(this + 20) >= v15 )
+  {
+    fld_e22 = (float)(int)*(this + 22);
+    fld_e21 = (float)(int)*(this + 21);
+    fld_e20 = (uint64_t)sub_4049C0(
+                             fld_e21,
+                             fld_e22,
+                             (uint64_t)(((double)(int)*(this + 20) - v15) * 1000.0),
+                             (uint64_t)(1000.0 * (double)(int)*(this + 20)));
+    v5 = sub_41A5E0(pArg2 + 60);
+    sub_41A590(pArg2 + 60, v6, fld_e20 + v5);
+    fld_e24 = (float)(int)*(this + 24);
+    fld_e23 = (float)(int)*(this + 23);
+    fld_e202 = sub_4049C0(
+           fld_e23,
+           fld_e24,
+           (uint64_t)(((double)(int)*(this + 20) - v15) * 1000.0),
+           (uint64_t)(1000.0 * (double)(int)*(this + 20)));
+========== 0x650A10 (line 698)
+// 0x650A10 sub_650A10 —— 属性累加 tick（6 浮点槽 + 16 属性槽）
+//   自身量 +80/+100/+84/+104 与 +88×0.001/+92×0.001 分别累加进宿主 pArg2 的 +60/+1054/+116/+1110/+830/+858 浮点槽（·sub_41A5E0 读 / ·sub
+//   +96 再逐个累加进 pArg2+284 起 16 个属性槽（步长 14），·sub_497040==17 的槽跳过 —— 与 ·sub_652430 相反对偶。
+// ------------------------------------------------------------
+int /*thiscall*/ sub_650A10(int this, int pArg2)
+{
+  int v4; // eax
+  int v5; // edx
+  int v6; // edx
+  int v7; // eax
+  int v8; // edx
+  int v9; // edx
+  int v10; // ebx
+  unsigned int v11; // edi
+  int result; // eax
+  int v13; // eax
+  int fld_50; // [esp+Ch] [ebp-4h]
+  float fld_64; // [esp+Ch] [ebp-4h]
+  float fld_68; // [esp+Ch] [ebp-4h]
+  float fld_58; // [esp+Ch] [ebp-4h]
+  float fld_5C; // [esp+Ch] [ebp-4h]
+  int v19; // [esp+18h] [ebp+8h]
+  int fld_54; // [esp+18h] [ebp+8h]
+  int v21; // [esp+18h] [ebp+8h]
+  int v22; // [esp+18h] [ebp+8h]
+  int v23; // [esp+18h] [ebp+8h]
+  int fld_60; // [esp+18h] [ebp+8h]
+
+  fld_50 = *(uint32_t *)(this + 80);
+  v4 = sub_41A5E0(pArg2 + 60);
+  sub_41A590(pArg2 + 60, v5, fld_50 + v4);
+  fld_64 = *(float *)(this + 100);
+  *(float *)&v19 = COERCE_FLOAT(sub_41A5E0(pArg2 + 1054)) + fld_64;
+  sub_41A590(pArg2 + 1054, v6, v19);
+  fld_54 = *(uint32_t *)(this + 84);
+  v7 = sub_41A5E0(pArg2 + 116);
+  sub_41A590(pArg2 + 116, fld_54, fld_54 + v7);
+  fld_68 = *(float *)(this + 104);
+  *(float *)&v21 = COERCE_FLOAT(sub_41A5E0(pArg2 + 1110)) + fld_68;
+  sub_41A590(pArg2 + 1110, v8, v21);

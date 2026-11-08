@@ -1,0 +1,7 @@
+CLASS .?AVCNRDPVPChannelListWindow@@  slots=14  fields_candidate=4
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   2  00631FF0  if ( pArg2 == *(uint32_t *)(this + 8) )
++0x0028 uint32_t   1  00632540  fld_28 = *(uint32_t *)(this + 40);
++0x002C int        1  00632540  pThis_2C = (int *)(this + 44);
++0x007C uint8_t    5  00631FF0  if ( *(uint8_t *)(this + 124) != 0 )

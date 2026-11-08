@@ -1,0 +1,28 @@
+CLASS .?AVCNArmorMastery@@  slots=30  fields_candidate=25
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   5  005F7040  fld_4 = (uint64_t)(((double)(*(int (/*thiscall*/ **)(uint32_t))(**(uin
++0x0054 float      5  005F7040  if ( *(float *)(this + 84) != 0.0 )
++0x0058 float      4  005F7040  if ( *(float *)(this + 88) != 0.0 )
++0x005C float      3  005F7040  if ( *(float *)(this + 92) != 0.0 )
++0x0060 float      6  005F7040  if ( *(float *)(this + 96) != 0.0 )
++0x0064 float      7  005F7040  if ( *(float *)(this + 100) != 0.0 )
++0x0068 float      1  005F7040  fld_68 = *(float *)(this + 104) * *(float *)(this + 84);
++0x006C int        1  005F7040  fld_6C = (double)*(int *)(this + 108) * *(float *)(this + 84) * 0.001;
++0x0070 float      1  005F7040  fld_70 = *(float *)(this + 112) * *(float *)(this + 84);
++0x0074 int        1  005F7040  + (double)*(int *)(this + 116))
++0x0078 float      1  005F7040  * *(float *)(this + 120)
++0x007C int        2  005F7040  fld_7C = (double)*(int *)(this + 124) * *(float *)(this + 88) * 0.001;
++0x0080 float      1  005F7040  fld_80 = *(float *)(this + 128) * *(float *)(this + 88);
++0x0084 int        1  005F7040  + (double)*(int *)(this + 132))
++0x0088 float      1  005F7040  * *(float *)(this + 136)
++0x008C int        1  005F7040  fld_8C = (uint64_t)((double)*(int *)(this + 140) * *(float *)(this + 9
++0x0090 float      1  005F7040  * *(float *)(this + 144)
++0x0094 float      1  005F7040  fld_94 = *(float *)(this + 148) * *(float *)(this + 96);
++0x0098 int        1  005F7040  fld_98 = (double)*(int *)(this + 152) * *(float *)(this + 96) * 0.001;
++0x009C int        2  005F7040  fld_9C = (double)*(int *)(this + 156) * *(float *)(this + 96) * 0.001;
++0x00A0 float      1  005F7040  * *(float *)(this + 160)
++0x00A4 float      1  005F7040  * *(float *)(this + 164)
++0x00A8 float      1  005F7040  fld_A8 = *(float *)(this + 168) * *(float *)(this + 100);
++0x00AC int        1  005F7040  fld_AC = (double)*(int *)(this + 172) * *(float *)(this + 100) * 0.001
++0x00B0 int        2  005F7040  fld_B0 = (double)*(int *)(this + 176) * *(float *)(this + 100) * 0.001

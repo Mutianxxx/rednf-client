@@ -1,0 +1,13 @@
+CLASS .?AVCNAppendageStackable@@  slots=36  fields_candidate=10
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   1  00485F70  *(uint32_t *)(this + 8) = *(uint32_t *)pArg2;
++0x000C uint32_t   1  00485F70  *(uint32_t *)(this + 12) = *(uint32_t *)(pArg2 + 4);
++0x0024 uint32_t   1  004859F0  fld_24 = *(uint32_t *)(this + 36);
++0x0028 uint8_t    1  004859F0  return fld_24 == 0 || fld_24 == 3 && *(uint8_t *)(this + 40) != 0;
++0x00A8 uint32_t   5  006030D0  fld_A8 = *(uint32_t *)(this + 168);
++0x00AC uint32_t   3  006030D0  if ( fld_A8 != 0 && (*(uint32_t *)(this + 172) - fld_A8) >> 3 != 0 )
++0x00B0 uint32_t   1  006030D0  *(uint32_t *)(this + 176) = 0;
++0x00B4 uint32_t   3  006030D0  && *(uint32_t *)(this + 180) != 17
++0x00B8 float      1  006030D0  && (double)(rand() % 10000) < *(float *)(this + 184) )
++0x00BC uint32_t   1  006030D0  fld_BC = *(uint32_t *)(this + 188);

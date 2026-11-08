@@ -1,0 +1,73 @@
+# ============================================================
+# 【40JP逆向源代码工程】遗漏区段复扫报告 A —— 区块边界核查 + CRT 区
+# 生成: 2026-10-06 18:00:24 (子代理复扫, 只读源码/数据; 快照期间另一会话仍在改工程)
+# 数据源: tools/transcribe.py PLAN / data/ida_all_functions.txt(12,172) / work/dump_*.txt / src/
+# ============================================================
+
+## A1. PLAN 区间核查结论: 纸面零缝隙
+  41 个 PLAN 输出文件区间合并 = [0x400000,0x6C1000) 连续覆盖; [0x401000,0x6C1000) 内断档数 = 0。
+  40/41 个 PLAN 输出文件已生成; 唯一从未生成: src/platform/crt_static.cpp
+    根因: 其数据源 dump_tail_b.txt 实际内容是 0x650000-0x670000(tail_a 的重复区),
+    PLAN 区间 0x670000-0x68A000 在该文件中 0 个函数 -> transcribe.py 取子集为空 -> 文件未诞生。
+    CRT 区数据实际经 dump_missing_*.txt 全部落进 src/platform/missing_tail.cpp (531/531)。
+
+## A2. dump 文件内容与 PLAN 区间错位 (3 处, 均在 tail 批次)
+  dump_tail_a.txt: 179 标记, 越界 17, 全部被其他 dump 覆盖 -> 无丢失
+  dump_tail_b.txt: 165 标记, 100% 落在 0x650000-0x670000; 职责区间 0x670000-0x68A000 的产出缺失 -> crt_static.cpp 未生成
+  dump_tail_c.txt: 1312 标记, 越界 909 个(0x40-0x50 重复灌区), 与既有 dump 100% 重复 -> 无新增无丢失
+
+## A3. 批量 dump 阶段系统性跳扫 (历史 ea+16 bug 的实际损失面)
+  dump                     in-range   dumped   ABSENT       比例
+  dump_engine.txt               846      812       34     4.0%
+  dump_combat_a.txt            1647     1576       71     4.3%
+  dump_misc_a.txt              2039     1929      110     5.4%
+  dump_parsers.txt              458      453        5     1.1%
+  dump_misc_b.txt              1155      759      396    34.3%
+  dump_ui_login.txt            1043     1003       40     3.8%
+  dump_monster_ai.txt          1339     1217      122     9.1%
+  dump_skills.txt              1753     1702       51     2.9%
+  --------------------------------------------------------------
+  按 dump 计合计 ABSENT = 829 (同函数可能对其所属 dump 缺失)
+  并集口径(凡不在任何 bulk dump): 2151 个 = 825 (上述 8 个区间内) + 1,326 (0x65-0x6C 尾部区:
+    tail_b 误产物未覆盖 0x67-0x68A + 未扫盲区; 其中 CRT 531 全数经 dump_missing 追回)
+  追回通道(有重叠): dump_missing 命中 2,128 | dump_full 命中 33 | dump_bigfuncs 命中 14
+  三通道并集追回 2,142 个, 剩余 9 个无任何 dump (见 A4)
+  规模分布: <=16B: 320, 17-64B: 173, 65-512B: 306, >512B: 26 (共 825 个 bulk 区间函数)
+  => 跳扫损失集中在"紧邻大函数的小函数"与"16 字节步进盲区", 由 missing 通道全额追回。
+
+## A4. 全部 dump 都没有的 census 函数 = 9 个 (4-13B getter)
+  42A530 size=4    sub_42A530  [素材仅 work/decomp_core_vt.txt; 已在 src/cnrd/CNRDObject.cpp 单行实现+头文件注释]
+  42A540 size=4    sub_42A540  [同上]
+  42A570 size=12   sub_42A570  [同上]
+  42A580 size=4    sub_42A580  [同上]
+  42A590 size=13   sub_42A590  [同上]
+  42A7C0 size=4    sub_42A7C0  [同上]
+  445C30 size=7    sub_445C30  [同上]
+  498F60 size=8    sub_498F60  [同上]
+  4C0380 size=5    sub_4C0380  [同上]
+  (这 9 个经 decomp_core_vt.txt 素材已全额落地; 全局最终"零代码"仅剩 9 个 CRT 失败桩, 见 A5)
+
+## A5. CRT 区 (0x66-0x6A) 实际转写数 vs 声称 ~1,100 (任务 C)
+  子区间             census      有代码      无代码
+  0x66-0x67          501      495        6
+  0x67-0x68A         531      531        0
+  0x68A-0x69          74       74        0
+  0x69-0x6A          299      296        3
+  0x66-0x6A 合计      1405     1396        9
+  声称 ~1,100 vs census 实测 1,405: 声称低估约 300 (P1 粗估)。
+  实际转写 1,396/1,405 = 99.36%; 真正缺口 = 9 个反编译失败函数, 现已全部以
+  "[计划内] 标准库替代" 注释桩登记 (missing_tail.cpp 6 个 / socket_ime.cpp 3 个):
+    66AD83 ?_CreateFrameInfo@@YAPAUFrameInfo@@PAU1@PAX@Z
+    66DCC5 _isupper
+    66DD73 _isxdigit
+    66DF3B __errno
+    66F107 ?__uncaught_exception@@YA_NXZ
+    66F45A ?CatchIt@@YAXPAUEHExceptionRecord@@PAUEHRegistrationNode@@
+    69E360 _pow
+    69E60D start_1
+    69F9C9 __check_range_exit
+  => 结论: "CRT 区以标准库替代不还原 ~1,100" 是陈旧口径——实际已 99.4% 转写并入库。
+
+## A6. 快照说明
+  扫描窗口 17:27-17:55 期间工程被并发会话持续修改 (truncation 797->3、445650 补齐、
+  9 个 CRT 失败桩化)。本报告数字为 2026-10-06 18:00:24 快照, 以"有代码体"判定为准。

@@ -1,0 +1,6 @@
+CLASS .?AVCNTrodden@@  slots=30  fields_candidate=3
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   4  005F9200  fld_4 = *(uint32_t *)(this + 4);
++0x0054 uint32_t   1  005F9200  *(uint32_t *)(this + 84) = -1;
++0x0058 uint8_t    1  005F9200  *(uint8_t *)(this + 88) = 0;

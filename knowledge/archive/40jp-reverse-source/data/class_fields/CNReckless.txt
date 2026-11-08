@@ -1,0 +1,11 @@
+CLASS .?AVCNReckless@@  slots=31  fields_candidate=8
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x002C uint32_t   1  00650B50  *(uint32_t *)(this + 44) = sub_47EF20(0, nArg2, -1, -1, 11);
++0x0050 uint32_t   2  00650A10  fld_50 = *(uint32_t *)(this + 80);
++0x0054 uint32_t   2  00650A10  fld_54 = *(uint32_t *)(this + 84);
++0x0058 int        2  00650A10  fld_58 = (double)*(int *)(this + 88) * 0.001;
++0x005C int        2  00650A10  fld_5C = (double)*(int *)(this + 92) * 0.001;
++0x0060 uint32_t   2  00650A10  fld_60 = *(uint32_t *)(this + 96);
++0x0064 float      2  00650A10  fld_64 = *(float *)(this + 100);
++0x0068 float      2  00650A10  fld_68 = *(float *)(this + 104);

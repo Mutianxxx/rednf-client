@@ -1,0 +1,17 @@
+CLASS .?AVCNEquipmentSilverKnifeOfEmily@@  slots=77  fields_candidate=14
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   1  00485F70  *(uint32_t *)(this + 8) = *(uint32_t *)pArg2;
++0x000C uint32_t   1  00485F70  *(uint32_t *)(this + 12) = *(uint32_t *)(pArg2 + 4);
++0x0024 uint32_t   1  004859F0  fld_24 = *(uint32_t *)(this + 36);
++0x0028 uint8_t    1  004859F0  return fld_24 == 0 || fld_24 == 3 && *(uint8_t *)(this + 40) != 0;
++0x04FC uint8_t    1  004BAC70  *(uint8_t *)(this + 1276) = 0;
++0x0504 uint32_t   1  004BAC70  *(uint32_t *)(this + 1284) = nArg2;
++0x050C uint32_t   1  004EF9D0  fld_50C = (char *)(124 * v122 + *(uint32_t *)(this + 1292));
++0x051C uint32_t   1  004EF9D0  fld_51C = *(uint32_t *)(this + 1308);
++0x0520 uint32_t   2  004EF9D0  fld_520 = (*(uint32_t *)(this + 1312) - fld_51C) >> 2;
++0x0524 uint32_t   1  004EF9D0  if ( fld_51C != 0 && fld_520 < (*(uint32_t *)(this + 1316) - fld_51C) 
++0x0528 uint8_t    2  004EF9D0  LOBYTE(fld_534) = *(uint8_t *)(this + 1320);
++0x052C uint32_t  17  004EF9D0  fld_52C = sub_4319E0(fld_52C112, *(uint32_t *)(this + 1324), *(uint32_
++0x0530 uint32_t  17  004EF9D0  fld_52C = sub_4319E0(fld_52C112, *(uint32_t *)(this + 1324), *(uint32_
++0x0534 uint32_t  20  004EF9D0  fld_5342 = (uint32_t *)(124 * v122 + *(uint32_t *)(*(uint32_t *)(this 

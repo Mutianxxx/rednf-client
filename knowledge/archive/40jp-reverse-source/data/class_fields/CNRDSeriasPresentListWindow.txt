@@ -1,0 +1,7 @@
+CLASS .?AVCNRDSeriasPresentListWindow@@  slots=14  fields_candidate=4
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   1  004D4120  if ( pArg2 == *(uint32_t *)(this + 8) )
++0x0034 uint32_t   1  004D4120  fld_34 = sub_69C690(*(uint32_t *)(this + 52));
++0x0074 uint32_t   3  004D4120  result = *(uint32_t *)(this + 116);
++0x0078 uint32_t   1  004D4120  result = (int)(*(uint32_t *)(this + 120) - result) / 52;

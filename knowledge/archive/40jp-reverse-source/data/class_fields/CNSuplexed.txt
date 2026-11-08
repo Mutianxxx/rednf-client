@@ -1,0 +1,9 @@
+CLASS .?AVCNSuplexed@@  slots=32  fields_candidate=6
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   4  00650030  fld_4 = *(uint32_t *)(this + 4);
++0x0058 uint32_t   1  00650030  *(uint32_t *)(this + 88) = -1;
++0x005C uint32_t   1  00650030  *(uint32_t *)(this + 92) = 0;
++0x0060 uint32_t   1  00650030  *(uint32_t *)(this + 96) = 0;
++0x0064 uint32_t   1  00650030  *(uint32_t *)(this + 100) = 0;
++0x0068 uint8_t    1  00650030  *(uint8_t *)(this + 104) = 1;

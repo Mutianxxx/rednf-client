@@ -1,0 +1,5 @@
+CLASS .?AVCNRDWarRoomDifficultListWindow@@  slots=14  fields_candidate=2
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0034 uint32_t   1  0063CA70  *(uint32_t *)(*(uint32_t *)(this + 52) + 4 * i) = 0;
++0x006C uint32_t   1  0063CA70  for ( i = 0; i < *(uint32_t *)(this + 108); ++i )

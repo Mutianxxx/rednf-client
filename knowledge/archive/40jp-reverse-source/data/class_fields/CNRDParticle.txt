@@ -1,0 +1,9 @@
+CLASS .?AVCNRDParticle@@  slots=19  fields_candidate=6
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 void       1  00445C10  qmemcpy((void *)(this + 4), pArg2, 0x62u);
++0x0043 uint32_t  10  00529E00  fld_43 = *(uint32_t *)(this + 67);
++0x0047 uint8_t    2  00529E00  fld_47 = *(uint8_t *)(this + 71);
++0x0059 uint32_t   3  00529D80  fld_59 = *(uint32_t *)(this + 89);
++0x005E int        1  00529D80  *((float *)this + 37) = (float)*(int *)(this + 94);
++0x0084 uint32_t  13  00529E00  fld_84 = *(uint32_t *)(this + 132) / fld_432;

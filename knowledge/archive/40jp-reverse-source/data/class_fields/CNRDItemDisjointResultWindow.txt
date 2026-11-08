@@ -1,0 +1,6 @@
+CLASS .?AVCNRDItemDisjointResultWindow@@  slots=14  fields_candidate=3
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   2  0063DED0  (640 - *(uint32_t *)(*(uint32_t *)(this + 8) + 28)) / 2,
++0x0034 uint32_t   1  0063DED0  (*(void (/*thiscall*/ **)(uint32_t, uint32_t))(**(uint32_t **)(this + 
++0x0070 int        1  0063DED0  sub_44CA70((int *)(this + 112));

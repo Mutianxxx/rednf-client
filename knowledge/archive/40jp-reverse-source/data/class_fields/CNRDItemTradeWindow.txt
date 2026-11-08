@@ -1,0 +1,11 @@
+CLASS .?AVCNRDItemTradeWindow@@  slots=14  fields_candidate=8
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   2  0054A820  fld_4 = *(uint32_t *)(this + 4);
++0x0008 uint32_t   1  00549E10  sub_540DE0(*(int **)(*(uint32_t *)(this + 8) + 116), 1, v7, v12, 4, 0,
++0x000C uint32_t   1  00540360  return sub_44AB50(*(uint32_t **)(this + 8), *(uint32_t *)(this + 12), 
++0x0014 uint32_t   1  0054A7A0  *(uint8_t *)(*(uint32_t *)(this + 20) + 17) = 1;
++0x008C uint32_t   2  0054A7A0  *(uint32_t *)(this + 140) = sub_429830((uint32_t *)dword_8F8500, (uint
++0x0090 uint32_t   1  0054A7A0  *(uint32_t *)(this + 144) = v2;
++0x00DC uint32_t   1  0054A7A0  *(uint8_t *)(*(uint32_t *)(this + 220) + 40) = 0;
++0x00E0 uint32_t   1  0054A7A0  *(uint8_t *)(*(uint32_t *)(this + 224) + 40) = 0;

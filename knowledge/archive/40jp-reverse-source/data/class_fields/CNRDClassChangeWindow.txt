@@ -1,0 +1,4 @@
+CLASS .?AVCNRDClassChangeWindow@@  slots=14  fields_candidate=1
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0021 char       1  006405E0  v27 = (char *)(pThis + 33);

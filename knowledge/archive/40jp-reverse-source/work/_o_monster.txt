@@ -1,0 +1,160 @@
+===== +96 (0x60) reads=292 writes=242
+  [R] src\cnrd\CNRDObject.cpp:69  int CNRDObject_vmt2C(int* this) { return this[24]; }   // +96
+        fn: 0x42A540 vmt2C / 0x42A550 vmt30 / 0x42A560 vmt34 —— 取 x/y/z
+  [R] src\cnrd\CNRDObject.cpp:124  return (nArg2 & this[24]) == nArg2;        // +96 条件位集
+        fn: 0x498DE0 vmt28 —— ★ 条件位掩码测试（研究第 20 轮直证: 273/529/17/65 均出自此）
+  [R] src\combat\bigfunc_5E1000_sub_5E1000.cpp:533  if ( (unsigned int)*(this + 96) < 0x10 )
+        fn: 0x5E1000 sub_5E1000  size=13379
+===== +7632 (0x1DD0) reads=3 writes=4
+  [R] src\game\creature\dragonman.cpp:5136  result = *(uint32_t *)(this + 7632);
+        fn: 0x5B7CC0 sub_5B7CC0 —— 架招自启（5/300 概率 setState 14）
+  [R] src\game\ui\http_item_info.cpp:7003  j__free(*(void **)(this + 7632));
+        fn: 0x579730 sub_579730 —— IRDCharacter 构造主体（107 行：4B7110/4B4950 部件 + 578240 外观 + 4B5A50/4A4BD0 动画）
+  [W] src\game\combat_core.cpp:11252  *(uint32_t *)(this + 7632) = -1;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7636 (0x1DD4) reads=0 writes=2
+  [W] src\game\combat_core.cpp:11253  *(uint32_t *)(this + 7636) = -1;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+  [W] src\game\ui\http_item_info.cpp:7005  *(uint32_t *)(this + 7636) = 0;
+        fn: 0x579730 sub_579730 —— IRDCharacter 构造主体（107 行：4B7110/4B4950 部件 + 578240 外观 + 4B5A50/4A4BD0 动画）
+===== +7668 (0x1DF4) reads=0 writes=2
+  [W] src\game\combat_core.cpp:11237  *(uint32_t *)(this + 7668) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7672 (0x1DF8) reads=0 writes=2
+  [W] src\game\combat_core.cpp:11240  *(uint32_t *)(this + 7672) = -1;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+  [W] src\game\ui\http_item_info.cpp:6996  *(uint32_t *)(this + 7672) = 0;
+        fn: 0x579730 sub_579730 —— IRDCharacter 构造主体（107 行：4B7110/4B4950 部件 + 578240 外观 + 4B5A50/4A4BD0 动画）
+===== +7676 (0x1DFC) reads=1 writes=1
+  [R] src\game\combat_core.cpp:8512  double fStopX; // st7 —— 停点 X（写 +7676）
+        fn: 0x4DAD70 sub_4DAD70
+  [W] src\game\combat_core.cpp:11241  *(uint32_t *)(this + 7676) = -1;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7688 (0x1E08) reads=0 writes=2
+  [W] src\game\combat_core.cpp:11238  *(uint32_t *)(this + 7688) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7708 (0x1E1C) reads=0 writes=1
+  [W] src\game\combat_core.cpp:11245  *(uint32_t *)(this + 7708) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7712 (0x1E20) reads=0 writes=1
+  [W] src\game\combat_core.cpp:11244  *(uint32_t *)(this + 7712) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7716 (0x1E24) reads=0 writes=1
+  [W] src\game\combat_core.cpp:11243  *(uint32_t *)(this + 7716) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7720 (0x1E28) reads=1 writes=2
+  [R] src\game\ui\cashshop.cpp:10391  *(uint32_t *)(this + 4 * (*(uint32_t *)(this + 7588) + 8 * fld_26E0) + 7720) + 1);
+        fn: 0x55C2B0 sub_55C2B0 —— 商城对象基件（418DD0/422E70/4938F0/491D00，96 行）
+  [W] src\game\combat_core.cpp:11242  *(uint32_t *)(this + 7720) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7732 (0x1E34) reads=0 writes=1
+  [W] src\game\combat_core.cpp:11330  *(uint32_t *)(this + 7732) = 200;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7764 (0x1E54) reads=1 writes=5
+  [R] src\game\ui\http_item_info.cpp:6866  return *(this + 7764);
+        fn: 0x5795F0 IRDCharacter__vmt4D4 —— IRDCharacter__vmt4D4 默认虚槽桩（10 行 return）
+  [W] src\game\combat_core.cpp:11247  *(uint8_t *)(this + 7764) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+  [W] src\game\equ_buff.cpp:6544  if ( *((uint8_t *)a1 + 7764) != 0 && *(uint8_t *)(a1[1942] + 170) != 0 )
+        fn: 0x4B7430 sub_4B7430 —— 升级演出装配（LevelNormalizeLibra.ani + LevelNormalize.ptl；LEVELING_OFF/FLASH；PVP_KO）
+===== +7768 (0x1E58) reads=3 writes=2
+  [R] src\game\equ_buff.cpp:6208  pThis_1E58 = (void ***)(this + 7768);
+        fn: 0x4B7110 sub_4B7110 —— 角色演出资源释放（宿主 +7428..+8172 大段槽清理）
+  [R] src\game\equ_buff.cpp:7512  pThis_1E58 = this + 7768;
+        fn: 0x4B9280 sub_4B9280 —— SP 增加演出（SpUp1/2/3.ani 按档位，挂子链 +204/+208）
+  [W] src\game\combat_core.cpp:11248  *(uint32_t *)(this + 7768) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7776 (0x1E60) reads=1 writes=3
+  [R] src\game\combat_core.cpp:6714  LOBYTE(nNewPeer) = *((uint8_t *)this + 7776);
+        fn: 0x4D8F00 sub_4D8F00
+  [W] src\game\combat_core.cpp:6718  *((uint8_t *)this + 7776) = 1;
+        fn: 0x4D8F00 sub_4D8F00
+  [W] src\game\combat_core.cpp:11250  *(uint8_t *)(this + 7776) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +7801 (0x1E79) reads=0 writes=8
+  [W] src\game\bigfunc_4471E0_sub_4471E0.cpp:1537  *(uint8_t *)(v208 + 7801) = 1;
+  [W] src\game\combat_core.cpp:8301  if ( byte_77F280 != 0 || *(this + 7801) == 0 )
+        fn: 0x4DA980 sub_4DA980 —— 死亡/淘汰确认包（type 42；off_77F3FC 日志双分支）
+  [W] src\game\combat_core.cpp:11251  *(uint8_t *)(this + 7801) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）
+===== +8288 (0x2060) reads=3 writes=5
+  [R] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1023  fld_2060 = sub_47EF20(v262, v263, v264, v265, LODWORD(v266)) + *(uint32_t *)(this + 8288);
+  [R] src\combat\bigfunc_5F39F0_sub_5F39F0.cpp:426  pThis_2060 = this + 8288;
+        fn: 0x5F39F0 sub_5F39F0  size=11125
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1252  if ( *(uint32_t *)(pArg1 + 6556) == 18 && sub_699000(pArg1 + 6560) >= *(uint32_t *)(pArg1 + 8288) )  // 【clock_now(clk)】
+===== +8292 (0x2064) reads=0 writes=6
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:528  if ( *(uint8_t *)(pArg1 + 8292) != 0 )
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:353  if ( *(uint8_t *)(this + 8292) != 0 )
+        fn: 0x5EA970 sub_5EA970  size=10856
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1066  *(uint8_t *)(this + 8292) = v90;
+===== +8324 (0x2084) reads=2 writes=17
+  [R] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1611  *(uint8_t *)(this + 8324));
+  [R] src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:603  if ( sub_699000(pArg1 + 6560) < *(uint32_t *)(pArg1 + 8324) )  // 【clock_now(clk)】
+        fn: 0x5F10C0 sub_5F10C0  size=10468
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:583  if ( *(uint8_t *)(pArg1 + 8324) == 0 )
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+===== +8328 (0x2088) reads=4 writes=9
+  [R] src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:557  if ( sub_699000(pArg1 + 6560) >= *(uint32_t *)(pArg1 + 8328) + 200 )  // 【clock_now(clk)】
+        fn: 0x5F10C0 sub_5F10C0  size=10468
+  [R] src\game\creature\expeller_guard.cpp:12129  pThis_2088 = (void ***)(this + 8328);
+        fn: 0x5DDCA0 sub_5DDCA0 —— CNMage 白魔字段块总析构（this+8232..8564 全槽清理，由·0x579F10 构造链对偶调用）：
+  [R] src\nengine\log_dump.cpp:7798  fld_2088 = 17292 * *(uint32_t *)(this + 8328);
+        fn: 0x408FA0 sub_408FA0 —— 全屏/窗口切换（nArg2 0/1）
+===== +8332 (0x208C) reads=3 writes=14
+  [R] src\nengine\log_dump.cpp:8470  v73 = 17292 * *(uint32_t *)(*(uint32_t *)ArgList + 8332) + *(uint32_t *)ArgList + 8336;
+        fn: 0x409AE0 sub_409AE0
+  [R] src\nengine\log_dump.cpp:8702  ++*(uint32_t *)(*(uint32_t *)ArgList + 8332);
+        fn: 0x409AE0 sub_409AE0
+  [R] src\nengine\log_dump.cpp:8716  if ( (unsigned int)++v51 >= *(uint32_t *)(*(uint32_t *)ArgList + 8332) )
+        fn: 0x409AE0 sub_409AE0
+===== +8344 (0x2098) reads=0 writes=13
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:892  if ( *(uint32_t *)(pArg1 + 8344) != 1 || *(uint32_t *)(*(uint32_t *)(pArg1 + 120) + 148) != 0 )
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1503  if ( *(uint32_t *)(pArg1 + 8344) == 0 )
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1782  *(uint32_t *)(this + 8344) = v119;
+===== +8348 (0x209C) reads=3 writes=13
+  [R] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1885  ++*(uint32_t *)(this + 8348);
+  [R] src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1423  (*(void (/*thiscall*/ **)(int, uint32_t))(*(uint32_t *)pArg1 + 208))(pArg1, *(uint32_t *)(pArg1 + 8348));
+  [R] src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1430  *(uint32_t *)(pArg1 + 8348),
+===== +8364 (0x20AC) reads=2 writes=7
+  [R] src\combat\bigfunc_5EA970_sub_5EA970.cpp:513  *(uint32_t *)(this + 8364),
+        fn: 0x5EA970 sub_5EA970  size=10856
+  [R] src\game\hiteff_monster.cpp:2483  fld_20AC = *(void ***)(this + 8364);
+        fn: 0x4E3360 sub_4E3360 —— 怪物资源侧析构（释放三块 + 全局怪物计数递减）
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1819  *(uint32_t *)(this + 8364) = (*(int (/*thiscall*/ **)(int))(v122 + 120))(this);
+===== +8472 (0x2118) reads=1 writes=9
+  [R] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1699  v217 = *(uint32_t *)(pArg1 + 8472);
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1817  if ( *(uint32_t *)(pArg1 + 8472) == 1 )
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:533  if ( *(uint32_t *)(this + 8472) == 1 )
+        fn: 0x5EA970 sub_5EA970  size=10856
+===== +8476 (0x211C) reads=1 writes=10
+  [R] src\combat\bigfunc_5F10C0_sub_5F10C0.cpp:1550  v66 = *(uint32_t *)(pArg1 + 8476);
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1956  if ( *(uint32_t *)(*(uint32_t *)(pArg1 + 120) + 148) == 13 && *(uint8_t *)(pArg1 + 8476) == 0 )
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:2008  *(uint8_t *)(pArg1 + 8476) = 1;
+===== +8569 (0x2179) reads=0 writes=4
+  [W] src\game\combat_core.cpp:8106  *((uint8_t *)this + 8569) = 0;
+        fn: 0x4DA730 sub_4DA730
+  [W] src\game\combat_core.cpp:11157  *(uint8_t *)(this + 8569) = 0;
+        fn: 0x4DE5E0 sub_4DE5E0 —— 文案条目装载 + 随机倒计时（0x4DE410 的配套件）
+  [W] src\game\rtti_core.cpp:4765  *(this + 8569) = 0;
+        fn: 0x4A4EA0 sub_4A4EA0
+===== +8570 (0x217A) reads=0 writes=4
+  [W] src\game\combat_core.cpp:8107  *((uint8_t *)this + 8570) = 0;
+        fn: 0x4DA730 sub_4DA730
+  [W] src\game\combat_core.cpp:11158  *(uint8_t *)(this + 8570) = 0;
+        fn: 0x4DE5E0 sub_4DE5E0 —— 文案条目装载 + 随机倒计时（0x4DE410 的配套件）
+  [W] src\game\rtti_core.cpp:4764  *(this + 8570) = 0;
+        fn: 0x4A4EA0 sub_4A4EA0
+===== +8584 (0x2188) reads=3 writes=8
+  [R] src\combat\bigfunc_5E1000_sub_5E1000.cpp:1510  pThis_2188 = *((uint8_t *)this + 8584);
+  [R] src\game\combat_core.cpp:11159  nRangeStart = *(uint32_t *)(this + 8584);
+        fn: 0x4DE5E0 sub_4DE5E0 —— 文案条目装载 + 随机倒计时（0x4DE410 的配套件）
+  [R] src\game\creature\expeller_guard.cpp:9054  LOBYTE(fld_e1953) = *((uint8_t *)this + 8584);
+        fn: 0x5DA6F0 sub_5DA6F0 —— 受击联动（·sub_4D54E0 受击包后：+1639==10 主状态镜像 且 +1953==0/+1954==15
+===== +8588 (0x218C) reads=1 writes=3
+  [R] src\game\combat_core.cpp:11161  sub_698F90(this + 8556, nRangeStart + nRand % (*(uint32_t *)(this + 8588) - nRangeStart), 0);  // 【clock_set_countdown(clk, duration=a2, star…】
+        fn: 0x4DE5E0 sub_4DE5E0 —— 文案条目装载 + 随机倒计时（0x4DE410 的配套件）
+  [W] src\game\combat_core.cpp:11156  *(uint32_t *)(this + 8588) = nRangeEnd;
+        fn: 0x4DE5E0 sub_4DE5E0 —— 文案条目装载 + 随机倒计时（0x4DE410 的配套件）
+  [W] src\game\combat_core.cpp:11327  *(uint32_t *)(this + 8588) = 0;
+        fn: 0x4DE700 sub_4DE700 —— 怪物扩展字段重置（+ 飞行/召唤标记图懒加载）

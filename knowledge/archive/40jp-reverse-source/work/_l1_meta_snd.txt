@@ -1,0 +1,21 @@
+0x6680B0 sub_6680B0 [308L]
+  STR: GetMessageBuffer
+  CALL: sub_6680B0, _CxxThrowException, new
+0x668320 sub_668320 [13L]
+  CALL: sub_668320, j__free
+0x668340 sub_668340 [34L]
+  CALL: eax>, sub_6680B0
+0x668410 sub_668410 [16L]
+  CALL: sub_668410, WSAStartup
+0x668444 ??2@YAPAXI@Z [20L]
+  CALL: new, malloc, _callnewh, std::_Nomemory
+0x668468 ?_Xran@_String_base@std@@QBEXXZ [18L]
+  STR: invalid string position
+  CALL: std::_String_base::_Xran, sub_401710, sub_401740, _CxxThrowException
+0x6684A8 ?_Xlen@_String_base@std@@QBEXXZ [18L]
+  STR: string too long
+  CALL: std::_String_base::_Xlen, sub_401710, sub_401740, _CxxThrowException
+0x6684E8 j_??2@YAPAXI@Z [11L]
+  CALL: new, Z
+0x6684ED ??0_Init_locks@std@@QAE@XZ [17L]
+  CALL: std::_Init_locks::_Init_locks, InterlockedIncrement, unknown_libname_14

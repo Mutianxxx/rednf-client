@@ -1,0 +1,55 @@
+# ============================================================
+# 【40JP逆向源代码工程】遗漏区段复扫报告 B —— 巨型函数(>8KB)复查
+# 生成: 2026-10-06 18:00:39 (子代理复扫)
+# 判定法: 源码 bigfunc 单文件 vs dump 素材逐行比对 (清洗后严格顺序匹配)
+# ============================================================
+
+## B1. 清单核对: census size>8000 = 14 个, 全部有独立源码文件
+
+  VA          size src 文件                                       src行数       素材 状态
+  0x4471E0   11291 bigfunc_4471E0_sub_4471E0.cpp                 1842 dump_bigfuncs 逐行一致
+  0x4ABE10   10050 bigfunc_4ABE10_sub_4ABE10.cpp                  961 dump_bigfuncs 逐行一致
+  0x4C5250   18096 bigfunc_4C5250_sub_4C5250.cpp                 3002 dump_full 逐行一致
+  0x4C9950   19214 bigfunc_4C9950_sub_4C9950.cpp                 3648 dump_full 逐行一致
+  0x510F30   10754 bigfunc_510F30_sub_510F30.cpp                 1620 dump_bigfuncs 逐行一致
+  0x51BA00   25733 bigfunc_51BA00_sub_51BA00.cpp                 4865 dump_full 逐行一致
+  0x53A220   17574 bigfunc_53A220_sub_53A220.cpp                 1907 dump_bigfuncs 逐行一致
+  0x57A980   36584 bigfunc_57A980_sub_57A980.cpp                 5017 dump_full 逐行一致
+  0x583B90   27453 bigfunc_583B90_sub_583B90.cpp                 4517 dump_full 逐行一致
+  0x5E1000   13379 bigfunc_5E1000_sub_5E1000.cpp                 2591 dump_full 逐行一致
+  0x5E78C0   12390 bigfunc_5E78C0_sub_5E78C0.cpp                 1972 dump_bigfuncs 逐行一致
+  0x5EA970   10856 bigfunc_5EA970_sub_5EA970.cpp                 2163 dump_full 逐行一致
+  0x5F10C0   10468 bigfunc_5F10C0_sub_5F10C0.cpp                 1673 dump_bigfuncs 逐行一致
+  0x5F39F0   11125 bigfunc_5F39F0_sub_5F39F0.cpp                 2250 dump_full 逐行一致
+
+## B2. work/bigfuncs_progress.log 与 work/dump_bigfuncs.txt 记录
+  progress.log: 28 行, "done" 记录 14 条 (14 个目标全部完成)
+  dump_bigfuncs.txt: 14 个函数。其中 8 个 (4C5250/4C9950/51BA00/57A980/583B90/5E1000/5EA970/5F39F0)
+    受 MAXLINES=2000 截断 (每块恰 2001 行 + truncated 注记)。
+    这 8 个的完整体后来由 work/truncated_funcs.txt 通道的 dump_full_0/1/2.txt 补齐 (上限 8000 行),
+    并经 tools/replace_truncated.py 落库 -> 现 src 内 8 个文件为完整版 (3,000-5,000 行)。
+    另 6 个 (4471E0/4ABE10/510F30/53A220/5E78C0/5F10C0) 未超 2000 行, 直接用 dump_bigfuncs 版。
+
+## B3. SKIPPED-BIG 记录核对 (批量阶段跳过记录)
+  dump 中的 SKIPPED-BIG 注记 18 条 (去重后 14 个函数):
+    dump_combat_a: 4471E0 | dump_misc_a: 4ABE10/4C5250/4C9950 | dump_misc_b: 510F30/51BA00/53A220
+    dump_skills: 5E1000/5E78C0/5EA970/5F10C0/5F39F0 | dump_ui_login: 57A980/583B90
+    dump_tail_c: 4471E0/4ABE10/4C5250/4C9950 (跨区重复记录)
+  => census(14) 与 SKIPPED-BIG(14) 及 dump_bigfuncs TARGETS(14) 三方一致, 无遗漏。
+
+## B4. 结论
+  巨型函数零缺口: 14/14 全部有完整单文件实现, 与素材逐行一致 (清洗表转换后)。
+  历史 bug 回放: 批量 MAXSIZE=8000 跳过 14 个 -> 专项 dump_bigfuncs 补救;
+  其中 8 个又在专项里撞上 MAXLINES=2000 上限 -> 二次补漏 (dump_full + replace_truncated) 追平。
+  该链路现已闭合, 但两次截断均为"到达上限未报警"型设计缺陷, 值得在工具里加失败守卫。
+
+## B5. 附: 同类残留 (非>8KB但曾被截断, 现已补齐状况)
+  work/truncated_funcs.txt 登记 797 个截断函数; 截至快照:
+  - 794 个已由 replace_truncated.py 用 dump_full 全量替换 (trunc_replace_report.txt: replaced=794)
+  - 3 个仍未替换: 4D2B30 / 4D2D60 / 4D46C0 (均在 src/game/combat_core.cpp)
+    原因: 这 3 个函数头部带"★语义精修注释块"(L1 手写注释), 使 replace_truncated.py 的
+    块边界解析(遇 "// ---" 终止)把 body 切片切到了注释区, 未探测到 truncated 注记 -> 静默跳过。
+    影响: 3 个块均停在批量转写上界 110 行; 按注记声明总行数, 缺失尾部为:
+      4D2B30 总 114 行 -> 缺 4 行 | 4D2D60 总 227 行 -> 缺 117 行 | 4D46C0 总 129 行 -> 缺 19 行
+      合计缺 ~140 行; dump_full_0/1/2.txt 内有这 3 个函数的完整素材 (113/226/128 行清洗前), 可就地补齐。
+    注: 这是本次复扫发现的唯一**实质性内容缺口** (转写流程静默跳过), 其余 794 处已全额替换。

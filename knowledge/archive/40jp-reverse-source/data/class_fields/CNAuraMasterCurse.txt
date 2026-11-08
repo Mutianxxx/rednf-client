@@ -1,0 +1,9 @@
+CLASS .?AVCNAuraMasterCurse@@  slots=37  fields_candidate=6
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   3  006499A0  fld_4 = *(uint32_t *)(this + 4);
++0x007C uint32_t   2  0064A190  fld_7C = *(uint32_t *)(this + 124);
++0x0080 uint32_t   8  006499A0  (*(void (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 128) + 12)
++0x0099 uint8_t    1  006499A0  *(uint8_t *)(this + 153) = 0;
++0x009A uint8_t    1  006499A0  *(uint8_t *)(this + 154) = 0;
++0x00A4 uint32_t   1  006499A0  fld_A4 = *(uint32_t *)(this + 164);

@@ -1,0 +1,37 @@
+CLASS .?AVCNEntranceChannel@@  slots=5  fields_candidate=34
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x000C uint32_t   8  00471280  && *(uint32_t *)(this + 12) != v5 )
++0x0010 uint32_t   5  00471280  && *(uint32_t *)(this + 16) != v8 )
++0x0014 uint32_t   5  00471280  if ( *(int *)(this + 20) > 0 )
++0x0018 uint32_t   1  00471280  if ( *(uint32_t *)(this + 20) < *(uint32_t *)(this + 24) - 1 )
++0x0040 int        1  00471280  pThis_40 = (int *)(this + 64);
++0x005C int        1  00471280  pThis_5C = (int *)(this + 92);
++0x0070 uint32_t   2  00471280  sub_69CEB0(*(uint32_t *)(this + 112));
++0x0074 uint32_t   3  00471280  *(uint8_t *)(*(uint32_t *)(this + 116) + 16) = 0;
++0x0078 uint32_t   2  00471280  *(uint8_t *)(*(uint32_t *)(this + 120) + 16) = 0;
++0x007C uint32_t   2  00471280  *(uint8_t *)(*(uint32_t *)(this + 124) + 16) = 0;
++0x0080 uint32_t   2  00471280  *(uint8_t *)(*(uint32_t *)(this + 128) + 16) = 0;
++0x0084 uint32_t   2  00471280  *(uint8_t *)(*(uint32_t *)(this + 132) + 16) = 0;
++0x0088 uint32_t   2  00471280  *(uint8_t *)(*(uint32_t *)(this + 136) + 16) = 0;
++0x008C uint32_t   2  00471280  *(uint8_t *)(*(uint32_t *)(this + 140) + 16) = 0;
++0x0090 uint32_t   2  00471280  *(uint8_t *)(*(uint32_t *)(this + 144) + 16) = 0;
++0x0094 uint32_t   2  00471280  *(uint8_t *)(*(uint32_t *)(this + 148) + 16) = 0;
++0x0098 uint32_t   2  00471280  *(uint8_t *)(*(uint32_t *)(this + 152) + 16) = 0;
++0x009C uint32_t   1  00471280  if ( *(uint8_t *)(*(uint32_t *)(this + 156) + 132) == 1 )
++0x00A0 uint32_t   1  00471280  else if ( *(uint8_t *)(*(uint32_t *)(this + 160) + 132) == 1 )
++0x00A4 uint32_t   1  00471280  fld_A4 = *(uint32_t *)(this + 164);
++0x00A8 uint32_t   1  00471280  fld_A8 = *(uint32_t *)(this + 168);
++0x00AC uint32_t   1  00471280  fld_AC = *(uint32_t *)(this + 172);
++0x00B0 uint32_t   1  00471280  fld_B0 = *(uint32_t *)(this + 176);
++0x00B4 uint32_t   1  00471280  fld_B4 = *(uint32_t *)(this + 180);
++0x014C uint8_t    1  00471280  if ( *(uint8_t *)(this + 332) != 0 )
++0x0158 uint32_t   1  00471280  fld_158 = *(uint32_t *)(this + 344);
++0x05B0 uint32_t   1  00471280  *((uint32_t *)dword_8F8528 + 621) = *(uint32_t *)(this + 1456);
++0x05B4 uint8_t    2  00471280  if ( *(uint8_t *)(this + 1460) == 0 )
++0x05B8 uint32_t   1  00471280  if ( *(uint32_t *)(this + 1464) == 1 )
++0x06C0 uint32_t   8  00471280  fld_6C0 = *(uint32_t *)(this + 1728);
++0x06C4 uint32_t   8  00471280  *(uint32_t *)(this + 1732) = -1;
++0x06C8 uint32_t   6  00471280  *(uint32_t *)(this + 1736) = timeGetTime();
++0x06CC uint32_t   6  00471280  *(uint32_t *)(this + 1740) = Time;
++0x06D0 uint32_t   2  00471280  fld_6CC = (unsigned int)(*(uint32_t *)(this + 1740) - *(uint32_t *)(th

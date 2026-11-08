@@ -1,0 +1,25 @@
+# Random spotcheck 20 functions (one per VA-space bucket, seed=40) — tree md5=1e28b9bc0e95fd28fda71d29a82ab8be
+# verdict FAIL if: no body / <3 nonblank lines / (decomp failed) / (exception / truncated marker
+# VA	name	ida_size	src_loc	nonblank	trunc	verdict
+0040FF30	sub_40FF30	size=144	src/nengine/log_dump.cpp:13854	nonblank=39	trunc=N	PASS
+0042F250	sub_42F250	size=252	src/game/broadcast_debug.cpp:13201	nonblank=46	trunc=N	PASS
+0044C2A0	sub_44C2A0	size=110	src/game/script_string.cpp:7448	nonblank=18	trunc=N	PASS
+00453C20	sub_453C20	size=57	src/game/worldmap_reward.cpp:2961	nonblank=17	trunc=N	PASS
+00488890	sub_488890	size=161	src/game/skill_load_tutorial.cpp:7170	nonblank=53	trunc=N	PASS
+004A5D60	sub_4A5D60	size=95	src/game/rtti_core.cpp:4893	nonblank=11	trunc=N	PASS
+004BAC10	sub_4BAC10	size=88	src/game/equ_buff.cpp:8532	nonblank=12	trunc=N	PASS
+004E2130	sub_4E2130	size=241	src/game/hiteff_monster.cpp:1608	nonblank=31	trunc=N	PASS
+00518D30	sub_518D30	size=33	src/game/po_effects.cpp:5770	nonblank=10	trunc=N	PASS
+00532C40	sub_532C40	size=33	src/game/missing_misc_b.cpp:6254	nonblank=10	trunc=N	PASS
+00556BE0	sub_556BE0	size=11	src/game/ui/cashshop.cpp:5818	nonblank=8	trunc=N	PASS
+005604F0	sub_5604F0	size=275	src/game/ui/cashshop.cpp:13849	nonblank=55	trunc=N	PASS
+005B6CF0	sub_5B6CF0	size=115	src/game/creature/dragonman.cpp:3957	nonblank=20	trunc=N	PASS
+005C28C0	sub_5C28C0	size=112	src/game/creature/spider_trap.cpp:1844	nonblank=21	trunc=N	PASS
+005E6EE0	sub_5E6EE0	size=2517	src/combat/fighter_skills.cpp:2553	nonblank=376	trunc=N	PASS
+0061E280	sub_61E280	size=33	src/combat/passive_object.cpp:26145	nonblank=9	trunc=N	PASS
+0064CA10	sub_64CA10	size=37	src/game/ui/aura_create.cpp:11203	nonblank=12	trunc=N	PASS
+00655E70	sub_655E70	size=23	src/nengine/zlib_inflate.cpp:6027	nonblank=7	trunc=N	PASS
+0066DE40	_strchr	size=6	src/platform/missing_tail.cpp:7669	nonblank=7	trunc=N	PASS
+006C0200	sub_6C0200	size=37	src/platform/code_tail.cpp:1100	nonblank=11	trunc=N	PASS
+
+# PASS 20 / 20

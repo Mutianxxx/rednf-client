@@ -1,0 +1,28 @@
+CLASS .?AVCNEntranceModule@@  slots=5  fields_candidate=25
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x002C uint32_t   2  0046C300  *(uint32_t *)(this + 44) = 1;
++0x0030 uint8_t    1  0046C300  if ( *(uint8_t *)(this + 48) != 0 && *(uint8_t *)(this + 49) == 0 )
++0x0031 uint8_t    2  0046C300  if ( *(uint8_t *)(this + 48) != 0 && *(uint8_t *)(this + 49) == 0 )
++0x0032 uint8_t    2  0046C300  if ( *(uint8_t *)(this + 50) == 0 )
++0x0034 uint32_t   3  0046C300  fld_34 = *(uint32_t *)(this + 52);
++0x0038 uint8_t    6  0046C300  if ( *(uint8_t *)(this + 56) != 0 )
++0x0040 uint32_t   4  0046C300  fld_40 = *(uint32_t *)(this + 64);
++0x0044 uint32_t   4  0046C300  fld_44 = fld_40 != 0 ? (*(uint32_t *)(this + 68) - fld_40) >> 2 : 0;
++0x0050 uint32_t   1  0046C300  fld_50 = *(uint32_t *)(this + 80) + 144 * fld_5C;
++0x005C uint32_t   6  0046C300  fld_5C = *(uint32_t *)(this + 92);
++0x0068 uint32_t   1  0046C300  fld_68 = *(uint32_t *)(this + 104);
++0x006C uint32_t   2  0046C300  fld_6C = *(uint32_t *)(this + 108);
++0x0070 uint32_t   2  0046C300  fld_70 = *(uint32_t *)(this + 112);
++0x0074 uint32_t   1  0046C300  fld_74 = *(uint32_t *)(this + 116);
++0x00AC uint32_t   4  0046C300  if ( *(uint32_t *)(this + 172) == -1 || sub_699000(this + 16) > *(uint
++0x00B0 uint32_t   2  0046C300  *(uint8_t *)(*(uint32_t *)(this + 176) + 16) = 1;
++0x00B4 uint32_t   3  0046C300  sub_46BA60(*(uint32_t *)(this + 180));
++0x00EC uint32_t   1  0046C300  fld_EC = *(uint32_t *)(this + 236);
++0x00F0 uint32_t   1  0046C300  fld_F0 = *(uint32_t *)(this + 240);
++0x00F4 uint32_t   6  0046C300  if ( sub_69C380(*(uint32_t *)(this + 244)) != 0 )
++0x00F8 uint32_t   1  0046C300  fld_F8 = *(uint32_t *)(this + 248);
++0x00FC uint32_t   4  0046C300  fld_FC = *(uint32_t *)(this + 252);
++0x0100 uint32_t   7  0046C300  sub_69BCC0(*(uint32_t *)(this + 256));
++0x0104 uint32_t   1  0046C300  fld_104 = *(uint32_t *)(this + 260);
++0x0108 uint32_t   1  0046C300  fld_108 = *(uint32_t *)(this + 264);

@@ -1,0 +1,12092 @@
+// ============================================================
+// 【40JP逆向源代码工程】parsers/monster_parser.cpp
+// 模块: 怪物/NPC/PassiveObject 定义解析器族
+// 来源: work/dump_parsers.txt  区块: 0x4FC000-0x50C000
+//       （深度校验用 work/dump_full_0/1/2.txt —— [tag] 词汇表按全量版提取）
+// 层级: L2 转写层 → L1 精修层（会话 4 精修：标签族头注 + attackinfo 字段表映射 + 分区）
+// 函数数: 207
+//
+// ★ 本文件全部解析器都是 [tag] 字符串驱动：sub_442A10 打开文件 → sub_443430 逐行读 →
+//   sub_40BF00/sub_423300 前缀/全串比对标签 → sub_4423D0(整型)/sub_442480(浮点)/
+//   sub_443370(字符串)取参数。未识别标签一律走 off_77F3FC("SCRIPT TAG ERROR! [%s] %s")。
+//
+// ★ 关键锚点（研究 20 定案）：
+//   - sub_503BA0 = 怪物/PO 攻击定义解析器（attackinfo 结构填充，全标签词汇表见研究 20 §1.3）
+//   - sub_502F00 = 玩家技能定义解析器（[shake screen]/[command] 等，研究 20 §13/§30）
+//   - sub_509C90 = 怪物数据文件解析器（[hit recovery]+396/+400、[stuckbonus on damage]+428..440
+//     四档 —— 研究 20 §12 的"固定字段对"主体）
+//   - sub_50B400 / sub_50B840 = PassiveObject / 技能 PO 解析器（[recovery time]/[skill recovery time]）
+//
+// 分区（按 VA 升序）：
+//   §A 0x4FC000-0x4FD000  全局配置族（经验/掉率增益表、地图表、任务/场景资源）
+//   §B 0x4FD000-0x4FE000  地图(场景)定义 + 副本定义族
+//   §C 0x4FE000-0x4FF800  场地/NPC 定义族（field/npc 资源与商店角色）
+//   §D 0x4FF800-0x504000  任务(quest)定义族 + 对象创建(sub_500B30) + 技能定义解析器 sub_502F00
+//   §E 0x504000-0x504600  掉落/奖励类别标签（[monster]/[trap]/[item]/[quest]）
+//   §F 0x504600-0x507690  容器辅助族（list/vector 模板实例）
+//   §G 0x507690-0x50AF40  瓦片地图/副本地图/怪物定义族 + ★ 攻击定义 sub_503BA0
+//   §H 0x50AF40-0x50C000  PassiveObject / 地图物件 / 技能 PO 定义族（sub_50AF40/50B400/50B840）
+// ============================================================
+
+#include "../../common/arad_types.h"
+
+// ============================================================
+// §A 0x4FC000-0x4FD000 全局配置族
+// ============================================================
+
+// ------------------------------------------------------------
+// 0x4FC0F0 sub_4FC0F0
+// ------------------------------------------------------------
+unsigned int /*thiscall*/ sub_4FC0F0(int this, unsigned int a2, int Block, int a4, int a5, int a6, int a7)
+{
+  int v8; // ecx
+  unsigned int result; // eax
+  int v10; // eax
+  uint32_t *v11; // edi
+
+  v8 = *(uint32_t *)(this + 4);
+  if ( v8 != 0 )
+    result = (*(uint32_t *)(this + 8) - v8) / 20;
+  else
+    result = 0;
+  if ( result >= a2 )
+  {
+    if ( v8 != 0 )
+    {
+      v11 = *(uint32_t **)(this + 8);
+      result = ((int)v11 - v8) / 20;
+      if ( a2 < result )
+      {
+        result = v8 + 20 * a2;
+        if ( (uint32_t *)result != v11 )
+        {
+          result = (unsigned int)sub_4FBD40(v11, v11, (uint32_t *)result);
+          *(uint32_t *)(this + 8) = result;
+        }
+      }
+    }
+  }
+  else
+  {
+    if ( v8 != 0 )
+      v10 = (*(uint32_t *)(this + 8) - v8) / 20;
+    else
+      v10 = 0;
+    return sub_4FBE30((int *)this, *(char **)(this + 8), a2 - v10, &Block);
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FC1A0 sub_4FC1A0
+// ------------------------------------------------------------
+unsigned int /*thiscall*/ sub_4FC1A0(void *this, unsigned int a2)
+{
+  return sub_4FC0F0((int)this, a2, 0, 0, 0, 0, 0);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FC1E0 sub_4FC1E0 —— 全局战斗/成长配置解析器（[nation code]/[version]/经验与掉率增益表族）
+//   [nation code]/[version] 区码与版本；经验增益 3 表（队伍人数×4 / 副本难度×4 / 结算评级×5）
+//   + 掉率增益 4 表（难度/队伍/怪物种类） + 奖励概率 + 物品与稀有度判定基数 + 公会成本。
+//   [drop prob number]/[drop prob]、[result reward prob number]/[result reward prob] 成对出现：
+//   先报条数再逐条读（研究 20 §12 的"固定字段对"同型）。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_4FC1E0(int a1, const char *ArgList)
+{
+  char result; // al
+  int v3; // ebx
+  int i2; // esi
+  float *v5; // esi
+  int i; // edi
+  float *v7; // esi
+  int j; // edi
+  float *v9; // esi
+  int k; // edi
+  int v11; // eax
+  int v12; // edi
+  int *v13; // esi
+  int v14; // eax
+  int v15; // eax
+  int v16; // eax
+  int v17; // eax
+  void ***v18; // edx
+  float *v19; // esi
+  int m; // edi
+  float *v21; // esi
+  int n; // edi
+  float *v23; // esi
+  int ii; // edi
+  int v25; // edi
+  int v26; // ebx
+  int *v27; // esi
+  int v28; // eax
+  int v29; // eax
+  float *v30; // esi
+  int jj; // edi
+  float *v32; // esi
+  int kk; // edi
+  int *v34; // esi
+  int mm; // edi
+  int *v36; // esi
+  int nn; // edi
+  const char *p_Block; // eax
+  void **v39[3]; // [esp-1Ch] [ebp-5Ch] BYREF
+  uint8_t *v40; // [esp-10h] [ebp-50h]
+  uint8_t *v41; // [esp-Ch] [ebp-4Ch]
+  uint8_t *v42; // [esp-8h] [ebp-48h]
+  unsigned int v43; // [esp-4h] [ebp-44h]
+  void ***i1; // [esp+Ch] [ebp-34h] BYREF
+  char v45; // [esp+13h] [ebp-2Dh] BYREF
+  int v46; // [esp+14h] [ebp-2Ch] BYREF
+  void *Block; // [esp+18h] [ebp-28h] BYREF
+  int v48; // [esp+28h] [ebp-18h]
+  unsigned int v49; // [esp+2Ch] [ebp-14h]
+  int v50; // [esp+30h] [ebp-10h]
+  int v51; // [esp+3Ch] [ebp-4h]
+
+  v50 = dword_796E50;
+  result = sub_442A10((char)szPassword, (int)ArgList);
+  if ( result != 0 )
+  {
+    v3 = a1;
+    sub_433EF0(a1);
+    v49 = 15;
+    v48 = 0;
+    LOBYTE(Block) = 0;
+    v51 = 0;
+    v45 = 0;
+    while ( (uint8_t)sub_443430(&v46) != 0 )
+    {
+      sub_442B20(&v46);
+      if ( sub_40BF00((std::_String_base *)&v46, 0, v48, "[nation code]", 0xDu) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)&v46, 0, v48, "[version]", 9u) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)&v46, 0, v48, "[clear exp bonusrate]", 0x15u) != 0 )
+          {
+            if ( sub_40BF00((std::_String_base *)&v46, 0, v48, "[monster exp bonusrate]", 0x17u) != 0 )
+            {
+              if ( (uint8_t)sub_423300(&v46, "[party user number exp bonusrate]") != 0 )
+              {
+                v5 = (float *)(v3 + 12);
+                for ( i = 4; i != 0; --i )
+                  *v5++ = sub_442480(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(&v46, "[dungeon difficulty exp bonusrate]") != 0 )
+              {
+                v7 = (float *)(v3 + 28);
+                for ( j = 4; j != 0; --j )
+                  *v7++ = sub_442480(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(&v46, "[clear rank exp bonusrate]") != 0 )
+              {
+                v9 = (float *)(v3 + 44);
+                for ( k = 5; k != 0; --k )
+                  *v9++ = sub_442480(nullptr);
+              }
+              else
+              {
+                if ( (uint8_t)sub_423300(&v46, "[drop prob number]") == 0 )
+                {
+                  if ( (uint8_t)sub_423300(&v46, "[drop prob]") != 0 )
+                  {
+                    v12 = 0;
+                    if ( sub_45E580(v3 + 64) > 0 )
+                    {
+                      i1 = nullptr;
+                      do
+                      {
+                        v13 = (int *)((char *)i1 + *(uint32_t *)(v3 + 68));
+                        v14 = sub_4423D0(nullptr);
+                        v42 = nullptr;
+                        *v13 = v14;
+                        v15 = sub_4423D0(v42);
+                        v41 = nullptr;
+                        v13[1] = v15;
+                        v16 = sub_4423D0(v41);
+                        v40 = nullptr;
+                        v13[2] = v16;
+                        v17 = sub_4423D0(v40);
+                        v18 = i1 + 5;
+                        v13[3] = v17;
+                        v13[4] = 1000;
+                        ++v12;
+                        i1 = v18;
+                      }
+                      while ( v12 < sub_45E580(v3 + 64) );
+                    }
+                    continue;
+                  }
+                  if ( (uint8_t)sub_423300(&v46, "[dungeon difficulty drop bonusrate]") != 0 )
+                  {
+                    v19 = (float *)(v3 + 80);
+                    for ( m = 4; m != 0; --m )
+                      *v19++ = sub_442480(nullptr);
+                    continue;
+                  }
+                  if ( (uint8_t)sub_423300(&v46, "[party user number drop bonusrate]") != 0 )
+                  {
+                    v21 = (float *)(v3 + 96);
+                    for ( n = 4; n != 0; --n )
+                      *v21++ = sub_442480(nullptr);
+                    continue;
+                  }
+                  if ( (uint8_t)sub_423300(&v46, "[drop bonusrate of monster kind]") != 0 )
+                  {
+                    v23 = (float *)(v3 + 112);
+                    for ( ii = 4; ii != 0; --ii )
+                      *v23++ = sub_442480(nullptr);
+                    continue;
+                  }
+                  if ( (uint8_t)sub_423300(&v46, "[result reward prob number]") == 0 )
+                  {
+                    if ( (uint8_t)sub_423300(&v46, "[result reward prob]") != 0 )
+                    {
+                      v25 = 0;
+                      if ( sub_45E580(v3 + 128) > 0 )
+                      {
+                        v26 = 0;
+                        do
+                        {
+                          v27 = (int *)(v26 + *(uint32_t *)(a1 + 132));
+                          v28 = sub_4423D0(nullptr);
+                          v42 = nullptr;
+                          *v27 = v28;
+                          v29 = sub_4423D0(v42);
+                          v41 = nullptr;
+                          v27[1] = v29;
+                          v27[2] = 0;
+                          v27[3] = sub_4423D0(v41);
+                          v27[4] = 1000;
+                          ++v25;
+                          v26 += 20;
+                        }
+                        while ( v25 < sub_45E580(a1 + 128) );
+                        v3 = a1;
+                      }
+                    }
+                    else if ( (uint8_t)sub_423300(&v46, "[dungeon difficulty reward bonusrate]") != 0 )
+                    {
+                      v30 = (float *)(v3 + 144);
+                      for ( jj = 4; jj != 0; --jj )
+                        *v30++ = sub_442480(nullptr);
+                    }
+                    else if ( (uint8_t)sub_423300(&v46, "[party user number reward bonusrate]") != 0 )
+                    {
+                      v32 = (float *)(v3 + 160);
+                      for ( kk = 4; kk != 0; --kk )
+                        *v32++ = sub_442480(nullptr);
+                    }
+                    else if ( (uint8_t)sub_423300(&v46, "[basis of item dicision]") != 0 )
+                    {
+                      *(uint32_t *)(v3 + 176) = sub_4423D0(nullptr);
+                    }
+                    else if ( (uint8_t)sub_423300(&v46, "[basis of equipment rarity dicision]") != 0 )
+                    {
+                      v34 = (int *)(v3 + 180);
+                      for ( mm = 4; mm != 0; --mm )
+                        *v34++ = sub_4423D0(nullptr);
+                    }
+                    else if ( (uint8_t)sub_423300(&v46, "[basis of stackable rarity dicision]") != 0 )
+                    {
+                      v36 = (int *)(v3 + 196);
+                      for ( nn = 4; nn != 0; --nn )
+                        *v36++ = sub_4423D0(nullptr);
+                    }
+                    else if ( (uint8_t)sub_423300(&v46, "[stamina recovery cost]") != 0 )
+                    {
+                      sub_5E5260((void **)(v3 + 212));
+                      for ( i1 = (void ***)sub_4423D0(&v45); v45 != 0; i1 = (void ***)sub_4423D0(&v45) )
+                        sub_431230(v3 + 212, &i1);
+                    }
+                    else if ( (uint8_t)sub_423300(&v46, "[guild create cost]") != 0 )
+                    {
+                      *(uint32_t *)(v3 + 228) = sub_4423D0(nullptr);
+                    }
+                    else if ( (uint8_t)sub_423300(&v46, "[guild levelup cost]") != 0 )
+                    {
+                      *(uint32_t *)(v3 + 232) = sub_4423D0(nullptr);
+                    }
+                    else if ( (uint8_t)sub_423300(&v46, "[guild point acquirement ratio]") != 0 )
+                    {
+                      *(uint32_t *)(v3 + 236) = sub_4423D0(nullptr);
+                    }
+                    else
+                    {
+                      i1 = v39;
+                      sub_401690(&v46);
+                      if ( sub_442C80((char)v39[0], v39[1], (int)v39[2], (int)v40, (int)v41, (int)v42, v43) == 0 )
+                      {
+                        p_Block = (const char *)Block;
+                        if ( v49 < 0x10 )
+                          p_Block = (const char *)&Block;
+                        off_77F3FC("SCRIPT TAG ERROR! [%s] %s", ArgList, p_Block);
+                      }
+                    }
+                    continue;
+                  }
+                }
+                v11 = sub_4423D0(nullptr);
+                sub_4FC1A0(v11);
+              }
+            }
+            else
+            {
+              *(float *)(v3 + 8) = sub_442480(nullptr);
+            }
+          }
+          else
+          {
+            *(float *)(v3 + 4) = sub_442480(nullptr);
+          }
+        }
+        else
+        {
+          for ( i2 = 0; i2 < 4; ++i2 )
+            *(uint8_t *)(i2 + v3) = sub_4423D0(nullptr);
+        }
+      }
+      else
+      {
+        dword_78FF38 = sub_4423D0(nullptr);
+        if ( dword_78FF38 == 1 )
+          dword_9B0AB0 = (int)&dword_9B0C08;
+        else
+          dword_9B0AB0 = (int)&dword_9B0BC8;
+      }
+    }
+    if ( v49 >= 0x10 )
+      j__free(Block);
+    return 1;
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x4FC840 sub_4FC840
+// ------------------------------------------------------------
+bool /*cdecl*/ sub_4FC840(const char *a1, int a2)
+{
+  strcpy(byte_9B6C78, a1);
+  if ( byte_9B6C77[strlen(byte_9B6C78)] != 92 && byte_9B6C77[strlen(byte_9B6C78)] != 47 )
+    *(uint16_t *)&byte_9B6C78[strlen(byte_9B6C78)] = 92;
+  return (uint8_t)sub_443C40((int)&unk_9B6D78, (char)byte_9B6C78, a2) != 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FC8D0 sub_4FC8D0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FC8D0(void *this)
+{
+  uint32_t *v1; // eax
+  int result; // eax
+  int v3; // edx
+
+  v1 = *(uint32_t **)this;
+  if ( *(uint8_t *)(*(uint32_t *)this + 69) != 0 )
+  {
+    result = v1[2];
+    *(uint32_t *)this = result;
+  }
+  else
+  {
+    v3 = *v1;
+    if ( *(uint8_t *)(*v1 + 69) != 0 )
+    {
+      result = v1[1];
+      if ( *(uint8_t *)(result + 69) == 0 )
+      {
+        do
+        {
+          if ( *(uint32_t *)this != *(uint32_t *)result )
+            break;
+          *(uint32_t *)this = result;
+          result = *(uint32_t *)(result + 4);
+        }
+        while ( *(uint8_t *)(result + 69) == 0 );
+        if ( *(uint8_t *)(result + 69) == 0 )
+          *(uint32_t *)this = result;
+      }
+    }
+    else
+    {
+      for ( result = *(uint32_t *)(v3 + 8); *(uint8_t *)(result + 69) == 0; result = *(uint32_t *)(result + 8) )
+        v3 = result;
+      *(uint32_t *)this = v3;
+    }
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FC930 sub_4FC930
+// ------------------------------------------------------------
+void /*thiscall*/ sub_4FC930(void *this)
+{
+  *(uint32_t *)this = -1;
+  sub_4015C0((void *)szPassword, 0);
+  *((uint32_t *)this + 8) = 0;
+  if ( *((uint32_t *)this + 10) != 0 )
+    j__free(*((void **)this + 10));
+  *((uint32_t *)this + 10) = 0;
+  *((uint32_t *)this + 11) = 0;
+  *((uint32_t *)this + 12) = 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FC970 sub_4FC970
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FC970(uint32_t *this, uint32_t *a2)
+{
+  uint32_t *v3; // ecx
+
+  v3 = this + 1;
+  *this = *a2;
+  v3[6] = 15;
+  v3[5] = 0;
+  *((uint8_t *)v3 + 4) = 0;
+  sub_4014D0((std::_String_base *)v3, a2 + 1, 0, -1);
+  *(this + 8) = a2[8];
+  sub_435020(a2 + 9);
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FC9F0 sub_4FC9F0
+// ------------------------------------------------------------
+char */*thiscall*/ sub_4FC9F0(char *this)
+{
+  char *v2; // ecx
+
+  v2 = this + 4;
+  *((uint32_t *)v2 + 6) = 15;
+  *((uint32_t *)v2 + 5) = 0;
+  v2[4] = 0;
+  *((uint32_t *)this + 10) = 0;
+  *((uint32_t *)this + 11) = 0;
+  *((uint32_t *)this + 12) = 0;
+  *(uint32_t *)this = -1;
+  sub_4015C0((void *)szPassword, 0);
+  *((uint32_t *)this + 8) = 0;
+  if ( *((uint32_t *)this + 10) != 0 )
+    j__free(*((void **)this + 10));
+  *((uint32_t *)this + 10) = 0;
+  *((uint32_t *)this + 11) = 0;
+  *((uint32_t *)this + 12) = 0;
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FCA80 sub_4FCA80
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FCA80(uint32_t *this, uint32_t *a2)
+{
+  *this = *a2;
+  sub_4014D0((std::_String_base *)(this + 1), a2 + 1, 0, -1);
+  *(this + 8) = a2[8];
+  sub_4ED3F0((int)(this + 9), (int)(a2 + 9));
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FCAC0 sub_4FCAC0
+// ------------------------------------------------------------
+uint32_t */*stdcall*/ sub_4FCAC0(int a1, int a2, int a3, uint32_t *a4, char a5)
+{
+  uint32_t *v5; // eax
+  uint32_t *v6; // esi
+  void *v8[9]; // [esp+0h] [ebp-24h] BYREF
+
+  v8[5] = v8;
+  v5 = operator new(0x48u);
+  v6 = v5;
+  v8[4] = v5;
+  v8[8] = (void *)1;
+  v8[3] = v5;
+  if ( v5 != nullptr )
+  {
+    *v5 = a1;
+    v5[1] = a2;
+    v5[2] = a3;
+    v5[3] = *a4;
+    sub_4FC970(v5 + 4, a4 + 1);
+    *((uint8_t *)v6 + 68) = a5;
+    *((uint8_t *)v6 + 69) = 0;
+  }
+  return v6;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FCB60 sub_4FCB60
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FCB60(uint32_t *this, uint32_t *a2, char a3, uint32_t *a4, int a5)
+{
+  int v6; // ecx
+  uint32_t *v7; // eax
+  uint32_t *v8; // eax
+  int v9; // eax
+  uint32_t *v10; // eax
+  int v11; // esi
+  uint32_t *v12; // ecx
+  int *v13; // ebx
+  int v14; // edx
+  void **pExceptionObject; // [esp+Ch] [ebp-50h] BYREF
+  uint8_t v17[20]; // [esp+34h] [ebp-28h] BYREF
+  int v18; // [esp+48h] [ebp-14h]
+  int v19; // [esp+4Ch] [ebp-10h]
+  int v20; // [esp+58h] [ebp-4h]
+  int v21; // [esp+70h] [ebp+14h]
+
+  if ( *(this + 2) >= 0x4924923u )
+  {
+    v19 = 15;
+    v18 = 0;
+    v17[4] = 0;
+    sub_4015C0("map/set<T> too long", 0x13u);
+    v20 = 0;
+    sub_401740(v17);
+    pExceptionObject = &std::length_error::`vftable';
+    _CxxThrowException(&pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+  }
+  v6 = sub_4FCAC0(*(this + 1), a4, *(this + 1), a5, 0);
+  v7 = (uint32_t *)*(this + 1);
+  v21 = v6;
+  ++*(this + 2);
+  if ( a4 == v7 )
+  {
+    v7[1] = v6;
+    *(uint32_t *)*(this + 1) = v6;
+    *(uint32_t *)(*(this + 1) + 8) = v6;
+  }
+  else if ( a3 != 0 )
+  {
+    *a4 = v6;
+    v8 = (uint32_t *)*(this + 1);
+    if ( a4 == (uint32_t *)*v8 )
+      *v8 = v6;
+  }
+  else
+  {
+    a4[2] = v6;
+    v9 = *(this + 1);
+    if ( a4 == *(uint32_t **)(v9 + 8) )
+      *(uint32_t *)(v9 + 8) = v6;
+  }
+  v10 = (uint32_t *)(v6 + 4);
+  v11 = v6;
+  if ( *(uint8_t *)(*(uint32_t *)(v6 + 4) + 68) == 0 )
+  {
+    while ( 1 )
+    {
+      v12 = (uint32_t *)*v10;
+      v13 = *(int **)(*v10 + 4);
+      v14 = *v13;
+      if ( *v10 == *v13 )
+      {
+        v14 = v13[2];
+        if ( *(uint8_t *)(v14 + 68) != 0 )
+        {
+          if ( v11 == v12[2] )
+          {
+            v11 = *v10;
+            sub_4CE650(*v10);
+          }
+          *(uint8_t *)(*(uint32_t *)(v11 + 4) + 68) = 1;
+          *(uint8_t *)(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4) + 68) = 0;
+          sub_4CE6B0(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4));
+          goto LABEL_21;
+        }
+      }
+      else if ( *(uint8_t *)(v14 + 68) != 0 )
+      {
+        if ( v11 == *v12 )
+        {
+          v11 = *v10;
+          sub_4CE6B0(*v10);
+        }
+        *(uint8_t *)(*(uint32_t *)(v11 + 4) + 68) = 1;
+        *(uint8_t *)(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4) + 68) = 0;
+        sub_4CE650(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4));
+        goto LABEL_21;
+      }
+      *(uint8_t *)(*v10 + 68) = 1;
+      *(uint8_t *)(v14 + 68) = 1;
+      *(uint8_t *)(*(uint32_t *)(*v10 + 4) + 68) = 0;
+      v11 = *(uint32_t *)(*v10 + 4);
+LABEL_21:
+      v10 = (uint32_t *)(v11 + 4);
+      if ( *(uint8_t *)(*(uint32_t *)(v11 + 4) + 68) != 0 )
+      {
+        v6 = v21;
+        break;
+      }
+    }
+  }
+  *(uint8_t *)(*(uint32_t *)(*(this + 1) + 4) + 68) = 1;
+  *a2 = v6;
+  return a2;
+}
+
+
+// ------------------------------------------------------------
+// 0x4FCD10 sub_4FCD10
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FCD10(int *this, int a2, uint32_t *a3)
+{
+  uint32_t *v3; // ebx
+  uint32_t *v5; // esi
+  int *v6; // eax
+  bool v7; // cl
+  int v8; // edx
+  uint32_t *v9; // edx
+  int v10; // edx
+  int v12; // ecx
+  char v13; // [esp+Ch] [ebp-4h]
+
+  v3 = a3;
+  v5 = (uint32_t *)*(this + 1);
+  v6 = (int *)v5[1];
+  v7 = true;
+  v13 = 1;
+  if ( *((uint8_t *)v6 + 69) == 0 )
+  {
+    v8 = *a3;
+    do
+    {
+      v7 = v8 < v6[3];
+      v5 = v6;
+      v13 = v7;
+      if ( v8 >= v6[3] )
+        v6 = (int *)v6[2];
+      else
+        v6 = (int *)*v6;
+    }
+    while ( *((uint8_t *)v6 + 69) == 0 );
+  }
+  v9 = v5;
+  a3 = v5;
+  if ( v7 )
+  {
+    if ( v5 == *(uint32_t **)*(this + 1) )
+    {
+      v10 = *sub_4FCB60(this, &a3, 1, v5, v3);
+      *(uint8_t *)(a2 + 4) = 1;
+      *(uint32_t *)a2 = v10;
+      return a2;
+    }
+    sub_4FC8D0(&a3);
+    v9 = a3;
+  }
+  if ( v9[3] >= *v3 )
+  {
+    *(uint8_t *)(a2 + 4) = 0;
+    *(uint32_t *)a2 = v9;
+    return a2;
+  }
+  else
+  {
+    v12 = *sub_4FCB60(this, &a3, v13, v5, v3);
+    *(uint32_t *)a2 = v12;
+    *(uint8_t *)(a2 + 4) = 1;
+    return a2;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FCDD0 sub_4FCDD0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FCDD0(int this, uint32_t *a2, uint32_t *a3, uint32_t *a4)
+{
+  uint32_t *v6; // eax
+  uint32_t *v7; // esi
+  uint32_t *v8; // eax
+  int v9; // ecx
+  uint8_t v10[8]; // [esp+8h] [ebp-8h] BYREF
+
+  if ( *(uint32_t *)(this + 8) == 0 )
+  {
+    sub_4FCB60((int *)this, a2, 1, *(uint32_t **)(this + 4), a4);
+    return a2;
+  }
+  v6 = *(uint32_t **)(this + 4);
+  v7 = a4;
+  if ( a3 == (uint32_t *)*v6 )
+  {
+    if ( *a4 < a3[3] )
+    {
+      sub_4FCB60((int *)this, a2, 1, a3, a4);
+      return a2;
+    }
+    goto LABEL_22;
+  }
+  if ( a3 == v6 )
+  {
+    v8 = (uint32_t *)v6[2];
+    if ( v8[3] < *a4 )
+    {
+      sub_4FCB60((int *)this, a2, 0, v8, a4);
+      return a2;
+    }
+    goto LABEL_22;
+  }
+  if ( *a4 >= a3[3] || (a4 = a3, sub_4FC8D0(&a4), a4[3] >= *v7) )
+  {
+    if ( a3[3] >= *v7 || (a4 = a3, sub_4CE5F0(&a4), a4 != *(uint32_t **)(this + 4)) && *v7 >= a4[3] )
+    {
+LABEL_22:
+      v9 = *(uint32_t *)sub_4FCD10((int *)this, (int)v10, v7);
+      *a2 = v9;
+      return a2;
+    }
+    if ( *(uint8_t *)(a3[2] + 69) != 0 )
+      sub_4FCB60((int *)this, a2, 0, a3, v7);
+    else
+      sub_4FCB60((int *)this, a2, 1, a4, v7);
+    return a2;
+  }
+  else
+  {
+    if ( *(uint8_t *)(a4[2] + 69) != 0 )
+      sub_4FCB60((int *)this, a2, 0, a4, v7);
+    else
+      sub_4FCB60((int *)this, a2, 1, a3, v7);
+    return a2;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FCF30 sub_4FCF30
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FCF30(uint32_t *this, int *a2)
+{
+  int *v2; // ebx
+  uint32_t *v4; // esi
+  int *v5; // eax
+  char *v6; // eax
+  int v8; // [esp+Ch] [ebp-78h] BYREF
+  int v9; // [esp+10h] [ebp-74h] BYREF
+  void *v10; // [esp+18h] [ebp-6Ch]
+  int v11; // [esp+28h] [ebp-5Ch]
+  unsigned int v12; // [esp+2Ch] [ebp-58h]
+  void *Block; // [esp+38h] [ebp-4Ch]
+  int v14; // [esp+3Ch] [ebp-48h]
+  int v15; // [esp+40h] [ebp-44h]
+  char v16[8]; // [esp+44h] [ebp-40h] BYREF
+  void *v17; // [esp+4Ch] [ebp-38h]
+  unsigned int v18; // [esp+60h] [ebp-24h]
+  void *v19; // [esp+6Ch] [ebp-18h]
+  int v20; // [esp+70h] [ebp-14h]
+  int v21; // [esp+74h] [ebp-10h]
+  int v22; // [esp+80h] [ebp-4h]
+
+  v2 = a2;
+  v4 = (uint32_t *)*(this + 1);
+  v5 = (int *)v4[1];
+  while ( *((uint8_t *)v5 + 69) == 0 )
+  {
+    if ( v5[3] >= *a2 )
+    {
+      v4 = v5;
+      v5 = (int *)*v5;
+    }
+    else
+    {
+      v5 = (int *)v5[2];
+    }
+  }
+  if ( v4 == (uint32_t *)*(this + 1) || *a2 < v4[3] )
+  {
+    v6 = sub_4FC9F0(v16);
+    v8 = *v2;
+    v22 = 0;
+    sub_4FC970(&v9, v6);
+    LOBYTE(v22) = 1;
+    v4 = (uint32_t *)*sub_4FCDD0((int)this, &a2, v4, &v8);
+    if ( Block != nullptr )
+      j__free(Block);
+    Block = nullptr;
+    v14 = 0;
+    v15 = 0;
+    if ( v12 >= 0x10 )
+      j__free(v10);
+    v12 = 15;
+    v11 = 0;
+    LOBYTE(v10) = 0;
+    if ( v19 != nullptr )
+      j__free(v19);
+    v19 = nullptr;
+    v20 = 0;
+    v21 = 0;
+    if ( v18 >= 0x10 )
+      j__free(v17);
+  }
+  return v4 + 4;
+}
+
+
+
+// ============================================================
+// §B 0x4FD000-0x4FE000 地图(场景)定义 + 副本定义族
+// ============================================================
+
+// ------------------------------------------------------------
+// 0x4FD040 sub_4FD040 —— 副本(dungeon)定义解析器
+//   标签族：[name]/[entering title]/[cutscene image]/[dungeon what must be cleared]/[area]
+//   + 入口类型枚举 [normal]=?/[gate]/[fishing place]/[pub]/[dungeon gate]。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_4FD040(int *a1, const char *ArgList)
+{
+  const char *v2; // edi
+  char result; // al
+  int *v4; // ebx
+  int v5; // ecx
+  void **v6; // esi
+  int v7; // eax
+  int v8; // eax
+  char *v9; // esi
+  void **v10; // eax
+  char v11; // [esp-1Ch] [ebp-ACh] BYREF
+  void *v12; // [esp-18h] [ebp-A8h]
+  int v13; // [esp-14h] [ebp-A4h]
+  int v14; // [esp-10h] [ebp-A0h]
+  char *v15; // [esp-Ch] [ebp-9Ch]
+  char *v16; // [esp-8h] [ebp-98h]
+  int *v17; // [esp-4h] [ebp-94h]
+  int i; // [esp+Ch] [ebp-84h] BYREF
+  char v19; // [esp+13h] [ebp-7Dh] BYREF
+  int v20; // [esp+14h] [ebp-7Ch] BYREF
+  char v21; // [esp+18h] [ebp-78h] BYREF
+  void *v22; // [esp+1Ch] [ebp-74h]
+  int v23; // [esp+2Ch] [ebp-64h]
+  unsigned int v24; // [esp+30h] [ebp-60h]
+  int v25; // [esp+34h] [ebp-5Ch]
+  void *Block; // [esp+3Ch] [ebp-54h]
+  void *Src; // [esp+40h] [ebp-50h]
+  int v28; // [esp+44h] [ebp-4Ch]
+  char v29[4]; // [esp+48h] [ebp-48h] BYREF
+  void *v30; // [esp+4Ch] [ebp-44h]
+  unsigned int v31; // [esp+5Ch] [ebp-34h]
+  unsigned int v32; // [esp+60h] [ebp-30h]
+  size_t v33; // [esp+64h] [ebp-2Ch] BYREF
+  void *v34[4]; // [esp+68h] [ebp-28h] BYREF
+  int v35; // [esp+78h] [ebp-18h]
+  unsigned int v36; // [esp+7Ch] [ebp-14h]
+  int v37; // [esp+80h] [ebp-10h]
+  int v38; // [esp+8Ch] [ebp-4h]
+
+  v2 = ArgList;
+  v37 = dword_796E50;
+  result = sub_442A10((char)&unk_9B6C78, (int)ArgList);
+  if ( result == 0 )
+    return result;
+  v4 = a1;
+  sub_4D1020(a1);
+  sub_443300((int)(a1 + 27), "%s%s", (char)&unk_9B6C78);
+  v36 = 15;
+  v35 = 0;
+  LOBYTE(v34[0]) = 0;
+  v38 = 1;
+  v32 = 15;
+  v31 = 0;
+  LOBYTE(v30) = 0;
+  v19 = 0;
+  sub_4FC9F0(&v20);
+  LOBYTE(v38) = 2;
+  if ( (uint8_t)sub_443430(&v33) == 0 )
+    goto LABEL_43;
+  do
+  {
+    sub_442B20(&v33);
+    if ( v35 != 0 )
+    {
+      v5 = v35;
+      if ( (unsigned int)v35 >= 6 )
+        v5 = 6;
+      v6 = (void **)v34[0];
+      if ( v36 < 0x10 )
+        v6 = v34;
+      v7 = memcmp((const char *)v6, "[name]", v5);
+      if ( v7 == 0 && (unsigned int)v35 >= 6 )
+      {
+        LOBYTE(v7) = v35 != 6;
+        if ( v7 == 0 )
+        {
+          v4 = a1;
+          v17 = a1 + 1;
+          sub_443370();
+          continue;
+        }
+      }
+      v4 = a1;
+    }
+    if ( sub_40BF00((std::_String_base *)&v33, 0, v35, "[entering title]", 0x10u) != 0 )
+    {
+      if ( sub_40BF00((std::_String_base *)&v33, 0, v35, "[cutscene image]", 0x10u) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)&v33, 0, v35, "[dungeon what must be cleared]", 0x1Eu) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)&v33, 0, v35, "[area]", 6u) != 0 )
+          {
+            i = (int)&v11;
+            v17 = (int *)15;
+            v16 = nullptr;
+            LOBYTE(v12) = 0;
+            sub_4014D0((size_t *)&v11, &v33, 0, 0xFFFFFFFF);
+            if ( (uint8_t)sub_442C80(v11, v12, v13, v14, (int)v15, (int)v16, (int)v17) == 0 )
+            {
+              v10 = (void **)v34[0];
+              if ( v36 < 0x10 )
+                v10 = v34;
+              off_77F3FC("SCRIPT TAG ERROR! [%s] %s", ArgList, (const char *)v10);
+            }
+          }
+          else
+          {
+            sub_4FC930(&v20);
+            v20 = sub_4423D0(nullptr);
+            v16 = &v21;
+            sub_443370();
+            v15 = v29;
+            sub_443370();
+            if ( sub_40BF00((std::_String_base *)v29, 0, v31, "[normal]", 8u) != 0 )
+            {
+              if ( (uint8_t)sub_423300(v29, "[gate]") != 0 )
+              {
+                v25 = 1;
+              }
+              else if ( (uint8_t)sub_423300(v29, "[fishing place]") != 0 )
+              {
+                v25 = 2;
+              }
+              else if ( (uint8_t)sub_423300(v29, "[pub]") != 0 )
+              {
+                v25 = 3;
+              }
+              else if ( (uint8_t)sub_423300(v29, "[dungeon gate]") != 0 )
+              {
+                v25 = 4;
+              }
+            }
+            else
+            {
+              v25 = 0;
+            }
+            v8 = sub_4423D0(&v19);
+            for ( i = v8; v19 != 0; i = v8 )
+            {
+              v9 = (char *)Src;
+              if ( Block != nullptr && ((uint8_t *)Src - (uint8_t *)Block) >> 2 < (unsigned int)((v28 - (int)Block) >> 2) )
+              {
+                *(uint32_t *)Src = v8;
+                Src = v9 + 4;
+              }
+              else
+              {
+                sub_430C80(Src, 1, (int)&i);
+              }
+              v8 = sub_4423D0(&v19);
+            }
+            v17 = &v20;
+            sub_4FCF30(&v20);
+            sub_4FCA80(v17);
+          }
+        }
+        else
+        {
+          v4[23] = sub_4423D0(nullptr);
+        }
+      }
+      else
+      {
+        v17 = v4 + 15;
+        sub_443370();
+        v4[22] = sub_4423D0(nullptr);
+      }
+    }
+    else
+    {
+      v17 = v4 + 8;
+      sub_443370();
+    }
+  }
+  while ( (uint8_t)sub_443430(&v33) != 0 );
+  v2 = ArgList;
+LABEL_43:
+  *v4 = sub_4A2F80(&dword_9B6D78, v2);
+  if ( Block != nullptr )
+    j__free(Block);
+  Block = nullptr;
+  Src = nullptr;
+  v28 = 0;
+  if ( v24 >= 0x10 )
+    j__free(v22);
+  v24 = 15;
+  v23 = 0;
+  LOBYTE(v22) = 0;
+  if ( v32 >= 0x10 )
+    j__free(v30);
+  v32 = 15;
+  v31 = 0;
+  LOBYTE(v30) = 0;
+  if ( v36 >= 0x10 )
+    j__free(v34[0]);
+  return 1;
+}
+
+
+// ------------------------------------------------------------
+// 0x4FD430 sub_4FD430
+// ------------------------------------------------------------
+bool /*cdecl*/ sub_4FD430(const char *a1, int a2)
+{
+  strcpy(byte_9B6D88, a1);
+  if ( byte_9B6D87[strlen(byte_9B6D88)] != 92 && byte_9B6D87[strlen(byte_9B6D88)] != 47 )
+    *(uint16_t *)&byte_9B6D88[strlen(byte_9B6D88)] = 92;
+  return (uint8_t)sub_443C40((int)&unk_9B6E88, (char)byte_9B6D88, a2) != 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FD4C0 sub_4FD4C0 —— 地图(map)定义解析器
+//   标签族：[name]/[map image]/[dungeon]；未识别标签打印 "SCRIPT TAG ERROR! [%s] %s"
+//   （off_77F3FC —— 研究 20 §1.3 所述引擎错误输出口）。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_4FD4C0(int a1, const char *ArgList)
+{
+  char result; // al
+  uint32_t *v3; // esi
+  unsigned int v4; // edx
+  int v5; // ecx
+  void **v6; // esi
+  int v7; // eax
+  int i; // eax
+  int v9; // eax
+  int v10; // edx
+  unsigned int v11; // ecx
+  int v12; // esi
+  void **v13; // eax
+  char v14; // [esp-1Ch] [ebp-64h] BYREF
+  void **v15; // [esp-18h] [ebp-60h]
+  int v16; // [esp-14h] [ebp-5Ch]
+  int v17; // [esp-10h] [ebp-58h]
+  int v18; // [esp-Ch] [ebp-54h]
+  CHAR *v19; // [esp-8h] [ebp-50h]
+  unsigned int v20; // [esp-4h] [ebp-4Ch]
+  uint32_t v21[2]; // [esp+Ch] [ebp-3Ch] BYREF
+  char *v22; // [esp+14h] [ebp-34h]
+  char v23; // [esp+1Bh] [ebp-2Dh] BYREF
+  uint8_t v24[4]; // [esp+1Ch] [ebp-2Ch] BYREF
+  void *Block[4]; // [esp+20h] [ebp-28h] BYREF
+  int v26; // [esp+30h] [ebp-18h]
+  unsigned int v27; // [esp+34h] [ebp-14h]
+  int v28; // [esp+38h] [ebp-10h]
+  int v29; // [esp+44h] [ebp-4h]
+
+  v28 = dword_796E50;
+  result = sub_442A10((char)&unk_9B6D88, (int)ArgList);
+  if ( result != 0 )
+  {
+    v3 = (uint32_t *)a1;
+    v20 = 0;
+    v19 = (CHAR *)szPassword;
+    *(uint32_t *)a1 = 0;
+    sub_4015C0(v19, v20);
+    sub_4015C0((void *)szPassword, 0);
+    *(uint32_t *)(a1 + 60) = 0;
+    if ( *(uint32_t *)(a1 + 68) != 0 )
+      j__free(*(void **)(a1 + 68));
+    *(uint32_t *)(a1 + 68) = 0;
+    *(uint32_t *)(a1 + 72) = 0;
+    *(uint32_t *)(a1 + 76) = 0;
+    v27 = 15;
+    v26 = 0;
+    LOBYTE(Block[0]) = 0;
+    v29 = 0;
+    v23 = 0;
+    if ( (uint8_t)sub_443430(v24) != 0 )
+    {
+      while ( 1 )
+      {
+        sub_442B20(v24);
+        v4 = v26;
+        if ( v26 == 0 )
+          goto LABEL_15;
+        v5 = v26;
+        if ( (unsigned int)v26 >= 6 )
+          v5 = 6;
+        v6 = (void **)Block[0];
+        if ( v27 < 0x10 )
+          v6 = Block;
+        v7 = memcmp((const char *)v6, "[name]", v5);
+        if ( v7 != 0 )
+          break;
+        if ( (unsigned int)v26 < 6 )
+          break;
+        LOBYTE(v7) = v26 != 6;
+        if ( v7 != 0 )
+          break;
+        v20 = a1 + 4;
+        sub_443370();
+LABEL_34:
+        if ( (uint8_t)sub_443430(v24) == 0 )
+        {
+          v3 = (uint32_t *)a1;
+          goto LABEL_36;
+        }
+      }
+      v4 = v26;
+LABEL_15:
+      if ( sub_40BF00((std::_String_base *)v24, 0, v4, "[map image]", 0xBu) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)v24, 0, v26, "[dungeon]", 9u) != 0 )
+        {
+          v22 = &v14;
+          v20 = 15;
+          v19 = nullptr;
+          LOBYTE(v15) = 0;
+          sub_4014D0((std::_String_base *)&v14, v24, 0, -1);
+          if ( sub_442C80(v14, v15, v16, v17, v18, (int)v19, v20) == 0 )
+          {
+            v13 = (void **)Block[0];
+            if ( v27 < 0x10 )
+              v13 = Block;
+            off_77F3FC("SCRIPT TAG ERROR! [%s] %s", ArgList, (const char *)v13);
+          }
+        }
+        else
+        {
+          if ( *(uint32_t *)(a1 + 68) != 0 )
+            j__free(*(void **)(a1 + 68));
+          v20 = (unsigned int)&v23;
+          *(uint32_t *)(a1 + 68) = 0;
+          *(uint32_t *)(a1 + 72) = 0;
+          *(uint32_t *)(a1 + 76) = 0;
+          for ( i = sub_4423D0((uint8_t *)v20); v23 != 0; i = sub_4423D0(&v23) )
+          {
+            v21[0] = i;
+            v9 = sub_4423D0(nullptr);
+            v10 = *(uint32_t *)(a1 + 68);
+            v21[1] = v9;
+            if ( v10 != 0 )
+              v11 = (*(uint32_t *)(a1 + 72) - v10) >> 3;
+            else
+              v11 = 0;
+            if ( v10 != 0 && v11 < (*(uint32_t *)(a1 + 76) - v10) >> 3 )
+            {
+              v12 = *(uint32_t *)(a1 + 72);
+              v20 = (unsigned int)v22;
+              v19 = (CHAR *)(a1 + 64);
+              sub_63A7C0(v12, 1, v21);
+              *(uint32_t *)(a1 + 72) = v12 + 8;
+            }
+            else
+            {
+              sub_473A80(a1 + 64, *(uint32_t *)(a1 + 72), 1u, (int)v21);
+            }
+          }
+        }
+      }
+      else
+      {
+        v20 = a1 + 32;
+        sub_443370();
+        *(uint32_t *)(a1 + 60) = sub_4423D0(nullptr);
+      }
+      goto LABEL_34;
+    }
+LABEL_36:
+    *v3 = sub_4A2F80(ArgList);
+    if ( v27 >= 0x10 )
+      j__free(Block[0]);
+    return 1;
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x4FD770 sub_4FD770
+// ------------------------------------------------------------
+bool /*cdecl*/ sub_4FD770(const char *a1, int a2)
+{
+  strcpy(byte_9B6E98, a1);
+  if ( byte_9B6E97[strlen(byte_9B6E98)] != 92 && byte_9B6E97[strlen(byte_9B6E98)] != 47 )
+    *(uint16_t *)&byte_9B6E98[strlen(byte_9B6E98)] = 92;
+  return (uint8_t)sub_443C40((int)&unk_9B6F98, (char)byte_9B6E98, a2) != 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FD800 sub_4FD800
+// ------------------------------------------------------------
+int /*cdecl*/ sub_4FD800(int a1)
+{
+  int result; // eax
+  int i; // ecx
+
+  result = a1;
+  for ( i = *(uint32_t *)(a1 + 8); *(uint8_t *)(i + 101) == 0; i = *(uint32_t *)(i + 8) )
+    result = i;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FD820 sub_4FD820
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_4FD820(uint32_t *a1)
+{
+  uint32_t *result; // eax
+  int *v2; // ecx
+
+  result = a1;
+  v2 = (int *)*a1;
+  if ( *(uint8_t *)(*a1 + 101) == 0 )
+  {
+    do
+    {
+      result = v2;
+      v2 = (int *)*v2;
+    }
+    while ( *((uint8_t *)v2 + 101) == 0 );
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FD840 sub_4FD840
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FD840(void *this)
+{
+  uint32_t *v1; // eax
+  int result; // eax
+  int v3; // edx
+
+  v1 = *(uint32_t **)this;
+  if ( *(uint8_t *)(*(uint32_t *)this + 101) != 0 )
+  {
+    result = v1[2];
+    *(uint32_t *)this = result;
+  }
+  else
+  {
+    v3 = *v1;
+    if ( *(uint8_t *)(*v1 + 101) != 0 )
+    {
+      result = v1[1];
+      if ( *(uint8_t *)(result + 101) == 0 )
+      {
+        do
+        {
+          if ( *(uint32_t *)this != *(uint32_t *)result )
+            break;
+          *(uint32_t *)this = result;
+          result = *(uint32_t *)(result + 4);
+        }
+        while ( *(uint8_t *)(result + 101) == 0 );
+        if ( *(uint8_t *)(result + 101) == 0 )
+          *(uint32_t *)this = result;
+      }
+    }
+    else
+    {
+      for ( result = *(uint32_t *)(v3 + 8); *(uint8_t *)(result + 101) == 0; result = *(uint32_t *)(result + 8) )
+        v3 = result;
+      *(uint32_t *)this = v3;
+    }
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FD8A0 sub_4FD8A0
+// ------------------------------------------------------------
+int */*thiscall*/ sub_4FD8A0(int *this)
+{
+  int *result; // eax
+  int *v2; // edx
+
+  result = (int *)*this;
+  if ( *(uint8_t *)(*this + 101) == 0 )
+  {
+    v2 = (int *)result[2];
+    if ( *((uint8_t *)v2 + 101) != 0 )
+    {
+      for ( result = (int *)result[1]; *((uint8_t *)result + 101) == 0; result = (int *)result[1] )
+      {
+        if ( *this != result[2] )
+          break;
+        *this = (int)result;
+      }
+      *this = (int)result;
+    }
+    else
+    {
+      result = (int *)*v2;
+      if ( *(uint8_t *)(*v2 + 101) == 0 )
+      {
+        do
+        {
+          v2 = result;
+          result = (int *)*result;
+        }
+        while ( *((uint8_t *)result + 101) == 0 );
+      }
+      *this = (int)v2;
+    }
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FD900 sub_4FD900
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FD900(uint32_t *this, int a2)
+{
+  uint32_t *result; // eax
+  int v3; // ecx
+  uint32_t *v4; // ecx
+
+  result = *(uint32_t **)(a2 + 8);
+  *(uint32_t *)(a2 + 8) = *result;
+  if ( *(uint8_t *)(*result + 101) == 0 )
+    *(uint32_t *)(*result + 4) = a2;
+  result[1] = *(uint32_t *)(a2 + 4);
+  v3 = *(this + 1);
+  if ( a2 == *(uint32_t *)(v3 + 4) )
+  {
+    *(uint32_t *)(v3 + 4) = result;
+    *result = a2;
+    *(uint32_t *)(a2 + 4) = result;
+  }
+  else
+  {
+    v4 = *(uint32_t **)(a2 + 4);
+    if ( a2 == *v4 )
+      *v4 = result;
+    else
+      v4[2] = result;
+    *result = a2;
+    *(uint32_t *)(a2 + 4) = result;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FD960 sub_4FD960
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FD960(uint32_t *this, uint32_t *a2)
+{
+  int result; // eax
+  int v3; // esi
+  int v4; // ecx
+  uint32_t *v5; // ecx
+
+  result = *a2;
+  *a2 = *(uint32_t *)(*a2 + 8);
+  v3 = *(uint32_t *)(result + 8);
+  if ( *(uint8_t *)(v3 + 101) == 0 )
+    *(uint32_t *)(v3 + 4) = a2;
+  *(uint32_t *)(result + 4) = a2[1];
+  v4 = *(this + 1);
+  if ( a2 == *(uint32_t **)(v4 + 4) )
+  {
+    *(uint32_t *)(v4 + 4) = result;
+    *(uint32_t *)(result + 8) = a2;
+    a2[1] = result;
+  }
+  else
+  {
+    v5 = (uint32_t *)a2[1];
+    if ( a2 == (uint32_t *)v5[2] )
+      v5[2] = result;
+    else
+      *v5 = result;
+    *(uint32_t *)(result + 8) = a2;
+    a2[1] = result;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FD9C0 sub_4FD9C0
+// ------------------------------------------------------------
+char /*stdcall*/ sub_4FD9C0(void **Block)
+{
+  void **v1; // edi
+  char result; // al
+  void **i; // esi
+
+  v1 = Block;
+  result = *((uint8_t *)Block + 21);
+  for ( i = Block; result == 0; v1 = i )
+  {
+    sub_4FD9C0(i[2]);
+    i = (void **)*i;
+    j__free(v1);
+    result = *((uint8_t *)i + 21);
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FDA00 sub_4FDA00
+// ------------------------------------------------------------
+void /*thiscall*/ sub_4FDA00(int this)
+{
+  if ( *(uint32_t *)(this + 72) != 0 )
+    j__free(*(void **)(this + 72));
+  *(uint32_t *)(this + 72) = 0;
+  *(uint32_t *)(this + 76) = 0;
+  *(uint32_t *)(this + 80) = 0;
+  if ( *(uint32_t *)(this + 64) >= 0x10u )
+    j__free(*(void **)(this + 44));
+  *(uint32_t *)(this + 64) = 15;
+  *(uint32_t *)(this + 60) = 0;
+  *(uint8_t *)(this + 44) = 0;
+  if ( *(uint32_t *)(this + 36) >= 0x10u )
+    j__free(*(void **)(this + 16));
+  *(uint32_t *)(this + 32) = 0;
+  *(uint32_t *)(this + 36) = 15;
+  *(uint8_t *)(this + 16) = 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FDA60 sub_4FDA60
+// ------------------------------------------------------------
+void /*thiscall*/ sub_4FDA60(void *this)
+{
+  sub_4FDA00((int)this + 4);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FDA80 sub_4FDA80
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FDA80(uint32_t *this, uint32_t *a2, char a3, uint32_t *a4, int a5)
+{
+  int v6; // ecx
+  uint32_t *v7; // eax
+  uint32_t *v8; // eax
+  int v9; // eax
+  uint32_t *v10; // eax
+  int v11; // esi
+  uint32_t *v12; // ecx
+  int *v13; // ebx
+  int v14; // edx
+  void **pExceptionObject; // [esp+Ch] [ebp-50h] BYREF
+  uint8_t v17[20]; // [esp+34h] [ebp-28h] BYREF
+  int v18; // [esp+48h] [ebp-14h]
+  int v19; // [esp+4Ch] [ebp-10h]
+  int v20; // [esp+58h] [ebp-4h]
+  int v21; // [esp+70h] [ebp+14h]
+
+  if ( *(this + 2) >= 0x1FFFFFFEu )
+  {
+    v19 = 15;
+    v18 = 0;
+    v17[4] = 0;
+    sub_4015C0("map/set<T> too long", 0x13u);
+    v20 = 0;
+    sub_401740(v17);
+    pExceptionObject = &std::length_error::`vftable';
+    _CxxThrowException(&pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+  }
+  v6 = sub_5648C0(*(this + 1), a4, *(this + 1), a5, 0);
+  v7 = (uint32_t *)*(this + 1);
+  v21 = v6;
+  ++*(this + 2);
+  if ( a4 == v7 )
+  {
+    v7[1] = v6;
+    *(uint32_t *)*(this + 1) = v6;
+    *(uint32_t *)(*(this + 1) + 8) = v6;
+  }
+  else if ( a3 != 0 )
+  {
+    *a4 = v6;
+    v8 = (uint32_t *)*(this + 1);
+    if ( a4 == (uint32_t *)*v8 )
+      *v8 = v6;
+  }
+  else
+  {
+    a4[2] = v6;
+    v9 = *(this + 1);
+    if ( a4 == *(uint32_t **)(v9 + 8) )
+      *(uint32_t *)(v9 + 8) = v6;
+  }
+  v10 = (uint32_t *)(v6 + 4);
+  v11 = v6;
+  if ( *(uint8_t *)(*(uint32_t *)(v6 + 4) + 20) == 0 )
+  {
+    while ( 1 )
+    {
+      v12 = (uint32_t *)*v10;
+      v13 = *(int **)(*v10 + 4);
+      v14 = *v13;
+      if ( *v10 == *v13 )
+      {
+        v14 = v13[2];
+        if ( *(uint8_t *)(v14 + 20) != 0 )
+        {
+          if ( v11 == v12[2] )
+          {
+            v11 = *v10;
+            sub_433130(*v10);
+          }
+          *(uint8_t *)(*(uint32_t *)(v11 + 4) + 20) = 1;
+          *(uint8_t *)(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4) + 20) = 0;
+          sub_4296E0(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4));
+          goto LABEL_21;
+        }
+      }
+      else if ( *(uint8_t *)(v14 + 20) != 0 )
+      {
+        if ( v11 == *v12 )
+        {
+          v11 = *v10;
+          sub_4296E0(*v10);
+        }
+        *(uint8_t *)(*(uint32_t *)(v11 + 4) + 20) = 1;
+        *(uint8_t *)(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4) + 20) = 0;
+        sub_433130(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4));
+        goto LABEL_21;
+      }
+      *(uint8_t *)(*v10 + 20) = 1;
+      *(uint8_t *)(v14 + 20) = 1;
+      *(uint8_t *)(*(uint32_t *)(*v10 + 4) + 20) = 0;
+      v11 = *(uint32_t *)(*v10 + 4);
+LABEL_21:
+      v10 = (uint32_t *)(v11 + 4);
+      if ( *(uint8_t *)(*(uint32_t *)(v11 + 4) + 20) != 0 )
+      {
+        v6 = v21;
+        break;
+      }
+    }
+  }
+  *(uint8_t *)(*(uint32_t *)(*(this + 1) + 4) + 20) = 1;
+  *a2 = v6;
+  return a2;
+}
+
+
+// ------------------------------------------------------------
+// 0x4FDC30 sub_4FDC30
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FDC30(uint32_t *this, int a2, uint32_t *a3)
+{
+  uint32_t *v3; // ebx
+  uint32_t *v5; // esi
+  int *v6; // eax
+  bool v7; // cl
+  int v8; // edx
+  uint32_t *v9; // edx
+  int v10; // edx
+  int v12; // ecx
+  char v13; // [esp+Ch] [ebp-4h]
+
+  v3 = a3;
+  v5 = (uint32_t *)*(this + 1);
+  v6 = (int *)v5[1];
+  v7 = true;
+  v13 = 1;
+  if ( *((uint8_t *)v6 + 21) == 0 )
+  {
+    v8 = *a3;
+    do
+    {
+      v7 = v8 < v6[3];
+      v5 = v6;
+      v13 = v7;
+      if ( v8 >= v6[3] )
+        v6 = (int *)v6[2];
+      else
+        v6 = (int *)*v6;
+    }
+    while ( *((uint8_t *)v6 + 21) == 0 );
+  }
+  v9 = v5;
+  a3 = v5;
+  if ( v7 )
+  {
+    if ( v5 == *(uint32_t **)*(this + 1) )
+    {
+      v10 = *sub_4FDA80(this, &a3, 1, v5, (int)v3);
+      *(uint8_t *)(a2 + 4) = 1;
+      *(uint32_t *)a2 = v10;
+      return a2;
+    }
+    sub_4A3B30(&a3);
+    v9 = a3;
+  }
+  if ( v9[3] >= *v3 )
+  {
+    *(uint8_t *)(a2 + 4) = 0;
+    *(uint32_t *)a2 = v9;
+    return a2;
+  }
+  else
+  {
+    v12 = *sub_4FDA80(this, &a3, v13, v5, (int)v3);
+    *(uint32_t *)a2 = v12;
+    *(uint8_t *)(a2 + 4) = 1;
+    return a2;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FDCF0 sub_4FDCF0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FDCF0(int this, uint32_t *a2, uint32_t *a3, uint32_t *a4)
+{
+  uint32_t *v6; // eax
+  uint32_t *v7; // esi
+  uint32_t *v8; // eax
+  int v9; // ecx
+  uint8_t v10[8]; // [esp+8h] [ebp-8h] BYREF
+
+  if ( *(uint32_t *)(this + 8) == 0 )
+  {
+    sub_4FDA80((uint32_t *)this, a2, 1, *(uint32_t **)(this + 4), (int)a4);
+    return a2;
+  }
+  v6 = *(uint32_t **)(this + 4);
+  v7 = a4;
+  if ( a3 == (uint32_t *)*v6 )
+  {
+    if ( *a4 < a3[3] )
+    {
+      sub_4FDA80((uint32_t *)this, a2, 1, a3, (int)a4);
+      return a2;
+    }
+    goto LABEL_22;
+  }
+  if ( a3 == v6 )
+  {
+    v8 = (uint32_t *)v6[2];
+    if ( v8[3] < *a4 )
+    {
+      sub_4FDA80((uint32_t *)this, a2, 0, v8, (int)a4);
+      return a2;
+    }
+    goto LABEL_22;
+  }
+  if ( *a4 >= a3[3] || (a4 = a3, sub_4A3B30(&a4), a4[3] >= *v7) )
+  {
+    if ( a3[3] >= *v7 || (a4 = a3, sub_41C5E0(&a4), a4 != *(uint32_t **)(this + 4)) && *v7 >= a4[3] )
+    {
+LABEL_22:
+      v9 = *(uint32_t *)sub_4FDC30((uint32_t *)this, (int)v10, v7);
+      *a2 = v9;
+      return a2;
+    }
+    if ( *(uint8_t *)(a3[2] + 21) != 0 )
+      sub_4FDA80((uint32_t *)this, a2, 0, a3, (int)v7);
+    else
+      sub_4FDA80((uint32_t *)this, a2, 1, a4, (int)v7);
+    return a2;
+  }
+  else
+  {
+    if ( *(uint8_t *)(a4[2] + 21) != 0 )
+      sub_4FDA80((uint32_t *)this, a2, 0, a4, (int)v7);
+    else
+      sub_4FDA80((uint32_t *)this, a2, 1, a3, (int)v7);
+    return a2;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FDE50 sub_4FDE50
+// ------------------------------------------------------------
+char /*stdcall*/ sub_4FDE50(void **Block)
+{
+  void **v1; // edi
+  char result; // al
+  void **i; // esi
+
+  v1 = Block;
+  result = *((uint8_t *)Block + 101);
+  for ( i = Block; result == 0; v1 = i )
+  {
+    sub_4FDE50(i[2]);
+    i = (void **)*i;
+    sub_4FDA70(v1);
+    j__free(v1);
+    result = *((uint8_t *)i + 101);
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FDEA0 sub_4FDEA0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FDEA0(uint32_t *this, uint32_t *a2)
+{
+  char *v3; // ecx
+
+  *this = *a2;
+  *(this + 1) = a2[1];
+  v3 = (char *)(this + 3);
+  *(this + 2) = a2[2];
+  *((uint32_t *)v3 + 6) = 15;
+  *((uint32_t *)v3 + 5) = 0;
+  v3[4] = 0;
+  sub_4014D0((std::_String_base *)v3, a2 + 3, 0, -1);
+  *(this + 16) = 15;
+  *(this + 15) = 0;
+  *((uint8_t *)this + 44) = 0;
+  sub_4014D0((std::_String_base *)(this + 10), a2 + 10, 0, -1);
+  sub_435020(a2 + 17);
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FDF40 sub_4FDF40
+// ------------------------------------------------------------
+char */*thiscall*/ sub_4FDF40(char *this)
+{
+  char *v2; // ecx
+
+  v2 = this + 12;
+  *((uint32_t *)v2 + 6) = 15;
+  *((uint32_t *)v2 + 5) = 0;
+  v2[4] = 0;
+  *((uint32_t *)this + 16) = 15;
+  *((uint32_t *)this + 15) = 0;
+  *(this + 44) = 0;
+  *((uint32_t *)this + 18) = 0;
+  *((uint32_t *)this + 19) = 0;
+  *((uint32_t *)this + 20) = 0;
+  *(uint32_t *)this = 0;
+  *((uint32_t *)this + 1) = 0;
+  *((uint32_t *)this + 2) = 0;
+  sub_4015C0((void *)szPassword, 0);
+  sub_4015C0((void *)szPassword, 0);
+  if ( *((uint32_t *)this + 18) != 0 )
+    j__free(*((void **)this + 18));
+  *((uint32_t *)this + 18) = 0;
+  *((uint32_t *)this + 19) = 0;
+  *((uint32_t *)this + 20) = 0;
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FDFE0 sub_4FDFE0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FDFE0(uint32_t *this, uint32_t *a2)
+{
+  *this = *a2;
+  *(this + 1) = a2[1];
+  *(this + 2) = a2[2];
+  sub_4014D0((std::_String_base *)(this + 3), a2 + 3, 0, -1);
+  sub_4014D0((std::_String_base *)(this + 10), a2 + 10, 0, -1);
+  sub_4ED3F0((int)(this + 17), (int)(a2 + 17));
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FE030 sub_4FE030
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FE030(uint32_t *this, uint32_t *a2)
+{
+  uint32_t *v2; // edx
+  int *v3; // eax
+  uint32_t v5[2]; // [esp+Ch] [ebp-8h] BYREF
+
+  v2 = (uint32_t *)*(this + 1);
+  v3 = (int *)v2[1];
+  while ( *((uint8_t *)v3 + 21) == 0 )
+  {
+    if ( v3[3] >= *a2 )
+    {
+      v2 = v3;
+      v3 = (int *)*v3;
+    }
+    else
+    {
+      v3 = (int *)v3[2];
+    }
+  }
+  if ( v2 != (uint32_t *)*(this + 1) && *a2 >= v2[3] )
+    return (int)(v2 + 4);
+  v5[0] = *a2;
+  v5[1] = 0;
+  return *sub_4FDCF0((int)this, &a2, v2, v5) + 16;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FE0B0 sub_4FE0B0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FE0B0(uint32_t *this)
+{
+  char *v2; // edi
+  int i; // ebx
+  uint32_t *v4; // ebx
+  uint32_t *v5; // eax
+  char *v6; // edi
+  uint32_t *v7; // eax
+  int result; // eax
+  void *Block; // [esp+Ch] [ebp-4h]
+  int Blocka; // [esp+Ch] [ebp-4h]
+
+  *this = 0;
+  sub_4015C0((void *)szPassword, 0);
+  sub_4015C0((void *)szPassword, 0);
+  sub_4015C0((void *)szPassword, 0);
+  *(this + 22) = 0;
+  sub_4015C0((void *)szPassword, 0);
+  *(this + 30) = 0;
+  sub_4015C0((void *)szPassword, 0);
+  *(this + 38) = 0;
+  sub_4015C0((void *)szPassword, 0);
+  sub_4015C0((void *)szPassword, 0);
+  v2 = (char *)(this + 53);
+  for ( i = 2; i != 0; --i )
+  {
+    sub_4015C0((void *)szPassword, 0);
+    v2 += 28;
+  }
+  *((uint8_t *)this + 268) = 1;
+  v4 = *(uint32_t **)(*(this + 70) + 4);
+  for ( Block = v4; *((uint8_t *)v4 + 21) == 0; Block = v4 )
+  {
+    sub_4FD9C0((void **)v4[2]);
+    v4 = (uint32_t *)*v4;
+    j__free(Block);
+  }
+  *(uint32_t *)(*(this + 70) + 4) = *(this + 70);
+  v5 = (uint32_t *)*(this + 70);
+  *(this + 71) = 0;
+  *v5 = v5;
+  *(uint32_t *)(*(this + 70) + 8) = *(this + 70);
+  sub_4015C0((void *)szPassword, 0);
+  v6 = (char *)(this + 80);
+  for ( Blocka = 5; Blocka != 0; --Blocka )
+  {
+    if ( *(uint32_t *)v6 != 0 )
+      j__free(*(void **)v6);
+    *(uint32_t *)v6 = 0;
+    *((uint32_t *)v6 + 1) = 0;
+    *((uint32_t *)v6 + 2) = 0;
+    v6 += 16;
+  }
+  sub_4FDE50(*(void ***)(*(this + 100) + 4));
+  *(uint32_t *)(*(this + 100) + 4) = *(this + 100);
+  v7 = (uint32_t *)*(this + 100);
+  *(this + 101) = 0;
+  *v7 = v7;
+  *(uint32_t *)(*(this + 100) + 8) = *(this + 100);
+  result = sub_4015C0((void *)szPassword, 0);
+  *(this + 68) = -1;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FE240 sub_4FE240
+// ------------------------------------------------------------
+uint32_t */*stdcall*/ sub_4FE240(int a1, int a2, int a3, uint32_t *a4, char a5)
+{
+  uint32_t *v5; // eax
+  uint32_t *v6; // esi
+  void *v8[9]; // [esp+0h] [ebp-24h] BYREF
+
+  v8[5] = v8;
+  v5 = operator new(0x68u);
+  v6 = v5;
+  v8[4] = v5;
+  v8[8] = (void *)1;
+  v8[3] = v5;
+  if ( v5 != nullptr )
+  {
+    *v5 = a1;
+    v5[1] = a2;
+    v5[2] = a3;
+    v5[3] = *a4;
+    sub_4FDEA0(v5 + 4, a4 + 1);
+    *((uint8_t *)v6 + 100) = a5;
+    *((uint8_t *)v6 + 101) = 0;
+  }
+  return v6;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FE2E0 sub_4FE2E0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FE2E0(uint32_t *this, uint32_t *a2, char a3, uint32_t *a4, int a5)
+{
+  int v6; // ecx
+  uint32_t *v7; // eax
+  uint32_t *v8; // eax
+  int v9; // eax
+  uint32_t *v10; // eax
+  int v11; // esi
+  uint32_t *v12; // ecx
+  int *v13; // ebx
+  int v14; // edx
+  uint32_t pExceptionObject[10]; // [esp+Ch] [ebp-50h] BYREF
+  size_t v17; // [esp+34h] [ebp-28h] BYREF
+  char v18; // [esp+38h] [ebp-24h]
+  int v19; // [esp+48h] [ebp-14h]
+  int v20; // [esp+4Ch] [ebp-10h]
+  int v21; // [esp+58h] [ebp-4h]
+  int v22; // [esp+70h] [ebp+14h]
+
+  if ( *(this + 2) >= 0x2E8BA2Du )
+  {
+    v20 = 15;
+    v19 = 0;
+    v18 = 0;
+    sub_4015C0(&v17, "map/set<T> too long", 0x13u);
+    v21 = 0;
+    sub_401740(pExceptionObject, &v17);
+    pExceptionObject[0] = &std::length_error::`vftable';
+    _CxxThrowException(pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+  }
+  v6 = sub_4FE240(*(this + 1), a4, *(this + 1), a5, 0);
+  v7 = (uint32_t *)*(this + 1);
+  v22 = v6;
+  ++*(this + 2);
+  if ( a4 == v7 )
+  {
+    v7[1] = v6;
+    *(uint32_t *)*(this + 1) = v6;
+    *(uint32_t *)(*(this + 1) + 8) = v6;
+  }
+  else if ( a3 != 0 )
+  {
+    *a4 = v6;
+    v8 = (uint32_t *)*(this + 1);
+    if ( a4 == (uint32_t *)*v8 )
+      *v8 = v6;
+  }
+  else
+  {
+    a4[2] = v6;
+    v9 = *(this + 1);
+    if ( a4 == *(uint32_t **)(v9 + 8) )
+      *(uint32_t *)(v9 + 8) = v6;
+  }
+  v10 = (uint32_t *)(v6 + 4);
+  v11 = v6;
+  if ( *(uint8_t *)(*(uint32_t *)(v6 + 4) + 100) == 0 )
+  {
+    while ( 1 )
+    {
+      v12 = (uint32_t *)*v10;
+      v13 = *(int **)(*v10 + 4);
+      v14 = *v13;
+      if ( *v10 == *v13 )
+      {
+        v14 = v13[2];
+        if ( *(uint8_t *)(v14 + 100) != 0 )
+        {
+          if ( v11 == v12[2] )
+          {
+            v11 = *v10;
+            sub_4FD900(*v10);
+          }
+          *(uint8_t *)(*(uint32_t *)(v11 + 4) + 100) = 1;
+          *(uint8_t *)(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4) + 100) = 0;
+          sub_4FD960(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4));
+          goto LABEL_21;
+        }
+      }
+      else if ( *(uint8_t *)(v14 + 100) != 0 )
+      {
+        if ( v11 == *v12 )
+        {
+          v11 = *v10;
+          sub_4FD960(*v10);
+        }
+        *(uint8_t *)(*(uint32_t *)(v11 + 4) + 100) = 1;
+        *(uint8_t *)(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4) + 100) = 0;
+        sub_4FD900(*(uint32_t *)(*(uint32_t *)(v11 + 4) + 4));
+        goto LABEL_21;
+      }
+      *(uint8_t *)(*v10 + 100) = 1;
+      *(uint8_t *)(v14 + 100) = 1;
+      *(uint8_t *)(*(uint32_t *)(*v10 + 4) + 100) = 0;
+      v11 = *(uint32_t *)(*v10 + 4);
+LABEL_21:
+      v10 = (uint32_t *)(v11 + 4);
+      if ( *(uint8_t *)(*(uint32_t *)(v11 + 4) + 100) != 0 )
+      {
+        v6 = v22;
+        break;
+      }
+    }
+  }
+  *(uint8_t *)(*(uint32_t *)(*(this + 1) + 4) + 100) = 1;
+  *a2 = v6;
+  return a2;
+}
+
+
+// ------------------------------------------------------------
+// 0x4FE490 sub_4FE490
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FE490(int *this, int a2, uint32_t *a3)
+{
+  uint32_t *v3; // ebx
+  uint32_t *v5; // esi
+  int *v6; // eax
+  bool v7; // cl
+  int v8; // edx
+  uint32_t *v9; // edx
+  int v10; // edx
+  int v12; // ecx
+  char v13; // [esp+Ch] [ebp-4h]
+
+  v3 = a3;
+  v5 = (uint32_t *)*(this + 1);
+  v6 = (int *)v5[1];
+  v7 = true;
+  v13 = 1;
+  if ( *((uint8_t *)v6 + 101) == 0 )
+  {
+    v8 = *a3;
+    do
+    {
+      v7 = v8 < v6[3];
+      v5 = v6;
+      v13 = v7;
+      if ( v8 >= v6[3] )
+        v6 = (int *)v6[2];
+      else
+        v6 = (int *)*v6;
+    }
+    while ( *((uint8_t *)v6 + 101) == 0 );
+  }
+  v9 = v5;
+  a3 = v5;
+  if ( v7 )
+  {
+    if ( v5 == *(uint32_t **)*(this + 1) )
+    {
+      v10 = *sub_4FE2E0(this, &a3, 1, v5, v3);
+      *(uint8_t *)(a2 + 4) = 1;
+      *(uint32_t *)a2 = v10;
+      return a2;
+    }
+    sub_4FD840(&a3);
+    v9 = a3;
+  }
+  if ( v9[3] >= *v3 )
+  {
+    *(uint8_t *)(a2 + 4) = 0;
+    *(uint32_t *)a2 = v9;
+    return a2;
+  }
+  else
+  {
+    v12 = *sub_4FE2E0(this, &a3, v13, v5, v3);
+    *(uint32_t *)a2 = v12;
+    *(uint8_t *)(a2 + 4) = 1;
+    return a2;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FE550 sub_4FE550
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FE550(int this, uint32_t *a2, uint32_t *a3, uint32_t *a4)
+{
+  uint32_t *v6; // eax
+  uint32_t *v7; // esi
+  uint32_t *v8; // eax
+  int v9; // ecx
+  uint8_t v10[8]; // [esp+8h] [ebp-8h] BYREF
+
+  if ( *(uint32_t *)(this + 8) == 0 )
+  {
+    sub_4FE2E0((int *)this, a2, 1, *(uint32_t **)(this + 4), a4);
+    return a2;
+  }
+  v6 = *(uint32_t **)(this + 4);
+  v7 = a4;
+  if ( a3 == (uint32_t *)*v6 )
+  {
+    if ( *a4 < a3[3] )
+    {
+      sub_4FE2E0((int *)this, a2, 1, a3, a4);
+      return a2;
+    }
+    goto LABEL_22;
+  }
+  if ( a3 == v6 )
+  {
+    v8 = (uint32_t *)v6[2];
+    if ( v8[3] < *a4 )
+    {
+      sub_4FE2E0((int *)this, a2, 0, v8, a4);
+      return a2;
+    }
+    goto LABEL_22;
+  }
+  if ( *a4 >= a3[3] || (a4 = a3, sub_4FD840(&a4), a4[3] >= *v7) )
+  {
+    if ( a3[3] >= *v7 || (a4 = a3, sub_4FD8A0((int *)&a4), a4 != *(uint32_t **)(this + 4)) && *v7 >= a4[3] )
+    {
+LABEL_22:
+      v9 = *(uint32_t *)sub_4FE490((int *)this, (int)v10, v7);
+      *a2 = v9;
+      return a2;
+    }
+    if ( *(uint8_t *)(a3[2] + 101) != 0 )
+      sub_4FE2E0((int *)this, a2, 0, a3, v7);
+    else
+      sub_4FE2E0((int *)this, a2, 1, a4, v7);
+    return a2;
+  }
+  else
+  {
+    if ( *(uint8_t *)(a4[2] + 101) != 0 )
+      sub_4FE2E0((int *)this, a2, 0, a4, v7);
+    else
+      sub_4FE2E0((int *)this, a2, 1, a3, v7);
+    return a2;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FE6B0 sub_4FE6B0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FE6B0(uint32_t *this, int *a2)
+{
+  int *v2; // ebx
+  uint32_t *v4; // ecx
+  int *v5; // eax
+  uint32_t *v6; // esi
+  char *v7; // eax
+  char v9[84]; // [esp+Ch] [ebp-B8h] BYREF
+  int v10; // [esp+60h] [ebp-64h] BYREF
+  uint32_t v11[21]; // [esp+64h] [ebp-60h] BYREF
+  int v12; // [esp+C0h] [ebp-4h]
+
+  v2 = a2;
+  v4 = (uint32_t *)*(this + 1);
+  v5 = (int *)v4[1];
+  v6 = v4;
+  while ( *((uint8_t *)v5 + 101) == 0 )
+  {
+    if ( v5[3] >= *a2 )
+    {
+      v6 = v5;
+      v5 = (int *)*v5;
+    }
+    else
+    {
+      v5 = (int *)v5[2];
+    }
+  }
+  if ( v6 == (uint32_t *)*(this + 1) || *a2 < v6[3] )
+  {
+    v7 = sub_4FDF40(v9);
+    v10 = *v2;
+    v12 = 0;
+    sub_4FDEA0(v11, v7);
+    LOBYTE(v12) = 1;
+    v6 = (uint32_t *)*sub_4FE550((int)this, &a2, v6, &v10);
+    sub_4FDA00((int)v11);
+    sub_4FDA00((int)v9);
+  }
+  return v6 + 4;
+}
+
+
+
+// ============================================================
+// §C 0x4FE000-0x4FF800 场地/NPC 定义族
+// ============================================================
+
+// ------------------------------------------------------------
+// 0x4FE770 sub_4FE770 —— NPC(场地角色)定义解析器
+//   标签族：资源 [name]/[field name]/[small face]/[big face]/[popup face]/[field animation]/
+//   [field wav]/[popup wav]；行为开关 [look around]；角色职能枚举（[role] 子串：
+//   [item shop]=0/[recover stamina]=1/[sera shop]=2/[guild]=3/[upgrade item]=4/[disjoint item]=5/
+//   [product item]=6/[item storage]=7/[post box]=8）；[quest speech]/[skill]/[speech] 资源列表；
+//   队伍枚举 [chaos team]/[red team]=0/[blue team]=1/[neutral team]=200（+272）。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_4FE770(int a1, const char *ArgList)
+{
+  char result; // al
+  int v3; // edi
+  int v4; // ecx
+  void **v5; // esi
+  int v6; // eax
+  int *v7; // esi
+  int v8; // eax
+  int v9; // eax
+  void *p_Block; // eax
+  void **v11; // esi
+  void **v12; // eax
+  void **v13[2]; // [esp-1Ch] [ebp-CCh] BYREF
+  char *v14; // [esp-14h] [ebp-C4h]
+  char *v15; // [esp-10h] [ebp-C0h]
+  int v16; // [esp-Ch] [ebp-BCh]
+  uint8_t *v17; // [esp-8h] [ebp-B8h]
+  int *i; // [esp-4h] [ebp-B4h]
+  int j; // [esp+Ch] [ebp-A4h] BYREF
+  char v20; // [esp+13h] [ebp-9Dh] BYREF
+  int v21[3]; // [esp+14h] [ebp-9Ch] BYREF
+  char v22; // [esp+20h] [ebp-90h] BYREF
+  char v23; // [esp+3Ch] [ebp-74h] BYREF
+  void *v24[4]; // [esp+58h] [ebp-58h] BYREF
+  uint8_t v25[4]; // [esp+68h] [ebp-48h] BYREF
+  void *Block; // [esp+6Ch] [ebp-44h] BYREF
+  int v27; // [esp+7Ch] [ebp-34h]
+  unsigned int v28; // [esp+80h] [ebp-30h]
+  int v29; // [esp+84h] [ebp-2Ch] BYREF
+  void *v30[4]; // [esp+88h] [ebp-28h] BYREF
+  int v31; // [esp+98h] [ebp-18h]
+  unsigned int v32; // [esp+9Ch] [ebp-14h]
+  int v33; // [esp+A0h] [ebp-10h]
+  int v34; // [esp+ACh] [ebp-4h]
+
+  v33 = dword_796E50;
+  result = sub_442A10((char)&unk_9B6E98, (int)ArgList);
+  if ( result != 0 )
+  {
+    v3 = a1;
+    sub_4FE0B0(a1);
+    i = (int *)ArgList;
+    sub_443300(a1 + 408, "%s%s", (char)&unk_9B6E98);
+    v32 = 15;
+    v31 = 0;
+    LOBYTE(v30[0]) = 0;
+    v34 = 1;
+    v28 = 15;
+    v27 = 0;
+    LOBYTE(Block) = 0;
+    v20 = 0;
+    if ( (uint8_t)sub_443430(&v29) != 0 )
+    {
+      while ( 1 )
+      {
+        sub_442B20(&v29);
+        if ( v31 == 0 )
+          goto LABEL_13;
+        v4 = v31;
+        if ( (unsigned int)v31 >= 6 )
+          v4 = 6;
+        v5 = (void **)v30[0];
+        if ( v32 < 0x10 )
+          v5 = v30;
+        v6 = memcmp((const char *)v5, "[name]", v4);
+        if ( v6 != 0 )
+          break;
+        if ( (unsigned int)v31 < 6 )
+          break;
+        LOBYTE(v6) = v31 != 6;
+        if ( v6 != 0 )
+          break;
+        v3 = a1;
+        i = (int *)(a1 + 4);
+        sub_443370();
+LABEL_77:
+        if ( (uint8_t)sub_443430(&v29) == 0 )
+          goto LABEL_78;
+      }
+      v3 = a1;
+LABEL_13:
+      if ( sub_40BF00((std::_String_base *)&v29, 0, v31, "[field name]", 0xCu) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)&v29, 0, v31, "[small face]", 0xCu) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)&v29, 0, v31, "[big face]", 0xAu) != 0 )
+          {
+            if ( sub_40BF00((std::_String_base *)&v29, 0, v31, "[popup face]", 0xCu) != 0 )
+            {
+              if ( sub_40BF00((std::_String_base *)&v29, 0, v31, "[field animation]", 0x11u) != 0 )
+              {
+                if ( (uint8_t)sub_423300(&v29, "[field wav]") != 0 )
+                {
+                  i = (int *)(v3 + 184);
+                  sub_443370();
+                }
+                else if ( (uint8_t)sub_423300(&v29, "[popup wav]") != 0 )
+                {
+                  i = (int *)(v3 + 212);
+                  sub_443370();
+                  v17 = (uint8_t *)(v3 + 240);
+                  sub_443370();
+                }
+                else if ( (uint8_t)sub_423300(&v29, "[look around]") != 0 )
+                {
+                  *(uint8_t *)(v3 + 268) = sub_4423D0(nullptr) != 0;
+                }
+                else if ( (uint8_t)sub_423300(&v29, "[role]") != 0 )
+                {
+                  for ( i = (int *)v25; sub_443370() != 0; *v7 = v8 )
+                  {
+                    j = 0;
+                    if ( (uint8_t)sub_423300(v25, "[item shop]") != 0 )
+                    {
+                      j = 0;
+                    }
+                    else if ( (uint8_t)sub_423300(v25, "[recover stamina]") != 0 )
+                    {
+                      j = 1;
+                    }
+                    else if ( (uint8_t)sub_423300(v25, "[sera shop]") != 0 )
+                    {
+                      j = 2;
+                    }
+                    else if ( (uint8_t)sub_423300(v25, "[guild]") != 0 )
+                    {
+                      j = 3;
+                    }
+                    else if ( (uint8_t)sub_423300(v25, "[upgrade item]") != 0 )
+                    {
+                      j = 4;
+                    }
+                    else if ( (uint8_t)sub_423300(v25, "[disjoint item]") != 0 )
+                    {
+                      j = 5;
+                    }
+                    else if ( (uint8_t)sub_423300(v25, "[product item]") != 0 )
+                    {
+                      j = 6;
+                    }
+                    else if ( (uint8_t)sub_423300(v25, "[item storage]") != 0 )
+                    {
+                      j = 7;
+                    }
+                    else if ( (uint8_t)sub_423300(v25, "[post box]") != 0 )
+                    {
+                      j = 8;
+                    }
+                    v7 = (int *)sub_4FE030(&j);
+                    v8 = sub_4423D0(nullptr);
+                    v17 = v25;
+                  }
+                }
+                else if ( (uint8_t)sub_423300(&v29, "[quest speech]") != 0 )
+                {
+                  i = (int *)(v3 + 288);
+                  sub_443370();
+                }
+                else if ( (uint8_t)sub_423300(&v29, "[skill]") != 0 )
+                {
+                  i = (int *)v25;
+                  sub_443370();
+                  if ( (uint8_t)sub_423300(v25, "[common]") != 0 )
+                  {
+                    v9 = 4;
+                  }
+                  else
+                  {
+                    p_Block = Block;
+                    if ( v28 < 0x10 )
+                      p_Block = &Block;
+                    v9 = sub_4426A0(p_Block);
+                  }
+                  v11 = (void **)(16 * v9 + v3 + 316);
+                  sub_5E5260(v11);
+                  for ( j = sub_4423D0(&v20); v20 != 0; j = sub_4423D0(&v20) )
+                    sub_431230((int)v11, &j);
+                }
+                else if ( (uint8_t)sub_423300(&v29, "[speech]") != 0 )
+                {
+                  sub_4FDF40((char *)v21);
+                  LOBYTE(v34) = 2;
+                  v21[0] = sub_4423D0(nullptr);
+                  v21[1] = sub_4423D0(nullptr);
+                  v21[2] = sub_4423D0(nullptr);
+                  v15 = &v22;
+                  sub_443370();
+                  v14 = &v23;
+                  sub_443370();
+                  sub_5E5260(v24);
+                  for ( j = sub_4423D0(&v20); v20 != 0; j = sub_4423D0(&v20) )
+                    sub_431230((int)v24, &j);
+                  i = v21;
+                  sub_4FE6B0((int **)(v3 + 396), v21);
+                  sub_4FDFE0(i);
+                  LOBYTE(v34) = 1;
+                  sub_4FDA00(v21);
+                }
+                else if ( (uint8_t)sub_423300(&v29, "[chaos team]") != 0 )
+                {
+                  i = (int *)v25;
+                  sub_443370();
+                  if ( (uint8_t)sub_423300(v25, "[red team]") != 0 )
+                  {
+                    *(uint32_t *)(v3 + 272) = 0;
+                  }
+                  else if ( (uint8_t)sub_423300(v25, "[blue team]") != 0 )
+                  {
+                    *(uint32_t *)(v3 + 272) = 1;
+                  }
+                  else if ( (uint8_t)sub_423300(v25, "[neutral team]") != 0 )
+                  {
+                    *(uint32_t *)(v3 + 272) = 200;
+                  }
+                }
+                else
+                {
+                  j = (int)v13;
+                  sub_401690(&v29);
+                  if ( sub_442C80((char)v13[0], v13[1], (int)v14, (int)v15, v16, (int)v17, (unsigned int)i) == 0 )
+                  {
+                    v12 = (void **)v30[0];
+                    if ( v32 < 0x10 )
+                      v12 = v30;
+                    off_77F3FC("SCRIPT TAG ERROR! [%s] %s", ArgList, (const char *)v12);
+                  }
+                }
+              }
+              else
+              {
+                i = (int *)(v3 + 156);
+                sub_443370();
+              }
+            }
+            else
+            {
+              i = (int *)(v3 + 124);
+              sub_443370();
+              *(uint32_t *)(v3 + 152) = sub_4423D0(nullptr);
+            }
+          }
+          else
+          {
+            i = (int *)(v3 + 92);
+            sub_443370();
+            *(uint32_t *)(v3 + 120) = sub_4423D0(nullptr);
+          }
+        }
+        else
+        {
+          i = (int *)(v3 + 60);
+          sub_443370();
+          *(uint32_t *)(v3 + 88) = sub_4423D0(nullptr);
+        }
+      }
+      else
+      {
+        i = (int *)(v3 + 32);
+        sub_443370();
+      }
+      goto LABEL_77;
+    }
+LABEL_78:
+    *(uint32_t *)v3 = sub_4A2F80(ArgList);
+    if ( v28 >= 0x10 )
+      j__free(Block);
+    v28 = 15;
+    v27 = 0;
+    LOBYTE(Block) = 0;
+    if ( v32 >= 0x10 )
+      j__free(v30[0]);
+    return 1;
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x4FEEA0 sub_4FEEA0
+// ------------------------------------------------------------
+bool /*cdecl*/ sub_4FEEA0(const char *a1, int a2)
+{
+  strcpy(byte_9B6FA8, a1);
+  if ( byte_9B6FA7[strlen(byte_9B6FA8)] != 92 && byte_9B6FA7[strlen(byte_9B6FA8)] != 47 )
+    *(uint16_t *)&byte_9B6FA8[strlen(byte_9B6FA8)] = 92;
+  return (uint8_t)sub_443C40((int)&unk_9B70A8, (char)byte_9B6FA8, a2) != 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FEF30 sub_4FEF30
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FEF30(int *this)
+{
+  int result; // eax
+
+  result = *(this + 1);
+  if ( result != 0 )
+    return (*(this + 2) - result) / 24;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FEF50 sub_4FEF50
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_4FEF50(uint32_t *a1, uint32_t *a2, uint32_t *a3)
+{
+  uint32_t *result; // eax
+  uint32_t *v4; // edi
+
+  for ( result = a1; result != a2; v4[5] = a3[5] )
+  {
+    v4 = result;
+    *result = *a3;
+    result[1] = a3[1];
+    result[2] = a3[2];
+    result[3] = a3[3];
+    result[4] = a3[4];
+    result += 6;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FEFA0 sub_4FEFA0
+// ------------------------------------------------------------
+char */*cdecl*/ sub_4FEFA0(char *a1, char *a2, const void *a3)
+{
+  char *result; // eax
+  void *v4; // edi
+
+  for ( result = a1; result != a2; result += 28 )
+  {
+    v4 = result;
+    qmemcpy(v4, a3, 0x1Cu);
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FEFD0 sub_4FEFD0
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_4FEFD0(uint32_t *a1, uint32_t *a2, uint32_t *a3)
+{
+  uint32_t *v3; // ecx
+  uint32_t *result; // eax
+
+  v3 = a2;
+  for ( result = a3; v3 != a1; result[5] = v3[5] )
+  {
+    v3 -= 6;
+    result -= 6;
+    *result = *v3;
+    result[1] = v3[1];
+    result[2] = v3[2];
+    result[3] = v3[3];
+    result[4] = v3[4];
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FF020 sub_4FF020
+// ------------------------------------------------------------
+char */*cdecl*/ sub_4FF020(char *a1, char *a2, char *a3)
+{
+  char *v3; // edx
+  char *result; // eax
+
+  v3 = a2;
+  result = a3;
+  while ( v3 != a1 )
+  {
+    v3 -= 28;
+    result -= 28;
+    qmemcpy(result, v3, 0x1Cu);
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FF050 sub_4FF050
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_4FF050(uint32_t *a1, uint32_t *a2, uint32_t *a3)
+{
+  uint32_t *v3; // ecx
+  uint32_t *result; // eax
+
+  v3 = a1;
+  for ( result = a3; v3 != a2; result += 6 )
+  {
+    if ( result != nullptr )
+    {
+      *result = *v3;
+      result[1] = v3[1];
+      result[2] = v3[2];
+      result[3] = v3[3];
+      result[4] = v3[4];
+      result[5] = v3[5];
+    }
+    v3 += 6;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FF0A0 sub_4FF0A0
+// ------------------------------------------------------------
+char */*cdecl*/ sub_4FF0A0(char *a1, char *a2, const void *a3)
+{
+  char *result; // eax
+  char *v4; // edx
+
+  result = a2;
+  if ( a2 != nullptr )
+  {
+    v4 = a2;
+    result = a1;
+    do
+    {
+      if ( result != nullptr )
+        qmemcpy(result, a3, 0x1Cu);
+      result += 28;
+      --v4;
+    }
+    while ( v4 != nullptr );
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FF0D0 sub_4FF0D0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_4FF0D0(int *this, int a2, unsigned int a3, uint32_t *Block)
+{
+  int result; // eax
+  int v6; // edx
+  int v7; // ebx
+  int v8; // ecx
+  int v9; // edx
+  int v10; // ecx
+  int v11; // edx
+  unsigned int v12; // ecx
+  int v14; // eax
+  int v15; // eax
+  unsigned int v16; // ecx
+  int v17; // eax
+  int v18; // ebx
+  int v19; // eax
+  unsigned int v20; // edi
+  void *v21; // ecx
+  int v23; // edi
+  int v24; // [esp-18h] [ebp-4Ch]
+  int v25; // [esp-Ch] [ebp-40h]
+  unsigned int v26; // [esp-8h] [ebp-3Ch]
+  int v27; // [esp+0h] [ebp-34h] BYREF
+  uint32_t v28[7]; // [esp+Ch] [ebp-28h] BYREF
+  int v29; // [esp+30h] [ebp-4h]
+  int v30; // [esp+3Ch] [ebp+8h]
+  int v31; // [esp+40h] [ebp+Ch]
+  char *Blocka; // [esp+44h] [ebp+10h]
+  void *Blockb; // [esp+44h] [ebp+10h]
+
+  result = (int)Block;
+  v6 = Block[1];
+  v7 = *(this + 1);
+  v28[0] = *Block;
+  v8 = Block[2];
+  v28[1] = v6;
+  v9 = Block[3];
+  v28[2] = v8;
+  v10 = Block[4];
+  v28[3] = v9;
+  v11 = Block[5];
+  v28[6] = &v27;
+  v28[4] = v10;
+  v28[5] = v11;
+  if ( v7 != 0 )
+  {
+    result = 715827883 * (*(this + 3) - v7);
+    v12 = (*(this + 3) - v7) / 24;
+  }
+  else
+  {
+    v12 = 0;
+  }
+  if ( a3 != 0 )
+  {
+    if ( v7 != 0 )
+      v14 = (*(this + 2) - v7) / 24;
+    else
+      v14 = 0;
+    if ( 178956970 - v14 < a3 )
+      sub_4CEAB0(this);
+    if ( v7 != 0 )
+      v15 = (*(this + 2) - v7) / 24;
+    else
+      v15 = 0;
+    if ( v12 >= a3 + v15 )
+    {
+      v21 = (void *)*(this + 2);
+      Blockb = v21;
+      if ( ((int)v21 - a2) / 24 >= a3 )
+      {
+        v30 = (int)v21 - 24 * a3;
+        *(this + 2) = sub_4FF050(v30, v21, v21);
+        sub_504430(a2, v30, Blockb);
+        return sub_4FEF50(a2, a2 + 24 * a3, v28);
+      }
+      else
+      {
+        sub_4FF050(a2, v21, a2 + 24 * a3);
+        v26 = a3 - (*(this + 2) - a2) / 24;
+        v25 = *(this + 2);
+        v29 = 2;
+        sub_504620(v25, v26, v28);
+        v23 = 24 * a3 + *(this + 2);
+        *(this + 2) = v23;
+        return sub_4FEF50(a2, v23 - 24 * a3, v28);
+      }
+    }
+    else
+    {
+      if ( 178956970 - (v12 >> 1) >= v12 )
+        v16 = (v12 >> 1) + v12;
+      else
+        v16 = 0;
+      if ( v7 != 0 )
+        v17 = (*(this + 2) - v7) / 24;
+      else
+        v17 = 0;
+      if ( v16 < a3 + v17 )
+        v16 = a3 + sub_4FEF30(this);
+      v18 = 24 * v16;
+      Blocka = (char *)operator new(24 * v16);
+      v24 = *(this + 1);
+      v29 = 0;
+      v31 = sub_4FF050(v24, a2, Blocka);
+      sub_5044B0(v31, a3, v28);
+      sub_4FF050(a2, *(this + 2), v31 + 24 * a3);
+      v19 = *(this + 1);
+      if ( v19 != 0 )
+        v19 = (*(this + 2) - v19) / 24;
+      v20 = v19 + a3;
+      if ( *(this + 1) != 0 )
+        j__free((void *)*(this + 1));
+      *(this + 3) = (int)&Blocka[v18];
+      *(this + 2) = (int)&Blocka[24 * v20];
+      *(this + 1) = (int)Blocka;
+      return (int)Blocka;
+    }
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x4FF3A0 sub_4FF3A0
+// ------------------------------------------------------------
+void /*thiscall*/ sub_4FF3A0(int *this, char *a2, unsigned int a3, void *Block)
+{
+  int v5; // edi
+  unsigned int v6; // ecx
+  int v8; // eax
+  int v9; // eax
+  unsigned int v10; // ecx
+  int v11; // eax
+  int v12; // edi
+  int v13; // eax
+  unsigned int v14; // esi
+  char *v15; // ecx
+  int v17; // edx
+  int v18; // [esp-18h] [ebp-50h]
+  int v19; // [esp-Ch] [ebp-44h]
+  unsigned int v20; // [esp-8h] [ebp-40h]
+  int v21; // [esp+0h] [ebp-38h] BYREF
+  uint32_t v22[8]; // [esp+Ch] [ebp-2Ch] BYREF
+  int v23; // [esp+34h] [ebp-4h]
+  char *v24; // [esp+40h] [ebp+8h]
+  char *v25; // [esp+44h] [ebp+Ch]
+  char *Blocka; // [esp+48h] [ebp+10h]
+  char *Blockb; // [esp+48h] [ebp+10h]
+
+  qmemcpy(v22, Block, 0x1Cu);
+  v5 = *(this + 1);
+  v22[7] = &v21;
+  if ( v5 != 0 )
+    v6 = (*(this + 3) - v5) / 28;
+  else
+    v6 = 0;
+  if ( a3 != 0 )
+  {
+    if ( v5 != 0 )
+      v8 = (*(this + 2) - *(this + 1)) / 28;
+    else
+      v8 = 0;
+    if ( 153391689 - v8 < a3 )
+      sub_4CEAB0(this);
+    if ( *(this + 1) != 0 )
+      v9 = (*(this + 2) - *(this + 1)) / 28;
+    else
+      v9 = 0;
+    if ( v6 >= a3 + v9 )
+    {
+      v15 = (char *)*(this + 2);
+      Blockb = v15;
+      if ( (v15 - a2) / 28 >= a3 )
+      {
+        v24 = &v15[-28 * a3];
+        *(this + 2) = sub_472DB0(v24, v15, v15);
+        sub_4FF020(a2, v24, Blockb);
+        sub_4FEFA0(a2, &a2[28 * a3], v22);
+      }
+      else
+      {
+        sub_472DB0(a2, v15, &a2[28 * a3]);
+        v20 = a3 - (*(this + 2) - (int)a2) / 28;
+        v19 = *(this + 2);
+        v23 = 2;
+        sub_488E00(v19, v20, v22);
+        v17 = 28 * a3 + *(this + 2);
+        *(this + 2) = v17;
+        sub_4FEFA0(a2, (char *)(v17 - 28 * a3), v22);
+      }
+    }
+    else
+    {
+      if ( 153391689 - (v6 >> 1) >= v6 )
+        v10 = (v6 >> 1) + v6;
+      else
+        v10 = 0;
+      if ( *(this + 1) != 0 )
+        v11 = (*(this + 2) - *(this + 1)) / 28;
+      else
+        v11 = 0;
+      if ( v10 < a3 + v11 )
+        v10 = a3 + sub_52AEF0(this);
+      v12 = 28 * v10;
+      Blocka = (char *)operator new(28 * v10);
+      v18 = *(this + 1);
+      v23 = 0;
+      v25 = (char *)sub_472DB0(v18, a2, Blocka);
+      sub_4FF0A0(v25, (char *)a3, v22);
+      sub_472DB0(a2, *(this + 2), &v25[28 * a3]);
+      v13 = *(this + 1);
+      if ( v13 != 0 )
+        v13 = (*(this + 2) - v13) / 28;
+      v14 = v13 + a3;
+      if ( *(this + 1) != 0 )
+        j__free((void *)*(this + 1));
+      *(this + 3) = (int)&Blocka[v12];
+      *(this + 2) = (int)&Blocka[28 * v14];
+      *(this + 1) = (int)Blocka;
+    }
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FF670 sub_4FF670
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FF670(int *this, uint32_t *a2, char *a3, uint32_t *Block)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 24 != 0 )
+    v6 = (int)&a3[-v5] / 24;
+  else
+    v6 = 0;
+  sub_4FF0D0(this, a3, 1u, Block);
+  *a2 = *(this + 1) + 24 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FF6E0 sub_4FF6E0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FF6E0(int *this, uint32_t *a2, char *a3, void *Block)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 28 != 0 )
+    v6 = (int)&a3[-v5] / 28;
+  else
+    v6 = 0;
+  sub_4FF3A0(this, a3, 1u, Block);
+  *a2 = *(this + 1) + 28 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FF750 sub_4FF750
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_4FF750(int this, uint32_t *Block)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  int v5; // edi
+  uint32_t *result; // eax
+
+  v3 = *(uint32_t *)(this + 4);
+  if ( v3 != 0 )
+    v4 = (*(uint32_t *)(this + 8) - v3) / 24;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(uint32_t *)(this + 12) - v3) / 24 )
+    return sub_4FF670((int *)this, &Block, *(char **)(this + 8), Block);
+  v5 = *(uint32_t *)(this + 8);
+  result = (uint32_t *)sub_5044B0(v5, 1, Block);
+  *(uint32_t *)(this + 8) = v5 + 24;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x4FF7E0 sub_4FF7E0
+// ------------------------------------------------------------
+char */*thiscall*/ sub_4FF7E0(int this, void *Block)
+{
+  int v3; // ebx
+  unsigned int v4; // esi
+  char *v5; // esi
+  char *result; // eax
+
+  v3 = *(uint32_t *)(this + 4);
+  if ( v3 != 0 )
+    v4 = (*(uint32_t *)(this + 8) - v3) / 28;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(uint32_t *)(this + 12) - v3) / 28 )
+    return (char *)sub_4FF6E0((int *)this, &Block, *(char **)(this + 8), Block);
+  v5 = *(char **)(this + 8);
+  result = sub_4FF0A0(v5, (char *)1, Block);
+  *(uint32_t *)(this + 8) = v5 + 28;
+  return result;
+}
+
+
+
+// ============================================================
+// §D 0x4FF800-0x504000 任务(quest)定义族 + 对象创建定义(sub_500B30) + 技能定义解析器(sub_502F00)
+// ============================================================
+
+// ------------------------------------------------------------
+// 0x4FF870 sub_4FF870 —— 任务(quest)定义解析器
+//   标签族：文本 [name]/[depend message]/[condition message]/[solve message]/[grade]；
+//   前置 [job change quest]/[pre required quest]/[collision quest]/[relation quest]；
+//   条件 [level]/[job]/[grow type]/[exceptional grow type]/[PVP RANK]/[pvp rank]；
+//   报酬 [clear reward item]/[monster reward item]/[depend give item]/[reward int data]/
+//   [reward type]（子枚举 [item]=0/[grow type]=1）；目标完成方式 [type]/[seeking] 枚举
+//   [condition under clear]=0/[hunt monster]=1/[clear map]=2/[meet npc]=3/[pvp rank]=4；
+//   稀有度 [normaly repeat]/[common unique]=1/[epic]=2（a1[29]）。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_4FF870(int *a1, const char *ArgList)
+{
+  char result; // al
+  unsigned int v3; // edx
+  int v4; // ecx
+  void **v5; // esi
+  int v6; // eax
+  void *p_Block; // eax
+  int v8; // eax
+  int v9; // eax
+  int v10; // eax
+  int v11; // eax
+  int j; // eax
+  void **v13; // eax
+  void *v14[3]; // [esp-1Ch] [ebp-C4h] BYREF
+  uint8_t *v15; // [esp-10h] [ebp-B8h]
+  uint8_t *v16; // [esp-Ch] [ebp-B4h]
+  uint8_t *v17; // [esp-8h] [ebp-B0h]
+  const char *v18; // [esp-4h] [ebp-ACh]
+  uint32_t v19[2]; // [esp+Ch] [ebp-9Ch] BYREF
+  void *v20[4]; // [esp+14h] [ebp-94h] BYREF
+  int v21; // [esp+24h] [ebp-84h] BYREF
+  int v22; // [esp+28h] [ebp-80h]
+  int v23; // [esp+2Ch] [ebp-7Ch]
+  int v24; // [esp+30h] [ebp-78h]
+  int v25; // [esp+34h] [ebp-74h]
+  int v26; // [esp+38h] [ebp-70h]
+  int v27; // [esp+3Ch] [ebp-6Ch]
+  int v28; // [esp+40h] [ebp-68h] BYREF
+  int v29; // [esp+44h] [ebp-64h]
+  int v30; // [esp+48h] [ebp-60h]
+  int v31; // [esp+4Ch] [ebp-5Ch]
+  int v32; // [esp+50h] [ebp-58h]
+  int v33; // [esp+54h] [ebp-54h]
+  void **i; // [esp+58h] [ebp-50h] BYREF
+  char v35; // [esp+5Fh] [ebp-49h] BYREF
+  uint8_t v36[4]; // [esp+60h] [ebp-48h] BYREF
+  void *Block; // [esp+64h] [ebp-44h] BYREF
+  unsigned int v38; // [esp+74h] [ebp-34h]
+  unsigned int v39; // [esp+78h] [ebp-30h]
+  int v40; // [esp+7Ch] [ebp-2Ch] BYREF
+  void *v41[4]; // [esp+80h] [ebp-28h] BYREF
+  int v42; // [esp+90h] [ebp-18h]
+  unsigned int v43; // [esp+94h] [ebp-14h]
+  int v44; // [esp+98h] [ebp-10h]
+  int v45; // [esp+A4h] [ebp-4h]
+
+  v44 = dword_796E50;
+  result = sub_442A10((char)&unk_9B6FA8, (int)ArgList);
+  if ( result != 0 )
+  {
+    sub_4D0D00(a1);
+    v43 = 15;
+    v42 = 0;
+    LOBYTE(v41[0]) = 0;
+    v45 = 1;
+    v39 = 15;
+    v38 = 0;
+    LOBYTE(Block) = 0;
+    v35 = 0;
+    if ( (uint8_t)sub_443430(&v40) != 0 )
+    {
+      while ( 1 )
+      {
+        sub_442B20(&v40);
+        v3 = v42;
+        if ( v42 == 0 )
+          goto LABEL_13;
+        v4 = v42;
+        if ( (unsigned int)v42 >= 6 )
+          v4 = 6;
+        v5 = (void **)v41[0];
+        if ( v43 < 0x10 )
+          v5 = v41;
+        v6 = memcmp((const char *)v5, "[name]", v4);
+        if ( v6 != 0 )
+          break;
+        if ( (unsigned int)v42 < 6 )
+          break;
+        LOBYTE(v6) = v42 != 6;
+        if ( v6 != 0 )
+          break;
+        v18 = (const char *)(a1 + 1);
+        sub_443370();
+LABEL_108:
+        if ( (uint8_t)sub_443430(&v40) == 0 )
+          goto LABEL_109;
+      }
+      v3 = v42;
+LABEL_13:
+      if ( sub_40BF00((std::_String_base *)&v40, 0, v3, "[depend message]", 0x10u) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)&v40, 0, v42, "[condition message]", 0x13u) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)&v40, 0, v42, "[solve message]", 0xFu) != 0 )
+          {
+            if ( sub_40BF00((std::_String_base *)&v40, 0, v42, "[grade]", 7u) != 0 )
+            {
+              if ( sub_40BF00((std::_String_base *)&v40, 0, v42, "[job change quest]", 0x12u) != 0 )
+              {
+                if ( (uint8_t)sub_423300(&v40, "[npc index]") != 0 )
+                {
+                  a1[31] = sub_4423D0(nullptr);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[complete npc index]") != 0 )
+                {
+                  a1[32] = sub_4423D0(nullptr);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[job]") != 0 )
+                {
+                  v18 = v36;
+                  sub_443370();
+                  p_Block = Block;
+                  if ( v39 < 0x10 )
+                    p_Block = &Block;
+                  a1[33] = sub_4426A0(p_Block);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[grow type]") != 0 )
+                {
+                  a1[34] = sub_4423D0(nullptr);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[exceptional grow type]") != 0 )
+                {
+                  sub_5E5260((void **)a1 + 35);
+                  for ( i = (void **)sub_4423D0(&v35); v35 != 0; i = (void **)sub_4423D0(&v35) )
+                    sub_431230((int)(a1 + 35), &i);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[level]") != 0 )
+                {
+                  v8 = sub_4423D0(nullptr);
+                  v17 = nullptr;
+                  a1[39] = v8;
+                  a1[40] = sub_4423D0(v17);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[pre required quest]") != 0 )
+                {
+                  memset(&v20[1], 0, 12);
+                  LOBYTE(v45) = 2;
+                  for ( i = (void **)sub_4423D0(&v35); v35 != 0; i = (void **)sub_4423D0(&v35) )
+                    sub_431230((int)v20, &i);
+                  if ( !sub_484F10(v20) )
+                    sub_475190((int)(a1 + 41), v20);
+                  LOBYTE(v45) = 1;
+                  sub_5E5260(v20);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[collision quest]") != 0 )
+                {
+                  sub_5E5260((void **)a1 + 45);
+                  for ( i = (void **)sub_4423D0(&v35); v35 != 0; i = (void **)sub_4423D0(&v35) )
+                    sub_431230((int)(a1 + 45), &i);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[PVP RANK]") != 0 )
+                {
+                  a1[49] = sub_4423D0(nullptr);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[effect after clear quest]") != 0 )
+                {
+                  *((uint8_t *)a1 + 200) = sub_4423D0(nullptr) != 0;
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[delete npc index]") != 0 )
+                {
+                  a1[51] = sub_4423D0(nullptr);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[clear reward item]") != 0 )
+                {
+                  sub_5E5260((void **)a1 + 52);
+                  while ( 1 )
+                  {
+                    v29 = -1;
+                    v30 = 0;
+                    v31 = 0;
+                    v32 = 0;
+                    v33 = -1;
+                    v28 = sub_4423D0(&v35);
+                    if ( v35 == 0 )
+                      break;
+                    v29 = sub_4423D0(nullptr);
+                    v30 = sub_4423D0(nullptr);
+                    v31 = sub_4423D0(nullptr);
+                    v32 = sub_4423D0(nullptr);
+                    v33 = sub_4423D0(nullptr);
+                    sub_4FF750(&v28);
+                  }
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[monster reward item]") != 0 )
+                {
+                  sub_5E5260((void **)a1 + 56);
+                  while ( 1 )
+                  {
+                    v22 = -1;
+                    v23 = -1;
+                    v24 = 0;
+                    v25 = 0;
+                    v26 = 0;
+                    v27 = -1;
+                    v21 = sub_4423D0(&v35);
+                    if ( v35 == 0 )
+                      break;
+                    v22 = sub_4423D0(nullptr);
+                    v23 = sub_4423D0(nullptr);
+                    v24 = sub_4423D0(nullptr);
+                    v25 = sub_4423D0(nullptr);
+                    v26 = sub_4423D0(nullptr);
+                    v27 = sub_4423D0(nullptr);
+                    sub_4FF7E0(&v21);
+                  }
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[appear map]") != 0 )
+                {
+                  v9 = sub_4423D0(nullptr);
+                  v17 = nullptr;
+                  a1[60] = v9;
+                  v10 = sub_4423D0(v17);
+                  v16 = nullptr;
+                  a1[61] = v10;
+                  v11 = sub_4423D0(v16);
+                  v15 = nullptr;
+                  a1[62] = v11;
+                  a1[63] = sub_4423D0(v15);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[depend give item]") != 0 )
+                {
+                  sub_5E5260((void **)a1 + 64);
+                  for ( j = sub_4423D0(&v35); v35 != 0; j = sub_4423D0(&v35) )
+                  {
+                    v19[0] = j;
+                    v19[1] = sub_4423D0(nullptr);
+                    sub_474950(v19);
+                  }
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[type]") != 0 )
+                {
+                  v18 = v36;
+                  sub_443370();
+                  if ( (uint8_t)sub_423300(v36, "[seeking]") != 0 )
+                  {
+                    a1[68] = 0;
+                  }
+                  else if ( (uint8_t)sub_423300(v36, "[condition under clear]") != 0 )
+                  {
+                    a1[68] = 1;
+                  }
+                  else if ( (uint8_t)sub_423300(v36, "[hunt monster]") != 0 )
+                  {
+                    a1[68] = 2;
+                  }
+                  else if ( (uint8_t)sub_423300(v36, "[clear map]") != 0 )
+                  {
+                    a1[68] = 3;
+                  }
+                  else if ( (uint8_t)sub_423300(v36, "[meet npc]") != 0 )
+                  {
+                    a1[68] = 4;
+                  }
+                  else if ( (uint8_t)sub_423300(v36, "[pvp rank]") != 0 )
+                  {
+                    a1[68] = 5;
+                  }
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[sub type]") != 0 )
+                {
+                  a1[69] = sub_4423D0(nullptr);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[int data]") != 0 )
+                {
+                  sub_5E5260((void **)a1 + 70);
+                  for ( i = (void **)sub_4423D0(&v35); v35 != 0; i = (void **)sub_4423D0(&v35) )
+                    sub_431230((int)(a1 + 70), &i);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[reward type]") != 0 )
+                {
+                  v18 = v36;
+                  sub_443370();
+                  if ( (uint8_t)sub_423300(v36, "[item]") != 0 )
+                  {
+                    a1[74] = 0;
+                  }
+                  else if ( (uint8_t)sub_423300(v36, "[grow type]") != 0 )
+                  {
+                    a1[74] = 1;
+                  }
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[reward int data]") != 0 )
+                {
+                  sub_5E5260((void **)a1 + 75);
+                  for ( i = (void **)sub_4423D0(&v35); v35 != 0; i = (void **)sub_4423D0(&v35) )
+                    sub_431230((int)(a1 + 75), &i);
+                }
+                else if ( (uint8_t)sub_423300(&v40, "[relation quest]") != 0 )
+                {
+                  a1[79] = sub_4423D0(nullptr);
+                }
+                else
+                {
+                  i = v14;
+                  sub_401690((int)v14, (size_t *)&v40);
+                  if ( (uint8_t)sub_442C80(
+                                          (char)v14[0],
+                                          v14[1],
+                                          (int)v14[2],
+                                          (int)v15,
+                                          (int)v16,
+                                          (int)v17,
+                                          (int)v18) == 0 )
+                  {
+                    v13 = (void **)v41[0];
+                    if ( v43 < 0x10 )
+                      v13 = v41;
+                    off_77F3FC("SCRIPT TAG ERROR! [%s] %s", ArgList, (const char *)v13);
+                  }
+                }
+              }
+              else
+              {
+                *((uint8_t *)a1 + 120) = sub_4423D0(nullptr) != 0;
+              }
+            }
+            else
+            {
+              v18 = v36;
+              sub_443370();
+              if ( sub_40BF00((std::_String_base *)v36, 0, v38, "[normaly repeat]", 0x10u) != 0 )
+              {
+                if ( (uint8_t)sub_423300(v36, "[common unique]") != 0 )
+                {
+                  a1[29] = 1;
+                }
+                else if ( (uint8_t)sub_423300(v36, "[epic]") != 0 )
+                {
+                  a1[29] = 2;
+                }
+              }
+              else
+              {
+                a1[29] = 0;
+              }
+            }
+          }
+          else
+          {
+            v18 = (const char *)(a1 + 22);
+            sub_443370();
+          }
+        }
+        else
+        {
+          v18 = (const char *)(a1 + 15);
+          sub_443370();
+        }
+      }
+      else
+      {
+        v18 = (const char *)(a1 + 8);
+        sub_443370();
+      }
+      goto LABEL_108;
+    }
+LABEL_109:
+    v18 = ArgList;
+    a1[40] = 99;
+    *a1 = sub_4A2F80(dword_9B70A8, v18);
+    if ( a1[32] == -1 )
+      a1[32] = a1[31];
+    if ( v39 >= 0x10 )
+      j__free(Block);
+    v39 = 15;
+    v38 = 0;
+    LOBYTE(Block) = 0;
+    if ( v43 >= 0x10 )
+      j__free(v41[0]);
+    return 1;
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x5002A0 sub_5002A0
+// ------------------------------------------------------------
+bool /*cdecl*/ sub_5002A0(const char *a1, int a2)
+{
+  strcpy(byte_9B70B8, a1);
+  if ( byte_9B70B7[strlen(byte_9B70B8)] != 92 && byte_9B70B7[strlen(byte_9B70B8)] != 47 )
+    *(uint16_t *)&byte_9B70B8[strlen(byte_9B70B8)] = 92;
+  return (uint8_t)sub_443C40((int)&unk_9B71B8, (char)byte_9B70B8, a2) != 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x500330 sub_500330 —— NPC 商店(npc shop)定义解析器
+//   标签族：[NPC]/[message]/[type]（商店枚举子串 [etc shop]/[weapon shop]/[disjoint shop]）
+//   /[only buy]/[sell item]。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_500330(int a1, const char *ArgList)
+{
+  char result; // al
+  int v3; // esi
+  unsigned int v4; // edx
+  int v5; // ecx
+  void **v6; // esi
+  int v7; // eax
+  int v8; // eax
+  int v9; // esi
+  unsigned int v10; // edx
+  int *v11; // ecx
+  void **v12; // eax
+  char v13; // [esp-1Ch] [ebp-78h] BYREF
+  void **v14; // [esp-18h] [ebp-74h]
+  int v15; // [esp-14h] [ebp-70h]
+  int v16; // [esp-10h] [ebp-6Ch]
+  int v17; // [esp-Ch] [ebp-68h]
+  CHAR *v18; // [esp-8h] [ebp-64h]
+  unsigned int v19; // [esp-4h] [ebp-60h]
+  int v20; // [esp+Ch] [ebp-50h] BYREF
+  char v21; // [esp+13h] [ebp-49h] BYREF
+  uint8_t v22[4]; // [esp+14h] [ebp-48h] BYREF
+  void *Block; // [esp+18h] [ebp-44h]
+  unsigned int v24; // [esp+28h] [ebp-34h]
+  unsigned int v25; // [esp+2Ch] [ebp-30h]
+  uint8_t v26[4]; // [esp+30h] [ebp-2Ch] BYREF
+  void *v27[4]; // [esp+34h] [ebp-28h] BYREF
+  int v28; // [esp+44h] [ebp-18h]
+  unsigned int v29; // [esp+48h] [ebp-14h]
+  int v30; // [esp+4Ch] [ebp-10h]
+  int v31; // [esp+58h] [ebp-4h]
+
+  v30 = dword_796E50;
+  result = sub_442A10((char)&unk_9B70B8, (int)ArgList);
+  if ( result != 0 )
+  {
+    v3 = a1;
+    v19 = 0;
+    v18 = (CHAR *)szPassword;
+    *(uint32_t *)a1 = 0;
+    *(uint32_t *)(a1 + 4) = 0;
+    *(uint32_t *)(a1 + 8) = 0;
+    *(uint8_t *)(a1 + 12) = 0;
+    sub_4015C0(v18, v19);
+    if ( *(uint32_t *)(a1 + 48) != 0 )
+      j__free(*(void **)(a1 + 48));
+    *(uint32_t *)(a1 + 48) = 0;
+    *(uint32_t *)(a1 + 52) = 0;
+    *(uint32_t *)(a1 + 56) = 0;
+    v29 = 15;
+    v28 = 0;
+    LOBYTE(v27[0]) = 0;
+    v31 = 1;
+    v25 = 15;
+    v24 = 0;
+    LOBYTE(Block) = 0;
+    v21 = 0;
+    if ( (uint8_t)sub_443430(v26) != 0 )
+    {
+      while ( 1 )
+      {
+        sub_442B20(v26);
+        v4 = v28;
+        if ( v28 == 0 )
+          goto LABEL_15;
+        v5 = v28;
+        if ( (unsigned int)v28 >= 5 )
+          v5 = 5;
+        v6 = (void **)v27[0];
+        if ( v29 < 0x10 )
+          v6 = v27;
+        v7 = memcmp((const char *)v6, "[NPC]", v5);
+        if ( v7 != 0 )
+          break;
+        if ( (unsigned int)v28 < 5 )
+          break;
+        LOBYTE(v7) = v28 != 5;
+        if ( v7 != 0 )
+          break;
+        *(uint32_t *)(a1 + 8) = sub_4423D0(nullptr);
+        v3 = a1;
+LABEL_43:
+        if ( (uint8_t)sub_443430(v26) == 0 )
+          goto LABEL_44;
+      }
+      v4 = v28;
+      v3 = a1;
+LABEL_15:
+      if ( sub_40BF00((std::_String_base *)v26, 0, v4, "[message]", 9u) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)v26, 0, v28, "[type]", 6u) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)v26, 0, v28, "[only buy]", 0xAu) != 0 )
+          {
+            if ( sub_40BF00((std::_String_base *)v26, 0, v28, "[sell item]", 0xBu) != 0 )
+            {
+              v20 = (int)&v13;
+              v19 = 15;
+              v18 = nullptr;
+              LOBYTE(v14) = 0;
+              sub_4014D0((std::_String_base *)&v13, v26, 0, -1);
+              if ( sub_442C80(v13, v14, v15, v16, v17, (int)v18, v19) == 0 )
+              {
+                v12 = (void **)v27[0];
+                if ( v29 < 0x10 )
+                  v12 = v27;
+                off_77F3FC("SCRIPT TAG ERROR! [%s] %s", ArgList, (const char *)v12);
+              }
+            }
+            else
+            {
+              if ( *(uint32_t *)(a1 + 48) != 0 )
+                j__free(*(void **)(a1 + 48));
+              v19 = (unsigned int)&v21;
+              *(uint32_t *)(a1 + 48) = 0;
+              *(uint32_t *)(a1 + 52) = 0;
+              *(uint32_t *)(a1 + 56) = 0;
+              v8 = sub_4423D0((uint8_t *)v19);
+              v20 = v8;
+              if ( v21 != 0 )
+              {
+                do
+                {
+                  v9 = *(uint32_t *)(a1 + 48);
+                  if ( v9 != 0 )
+                    v10 = (*(uint32_t *)(a1 + 52) - v9) >> 2;
+                  else
+                    v10 = 0;
+                  if ( v9 != 0 && v10 < (*(uint32_t *)(a1 + 56) - v9) >> 2 )
+                  {
+                    v11 = *(int **)(a1 + 52);
+                    *v11 = v8;
+                    *(uint32_t *)(a1 + 52) = v11 + 1;
+                  }
+                  else
+                  {
+                    sub_430C80(*(void **)(a1 + 52), 1, (int)&v20);
+                  }
+                  v8 = sub_4423D0(&v21);
+                  v20 = v8;
+                }
+                while ( v21 != 0 );
+                v3 = a1;
+              }
+            }
+          }
+          else
+          {
+            *(uint8_t *)(v3 + 12) = sub_4423D0(nullptr) != 0;
+          }
+        }
+        else
+        {
+          v19 = (unsigned int)v22;
+          sub_443370();
+          if ( sub_40BF00((std::_String_base *)v22, 0, v24, "[etc shop]", 0xAu) != 0 )
+          {
+            if ( sub_40BF00((std::_String_base *)v22, 0, v24, "[weapon shop]", 0xDu) != 0 )
+            {
+              if ( sub_40BF00((std::_String_base *)v22, 0, v24, "[disjoint shop]", 0xFu) == 0 )
+                *(uint32_t *)(v3 + 4) = 2;
+            }
+            else
+            {
+              *(uint32_t *)(v3 + 4) = 1;
+            }
+          }
+          else
+          {
+            *(uint32_t *)(v3 + 4) = 0;
+          }
+        }
+      }
+      else
+      {
+        v19 = v3 + 16;
+        sub_443370();
+      }
+      goto LABEL_43;
+    }
+LABEL_44:
+    *(uint32_t *)v3 = sub_4A2F80(ArgList);
+    if ( v25 >= 0x10 )
+      j__free(Block);
+    v25 = 15;
+    v24 = 0;
+    LOBYTE(Block) = 0;
+    if ( v29 >= 0x10 )
+      j__free(v27[0]);
+    return 1;
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x5006B0 sub_5006B0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_5006B0(int this)
+{
+  *(uint32_t *)(this + 24) = 15;
+  *(uint32_t *)(this + 20) = 0;
+  *(uint8_t *)(this + 4) = 0;
+  sub_4015C0((void *)szPassword, 0);
+  *(uint32_t *)(this + 28) = 0;
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x500710 sub_500710
+// ------------------------------------------------------------
+int /*cdecl*/ sub_500710(int a1, int a2, int a3)
+{
+  int v3; // esi
+  int result; // eax
+  uint32_t v5[6]; // [esp+0h] [ebp-24h] BYREF
+  int v6; // [esp+20h] [ebp-4h]
+
+  v3 = a1;
+  v5[5] = v5;
+  v5[4] = a1;
+  v6 = 0;
+  while ( a2 != 0 )
+  {
+    v5[3] = v3;
+    LOBYTE(v6) = 1;
+    if ( v3 != 0 )
+    {
+      *(uint32_t *)(v3 + 24) = 15;
+      *(uint32_t *)(v3 + 20) = 0;
+      *(uint8_t *)(v3 + 4) = 0;
+      sub_4014D0((std::_String_base *)v3, a3, 0, -1);
+      result = *(uint32_t *)(a3 + 28);
+      *(uint32_t *)(v3 + 28) = result;
+    }
+    v3 += 32;
+    LOBYTE(v6) = 0;
+    --a2;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5007D0 sub_5007D0
+// ------------------------------------------------------------
+int /*stdcall*/ sub_5007D0(int a1, int a2, int a3)
+{
+  sub_500710(a1, a2, a3);
+  return a1 + 32 * a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x500800 sub_500800
+// ------------------------------------------------------------
+void /*thiscall*/ sub_500800(int this, int a2, unsigned int a3, int a4)
+{
+  int v5; // ecx
+  unsigned int v6; // eax
+  int v8; // edx
+  int v9; // edx
+  unsigned int v10; // eax
+  int v11; // edx
+  int v12; // eax
+  char *v13; // ebx
+  void *v14; // ecx
+  int v15; // eax
+  unsigned int v16; // edi
+  char *v17; // eax
+  int v18; // edi
+  char *v19; // edi
+  int v20; // eax
+  int v21; // [esp-18h] [ebp-64h]
+  void *v22; // [esp-18h] [ebp-64h]
+  int v23; // [esp-10h] [ebp-5Ch]
+  int v24; // [esp-Ch] [ebp-58h]
+  unsigned int v25; // [esp-8h] [ebp-54h]
+  uint32_t v26[4]; // [esp+0h] [ebp-4Ch] BYREF
+  void *Block; // [esp+10h] [ebp-3Ch]
+  char *v28; // [esp+14h] [ebp-38h]
+  char v29[4]; // [esp+18h] [ebp-34h] BYREF
+  void *v30; // [esp+1Ch] [ebp-30h]
+  int v31; // [esp+2Ch] [ebp-20h]
+  unsigned int v32; // [esp+30h] [ebp-1Ch]
+  int v33; // [esp+34h] [ebp-18h]
+  int v34; // [esp+38h] [ebp-14h]
+  uint32_t *v35; // [esp+3Ch] [ebp-10h]
+  int v36; // [esp+48h] [ebp-4h]
+  int v37; // [esp+58h] [ebp+Ch]
+
+  v35 = v26;
+  v34 = dword_796E50;
+  v26[3] = this;
+  v32 = 15;
+  v31 = 0;
+  LOBYTE(v30) = 0;
+  sub_4014D0((std::_String_base *)v29, a4, 0, -1);
+  v33 = *(uint32_t *)(a4 + 28);
+  v5 = *(uint32_t *)(this + 4);
+  v36 = 0;
+  if ( v5 != 0 )
+    v6 = (*(uint32_t *)(this + 12) - v5) >> 5;
+  else
+    v6 = 0;
+  if ( a3 != 0 )
+  {
+    if ( v5 != 0 )
+      v8 = (*(uint32_t *)(this + 8) - v5) >> 5;
+    else
+      v8 = 0;
+    if ( 0x7FFFFFF - v8 < a3 )
+      sub_427E20(this);
+    if ( v5 != 0 )
+      v9 = (*(uint32_t *)(this + 8) - v5) >> 5;
+    else
+      v9 = 0;
+    if ( v6 >= a3 + v9 )
+    {
+      v17 = *(char **)(this + 8);
+      Block = v17;
+      if ( (int)&v17[-a2] >> 5 >= a3 )
+      {
+        v19 = &v17[-32 * a3];
+        v20 = sub_4981F0(v19, v17, v17);
+        v22 = Block;
+        *(uint32_t *)(this + 8) = v20;
+        sub_492DA0(a2, v19, v22);
+        sub_492D60(a2, a2 + 32 * a3, v29);
+      }
+      else
+      {
+        sub_4981F0(a2, v17, a2 + 32 * a3);
+        v25 = a3 - ((*(uint32_t *)(this + 8) - a2) >> 5);
+        v24 = *(uint32_t *)(this + 8);
+        LOBYTE(v36) = 3;
+        sub_5007D0(v24, v25, v29);
+        v18 = 32 * a3 + *(uint32_t *)(this + 8);
+        *(uint32_t *)(this + 8) = v18;
+        v36 = 0;
+        sub_492D60(a2, v18 - 32 * a3, v29);
+      }
+    }
+    else
+    {
+      if ( 0x7FFFFFF - (v6 >> 1) >= v6 )
+        v10 = (v6 >> 1) + v6;
+      else
+        v10 = 0;
+      if ( v5 != 0 )
+        v11 = (*(uint32_t *)(this + 8) - v5) >> 5;
+      else
+        v11 = 0;
+      if ( v10 < a3 + v11 )
+      {
+        if ( v5 != 0 )
+          v12 = (*(uint32_t *)(this + 8) - v5) >> 5;
+        else
+          v12 = 0;
+        v10 = a3 + v12;
+      }
+      v37 = 32 * v10;
+      v13 = (char *)operator new(32 * v10);
+      v21 = *(uint32_t *)(this + 4);
+      Block = v13;
+      v28 = v13;
+      LOBYTE(v36) = 1;
+      v28 = (char *)sub_4981F0(v21, a2, v13);
+      sub_500710(v28, a3, v29);
+      v23 = *(uint32_t *)(this + 8);
+      v28 += 32 * a3;
+      sub_4981F0(a2, v23, v28);
+      v14 = *(void **)(this + 4);
+      if ( v14 != nullptr )
+        v15 = (*(uint32_t *)(this + 8) - (int)v14) >> 5;
+      else
+        v15 = 0;
+      v16 = v15 + a3;
+      if ( v14 != nullptr )
+      {
+        sub_493260(v14, *(uint32_t *)(this + 8));
+        j__free(*(void **)(this + 4));
+      }
+      *(uint32_t *)(this + 12) = &v13[v37];
+      *(uint32_t *)(this + 8) = &v13[32 * v16];
+      *(uint32_t *)(this + 4) = v13;
+    }
+  }
+  if ( v32 >= 0x10 )
+    j__free(v30);
+}
+
+
+// ------------------------------------------------------------
+// 0x500AC0 sub_500AC0
+// ------------------------------------------------------------
+void /*thiscall*/ sub_500AC0(int *this, int a2)
+{
+  int v3; // edx
+  unsigned int v4; // ecx
+  int v5; // edi
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) >> 5;
+  else
+    v4 = 0;
+  if ( v3 != 0 && v4 < (*(this + 3) - v3) >> 5 )
+  {
+    v5 = *(this + 2);
+    sub_500710(v5, 1, a2);
+    *(this + 2) = v5 + 32;
+  }
+  else
+  {
+    sub_500800((int)this, *(this + 2), 1u, a2);
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x500B30 sub_500B30 —— 对象创建/运动定义解析器（PassiveObject 生成器，[creation pos] 族）
+//   标签族：创建位置 [creation pos]/[x axis]/[y axis]/[z axis]；运动 [move type] 子枚举
+//   [stop]=0/[straight line]=1/[sin]=2/[cos]=3 + [move variable 1]/[move variable 2]；
+//   变值模式 [changing term]/[changing type] 子枚举 [keep changing]=0/[keep last value]=1/[ping pong]=2；
+//   [gravity]/[rotation angle]/[life time]；落点 [landing type] 子枚举 [pierce]/[slide]/[vanish]；
+//   表现 [transparent value]；子对象生成 [creation frequency]/[maximum create number]/[maximum create time]/
+//   [create area size]/[create area rotation angle]；区域形状 [rotation angle range type] 子枚举
+//   [rectangle]/[circle]；[rotation angle variable]/[random range]/[display effect rate]/[create pos correct]；
+//   对象 [object type] 子枚举 [animation]/[passive object]；[how to create object] 子枚举 [randomize]/[in order]；
+//   [object]/[layer]。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_500B30(int a1, char *ArgList)
+{
+  char result; // al
+  int v3; // ebx
+  int v4; // eax
+  int v5; // eax
+  int v6; // eax
+  int v7; // eax
+  int v8; // eax
+  int v9; // eax
+  int v10; // eax
+  int v11; // eax
+  int v12; // eax
+  int v13; // eax
+  int v14; // eax
+  int v15; // eax
+  int *v16; // edi
+  int i; // ebx
+  void *p_Block; // eax
+  const char *v19; // eax
+  void *v20[4]; // [esp-1Ch] [ebp-98h] BYREF
+  uint8_t *v21; // [esp-Ch] [ebp-88h]
+  uint8_t *v22; // [esp-8h] [ebp-84h]
+  uint8_t *j; // [esp-4h] [ebp-80h]
+  char v24; // [esp+0h] [ebp-7Ch]
+  void **v25; // [esp+Ch] [ebp-70h]
+  int v26; // [esp+10h] [ebp-6Ch]
+  uint8_t v27[28]; // [esp+14h] [ebp-68h] BYREF
+  int v28; // [esp+30h] [ebp-4Ch]
+  uint8_t v29[4]; // [esp+34h] [ebp-48h] BYREF
+  void *Block; // [esp+38h] [ebp-44h] BYREF
+  int v31; // [esp+48h] [ebp-34h]
+  unsigned int v32; // [esp+4Ch] [ebp-30h]
+  int v33; // [esp+50h] [ebp-2Ch] BYREF
+  void *v34; // [esp+54h] [ebp-28h] BYREF
+  int v35; // [esp+64h] [ebp-18h]
+  unsigned int v36; // [esp+68h] [ebp-14h]
+  int v37; // [esp+6Ch] [ebp-10h]
+  int v38; // [esp+78h] [ebp-4h]
+
+  v37 = dword_796E50;
+  result = sub_442A10((char)szPassword, (int)ArgList);
+  if ( result != 0 )
+  {
+    sub_443300(a1 + 196, ArgList, v24);
+    sub_4D0B90(a1);
+    sub_443300(a1 + 196, ArgList, v24);
+    v3 = 0;
+    v36 = 15;
+    v35 = 0;
+    LOBYTE(v34) = 0;
+    v38 = 1;
+    v32 = 15;
+    v31 = 0;
+    LOBYTE(Block) = 0;
+    v26 = 0;
+    while ( (uint8_t)sub_443430(&v33) != 0 )
+    {
+      sub_442B20(&v33);
+      if ( sub_40BF00((std::_String_base *)&v33, 0, v35, "[creation pos]", 0xEu) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)&v33, 0, v35, "[x axis]", 8u) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)&v33, 0, v35, "[y axis]", 8u) != 0 )
+          {
+            if ( sub_40BF00((std::_String_base *)&v33, 0, v35, "[z axis]", 8u) != 0 )
+            {
+              if ( (uint8_t)sub_423300(&v33, "[move type]") != 0 )
+              {
+                j = v29;
+                sub_443370();
+                if ( (uint8_t)sub_423300(v29, "[stop]") != 0 )
+                {
+                  *(uint8_t *)(v3 + a1 + 12) = 0;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[straight line]") != 0 )
+                {
+                  *(uint8_t *)(v3 + a1 + 12) = 1;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[sin]") != 0 )
+                {
+                  *(uint8_t *)(v3 + a1 + 12) = 2;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[cos]") != 0 )
+                {
+                  *(uint8_t *)(v3 + a1 + 12) = 3;
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[move variable 1]") != 0 )
+              {
+                v6 = sub_4423D0(nullptr);
+                v22 = nullptr;
+                *(uint32_t *)(a1 + 8 * v3 + 15) = v6;
+                *(uint32_t *)(a1 + 8 * v3 + 19) = sub_4423D0(v22);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[move variable 2]") != 0 )
+              {
+                v7 = sub_4423D0(nullptr);
+                v22 = nullptr;
+                *(uint32_t *)(a1 + 8 * v3 + 39) = v7;
+                *(uint32_t *)(a1 + 8 * v3 + 43) = sub_4423D0(v22);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[changing term]") != 0 )
+              {
+                *(uint32_t *)(a1 + 63) = sub_4423D0(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[changing type]") != 0 )
+              {
+                j = v29;
+                sub_443370();
+                if ( (uint8_t)sub_423300(v29, "[keep changing]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 67) = 0;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[keep last value]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 67) = 1;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[ping pong]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 67) = 2;
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[gravity]") != 0 )
+              {
+                *(uint32_t *)(a1 + 68) = sub_4423D0(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[rotation angle]") != 0 )
+              {
+                v8 = sub_4423D0(nullptr);
+                v22 = nullptr;
+                *(uint32_t *)(a1 + 72) = v8;
+                v9 = sub_4423D0(v22);
+                v21 = nullptr;
+                *(uint32_t *)(a1 + 76) = v9;
+                *(uint32_t *)(a1 + 80) = sub_4423D0(v21);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[life time]") != 0 )
+              {
+                *(uint32_t *)(a1 + 85) = sub_4423D0(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[landing type]") != 0 )
+              {
+                j = v29;
+                sub_443370();
+                if ( (uint8_t)sub_423300(v29, "[pierce]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 89) = 0;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[slide]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 89) = 1;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[stop]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 89) = 2;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[vanish]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 89) = 3;
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[transparent value]") != 0 )
+              {
+                v10 = sub_4423D0(nullptr);
+                v22 = nullptr;
+                *(uint32_t *)(a1 + 90) = v10;
+                *(uint32_t *)(a1 + 94) = sub_4423D0(v22);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[creation frequency]") != 0 )
+              {
+                *(float *)(a1 + 100) = sub_442480(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[maximum create number]") != 0 )
+              {
+                *(uint32_t *)(a1 + 104) = sub_4423D0(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[maximum create time]") != 0 )
+              {
+                *(uint32_t *)(a1 + 108) = sub_4423D0(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[create area size]") != 0 )
+              {
+                v11 = sub_4423D0(nullptr);
+                v22 = nullptr;
+                *(uint32_t *)(a1 + 112) = v11;
+                v12 = sub_4423D0(v22);
+                v21 = nullptr;
+                *(uint32_t *)(a1 + 116) = v12;
+                *(uint32_t *)(a1 + 120) = sub_4423D0(v21);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[create area rotation angle]") != 0 )
+              {
+                v13 = sub_4423D0(nullptr);
+                v22 = nullptr;
+                *(uint32_t *)(a1 + 124) = v13;
+                v14 = sub_4423D0(v22);
+                v21 = nullptr;
+                *(uint32_t *)(a1 + 128) = v14;
+                *(uint32_t *)(a1 + 132) = sub_4423D0(v21);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[rotation angle range type]") != 0 )
+              {
+                j = v29;
+                sub_443370();
+                if ( (uint8_t)sub_423300(v29, "[rectangle]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 136) = 0;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[circle]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 136) = 1;
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[rotation angle variable]") != 0 )
+              {
+                v15 = sub_4423D0(nullptr);
+                v22 = nullptr;
+                *(uint32_t *)(a1 + 140) = v15;
+                *(uint32_t *)(a1 + 144) = sub_4423D0(v22);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[random range]") != 0 )
+              {
+                *(uint32_t *)(a1 + 148) = sub_4423D0(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[display effect rate]") != 0 )
+              {
+                v16 = (int *)(a1 + 156);
+                for ( i = 3; i != 0; --i )
+                  *v16++ = sub_4423D0(nullptr);
+                v3 = v26;
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[create pos correct]") != 0 )
+              {
+                *(uint8_t *)(a1 + 152) = sub_4423D0(nullptr) != 0;
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[object type]") != 0 )
+              {
+                j = v29;
+                sub_443370();
+                if ( (uint8_t)sub_423300(v29, "[animation]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 172) = 2;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[passive object]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 172) = 33;
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[how to create object]") != 0 )
+              {
+                j = v29;
+                sub_443370();
+                if ( (uint8_t)sub_423300(v29, "[randomize]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 168) = 1;
+                }
+                else if ( (uint8_t)sub_423300(v29, "[in order]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 168) = 0;
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[object]") != 0 )
+              {
+                sub_428480(a1 + 180);
+                for ( j = v29; sub_443370() != 0; j = v29 )
+                {
+                  sub_5006B0(v27);
+                  LOBYTE(v38) = 2;
+                  sub_4014D0((std::_String_base *)v27, v29, 0, -1);
+                  v28 = sub_4423D0(nullptr);
+                  sub_500AC0(v27);
+                  LOBYTE(v38) = 1;
+                  sub_501490(v27);
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v33, "[layer]") != 0 )
+              {
+                j = v29;
+                sub_443370();
+                p_Block = Block;
+                if ( v32 < 0x10 )
+                  p_Block = &Block;
+                *(uint32_t *)(a1 + 176) = sub_4425F0(p_Block);
+              }
+              else
+              {
+                v25 = v20;
+                sub_401690(&v33);
+                if ( (uint8_t)sub_442C80(
+                                        (char)v20[0],
+                                        v20[1],
+                                        (int)v20[2],
+                                        (int)v20[3],
+                                        (int)v21,
+                                        (int)v22,
+                                        (int)j) == 0 )
+                {
+                  v19 = (const char *)v34;
+                  if ( v36 < 0x10 )
+                    v19 = (const char *)&v34;
+                  off_77F3FC("SCRIPT TAG ERROR! [%s] %s", ArgList, v19);
+                }
+              }
+            }
+            else
+            {
+              v3 = 2;
+              v26 = 2;
+            }
+          }
+          else
+          {
+            v3 = 1;
+            v26 = 1;
+          }
+        }
+        else
+        {
+          v3 = 0;
+          v26 = 0;
+        }
+      }
+      else
+      {
+        v4 = sub_4423D0(nullptr);
+        v22 = nullptr;
+        *(uint32_t *)a1 = v4;
+        v5 = sub_4423D0(v22);
+        v21 = nullptr;
+        *(uint32_t *)(a1 + 4) = v5;
+        *(uint32_t *)(a1 + 8) = sub_4423D0(v21);
+      }
+    }
+    if ( v32 >= 0x10 )
+      j__free(Block);
+    v32 = 15;
+    v31 = 0;
+    LOBYTE(Block) = 0;
+    if ( v36 >= 0x10 )
+      j__free(v34);
+    return 1;
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x5013F0 sub_5013F0
+// ------------------------------------------------------------
+uint64_t /*cdecl*/ sub_5013F0(int a1, int a2)
+{
+  double v2; // st7
+
+  v2 = (double)a2 * 0.0099999998 * (double)a1;
+  if ( v2 < 1.0 )
+    return (uint64_t)1.0;
+  return (uint64_t)v2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x501420 sub_501420
+// ------------------------------------------------------------
+int /*cdecl*/ sub_501420(int a1, int a2)
+{
+  return a1 + a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x501430 sub_501430
+// ------------------------------------------------------------
+int /*thiscall*/ sub_501430(void *this)
+{
+  uint32_t *v1; // eax
+  int result; // eax
+  int v3; // edx
+
+  v1 = *(uint32_t **)this;
+  if ( *(uint8_t *)(*(uint32_t *)this + 45) != 0 )
+  {
+    result = v1[2];
+    *(uint32_t *)this = result;
+  }
+  else
+  {
+    v3 = *v1;
+    if ( *(uint8_t *)(*v1 + 45) != 0 )
+    {
+      result = v1[1];
+      if ( *(uint8_t *)(result + 45) == 0 )
+      {
+        do
+        {
+          if ( *(uint32_t *)this != *(uint32_t *)result )
+            break;
+          *(uint32_t *)this = result;
+          result = *(uint32_t *)(result + 4);
+        }
+        while ( *(uint8_t *)(result + 45) == 0 );
+        if ( *(uint8_t *)(result + 45) == 0 )
+          *(uint32_t *)this = result;
+      }
+    }
+    else
+    {
+      for ( result = *(uint32_t *)(v3 + 8); *(uint8_t *)(result + 45) == 0; result = *(uint32_t *)(result + 8) )
+        v3 = result;
+      *(uint32_t *)this = v3;
+    }
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x501490 sub_501490
+// ------------------------------------------------------------
+void /*thiscall*/ sub_501490(void **this)
+{
+  if ( (unsigned int)*(this + 6) >= 0x10 )
+    j__free(*(this + 1));
+  *(this + 6) = (void *)15;
+  *(this + 5) = nullptr;
+  *((uint8_t *)this + 4) = 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5014C0 sub_5014C0
+// ------------------------------------------------------------
+void /*thiscall*/ sub_5014C0(void **this)
+{
+  if ( (unsigned int)*(this + 9) >= 0x10 )
+    j__free(*(this + 4));
+  *(this + 9) = (void *)15;
+  *(this + 8) = nullptr;
+  *((uint8_t *)this + 16) = 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5014F0 sub_5014F0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_5014F0(uint32_t *this, uint32_t *a2, unsigned int *a3)
+{
+  uint32_t *v5; // eax
+  unsigned int v6; // ecx
+  const char *v7; // eax
+  uint32_t *v9; // [esp+18h] [ebp+Ch]
+
+  v5 = (uint32_t *)sub_65DCE0(a3);
+  v9 = v5;
+  if ( v5 == (uint32_t *)*(this + 1)
+    || ((v6 = v5[8], v5[9] < 0x10u) ? (v7 = (const char *)(v5 + 4)) : (v7 = (const char *)v5[4]),
+        sub_40BF00((std::_String_base *)a3, 0, a3[5], v7, v6) < 0) )
+  {
+    *a2 = *(this + 1);
+    return a2;
+  }
+  else
+  {
+    *a2 = v9;
+    return a2;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x501560 sub_501560
+// ------------------------------------------------------------
+unsigned int /*thiscall*/ sub_501560(int this, int Src, unsigned int a3, int *a4)
+{
+  int v5; // edx
+  unsigned int result; // eax
+  int v8; // ecx
+  int v9; // ecx
+  unsigned int v10; // eax
+  int v11; // ecx
+  int v12; // eax
+  char *v14; // eax
+  uint32_t *v15; // eax
+  int v16; // eax
+  int v17; // ecx
+  unsigned int v18; // edi
+  uint8_t *v19; // eax
+  unsigned int v21; // edx
+  int v22; // ecx
+  char *v23; // edi
+  int v24; // edi
+  char *v25; // [esp+8h] [ebp-4h]
+  int Srcb; // [esp+14h] [ebp+8h]
+  char *Srca; // [esp+14h] [ebp+8h]
+  int v28; // [esp+18h] [ebp+Ch]
+  int v29; // [esp+18h] [ebp+Ch]
+
+  v5 = *(uint32_t *)(this + 4);
+  a4 = (int *)*a4;
+  if ( v5 != 0 )
+    result = (*(uint32_t *)(this + 12) - v5) >> 2;
+  else
+    result = 0;
+  if ( a3 != 0 )
+  {
+    if ( v5 != 0 )
+      v8 = (*(uint32_t *)(this + 8) - v5) >> 2;
+    else
+      v8 = 0;
+    if ( 0x3FFFFFFF - v8 < a3 )
+      sub_47F990(this);
+    if ( v5 != 0 )
+      v9 = (*(uint32_t *)(this + 8) - v5) >> 2;
+    else
+      v9 = 0;
+    if ( result >= a3 + v9 )
+    {
+      v19 = *(uint8_t **)(this + 8);
+      v21 = (int)&v19[-Src] >> 2;
+      v22 = 4 * a3;
+      v29 = (int)v19;
+      Srca = (char *)(4 * a3);
+      if ( v21 >= a3 )
+      {
+        v24 = (int)&v19[-v22];
+        *(uint32_t *)(this + 8) = sub_55E7F0(&v19[-v22], (int)v19, v19);
+        sub_5DAF70((void *)Src, v24, v29);
+        return sub_49A9D0(Src, &Srca[Src], &a4);
+      }
+      else
+      {
+        sub_55E7F0((void *)Src, (int)v19, (void *)(Src + v22));
+        sub_523700(*(uint32_t **)(this + 8), a3 - ((*(uint32_t *)(this + 8) - Src) >> 2), &a4);
+        v23 = &Srca[*(uint32_t *)(this + 8)];
+        *(uint32_t *)(this + 8) = v23;
+        return sub_49A9D0(Src, v23 - Srca, &a4);
+      }
+    }
+    else
+    {
+      if ( 0x3FFFFFFF - (result >> 1) >= result )
+        v10 = (result >> 1) + result;
+      else
+        v10 = 0;
+      if ( v5 != 0 )
+        v11 = (*(uint32_t *)(this + 8) - v5) >> 2;
+      else
+        v11 = 0;
+      if ( v10 < a3 + v11 )
+      {
+        if ( v5 != 0 )
+          v12 = (*(uint32_t *)(this + 8) - v5) >> 2;
+        else
+          v12 = 0;
+        v10 = a3 + v12;
+      }
+      v28 = 4 * v10;
+      v25 = (char *)operator new(4 * v10);
+      Srcb = 4 * ((Src - *(uint32_t *)(this + 4)) >> 2);
+      v14 = (char *)memcpy_0(v25, *(const void **)(this + 4), Srcb);
+      v15 = sub_523700(&v14[Srcb], a3, &a4);
+      memcpy_0(v15, (const void *)Src, 4 * ((*(uint32_t *)(this + 8) - Src) >> 2));
+      v16 = *(uint32_t *)(this + 4);
+      if ( v16 != 0 )
+        v17 = (*(uint32_t *)(this + 8) - v16) >> 2;
+      else
+        v17 = 0;
+      v18 = v17 + a3;
+      if ( v16 != 0 )
+        j__free(*(void **)(this + 4));
+      *(uint32_t *)(this + 12) = &v25[v28];
+      *(uint32_t *)(this + 8) = &v25[4 * v18];
+      *(uint32_t *)(this + 4) = v25;
+      return (unsigned int)v25;
+    }
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x501740 sub_501740
+// ------------------------------------------------------------
+int /*thiscall*/ sub_501740(int *this, char *a2, unsigned int a3, int *Block)
+{
+  int v5; // ecx
+  int v6; // edx
+  int v7; // ebx
+  int result; // eax
+  unsigned int v9; // ecx
+  int v11; // eax
+  int v12; // eax
+  unsigned int v13; // ecx
+  int v14; // eax
+  int v15; // ebx
+  int v16; // eax
+  unsigned int v17; // edi
+  uint32_t *v18; // ecx
+  int v20; // edi
+  uint32_t *v21; // [esp-18h] [ebp-40h]
+  int v22; // [esp-Ch] [ebp-34h]
+  unsigned int v23; // [esp-8h] [ebp-30h]
+  int v24; // [esp+0h] [ebp-28h] BYREF
+  uint32_t v25[4]; // [esp+Ch] [ebp-1Ch] BYREF
+  int v26; // [esp+24h] [ebp-4h]
+  uint32_t *v27; // [esp+30h] [ebp+8h]
+  uint32_t *v28; // [esp+34h] [ebp+Ch]
+  uint32_t *Blocka; // [esp+38h] [ebp+10h]
+  void *Blockb; // [esp+38h] [ebp+10h]
+
+  v5 = *Block;
+  v6 = Block[1];
+  v7 = *(this + 1);
+  result = Block[2];
+  v25[3] = &v24;
+  v25[0] = v5;
+  v25[1] = v6;
+  v25[2] = result;
+  if ( v7 != 0 )
+  {
+    result = 715827883 * (*(this + 3) - v7);
+    v9 = (*(this + 3) - v7) / 12;
+  }
+  else
+  {
+    v9 = 0;
+  }
+  if ( a3 != 0 )
+  {
+    if ( v7 != 0 )
+      v11 = (*(this + 2) - v7) / 12;
+    else
+      v11 = 0;
+    if ( 357913941 - v11 < a3 )
+      sub_47F990(this);
+    if ( v7 != 0 )
+      v12 = (*(this + 2) - v7) / 12;
+    else
+      v12 = 0;
+    if ( v9 >= a3 + v12 )
+    {
+      v18 = (uint32_t *)*(this + 2);
+      Blockb = v18;
+      if ( ((char *)v18 - a2) / 12 >= a3 )
+      {
+        v27 = &v18[-3 * a3];
+        *(this + 2) = (int)sub_59EE30(v27, v18, v18);
+        sub_504450(a2, v27, Blockb);
+        return sub_5043B0(a2, &a2[12 * a3], v25);
+      }
+      else
+      {
+        sub_59EE30(a2, v18, &a2[12 * a3]);
+        v23 = a3 - (*(this + 2) - (int)a2) / 12;
+        v22 = *(this + 2);
+        v26 = 2;
+        sub_5E51C0(v22, v23, v25);
+        v20 = 12 * a3 + *(this + 2);
+        *(this + 2) = v20;
+        return sub_5043B0(a2, v20 - 12 * a3, v25);
+      }
+    }
+    else
+    {
+      if ( 357913941 - (v9 >> 1) >= v9 )
+        v13 = (v9 >> 1) + v9;
+      else
+        v13 = 0;
+      if ( v7 != 0 )
+        v14 = (*(this + 2) - v7) / 12;
+      else
+        v14 = 0;
+      if ( v13 < a3 + v14 )
+        v13 = a3 + sub_4DA030(this);
+      v15 = 3 * v13;
+      Blocka = operator new(12 * v13);
+      v21 = (uint32_t *)*(this + 1);
+      v26 = 0;
+      v28 = sub_59EE30(v21, a2, Blocka);
+      sub_623C10(v28, a3, v25);
+      sub_59EE30(a2, (uint32_t *)*(this + 2), &v28[3 * a3]);
+      v16 = *(this + 1);
+      if ( v16 != 0 )
+        v16 = (*(this + 2) - v16) / 12;
+      v17 = v16 + a3;
+      if ( *(this + 1) != 0 )
+        j__free((void *)*(this + 1));
+      *(this + 3) = (int)&Blocka[v15];
+      *(this + 2) = (int)&Blocka[3 * v17];
+      *(this + 1) = (int)Blocka;
+      return (int)Blocka;
+    }
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x5019F0 sub_5019F0
+// ------------------------------------------------------------
+int ***/*thiscall*/ sub_5019F0(uint32_t *this, int ***a2, int **a3)
+{
+  int **v3; // ebx
+  int *v4; // edi
+  int *v5; // ecx
+  int *v6; // esi
+  uint32_t *v7; // ecx
+  int v8; // eax
+  int *v9; // eax
+  int v10; // ecx
+  bool v11; // zf
+  int v12; // eax
+  int **v13; // eax
+  char v14; // al
+  void **v15; // eax
+  uint32_t *v16; // ecx
+  uint32_t *v17; // eax
+  uint32_t *v18; // eax
+  int v19; // eax
+  uint32_t pExceptionObject[10]; // [esp+Ch] [ebp-5Ch] BYREF
+  size_t v22; // [esp+34h] [ebp-34h] BYREF
+  char v23; // [esp+38h] [ebp-30h]
+  int v24; // [esp+48h] [ebp-20h]
+  int v25; // [esp+4Ch] [ebp-1Ch]
+  int v26; // [esp+50h] [ebp-18h]
+  void *Block; // [esp+54h] [ebp-14h]
+  uint32_t *v28; // [esp+58h] [ebp-10h]
+  int v29; // [esp+64h] [ebp-4h]
+
+  v28 = this;
+  if ( *((uint8_t *)a3 + 45) != 0 )
+  {
+    v25 = 15;
+    v24 = 0;
+    v23 = 0;
+    sub_4015C0(&v22, "invalid map/set<T> iterator", 0x1Bu);
+    v29 = 0;
+    sub_401740(pExceptionObject, &v22);
+    pExceptionObject[0] = &std::out_of_range::`vftable';
+    _CxxThrowException(pExceptionObject, (_ThrowInfo *)&_TI3_AVout_of_range_std__);
+  }
+  v3 = a3;
+  Block = a3;
+  sub_40BEA0((int *)&a3);
+  if ( *((uint8_t *)*v3 + 45) != 0 )
+  {
+    v4 = v3[2];
+LABEL_8:
+    v6 = v3[1];
+    if ( *((uint8_t *)v4 + 45) == 0 )
+      v4[1] = (int)v6;
+    v7 = v28;
+    v8 = v28[1];
+    if ( *(int ***)(v8 + 4) == v3 )
+    {
+      *(uint32_t *)(v8 + 4) = v4;
+    }
+    else if ( (int **)*v6 == v3 )
+    {
+      *v6 = (int)v4;
+    }
+    else
+    {
+      v6[2] = (int)v4;
+    }
+    if ( *(int ***)v7[1] == v3 )
+    {
+      if ( *((uint8_t *)v4 + 45) != 0 )
+      {
+        v9 = v6;
+      }
+      else
+      {
+        v9 = (int *)sub_6600D0(v4);
+        v7 = v28;
+      }
+      *(uint32_t *)v7[1] = v9;
+    }
+    v10 = v7[1];
+    v11 = *(uint32_t *)(v10 + 8) == (uint32_t)v3;
+    v26 = v10;
+    if ( v11 )
+    {
+      if ( *((uint8_t *)v4 + 45) != 0 )
+        *(uint32_t *)(v10 + 8) = v6;
+      else
+        *(uint32_t *)(v26 + 8) = sub_4429F0(v4);
+    }
+    goto LABEL_35;
+  }
+  if ( *((uint8_t *)v3[2] + 45) != 0 )
+  {
+    v4 = *v3;
+    goto LABEL_8;
+  }
+  v5 = (int *)a3;
+  v4 = a3[2];
+  if ( a3 == v3 )
+    goto LABEL_8;
+  (*v3)[1] = (int)a3;
+  *v5 = (int)*v3;
+  if ( v5 == v3[2] )
+  {
+    v6 = v5;
+  }
+  else
+  {
+    v6 = (int *)v5[1];
+    if ( *((uint8_t *)v4 + 45) == 0 )
+      v4[1] = (int)v6;
+    *v6 = (int)v4;
+    v5[2] = (int)v3[2];
+    v3[2][1] = (int)v5;
+  }
+  v12 = v28[1];
+  if ( *(int ***)(v12 + 4) == v3 )
+  {
+    *(uint32_t *)(v12 + 4) = v5;
+  }
+  else
+  {
+    v13 = (int **)v3[1];
+    if ( *v13 == (int *)v3 )
+      *v13 = v5;
+    else
+      v13[2] = v5;
+  }
+  v5[1] = (int)v3[1];
+  v14 = *((uint8_t *)v5 + 44);
+  *((uint8_t *)v5 + 44) = *((uint8_t *)v3 + 44);
+  *((uint8_t *)v3 + 44) = v14;
+LABEL_35:
+  v15 = (void **)Block;
+  if ( *((uint8_t *)Block + 44) == 1 )
+  {
+    v16 = v28;
+    if ( v4 != *(int **)(v28[1] + 4) )
+    {
+      do
+      {
+        if ( *((uint8_t *)v4 + 44) != 1 )
+          break;
+        v17 = (uint32_t *)*v6;
+        if ( v4 == (int *)*v6 )
+        {
+          v17 = (uint32_t *)v6[2];
+          if ( *((uint8_t *)v17 + 44) == 0 )
+          {
+            *((uint8_t *)v17 + 44) = 1;
+            *((uint8_t *)v6 + 44) = 0;
+            sub_442AC0(v6);
+            v17 = (uint32_t *)v6[2];
+            v16 = v28;
+          }
+          if ( *((uint8_t *)v17 + 45) != 0 )
+            goto LABEL_53;
+          if ( *(uint8_t *)(*v17 + 44) != 1 || *(uint8_t *)(v17[2] + 44) != 1 )
+          {
+            if ( *(uint8_t *)(v17[2] + 44) == 1 )
+            {
+              *(uint8_t *)(*v17 + 44) = 1;
+              *((uint8_t *)v17 + 44) = 0;
+              sub_433290(v17);
+              v17 = (uint32_t *)v6[2];
+            }
+            *((uint8_t *)v17 + 44) = *((uint8_t *)v6 + 44);
+            *((uint8_t *)v6 + 44) = 1;
+            *(uint8_t *)(v17[2] + 44) = 1;
+            sub_442AC0(v6);
+            break;
+          }
+        }
+        else
+        {
+          if ( *((uint8_t *)v17 + 44) == 0 )
+          {
+            *((uint8_t *)v17 + 44) = 1;
+            *((uint8_t *)v6 + 44) = 0;
+            sub_433290(v6);
+            v17 = (uint32_t *)*v6;
+            v16 = v28;
+          }
+          if ( *((uint8_t *)v17 + 45) != 0 )
+            goto LABEL_53;
+          if ( *(uint8_t *)(v17[2] + 44) != 1 || *(uint8_t *)(*v17 + 44) != 1 )
+          {
+            if ( *(uint8_t *)(*v17 + 44) == 1 )
+            {
+              *(uint8_t *)(v17[2] + 44) = 1;
+              *((uint8_t *)v17 + 44) = 0;
+              sub_442AC0(v17);
+              v17 = (uint32_t *)*v6;
+            }
+            *((uint8_t *)v17 + 44) = *((uint8_t *)v6 + 44);
+            *((uint8_t *)v6 + 44) = 1;
+            *(uint8_t *)(*v17 + 44) = 1;
+            sub_433290(v6);
+            break;
+          }
+        }
+        *((uint8_t *)v17 + 44) = 0;
+LABEL_53:
+        v4 = v6;
+        v11 = v6 == *(int **)(v16[1] + 4);
+        v6 = (int *)v6[1];
+      }
+      while ( !v11 );
+    }
+    v15 = (void **)Block;
+    *((uint8_t *)v4 + 44) = 1;
+  }
+  if ( (unsigned int)v15[9] >= 0x10 )
+    j__free(v15[4]);
+  v18 = Block;
+  *((uint32_t *)Block + 9) = 15;
+  v18[8] = 0;
+  *((uint8_t *)v18 + 16) = 0;
+  j__free(v18);
+  v19 = v28[2];
+  if ( v19 != 0 )
+    v28[2] = v19 - 1;
+  *a2 = a3;
+  return a2;
+}
+
+
+// ------------------------------------------------------------
+// 0x501CD0 sub_501CD0
+// ------------------------------------------------------------
+void */*stdcall*/ sub_501CD0(int a1, int a2, int a3, int a4, char a5)
+{
+  void *v5; // esi
+  void *v7[9]; // [esp+0h] [ebp-24h] BYREF
+
+  v7[5] = v7;
+  v5 = operator new(0x30u);
+  v7[4] = v5;
+  v7[8] = (void *)1;
+  v7[3] = v5;
+  if ( v5 != nullptr )
+    sub_40C300(a1, a2, a3, a4, a5);
+  return v5;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x501D60 sub_501D60
+// ------------------------------------------------------------
+char /*stdcall*/ sub_501D60(void **Block)
+{
+  void **v1; // edi
+  char result; // al
+  void **i; // esi
+
+  v1 = Block;
+  result = *((uint8_t *)Block + 45);
+  for ( i = Block; result == 0; v1 = i )
+  {
+    sub_501D60(i[2]);
+    i = (void **)*i;
+    sub_5014C0(v1);
+    j__free(v1);
+    result = *((uint8_t *)i + 45);
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x501DB0 sub_501DB0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_501DB0(int *this, uint32_t *a2, int a3, int *Block)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 12 != 0 )
+    v6 = (a3 - v5) / 12;
+  else
+    v6 = 0;
+  sub_501740(this, a3, 1u, Block);
+  *a2 = *(this + 1) + 12 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x501E20 sub_501E20
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_501E20(int *this, uint32_t *a2, char a3, uint32_t *a4, int a5)
+{
+  uint32_t *v6; // ecx
+  uint32_t *v7; // eax
+  uint32_t *v8; // eax
+  int v9; // eax
+  uint32_t *v10; // eax
+  uint32_t *v11; // esi
+  uint32_t *v12; // ecx
+  int *v13; // ebx
+  int v14; // edx
+  uint32_t pExceptionObject[10]; // [esp+Ch] [ebp-50h] BYREF
+  uint8_t v17[20]; // [esp+34h] [ebp-28h] BYREF
+  int v18; // [esp+48h] [ebp-14h]
+  int v19; // [esp+4Ch] [ebp-10h]
+  int v20; // [esp+58h] [ebp-4h]
+  uint32_t *v21; // [esp+70h] [ebp+14h]
+
+  if ( (unsigned int)*(this + 2) >= 0x7FFFFFE )
+  {
+    v19 = 15;
+    v18 = 0;
+    v17[4] = 0;
+    sub_4015C0("map/set<T> too long", 0x13u);
+    v20 = 0;
+    sub_401740(pExceptionObject, (int)v17);
+    pExceptionObject[0] = &std::length_error::`vftable';
+    _CxxThrowException(pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+  }
+  v6 = sub_501CD0(*(this + 1), (int)a4, *(this + 1), a5, 0);
+  v7 = (uint32_t *)*(this + 1);
+  v21 = v6;
+  ++*(this + 2);
+  if ( a4 == v7 )
+  {
+    v7[1] = v6;
+    *(uint32_t *)*(this + 1) = v6;
+    *(uint32_t *)(*(this + 1) + 8) = v6;
+  }
+  else if ( a3 != 0 )
+  {
+    *a4 = v6;
+    v8 = (uint32_t *)*(this + 1);
+    if ( a4 == (uint32_t *)*v8 )
+      *v8 = v6;
+  }
+  else
+  {
+    a4[2] = v6;
+    v9 = *(this + 1);
+    if ( a4 == *(uint32_t **)(v9 + 8) )
+      *(uint32_t *)(v9 + 8) = v6;
+  }
+  v10 = v6 + 1;
+  v11 = v6;
+  if ( *(uint8_t *)(v6[1] + 44) == 0 )
+  {
+    while ( 1 )
+    {
+      v12 = (uint32_t *)*v10;
+      v13 = *(int **)(*v10 + 4);
+      v14 = *v13;
+      if ( *v10 == *v13 )
+      {
+        v14 = v13[2];
+        if ( *(uint8_t *)(v14 + 44) != 0 )
+        {
+          if ( v11 == (uint32_t *)v12[2] )
+          {
+            v11 = (uint32_t *)*v10;
+            sub_442AC0(*v10);
+          }
+          *(uint8_t *)(v11[1] + 44) = 1;
+          *(uint8_t *)(*(uint32_t *)(v11[1] + 4) + 44) = 0;
+          sub_433290(*(uint32_t *)(v11[1] + 4));
+          goto LABEL_21;
+        }
+      }
+      else if ( *(uint8_t *)(v14 + 44) != 0 )
+      {
+        if ( v11 == (uint32_t *)*v12 )
+        {
+          v11 = (uint32_t *)*v10;
+          sub_433290(*v10);
+        }
+        *(uint8_t *)(v11[1] + 44) = 1;
+        *(uint8_t *)(*(uint32_t *)(v11[1] + 4) + 44) = 0;
+        sub_442AC0(*(uint32_t *)(v11[1] + 4));
+        goto LABEL_21;
+      }
+      *(uint8_t *)(*v10 + 44) = 1;
+      *(uint8_t *)(v14 + 44) = 1;
+      *(uint8_t *)(*(uint32_t *)(*v10 + 4) + 44) = 0;
+      v11 = *(uint32_t **)(*v10 + 4);
+LABEL_21:
+      v10 = v11 + 1;
+      if ( *(uint8_t *)(v11[1] + 44) != 0 )
+      {
+        v6 = v21;
+        break;
+      }
+    }
+  }
+  *(uint8_t *)(*(uint32_t *)(*(this + 1) + 4) + 44) = 1;
+  *a2 = v6;
+  return a2;
+}
+
+
+// ------------------------------------------------------------
+// 0x501FD0 sub_501FD0
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_501FD0(int a1, int a2, uint32_t *a3)
+{
+  int v3; // esi
+  uint32_t *v4; // edi
+  int v5; // eax
+
+  v3 = a2;
+  if ( a1 == a2 )
+    return a3;
+  v4 = a3;
+  do
+  {
+    v5 = *(uint32_t *)(v3 - 44);
+    v3 -= 44;
+    v4 -= 11;
+    *v4 = v5;
+    v4[1] = *(uint32_t *)(v3 + 4);
+    sub_41B0D0(v3 + 8);
+    sub_4800C0(v3 + 12);
+    sub_480210(v3 + 28);
+  }
+  while ( v3 != a1 );
+  return v4;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502030 sub_502030
+// ------------------------------------------------------------
+char */*thiscall*/ sub_502030(char *this)
+{
+  void **v2; // ebx
+
+  v2 = (void **)(this + 8);
+  *((uint32_t *)this + 2) = 0;
+  sub_41BFE0((void **)this + 2, szPassword);
+  *((uint32_t *)this + 4) = 0;
+  *((uint32_t *)this + 5) = 0;
+  *((uint32_t *)this + 6) = 0;
+  *((uint32_t *)this + 8) = 0;
+  *((uint32_t *)this + 9) = 0;
+  *((uint32_t *)this + 10) = 0;
+  *(uint32_t *)this = 0;
+  *((uint32_t *)this + 1) = 0;
+  sub_41B010(v2);
+  if ( *((uint32_t *)this + 4) != 0 )
+    j__free(*((void **)this + 4));
+  *((uint32_t *)this + 4) = 0;
+  *((uint32_t *)this + 5) = 0;
+  *((uint32_t *)this + 6) = 0;
+  if ( *((uint32_t *)this + 8) != 0 )
+    j__free(*((void **)this + 8));
+  *((uint32_t *)this + 8) = 0;
+  *((uint32_t *)this + 9) = 0;
+  *((uint32_t *)this + 10) = 0;
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5020D0 sub_5020D0
+// ------------------------------------------------------------
+unsigned int /*thiscall*/ sub_5020D0(int *this, int *a2)
+{
+  int v2; // esi
+  unsigned int v3; // edx
+  int *v4; // eax
+  unsigned int result; // eax
+
+  v2 = *(this + 1);
+  if ( v2 != 0 )
+    v3 = (*(this + 2) - v2) >> 2;
+  else
+    v3 = 0;
+  if ( v2 == 0 || v3 >= (*(this + 3) - v2) >> 2 )
+    return sub_501560((int)this, *(this + 2), 1u, a2);
+  v4 = (int *)*(this + 2);
+  *v4 = *a2;
+  result = (unsigned int)(v4 + 1);
+  *(this + 2) = result;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502120 sub_502120
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_502120(int *this, int *Block)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  int v5; // edi
+  uint32_t *result; // eax
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) / 12;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(this + 3) - v3) / 12 )
+    return sub_501DB0(this, &Block, *(this + 2), Block);
+  v5 = *(this + 2);
+  result = (uint32_t *)sub_623C10(v5, 1, Block);
+  *(this + 2) = v5 + 12;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5021A0 sub_5021A0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_5021A0(int *this, int a2, uint32_t *a3)
+{
+  int v3; // ebx
+  uint32_t *v4; // esi
+  char v5; // al
+  uint32_t *v6; // edi
+  unsigned int i; // esi
+  unsigned int v8; // ecx
+  const char *v9; // eax
+  unsigned int v10; // edx
+  const char *v11; // esi
+  int v12; // eax
+  bool v13; // sf
+  unsigned int v14; // esi
+  int v15; // eax
+  uint32_t *v16; // ebx
+  const char *v18; // eax
+  uint32_t *v19; // [esp+Ch] [ebp-14h]
+  int *v20; // [esp+18h] [ebp-8h]
+  char v21; // [esp+1Ch] [ebp-4h]
+
+  v3 = *(uint32_t *)(*(this + 1) + 4);
+  v4 = (uint32_t *)*(this + 1);
+  v5 = 1;
+  v6 = a3;
+  v20 = this;
+  v21 = 1;
+  if ( *(uint8_t *)(v3 + 45) == 0 )
+  {
+    for ( i = a3[5]; ; i = a3[5] )
+    {
+      v8 = *(uint32_t *)(v3 + 32);
+      v19 = (uint32_t *)v3;
+      if ( *(uint32_t *)(v3 + 36) < 0x10u )
+        v9 = (const char *)(v3 + 16);
+      else
+        v9 = *(const char **)(v3 + 16);
+      v10 = a3[5];
+      if ( i < v10 )
+        v10 = i;
+      if ( v10 == 0 )
+        goto LABEL_16;
+      if ( v10 < v8 )
+        v8 = v10;
+      v11 = v6[6] < 0x10u ? (const char *)(v6 + 1) : (const char *)v6[1];
+      v12 = memcmp(v11, v9, v8);
+      v13 = v12 < 0;
+      v6 = a3;
+      if ( v12 == 0 )
+      {
+LABEL_16:
+        v14 = *(uint32_t *)(v3 + 32);
+        if ( v10 >= v14 )
+          v15 = v10 != v14;
+        else
+          v15 = -1;
+        v13 = v15 < 0;
+      }
+      v5 = v13;
+      v21 = v13;
+      v3 = v13 ? *(uint32_t *)v3 : *(uint32_t *)(v3 + 8);
+      if ( *(uint8_t *)(v3 + 45) != 0 )
+        break;
+    }
+    v4 = v19;
+    this = v20;
+  }
+  v16 = v4;
+  a3 = v4;
+  if ( v5 != 0 )
+  {
+    if ( v4 == *(uint32_t **)*(this + 1) )
+    {
+      *(uint32_t *)a2 = *sub_501E20(this, &a3, 1, v4, (int)v6);
+      *(uint8_t *)(a2 + 4) = 1;
+      return a2;
+    }
+    sub_501430(&a3);
+    v16 = a3;
+  }
+  if ( v6[6] < 0x10u )
+    v18 = (const char *)(v6 + 1);
+  else
+    v18 = (const char *)v6[1];
+  if ( sub_40BF00((std::_String_base *)(v16 + 3), 0, v16[8], v18, v6[5]) >= 0 )
+  {
+    *(uint32_t *)a2 = v16;
+    *(uint8_t *)(a2 + 4) = 0;
+  }
+  else
+  {
+    *(uint32_t *)a2 = *sub_501E20(v20, &a3, v21, v4, (int)v6);
+    *(uint8_t *)(a2 + 4) = 1;
+  }
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502300 sub_502300
+// ------------------------------------------------------------
+int **/*thiscall*/ sub_502300(int ***this, int **a2, int *a3, int *a4)
+{
+  int *v4; // ebx
+  int *v5; // esi
+  int v7; // eax
+  uint32_t *v8; // eax
+  int **v10; // ecx
+  int **v11; // eax
+  int *j; // eax
+  int *i; // eax
+
+  v4 = a4;
+  v5 = a3;
+  v7 = (int)*(this + 1);
+  if ( a3 == *(int **)v7 && a4 == (int *)v7 )
+  {
+    sub_501D60(*(void ***)(v7 + 4));
+    (*(this + 1))[1] = (int *)*(this + 1);
+    v8 = *(this + 1);
+    *(this + 2) = nullptr;
+    *v8 = v8;
+    (*(this + 1))[2] = (int *)*(this + 1);
+    *a2 = **(this + 1);
+    return a2;
+  }
+  else
+  {
+    if ( a3 != a4 )
+    {
+      do
+      {
+        v10 = (int **)v5;
+        if ( *((uint8_t *)v5 + 45) == 0 )
+        {
+          v11 = (int **)v5[2];
+          if ( *((uint8_t *)v11 + 45) != 0 )
+          {
+            for ( i = (int *)v5[1]; *((uint8_t *)i + 45) == 0; i = (int *)i[1] )
+            {
+              if ( v5 != (int *)i[2] )
+                break;
+              v5 = i;
+            }
+            v5 = i;
+          }
+          else
+          {
+            v5 = (int *)v5[2];
+            for ( j = *v11; *((uint8_t *)j + 45) == 0; j = (int *)*j )
+              v5 = j;
+          }
+        }
+        sub_5019F0(this, (int ***)&a3, v10);
+      }
+      while ( v5 != v4 );
+    }
+    *a2 = v5;
+    return a2;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5023C0 sub_5023C0
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_5023C0(uint32_t *a1, uint32_t *a2, uint32_t *a3)
+{
+  uint32_t *result; // eax
+  uint32_t *i; // esi
+
+  result = a2;
+  for ( i = a1; i != a2; i += 11 )
+  {
+    *i = *a3;
+    i[1] = a3[1];
+    sub_41B0D0(a3 + 2);
+    sub_4800C0(a3 + 3);
+    sub_480210(a3 + 7);
+    result = a2;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502410 sub_502410
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_502410(int a1, int a2, uint32_t *a3)
+{
+  return sub_501FD0(a1, a2, a3);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502430 sub_502430
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_502430(int this, uint32_t *a2, uint32_t *a3, uint32_t *a4)
+{
+  uint32_t *v6; // eax
+  uint32_t *v7; // edi
+  uint32_t *v8; // eax
+  int v9; // ecx
+  uint8_t v10[8]; // [esp+8h] [ebp-8h] BYREF
+
+  if ( *(uint32_t *)(this + 8) == 0 )
+  {
+    sub_501E20((int *)this, a2, 1, *(uint32_t **)(this + 4), (int)a4);
+    return a2;
+  }
+  v6 = *(uint32_t **)(this + 4);
+  v7 = a4;
+  if ( a3 == (uint32_t *)*v6 )
+  {
+    if ( (uint8_t)sub_40C160(a4, a3 + 3) != 0 )
+    {
+      sub_501E20((int *)this, a2, 1, a3, (int)v7);
+      return a2;
+    }
+    goto LABEL_23;
+  }
+  if ( a3 == v6 )
+  {
+    if ( (uint8_t)sub_40C160(v6[2] + 12, a4) != 0 )
+    {
+      sub_501E20((int *)this, a2, 0, *(uint32_t **)(*(uint32_t *)(this + 4) + 8), (int)v7);
+      return a2;
+    }
+    goto LABEL_23;
+  }
+  if ( (uint8_t)sub_40C160(a4, a3 + 3) != 0 )
+  {
+    a4 = a3;
+    sub_501430(&a4);
+    if ( (uint8_t)sub_40C160(a4 + 3, v7) != 0 )
+    {
+      if ( *(uint8_t *)(a4[2] + 45) != 0 )
+        sub_501E20((int *)this, a2, 0, a4, (int)v7);
+      else
+        sub_501E20((int *)this, a2, 1, a3, (int)v7);
+      return a2;
+    }
+  }
+  if ( (uint8_t)sub_40C160(a3 + 3, v7) == 0 )
+    goto LABEL_23;
+  a4 = a3;
+  sub_40BEA0(&a4);
+  v8 = a4;
+  if ( a4 != *(uint32_t **)(this + 4) )
+  {
+    if ( (uint8_t)sub_40C160(v7, a4 + 3) != 0 )
+    {
+      v8 = a4;
+      goto LABEL_19;
+    }
+LABEL_23:
+    v9 = *(uint32_t *)sub_5021A0((int *)this, (int)v10, v7);
+    *a2 = v9;
+    return a2;
+  }
+LABEL_19:
+  if ( *(uint8_t *)(a3[2] + 45) != 0 )
+    sub_501E20((int *)this, a2, 0, a3, (int)v7);
+  else
+    sub_501E20((int *)this, a2, 1, v8, (int)v7);
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5025D0 sub_5025D0
+// ------------------------------------------------------------
+void /*cdecl*/ sub_5025D0(int a1, int a2, int a3)
+{
+  int v3; // esi
+  uint32_t v5[5]; // [esp+0h] [ebp-20h] BYREF
+  int v6; // [esp+1Ch] [ebp-4h]
+
+  v3 = a1;
+  v5[4] = v5;
+  v5[3] = a1;
+  v6 = 0;
+  while ( a2 != 0 )
+  {
+    LOBYTE(v6) = 1;
+    if ( v3 != 0 )
+      sub_480A90(a3);
+    --a2;
+    v3 += 44;
+    LOBYTE(v6) = 0;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5026A0 sub_5026A0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_5026A0(uint32_t *this, unsigned int *a2)
+{
+  unsigned int *v2; // ebx
+  uint32_t *v4; // esi
+  const char *v5; // eax
+  int v7; // [esp+Ch] [ebp-2Ch] BYREF
+  void *Block; // [esp+10h] [ebp-28h]
+  int v9; // [esp+20h] [ebp-18h]
+  unsigned int v10; // [esp+24h] [ebp-14h]
+  int v11; // [esp+28h] [ebp-10h]
+  int v12; // [esp+34h] [ebp-4h]
+
+  v2 = a2;
+  v4 = (uint32_t *)sub_65DCE0(a2);
+  if ( v4 == (uint32_t *)*(this + 1)
+    || (v4[9] < 0x10u ? (v5 = (const char *)(v4 + 4)) : (v5 = (const char *)v4[4]),
+        sub_40BF00((std::_String_base *)v2, 0, v2[5], v5, v4[8]) < 0) )
+  {
+    v10 = 15;
+    v9 = 0;
+    LOBYTE(Block) = 0;
+    sub_4014D0((std::_String_base *)&v7, v2, 0, -1);
+    v11 = 0;
+    v12 = 0;
+    v4 = (uint32_t *)*sub_502430((int)this, &a2, v4, &v7);
+    if ( v10 >= 0x10 )
+      j__free(Block);
+  }
+  return v4 + 10;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5027A0 sub_5027A0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_5027A0(uint32_t *this)
+{
+  int v2; // eax
+
+  v2 = sub_433B80();
+  *(this + 1) = v2;
+  *(uint8_t *)(v2 + 45) = 1;
+  *(uint32_t *)(*(this + 1) + 4) = *(this + 1);
+  *(uint32_t *)*(this + 1) = *(this + 1);
+  *(uint32_t *)(*(this + 1) + 8) = *(this + 1);
+  *(this + 2) = 0;
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5027D0 sub_5027D0
+// ------------------------------------------------------------
+int /*stdcall*/ sub_5027D0(int a1, int a2, int a3)
+{
+  sub_5025D0(a1, a2, a3);
+  return a1 + 44 * a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502800 sub_502800
+// ------------------------------------------------------------
+void /*thiscall*/ sub_502800(int *this, int a2, unsigned int a3, int a4)
+{
+  int v5; // ebx
+  unsigned int v6; // ecx
+  int v8; // eax
+  int v9; // eax
+  unsigned int v10; // ecx
+  int v11; // eax
+  char *v12; // ebx
+  int v13; // eax
+  unsigned int v14; // edi
+  int v15; // eax
+  int v16; // ecx
+  int v18; // edi
+  int v19; // [esp-18h] [ebp-68h]
+  int v20; // [esp-Ch] [ebp-5Ch]
+  unsigned int v21; // [esp-8h] [ebp-58h]
+  int v22; // [esp+0h] [ebp-50h] BYREF
+  uint8_t v23[8]; // [esp+Ch] [ebp-44h] BYREF
+  void *v24; // [esp+14h] [ebp-3Ch] BYREF
+  void *v25; // [esp+1Ch] [ebp-34h]
+  int v26; // [esp+20h] [ebp-30h]
+  int v27; // [esp+24h] [ebp-2Ch]
+  void *v28; // [esp+2Ch] [ebp-24h]
+  int v29; // [esp+30h] [ebp-20h]
+  int v30; // [esp+34h] [ebp-1Ch]
+  void *Block; // [esp+38h] [ebp-18h]
+  int *v32; // [esp+3Ch] [ebp-14h]
+  int *v33; // [esp+40h] [ebp-10h]
+  int v34; // [esp+4Ch] [ebp-4h]
+  int v35; // [esp+58h] [ebp+8h]
+  int v36; // [esp+5Ch] [ebp+Ch]
+  int v37; // [esp+60h] [ebp+10h]
+  int v38; // [esp+60h] [ebp+10h]
+
+  v33 = &v22;
+  v32 = this;
+  sub_480A90(a4);
+  v5 = *(this + 1);
+  v6 = 0;
+  v34 = 0;
+  if ( v5 != 0 )
+    v6 = (*(this + 3) - v5) / 44;
+  if ( a3 != 0 )
+  {
+    if ( v5 != 0 )
+      v8 = (*(this + 2) - v5) / 44;
+    else
+      v8 = 0;
+    if ( 97612893 - v8 < a3 )
+      sub_47F990(this);
+    if ( v5 != 0 )
+      v9 = (*(this + 2) - v5) / 44;
+    else
+      v9 = 0;
+    if ( v6 >= a3 + v9 )
+    {
+      v16 = *(this + 2);
+      v38 = v16;
+      if ( (v16 - a2) / 44 >= a3 )
+      {
+        v35 = v16 - 44 * a3;
+        *(this + 2) = sub_480E70(v35, v16, v16);
+        sub_502410(a2, v35, v38);
+        sub_5023C0(a2, a2 + 44 * a3, v23);
+      }
+      else
+      {
+        sub_480E70(a2, v16, a2 + 44 * a3);
+        v21 = a3 - (*(this + 2) - a2) / 44;
+        v20 = *(this + 2);
+        LOBYTE(v34) = 3;
+        sub_5027D0(v20, v21, v23);
+        v18 = 44 * a3 + *(this + 2);
+        *(this + 2) = v18;
+        v34 = 0;
+        sub_5023C0(a2, v18 - 44 * a3, v23);
+      }
+    }
+    else
+    {
+      if ( 97612893 - (v6 >> 1) >= v6 )
+        v10 = (v6 >> 1) + v6;
+      else
+        v10 = 0;
+      if ( v5 != 0 )
+        v11 = (*(this + 2) - v5) / 44;
+      else
+        v11 = 0;
+      if ( v10 < a3 + v11 )
+        v10 = a3 + sub_527B90(this);
+      v37 = 44 * v10;
+      v12 = (char *)operator new(44 * v10);
+      v19 = *(this + 1);
+      Block = v12;
+      LOBYTE(v34) = 1;
+      v36 = sub_480E70(v19, a2, v12);
+      sub_5025D0(v36, a3, v23);
+      sub_480E70(a2, *(this + 2), 44 * a3 + v36);
+      v13 = *(this + 1);
+      v34 = 0;
+      if ( v13 != 0 )
+        v13 = (*(this + 2) - v13) / 44;
+      v14 = v13 + a3;
+      v15 = *(this + 1);
+      if ( v15 != 0 )
+      {
+        sub_480F40(v15, *(this + 2));
+        j__free((void *)*(this + 1));
+      }
+      *(this + 3) = (int)&v12[v37];
+      *(this + 2) = (int)&v12[44 * v14];
+      *(this + 1) = (int)v12;
+    }
+  }
+  v34 = -1;
+  if ( v28 != nullptr )
+    j__free(v28);
+  v28 = nullptr;
+  v29 = 0;
+  v30 = 0;
+  if ( v25 != nullptr )
+    j__free(v25);
+  v25 = nullptr;
+  v26 = 0;
+  v27 = 0;
+  sub_41B010(&v24);
+}
+
+
+// ------------------------------------------------------------
+// 0x502B30 sub_502B30
+// ------------------------------------------------------------
+char /*cdecl*/ sub_502B30(char *i, int a2)
+{
+  char *v2; // eax
+  int v3; // edx
+  char v4; // cl
+  char *v5; // eax
+  int v6; // ecx
+  char *v7; // ecx
+  int v9; // edi
+  int j; // eax
+  char *v11; // ecx
+  unsigned int v12; // [esp+8h] [ebp-34h] BYREF
+  void *v13; // [esp+Ch] [ebp-30h]
+  int v14; // [esp+1Ch] [ebp-20h]
+  unsigned int v15; // [esp+20h] [ebp-1Ch]
+  int v16; // [esp+24h] [ebp-18h] BYREF
+  void *Block; // [esp+28h] [ebp-14h]
+  int v18; // [esp+38h] [ebp-4h]
+
+  v2 = i;
+  v3 = byte_9B71C8 - i;
+  do
+  {
+    v4 = *v2;
+    v2[v3] = *v2;
+    ++v2;
+  }
+  while ( v4 != 0 );
+  if ( byte_9B71C7[strlen(byte_9B71C8)] != 92 && byte_9B71C7[strlen(byte_9B71C8)] != 47 )
+    *(uint16_t *)&byte_9B71C8[strlen(byte_9B71C8)] = 92;
+  sub_444150(&v16);
+  v18 = 0;
+  if ( (uint8_t)sub_443C40((int)&v16, (char)byte_9B71C8, a2) == 0 )
+    goto LABEL_14;
+  v5 = *(char **)Block;
+  for ( i = *(char **)Block; i != Block; v5 = i )
+  {
+    v6 = *((uint32_t *)v5 + 10) < 0x10u ? (int)(v5 + 20) : *((uint32_t *)v5 + 5);
+    if ( (uint8_t)sub_443C40(12 * *((uint32_t *)v5 + 3) + 10187476, (char)byte_9B71C8, v6) == 0 )
+      goto LABEL_14;
+    sub_40BEA0(&i);
+  }
+  if ( (uint8_t)sub_442A10((char)byte_9B71C8, (int)"RDARKeyIndex.dat") == 0 )
+  {
+LABEL_14:
+    v7 = *(char **)Block;
+    v18 = -1;
+    sub_443810(&i, v7, Block);
+    j__free(Block);
+    return 0;
+  }
+  v9 = 0;
+  for ( j = sub_65BE30(&unk_9789A0); j != 0; j = sub_65BE30(&unk_9789A0) )
+  {
+    if ( j == 2 )
+    {
+      v9 = j__atol(dword_9789A4);
+    }
+    else if ( j == 6 )
+    {
+      v15 = 15;
+      v14 = 0;
+      LOBYTE(v13) = 0;
+      sub_4015C0(dword_9789A4, strlen(dword_9789A4));
+      LOBYTE(v18) = 1;
+      *sub_5026A0(&dword_9B72C8, &v12) = v9;
+      LOBYTE(v18) = 0;
+      if ( v15 >= 0x10 )
+        j__free(v13);
+      v15 = 15;
+      v14 = 0;
+      LOBYTE(v13) = 0;
+    }
+  }
+  v11 = *(char **)Block;
+  v18 = -1;
+  sub_443810(&i, v11, Block);
+  j__free(Block);
+  return 1;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502DA0 sub_502DA0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_502DA0(uint32_t *this, uint32_t *a2, int a3)
+{
+  int v4; // edi
+  int v5; // esi
+
+  sub_480BC0(a3 + 44, *(this + 2), a3);
+  v4 = *(this + 2);
+  v5 = v4 - 44;
+  do
+  {
+    sub_47FA00(v5);
+    v5 += 44;
+  }
+  while ( v5 != v4 );
+  *(this + 2) -= 44;
+  *a2 = a3;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502E00 sub_502E00
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_502E00(int *this, uint32_t *a2, char *a3, int a4)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 44 != 0 )
+    v6 = (int)&a3[-v5] / 44;
+  else
+    v6 = 0;
+  sub_502800(this, a3, 1u, a4);
+  *a2 = *(this + 1) + 44 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502E70 sub_502E70
+// ------------------------------------------------------------
+void /*thiscall*/ sub_502E70(int *this, int a2)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  int v5; // edi
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) / 44;
+  else
+    v4 = 0;
+  if ( v3 != 0 && v4 < (*(this + 3) - v3) / 44 )
+  {
+    v5 = *(this + 2);
+    sub_5025D0(v5, 1, a2);
+    *(this + 2) = v5 + 44;
+  }
+  else
+  {
+    sub_502E00(this, &a2, (char *)*(this + 2), a2);
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x502F00 sub_502F00 —— ★ 玩家技能定义解析器（.skl 文件；研究 20 §13 定位为 [shake screen] 解析器，
+//   研究 20 §30 定位为 [command] 技能指令语法解析器）。a1 = 技能对象（0x4A3520 构造），
+//   a3 = 技能来源类别（4 时置 *a1 = -1，否则 sub_4A2F80 查技能 ID）。
+//   标签族（29 个，按文件顺序）：
+//   基础 [name]/[name2]/[explain]/[maximum level]/[purchase cost]/[required level]/
+//   [required level range]/[pre required skill]/[steel learning skill]/[type]/
+//   [active]=0/[passive]（+76 类型码）/[skill class]/[growtype fitness]/
+//   [casting time]/[growtype maximum level]/[skill fitness growtype]/[consume MP]/
+//   [consume item]/[cool time]/[skill under cooltime effect]/[auto cooltime apply]/[icon]/
+//   [command key explain]/[command]（§30 键序语法：键名→键码，模式 DOWN/DOWN ONCE/UP/UP ONCE，
+//   节奏符 '!'=150ms/','=300ms/'~'=1000ms）/[static data]/[level info]/[level property]/
+//   [shake screen]（研究 20 §13：写技能+296/+300，最终传入镜头震动入口 sub_424120）。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_502F00(int a1, const char *ArgList, int a3)
+{
+  char result; // al
+  int v4; // eax
+  int v5; // eax
+  int v6; // eax
+  uint32_t *v7; // edi
+  int j; // ebx
+  uint32_t *v9; // edi
+  int k; // ebx
+  uint32_t *v11; // edi
+  int m; // ebx
+  int v13; // edi
+  int n; // ebx
+  uint32_t *v15; // edi
+  int jj; // ebx
+  int v17; // eax
+  int kk; // eax
+  char v19; // al
+  int v20; // ebx
+  int v21; // edi
+  int v22; // edi
+  int mm; // edi
+  int v24; // eax
+  uint32_t *v25; // eax
+  int v26; // eax
+  const char *v27; // eax
+  uint32_t *v28; // edi
+  int nn; // ebx
+  int v30; // ecx
+  int v31; // eax
+  int v32; // ecx
+  unsigned int v33; // ebx
+  uint32_t *v34; // eax
+  void *v35[3]; // [esp-1Ch] [ebp-110h] BYREF
+  int v36; // [esp-10h] [ebp-104h]
+  int v37; // [esp-Ch] [ebp-100h]
+  int v38; // [esp-8h] [ebp-FCh]
+  int v39; // [esp-4h] [ebp-F8h]
+  uint8_t v40[28]; // [esp+Ch] [ebp-E8h] BYREF
+  int v41; // [esp+28h] [ebp-CCh] BYREF
+  int v42; // [esp+2Ch] [ebp-C8h]
+  uint8_t v43[4]; // [esp+30h] [ebp-C4h] BYREF
+  uint8_t v44[4]; // [esp+54h] [ebp-A0h] BYREF
+  uint32_t v45[2]; // [esp+58h] [ebp-9Ch] BYREF
+  int v46; // [esp+60h] [ebp-94h] BYREF
+  int ii; // [esp+64h] [ebp-90h] BYREF
+  int v48; // [esp+68h] [ebp-8Ch]
+  int v49; // [esp+6Ch] [ebp-88h]
+  uint8_t v50[4]; // [esp+70h] [ebp-84h] BYREF
+  int v51; // [esp+74h] [ebp-80h]
+  int v52; // [esp+78h] [ebp-7Ch]
+  int v53; // [esp+7Ch] [ebp-78h]
+  int v54; // [esp+80h] [ebp-74h]
+  int v55; // [esp+84h] [ebp-70h]
+  float i; // [esp+88h] [ebp-6Ch] BYREF
+  char v57; // [esp+8Fh] [ebp-65h] BYREF
+  uint8_t v58[28]; // [esp+90h] [ebp-64h] BYREF
+  uint8_t v59[4]; // [esp+ACh] [ebp-48h] BYREF
+  void *Block; // [esp+B0h] [ebp-44h]
+  int v61; // [esp+C0h] [ebp-34h]
+  unsigned int v62; // [esp+C4h] [ebp-30h]
+  int v63; // [esp+C8h] [ebp-2Ch] BYREF
+  void *v64; // [esp+CCh] [ebp-28h] BYREF
+  int v65; // [esp+DCh] [ebp-18h]
+  unsigned int v66; // [esp+E0h] [ebp-14h]
+  int v67; // [esp+E4h] [ebp-10h]
+  int v68; // [esp+F0h] [ebp-4h]
+
+  v67 = dword_796E50;
+  result = sub_442A10((char)&unk_9B71C8, (int)ArgList);
+  if ( result != 0 )
+  {
+    sub_481420(a1);
+    v66 = 15;
+    v65 = 0;
+    LOBYTE(v64) = 0;
+    v68 = 1;
+    v62 = 15;
+    v61 = 0;
+    LOBYTE(Block) = 0;
+    v57 = 0;
+    while ( (uint8_t)sub_443430(&v63) != 0 )
+    {
+      sub_442B20(&v63);
+      if ( sub_40BF00(0, v65, "[name]", 6) != 0 )
+      {
+        if ( sub_40BF00(0, v65, "[name2]", 7) != 0 )
+        {
+          if ( sub_40BF00(0, v65, "[explain]", 9) != 0 )
+          {
+            if ( sub_40BF00(0, v65, "[maximum level]", 15) != 0 )
+            {
+              if ( (uint8_t)sub_423300(&v63, "[purchase cost]") != 0 )
+              {
+                sub_5E5260((void *)(a1 + 20));
+                for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+                  sub_431230(&i);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[required level]") != 0 )
+              {
+                *(uint32_t *)(a1 + 36) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[required level range]") != 0 )
+              {
+                *(uint32_t *)(a1 + 40) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[pre required skill]") != 0 )
+              {
+                sub_5E5260((void *)(a1 + 44));
+                sub_5E5260((void *)(a1 + 60));
+                for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+                {
+                  sub_431230(&i);
+                  i = COERCE_FLOAT(sub_4423D0(0));
+                  sub_431230(&i);
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[steel learning skill]") != 0 )
+              {
+                v4 = sub_4423D0(0);
+                v38 = 0;
+                *(uint8_t *)(a1 + 320) = v4 == 1;
+                v5 = sub_4423D0(v38);
+                v37 = 0;
+                *(uint32_t *)(a1 + 324) = v5;
+                v6 = sub_4423D0(v37);
+                v36 = 0;
+                *(uint32_t *)(a1 + 328) = v6;
+                *(uint32_t *)(a1 + 332) = sub_4423D0(v36);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[type]") != 0 )
+              {
+                sub_443370(v59);
+                if ( (uint8_t)sub_423300(v59, "[active]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 76) = 0;
+                }
+                else if ( (uint8_t)sub_423300(v59, "[passive]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 76) = 1;
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[skill class]") != 0 )
+              {
+                *(uint32_t *)(a1 + 80) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[growtype fitness]") != 0 )
+              {
+                v7 = (uint32_t *)(a1 + 84);
+                for ( j = 5; j != 0; --j )
+                  *v7++ = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[casting time]") != 0 )
+              {
+                v9 = (uint32_t *)(a1 + 132);
+                for ( k = 2; k != 0; --k )
+                  *v9++ = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[growtype maximum level]") != 0 )
+              {
+                v11 = (uint32_t *)(a1 + 104);
+                for ( m = 5; m != 0; --m )
+                  *v11++ = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[skill fitness growtype]") != 0 )
+              {
+                sub_5E5260((void *)(a1 + 304));
+                for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+                  sub_431230(&i);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[consume MP]") != 0 )
+              {
+                v13 = a1 + 124;
+                for ( n = 2; n != 0; --n )
+                {
+                  v13 += 4;
+                  *(float *)(v13 - 4) = sub_442480(0) * 0.89999998;
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[consume item]") != 0 )
+              {
+                v48 = 0;
+                v49 = 0;
+                sub_5E5260((void *)(a1 + 140));
+                for ( ii = sub_4423D0(&v57); v57 != 0; ii = sub_4423D0(&v57) )
+                {
+                  v48 = sub_4423D0(0);
+                  v49 = sub_4423D0(0);
+                  sub_502120(&ii);
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[cool time]") != 0 )
+              {
+                v15 = (uint32_t *)(a1 + 156);
+                for ( jj = 2; jj != 0; --jj )
+                  *v15++ = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[skill under cooltime effect]") != 0 )
+              {
+                sub_5E5260((void *)(a1 + 164));
+                for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+                  sub_431230(&i);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[auto cooltime apply]") != 0 )
+              {
+                *(uint8_t *)(a1 + 180) = sub_4423D0(0) != 0;
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[icon]") != 0 )
+              {
+                sub_442E10(a1 + 184);
+                v17 = sub_4423D0(0);
+                v37 = a1 + 188;
+                *(uint32_t *)(a1 + 192) = v17;
+                sub_442E10(v37);
+                *(uint32_t *)(a1 + 196) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[command key explain]") != 0 )
+              {
+                sub_442E10(a1 + 244);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[command]") != 0 )
+              {
+                v51 = 0;
+                v52 = 0;
+                v53 = 0;
+                v54 = 0;
+                v55 = 300;
+                LOBYTE(v68) = 2;
+                sub_435850(a1 + 200);
+                for ( kk = sub_65BE30(&unk_9789A0); kk != 0; kk = sub_65BE30(&unk_9789A0) )
+                {
+                  if ( kk == 5 )
+                    break;
+                  switch ( kk )
+                  {
+                    case 6:
+                      sub_401710(dword_9789A4);
+                      LOBYTE(v68) = 3;
+                      sub_5014F0(&v46, v40);
+                      LOBYTE(v68) = 2;
+                      sub_501490(v40);
+                      if ( v46 != dword_9B72CC )
+                        sub_431230(v46 + 40);
+                      break;
+                    case 2:
+                      v54 = j__atol(dword_9789A4);
+                      break;
+                    case 7:
+                      sub_401710(byte_979DF8);
+                      LOBYTE(v68) = 4;
+                      if ( (uint8_t)sub_423300(v58, "DOWN") != 0 )
+                      {
+                        *(uint32_t *)(a1 + 232) = 0;
+                        LOBYTE(v68) = 2;
+                        sub_501490(v58);
+                      }
+                      else if ( (uint8_t)sub_423300(v58, "DOWN ONCE") != 0 )
+                      {
+                        *(uint32_t *)(a1 + 232) = 1;
+                        LOBYTE(v68) = 2;
+                        sub_501490(v58);
+                      }
+                      else if ( (uint8_t)sub_423300(v58, "UP") != 0 )
+                      {
+                        *(uint32_t *)(a1 + 232) = 2;
+                        LOBYTE(v68) = 2;
+                        sub_501490(v58);
+                      }
+                      else
+                      {
+                        if ( (uint8_t)sub_423300(v58, "UP ONCE") != 0 )
+                          *(uint32_t *)(a1 + 232) = 3;
+                        LOBYTE(v68) = 2;
+                        sub_501490(v58);
+                      }
+                      break;
+                    case 8:
+                      v19 = *dword_9789A4;
+                      if ( *dword_9789A4 == 38 )
+                      {
+                        if ( (uint8_t)sub_484F10(v50) == 0 )
+                          sub_4ED3F0(v50);
+                      }
+                      else
+                      {
+                        switch ( v19 )
+                        {
+                          case '!':
+                            v55 = 150;
+                            break;
+                          case ',':
+                            v55 = 300;
+                            break;
+                          case '~':
+                            v55 = 1000;
+                            break;
+                          default:
+                            break;
+                        }
+                        if ( (uint8_t)sub_484F10(v50) == 0 )
+                          sub_4B5910(v50);
+                      }
+                      sub_4B1C10(v50);
+                      break;
+                    default:
+                      break;
+                  }
+                }
+                if ( (uint8_t)sub_484F10(v50) == 0 )
+                  sub_4B5910(v50);
+                LOBYTE(v68) = 1;
+                sub_5E5260(v50);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[static data]") != 0 )
+              {
+                sub_5E5260((void *)(a1 + 248));
+                for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+                  sub_431230(&i);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[level info]") != 0 )
+              {
+                sub_42D540(a1 + 264);
+                v20 = sub_4423D0(0);
+                sub_4897D0(v20);
+                v21 = 0;
+                for ( i = COERCE_FLOAT(sub_4423D0(&v57)); v57 != 0; i = COERCE_FLOAT(sub_4423D0(&v57)) )
+                {
+                  sub_431230(&i);
+                  ++v21;
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[level property]") != 0 )
+              {
+                v22 = sub_4423D0(&v57);
+                if ( v57 == 0 )
+                  break;
+                sub_502030(&v41);
+                LOBYTE(v68) = 5;
+                v41 = v22;
+                v42 = sub_4423D0(0);
+                sub_442E10(v43);
+                for ( mm = sub_4423D0(&v57); v57 != 0; mm = sub_4423D0(&v57) )
+                {
+                  v24 = sub_4423D0(0);
+                  v45[0] = mm;
+                  v45[1] = v24;
+                  sub_474950(v45);
+                  i = sub_442480(0);
+                  sub_5020D0(&i);
+                }
+                v25 = *(uint32_t **)(a1 + 284);
+                while ( v25 != *(uint32_t **)(a1 + 288) )
+                {
+                  if ( v25[1] < v41 || *v25 > v42 )
+                    v25 += 11;
+                  else
+                    v25 = *(uint32_t **)sub_502DA0(v44, v25);
+                }
+                sub_502E70(&v41);
+                LOBYTE(v68) = 1;
+                sub_47FA00(&v41);
+              }
+              else if ( (uint8_t)sub_423300(&v63, "[shake screen]") != 0 )
+              {
+                v26 = sub_4423D0(0);
+                v38 = 0;
+                *(uint32_t *)(a1 + 296) = v26;
+                *(uint32_t *)(a1 + 300) = sub_4423D0(v38);
+              }
+              else
+              {
+                i = COERCE_FLOAT(v35);
+                sub_401690(&v63);
+                if ( (uint8_t)sub_442C80((char)v35[0], v35[1], (int)v35[2], v36, v37, v38, v39) == 0 )
+                {
+                  v27 = (const char *)v64;
+                  if ( v66 < 0x10 )
+                    v27 = (const char *)&v64;
+                  off_77F3FC("SCRIPT TAG ERROR! [%s] %s", ArgList, v27);
+                }
+              }
+            }
+            else
+            {
+              *(uint32_t *)(a1 + 16) = sub_4423D0(0);
+            }
+          }
+          else
+          {
+            sub_442E10(a1 + 12);
+          }
+        }
+        else
+        {
+          sub_442E10(a1 + 8);
+        }
+      }
+      else
+      {
+        sub_442E10(a1 + 4);
+      }
+    }
+    v28 = (uint32_t *)(a1 + 104);
+    for ( nn = 5; nn != 0; --nn )
+    {
+      if ( *v28 > *(uint32_t *)(a1 + 16) )
+      {
+        off_77F3FC(aSkillError, ArgList);
+        *(uint32_t *)(a1 + 16) = *v28;
+      }
+      ++v28;
+    }
+    while ( 1 )
+    {
+      v30 = *(uint32_t *)(a1 + 24);
+      v31 = v30 != 0 ? (*(uint32_t *)(a1 + 28) - v30) >> 2 : 0;
+      if ( v31 >= *(uint32_t *)(a1 + 16) )
+        break;
+      v32 = *(uint32_t *)(a1 + 24);
+      if ( v32 != 0 )
+        v33 = (*(uint32_t *)(a1 + 28) - v32) >> 2;
+      else
+        v33 = 0;
+      if ( v32 != 0 && v33 < (*(uint32_t *)(a1 + 32) - v32) >> 2 )
+      {
+        v34 = *(uint32_t **)(a1 + 28);
+        *v34 = *(v34 - 1);
+        *(uint32_t *)(a1 + 28) = v34 + 1;
+      }
+      else
+      {
+        sub_430C80(*(void **)(a1 + 28), 1, *(uint32_t *)(a1 + 28) - 4);
+      }
+    }
+    if ( a3 == 4 )
+      *(uint32_t *)a1 = -1;
+    else
+      *(uint32_t *)a1 = sub_4A2F80(ArgList);
+    if ( v62 >= 0x10 )
+      j__free(Block);
+    v62 = 15;
+    v61 = 0;
+    LOBYTE(Block) = 0;
+    if ( v66 >= 0x10 )
+      j__free(v64);
+    return 1;
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x503BA0 sub_503BA0 —— ★★ 怪物/PassiveObject 攻击定义解析器（attackinfo 结构填充）
+//   【研究 20 §1.3 全词汇表定案函数；研究 20 §12 "攻击定义" 解析器】。
+//   a1 = attackinfo 结构基址（0x98 字节，由 sub_4A3520 构造 → sub_4A3450 置默认值）。
+//   调用者：sub_4D2D60 对象工厂 case 8（operator new(0x98) + sub_4A3520 → 本函数）。
+//   迭代：sub_443430 逐行 → sub_442B20 取行 → 标签比对 → 参数读取
+//   （sub_4423D0 整型 / sub_442480 浮点 / sub_443370 字符串）。
+//
+//   ── attackinfo 字段表（本函数写入点，与 研究 20 §1.3 逐项对照）──
+//   +0    float   [damage]                伤害门（>0 才出特效/结算；float 版）
+//   +4    int     [absolute damage]       绝对伤害值
+//   +8    int     [damage bonus]          伤害加成
+//   +12   int     [attack type] 子枚举 [physic]=0/[magic]=1/[ignore defense]=2  伤害大类
+//                                          （==1 时受击动作速度 ×0.7，研究 20 §2 ⑧）
+//   +16   bool    [weapon damage apply]   武器伤害适用
+//   +17   bool    [attack myself]         友敌开关 1/3（= 本地扫掠 sub_4E82B0 的 +405 门镜像）
+//   +18   bool    [attack friend]         友敌开关 2/3（+406）
+//   +19   bool    [attack enemy]          友敌开关 3/3（+407）
+//   +20   int     [elemental property]    属性攻击（子串名查表 sub_442710）
+//   +24   int[2]  [active status]         携带异常状态 id（0..17，off_791F38 表 18 项；
+//                                          17 = 无；第二槽位经 v3 索引 → +28）
+//   +36   float[2] [active status] 强度    与 +24/+28 平行数组
+//   +48   int[2]  [active status] 概率     与 +24/+28 平行数组
+//   +60   int     [damage reaction] 子枚举 [none]=0/[damage]=1/[down]=2  反应类型
+//   +64   int     [push aside]            击退距离（阈值 150 分档，研究 20 §2 ⑧ state 4）
+//   +68   int     [lift up]               浮空值（阈值 400 分档）
+//   +72   float   [critical hit]          暴击率
+//   +76   float   [stuck]                 硬直强度/概率
+//   +80   bool    [stuck prob increase]   三开关之一
+//   +81   bool    [knuck back]            三开关之二（原文拼写如此）
+//   +82   bool    [ignore defense]        三开关之三
+//   +84   float   [human damage rate]     对人型倍率（>100% 出标记特效，研究 20 §5.2）
+//   +88   float   [fort damage rate]      对城械倍率（同上）
+//   +92   string  [hit wav]               自定义命中音效（VC6 std::string，研究 20 §5.5）
+//   +120  int     [attack direction] 子枚举 [hit lift up]=0/[hit horizon]=1/[hit down]=2
+//                                          受击方向类型（决定反应动画选型）
+//   +124  int     [hit info] 主参数 子枚举 [blow]=0/[cut]=1/[burn]=2/[etc]=3
+//                                          伤害类（钝击 Knock / 斩击 Slash 火花；burn=延滞伤）
+//   +128  bool    [hit info] 第二参数 子枚举 [no blood]=0/[blood]=1  血溅/刃钝标志
+//   +132  int     [hit info] 第三参数    ★ 受击硬直（stuck）时长 ms —— hit stop 时长（研究 20 §3）
+//   +136  float   [hit info] 第四参数    受击动作速度倍率（-1 → 1.0，研究 20 §2 ⑧）
+//   +140  bool    [HP drain]              吸血
+//   +141  bool    [MP drain]              吸魔
+//   ── 本函数写入范围止于 +141（+124 附近穿插写 +128/+132/+136）──
+//   +144 / +148 本函数【不写】：二者由 sub_4A3450 置默认（+144=0 / +148=100.0f），
+//     运行时再由伤害流水线写入（研究 20 §1.3 第 14 轮：+144=背击暴击加成、+148=本次攻击倍率%，
+//     终段公式 ×(+148×0.01)×技能参数×0.01；研究 20 §16 P38 速率链同型换算）。
+//
+//   未识别标签 → off_77F3FC("SCRIPT TAG ERROR! [%s] %s")（研究 20 §1.3 所述的引擎错误输出）。
+//   标签总数 38（含子枚举）。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_503BA0(int a1, const char *ArgList)
+{
+  char result; // al
+  int v3; // ebx
+  void *p_Block; // eax
+  int v5; // edi
+  int v6; // eax
+  const char *v7; // eax
+  void *v8[5]; // [esp-1Ch] [ebp-74h] BYREF
+  int v9; // [esp-8h] [ebp-60h]
+  int v10; // [esp-4h] [ebp-5Ch]
+  void **v11; // [esp+Ch] [ebp-4Ch]
+  uint8_t v12[4]; // [esp+10h] [ebp-48h] BYREF
+  void *Block; // [esp+14h] [ebp-44h] BYREF
+  int v14; // [esp+24h] [ebp-34h]
+  unsigned int v15; // [esp+28h] [ebp-30h]
+  int v16; // [esp+2Ch] [ebp-2Ch] BYREF
+  void *v17; // [esp+30h] [ebp-28h] BYREF
+  int v18; // [esp+40h] [ebp-18h]
+  unsigned int v19; // [esp+44h] [ebp-14h]
+  int v20; // [esp+48h] [ebp-10h]
+  int v21; // [esp+54h] [ebp-4h]
+
+  v20 = dword_796E50;
+  result = sub_442A10((char)szPassword, (int)ArgList);
+  if ( result != 0 )
+  {
+    sub_4A3450(a1);   // attackinfo 默认值（sub_4A3450 @0x4A3450，由 sub_4A3520 构造函数先行调用）：
+                      //   +0/+4/+8/+12=0；+16/+17/+18=0 但 +19=1（默认只打敌人）；
+                      //   +20=4（属性=无）；+24/+28/+32=17（三槽异常状态 id 全 none=17）；
+                      //   +36..+56=0（状态强度/概率平行数组）；+60=1（默认 damage 反应）；
+                      //   +64/+68/+72/+76=0；+80..+82=0；
+                      //   +84/+88=100.0f(0x42C80000)；+92=空串；+120=1（hit horizon）；+124=4（[hit info] 哨兵）；
+                      //   +128=0；+132=-1（stuck 时长哨兵）；+136=-1.0f（速度倍率哨兵）；
+                      //   +140/+141=0；+144=0；+148=100.0f
+    v3 = 0;
+    v19 = 15;
+    v18 = 0;
+    LOBYTE(v17) = 0;
+    v21 = 1;
+    v15 = 15;
+    v14 = 0;
+    LOBYTE(Block) = 0;
+    while ( (uint8_t)sub_443430(&v16) != 0 )
+    {
+      sub_442B20(&v16);
+      if ( sub_40BF00(0, v18, "[damage]", 8) != 0 )
+      {
+        if ( sub_40BF00(0, v18, "[absolute damage]", 17) != 0 )
+        {
+          if ( sub_40BF00(0, v18, "[damage bonus]", 14) != 0 )
+          {
+            if ( sub_40BF00(0, v18, "[attack type]", 13) != 0 )
+            {
+              if ( (uint8_t)sub_423300(&v16, "[weapon damage apply]") != 0 )
+              {
+                *(uint8_t *)(a1 + 16) = sub_4423D0(0) != 0;   // +16 [weapon damage apply] 武器伤害适用
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[attack myself]") != 0 )
+              {
+                *(uint8_t *)(a1 + 17) = sub_4423D0(0) != 0;   // +17 [attack myself]  友敌开关 1/3（本地扫掠 +405 门镜像）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[attack friend]") != 0 )
+              {
+                *(uint8_t *)(a1 + 18) = sub_4423D0(0) != 0;   // +18 [attack friend]  友敌开关 2/3（+406）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[attack enemy]") != 0 )
+              {
+                *(uint8_t *)(a1 + 19) = sub_4423D0(0) != 0;   // +19 [attack enemy]   友敌开关 3/3（+407）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[elemental property]") != 0 )
+              {
+                sub_443370(v12);
+                p_Block = Block;
+                if ( v15 < 0x10 )
+                  p_Block = &Block;
+                *(uint32_t *)(a1 + 20) = sub_442710(p_Block);  // +20 [elemental property] 属性攻击（名字查表）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[active status]") != 0 )
+              {
+                sub_443370(v12);
+                if ( *(uint32_t *)(a1 + 24) != 17 )            // 首槽非 17(=none) → 第二槽 v3=1
+                  v3 = 1;
+                v5 = 0;
+                while ( (uint8_t)sub_423300(v12, off_791F38[v5]) == 0 )
+                {
+                  if ( ++v5 >= 18 )                             // 18 项状态名表（含 [none]=17）
+                    goto LABEL_36;
+                }
+                *(uint32_t *)(a1 + 4 * v3 + 24) = v5;          // +24/+28 [active status] 状态 id
+LABEL_36:
+                *(float *)(a1 + 4 * v3 + 36) = sub_442480(0);  // +36/+40 状态强度（float 平行数组）
+                *(uint32_t *)(a1 + 4 * v3 + 48) = sub_4423D0(0);// +48/+52 状态概率（int 平行数组）
+                v3 = 0;
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[damage reaction]") != 0 )
+              {
+                sub_443370(v12);
+                if ( (uint8_t)sub_423300(v12, "[none]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 60) = 0;                   // +60 [damage reaction] [none] 反应类型=无
+                }
+                else if ( (uint8_t)sub_423300(v12, "[damage]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 60) = 1;                   // +60 [damage] 走受击反应（state 3/4/5 选型门）
+                }
+                else if ( (uint8_t)sub_423300(v12, "[down]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 60) = 2;                   // +60 [down] 击倒
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[push aside]") != 0 )
+              {
+                *(uint32_t *)(a1 + 64) = sub_4423D0(0);         // +64 [push aside] 击退距离（<150 分档，研究 20 §2 ⑧）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[lift up]") != 0 )
+              {
+                *(uint32_t *)(a1 + 68) = sub_4423D0(0);         // +68 [lift up] 浮空值（<400 分档 + 暴击加成 250/50）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[critical hit]") != 0 )
+              {
+                *(float *)(a1 + 72) = sub_442480(0);            // +72 [critical hit] 暴击率（伤害终段 +3.0 加成）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[stuck]") != 0 )
+              {
+                *(float *)(a1 + 76) = sub_442480(0);            // +76 [stuck] 硬直强度/概率（float 属性路径）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[stuck prob increase]") != 0 )
+              {
+                *(uint8_t *)(a1 + 80) = sub_4423D0(0) != 0;     // +80 [stuck prob increase] 三开关之一
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[knuck back]") != 0 )
+              {
+                *(uint8_t *)(a1 + 81) = sub_4423D0(0) != 0;     // +81 [knuck back] 三开关之二（原文拼写）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[ignore defense]") != 0 )
+              {
+                *(uint8_t *)(a1 + 82) = sub_4423D0(0) != 0;     // +82 [ignore defense] 三开关之三
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[human damage rate]") != 0 )
+              {
+                *(float *)(a1 + 84) = sub_442480(0);            // +84 [human damage rate] 对人型倍率（>100% 标记特效）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[fort damage rate]") != 0 )
+              {
+                *(float *)(a1 + 88) = sub_442480(0);            // +88 [fort damage rate] 对城械倍率
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[HP drain]") != 0 )
+              {
+                *(uint8_t *)(a1 + 140) = sub_4423D0(0) != 0;    // +140 [HP drain] 吸血
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[MP drain]") != 0 )
+              {
+                *(uint8_t *)(a1 + 141) = sub_4423D0(0) != 0;    // +141 [MP drain] 吸魔
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[hit wav]") != 0 )
+              {
+                sub_443370(a1 + 92);                            // +92 [hit wav] 自定义命中音效（VC6 std::string）
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[attack direction]") != 0 )
+              {
+                sub_443370(v12);
+                if ( (uint8_t)sub_423300(v12, "[hit lift up]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 120) = 0;                  // +120 [attack direction] 0=上挑
+                }
+                else if ( (uint8_t)sub_423300(v12, "[hit horizon]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 120) = 1;                  // +120 1=平推
+                }
+                else if ( (uint8_t)sub_423300(v12, "[hit down]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 120) = 2;                  // +120 2=下压（决定反应动画选型）
+                }
+              }
+              else if ( (uint8_t)sub_423300(&v16, "[hit info]") != 0 )
+              {
+                sub_443370(v12);
+                if ( (uint8_t)sub_423300(v12, "[blow]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 124) = 0;                  // +124 [hit info] 0=[blow] 钝击 → Knock 火花
+                }
+                else if ( (uint8_t)sub_423300(v12, "[cut]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 124) = 1;                  // +124 1=[cut] 斩击 → Slash 火花
+                }
+                else if ( (uint8_t)sub_423300(v12, "[burn]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 124) = 2;                  // +124 2=[burn] 延滞伤（CNChangeHp 1000ms）
+                }
+                else if ( (uint8_t)sub_423300(v12, "[etc]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 124) = 3;                  // +124 3=[etc] 自定义路径（攻方 vt+652）
+                }
+                sub_443370(v12);
+                if ( (uint8_t)sub_423300(v12, "[no blood]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 128) = 0;                   // +128 [no blood] 无血溅
+                }
+                else if ( (uint8_t)sub_423300(v12, "[blood]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 128) = 1;                   // +128 [blood] 有血溅（SplashBlood 族）
+                }
+                v6 = sub_4423D0(0);
+                v9 = 0;
+                *(uint32_t *)(a1 + 132) = v6;                   // +132 ★ 受击硬直(stuck)时长 ms = hit stop 时长
+                                                                //   （研究 20 §3 表现壳 sub_4E5DC0 读此处，
+                                                                //    经 vt+228(this,1,时长,0) 施加主状态 1）
+                *(float *)(a1 + 136) = sub_442480(v9);          // +136 受击动作速度倍率（-1 → 1.0；+12==1 时 ×0.7）
+              }
+              else
+              {
+                v11 = v8;
+                sub_401690(&v16);
+                if ( (uint8_t)sub_442C80((char)v8[0], v8[1], (int)v8[2], (int)v8[3], (int)v8[4], v9, v10) == 0 )
+                {
+                  v7 = (const char *)v17;
+                  if ( v19 < 0x10 )
+                    v7 = (const char *)&v17;
+                  off_77F3FC("SCRIPT TAG ERROR! [%s] %s", ArgList, v7);  // 未知标签 = 引擎错误输出（研究 20 §1.3）
+                }
+              }
+            }
+            else
+            {
+              sub_443370(v12);
+              if ( (uint8_t)sub_423300(v12, "[physic]") != 0 )
+              {
+                *(uint32_t *)(a1 + 12) = 0;                     // +12 [attack type] 0=物理
+              }
+              else if ( (uint8_t)sub_423300(v12, "[magic]") != 0 )
+              {
+                *(uint32_t *)(a1 + 12) = 1;                     // +12 1=魔法（受击动作速度 ×0.7 —— 研究 20 §2 ⑧）
+              }
+              else if ( (uint8_t)sub_423300(v12, "[ignore defense]") != 0 )
+              {
+                *(uint32_t *)(a1 + 12) = 2;                     // +12 2=无视防御
+              }
+            }
+          }
+          else
+          {
+            *(uint32_t *)(a1 + 8) = sub_4423D0(0);              // +8  [damage bonus] 伤害加成
+          }
+        }
+        else
+        {
+          *(uint32_t *)(a1 + 4) = sub_4423D0(0);                // +4  [absolute damage] 绝对伤害
+        }
+      }
+      else
+      {
+        *(float *)a1 = sub_442480(0);                           // +0  float [damage] 伤害门（>0 才出特效/结算）
+      }
+    }
+    if ( v15 >= 0x10 )
+      j__free(Block);
+    v15 = 15;
+    v14 = 0;
+    LOBYTE(Block) = 0;
+    if ( v19 >= 0x10 )
+      j__free(v17);
+    return 1;
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x504300 sub_504300
+// ------------------------------------------------------------
+bool /*cdecl*/ sub_504300(const char *a1, int a2)
+{
+  strcpy(byte_9B7308, a1);
+  if ( byte_9B7307[strlen(byte_9B7308)] != 92 && byte_9B7307[strlen(byte_9B7308)] != 47 )
+    *(uint16_t *)&byte_9B7308[strlen(byte_9B7308)] = 92;
+  return (uint8_t)sub_443C40((int)&unk_9B7408, (char)byte_9B7308, a2) != 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504390 sub_504390
+// ------------------------------------------------------------
+int /*thiscall*/ sub_504390(int *this)
+{
+  int result; // eax
+
+  result = *(this + 1);
+  if ( result != 0 )
+    return (*(this + 2) - result) / 36;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5043B0 sub_5043B0
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_5043B0(uint32_t *a1, uint32_t *a2, uint32_t *a3)
+{
+  uint32_t *result; // eax
+  uint32_t *v4; // edi
+
+  for ( result = a1; result != a2; v4[2] = a3[2] )
+  {
+    v4 = result;
+    *result = *a3;
+    result[1] = a3[1];
+    result += 3;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5043F0 sub_5043F0
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_5043F0(uint32_t *a1, uint32_t *a2, uint32_t *a3)
+{
+  uint32_t *v3; // ecx
+  uint32_t *result; // eax
+
+  v3 = a2;
+  for ( result = a3; v3 != a1; result[3] = v3[3] )
+  {
+    v3 -= 4;
+    result -= 4;
+    *result = *v3;
+    result[1] = v3[1];
+    result[2] = v3[2];
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504430 sub_504430
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_504430(uint32_t *a1, uint32_t *a2, uint32_t *a3)
+{
+  return sub_4FEFD0(a1, a2, a3);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504450 sub_504450
+// ------------------------------------------------------------
+int /*cdecl*/ sub_504450(int a1, int a2, int a3)
+{
+  return sub_623BD0(a1, a2, a3);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504470 sub_504470
+// ------------------------------------------------------------
+uint32_t */*stdcall*/ sub_504470(int a1, int a2, uint32_t *a3)
+{
+  uint32_t *result; // eax
+
+  result = operator new(0x18u);
+  if ( result != nullptr )
+  {
+    *result = a1;
+    result[1] = a2;
+    result[2] = *a3;
+    result[3] = a3[1];
+    result[4] = a3[2];
+    result[5] = a3[3];
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5044B0 sub_5044B0
+// ------------------------------------------------------------
+uint32_t */*cdecl*/ sub_5044B0(uint32_t *a1, uint32_t *a2, uint32_t *a3)
+{
+  uint32_t *result; // eax
+  uint32_t *v4; // ecx
+
+  result = a2;
+  if ( a2 != nullptr )
+  {
+    v4 = a2;
+    result = a1;
+    do
+    {
+      if ( result != nullptr )
+      {
+        *result = *a3;
+        result[1] = a3[1];
+        result[2] = a3[2];
+        result[3] = a3[3];
+        result[4] = a3[4];
+        result[5] = a3[5];
+      }
+      result += 6;
+      v4 = (uint32_t *)((char *)v4 - 1);
+    }
+    while ( v4 != nullptr );
+  }
+  return result;
+}
+
+
+
+// ============================================================
+// §E 0x504000-0x504600 掉落/奖励类别标签（sub_504500）、容器辅助族
+// ============================================================
+
+// ------------------------------------------------------------
+// 0x504500 sub_504500 —— 掉落/奖励对象类别码解析器
+//   标签族：[monster]=0/[trap]=1/[item]=2/[quest]=3（写 *a1；其余 5 项 sub_4423D0 数值）。
+// ------------------------------------------------------------
+void /*cdecl*/ sub_504500(uint32_t *a1)
+{
+  int i; // edi
+  uint8_t v2[4]; // [esp+8h] [ebp-2Ch] BYREF
+  void *Block; // [esp+Ch] [ebp-28h]
+  unsigned int v4; // [esp+1Ch] [ebp-18h]
+  unsigned int v5; // [esp+20h] [ebp-14h]
+  int v6; // [esp+24h] [ebp-10h]
+  int v7; // [esp+30h] [ebp-4h]
+
+  v6 = dword_796E50;
+  v5 = 15;
+  v4 = 0;
+  LOBYTE(Block) = 0;
+  v7 = 0;
+  for ( i = 0; i < 6; ++i )
+  {
+    if ( i != 0 )
+    {
+      a1[i] = sub_4423D0(nullptr);
+    }
+    else if ( sub_443370() != 0 )
+    {
+      if ( sub_40BF00((std::_String_base *)v2, 0, v4, "[monster]", 9u) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)v2, 0, v4, "[trap]", 6u) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)v2, 0, v4, "[item]", 6u) != 0 )
+          {
+            if ( sub_40BF00((std::_String_base *)v2, 0, v4, "[quest]", 7u) == 0 )
+              *a1 = 3;
+          }
+          else
+          {
+            *a1 = 2;
+          }
+        }
+        else
+        {
+          *a1 = 1;
+        }
+      }
+      else
+      {
+        *a1 = 0;
+      }
+    }
+  }
+  if ( v5 >= 0x10 )
+    j__free(Block);
+}
+
+
+
+// ------------------------------------------------------------
+// 容器模板实例族（0x504620~0x507690 区间；list<T>/vector<CnMonsterTemp> 等辅助函数；
+//   其中 sub_5046D0/4760/47F0/48F0 为 std::list 容量检查（"list<T> too long"），
+//   sub_508F60 为 "vector<T> too long"，属 CRT/STL 实例化，非游戏语义）
+// ------------------------------------------------------------
+
+// ------------------------------------------------------------
+// 0x504620 sub_504620
+// ------------------------------------------------------------
+uint32_t */*stdcall*/ sub_504620(uint32_t *a1, uint32_t *a2, uint32_t *a3)
+{
+  sub_5044B0(a1, a2, a3);
+  return &a1[6 * (uint32_t)a2];
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504650 sub_504650
+// ------------------------------------------------------------
+int /*stdcall*/ sub_504650(int a1, int a2, int a3)
+{
+  sub_4BF340(a1, a2, a3);
+  return a1 + 16 * a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504680 sub_504680
+// ------------------------------------------------------------
+void /*thiscall*/ sub_504680(void *this)
+{
+  *(uint32_t *)this = -1;
+  *((uint8_t *)this + 4) = 1;
+  *((uint32_t *)this + 2) = 0;
+  *((uint32_t *)this + 3) = 0;
+  *((uint32_t *)this + 4) = 0;
+  *((uint32_t *)this + 5) = 0;
+  *((uint32_t *)this + 7) = 1;
+  *((uint32_t *)this + 6) = 1;
+  *((uint32_t *)this + 8) = 0;
+  *((uint32_t *)this + 9) = 0;
+  if ( *((uint32_t *)this + 11) != 0 )
+    j__free(*((void **)this + 11));
+  *((uint32_t *)this + 11) = 0;
+  *((uint32_t *)this + 12) = 0;
+  *((uint32_t *)this + 13) = 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5046D0 sub_5046D0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_5046D0(uint32_t *this, unsigned int a2)
+{
+  int v2; // eax
+  int result; // eax
+  void **pExceptionObject; // [esp+4h] [ebp-50h] BYREF
+  uint8_t v5[20]; // [esp+2Ch] [ebp-28h] BYREF
+  int v6; // [esp+40h] [ebp-14h]
+  int v7; // [esp+44h] [ebp-10h]
+  int v8; // [esp+50h] [ebp-4h]
+
+  v2 = *(this + 2);
+  if ( 97612893 - v2 < a2 )
+  {
+    v7 = 15;
+    v6 = 0;
+    v5[4] = 0;
+    sub_4015C0("list<T> too long", 0x10u);
+    v8 = 0;
+    sub_401740(v5);
+    pExceptionObject = &std::length_error::`vftable';
+    _CxxThrowException(&pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+  }
+  result = a2 + v2;
+  *(this + 2) = result;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504760 sub_504760
+// ------------------------------------------------------------
+int /*thiscall*/ sub_504760(uint32_t *this, unsigned int a2)
+{
+  int v2; // eax
+  int result; // eax
+  void **pExceptionObject; // [esp+4h] [ebp-50h] BYREF
+  uint8_t v5[20]; // [esp+2Ch] [ebp-28h] BYREF
+  int v6; // [esp+40h] [ebp-14h]
+  int v7; // [esp+44h] [ebp-10h]
+  int v8; // [esp+50h] [ebp-4h]
+
+  v2 = *(this + 2);
+  if ( 0xFFFFFFF - v2 < a2 )
+  {
+    v7 = 15;
+    v6 = 0;
+    v5[4] = 0;
+    sub_4015C0("list<T> too long", 0x10u);
+    v8 = 0;
+    sub_401740(v5);
+    pExceptionObject = &std::length_error::`vftable';
+    _CxxThrowException(&pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+  }
+  result = a2 + v2;
+  *(this + 2) = result;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5047F0 sub_5047F0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_5047F0(uint32_t *this, unsigned int a2)
+{
+  int v2; // eax
+  int result; // eax
+  void **pExceptionObject; // [esp+4h] [ebp-50h] BYREF
+  uint8_t v5[20]; // [esp+2Ch] [ebp-28h] BYREF
+  int v6; // [esp+40h] [ebp-14h]
+  int v7; // [esp+44h] [ebp-10h]
+  int v8; // [esp+50h] [ebp-4h]
+
+  v2 = *(this + 2);
+  if ( 82595524 - v2 < a2 )
+  {
+    v7 = 15;
+    v6 = 0;
+    v5[4] = 0;
+    sub_4015C0("list<T> too long", 0x10u);
+    v8 = 0;
+    sub_401740(v5);
+    pExceptionObject = &std::length_error::`vftable';
+    _CxxThrowException(&pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+  }
+  result = a2 + v2;
+  *(this + 2) = result;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504880 sub_504880
+// ------------------------------------------------------------
+void /*noreturn*/ sub_504880()
+{
+  void **pExceptionObject; // [esp+0h] [ebp-50h] BYREF
+  uint8_t v1[20]; // [esp+28h] [ebp-28h] BYREF
+  int v2; // [esp+3Ch] [ebp-14h]
+  int v3; // [esp+40h] [ebp-10h]
+  int v4; // [esp+4Ch] [ebp-4h]
+
+  v3 = 15;
+  v2 = 0;
+  v1[4] = 0;
+  sub_4015C0((void *)"vector<T> too long", 0x12u);
+  v4 = 0;
+  sub_401740(v1);
+  pExceptionObject = &std::length_error::`vftable';
+  _CxxThrowException(&pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5048F0 sub_5048F0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_5048F0(uint32_t *this, unsigned int a2)
+{
+  int v2; // eax
+  int result; // eax
+  void **pExceptionObject; // [esp+4h] [ebp-50h] BYREF
+  uint8_t v5[20]; // [esp+2Ch] [ebp-28h] BYREF
+  int v6; // [esp+40h] [ebp-14h]
+  int v7; // [esp+44h] [ebp-10h]
+  int v8; // [esp+50h] [ebp-4h]
+
+  v2 = *(this + 2);
+  if ( 0x7FFFFFF - v2 < a2 )
+  {
+    v7 = 15;
+    v6 = 0;
+    v5[4] = 0;
+    sub_4015C0("list<T> too long", 0x10u);
+    v8 = 0;
+    sub_401740(v5);
+    pExceptionObject = &std::length_error::`vftable';
+    _CxxThrowException(&pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+  }
+  result = a2 + v2;
+  *(this + 2) = result;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504980 sub_504980
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_504980(uint32_t *this, int a2, int a3, uint32_t *a4)
+{
+  *this = a2;
+  *(this + 1) = a3;
+  *(this + 8) = 15;
+  *(this + 7) = 0;
+  *((uint8_t *)this + 12) = 0;
+  sub_4014D0((std::_String_base *)(this + 2), a4, 0, -1);
+  *(this + 9) = a4[7];
+  *(this + 10) = a4[8];
+  *(this + 11) = a4[9];
+  *(this + 12) = a4[10];
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5049E0 sub_5049E0
+// ------------------------------------------------------------
+int /*cdecl*/ sub_5049E0(int a1, int a2, int a3)
+{
+  int v3; // esi
+  int v4; // edi
+
+  v3 = a2;
+  if ( a1 == a2 )
+    return a3;
+  v4 = a3;
+  do
+  {
+    v3 -= 36;
+    v4 -= 36;
+    sub_4014D0((std::_String_base *)v4, v3, 0, -1);
+    *(uint32_t *)(v4 + 28) = *(uint32_t *)(v3 + 28);
+    *(uint8_t *)(v4 + 32) = *(uint8_t *)(v3 + 32);
+  }
+  while ( v3 != a1 );
+  return v4;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504A30 sub_504A30
+// ------------------------------------------------------------
+int /*cdecl*/ sub_504A30(int a1, int a2, int a3)
+{
+  int v3; // esi
+  uint32_t v6[5]; // [esp+0h] [ebp-20h] BYREF
+  int v7; // [esp+1Ch] [ebp-4h]
+
+  v3 = a3;
+  v6[4] = v6;
+  v6[3] = a3;
+  v7 = 0;
+  while ( a1 != a2 )
+  {
+    LOBYTE(v7) = 1;
+    if ( v3 != 0 )
+    {
+      *(uint32_t *)(v3 + 24) = 15;
+      *(uint32_t *)(v3 + 20) = 0;
+      *(uint8_t *)(v3 + 4) = 0;
+      sub_4014D0((std::_String_base *)v3, a1, 0, -1);
+      *(uint32_t *)(v3 + 28) = *(uint32_t *)(a1 + 28);
+      *(uint8_t *)(v3 + 32) = *(uint8_t *)(a1 + 32);
+    }
+    v3 += 36;
+    LOBYTE(v7) = 0;
+    a1 += 36;
+  }
+  return v3;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504AF0 sub_504AF0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_504AF0(int this)
+{
+  *(uint32_t *)(this + 24) = 15;
+  *(uint32_t *)(this + 20) = 0;
+  *(uint8_t *)(this + 4) = 0;
+  sub_4015C0((void *)szPassword, 0);
+  *(uint32_t *)(this + 32) = 0;
+  *(uint32_t *)(this + 36) = 0;
+  *(uint32_t *)(this + 40) = 0;
+  *(uint32_t *)(this + 28) = 1;
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504B50 sub_504B50
+// ------------------------------------------------------------
+void /*thiscall*/ sub_504B50(void *this)
+{
+  *(uint32_t *)this = -1;
+  *((uint32_t *)this + 3) = 0;
+  *((uint32_t *)this + 2) = 0;
+  *((uint32_t *)this + 1) = 0;
+  if ( *((uint32_t *)this + 5) != 0 )
+    j__free(*((void **)this + 5));
+  *((uint32_t *)this + 5) = 0;
+  *((uint32_t *)this + 6) = 0;
+  *((uint32_t *)this + 7) = 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504B90 sub_504B90
+// ------------------------------------------------------------
+int /*thiscall*/ sub_504B90(int this)
+{
+  *(uint32_t *)(this + 24) = 15;
+  *(uint32_t *)(this + 20) = 0;
+  *(uint8_t *)(this + 4) = 0;
+  sub_4015C0((void *)szPassword, 0);
+  *(uint8_t *)(this + 32) = 0;
+  *(uint32_t *)(this + 28) = 1;
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504BF0 sub_504BF0
+// ------------------------------------------------------------
+char /*thiscall*/ sub_504BF0(uint32_t *this, unsigned int a2)
+{
+  char *v4; // eax
+
+  *(this + 1) = 0;
+  *(this + 2) = 0;
+  *(this + 3) = 0;
+  if ( a2 == 0 )
+    return 0;
+  if ( a2 > 0x1FFFFFFF )
+    sub_504880(this);
+  v4 = (char *)operator new(8 * a2);
+  *(this + 3) = &v4[8 * a2];
+  *(this + 1) = v4;
+  *(this + 2) = v4;
+  return 1;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504C50 sub_504C50
+// ------------------------------------------------------------
+char /*thiscall*/ sub_504C50(uint32_t *this, unsigned int a2)
+{
+  char *v4; // eax
+
+  *(this + 1) = 0;
+  *(this + 2) = 0;
+  *(this + 3) = 0;
+  if ( a2 == 0 )
+    return 0;
+  if ( a2 > 0xAAAAAAA )
+    sub_504880(this);
+  v4 = (char *)operator new(24 * a2);
+  *(this + 3) = &v4[24 * a2];
+  *(this + 1) = v4;
+  *(this + 2) = v4;
+  return 1;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x504CA0 sub_504CA0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_504CA0(int *this, int a2, unsigned int a3, uint32_t *Block)
+{
+  int result; // eax
+  int v6; // edx
+  int v7; // ebx
+  int v8; // ecx
+  int v9; // edx
+  int v10; // ecx
+  int v11; // edx
+  unsigned int v12; // ecx
+  int v14; // eax
+  int v15; // eax
+  unsigned int v16; // ecx
+  int v17; // eax
+  int v18; // ebx
+  int v19; // eax
+  unsigned int v20; // edi
+  void *v21; // ecx
+  int v23; // edi
+  int v24; // [esp-18h] [ebp-4Ch]
+  int v25; // [esp-Ch] [ebp-40h]
+  unsigned int v26; // [esp-8h] [ebp-3Ch]
+  int v27; // [esp+0h] [ebp-34h] BYREF
+  uint32_t v28[7]; // [esp+Ch] [ebp-28h] BYREF
+  int v29; // [esp+30h] [ebp-4h]
+  int v30; // [esp+3Ch] [ebp+8h]
+  int v31; // [esp+40h] [ebp+Ch]
+  char *Blocka; // [esp+44h] [ebp+10h]
+  void *Blockb; // [esp+44h] [ebp+10h]
+
+  result = (int)Block;
+  v6 = Block[1];
+  v7 = *(this + 1);
+  v28[0] = *Block;
+  v8 = Block[2];
+  v28[1] = v6;
+  v9 = Block[3];
+  v28[2] = v8;
+  v10 = Block[4];
+  v28[3] = v9;
+  v11 = Block[5];
+  v28[6] = &v27;
+  v28[4] = v10;
+  v28[5] = v11;
+  if ( v7 != 0 )
+  {
+    result = 715827883 * (*(this + 3) - v7);
+    v12 = (*(this + 3) - v7) / 24;
+  }
+  else
+  {
+    v12 = 0;
+  }
+  if ( a3 != 0 )
+  {
+    if ( v7 != 0 )
+      v14 = (*(this + 2) - v7) / 24;
+    else
+      v14 = 0;
+    if ( 178956970 - v14 < a3 )
+      sub_42CB90(this);
+    if ( v7 != 0 )
+      v15 = (*(this + 2) - v7) / 24;
+    else
+      v15 = 0;
+    if ( v12 >= a3 + v15 )
+    {
+      v21 = (void *)*(this + 2);
+      Blockb = v21;
+      if ( ((int)v21 - a2) / 24 >= a3 )
+      {
+        v30 = (int)v21 - 24 * a3;
+        *(this + 2) = sub_4FF050(v30, v21, v21);
+        sub_504430(a2, v30, Blockb);
+        return sub_4FEF50(a2, a2 + 24 * a3, v28);
+      }
+      else
+      {
+        sub_4FF050(a2, v21, a2 + 24 * a3);
+        v26 = a3 - (*(this + 2) - a2) / 24;
+        v25 = *(this + 2);
+        v29 = 2;
+        sub_504620(v25, v26, v28);
+        v23 = 24 * a3 + *(this + 2);
+        *(this + 2) = v23;
+        return sub_4FEF50(a2, v23 - 24 * a3, v28);
+      }
+    }
+    else
+    {
+      if ( 178956970 - (v12 >> 1) >= v12 )
+        v16 = (v12 >> 1) + v12;
+      else
+        v16 = 0;
+      if ( v7 != 0 )
+        v17 = (*(this + 2) - v7) / 24;
+      else
+        v17 = 0;
+      if ( v16 < a3 + v17 )
+        v16 = a3 + sub_4FEF30(this);
+      v18 = 24 * v16;
+      Blocka = (char *)operator new(24 * v16);
+      v24 = *(this + 1);
+      v29 = 0;
+      v31 = sub_4FF050(v24, a2, Blocka);
+      sub_5044B0(v31, a3, v28);
+      sub_4FF050(a2, *(this + 2), v31 + 24 * a3);
+      v19 = *(this + 1);
+      if ( v19 != 0 )
+        v19 = (*(this + 2) - v19) / 24;
+      v20 = v19 + a3;
+      if ( *(this + 1) != 0 )
+        j__free((void *)*(this + 1));
+      *(this + 3) = (int)&Blocka[v18];
+      *(this + 2) = (int)&Blocka[24 * v20];
+      *(this + 1) = (int)Blocka;
+      return (int)Blocka;
+    }
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x504F70 sub_504F70
+// ------------------------------------------------------------
+unsigned int /*thiscall*/ sub_504F70(int this, int a2, unsigned int a3, uint32_t *Block)
+{
+  int v5; // edx
+  int v6; // ecx
+  int v7; // edx
+  unsigned int result; // eax
+  int v10; // ecx
+  int v11; // ecx
+  unsigned int v12; // eax
+  int v13; // ecx
+  int v14; // eax
+  uint32_t *v15; // ebx
+  int v16; // ecx
+  int v17; // eax
+  unsigned int v18; // edi
+  void *v19; // eax
+  int v20; // edi
+  int v21; // edi
+  int v22; // [esp-18h] [ebp-44h]
+  int v23; // [esp-Ch] [ebp-38h]
+  unsigned int v24; // [esp-8h] [ebp-34h]
+  int v25; // [esp+0h] [ebp-2Ch] BYREF
+  uint32_t v26[5]; // [esp+Ch] [ebp-20h] BYREF
+  int v27; // [esp+28h] [ebp-4h]
+  int v28; // [esp+38h] [ebp+Ch]
+  char *Blocka; // [esp+3Ch] [ebp+10h]
+  void *Blockb; // [esp+3Ch] [ebp+10h]
+
+  v5 = Block[1];
+  v26[0] = *Block;
+  v6 = Block[2];
+  v26[1] = v5;
+  v26[3] = Block[3];
+  v7 = *(uint32_t *)(this + 4);
+  v26[4] = &v25;
+  v26[2] = v6;
+  if ( v7 != 0 )
+    result = (*(uint32_t *)(this + 12) - v7) >> 4;
+  else
+    result = 0;
+  if ( a3 != 0 )
+  {
+    if ( v7 != 0 )
+      v10 = (*(uint32_t *)(this + 8) - v7) >> 4;
+    else
+      v10 = 0;
+    if ( 0xFFFFFFF - v10 < a3 )
+      sub_42CB90(this);
+    if ( v7 != 0 )
+      v11 = (*(uint32_t *)(this + 8) - v7) >> 4;
+    else
+      v11 = 0;
+    if ( result >= a3 + v11 )
+    {
+      v19 = *(void **)(this + 8);
+      Blockb = v19;
+      if ( ((int)v19 - a2) >> 4 >= a3 )
+      {
+        v21 = (int)v19 - 16 * a3;
+        *(uint32_t *)(this + 8) = sub_602460(v21, v19, v19);
+        sub_4BF320(a2, v21, (int)Blockb);
+        return sub_453C20(a2, a2 + 16 * a3, v26);
+      }
+      else
+      {
+        sub_602460(a2, v19, a2 + 16 * a3);
+        v24 = a3 - ((*(uint32_t *)(this + 8) - a2) >> 4);
+        v23 = *(uint32_t *)(this + 8);
+        v27 = 2;
+        sub_504650(v23, v24, v26);
+        v20 = 16 * a3 + *(uint32_t *)(this + 8);
+        *(uint32_t *)(this + 8) = v20;
+        return sub_453C20(a2, v20 - 16 * a3, v26);
+      }
+    }
+    else
+    {
+      if ( 0xFFFFFFF - (result >> 1) >= result )
+        v12 = (result >> 1) + result;
+      else
+        v12 = 0;
+      if ( v7 != 0 )
+        v13 = (*(uint32_t *)(this + 8) - v7) >> 4;
+      else
+        v13 = 0;
+      if ( v12 < a3 + v13 )
+      {
+        if ( v7 != 0 )
+          v14 = (*(uint32_t *)(this + 8) - v7) >> 4;
+        else
+          v14 = 0;
+        v12 = a3 + v14;
+      }
+      v28 = 16 * v12;
+      Blocka = (char *)operator new(16 * v12);
+      v22 = *(uint32_t *)(this + 4);
+      v27 = 0;
+      v15 = (uint32_t *)sub_602460(v22, a2, Blocka);
+      sub_4BF340(v15, (uint32_t *)a3, v26);
+      sub_602460(a2, *(uint32_t *)(this + 8), &v15[4 * a3]);
+      v16 = *(uint32_t *)(this + 4);
+      if ( v16 != 0 )
+        v17 = (*(uint32_t *)(this + 8) - v16) >> 4;
+      else
+        v17 = 0;
+      v18 = v17 + a3;
+      if ( v16 != 0 )
+        j__free(*(void **)(this + 4));
+      *(uint32_t *)(this + 12) = &Blocka[v28];
+      *(uint32_t *)(this + 8) = &Blocka[16 * v18];
+      *(uint32_t *)(this + 4) = Blocka;
+      return (unsigned int)Blocka;
+    }
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x5051D0 sub_5051D0
+// ------------------------------------------------------------
+uint32_t */*stdcall*/ sub_5051D0(int a1, int a2, uint32_t *a3)
+{
+  uint32_t *v3; // esi
+  void *v5[9]; // [esp+0h] [ebp-24h] BYREF
+
+  v5[5] = v5;
+  v3 = operator new(0x34u);
+  v5[4] = v3;
+  v5[8] = (void *)1;
+  v5[3] = v3;
+  if ( v3 != nullptr )
+    sub_504980(v3, a1, a2, a3);
+  return v3;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x505250 sub_505250
+// ------------------------------------------------------------
+void /*thiscall*/ sub_505250(int this, int a2, unsigned int a3, int a4)
+{
+  void *v4; // edx
+  int v6; // ecx
+  unsigned int v7; // eax
+  int v9; // edx
+  int v10; // edx
+  unsigned int v11; // eax
+  int v12; // edx
+  int v13; // eax
+  char *v14; // edi
+  int v15; // ecx
+  int v16; // eax
+  unsigned int v17; // ebx
+  int v18; // eax
+  bool v20; // cf
+  int v21; // ecx
+  int v22; // ebx
+  int v23; // ebx
+  int v24; // [esp-18h] [ebp-40h]
+  int v25; // [esp-Ch] [ebp-34h]
+  unsigned int v26; // [esp-8h] [ebp-30h]
+  int v27; // [esp+0h] [ebp-28h] BYREF
+  void *v28[4]; // [esp+Ch] [ebp-1Ch] BYREF
+  int v29; // [esp+24h] [ebp-4h]
+  int v30; // [esp+30h] [ebp+8h]
+  int v31; // [esp+34h] [ebp+Ch]
+  int v32; // [esp+38h] [ebp+10h]
+  int v33; // [esp+38h] [ebp+10h]
+
+  v4 = *(void **)(a4 + 4);
+  v28[0] = *(void **)a4;
+  v6 = *(uint32_t *)(this + 4);
+  v28[3] = &v27;
+  v28[1] = v4;
+  if ( v6 != 0 )
+    v7 = (*(uint32_t *)(this + 12) - v6) >> 3;
+  else
+    v7 = 0;
+  if ( a3 != 0 )
+  {
+    if ( v6 != 0 )
+      v9 = (*(uint32_t *)(this + 8) - v6) >> 3;
+    else
+      v9 = 0;
+    if ( 0x1FFFFFFF - v9 < a3 )
+      sub_504880(this);
+    if ( v6 != 0 )
+      v10 = (*(uint32_t *)(this + 8) - v6) >> 3;
+    else
+      v10 = 0;
+    if ( v7 >= a3 + v10 )
+    {
+      v18 = *(uint32_t *)(this + 8);
+      v20 = (v18 - a2) >> 3 < a3;
+      v21 = 8 * a3;
+      v30 = 8 * a3;
+      v33 = v18;
+      if ( v20 )
+      {
+        sub_44BD30(a2, v18, a2 + v21);
+        v26 = a3 - ((*(uint32_t *)(this + 8) - a2) >> 3);
+        v25 = *(uint32_t *)(this + 8);
+        v29 = 2;
+        sub_5E51F0(v25, v26, v28);
+        v22 = v30 + *(uint32_t *)(this + 8);
+        *(uint32_t *)(this + 8) = v22;
+        sub_41FEB0(a2, v22 - v30, v28);
+      }
+      else
+      {
+        v23 = v18 - v21;
+        *(uint32_t *)(this + 8) = sub_44BD30(v18 - v21, v18, v18);
+        sub_44BD00(a2, v23, v33);
+        sub_41FEB0(a2, a2 + v30, v28);
+      }
+    }
+    else
+    {
+      if ( 0x1FFFFFFF - (v7 >> 1) >= v7 )
+        v11 = (v7 >> 1) + v7;
+      else
+        v11 = 0;
+      if ( v6 != 0 )
+        v12 = (*(uint32_t *)(this + 8) - v6) >> 3;
+      else
+        v12 = 0;
+      if ( v11 < a3 + v12 )
+      {
+        if ( v6 != 0 )
+          v13 = (*(uint32_t *)(this + 8) - v6) >> 3;
+        else
+          v13 = 0;
+        v11 = a3 + v13;
+      }
+      v31 = 8 * v11;
+      v14 = (char *)operator new(8 * v11);
+      v24 = *(uint32_t *)(this + 4);
+      v28[2] = v14;
+      v29 = 0;
+      v32 = sub_44BD30(v24, a2, v14);
+      sub_63A7C0(v32, a3, v28);
+      sub_44BD30(a2, *(uint32_t *)(this + 8), v32 + 8 * a3);
+      v15 = *(uint32_t *)(this + 4);
+      if ( v15 != 0 )
+        v16 = (*(uint32_t *)(this + 8) - v15) >> 3;
+      else
+        v16 = 0;
+      v17 = v16 + a3;
+      if ( v15 != 0 )
+        j__free(*(void **)(this + 4));
+      *(uint32_t *)(this + 12) = &v14[v31];
+      *(uint32_t *)(this + 8) = &v14[8 * v17];
+      *(uint32_t *)(this + 4) = v14;
+    }
+  }
+}
+
+
+// ------------------------------------------------------------
+// 0x5054A0 sub_5054A0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_5054A0(int *this, int a2, unsigned int a3, uint32_t *Block)
+{
+  int result; // eax
+  int v6; // edx
+  int v7; // ebx
+  int v8; // ecx
+  int v9; // edx
+  int v10; // ecx
+  int v11; // edx
+  unsigned int v12; // ecx
+  int v14; // eax
+  int v15; // eax
+  unsigned int v16; // ecx
+  int v17; // eax
+  int v18; // ebx
+  int v19; // eax
+  unsigned int v20; // edi
+  void *v21; // ecx
+  int v23; // edi
+  int v24; // [esp-18h] [ebp-4Ch]
+  int v25; // [esp-Ch] [ebp-40h]
+  unsigned int v26; // [esp-8h] [ebp-3Ch]
+  int v27; // [esp+0h] [ebp-34h] BYREF
+  uint32_t v28[7]; // [esp+Ch] [ebp-28h] BYREF
+  int v29; // [esp+30h] [ebp-4h]
+  int v30; // [esp+3Ch] [ebp+8h]
+  int v31; // [esp+40h] [ebp+Ch]
+  char *Blocka; // [esp+44h] [ebp+10h]
+  void *Blockb; // [esp+44h] [ebp+10h]
+
+  result = (int)Block;
+  v6 = Block[1];
+  v7 = *(this + 1);
+  v28[0] = *Block;
+  v8 = Block[2];
+  v28[1] = v6;
+  v9 = Block[3];
+  v28[2] = v8;
+  v10 = Block[4];
+  v28[3] = v9;
+  v11 = Block[5];
+  v28[6] = &v27;
+  v28[4] = v10;
+  v28[5] = v11;
+  if ( v7 != 0 )
+  {
+    result = 715827883 * (*(this + 3) - v7);
+    v12 = (*(this + 3) - v7) / 24;
+  }
+  else
+  {
+    v12 = 0;
+  }
+  if ( a3 != 0 )
+  {
+    if ( v7 != 0 )
+      v14 = (*(this + 2) - v7) / 24;
+    else
+      v14 = 0;
+    if ( 178956970 - v14 < a3 )
+      sub_504880(this);
+    if ( v7 != 0 )
+      v15 = (*(this + 2) - v7) / 24;
+    else
+      v15 = 0;
+    if ( v12 >= a3 + v15 )
+    {
+      v21 = (void *)*(this + 2);
+      Blockb = v21;
+      if ( ((int)v21 - a2) / 24 >= a3 )
+      {
+        v30 = (int)v21 - 24 * a3;
+        *(this + 2) = sub_4FF050(v30, v21, v21);
+        sub_504430(a2, v30, Blockb);
+        return sub_4FEF50(a2, a2 + 24 * a3, v28);
+      }
+      else
+      {
+        sub_4FF050(a2, v21, a2 + 24 * a3);
+        v26 = a3 - (*(this + 2) - a2) / 24;
+        v25 = *(this + 2);
+        v29 = 2;
+        sub_504620(v25, v26, v28);
+        v23 = 24 * a3 + *(this + 2);
+        *(this + 2) = v23;
+        return sub_4FEF50(a2, v23 - 24 * a3, v28);
+      }
+    }
+    else
+    {
+      if ( 178956970 - (v12 >> 1) >= v12 )
+        v16 = (v12 >> 1) + v12;
+      else
+        v16 = 0;
+      if ( v7 != 0 )
+        v17 = (*(this + 2) - v7) / 24;
+      else
+        v17 = 0;
+      if ( v16 < a3 + v17 )
+        v16 = a3 + sub_4FEF30(this);
+      v18 = 24 * v16;
+      Blocka = (char *)operator new(24 * v16);
+      v24 = *(this + 1);
+      v29 = 0;
+      v31 = sub_4FF050(v24, a2, Blocka);
+      sub_5044B0(v31, a3, v28);
+      sub_4FF050(a2, *(this + 2), v31 + 24 * a3);
+      v19 = *(this + 1);
+      if ( v19 != 0 )
+        v19 = (*(this + 2) - v19) / 24;
+      v20 = v19 + a3;
+      if ( *(this + 1) != 0 )
+        j__free((void *)*(this + 1));
+      *(this + 3) = (int)&Blocka[v18];
+      *(this + 2) = (int)&Blocka[24 * v20];
+      *(this + 1) = (int)Blocka;
+      return (int)Blocka;
+    }
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x505770 sub_505770
+// ------------------------------------------------------------
+int /*thiscall*/ sub_505770(int *this, uint32_t *a2, unsigned int a3, uint32_t *Block)
+{
+  int v5; // edx
+  int v6; // ebx
+  int v7; // ecx
+  int v8; // edx
+  int result; // eax
+  unsigned int v10; // ecx
+  int v12; // eax
+  int v13; // eax
+  unsigned int v14; // ecx
+  int v15; // eax
+  int v16; // ebx
+  int v17; // eax
+  unsigned int v18; // edi
+  void *v19; // ecx
+  int v21; // edi
+  int v22; // [esp-18h] [ebp-48h]
+  int v23; // [esp-Ch] [ebp-3Ch]
+  unsigned int v24; // [esp-8h] [ebp-38h]
+  int v25; // [esp+0h] [ebp-30h] BYREF
+  uint32_t v26[6]; // [esp+Ch] [ebp-24h] BYREF
+  int v27; // [esp+2Ch] [ebp-4h]
+  int v28; // [esp+38h] [ebp+8h]
+  uint32_t *v29; // [esp+3Ch] [ebp+Ch]
+  char *Blocka; // [esp+40h] [ebp+10h]
+  void *Blockb; // [esp+40h] [ebp+10h]
+
+  v5 = Block[1];
+  v6 = *(this + 1);
+  v26[0] = *Block;
+  v7 = Block[2];
+  v26[1] = v5;
+  v8 = Block[3];
+  result = Block[4];
+  v26[5] = &v25;
+  v26[2] = v7;
+  v26[3] = v8;
+  v26[4] = result;
+  if ( v6 != 0 )
+  {
+    result = 1717986919 * (*(this + 3) - v6);
+    v10 = (*(this + 3) - v6) / 20;
+  }
+  else
+  {
+    v10 = 0;
+  }
+  if ( a3 != 0 )
+  {
+    if ( v6 != 0 )
+      v12 = (*(this + 2) - v6) / 20;
+    else
+      v12 = 0;
+    if ( 214748364 - v12 < a3 )
+      sub_4CEAB0(this);
+    if ( v6 != 0 )
+      v13 = (*(this + 2) - v6) / 20;
+    else
+      v13 = 0;
+    if ( v10 >= a3 + v13 )
+    {
+      v19 = (void *)*(this + 2);
+      Blockb = v19;
+      if ( ((uint8_t *)v19 - (uint8_t *)a2) / 20 >= a3 )
+      {
+        v28 = (int)v19 - 20 * a3;
+        *(this + 2) = sub_4FBDE0(v28, v19, v19);
+        sub_57A4A0(a2, v28, Blockb);
+        return (int)sub_655A00(a2, &a2[5 * a3], v26);
+      }
+      else
+      {
+        sub_4FBDE0(a2, v19, &a2[5 * a3]);
+        v24 = a3 - (*(this + 2) - (int)a2) / 20;
+        v23 = *(this + 2);
+        v27 = 2;
+        sub_57A4C0(v23, v24, v26);
+        v21 = 20 * a3 + *(this + 2);
+        *(this + 2) = v21;
+        return (int)sub_655A00(a2, (uint32_t *)(v21 - 20 * a3), v26);
+      }
+    }
+    else
+    {
+      if ( 214748364 - (v10 >> 1) >= v10 )
+        v14 = (v10 >> 1) + v10;
+      else
+        v14 = 0;
+      if ( v6 != 0 )
+        v15 = (*(this + 2) - v6) / 20;
+      else
+        v15 = 0;
+      if ( v14 < a3 + v15 )
+        v14 = a3 + sub_45E580(this);
+      v16 = 20 * v14;
+      Blocka = (char *)operator new(20 * v14);
+      v22 = *(this + 1);
+      v27 = 0;
+      v29 = (uint32_t *)sub_4FBDE0(v22, a2, Blocka);
+      sub_655A40(v29, (uint32_t *)a3, v26);
+      sub_4FBDE0(a2, *(this + 2), &v29[5 * a3]);
+      v17 = *(this + 1);
+      if ( v17 != 0 )
+        v17 = (*(this + 2) - v17) / 20;
+      v18 = v17 + a3;
+      if ( *(this + 1) != 0 )
+        j__free((void *)*(this + 1));
+      *(this + 3) = (int)&Blocka[v16];
+      *(this + 2) = (int)&Blocka[20 * v18];
+      *(this + 1) = (int)Blocka;
+      return (int)Blocka;
+    }
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x505A30 sub_505A30
+// ------------------------------------------------------------
+int /*thiscall*/ sub_505A30(int *this, int a2, unsigned int a3, int *Block)
+{
+  int v5; // ecx
+  int v6; // edx
+  int v7; // ebx
+  int result; // eax
+  unsigned int v9; // ecx
+  int v11; // eax
+  int v12; // eax
+  unsigned int v13; // ecx
+  int v14; // eax
+  int v15; // ebx
+  int v16; // eax
+  unsigned int v17; // edi
+  void *v18; // ecx
+  int v20; // edi
+  int v21; // [esp-18h] [ebp-40h]
+  int v22; // [esp-Ch] [ebp-34h]
+  unsigned int v23; // [esp-8h] [ebp-30h]
+  int v24; // [esp+0h] [ebp-28h] BYREF
+  uint32_t v25[4]; // [esp+Ch] [ebp-1Ch] BYREF
+  int v26; // [esp+24h] [ebp-4h]
+  int v27; // [esp+30h] [ebp+8h]
+  int v28; // [esp+34h] [ebp+Ch]
+  char *Blocka; // [esp+38h] [ebp+10h]
+  void *Blockb; // [esp+38h] [ebp+10h]
+
+  v5 = *Block;
+  v6 = Block[1];
+  v7 = *(this + 1);
+  result = Block[2];
+  v25[3] = &v24;
+  v25[0] = v5;
+  v25[1] = v6;
+  v25[2] = result;
+  if ( v7 != 0 )
+  {
+    result = 715827883 * (*(this + 3) - v7);
+    v9 = (*(this + 3) - v7) / 12;
+  }
+  else
+  {
+    v9 = 0;
+  }
+  if ( a3 != 0 )
+  {
+    if ( v7 != 0 )
+      v11 = (*(this + 2) - v7) / 12;
+    else
+      v11 = 0;
+    if ( 357913941 - v11 < a3 )
+      sub_4CEAB0(this);
+    if ( v7 != 0 )
+      v12 = (*(this + 2) - v7) / 12;
+    else
+      v12 = 0;
+    if ( v9 >= a3 + v12 )
+    {
+      v18 = (void *)*(this + 2);
+      Blockb = v18;
+      if ( ((int)v18 - a2) / 12 >= a3 )
+      {
+        v27 = (int)v18 - 12 * a3;
+        *(this + 2) = sub_59EE30(v27, v18, v18);
+        sub_504450(a2, v27, Blockb);
+        return sub_5043B0(a2, a2 + 12 * a3, v25);
+      }
+      else
+      {
+        sub_59EE30(a2, v18, a2 + 12 * a3);
+        v23 = a3 - (*(this + 2) - a2) / 12;
+        v22 = *(this + 2);
+        v26 = 2;
+        sub_5E51C0(v22, v23, v25);
+        v20 = 12 * a3 + *(this + 2);
+        *(this + 2) = v20;
+        return sub_5043B0(a2, v20 - 12 * a3, v25);
+      }
+    }
+    else
+    {
+      if ( 357913941 - (v9 >> 1) >= v9 )
+        v13 = (v9 >> 1) + v9;
+      else
+        v13 = 0;
+      if ( v7 != 0 )
+        v14 = (*(this + 2) - v7) / 12;
+      else
+        v14 = 0;
+      if ( v13 < a3 + v14 )
+        v13 = a3 + sub_4DA030(this);
+      v15 = 12 * v13;
+      Blocka = (char *)operator new(12 * v13);
+      v21 = *(this + 1);
+      v26 = 0;
+      v28 = sub_59EE30(v21, a2, Blocka);
+      sub_623C10(v28, a3, v25);
+      sub_59EE30(a2, *(this + 2), v28 + 12 * a3);
+      v16 = *(this + 1);
+      if ( v16 != 0 )
+        v16 = (*(this + 2) - v16) / 12;
+      v17 = v16 + a3;
+      if ( *(this + 1) != 0 )
+        j__free((void *)*(this + 1));
+      *(this + 3) = (int)&Blocka[v15];
+      *(this + 2) = (int)&Blocka[12 * v17];
+      *(this + 1) = (int)Blocka;
+      return (int)Blocka;
+    }
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x505CE0 sub_505CE0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_505CE0(uint32_t *this, int a2)
+{
+  int v3; // ecx
+  unsigned int v4; // eax
+  int v6; // [esp-14h] [ebp-34h]
+  int v7; // [esp-10h] [ebp-30h]
+  int v8; // [esp-Ch] [ebp-2Ch]
+  int v9; // [esp+0h] [ebp-20h] BYREF
+  void *v10; // [esp+Ch] [ebp-14h]
+  int *v11; // [esp+10h] [ebp-10h]
+  int v12; // [esp+1Ch] [ebp-4h]
+
+  v3 = *(uint32_t *)(a2 + 4);
+  v11 = &v9;
+  v10 = this;
+  if ( v3 != 0 )
+    v4 = (*(uint32_t *)(a2 + 8) - v3) >> 3;
+  else
+    v4 = 0;
+  if ( sub_504BF0(this, v4) != 0 )
+  {
+    v8 = *(this + 1);
+    v7 = *(uint32_t *)(a2 + 8);
+    v6 = *(uint32_t *)(a2 + 4);
+    v12 = 0;
+    *(this + 2) = sub_44BD30(v6, v7, v8);
+  }
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x505D80 sub_505D80
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_505D80(uint32_t *this, int a2)
+{
+  unsigned int v2; // eax
+  uint32_t *v5; // [esp-14h] [ebp-34h]
+  uint32_t *v6; // [esp-10h] [ebp-30h]
+  uint32_t *v7; // [esp-Ch] [ebp-2Ch]
+  int v8; // [esp+0h] [ebp-20h] BYREF
+  void *v9; // [esp+Ch] [ebp-14h]
+  int *v10; // [esp+10h] [ebp-10h]
+  int v11; // [esp+1Ch] [ebp-4h]
+
+  v2 = *(uint32_t *)(a2 + 4);
+  v10 = &v8;
+  v9 = this;
+  if ( v2 != 0 )
+    v2 = (int)(*(uint32_t *)(a2 + 8) - v2) / 24;
+  if ( sub_504C50(this, v2) != 0 )
+  {
+    v7 = (uint32_t *)*(this + 1);
+    v6 = *(uint32_t **)(a2 + 8);
+    v5 = *(uint32_t **)(a2 + 4);
+    v11 = 0;
+    *(this + 2) = sub_4FF050(v5, v6, v7);
+  }
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x505E20 sub_505E20
+// ------------------------------------------------------------
+int /*cdecl*/ sub_505E20(int a1, int a2, int a3)
+{
+  int i; // esi
+  int result; // eax
+
+  for ( i = a1; i != a2; i += 36 )
+  {
+    sub_4014D0((std::_String_base *)i, a3, 0, -1);
+    result = *(uint32_t *)(a3 + 28);
+    *(uint32_t *)(i + 28) = result;
+    *(uint8_t *)(i + 32) = *(uint8_t *)(a3 + 32);
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x505E60 sub_505E60
+// ------------------------------------------------------------
+int /*cdecl*/ sub_505E60(int a1, int a2, int a3)
+{
+  return sub_5049E0(a1, a2, a3);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x505E80 sub_505E80
+// ------------------------------------------------------------
+int /*cdecl*/ sub_505E80(int a1, int a2, int a3)
+{
+  int v3; // esi
+  int result; // eax
+  uint32_t v5[6]; // [esp+0h] [ebp-24h] BYREF
+  int v6; // [esp+20h] [ebp-4h]
+
+  v3 = a1;
+  v5[5] = v5;
+  v5[4] = a1;
+  v6 = 0;
+  while ( a2 != 0 )
+  {
+    v5[3] = v3;
+    LOBYTE(v6) = 1;
+    if ( v3 != 0 )
+    {
+      *(uint32_t *)(v3 + 24) = 15;
+      *(uint32_t *)(v3 + 20) = 0;
+      *(uint8_t *)(v3 + 4) = 0;
+      sub_4014D0((std::_String_base *)v3, a3, 0, -1);
+      result = *(uint32_t *)(a3 + 28);
+      *(uint32_t *)(v3 + 28) = result;
+      *(uint8_t *)(v3 + 32) = *(uint8_t *)(a3 + 32);
+    }
+    v3 += 36;
+    LOBYTE(v6) = 0;
+    --a2;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x505F40 sub_505F40
+// ------------------------------------------------------------
+int /*thiscall*/ sub_505F40(int *this, uint32_t *a2)
+{
+  int v3; // edi
+  uint32_t *v4; // ebx
+  int result; // eax
+
+  v3 = *(this + 1);
+  v4 = sub_504470(v3, *(uint32_t *)(v3 + 4), a2);
+  result = sub_504760(this, 1u);
+  *(uint32_t *)(v3 + 4) = v4;
+  *(uint32_t *)v4[1] = v4;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x505F80 sub_505F80
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_505F80(int *this, uint32_t *a2, char *a3, uint32_t *Block)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 24 != 0 )
+    v6 = (int)&a3[-v5] / 24;
+  else
+    v6 = 0;
+  sub_504CA0(this, a3, 1u, Block);
+  *a2 = *(this + 1) + 24 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x505FF0 sub_505FF0
+// ------------------------------------------------------------
+unsigned int /*thiscall*/ sub_505FF0(unsigned int *this, unsigned int a2, int a3)
+{
+  int v4; // edx
+  unsigned int result; // eax
+  int v6; // eax
+  void *v7; // edx
+
+  v4 = *(this + 1);
+  if ( v4 != 0 )
+    result = (int)(*(this + 2) - v4) >> 2;
+  else
+    result = 0;
+  if ( result >= a2 )
+  {
+    if ( v4 != 0 )
+    {
+      result = *(this + 2);
+      if ( a2 < (int)(result - v4) >> 2 )
+      {
+        v7 = (void *)(v4 + 4 * a2);
+        if ( v7 != (void *)result )
+        {
+          result = (unsigned int)memcpy_0(v7, (const void *)result, 0);
+          *(this + 2) = result;
+        }
+      }
+    }
+  }
+  else
+  {
+    if ( v4 != 0 )
+      v6 = (int)(*(this + 2) - v4) >> 2;
+    else
+      v6 = 0;
+    return sub_430C80((void *)*(this + 2), a2 - v6, (int)&a3);
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506080 sub_506080
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_506080(int *this, uint32_t *a2, char *a3, uint32_t *Block)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 24 != 0 )
+    v6 = (int)&a3[-v5] / 24;
+  else
+    v6 = 0;
+  sub_5054A0(this, a3, 1u, Block);
+  *a2 = *(this + 1) + 24 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5060F0 sub_5060F0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_5060F0(int *this, uint32_t *a2, uint32_t *a3, int *Block)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 12 != 0 )
+    v6 = ((int)a3 - v5) / 12;
+  else
+    v6 = 0;
+  sub_505A30(this, a3, 1u, Block);
+  *a2 = *(this + 1) + 12 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506160 sub_506160
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_506160(int *this, uint32_t *a2, char *a3, uint32_t *Block)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 20 != 0 )
+    v6 = (int)&a3[-v5] / 20;
+  else
+    v6 = 0;
+  sub_505770(this, a3, 1u, Block);
+  *a2 = *(this + 1) + 20 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5061D0 sub_5061D0
+// ------------------------------------------------------------
+uint8_t */*thiscall*/ sub_5061D0(uint8_t *this, int a2)
+{
+  *(uint32_t *)this = *(uint32_t *)a2;
+  *(this + 4) = *(uint8_t *)(a2 + 4);
+  *((uint32_t *)this + 2) = *(uint32_t *)(a2 + 8);
+  *((uint32_t *)this + 3) = *(uint32_t *)(a2 + 12);
+  *((uint32_t *)this + 4) = *(uint32_t *)(a2 + 16);
+  *((uint32_t *)this + 5) = *(uint32_t *)(a2 + 20);
+  *((uint32_t *)this + 6) = *(uint32_t *)(a2 + 24);
+  *((uint32_t *)this + 7) = *(uint32_t *)(a2 + 28);
+  *((uint32_t *)this + 8) = *(uint32_t *)(a2 + 32);
+  *((uint32_t *)this + 9) = *(uint32_t *)(a2 + 36);
+  sub_435020((void *)(a2 + 40));
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506230 sub_506230
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_506230(uint32_t *this, uint32_t *a2)
+{
+  *this = *a2;
+  *(this + 1) = a2[1];
+  *(this + 2) = a2[2];
+  *(this + 3) = a2[3];
+  *(this + 4) = a2[4];
+  *(this + 5) = a2[5];
+  *(this + 6) = a2[6];
+  *(this + 7) = a2[7];
+  *(this + 8) = a2[8];
+  sub_505CE0(this + 9, (int)(a2 + 9));
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506280 sub_506280
+// ------------------------------------------------------------
+int /*cdecl*/ sub_506280(int a1, int a2, int a3)
+{
+  int v3; // esi
+  int v4; // edi
+  int v5; // eax
+
+  v3 = a2;
+  if ( a1 == a2 )
+    return a3;
+  v4 = a3;
+  do
+  {
+    v5 = *(uint32_t *)(v3 - 56);
+    v3 -= 56;
+    v4 -= 56;
+    *(uint32_t *)v4 = v5;
+    *(uint8_t *)(v4 + 4) = *(uint8_t *)(v3 + 4);
+    *(uint32_t *)(v4 + 8) = *(uint32_t *)(v3 + 8);
+    *(uint32_t *)(v4 + 12) = *(uint32_t *)(v3 + 12);
+    *(uint32_t *)(v4 + 16) = *(uint32_t *)(v3 + 16);
+    *(uint32_t *)(v4 + 20) = *(uint32_t *)(v3 + 20);
+    *(uint32_t *)(v4 + 24) = *(uint32_t *)(v3 + 24);
+    *(uint32_t *)(v4 + 28) = *(uint32_t *)(v3 + 28);
+    *(uint32_t *)(v4 + 32) = *(uint32_t *)(v3 + 32);
+    *(uint32_t *)(v4 + 36) = *(uint32_t *)(v3 + 36);
+    sub_4ED3F0(v4 + 40, v3 + 40);
+  }
+  while ( v3 != a1 );
+  return v4;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506300 sub_506300
+// ------------------------------------------------------------
+void */*thiscall*/ sub_506300(void *this)
+{
+  *((uint32_t *)this + 11) = 0;
+  *((uint32_t *)this + 12) = 0;
+  *((uint32_t *)this + 13) = 0;
+  *(uint32_t *)this = -1;
+  *((uint8_t *)this + 4) = 1;
+  *((uint32_t *)this + 2) = 0;
+  *((uint32_t *)this + 3) = 0;
+  *((uint32_t *)this + 4) = 0;
+  *((uint32_t *)this + 5) = 0;
+  *((uint32_t *)this + 7) = 1;
+  *((uint32_t *)this + 6) = 1;
+  *((uint32_t *)this + 8) = 0;
+  *((uint32_t *)this + 9) = 0;
+  if ( *((uint32_t *)this + 11) != 0 )
+    j__free(*((void **)this + 11));
+  *((uint32_t *)this + 11) = 0;
+  *((uint32_t *)this + 12) = 0;
+  *((uint32_t *)this + 13) = 0;
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506360 sub_506360
+// ------------------------------------------------------------
+void */*thiscall*/ sub_506360(void *this)
+{
+  *((uint32_t *)this + 10) = 0;
+  *((uint32_t *)this + 11) = 0;
+  *((uint32_t *)this + 12) = 0;
+  *((uint32_t *)this + 2) = 1;
+  *((uint32_t *)this + 1) = 1;
+  *(uint32_t *)this = 0;
+  *((uint32_t *)this + 3) = 0;
+  *((uint32_t *)this + 4) = 0;
+  *((uint32_t *)this + 5) = 0;
+  *((uint32_t *)this + 6) = -1;
+  *((uint32_t *)this + 8) = -1;
+  *((uint32_t *)this + 7) = -1;
+  if ( *((uint32_t *)this + 10) != 0 )
+    j__free(*((void **)this + 10));
+  *((uint32_t *)this + 10) = 0;
+  *((uint32_t *)this + 11) = 0;
+  *((uint32_t *)this + 12) = 0;
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5063B0 sub_5063B0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_5063B0(int this, uint32_t *Block)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  uint32_t *v5; // edi
+  uint32_t *result; // eax
+
+  v3 = *(uint32_t *)(this + 4);
+  if ( v3 != 0 )
+    v4 = (*(uint32_t *)(this + 8) - v3) / 24;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(uint32_t *)(this + 12) - v3) / 24 )
+    return sub_505F80((int *)this, &Block, *(char **)(this + 8), Block);
+  v5 = *(uint32_t **)(this + 8);
+  result = sub_5044B0(v5, (uint32_t *)1, Block);
+  *(uint32_t *)(this + 8) = v5 + 6;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506440 sub_506440
+// ------------------------------------------------------------
+unsigned int /*thiscall*/ sub_506440(int *this, uint32_t *Block)
+{
+  int v3; // edx
+  unsigned int v4; // ecx
+  int v5; // edi
+  unsigned int result; // eax
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) >> 4;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(this + 3) - v3) >> 4 )
+    return sub_504F70((int)this, *(this + 2), 1u, Block);
+  v5 = *(this + 2);
+  result = sub_4BF340(v5, 1, Block);
+  *(this + 2) = v5 + 16;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5064B0 sub_5064B0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_5064B0(int *this, uint32_t *a2)
+{
+  int v3; // edi
+  uint32_t *v4; // ebx
+  int result; // eax
+
+  v3 = *(this + 1);
+  v4 = sub_5051D0(v3, *(uint32_t *)(v3 + 4), a2);
+  result = sub_5046D0(this, 1u);
+  *(uint32_t *)(v3 + 4) = v4;
+  *(uint32_t *)v4[1] = v4;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5064F0 sub_5064F0
+// ------------------------------------------------------------
+void /*thiscall*/ sub_5064F0(int *this, int a2)
+{
+  int v3; // edx
+  unsigned int v4; // ecx
+  int v5; // edi
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) >> 3;
+  else
+    v4 = 0;
+  if ( v3 != 0 && v4 < (*(this + 3) - v3) >> 3 )
+  {
+    v5 = *(this + 2);
+    sub_63A7C0(v5, 1, a2);
+    *(this + 2) = v5 + 8;
+  }
+  else
+  {
+    sub_505250((int)this, *(this + 2), 1u, a2);
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506560 sub_506560
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_506560(int this, uint32_t *Block)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  uint32_t *v5; // edi
+  uint32_t *result; // eax
+
+  v3 = *(uint32_t *)(this + 4);
+  if ( v3 != 0 )
+    v4 = (*(uint32_t *)(this + 8) - v3) / 24;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(uint32_t *)(this + 12) - v3) / 24 )
+    return sub_506080((int *)this, &Block, *(char **)(this + 8), Block);
+  v5 = *(uint32_t **)(this + 8);
+  result = sub_5044B0(v5, (uint32_t *)1, Block);
+  *(uint32_t *)(this + 8) = v5 + 6;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5065F0 sub_5065F0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_5065F0(int this, uint32_t *Block)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  int v5; // edi
+  uint32_t *result; // eax
+
+  v3 = *(uint32_t *)(this + 4);
+  if ( v3 != 0 )
+    v4 = (*(uint32_t *)(this + 8) - v3) / 20;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(uint32_t *)(this + 12) - v3) / 20 )
+    return sub_506160((int *)this, &Block, *(char **)(this + 8), Block);
+  v5 = *(uint32_t *)(this + 8);
+  result = (uint32_t *)sub_655A40(v5, 1, Block);
+  *(uint32_t *)(this + 8) = v5 + 20;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506680 sub_506680
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_506680(int *this, int *Block)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  int v5; // edi
+  uint32_t *result; // eax
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) / 12;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(this + 3) - v3) / 12 )
+    return sub_5060F0(this, &Block, (uint32_t *)*(this + 2), Block);
+  v5 = *(this + 2);
+  result = (uint32_t *)sub_623C10(v5, 1, Block);
+  *(this + 2) = v5 + 12;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506700 sub_506700
+// ------------------------------------------------------------
+int /*stdcall*/ sub_506700(int a1, int a2, int a3)
+{
+  sub_505E80(a1, a2, a3);
+  return a1 + 36 * a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506730 sub_506730
+// ------------------------------------------------------------
+void /*thiscall*/ sub_506730(int *this, int a2, unsigned int a3, int a4)
+{
+  char v5; // cl
+  int v6; // ebx
+  unsigned int v7; // ecx
+  int v9; // eax
+  int v10; // eax
+  unsigned int v11; // ecx
+  int v12; // eax
+  char *v13; // ebx
+  int v14; // ecx
+  int v15; // eax
+  unsigned int v16; // edi
+  void *v17; // eax
+  int v18; // ecx
+  int v20; // edi
+  int v21; // [esp-18h] [ebp-68h]
+  int v22; // [esp-Ch] [ebp-5Ch]
+  unsigned int v23; // [esp-8h] [ebp-58h]
+  int v24; // [esp+0h] [ebp-50h] BYREF
+  void *Block; // [esp+Ch] [ebp-44h]
+  int *v26; // [esp+10h] [ebp-40h]
+  char *v27; // [esp+14h] [ebp-3Ch]
+  char v28[4]; // [esp+18h] [ebp-38h] BYREF
+  void *v29; // [esp+1Ch] [ebp-34h]
+  int v30; // [esp+2Ch] [ebp-24h]
+  unsigned int v31; // [esp+30h] [ebp-20h]
+  int v32; // [esp+34h] [ebp-1Ch]
+  char v33; // [esp+38h] [ebp-18h]
+  int v34; // [esp+3Ch] [ebp-14h]
+  int *v35; // [esp+40h] [ebp-10h]
+  int v36; // [esp+4Ch] [ebp-4h]
+  int v37; // [esp+58h] [ebp+8h]
+  int v38; // [esp+5Ch] [ebp+Ch]
+  int v39; // [esp+60h] [ebp+10h]
+
+  v35 = &v24;
+  v34 = dword_796E50;
+  v26 = this;
+  v31 = 15;
+  v30 = 0;
+  LOBYTE(v29) = 0;
+  sub_4014D0((std::_String_base *)v28, a4, 0, -1);
+  v5 = *(uint8_t *)(a4 + 32);
+  v32 = *(uint32_t *)(a4 + 28);
+  v33 = v5;
+  v6 = *(this + 1);
+  v36 = 0;
+  if ( v6 != 0 )
+    v7 = (*(this + 3) - v6) / 36;
+  else
+    v7 = 0;
+  if ( a3 != 0 )
+  {
+    if ( v6 != 0 )
+      v9 = (*(this + 2) - v6) / 36;
+    else
+      v9 = 0;
+    if ( 119304647 - v9 < a3 )
+      sub_4CEAB0(this);
+    if ( v6 != 0 )
+      v10 = (*(this + 2) - v6) / 36;
+    else
+      v10 = 0;
+    if ( v7 >= a3 + v10 )
+    {
+      v18 = *(this + 2);
+      v39 = v18;
+      if ( (v18 - a2) / 36 >= a3 )
+      {
+        v37 = v18 - 36 * a3;
+        *(this + 2) = sub_504A30(v37, v18, v18);
+        sub_505E60(a2, v37, v39);
+        sub_505E20(a2, a2 + 36 * a3, v28);
+      }
+      else
+      {
+        sub_504A30(a2, v18, a2 + 36 * a3);
+        v23 = a3 - (*(this + 2) - a2) / 36;
+        v22 = *(this + 2);
+        LOBYTE(v36) = 3;
+        sub_506700(v22, v23, v28);
+        v20 = 36 * a3 + *(this + 2);
+        *(this + 2) = v20;
+        v36 = 0;
+        sub_505E20(a2, v20 - 36 * a3, v28);
+      }
+    }
+    else
+    {
+      if ( 119304647 - (v7 >> 1) >= v7 )
+        v11 = (v7 >> 1) + v7;
+      else
+        v11 = 0;
+      if ( v6 != 0 )
+        v12 = (*(this + 2) - v6) / 36;
+      else
+        v12 = 0;
+      if ( v11 < a3 + v12 )
+        v11 = a3 + sub_504390(this);
+      v38 = 36 * v11;
+      v13 = (char *)operator new(36 * v11);
+      v21 = *(this + 1);
+      Block = v13;
+      v27 = v13;
+      LOBYTE(v36) = 1;
+      v27 = (char *)sub_504A30(v21, a2, v13);
+      sub_505E80(v27, a3, v28);
+      v14 = *(this + 2);
+      v27 += 36 * a3;
+      sub_504A30(a2, v14, v27);
+      v15 = *(this + 1);
+      if ( v15 != 0 )
+        v15 = (*(this + 2) - v15) / 36;
+      v16 = v15 + a3;
+      v17 = (void *)*(this + 1);
+      if ( v17 != nullptr )
+      {
+        sub_4D0970(v17, *(this + 2));
+        j__free((void *)*(this + 1));
+      }
+      *(this + 3) = (int)&v13[v38];
+      *(this + 2) = (int)&v13[36 * v16];
+      *(this + 1) = (int)v13;
+    }
+  }
+  if ( v31 >= 0x10 )
+    j__free(v29);
+}
+
+
+// ------------------------------------------------------------
+// 0x506A60 sub_506A60
+// ------------------------------------------------------------
+int /*cdecl*/ sub_506A60(int a1, int a2, int a3)
+{
+  int result; // eax
+  int i; // esi
+
+  result = a2;
+  for ( i = a1; i != a2; i += 56 )
+  {
+    *(uint32_t *)i = *(uint32_t *)a3;
+    *(uint8_t *)(i + 4) = *(uint8_t *)(a3 + 4);
+    *(uint32_t *)(i + 8) = *(uint32_t *)(a3 + 8);
+    *(uint32_t *)(i + 12) = *(uint32_t *)(a3 + 12);
+    *(uint32_t *)(i + 16) = *(uint32_t *)(a3 + 16);
+    *(uint32_t *)(i + 20) = *(uint32_t *)(a3 + 20);
+    *(uint32_t *)(i + 24) = *(uint32_t *)(a3 + 24);
+    *(uint32_t *)(i + 28) = *(uint32_t *)(a3 + 28);
+    *(uint32_t *)(i + 32) = *(uint32_t *)(a3 + 32);
+    *(uint32_t *)(i + 36) = *(uint32_t *)(a3 + 36);
+    sub_4ED3F0(i + 40, a3 + 40);
+    result = a2;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506AD0 sub_506AD0
+// ------------------------------------------------------------
+int /*cdecl*/ sub_506AD0(int a1, int a2, int a3)
+{
+  return sub_506280(a1, a2, a3);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506AF0 sub_506AF0
+// ------------------------------------------------------------
+int /*cdecl*/ sub_506AF0(int a1, int a2, int a3)
+{
+  int v3; // esi
+  uint32_t v6[5]; // [esp+0h] [ebp-20h] BYREF
+  int v7; // [esp+1Ch] [ebp-4h]
+
+  v3 = a3;
+  v6[4] = v6;
+  v6[3] = a3;
+  v7 = 0;
+  while ( a1 != a2 )
+  {
+    LOBYTE(v7) = 1;
+    if ( v3 != 0 )
+    {
+      *(uint32_t *)v3 = *(uint32_t *)a1;
+      *(uint8_t *)(v3 + 4) = *(uint8_t *)(a1 + 4);
+      *(uint32_t *)(v3 + 8) = *(uint32_t *)(a1 + 8);
+      *(uint32_t *)(v3 + 12) = *(uint32_t *)(a1 + 12);
+      *(uint32_t *)(v3 + 16) = *(uint32_t *)(a1 + 16);
+      *(uint32_t *)(v3 + 20) = *(uint32_t *)(a1 + 20);
+      *(uint32_t *)(v3 + 24) = *(uint32_t *)(a1 + 24);
+      *(uint32_t *)(v3 + 28) = *(uint32_t *)(a1 + 28);
+      *(uint32_t *)(v3 + 32) = *(uint32_t *)(a1 + 32);
+      *(uint32_t *)(v3 + 36) = *(uint32_t *)(a1 + 36);
+      sub_435020((void *)(a1 + 40));
+    }
+    v3 += 56;
+    LOBYTE(v7) = 0;
+    a1 += 56;
+  }
+  return v3;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506BE0 sub_506BE0
+// ------------------------------------------------------------
+void /*cdecl*/ sub_506BE0(int a1, int a2)
+{
+  int v2; // esi
+  const char *v3; // edi
+  unsigned int v4; // eax
+  int v5; // ecx
+  const char *p_Block; // esi
+  int v7; // edx
+  int v8; // edx
+  int v9; // edi
+  int v10; // ecx
+  unsigned int v11; // esi
+  int *v12; // eax
+  int i; // [esp+0h] [ebp-30h]
+  void *Block; // [esp+8h] [ebp-28h] BYREF
+  unsigned int v15; // [esp+18h] [ebp-18h]
+  unsigned int v16; // [esp+1Ch] [ebp-14h]
+  int v17; // [esp+20h] [ebp-10h]
+  int v18; // [esp+2Ch] [ebp-4h]
+
+  v17 = dword_796E50;
+  v16 = 15;
+  v15 = 0;
+  LOBYTE(Block) = 0;
+  v18 = 0;
+  if ( a1 > 0 )
+  {
+    for ( i = a1; i != 0; --i )
+    {
+      sub_443370();
+      v2 = 0;
+      a1 = 0;
+      while ( 1 )
+      {
+        v3 = off_795AC0[(uint8_t)dword_6FC398[v2]];
+        v4 = strlen(v3);
+        if ( v15 == 0 )
+          goto LABEL_11;
+        v5 = v15;
+        if ( v15 >= v4 )
+          v5 = v4;
+        p_Block = (const char *)Block;
+        if ( v16 < 0x10 )
+          p_Block = (const char *)&Block;
+        v7 = memcmp(p_Block, v3, v5);
+        v2 = a1;
+        if ( v7 == 0 )
+        {
+LABEL_11:
+          if ( v15 >= v4 && v15 == v4 )
+            break;
+        }
+        a1 = ++v2;
+        if ( v2 >= 27 )
+          goto LABEL_21;
+      }
+      v8 = *(uint32_t *)(a2 + 44);
+      v9 = dword_6FC398[v2];
+      v10 = a2 + 40;
+      a1 = v9;
+      if ( v8 != 0 )
+        v11 = (*(uint32_t *)(a2 + 48) - v8) >> 2;
+      else
+        v11 = 0;
+      if ( v8 != 0 && v11 < (*(uint32_t *)(a2 + 52) - v8) >> 2 )
+      {
+        v12 = *(int **)(a2 + 48);
+        *v12 = v9;
+        *(uint32_t *)(v10 + 8) = v12 + 1;
+      }
+      else
+      {
+        sub_430C80(*(void **)(a2 + 48), 1, (int)&a1);
+      }
+LABEL_21:
+      ;
+    }
+    if ( v16 >= 0x10 )
+      j__free(Block);
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506D30 sub_506D30
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_506D30(int *this, uint32_t *a2, int a3, int a4)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 36 != 0 )
+    v6 = (a3 - v5) / 36;
+  else
+    v6 = 0;
+  sub_506730(this, a3, 1u, a4);
+  *a2 = *(this + 1) + 36 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506DA0 sub_506DA0
+// ------------------------------------------------------------
+uint32_t */*stdcall*/ sub_506DA0(int a1, int a2, uint32_t *a3)
+{
+  uint32_t *v3; // esi
+  void *v5[9]; // [esp+0h] [ebp-24h] BYREF
+
+  v5[5] = v5;
+  v3 = operator new(0x3Cu);
+  v5[4] = v3;
+  v5[8] = (void *)1;
+  v5[3] = v3;
+  if ( v3 != nullptr )
+  {
+    v3[1] = a2;
+    *v3 = a1;
+    sub_506230(v3 + 2, a3);
+  }
+  return v3;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506E30 sub_506E30
+// ------------------------------------------------------------
+uint32_t */*stdcall*/ sub_506E30(int a1, int a2, uint32_t *a3)
+{
+  uint32_t *v3; // eax
+  uint32_t *v4; // esi
+  void *v6[9]; // [esp+0h] [ebp-24h] BYREF
+
+  v6[5] = v6;
+  v3 = operator new(0x28u);
+  v4 = v3;
+  v6[4] = v3;
+  v6[8] = (void *)1;
+  v6[3] = v3;
+  if ( v3 != nullptr )
+  {
+    *v3 = a1;
+    v3[1] = a2;
+    v3[2] = *a3;
+    v3[3] = a3[1];
+    v3[4] = a3[2];
+    v3[5] = a3[3];
+    sub_505D80(v3 + 6, (int)(a3 + 4));
+  }
+  return v4;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506ED0 sub_506ED0
+// ------------------------------------------------------------
+void /*cdecl*/ sub_506ED0(int a1, int a2, int a3)
+{
+  int v3; // esi
+  uint32_t v4[6]; // [esp+0h] [ebp-24h] BYREF
+  int v5; // [esp+20h] [ebp-4h]
+
+  v3 = a1;
+  v4[5] = v4;
+  v4[4] = a1;
+  v5 = 0;
+  while ( a2 != 0 )
+  {
+    v4[3] = v3;
+    LOBYTE(v5) = 1;
+    if ( v3 != 0 )
+    {
+      *(uint32_t *)v3 = *(uint32_t *)a3;
+      *(uint8_t *)(v3 + 4) = *(uint8_t *)(a3 + 4);
+      *(uint32_t *)(v3 + 8) = *(uint32_t *)(a3 + 8);
+      *(uint32_t *)(v3 + 12) = *(uint32_t *)(a3 + 12);
+      *(uint32_t *)(v3 + 16) = *(uint32_t *)(a3 + 16);
+      *(uint32_t *)(v3 + 20) = *(uint32_t *)(a3 + 20);
+      *(uint32_t *)(v3 + 24) = *(uint32_t *)(a3 + 24);
+      *(uint32_t *)(v3 + 28) = *(uint32_t *)(a3 + 28);
+      *(uint32_t *)(v3 + 32) = *(uint32_t *)(a3 + 32);
+      *(uint32_t *)(v3 + 36) = *(uint32_t *)(a3 + 36);
+      sub_435020((void *)(a3 + 40));
+    }
+    v3 += 56;
+    LOBYTE(v5) = 0;
+    --a2;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x506FC0 sub_506FC0
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_506FC0(int this, uint32_t *a2, uint32_t **Block)
+{
+  uint32_t *v3; // ebx
+
+  v3 = *Block;
+  if ( Block != *(uint32_t ***)(this + 4) )
+  {
+    *Block[1] = *Block;
+    (*Block)[1] = Block[1];
+    sub_4CFE40(Block);
+    j__free(Block);
+    --*(uint32_t *)(this + 8);
+  }
+  *a2 = v3;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x507010 sub_507010
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_507010(int *this, int a2)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  int v5; // edi
+  uint32_t *result; // eax
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) / 36;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(this + 3) - v3) / 36 )
+    return sub_506D30(this, &a2, *(this + 2), a2);
+  v5 = *(this + 2);
+  result = (uint32_t *)sub_505E80(v5, 1, a2);
+  *(this + 2) = v5 + 36;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5070A0 sub_5070A0
+// ------------------------------------------------------------
+void /*thiscall*/ sub_5070A0(uint32_t *this, int a2, int a3, uint32_t *a4, int a5)
+{
+  uint32_t *v5; // esi
+  uint32_t *v6; // edi
+  uint32_t v7[4]; // [esp+0h] [ebp-24h] BYREF
+  uint32_t *v8; // [esp+10h] [ebp-14h]
+  uint32_t *v9; // [esp+14h] [ebp-10h]
+  int v10; // [esp+20h] [ebp-4h]
+
+  v5 = (uint32_t *)a3;
+  v9 = v7;
+  v8 = this;
+  v7[3] = a3;
+  v10 = 0;
+  while ( v5 != a4 )
+  {
+    v6 = sub_506DA0(a2, *(uint32_t *)(a2 + 4), v5 + 2);
+    sub_5047F0(v8, 1u);
+    *(uint32_t *)(a2 + 4) = v6;
+    *(uint32_t *)v6[1] = v6;
+    v5 = (uint32_t *)*v5;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x507150 sub_507150
+// ------------------------------------------------------------
+int /*thiscall*/ sub_507150(int *this, uint32_t *a2)
+{
+  int v3; // edi
+  uint32_t *v4; // ebx
+  int result; // eax
+
+  v3 = *(this + 1);
+  v4 = sub_506DA0(v3, *(uint32_t *)(v3 + 4), a2);
+  result = sub_5047F0(this, 1u);
+  *(uint32_t *)(v3 + 4) = v4;
+  *(uint32_t *)v4[1] = v4;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x507190 sub_507190
+// ------------------------------------------------------------
+int /*thiscall*/ sub_507190(int *this, uint32_t *a2)
+{
+  int v3; // edi
+  uint32_t *v4; // ebx
+  int result; // eax
+
+  v3 = *(this + 1);
+  v4 = sub_506E30(v3, *(uint32_t *)(v3 + 4), a2);
+  result = sub_5048F0(this, 1u);
+  *(uint32_t *)(v3 + 4) = v4;
+  *(uint32_t *)v4[1] = v4;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5071D0 sub_5071D0
+// ------------------------------------------------------------
+int /*stdcall*/ sub_5071D0(int a1, int a2, int a3)
+{
+  sub_506ED0(a1, a2, a3);
+  return a1 + 56 * a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x507200 sub_507200
+// ------------------------------------------------------------
+void /*thiscall*/ sub_507200(int *this, int a2, unsigned int a3, int a4)
+{
+  int v5; // ebx
+  unsigned int v6; // ecx
+  int v8; // eax
+  int v9; // eax
+  unsigned int v10; // ecx
+  int v11; // eax
+  char *v12; // ebx
+  int v13; // eax
+  unsigned int v14; // edi
+  int v15; // eax
+  char *v16; // ecx
+  int v18; // edx
+  int v19; // [esp-18h] [ebp-74h]
+  int v20; // [esp-Ch] [ebp-68h]
+  unsigned int v21; // [esp-8h] [ebp-64h]
+  int v22; // [esp+0h] [ebp-5Ch] BYREF
+  uint8_t v23[44]; // [esp+Ch] [ebp-50h] BYREF
+  void *v24; // [esp+38h] [ebp-24h]
+  void *Block; // [esp+44h] [ebp-18h]
+  int *v26; // [esp+48h] [ebp-14h]
+  int *v27; // [esp+4Ch] [ebp-10h]
+  int v28; // [esp+58h] [ebp-4h]
+  char *v29; // [esp+64h] [ebp+8h]
+  int v30; // [esp+68h] [ebp+Ch]
+  int v31; // [esp+6Ch] [ebp+10h]
+
+  v27 = &v22;
+  v26 = this;
+  sub_5061D0(a4);
+  v5 = *(this + 1);
+  v6 = 0;
+  v28 = 0;
+  if ( v5 != 0 )
+    v6 = (*(this + 3) - v5) / 56;
+  if ( a3 != 0 )
+  {
+    if ( v5 != 0 )
+      v8 = (*(this + 2) - *(this + 1)) / 56;
+    else
+      v8 = 0;
+    if ( 76695844 - v8 < a3 )
+      sub_4CEAB0(this);
+    if ( *(this + 1) != 0 )
+      v9 = (*(this + 2) - *(this + 1)) / 56;
+    else
+      v9 = 0;
+    if ( v6 >= a3 + v9 )
+    {
+      v16 = (char *)*(this + 2);
+      Block = v16;
+      if ( (int)&v16[-a2] / 56 >= a3 )
+      {
+        v29 = &v16[-56 * a3];
+        *(this + 2) = sub_506AF0(v29, v16, v16);
+        sub_506AD0(a2, v29, Block);
+        sub_506A60(a2, a2 + 56 * a3, v23);
+      }
+      else
+      {
+        sub_506AF0(a2, v16, a2 + 56 * a3);
+        v21 = a3 - (*(this + 2) - a2) / 56;
+        v20 = *(this + 2);
+        LOBYTE(v28) = 3;
+        sub_5071D0(v20, v21, v23);
+        v18 = 56 * a3 + *(this + 2);
+        *(this + 2) = v18;
+        v28 = 0;
+        sub_506A60(a2, v18 - 56 * a3, v23);
+      }
+    }
+    else
+    {
+      if ( 76695844 - (v6 >> 1) >= v6 )
+        v10 = (v6 >> 1) + v6;
+      else
+        v10 = 0;
+      if ( *(this + 1) != 0 )
+        v11 = (*(this + 2) - *(this + 1)) / 56;
+      else
+        v11 = 0;
+      if ( v10 < a3 + v11 )
+        v10 = a3 + sub_488DD0(this);
+      v31 = 56 * v10;
+      v12 = (char *)operator new(56 * v10);
+      v19 = *(this + 1);
+      Block = v12;
+      LOBYTE(v28) = 1;
+      v30 = sub_506AF0(v19, a2, v12);
+      sub_506ED0(v30, a3, v23);
+      sub_506AF0(a2, *(this + 2), 56 * a3 + v30);
+      v13 = *(this + 1);
+      if ( v13 != 0 )
+        v13 = (*(this + 2) - v13) / 56;
+      v14 = v13 + a3;
+      v15 = *(this + 1);
+      if ( v15 != 0 )
+      {
+        sub_4D0940(v15, *(this + 2));
+        j__free((void *)*(this + 1));
+      }
+      *(this + 3) = (int)&v12[v31];
+      *(this + 2) = (int)&v12[56 * v14];
+      *(this + 1) = (int)v12;
+    }
+  }
+  if ( v24 != nullptr )
+    j__free(v24);
+}
+
+
+// ------------------------------------------------------------
+// 0x507510 sub_507510
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_507510(uint32_t *this, int a2)
+{
+  int *v3; // eax
+  int v5; // [esp-10h] [ebp-30h]
+  int v6; // [esp-Ch] [ebp-2Ch]
+  int *v7; // [esp-8h] [ebp-28h]
+  uint32_t v8[8]; // [esp+0h] [ebp-20h] BYREF
+
+  v8[4] = v8;
+  v8[3] = this;
+  v3 = (int *)sub_4CE750();
+  *(this + 1) = v3;
+  *(this + 2) = 0;
+  v7 = *(int **)(a2 + 4);
+  v6 = *v7;
+  v5 = *v3;
+  v8[7] = 0;
+  sub_5070A0(this, v5, v6, v7, a2);
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x507590 sub_507590
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_507590(int *this, uint32_t *a2, int a3, int a4)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 56 != 0 )
+    v6 = (a3 - v5) / 56;
+  else
+    v6 = 0;
+  sub_507200(this, a3, 1u, a4);
+  *a2 = *(this + 1) + 56 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x507600 sub_507600
+// ------------------------------------------------------------
+void /*thiscall*/ sub_507600(int *this, int a2)
+{
+  int v3; // ebx
+  unsigned int v4; // esi
+  int v5; // esi
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) / 56;
+  else
+    v4 = 0;
+  if ( v3 != 0 && v4 < (*(this + 3) - v3) / 56 )
+  {
+    v5 = *(this + 2);
+    sub_506ED0(v5, 1, a2);
+    *(this + 2) = v5 + 56;
+  }
+  else
+  {
+    sub_507590(this, &a2, *(this + 2), a2);
+  }
+}
+
+
+
+// ============================================================
+// §F 0x504600-0x507690 容器辅助族（list/vector/map 模板实例 + 怪物基础参数表）
+// ============================================================
+// ============================================================
+// §G 0x507690-0x50AF40 瓦片地图/副本地图/怪物定义族 + ★ 攻击定义 sub_503BA0
+// ============================================================
+
+// ------------------------------------------------------------
+// 0x507690 sub_507690 —— 瓦片(tile)定义解析器
+//   标签族：[IMAGE]/[tile type]（子枚举 [basic]/[extended]）/子枚举 [pass type]；
+//   加载失败打印 "TILE LOAD FAIL! [%s]"。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_507690(int a1, const char *ArgList)
+{
+  int v3; // esi
+  int v4; // ebx
+  int v5; // edi
+  int j; // edi
+  int *v7; // esi
+  char v8; // [esp-10h] [ebp-68h] BYREF
+  uint8_t *v9; // [esp-4h] [ebp-5Ch]
+  char *i; // [esp+Ch] [ebp-4Ch]
+  uint8_t v11[4]; // [esp+10h] [ebp-48h] BYREF
+  void *Block; // [esp+14h] [ebp-44h]
+  unsigned int v13; // [esp+24h] [ebp-34h]
+  unsigned int v14; // [esp+28h] [ebp-30h]
+  uint8_t v15[4]; // [esp+2Ch] [ebp-2Ch] BYREF
+  void *v16; // [esp+30h] [ebp-28h]
+  void *v17; // [esp+40h] [ebp-18h]
+  unsigned int v18; // [esp+44h] [ebp-14h]
+  int v19; // [esp+48h] [ebp-10h]
+  int v20; // [esp+54h] [ebp-4h]
+
+  v19 = dword_796E50;
+  if ( (uint8_t)sub_442A10((char)szPassword, (int)ArgList) != 0 )
+  {
+    v3 = a1;
+    sub_4D0AE0(a1);
+    v4 = 0;
+    v18 = 15;
+    v17 = nullptr;
+    LOBYTE(v16) = 0;
+    v20 = 1;
+    v14 = 15;
+    v13 = 0;
+    LOBYTE(Block) = 0;
+    while ( (uint8_t)sub_443430(v15) != 0 )
+    {
+      sub_442B20(v15);
+      if ( sub_40BF00((std::_String_base *)v15, 0, (unsigned int)v17, "[IMAGE]", 7u) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)v15, 0, (unsigned int)v17, "[tile type]", 0xBu) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)v15, 0, (unsigned int)v17, "[pass type]", 0xBu) == 0 )
+          {
+            v5 = *(uint8_t *)(v3 + 32) != 0 ? 10 : 30;
+            i = &v8;
+            sub_489720(v5, v8, nullptr, 0, 0);
+            for ( i = (char *)v5; i != nullptr; --i )
+            {
+              sub_505FF0((unsigned int *)(v4 + *(uint32_t *)(v3 + 40)), 0xEu, 0);
+              for ( j = 0; j < 56; j += 4 )
+              {
+                v7 = (int *)(j + *(uint32_t *)(*(uint32_t *)(v3 + 40) + v4 + 4));
+                *v7 = sub_4423D0(nullptr);
+                v3 = a1;
+              }
+              v4 += 16;
+            }
+            v4 = 0;
+          }
+        }
+        else
+        {
+          v9 = v11;
+          sub_443370();
+          if ( sub_40BF00((std::_String_base *)v11, 0, v13, "[basic]", 7u) != 0 )
+          {
+            if ( sub_40BF00((std::_String_base *)v11, 0, v13, "[extended]", 0xAu) == 0 )
+              *(uint8_t *)(v3 + 32) = 1;
+          }
+          else
+          {
+            *(uint8_t *)(v3 + 32) = 0;
+          }
+        }
+      }
+      else
+      {
+        v9 = (uint8_t *)v3;
+        sub_443370();
+        *(uint32_t *)(v3 + 28) = sub_4423D0(nullptr);
+      }
+    }
+    if ( v14 >= 0x10 )
+      j__free(Block);
+    v14 = 15;
+    v13 = 0;
+    LOBYTE(Block) = 0;
+    if ( v18 >= 0x10 )
+      j__free(v16);
+    return 1;
+  }
+  else
+  {
+    off_77F3FC("TILE LOAD FAIL! [%s]", ArgList);
+    return 0;
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5078C0 sub_5078C0 —— 副本地图(dungeon map)定义解析器（0x1D8 字节对象，sub_4D1680 构造）
+//   标签族：地图 [map name]/[player number]/[pvp start area]；阴影 [shadow type] 子枚举
+//   [mirror]/[more darker]；[dungeon] 子枚举 [type]/[normal]/[boss]/[greed]；瓦片 [tile]/[extended tile]；
+//   [elemental property]；视野 [far sight scroll]/[middle sight scroll]/[near sight scroll]；
+//   [background animation] 子枚举 [below]；可行区域 [town movable area]/[virtual movable area]；
+//   [pathgate pos]/[dungeon start area]；资源 [sound]/[animation]/[passive object]；
+//   生成表 [monster]/[champion]/[super champion]/[special passive object]/[NPC]/[item]；
+//   [monster spawn pos]/[chaos zone]（子枚举 [left]/[right]）；数量模式 [fixed]/[half]/[ratio]。
+//   标签总数 39。调用者：sub_4D2D60 工厂 case 7。未识别标签 → off_77F3FC。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_5078C0(int a1, int ArgList)
+{
+  const char *v2; // ebx
+  int v3; // edi
+  int v4; // eax
+  int *v5; // esi
+  int i; // ebx
+  int v7; // eax
+  int v8; // eax
+  int v9; // eax
+  int v10; // ebx
+  int v11; // esi
+  int v12; // edi
+  uint32_t *v13; // eax
+  int v14; // eax
+  int v15; // eax
+  uint8_t *v16; // eax
+  uint8_t *v17; // eax
+  uint8_t *v18; // eax
+  int i6; // edx
+  uint8_t *v20; // ecx
+  uint8_t *v21; // eax
+  uint32_t *v22; // esi
+  int v23; // eax
+  int v24; // eax
+  void *v25; // eax
+  int v26; // eax
+  int v27; // eax
+  int k; // eax
+  int m; // eax
+  int *v30; // esi
+  int n; // edi
+  int ii; // ebx
+  int v33; // eax
+  int v34; // eax
+  int v35; // eax
+  int v36; // eax
+  int jj; // eax
+  int i5; // esi
+  int v39; // eax
+  int kk; // esi
+  int v41; // eax
+  int mm; // esi
+  int nn; // esi
+  int v44; // eax
+  int i1; // esi
+  int i2; // eax
+  int v47; // eax
+  int i3; // ebx
+  int i4; // eax
+  const char *v50; // eax
+  int v51; // eax
+  void *v53[3]; // [esp-1Ch] [ebp-20Ch] BYREF
+  uint8_t *v54; // [esp-10h] [ebp-200h]
+  uint8_t *v55; // [esp-Ch] [ebp-1FCh]
+  void **v56; // [esp-8h] [ebp-1F8h]
+  int j; // [esp-4h] [ebp-1F4h]
+  char v58[12]; // [esp+Ch] [ebp-1E4h] BYREF
+  uint32_t v59[9]; // [esp+18h] [ebp-1D8h] BYREF
+  uint32_t v60[6]; // [esp+4Ch] [ebp-1A4h] BYREF
+  uint32_t v61[5]; // [esp+64h] [ebp-18Ch] BYREF
+  uint32_t v62[4]; // [esp+78h] [ebp-178h] BYREF
+  uint32_t v63[6]; // [esp+88h] [ebp-168h] BYREF
+  uint32_t v64[2]; // [esp+A0h] [ebp-150h] BYREF
+  uint32_t v65[2]; // [esp+A8h] [ebp-148h] BYREF
+  int v66; // [esp+B0h] [ebp-140h] BYREF
+  bool v67; // [esp+B4h] [ebp-13Ch]
+  int v68; // [esp+B8h] [ebp-138h]
+  int v69; // [esp+BCh] [ebp-134h]
+  int v70; // [esp+C0h] [ebp-130h]
+  int v71; // [esp+C4h] [ebp-12Ch]
+  int v72; // [esp+C8h] [ebp-128h]
+  int v73; // [esp+CCh] [ebp-124h]
+  int v74; // [esp+D0h] [ebp-120h]
+  int v75; // [esp+D4h] [ebp-11Ch]
+  void *v76; // [esp+D8h] [ebp-118h] BYREF
+  void *v77; // [esp+DCh] [ebp-114h]
+  int v78; // [esp+E8h] [ebp-108h] BYREF
+  int v79; // [esp+ECh] [ebp-104h]
+  int v80; // [esp+F0h] [ebp-100h]
+  int v81; // [esp+F4h] [ebp-FCh]
+  void *Block; // [esp+FCh] [ebp-F4h]
+  int v83; // [esp+100h] [ebp-F0h]
+  int v84; // [esp+104h] [ebp-ECh]
+  int v85; // [esp+108h] [ebp-E8h]
+  int v86; // [esp+10Ch] [ebp-E4h] BYREF
+  int v87; // [esp+110h] [ebp-E0h]
+  int v88; // [esp+114h] [ebp-DCh]
+  int v89; // [esp+118h] [ebp-D8h]
+  int v90; // [esp+11Ch] [ebp-D4h] BYREF
+  int v91; // [esp+120h] [ebp-D0h]
+  int v92; // [esp+124h] [ebp-CCh]
+  int v93; // [esp+128h] [ebp-C8h] BYREF
+  int v94; // [esp+12Ch] [ebp-C4h]
+  int v95; // [esp+130h] [ebp-C0h]
+  int v96; // [esp+134h] [ebp-BCh]
+  int v97; // [esp+138h] [ebp-B8h]
+  void **v98; // [esp+13Ch] [ebp-B4h]
+  int v99; // [esp+140h] [ebp-B0h]
+  int v100; // [esp+144h] [ebp-ACh] BYREF
+  int v101; // [esp+148h] [ebp-A8h]
+  char v102; // [esp+14Fh] [ebp-A1h] BYREF
+  uint32_t *v103; // [esp+150h] [ebp-A0h] BYREF
+  char v104; // [esp+157h] [ebp-99h] BYREF
+  uint8_t v105[28]; // [esp+158h] [ebp-98h] BYREF
+  int v106; // [esp+174h] [ebp-7Ch]
+  bool v107; // [esp+178h] [ebp-78h]
+  char v108[4]; // [esp+17Ch] [ebp-74h] BYREF
+  void *v109; // [esp+180h] [ebp-70h]
+  int v110; // [esp+190h] [ebp-60h]
+  unsigned int v111; // [esp+194h] [ebp-5Ch]
+  int v112; // [esp+198h] [ebp-58h]
+  int v113; // [esp+19Ch] [ebp-54h]
+  int v114; // [esp+1A0h] [ebp-50h]
+  int v115; // [esp+1A4h] [ebp-4Ch]
+  char v116[4]; // [esp+1A8h] [ebp-48h] BYREF
+  uint32_t v117[5]; // [esp+1ACh] [ebp-44h] BYREF
+  unsigned int v118; // [esp+1C0h] [ebp-30h]
+  int v119; // [esp+1C4h] [ebp-2Ch] BYREF
+  void *v120; // [esp+1C8h] [ebp-28h] BYREF
+  int v121; // [esp+1D8h] [ebp-18h]
+  unsigned int v122; // [esp+1DCh] [ebp-14h]
+  int v123; // [esp+1E0h] [ebp-10h]
+  int v124; // [esp+1ECh] [ebp-4h]
+
+  v2 = (const char *)ArgList;
+  v123 = dword_796E50;
+  if ( (uint8_t)sub_442A10((char)&unk_9B7308, ArgList) == 0 )
+    return 0;
+  v3 = a1;
+  sub_4D13A0(a1);
+  sub_443300(a1 + 280, "%s%s", (char)&unk_9B7308);
+  v122 = 15;
+  v121 = 0;
+  LOBYTE(v120) = 0;
+  v124 = 0;
+  v103 = nullptr;
+  sub_41BFE0((void **)&v103, szPassword);
+  LOBYTE(v124) = 1;
+  v104 = 0;
+  sub_504AF0(v108);
+  LOBYTE(v124) = 2;
+  v86 = -1;
+  v87 = 0;
+  v88 = 0;
+  v89 = 0;
+  sub_506300(&v66);
+  v78 = -1;
+  v81 = 0;
+  v80 = 0;
+  v79 = 0;
+  Block = nullptr;
+  v83 = 0;
+  v84 = 0;
+  LOBYTE(v124) = 4;
+  v93 = 0;
+  v94 = 0;
+  v95 = 0;
+  v96 = 0;
+  v97 = 0;
+  if ( (uint8_t)sub_443430(&v119) == 0 )
+    goto LABEL_165;
+  while ( 1 )
+  {
+    sub_442B20(&v119);
+    if ( sub_40BF00((std::_String_base *)&v119, 0, v121, "[map name]", 0xAu) == 0 )
+    {
+      j = *(uint32_t *)(v3 + 424);
+      sub_443370();
+      goto LABEL_164;
+    }
+    if ( sub_40BF00((std::_String_base *)&v119, 0, v121, "[player number]", 0xFu) == 0 )
+    {
+      v4 = sub_4423D0(nullptr);
+      v56 = nullptr;
+      *(uint32_t *)(v3 + 336) = v4;
+      *(uint32_t *)(v3 + 340) = sub_4423D0(v56);
+      goto LABEL_164;
+    }
+    if ( sub_40BF00((std::_String_base *)&v119, 0, v121, "[pvp start area]", 0x10u) == 0 )
+    {
+      v5 = (int *)(v3 + 348);
+      for ( i = 3; i != 0; --i )
+      {
+        v7 = sub_4423D0(nullptr);
+        v56 = nullptr;
+        *(v5 - 1) = v7;
+        v8 = sub_4423D0(v56);
+        v55 = nullptr;
+        *v5 = v8;
+        v9 = sub_4423D0(v55);
+        v54 = nullptr;
+        v5[1] = v9;
+        v5[2] = sub_4423D0(v54);
+        v5 += 4;
+      }
+      goto LABEL_164;
+    }
+    if ( sub_40BF00((std::_String_base *)&v119, 0, v121, "[shadow type]", 0xDu) == 0 )
+    {
+      j = (int)&v103;
+      sub_442E10();
+      if ( sub_43BCF0(&v103, "[mirror]") )
+      {
+        *(uint32_t *)(v3 + 392) = 1;
+      }
+      else if ( sub_43BCF0(&v103, "[more darker]") )
+      {
+        *(uint32_t *)(v3 + 392) = 2;
+      }
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[dungeon]") != 0 )
+    {
+      v10 = v3 + 4;
+      sub_6569D0(v3 + 4);
+      v100 = sub_4423D0(&v104);
+      if ( v104 != 0 )
+      {
+        do
+        {
+          v11 = *(uint32_t *)(v10 + 4);
+          v12 = sub_40C0F0(v11, *(uint32_t *)(v11 + 4), &v100);
+          sub_437320(1);
+          *(uint32_t *)(v11 + 4) = v12;
+          v13 = *(uint32_t **)(v12 + 4);
+          j = (int)&v104;
+          *v13 = v12;
+          v100 = sub_4423D0((uint8_t *)j);
+        }
+        while ( v104 != 0 );
+        v3 = a1;
+      }
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[type]") != 0 )
+    {
+      j = (int)&v103;
+      sub_442E10();
+      if ( sub_43BCF0(&v103, "[normal]") )
+      {
+        *(uint32_t *)(v3 + 16) = 0;
+      }
+      else if ( sub_43BCF0(&v103, "[boss]") )
+      {
+        *(uint32_t *)(v3 + 16) = 1;
+      }
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[greed]") != 0 )
+      break;
+    if ( (uint8_t)sub_423300(&v119, "[tile]") != 0 )
+    {
+      sub_4017E0(v3 + 124);
+      for ( j = (int)&v103; sub_442E10() != 0; j = (int)&v103 )
+        sub_420BB0(&v103);
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[extended tile]") != 0 )
+    {
+      sub_4017E0(v3 + 140);
+      for ( j = (int)&v103; sub_442E10() != 0; j = (int)&v103 )
+        sub_420BB0(&v103);
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[elemental property]") != 0 )
+    {
+      j = (int)&v103;
+      sub_442E10();
+      v24 = sub_41ACF0(&v103);
+      *(uint32_t *)(v3 + 120) = sub_442710(v24);
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[far sight scroll]") != 0 )
+    {
+      *(uint32_t *)(v3 + 156) = sub_4423D0(nullptr);
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[middle sight scroll]") != 0 )
+    {
+      *(uint32_t *)(v3 + 160) = sub_4423D0(nullptr);
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[near sight scroll]") != 0 )
+    {
+      *(uint32_t *)(v3 + 164) = sub_4423D0(nullptr);
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[background animation]") != 0 )
+    {
+      sub_4D09E0(v3 + 168);
+      sub_504B90(v105);
+      j = (int)&v103;
+      for ( LOBYTE(v124) = 6; sub_442E10() != 0; j = (int)&v103 )
+      {
+        v25 = (void *)sub_41ACF0(&v103);
+        sub_406D60(v25);
+        j = (int)&v103;
+        sub_442E10();
+        v26 = sub_41ACF0(&v103);
+        v27 = sub_4425F0(v26);
+        v56 = (void **)&v103;
+        v106 = v27;
+        sub_442E10();
+        v107 = !sub_43BCF0(&v103, "[below]");
+        sub_507010(v105);
+      }
+      LOBYTE(v124) = 4;
+      sub_501490(v105);
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[town movable area]") != 0 )
+    {
+      sub_5E5260((void **)(v3 + 184));
+      for ( k = sub_4423D0(&v104); v104 != 0; k = sub_4423D0(&v104) )
+      {
+        v60[0] = k;
+        v60[1] = sub_4423D0(nullptr);
+        v60[2] = sub_4423D0(nullptr);
+        v60[3] = sub_4423D0(nullptr);
+        v60[4] = sub_4423D0(nullptr);
+        v60[5] = sub_4423D0(nullptr);
+        sub_5063B0(v60);
+      }
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[virtual movable area]") != 0 )
+    {
+      sub_5E5260((void **)(v3 + 200));
+      for ( m = sub_4423D0(&v104); v104 != 0; m = sub_4423D0(&v104) )
+      {
+        v62[0] = m;
+        v62[1] = sub_4423D0(nullptr);
+        v62[2] = sub_4423D0(nullptr);
+        v62[3] = sub_4423D0(nullptr);
+        sub_506440(v62);
+      }
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[pathgate pos]") != 0 )
+    {
+      v30 = (int *)(a1 + 216);
+      for ( n = 4; n != 0; --n )
+      {
+        for ( ii = 2; ii != 0; --ii )
+          *v30++ = sub_4423D0(nullptr);
+      }
+      v3 = a1;
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[dungeon start area]") != 0 )
+    {
+      v33 = sub_4423D0(nullptr);
+      v56 = nullptr;
+      *(uint32_t *)(v3 + 248) = v33;
+      v34 = sub_4423D0(v56);
+      v55 = nullptr;
+      *(uint32_t *)(v3 + 252) = v34;
+      v35 = sub_4423D0(v55);
+      v54 = nullptr;
+      *(uint32_t *)(v3 + 256) = v35;
+      *(uint32_t *)(v3 + 260) = sub_4423D0(v54);
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[sound]") != 0 )
+    {
+      sub_4017E0(v3 + 264);
+      for ( j = (int)&v103; sub_442E10() != 0; j = (int)&v103 )
+        sub_420BB0(&v103);
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[animation]") != 0 )
+    {
+      sub_4CFEA0(v3 + 36);
+      for ( j = (int)v108; sub_443370() != 0; j = (int)v108 )
+      {
+        j = (int)&v103;
+        sub_442E10();
+        v36 = sub_41ACF0(&v103);
+        v112 = sub_4425F0(v36);
+        v113 = sub_4423D0(nullptr);
+        v114 = sub_4423D0(nullptr);
+        v115 = sub_4423D0(nullptr);
+        sub_5064B0(v108);
+      }
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[passive object]") != 0 )
+    {
+      sub_6569D0(v3 + 48);
+      for ( jj = sub_4423D0(&v104); v104 != 0; jj = sub_4423D0(&v104) )
+      {
+        v86 = jj;
+        v87 = sub_4423D0(nullptr);
+        v88 = sub_4423D0(nullptr);
+        v89 = sub_4423D0(nullptr);
+        sub_505F40(&v86);
+      }
+      goto LABEL_164;
+    }
+    if ( (uint8_t)sub_423300(&v119, "[monster]") == 0 )
+    {
+      if ( (uint8_t)sub_423300(&v119, "[champion]") != 0 )
+      {
+        *(uint32_t *)(v3 + 76) = sub_4423D0(nullptr);
+      }
+      else if ( (uint8_t)sub_423300(&v119, "[item]") != 0 )
+      {
+        sub_4D1310(v3 + 80);
+        for ( kk = sub_4423D0(&v104); v104 != 0; kk = sub_4423D0(&v104) )
+        {
+          sub_506360(v59);
+          LOBYTE(v124) = 7;
+          v59[0] = kk;
+          v59[2] = sub_4423D0(nullptr);
+          v59[1] = sub_4423D0(nullptr);
+          v59[3] = sub_4423D0(nullptr);
+          v59[4] = sub_4423D0(nullptr);
+          v59[5] = sub_4423D0(nullptr);
+          v59[6] = sub_4423D0(nullptr);
+          v59[7] = sub_4423D0(nullptr);
+          v59[8] = sub_4423D0(nullptr);
+          v41 = sub_4423D0(nullptr);
+          if ( v41 > 0 )
+          {
+            for ( mm = v41; mm != 0; --mm )
+            {
+              v65[0] = sub_4423D0(nullptr);
+              v65[1] = sub_4423D0(nullptr);
+              sub_5064F0(v65);
+            }
+          }
+          sub_507150(v59);
+          LOBYTE(v124) = 4;
+          sub_4CEB20(v59);
+        }
+      }
+      else if ( (uint8_t)sub_423300(&v119, "[special passive object]") != 0 )
+      {
+        sub_507510(v3 + 80);
+        LOBYTE(v124) = 8;
+        sub_4D1350(v3 + 92);
+        for ( nn = sub_4423D0(&v104); v104 != 0; nn = sub_4423D0(&v104) )
+        {
+          sub_504B50(&v78);
+          v78 = nn;
+          v79 = sub_4423D0(nullptr);
+          v80 = sub_4423D0(nullptr);
+          v81 = sub_4423D0(nullptr);
+          v44 = sub_4423D0(nullptr);
+          if ( v44 > 0 )
+          {
+            for ( i1 = v44; i1 != 0; --i1 )
+            {
+              memset(v63, 255, sizeof(v63));
+              sub_504500(v63);
+              sub_506560(v63);
+            }
+          }
+          sub_507190(&v78);
+        }
+        LOBYTE(v124) = 4;
+        sub_4D1640(v58);
+      }
+      else if ( (uint8_t)sub_423300(&v119, "[NPC]") != 0 )
+      {
+        sub_5E5260((void **)(v3 + 104));
+        for ( i2 = sub_4423D0(&v104); v104 != 0; i2 = sub_4423D0(&v104) )
+        {
+          v93 = i2;
+          j = (int)&v103;
+          sub_442E10();
+          if ( sub_43BCF0(&v103, "[left]") )
+          {
+            v94 = 0;
+          }
+          else if ( sub_43BCF0(&v103, "[right]") )
+          {
+            v94 = 1;
+          }
+          v95 = sub_4423D0(nullptr);
+          v96 = sub_4423D0(nullptr);
+          v97 = sub_4423D0(nullptr);
+          sub_5065F0(&v93);
+        }
+      }
+      else if ( (uint8_t)sub_423300(&v119, "[monster spawn pos]") != 0 )
+      {
+        sub_5E5260((void **)(v3 + 440));
+        v47 = sub_4423D0(nullptr);
+        v90 = 0;
+        v91 = 0;
+        v92 = 0;
+        if ( v47 > 0 )
+        {
+          for ( i3 = v47; i3 != 0; --i3 )
+          {
+            v90 = sub_4423D0(nullptr);
+            v91 = sub_4423D0(nullptr);
+            v92 = sub_4423D0(nullptr);
+            sub_506680(&v90);
+          }
+        }
+      }
+      else if ( (uint8_t)sub_423300(&v119, "[chaos zone]") != 0 )
+      {
+        sub_5E5260((void **)(v3 + 456));
+        v102 = 0;
+        for ( i4 = sub_4423D0(&v102); v102 != 0; i4 = sub_4423D0(&v102) )
+        {
+          v61[0] = i4;
+          v61[1] = sub_4423D0(nullptr);
+          v61[2] = sub_4423D0(nullptr);
+          v61[3] = sub_4423D0(nullptr);
+          v61[4] = sub_4423D0(nullptr);
+          sub_5065F0(v61);
+        }
+      }
+      else
+      {
+        v98 = v53;
+        sub_401690(&v119);
+        if ( (uint8_t)sub_442C80((char)v53[0], v53[1], (int)v53[2], (int)v54, (int)v55, (int)v56, j) == 0 )
+        {
+          v50 = (const char *)v120;
+          if ( v122 < 0x10 )
+            v50 = (const char *)&v120;
+          off_77F3FC("SCRIPT TAG ERROR! [%s] %s", v2, v50);
+        }
+      }
+      goto LABEL_164;
+    }
+    sub_4D09A0(v3 + 60);
+    for ( i5 = sub_4423D0(&v104); v104 != 0; i5 = sub_4423D0(&v104) )
+    {
+      sub_504680(&v66);
+      v66 = i5;
+      v67 = sub_4423D0(nullptr) != 0;
+      v68 = sub_4423D0(nullptr);
+      v69 = sub_4423D0(nullptr);
+      v70 = sub_4423D0(nullptr);
+      v71 = sub_4423D0(nullptr);
+      v72 = sub_4423D0(nullptr);
+      v73 = sub_4423D0(nullptr);
+      sub_442E10();
+      if ( sub_43BCF0(&v103, "[fixed]") )
+      {
+        v74 = 0;
+      }
+      else if ( sub_43BCF0(&v103, "[half]") )
+      {
+        v74 = 1;
+      }
+      else if ( sub_43BCF0(&v103, "[ratio]") )
+      {
+        v74 = 2;
+      }
+      j = (int)&v103;
+      sub_442E10();
+      if ( sub_43BCF0(&v103, "[normal]") )
+      {
+        v75 = 0;
+      }
+      else
+      {
+        if ( sub_43BCF0(&v103, "[champion]") )
+        {
+          v75 = 1;
+          v39 = sub_4423D0(nullptr);
+          if ( v39 <= 0 )
+            goto LABEL_119;
+        }
+        else
+        {
+          if ( !sub_43BCF0(&v103, "[super champion]") )
+          {
+            if ( sub_43BCF0(&v103, "[boss]") )
+              v75 = 3;
+            goto LABEL_125;
+          }
+          v75 = 2;
+          v39 = sub_4423D0(nullptr);
+          if ( v39 <= 0 )
+          {
+LABEL_119:
+            sub_5E5260(&v76);
+            goto LABEL_125;
+          }
+        }
+        sub_506BE0(v39, &v66);
+      }
+LABEL_125:
+      sub_507600(&v66);
+    }
+LABEL_164:
+    v2 = (const char *)ArgList;
+    if ( (uint8_t)sub_443430(&v119) == 0 )
+    {
+LABEL_165:
+      *(uint32_t *)v3 = sub_4A2F80(v2);
+      v51 = *(uint32_t *)(v3 + 4 * dword_78FF38 + 424);
+      j = -1;
+      v56 = nullptr;
+      if ( v51 == 0 )
+        v51 = *(uint32_t *)(v3 + 424);
+      sub_4014D0((std::_String_base *)(v3 + 308), v51, v56, j);
+      if ( Block != nullptr )
+        j__free(Block);
+      if ( v77 != nullptr )
+        j__free(v77);
+      if ( v111 >= 0x10 )
+        j__free(v109);
+      v111 = 15;
+      v110 = 0;
+      LOBYTE(v109) = 0;
+      LOBYTE(v124) = 0;
+      sub_41B010((void **)&v103);
+      if ( v122 >= 0x10 )
+        j__free(v120);
+      return 1;
+    }
+  }
+  v85 = v3 + 20;
+  sub_5E5260((void **)(v3 + 20));
+  j = (int)&v103;
+  sub_442E10();
+  if ( v103 != nullptr )
+    v14 = v103[1];
+  else
+    v14 = 0;
+  v100 = 0;
+  v99 = -1;
+  v101 = 0;
+  v98 = (void **)(v14 - 1);
+  if ( v14 - 1 <= 0 )
+    goto LABEL_164;
+  do
+  {
+    v118 = 15;
+    v117[4] = 0;
+    LOBYTE(v117[0]) = 0;
+    j = 2;
+    LOBYTE(v124) = 5;
+    v15 = sub_41ACF0(&v103);
+    sub_4022F0((std::_String_base *)v116, v101 + v15, j);
+    v16 = (uint8_t *)v117[0];
+    if ( v118 < 0x10 )
+      v16 = v117;
+    if ( *v16 == 13 )
+      goto LABEL_53;
+    v17 = (uint8_t *)v117[0];
+    if ( v118 < 0x10 )
+      v17 = v117;
+    if ( *v17 == 10 )
+      goto LABEL_53;
+    v18 = (uint8_t *)v117[0];
+    if ( v118 < 0x10 )
+      v18 = v117;
+    if ( *v18 == 32 )
+    {
+LABEL_53:
+      v23 = v101 + 1;
+    }
+    else
+    {
+      for ( i6 = 0; i6 < 16; ++i6 )
+      {
+        v20 = (uint8_t *)v117[0];
+        if ( v118 < 0x10 )
+          v20 = v117;
+        v21 = *(uint8_t **)(dword_9B0AB0 + 4 * i6);
+        if ( *v20 == *v21 )
+        {
+          v22 = (uint32_t *)v117[0];
+          if ( v118 < 0x10 )
+            v22 = v117;
+          if ( *((uint8_t *)v22 + 1) == v21[1] )
+            break;
+        }
+      }
+      if ( i6 == 16 )
+      {
+        ++v101;
+        ++v100;
+        goto LABEL_55;
+      }
+      if ( v99 == -1 )
+      {
+        v99 = i6;
+      }
+      else
+      {
+        v64[1] = i6;
+        v64[0] = v99;
+        sub_474950(v64);
+        v99 = -1;
+      }
+      v23 = v101 + 2;
+    }
+    v101 = v23;
+LABEL_55:
+    LOBYTE(v124) = 4;
+    sub_501490(v116);
+  }
+  while ( v101 < (int)v98 );
+  if ( v100 == 0 )
+  {
+    v3 = a1;
+    goto LABEL_164;
+  }
+  sub_4CEB50(&v78);
+  sub_4CE820(&v66);
+  sub_501490(v108);
+  LOBYTE(v124) = 0;
+  sub_41B010((void **)&v103);
+  sub_501490(&v119);
+  return 0;
+}
+
+
+// ------------------------------------------------------------
+// 0x508C30 sub_508C30
+// ------------------------------------------------------------
+char /*cdecl*/ sub_508C30(const char *a1, int a2, int a3, int a4)
+{
+  char result; // al
+  int *v5; // esi
+  int *v6; // esi
+
+  strcpy(byte_9B7730, a1);
+  if ( byte_9B772F[strlen(byte_9B7730)] != 92 && byte_9B772F[strlen(byte_9B7730)] != 47 )
+    *(uint16_t *)&byte_9B7730[strlen(byte_9B7730)] = 92;
+  if ( (uint8_t)sub_443C40((int)&unk_9B7C3C, (char)byte_9B7730, a2) == 0 )
+    return 0;
+  memset(&unk_9B7418, 0, 0x188u);
+  if ( (uint8_t)sub_442A10((char)byte_9B7730, a3) == 0 )
+    return 0;
+  v5 = (int *)&unk_9B7418;
+  do
+    *v5++ = sub_4423D0(nullptr);
+  while ( (int)v5 < (int)dword_9B75A0 );
+  if ( a4 != 0 )
+  {
+    memset(dword_9B75A0, 0, sizeof(dword_9B75A0));
+    result = sub_442A10((char)byte_9B7730, a4);
+    if ( result == 0 )
+      return result;
+    v6 = dword_9B75A0;
+    do
+      *v6++ = sub_4423D0(nullptr);
+    while ( (int)v6 < (int)&unk_9B772C );
+  }
+  return 1;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x508D50 sub_508D50
+// ------------------------------------------------------------
+bool /*cdecl*/ sub_508D50(const char *a1, int a2)
+{
+  strcpy(byte_9B7930, a1);
+  if ( byte_9B792F[strlen(byte_9B7930)] != 92 && byte_9B792F[strlen(byte_9B7930)] != 47 )
+    *(uint16_t *)&byte_9B7930[strlen(byte_9B7930)] = 92;
+  return (uint8_t)sub_443C40((int)&unk_9B7C48, (char)byte_9B7930, a2) != 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x508DE0 sub_508DE0
+// ------------------------------------------------------------
+bool /*cdecl*/ sub_508DE0(const char *a1, int a2)
+{
+  strcpy(byte_9B7A30, a1);
+  if ( byte_9B7A2F[strlen(byte_9B7A30)] != 92 && byte_9B7A2F[strlen(byte_9B7A30)] != 47 )
+    *(uint16_t *)&byte_9B7A30[strlen(byte_9B7A30)] = 92;
+  return (uint8_t)sub_443C40((int)&unk_9B7C70, (char)byte_9B7A30, a2) != 0;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x508E70 sub_508E70
+// ------------------------------------------------------------
+char */*cdecl*/ sub_508E70(char *a1, char *a2, const void *a3)
+{
+  char *result; // eax
+  void *v4; // edi
+
+  for ( result = a1; result != a2; result += 44 )
+  {
+    v4 = result;
+    qmemcpy(v4, a3, 0x2Cu);
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x508EA0 sub_508EA0
+// ------------------------------------------------------------
+char */*cdecl*/ sub_508EA0(char *a1, char *a2, char *a3)
+{
+  char *v3; // edx
+  char *result; // eax
+
+  v3 = a1;
+  for ( result = a3; v3 != a2; result += 44 )
+  {
+    if ( result != nullptr )
+      qmemcpy(result, v3, 0x2Cu);
+    v3 += 44;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x508EE0 sub_508EE0
+// ------------------------------------------------------------
+char */*stdcall*/ sub_508EE0(char *a1, char *a2, const void *a3)
+{
+  sub_4F8DF0(a1, a2, a3);
+  return &a1[44 * (uint32_t)a2];
+}
+
+
+
+// ------------------------------------------------------------
+// 0x508F10 sub_508F10
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_508F10(char **this, uint32_t *a2, char *a3, char *a4)
+{
+  char *v4; // eax
+  char *v5; // esi
+  char *v6; // ebx
+  char *v7; // edx
+  const void *v8; // esi
+  void *v9; // edi
+
+  v4 = a4;
+  v5 = a3;
+  if ( a3 != a4 )
+  {
+    v6 = *(this + 2);
+    v7 = a3;
+    if ( a4 != v6 )
+    {
+      do
+      {
+        v8 = v4;
+        v9 = v7;
+        v4 += 44;
+        v7 += 44;
+        qmemcpy(v9, v8, 0x2Cu);
+      }
+      while ( v4 != v6 );
+      v5 = a3;
+    }
+    *(this + 2) = v7;
+  }
+  *a2 = v5;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x508F60 sub_508F60
+// ------------------------------------------------------------
+void /*noreturn*/ sub_508F60()
+{
+  void **pExceptionObject; // [esp+0h] [ebp-50h] BYREF
+  uint8_t v1[20]; // [esp+28h] [ebp-28h] BYREF
+  int v2; // [esp+3Ch] [ebp-14h]
+  int v3; // [esp+40h] [ebp-10h]
+  int v4; // [esp+4Ch] [ebp-4h]
+
+  v3 = 15;
+  v2 = 0;
+  v1[4] = 0;
+  sub_4015C0((void *)"vector<T> too long", 0x12u);
+  v4 = 0;
+  sub_401740(v1);
+  pExceptionObject = &std::length_error::`vftable';
+  _CxxThrowException(&pExceptionObject, (_ThrowInfo *)&_TI3_AVlength_error_std__);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x508FD0 sub_508FD0
+// ------------------------------------------------------------
+int /*thiscall*/ sub_508FD0(int *this, char *a2, unsigned int a3, int *Block)
+{
+  int v5; // ecx
+  int v6; // edx
+  int v7; // ebx
+  int result; // eax
+  unsigned int v9; // ecx
+  int v11; // eax
+  int v12; // eax
+  unsigned int v13; // ecx
+  int v14; // eax
+  int v15; // ebx
+  int v16; // eax
+  unsigned int v17; // edi
+  uint32_t *v18; // ecx
+  int v20; // edi
+  uint32_t *v21; // [esp-18h] [ebp-40h]
+  int v22; // [esp-Ch] [ebp-34h]
+  unsigned int v23; // [esp-8h] [ebp-30h]
+  int v24; // [esp+0h] [ebp-28h] BYREF
+  uint32_t v25[4]; // [esp+Ch] [ebp-1Ch] BYREF
+  int v26; // [esp+24h] [ebp-4h]
+  uint32_t *v27; // [esp+30h] [ebp+8h]
+  uint32_t *v28; // [esp+34h] [ebp+Ch]
+  uint32_t *Blocka; // [esp+38h] [ebp+10h]
+  void *Blockb; // [esp+38h] [ebp+10h]
+
+  v5 = *Block;
+  v6 = Block[1];
+  v7 = *(this + 1);
+  result = Block[2];
+  v25[3] = &v24;
+  v25[0] = v5;
+  v25[1] = v6;
+  v25[2] = result;
+  if ( v7 != 0 )
+  {
+    result = 715827883 * (*(this + 3) - v7);
+    v9 = (*(this + 3) - v7) / 12;
+  }
+  else
+  {
+    v9 = 0;
+  }
+  if ( a3 != 0 )
+  {
+    if ( v7 != 0 )
+      v11 = (*(this + 2) - v7) / 12;
+    else
+      v11 = 0;
+    if ( 357913941 - v11 < a3 )
+      sub_4A30C0(this);
+    if ( v7 != 0 )
+      v12 = (*(this + 2) - v7) / 12;
+    else
+      v12 = 0;
+    if ( v9 >= a3 + v12 )
+    {
+      v18 = (uint32_t *)*(this + 2);
+      Blockb = v18;
+      if ( ((char *)v18 - a2) / 12 >= a3 )
+      {
+        v27 = &v18[-3 * a3];
+        *(this + 2) = (int)sub_59EE30(v27, v18, v18);
+        sub_504450(a2, v27, Blockb);
+        return sub_5043B0(a2, &a2[12 * a3], v25);
+      }
+      else
+      {
+        sub_59EE30(a2, v18, &a2[12 * a3]);
+        v23 = a3 - (*(this + 2) - (int)a2) / 12;
+        v22 = *(this + 2);
+        v26 = 2;
+        sub_5E51C0(v22, v23, v25);
+        v20 = 12 * a3 + *(this + 2);
+        *(this + 2) = v20;
+        return sub_5043B0(a2, v20 - 12 * a3, v25);
+      }
+    }
+    else
+    {
+      if ( 357913941 - (v9 >> 1) >= v9 )
+        v13 = (v9 >> 1) + v9;
+      else
+        v13 = 0;
+      if ( v7 != 0 )
+        v14 = (*(this + 2) - v7) / 12;
+      else
+        v14 = 0;
+      if ( v13 < a3 + v14 )
+        v13 = a3 + sub_4DA030(this);
+      v15 = 3 * v13;
+      Blocka = operator new(12 * v13);
+      v21 = (uint32_t *)*(this + 1);
+      v26 = 0;
+      v28 = sub_59EE30(v21, a2, Blocka);
+      sub_623C10(v28, a3, v25);
+      sub_59EE30(a2, (uint32_t *)*(this + 2), &v28[3 * a3]);
+      v16 = *(this + 1);
+      if ( v16 != 0 )
+        v16 = (*(this + 2) - v16) / 12;
+      v17 = v16 + a3;
+      if ( *(this + 1) != 0 )
+        j__free((void *)*(this + 1));
+      *(this + 3) = (int)&Blocka[v15];
+      *(this + 2) = (int)&Blocka[3 * v17];
+      *(this + 1) = (int)Blocka;
+      return (int)Blocka;
+    }
+  }
+  return result;
+}
+
+
+// ------------------------------------------------------------
+// 0x509280 sub_509280
+// ------------------------------------------------------------
+char /*thiscall*/ sub_509280(uint32_t *this, unsigned int a2)
+{
+  char *v4; // eax
+
+  *(this + 1) = 0;
+  *(this + 2) = 0;
+  *(this + 3) = 0;
+  if ( a2 == 0 )
+    return 0;
+  if ( a2 > 0x5D1745D )
+    sub_508F60(this);
+  v4 = (char *)operator new(44 * a2);
+  *(this + 3) = &v4[44 * a2];
+  *(this + 1) = v4;
+  *(this + 2) = v4;
+  return 1;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5092D0 sub_5092D0
+// ------------------------------------------------------------
+void /*thiscall*/ sub_5092D0(int this, char *a2, unsigned int a3, void *Block)
+{
+  int v5; // edi
+  unsigned int v6; // ecx
+  int v8; // eax
+  int v9; // eax
+  unsigned int v10; // ecx
+  int v11; // eax
+  int v12; // edi
+  int v13; // eax
+  unsigned int v14; // esi
+  char *v15; // ecx
+  int v17; // esi
+  char *v18; // [esp-18h] [ebp-60h]
+  char *v19; // [esp-Ch] [ebp-54h]
+  char *v20; // [esp-8h] [ebp-50h]
+  int v21; // [esp+0h] [ebp-48h] BYREF
+  uint32_t v22[12]; // [esp+Ch] [ebp-3Ch] BYREF
+  int v23; // [esp+44h] [ebp-4h]
+  char *v24; // [esp+50h] [ebp+8h]
+  char *v25; // [esp+54h] [ebp+Ch]
+  char *Blocka; // [esp+58h] [ebp+10h]
+  char *Blockb; // [esp+58h] [ebp+10h]
+
+  qmemcpy(v22, Block, 0x2Cu);
+  v5 = *(uint32_t *)(this + 4);
+  v22[11] = &v21;
+  if ( v5 != 0 )
+    v6 = (*(uint32_t *)(this + 12) - v5) / 44;
+  else
+    v6 = 0;
+  if ( a3 != 0 )
+  {
+    if ( v5 != 0 )
+      v8 = (*(uint32_t *)(this + 8) - v5) / 44;
+    else
+      v8 = 0;
+    if ( 97612893 - v8 < a3 )
+      sub_508F60(this);
+    if ( v5 != 0 )
+      v9 = (*(uint32_t *)(this + 8) - v5) / 44;
+    else
+      v9 = 0;
+    if ( v6 >= a3 + v9 )
+    {
+      v15 = *(char **)(this + 8);
+      Blockb = v15;
+      if ( (v15 - a2) / 44 >= a3 )
+      {
+        v24 = &v15[-44 * a3];
+        *(uint32_t *)(this + 8) = sub_508EA0(v24, v15, v15);
+        sub_4F8D90(a2, v24, Blockb);
+        sub_508E70(a2, &a2[44 * a3], v22);
+      }
+      else
+      {
+        sub_508EA0(a2, v15, &a2[44 * a3]);
+        v20 = (char *)(a3 - (*(uint32_t *)(this + 8) - (int)a2) / 44);
+        v19 = *(char **)(this + 8);
+        v23 = 2;
+        sub_508EE0(v19, v20, v22);
+        v17 = 44 * a3 + *(uint32_t *)(this + 8);
+        *(uint32_t *)(this + 8) = v17;
+        sub_508E70(a2, (char *)(v17 - 44 * a3), v22);
+      }
+    }
+    else
+    {
+      if ( 97612893 - (v6 >> 1) >= v6 )
+        v10 = (v6 >> 1) + v6;
+      else
+        v10 = 0;
+      if ( v5 != 0 )
+        v11 = (*(uint32_t *)(this + 8) - v5) / 44;
+      else
+        v11 = 0;
+      if ( v10 < a3 + v11 )
+        v10 = a3 + sub_527B90(this);
+      v12 = 44 * v10;
+      Blocka = (char *)operator new(44 * v10);
+      v18 = *(char **)(this + 4);
+      v23 = 0;
+      v25 = sub_508EA0(v18, a2, Blocka);
+      sub_4F8DF0(v25, (char *)a3, v22);
+      sub_508EA0(a2, *(char **)(this + 8), &v25[44 * a3]);
+      v13 = *(uint32_t *)(this + 4);
+      if ( v13 != 0 )
+        v13 = (*(uint32_t *)(this + 8) - v13) / 44;
+      v14 = v13 + a3;
+      if ( *(uint32_t *)(this + 4) != 0 )
+        j__free(*(void **)(this + 4));
+      *(uint32_t *)(this + 12) = &Blocka[v12];
+      *(uint32_t *)(this + 8) = &Blocka[44 * v14];
+      *(uint32_t *)(this + 4) = Blocka;
+    }
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509580 sub_509580
+// ------------------------------------------------------------
+char **/*thiscall*/ sub_509580(char **this, int a2)
+{
+  unsigned int v2; // eax
+  char *v5; // [esp-14h] [ebp-34h]
+  char *v6; // [esp-10h] [ebp-30h]
+  char *v7; // [esp-Ch] [ebp-2Ch]
+  int v8; // [esp+0h] [ebp-20h] BYREF
+  void *v9; // [esp+Ch] [ebp-14h]
+  int *v10; // [esp+10h] [ebp-10h]
+  int v11; // [esp+1Ch] [ebp-4h]
+
+  v2 = *(uint32_t *)(a2 + 4);
+  v10 = &v8;
+  v9 = this;
+  if ( v2 != 0 )
+    v2 = (int)(*(uint32_t *)(a2 + 8) - v2) / 44;
+  if ( sub_509280(this, v2) != 0 )
+  {
+    v7 = *(this + 1);
+    v6 = *(char **)(a2 + 8);
+    v5 = *(char **)(a2 + 4);
+    v11 = 0;
+    *(this + 2) = sub_508EA0(v5, v6, v7);
+  }
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509620 sub_509620
+// ------------------------------------------------------------
+int /*thiscall*/ sub_509620(int this, int a2)
+{
+  int v3; // eax
+  unsigned int v4; // ecx
+  char *v6; // ebx
+  unsigned int v7; // eax
+  int v8; // eax
+  unsigned int v9; // eax
+  char *v10; // edi
+  unsigned int v11; // eax
+
+  if ( this == a2 )
+    return this;
+  v3 = *(uint32_t *)(a2 + 4);
+  if ( v3 == 0 || (v4 = (*(uint32_t *)(a2 + 8) - v3) / 44) == 0 )
+  {
+    if ( *(uint32_t *)(this + 4) != 0 )
+      j__free(*(void **)(this + 4));
+    *(uint32_t *)(this + 4) = 0;
+    *(uint32_t *)(this + 8) = 0;
+    *(uint32_t *)(this + 12) = 0;
+    return this;
+  }
+  v6 = *(char **)(this + 4);
+  if ( v6 != nullptr )
+    v7 = (*(uint32_t *)(this + 8) - (int)v6) / 44;
+  else
+    v7 = 0;
+  if ( v4 > v7 )
+  {
+    if ( v6 != nullptr )
+      v9 = (*(uint32_t *)(this + 12) - (int)v6) / 44;
+    else
+      v9 = 0;
+    if ( v4 <= v9 )
+    {
+      v10 = (char *)(*(uint32_t *)(a2 + 4) + 44 * sub_527B90(this));
+      sub_4F8DC0(*(char **)(a2 + 4), v10, v6);
+      *(uint32_t *)(this + 8) = sub_508EA0(v10, *(char **)(a2 + 8), *(char **)(this + 8));
+      return this;
+    }
+    if ( v6 != nullptr )
+      j__free(*(void **)(this + 4));
+    v11 = sub_527B90(a2);
+    if ( sub_509280((uint32_t *)this, v11) != 0 )
+      *(uint32_t *)(this + 8) = sub_433CF0(*(uint32_t *)(a2 + 4), *(uint32_t *)(a2 + 8), *(uint32_t *)(this + 4));
+    return this;
+  }
+  sub_4F8DC0(*(char **)(a2 + 4), *(char **)(a2 + 8), *(char **)(this + 4));
+  v8 = *(uint32_t *)(a2 + 4);
+  if ( v8 != 0 )
+    *(uint32_t *)(this + 8) = *(uint32_t *)(this + 4) + 44 * ((*(uint32_t *)(a2 + 8) - v8) / 44);
+  else
+    *(uint32_t *)(this + 8) = *(uint32_t *)(this + 4);
+  return this;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5097A0 sub_5097A0
+// ------------------------------------------------------------
+int /*cdecl*/ sub_5097A0(int a1, int a2, int a3)
+{
+  int v3; // esi
+  int v4; // edi
+
+  v3 = a1;
+  if ( a1 == a2 )
+    return a3;
+  v4 = a3;
+  do
+  {
+    sub_509620(v4, v3);
+    v3 += 16;
+    v4 += 16;
+  }
+  while ( v3 != a2 );
+  return v4;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5097E0 sub_5097E0
+// ------------------------------------------------------------
+int /*cdecl*/ sub_5097E0(int a1, int a2, int a3)
+{
+  int v3; // esi
+  int v4; // edi
+
+  v3 = a2;
+  if ( a1 == a2 )
+    return a3;
+  v4 = a3;
+  do
+  {
+    v3 -= 16;
+    v4 -= 16;
+    sub_509620(v4, v3);
+  }
+  while ( v3 != a1 );
+  return v4;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509820 sub_509820
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_509820(int *this, uint32_t *a2, uint32_t *a3, int *Block)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 12 != 0 )
+    v6 = ((int)a3 - v5) / 12;
+  else
+    v6 = 0;
+  sub_508FD0(this, a3, 1u, Block);
+  *a2 = *(this + 1) + 12 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509890 sub_509890
+// ------------------------------------------------------------
+void /*thiscall*/ sub_509890(
+        int this,
+        unsigned int a2,
+        char Block,
+        int a4,
+        int a5,
+        int a6,
+        int a7,
+        int a8,
+        int a9,
+        int a10,
+        int a11,
+        int a12,
+        int a13)
+{
+  int v13; // edi
+  unsigned int v14; // eax
+  int v15; // eax
+
+  v13 = *(uint32_t *)(this + 4);
+  if ( v13 != 0 )
+    v14 = (*(uint32_t *)(this + 8) - v13) / 44;
+  else
+    v14 = 0;
+  if ( v14 >= a2 )
+  {
+    if ( v13 != 0 && a2 < (*(uint32_t *)(this + 8) - v13) / 44 )
+      sub_508F10((char **)this, &a2, (char *)(v13 + 44 * a2), *(char **)(this + 8));
+  }
+  else
+  {
+    if ( v13 != 0 )
+      v15 = (*(uint32_t *)(this + 8) - v13) / 44;
+    else
+      v15 = 0;
+    sub_5092D0(this, *(char **)(this + 8), a2 - v15, &Block);
+  }
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509930 sub_509930
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_509930(uint32_t *this, uint32_t *a2, char *a3, void *Block)
+{
+  int v5; // esi
+  int v6; // esi
+
+  v5 = *(this + 1);
+  if ( v5 != 0 && (*(this + 2) - v5) / 44 != 0 )
+    v6 = (int)&a3[-v5] / 44;
+  else
+    v6 = 0;
+  sub_5092D0((int)this, a3, 1u, Block);
+  *a2 = *(this + 1) + 44 * v6;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5099A0 sub_5099A0
+// ------------------------------------------------------------
+int /*cdecl*/ sub_5099A0(int a1, int a2, int a3)
+{
+  int i; // esi
+  int result; // eax
+
+  for ( i = a1; i != a2; i += 16 )
+    result = sub_509620(i, a3);
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5099D0 sub_5099D0
+// ------------------------------------------------------------
+int /*cdecl*/ sub_5099D0(int a1, int a2, int a3)
+{
+  return sub_5097E0(a1, a2, a3);
+}
+
+
+
+// ------------------------------------------------------------
+// 0x5099F0 sub_5099F0
+// ------------------------------------------------------------
+char **/*cdecl*/ sub_5099F0(int a1, int a2, char **a3)
+{
+  char **v3; // esi
+  uint32_t v6[5]; // [esp+0h] [ebp-20h] BYREF
+  int v7; // [esp+1Ch] [ebp-4h]
+
+  v3 = a3;
+  v6[4] = v6;
+  v6[3] = a3;
+  v7 = 0;
+  while ( a1 != a2 )
+  {
+    LOBYTE(v7) = 1;
+    if ( v3 != nullptr )
+      sub_509580(v3, a1);
+    v3 += 4;
+    LOBYTE(v7) = 0;
+    a1 += 16;
+  }
+  return v3;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509A80 sub_509A80
+// ------------------------------------------------------------
+uint32_t */*thiscall*/ sub_509A80(int *this, int *Block)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  int v5; // edi
+  uint32_t *result; // eax
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) / 12;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(this + 3) - v3) / 12 )
+    return sub_509820(this, &Block, (uint32_t *)*(this + 2), Block);
+  v5 = *(this + 2);
+  result = (uint32_t *)sub_623C10(v5, 1, Block);
+  *(this + 2) = v5 + 12;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509B00 sub_509B00
+// ------------------------------------------------------------
+int /*thiscall*/ sub_509B00(int *this, void *Block)
+{
+  int v3; // edx
+  unsigned int v4; // ecx
+  int v5; // edi
+  int result; // eax
+
+  v3 = *(this + 1);
+  if ( v3 != 0 )
+    v4 = (*(this + 2) - v3) >> 5;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(this + 3) - v3) >> 5 )
+    return sub_4DE980(*(this + 2), 1, Block);
+  v5 = *(this + 2);
+  result = sub_4DAB30(v5, 1, Block);
+  *(this + 2) = v5 + 32;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509B70 sub_509B70
+// ------------------------------------------------------------
+char */*thiscall*/ sub_509B70(int this, void *Block)
+{
+  int v3; // edi
+  unsigned int v4; // ecx
+  char *v5; // edi
+  char *result; // eax
+
+  v3 = *(uint32_t *)(this + 4);
+  if ( v3 != 0 )
+    v4 = (*(uint32_t *)(this + 8) - v3) / 44;
+  else
+    v4 = 0;
+  if ( v3 == 0 || v4 >= (*(uint32_t *)(this + 12) - v3) / 44 )
+    return (char *)sub_509930((uint32_t *)this, &Block, *(char **)(this + 8), Block);
+  v5 = *(char **)(this + 8);
+  result = sub_4F8DF0(v5, (char *)1, Block);
+  *(uint32_t *)(this + 8) = v5 + 44;
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509C00 sub_509C00
+// ------------------------------------------------------------
+char **/*cdecl*/ sub_509C00(char **a1, int a2, int a3)
+{
+  char **v3; // esi
+  char **result; // eax
+  uint32_t v6[5]; // [esp+0h] [ebp-20h] BYREF
+  int v7; // [esp+1Ch] [ebp-4h]
+
+  v3 = a1;
+  v6[4] = v6;
+  v6[3] = a1;
+  v7 = 0;
+  while ( a2 != 0 )
+  {
+    LOBYTE(v7) = 1;
+    if ( v3 != nullptr )
+      result = sub_509580(v3, a3);
+    --a2;
+    v3 += 4;
+    LOBYTE(v7) = 0;
+  }
+  return result;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x509C90 sub_509C90 —— ★★ 怪物数据文件解析器（MonsterBaseParameter.tbl 族；技能/属性块通用）
+//   【研究 20 §12 定位：技能/属性块通用解析器，"固定字段对"（基础/加成 双格）的主体】。
+//   a1 = 数据对象（每数据文件一份，sub_4D2D60 工厂 case 1 的 0x5A0 对象），a2 = 文件路径。
+//
+//   ── 关键字段对（研究 20 §12 字段表对照；全库唯一写入点）──
+//   a1+380/+384  [attack speed]          攻速（基础/加成）—— 攻速聚合 base×(1+stat×0.01) 的源头
+//   a1+388/+392  [cast speed]            施放速度
+//   a1+396/+400  [hit recovery]          受方硬直恢复 ★（研究 20 §12；§14#2 定案：
+//                                        客户端仅解析不消费，表现壳原样施加 attackinfo+132，
+//                                        权威时长在服务端）
+//   a1+404/+408  [jump power]            跳跃力
+//   a1+412/+416  [jump speed]            跳跃速度
+//   a1+420/+424  [weight]                重量（研究 20 §19 更正："全 PE 无 [weight] 标签"系误——
+//                                        该标签实际存在于本解析器，见报告）
+//   a1+428/432/436/440  [stuckbonus on damage]  攻方按伤害类四档的硬直加成 ★
+//                                        （研究 20 §12；生效点读者 0x47EF20/0x47F310/0x482A90 待追）
+//   a1+492 / +496  [warlike] / [attack delay]
+//   a1+772       [elemental property]     属性（名字查表）
+//   a1+776       [active status]          状态槽（17 槽枚举：none=17/slow=0..hold=16 —— 研究 20 §10）
+//   a1+850       [ignore defense]         无视防御开关
+//   a1+879/+880  [HP drain]/[MP drain]    吸血/吸魔开关
+//   a1+884       [skill levelup]          升级技能表（子枚举 [common]=4 = 通用）
+//   a1+916       [avatar select ability]  时装能力选择
+//
+//   其它标签族：几何 [name]/[width]/[floating height]/[layer]；能力 [category]（22 项名表 off_791F80）/
+//   [ability category]（13 项 off_795B2C，符号 "+"=0/"*"=1）/ [ability table] /
+//   [summon skill status up rate]（10 个 float）；抗性 [fire/water/dark/light resistance]、
+//   [HP/MP regen speed]；AI [superarmor on attack]/[sight]/[targeting time term] 与 14 项
+//   [targeting ...] 选敌策略；演出 [die effect]/[face image] 与动作表（[waiting motion]...）；
+//   [speech on situation] 情境语音（子枚举 [on attack]/[on damage]/[on die]/[on revenge]/[on etc]/
+//   [on appear]/[on disappear]/[on go to help]/[on stand]）；[spawn prob] 出现概率；
+//   [jumpattack info]/[attack info]/[etc attack info] 攻击数据引用（经 sub_420BB0 打包）。
+//   标签总数 75。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_509C90(int a1, int a2)
+{
+  char result; // al
+  int v3; // eax
+  int v4; // esi
+  int v5; // esi
+  float *v6; // esi
+  int i; // ebx
+  int j; // esi
+  int v9; // eax
+  int k; // esi
+  int v11; // eax
+  int v12; // esi
+  const char *v13; // eax
+  int n; // esi
+  int v15; // eax
+  int v16; // esi
+  int jj; // ebx
+  char **v18; // esi
+  uint32_t *v19; // ebx
+  uint32_t v20[2]; // [esp+4h] [ebp-84h] BYREF
+  uint32_t v21[2]; // [esp+Ch] [ebp-7Ch] BYREF
+  uint32_t v22[2]; // [esp+14h] [ebp-74h] BYREF
+  bool v23[4]; // [esp+1Ch] [ebp-6Ch] BYREF
+  float v24; // [esp+20h] [ebp-68h]
+  float v25; // [esp+24h] [ebp-64h]
+  float v26; // [esp+28h] [ebp-60h]
+  int v27; // [esp+2Ch] [ebp-5Ch]
+  int v28; // [esp+30h] [ebp-58h]
+  int v29; // [esp+34h] [ebp-54h]
+  int v30; // [esp+38h] [ebp-50h]
+  int v31; // [esp+3Ch] [ebp-4Ch] BYREF
+  char v32; // [esp+40h] [ebp-48h]
+  int v33; // [esp+44h] [ebp-44h]
+  void *v34; // [esp+48h] [ebp-40h] BYREF
+  char v35; // [esp+4Fh] [ebp-39h] BYREF
+  int ii; // [esp+50h] [ebp-38h] BYREF
+  void *v37; // [esp+54h] [ebp-34h] BYREF
+  char m; // [esp+5Bh] [ebp-2Dh] BYREF
+  uint8_t v39[4]; // [esp+5Ch] [ebp-2Ch] BYREF
+  void *Block; // [esp+60h] [ebp-28h]
+  unsigned int v41; // [esp+70h] [ebp-18h]
+  unsigned int v42; // [esp+74h] [ebp-14h]
+  int v43; // [esp+78h] [ebp-10h]
+  int v44; // [esp+84h] [ebp-4h]
+
+  v43 = dword_796E50;
+  result = sub_442A10((char)&unk_9B7830, a2);
+  if ( result != 0 )
+  {
+    sub_4CEB80(a1);
+    sub_443300(a1 + 928, "%s%s", (char)&unk_9B7830);
+    v42 = 15;
+    v41 = 0;
+    LOBYTE(Block) = 0;
+    v44 = 0;
+    v37 = nullptr;
+    sub_41BFE0(&v37, szPassword);
+    LOBYTE(v44) = 1;
+    m = 0;
+    while ( (uint8_t)sub_443430(v39) != 0 )
+    {
+      sub_442B20(v39);
+      if ( sub_40BF00((std::_String_base *)v39, 0, v41, "[name]", 6u) == 0 )
+        goto LABEL_162;
+      if ( sub_40BF00((std::_String_base *)v39, 0, v41, "[width]", 7u) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)v39, 0, v41, "[floating height]", 0x11u) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)v39, 0, v41, "[layer]", 7u) != 0 )
+          {
+            if ( (uint8_t)sub_423300(v39, "[category]") != 0 )
+            {
+              sub_5E5260((void *)(a1 + 48));
+              while ( sub_442E10() != 0 )
+              {
+                v4 = 0;
+                ii = 0;
+                while ( !sub_43BCF0(&v37, off_791F80[v4]) )
+                {
+                  if ( ++v4 >= 22 )
+                  {
+                    ii = v4;
+                    goto LABEL_18;
+                  }
+                }
+                ii = v4;
+                sub_431230(&ii);
+LABEL_18:
+                ;
+              }
+              continue;
+            }
+            if ( (uint8_t)sub_423300(v39, "[ability category]") != 0 )
+            {
+              v33 = 0;
+              v31 = 13;
+              v32 = 0;
+              sub_5E5260((void *)(a1 + 128));
+              while ( sub_442E10() != 0 )
+              {
+                v5 = 0;
+                while ( !sub_43BCF0(&v37, off_795B2C[v5]) )
+                {
+                  if ( ++v5 >= 13 )
+                    goto LABEL_31;
+                }
+                v31 = v5;
+                sub_442E10();
+                if ( sub_43BCF0(&v37, "+") )
+                {
+                  v32 = 0;
+                }
+                else if ( sub_43BCF0(&v37, "*") )
+                {
+                  v32 = 1;
+                }
+                v33 = sub_4423D0(0);
+LABEL_31:
+                sub_509A80(&v31);
+              }
+              continue;
+            }
+            if ( (uint8_t)sub_423300(v39, "[ability table]") != 0 )
+            {
+              *(uint32_t *)(a1 + 144) = sub_4423D0(0);
+            }
+            else
+            {
+              if ( (uint8_t)sub_423300(v39, "[summon skill status up rate]") != 0 )
+              {
+                v6 = (float *)(a1 + 148);
+                for ( i = 10; i != 0; --i )
+                  *v6++ = sub_442480(0);
+                continue;
+              }
+              if ( (uint8_t)sub_423300(v39, "[level]") != 0 )
+              {
+                *(uint32_t *)(a1 + 188) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 192) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[fire resistance]") != 0 )
+              {
+                *(uint32_t *)(a1 + 196) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 200) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[water resistance]") != 0 )
+              {
+                *(uint32_t *)(a1 + 204) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 208) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[dark resistance]") != 0 )
+              {
+                *(uint32_t *)(a1 + 212) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 216) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[light resistance]") != 0 )
+              {
+                *(uint32_t *)(a1 + 220) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 224) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[HP regen speed]") != 0 )
+              {
+                *(uint32_t *)(a1 + 356) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 360) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[MP regen speed]") != 0 )
+              {
+                *(uint32_t *)(a1 + 364) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 368) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[move speed]") != 0 )
+              {
+                *(uint32_t *)(a1 + 372) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 376) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[attack speed]") != 0 )
+              {
+                *(uint32_t *)(a1 + 380) = sub_4423D0(0);   // +380 [attack speed] 基础（+384 加成）
+                *(uint32_t *)(a1 + 384) = sub_4423D0(0);   //   攻速聚合 base×(1+stat×0.01) 的源头（研究 20 §16）
+              }
+              else if ( (uint8_t)sub_423300(v39, "[cast speed]") != 0 )
+              {
+                *(uint32_t *)(a1 + 388) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 392) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[hit recovery]") != 0 )
+              {
+                *(uint32_t *)(a1 + 396) = sub_4423D0(0);   // +396 [hit recovery] 基础（基础/加成 双格）
+                *(uint32_t *)(a1 + 400) = sub_4423D0(0);   // +400 [hit recovery] 加成（研究 20 §12：
+                                                           //   客户端仅解析不消费，权威时长在服务端）
+              }
+              else if ( (uint8_t)sub_423300(v39, "[jump power]") != 0 )
+              {
+                *(uint32_t *)(a1 + 404) = sub_4423D0(0);   // +404 [jump power] 基础（+408 加成）
+                *(uint32_t *)(a1 + 408) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[jump speed]") != 0 )
+              {
+                *(uint32_t *)(a1 + 412) = sub_4423D0(0);
+                *(uint32_t *)(a1 + 416) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[weight]") != 0 )
+              {
+                *(uint32_t *)(a1 + 420) = sub_4423D0(0);   // +420 [weight] 基础（+424 加成）
+                *(uint32_t *)(a1 + 424) = sub_4423D0(0);   //   ★ 更正研究 20 §19 "全 PE 无 [weight] 标签"之误
+              }
+              else if ( (uint8_t)sub_423300(v39, "[superarmor on attack]") != 0 )
+              {
+                *(uint8_t *)(a1 + 500) = sub_4423D0(0) != 0;
+                *(uint32_t *)(a1 + 504) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[sight]") != 0 )
+              {
+                *(uint32_t *)(a1 + 444) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[targeting time term]") != 0 )
+              {
+                *(uint32_t *)(a1 + 448) = sub_4423D0(0);
+              }
+              else if ( (uint8_t)sub_423300(v39, "[targeting on attack]") != 0 )
+              {
+                *(uint8_t *)(a1 + 452) = sub_4423D0(0) != 0;
+              }
+              else if ( (uint8_t)sub_423300(v39, "[targeting on damage]") != 0 )
+              {
+                *(uint8_t *)(a1 + 453) = sub_4423D0(0) != 0;
+              }
+              else
+              {
+                if ( (uint8_t)sub_423300(v39, "[targeting high level]") != 0 )
+                {
+                  if ( sub_4423D0(0) != 0 )
+                    *(uint32_t *)(a1 + 456) = 2;
+                  continue;
+                }
+                if ( (uint8_t)sub_423300(v39, "[targeting low level]") != 0 )
+                {
+                  if ( sub_4423D0(0) != 0 )
+                    *(uint32_t *)(a1 + 456) = 1;
+                  continue;
+                }
+                if ( (uint8_t)sub_423300(v39, "[targeting high HP]") != 0 )
+                {
+                  if ( sub_4423D0(0) != 0 )
+                    *(uint32_t *)(a1 + 460) = 2;
+                  continue;
+                }
+                if ( (uint8_t)sub_423300(v39, "[targeting low HP]") != 0 )
+                {
+                  if ( sub_4423D0(0) != 0 )
+                    *(uint32_t *)(a1 + 460) = 1;
+                  continue;
+                }
+                if ( (uint8_t)sub_423300(v39, "[targeting nearest]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 468) = sub_4423D0(0) != 0;
+                }
+                else if ( (uint8_t)sub_423300(v39, "[targeting attacker]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 469) = sub_4423D0(0) != 0;
+                }
+                else if ( (uint8_t)sub_423300(v39, "[targeting from direction]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 470) = sub_4423D0(0) != 0;
+                }
+                else if ( (uint8_t)sub_423300(v39, "[targeting low physical attack]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 472) = sub_4423D0(0) != 0;
+                }
+                else if ( (uint8_t)sub_423300(v39, "[targeting low physical defense]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 476) = sub_4423D0(0) != 0;
+                }
+                else if ( (uint8_t)sub_423300(v39, "[targeting low magical attack]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 480) = sub_4423D0(0) != 0;
+                }
+                else if ( (uint8_t)sub_423300(v39, "[targeting low magical defense]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 484) = sub_4423D0(0) != 0;
+                }
+                else if ( (uint8_t)sub_423300(v39, "[targeting downed]") != 0 )
+                {
+                  *(uint8_t *)(a1 + 488) = sub_4423D0(0) != 0;
+                }
+                else if ( (uint8_t)sub_423300(v39, "[warlike]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 492) = sub_4423D0(0);
+                }
+                else if ( (uint8_t)sub_423300(v39, "[attack delay]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 496) = sub_4423D0(0);
+                }
+                else if ( (uint8_t)sub_423300(v39, "[stuckbonus on damage]") != 0 )
+                {
+                  *(uint32_t *)(a1 + 428) = sub_4423D0(0);  // +428 [stuckbonus on damage] 档 1/4（攻方硬直加成）
+                  *(uint32_t *)(a1 + 432) = sub_4423D0(0);  // +432 档 2/4
+                  *(uint32_t *)(a1 + 436) = sub_4423D0(0);  // +436 档 3/4
+                  *(uint32_t *)(a1 + 440) = sub_4423D0(0);  // +440 档 4/4（按伤害类四档 —— 研究 20 §12）
+                }
+                else
+                {
+                  if ( (uint8_t)sub_423300(v39, "[item]") != 0 )
+                  {
+                    sub_5E5260((void *)(a1 + 64));
+                    for ( j = sub_4423D0(&m); m != 0; j = sub_4423D0(&m) )
+                    {
+                      v9 = sub_4423D0(0);
+                      v22[0] = j;
+                      v22[1] = v9;
+                      sub_474950(v22);
+                    }
+                    continue;
+                  }
+                  if ( (uint8_t)sub_423300(v39, "[common champion drop item]") != 0 )
+                  {
+                    sub_5E5260((void *)(a1 + 80));
+                    for ( k = sub_4423D0(&m); m != 0; k = sub_4423D0(&m) )
+                    {
+                      v11 = sub_4423D0(0);
+                      v20[0] = k;
+                      v20[1] = v11;
+                      sub_474950(v20);
+                    }
+                    continue;
+                  }
+                  if ( (uint8_t)sub_423300(v39, "[common champion elemental property]") != 0 )
+                  {
+                    sub_5E5260((void *)(a1 + 1420));
+                    for ( m = sub_442E10(); m != 0; m = sub_442E10() )
+                    {
+                      v12 = 0;
+                      ii = 0;
+                      while ( 1 )
+                      {
+                        v13 = (const char *)sub_442780(v12);
+                        if ( sub_43BCF0(&v37, v13) )
+                          break;
+                        if ( ++v12 >= 5 )
+                        {
+                          ii = v12;
+                          goto LABEL_126;
+                        }
+                      }
+                      ii = v12;
+                      sub_431230(&ii);
+LABEL_126:
+                      ;
+                    }
+                    continue;
+                  }
+                  if ( (uint8_t)sub_423300(v39, "[super champion drop item]") != 0 )
+                  {
+                    sub_5E5260((void *)(a1 + 96));
+                    for ( n = sub_4423D0(&m); m != 0; n = sub_4423D0(&m) )
+                    {
+                      v15 = sub_4423D0(0);
+                      v21[0] = n;
+                      v21[1] = v15;
+                      sub_474950(v21);
+                    }
+                    continue;
+                  }
+                  if ( (uint8_t)sub_423300(v39, "[attack kind]") != 0 )
+                  {
+                    sub_5E5260((void *)(a1 + 900));
+                    while ( 1 )
+                    {
+                      v23[0] = false;
+                      v27 = 0;
+                      v28 = 0;
+                      v29 = 0;
+                      v30 = 0;
+                      v25 = 0.0;
+                      v26 = 0.0;
+                      v24 = sub_442480(&v35);
+                      if ( v35 == 0 )
+                        break;
+                      v25 = sub_442480(0);
+                      v26 = sub_442480(0);
+                      v23[0] = sub_4423D0(0) != 0;
+                      v27 = sub_4423D0(0);
+                      v28 = sub_4423D0(0);
+                      v29 = sub_4423D0(0);
+                      v30 = sub_4423D0(0);
+                      sub_509B00(v23);
+                    }
+                    continue;
+                  }
+                  if ( (uint8_t)sub_423300(v39, "[die effect]") != 0 )
+                  {
+                    *(uint32_t *)(a1 + 916) = sub_4423D0(0);
+                    *(uint32_t *)(a1 + 920) = sub_4423D0(0);
+                    *(uint32_t *)(a1 + 924) = sub_4423D0(0);
+                  }
+                  else
+                  {
+                    if ( (uint8_t)sub_423300(v39, "[face image]") == 0 )
+                    {
+                      if ( (uint8_t)sub_423300(v39, "[waiting motion]") == 0
+                        && (uint8_t)sub_423300(v39, "[move motion]") == 0
+                        && (uint8_t)sub_423300(v39, "[sit motion]") == 0
+                        && (uint8_t)sub_423300(v39, "[damage motion 1]") == 0
+                        && (uint8_t)sub_423300(v39, "[damage motion 2]") == 0
+                        && (uint8_t)sub_423300(v39, "[down motion]") == 0
+                        && (uint8_t)sub_423300(v39, "[overturn motion]") == 0
+                        && (uint8_t)sub_423300(v39, "[jump motion]") == 0
+                        && (uint8_t)sub_423300(v39, "[jumpattack motion]") == 0 )
+                      {
+                        if ( (uint8_t)sub_423300(v39, "[attack motion]") != 0 )
+                        {
+                          sub_4017E0(a1 + 792);
+                          while ( sub_442E10() != 0 )
+                            sub_420BB0(&v37);
+                          continue;
+                        }
+                        if ( (uint8_t)sub_423300(v39, "[etc motion]") != 0 )
+                        {
+                          sub_4017E0(a1 + 808);
+                          while ( sub_442E10() != 0 )
+                            sub_420BB0(&v37);
+                          continue;
+                        }
+                        if ( (uint8_t)sub_423300(v39, "[jumpattack info]") == 0 )
+                        {
+                          if ( (uint8_t)sub_423300(v39, "[attack info]") != 0 )
+                          {
+                            sub_4017E0(a1 + 852);
+                            while ( sub_442E10() != 0 )
+                              sub_420BB0(&v37);
+                          }
+                          else if ( (uint8_t)sub_423300(v39, "[etc attack info]") != 0 )
+                          {
+                            sub_4017E0(a1 + 868);
+                            while ( sub_442E10() != 0 )
+                              sub_420BB0(&v37);
+                          }
+                          else if ( (uint8_t)sub_423300(v39, "[int data]") != 0 )
+                          {
+                            sub_5E5260((void *)(a1 + 884));
+                            for ( ii = sub_4423D0(&m); m != 0; ii = sub_4423D0(&m) )
+                              sub_431230(&ii);
+                          }
+                          else if ( (uint8_t)sub_423300(v39, "[speech on situation]") != 0 )
+                          {
+                            sub_432D20(&v34);
+                            LOBYTE(v44) = 2;
+                            v16 = a1 + 956;
+                            for ( jj = 29; jj != 0; --jj )
+                            {
+                              sub_4017E0(v16);
+                              v16 += 16;
+                            }
+                            while ( sub_442E10() != 0 )
+                            {
+                              sub_442E10();
+                              sub_4423D0(0);
+                              if ( !sub_43BCF0(&v37, "[on attack]")
+                                && !sub_43BCF0(&v37, "[on damage]")
+                                && !sub_43BCF0(&v37, "[on die]")
+                                && !sub_43BCF0(&v37, "[on revenge]")
+                                && !sub_43BCF0(&v37, "[on etc]")
+                                && !sub_43BCF0(&v37, "[on appear]")
+                                && !sub_43BCF0(&v37, "[on disappear]")
+                                && !sub_43BCF0(&v37, "[on go to help]") )
+                              {
+                                sub_43BCF0(&v37, "[on stand]");
+                              }
+                              sub_420BB0(&v34);
+                            }
+                            LOBYTE(v44) = 1;
+                            sub_41B010(&v34);
+                          }
+                          else if ( (uint8_t)sub_423300(v39, "[spawn prob]") != 0 )
+                          {
+                            *(uint32_t *)(a1 + 1436) = sub_4423D0(0);
+                          }
+                          else
+                          {
+                            v18 = off_791FD8;
+                            v19 = (uint32_t *)(a1 + 232);
+                            do
+                            {
+                              if ( (uint8_t)sub_423300(v39, *v18) != 0 )
+                              {
+                                *(v19 - 1) = sub_4423D0(0);
+                                *v19 = sub_4423D0(0);
+                              }
+                              ++v18;
+                              v19 += 2;
+                            }
+                            while ( (int)v18 < (int)off_792018 );
+                          }
+                          continue;
+                        }
+                      }
+LABEL_162:
+                      sub_443370();
+                      continue;
+                    }
+                    sub_443370();
+                    *(uint32_t *)(a1 + 536) = sub_4423D0(0);
+                  }
+                }
+              }
+            }
+          }
+          else
+          {
+            sub_442E10();
+            v3 = sub_41ACF0(&v37);
+            *(uint32_t *)(a1 + 44) = sub_4425F0(v3);
+          }
+        }
+        else
+        {
+          *(uint32_t *)(a1 + 40) = sub_4423D0(0);
+        }
+      }
+      else
+      {
+        *(uint32_t *)(a1 + 32) = sub_4423D0(0);
+        *(uint32_t *)(a1 + 36) = sub_4423D0(0);
+      }
+    }
+    *(uint32_t *)a1 = sub_4A2F80(a2);
+    LOBYTE(v44) = 0;
+    sub_41B010(&v37);
+    if ( v42 >= 0x10 )
+      j__free(Block);
+    return 1;
+  }
+  return result;
+}
+
+
+// ============================================================
+// §H 0x50AF40-0x50C000 PassiveObject / 地图物件 / 技能 PO 定义族
+// ============================================================
+
+// ------------------------------------------------------------
+// 0x50AF40 sub_50AF40 —— 地图物件(map object)定义解析器
+//   标签族：几何 [name]/[width]/[floating height]/[layer]；通行 [pass type] 子枚举
+//   [pass all]=0/[pass only float type]/[do not pass]；[piercing power] 穿透力；
+//   [category]；动作 [basic motion]/[etc motion]；[destroy particle] 破坏粒子；
+//   攻击数据引用 [attack info]/[etc attack info]；[int data]/[string data] 通用袋。
+//   标签总数 17。调用者：sub_4D2D60 工厂（地图物件类）。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_50AF40(int a1, int a2)
+{
+  int v2; // esi
+  char result; // al
+  int v4; // eax
+  int v5; // esi
+  int i; // [esp+4h] [ebp-38h] BYREF
+  char v7; // [esp+Bh] [ebp-31h] BYREF
+  void *v8; // [esp+Ch] [ebp-30h] BYREF
+  uint8_t v9[4]; // [esp+10h] [ebp-2Ch] BYREF
+  void *Block; // [esp+14h] [ebp-28h]
+  unsigned int v11; // [esp+24h] [ebp-18h]
+  unsigned int v12; // [esp+28h] [ebp-14h]
+  int v13; // [esp+2Ch] [ebp-10h]
+  int v14; // [esp+38h] [ebp-4h]
+
+  v2 = a2;
+  v13 = dword_796E50;
+  result = sub_442A10((char)&unk_9B7930, a2);
+  if ( result == 0 )
+    return result;
+  sub_4CF050(a1);
+  sub_443300(a1 + 220, "%s%s", (char)&unk_9B7930);
+  v12 = 15;
+  v11 = 0;
+  LOBYTE(Block) = 0;
+  v14 = 0;
+  v8 = nullptr;
+  sub_41BFE0(&v8, szPassword);
+  LOBYTE(v14) = 1;
+  v7 = 0;
+  if ( (uint8_t)sub_443430(v9) == 0 )
+    goto LABEL_50;
+  do
+  {
+    sub_442B20(v9);
+    if ( sub_40BF00((std::_String_base *)v9, 0, v11, "[name]", 6u) == 0 )
+    {
+LABEL_36:
+      sub_443370();
+      continue;
+    }
+    if ( sub_40BF00((std::_String_base *)v9, 0, v11, "[width]", 7u) == 0 )
+    {
+      *(uint32_t *)(a1 + 32) = sub_4423D0(nullptr);
+      *(uint32_t *)(a1 + 36) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( sub_40BF00((std::_String_base *)v9, 0, v11, "[floating height]", 0x11u) == 0 )
+    {
+      *(uint32_t *)(a1 + 40) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( sub_40BF00((std::_String_base *)v9, 0, v11, "[layer]", 7u) == 0 )
+    {
+      sub_442E10();
+      v4 = sub_41ACF0(&v8);
+      *(uint32_t *)(a1 + 44) = sub_4425F0(v4);
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v9, "[pass type]") != 0 )
+    {
+      sub_442E10();
+      if ( sub_43BCF0(&v8, "[pass all]") )
+      {
+        *(uint32_t *)(a1 + 48) = 0;
+      }
+      else if ( sub_43BCF0(&v8, "[pass only float type]") )
+      {
+        *(uint32_t *)(a1 + 48) = 1;
+      }
+      else if ( sub_43BCF0(&v8, "[do not pass]") )
+      {
+        *(uint32_t *)(a1 + 48) = 2;
+      }
+    }
+    else
+    {
+      if ( (uint8_t)sub_423300(v9, "[piercing power]") != 0 )
+      {
+        *(uint32_t *)(a1 + 52) = sub_4423D0(nullptr);
+        continue;
+      }
+      if ( (uint8_t)sub_423300(v9, "[category]") != 0 )
+      {
+        sub_5E5260((void **)(a1 + 56));
+        while ( sub_442E10() != 0 )
+        {
+          v5 = 0;
+          i = 0;
+          while ( !sub_43BCF0(&v8, off_791F80[v5]) )
+          {
+            if ( ++v5 >= 22 )
+            {
+              i = v5;
+              goto LABEL_27;
+            }
+          }
+          i = v5;
+          sub_431230(a1 + 56, &i);
+LABEL_27:
+          ;
+        }
+      }
+      else
+      {
+        if ( (uint8_t)sub_423300(v9, "[basic motion]") != 0 )
+          goto LABEL_36;
+        if ( (uint8_t)sub_423300(v9, "[etc motion]") != 0 )
+        {
+          sub_4017E0(a1 + 100);
+          while ( sub_442E10() != 0 )
+            sub_420BB0(&v8);
+        }
+        else
+        {
+          if ( (uint8_t)sub_423300(v9, "[destroy particle]") != 0
+            || (uint8_t)sub_423300(v9, "[attack info]") != 0 )
+          {
+            goto LABEL_36;
+          }
+          if ( (uint8_t)sub_423300(v9, "[etc attack info]") != 0 )
+          {
+            sub_4017E0(a1 + 172);
+            while ( sub_442E10() != 0 )
+              sub_420BB0(&v8);
+          }
+          else if ( (uint8_t)sub_423300(v9, "[int data]") != 0 )
+          {
+            sub_5E5260((void **)(a1 + 188));
+            for ( i = sub_4423D0(&v7); v7 != 0; i = sub_4423D0(&v7) )
+              sub_431230(a1 + 188, &i);
+          }
+          else if ( (uint8_t)sub_423300(v9, "[string data]") != 0 )
+          {
+            sub_4017E0(a1 + 204);
+            while ( sub_442E10() != 0 )
+              sub_420BB0(&v8);
+          }
+        }
+      }
+    }
+  }
+  while ( (uint8_t)sub_443430(v9) != 0 );
+  v2 = a2;
+LABEL_50:
+  *(uint32_t *)a1 = sub_4A2F80(v2);
+  LOBYTE(v14) = 0;
+  sub_41B010(&v8);
+  if ( v12 >= 0x10 )
+    j__free(Block);
+  return 1;
+}
+
+
+// ------------------------------------------------------------
+// 0x50B400 sub_50B400 —— PassiveObject(PO)定义解析器（普通物件，非技能 PO）
+//   标签族：几何 [name]/[width]/[floating height]/[layer]；时序 [recovery time] 恢复时间；
+//   运动 [direction correct]/[move speed]/[gravity]；动作 [basic motion]/[etc motion]；
+//   攻击数据引用 [attack info]（经 sub_420BB0 打包）；[int data]/[string data] 通用袋。
+//   标签总数 13。调用者：sub_4D2D60 工厂（PO 类）。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_50B400(int a1, int a2)
+{
+  int v2; // esi
+  char result; // al
+  unsigned int v4; // edx
+  int v5; // ecx
+  const char *p_Block; // esi
+  int v7; // eax
+  int v8; // eax
+  int i; // [esp+4h] [ebp-38h] BYREF
+  void *v10; // [esp+8h] [ebp-34h] BYREF
+  char v11; // [esp+Fh] [ebp-2Dh] BYREF
+  uint8_t v12[4]; // [esp+10h] [ebp-2Ch] BYREF
+  void *Block; // [esp+14h] [ebp-28h] BYREF
+  unsigned int v14; // [esp+24h] [ebp-18h]
+  unsigned int v15; // [esp+28h] [ebp-14h]
+  int v16; // [esp+2Ch] [ebp-10h]
+  int v17; // [esp+38h] [ebp-4h]
+
+  v2 = a2;
+  v16 = dword_796E50;
+  result = sub_442A10((char)&unk_9B7A30, a2);
+  if ( result == 0 )
+    return result;
+  sub_4CF120(a1);
+  sub_443300(a1 + 172, "%s%s", (char)&unk_9B7A30);
+  v15 = 15;
+  v14 = 0;
+  LOBYTE(Block) = 0;
+  v17 = 0;
+  v10 = nullptr;
+  sub_41BFE0(&v10, szPassword);
+  LOBYTE(v17) = 1;
+  v11 = 0;
+  if ( (uint8_t)sub_443430(v12) == 0 )
+    goto LABEL_45;
+  do
+  {
+    sub_442B20(v12);
+    v4 = v14;
+    if ( v14 != 0 )
+    {
+      v5 = v14;
+      if ( v14 >= 6 )
+        v5 = 6;
+      p_Block = (const char *)Block;
+      if ( v15 < 0x10 )
+        p_Block = (const char *)&Block;
+      v7 = memcmp(p_Block, "[name]", v5);
+      if ( v7 == 0 && v14 >= 6 )
+      {
+        LOBYTE(v7) = v14 != 6;
+        if ( v7 == 0 )
+        {
+LABEL_11:
+          sub_443370();
+          continue;
+        }
+      }
+      v4 = v14;
+    }
+    if ( sub_40BF00((std::_String_base *)v12, 0, v4, "[width]", 7u) != 0 )
+    {
+      if ( sub_40BF00((std::_String_base *)v12, 0, v14, "[floating height]", 0x11u) != 0 )
+      {
+        if ( sub_40BF00((std::_String_base *)v12, 0, v14, "[layer]", 7u) != 0 )
+        {
+          if ( sub_40BF00((std::_String_base *)v12, 0, v14, "[recovery time]", 0xFu) != 0 )
+          {
+            if ( sub_40BF00((std::_String_base *)v12, 0, v14, "[direction correct]", 0x13u) != 0 )
+            {
+              if ( (uint8_t)sub_423300(v12, "[move speed]") != 0 )
+              {
+                *(uint32_t *)(a1 + 56) = sub_4423D0(nullptr);
+                *(uint32_t *)(a1 + 60) = sub_4423D0(nullptr);
+                *(uint32_t *)(a1 + 64) = sub_4423D0(nullptr);
+                *(uint32_t *)(a1 + 68) = sub_4423D0(nullptr);
+                *(uint32_t *)(a1 + 72) = sub_4423D0(nullptr);
+              }
+              else if ( (uint8_t)sub_423300(v12, "[gravity]") != 0 )
+              {
+                *(uint32_t *)(a1 + 76) = sub_4423D0(nullptr);
+              }
+              else
+              {
+                if ( (uint8_t)sub_423300(v12, "[basic motion]") != 0 )
+                  goto LABEL_11;
+                if ( (uint8_t)sub_423300(v12, "[etc motion]") != 0 )
+                {
+                  sub_4017E0(a1 + 108);
+                  while ( sub_442E10() != 0 )
+                    sub_420BB0(&v10);
+                }
+                else if ( (uint8_t)sub_423300(v12, "[attack info]") != 0 )
+                {
+                  sub_4017E0(a1 + 124);
+                  while ( sub_442E10() != 0 )
+                    sub_420BB0(&v10);
+                }
+                else if ( (uint8_t)sub_423300(v12, "[int data]") != 0 )
+                {
+                  sub_5E5260((void **)(a1 + 140));
+                  for ( i = sub_4423D0(&v11); v11 != 0; i = sub_4423D0(&v11) )
+                    sub_431230(a1 + 140, &i);
+                }
+                else if ( (uint8_t)sub_423300(v12, "[string data]") != 0 )
+                {
+                  sub_4017E0(a1 + 156);
+                  while ( sub_442E10() != 0 )
+                    sub_420BB0(&v10);
+                }
+              }
+            }
+            else
+            {
+              *(uint8_t *)(a1 + 52) = sub_4423D0(nullptr) != 0;
+            }
+          }
+          else
+          {
+            *(uint32_t *)(a1 + 48) = sub_4423D0(nullptr);
+          }
+        }
+        else
+        {
+          sub_442E10();
+          v8 = sub_41ACF0(&v10);
+          *(uint32_t *)(a1 + 44) = sub_4425F0(v8);
+        }
+      }
+      else
+      {
+        *(uint32_t *)(a1 + 40) = sub_4423D0(nullptr);
+      }
+    }
+    else
+    {
+      *(uint32_t *)(a1 + 32) = sub_4423D0(nullptr);
+      *(uint32_t *)(a1 + 36) = sub_4423D0(nullptr);
+    }
+  }
+  while ( (uint8_t)sub_443430(v12) != 0 );
+  v2 = a2;
+LABEL_45:
+  *(uint32_t *)a1 = sub_4A2F80(v2);
+  LOBYTE(v17) = 0;
+  sub_41B010(&v10);
+  if ( v15 >= 0x10 )
+    j__free(Block);
+  return 1;
+}
+
+
+// ------------------------------------------------------------
+// 0x50B840 sub_50B840 —— 技能 PassiveObject / 觉醒(overskill)定义解析器
+//   标签族：几何 [name]/[width]/[floating height]/[layer]；时序 [skill recovery time]/
+//   [over skill recovery time]（普通技能/觉醒技能 双恢复时间 —— 与 sub_50B400 [recovery time] 对照）；
+//   运动 [direction correct]/[move speed]/[gravity]；成长 [start level]/[permission level]/
+//   [artifact slot]/[learn overskill level]；动作表 [basic motion]/[walk motion]/[run motion]/
+//   [skill motion]/[over skill motion]/[response motion]/[etc motion]；
+//   攻击数据引用 [attack info]；[int data]/[string data]。标签总数 23。
+// ------------------------------------------------------------
+char /*cdecl*/ sub_50B840(int a1, int a2)
+{
+  const char *v2; // esi
+  char result; // al
+  unsigned int v4; // edx
+  int v5; // ecx
+  const char *p_Block; // esi
+  int v7; // eax
+  const CHAR *v8; // eax
+  int i; // [esp+4h] [ebp-38h] BYREF
+  unsigned int *v10; // [esp+8h] [ebp-34h] BYREF
+  char v11; // [esp+Fh] [ebp-2Dh] BYREF
+  uint8_t v12[4]; // [esp+10h] [ebp-2Ch] BYREF
+  void *Block; // [esp+14h] [ebp-28h] BYREF
+  unsigned int v14; // [esp+24h] [ebp-18h]
+  unsigned int v15; // [esp+28h] [ebp-14h]
+  int v16; // [esp+2Ch] [ebp-10h]
+  int v17; // [esp+38h] [ebp-4h]
+
+  v2 = (const char *)a2;
+  v16 = dword_796E50;
+  result = sub_442A10((char)&unk_9B7B30, a2);
+  if ( result == 0 )
+    return result;
+  sub_4CF290((char *)a1);
+  sub_443300(a1 + 332, "%s%s", (char)&unk_9B7B30);
+  v15 = 15;
+  v14 = 0;
+  LOBYTE(Block) = 0;
+  v17 = 0;
+  v10 = nullptr;
+  sub_41BFE0((void **)&v10, szPassword);
+  LOBYTE(v17) = 1;
+  v11 = 0;
+  if ( (uint8_t)sub_443430(v12) == 0 )
+    goto LABEL_63;
+  do
+  {
+    sub_442B20(v12);
+    v4 = v14;
+    if ( v14 != 0 )
+    {
+      v5 = v14;
+      if ( v14 >= 6 )
+        v5 = 6;
+      p_Block = (const char *)Block;
+      if ( v15 < 0x10 )
+        p_Block = (const char *)&Block;
+      v7 = memcmp(p_Block, "[name]", v5);
+      if ( v7 == 0 && v14 >= 6 )
+      {
+        LOBYTE(v7) = v14 != 6;
+        if ( v7 == 0 )
+          goto LABEL_45;
+      }
+      v4 = v14;
+    }
+    if ( sub_40BF00((std::_String_base *)v12, 0, v4, "[width]", 7u) == 0 )
+    {
+      *(uint32_t *)(a1 + 32) = sub_4423D0(nullptr);
+      *(uint32_t *)(a1 + 36) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( sub_40BF00((std::_String_base *)v12, 0, v14, "[floating height]", 0x11u) == 0 )
+    {
+      *(uint32_t *)(a1 + 40) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( sub_40BF00((std::_String_base *)v12, 0, v14, "[layer]", 7u) == 0 )
+    {
+      sub_442E10();
+      v8 = sub_41ACF0(&v10);
+      *(uint32_t *)(a1 + 44) = sub_4425F0(v8);
+      continue;
+    }
+    if ( sub_40BF00((std::_String_base *)v12, 0, v14, "[skill recovery time]", 0x15u) == 0 )
+    {
+      *(uint32_t *)(a1 + 48) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( sub_40BF00((std::_String_base *)v12, 0, v14, "[over skill recovery time]", 0x1Au) == 0 )
+    {
+      *(uint32_t *)(a1 + 52) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v12, "[direction correct]") != 0 )
+    {
+      *(uint8_t *)(a1 + 56) = sub_4423D0(nullptr) != 0;
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v12, "[move speed]") != 0 )
+    {
+      *(uint32_t *)(a1 + 60) = sub_4423D0(nullptr);
+      *(uint32_t *)(a1 + 64) = sub_4423D0(nullptr);
+      *(uint32_t *)(a1 + 68) = sub_4423D0(nullptr);
+      *(uint32_t *)(a1 + 72) = sub_4423D0(nullptr);
+      *(uint32_t *)(a1 + 76) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v12, "[gravity]") != 0 )
+    {
+      *(uint32_t *)(a1 + 80) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v12, "[start level]") != 0 )
+    {
+      *(uint32_t *)(a1 + 84) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v12, "[permission level]") != 0 )
+    {
+      *(uint32_t *)(a1 + 88) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v12, "[artifact slot]") != 0 )
+    {
+      *(uint32_t *)(a1 + 92) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v12, "[learn overskill level]") != 0 )
+    {
+      *(uint32_t *)(a1 + 96) = sub_4423D0(nullptr);
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v12, "[basic motion]") != 0
+      || (uint8_t)sub_423300(v12, "[walk motion]") != 0
+      || (uint8_t)sub_423300(v12, "[run motion]") != 0
+      || (uint8_t)sub_423300(v12, "[skill motion]") != 0
+      || (uint8_t)sub_423300(v12, "[over skill motion]") != 0
+      || (uint8_t)sub_423300(v12, "[response motion]") != 0 )
+    {
+LABEL_45:
+      sub_443370();
+      continue;
+    }
+    if ( (uint8_t)sub_423300(v12, "[etc motion]") != 0 )
+    {
+      sub_4017E0(a1 + 268);
+      while ( sub_442E10() != 0 )
+        sub_420BB0(&v10);
+    }
+    else if ( (uint8_t)sub_423300(v12, "[attack info]") != 0 )
+    {
+      sub_4017E0(a1 + 284);
+      while ( sub_442E10() != 0 )
+        sub_420BB0(&v10);
+    }
+    else if ( (uint8_t)sub_423300(v12, "[int data]") != 0 )
+    {
+      sub_5E5260((void **)(a1 + 300));
+      for ( i = sub_4423D0(&v11); v11 != 0; i = sub_4423D0(&v11) )
+        sub_431230(a1 + 300, &i);
+    }
+    else if ( (uint8_t)sub_423300(v12, "[string data]") != 0 )
+    {
+      sub_4017E0(a1 + 316);
+      while ( sub_442E10() != 0 )
+        sub_420BB0(&v10);
+    }
+  }
+  while ( (uint8_t)sub_443430(v12) != 0 );
+  v2 = (const char *)a2;
+LABEL_63:
+  *(uint32_t *)a1 = sub_4A2F80(dword_9B7C54, v2);
+  LOBYTE(v17) = 0;
+  sub_41B010((void **)&v10);
+  if ( v15 >= 0x10 )
+    j__free(Block);
+  return 1;
+}
+
+
+// ------------------------------------------------------------
+// 0x50BE20 sub_50BE20
+// ------------------------------------------------------------
+char **/*stdcall*/ sub_50BE20(char **a1, int a2, int a3)
+{
+  sub_509C00(a1, a2, a3);
+  return &a1[4 * a2];
+}
+
+
+
+// ------------------------------------------------------------
+// 0x50BE50 sub_50BE50
+// ------------------------------------------------------------
+int */*thiscall*/ sub_50BE50(int *this, int *a2, int a3, int a4)
+{
+  int v5; // edi
+
+  if ( a3 != a4 )
+  {
+    v5 = sub_5097A0(a4, *(this + 2), a3);
+    sub_42CC00(v5, *(this + 2));
+    *(this + 2) = v5;
+  }
+  *a2 = a3;
+  return a2;
+}
+
+
+
+// ------------------------------------------------------------
+// 0x50BEA0 sub_50BEA0
+// ------------------------------------------------------------
+void /*thiscall*/ sub_50BEA0(int *this, int a2, unsigned int a3, int a4)
+{
+  int v5; // edx
+  int v6; // ecx
+  unsigned int v7; // eax
+  int v9; // ecx
+  unsigned int v10; // eax
+  int v11; // ecx
+  int v12; // eax
+  char *v13; // ebx
+  int v14; // ecx
+  int v15; // eax
+  unsigned int v16; // edi
+  uint32_t *v17; // eax
+  int v18; // edi
+  int v19; // edi
+  uint32_t *v20; // eax
+  int v21; // [esp-18h] [ebp-4Ch]
+  void *v22; // [esp-18h] [ebp-4Ch]
+  int v23; // [esp-Ch] [ebp-40h]
+  unsigned int v24; // [esp-8h] [ebp-3Ch]
+  int v25; // [esp+0h] [ebp-34h] BYREF
+  int v26; // [esp+Ch] [ebp-28h] BYREF
+  void *v27; // [esp+10h] [ebp-24h]
+  void *Block; // [esp+1Ch] [ebp-18h]
+  int *v29; // [esp+20h] [ebp-14h]
+  int *v30; // [esp+24h] [ebp-10h]
+  int v31; // [esp+30h] [ebp-4h]
+  uint32_t *v32; // [esp+40h] [ebp+Ch]
+  int v33; // [esp+44h] [ebp+10h]
+
+  v30 = &v25;
+  v29 = this;
+  sub_509580(&v26, a4);
+  v5 = *(this + 1);
+  v6 = 0;
+  v31 = 0;
+  if ( v5 != 0 )
+    v7 = (*(this + 3) - v5) >> 4;
+  else
+    v7 = 0;
+  if ( a3 != 0 )
+  {
+    if ( v5 != 0 )
+      v6 = (*(this + 2) - v5) >> 4;
+    if ( 0xFFFFFFF - v6 < a3 )
+      sub_508F60(this);
+    if ( v5 != 0 )
+      v9 = (*(this + 2) - v5) >> 4;
+    else
+      v9 = 0;
+    if ( v7 >= a3 + v9 )
+    {
+      v17 = (uint32_t *)*(this + 2);
+      Block = v17;
+      if ( ((int)v17 - a2) >> 4 >= a3 )
+      {
+        v19 = (int)&v17[-4 * a3];
+        v20 = sub_5099F0(v19, (int)v17, v17);
+        v22 = Block;
+        *(this + 2) = (int)v20;
+        sub_5099D0(a2, v19, v22);
+        sub_5099A0(a2, a2 + 16 * a3, &v26);
+      }
+      else
+      {
+        sub_5099F0(a2, (int)v17, (uint32_t *)(a2 + 16 * a3));
+        v24 = a3 - ((*(this + 2) - a2) >> 4);
+        v23 = *(this + 2);
+        LOBYTE(v31) = 3;
+        sub_50BE20(v23, v24, &v26);
+        v18 = 16 * a3 + *(this + 2);
+        *(this + 2) = v18;
+        v31 = 0;
+        sub_5099A0(a2, v18 - 16 * a3, &v26);
+      }
+    }
+    else
+    {
+      if ( 0xFFFFFFF - (v7 >> 1) >= v7 )
+        v10 = (v7 >> 1) + v7;
+      else
+        v10 = 0;
+      if ( v5 != 0 )
+        v11 = (*(this + 2) - v5) >> 4;
+      else
+        v11 = 0;
+      if ( v10 < a3 + v11 )
+      {
+        if ( v5 != 0 )
+          v12 = (*(this + 2) - v5) >> 4;
+        else
+          v12 = 0;
+        v10 = a3 + v12;
+      }
+      v33 = 16 * v10;
+      v13 = (char *)operator new(16 * v10);
+      v21 = *(this + 1);
+      Block = v13;
+      LOBYTE(v31) = 1;
+      v32 = sub_5099F0(v21, a2, v13);
+      sub_509C00(v32, a3, (int)&v26);
+      sub_5099F0(a2, *(this + 2), &v32[4 * a3]);
+      v14 = *(this + 1);
+      if ( v14 != 0 )
+        v15 = (*(this + 2) - v14) >> 4;
+      else
+        v15 = 0;
+      v16 = v15 + a3;
+      if ( v14 != 0 )
+      {
+        sub_42CC00(v14, *(this + 2));
+        j__free((void *)*(this + 1));
+      }
+      *(this + 3) = (int)&v13[v33];
+      *(this + 2) = (int)&v13[16 * v16];
+      *(this + 1) = (int)v13;
+    }
+  }
+  if ( v27 != nullptr )
+    j__free(v27);
+}
+

@@ -1,0 +1,9 @@
+CLASS .?AVCNChangeDamageBonusRate@@  slots=30  fields_candidate=6
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   2  0064CB10  if ( *(uint8_t *)(this + 92) != 0 && (*(uint32_t *)(dword_8F7A24 + 12)
++0x0050 uint8_t    2  0064CB10  if ( *(uint8_t *)(this + 80) != 0 && *(int *)(this + 88) > 0 )
++0x0054 uint32_t   3  0064CA60  fld_54 = *(uint32_t *)(this + 84);
++0x0058 uint32_t   4  0064CB10  if ( *(uint8_t *)(this + 80) != 0 && *(int *)(this + 88) > 0 )
++0x005C uint8_t    1  0064CB10  if ( *(uint8_t *)(this + 92) != 0 && (*(uint32_t *)(dword_8F7A24 + 12)
++0x0060 uint32_t   4  0064CB10  if ( *(uint32_t *)(this + 96) == 0 )

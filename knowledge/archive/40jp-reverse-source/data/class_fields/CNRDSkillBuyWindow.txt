@@ -1,0 +1,10 @@
+CLASS .?AVCNRDSkillBuyWindow@@  slots=14  fields_candidate=7
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   3  00550480  fld_4 = *(uint32_t *)(this + 4);
++0x0008 uint32_t   1  00550480  fld_82 = *(uint32_t *)(*(uint32_t *)(this + 8) + 2504);
++0x000C uint32_t   1  00540360  return sub_44AB50(*(uint32_t **)(this + 8), *(uint32_t *)(this + 12), 
++0x0014 uint32_t   3  00550480  if ( *(uint8_t *)(*(uint32_t *)(this + 20) + 108) != 0 )
++0x0038 uint32_t   2  00550480  *(uint32_t *)(this + 56),
++0x003C uint32_t   1  00550480  fld_3C = *(uint32_t *)(this + 60);
++0x0144 uint32_t   3  00550480  if ( dword_9B88CC != pThis_44 || dword_795374 != *(uint32_t *)(this + 

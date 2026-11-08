@@ -1,0 +1,4 @@
+CLASS .?AVCNRDGuildWindow@@  slots=14  fields_candidate=1
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   2  00638CA0  (640 - *(uint32_t *)(*(uint32_t *)(this + 8) + 28)) / 2,

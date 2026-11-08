@@ -1,0 +1,996 @@
+gfx_texture.cpp	00410300	+0x14	-	S2	左边界 X	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	00410300	+0x14	-	S2	左边界 X	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	00410300	+0x1C	-	S2	尺寸差 dX	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	00410300	+0x18	-	S2	上边界 Y	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	00410300	+0x18	-	S2	上边界 Y	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	00410300	+0x20	-	S2	宽（源矩形）	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	00410300	+0x14	-	S2	左边界 X	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	00410300	+0x18	-	S2	上边界 Y	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	00410300	+0x20	-	S2	宽（源矩形）	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	00410300	+0x1C	-	S2	尺寸差 dX	// 0x410300 sub_410300 —— 缩放与镜像纹理绘制（正负分支）
+gfx_texture.cpp	004107D0	+0x14	-	S2	左边界 X	// 0x4107D0 sub_4107D0 —— 块传输分派（纹理块 / 位图 Blt）
+gfx_texture.cpp	004107D0	+0x20	-	S2	宽（源矩形）	// 0x4107D0 sub_4107D0 —— 块传输分派（纹理块 / 位图 Blt）
+gfx_texture.cpp	004107D0	+0x78	-	S2	目标矩形槽	// 0x4107D0 sub_4107D0 —— 块传输分派（纹理块 / 位图 Blt）
+gfx_texture.cpp	004107D0	+0x1C	-	S2	尺寸差 dX	// 0x4107D0 sub_4107D0 —— 块传输分派（纹理块 / 位图 Blt）
+gfx_texture.cpp	00410B60	+0x14	-	S2	左边界 X	// 0x410B60 sub_410B60 —— 绘制入口（按旋转角分派）
+gfx_texture.cpp	00410C80	+0x1C	-	S2	尺寸差 dX	// 0x410C80 sub_410C80 —— 缩放块传输（7 号缩放 / 逐行拷贝）
+gfx_texture.cpp	00410C80	+0x20	-	S2	宽（源矩形）	// 0x410C80 sub_410C80 —— 缩放块传输（7 号缩放 / 逐行拷贝）
+gfx_texture.cpp	00410C80	+0x7C	-	S2	目标矩形续槽	// 0x410C80 sub_410C80 —— 缩放块传输（7 号缩放 / 逐行拷贝）
+gfx_texture.cpp	00410C80	+0x1C	-	S2	尺寸差 dX	// 0x410C80 sub_410C80 —— 缩放块传输（7 号缩放 / 逐行拷贝）
+gfx_texture.cpp	00410C80	+0x78	-	S2	目标矩形槽	// 0x410C80 sub_410C80 —— 缩放块传输（7 号缩放 / 逐行拷贝）
+gfx_texture.cpp	00410F30	+0x64	-	S2	缩放源尺寸 Y	// 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+gfx_texture.cpp	00410F30	+0x1C	-	S2	尺寸差 dX	// 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+gfx_texture.cpp	00410F30	+0x20	-	S2	宽（源矩形）	// 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+gfx_texture.cpp	00410F30	+0x7C	-	S2	目标矩形续槽	// 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+gfx_texture.cpp	00410F30	+0x70	-	S2	裁剪矩形缓存 Y	// 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+gfx_texture.cpp	00410F30	+0x60	-	S2	缩放源尺寸 X	// 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+gfx_texture.cpp	00410F30	+0x64	-	S2	缩放源尺寸 Y	// 0x410F30 sub_410F30 —— 缩放绘制（中心取 this+96.100 半值）
+gfx_texture.cpp	00411080	+0x60	-	S2	缩放源尺寸 X	// 0x411080 sub_411080 —— 缩放绘制（动态 alpha 掩码变体）
+gfx_texture.cpp	00411080	+0x64	-	S2	缩放源尺寸 Y	// 0x411080 sub_411080 —— 缩放绘制（动态 alpha 掩码变体）
+gfx_texture.cpp	00411080	+0x1C	-	S2	尺寸差 dX	// 0x411080 sub_411080 —— 缩放绘制（动态 alpha 掩码变体）
+gfx_texture.cpp	00411080	+0x20	-	S2	宽（源矩形）	// 0x411080 sub_411080 —— 缩放绘制（动态 alpha 掩码变体）
+gfx_texture.cpp	00411080	+0x7C	-	S2	目标矩形续槽	// 0x411080 sub_411080 —— 缩放绘制（动态 alpha 掩码变体）
+gfx_texture.cpp	00411080	+0x60	-	S2	缩放源尺寸 X	// 0x411080 sub_411080 —— 缩放绘制（动态 alpha 掩码变体）
+gfx_texture.cpp	00411080	+0x64	-	S2	缩放源尺寸 Y	// 0x411080 sub_411080 —— 缩放绘制（动态 alpha 掩码变体）
+gfx_texture.cpp	004113F0	+0x10	-	S2	行指针表槽	// 0x4113F0 sub_4113F0 —— 指定色转透明（32bpp）
+gfx_texture.cpp	00411460	+0x14	-	S2	左边界 X	// 0x411460 sub_411460 —— 整幅填充（32bpp）
+gfx_texture.cpp	00411460	+0x10	-	S2	行指针表槽	// 0x411460 sub_411460 —— 整幅填充（32bpp）
+gfx_texture.cpp	004114C0	+0x10	-	S2	行指针表槽	// 0x4114C0 sub_4114C0 —— 单像素取色（32bpp）
+gfx_texture.cpp	00411590	+0x18	-	S2	上边界 Y	// 0x411590 sub_411590 —— 图像存盘（32bpp 序列化）
+gfx_texture.cpp	00411590	+0x14	-	S2	左边界 X	// 0x411590 sub_411590 —— 图像存盘（32bpp 序列化）
+gfx_texture.cpp	00411590	+0x14	-	S2	左边界 X	// 0x411590 sub_411590 —— 图像存盘（32bpp 序列化）
+gfx_texture.cpp	004116A0	+0x18	-	S2	上边界 Y	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	004116A0	+0x14	-	S2	左边界 X	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	004116A0	+0x18	-	S2	上边界 Y	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	004116A0	+0x14	-	S2	左边界 X	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	004116A0	+0x18	-	S2	上边界 Y	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	004116A0	+0x18	-	S2	上边界 Y	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	004116A0	+0xC	-	S2	行表/数据基址槽	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	004116A0	+0x18	-	S2	上边界 Y	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	004116A0	+0x14	-	S2	左边界 X	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	004116A0	+0x14	-	S2	左边界 X	// 0x4116A0 sub_4116A0
+gfx_texture.cpp	00411EB0	+0x14	-	S2	左边界 X	// 0x411EB0 sub_411EB0 —— 尺寸头预读与内存需求估算
+gfx_texture.cpp	00411EB0	+0x18	-	S2	上边界 Y	// 0x411EB0 sub_411EB0 —— 尺寸头预读与内存需求估算
+gfx_texture.cpp	00411FD0	+0x18	-	S2	上边界 Y	// 0x411FD0 sub_411FD0 —— 行指针表重建（步长 this+80）
+gfx_texture.cpp	00411FD0	+0xC	-	S2	行表/数据基址槽	// 0x411FD0 sub_411FD0 —— 行指针表重建（步长 this+80）
+gfx_texture.cpp	00411FD0	+0x18	-	S2	上边界 Y	// 0x411FD0 sub_411FD0 —— 行指针表重建（步长 this+80）
+gfx_texture.cpp	00412040	+0x18	-	S2	上边界 Y	// 0x412040 sub_412040 —— 图像存盘（16bpp 行宽变体）
+gfx_texture.cpp	00412040	+0x14	-	S2	左边界 X	// 0x412040 sub_412040 —— 图像存盘（16bpp 行宽变体）
+gfx_texture.cpp	00412040	+0x14	-	S2	左边界 X	// 0x412040 sub_412040 —— 图像存盘（16bpp 行宽变体）
+gfx_texture.cpp	00412150	+0x14	-	S2	左边界 X	// 0x412150 sub_412150
+gfx_texture.cpp	00412150	+0x18	-	S2	上边界 Y	// 0x412150 sub_412150
+gfx_texture.cpp	00412150	+0x14	-	S2	左边界 X	// 0x412150 sub_412150
+gfx_texture.cpp	00412150	+0x18	-	S2	上边界 Y	// 0x412150 sub_412150
+gfx_texture.cpp	00412150	+0x18	-	S2	上边界 Y	// 0x412150 sub_412150
+gfx_texture.cpp	00412150	+0x18	-	S2	上边界 Y	// 0x412150 sub_412150
+gfx_texture.cpp	00412150	+0x14	-	S2	左边界 X	// 0x412150 sub_412150
+gfx_texture.cpp	00412150	+0x14	-	S2	左边界 X	// 0x412150 sub_412150
+gfx_texture.cpp	00412150	+0x14	-	S2	左边界 X	// 0x412150 sub_412150
+gfx_texture.cpp	004125D0	+0x88	-	S2b	决定	// 0x4125D0 sub_4125D0 —— 尺寸头预读（bpp 由 this+136 决定）
+gfx_texture.cpp	004125D0	+0x88	-	S2b	决定	// 0x4125D0 sub_4125D0 —— 尺寸头预读（bpp 由 this+136 决定）
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x14	-	S2	左边界 X	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x14	-	S2	左边界 X	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x14	-	S2	左边界 X	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x14	-	S2	左边界 X	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x18	-	S2	上边界 Y	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x14	-	S2	左边界 X	// 0x412700 sub_412700
+gfx_texture.cpp	00412700	+0x14	-	S2	左边界 X	// 0x412700 sub_412700
+gfx_texture.cpp	00412AE0	+0x10	-	S2	行指针表槽	// 0x412AE0 sub_412AE0 —— 指定色转透明（16bpp A1R5G5B5）
+gfx_texture.cpp	00412B70	+0x18	-	S2	上边界 Y	// 0x412B70 sub_412B70 —— 整幅填充（16bpp 批量）
+gfx_texture.cpp	00412B70	+0x14	-	S2	左边界 X	// 0x412B70 sub_412B70 —— 整幅填充（16bpp 批量）
+gfx_texture.cpp	00412B70	+0x10	-	S2	行指针表槽	// 0x412B70 sub_412B70 —— 整幅填充（16bpp 批量）
+gfx_texture.cpp	00412C20	+0x10	-	S2	行指针表槽	// 0x412C20 sub_412C20 —— 单像素置色（16bpp）
+gfx_texture.cpp	00412C20	+0x10	-	S2	行指针表槽	// 0x412C20 sub_412C20 —— 单像素置色（16bpp）
+gfx_texture.cpp	00412C80	+0x10	-	S2	行指针表槽	// 0x412C80 sub_412C80 —— 单像素取色（16bpp 反折叠）
+gfx_texture.cpp	00412CF0	+0x10	-	S2	行指针表槽	// 0x412CF0 sub_412CF0 —— 水平线段填充（16bpp）
+gfx_texture.cpp	00412DA0	+0x10	-	S2	行指针表槽	// 0x412DA0 sub_412DA0 —— 垂直线段填充（16bpp）
+gfx_texture.cpp	00412E40	+0x10	-	S2	行指针表槽	// 0x412E40 sub_412E40 —— 指定色转透明（16bpp R5G6B5 变体）
+gfx_texture.cpp	00412ED0	+0x18	-	S2	上边界 Y	// 0x412ED0 sub_412ED0 —— 整幅填充（16bpp R5G6B5 变体）
+gfx_texture.cpp	00412ED0	+0x14	-	S2	左边界 X	// 0x412ED0 sub_412ED0 —— 整幅填充（16bpp R5G6B5 变体）
+gfx_texture.cpp	00412ED0	+0x10	-	S2	行指针表槽	// 0x412ED0 sub_412ED0 —— 整幅填充（16bpp R5G6B5 变体）
+gfx_texture.cpp	00412F80	+0x10	-	S2	行指针表槽	// 0x412F80 sub_412F80 —— 矩形区域填充（16bpp R5G6B5）
+gfx_texture.cpp	00413040	+0x10	-	S2	行指针表槽	// 0x413040 sub_413040 —— 单像素置色（16bpp R5G6B5 变体）
+gfx_texture.cpp	00413040	+0x10	-	S2	行指针表槽	// 0x413040 sub_413040 —— 单像素置色（16bpp R5G6B5 变体）
+gfx_texture.cpp	004130A0	+0x10	-	S2	行指针表槽	// 0x4130A0 sub_4130A0 —— 单像素取色（16bpp R5G6B5 变体）
+gfx_texture.cpp	00413110	+0x10	-	S2	行指针表槽	// 0x413110 sub_413110 —— 水平线段填充（16bpp R5G6B5 变体）
+gfx_texture.cpp	004131C0	+0x10	-	S2	行指针表槽	// 0x4131C0 sub_4131C0 —— 垂直线段填充（16bpp R5G6B5 变体）
+gfx_texture.cpp	004132E0	+0x18	-	S2	上边界 Y	// 0x4132E0 sub_4132E0 —— 行指针表重建（步长 4*this+20）
+gfx_texture.cpp	004132E0	+0x14	-	S2	左边界 X	// 0x4132E0 sub_4132E0 —— 行指针表重建（步长 4*this+20）
+gfx_texture.cpp	004132E0	+0xC	-	S2	行表/数据基址槽	// 0x4132E0 sub_4132E0 —— 行指针表重建（步长 4*this+20）
+gfx_texture.cpp	004132E0	+0x18	-	S2	上边界 Y	// 0x4132E0 sub_4132E0 —— 行指针表重建（步长 4*this+20）
+gfx_texture.cpp	00413360	+0x10	-	S2	行指针表槽	// 0x413360 sub_413360 —— 指定色 alpha 清 0（32bpp）
+gfx_texture.cpp	004133D0	+0x10	-	S2	行指针表槽	// 0x4133D0 sub_4133D0 —— 单像素置色（32bpp）
+gfx_texture.cpp	004133D0	+0x10	-	S2	行指针表槽	// 0x4133D0 sub_4133D0 —— 单像素置色（32bpp）
+gfx_texture.cpp	00413420	+0x10	-	S2	行指针表槽	// 0x413420 sub_413420 —— 垂直线段填充（32bpp）
+gfx_texture.cpp	004134B0	+0x18	-	S2	上边界 Y	// 0x4134B0 sub_4134B0 —— 图像存盘（标志 1 / 32bpp）
+gfx_texture.cpp	004134B0	+0x14	-	S2	左边界 X	// 0x4134B0 sub_4134B0 —— 图像存盘（标志 1 / 32bpp）
+gfx_texture.cpp	004134B0	+0x14	-	S2	左边界 X	// 0x4134B0 sub_4134B0 —— 图像存盘（标志 1 / 32bpp）
+gfx_texture.cpp	00413580	+0x14	-	S2	左边界 X	// 0x413580 sub_413580 —— 图像读入（标志 1 / 32bpp）
+gfx_texture.cpp	00413580	+0x14	-	S2	左边界 X	// 0x413580 sub_413580 —— 图像读入（标志 1 / 32bpp）
+gfx_texture.cpp	00413800	+0x68	-	S2	裁剪矩形缓存 X	// 0x413800 sub_413800 —— 图像状态复位
+gfx_texture.cpp	004138A0	+0x68	-	S2	裁剪矩形缓存 X	// 0x4138A0 sub_4138A0 —— 格式分派 Blt（3 / 7）
+gfx_texture.cpp	004138A0	+0x68	-	S2	裁剪矩形缓存 X	// 0x4138A0 sub_4138A0 —— 格式分派 Blt（3 / 7）
+gfx_texture.cpp	00413920	+0x18	-	S2	上边界 Y	// 0x413920 sub_413920 —— 存盘为 1 字节/像素（8bpp 模板）
+gfx_texture.cpp	00413920	+0x14	-	S2	左边界 X	// 0x413920 sub_413920 —— 存盘为 1 字节/像素（8bpp 模板）
+gfx_texture.cpp	00413920	+0x18	-	S2	上边界 Y	// 0x413920 sub_413920 —— 存盘为 1 字节/像素（8bpp 模板）
+gfx_texture.cpp	00413A60	+0x18	-	S2	上边界 Y	// 0x413A60 sub_413A60 —— 读入 1 字节/像素并展开 ARGB
+gfx_texture.cpp	00413A60	+0x18	-	S2	上边界 Y	// 0x413A60 sub_413A60 —— 读入 1 字节/像素并展开 ARGB
+gfx_texture.cpp	00413CE0	+0x4C	-	S2	字体/位图附属槽	// 0x413CE0 sub_413CE0 —— 图像对象析构（三对象释放）
+gfx_texture.cpp	00413CE0	+0x78	-	S2	目标矩形槽	// 0x413CE0 sub_413CE0 —— 图像对象析构（三对象释放）
+gfx_texture.cpp	00413D40	+0x18	-	S2	上边界 Y	// 0x413D40 sub_413D40 —— 行指针表重建（像素步长变体）
+gfx_texture.cpp	00413D40	+0xC	-	S2	行表/数据基址槽	// 0x413D40 sub_413D40 —— 行指针表重建（像素步长变体）
+gfx_texture.cpp	00413D40	+0x18	-	S2	上边界 Y	// 0x413D40 sub_413D40 —— 行指针表重建（像素步长变体）
+gfx_texture.cpp	00413EE0	+0x78	-	S2	目标矩形槽	// 0x413EE0 sub_413EE0
+gfx_texture.cpp	00413EE0	+0x14	-	S2	左边界 X	// 0x413EE0 sub_413EE0
+gfx_texture.cpp	00413EE0	+0x14	-	S2	左边界 X	// 0x413EE0 sub_413EE0
+gfx_texture.cpp	00413EE0	+0x18	-	S2	上边界 Y	// 0x413EE0 sub_413EE0
+gfx_texture.cpp	00414090	+0x78	-	S2	目标矩形槽	// 0x414090 sub_414090 —— 窗口尺寸调整（带边框变体）
+gfx_texture.cpp	00414090	+0x14	-	S2	左边界 X	// 0x414090 sub_414090 —— 窗口尺寸调整（带边框变体）
+gfx_texture.cpp	00414090	+0x14	-	S2	左边界 X	// 0x414090 sub_414090 —— 窗口尺寸调整（带边框变体）
+gfx_texture.cpp	00414090	+0x18	-	S2	上边界 Y	// 0x414090 sub_414090 —— 窗口尺寸调整（带边框变体）
+gfx_texture.cpp	004145E0	+0x34	-	S2	图像对象槽	// 0x4145E0 sub_4145E0 —— 声音槽位表释放
+gfx_texture.cpp	00414850	+0x34	-	S2	图像对象槽	// 0x414850 sub_414850 —— 声音缓冲创建（描述结构 → vt+12）
+gfx_texture.cpp	00414E00	+0x34	-	S2	图像对象槽	// 0x414E00 sub_414E00 —— COM 接口释放（五个）
+gfx_texture.cpp	004150E0	+0x30	-	S2	字形/文本对象槽	// 0x4150E0 sub_4150E0 —— 惰性创建字符串参数包
+gfx_texture.cpp	00415B80	+0x4	-	S2	纹理就绪/激活标志	// 0x415B80 sub_415B80 —— 580B 记录矢量插入（MSVC vector 实例）
+gfx_texture.cpp	00415B80	+0xC	-	S2	行表/数据基址槽	// 0x415B80 sub_415B80 —— 580B 记录矢量插入（MSVC vector 实例）
+gfx_texture.cpp	00415B80	+0x4	-	S2	纹理就绪/激活标志	// 0x415B80 sub_415B80 —— 580B 记录矢量插入（MSVC vector 实例）
+gfx_texture.cpp	00415E70	+0x4	-	S2	纹理就绪/激活标志	// 0x415E70 sub_415E70 —— 指定位置插入一条 580B 记录（返回新元素）
+gfx_texture.cpp	00415EE0	+0x4	-	S2	纹理就绪/激活标志	// 0x415EE0 sub_415EE0 —— 尾插一条 580B 记录（满则走插入路径）
+gfx_texture.cpp	004164C0	+0x18	-	S2	上边界 Y	// SECTION 0x4164C0 — string/vector 容器工具
+gfx_texture.cpp	004164C0	+0x18	-	S2	上边界 Y	// SECTION 0x4164C0 — string/vector 容器工具
+gfx_texture.cpp	004164C0	+0x14	-	S2	左边界 X	// SECTION 0x4164C0 — string/vector 容器工具
+gfx_texture.cpp	00416890	+0x4	-	S2	纹理就绪/激活标志	// SECTION 0x416890 — 字形/文本对象容器（大函数，字体缓存管理）
+gfx_texture.cpp	00416890	+0xC	-	S2	行表/数据基址槽	// SECTION 0x416890 — 字形/文本对象容器（大函数，字体缓存管理）
+gfx_texture.cpp	00416890	+0x4	-	S2	纹理就绪/激活标志	// SECTION 0x416890 — 字形/文本对象容器（大函数，字体缓存管理）
+gfx_texture.cpp	00416890	+0x4	-	S2	纹理就绪/激活标志	// SECTION 0x416890 — 字形/文本对象容器（大函数，字体缓存管理）
+gfx_texture.cpp	00416890	+0x4	-	S2	纹理就绪/激活标志	// SECTION 0x416890 — 字形/文本对象容器（大函数，字体缓存管理）
+gfx_texture.cpp	00416BD0	+0x4	-	S2	纹理就绪/激活标志	// 0x416BD0 sub_416BD0 —— 指定位置插入一条 28B 记录（返回新元素）
+gfx_texture.cpp	00416C40	+0x4	-	S2	纹理就绪/激活标志	// 0x416C40 sub_416C40 —— 尾插一条 28B 记录（满则走插入路径）
+gfx_texture.cpp	00417030	+0x14	-	S2	左边界 X	// 0x417030 sub_417030
+gfx_texture.cpp	00417030	+0x10	-	S2	行指针表槽	// 0x417030 sub_417030
+gfx_texture.cpp	00417150	+0x78	-	S2	目标矩形槽	// 0x417150 sub_417150 —— 文本绘制核心（查字形块 + 裁剪 + 块位图提交）
+gfx_texture.cpp	00417150	+0x7C	-	S2	目标矩形续槽	// 0x417150 sub_417150 —— 文本绘制核心（查字形块 + 裁剪 + 块位图提交）
+gfx_texture.cpp	00417150	+0x4C	-	S2	字体/位图附属槽	// 0x417150 sub_417150 —— 文本绘制核心（查字形块 + 裁剪 + 块位图提交）
+gfx_texture.cpp	00417150	+0x64	-	S2	缩放源尺寸 Y	// 0x417150 sub_417150 —— 文本绘制核心（查字形块 + 裁剪 + 块位图提交）
+gfx_texture.cpp	00417450	+0x4C	-	S2	字体/位图附属槽	// 0x417450 sub_417450 —— 字体写盘（5 字段 + 宽度表 + 各字形 vt+104）
+gfx_texture.cpp	004174F0	+0x4C	-	S2	字体/位图附属槽	// 0x4174F0 sub_4174F0 —— 字体读盘（5 字段 + 分配字形矢量 + 重建）
+gfx_texture.cpp	004174F0	+0x4C	-	S2	字体/位图附属槽	// 0x4174F0 sub_4174F0 —— 字体读盘（5 字段 + 分配字形矢量 + 重建）
+gfx_texture.cpp	004174F0	+0x4C	-	S2	字体/位图附属槽	// 0x4174F0 sub_4174F0 —— 字体读盘（5 字段 + 分配字形矢量 + 重建）
+gfx_texture.cpp	00417B60	+0x68	-	S2	裁剪矩形缓存 X	// 0x417B60 sub_417B60
+gfx_texture.cpp	00417B60	+0x64	-	S2	缩放源尺寸 Y	// 0x417B60 sub_417B60
+gfx_texture.cpp	00417B60	+0x70	-	S2	裁剪矩形缓存 Y	// 0x417B60 sub_417B60
+gfx_texture.cpp	00417B60	+0xC	-	S2	行表/数据基址槽	// 0x417B60 sub_417B60
+gfx_texture.cpp	00417B60	+0x4C	-	S2	字体/位图附属槽	// 0x417B60 sub_417B60
+gfx_texture.cpp	00417B60	+0x4C	-	S2	字体/位图附属槽	// 0x417B60 sub_417B60
+gfx_texture.cpp	00417EE0	+0x4C	-	S2	字体/位图附属槽	// 0x417EE0 sub_417EE0 —— 字体对象 D3D 路径读盘（表面重建）
+gfx_texture.cpp	00417EE0	+0x4C	-	S2	字体/位图附属槽	// 0x417EE0 sub_417EE0 —— 字体对象 D3D 路径读盘（表面重建）
+gfx_texture.cpp	004182C0	+0x4	-	S2	纹理就绪/激活标志	// 0x4182C0 sub_4182C0 —— 8B 元素矢量插入（MSVC _Insert_n 实例）
+gfx_texture.cpp	004182C0	+0xC	-	S2	行表/数据基址槽	// 0x4182C0 sub_4182C0 —— 8B 元素矢量插入（MSVC _Insert_n 实例）
+gfx_texture.cpp	004182C0	+0x4	-	S2	纹理就绪/激活标志	// 0x4182C0 sub_4182C0 —— 8B 元素矢量插入（MSVC _Insert_n 实例）
+gfx_texture.cpp	004182C0	+0x4	-	S2	纹理就绪/激活标志	// 0x4182C0 sub_4182C0 —— 8B 元素矢量插入（MSVC _Insert_n 实例）
+gfx_texture.cpp	00418540	+0x4	-	S2	纹理就绪/激活标志	// 0x418540 sub_418540 —— 8B 元素矢量 resize
+gfx_texture.cpp	004186C0	+0x2C	-	S2	文本宽度槽	// 0x4186C0 sub_4186C0 —— 单字形栅格化与缓存（50 块轮转）
+gfx_texture.cpp	004186C0	+0x2C	-	S2	文本宽度槽	// 0x4186C0 sub_4186C0 —— 单字形栅格化与缓存（50 块轮转）
+gfx_texture.cpp	004186C0	+0x2A	-	S2	文本宽度表附属槽	// 0x4186C0 sub_4186C0 —— 单字形栅格化与缓存（50 块轮转）
+gfx_texture.cpp	004186C0	+0x2A	-	S2	文本宽度表附属槽	// 0x4186C0 sub_4186C0 —— 单字形栅格化与缓存（50 块轮转）
+gfx_texture.cpp	004186C0	+0x2A	-	S2	文本宽度表附属槽	// 0x4186C0 sub_4186C0 —— 单字形栅格化与缓存（50 块轮转）
+gfx_texture.cpp	00418CD0	+0x190	-	S2	图像包记录下标（Load 解析）	// 0x418CD0 sub_418CD0
+gfx_texture.cpp	00418DD0	+0x34	-	S2	图像对象槽	// 0x418DD0 sub_418DD0
+gfx_texture.cpp	00418DD0	+0x34	-	S2	图像对象槽	// 0x418DD0 sub_418DD0
+gfx_texture.cpp	00418E20	+0x34	-	S2	图像对象槽	// 0x418E20 sub_418E20
+gfx_texture.cpp	00418FD0	+0x2C	-	S2	文本宽度槽	// 0x418FD0 sub_418FD0 —— CNImagePackEx 资源释放（目录归还 + 名字串清理）
+gfx_texture.cpp	00419070	+0x4	-	S2	纹理就绪/激活标志	// 0x419070 sub_419070
+gfx_texture.cpp	00419070	+0xC	-	S2	行表/数据基址槽	// 0x419070 sub_419070
+gfx_texture.cpp	00419070	+0x4	-	S2	纹理就绪/激活标志	// 0x419070 sub_419070
+gfx_texture.cpp	00419070	+0x4	-	S2	纹理就绪/激活标志	// 0x419070 sub_419070
+gfx_texture.cpp	004193D0	+0x4	-	S2	纹理就绪/激活标志	// 0x4193D0 sub_4193D0 —— 12B 目录矢量 resize
+gfx_texture.cpp	00419550	+0x60	-	S2	缩放源尺寸 X	// 0x419550 sub_419550
+gfx_texture.cpp	00419550	+0x34	-	S2	图像对象槽	// 0x419550 sub_419550
+gfx_texture.cpp	00419550	+0x60	-	S2	缩放源尺寸 X	// 0x419550 sub_419550
+gfx_texture.cpp	0041A020	+0xC	-	S2	行表/数据基址槽	// 0x41A020 sub_41A020 —— deque 中段删除（erase 区间）
+gfx_texture.cpp	0041A020	+0x10	-	S2	行指针表槽	// 0x41A020 sub_41A020 —— deque 中段删除（erase 区间）
+gfx_texture.cpp	0041A020	+0xC	-	S2	行表/数据基址槽	// 0x41A020 sub_41A020 —— deque 中段删除（erase 区间）
+gfx_texture.cpp	0041A020	+0x10	-	S2	行指针表槽	// 0x41A020 sub_41A020 —— deque 中段删除（erase 区间）
+gfx_texture.cpp	0041A020	+0xC	-	S2	行表/数据基址槽	// 0x41A020 sub_41A020 —— deque 中段删除（erase 区间）
+gfx_texture.cpp	0041A020	+0x10	-	S2	行指针表槽	// 0x41A020 sub_41A020 —— deque 中段删除（erase 区间）
+gfx_texture.cpp	0041A340	+0xC	-	S2	行表/数据基址槽	// 0x41A340 sub_41A340 —— deque 块表扩容（4B 元素页表）
+gfx_texture.cpp	0041A490	+0x10	-	S2	行指针表槽	// 0x41A490 sub_41A490 —— deque 尾插（惰性页分配）
+gfx_texture.cpp	0041A490	+0x10	-	S2	行指针表槽	// 0x41A490 sub_41A490 —— deque 尾插（惰性页分配）
+gfx_texture.cpp	0041A990	+0x4	-	S2	纹理就绪/激活标志	// 0x41A990 sub_41A990 —— vector<T 4B> 下标取值（越界抛）
+gfx_texture.cpp	0041A9C0	+0x4	-	S2	纹理就绪/激活标志	// 0x41A9C0 sub_41A9C0 —— vector<T 12B> 下标取值（越界抛）
+gfx_texture.cpp	0041AA00	+0x4	-	S2	纹理就绪/激活标志	// 0x41AA00 sub_41AA00 —— vector<T 4B> 批量插入（insert(pos, n, val) 实例）
+gfx_texture.cpp	0041AA00	+0x4	-	S2	纹理就绪/激活标志	// 0x41AA00 sub_41AA00 —— vector<T 4B> 批量插入（insert(pos, n, val) 实例）
+gfx_texture.cpp	0041AC90	+0x4	-	S2	纹理就绪/激活标志	// 0x41AC90 sub_41AC90 —— 槽位数据寻址（HIWORD 选单元 + LOWORD 选项）
+gfx_texture.cpp	0041AD10	+0x4	-	S2	纹理就绪/激活标志	// 0x41AD10 sub_41AD10 —— 12B 单元链表尾插（写入槽索引）
+gfx_texture.cpp	0041AE90	+0x4	-	S2	纹理就绪/激活标志	// 0x41AE90 sub_41AE90 —— 槽位池释放（位图回收 + 父级链表摘除）【推断】
+gfx_texture.cpp	0041AFC0	+0x4	-	S2	纹理就绪/激活标志	// 0x41AFC0 sub_41AFC0 —— 池句柄释放入口（HIWORD 选级 → 0x41AE90）
+gfx_texture.cpp	0041B120	+0x4	-	S2	纹理就绪/激活标志	// 0x41B120 sub_41B120 —— 12B 单元 vector 析构（区间销毁 + 释放缓冲）
+gfx_texture.cpp	0041B310	+0x4	-	S2	纹理就绪/激活标志	// 0x41B310 sub_41B310 —— 槽位池析构（位图数组 + 9 级槽链表）
+gfx_texture.cpp	0041B310	+0x14	-	S2	左边界 X	// 0x41B310 sub_41B310 —— 槽位池析构（位图数组 + 9 级槽链表）
+gfx_texture.cpp	0041B550	+0x4	-	S2	纹理就绪/激活标志	// 0x41B550 sub_41B550 —— 外层池数组析构（vector<T*> → 逐项 0x41B310 + free）
+gfx_texture.cpp	0041B660	+0x4	-	S2	纹理就绪/激活标志	// 0x41B660 sub_41B660 —— 12B 单元 insert(pos, n, val) 核心
+gfx_texture.cpp	0041B660	+0xC	-	S2	行表/数据基址槽	// 0x41B660 sub_41B660 —— 12B 单元 insert(pos, n, val) 核心
+gfx_texture.cpp	0041B660	+0x4	-	S2	纹理就绪/激活标志	// 0x41B660 sub_41B660 —— 12B 单元 insert(pos, n, val) 核心
+gfx_texture.cpp	0041B660	+0x4	-	S2	纹理就绪/激活标志	// 0x41B660 sub_41B660 —— 12B 单元 insert(pos, n, val) 核心
+gfx_texture.cpp	0041B660	+0x4	-	S2	纹理就绪/激活标志	// 0x41B660 sub_41B660 —— 12B 单元 insert(pos, n, val) 核心
+gfx_texture.cpp	0041B970	+0x4	-	S2	纹理就绪/激活标志	// 0x41B970 sub_41B970 —— 12B 单元 vector resize（模板元素 pszArg3）
+gfx_texture.cpp	0041BA60	+0x4	-	S2	纹理就绪/激活标志	// 0x41BA60 sub_41BA60 —— ★ 槽位池构造（9 级位图 2^16..2^8 + 9 槽链表 + 预置 0..255）
+gfx_texture.cpp	0041BA60	+0x18	-	S2	上边界 Y	// 0x41BA60 sub_41BA60 —— ★ 槽位池构造（9 级位图 2^16..2^8 + 9 槽链表 + 预置 0..255）
+gfx_texture.cpp	0041C5A0	+0x4	-	S2	纹理就绪/激活标志	// 0x41C5A0 sub_41C5A0 —— vector<T 4B> 大小查询（空返回 0）
+gfx_texture.cpp	0041C6E0	+0x18	-	S2	上边界 Y	// 0x41C6E0 sub_41C6E0 —— 超时判定（clock_now(clk) >= this+24 截止时刻）
+gfx_texture.cpp	0041C8B0	+0xC	-	S2	行表/数据基址槽	// 0x41C8B0 sub_41C8B0 —— ★ 帧更新主循环（CNMainGameModule::Update）
+gfx_texture.cpp	0041C8B0	+0xC	-	S2	行表/数据基址槽	// 0x41C8B0 sub_41C8B0 —— ★ 帧更新主循环（CNMainGameModule::Update）
+gfx_texture.cpp	0041CC80	+0x1C	-	S2	尺寸差 dX	// 0x41CC80 sub_41CC80
+gfx_texture.cpp	0041CC80	+0x14	-	S2	左边界 X	// 0x41CC80 sub_41CC80
+gfx_texture.cpp	0041CC80	+0x10	-	S2	行指针表槽	// 0x41CC80 sub_41CC80
+gfx_texture.cpp	0041D300	+0xC	-	S2	行表/数据基址槽	// 0x41D300 sub_41D300 —— 模块切换 setter → 0x41CC80(onChangeModule) 转发
+gfx_texture.cpp	0041D320	+0xC	-	S2	行表/数据基址槽	// 0x41D320 sub_41D320 —— ★ 登出/回主界面资源卸载链
+gfx_texture.cpp	0041D320	+0x14	-	S2	左边界 X	// 0x41D320 sub_41D320 —— ★ 登出/回主界面资源卸载链
+gfx_texture.cpp	0041D520	+0xC	-	S2	行表/数据基址槽	// 0x41D520 sub_41D520 —— 切换到模块 5 的切换流程
+gfx_texture.cpp	0041D980	+0x4	-	S2	纹理就绪/激活标志	// 0x41D980 sub_41D980 —— 红黑树 erase(first, last) 实例一
+gfx_texture.cpp	0041DA40	+0x4	-	S2	纹理就绪/激活标志	// 0x41DA40 sub_41DA40 —— 同族实例二（回调 0x41CAA0）
+gfx_texture.cpp	0041DB00	+0x4	-	S2	纹理就绪/激活标志	// 0x41DB00 sub_41DB00 —— 同族实例三（回调 0x41CAE0）
+gfx_texture.cpp	0041DBC0	+0x4	-	S2	纹理就绪/激活标志	// 0x41DBC0 sub_41DBC0 —— 同族实例四（回调 0x41CB20）
+gfx_texture.cpp	0041DC80	+0x4	-	S2	纹理就绪/激活标志	// 0x41DC80 sub_41DC80 —— vector<T 4B 驻留句柄> 拷贝赋值 operator=
+gfx_texture.cpp	0041DC80	+0xC	-	S2	行表/数据基址槽	// 0x41DC80 sub_41DC80 —— vector<T 4B 驻留句柄> 拷贝赋值 operator=
+gfx_texture.cpp	0041E600	+0x4	-	S2	纹理就绪/激活标志	// 0x41E600 sub_41E600 —— 矢量清空（步长 144B 逐元素 0x41CBF0 成员析构）
+gfx_texture.cpp	0041F690	+0x4	-	S2	纹理就绪/激活标志	// 0x41F690 sub_41F690 —— map 区间擦除 [pDwArg3, pDwArg4)
+monster_parser.cpp	004FC0F0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FC0F0 sub_4FC0F0
+monster_parser.cpp	004FC0F0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FC0F0 sub_4FC0F0
+monster_parser.cpp	004FCB60	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FCB60 sub_4FCB60
+monster_parser.cpp	004FCB60	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FCB60 sub_4FCB60
+monster_parser.cpp	004FCB60	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FCB60 sub_4FCB60
+monster_parser.cpp	004FCB60	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FCB60 sub_4FCB60
+monster_parser.cpp	004FD900	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FD900 sub_4FD900
+monster_parser.cpp	004FD960	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FD960 sub_4FD960
+monster_parser.cpp	004FDA80	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FDA80 sub_4FDA80
+monster_parser.cpp	004FDA80	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FDA80 sub_4FDA80
+monster_parser.cpp	004FDA80	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FDA80 sub_4FDA80
+monster_parser.cpp	004FDA80	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FDA80 sub_4FDA80
+monster_parser.cpp	004FE2E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FE2E0 sub_4FE2E0
+monster_parser.cpp	004FE2E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FE2E0 sub_4FE2E0
+monster_parser.cpp	004FE2E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FE2E0 sub_4FE2E0
+monster_parser.cpp	004FE2E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FE2E0 sub_4FE2E0
+monster_parser.cpp	004FF0D0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF0D0	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF0D0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF0D0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF0D0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF0D0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF0D0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF0D0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF0D0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF0D0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF0D0 sub_4FF0D0
+monster_parser.cpp	004FF3A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF3A0	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF3A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF3A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF3A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF3A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF3A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF3A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF3A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF3A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF3A0 sub_4FF3A0
+monster_parser.cpp	004FF670	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF670 sub_4FF670
+monster_parser.cpp	004FF6E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF6E0 sub_4FF6E0
+monster_parser.cpp	004FF750	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF750 sub_4FF750
+monster_parser.cpp	004FF750	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF750 sub_4FF750
+monster_parser.cpp	004FF750	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF750 sub_4FF750
+monster_parser.cpp	004FF7E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FF7E0 sub_4FF7E0
+monster_parser.cpp	004FF7E0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FF7E0 sub_4FF7E0
+monster_parser.cpp	00500800	+0x4	-	S2	解析容器 vector begin 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x8	-	S2	解析容器 vector end 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x8	-	S2	解析容器 vector end 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x8	-	S2	解析容器 vector end 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x8	-	S2	解析容器 vector end 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x8	-	S2	解析容器 vector end 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x8	-	S2	解析容器 vector end 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x4	-	S2	解析容器 vector begin 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x8	-	S2	解析容器 vector end 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x8	-	S2	解析容器 vector end 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500800	+0x8	-	S2	解析容器 vector end 指针	// 0x500800 sub_500800
+monster_parser.cpp	00500AC0	+0x4	-	S2	解析容器 vector begin 指针	// 0x500AC0 sub_500AC0
+monster_parser.cpp	00500AC0	+0x8	-	S2	解析容器 vector end 指针	// 0x500AC0 sub_500AC0
+monster_parser.cpp	00500AC0	+0x8	-	S2	解析容器 vector end 指针	// 0x500AC0 sub_500AC0
+monster_parser.cpp	00501560	+0x4	-	S2	解析容器 vector begin 指针	// 0x501560 sub_501560
+monster_parser.cpp	00501560	+0x8	-	S2	解析容器 vector end 指针	// 0x501560 sub_501560
+monster_parser.cpp	00501560	+0x8	-	S2	解析容器 vector end 指针	// 0x501560 sub_501560
+monster_parser.cpp	00501560	+0x8	-	S2	解析容器 vector end 指针	// 0x501560 sub_501560
+monster_parser.cpp	00501560	+0x8	-	S2	解析容器 vector end 指针	// 0x501560 sub_501560
+monster_parser.cpp	00501560	+0x4	-	S2	解析容器 vector begin 指针	// 0x501560 sub_501560
+monster_parser.cpp	00501560	+0x8	-	S2	解析容器 vector end 指针	// 0x501560 sub_501560
+monster_parser.cpp	00501740	+0x4	-	S2	解析容器 vector begin 指针	// 0x501740 sub_501740
+monster_parser.cpp	00501740	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x501740 sub_501740
+monster_parser.cpp	00501740	+0x8	-	S2	解析容器 vector end 指针	// 0x501740 sub_501740
+monster_parser.cpp	00501740	+0x8	-	S2	解析容器 vector end 指针	// 0x501740 sub_501740
+monster_parser.cpp	00501740	+0x8	-	S2	解析容器 vector end 指针	// 0x501740 sub_501740
+monster_parser.cpp	00501740	+0x4	-	S2	解析容器 vector begin 指针	// 0x501740 sub_501740
+monster_parser.cpp	00501740	+0x8	-	S2	解析容器 vector end 指针	// 0x501740 sub_501740
+monster_parser.cpp	00501740	+0x8	-	S2	解析容器 vector end 指针	// 0x501740 sub_501740
+monster_parser.cpp	00501740	+0x8	-	S2	解析容器 vector end 指针	// 0x501740 sub_501740
+monster_parser.cpp	00501DB0	+0x4	-	S2	解析容器 vector begin 指针	// 0x501DB0 sub_501DB0
+monster_parser.cpp	00501E20	+0x4	-	S2	解析容器 vector begin 指针	// 0x501E20 sub_501E20
+monster_parser.cpp	005020D0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5020D0 sub_5020D0
+monster_parser.cpp	005020D0	+0x8	-	S2	解析容器 vector end 指针	// 0x5020D0 sub_5020D0
+monster_parser.cpp	00502120	+0x4	-	S2	解析容器 vector begin 指针	// 0x502120 sub_502120
+monster_parser.cpp	00502120	+0x8	-	S2	解析容器 vector end 指针	// 0x502120 sub_502120
+monster_parser.cpp	00502120	+0x8	-	S2	解析容器 vector end 指针	// 0x502120 sub_502120
+monster_parser.cpp	005021A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5021A0 sub_5021A0
+monster_parser.cpp	00502300	+0x4	-	S2	解析容器 vector begin 指针	// 0x502300 sub_502300
+monster_parser.cpp	00502800	+0x4	-	S2	解析容器 vector begin 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x8	-	S2	解析容器 vector end 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x8	-	S2	解析容器 vector end 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x8	-	S2	解析容器 vector end 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x4	-	S2	解析容器 vector begin 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x4	-	S2	解析容器 vector begin 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x8	-	S2	解析容器 vector end 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x8	-	S2	解析容器 vector end 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x4	-	S2	解析容器 vector begin 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x8	-	S2	解析容器 vector end 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x8	-	S2	解析容器 vector end 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502800	+0x8	-	S2	解析容器 vector end 指针	// 0x502800 sub_502800
+monster_parser.cpp	00502DA0	+0x8	-	S2	解析容器 vector end 指针	// 0x502DA0 sub_502DA0
+monster_parser.cpp	00502E00	+0x4	-	S2	解析容器 vector begin 指针	// 0x502E00 sub_502E00
+monster_parser.cpp	00502E70	+0x4	-	S2	解析容器 vector begin 指针	// 0x502E70 sub_502E70
+monster_parser.cpp	00502E70	+0x8	-	S2	解析容器 vector end 指针	// 0x502E70 sub_502E70
+monster_parser.cpp	00502E70	+0x8	-	S2	解析容器 vector end 指针	// 0x502E70 sub_502E70
+monster_parser.cpp	005046D0	+0x8	-	S2	解析容器 vector end 指针	// 0x5046D0 sub_5046D0
+monster_parser.cpp	00504760	+0x8	-	S2	解析容器 vector end 指针	// 0x504760 sub_504760
+monster_parser.cpp	005047F0	+0x8	-	S2	解析容器 vector end 指针	// 0x5047F0 sub_5047F0
+monster_parser.cpp	005048F0	+0x8	-	S2	解析容器 vector end 指针	// 0x5048F0 sub_5048F0
+monster_parser.cpp	00504CA0	+0x4	-	S2	解析容器 vector begin 指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504CA0	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504CA0	+0x8	-	S2	解析容器 vector end 指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504CA0	+0x8	-	S2	解析容器 vector end 指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504CA0	+0x8	-	S2	解析容器 vector end 指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504CA0	+0x4	-	S2	解析容器 vector begin 指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504CA0	+0x8	-	S2	解析容器 vector end 指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504CA0	+0x4	-	S2	解析容器 vector begin 指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504CA0	+0x8	-	S2	解析容器 vector end 指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504CA0	+0x8	-	S2	解析容器 vector end 指针	// 0x504CA0 sub_504CA0
+monster_parser.cpp	00504F70	+0x4	-	S2	解析容器 vector begin 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x8	-	S2	解析容器 vector end 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x8	-	S2	解析容器 vector end 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x8	-	S2	解析容器 vector end 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x8	-	S2	解析容器 vector end 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x4	-	S2	解析容器 vector begin 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x8	-	S2	解析容器 vector end 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x8	-	S2	解析容器 vector end 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x4	-	S2	解析容器 vector begin 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x8	-	S2	解析容器 vector end 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00504F70	+0x8	-	S2	解析容器 vector end 指针	// 0x504F70 sub_504F70
+monster_parser.cpp	00505250	+0x4	-	S2	解析容器 vector begin 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x4	-	S2	解析容器 vector begin 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x4	-	S2	解析容器 vector begin 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	00505250	+0x8	-	S2	解析容器 vector end 指针	// 0x505250 sub_505250
+monster_parser.cpp	005054A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	005054A0	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	005054A0	+0x8	-	S2	解析容器 vector end 指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	005054A0	+0x8	-	S2	解析容器 vector end 指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	005054A0	+0x8	-	S2	解析容器 vector end 指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	005054A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	005054A0	+0x8	-	S2	解析容器 vector end 指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	005054A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	005054A0	+0x8	-	S2	解析容器 vector end 指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	005054A0	+0x8	-	S2	解析容器 vector end 指针	// 0x5054A0 sub_5054A0
+monster_parser.cpp	00505770	+0x4	-	S2	解析容器 vector begin 指针	// 0x505770 sub_505770
+monster_parser.cpp	00505770	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x505770 sub_505770
+monster_parser.cpp	00505770	+0x8	-	S2	解析容器 vector end 指针	// 0x505770 sub_505770
+monster_parser.cpp	00505770	+0x8	-	S2	解析容器 vector end 指针	// 0x505770 sub_505770
+monster_parser.cpp	00505770	+0x8	-	S2	解析容器 vector end 指针	// 0x505770 sub_505770
+monster_parser.cpp	00505770	+0x4	-	S2	解析容器 vector begin 指针	// 0x505770 sub_505770
+monster_parser.cpp	00505770	+0x8	-	S2	解析容器 vector end 指针	// 0x505770 sub_505770
+monster_parser.cpp	00505770	+0x4	-	S2	解析容器 vector begin 指针	// 0x505770 sub_505770
+monster_parser.cpp	00505770	+0x8	-	S2	解析容器 vector end 指针	// 0x505770 sub_505770
+monster_parser.cpp	00505770	+0x8	-	S2	解析容器 vector end 指针	// 0x505770 sub_505770
+monster_parser.cpp	00505A30	+0x4	-	S2	解析容器 vector begin 指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505A30	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505A30	+0x8	-	S2	解析容器 vector end 指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505A30	+0x8	-	S2	解析容器 vector end 指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505A30	+0x8	-	S2	解析容器 vector end 指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505A30	+0x4	-	S2	解析容器 vector begin 指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505A30	+0x8	-	S2	解析容器 vector end 指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505A30	+0x4	-	S2	解析容器 vector begin 指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505A30	+0x8	-	S2	解析容器 vector end 指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505A30	+0x8	-	S2	解析容器 vector end 指针	// 0x505A30 sub_505A30
+monster_parser.cpp	00505CE0	+0x4	-	S2	解析容器 vector begin 指针	// 0x505CE0 sub_505CE0
+monster_parser.cpp	00505F40	+0x4	-	S2	解析容器 vector begin 指针	// 0x505F40 sub_505F40
+monster_parser.cpp	00505F80	+0x4	-	S2	解析容器 vector begin 指针	// 0x505F80 sub_505F80
+monster_parser.cpp	00505FF0	+0x4	-	S2	解析容器 vector begin 指针	// 0x505FF0 sub_505FF0
+monster_parser.cpp	00505FF0	+0x8	-	S2	解析容器 vector end 指针	// 0x505FF0 sub_505FF0
+monster_parser.cpp	00506080	+0x4	-	S2	解析容器 vector begin 指针	// 0x506080 sub_506080
+monster_parser.cpp	005060F0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5060F0 sub_5060F0
+monster_parser.cpp	00506160	+0x4	-	S2	解析容器 vector begin 指针	// 0x506160 sub_506160
+monster_parser.cpp	005063B0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5063B0 sub_5063B0
+monster_parser.cpp	005063B0	+0x8	-	S2	解析容器 vector end 指针	// 0x5063B0 sub_5063B0
+monster_parser.cpp	00506440	+0x4	-	S2	解析容器 vector begin 指针	// 0x506440 sub_506440
+monster_parser.cpp	00506440	+0x8	-	S2	解析容器 vector end 指针	// 0x506440 sub_506440
+monster_parser.cpp	00506440	+0x8	-	S2	解析容器 vector end 指针	// 0x506440 sub_506440
+monster_parser.cpp	005064B0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5064B0 sub_5064B0
+monster_parser.cpp	005064F0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5064F0 sub_5064F0
+monster_parser.cpp	005064F0	+0x8	-	S2	解析容器 vector end 指针	// 0x5064F0 sub_5064F0
+monster_parser.cpp	005064F0	+0x8	-	S2	解析容器 vector end 指针	// 0x5064F0 sub_5064F0
+monster_parser.cpp	00506560	+0x4	-	S2	解析容器 vector begin 指针	// 0x506560 sub_506560
+monster_parser.cpp	00506560	+0x8	-	S2	解析容器 vector end 指针	// 0x506560 sub_506560
+monster_parser.cpp	005065F0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5065F0 sub_5065F0
+monster_parser.cpp	005065F0	+0x8	-	S2	解析容器 vector end 指针	// 0x5065F0 sub_5065F0
+monster_parser.cpp	005065F0	+0x8	-	S2	解析容器 vector end 指针	// 0x5065F0 sub_5065F0
+monster_parser.cpp	00506680	+0x4	-	S2	解析容器 vector begin 指针	// 0x506680 sub_506680
+monster_parser.cpp	00506680	+0x8	-	S2	解析容器 vector end 指针	// 0x506680 sub_506680
+monster_parser.cpp	00506680	+0x8	-	S2	解析容器 vector end 指针	// 0x506680 sub_506680
+monster_parser.cpp	00506730	+0x4	-	S2	解析容器 vector begin 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x8	-	S2	解析容器 vector end 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x8	-	S2	解析容器 vector end 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x8	-	S2	解析容器 vector end 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x8	-	S2	解析容器 vector end 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x4	-	S2	解析容器 vector begin 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x8	-	S2	解析容器 vector end 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x8	-	S2	解析容器 vector end 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x4	-	S2	解析容器 vector begin 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x8	-	S2	解析容器 vector end 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x8	-	S2	解析容器 vector end 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506730	+0x8	-	S2	解析容器 vector end 指针	// 0x506730 sub_506730
+monster_parser.cpp	00506D30	+0x4	-	S2	解析容器 vector begin 指针	// 0x506D30 sub_506D30
+monster_parser.cpp	00507010	+0x4	-	S2	解析容器 vector begin 指针	// 0x507010 sub_507010
+monster_parser.cpp	00507010	+0x8	-	S2	解析容器 vector end 指针	// 0x507010 sub_507010
+monster_parser.cpp	00507010	+0x8	-	S2	解析容器 vector end 指针	// 0x507010 sub_507010
+monster_parser.cpp	00507150	+0x4	-	S2	解析容器 vector begin 指针	// 0x507150 sub_507150
+monster_parser.cpp	00507190	+0x4	-	S2	解析容器 vector begin 指针	// 0x507190 sub_507190
+monster_parser.cpp	00507200	+0x4	-	S2	解析容器 vector begin 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0x8	-	S2	解析容器 vector end 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0x8	-	S2	解析容器 vector end 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0x8	-	S2	解析容器 vector end 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0x4	-	S2	解析容器 vector begin 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0x4	-	S2	解析容器 vector begin 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0x8	-	S2	解析容器 vector end 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0x4	-	S2	解析容器 vector begin 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0x8	-	S2	解析容器 vector end 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507200	+0x8	-	S2	解析容器 vector end 指针	// 0x507200 sub_507200
+monster_parser.cpp	00507590	+0x4	-	S2	解析容器 vector begin 指针	// 0x507590 sub_507590
+monster_parser.cpp	00507600	+0x4	-	S2	解析容器 vector begin 指针	// 0x507600 sub_507600
+monster_parser.cpp	00507600	+0x8	-	S2	解析容器 vector end 指针	// 0x507600 sub_507600
+monster_parser.cpp	00507600	+0x8	-	S2	解析容器 vector end 指针	// 0x507600 sub_507600
+monster_parser.cpp	00508FD0	+0x4	-	S2	解析容器 vector begin 指针	// 0x508FD0 sub_508FD0
+monster_parser.cpp	00508FD0	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x508FD0 sub_508FD0
+monster_parser.cpp	00508FD0	+0x8	-	S2	解析容器 vector end 指针	// 0x508FD0 sub_508FD0
+monster_parser.cpp	00508FD0	+0x8	-	S2	解析容器 vector end 指针	// 0x508FD0 sub_508FD0
+monster_parser.cpp	00508FD0	+0x8	-	S2	解析容器 vector end 指针	// 0x508FD0 sub_508FD0
+monster_parser.cpp	00508FD0	+0x4	-	S2	解析容器 vector begin 指针	// 0x508FD0 sub_508FD0
+monster_parser.cpp	00508FD0	+0x8	-	S2	解析容器 vector end 指针	// 0x508FD0 sub_508FD0
+monster_parser.cpp	00508FD0	+0x8	-	S2	解析容器 vector end 指针	// 0x508FD0 sub_508FD0
+monster_parser.cpp	00508FD0	+0x8	-	S2	解析容器 vector end 指针	// 0x508FD0 sub_508FD0
+monster_parser.cpp	005092D0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5092D0 sub_5092D0
+monster_parser.cpp	005092D0	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x5092D0 sub_5092D0
+monster_parser.cpp	005092D0	+0x8	-	S2	解析容器 vector end 指针	// 0x5092D0 sub_5092D0
+monster_parser.cpp	005092D0	+0x8	-	S2	解析容器 vector end 指针	// 0x5092D0 sub_5092D0
+monster_parser.cpp	005092D0	+0x8	-	S2	解析容器 vector end 指针	// 0x5092D0 sub_5092D0
+monster_parser.cpp	005092D0	+0x4	-	S2	解析容器 vector begin 指针	// 0x5092D0 sub_5092D0
+monster_parser.cpp	005092D0	+0x8	-	S2	解析容器 vector end 指针	// 0x5092D0 sub_5092D0
+monster_parser.cpp	00509620	+0x8	-	S2	解析容器 vector end 指针	// 0x509620 sub_509620
+monster_parser.cpp	00509620	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x509620 sub_509620
+monster_parser.cpp	00509820	+0x4	-	S2	解析容器 vector begin 指针	// 0x509820 sub_509820
+monster_parser.cpp	00509930	+0x4	-	S2	解析容器 vector begin 指针	// 0x509930 sub_509930
+monster_parser.cpp	00509A80	+0x4	-	S2	解析容器 vector begin 指针	// 0x509A80 sub_509A80
+monster_parser.cpp	00509A80	+0x8	-	S2	解析容器 vector end 指针	// 0x509A80 sub_509A80
+monster_parser.cpp	00509A80	+0x8	-	S2	解析容器 vector end 指针	// 0x509A80 sub_509A80
+monster_parser.cpp	00509B00	+0x4	-	S2	解析容器 vector begin 指针	// 0x509B00 sub_509B00
+monster_parser.cpp	00509B00	+0x8	-	S2	解析容器 vector end 指针	// 0x509B00 sub_509B00
+monster_parser.cpp	00509B00	+0x8	-	S2	解析容器 vector end 指针	// 0x509B00 sub_509B00
+monster_parser.cpp	00509B70	+0x4	-	S2	解析容器 vector begin 指针	// 0x509B70 sub_509B70
+monster_parser.cpp	00509B70	+0x8	-	S2	解析容器 vector end 指针	// 0x509B70 sub_509B70
+monster_parser.cpp	0050BE50	+0x8	-	S2	解析容器 vector end 指针	// 0x50BE50 sub_50BE50
+monster_parser.cpp	0050BEA0	+0x4	-	S2	解析容器 vector begin 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x8	-	S2	解析容器 vector end 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x8	-	S2	解析容器 vector end 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x8	-	S2	解析容器 vector end 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x8	-	S2	解析容器 vector end 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x4	-	S2	解析容器 vector begin 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x8	-	S2	解析容器 vector end 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x8	-	S2	解析容器 vector end 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x4	-	S2	解析容器 vector begin 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x8	-	S2	解析容器 vector end 指针	// 0x50BEA0 sub_50BEA0
+monster_parser.cpp	0050BEA0	+0x8	-	S2	解析容器 vector end 指针	// 0x50BEA0 sub_50BEA0
+ui_icon_perf.cpp	00460920	+0x2E4	-	S2	ListBox 控件状态槽	// 0x460920 sub_460920
+ui_icon_perf.cpp	004684F0	+0x2E0	-	S2	ListBox 控件几何槽	// 0x4684F0 sub_4684F0 —— 观察对象数据装载（名称/血量/装备）
+ui_icon_perf.cpp	004684F0	+0x2E0	-	S2	ListBox 控件几何槽	// 0x4684F0 sub_4684F0 —— 观察对象数据装载（名称/血量/装备）
+ui_icon_perf.cpp	004688A0	+0x2E0	-	S2	ListBox 控件几何槽	// 0x4688A0 sub_4688A0 —— 观察对象进度映射（65 档）
+ui_icon_perf.cpp	004688A0	+0x2E0	-	S2	ListBox 控件几何槽	// 0x4688A0 sub_4688A0 —— 观察对象进度映射（65 档）
+ui_icon_perf.cpp	00468C40	+0x2E0	-	S2	ListBox 控件几何槽	// 0x468C40 sub_468C40 —— 观察面板逐帧绘制（等级/名/进度）
+ui_icon_perf.cpp	00468C40	+0x2E4	-	S2	ListBox 控件状态槽	// 0x468C40 sub_468C40 —— 观察面板逐帧绘制（等级/名/进度）
+ui_icon_perf.cpp	00468C40	+0x2E4	-	S2	ListBox 控件状态槽	// 0x468C40 sub_468C40 —— 观察面板逐帧绘制（等级/名/进度）
+ui_icon_perf.cpp	00468C40	+0x2E4	-	S2	ListBox 控件状态槽	// 0x468C40 sub_468C40 —— 观察面板逐帧绘制（等级/名/进度）
+ui_icon_perf.cpp	00468C40	+0x2E0	-	S2	ListBox 控件几何槽	// 0x468C40 sub_468C40 —— 观察面板逐帧绘制（等级/名/进度）
+ui_icon_perf.cpp	00468C40	+0x2E0	-	S2	ListBox 控件几何槽	// 0x468C40 sub_468C40 —— 观察面板逐帧绘制（等级/名/进度）
+ui_icon_perf.cpp	00468C40	+0x2E4	-	S2	ListBox 控件状态槽	// 0x468C40 sub_468C40 —— 观察面板逐帧绘制（等级/名/进度）
+ui_icon_perf.cpp	00469170	+0x4D4	CNRDBaseInterface	S1	0x469170 读取槽（与 +1232 角色名标签同段，语义未定）	// 0x469170 CNRDBaseInterface__vmt0
+ui_icon_perf.cpp	00469170	+0x218	CNRDBaseInterface	S1	★ 倒计时截止时刻（0x469170: fld_218 = *(this+536)；与 clock_now(this+512) 比较）	// 0x469170 CNRDBaseInterface__vmt0
+ui_icon_perf.cpp	00469170	+0x4C4	CNRDBaseInterface	S1	★ 等级标签控件（0x469170: sprintf("Lv.%d") 后按其 +20/+24 定位绘制）	// 0x469170 CNRDBaseInterface__vmt0
+ui_icon_perf.cpp	00469170	+0x4C4	CNRDBaseInterface	S1	★ 等级标签控件（0x469170: sprintf("Lv.%d") 后按其 +20/+24 定位绘制）	// 0x469170 CNRDBaseInterface__vmt0
+ui_icon_perf.cpp	00469170	+0x4C8	CNRDBaseInterface	S1	0x469170 读取槽（与 +1220 等级标签同段，语义未定）	// 0x469170 CNRDBaseInterface__vmt0
+ui_icon_perf.cpp	0046B310	+0x38	CNEntranceModule	S1	★ 键盘输入使能（0x46C300: *(this+56)!=0 才允许 sub_46BD70 键盘导航与全部按钮响应）	// 0x46B310 sub_46B310 —— 频道列表行绘制
+ui_icon_perf.cpp	0046B310	+0x38	CNEntranceModule	S1	★ 键盘输入使能（0x46C300: *(this+56)!=0 才允许 sub_46BD70 键盘导航与全部按钮响应）	// 0x46B310 sub_46B310 —— 频道列表行绘制
+ui_icon_perf.cpp	0046B310	+0x38	CNEntranceModule	S1	★ 键盘输入使能（0x46C300: *(this+56)!=0 才允许 sub_46BD70 键盘导航与全部按钮响应）	// 0x46B310 sub_46B310 —— 频道列表行绘制
+ui_icon_perf.cpp	0046C300	+0x68	CNEntranceModule	S1	★ 角色选中板按钮（0x46C300: fld_68=+104 命中 → +44 锁存 1、清选中板 +16、置 +176 高亮、sub_46BA60(切页)+44E850(30)）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x34	CNEntranceModule	S1	★ 角色选中板（0x46C300: 其 +16 置 0 取消高亮）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x6C	CNEntranceModule	S1	★ 角色名板按钮（0x46C300: fld_6C=+108 命中且当前角色 != -1 → 44E8D0(0x1E) 弹角色名说明 + CLICK_BUTTON2）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x5C	CNEntranceModule	S1	★ 当前选中角色下标（0x46C300: ==-1 未选；44E8D0(0x1E) 名字板定位）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x50	CNEntranceModule	S1	★ 角色条目数组基址（0x46C300: *(this+80) + 144*nSelChar，144 字节/条）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x34	CNEntranceModule	S1	★ 角色选中板（0x46C300: 其 +16 置 0 取消高亮）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x40	CNEntranceModule	S1	★ 角色条目数组 begin（0x46C300: (*(this+68)-*(this+64))>>2 >= 8 → 已满 8 角色）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x44	CNEntranceModule	S1	★ 角色数（begin/end 差 >>2；>=8 时提示「角色已满」）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x70	CNEntranceModule	S1	★ 取消选中按钮（0x46C300: fld_70=+112 命中且当前角色 != -1 → sub_46BCB0(清除选中) + CLICK_BUTTON4）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x5C	CNEntranceModule	S1	★ 当前选中角色下标（0x46C300: ==-1 未选；44E8D0(0x1E) 名字板定位）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x74	CNEntranceModule	S1	★ 返回按钮（0x46C300: fld_74=+116 命中 → sub_41C860 退出确认 + CLICK_BUTTON3，并直接 return）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x40	CNEntranceModule	S1	★ 角色条目数组 begin（0x46C300: (*(this+68)-*(this+64))>>2 >= 8 → 已满 8 角色）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0xEC	CNEntranceModule	S1	上滚按钮（0x46C300: "SCROLL_ARROW" → sub_69C400(当前-1)）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0xF4	CNEntranceModule	S1	滚动条控件（0x46C300: sub_69C380/69C3A0/69C500 取值/步长/上限）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0xF0	CNEntranceModule	S1	下滚按钮（0x46C300: "SCROLL_ARROW" → sub_69C400(当前+1)）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0xF4	CNEntranceModule	S1	滚动条控件（0x46C300: sub_69C380/69C3A0/69C500 取值/步长/上限）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0xF4	CNEntranceModule	S1	滚动条控件（0x46C300: sub_69C380/69C3A0/69C500 取值/步长/上限）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0xF4	CNEntranceModule	S1	滚动条控件（0x46C300: sub_69C380/69C3A0/69C500 取值/步长/上限）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0xF8	CNEntranceModule	S1	★ 名字编辑按钮（0x46C300: 命中且角色数<8 → sub_422E70(140) 提示串）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0xFC	CNEntranceModule	S1	★ 名字输入框（0x46C300: 其 +16 可见位；置 1 后 sub_69BCC0 聚焦 + dword_79BE4C）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x100	CNEntranceModule	S1	★ 名字输入控件（0x46C300: sub_69B740 取串 → 校验 → 发 5 号包 + "Character Name send"）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x104	CNEntranceModule	S1	退出按钮 A（0x46C300: 命中 → sub_41C860）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x40	CNEntranceModule	S1	★ 角色条目数组 begin（0x46C300: (*(this+68)-*(this+64))>>2 >= 8 → 已满 8 角色）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x100	CNEntranceModule	S1	★ 名字输入控件（0x46C300: sub_69B740 取串 → 校验 → 发 5 号包 + "Character Name send"）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x108	CNEntranceModule	S1	退出按钮 B（与 +260 成组的退出/辅助按钮槽）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x34	CNEntranceModule	S1	★ 角色选中板（0x46C300: 其 +16 置 0 取消高亮）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046C300	+0x40	CNEntranceModule	S1	★ 角色条目数组 begin（0x46C300: (*(this+68)-*(this+64))>>2 >= 8 → 已满 8 角色）	// 0x46C300 CNEntranceModule__vmt4
+ui_icon_perf.cpp	0046D300	+0x34	-	S2	选角界面帧附属槽	// 0x46D300 sub_46D300 —— 选角界面复位与资源释放
+window_party.cpp	00631980	+0x24	CNRDPartyListWindow	S1	列表模式（0x631980: *(this+36) ==1 走组队列表 630750 / ==0 走 PVP 6312F0，切换时 vt+24 换页 19/14）	// 0x631980 CNRDPartyListWindow__vmtC —— CNRDPartyListWindow__vmtC 打开槽（429830 + 69A5F0 + 630750/6312
+window_party.cpp	00632540	+0x28	CNRDPVPChannelListWindow	S1	关闭/返回按钮（0x632540: *(this+40) 其 +17 命中 → vt+32 关窗 + CLICK_BUTTON2）	// 0x632540 CNRDPVPChannelListWindow__vmt8 —— CNRDPVPChannelListWindow__vmt8 Update（48 行：CLICK_BUTTO
+window_party.cpp	006330F0	+0x54	CNRDImportantItemUseConfirmWindow	S1	道具 id（0x6330F0: fld_54=*(this+84)；与 vt+16()+4 比对）	// 0x6330F0 CNRDImportantItemUseConfirmWindow__vmt38 —— CNRDImportantItemUseConfirmWindow__vmt38 确认动
+window_party.cpp	0063A050	+0x64	CNRDUpgradeConfirmWindow	S1	待强化物品（0x63A4C0: *(this+100)=nArg2；63A520 装配）	// 0x63A050 CNRDUpgradeConfirmWindow__vmt8 —— CNRDUpgradeConfirmWindow__vmt8 确认强化（484ED0/422E70/44E8
+window_party.cpp	0063A140	+0x64	CNRDUpgradeConfirmWindow	S1	待强化物品（0x63A4C0: *(this+100)=nArg2；63A520 装配）	// 0x63A140 CNRDUpgradeConfirmWindow__vmt0 —— CNRDUpgradeConfirmWindow__vmt0 构造（165 行：554930 + 484ED
+window_party.cpp	0063A140	+0x64	CNRDUpgradeConfirmWindow	S1	待强化物品（0x63A4C0: *(this+100)=nArg2；63A520 装配）	// 0x63A140 CNRDUpgradeConfirmWindow__vmt0 —— CNRDUpgradeConfirmWindow__vmt0 构造（165 行：554930 + 484ED
+window_party.cpp	0063A140	+0x64	CNRDUpgradeConfirmWindow	S1	待强化物品（0x63A4C0: *(this+100)=nArg2；63A520 装配）	// 0x63A140 CNRDUpgradeConfirmWindow__vmt0 —— CNRDUpgradeConfirmWindow__vmt0 构造（165 行：554930 + 484ED
+window_party.cpp	0063A140	+0x64	CNRDUpgradeConfirmWindow	S1	待强化物品（0x63A4C0: *(this+100)=nArg2；63A520 装配）	// 0x63A140 CNRDUpgradeConfirmWindow__vmt0 —— CNRDUpgradeConfirmWindow__vmt0 构造（165 行：554930 + 484ED
+window_party.cpp	0063AC20	+0x24	CNRDUpgradeResultWindow	S1	强化结果码（0x63AC20: *(uint8_t*)(this+36)=pszArg3；0=SUCCESS/1,2=FAIL(串1670)/其他=EQUIP_BROKEN(串1672)）	// 0x63AC20 CNRDUpgradeResultWindow__vmtC —— CNRDUpgradeResultWindow__vmtC 播放强化结果：STRENGTHEN_SUCCESS
+window_party.cpp	0063AC20	+0x64	CNRDUpgradeResultWindow	S1	结果物品（0x63AC20: *(this+100) 作 sub_484ED0 判；vt+188 取件 +41A5E0(item+4) 判 ZERO）	// 0x63AC20 CNRDUpgradeResultWindow__vmtC —— CNRDUpgradeResultWindow__vmtC 播放强化结果：STRENGTHEN_SUCCESS
+window_party.cpp	0063B450	+0x3C	CNRDItemBoxWindow	S1	确认按钮（0x63B4D0: fld_3C=*(this+60) 命中 → CLICK_BUTTON2 + 0x39 号命令）	// 0x63B450 CNRDItemBoxWindow__vmtC —— CNRDItemBoxWindow__vmtC 打开槽（44AB50/44BBA0 页切换显示）
+window_party.cpp	0063B450	+0x38	CNRDItemBoxWindow	S1	主操作按钮（0x63B4D0: fld_38=*(this+56)；其 +17 命中且 +12==dword_79BE34 → CLICK_BUTTON2）	// 0x63B450 CNRDItemBoxWindow__vmtC —— CNRDItemBoxWindow__vmtC 打开槽（44AB50/44BBA0 页切换显示）
+window_party.cpp	0063B4D0	+0x38	CNRDItemBoxWindow	S1	主操作按钮（0x63B4D0: fld_38=*(this+56)；其 +17 命中且 +12==dword_79BE34 → CLICK_BUTTON2）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x30	CNRDItemBoxWindow	S1	子状态/校验结果（0x63B4D0: 由 63B280 返回 1 置 2；非 1 则直接关窗）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x24	CNRDItemBoxWindow	S1	选中物品槽 id（0x63B4D0: fld_24=*(this+36)；0→帧 15、1→帧 0xE 换算图标）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x3C	CNRDItemBoxWindow	S1	确认按钮（0x63B4D0: fld_3C=*(this+60) 命中 → CLICK_BUTTON2 + 0x39 号命令）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x40	CNRDItemBoxWindow	S1	取消按钮（0x63B4D0: fld_40=*(this+64) 命中 → CLICK_BUTTON2 + 0x39 号命令）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x30	CNRDItemBoxWindow	S1	子状态/校验结果（0x63B4D0: 由 63B280 返回 1 置 2；非 1 则直接关窗）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x24	CNRDItemBoxWindow	S1	选中物品槽 id（0x63B4D0: fld_24=*(this+36)；0→帧 15、1→帧 0xE 换算图标）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x8	CNRDItemBoxWindow	S1	宿主控件（0x63B4D0: fld_8=*(this+8)；sub_69A500(fld_8)==1 且其 +2504==2 时触发本窗动作）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x30	CNRDItemBoxWindow	S1	子状态/校验结果（0x63B4D0: 由 63B280 返回 1 置 2；非 1 则直接关窗）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x30	CNRDItemBoxWindow	S1	子状态/校验结果（0x63B4D0: 由 63B280 返回 1 置 2；非 1 则直接关窗）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x30	CNRDItemBoxWindow	S1	子状态/校验结果（0x63B4D0: 由 63B280 返回 1 置 2；非 1 则直接关窗）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B4D0	+0x30	CNRDItemBoxWindow	S1	子状态/校验结果（0x63B4D0: 由 63B280 返回 1 置 2；非 1 则直接关窗）	// 0x63B4D0 CNRDItemBoxWindow__vmt8 —— CNRDItemBoxWindow__vmt8 Update（111 行：CLICK_BUTTON2 + 486F40 格
+window_party.cpp	0063B6D0	+0x24	CNRDItemBoxWindow	S1	选中物品槽 id（0x63B4D0: fld_24=*(this+36)；0→帧 15、1→帧 0xE 换算图标）	// 0x63B6D0 CNRDItemBoxWindow__vmt0 —— CNRDItemBoxWindow__vmt0 构造（106 行：418DD0/484ED0/4F33A0/63B400/
+window_party.cpp	0063B6D0	+0x30	CNRDItemBoxWindow	S1	子状态/校验结果（0x63B4D0: 由 63B280 返回 1 置 2；非 1 则直接关窗）	// 0x63B6D0 CNRDItemBoxWindow__vmt0 —— CNRDItemBoxWindow__vmt0 构造（106 行：418DD0/484ED0/4F33A0/63B400/
+window_party.cpp	0063B6D0	+0x24	CNRDItemBoxWindow	S1	选中物品槽 id（0x63B4D0: fld_24=*(this+36)；0→帧 15、1→帧 0xE 换算图标）	// 0x63B6D0 CNRDItemBoxWindow__vmt0 —— CNRDItemBoxWindow__vmt0 构造（106 行：418DD0/484ED0/4F33A0/63B400/
+window_party.cpp	0063B6D0	+0x28	CNRDItemBoxWindow	S1	激活标志（0x63B4D0: *(this+40)==1 且 clock_now(this+68)>=1000 才走 63B280 校验并置 2）	// 0x63B6D0 CNRDItemBoxWindow__vmt0 —— CNRDItemBoxWindow__vmt0 构造（106 行：418DD0/484ED0/4F33A0/63B400/
+window_party.cpp	0063C270	+0x6C	CNRDWarRoomDifficultListWindow	S1	条目数（0x63CA70: *(this+108) 清零循环上界）	// 0x63C270 CNRDWarRoomDifficultListWindow__vmt0 —— CNRDWarRoomDifficultListWindow__vmt0 构造（193 行：55
+window_party.cpp	0063D440	+0x9C	CNRDLotteryItemWindow	S1	★ 物品 id B（0x63D940: *(this+156) = *(nArg2 vt+16() + 4)）	// 0x63D440 CNRDLotteryItemWindow__vmt8 —— CNRDLotteryItemWindow__vmt8 Update（484E80/423200 系 + CLIC
+window_party.cpp	0063D440	+0x24	CNRDLotteryItemWindow	S1	★ 页签按钮 A（0x63D940: 其 +16 = (*(this+152) == 1)）	// 0x63D440 CNRDLotteryItemWindow__vmt8 —— CNRDLotteryItemWindow__vmt8 Update（484E80/423200 系 + CLIC
+window_party.cpp	0063D440	+0x9C	CNRDLotteryItemWindow	S1	★ 物品 id B（0x63D940: *(this+156) = *(nArg2 vt+16() + 4)）	// 0x63D440 CNRDLotteryItemWindow__vmt8 —— CNRDLotteryItemWindow__vmt8 Update（484E80/423200 系 + CLIC
+window_party.cpp	0063D510	+0x9C	CNRDLotteryItemWindow	S1	★ 物品 id B（0x63D940: *(this+156) = *(nArg2 vt+16() + 4)）	// 0x63D510 CNRDLotteryItemWindow__vmt0 —— CNRDLotteryItemWindow__vmt0 构造（131 行：554930 + 699000/4049
+window_party.cpp	0063D510	+0x68	CNRDLotteryItemWindow	S1	★ 物品 id A（0x63D940: *(this+104) = *(nArg2 vt+16() + 68) 取物品编号）	// 0x63D510 CNRDLotteryItemWindow__vmt0 —— CNRDLotteryItemWindow__vmt0 构造（131 行：554930 + 699000/4049
+window_party.cpp	0063D940	+0x98	CNRDLotteryItemWindow	S1	★ 页签选择值（0x63D940: = nArg3；1→A 可见、0→B 可见，两按钮互斥驱动）	// 0x63D940 CNRDLotteryItemWindow__vmtC —— CNRDLotteryItemWindow__vmtC 播放赌博动画：GAMBLE_OPEN_LOOP 开启循环 
+window_party.cpp	0063DB00	+0x34	CNRDItemDisjointResultWindow	S1	结果列表控件（0x63DED0: *(this+52) 经其 vt+32(0) 复位滚动）	// 0x63DB00 CNRDItemDisjointResultWindow__vmt0 —— CNRDItemDisjointResultWindow__vmt0 构造（69C690 + 418
+window_party.cpp	0063E890	+0x80	CNRDItemTradeResultWindow	S1	失败原因 id（0x63E890: *(this+128)!=0xFFFF 才画图标；0x63ECD0 存 nArg3 并取串 1114/1115）	// 0x63E890 CNRDItemTradeResultWindow__vmt0 —— CNRDItemTradeResultWindow__vmt0 构造（103 行：418DD0/42983
+window_party.cpp	0063E890	+0x34	CNRDItemTradeResultWindow	S1	列表控件（0x63E890: sub_69C690(*(this+52)) 取滚动偏移；行高 39px）	// 0x63E890 CNRDItemTradeResultWindow__vmt0 —— CNRDItemTradeResultWindow__vmt0 构造（103 行：418DD0/42983
+window_party.cpp	0063E890	+0x74	CNRDItemTradeResultWindow	S1	结果条目向量 begin（0x63E890: result=*(this+116)；元素 52 字节）	// 0x63E890 CNRDItemTradeResultWindow__vmt0 —— CNRDItemTradeResultWindow__vmt0 构造（103 行：418DD0/42983
+window_party.cpp	0063ECD0	+0x80	CNRDItemTradeResultWindow	S1	失败原因 id（0x63E890: *(this+128)!=0xFFFF 才画图标；0x63ECD0 存 nArg3 并取串 1114/1115）	// 0x63ECD0 CNRDItemTradeResultWindow__vmtC —— CNRDItemTradeResultWindow__vmtC 收尾（429830 + 69C340/69
+item_parser.cpp	004F0B90	+0x8	-	S2	解析容器 vector end 指针	// 0x4F0B90 sub_4F0B90
+item_parser.cpp	004F0B90	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F0B90 sub_4F0B90
+item_parser.cpp	004F0B90	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4F0B90 sub_4F0B90
+item_parser.cpp	004F0F10	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x8	-	S2	解析容器 vector end 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x8	-	S2	解析容器 vector end 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x8	-	S2	解析容器 vector end 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x8	-	S2	解析容器 vector end 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x8	-	S2	解析容器 vector end 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x8	-	S2	解析容器 vector end 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x8	-	S2	解析容器 vector end 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F0F10	+0x8	-	S2	解析容器 vector end 指针	// 0x4F0F10 sub_4F0F10
+item_parser.cpp	004F15E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F15E0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F15E0 sub_4F15E0
+item_parser.cpp	004F1920	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F1920 sub_4F1920
+item_parser.cpp	004F1990	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F1990 sub_4F1990
+item_parser.cpp	004F1990	+0x8	-	S2	解析容器 vector end 指针	// 0x4F1990 sub_4F1990
+item_parser.cpp	004F3010	+0x48	IRDItem	S2	IRDItem 记录标量槽	// 0x4F3010 IRDItem__vmt64 —— 显示数量经本地玩家钩子修正后取 vmt112
+item_parser.cpp	004F30E0	+0x4C	IRDItem	S2	IRDItem 记录标量槽 2	// 0x4F30E0 IRDItem__vmt8 —— 物品地面绘制主例程（图标/数量/阴影/商城态）
+item_parser.cpp	004F30E0	+0x24	IRDItem	S1	物品状态字（0x4859F0: ==0 直通 / ==3 时须 +40 字节标志非 0）	// 0x4F30E0 IRDItem__vmt8 —— 物品地面绘制主例程（图标/数量/阴影/商城态）
+item_parser.cpp	004F4280	+0x8	-	S2	解析容器 vector end 指针	// 0x4F4280 sub_4F4280 —— deque<uint32> 扩容搬移（块 16 字节双端队列）
+item_parser.cpp	004F4280	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4F4280 sub_4F4280 —— deque<uint32> 扩容搬移（块 16 字节双端队列）
+item_parser.cpp	004F4280	+0x8	-	S2	解析容器 vector end 指针	// 0x4F4280 sub_4F4280 —— deque<uint32> 扩容搬移（块 16 字节双端队列）
+item_parser.cpp	004F4440	+0x10	-	S2	解析容器尾槽/计数槽	// 0x4F4440 sub_4F4440 —— deque<uint32> 尾部压入（16 字节块惰性分配）
+item_parser.cpp	004F4440	+0x8	-	S2	解析容器 vector end 指针	// 0x4F4440 sub_4F4440 —— deque<uint32> 尾部压入（16 字节块惰性分配）
+item_parser.cpp	004F4440	+0x10	-	S2	解析容器尾槽/计数槽	// 0x4F4440 sub_4F4440 —— deque<uint32> 尾部压入（16 字节块惰性分配）
+item_parser.cpp	004F44C0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F44C0 sub_4F44C0 —— vector<uint32> 批量插入（0x3FFFFFFF 上限）
+item_parser.cpp	004F44C0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F44C0 sub_4F44C0 —— vector<uint32> 批量插入（0x3FFFFFFF 上限）
+item_parser.cpp	004F44C0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F44C0 sub_4F44C0 —— vector<uint32> 批量插入（0x3FFFFFFF 上限）
+item_parser.cpp	004F44C0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F44C0 sub_4F44C0 —— vector<uint32> 批量插入（0x3FFFFFFF 上限）
+item_parser.cpp	004F44C0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F44C0 sub_4F44C0 —— vector<uint32> 批量插入（0x3FFFFFFF 上限）
+item_parser.cpp	004F44C0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F44C0 sub_4F44C0 —— vector<uint32> 批量插入（0x3FFFFFFF 上限）
+item_parser.cpp	004F44C0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F44C0 sub_4F44C0 —— vector<uint32> 批量插入（0x3FFFFFFF 上限）
+item_parser.cpp	004F4970	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F4970 sub_4F4970 —— vector<uint32> 尾部压入（满则 4F44C0）
+item_parser.cpp	004F4970	+0x8	-	S2	解析容器 vector end 指针	// 0x4F4970 sub_4F4970 —— vector<uint32> 尾部压入（满则 4F44C0）
+item_parser.cpp	004F57A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F57A0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F57A0 sub_4F57A0 —— 80 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F6600	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F6600 sub_4F6600 —— 80 字节元素单点插入（返回新址）
+item_parser.cpp	004F6700	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F6700 sub_4F6700 —— 80 字节元素尾插（满则 4F6600）
+item_parser.cpp	004F6700	+0x8	-	S2	解析容器 vector end 指针	// 0x4F6700 sub_4F6700 —— 80 字节元素尾插（满则 4F6600）
+item_parser.cpp	004F6700	+0x8	-	S2	解析容器 vector end 指针	// 0x4F6700 sub_4F6700 —— 80 字节元素尾插（满则 4F6600）
+item_parser.cpp	004F7830	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7830	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7830	+0x8	-	S2	解析容器 vector end 指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7830	+0x8	-	S2	解析容器 vector end 指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7830	+0x8	-	S2	解析容器 vector end 指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7830	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7830	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7830	+0x8	-	S2	解析容器 vector end 指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7830	+0x8	-	S2	解析容器 vector end 指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7830	+0x8	-	S2	解析容器 vector end 指针	// 0x4F7830 sub_4F7830 —— 124 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F7B60	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F7B60 sub_4F7B60 —— 124 字节元素单点插入（返回新址）
+item_parser.cpp	004F7BD0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F7BD0 sub_4F7BD0 —— 124 字节元素尾插（满则 4F7B60）
+item_parser.cpp	004F7BD0	+0x8	-	S2	解析容器 vector end 指针	// 0x4F7BD0 sub_4F7BD0 —— 124 字节元素尾插（满则 4F7B60）
+item_parser.cpp	004F8F40	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F8F40 sub_4F8F40 —— 等级分段查表（1..99 × 5 档系数）【推断】
+item_parser.cpp	004F9750	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F9750 sub_4F9750 —— 44 字节元素带界取址（越界抛 out_of_range）
+item_parser.cpp	004F9790	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9790	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9790	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9790	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9790	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9790	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9790	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9790	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9790	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9790	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9790 sub_4F9790 —— 44 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004F9A40	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F9A40 sub_4F9A40 —— 与 ·0x4F44C0 同构（差异：超长抛 sub_4F9570 而非 4F43D0）
+item_parser.cpp	004F9A40	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9A40 sub_4F9A40 —— 与 ·0x4F44C0 同构（差异：超长抛 sub_4F9570 而非 4F43D0）
+item_parser.cpp	004F9A40	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9A40 sub_4F9A40 —— 与 ·0x4F44C0 同构（差异：超长抛 sub_4F9570 而非 4F43D0）
+item_parser.cpp	004F9A40	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9A40 sub_4F9A40 —— 与 ·0x4F44C0 同构（差异：超长抛 sub_4F9570 而非 4F43D0）
+item_parser.cpp	004F9A40	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9A40 sub_4F9A40 —— 与 ·0x4F44C0 同构（差异：超长抛 sub_4F9570 而非 4F43D0）
+item_parser.cpp	004F9A40	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F9A40 sub_4F9A40 —— 与 ·0x4F44C0 同构（差异：超长抛 sub_4F9570 而非 4F43D0）
+item_parser.cpp	004F9A40	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9A40 sub_4F9A40 —— 与 ·0x4F44C0 同构（差异：超长抛 sub_4F9570 而非 4F43D0）
+item_parser.cpp	004F9C20	+0x4	-	S2	解析容器 vector begin 指针	// 0x4F9C20 sub_4F9C20 —— 44 字节元素向量区间拷贝赋值
+item_parser.cpp	004F9D10	+0x8	-	S2	解析容器 vector end 指针	// 0x4F9D10 sub_4F9D10 —— 44 字节元素向量赋值（容量三路分支）
+item_parser.cpp	004F9D10	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4F9D10 sub_4F9D10 —— 44 字节元素向量赋值（容量三路分支）
+item_parser.cpp	004FA000	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FA000 sub_4FA000 —— 44 字节元素单点插入（返回新址）
+item_parser.cpp	004FA120	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FA120 sub_4FA120 —— 44 字节元素尾插（满则 4FA000）
+item_parser.cpp	004FA120	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA120 sub_4FA120 —— 44 字节元素尾插（满则 4FA000）
+item_parser.cpp	004FA210	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FA210	+0x8	-	S2	解析容器 vector end 指针	// 0x4FA210 sub_4FA210 —— 84 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FAF80	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FAF80 sub_4FAF80 —— 84 字节元素单点插入（返回新址）
+item_parser.cpp	004FAFF0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FAFF0 sub_4FAFF0 —— 84 字节元素向量析构（44C0C0 逐槽 + 释放）
+item_parser.cpp	004FB0F0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FB0F0 sub_4FB0F0 —— 84 字节元素尾插（满则 4FAF80）
+item_parser.cpp	004FB0F0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FB0F0 sub_4FB0F0 —— 84 字节元素尾插（满则 4FAF80）
+item_parser.cpp	004FB660	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FB660 sub_4FB660 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FB660	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4FB660 sub_4FB660 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FB660	+0x8	-	S2	解析容器 vector end 指针	// 0x4FB660 sub_4FB660 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FB660	+0x8	-	S2	解析容器 vector end 指针	// 0x4FB660 sub_4FB660 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FB660	+0x8	-	S2	解析容器 vector end 指针	// 0x4FB660 sub_4FB660 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FB660	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FB660 sub_4FB660 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FB660	+0x8	-	S2	解析容器 vector end 指针	// 0x4FB660 sub_4FB660 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FB660	+0x8	-	S2	解析容器 vector end 指针	// 0x4FB660 sub_4FB660 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FB660	+0x8	-	S2	解析容器 vector end 指针	// 0x4FB660 sub_4FB660 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FB970	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FB970 sub_4FB970 —— 20 字节元素单点插入（返回新址）
+item_parser.cpp	004FB9E0	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FB9E0 sub_4FB9E0 —— 20 字节元素尾插（满则 4FB970）
+item_parser.cpp	004FB9E0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FB9E0 sub_4FB9E0 —— 20 字节元素尾插（满则 4FB970）
+item_parser.cpp	004FB9E0	+0x8	-	S2	解析容器 vector end 指针	// 0x4FB9E0 sub_4FB9E0 —— 20 字节元素尾插（满则 4FB970）
+item_parser.cpp	004FBE30	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FBE30	+0xC	-	S2	解析容器 vector 容量尾指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FBE30	+0x8	-	S2	解析容器 vector end 指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FBE30	+0x8	-	S2	解析容器 vector end 指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FBE30	+0x8	-	S2	解析容器 vector end 指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FBE30	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FBE30	+0x8	-	S2	解析容器 vector end 指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FBE30	+0x4	-	S2	解析容器 vector begin 指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FBE30	+0x8	-	S2	解析容器 vector end 指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+item_parser.cpp	004FBE30	+0x8	-	S2	解析容器 vector end 指针	// 0x4FBE30 sub_4FBE30 —— 20 字节元素向量插入（三路分支 + 1.5 倍扩容）
+socket_ime.cpp	00697D00	+0x108	IFileResourceManager	S1	资源句柄/值（0x697B30: *(this+264)=nArg4）	// 0x697D00 sub_697D00
+socket_ime.cpp	006983E0	+0x4	IFileResourceManager	S1	资源键/序号（0x697B30 映射节点构造: *(this+4)=nArg2 入槽）	// 0x6983E0 sub_6983E0
+socket_ime.cpp	006989F0	+0x1BC	-	S2	发送环 CWSBuffer 对象指针	// 0x6989F0 sub_6989F0
+socket_ime.cpp	006989F0	+0x1B8	-	S2	接收环 CWSBuffer 对象指针	// 0x6989F0 sub_6989F0
+socket_ime.cpp	00698A50	+0x1BC	-	S2	发送环 CWSBuffer 对象指针	// 0x698A50 sub_698A50
+socket_ime.cpp	00698A50	+0x1B4	-	S2	SOCKET 句柄	// 0x698A50 sub_698A50
+socket_ime.cpp	00698A50	+0x1BC	-	S2	发送环 CWSBuffer 对象指针	// 0x698A50 sub_698A50
+socket_ime.cpp	00698B50	+0x1B4	-	S2	SOCKET 句柄	// 0x698B50 sub_698B50
+socket_ime.cpp	00698B50	+0x1B4	-	S2	SOCKET 句柄	// 0x698B50 sub_698B50
+socket_ime.cpp	00698D90	+0x1B8	-	S2	接收环 CWSBuffer 对象指针	// 0x698D90 sub_698D90
+socket_ime.cpp	00698DC0	+0x1B0	-	S2	IP 串槽（inet_addr 源）	// 0x698DC0 sub_698DC0
+socket_ime.cpp	00698DC0	+0x1B4	-	S2	SOCKET 句柄	// 0x698DC0 sub_698DC0
+socket_ime.cpp	00698DC0	+0x1B4	-	S2	SOCKET 句柄	// 0x698DC0 sub_698DC0
+socket_ime.cpp	00698DC0	+0x1B4	-	S2	SOCKET 句柄	// 0x698DC0 sub_698DC0
+socket_ime.cpp	0069AEA0	+0x6C	CNEdit@nengine	S2	文本缓冲容器续槽	// 0x69AEA0 sub_69AEA0
+socket_ime.cpp	0069AEA0	+0x70	CNEdit@nengine	S2	文本缓冲容器尾槽	// 0x69AEA0 sub_69AEA0
+socket_ime.cpp	0069B2E0	+0x70	-	S2	文本缓冲容器尾槽	// 0x69B2E0 sub_69B2E0
+socket_ime.cpp	0069B2E0	+0x70	-	S2	文本缓冲容器尾槽	// 0x69B2E0 sub_69B2E0
+socket_ime.cpp	0069B2E0	+0x6C	-	S2	文本缓冲容器续槽	// 0x69B2E0 sub_69B2E0
+socket_ime.cpp	0069B2E0	+0x70	-	S2	文本缓冲容器尾槽	// 0x69B2E0 sub_69B2E0
+socket_ime.cpp	0069B590	+0x6C	-	S2	文本缓冲容器续槽	// 0x69B590 sub_69B590
+socket_ime.cpp	0069C310	+0x18	CNTextBox@nengine	S2	控件父链/宿主槽	// 0x69C310 sub_69C310
+socket_ime.cpp	0069C310	+0x68	CNTextBox@nengine	S2	文本缓冲容器 begin 槽	// 0x69C310 sub_69C310
+socket_ime.cpp	0069C3C0	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C3C0 sub_69C3C0
+socket_ime.cpp	0069C3C0	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C3C0 sub_69C3C0
+socket_ime.cpp	0069C3E0	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C3E0 sub_69C3E0
+socket_ime.cpp	0069C3E0	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C3E0 sub_69C3E0
+socket_ime.cpp	0069C400	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C400 sub_69C400
+socket_ime.cpp	0069C400	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C400 sub_69C400
+socket_ime.cpp	0069C420	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C420 sub_69C420
+socket_ime.cpp	0069C420	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C420 sub_69C420
+socket_ime.cpp	0069C440	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C440 sub_69C440
+socket_ime.cpp	0069C440	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C440 sub_69C440
+socket_ime.cpp	0069C460	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C460 sub_69C460
+socket_ime.cpp	0069C460	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C460 sub_69C460
+socket_ime.cpp	0069C480	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C480 sub_69C480
+socket_ime.cpp	0069C480	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C480 sub_69C480
+socket_ime.cpp	0069C4A0	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C4A0 sub_69C4A0
+socket_ime.cpp	0069C4A0	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C4A0 sub_69C4A0
+socket_ime.cpp	0069C500	+0x68	-	S2	文本缓冲容器 begin 槽	// 0x69C500 sub_69C500
+socket_ime.cpp	0069C600	+0x6C	CNScroll@nengine	S2	文本缓冲容器续槽	// 0x69C600 sub_69C600
+socket_ime.cpp	0069C600	+0x68	CNScroll@nengine	S2	文本缓冲容器 begin 槽	// 0x69C600 sub_69C600
+socket_ime.cpp	0069C600	+0x6C	CNScroll@nengine	S2	文本缓冲容器续槽	// 0x69C600 sub_69C600
+socket_ime.cpp	0069C7B0	+0x68	CNButton@nengine	S2	文本缓冲容器 begin 槽	// 0x69C7B0 sub_69C7B0
+socket_ime.cpp	0069C880	+0x6C	CNButton@nengine	S2	文本缓冲容器续槽	// 0x69C880 sub_69C880
+socket_ime.cpp	0069C880	+0x74	CNButton@nengine	S2	容器附属槽	// 0x69C880 sub_69C880
+socket_ime.cpp	0069CB80	+0x74	CNVSlider@nengine	S2	容器附属槽	// 0x69CB80 sub_69CB80
+socket_ime.cpp	0069CC60	+0x74	CNVSlider@nengine	S2	容器附属槽	// 0x69CC60 sub_69CC60
+socket_ime.cpp	0069CC60	+0x68	CNVSlider@nengine	S2	文本缓冲容器 begin 槽	// 0x69CC60 sub_69CC60
+socket_ime.cpp	0069CC60	+0x6C	CNVSlider@nengine	S2	文本缓冲容器续槽	// 0x69CC60 sub_69CC60
+socket_ime.cpp	0069CC60	+0x74	CNVSlider@nengine	S2	容器附属槽	// 0x69CC60 sub_69CC60
+socket_ime.cpp	0069CCE0	+0x6C	CNVSlider@nengine	S2	文本缓冲容器续槽	// 0x69CCE0 sub_69CCE0
+socket_ime.cpp	0069CCE0	+0x6C	CNVSlider@nengine	S2	文本缓冲容器续槽	// 0x69CCE0 sub_69CCE0
+socket_ime.cpp	0069CD70	+0x68	CNVScroll@nengine	S2	文本缓冲容器 begin 槽	// 0x69CD70 sub_69CD70
+socket_ime.cpp	0069CEF0	+0xC	CNRadioButton@nengine	S2	控件文本容器槽	// 0x69CEF0 sub_69CEF0
+socket_ime.cpp	0069D030	+0x74	CNCheckBox@nengine	S2	容器附属槽	// 0x69D030 sub_69D030
+zlib_inflate.cpp	00650030	+0x4	CNSuplexed	S1	宿主对象指针（0x650030: 经宿主 vt+776(3) 门控后 vt+556 停 / vt+768 应用 / vt+556 再启）	// 0x650030 sub_650030 —— 状态块写入 + 3 号状态门控重应用
+zlib_inflate.cpp	00650A10	+0x50	CNReckless	S1	参数槽 B（0x650B50: *(this+80)=表项[1]；0x650A10 累加进宿主 +60）	// 0x650A10 sub_650A10 —— 属性累加 tick（6 浮点槽 + 16 属性槽）
+zlib_inflate.cpp	00650A10	+0x64	CNReckless	S1	攻击百分比（0x650B50: *(this+100)=表项[2]×(-0.01)；0x650A10 累加进宿主 +1054）	// 0x650A10 sub_650A10 —— 属性累加 tick（6 浮点槽 + 16 属性槽）
+zlib_inflate.cpp	00650A10	+0x68	CNReckless	S1	施法百分比（0x650B50: *(this+104)=表项[3]×(-0.01)；0x650A10 累加进宿主 +1110）	// 0x650A10 sub_650A10 —— 属性累加 tick（6 浮点槽 + 16 属性槽）
+zlib_inflate.cpp	00650A10	+0x58	CNReckless	S1	HP 回复率 ×0.01（0x650A10: *(this+88)×0.001 累加进宿主 +830）	// 0x650A10 sub_650A10 —— 属性累加 tick（6 浮点槽 + 16 属性槽）
+zlib_inflate.cpp	00650A10	+0x5C	CNReckless	S1	MP 回复率 ×0.01（0x650A10: *(this+92)×0.001 累加进宿主 +858）	// 0x650A10 sub_650A10 —— 属性累加 tick（6 浮点槽 + 16 属性槽）
+zlib_inflate.cpp	00650A10	+0x54	CNReckless	S1	防御加算（0x650A10: *(this+84) 累加进宿主 +116）	// 0x650A10 sub_650A10 —— 属性累加 tick（6 浮点槽 + 16 属性槽）
+zlib_inflate.cpp	00650A10	+0x60	CNReckless	S1	属性加算源（0x650A10: *(this+96) 逐个加进宿主 +284 起 16 属性槽，步长 14）	// 0x650A10 sub_650A10 —— 属性累加 tick（6 浮点槽 + 16 属性槽）
+zlib_inflate.cpp	00650E80	+0x50	CNGrabbedBlastBlood	S1	命中侧标志（0x650E80: fld_50=*(this+80) 经宿主 vt+152 取朝向）	// 0x650E80 sub_650E80 —— 命中落位偏移（单段 ±43、高度钳制 110）
+zlib_inflate.cpp	00650E80	+0x4	CNGrabbedBlastBlood	S1	宿主对象指针（0x650E80: vt+152 朝向、vt+192 高度、vt+776(3) 门控）	// 0x650E80 sub_650E80 —— 命中落位偏移（单段 ±43、高度钳制 110）
+zlib_inflate.cpp	00650E80	+0x4	CNGrabbedBlastBlood	S1	宿主对象指针（0x650E80: vt+152 朝向、vt+192 高度、vt+776(3) 门控）	// 0x650E80 sub_650E80 —— 命中落位偏移（单段 ±43、高度钳制 110）
+zlib_inflate.cpp	00651000	+0x98	CNDOTArea	S1	时间基准比值浮点（0x651000：新基准/旧基准，用于 +160 两对象变换块 12/16/20 三标量缩放）（证据: va=00651000）	// 0x651000 sub_651000 —— 时间基准重定标（120 帧制 + 参数缩放）
+zlib_inflate.cpp	006510D0	+0x90	CNDOTArea	S1	延滞伤害量 B（0x6510D0：273 态取 +144）（证据: va=006510D0）	// 0x6510D0 sub_6510D0 —— 延滞伤害表现（CNChangeHp 附着 + 观察刷新）
+zlib_inflate.cpp	00651260	+0x4	CNDOTArea	S1	宿主对象（0x6510D0 经 *(this+4) vt+40/+80；光环附着宿主）（证据: va=00651000）	// 0x651260 sub_651260
+zlib_inflate.cpp	00651350	+0x4	CNDOTArea	S1	宿主对象（0x6510D0 经 *(this+4) vt+40/+80；光环附着宿主）（证据: va=00651000）	// 0x651350 sub_651350 —— 挂接件定点收尾（CNChangeHp 状态 2 调 vt+76）【推断】
+zlib_inflate.cpp	00651B10	+0x64	CNRemoveActiveStatus	S1	挂接对象（0x651B10: *(this+100) 非空调其 vt+12(0) 解除）	// 0x651B10 sub_651B10 —— 清 +80 标志并复位 +100 挂接件
+zlib_inflate.cpp	006522A0	+0x54	CNAimVitalPoint	S1	瞄准槽索引（0x6522A0: *(this+84) 从宿主 +466 扣除）	// 0x6522A0 sub_6522A0 —— 扣除 tick（+80/+84 → 宿主 +1278/+466）
+zlib_inflate.cpp	006522A0	+0x50	CNAimVitalPoint	S1	瞄准扣减值（0x6522A0: *(float*)(this+80) 从宿主 +1278 扣除）	// 0x6522A0 sub_6522A0 —— 扣除 tick（+80/+84 → 宿主 +1278/+466）
+zlib_inflate.cpp	00652300	+0x4	CNAimVitalPoint	S1	宿主对象指针（0x652300: vt+192 取高、vt+776(3) 门控；AimedVitalPoint.ani）	// 0x652300 sub_652300 —— 激活下发（+88 播放 + 高度修正图层属性）
+zlib_inflate.cpp	00655A90	+0x1C	-	S2	累计时长累加槽（+= fArg2）	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x28	-	S2	阶段计数器	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x4	-	S2	阶段/状态枚举（-1 递减）	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x20	-	S2	下一阶段阈值时刻	// 0x655A90 sub_655A90
+zlib_inflate.cpp	00655A90	+0x30	-	S2	调试打印行计数	// 0x655A90 sub_655A90
+combat_core.cpp	004D1860	+0x40	-	S2	坐标三元组 X	// 0x4D1860 sub_4D1860
+combat_core.cpp	004D1860	+0x44	-	S2	坐标三元组 Y	// 0x4D1860 sub_4D1860
+combat_core.cpp	004D1860	+0x40	-	S2	坐标三元组 X	// 0x4D1860 sub_4D1860
+combat_core.cpp	004D1860	+0x44	-	S2	坐标三元组 Y	// 0x4D1860 sub_4D1860
+combat_core.cpp	004D1DB0	+0x84	-	S2	观察者表 begin 指针	// 0x4D1DB0 sub_4D1DB0
+combat_core.cpp	004D3950	+0x20	CNSlangTextFilter	S1	条目数（0x4D3950: *(this+32) 循环上界；0x4D39F0 SJIS 匹配）	// 0x4D3950 sub_4D3950
+combat_core.cpp	004D3950	+0x1C	CNSlangTextFilter	S1	value 表指针数组（0x4D3950: *(this+28) 同组 free）	// 0x4D3950 sub_4D3950
+combat_core.cpp	004D3B50	+0x20	CNSlangTextFilter	S1	条目数（0x4D3950: *(this+32) 循环上界；0x4D39F0 SJIS 匹配）	// 0x4D3B50 sub_4D3B50
+combat_core.cpp	004D4040	+0x20	-	S2	时钟/计时槽 2	// 0x4D4040 sub_4D4040
+combat_core.cpp	004D4120	+0x38	CNRDSeriasPresentListWindow	S2	碰撞/几何槽 2	// 0x4D4120 sub_4D4120
+combat_core.cpp	004D4120	+0x34	CNRDSeriasPresentListWindow	S1	列表控件（0x4D4120: sub_69C690(*(this+52)) 取滚动偏移）	// 0x4D4120 sub_4D4120
+combat_core.cpp	004D4120	+0x38	CNRDSeriasPresentListWindow	S2	碰撞/几何槽 2	// 0x4D4120 sub_4D4120
+combat_core.cpp	004D4120	+0x74	CNRDSeriasPresentListWindow	S1	条目向量 begin（0x4D4120: *(this+116)；元素 52 字节，行高 39px）	// 0x4D4120 sub_4D4120
+combat_core.cpp	004D9000	+0x1BEC	CNGhoulOilSellerOlrek	S1	★大状态 ID（★全库通用 this+7148；4DB480 反击判定 11/12→切 4）（证据 va=004DB480）	// 0x4D9000 sub_4D9000
+combat_core.cpp	004D94A0	+0x20A8	CNGhoulOilSellerOlrek	S1	拾取信息 7 字节对象指针（4D94A0 懒创建/释放）（证据 va=004D94A0）	// 0x4D94A0 sub_4D94A0 —— 拾取信息快照读写（this+8360 的 7 字节对象）
+combat_core.cpp	004D94A0	+0x20A0	CNGhoulOilSellerOlrek	S1	骑乘/宿主槽（★全库通用 this+8352）（证据 va=004D94A0）	// 0x4D94A0 sub_4D94A0 —— 拾取信息快照读写（this+8360 的 7 字节对象）
+combat_core.cpp	004D9F50	+0x20A8	CNGhoulOilSellerOlrek	S1	拾取信息 7 字节对象指针（4D94A0 懒创建/释放）（证据 va=004D94A0）	// 0x4D9F50 sub_4D9F50 —— 骑乘/宿主槽写入（this+8352 双写）
+combat_core.cpp	004D9F50	+0x20A8	CNGhoulOilSellerOlrek	S1	拾取信息 7 字节对象指针（4D94A0 懒创建/释放）（证据 va=004D94A0）	// 0x4D9F50 sub_4D9F50 —— 骑乘/宿主槽写入（this+8352 双写）
+combat_core.cpp	004DE410	+0x288	CNGhoulOilSellerOlrek	S1	怪物位标志字（0x5908E0 掩码清 bit0 = APPEAR 已播标志）	// 0x4DE410 sub_4DE410 —— 名称模板写入 + 随机倒计时
+combat_core.cpp	004DEBD0	+0x4	-	S2	std::string SSO 头槽（+28=15 组）	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0xC	-	S2	std::string 长度槽	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x4	-	S2	std::string SSO 头槽（+28=15 组）	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x4	-	S2	std::string SSO 头槽（+28=15 组）	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DEBD0	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DEBD0 sub_4DEBD0 —— 容器重建/释放（a2 对象的 +4/+8/+C 字段族）
+combat_core.cpp	004DF2D0	+0x1C58	CNGhoulOilSellerOlrek	S1	光环对象（★已确证偏移语义 this+7256）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1DFC	CNGhoulOilSellerOlrek	S1	名牌/骑乘族槽（-1 哨兵）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1DF8	CNGhoulOilSellerOlrek	S1	名牌/骑乘族槽（-1 哨兵）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1DFC	CNGhoulOilSellerOlrek	S1	名牌/骑乘族槽（-1 哨兵）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1DF8	CNGhoulOilSellerOlrek	S1	名牌/骑乘族槽（-1 哨兵）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x74	CNGhoulOilSellerOlrek	S2	观察者表 end 指针	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1E34	CNGhoulOilSellerOlrek	S1	复位批尾置 200（与 +608=100 同风格：数值型门限初值）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DF2D0	+0x1C54	CNGhoulOilSellerOlrek	S1	当前目标（★已确证偏移语义 this+7252）（证据 va=确证语义）	// 0x4DF2D0 sub_4DF2D0 —— ★ 大状态逐帧 tick 分派器（研究 §16 P41：tick case 硬编码）
+combat_core.cpp	004DFF90	+0x4	-	S2	std::string SSO 头槽（+28=15 组）	// 0x4DFF90 sub_4DFF90 —— 8 字节/条容器访问（this+4/+8/+12 三件套）
+combat_core.cpp	004DFF90	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DFF90 sub_4DFF90 —— 8 字节/条容器访问（this+4/+8/+12 三件套）
+combat_core.cpp	004DFF90	+0x8	-	S2	std::string SSO 内联缓冲	// 0x4DFF90 sub_4DFF90 —— 8 字节/条容器访问（this+4/+8/+12 三件套）
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E88	CNMage	S1	★ 子状态 B（0x5DE690: +7816==11 判据）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x2178	CNMage	S1	★ 相位组索引（0x5DE690: +8568!=-1 门；经 sub_5DA1E0 映射组号后喂 sub_4BA730 广播）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x16C	CNMage	S1	★ 场景动画池指针（0x5DE690 case 14 经 sub_431920 加载 FollowMeCast.ani；+384<0x10 时改用 this+108 内联）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x74	CNMage	S1	0x5DE690 读取槽（fld_74）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x16C	CNMage	S1	★ 场景动画池指针（0x5DE690 case 14 经 sub_431920 加载 FollowMeCast.ani；+384<0x10 时改用 this+108 内联）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x74	CNMage	S1	0x5DE690 读取槽（fld_74）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x2140	CNMage	S1	0x5DE690: sub_432E50(*(this+8512)) 取值	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x2144	CNMage	S1	0x5DE690 相位值 A	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x2144	CNMage	S1	0x5DE690 相位值 A	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x2154	CNMage	S1	0x5DE690 相位值 B（fld_2154）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x2154	CNMage	S1	0x5DE690 相位值 B（fld_2154）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x2160	CNMage	S1	0x5DE690 经 sub_4939E0(*(this+8544), 1) 消费	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x2180	CNMage	S1	★ 渐变 alpha（0x5DE690: sub_42B420(255,220,…,100) 插值 → vt+252(0/1, alpha) 双通道）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E88	CNMage	S1	★ 子状态 B（0x5DE690: +7816==11 判据）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E88	CNMage	S1	★ 子状态 B（0x5DE690: +7816==11 判据）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E88	CNMage	S1	★ 子状态 B（0x5DE690: +7816==11 判据）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x78	CNMage	S1	动画对象指针（0x499020 帧时刻同步宿主；0x5DE690 经此 +148 取剩余硬直）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x16C	CNMage	S1	★ 场景动画池指针（0x5DE690 case 14 经 sub_431920 加载 FollowMeCast.ani；+384<0x10 时改用 this+108 内联）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x74	CNMage	S1	0x5DE690 读取槽（fld_74）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x16C	CNMage	S1	★ 场景动画池指针（0x5DE690 case 14 经 sub_431920 加载 FollowMeCast.ani；+384<0x10 时改用 this+108 内联）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0xA0	CNMage	S1	相位参数（0x5DE690: sub_4BA730(1, fld_2178, 0, -*(this+160)) 的入参源）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x16C	CNMage	S1	★ 场景动画池指针（0x5DE690 case 14 经 sub_431920 加载 FollowMeCast.ani；+384<0x10 时改用 this+108 内联）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x74	CNMage	S1	0x5DE690 读取槽（fld_74）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E80	CNMage	S1	★ 变体选择（0x5DE690: +7808==1 分支）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E88	CNMage	S1	★ 子状态 B（0x5DE690: +7816==11 判据）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E88	CNMage	S1	★ 子状态 B（0x5DE690: +7816==11 判据）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E88	CNMage	S1	★ 子状态 B（0x5DE690: +7816==11 判据）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1E88	CNMage	S1	★ 子状态 B（0x5DE690: +7816==11 判据）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x1F1C	CNMage	S1	★ 技能号（0x5DE690: ==30 时走 case 14 的 FollowMeCast 召集演出）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x2178	CNMage	S1	★ 相位组索引（0x5DE690: +8568!=-1 门；经 sub_5DA1E0 映射组号后喂 sub_4BA730 广播）	// 0x5E1000 sub_5E1000  size=13379
+bigfunc_5E1000_sub_5E1000.cpp	005E1000	+0x199C	CNMage	S1	★ 法师大状态 ID（0x5DE690 switch(this+6556) 总闸：0/7/8/10/12/14/18/19/20/21 分派）	// 0x5E1000 sub_5E1000  size=13379
+po_effects.cpp	00510050	+0x4A8	CNItemAreaStackable	S2	指示器子对象槽	// 0x510050 CNItemAreaStackable__vmt88
+po_effects.cpp	005104F0	+0xA8	CNSummonMonsterStackable	S2	指示器对象指针槽 A	// 0x5104F0 CNSummonMonsterStackable__vmt88
+po_effects.cpp	005104F0	+0xAC	CNSummonMonsterStackable	S2	指示器对象指针槽 B	// 0x5104F0 CNSummonMonsterStackable__vmt88
+po_effects.cpp	00513AA0	+0x4	-	S2	宿主对象指针/虚表转发槽	// 0x513AA0 sub_513AA0
+po_effects.cpp	00513AA0	+0x8	-	S2	宿主对象指针续槽	// 0x513AA0 sub_513AA0
+po_effects.cpp	00513AA0	+0x8	-	S2	宿主对象指针续槽	// 0x513AA0 sub_513AA0
+po_effects.cpp	005149F0	+0x544	CNEquipmentDragonicSkin	S2	动画件装配对象槽	// 0x5149F0 CNEquipmentDragonicSkin__vmt12C
+po_effects.cpp	005149F0	+0x544	CNEquipmentDragonicSkin	S2	动画件装配对象槽	// 0x5149F0 CNEquipmentDragonicSkin__vmt12C
+po_effects.cpp	00516440	+0x5B0	CNEquipmentHeavyResponsibility	S2	效果对象指针槽（vmt12C tick 用）	// 0x516440 CNEquipmentHeavyResponsibility__vmt12C
+po_effects.cpp	00516440	+0x5B0	CNEquipmentHeavyResponsibility	S2	效果对象指针槽（vmt12C tick 用）	// 0x516440 CNEquipmentHeavyResponsibility__vmt12C
+po_effects.cpp	00516440	+0x5B0	CNEquipmentHeavyResponsibility	S2	效果对象指针槽（vmt12C tick 用）	// 0x516440 CNEquipmentHeavyResponsibility__vmt12C
+po_effects.cpp	00516B80	+0x5C8	CNEquipmentHatefulBeastCoat	S2	效果计数槽	// 0x516B80 CNEquipmentHatefulBeastCoat__vmt12C
+po_effects.cpp	00516B80	+0x5CC	CNEquipmentHatefulBeastCoat	S2	动画件装配门	// 0x516B80 CNEquipmentHatefulBeastCoat__vmt12C
+po_effects.cpp	00516B80	+0x5CC	CNEquipmentHatefulBeastCoat	S2	动画件装配门	// 0x516B80 CNEquipmentHatefulBeastCoat__vmt12C
+po_effects.cpp	005170C0	+0x5CC	CNEquipmentLalaMisYong	S2	动画件装配门	// 0x5170C0 CNEquipmentLalaMisYong__vmt12C
+po_effects.cpp	005170C0	+0x5B0	CNEquipmentLalaMisYong	S2	效果对象指针槽（vmt12C tick 用）	// 0x5170C0 CNEquipmentLalaMisYong__vmt12C
+po_effects.cpp	005170C0	+0x5B0	CNEquipmentLalaMisYong	S2	效果对象指针槽（vmt12C tick 用）	// 0x5170C0 CNEquipmentLalaMisYong__vmt12C
+po_effects.cpp	00517740	+0x4	-	S2	宿主对象指针/虚表转发槽	// 0x517740 sub_517740
+po_effects.cpp	00518580	+0x5D0	CNEquipmentPureGuardian	S2	效果宿主/触发槽	// 0x518580 CNEquipmentPureGuardian__vmt12C
+po_effects.cpp	00518580	+0x5B0	CNEquipmentPureGuardian	S2	效果对象指针槽（vmt12C tick 用）	// 0x518580 CNEquipmentPureGuardian__vmt12C
+po_effects.cpp	00518580	+0x5B0	CNEquipmentPureGuardian	S2	效果对象指针槽（vmt12C tick 用）	// 0x518580 CNEquipmentPureGuardian__vmt12C
+po_effects.cpp	00518CA0	+0x5CC	CNEquipmentTeachingofGoraBoldness	S2	动画件装配门	// 0x518CA0 CNEquipmentTeachingofGoraBoldness__vmt12C
+po_effects.cpp	00518CA0	+0x5D0	CNEquipmentTeachingofGoraBoldness	S2	效果宿主/触发槽	// 0x518CA0 CNEquipmentTeachingofGoraBoldness__vmt12C
+po_effects.cpp	00518CA0	+0x5D0	CNEquipmentTeachingofGoraBoldness	S2	效果宿主/触发槽	// 0x518CA0 CNEquipmentTeachingofGoraBoldness__vmt12C
+po_effects.cpp	00519600	+0x5B0	CNEquipmentCrisisScepter	S2	效果对象指针槽（vmt12C tick 用）	// 0x519600 CNEquipmentCrisisScepter__vmt12C
+po_effects.cpp	00519600	+0x5B0	CNEquipmentCrisisScepter	S2	效果对象指针槽（vmt12C tick 用）	// 0x519600 CNEquipmentCrisisScepter__vmt12C
+po_effects.cpp	00519950	+0x5B0	CNEquipmentZiegGarbCoat	S2	效果对象指针槽（vmt12C tick 用）	// 0x519950 CNEquipmentZiegGarbCoat__vmt88
+po_effects.cpp	00519950	+0x5B0	CNEquipmentZiegGarbCoat	S2	效果对象指针槽（vmt12C tick 用）	// 0x519950 CNEquipmentZiegGarbCoat__vmt88
+po_effects.cpp	00519950	+0x5B0	CNEquipmentZiegGarbCoat	S2	效果对象指针槽（vmt12C tick 用）	// 0x519950 CNEquipmentZiegGarbCoat__vmt88
+po_effects.cpp	0051A110	+0x5B0	CNEquipmentBlackLunaTunic	S2	效果对象指针槽（vmt12C tick 用）	// 0x51A110 CNEquipmentBlackLunaTunic__vmt8C
+po_effects.cpp	0051A390	+0x5B0	CNEquipmentAceAdventCoat	S2	效果对象指针槽（vmt12C tick 用）	// 0x51A390 CNEquipmentAceAdventCoat__vmt12C
+po_effects.cpp	0051A390	+0x5B0	CNEquipmentAceAdventCoat	S2	效果对象指针槽（vmt12C tick 用）	// 0x51A390 CNEquipmentAceAdventCoat__vmt12C
+po_effects.cpp	0051AB90	+0x5B0	CNEquipmentCurseArmorTodpursResist	S2	效果对象指针槽（vmt12C tick 用）	// 0x51AB90 CNEquipmentCurseArmorTodpursResist__vmt88
+po_effects.cpp	0051B0F0	+0x544	CNEquipmentSleepySpring	S2	动画件装配对象槽	// 0x51B0F0 CNEquipmentSleepySpring__vmt88
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291
+bigfunc_4471E0_sub_4471E0.cpp	004471E0	+0x100014	CNRDUdpModule	S2	包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）	// 0x4471E0 sub_4471E0  size=11291

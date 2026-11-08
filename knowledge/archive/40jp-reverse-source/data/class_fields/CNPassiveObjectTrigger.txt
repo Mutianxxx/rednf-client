@@ -1,0 +1,24 @@
+CLASS .?AVCNPassiveObjectTrigger@@  slots=177  fields_candidate=21
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0078 uint32_t   6  00499020  fld_78 = *(uint32_t *)(this + 120);
++0x00E8 uint8_t    2  00499020  result = *(uint8_t *)(this + 232);
++0x00EC uint32_t   1  00499020  *(uint32_t *)(this + 236) = nArg3;
++0x00F0 uint32_t   1  00499020  *(uint32_t *)(this + 240) = nArg4;
++0x00F4 float      4  00499080  if ( *(float *)(this + 244) == 0.0 || fArg32 != 0.0 )
++0x00F8 uint8_t    1  0042A8D0  *(uint8_t *)(this + 248) = pszArg2;
++0x00FC uint32_t   1  0042A8D0  *(uint32_t *)(this + 252) = nArg3;
++0x0100 uint8_t    1  0042A8D0  *(uint8_t *)(this + 256) = pszArg4;
++0x0104 uint32_t   1  0042A8D0  *(uint32_t *)(this + 260) = nArg5;
++0x0282 uint8_t    5  004E5C10  result = *(uint8_t *)(this + 642);
++0x0284 uint32_t   4  004E5C10  *(uint32_t *)(this + 644) = nArg3;
++0x02A8 uint32_t   1  004E1FE0  *(uint32_t *)(this + 680) = *(uint32_t *)pArg2;
++0x02AC uint32_t   1  004E1FE0  *(uint32_t *)(this + 684) = *(uint32_t *)(pArg2 + 4);
++0x02B0 uint32_t   1  004E1FE0  *(uint32_t *)(this + 688) = *(uint32_t *)(pArg2 + 8);
++0x02B4 uint32_t   1  004E1FE0  *(uint32_t *)(this + 692) = *(uint32_t *)(pArg2 + 12);
++0x02B8 uint32_t   1  004E1FE0  *(uint32_t *)(this + 696) = *(uint32_t *)(pArg2 + 16);
++0x02BC uint8_t    1  004E1FE0  *(uint8_t *)(this + 700) = *(uint8_t *)(pArg2 + 20);
++0x02BD uint8_t    1  004E1FE0  *(uint8_t *)(this + 701) = *(uint8_t *)(pArg2 + 21);
++0x02C0 uint32_t   1  004E1FE0  *(uint32_t *)(this + 704) = *(uint32_t *)(pArg2 + 24);
++0x03C4 uint32_t   1  005FFF80  *(uint32_t *)(this + 964) = Size;
++0x03C8 uint32_t   3  005FFF80  if ( *(uint32_t *)(this + 968) != 0 )

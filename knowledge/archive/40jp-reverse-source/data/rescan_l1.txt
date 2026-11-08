@@ -1,0 +1,79 @@
+# ============================================================
+# 【40JP逆向源代码工程】遗漏区段复扫报告 D —— L1 精修层完整性
+# 生成: 2026-10-06 18:03:51 (子代理复扫)
+# ============================================================
+
+## D1. L1 实际文件清单 (src/nengine, src/cnrd, src/game/module 全量)
+
+  src/nengine/
+    time_system.h                   92 行  [存在]
+    time_system.cpp                159 行  [存在]
+    camera_fx.h                    141 行  [存在]
+    camera_fx.cpp                  474 行  [存在]
+    net_socket.cpp                  99 行  [存在]
+    log_dump.cpp                 13919 行  [存在]
+    gfx_texture.cpp              14753 行  [存在]
+    zlib_inflate.cpp              7329 行  [存在]
+    sound_script.cpp               467 行  [存在]
+    missing_engine.cpp             367 行  [存在]
+  src/cnrd/
+    CNRDObject.h                   160 行  [存在]
+    CNRDObject.cpp                 641 行  [存在]
+    IRDActiveObject.h              100 行  [存在]
+    IRDActiveObject.cpp            450 行  [存在]
+    IRDCollisionObject.h            80 行  [存在]
+    IRDCollisionObject.cpp         358 行  [存在]
+    ActiveObjectEquipment.cpp      399 行  [存在]
+  src/game/module/
+    CNMainGameModule.cpp           497 行  [存在]
+
+  L1 语义层 = 下列 8 个 .cpp (按"函数头注释 + 逐行语义还原"标准):
+    src/nengine/time_system.cpp                    VA 标记 7
+    src/nengine/camera_fx.cpp                      VA 标记 21
+    src/nengine/net_socket.cpp                     VA 标记 2
+    src/game/module/CNMainGameModule.cpp           VA 标记 5
+    src/cnrd/CNRDObject.cpp                        VA 标记 39
+    src/cnrd/IRDCollisionObject.cpp                VA 标记 12
+    src/cnrd/IRDActiveObject.cpp                   VA 标记 30
+    src/cnrd/ActiveObjectEquipment.cpp             VA 标记 14
+  合计: 130 个 VA 标记 / 128 个唯一 VA (2 处复述性二次提及: 424BB0 / 4E7440)
+  与 docs/16 §1 "L1 精修层 130 函数（8 个文件）" 完全吻合 -> 声称数字可信。
+
+## D2. docs/10 - docs/17 声称的 L1 文件逐条核对
+
+  [docs/10] 声称: src/nengine/time_system.h + time_system.cpp (7 函数)
+      核对: 全部文件存在 -> 存在, 7 个标记与"7 函数"吻合
+  [docs/12] 声称: src/nengine/camera_fx.h/.cpp (20 函数)
+      核对: 全部文件存在 -> 文件存在; 文档以 "camera_fx.h/.cpp" 斜杠合并书写(非字面路径), 实际 21 个标记略多于声称 20
+  [docs/13] 声称: src/game/module/CNMainGameModule.cpp + src/nengine/net_socket.cpp
+      核对: 全部文件存在 -> 存在 (5 + 2 标记)
+  [docs/14] 声称: src/cnrd/ 三组 .h/.cpp (~64 函数)
+      核对: 全部文件存在 -> 全部存在; cpp 标记 39+12+30=81 (超出声称 ~64, 为补充精修)
+  [docs/15] 声称: src/cnrd/ActiveObjectEquipment.cpp (14 函数)
+      核对: 全部文件存在 -> 存在, 14 个标记与声称一致
+  [docs/16] 声称: L1 精修层 130 函数（8 个文件）
+      核对: 全部文件存在 -> 完全吻合 (130)
+  [docs/17] 声称: src/nengine/zlib_inflate.cpp (补齐转写)
+      核对: 全部文件存在 -> 存在 (L2 转写层文件, 非 L1)
+
+## D3. 文档提到但文件不存在的情形
+  1) docs/12 文本写 "src/nengine/camera_fx.h/.cpp" —— 斜杠合并书写, 不是真实路径;
+     两个真实文件 camera_fx.h / camera_fx.cpp 均存在。属排版问题, 非遗漏。
+  2) docs/11_重建排期总表.md: 716 个 "计划源码路径" (src/cnrd/CNRD*.cpp 等) 不存在——
+     这是设计使然的"待重建工作队列"(状态列 ☐待重建), 不是声称已完成的文件。
+     注: 这 716 个路径若被外部工具当作"应存在文件"扫描, 会产生大量假阳性告警。
+  3) 其余 docs/00,10,13,14,15,16,17 引用的 src 文件全部存在。
+
+## D4. L1 层内容的完整性观察
+  - L1 的 .h 文件 (CNRDObject.h 76 标记 / IRDActiveObject.h 52 / IRDCollisionObject.h 42) 是
+    虚表槽位索引表 (注释形态), .cpp 是逐行语义实现; 两者互补, 无信息缺口。
+  - L1 与 L2 存在 10 个重复 VA 的双实现 (如 423200/423380 在 net_socket.cpp[L1] 与
+    broadcast_debug.cpp[L2] 各有一份; 433690 在 CNMainGameModule.cpp[L1] 与 broadcast_debug.cpp[L2])。
+    这是设计内的 L1 覆写 L2 关系 (精修版取代转写版), 不是重复劳动错误;
+    但对"全库 VA grep"会产生 2 处命中, 引用时需注意以 L1 版为准。
+  - 未发现: 文档声称存在而目录中缺失的 L1 文件; 也未发现 L1 目录中的孤儿文件。
+
+## D5. 结论
+  L1 精修层文件完整性 = 通过。8 个 .cpp 全部存在、VA 标记合计 130 与文档声称一致;
+  docs/10-15 逐篇引用的源文件全部真实存在 (唯一例外为 docs/12 的排版性斜杠写法);
+  docs/11 的 716 个路径是"计划队列"而非完成声称, 归类为设计使然。

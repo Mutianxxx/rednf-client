@@ -1,0 +1,11 @@
+CLASS .?AVCNRDWarRoomResult@@  slots=1  fields_candidate=8
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t  15  0049E560  fld_4 = *(uint32_t *)(this + 4);
++0x0030 uint32_t   1  0049E560  if ( nArg2 == *(uint32_t *)(this + 48) )
++0x0065 uint8_t    2  0049E560  *(uint8_t *)(this + 101) = 0;
++0x0066 uint8_t    2  0049E560  *(uint8_t *)(this + 102) = 0;
++0x007C uint32_t   4  0049E560  sub_49E110(*(uint32_t *)(this + 124), 0);
++0x0090 int        2  0049E560  fld_90 = (float)*(int *)(this + 144);
++0x0094 uint32_t   1  0049E560  sub_69A110(273, 352, *(uint32_t *)(this + 148), *(uint32_t *)(this + 1
++0x0098 uint32_t   3  0049E560  fld_98 = *(uint32_t *)(this + 152);

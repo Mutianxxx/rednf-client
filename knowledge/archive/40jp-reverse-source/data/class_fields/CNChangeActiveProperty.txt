@@ -1,0 +1,5 @@
+CLASS .?AVCNChangeActiveProperty@@  slots=30  fields_candidate=2
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   4  00603810  result = (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 4)
++0x0058 uint32_t   1  00603810  result = *(uint32_t *)(this + 88);

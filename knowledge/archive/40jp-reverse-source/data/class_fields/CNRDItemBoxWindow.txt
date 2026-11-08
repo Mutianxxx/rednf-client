@@ -1,0 +1,12 @@
+CLASS .?AVCNRDItemBoxWindow@@  slots=15  fields_candidate=9
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   3  0063B4D0  fld_8 = *(uint32_t *)(this + 8);
++0x0010 uint32_t   2  0063B4D0  if ( (uint8_t)sub_69A500(fld_8) == 1 && *(uint32_t *)(*(uint32_t *)(th
++0x0024 uint32_t   4  0063B4D0  fld_24 = *(uint32_t *)(this + 36);
++0x0028 uint32_t   3  0063B4D0  if ( *(uint32_t *)(this + 40) == 1 && (unsigned int)sub_699000(this + 
++0x0030 uint32_t   7  0063B4D0  fld_30 = sub_484ED0(*(uint32_t *)(this + 48));
++0x0034 uint32_t   2  0063B4D0  if ( *(uint32_t *)(this + 52) != 0 )
++0x0038 uint32_t   2  0063B4D0  fld_38 = *(uint32_t *)(this + 56);
++0x003C uint32_t   3  0063B4D0  fld_3C = *(uint32_t *)(this + 60);
++0x0040 uint32_t   4  0063B4D0  || *(uint8_t *)((fld_40 = *(uint32_t *)(this + 64)) + 17) != 0 && dwor

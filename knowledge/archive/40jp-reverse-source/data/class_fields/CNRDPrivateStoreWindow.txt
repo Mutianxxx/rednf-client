@@ -1,0 +1,7 @@
+CLASS .?AVCNRDPrivateStoreWindow@@  slots=29  fields_candidate=4
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   1  00542650  fld_4 = *(uint32_t *)(this + 4);
++0x0008 uint32_t   1  00542650  fld_8 = *(uint32_t *)(*(uint32_t *)(this + 8) + 2504);
++0x000C uint32_t   1  00540360  return sub_44AB50(*(uint32_t **)(this + 8), *(uint32_t *)(this + 12), 
++0x0024 uint32_t   3  00542650  && ((fld_24 = *(uint32_t *)(this + 36), v5 >= *(uint32_t *)(fld_24 + 8

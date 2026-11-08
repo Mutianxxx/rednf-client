@@ -1,0 +1,17 @@
+CLASS .?AVCNRDDialogueWindow@@  slots=14  fields_candidate=14
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   5  00605FD0  if ( pArg2 == *(uint32_t *)(this + 8) )
++0x0028 uint32_t   1  00607020  fld_28 = *(uint32_t *)(this + 40);
++0x002C uint32_t   1  00607020  fld_2C = *(uint32_t *)(this + 44);
++0x003C uint32_t   4  00605FD0  fld_3C = sub_69C690(*(uint32_t *)(this + 60));
++0x0078 uint32_t   1  006071B0  *(uint32_t *)(this + 120) = uArg2 + 74;
++0x0084 uint32_t   1  00605FD0  pThis_84 = *(uint32_t *)(this + 132);
++0x0098 uint32_t   1  00605FD0  if ( *(uint32_t *)(this + 152) < 0x10u )
++0x00A0 uint32_t   3  00607020  fld_A0 = *(uint32_t *)(this + 160);
++0x00A4 uint32_t   3  00607020  fld_A4 = *(int **)(*(uint32_t *)(this + 164) - 4);
++0x00A8 uint32_t   1  006071B0  *(uint32_t *)(this + 168) = 0;
++0x00B0 uint32_t   5  00605FD0  fld_B0 = *(uint32_t *)(this + 176);
++0x00B4 uint32_t   2  00605FD0  fld_B4 = (*(uint32_t *)(this + 180) - fld_B0) >> 3;
++0x00BC uint8_t    2  00605FD0  LOBYTE(fld_B4) = *(uint8_t *)(this + 188);
++0x00C0 uint32_t   1  006071B0  *(uint32_t *)(this + 192) = *uArg2;

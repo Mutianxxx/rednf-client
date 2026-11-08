@@ -1,0 +1,56 @@
+===== +8604 (0x219C) reads=18 writes=94
+  [R] src\game\rtti_core.cpp:10265  j__free(*(void **)(this + 8604));
+        fn: 0x4AB180 sub_4AB180
+  [R] src\game\creature\dragonman.cpp:3844  nFallFlag = *((uint8_t *)pDwArg1 + 8604);
+        fn: 0x5B6380 sub_5B6380 —— ZGM 攻击主循环（命中/高度/近远战三支）
+  [R] src\game\creature\goblin_fox.cpp:3742  int fld_e2151; // edi | =+0x219C 字段 x1（证据 0059A020）
+        fn: 0x5946D0 sub_5946D0 —— 施法中目标位移同步（动画态14 时跟随目标 X 位移）
+===== +8608 (0x21A0) reads=17 writes=78
+  [R] src\game\creature\dragonman.cpp:4847  sub_698F90(pObj + 8608, 0, 0);  // 【clock_set_countdown(clk, duration=a2, star…】
+        fn: 0x5B7660 sub_5B7660 —— 信徒(CNZealot)绑定确认回落
+  [R] src\game\creature\dragonman.cpp:7920  pRider = *(uint32_t *)(this + 8608);
+        fn: 0x5BAB60 sub_5BAB60 —— 炮车牛·开火与骑手放生（COWCANNON_SHOOT）
+  [R] src\game\creature\dragonman.cpp:7926  nTmp = (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 8608) + 236))(*(uint32_t *)(this + 8608));
+        fn: 0x5BAB60 sub_5BAB60 —— 炮车牛·开火与骑手放生（COWCANNON_SHOOT）
+===== +8612 (0x21A4) reads=10 writes=72
+  [R] src\game\gunner_state.cpp:3752  fld_21A4 = *(uint32_t *)(this + 8612);
+        fn: 0x4C4260 sub_4C4260
+  [R] src\game\gunner_state.cpp:3755  sub_42AF90(*(void ***)(this + 8612));
+        fn: 0x4C4260 sub_4C4260
+  [R] src\game\rtti_core.cpp:10670  sub_6569D0(this + 8612);
+        fn: 0x4AB960 sub_4AB960
+===== +8616 (0x21A8) reads=11 writes=60
+  [R] src\game\bigfunc_4C5250_sub_4C5250.cpp:575  v84 = *(uint32_t *)(pArg1 + 8616);
+        fn: 0x4C5250 sub_4C5250  size=18096
+  [R] src\game\rtti_core.cpp:5757  j__free(*(void **)(this + 8616));
+        fn: 0x4A6380 sub_4A6380
+  [R] src\game\rtti_core.cpp:9436  `eh vector constructor iterator'(this + 8616, 0x1Cu, 2, (void (/*thiscall*/ *)(void *))sub_40C120, sub_501490);
+        fn: 0x4AA280 sub_4AA280
+===== +8624 (0x21B0) reads=6 writes=65
+  [R] src\game\gunner_state.cpp:3340  pThis_21B0 = (int **)(this + 8624);
+        fn: 0x4C39D0 sub_4C39D0
+  [R] src\game\gunner_state.cpp:3758  pThis_21B0 = *(void (/*thiscall*/ ****)(uint32_t, int))(this + 8624);
+        fn: 0x4C4260 sub_4C4260
+  [R] src\game\creature\dragonman.cpp:985  pDwArg1[2156] = nCurX;  // this+8624 幻觉期间本体X存档(事件16换位用)
+        fn: 0x5B0D10 sub_5B0D10 —— 龙人·动作事件总分发（大状态 × 事件码二维派发）
+===== +8640 (0x21C0) reads=14 writes=35
+  [R] src\game\rtti_core.cpp:6206  j__free(*(void **)(this + 8640));
+        fn: 0x4A6C60 sub_4A6C60
+  [R] src\game\creature\dragonman.cpp:2275  fld_21C0 = **(uint32_t **)(this + 8640);
+        fn: 0x5B2F40 sub_5B2F40 —— 赛格哈特·死亡/退场对话门（死亡表现前置）
+  [R] src\game\creature\dragonman.cpp:2279  (*(void (/*thiscall*/ **)(uint32_t, int))(fld_21C0 + 112))(*(uint32_t *)(this + 8640), pThis_78);
+        fn: 0x5B2F40 sub_5B2F40 —— 赛格哈特·死亡/退场对话门（死亡表现前置）
+===== +8656 (0x21D0) reads=20 writes=30
+  [R] src\combat\passive_object.cpp:8457  pObj2 = *(uint32_t *)(pObj + 8656);
+        fn: 0x608CD0 CNGunnerBullet__vmt2A8
+  [R] src\game\gunner_state.cpp:3297  (*(void (/*thiscall*/ **)(uint32_t, uint32_t))(**(uint32_t **)(this + 8656) + 124))(*(uint32_t *)(this + 8656), 0);
+        fn: 0x4C39D0 sub_4C39D0
+  [R] src\game\gunner_state.cpp:3301  fld_21D0 = **(uint32_t **)(this + 8656);
+        fn: 0x4C39D0 sub_4C39D0
+===== +8664 (0x21D8) reads=5 writes=27
+  [R] src\game\creature\expeller_guard.cpp:3708  (*(void (/*thiscall*/ **)(uint32_t, uint32_t))(**(uint32_t **)(this + 8664) + 12))(*(uint32_t *)(this + 8664), 0);
+        fn: 0x5D3EB0 sub_5D3EB0 —— 军团驱逐者播报转发（8664 子对象定位）
+  [R] src\game\creature\expeller_guard.cpp:3709  fld_21D8 = **(uint32_t **)(this + 8664);
+        fn: 0x5D3EB0 sub_5D3EB0 —— 军团驱逐者播报转发（8664 子对象定位）
+  [R] src\game\creature\expeller_guard.cpp:3713  (*(void (/*thiscall*/ **)(uint32_t, int))(fld_21D8 + 40))(*(uint32_t *)(this + 8664), pThis_78);
+        fn: 0x5D3EB0 sub_5D3EB0 —— 军团驱逐者播报转发（8664 子对象定位）

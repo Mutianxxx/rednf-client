@@ -1,0 +1,8 @@
+CLASS .?AVCNRDGuildInfo@@  slots=4  fields_candidate=5
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   3  004BEA70  if ( *(uint32_t *)(this + 4) == 2 )
++0x0008 uint32_t   1  004BEA70  *(uint32_t *)(this + 8),
++0x003D uint8_t    1  004BEA70  *(uint8_t *)(this + 61) = 0;
++0x003E uint8_t    1  004BEA70  *(uint8_t *)(this + 62) = 0;
++0x004C size_t     1  004BEA70  sub_4015C0((size_t *)(this + 76), Src, strlen(Src));  // 【std::string构

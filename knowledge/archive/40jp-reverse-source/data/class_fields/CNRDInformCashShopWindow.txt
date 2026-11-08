@@ -1,0 +1,4 @@
+CLASS .?AVCNRDInformCashShopWindow@@  slots=14  fields_candidate=1
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0034 uint32_t   1  006386F0  *(uint32_t *)(this + 52) = 0;

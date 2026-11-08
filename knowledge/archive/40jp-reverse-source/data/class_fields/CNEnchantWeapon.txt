@@ -1,0 +1,9 @@
+CLASS .?AVCNEnchantWeapon@@  slots=30  fields_candidate=6
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   2  005FF170  *(uint32_t *)(this + 4),
++0x0050 uint32_t   1  005FF860  pThis_8 = *(uint32_t *)(this + 80);
++0x0058 uint32_t   1  005FEFE0  *(uint32_t *)(pArg2 + 8) += *(uint32_t *)(this + 88);
++0x005C uint32_t   3  005FF860  pThis_8 = *(uint32_t *)(this + 92);
++0x0064 uint8_t    7  005FF860  LOBYTE(pThis_8) = *(uint8_t *)(this + 100);
++0x0068 uint32_t   1  005FF860  if ( *(uint32_t *)(this + 104) < pThis_8 )

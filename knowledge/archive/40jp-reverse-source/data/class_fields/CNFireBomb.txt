@@ -1,0 +1,11 @@
+CLASS .?AVCNFireBomb@@  slots=30  fields_candidate=8
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   6  0064D480  pThis_80 = (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 
++0x0050 uint32_t   3  0064D480  LOBYTE(pThis_80) = sub_698F90(this + 128, *(uint32_t *)(this + 80), 0)
++0x008D uint8_t    2  0064D480  *(uint8_t *)(this + 141) = 0;
++0x008E uint8_t    2  0064D480  *(uint8_t *)(this + 142) = 0;
++0x0098 uint32_t   1  0064D480  fld_98 = *(uint32_t *)(this + 152);
++0x009C uint32_t   2  0064D070  sub_493A60(*(uint32_t *)(this + 156), v11);
++0x00A0 uint32_t   2  0064D070  sub_493A60(*(uint32_t *)(this + 160), v11);
++0x00A4 uint32_t   3  0064D070  sub_493A60(*(uint32_t *)(this + 164), v11);

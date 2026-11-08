@@ -1,0 +1,16 @@
+# Phantom VAs (source marker, not an IDA function-table entry)
+# header-marker phantoms: 1 ; inline-comment phantoms: 9
+
+# --- A) header-marker phantoms (function claims) ---
+00499A60	inside=00499A20 sub_499A20 +0x40	src/cnrd/CNRDObject.cpp:612
+
+# --- B) inline data-address phantoms (likely .data globals, benign) ---
+0077F6DC	src/nengine/camera_fx.cpp:14
+0079D080	src/nengine/time_system.cpp:26
+0079D0C4	src/game/module/CNMainGameModule.cpp:371
+0079D0C8	src/nengine/camera_fx.cpp:12
+0079D0CC	src/nengine/camera_fx.cpp:13
+008F7B08	src/game/module/CNMainGameModule.cpp:60
+008F7BD0	src/nengine/camera_fx.cpp:15
+008F7BD4	src/nengine/camera_fx.cpp:16
+008F7C04	src/game/module/CNMainGameModule.cpp:61

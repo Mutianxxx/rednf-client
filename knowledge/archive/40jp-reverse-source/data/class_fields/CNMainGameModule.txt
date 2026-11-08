@@ -1,0 +1,12 @@
+CLASS .?AVCNMainGameModule@@  slots=5  fields_candidate=9
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0010 uint32_t   2  00444C60  sub_4294E0(*(uint32_t *)(this + 16));
++0x0014 uint32_t   3  00444C60  if ( *(uint32_t *)(this + 20) != 0 )
++0x0025 uint8_t    1  00444C60  *(uint8_t *)(this + 37) = 0;
++0x0026 uint8_t    1  00444C60  *(uint8_t *)(this + 38) = 0;
++0x0034 uint32_t   2  00444C60  sub_475810(*(int **)(*(uint32_t *)(this + 16) + 108), this, *(uint32_t
++0x0038 uint32_t   2  00444C60  sub_475810(*(int **)(*(uint32_t *)(this + 16) + 108), this, *(uint32_t
++0x003C uint32_t   7  00444C60  if ( *(uint32_t *)(this + 60) == 255 )
++0x006A uint8_t    1  00444C60  if ( *(uint8_t *)(this + 106) != 0 )
++0x0078 uint32_t   2  00444C60  fld_78 = *(uint32_t *)(this + 120);

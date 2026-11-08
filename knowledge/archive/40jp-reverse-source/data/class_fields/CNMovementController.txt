@@ -1,0 +1,6 @@
+CLASS .?AVCNMovementController@@  slots=30  fields_candidate=3
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   9  005FDF60  result = (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 4)
++0x0058 uint32_t   2  005FDF60  if ( fld_4 > *(uint32_t *)(this + 92) || fld_4 < *(uint32_t *)(this + 
++0x005C uint32_t   2  005FDF60  if ( fld_4 > *(uint32_t *)(this + 92) || fld_4 < *(uint32_t *)(this + 

@@ -1,0 +1,70 @@
+0x5c1750	fld_21BC	-	类=? 偏移+0x21BC 无字段名
+0x5c1750	fld_21B82	-	无偏移证据
+0x5c1750	fld_21BC	-	类=? 偏移+0x21BC 无字段名
+0x5c23a0	fld_e1639	-	无偏移证据
+0x5c3920	fld_e21562	-	偏移冲突[8624, 8636]
+0x5c3af0	fld_e1813	pTarget7252	R2declanc/IRDActiveObject +0x1C54
+0x5c3af0	fld_e18132	pTarget7252_	R2declanc/IRDActiveObject +0x1C54
+0x5c3af0	fld_e2167	-	无偏移证据
+0x5c3af0	fld_e1813	pTarget7252_2	R2declanc/IRDActiveObject +0x1C54
+0x5c3c20	fld_e2155	-	无偏移证据
+0x5c3c20	fld_e21552	-	类=? 偏移+0x21AC 无字段名
+0x5c3c20	fld_e21553	-	无偏移证据
+0x5c3d40	fld_e1813	-	无偏移证据
+0x5c3d40	fld_e18132	-	无偏移证据
+0x5c4340	fld_e2167	-	无偏移证据
+0x5c57f0	fld_e1540	-	类=? 偏移+0x1810 无字段名
+0x5c6d00	fld_e2186	-	无偏移证据
+0x5c72a0	fld_4	-	类=? 偏移+0x4 无字段名
+0x5c72a0	fld_8	-	无偏移证据
+0x5c72a0	fld_82	-	无偏移证据
+0x5c72a0	fld_85	-	无偏移证据
+0x5c72a0	fld_86	-	无偏移证据
+0x5c72a0	fld_43	-	类=? 偏移+0x4 无字段名
+0x5c72a0	fld_87	-	无偏移证据
+0x5c7480	fld_e20882	nRideHostSlot_	R1slots/CNNaias +0x20A0
+0x5c7750	fld_e20882	nRideHostSlot_	R1slots/CNAdor +0x20A0
+0x5c7a60	fld_e20882	nRideHostSlot_	R1slots/CNStalker +0x20A0
+0x5c7d80	fld_e29	-	类=CNWisp 偏移+0x74 无字段名
+0x5c7d80	fld_e20882	nRideHostSlot_	R1slots/CNWisp +0x20A0
+0x5c7fb0	fld_e1	-	类=? 偏移+0x4 无字段名
+0x5c7fb0	fld_e2	-	无偏移证据
+0x5c8650	fld_22102	pSegThrTbl8720_	R1slots/CNStalker +0x2210
+0x5c8650	fld_22143	nSegThrEnd8724_	R1slots/CNStalker +0x2214
+0x5c8fe0	fld_e21802	pSegThrTbl8720_	R1slots/CNWisp +0x2210
+0x5c8fe0	fld_e21813	nSegThrEnd8724_	R1slots/CNWisp +0x2214
+0x5c9a30	fld_e29	-	类=? 偏移+0x74 无字段名
+0x5c9a30	fld_e292	-	类=? 偏移+0x74 无字段名
+0x5c9e30	fld_e2155	-	类=? 偏移+0x21AC 无字段名
+0x5c9e30	fld_e2157	-	无偏移证据
+0x5ca150	fld_e1554	-	类=? 偏移+0x1848 无字段名
+0x5ca150	fld_e15543	-	类=? 偏移+0x1848 无字段名
+0x5cabb0	fld_e2158	-	无偏移证据
+0x5cabb0	fld_e1639	-	类=? 偏移+0x199C 无字段名
+0x5cba00	fld_e1813	pTarget7252	Duniv/通用 +0x1C54
+0x5cbd50	fld_e2172	-	类=? 偏移+0x21F0 无字段名
+0x5cc010	fld_e2163	-	类=CNSpikeKing 偏移+0x21CC 无字段名
+0x5cc010	fld_e21632	-	无偏移证据
+0x5cc110	fld_e29	-	类=CNSpirit 偏移+0x74 无字段名
+0x5cc110	fld_e292	-	类=CNSpirit 偏移+0x74 无字段名
+0x5cc510	fld_e2	-	类=? 偏移+0x8 无字段名
+0x5cc5a0	fld_4	-	类=? 偏移+0x4 无字段名
+0x5cc5a0	fld_8	-	无偏移证据
+0x5cc5a0	fld_82	-	无偏移证据
+0x5cc5a0	fld_85	-	无偏移证据
+0x5cc5a0	fld_86	-	无偏移证据
+0x5cc5a0	fld_43	-	类=? 偏移+0x4 无字段名
+0x5cc5a0	fld_87	-	无偏移证据
+0x5cc780	fld_e1639	-	类=CNSpikeKing 偏移+0x199C 无字段名
+0x5cc780	fld_e2162	-	类=CNSpikeKing 偏移+0x21C8 无字段名
+0x5cc780	fld_e2154	-	类=CNSpikeKing 偏移+0x21A8 无字段名
+0x5cc780	fld_e21542	-	无偏移证据
+0x5cd5e0	fld_1C54	pTarget7252	Duniv/通用 +0x1C54
+0x5cd6f0	fld_e8636	-	偏移冲突[-1, 34544]
+0x5cddd0	fld_e1554	-	类=CNGoliath 偏移+0x1848 无字段名
+0x5cf180	fld_e2176	-	类=CNSoldier 偏移+0x2200 无字段名
+0x5cf520	fld_e2209	-	类=? 偏移+0x2284 无字段名
+0x5cf880	fld_e2260	-	无偏移证据
+0x5cf880	fld_e2259	-	无偏移证据
+0x5cfb50	fld_22C42	uJitterAmp8900_	R1slots/CNGuardBlock +0x22C4
+0x5cfd80	fld_e8840	-	偏移冲突[-1, 35360]

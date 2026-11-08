@@ -1,0 +1,9 @@
+CLASS .?AVCNRDItemTradeResultWindow@@  slots=14  fields_candidate=6
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   3  0063E890  if ( pArg2 == *(uint32_t *)(this + 8) )
++0x0034 uint32_t   2  0063E890  fld_34 = sub_69C690(*(uint32_t *)(this + 52));
++0x0070 int        1  0063ECD0  sub_44CA70((int *)(this + 112));
++0x0074 uint32_t   3  0063E890  result = *(uint32_t *)(this + 116);
++0x0078 uint32_t   1  0063E890  result = (int)(*(uint32_t *)(this + 120) - result) / 52;
++0x0080 uint32_t   4  0063E890  if ( *(uint32_t *)(this + 128) != 0xFFFF )

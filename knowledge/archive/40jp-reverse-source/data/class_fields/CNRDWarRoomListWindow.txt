@@ -1,0 +1,14 @@
+CLASS .?AVCNRDWarRoomListWindow@@  slots=14  fields_candidate=11
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   2  0062E640  sub_69A650(*(uint32_t *)(this + 8));
++0x0028 uint32_t   1  0062E640  fld_28 = *(uint32_t *)(this + 40);
++0x002C uint32_t   1  0062E640  *(uint8_t *)(*(uint32_t *)(this + 44) + 17) = 0;
++0x0030 uint32_t   1  0062E640  fld_30 = *(uint32_t *)(this + 48);
++0x0034 uint32_t   1  0062E640  fld_34 = *(uint32_t *)(this + 52);
++0x00A8 uint32_t   2  0062E640  fld_A8 = *(uint32_t *)(this + 168);
++0x00AC uint32_t   1  0062E640  fld_AC = fld_A8 != 0 ? (*(uint32_t *)(this + 172) - fld_A8) >> 2 : 0;
++0x00B4 uint32_t   6  0062E640  fld_B4 = v3 + 6 * *(uint32_t *)(this + 180);
++0x00B8 uint32_t   2  0062E640  if ( fld_B43 < *(uint32_t *)(this + 184) )
++0x00C0 uint32_t   1  0062E640  if ( v16 != *(uint32_t *)(this + 192) )
++0x00E4 uint32_t   1  0062E830  *(uint32_t *)(this + 228) = nArg3;

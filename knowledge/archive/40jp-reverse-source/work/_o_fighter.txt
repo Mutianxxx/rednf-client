@@ -1,0 +1,65 @@
+===== +396 (0x18C) reads=10 writes=20
+  [R] src\cnrd\IRDCollisionObject.cpp:142  base = (float)(*(int(__thiscall**)(void*))(*(int*)this_ + 396))(this_) + base;
+        fn: 0x4E57E0 vmt1A8 —— ★ 深度/属性修正伤害输入【会话 3 新分析】
+  [R] src\combat\swordman_skills.cpp:4719  result = sub_41A590(pArg3 + 396, nArg2, 1000);
+        fn: 0x5FAD60 CNRDActiveStatus__vmt30
+  [R] src\combat\swordman_skills.cpp:8799  *(this + 222) = (*(int (/*thiscall*/ **)(int))(*(uint32_t *)nArg2 + 396))(nArg2);
+        fn: 0x5FFD50 CNRDPassiveObject__vmt2A8
+===== +456 (0x1C8) reads=10 writes=23
+  [R] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1056  (*(void (/*thiscall*/ **)(int, int))(*(uint32_t *)this + 344))(this, *(uint32_t *)(this + 556) + 456);
+  [R] src\combat\passive_object.cpp:1807  result = (*(int (/*thiscall*/ **)(int *, int))(*this + 344))(this, *(this + 139) + 456);
+        fn: 0x601DA0 CNStorageSub__vmtC —— 状态选动画
+  [R] src\game\bigfunc_4C9950_sub_4C9950.cpp:1536  (*(void (/*thiscall*/ **)(int *, int))(*this + 344))(this, *(this + 139) + 456);
+===== +464 (0x1D0) reads=14 writes=17
+  [R] src\cnrd\IRDCollisionObject.cpp:263  return (char)(*(int(__thiscall**)(int*, int))(*this_ + 464))(this_, nArg2);  // vt+464
+        fn: 0x4E8080 vmt1C8 —— 命中目标列表追加（去重 + vt+464 回调）
+  [R] src\combat\passive_object.cpp:1032  result = (*(int (/*thiscall*/ **)(size_t *, uint32_t))(*pThis + 464))(pThis, *(uint32_t *)(v35 + 4 * i));
+        fn: 0x600C20 sub_600C20
+  [R] src\combat\passive_object.cpp:7254  + *(float *)(this + 464);
+        fn: 0x607420 CNGunnerBullet__vmt158
+===== +6892 (0x1AEC) reads=1 writes=3
+  [R] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1078  result = *(uint32_t *)(this + 6892);
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1553  && *(uint32_t *)(pArg1 + 6892) == 1
+===== +8326 (0x2086) reads=0 writes=5
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:670  if ( *(uint8_t *)(pArg1 + 8326) != 0 )
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:872  *(uint8_t *)(pArg1 + 8326) = 1;
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1589  *(uint8_t *)(this + 8326) = 0;
+===== +8344 (0x2098) reads=0 writes=13
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:892  if ( *(uint32_t *)(pArg1 + 8344) != 1 || *(uint32_t *)(*(uint32_t *)(pArg1 + 120) + 148) != 0 )
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1503  if ( *(uint32_t *)(pArg1 + 8344) == 0 )
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1782  *(uint32_t *)(this + 8344) = v119;
+===== +8376 (0x20B8) reads=1 writes=11
+  [R] src\combat\swordman_skills.cpp:713  fld_20B8 = *(void ***)(this + 8376);
+        fn: 0x5F0D40 sub_5F0D40
+  [W] src\combat\bigfunc_5E1000_sub_5E1000.cpp:2633  *((uint8_t *)this + 8376) = 0;
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:326  if ( *(uint32_t *)(pArg1 + 7808) == 1 && *(int *)(*(uint32_t *)(pArg1 + 120) + 148) >= 1 && *(uint8_t *)(pArg1 + 8376) == 0 )
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+===== +8377 (0x20B9) reads=0 writes=4
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:436  && *(uint8_t *)(pArg1 + 8377) == 0 )
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:494  *(uint8_t *)(pArg1 + 8377) = 1;
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1466  *(uint8_t *)(this + 8377) = 0;
+===== +8384 (0x20C0) reads=0 writes=7
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:350  if ( *(uint32_t *)(pArg1 + 7808) == 0 && *(int *)(*(uint32_t *)(pArg1 + 120) + 148) >= 4 && *(uint8_t *)(pArg1 + 8384) == 0 )
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:364  *(uint8_t *)(pArg1 + 8384) = 1;
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1320  *(uint8_t *)(this + 8384) = 0;
+===== +8392 (0x20C8) reads=0 writes=6
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:368  && *(uint8_t *)(pArg1 + 8392) == 0 )
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:390  *(uint8_t *)(pArg1 + 8392) = 1;
+        fn: 0x5E78C0 sub_5E78C0  size=12390
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:1304  *(uint8_t *)(this + 8392) = 0;
+===== +8436 (0x20F4) reads=4 writes=10
+  [R] src\combat\swordman_skills.cpp:562  fld_20F4 = *(uint32_t *)(this + 8436);
+        fn: 0x5F07A0 CNSwordman__vmt514
+  [R] src\combat\swordman_skills.cpp:567  fld_20F42 = **(uint32_t **)(this + 8436);
+        fn: 0x5F07A0 CNSwordman__vmt514
+  [R] src\combat\swordman_skills.cpp:575  (*(void (/*thiscall*/ **)(uint32_t, int, int, int))(fld_20F42 + 56))(*(uint32_t *)(this + 8436), this, this, 1);
+        fn: 0x5F07A0 CNSwordman__vmt514
+===== +8437 (0x20F5) reads=0 writes=5
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1761  if ( *(uint8_t *)(pArg1 + 8437) != 0 )
+  [W] src\combat\bigfunc_5E78C0_sub_5E78C0.cpp:1783  *(uint8_t *)(pArg1 + 8437) = 1;
+  [W] src\combat\bigfunc_5EA970_sub_5EA970.cpp:2067  *(uint8_t *)(this + 8437) = 0;

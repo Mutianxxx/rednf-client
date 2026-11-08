@@ -1,0 +1,25 @@
+CLASS .?AVCNSelectDungeonModule@@  slots=5  fields_candidate=22
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0014 uint32_t   1  00454740  fld_14 = *(uint32_t *)(this + 20);
++0x0018 uint32_t   1  00454740  fld_18 = *(uint32_t *)(this + 24);
++0x0020 uint32_t   1  00454740  fld_20 = *(uint32_t *)(this + 32);
++0x0024 uint32_t   1  00454740  fld_24 = *(uint32_t *)(this + 36);
++0x0044 uint32_t   1  00454740  fld_44 = *(uint32_t *)(this + 68);
++0x0094 uint8_t    2  00454740  if ( *(uint8_t *)(this + 148) != 0 )
++0x00B4 uint8_t    2  00454740  if ( v4 == sub_429830((uint16_t)word_77F804) && *(uint8_t *)(this + 18
++0x00C5 uint8_t    1  00454740  *(uint8_t *)(this + 197) = 0;
++0x00C6 uint8_t    1  00454740  *(uint8_t *)(this + 198) = 0;
++0x00D4 uint32_t   3  00454740  else if ( fld_E8 == 2 && *(uint32_t *)(this + 212) == -1 )
++0x00D8 uint8_t    1  00454740  *(uint8_t *)(this + 216) = 1;
++0x00DC uint32_t   1  00454740  fld_DC = (int *)sub_476B60(*(uint32_t *)(this + 220));
++0x00E0 uint32_t   2  00454740  sub_475810(fld_DC, this, *(uint32_t *)(this + 224), *(uint32_t *)(this
++0x00E4 uint32_t   2  00454740  sub_475810(fld_DC, this, *(uint32_t *)(this + 224), *(uint32_t *)(this
++0x00E8 uint32_t   4  00454740  fld_E8 = *(uint32_t *)(this + 232);
++0x00EC uint8_t    3  00454740  *(uint8_t *)(this + 236) = 1;
++0x00FD uint8_t    1  00454740  *(uint8_t *)(this + 253) = 0;
++0x00FE uint8_t    1  00454740  *(uint8_t *)(this + 254) = 0;
++0x0114 uint32_t   6  00454740  fld_114 = (int *)(*(uint32_t *)(this + 276) + 16 * v6);
++0x0118 uint32_t   1  00454740  if ( fld_1142 != 0 && (*(uint32_t *)(this + 280) - fld_1142) >> 4 != 0
++0x0120 uint32_t   7  00454740  if ( v5 != -1 && v5 != *(uint32_t *)(this + 288) )
++0x0124 uint32_t   2  00454740  if ( v5 != *(uint32_t *)(this + 292) )

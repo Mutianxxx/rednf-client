@@ -1,0 +1,119 @@
+# Shell/anomaly scan — tree md5=1e28b9bc0e95fd28fda71d29a82ab8be @ 2026-10-06T17:39:38
+# header blocks: 12315 ; unique VAs: 12173 ; files: 71 ; total lines: 568922
+# (decomp failed) blocks: 10
+# (exception blocks: 13
+# truncated blocks: 3 (declared-dropped lines: 100, avg 33.3)
+# no-body blocks (index-only comments): 34
+# blocks with <3 nonblank lines: 25 ; <=1 line: 18
+# VAs with NO complete body anywhere (all truncated or no-body): 13
+# effective deep coverage = (12172 - 13)/12172 = 99.8932%
+
+# --- (decomp failed) VAs ---
+00445650	src/game/script_string.cpp:3883
+0066AD83	src/platform/missing_tail.cpp:6287
+0066DCC5	src/platform/missing_tail.cpp:7657
+0066DD73	src/platform/missing_tail.cpp:7663
+0066DF3B	src/platform/missing_tail.cpp:7679
+0066F107	src/platform/missing_tail.cpp:42279
+0066F45A	src/platform/missing_tail.cpp:42285
+0069E360	src/platform/socket_ime.cpp:10055
+0069E60D	src/platform/socket_ime.cpp:10116
+0069F9C9	src/platform/socket_ime.cpp:11055
+
+# --- (exception VAs ---
+004018B0	src/nengine/log_dump.cpp:655
+00668B9B	src/platform/missing_tail.cpp:23052
+0066A289	src/platform/missing_tail.cpp:5988
+0066A2A1	src/platform/missing_tail.cpp:23775
+0066AFAD	src/platform/missing_tail.cpp:6357
+0066AFEA	src/platform/missing_tail.cpp:24136
+0066B04A	src/platform/missing_tail.cpp:6377
+0066B057	src/platform/missing_tail.cpp:24165
+0066B070	src/platform/missing_tail.cpp:40541
+0066B093	src/platform/missing_tail.cpp:24177
+0066B0AC	src/platform/missing_tail.cpp:40553
+0066B0CF	src/platform/missing_tail.cpp:24189
+0066B0E7	src/platform/missing_tail.cpp:40565
+
+# --- no-body VAs ---
+00445650	src/game/script_string.cpp:3883
+004A1E20	src/cnrd/IRDActiveObject.cpp:450
+004D33A0	src/game/combat_core.cpp:1502
+004D3400	src/game/combat_core.cpp:1505
+004D3470	src/game/combat_core.cpp:1506
+004D3720	src/game/combat_core.cpp:1507
+004D39F0	src/game/combat_core.cpp:1508
+004D3C30	src/game/combat_core.cpp:1509
+004D46C0	src/game/combat_core.cpp:14
+004D49A0	src/game/combat_core.cpp:20
+004D4D40	src/game/combat_core.cpp:12
+004D5170	src/game/combat_core.cpp:16
+004D6A80	src/game/combat_core.cpp:15
+004D6D90	src/game/combat_core.cpp:11
+004D71B0	src/game/combat_core.cpp:10
+004D7960	src/game/combat_core.cpp:13
+004D7960	src/game/combat_core.cpp:5181
+004D7C60	src/game/combat_core.cpp:5182
+004D7F30	src/game/combat_core.cpp:5183
+004D8170	src/game/combat_core.cpp:5184
+004D82D0	src/game/combat_core.cpp:5185
+004D82D0	src/game/combat_core.cpp:5652
+004D84F0	src/game/combat_core.cpp:5653
+004D9F20	src/game/combat_core.cpp:17
+004E7440	src/cnrd/IRDCollisionObject.cpp:324
+0066AD83	src/platform/missing_tail.cpp:6287
+0066DCC5	src/platform/missing_tail.cpp:7657
+0066DD73	src/platform/missing_tail.cpp:7663
+0066DF3B	src/platform/missing_tail.cpp:7679
+0066F107	src/platform/missing_tail.cpp:42279
+0066F45A	src/platform/missing_tail.cpp:42285
+0069E360	src/platform/socket_ime.cpp:10055
+0069E60D	src/platform/socket_ime.cpp:10116
+0069F9C9	src/platform/socket_ime.cpp:11055
+
+# --- <3 nonblank VAs ---
+00424C50	src/nengine/camera_fx.cpp:197	nonblank=1
+0042A530	src/cnrd/CNRDObject.cpp:65	nonblank=2
+0042A570	src/cnrd/CNRDObject.cpp:73	nonblank=2
+0042A580	src/cnrd/CNRDObject.cpp:76	nonblank=2
+00445C30	src/cnrd/CNRDObject.cpp:97	nonblank=2
+00498F60	src/cnrd/CNRDObject.cpp:158	nonblank=2
+004A0F50	src/cnrd/IRDActiveObject.cpp:81	nonblank=2
+004A0F70	src/cnrd/IRDActiveObject.cpp:84	nonblank=2
+004A1E20	src/cnrd/IRDActiveObject.cpp:450	nonblank=1
+004D3400	src/game/combat_core.cpp:1505	nonblank=1
+004D3470	src/game/combat_core.cpp:1506	nonblank=1
+004D3720	src/game/combat_core.cpp:1507	nonblank=1
+004D39F0	src/game/combat_core.cpp:1508	nonblank=1
+004D46C0	src/game/combat_core.cpp:14	nonblank=1
+004D4D40	src/game/combat_core.cpp:12	nonblank=1
+004D5170	src/game/combat_core.cpp:16	nonblank=1
+004D6A80	src/game/combat_core.cpp:15	nonblank=1
+004D6D90	src/game/combat_core.cpp:11	nonblank=1
+004D71B0	src/game/combat_core.cpp:10	nonblank=1
+004D7960	src/game/combat_core.cpp:13	nonblank=1
+004D7960	src/game/combat_core.cpp:5181	nonblank=1
+004D7C60	src/game/combat_core.cpp:5182	nonblank=1
+004D7F30	src/game/combat_core.cpp:5183	nonblank=1
+004D8170	src/game/combat_core.cpp:5184	nonblank=1
+004D82D0	src/game/combat_core.cpp:5652	nonblank=1
+
+# --- truncated blocks (VA, loc, declared_total, block_lines) ---
+004D2D60	src/game/combat_core.cpp:1374	declared=227	actual=128	dropped=99
+004D46C0	src/game/combat_core.cpp:2436	declared=129	actual=122	dropped=7
+004D2B30	src/game/combat_core.cpp:1254	declared=114	actual=120	dropped=-6
+
+# --- VAs with NO complete body anywhere ---
+00445650	size=112	sub_445650	src/game/script_string.cpp:3883
+004D2B30	size=490	sub_4D2B30	src/game/combat_core.cpp:1254
+004D2D60	size=1532	sub_4D2D60	src/game/combat_core.cpp:1374
+004D46C0	size=730	sub_4D46C0	src/game/combat_core.cpp:14; src/game/combat_core.cpp:2436
+0066AD83	size=40	?_CreateFrameInfo@@YAPAUFrameInfo@@PAU1@PAX@Z	src/platform/missing_tail.cpp:6287
+0066DCC5	size=58	_isupper	src/platform/missing_tail.cpp:7657
+0066DD73	size=63	_isxdigit	src/platform/missing_tail.cpp:7663
+0066DF3B	size=9	__errno	src/platform/missing_tail.cpp:7679
+0066F107	size=19	?__uncaught_exception@@YA_NXZ	src/platform/missing_tail.cpp:42279
+0066F45A	size=103	?CatchIt@@YAXPAUEHExceptionRecord@@PAUEHRegistrationNode@@PAU_CONTEXT@@PAXPBU_s_FuncInfo@@PBU_s_HandlerType@@PBU_s_CatchableType@@PBU_s_TryBlockMapEntry@@H1E@Z	src/platform/missing_tail.cpp:42285
+0069E360	size=610	_pow	src/platform/socket_ime.cpp:10055
+0069E60D	size=174	start_1	src/platform/socket_ime.cpp:10116
+0069F9C9	size=163	__check_range_exit	src/platform/socket_ime.cpp:11055

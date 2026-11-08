@@ -1,0 +1,15 @@
+CLASS .?AVCNRoomListModule@@  slots=5  fields_candidate=12
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x002C uint32_t   1  0045CB30  sub_4294E0(*(uint32_t *)(this + 44));
++0x0064 uint32_t   1  0045CB30  sub_48C920((int)&v47, (int)&v46, pObj, *(uint32_t *)(this + 100), v34)
++0x0068 uint32_t   1  0045CB30  fld_68 = *(uint32_t *)(this + 104);
++0x006C uint32_t   2  0045CB30  fld_6C = *(uint32_t *)(this + 108) == v8;
++0x0070 uint32_t   2  0045CB30  if ( fld_68 != 0 && *(uint32_t *)(fld_68 + 32) != 1 && sub_699000(this
++0x0074 uint8_t    2  0045CB30  if ( *(uint8_t *)(this + 116) == 0 )
++0x0078 uint32_t   2  0045CB30  LODWORD(v42) = *(uint32_t *)(this + 120);
++0x0089 uint8_t    1  0045CB30  *(uint8_t *)(this + 137) = 0;
++0x008A uint8_t    1  0045CB30  *(uint8_t *)(this + 138) = 0;
++0x0098 uint32_t   6  0045CB30  fld_98 = *(uint32_t *)(this + 152);
++0x009C uint32_t   2  0045CB30  if ( sub_699000(this + 16) >= *(uint32_t *)(this + 156) + 14000 )  // 
++0x00A0 uint32_t   2  0045CB30  if ( nRand == *(uint32_t *)(this + 160) )

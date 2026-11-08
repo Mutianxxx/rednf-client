@@ -1,0 +1,19 @@
+CLASS .?AVCNScriptLoader@@  slots=14  fields_candidate=16
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   1  00697B30  *(uint32_t *)(this + 4) = nArg2;
++0x0007 uint16_t   1  00697B30  pThis_7 = (uint16_t *)(this + 7);
++0x0008 char       1  00697B30  strcpy((char *)(this + 8), pArg3);
++0x0014 uint8_t    1  004D2D60  *(uint8_t *)(pObj + 20) = 0;
++0x0024 uint32_t   1  004D2D60  *(uint32_t *)(pObj + 36) = 0;
++0x0028 uint32_t   2  004D2D60  if ( *(uint32_t *)(pObj + 40) >= 0x10u )
++0x0030 uint32_t   2  004D2D60  if ( *(uint32_t *)(pObj + 48) != 0 )
++0x0034 uint32_t   1  004D2D60  *(uint32_t *)(pObj + 52) = 0;
++0x0038 uint32_t   1  004D2D60  *(uint32_t *)(pObj + 56) = 0;
++0x0060 uint8_t    1  004D2D60  *(uint8_t *)(pObj + 96) = 0;
++0x0070 uint32_t   1  004D2D60  *(uint32_t *)(pObj + 112) = 0;
++0x0074 uint32_t   2  004D2D60  if ( *(uint32_t *)(pObj + 116) >= 0x10u )
++0x00C8 uint8_t    1  004D2D60  *(uint8_t *)(pObj + 200) = 0;
++0x00D8 uint32_t   1  004D2D60  *(uint32_t *)(pObj + 216) = 0;
++0x00DC uint32_t   2  004D2D60  if ( *(uint32_t *)(pObj + 220) >= 0x10u )
++0x0108 uint32_t   2  00697B30  *(uint32_t *)(this + 264) = nArg4;

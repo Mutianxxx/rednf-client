@@ -1,0 +1,7 @@
+CLASS .?AVCNCallStorageBird@@  slots=36  fields_candidate=4
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0008 uint32_t   1  00485F70  *(uint32_t *)(this + 8) = *(uint32_t *)pArg2;
++0x000C uint32_t   1  00485F70  *(uint32_t *)(this + 12) = *(uint32_t *)(pArg2 + 4);
++0x0024 uint32_t   1  004859F0  fld_24 = *(uint32_t *)(this + 36);
++0x0028 uint8_t    1  004859F0  return fld_24 == 0 || fld_24 == 3 && *(uint8_t *)(this + 40) != 0;

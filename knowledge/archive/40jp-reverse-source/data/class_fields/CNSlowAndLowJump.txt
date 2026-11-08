@@ -1,0 +1,7 @@
+CLASS .?AVCNSlowAndLowJump@@  slots=33  fields_candidate=4
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   4  005F8080  LOBYTE(fld_60) = (*(int (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(t
++0x002C uint32_t   2  005F8080  fld_2C = *(uint32_t *)(this + 44) - sub_699000(this + 8);  // 【clock_n
++0x0060 uint32_t   2  005F8080  fld_60 = *(uint32_t *)(this + 96);
++0x0070 uint32_t   3  005F8080  sub_4938F0(*(uint32_t *)(4 * (*(uint8_t *)(**(uint32_t **)(this + 112)

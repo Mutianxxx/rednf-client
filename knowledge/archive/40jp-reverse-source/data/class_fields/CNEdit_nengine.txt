@@ -1,0 +1,36 @@
+CLASS .?AVCNEdit@nengine@@  slots=9  fields_candidate=33
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint8_t    3  0069AC10  *(uint8_t *)(this + 4) = 0;
++0x0008 uint32_t   2  0069AC10  *(uint32_t *)(this + 8) = 8;
++0x000C uint32_t   3  0069A520  *(uint32_t *)(this + 12) = dword_9D3BCC;
++0x0010 uint8_t    2  0069A520  *(uint8_t *)(this + 16) = 1;
++0x0011 uint8_t    1  0069A520  *(uint8_t *)(this + 17) = 1;
++0x0012 uint8_t    1  0069A520  *(uint8_t *)(this + 18) = 0;
++0x0014 uint32_t   7  0069A520  *(uint32_t *)(this + 20) = 0;
++0x0018 uint32_t   7  0069A520  *(uint32_t *)(this + 24) = 0;
++0x001C uint32_t   1  0069A520  *(uint32_t *)(this + 28) = 0;
++0x0020 uint32_t   1  0069A520  *(uint32_t *)(this + 32) = 0;
++0x0024 uint32_t   1  0069A520  *(uint32_t *)(this + 36) = 0;
++0x0028 uint32_t   1  0069A520  *(uint32_t *)(this + 40) = 0;
++0x002C uint32_t   1  0069A520  *(uint32_t *)(this + 44) = 0;
++0x0030 uint32_t   1  0069A520  *(uint32_t *)(this + 48) = 0;
++0x0034 uint32_t   1  0069A520  *(uint32_t *)(this + 52) = 0;
++0x0038 uint32_t   1  0069A520  *(uint32_t *)(this + 56) = 0;
++0x003C uint32_t   1  0069A520  *(uint32_t *)(this + 60) = 0;
++0x0040 uint8_t    1  0069A520  *(uint8_t *)(this + 64) = 1;
++0x0044 uint32_t   1  0069A520  *(uint32_t *)(this + 68) = 0;
++0x0068 uint32_t   2  0069AC10  *(uint32_t *)(this + 104) = 0;
++0x006C uint32_t   5  0069AC10  *(uint32_t *)(this + 108) = 0;
++0x0070 uint32_t   3  0069AC10  *(uint32_t *)(this + 112) = 0;
++0x0074 uint8_t    1  0069AC10  *(uint8_t *)(this + 116) = 0;
++0x0075 uint8_t    3  0069AC10  *(uint8_t *)(this + 117) = 0;
++0x0078 uint32_t   8  0069AC10  *(uint32_t *)(this + 120) = 0;
++0x007C uint32_t   1  0069AC10  *(uint32_t *)(this + 124) = 0;
++0x0080 uint32_t   5  0069AC10  *(uint32_t *)(this + 128) = -1;
++0x00C0 uint32_t   3  0069AEA0  if ( *(uint32_t *)(this + 192) != 0 )
++0x00D0 uint32_t   3  0069AEA0  fld_D0 = *(uint8_t *)(fld_702 + *(uint32_t *)(this + 208) + fld_6C - 1
++0x00D4 uint32_t   1  0069AEA0  if ( *(uint32_t *)(this + 212) > fld_6C )
++0x00DC uint8_t    1  0069AC10  *(uint8_t *)(this + 220) = 0;
++0x00DD uint8_t    1  0069AC10  *(uint8_t *)(this + 221) = 0;
++0x00E0 uint32_t   7  0069AC10  *(uint32_t *)(this + 224) = 0;

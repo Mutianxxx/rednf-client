@@ -1,0 +1,13 @@
+CLASS .?AVCNRDItemToolWindow@@  slots=14  fields_candidate=10
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x000C uint32_t   1  00540360  return sub_44AB50(*(uint32_t **)(this + 8), *(uint32_t *)(this + 12), 
++0x0010 uint32_t   1  0054D600  fld_10 = *(uint32_t *)(this + 16);
++0x0014 uint32_t   6  0054D600  if ( --fld_10 == 0 && *(uint32_t *)(this + 20) == 1 )
++0x0040 uint32_t   4  0054D600  fld_40 = sub_484ED0(*(uint32_t *)(this + 64));
++0x0044 uint32_t   2  0054D600  fld_44 = sub_484ED0(*(uint32_t *)(this + 68));
++0x0048 uint32_t   1  0054D600  *(uint32_t *)(this + 72) = 0;
++0x0078 uint32_t   1  0054D600  *(uint32_t *)(this + 120) = -1;
++0x008C uint32_t   1  0054D600  fld_8C = sub_69C690(*(uint32_t *)(this + 140));
++0x0090 uint32_t   1  0054D600  fld_90 = *(uint32_t *)(this + 144);
++0x0094 uint32_t   1  0054D600  fld_94 = *(uint32_t *)(this + 148);

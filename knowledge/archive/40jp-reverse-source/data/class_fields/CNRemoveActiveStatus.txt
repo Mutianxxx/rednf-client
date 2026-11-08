@@ -1,0 +1,5 @@
+CLASS .?AVCNRemoveActiveStatus@@  slots=30  fields_candidate=2
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0050 uint8_t    1  00651B10  *(uint8_t *)(this + 80) = 0;
++0x0064 uint32_t   1  00651B10  fld_64 = *(uint32_t *)(this + 100);

@@ -1,0 +1,4 @@
+CLASS .?AVCNProvocationDollAura@@  slots=38  fields_candidate=1
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0004 uint32_t   1  0064A790  if ( (*(uint8_t (/*thiscall*/ **)(uint32_t))(**(uint32_t **)(this + 4)

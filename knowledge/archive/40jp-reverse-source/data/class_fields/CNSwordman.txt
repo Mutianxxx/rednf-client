@@ -1,0 +1,44 @@
+CLASS .?AVCNSwordman@@  slots=333  fields_candidate=41
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0074 uint32_t   2  005F07A0  fld_74 = *(uint32_t *)(this + 116);
++0x0078 uint32_t   7  00499020  fld_78 = *(uint32_t *)(this + 120);
++0x00E8 uint8_t    2  00499020  result = *(uint8_t *)(this + 232);
++0x00EC uint32_t   1  00499020  *(uint32_t *)(this + 236) = nArg3;
++0x00F0 uint32_t   1  00499020  *(uint32_t *)(this + 240) = nArg4;
++0x00F4 float      4  00499080  if ( *(float *)(this + 244) == 0.0 || fArg32 != 0.0 )
++0x00F8 uint8_t    1  0042A8D0  *(uint8_t *)(this + 248) = pszArg2;
++0x00FC uint32_t   1  0042A8D0  *(uint32_t *)(this + 252) = nArg3;
++0x0100 uint8_t    1  0042A8D0  *(uint8_t *)(this + 256) = pszArg4;
++0x0104 uint32_t   1  0042A8D0  *(uint32_t *)(this + 260) = nArg5;
++0x0184 float      1  005EE040  *(float *)(this + 388) = (float)sub_47EFD0(pThis_488, 0.0, pThis_474, 
++0x018C uint32_t   1  005EE040  *(uint32_t *)(this + 396) = 0;
++0x01C0 uint32_t   1  005EE040  *(uint32_t *)(this + 448) = 2;
++0x0200 uint32_t   2  004AF8E0  if ( *(uint32_t *)(this + 512) == 4 )
++0x0204 uint8_t    1  004AF8E0  *(uint8_t *)(this + 516) = (*(int (/*thiscall*/ **)(int))(*(uint32_t *
++0x0208 uint32_t   5  004AF8E0  if ( *(uint32_t *)(this + 520) == -1 )
++0x020C uint32_t   2  004AF8E0  if ( *(uint32_t *)(this + 524) == -1082130432 )
++0x0268 uint32_t   3  005EFBD0  fld_268 = *(uint32_t *)(this + 616);
++0x0282 uint8_t    6  005EFBD0  if ( *(uint8_t *)(this + 642) != 0 )
++0x0284 uint32_t   5  005EFBD0  fld_284 = *(uint32_t *)(this + 644);
++0x1BB8 uint32_t   1  004D5A90  *(uint32_t *)(this + 7096) = sub_699000(this + 36);
++0x1BBC uint32_t   1  004D5A90  *(uint32_t *)(this + 7100) = nArg2;
++0x1BC0 uint8_t    1  004D5A90  *(uint8_t *)(this + 7104) = pszArg3;
++0x1BEC uint32_t   2  005796C0  pThis_1BEC = (uint32_t *)(this + 7148);
++0x1BF0 uint32_t   1  005796C0  *(uint32_t *)(this + 7152) = *(uint32_t *)(pArg2 + 4);
++0x1BF4 uint8_t    1  005796C0  *(uint8_t *)(this + 7156) = *(uint8_t *)(pArg2 + 8);
++0x1CF8 uint32_t   1  004B4EE0  return sub_4B2BF0((uint32_t *)(this + 7416), &nArg2, nArg3);
++0x1CFC uint32_t   1  004B4EE0  if ( nArg3 != *(uint32_t *)(this + 7420) )
++0x2024 uint32_t   1  005EE040  *(uint32_t *)(this + 8228) = sub_699000(this + 6560);
++0x202C uint32_t   3  005EE040  if ( *(uint32_t *)(this + 8236) == 0 )
++0x2048 uint32_t   2  005EE010  *(uint32_t *)(this + 8264) = 100;
++0x204C uint8_t    3  005EFBD0  if ( (*(int (/*thiscall*/ **)(int, int))(*(uint32_t *)this + 1140))(th
++0x2071 uint8_t    3  005EFBD0  if ( *(uint8_t *)(this + 8305) != 0 && (*(uint8_t (/*thiscall*/ **)(in
++0x20DC uint8_t    3  005EFBD0  if ( *(uint8_t *)(this + 8412) != 0 && (*(uint8_t (/*thiscall*/ **)(in
++0x20EC uint32_t   5  005F07A0  if ( *(uint32_t *)(this + 8428) == 0 )
++0x20F0 uint32_t   4  005F07A0  if ( *(uint32_t *)(this + 8432) == 0 )
++0x20F4 uint32_t   4  005F07A0  if ( *(uint32_t *)(this + 8436) == 0 )
++0x20F8 uint8_t    2  005EDFF0  *(uint8_t *)(this + 8440) = 0;
++0x20F9 uint8_t    1  005EDFF0  *(uint8_t *)(this + 8441) = 0;
++0x20FC uint32_t   6  005EE040  fld_20FC = *(uint32_t *)(this + 8444);
++0x2148 uint32_t   2  005EDFF0  *(uint32_t *)(this + 8520) = 0;

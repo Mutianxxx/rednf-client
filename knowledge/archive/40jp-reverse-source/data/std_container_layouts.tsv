@@ -1,0 +1,19 @@
+container	offset	field	note
+vector	0x0000	pVecBegin	MSVC std::vector<T> 三指针：_Myfirst/_Mylast/_Myend
+vector	0x0004	pVecEnd	MSVC std::vector<T> 三指针：_Myfirst/_Mylast/_Myend
+vector	0x0008	pVecCap	MSVC std::vector<T> 三指针：_Myfirst/_Mylast/_Myend
+string_sso	0x0000	pStrBuf	MSVC std::string SSO：+0 缓冲/+4 长度/+8 容量（15=内联）
+string_sso	0x0004	nStrLen	MSVC std::string SSO：+0 缓冲/+4 长度/+8 容量（15=内联）
+string_sso	0x0008	nStrCap	MSVC std::string SSO：+0 缓冲/+4 长度/+8 容量（15=内联）
+list	0x0000	pListHead	MSVC std::list<T>：哨兵双指针自环
+list	0x0004	pListTail	MSVC std::list<T>：哨兵双指针自环
+map_rb	0x0000	pRbRoot	MSVC std::map/set：+0 根，+4 红黑树头（哨兵自环）
+map_rb	0x0004	pRbHead	MSVC std::map/set：+0 根，+4 红黑树头（哨兵自环）
+zstream	0x0000	next_in	zlib z_stream 标准布局
+zstream	0x0004	avail_in	zlib z_stream 标准布局
+zstream	0x0008	total_in	zlib z_stream 标准布局
+zstream	0x000C	next_out	zlib z_stream 标准布局
+zstream	0x0010	avail_out	zlib z_stream 标准布局
+zstream	0x0014	total_out	zlib z_stream 标准布局
+zstream	0x0018	msg	zlib z_stream 标准布局
+zstream	0x001C	state	zlib z_stream 标准布局

@@ -1,0 +1,988 @@
+{
+"CNBlackLugaru": [
+[
+105,
+"    unsigned int    field_8604;                    // +0x219C (8604) x1  子类槽〔594F90 复位〕〔证据: va=00594F90〕"
+],
+[
+106,
+"    unsigned char   field_8608;                    // +0x21A0 (8608) x1  子类标记字节〔594F90 复位；594FD0 读取后回退基类〕〔证据: va=00594F90〕"
+],
+[
+108,
+"    unsigned int    field_8612;                    // +0x21A4 (8612) x1  子类槽〔594F90 复位〕〔证据: va=00594F90〕"
+],
+[
+110,
+"    unsigned int    field_8624;                    // +0x21B0 (8624) x1  子类槽〔594F90 清 8624 起 12 字节之首〕〔证据: va=00594F90〕"
+]
+],
+"CNClayMaster": [
+[
+102,
+"    unsigned int    field_8604;                    // +0x219C (8604) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+103,
+"    unsigned int    field_8608;                    // +0x21A0 (8608) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+104,
+"    unsigned int    field_8612;                    // +0x21A4 (8612) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+105,
+"    unsigned int    field_8616;                    // +0x21A8 (8616) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+108,
+"    unsigned int    field_8624;                    // +0x21B0 (8624) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+112,
+"    unsigned int    field_8640;                    // +0x21C0 (8640) x2  子类槽〔5A9100 态14 清 0〕〔证据: va=005A9100〕"
+],
+[
+116,
+"    unsigned char   field_8656;                    // +0x21D0 (8656) x1  子类标记字节〔5A82B0 清 0〕〔证据: va=005A82B0〕"
+],
+[
+118,
+"    unsigned char   field_8664;                    // +0x21D8 (8664) x1  子类标记字节〔5A9100 态8 清 0〕〔证据: va=005A9100〕"
+]
+],
+"CNCowardGoblin": [
+[
+104,
+"    unsigned int    field_8628;                    // +0x21B4 (8628) x1  子类槽〔5A2020 复位〕〔证据: va=005A2020〕"
+],
+[
+105,
+"    unsigned int    field_8632;                    // +0x21B8 (8632) x1  子类槽〔5A2020 复位〕〔证据: va=005A2020〕"
+],
+[
+106,
+"    unsigned int    field_8636;                    // +0x21BC (8636) x1  子类槽〔5A2020 复位〕〔证据: va=005A2020〕"
+],
+[
+107,
+"    unsigned int    field_8640;                    // +0x21C0 (8640) x1  子类槽〔5A2020 复位〕〔证据: va=005A2020〕"
+]
+],
+"CNDendroid": [
+[
+87,
+"    unsigned int    field_8616;                    // +0x21A8 (8616) x1  【推断】无索引哨兵槽〔5C3A30 复位置 -1；候选表其余 va 未直读此槽〕〔证据: va=005C3A30〕"
+],
+[
+89,
+"    unsigned int    field_8624;                    // +0x21B0 (8624) x1  【推断】子类槽〔5C3A30 清零〕〔证据: va=005C3A30〕"
+],
+[
+94,
+"    unsigned int    field_8648;                    // +0x21C8 (8648) x1  【推断】子类槽〔5C3A30 清零〕〔证据: va=005C3A30〕"
+]
+],
+"CNDendroidBasic": [
+[
+87,
+"    unsigned int    field_8616;                    // +0x21A8 (8616) x1  【推断】无索引哨兵槽〔5C3A30 复位置 -1；候选表其余 va 未直读此槽〕〔证据: va=005C3A30〕"
+],
+[
+89,
+"    unsigned int    field_8624;                    // +0x21B0 (8624) x1  【推断】子类槽〔5C3A30 清零〕〔证据: va=005C3A30〕"
+],
+[
+94,
+"    unsigned int    field_8648;                    // +0x21C8 (8648) x1  【推断】子类槽〔5C3A30 清零〕〔证据: va=005C3A30〕"
+]
+],
+"CNDollMaster": [
+[
+79,
+"    unsigned int     field_8604          ; // +0x219C (8604) x1  子类槽〔5A82B0 复位〕"
+],
+[
+80,
+"    unsigned int     field_8608          ; // +0x21A0 (8608) x1  子类槽〔5A82B0 复位〕"
+],
+[
+81,
+"    unsigned int     field_8612          ; // +0x21A4 (8612) x1  子类槽〔5A82B0 复位〕"
+],
+[
+82,
+"    unsigned int     field_8616          ; // +0x21A8 (8616) x1  子类槽〔5A82B0 复位〕"
+],
+[
+85,
+"    unsigned int     field_8624          ; // +0x21B0 (8624) x1  子类槽〔5A82B0 复位〕"
+],
+[
+89,
+"    unsigned int     field_8640          ; // +0x21C0 (8640) x2  子类槽〔5A9100 态14 清 0〕"
+],
+[
+91,
+"    unsigned char    field_8656          ; // +0x21D0 (8656) x1  子类标记字节〔5A82B0 清 0〕"
+],
+[
+93,
+"    unsigned char    field_8664          ; // +0x21D8 (8664) x1  子类标记字节〔5A9100 态8 清 0〕"
+]
+],
+"CNDraconian": [
+[
+83,
+"    unsigned short  field_8620;                    // +0x21AC (8620) x1  【推断】子类槽双字节〔5AF910 复位清零；无直读证据〕〔证据: va=005AF910〕"
+]
+],
+"CNDrakeLooseSerimalion": [
+[
+95,
+"    unsigned char   field_8761;                    // +0x2239 (8761) x1  【推断】子类标记字节〔5AA6A0 重抽时清 0〕〔证据: va=005AA6A0〕"
+],
+[
+96,
+"    unsigned char   field_8762;                    // +0x223A (8762) x1  【推断】子类标记字节〔5AA6A0 重抽时清 0〕〔证据: va=005AA6A0〕"
+]
+],
+"CNDrakeSerimalion": [
+[
+92,
+"    unsigned char   field_8761;                    // +0x2239 (8761) x1  【推断】子类标记字节〔5AA6A0 重抽时清 0〕〔证据: va=005AA6A0〕"
+],
+[
+93,
+"    unsigned char   field_8762;                    // +0x223A (8762) x1  【推断】子类标记字节〔5AA6A0 重抽时清 0〕〔证据: va=005AA6A0〕"
+]
+],
+"CNFighter": [
+[
+46,
+"    unsigned int     f_018C;          // +0x018C (396) x1  va=005EA970 0x5EA970 清零槽"
+],
+[
+53,
+"    unsigned int     f_01C8;          // +0x01C8 (456) x2  va=005EA970 0x5EA970 写入槽（v218）"
+],
+[
+55,
+"    unsigned int     f_01D0;          // +0x01D0 (464) x1  va=005EA970 0x5EA970 写 -998637568（-1000.0f 位模式；【推断】速度/延迟初值）"
+],
+[
+74,
+"    unsigned int     f_1AEC;          // +0x1AEC (6892) x1  va=005EA970 0x5EA970 读取槽"
+],
+[
+87,
+"    unsigned int     f_2018;          // +0x2018 (8216) x4  va=005EA970 0x5EA970 写入槽（v214）"
+],
+[
+89,
+"    unsigned int     f_2020;          // +0x2020 (8224) x1  va=005EA970 0x5EA970 清零槽"
+],
+[
+103,
+"    unsigned char    f_2054;          // +0x2054 (8276) x1  va=005EA970 0x5EA970 清零字节槽"
+],
+[
+106,
+"    unsigned int     f_205C;          // +0x205C (8284) x3  va=005EA970 0x5EA970 写入槽（v260）"
+],
+[
+107,
+"    unsigned int     f_2060;          // +0x2060 (8288) x3  va=005EA970 0x5EA970 写入槽（v80）"
+],
+[
+120,
+"    unsigned char    f_2086;          // +0x2086 (8326) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+122,
+"    unsigned int     f_2088;          // +0x2088 (8328) x1  va=005EA970 0x5EA970 清零槽"
+],
+[
+123,
+"    unsigned char    f_208C;          // +0x208C (8332) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+124,
+"    unsigned char    f_208D;          // +0x208D (8333) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+130,
+"    unsigned int     f_2098;          // +0x2098 (8344) x2  va=005EA970 0x5EA970 写入槽（v119）"
+],
+[
+139,
+"    unsigned char    f_20B8;          // +0x20B8 (8376) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+140,
+"    unsigned char    f_20B9;          // +0x20B9 (8377) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+143,
+"    unsigned char    f_20C0;          // +0x20C0 (8384) x2  va=005EA970 0x5EA970 清零字节"
+],
+[
+146,
+"    unsigned char    f_20C8;          // +0x20C8 (8392) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+150,
+"    unsigned int     f_20D4;          // +0x20D4 (8404) x1  va=005EA970 0x5EA970 清零槽"
+],
+[
+151,
+"    unsigned int     f_20D8;          // +0x20D8 (8408) x3  va=005EA970 0x5EA970: +8408==0 条件"
+],
+[
+154,
+"    unsigned int     f_20E4;          // +0x20E4 (8420) x2  va=005EA970 0x5EA970: *(this+8420)!=0 条件"
+],
+[
+155,
+"    unsigned int     f_20E8;          // +0x20E8 (8424) x1  va=005EA970 0x5EA970 清零槽"
+],
+[
+156,
+"    unsigned int     f_20EC;          // +0x20EC (8428) x1  va=005EA970 0x5EA970 清零槽"
+],
+[
+157,
+"    unsigned int     f_20F0;          // +0x20F0 (8432) x1  va=005EA970 0x5EA970 清零槽"
+],
+[
+158,
+"    unsigned char    f_20F4;          // +0x20F4 (8436) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+159,
+"    unsigned char    f_20F5;          // +0x20F5 (8437) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+163,
+"    unsigned int     f_2100;          // +0x2100 (8448) x1  va=005EA970 0x5EA970 写入槽（result）"
+],
+[
+169,
+"    unsigned int     f_2118;          // +0x2118 (8472) x3  va=005EA970 0x5EA970: *(this+8472)==1 条件"
+],
+[
+170,
+"    unsigned char    f_211C;          // +0x211C (8476) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+171,
+"    unsigned char    f_211D;          // +0x211D (8477) x1  va=005EA970 0x5EA970 清零字节"
+],
+[
+173,
+"    unsigned int     f_2120;          // +0x2120 (8480) x3  va=005EA970 0x5EA970: *(this+8480)==0 条件"
+],
+[
+175,
+"    unsigned int     f_2130;          // +0x2130 (8496) x3  va=005EA970 0x5EA970 读取槽"
+],
+[
+176,
+"    unsigned int     f_2134;          // +0x2134 (8500) x4  va=005EA970 0x5EA970: *(this+8500) >= dword_9B9348 门"
+],
+[
+177,
+"    unsigned int     f_2138;          // +0x2138 (8504) x1  va=005EA970 0x5EA970 写 -200（【推断】延迟/偏移值，与 +2068 同法）"
+],
+[
+178,
+"    unsigned int     f_213C;          // +0x213C (8508) x1  va=005EA970 0x5EA970 清零槽"
+],
+[
+180,
+"    unsigned int     f_2144;          // +0x2144 (8516) x1  va=005EA970 0x5EA970 清零槽"
+]
+],
+"CNFlyDragon": [
+[
+103,
+"    unsigned char   field_8761;                    // +0x2239 (8761) x1  【推断】子类标记字节〔5AA6A0 重抽时清 0〕〔证据: va=005AA6A0〕"
+],
+[
+104,
+"    unsigned char   field_8762;                    // +0x223A (8762) x1  【推断】子类标记字节〔5AA6A0 重抽时清 0〕〔证据: va=005AA6A0〕"
+]
+],
+"CNGoblinBullsEye": [
+[
+90,
+"    unsigned int    field_8616;                    // +0x21A8 (8616) x1  【推断】子类槽〔59E550 复位清零〕〔证据: va=0059E550〕"
+],
+[
+91,
+"    unsigned int    field_8620;                    // +0x21AC (8620) x1  【推断】子类槽〔59E550 复位清零〕〔证据: va=0059E550〕"
+],
+[
+96,
+"    unsigned char   field_8676;                    // +0x21E4 (8676) x1  【推断】子类槽〔5A0420 进态 8 型 1 置 0；5A0AE0 清零〕〔证据: va=005A0420〕"
+],
+[
+98,
+"    unsigned int    field_8680;                    // +0x21E8 (8680) x1  【推断】子类槽〔5A0420 进态 8 型 1 置 0；5A0AE0 清零〕〔证据: va=005A0420〕"
+]
+],
+"CNGoblinHodor": [
+[
+104,
+"    unsigned int    field_8616;                    // +0x21A8 (8616) x1  子类槽〔599D50 清零〕〔证据: va=00599D50〕"
+]
+],
+"CNGoblinKagelBase": [
+[
+34,
+"    unsigned int    field_324;                     // +0x0144 (324) x5  无直证（5F150 保存/还原包裹惊叹气泡）〔证据: va=0059F150〕"
+],
+[
+102,
+"    unsigned int    field_8616;                    // +0x21A8 (8616) x1  子类槽〔5E550 复位〕〔证据: va=0059E550〕"
+],
+[
+103,
+"    unsigned int    field_8620;                    // +0x21AC (8620) x1  子类槽〔5E550 复位〕〔证据: va=0059E550〕"
+],
+[
+112,
+"    unsigned char   field_8657;                    // +0x21D1 (8657) x1  子类标记字节〔5F150 清 0〕〔证据: va=0059F150〕"
+],
+[
+113,
+"    unsigned char   field_8658;                    // +0x21D2 (8658) x1  子类标记字节〔5F150 清 0〕〔证据: va=0059F150〕"
+]
+],
+"CNIceDoll_Sharedo": [
+[
+79,
+"    unsigned int     field_8604          ; // +0x219C (8604) x1  子类槽〔5A82B0 复位〕"
+],
+[
+80,
+"    unsigned int     field_8608          ; // +0x21A0 (8608) x1  子类槽〔5A82B0 复位〕"
+],
+[
+81,
+"    unsigned int     field_8612          ; // +0x21A4 (8612) x1  子类槽〔5A82B0 复位〕"
+],
+[
+82,
+"    unsigned int     field_8616          ; // +0x21A8 (8616) x1  子类槽〔5A82B0 复位〕"
+],
+[
+85,
+"    unsigned int     field_8624          ; // +0x21B0 (8624) x1  子类槽〔5A82B0 复位〕"
+],
+[
+89,
+"    unsigned int     field_8640          ; // +0x21C0 (8640) x2  子类槽〔5A9100 态14 清 0〕"
+],
+[
+91,
+"    unsigned char    field_8656          ; // +0x21D0 (8656) x1  子类标记字节〔5A82B0 清 0〕"
+],
+[
+93,
+"    unsigned char    field_8664          ; // +0x21D8 (8664) x1  子类标记字节〔5A9100 态8 清 0〕"
+]
+],
+"CNLugaru": [
+[
+105,
+"    unsigned int    field_8604;                    // +0x219C (8604) x1  子类槽〔594340 复位〕〔证据: va=00594340〕"
+],
+[
+106,
+"    unsigned int    field_8608;                    // +0x21A0 (8608) x1  子类槽〔594340 复位〕〔证据: va=00594340〕"
+],
+[
+108,
+"    unsigned int    field_8620;                    // +0x21AC (8620) x1  子类槽〔594340 清 8620 起 12 字节之首〕〔证据: va=00594340〕"
+]
+],
+"CNMage": [
+[
+28,
+"    unsigned int     f_0074;          // +0x0074 (116) x1  va=005DE690 0x5DE690 读取槽（fld_74）"
+],
+[
+98,
+"    unsigned char    f_2024;          // +0x2024 (8228) x1  va=005DE690 0x5DE690: !=0 条件字节"
+],
+[
+110,
+"    unsigned int     f_20F8;          // +0x20F8 (8440) x2  va=005DE690 0x5DE690: *(this+8440)!=0 门"
+],
+[
+114,
+"    unsigned char    f_2138;          // +0x2138 (8504) x3  va=005DE690 0x5DE690: ==0 判据字节"
+]
+],
+"CNMasterDogri": [
+[
+80,
+"    unsigned int     field_8604          ; // +0x219C (8604) x1  子类槽〔5A82B0 复位〕"
+],
+[
+81,
+"    unsigned int     field_8608          ; // +0x21A0 (8608) x1  子类槽〔5A82B0 复位〕"
+],
+[
+82,
+"    unsigned int     field_8612          ; // +0x21A4 (8612) x1  子类槽〔5A82B0 复位〕"
+],
+[
+83,
+"    unsigned int     field_8616          ; // +0x21A8 (8616) x1  子类槽〔5A82B0 复位〕"
+],
+[
+86,
+"    unsigned int     field_8624          ; // +0x21B0 (8624) x2  子类槽〔5A82B0 复位〕"
+],
+[
+90,
+"    unsigned int     field_8640          ; // +0x21C0 (8640) x2  子类槽〔5A9100 态14 清 0〕"
+],
+[
+94,
+"    unsigned char    field_8656          ; // +0x21D0 (8656) x1  子类标记字节〔5A82B0 清 0〕"
+],
+[
+96,
+"    unsigned char    field_8664          ; // +0x21D8 (8664) x1  子类标记字节〔5A9100 态8 清 0〕"
+]
+],
+"CNRDBaseInterface": [
+[
+49,
+"    uint32_t         field_04C8          ; // +0x04C8 (1224) x1  va=00469170 0x469170 读取槽（与 +1220 等级标签同段，语义未定）"
+],
+[
+53,
+"    uint32_t         field_04D4          ; // +0x04D4 (1236) x2  va=00469170 0x469170 读取槽（与 +1232 角色名标签同段，语义未定）"
+]
+],
+"CNRDCharacterTalkBox": [
+[
+29,
+"    unsigned char    field_0049            ; // +0x0049 (73) x1  复位清零字节（0x49B520/0x49B570 置 0；无消费点直证 → 保留占位名）（证据: va=0049B570）"
+],
+[
+30,
+"    unsigned char    field_004A            ; // +0x004A (74) x1  复位清零字节（同上成对置 0；无消费点直证 → 保留占位名）（证据: va=0049B570）"
+]
+],
+"CNRDDialogueWindow": [
+[
+29,
+"    uint32_t         field_0028          ; // +0x0028 (40) x1  va=00607020 0x607020 读取槽（控件槽位，语义未定）"
+],
+[
+30,
+"    uint32_t         field_002C          ; // +0x002C (44) x1  va=00607020 0x607020 读取槽（控件槽位，语义未定）"
+]
+],
+"CNRDItemShopWindow": [
+[
+54,
+"    uint8_t          field_007D          ; // +0x007D (125) x1  va=00564810 复位组字节（0x564810 清 0，语义未定）"
+],
+[
+55,
+"    uint8_t          field_007E          ; // +0x007E (126) x1  va=00564810 复位组字节（0x564810 清 0，语义未定）"
+]
+],
+"CNRDMakePriceWindow": [
+[
+52,
+"    uint8_t          field_0040          ; // +0x0040 (64) x1  va=0069A520 0x69A520 构造写 1（装配位，语义未定）"
+],
+[
+54,
+"    uint32_t         field_0044          ; // +0x0044 (68) x1  va=0069A520 0x69A520 构造写 0（装配位，语义未定）"
+]
+],
+"CNRDQuestInfoWindow": [
+[
+38,
+"    uint32_t         field_007C          ; // +0x007C (124) x1  va=00551D10 0x551D10 读取槽（语义未定）"
+],
+[
+44,
+"    uint32_t         field_00C8          ; // +0x00C8 (200) x1  va=00551D10 0x551D10 读取槽（语义未定）"
+]
+],
+"CNRDSkillBuyWindow": [
+[
+37,
+"    uint32_t         field_003C          ; // +0x003C (60) x1  va=00550480 0x550480 读取槽（滚动态字段，语义未定）"
+]
+],
+"CNRDWarRoomBattleTalkBox": [
+[
+29,
+"    unsigned char    field_0049            ; // +0x0049 (73) x1  复位清零字节（0x49B520/0x49B570 置 0；无消费点直证 → 保留占位名）（证据: va=0049B570）"
+],
+[
+30,
+"    unsigned char    field_004A            ; // +0x004A (74) x1  复位清零字节（同上成对置 0；无消费点直证 → 保留占位名）（证据: va=0049B570）"
+]
+],
+"CNRoomListModule": [
+[
+41,
+"    uint8_t          field_0089          ; // +0x0089 (137) x1  va=0045CB30 复位组字节（0x45CB30 清 0，语义未定）"
+],
+[
+42,
+"    uint8_t          field_008A          ; // +0x008A (138) x1  va=0045CB30 复位组字节（0x45CB30 清 0，语义未定）"
+]
+],
+"CNScriptLoader": [
+[
+22,
+"    unsigned char    field_0014            ; // +0x0014 (20) x1  工厂产物对象字段（0x4D2D60 属性块解析器工厂 switch：本条为被创建对象 pObj+20 的清零写点，非本类布局 → 保留占位名）（证据: va=004D2D60）"
+],
+[
+24,
+"    unsigned int     field_0024            ; // +0x0024 (36) x1  工厂产物对象字段（0x4D2D60：pObj+36 清零；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+25,
+"    unsigned int     field_0028            ; // +0x0028 (40) x2  工厂产物对象字段（0x4D2D60：pObj+40 容量判据；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+27,
+"    unsigned int     field_0030            ; // +0x0030 (48) x2  工厂产物对象字段（0x4D2D60：pObj+48 指针判据；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+28,
+"    unsigned int     field_0034            ; // +0x0034 (52) x1  工厂产物对象字段（0x4D2D60：pObj+52 清零；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+29,
+"    unsigned int     field_0038            ; // +0x0038 (56) x1  工厂产物对象字段（0x4D2D60：pObj+56 清零；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+31,
+"    unsigned char    field_0060            ; // +0x0060 (96) x1  工厂产物对象字段（0x4D2D60：pObj+96 清零；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+33,
+"    unsigned int     field_0070            ; // +0x0070 (112) x1  工厂产物对象字段（0x4D2D60：pObj+112 清零；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+34,
+"    unsigned int     field_0074            ; // +0x0074 (116) x2  工厂产物对象字段（0x4D2D60：pObj+116 容量判据；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+36,
+"    unsigned char    field_00C8            ; // +0x00C8 (200) x1  工厂产物对象字段（0x4D2D60：pObj+200 清零；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+38,
+"    unsigned int     field_00D8            ; // +0x00D8 (216) x1  工厂产物对象字段（0x4D2D60：pObj+216 清零；非本类布局 → 占位）（证据: va=004D2D60）"
+],
+[
+39,
+"    unsigned int     field_00DC            ; // +0x00DC (220) x2  工厂产物对象字段（0x4D2D60：pObj+220 容量判据；非本类布局 → 占位）（证据: va=004D2D60）"
+]
+],
+"CNSelectDungeonModule": [
+[
+40,
+"    uint8_t          field_00C5          ; // +0x00C5 (197) x1  va=00454740 复位组字节（0x454740 清 0；与 +198/+212/-1/+216=1 同组，语义未定）"
+],
+[
+41,
+"    uint8_t          field_00C6          ; // +0x00C6 (198) x1  va=00454740 复位组字节（0x454740 清 0；与 +197 成组，语义未定）"
+],
+[
+44,
+"    uint8_t          field_00D8          ; // +0x00D8 (216) x1  va=00454740 复位组字节（0x454740 与 +212=-1 同组置 1，语义未定）"
+],
+[
+53,
+"    uint8_t          field_00FD          ; // +0x00FD (253) x1  va=00454740 复位组字节（0x454740 清 0，语义未定）"
+],
+[
+54,
+"    uint8_t          field_00FE          ; // +0x00FE (254) x1  va=00454740 复位组字节（0x454740 清 0，语义未定）"
+]
+],
+"CNStarFish": [
+[
+103,
+"    unsigned char   field_8604;                    // +0x219C (8604) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+104,
+"    unsigned char   field_8605;                    // +0x219D (8605) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+106,
+"    unsigned int    field_8608;                    // +0x21A0 (8608) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+107,
+"    unsigned int    field_8612;                    // +0x21A4 (8612) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+109,
+"    unsigned char   field_8632;                    // +0x21B8 (8632) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+110,
+"    unsigned char   field_8633;                    // +0x21B9 (8633) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+113,
+"    unsigned int    field_8640;                    // +0x21C0 (8640) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+114,
+"    unsigned int    field_8644;                    // +0x21C4 (8644) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+115,
+"    unsigned int    field_8648;                    // +0x21C8 (8648) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+116,
+"    unsigned char   field_8652;                    // +0x21CC (8652) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+]
+],
+"CNStarFishDevourer": [
+[
+103,
+"    unsigned char   field_8604;                    // +0x219C (8604) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+104,
+"    unsigned char   field_8605;                    // +0x219D (8605) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+106,
+"    unsigned int    field_8608;                    // +0x21A0 (8608) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+107,
+"    unsigned int    field_8612;                    // +0x21A4 (8612) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+109,
+"    unsigned char   field_8632;                    // +0x21B8 (8632) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+110,
+"    unsigned char   field_8633;                    // +0x21B9 (8633) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+113,
+"    unsigned int    field_8640;                    // +0x21C0 (8640) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+114,
+"    unsigned int    field_8644;                    // +0x21C4 (8644) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+115,
+"    unsigned int    field_8648;                    // +0x21C8 (8648) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+116,
+"    unsigned char   field_8652;                    // +0x21CC (8652) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+]
+],
+"CNStarFishKing": [
+[
+91,
+"    unsigned char   field_8604;                    // +0x219C (8604) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+92,
+"    unsigned char   field_8605;                    // +0x219D (8605) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+94,
+"    unsigned int    field_8608;                    // +0x21A0 (8608) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+95,
+"    unsigned int    field_8612;                    // +0x21A4 (8612) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+97,
+"    unsigned char   field_8632;                    // +0x21B8 (8632) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+98,
+"    unsigned char   field_8633;                    // +0x21B9 (8633) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+101,
+"    unsigned int    field_8640;                    // +0x21C0 (8640) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+102,
+"    unsigned int    field_8644;                    // +0x21C4 (8644) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+103,
+"    unsigned int    field_8648;                    // +0x21C8 (8648) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+104,
+"    unsigned char   field_8652;                    // +0x21CC (8652) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+]
+],
+"CNStarFishRukuku": [
+[
+101,
+"    unsigned char   field_8604;                    // +0x219C (8604) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+102,
+"    unsigned char   field_8605;                    // +0x219D (8605) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+104,
+"    unsigned int    field_8608;                    // +0x21A0 (8608) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+105,
+"    unsigned int    field_8612;                    // +0x21A4 (8612) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+107,
+"    unsigned char   field_8632;                    // +0x21B8 (8632) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+108,
+"    unsigned char   field_8633;                    // +0x21B9 (8633) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+],
+[
+111,
+"    unsigned int    field_8640;                    // +0x21C0 (8640) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+112,
+"    unsigned int    field_8644;                    // +0x21C4 (8644) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+113,
+"    unsigned int    field_8648;                    // +0x21C8 (8648) x1  子类槽〔5B4700 归零〕〔证据: va=005B4700〕"
+],
+[
+114,
+"    unsigned char   field_8652;                    // +0x21CC (8652) x1  子类标记字节〔5B4700 整块清场〕〔证据: va=005B4700〕"
+]
+],
+"CNSteelMaster": [
+[
+97,
+"    unsigned int     field_8604          ; // +0x219C (8604) x1  子类槽〔5A82B0 复位〕"
+],
+[
+98,
+"    unsigned int     field_8608          ; // +0x21A0 (8608) x1  子类槽〔5A82B0 复位〕"
+],
+[
+99,
+"    unsigned int     field_8612          ; // +0x21A4 (8612) x1  子类槽〔5A82B0 复位〕"
+],
+[
+100,
+"    unsigned int     field_8616          ; // +0x21A8 (8616) x1  子类槽〔5A82B0 复位〕"
+],
+[
+103,
+"    unsigned int     field_8624          ; // +0x21B0 (8624) x2  子类槽〔5A82B0 复位〕"
+],
+[
+107,
+"    unsigned int     field_8640          ; // +0x21C0 (8640) x2  子类槽〔5A9100 态14 清 0〕"
+],
+[
+109,
+"    unsigned char    field_8656          ; // +0x21D0 (8656) x1  子类标记字节〔5A82B0 清 0〕"
+],
+[
+111,
+"    unsigned char    field_8664          ; // +0x21D8 (8664) x1  子类标记字节〔5A9100 态8 清 0〕"
+]
+],
+"CNStoneMaster": [
+[
+102,
+"    unsigned int    field_8604;                    // +0x219C (8604) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+103,
+"    unsigned int    field_8608;                    // +0x21A0 (8608) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+104,
+"    unsigned int    field_8612;                    // +0x21A4 (8612) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+105,
+"    unsigned int    field_8616;                    // +0x21A8 (8616) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+108,
+"    unsigned int    field_8624;                    // +0x21B0 (8624) x1  子类槽〔5A82B0 复位〕〔证据: va=005A82B0〕"
+],
+[
+112,
+"    unsigned int    field_8640;                    // +0x21C0 (8640) x2  子类槽〔5A9100 态14 清 0〕〔证据: va=005A9100〕"
+],
+[
+116,
+"    unsigned char   field_8656;                    // +0x21D0 (8656) x1  子类标记字节〔5A82B0 清 0〕〔证据: va=005A82B0〕"
+],
+[
+118,
+"    unsigned char   field_8664;                    // +0x21D8 (8664) x1  子类标记字节〔5A9100 态8 清 0〕〔证据: va=005A9100〕"
+]
+],
+"CNWhiteLugaru": [
+[
+101,
+"    unsigned int    field_8604;                    // +0x219C (8604) x1  附属槽〔595E10 复位；595E50 空则退出大状态14〕〔证据: va=00595E10〕"
+],
+[
+102,
+"    unsigned int    field_8608;                    // +0x21A0 (8608) x1  附属槽〔595E10 复位〕〔证据: va=00595E10〕"
+]
+],
+"IRDMonster": [
+[
+26,
+"    unsigned int     f_0060;          // +0x0060 (96) x1  va=004DE700 【推断】条件/标签 id（0x4DE700 复位写 529；0x4E7160 同址写 1「动作子对象存在标志」，语义待定）"
+],
+[
+85,
+"    unsigned int     f_1DD0;          // +0x1DD0 (7632) x1  va=004DE700 【推断】怪物窗口槽 A（复位 -1 哨兵；0x4DE700 头注归入「骑乘/名牌/拾取族」）"
+],
+[
+86,
+"    unsigned int     f_1DD4;          // +0x1DD4 (7636) x1  va=004DE700 【推断】怪物窗口槽 B（与 A 成对复位 -1）"
+],
+[
+88,
+"    unsigned int     f_1DF4;          // +0x1DF4 (7668) x1  va=004DE700 名牌/骑乘族计数槽（0x4DE700 清零）"
+],
+[
+89,
+"    unsigned int     f_1DF8;          // +0x1DF8 (7672) x1  va=004DE700 名牌/骑乘族槽（-1 哨兵）"
+],
+[
+90,
+"    unsigned int     f_1DFC;          // +0x1DFC (7676) x1  va=004DE700 名牌/骑乘族槽（-1 哨兵）"
+],
+[
+92,
+"    unsigned int     f_1E08;          // +0x1E08 (7688) x1  va=004DE700 名牌/骑乘族计数槽（0x4DE700 清零）"
+],
+[
+94,
+"    unsigned int     f_1E1C;          // +0x1E1C (7708) x1  va=004DE700 四连清零槽 1（0x4DE700）"
+],
+[
+95,
+"    unsigned int     f_1E20;          // +0x1E20 (7712) x1  va=004DE700 四连清零槽 2"
+],
+[
+96,
+"    unsigned int     f_1E24;          // +0x1E24 (7716) x1  va=004DE700 四连清零槽 3"
+],
+[
+97,
+"    unsigned int     f_1E28;          // +0x1E28 (7720) x1  va=004DE700 四连清零槽 4"
+],
+[
+99,
+"    unsigned int     f_1E34;          // +0x1E34 (7732) x1  va=004DE700 【推断】复位批尾置 200（与 +608=100 同风格：数值型门限初值）"
+],
+[
+101,
+"    unsigned char    f_1E54;          // +0x1E54 (7764) x1  va=004DE700 复位批字节槽（0x4DE700 清零）"
+],
+[
+103,
+"    unsigned int     f_1E58;          // +0x1E58 (7768) x1  va=004DE700 复位批 dword 槽（0x4DE700 清零）"
+],
+[
+106,
+"    unsigned char    f_1E60;          // +0x1E60 (7776) x1  va=004DE700 复位批字节槽（0x4DE700 清零）"
+],
+[
+108,
+"    unsigned char    f_1E79;          // +0x1E79 (7801) x1  va=004DE700 复位批字节槽（0x4DE700 清零）"
+],
+[
+116,
+"    unsigned int     f_2060;          // +0x2060 (8288) x1  va=004DE700 拾取族 slot（-1 哨兵；0x4DE700）"
+],
+[
+117,
+"    unsigned int     f_2064;          // +0x2064 (8292) x1  va=004DE700 【推断】拾取族时限初值 1000（0x4DE700 同批风格）"
+],
+[
+126,
+"    unsigned int     f_2084;          // +0x2084 (8324) x1  va=004DE700 拾取族槽（-1 哨兵；0x4DE700）"
+],
+[
+127,
+"    unsigned int     f_2088;          // +0x2088 (8328) x1  va=004DE700 拾取族槽（-1 哨兵）"
+],
+[
+128,
+"    unsigned int     f_208C;          // +0x208C (8332) x1  va=004DE700 拾取族槽（-1 哨兵）"
+],
+[
+131,
+"    unsigned int     f_2098;          // +0x2098 (8344) x1  va=004DE700 懒加载族计数/句柄槽（0x4DE700 清零）"
+],
+[
+132,
+"    unsigned int     f_209C;          // +0x209C (8348) x1  va=004DE700 懒加载族计数/句柄槽（0x4DE700 清零）"
+],
+[
+136,
+"    unsigned int     f_20AC;          // +0x20AC (8364) x2  va=004DE700 拾取/坐标缓存槽（同族 vt+112(this,+8364,+8368,0)）"
+],
+[
+138,
+"    unsigned int     f_2118;          // +0x2118 (8472) x1  va=004DE700 复位批尾槽（0x4DE700 清零）"
+],
+[
+139,
+"    unsigned int     f_211C;          // +0x211C (8476) x1  va=004DE700 复位批尾槽（0x4DE700 清零）"
+],
+[
+148,
+"    unsigned char    f_2179;          // +0x2179 (8569) x1  va=004DE700 复位批尾字节槽（0x4DE700 清零）"
+],
+[
+149,
+"    unsigned char    f_217A;          // +0x217A (8570) x1  va=004DE700 复位批尾字节槽（0x4DE700 清零）"
+],
+[
+151,
+"    unsigned int     f_2188;          // +0x2188 (8584) x1  va=004DE700 随机区间/文案槽（0x4DE5E0 系列）"
+],
+[
+152,
+"    unsigned int     f_218C;          // +0x218C (8588) x1  va=004DE700 随机区间/文案槽"
+]
+]
+}

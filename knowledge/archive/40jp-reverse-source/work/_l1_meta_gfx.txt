@@ -1,0 +1,764 @@
+0x410000 sub_410000 [20L]
+  CALL: sub_410000
+0x410030 sub_410030 [65L]
+  CALL: sub_410030, sub_404F40, IntersectRect, sub_404F80
+0x410140 sub_410140 [94L]
+  CALL: sub_410140, sub_404F40, sub_40FCB0, BYTE2, sub_404F80
+0x410300 sub_410300 [156L]
+  CALL: sub_410300, sub_404F40, sub_40FCB0, BYTE2, sub_404F80
+0x4105A0 sub_4105A0 [66L]
+  CALL: sub_4105A0, sub_404F40, sub_67CF8F, sub_67CB3E, sub_67D13A, sub_67CEFF, sub_67C632, BYTE2, sub_404F80
+0x410750 sub_410750 [20L]
+  STR: CND3DBaseTexture : ImagePackEx already exists
+  CALL: sub_410750, off_77F3FC
+0x410790 sub_410790 [29L]
+  CALL: sub_410790
+0x4107D0 sub_4107D0 [55L]
+  CALL: sub_4107D0, sub_418E20, sub_410030, sub_404F40, CopyRect, OffsetRect, IntersectRect, sub_404F80
+0x410910 sub_410910 [104L]
+  CALL: sub_410910, sub_404F40, sub_418E20, sub_404F80
+0x410A80 sub_410A80 [23L]
+  CALL: sub_410A80, sub_418E20, sub_410030, sub_410140
+0x410B60 sub_410B60 [26L]
+  CALL: sub_410B60, sub_418E20, sub_410300, sub_4105A0
+0x410C80 sub_410C80 [148L]
+  CALL: sub_410C80, sub_418E20, sub_404F40, sub_404F80, LODWORD, CopyRect, IntersectRect, OffsetRect
+0x410F30 sub_410F30 [69L]
+  CALL: sub_410F30, sub_418E20, sub_404F40, BYTE2, sub_404F80
+0x411080 sub_411080 [85L]
+  CALL: sub_411080, sub_418E20, BYTE2, sub_404F40, sub_404F80
+0x4111E0 sub_4111E0 [39L]
+  CALL: sub_4111E0
+0x411240 sub_411240 [85L]
+  CALL: eax>, SetRect, sub_4111E0, sub_405060
+0x4113F0 sub_4113F0 [27L]
+  CALL: sub_4113F0, eax, BYTE2
+0x411460 sub_411460 [38L]
+  CALL: sub_411460, BYTE2
+0x4114C0 sub_4114C0 [15L]
+  CALL: sub_4114C0, sub_40F530
+0x411510 sub_411510 [33L]
+  CALL: sub_411510, BYTE2
+0x411590 sub_411590 [48L]
+  CALL: sub_411590, sub_66BC25
+0x4116A0 sub_4116A0 [202L]
+  CALL: sub_4116A0, sub_66BD5A, LABEL_40:, new, sub_652E00, LABEL_24:, j_j__free, LABEL_22:
+0x411B30 sub_411B30 [279L]
+  CALL: sub_411B30, LABEL_34:, new, LABEL_18:, j_j__free, LOBYTE, sub_652E00
+0x411EB0 sub_411EB0 [59L]
+  CALL: sub_411EB0, ftell, sub_66BD5A, off_77F3FC
+0x411FD0 sub_411FD0 [41L]
+  CALL: sub_411FD0, j_j__free, new
+0x412040 sub_412040 [48L]
+  CALL: sub_412040, sub_66BC25
+0x412150 sub_412150 [232L]
+  CALL: sub_412150, sub_66BD5A, new, j_j__free, LABEL_26:, sub_652E00
+0x4125D0 sub_4125D0 [59L]
+  CALL: sub_4125D0, sub_66BD5A, off_77F3FC
+0x412700 sub_412700 [282L]
+  CALL: sub_412700, LABEL_42:, new, j_j__free, LABEL_24:, sub_652E00, BYTE2
+0x412AE0 sub_412AE0 [30L]
+  CALL: sub_412AE0, eax, HIWORD
+0x412B70 sub_412B70 [50L]
+  CALL: sub_412B70, HIWORD
+0x412C20 sub_412C20 [21L]
+  CALL: sub_412C20, LOBYTE, sub_40F530, HIWORD
+0x412C80 sub_412C80 [19L]
+  CALL: sub_412C80, sub_40F530
+0x412CF0 sub_412CF0 [54L]
+  CALL: sub_412CF0, HIWORD, LOWORD
+0x412DA0 sub_412DA0 [47L]
+  CALL: sub_412DA0, HIWORD
+0x412E40 sub_412E40 [27L]
+  CALL: sub_412E40, eax, HIWORD
+0x412ED0 sub_412ED0 [50L]
+  CALL: sub_412ED0, HIWORD
+0x412F80 sub_412F80 [52L]
+  CALL: sub_412F80, HIWORD
+0x413040 sub_413040 [21L]
+  CALL: sub_413040, LOBYTE, sub_40F530, HIWORD
+0x4130A0 sub_4130A0 [20L]
+  CALL: sub_4130A0, sub_40F530
+0x413110 sub_413110 [54L]
+  CALL: sub_413110, HIWORD, LOWORD
+0x4131C0 sub_4131C0 [47L]
+  CALL: sub_4131C0, HIWORD
+0x413260 sub_413260 [30L]
+  CALL: sub_413260
+0x4132E0 sub_4132E0 [40L]
+  CALL: sub_4132E0, j_j__free, new
+0x413360 sub_413360 [26L]
+  CALL: sub_413360, eax, BYTE2
+0x4133D0 sub_4133D0 [18L]
+  CALL: sub_4133D0, LOBYTE, sub_40F530, BYTE2
+0x413420 sub_413420 [45L]
+  CALL: sub_413420, BYTE2
+0x4134B0 sub_4134B0 [44L]
+  CALL: sub_4134B0, sub_66BC25
+0x413580 sub_413580 [54L]
+  CALL: sub_413580, sub_66BD5A
+0x413670 sub_413670 [52L]
+  CALL: sub_413670, SetRect
+0x413740 sub_413740 [35L]
+  CALL: sub_413740, SetRect
+0x413800 sub_413800 [28L]
+  CALL: sub_413800
+0x413840 sub_413840 [18L]
+  CALL: sub_413840
+0x413870 sub_413870 [14L]
+  CALL: sub_413870
+0x4138A0 sub_4138A0 [43L]
+  CALL: sub_4138A0
+0x413920 sub_413920 [67L]
+  CALL: sub_413920, sub_66BC25
+0x413A60 sub_413A60 [65L]
+  CALL: sub_413A60, sub_66BD5A, new, j_j__free
+0x413B80 sub_413B80 [74L]
+  CALL: sub_413B80, SetRect, new, sub_4089B0, sub_413670
+0x413CE0 sub_413CE0 [35L]
+  CALL: sub_413CE0
+0x413D40 sub_413D40 [41L]
+  CALL: sub_413D40, j_j__free, new
+0x413DB0 sub_413DB0 [23L]
+  CALL: sub_413DB0, BYTE2
+0x413E10 sub_413E10 [15L]
+  CALL: sub_413E10
+0x413E40 sub_413E40 [15L]
+  CALL: sub_413E40
+0x413E80 sub_413E80 [15L]
+  CALL: sub_413E80
+0x413EB0 sub_413EB0 [19L]
+  CALL: sub_413EB0
+0x413ED0 sub_413ED0 [18L]
+  CALL: sub_413ED0
+0x413EE0 sub_413EE0 [89L]
+  CALL: sub_413EE0, sub_413670, sub_404590, GetWindowLongA, GetSystemMetrics, AdjustWindowRectEx, SetWindowPos
+0x414090 sub_414090 [79L]
+  CALL: sub_414090, sub_413670, sub_404590, GetWindowLongA, GetSystemMetrics, AdjustWindowRectEx, SetWindowPos
+0x414200 sub_414200 [78L]
+  CALL: sub_414200, va_start, LOBYTE, vsprintf, sub_404B30, sub_404E30, strlen, unknown_libname_3
+0x4143A0 sub_4143A0 [31L]
+  CALL: sub_4143A0, sub_40F360
+0x414450 sub_414450 [10L]
+  CALL: sub_414450
+0x414460 sub_414460 [13L]
+  CALL: sub_414460, sub_414490, j__free
+0x414490 sub_414490 [18L]
+  CALL: sub_414490, sub_413CE0, sub_40F3B0
+0x4144F0 sub_4144F0 [16L]
+  CALL: sub_4144F0
+0x414510 sub_414510 [18L]
+  CALL: sub_414510
+0x414530 sub_414530 [14L]
+  CALL: sub_414530, sub_4081C0
+0x414560 sub_414560 [13L]
+  CALL: sub_414560
+0x414570 sub_414570 [23L]
+  CALL: sub_414570, new
+0x4145E0 sub_4145E0 [26L]
+  CALL: sub_4145E0, j_j__free
+0x414640 sub_414640 [52L]
+  CALL: sub_414640
+0x414700 sub_414700 [19L]
+  CALL: sub_414700
+0x414750 sub_414750 [18L]
+  CALL: sub_414750
+0x4147A0 sub_4147A0 [18L]
+  CALL: sub_4147A0
+0x4147F0 sub_4147F0 [19L]
+  CALL: sub_4147F0
+0x414850 sub_414850 [40L]
+  CALL: sub_414850
+0x4148E0 sub_4148E0 [25L]
+  CALL: sub_4148E0
+0x414940 sub_414940 [27L]
+  CALL: sub_414940
+0x414990 sub_414990 [24L]
+  CALL: sub_414990
+0x4149E0 sub_4149E0 [58L]
+  CALL: sub_4149E0, sub_4199A0, sub_419B40, sub_419C40, sub_414850, sub_414940, LABEL_10:, sub_419B80, sub_414990, sub_402AE0, sub_4148E0
+0x414B30 sub_414B30 [19L]
+  CALL: sub_414B30, sub_402A50, sub_419C80
+0x414BB0 sub_414BB0 [24L]
+  CALL: sub_414BB0, sub_419CD0, sub_402A60
+0x414C40 sub_414C40 [13L]
+  CALL: sub_414C40, sub_414BB0, j__free
+0x414C70 sub_414C70 [13L]
+  CALL: sub_414C70, sub_414B30, nullsub_3
+0x414CC0 sub_414CC0 [13L]
+  CALL: sub_414CC0, sub_414CF0, j__free
+0x414CF0 sub_414CF0 [12L]
+  CALL: sub_414CF0, sub_419CD0, sub_414BB0
+0x414D40 sub_414D40 [15L]
+  CALL: sub_414D40
+0x414D60 sub_414D60 [24L]
+  CALL: sub_414D60, CoCreateInstance
+0x414E00 sub_414E00 [37L]
+  CALL: sub_414E00
+0x414E70 sub_414E70 [29L]
+  CALL: sub_414E70
+0x414F00 sub_414F00 [20L]
+  CALL: sub_414F00
+0x414F50 sub_414F50 [19L]
+  CALL: sub_414F50
+0x414F90 sub_414F90 [20L]
+  CALL: sub_414F90
+0x414FE0 sub_414FE0 [15L]
+  CALL: sub_414FE0
+0x415020 sub_415020 [39L]
+  CALL: sub_415020, MultiByteToWideChar
+0x4150E0 sub_4150E0 [28L]
+  CALL: sub_4150E0, new, sub_414C70, sub_419C90
+0x415190 sub_415190 [17L]
+  CALL: sub_415190
+0x415200 sub_415200 [12L]
+  CALL: sub_415200
+0x415240 sub_415240 [116L]
+  CALL: sub_415240
+0x415660 sub_415660 [21L]
+  CALL: sub_415660, GetAsyncKeyState
+0x4156C0 sub_4156C0 [13L]
+  CALL: sub_4156C0
+0x4156E0 sub_4156E0 [30L]
+  CALL: sub_4156E0
+0x415770 sub_415770 [29L]
+  CALL: sub_415770, LOBYTE
+0x4157E0 sub_4157E0 [10L]
+  CALL: sub_4157E0
+0x4157F0 sub_4157F0 [24L]
+  CALL: sub_4157F0
+0x415840 sub_415840 [61L]
+  CALL: sub_415840, LOBYTE
+0x415960 sub_415960 [23L]
+  CALL: sub_415960
+0x4159C0 sub_4159C0 [15L]
+  CALL: sub_4159C0
+0x4159F0 sub_4159F0 [18L]
+  CALL: sub_4159F0
+0x415A20 sub_415A20 [21L]
+  CALL: sub_415A20
+0x415A60 sub_415A60 [20L]
+  CALL: sub_415A60
+0x415AA0 sub_415AA0 [27L]
+  CALL: sub_415AA0
+0x415AE0 sub_415AE0 [11L]
+  CALL: sub_415AE0, sub_415AA0
+0x415B10 sub_415B10 [24L]
+  STR: vector<T> too long
+  CALL: sub_415B10, sub_4015C0, sub_401740, _CxxThrowException
+0x415B80 sub_415B80 [116L]
+  CALL: sub_415B80, sub_415B10, sub_415A60, sub_415A20, sub_4159F0, sub_415AE0, sub_4159C0, new, sub_415AA0, j__free
+0x415E70 sub_415E70 [20L]
+  CALL: sub_415E70, sub_415B80
+0x415EE0 sub_415EE0 [25L]
+  CALL: sub_415EE0, sub_415E70, sub_415AA0
+0x415F70 sub_415F70 [11L]
+  CALL: sub_415F70, sub_415EE0
+0x415F90 sub_415F90 [46L]
+  CALL: sub_415F90
+0x4160B0 sub_4160B0 [14L]
+  CALL: sub_4160B0
+0x4160E0 sub_4160E0 [11L]
+  CALL: sub_4160E0
+0x4160F0 sub_4160F0 [15L]
+  CALL: sub_4160F0, GetAsyncKeyState
+0x416140 sub_416140 [10L]
+  CALL: sub_416140, GetAsyncKeyState
+0x416170 sub_416170 [10L]
+  CALL: sub_416170, GetAsyncKeyState
+0x4161A0 sub_4161A0 [61L]
+  CALL: sub_4161A0
+0x4163A0 sub_4163A0 [18L]
+  CALL: eax>, LOBYTE, BYTE1, LOWORD
+0x4163E0 sub_4163E0 [10L]
+  CALL: sub_4163E0
+0x4163F0 sub_4163F0 [20L]
+  CALL: sub_4163F0
+0x416420 sub_416420 [14L]
+  CALL: sub_416420
+0x416430 sub_416430 [22L]
+  CALL: sub_416430
+0x416470 unknown_libname_3 [11L]
+  CALL: unknown_libname_3
+0x416480 sub_416480 [17L]
+  CALL: sub_416480, j__free
+0x4164C0 sub_4164C0 [72L]
+  CALL: sub_4164C0, std::_String_base::_Xlen, sub_4012B0, LOBYTE, BYTE1, LOWORD
+0x4165A0 sub_4165A0 [24L]
+  CALL: sub_4165A0, sub_4014D0
+0x4165E0 sub_4165E0 [15L]
+  CALL: sub_4165E0, j__free
+0x416610 sub_416610 [24L]
+  STR: vector<T> too long
+  CALL: sub_416610, sub_4015C0, sub_401740, _CxxThrowException
+0x416680 sub_416680 [10L]
+  CALL: sub_416680, sub_4165A0
+0x4166A0 sub_4166A0 [19L]
+  CALL: sub_4166A0, j__free
+0x4166E0 sub_4166E0 [32L]
+  CALL: sub_4166E0, LOBYTE, sub_4014D0
+0x416780 sub_416780 [33L]
+  CALL: sub_416780, LOBYTE, sub_4014D0
+0x416820 sub_416820 [10L]
+  CALL: sub_416820, sub_4166A0
+0x416840 sub_416840 [10L]
+  CALL: sub_416840, sub_4166E0
+0x416860 sub_416860 [11L]
+  CALL: sub_416860, sub_416780
+0x416890 sub_416890 [126L]
+  CALL: sub_416890, LOBYTE, sub_4014D0, sub_416610, sub_4166E0, sub_416680, sub_52C080, sub_416860, sub_52AEF0, new, sub_416780, sub_4166A0, j__free
+0x416BD0 sub_416BD0 [20L]
+  CALL: sub_416BD0, sub_416890
+0x416C40 sub_416C40 [25L]
+  CALL: sub_416C40, sub_416BD0, sub_416780
+0x416CD0 sub_416CD0 [24L]
+  CALL: sub_416CD0
+0x416D10 sub_416D10 [23L]
+  CALL: sub_416D10
+0x416D50 sub_416D50 [28L]
+  CALL: sub_416D50, DeleteObject
+0x416DA0 sub_416DA0 [75L]
+  CALL: sub_416DA0, DeleteObject
+0x416E70 sub_416E70 [26L]
+  CALL: sub_416E70
+0x416EE0 sub_416EE0 [25L]
+  CALL: sub_416EE0
+0x416F40 sub_416F40 [40L]
+  STR: NeopleFontFile
+  CALL: sub_416F40, fopen, wsprintfA, sub_66BC25, fclose
+0x417030 sub_417030 [48L]
+  STR: NeopleFontFile
+  CALL: sub_417030, fopen, sub_66BD5A, strcmp, sub_402AE0, fclose
+0x417150 sub_417150 [114L]
+  CALL: sub_417150, strlen
+0x4172B0 sub_4172B0 [44L]
+  CALL: sub_4172B0, sub_404F40, sub_417150, sub_404F80
+0x417450 sub_417450 [24L]
+  CALL: sub_417450, sub_66BC25
+0x4174F0 sub_4174F0 [54L]
+  CALL: sub_4174F0, sub_66BD5A, new
+0x4175D0 sub_4175D0 [57L]
+  CALL: sub_4175D0, WideCharToMultiByte, LOBYTE, HIBYTE
+0x4176A0 sub_4176A0 [10L]
+  CALL: sub_4176A0, strlen
+0x4176C0 sub_4176C0 [11L]
+  CALL: sub_4176C0, sub_4175D0
+0x4176E0 sub_4176E0 [253L]
+  STR: Arial Narrow
+  CALL: sub_4176E0, strcmp, CreateFontA, GetDC, CreateCompatibleDC, CreateDIBSection, SelectObject, SetTextColor, SetBkMode, CreateSolidBrush, LOWORD, TextOutA, GetTextExtentPoint32A, strlen
+0x417B60 sub_417B60 [199L]
+  STR: Arial Narrow
+  CALL: sub_417B60, sub_402AE0, new, sub_4176E0
+0x417EE0 sub_417EE0 [54L]
+  CALL: sub_417EE0, sub_66BD5A, new, sub_411240
+0x417FE0 sub_417FE0 [13L]
+  CALL: sub_417FE0, CreateFontA
+0x418070 sub_418070 [27L]
+  CALL: sub_418070, sub_405060
+0x4180D0 sub_4180D0 [33L]
+  CALL: sub_4180D0
+0x418120 sub_418120 [24L]
+  STR: invalid vector<T> subscript
+  CALL: sub_418120, sub_4015C0, sub_401740, _CxxThrowException
+0x418190 sub_418190 [24L]
+  STR: vector<T> too long
+  CALL: sub_418190, sub_4015C0, sub_401740, _CxxThrowException
+0x418200 sub_418200 [32L]
+  CALL: sub_418200, DeleteObject, DeleteDC, j__free, sub_416420
+0x4182C0 sub_4182C0 [122L]
+  CALL: sub_4182C0, sub_418190, sub_44BD30, sub_5E51F0, sub_41FEB0, sub_44BD00, new, sub_63A7C0, j__free
+0x418510 sub_418510 [13L]
+  CALL: sub_418510, sub_418200, j__free
+0x418540 sub_418540 [31L]
+  CALL: sub_418540, sub_4180D0, sub_4182C0
+0x4185B0 sub_4185B0 [42L]
+  CALL: sub_4185B0, sub_40B530, LOBYTE, sub_418070, CreateDIBSection, GetDC, CreateCompatibleDC, SelectObject, ReleaseDC
+0x4186C0 sub_4186C0 [194L]
+  CALL: sub_4186C0, HIBYTE, sub_418070, sub_418540, sub_418120, SelectObject, SetBkMode, SetTextColor, TextOutA, sub_405060
+0x418AA0 sub_418AA0 [146L]
+  CALL: sub_418AA0, strlen, BYTE2, sub_404F40, LOBYTE, HIBYTE, sub_4186C0, sub_418120, sub_404F80
+0x418CB0 sub_418CB0 [15L]
+  CALL: sub_418CB0
+0x418CD0 sub_418CD0 [48L]
+  STR: Neople Image File
+  CALL: sub_418CD0, fopen, sub_40E3E0, sub_66BD5A, strcmp, fclose
+0x418DD0 sub_418DD0 [17L]
+  CALL: sub_418DD0, sub_419F00
+0x418E20 sub_418E20 [75L]
+  CALL: sub_418E20, sub_419F00, sub_41A510, LOBYTE, sub_404F40, sub_418CD0, sub_418CB0, fseek, sub_404F80, fclose
+0x418F60 sub_418F60 [24L]
+  STR: vector<T> too long
+  CALL: sub_418F60, sub_4015C0, sub_401740, _CxxThrowException
+0x418FD0 sub_418FD0 [48L]
+  CALL: sub_418FD0, j__free, sub_401230, sub_41A260
+0x419070 sub_419070 [117L]
+  CALL: sub_419070, sub_418F60, sub_59EE30, sub_504450, sub_5043B0, sub_5E51C0, sub_4DA030, new, sub_623C10, j__free
+0x419320 sub_419320 [31L]
+  STR: CNImagePackEx::Destroy - %s
+  CALL: sub_419320, off_77F3FC, sub_418FD0, j__free
+0x4193D0 sub_4193D0 [45L]
+  CALL: sub_4193D0, sub_47DDD0, sub_419070
+0x419480 sub_419480 [35L]
+  CALL: sub_419480, sub_419E90
+0x419520 sub_419520 [13L]
+  CALL: sub_419520, sub_419320, j__free
+0x419550 sub_419550 [132L]
+  STR: CNImagePackEx::Load - %s, CreateImage(%d) failed | CNImagePackEx::Load - SetImagePackEx(%d) failed | CNImagePackEx::Load - %s | CNImagePackEx::Load - open_file failed %s
+  CALL: sub_419550, sub_404F40, sub_419D40, sub_40E3E0, sub_4015C0, strlen, _access, sub_4014D0, sub_418CD0, LOBYTE, sub_4193D0, sub_66BD5A, off_77F3FC, CreateImage
+0x4198A0 sub_4198A0 [52L]
+  CALL: sub_4198A0, sub_419E90, LOBYTE, sub_4015C0, strlen, sub_419550, j__free
+0x4199A0 sub_4199A0 [95L]
+  CALL: sub_4199A0, mmioOpenA, mmioDescend, mmioRead, GlobalAlloc, mmioAscend, GlobalFree, mmioClose
+0x419B40 sub_419B40 [12L]
+  CALL: sub_419B40, mmioSeek, mmioDescend
+0x419B80 sub_419B80 [63L]
+  CALL: sub_419B80, mmioGetInfo, mmioSetInfo, mmioAdvance
+0x419C40 sub_419C40 [20L]
+  CALL: sub_419C40, GlobalFree, mmioClose
+0x419C90 sub_419C90 [23L]
+  CALL: sub_419C90
+0x419CD0 sub_419CD0 [15L]
+  CALL: sub_419CD0, eax
+0x419CF0 sub_419CF0 [22L]
+  CALL: sub_419CF0, strlen
+0x419D40 sub_419D40 [61L]
+  STR: %s%c%s%c%s | %c%s%c%s
+  CALL: sub_419D40, strlen, strncpy, sprintf
+0x419E90 sub_419E90 [14L]
+  CALL: sub_419E90
+0x419EB0 sub_419EB0 [12L]
+  CALL: sub_419EB0
+0x419EE0 sub_419EE0 [15L]
+  CALL: sub_419EE0
+0x419F10 sub_419F10 [33L]
+  CALL: sub_419F10
+0x419FA0 sub_419FA0 [37L]
+  CALL: sub_419FA0
+0x41A020 sub_41A020 [67L]
+  CALL: sub_41A020, sub_419FA0, sub_419F10
+0x41A110 sub_41A110 [24L]
+  CALL: sub_41A110
+0x41A150 sub_41A150 [13L]
+  CALL: sub_41A150, sub_406E40
+0x41A170 sub_41A170 [50L]
+  CALL: sub_41A170, sub_406E40
+0x41A230 sub_41A230 [13L]
+  CALL: sub_41A230, sub_41A150, j__free
+0x41A260 sub_41A260 [31L]
+  CALL: sub_41A260, sub_41A020
+0x41A2D0 sub_41A2D0 [24L]
+  STR: deque<T> too long
+  CALL: sub_41A2D0, sub_4015C0, sub_401740, _CxxThrowException
+0x41A340 sub_41A340 [73L]
+  CALL: sub_41A340, sub_41A2D0, new, memcpy_0, j__free
+0x41A490 sub_41A490 [32L]
+  CALL: sub_41A490, sub_41A340, new
+0x41A510 sub_41A510 [31L]
+  CALL: sub_41A510, timeGetTime, sub_41A490
+0x41A580 sub_41A580 [11L]
+  CALL: sub_41A580
+0x41A590 sub_41A590 [23L]
+  CALL: sub_41A590, rand, HIWORD
+0x41A5E0 sub_41A5E0 [26L]
+  CALL: sub_41A5E0, HIWORD
+0x41A630 sub_41A630 [54L]
+  CALL: sub_41A630, time, srand, rand, HIWORD
+0x41A6F0 sub_41A6F0 [17L]
+  CALL: sub_41A6F0, j__free
+0x41A720 sub_41A720 [11L]
+  CALL: sub_41A720
+0x41A760 sub_41A760 [17L]
+  CALL: sub_41A760
+0x41A790 sub_41A790 [12L]
+  CALL: sub_41A790, sub_6569D0, j__free
+0x41A7C0 sub_41A7C0 [24L]
+  STR: invalid vector<T> subscript
+  CALL: sub_41A7C0, sub_4015C0, sub_401740, _CxxThrowException
+0x41A830 sub_41A830 [33L]
+  STR: list<T> too long
+  CALL: sub_41A830, sub_4015C0, sub_401740, _CxxThrowException
+0x41A8C0 sub_41A8C0 [24L]
+  STR: vector<T> too long
+  CALL: sub_41A8C0, sub_4015C0, sub_401740, _CxxThrowException
+0x41A930 sub_41A930 [40L]
+  CALL: sub_41A930, j__free
+0x41A990 sub_41A990 [15L]
+  CALL: sub_41A990, sub_41A7C0
+0x41A9C0 sub_41A9C0 [15L]
+  CALL: sub_41A9C0, sub_41A7C0
+0x41AA00 sub_41AA00 [112L]
+  CALL: sub_41AA00, sub_41A8C0, sub_55E7F0, sub_5DAF70, sub_49A9D0, sub_523700, new, memcpy_0, j__free
+0x41ABE0 sub_41ABE0 [29L]
+  CALL: sub_41ABE0, sub_40C0F0, sub_41A830
+0x41AC90 sub_41AC90 [18L]
+  CALL: sub_41AC90, HIWORD
+0x41ACF0 sub_41ACF0 [17L]
+  CALL: sub_41ACF0, sub_41AC90
+0x41AD10 sub_41AD10 [19L]
+  CALL: sub_41AD10, sub_40C0F0, sub_41A830
+0x41AD50 sub_41AD50 [10L]
+  CALL: sub_41AD50, sub_41A930
+0x41AD70 sub_41AD70 [51L]
+  CALL: sub_41AD70, sub_41A9C0, sub_5D2440, sub_41A990, sub_41AD10
+0x41AE90 sub_41AE90 [67L]
+  CALL: sub_41AE90, sub_41A7C0, sub_41A720, sub_41A990, sub_41A760, sub_41A9C0, sub_41AD10, sub_4371E0
+0x41AFC0 sub_41AFC0 [17L]
+  CALL: sub_41AFC0, HIWORD, LOBYTE, sub_41AE90
+0x41B010 sub_41B010 [18L]
+  CALL: sub_41B010, sub_41AFC0, j__free
+0x41B050 sub_41B050 [29L]
+  CALL: sub_41B050, sub_425940, sub_41ABE0
+0x41B0D0 sub_41B0D0 [27L]
+  CALL: sub_41B0D0, sub_41AFC0, j__free
+0x41B120 sub_41B120 [20L]
+  CALL: sub_41B120, sub_41A930, j__free
+0x41B170 sub_41B170 [53L]
+  CALL: sub_41B170, j__free, sub_41ABE0
+0x41B200 sub_41B200 [54L]
+  CALL: sub_41B200, j__free, sub_41ABE0
+0x41B280 sub_41B280 [27L]
+  CALL: sub_41B280, LOBYTE, sub_41B050
+0x41B310 sub_41B310 [49L]
+  CALL: sub_41B310, free, j__free, sub_41A930
+0x41B420 sub_41B420 [46L]
+  CALL: sub_41B420, j__free, sub_41ABE0
+0x41B4A0 sub_41B4A0 [10L]
+  CALL: sub_41B4A0, sub_41B200
+0x41B4C0 sub_41B4C0 [28L]
+  CALL: sub_41B4C0, LOBYTE, sub_41B050
+0x41B550 sub_41B550 [30L]
+  CALL: sub_41B550, sub_41B310, j__free
+0x41B5E0 sub_41B5E0 [19L]
+  CALL: sub_41B5E0, sub_41B170, sub_41A930
+0x41B630 sub_41B630 [11L]
+  CALL: sub_41B630, sub_41B4C0
+0x41B660 sub_41B660 [134L]
+  CALL: sub_41B660, sub_41B050, sub_41A8C0, sub_41B280, sub_41B4A0, sub_41B420, LOBYTE, sub_41B630, sub_4DA030, new, sub_41B4C0, sub_41A930, j__free
+0x41B970 sub_41B970 [51L]
+  CALL: sub_41B970, sub_41B5E0, sub_41B660, j__free
+0x41BA60 sub_41BA60 [92L]
+  CALL: sub_41BA60, LOBYTE, new, malloc, sub_41AA00, sub_425940, sub_41B970, sub_40C0F0, sub_41A830
+0x41BBE0 sub_41BBE0 [223L]
+  CALL: sub_41BBE0, HIBYTE, sub_41AD70, j__free, new, sub_41BA60, sub_41AA00, sub_41A7C0
+0x41BFE0 sub_41BFE0 [53L]
+  CALL: sub_41BFE0, sub_41AFC0, j__free, strlen, new, sub_41BBE0, sub_41AC90
+0x41C0C0 sub_41C0C0 [10L]
+  CALL: sub_41C0C0, sub_423290
+0x41C0E0 sub_41C0E0 [10L]
+  CALL: sub_41C0E0, sub_423290
+0x41C100 sub_41C100 [17L]
+  CALL: sub_41C100, strlen, sub_423290
+0x41C150 sub_41C150 [11L]
+  CALL: sub_41C150, sub_41A590
+0x41C170 sub_41C170 [12L]
+  CALL: sub_41C170, sub_41B0D0
+0x41C190 sub_41C190 [10L]
+  CALL: sub_41C190, sub_425960
+0x41C1B0 sub_41C1B0 [10L]
+  CALL: sub_41C1B0, sub_429830
+0x41C1C0 sub_41C1C0 [11L]
+  CALL: sub_41C1C0
+0x41C1E0 sub_41C1E0 [14L]
+  CALL: sub_41C1E0, sub_65DC70, sub_6989F0, PostQuitMessage, sub_41FD50, exit
+0x41C210 sub_41C210 [21L]
+  CALL: sub_41C210, sub_42B510
+0x41C240 sub_41C240 [20L]
+  CALL: sub_41C240
+0x41C270 sub_41C270 [10L]
+  CALL: sub_41C270, sub_41A590
+0x41C290 sub_41C290 [10L]
+  CALL: sub_41C290, sub_41A5E0
+0x41C2B0 sub_41C2B0 [43L]
+  CALL: sub_41C2B0, off_77F3FC, sub_423200, strlen, sub_423290, sub_423380, sub_698F90
+0x41C3C0 sub_41C3C0 [11L]
+  CALL: sub_41C3C0
+0x41C3D0 sub_41C3D0 [34L]
+  CALL: sub_41C3D0, sub_422E70, sub_43BEE0, sub_429830, sub_431820
+0x41C470 sub_41C470 [11L]
+  CALL: sub_41C470
+0x41C490 sub_41C490 [11L]
+  CALL: sub_41C490
+0x41C4B0 sub_41C4B0 [39L]
+  CALL: sub_41C4B0, sub_422E70
+0x41C570 sub_41C570 [12L]
+  CALL: sub_41C570
+0x41C590 sub_41C590 [10L]
+  CALL: sub_41C590
+0x41C5A0 sub_41C5A0 [16L]
+  CALL: sub_41C5A0
+0x41C5C0 sub_41C5C0 [24L]
+  CALL: sub_41C5C0
+0x41C5E0 sub_41C5E0 [42L]
+  CALL: sub_41C5E0
+0x41C640 sub_41C640 [42L]
+  CALL: sub_41C640
+0x41C6A0 sub_41C6A0 [20L]
+  CALL: sub_41C6A0, sub_41B0D0
+0x41C6E0 sub_41C6E0 [13L]
+  CALL: sub_41C6E0, sub_699000
+0x41C700 sub_41C700 [43L]
+  CALL: sub_41C700, sub_444B60, sub_444F60
+0x41C7C0 sub_41C7C0 [13L]
+  CALL: sub_41C7C0, sub_41C7F0, j__free
+0x41C7F0 sub_41C7F0 [21L]
+  CALL: sub_41C7F0, sub_444F10
+0x41C860 sub_41C860 [17L]
+  CALL: sub_41C860, sub_4461F0, sub_41C1E0, sub_423200, sub_423380
+0x41C8B0 sub_41C8B0 [52L]
+  CALL: sub_41C8B0, SendMessageA, sub_699000, sub_422E70, sub_44E8D0
+0x41C9E0 sub_41C9E0 [18L]
+  CALL: sub_41C9E0, sub_41C3D0
+0x41CA00 sub_41CA00 [10L]
+  CALL: sub_41CA00, sub_41C6A0
+0x41CA20 sub_41CA20 [23L]
+  CALL: sub_41CA20, j__free
+0x41CA60 sub_41CA60 [23L]
+  CALL: sub_41CA60, j__free
+0x41CAA0 sub_41CAA0 [23L]
+  CALL: sub_41CAA0, j__free
+0x41CAE0 sub_41CAE0 [23L]
+  CALL: sub_41CAE0, j__free
+0x41CB20 sub_41CB20 [23L]
+  CALL: sub_41CB20, j__free
+0x41CB60 sub_41CB60 [30L]
+  CALL: sub_41CB60, LOBYTE, sub_41B0D0
+0x41CBF0 sub_41CBF0 [20L]
+  CALL: sub_41CBF0, j__free, sub_41A580
+0x41CC80 sub_41CC80 [252L]
+  STR: @@UDP STOP - onChangeModule(), MODULE_TYPE_PVP 1 | @@UDP STOP - onChangeModule(), MODULE_TYPE_WARROOM 1 | @@UDP STOP - onChangeModule(), MODULE_TYPE_MAIN_GAME || MODULE_TYPE_SELECT_DUNGEON 1 | LADDER_DOWN | STOP SOUND | MAP_APPEAR | @@UDP START - onChangeModule(), MODULE_TYPE_SELECT_DUNGEON : seatIndex %d /// 1
+  CALL: sub_41CC80, off_77F3FC, sub_41A170, sub_4772A0, sub_45A420, sub_425500, sub_424100, sub_475760, sub_472AF0, onChangeModule, sub_44E850, sub_46E3B0, sub_422E70, sub_44E8D0
+0x41D300 sub_41D300 [14L]
+  CALL: sub_41D300, sub_41CC80
+0x41D320 sub_41D320 [97L]
+  CALL: sub_41D320, sub_65DC70, sub_41CC80, sub_4297A0, sub_4878B0, sub_41CA60, sub_45C400, sub_425500, sub_424100, sub_475760, sub_472AF0, sub_485020, sub_4844B0, sub_483E30
+0x41D520 sub_41D520 [19L]
+  CALL: sub_41D520, sub_44AB50, sub_41CC80, sub_423200, sub_423380
+0x41D580 sub_41D580 [10L]
+  CALL: sub_41D580, sub_41CB60
+0x41D5A0 sub_41D5A0 [24L]
+  STR: vector<T> too long
+  CALL: sub_41D5A0, sub_4015C0, sub_401740, _CxxThrowException
+0x41D610 sub_41D610 [219L]
+  STR: invalid map/set<T> iterator
+  CALL: sub_41D610, sub_4015C0, sub_401740, _CxxThrowException, sub_41C5E0, sub_52E300, sub_542490, sub_433130, sub_4296E0, j__free
+0x41D8D0 sub_41D8D0 [25L]
+  CALL: sub_41D8D0, j__free
+0x41D910 sub_41D910 [10L]
+  CALL: sub_41D910
+0x41D930 sub_41D930 [23L]
+  CALL: sub_41D930, sub_416610, new
+0x41D980 sub_41D980 [66L]
+  CALL: sub_41D980, sub_41CA60, sub_41D610
+0x41DA40 sub_41DA40 [66L]
+  CALL: sub_41DA40, sub_41CAA0, sub_41D610
+0x41DB00 sub_41DB00 [66L]
+  CALL: sub_41DB00, sub_41CAE0, sub_41D610
+0x41DBC0 sub_41DBC0 [66L]
+  CALL: sub_41DBC0, sub_41CB20, sub_41D610
+0x41DC80 sub_41DC80 [78L]
+  CALL: sub_41DC80, sub_4017E0, sub_41C6A0, sub_4016E0, j__free, sub_401950, sub_41D580, sub_41CA00, sub_41CB60
+0x41DDD0 sub_41DDD0 [13L]
+  CALL: sub_41DDD0, sub_41CBF0
+0x41DE00 sub_41DE00 [16L]
+  CALL: sub_41DE00, sub_41D8D0
+0x41DE30 sub_41DE30 [97L]
+  CALL: sub_41DE30, sub_46DE70, sub_46F990
+0x41E090 sub_41E090 [13L]
+  CALL: sub_41E090, sub_41E0C0, j__free
+0x41E0C0 sub_41E0C0 [66L]
+  CALL: sub_41E0C0, sub_46DF70, DeleteObject
+0x41E260 sub_41E260 [16L]
+  CALL: sub_41E260, sub_41D980, j__free
+0x41E2A0 sub_41E2A0 [61L]
+  CALL: sub_41E2A0, sub_454BC0, sub_454360
+0x41E400 sub_41E400 [13L]
+  CALL: sub_41E400, sub_41E430, j__free
+0x41E430 sub_41E430 [28L]
+  CALL: sub_41E430, sub_4539D0, j__free
+0x41E4F0 sub_41E4F0 [45L]
+  STR: Connect to Server... | Connection Failed
+  CALL: sub_41E4F0, sub_41DC80, sub_41ACF0, j__atol, strlen, off_77F3FC, sub_4231B0, sub_4052D0, sub_698F90, off_77F3F8
+0x41E600 sub_41E600 [26L]
+  CALL: sub_41E600, sub_41CBF0, j__free
+0x41E650 sub_41E650 [16L]
+  CALL: sub_41E650, sub_41DA40, j__free
+0x41E690 sub_41E690 [16L]
+  CALL: sub_41E690, sub_41DB00, j__free
+0x41E6D0 sub_41E6D0 [16L]
+  CALL: sub_41E6D0, sub_41DBC0, j__free
+0x41E710 sub_41E710 [11L]
+  CALL: sub_41E710, sub_41E600
+0x41E720 sub_41E720 [227L]
+  STR: invalid map/set<T> iterator
+  CALL: sub_41E720, sub_4015C0, sub_401740, _CxxThrowException, sub_41C640, sub_41C5C0, sub_433210, sub_4331B0, sub_433230, j__free
+0x41EA00 sub_41EA00 [24L]
+  CALL: sub_41EA00, sub_4CEB50, j__free
+0x41EA50 sub_41EA50 [36L]
+  CALL: sub_41EA50, sub_433AC0, sub_4525D0, sub_452C50
+0x41EB00 sub_41EB00 [13L]
+  CALL: sub_41EB00, sub_41EB30, j__free
+0x41EB30 sub_41EB30 [31L]
+  CALL: sub_41EB30, sub_452FA0, LOBYTE, sub_41DA40, j__free
+0x41EBC0 sub_41EBC0 [45L]
+  CALL: sub_41EBC0, sub_46AE70, sub_46D4A0
+0x41ECB0 sub_41ECB0 [13L]
+  CALL: sub_41ECB0, sub_41ECE0, j__free
+0x41ECE0 sub_41ECE0 [41L]
+  CALL: sub_41ECE0, sub_46BED0, DeleteObject, sub_41E600, j__free
+0x41EDD0 sub_41EDD0 [57L]
+  CALL: sub_41EDD0, sub_433AC0, sub_42B4C0, sub_42EBD0
+0x41EEF0 sub_41EEF0 [13L]
+  CALL: sub_41EEF0, sub_41EF20, j__free
+0x41EF20 sub_41EF20 [39L]
+  CALL: sub_41EF20, sub_42F0D0, j__free, LOBYTE, sub_41DA40
+0x41EFF0 sub_41EFF0 [45L]
+  CALL: sub_41EFF0, sub_433AC0, sub_487AB0, sub_488160
+0x41F0C0 sub_41F0C0 [13L]
+  CALL: sub_41F0C0, sub_41F0F0, j__free
+0x41F0F0 sub_41F0F0 [32L]
+  CALL: sub_41F0F0, sub_488300, LOBYTE, sub_41DA40, j__free
+0x41F190 sub_41F190 [19L]
+  CALL: sub_41F190, sub_6991D0
+0x41F1F0 sub_41F1F0 [13L]
+  CALL: sub_41F1F0, sub_41F220, j__free
+0x41F220 sub_41F220 [29L]
+  CALL: sub_41F220, sub_699230, sub_4166A0, j__free
+0x41F2C0 sub_41F2C0 [76L]
+  STR: Sprite/Interface/SelectCharacter.img | Sprite/Interface/CreateCharacter.img | Sprite/Interface/CharacterIllust.img | Sprite/Interface/Base.img | Sprite/Interface/ItemInventoryWindow.img | Sprite/Interface/AvatarInventoryWindow.img | Sprite/Interface/ItemTradeWindow.img | Sprite/Interface/EquipmentShopWindow.img
+  CALL: sub_41F2C0, new, sub_41F190, sub_6990D0, sub_6992C0, sub_699100
+0x41F690 sub_41F690 [66L]
+  CALL: sub_41F690, sub_41EA00, sub_41E720
+0x41F750 sub_41F750 [16L]
+  CALL: sub_41F750, sub_41F690, j__free
+0x41F790 sub_41F790 [78L]
+  CALL: sub_41F790, sub_433AC0, sub_433B40, sub_45AFF0, sub_45C640
+0x41F930 _DllMain@12 [10L]
+  CALL: DllMain
+0x41F940 sub_41F940 [13L]
+  CALL: sub_41F940, sub_41F970, j__free
+0x41F970 sub_41F970 [61L]
+  CALL: sub_41F970, sub_45C9A0, LOBYTE, sub_41D980, j__free, sub_41F690, sub_41DBC0, sub_41DB00
+0x41FAA0 sub_41FAA0 [83L]
+  CALL: sub_41FAA0, new, sub_41DE30, sub_41EBC0, sub_41F790, sub_41E2A0, sub_41C700, sub_41EA50, sub_41EDD0, sub_41EFF0
+0x41FC50 sub_41FC50 [22L]
+  CALL: sub_41FC50, new, sub_4230A0
+0x41FCE0 sub_41FCE0 [11L]
+  CALL: sub_41FCE0
+0x41FCF0 sub_41FCF0 [24L]
+  CALL: sub_41FCF0, CoInitialize, CoCreateInstance, CoUninitialize
+0x41FD50 sub_41FD50 [20L]
+  CALL: sub_41FD50, sub_699580, sub_407BD0, sub_404490
+0x41FDC0 sub_41FDC0 [53L]
+  CALL: sub_41FDC0, sub_41A590
+0x41FE80 sub_41FE80 [15L]
+  CALL: sub_41FE80, sub_41B0D0
+0x41FEB0 sub_41FEB0 [17L]
+  CALL: sub_41FEB0
+0x41FEE0 sub_41FEE0 [20L]
+  CALL: sub_41FEE0, sub_41B0D0
+0x41FF20 sub_41FF20 [10L]
+  CALL: sub_41FF20, sub_41FEE0
+0x41FF40 sub_41FF40 [14L]
+  CALL: sub_41FF40, nullsub_3
+0x41FFE0 sub_41FFE0 [28L]
+  CALL: sub_41FFE0, LOBYTE, sub_41B0D0

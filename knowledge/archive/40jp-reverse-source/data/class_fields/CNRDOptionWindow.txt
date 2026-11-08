@@ -1,0 +1,7 @@
+CLASS .?AVCNRDOptionWindow@@  slots=14  fields_candidate=4
+off      type     cnt  sample_va  evidence
+----------------------------------------------------------------------------------------------------
++0x0024 uint32_t   1  00562480  if ( pArg2 == *(uint32_t *)(this + 36) )
++0x0028 uint32_t   1  00562480  pThis_28 = (uint32_t *)(this + 40);
++0x0040 uint32_t   1  00562480  if ( pArg2 == *(uint32_t *)(this + 64) )
++0x0090 uint32_t   1  00562480  if ( pArg22 == *pThis_28 && *(uint32_t *)(this + 144) == result && (ui

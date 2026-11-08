@@ -1,0 +1,330 @@
+###### src/game/parsers/monster_parser.cpp
+  +0x0004 [解析容器 vector begin 指针] src=004FC0F0
+      | fld_4 = *(uint32_t *)(this + 4);
+      | sub_4015C0((void *)szPassword, 0);  // 【std::string构造赋值】清空 this+4 处字符串（this 经寄存器）
+      | pThis_4 = this + 4;
+  +0x0008 [解析容器 vector end 指针] src=004FC0F0
+      | result = (*(uint32_t *)(this + 8) - fld_4) / 20;
+      | fld_8 = *(uint32_t **)(this + 8);
+      | *(uint32_t *)(this + 8) = result;
+  +0x000C [解析容器 vector 容量尾指针] src=004FC0F0
+      | *((uint32_t *)this + 12) = 0;
+      | *((uint32_t *)this + 12) = 0;
+      | *((uint32_t *)this + 12) = 0;
+###### src/game/parsers/item_parser.cpp
+  +0x0004 [解析容器 vector begin 指针] src=004F0700
+      | *((uint32_t *)this + 4) = 0;
+      | *((uint32_t *)this + 4) = 0;
+      | fld_4 = *(uint32_t **)(this + 4);
+  +0x0008 [解析容器 vector end 指针] src=004F0700
+      | *((uint32_t *)this + 8) = 0;
+      | *((uint32_t *)this + 8) = 0;
+      | fld_8 = (*(uint32_t *)(this + 8) - (int)fld_4) / 36;
+  +0x000C [解析容器 vector 容量尾指针] src=004F0700
+      | fld_C = (*(uint32_t *)(this + 12) - (int)fld_4) / 36;
+      | *((uint32_t *)this + 12) = 0;
+      | *(this + 12) = 0;
+  +0x0010 [解析容器尾槽/计数槽] src=004F4440
+      | && *(uint32_t *)((*(int (/*thiscall*/ **)(void *))(*(uint32_t *)this + 16))(this) + 52) == 0;
+      | *(uint32_t *)(this + 16) = 0;
+      | *((uint8_t *)this + 16) = 0;
+  +0x0024 [IRDItem 状态字（0x4859F0 判定 ==0/==3）] src=004859F0
+      | DeleteCriticalSection((LPCRITICAL_SECTION)(this + 36));
+      | EnterCriticalSection((LPCRITICAL_SECTION)(this + 36));
+      | LeaveCriticalSection((LPCRITICAL_SECTION)(this + 36));
+  +0x0048 [IRDItem 记录标量槽] src=00485F70
+      | if ( *(this + 14) == 0 || (*(uint8_t (/*thiscall*/ **)(int *))(*this + 72))(this) == 0 )
+      | *(uint32_t *)(this + 72) = 0;
+      | *(uint32_t *)(this + 72) = 0;
+  +0x004C [IRDItem 记录标量槽 2] src=00485F70
+      | *(uint32_t *)(this + 76) = 0;
+      | *(uint32_t *)(this + 76) = 15;
+      | *(uint32_t *)(this + 76) = 0;
+###### src/nengine/gfx_texture.cpp
+  +0x0004 [纹理就绪/激活标志] src=004107D0
+      | if ( (*(uint32_t *)(this + 128) == 0 || sub_418E20(*(uint32_t *)(this + 132)) != 0) && *(uint8_t *)(this + 4) 
+      | && *(uint8_t *)(this + 4) != 0
+      | if ( (*(uint32_t *)(this + 128) == 0 || sub_418E20(*(uint32_t *)(this + 132)) != 0) && *(uint8_t *)(this + 4) 
+  +0x000C [行表/数据基址槽] src=00411FD0
+      | if ( sub_40F530(nArg2, nArg3, this + 12) )
+      | result = (*(int (/*thiscall*/ **)(int *, int, FILE *))(*this + 12))(this, v25, Stream);
+      | result = (*(int (/*thiscall*/ **)(int *, int, FILE *))(*this + 12))(this, v25, Stream);
+  +0x0010 [行指针表槽] src=00411FD0
+      | i = *(uint32_t *)(*(uint32_t *)(this + 16) + 4 * (fld_7C + lprcSrc->top)) + 4 * lprcSrc->left;
+      | if ( *(uint32_t *)(this + 16) != 0 )
+      | j_j__free(*(void **)(this + 16));
+  +0x0014 [左边界 X] src=00410300
+      | fld_14 = ((double)*(unsigned int *)(this + 20) + fld_1C) * fArg7;
+      | fld_142 = *(uint32_t *)(this + 20);
+      | fld_143 = (double)*(int *)(this + 20);
+  +0x0018 [上边界 Y] src=00410300
+      | fld_18 = ((double)*(unsigned int *)(this + 24) + fld_20) * fArg8;
+      | fld_182 = *(uint32_t *)(this + 24);
+      | fld_183 = (double)*(int *)(this + 24);
+  +0x001C [尺寸差 dX] src=00410300
+      | fld_1C = (double)*(int *)(this + 28) - fArg9;
+      | fld_1C = nArg2 + *(uint32_t *)(this + 28);
+      | fld_1C = *(uint32_t *)(this + 28);
+  +0x0020 [宽（源矩形）] src=00410300
+      | fld_20 = (double)*(int *)(this + 32) - fArg10;
+      | if ( *(this + 32) != 0 )
+      | *(this + 32) = nArg2;
+  +0x002A [文本宽度表附属槽] src=004186C0
+      | *(uint16_t *)(this + 42) = 0;
+      | if ( *(uint16_t *)(this + 42) == fld_200FC )
+      | fld_2A = *(uint16_t *)(this + 42);
+  +0x002C [文本宽度槽] src=004186C0
+      | if ( *(uint8_t *)(this + 44) == 0 )
+      | *(uint8_t *)(this + 44) = 0;
+      | if ( *(uint8_t *)(this + 44) != 0 )
+  +0x0030 [字形/文本对象槽] src=004150E0
+      | CopyRect(&rcDst, (const RECT *)(this + 48));
+      | IntersectRect(&rcDst, &rcDst, (const RECT *)(this + 48));
+      | *(uint32_t *)(this + 48) = 0;
+  +0x0034 [图像对象槽] src=004145E0
+      | *(uint32_t *)(this + 52) = pMem;
+      | *(uint32_t *)(*(uint32_t *)(this + 52) + 4 * i) = 0;
+      | fld_34 = *(uint32_t *)(*(uint32_t *)(this + 52) + 4 * i);
+  +0x004C [字体/位图附属槽] src=00417150
+      | *((uint8_t *)this + 76) = 1;
+      | *((uint8_t *)this + 76) = 0;
+      | if ( *(uint8_t *)(this + 76) == 0 )
+  +0x0060 [缩放源尺寸 X] src=00410F30
+      | fld_60 = *(int *)(this + 96) >> 1;
+      | fld_60 = *(int *)(this + 96) >> 1;
+      | pThis_60 = (uint32_t *)(this + 96);
+  +0x0064 [缩放源尺寸 Y] src=00410F30
+      | fld_64 = *(int *)(this + 100) >> 1;
+      | fld_64 = *(int *)(this + 100) >> 1;
+      | *(uint32_t *)(this + 100) = 0;
+  +0x0068 [裁剪矩形缓存 X] src=00413800
+      | fld_68 = *(uint32_t *)(this + 104);
+      | (*(void (/*stdcall*/ **)(uint32_t))(*(uint32_t *)fld_68 + 8))(*(uint32_t *)(this + 104));
+      | *(uint32_t *)(this + 104) = 0;
+  +0x0070 [裁剪矩形缓存 Y] src=00410F30
+      | result = (*(int (/*stdcall*/ **)(uint32_t, uint32_t))(**(uint32_t **)(this + 112) + 68))(*(uint32_t *)(this + 
+      | *(uint32_t *)(this + 112),
+      | *(uint32_t *)(this + 112),
+  +0x0078 [目标矩形槽] src=004107D0
+      | fld_78 = (*(int (/*stdcall*/ **)(uint32_t, uint32_t, struct tagRECT *, int, LONG, int *))(**(uint32_t **)(this
+      | *(uint32_t *)(this + 120),
+      | if ( pArg4[7].right != *(uint32_t *)(this + 120) )
+  +0x007C [目标矩形续槽] src=00410C80
+      | (*(void (/*stdcall*/ **)(uint32_t, uint32_t, int *, uint32_t *, float *, int, float *, unsigned int))(**(uint3
+      | *(uint32_t *)(this + 124),
+      | fld_7C = (*(int (/*stdcall*/ **)(uint32_t, uint32_t, RECT *, LONG *, float *, uint32_t, float *, int))(**(uint
+  +0x0190 [图像包记录下标（Load 解析）] src=00418CD0
+###### src/platform/socket_ime.cpp
+  +0x0004 [已初始化字节] src=00698690
+      | *(uint32_t *)(this + 4) = 0x400000;
+      | *(uint32_t *)(this + 4) = nArg2;
+      | *(this + 4) = 0;
+  +0x0008 [已连接字节] src=006989F0
+      | *(uint32_t *)(this + 8) = 0x400000;
+      | *(this + 8) = 0;
+      | strcpy((char *)(this + 8), pArg3);
+  +0x000C [窗口句柄 HWND（WSAAsyncSelect 目标）] src=00698D90
+      | *(this + 12) = 0;
+      | *(uint8_t *)(this + 12) = 0;
+      | *(uint8_t *)(this + 12) = 1;
+  +0x0010 [WSADATA 缓冲（400B）] src=00698690
+      | *(uint32_t *)(this + 16) = 1808;
+      | *((uint8_t *)this + 16) = 0;
+      | memset(this + 16, 0, 0x190u);
+  +0x01B0 [IP 串槽（inet_addr 源）] src=00698DC0
+      | *(uint32_t *)(this + 432) = 0;
+      | *(uint32_t *)(this + 432) = nArg3;
+      | fld_1B0 = *(uint16_t *)(this + 432);
+  +0x01B4 [SOCKET 句柄] src=00698A50
+      | *(uint32_t *)(this + 436) = 0;
+      | if ( *(uint32_t *)(this + 436) != 0 )
+      | off_77F3FC("Disconnect %d", *(uint32_t *)(this + 436));
+  +0x01B8 [接收环 CWSBuffer 对象指针] src=006989F0
+      | pThis_1B8 = *(void (/*thiscall*/ ****)(uint32_t, int))(this + 440);
+      | *(uint32_t *)(this + 440) = 0;
+      | pThis_1B8 = *(void (/*thiscall*/ ****)(uint32_t, int))(this + 440);
+  +0x01BC [发送环 CWSBuffer 对象指针] src=006989F0
+      | pThis_1BC = *(void (/*thiscall*/ ****)(uint32_t, int))(this + 444);
+      | *(uint32_t *)(this + 444) = 0;
+      | pThis_1BC = *(void (/*thiscall*/ ****)(uint32_t, int))(this + 444);
+  +0x0004 [控件激活/就绪字节] src=0069AB90
+      | *(uint32_t *)(this + 4) = 0x400000;
+      | *(uint32_t *)(this + 4) = nArg2;
+      | *(this + 4) = 0;
+  +0x0008 [控件类型字节（Init 置 8）] src=0069AB90
+      | *(uint32_t *)(this + 8) = 0x400000;
+      | *(this + 8) = 0;
+      | strcpy((char *)(this + 8), pArg3);
+  +0x000C [控件文本容器槽] src=0069AB90
+      | *(this + 12) = 0;
+      | *(uint8_t *)(this + 12) = 0;
+      | *(uint8_t *)(this + 12) = 1;
+  +0x0014 [控件几何/矩形槽] src=0069AB90
+      | *(uint32_t *)(this + 20) = &unk_749D84;
+      | return (*(int (/*thiscall*/ **)(void *))(*(uint32_t *)this + 20))(this);
+      | *(uint32_t *)(this + 20) = nArg3;
+  +0x0018 [控件父链/宿主槽] src=0069A5F0
+      | if ( sub_401CB0((LPCRITICAL_SECTION)(this + 24)) < 0 )
+      | *(uint32_t *)(this + 24) = nArg2;
+      | if ( fld_14 != *(uint32_t *)(this + 24) )
+  +0x0024 [控件状态槽] src=0069C310
+      | fld_24 = *(uint32_t *)(this + 36);
+      | fld_24 = *(uint32_t *)(this + 36);
+      | fld_24 = *(uint32_t *)(this + 36);
+  +0x0028 [控件几何槽] src=0069C310
+      | sub_4166A0(fld_24, *(uint32_t *)(this + 40));
+      | *(uint32_t *)(this + 40) = 0;
+      | *(uint32_t *)(this + 40) = 0;
+  +0x002C [光标位置槽] src=0069AB90
+      | result = (*(int (/*thiscall*/ **)(DWORD *, uint32_t *))(*this + 44))(this, v4);
+      | *((uint8_t *)this + 44) = pszArg6;
+      | *(uint32_t *)(this + 44) = 0;
+  +0x0034 [滚动/偏移槽] src=0069AB90
+      | (*(void (/*thiscall*/ **)(void *, uint32_t))(*(uint32_t *)this + 52))(this, *v2);
+      | *(uint32_t *)(this + 52) = 0;
+      | *(uint32_t *)(this + 52) = pMem;
+  +0x0038 [滚动/偏移续槽] src=0069AB90
+      | *(uint32_t *)(this + 56) = 0;
+      | sub_416430(*(void **)(this + 56), *(uint32_t *)(this + 8), (int)hdca - 1, v9, v14, v13);
+      | *(uint32_t *)(this + 56) = 0;
+  +0x0044 [IME 组合窗附属槽] src=0069AB90
+      | fld_e68 = (uint32_t *)*(this + 68);
+      | while ( v4 != (uint32_t *)*(this + 68) );
+      | if ( v13[0] == (int *)*(this + 68) )
+  +0x0058 [字符宽度表槽] src=0069AB90
+      | *(uint32_t *)(this + 88) = 0;
+      | *(uint32_t *)(this + 88) = 0;
+      | *((uint32_t *)fld_50 + 5) = *(uint32_t *)(this + 88);
+  +0x0060 [内嵌光标闪烁对象（sub_698F90 构造）] src=00698F90
+      | fld_60 = *(uint32_t **)(this + 96);
+      | if ( fld_60 == **(uint32_t ***)(this + 96) )
+      | fld_60 = *(uint32_t **)(this + 96);
+  +0x0068 [文本缓冲容器 begin 槽] src=0069C310
+      | *((uint32_t *)this + 104) = 0;
+      | *((uint32_t *)this + 104) = 0;
+      | *(uint32_t *)(this + 104) = 0;
+  +0x006C [文本缓冲容器续槽] src=0069C310
+      | *((uint32_t *)this + 108) = 0;
+      | *((uint32_t *)this + 108) = 0;
+      | *(uint32_t *)(this + 108) = 0;
+  +0x0070 [文本缓冲容器尾槽] src=0069C310
+      | *(uint32_t *)(this + 112) = 0;
+      | *(uint32_t *)(this + 112) = 0;
+      | fld_70 = *((const char **)sub_4030C0(pThis_A0, v17, *(uint32_t *)(this + 112), *(uint32_t *)(this + 108) / 5u)
+  +0x0074 [容器附属槽] src=0069C880
+      | *(uint8_t *)(this + 116) = 0;
+      | *(uint8_t *)(this + 116) = 0;
+      | *(uint32_t *)(this + 116) = 0;
+###### src/nengine/zlib_inflate.cpp
+  +0x0004 [阶段/状态枚举（-1 递减）] src=00655A90
+      | fld_4 = *(uint32_t *)(this + 4);
+      | (*(void (/*thiscall*/ **)(uint32_t, uint32_t))(**(uint32_t **)(this + 4) + 556))(*(uint32_t *)(this + 4), 0);
+      | (*(void (/*thiscall*/ **)(uint32_t, int, uint32_t, uint32_t))(**(uint32_t **)(this + 4) + 768))(
+  +0x001C [累计时长累加槽（+= fArg2）] src=00655A90
+      | fld_1C = fArg2 + *(float *)(this + 28);
+      | *(float *)(this + 28) = fld_1C;
+      | *(uint32_t *)(this + 28) = 0;
+  +0x0020 [下一阶段阈值时刻] src=00655A90
+      | pThis_20 = v2 * *((float *)this + 32) * 0.001 + *((float *)this + 33);
+      | *(uint32_t *)(this + 32) = -1;
+      | *(uint32_t *)(this + 32) = v7;
+  +0x0024 [阶段阈值上限] src=00655A90
+      | *(uint32_t *)(this + 36) = -1082130432;
+      | (***(void (/*thiscall*/ ****)(uint32_t, uint32_t, int, uint32_t))(this + 36))(
+      | *(uint32_t *)(this + 36),
+  +0x0028 [阶段计数器] src=00655A90
+      | *(uint8_t *)(this + 40) = 0;
+      | *(this + 40) = v10;
+      | fld_28 = *(uint32_t *)(this + 40);
+  +0x002C [已耗时长（now 差）] src=00655A90
+      | *(uint32_t *)(this + 44) = sub_47EF20(0, nArg2, -1, -1, 11);
+      | sub_651510(*((void **)this + 44), (int)Block2, v18, v34);
+      | pThis_2C = pThis_2B == *((int ***)this + 44);
+  +0x0030 [调试打印行计数] src=00655A90
+      | fld_30 = *(uint32_t *)(this + 48);
+      | fld_302 = (float *)(v8 + *(uint32_t *)(this + 48));
+      | *(float *)(v8 + *(uint32_t *)(this + 48) + 12) = fArg22 + *(float *)(*(uint32_t *)(this + 48) + v8 + 12);
+###### src/game/ui_icon_perf.cpp
+  +0x0034 [选角界面帧附属槽] src=0046C300
+      | *(uint32_t *)(this + 52) = 0;
+      | if ( *(uint8_t *)(this + 48) != 0 && (uint8_t)sub_484F10(this + 52) != 0 )
+      | *(this + 52) = v5;
+  +0x02E0 [ListBox 控件几何槽] src=004684F0
+      | *(uint32_t *)(this + 736) = 0;
+      | if ( *(uint32_t **)(this + 736) != pArg2 )
+      | *(uint32_t *)(this + 736) = pArg2;
+  +0x02E4 [ListBox 控件状态槽] src=00460920
+      | *(uint32_t *)(this + 740) = 0;
+      | fld_2E4 = *(uint32_t *)(this + 740);
+      | if ( *(uint32_t *)(this + 740) == 3 )
+###### src/game/combat_core.cpp
+  +0x0004 [std::string SSO 头槽（+28=15 组）] src=004D01E0
+      | pThis_4 = (void **)(this + 4);
+      | pThis_4 = this + 4;
+      | pThis_4 = this + 4;
+  +0x0008 [std::string SSO 内联缓冲] src=004D01E0
+      | *(uint8_t *)(this + 8) = 0;
+      | *(uint8_t *)(this + 8) = 0;
+      | *(uint8_t *)(this + 8) = 0;
+  +0x000C [std::string 长度槽] src=004D01E0
+      | *(uint32_t *)(this + 12) = 0;
+      | sub_41BFE0((void **)(this + 12), szPassword);
+      | *((uint32_t *)this + 12) = 0;
+  +0x001C [时钟/计时槽] src=004D3950
+      | *(uint32_t *)(this + 28) = 15;
+      | *(uint32_t *)(this + 28) = 15;
+      | *(uint32_t *)(this + 28) = 15;
+  +0x0020 [时钟/计时槽 2] src=004D3950
+      | *(uint32_t *)(this + 32) = 0;
+      | *(uint32_t *)(this + 32) = 0;
+      | fld_20 = *(uint32_t *)(this + 32);
+  +0x0034 [碰撞/几何槽] src=004D4120
+      | *(uint32_t *)(this + 52) = 0;
+      | *(uint32_t *)(this + 52) = sub_4CE730();
+      | fld_34 = *(uint32_t ***)(this + 52);
+  +0x0038 [碰撞/几何槽 2] src=004D4120
+      | *(uint32_t *)(this + 56) = 0;
+      | *(uint32_t *)(this + 56) = 0;
+      | *(uint32_t *)(this + 56) = 0;
+  +0x0040 [坐标三元组 X] src=004D1860
+      | (void *)(this + 64),
+      | *(uint32_t *)(this + 64) = 0;
+      | *(uint32_t *)(this + 64) = 0;
+  +0x0044 [坐标三元组 Y] src=004D1860
+      | *(uint32_t *)(this + 68) = 0;
+      | *(uint32_t *)(this + 68) = 0;
+      | fld_44 = *(uint32_t *)(this + 68);
+  +0x0074 [观察者表 end 指针] src=004D4120
+      | *(uint32_t *)(this + 116) = 0;
+      | *(uint32_t *)(this + 116) = 0;
+      | sub_41BFE0((void **)(this + 116), szPassword);
+  +0x0084 [观察者表 begin 指针] src=004D1DB0
+      | *(uint32_t *)(this + 132) = 0;
+      | *(uint32_t *)(this + 132) = 0;
+      | *(uint8_t *)(this + 132) = 0;
+###### src/game/bigfunc_4471E0_sub_4471E0.cpp
+  +0x100014 [包体容器宿主槽（this+262149 int 下标 = +0x100014；对象列表 +104）] src=004471E0
+###### src/game/po_effects.cpp
+  +0x0004 [宿主对象指针/虚表转发槽] src=00513AA0
+  +0x0008 [宿主对象指针续槽] src=00513AA0
+  +0x00A4 [PO 目标宿主槽] src=00513B40
+  +0x00A8 [指示器对象指针槽 A] src=005104F0
+  +0x00AC [指示器对象指针槽 B] src=005104F0
+  +0x04A8 [指示器子对象槽] src=00510050
+  +0x0544 [动画件装配对象槽] src=005149F0
+      | *(uint32_t *)(this + 1348) = pObj;
+  +0x05B0 [效果对象指针槽（vmt12C tick 用）] src=00516440
+      | *(uint32_t *)(this + 1456) = &vftbl_nengine__CNTimer;
+      | LOBYTE(v7) = sub_698F90((int)(this + 1456), 20000, 0);  // 【clock_set_countdown(clk, duration=a2, star…】
+      | *(uint32_t *)(this + 1456) = &vftbl_nengine__IObject;
+  +0x05C8 [效果计数槽] src=00516B80
+      | *(uint32_t *)(this + 1480) = 0;
+      | *(uint32_t *)(this + 1480) = 0;
+  +0x05CC [动画件装配门] src=00516B80
+      | pThis_5CC = *(void (/*thiscall*/ ****)(uint32_t, int))(this + 1484);
+      | *(uint32_t *)(this + 1484) = 0;
+      | *(uint32_t *)(this + 1484) = 0;
+  +0x05D0 [效果宿主/触发槽] src=00518580
+      | *((uint8_t *)this + 1488) = 0;  // 状态施加标志位清零
+      | *((uint8_t *)this + 1488) = 0;  // 状态施加标志位清零
+      | result = *((uint8_t *)this + 1488);
