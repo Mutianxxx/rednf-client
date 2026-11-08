@@ -1,0 +1,27 @@
+# 构建与运行产物：可重建，不入库
+project/cache/
+project/build/
+project/saves/
+project/reports/
+project/checkpoints/
+delivery/
+
+# 编译中间件与调试符号（第三方预编译依赖如 SDL2 的 .a/.dll 仍入库）
+*.pdb
+*.ilk
+*.exp
+*.obj
+*.o
+
+# Python 与工具缓存
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# 编辑器与本机配置
+.vscode/
+.idea/
+*.user
+*.suo
+*.log
