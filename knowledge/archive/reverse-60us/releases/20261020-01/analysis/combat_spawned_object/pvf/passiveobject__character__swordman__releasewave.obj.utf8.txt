@@ -1,0 +1,20 @@
+[floating height]  1		// 0이면 지상형, 1이상이면 부유형 (값 = 부유 높이)
+[layer]  `[normal]`		// 그리기 레이어. `[normal]` `[bottom]` `[closeback]` `[middleback]` `[distantback]` 중 택일
+[pass type]  `[pass all]`	// `[pass all]` `[pass only float type]` `[do not pass]` 중 택일
+[piercing power]  1000
+
+// 애니메이션 리스트. 없는 것은 적지 않아도 됨. 혹은 ``로 넣으면 없는 것으로 처리 //
+[basic motion]  `Animation/ReleaseWave.ani`
+[attack info]  `AttackInfo/ReleaseWave.atk`
+
+ 
+
+
+
+
+[name]  <9::name_4430>	// 오브젝트의 이름
+ 
+
+ 
+
+

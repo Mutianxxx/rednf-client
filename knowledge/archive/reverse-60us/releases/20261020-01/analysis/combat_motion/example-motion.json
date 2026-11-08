@@ -1,0 +1,240 @@
+{
+  "kind": "bounded native-derived simulation; not original-client runtime capture",
+  "scale_input": 1000,
+  "direction": 1,
+  "assumptions": [
+    "local owner gate true",
+    "no collision owner/controller",
+    "z axis initially stationary"
+  ],
+  "clock": "delta of selected pausable/scaled gameplay clock derived from timeGetTime milliseconds",
+  "rate_percent": 100.0,
+  "body_frame_deadlines": [
+    70,
+    140,
+    210,
+    280,
+    580
+  ],
+  "samples": [
+    {
+      "time": 0,
+      "axes": [
+        {
+          "position": 0.0,
+          "velocity": 600.0,
+          "acceleration": -1000,
+          "remaining": 600
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        }
+      ]
+    },
+    {
+      "time": 100,
+      "axes": [
+        {
+          "position": 55.000003814697266,
+          "velocity": 500.0,
+          "acceleration": -1000,
+          "remaining": 500
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        }
+      ],
+      "result_codes": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 200,
+      "axes": [
+        {
+          "position": 100.00000762939453,
+          "velocity": 400.0,
+          "acceleration": -1000,
+          "remaining": 400
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        }
+      ],
+      "result_codes": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 300,
+      "axes": [
+        {
+          "position": 135.0,
+          "velocity": 300.0,
+          "acceleration": -1000,
+          "remaining": 300
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        }
+      ],
+      "result_codes": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 400,
+      "axes": [
+        {
+          "position": 160.0,
+          "velocity": 200.0,
+          "acceleration": -1000,
+          "remaining": 200
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        }
+      ],
+      "result_codes": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 500,
+      "axes": [
+        {
+          "position": 175.0,
+          "velocity": 99.99999237060547,
+          "acceleration": -1000,
+          "remaining": 100
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        }
+      ],
+      "result_codes": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 600,
+      "axes": [
+        {
+          "position": 180.0,
+          "velocity": -1.237913966178894e-05,
+          "acceleration": 0,
+          "remaining": 0
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        }
+      ],
+      "result_codes": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "time": 700,
+      "axes": [
+        {
+          "position": 180.0,
+          "velocity": -1.237913966178894e-05,
+          "acceleration": 0,
+          "remaining": 0
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        },
+        {
+          "position": 0.0,
+          "velocity": 0.0,
+          "acceleration": 0,
+          "remaining": -1
+        }
+      ],
+      "result_codes": [
+        2,
+        0,
+        0
+      ]
+    }
+  ]
+}

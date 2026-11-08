@@ -1,0 +1,96 @@
+{
+  "schema": "dnf-finalized-skill-evidence-v1",
+  "generated_utc": "2026-10-17T23:12:48.892217+00:00",
+  "skills": [
+    {
+      "key": "hopsmash",
+      "name": "崩山击",
+      "report": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/skills/hopsmash.json",
+      "sample_count": 2,
+      "eligible_observation_windows": 2,
+      "excluded_at_user_request": false
+    },
+    {
+      "key": "frenzy",
+      "name": "血之狂暴",
+      "report": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/skills/frenzy.json",
+      "sample_count": 4,
+      "eligible_observation_windows": 4,
+      "excluded_at_user_request": false
+    },
+    {
+      "key": "gorecross",
+      "name": "十字斩",
+      "report": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/skills/gorecross.json",
+      "sample_count": 1,
+      "eligible_observation_windows": 1,
+      "excluded_at_user_request": false
+    },
+    {
+      "key": "bloodsword",
+      "name": "血气之刃",
+      "report": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/skills/bloodsword.json",
+      "sample_count": 1,
+      "eligible_observation_windows": 1,
+      "excluded_at_user_request": false
+    },
+    {
+      "key": "bloodboom",
+      "name": "浴血之怒",
+      "report": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/skills/bloodboom.json",
+      "sample_count": 1,
+      "eligible_observation_windows": 1,
+      "excluded_at_user_request": false
+    },
+    {
+      "key": "bloodblast",
+      "name": "怒气爆发",
+      "report": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/skills/bloodblast.json",
+      "sample_count": 2,
+      "eligible_observation_windows": 1,
+      "excluded_at_user_request": false
+    },
+    {
+      "key": "bloodblastex",
+      "name": "血气爆发",
+      "report": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/skills/bloodblastex.json",
+      "sample_count": 1,
+      "eligible_observation_windows": 1,
+      "excluded_at_user_request": false
+    },
+    {
+      "key": "outragebreak",
+      "name": "崩山裂地斩",
+      "report": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/skills/outragebreak.json",
+      "sample_count": 2,
+      "eligible_observation_windows": 1,
+      "excluded_at_user_request": false
+    },
+    {
+      "key": "bloodyrave",
+      "name": "嗜魂封魔斩",
+      "report": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/skills/bloodyrave.json",
+      "sample_count": 1,
+      "eligible_observation_windows": 0,
+      "excluded_at_user_request": true
+    }
+  ],
+  "sample_manifest": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/sample-manifest.json",
+  "source_graph": "reverse_lab/v3/reports/live-tests/skill-chain-analysis/source-graph.json",
+  "generator_sha256": "77f41a9c0ab29155cd978b9c81febe526c83910ead33491b74b7c0baec1e84d7",
+  "verification": {
+    "passed": true,
+    "raw_sample_ranges_rehashed": 15,
+    "original_raw_hashes_match": true,
+    "version_bound_module_hash_matches": true,
+    "verified_spawn_chains": 13,
+    "descriptor_50_matches_labelled_skill_list_id": 13,
+    "excluded_skill_contributes_no_behavior_edges": true,
+    "source_members_archived_and_hashed": 157,
+    "source_images_with_archive_candidates": 62,
+    "source_images_total": 62,
+    "npk_directory_errors": 0,
+    "normal_skill_lifecycle_fully_recovered": false,
+    "scope": "Evidence consistency and reproducibility; not original-client visual acceptance or full controller recovery"
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "source_path": "D:\\dnf\\60US\\analysis\\unpack_attempts\\001\\launcher_test\\DFO_fixed_v3.original.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "slices": [
+    {
+      "name": "interpolation_parser",
+      "va": "0xa29191",
+      "size": 30,
+      "file_offset": 6459793,
+      "sha256": "97368f2a148ccad3b2931b0b7aa84e4f9fa718ec9676ec3ab62bdba6f81d3196",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "pose_update",
+      "va": "0xa24950",
+      "size": 608,
+      "file_offset": 6441296,
+      "sha256": "bd44ce274461c8f3859c902a22a98ea6d80c66bc136bf5466b44b4ed8582e2be",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "integer_lerp",
+      "va": "0x473f20",
+      "size": 41,
+      "file_offset": 474912,
+      "sha256": "fa9b99dab61e29f253d0712719ef1488bfba22e19d676dd8e56342bda9b8d3e5",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "float_lerp",
+      "va": "0xb099b0",
+      "size": 42,
+      "file_offset": 7379376,
+      "sha256": "51ee24d4d921514fa069d9033dc67943d38be9131d97a5ae2da2ac4bccffdd8d",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "truncate",
+      "va": "0xc01544",
+      "size": 117,
+      "file_offset": 8394052,
+      "sha256": "5333b186c02836974c6f792303aeb2c00d856316b93ccbbe65f51def6ae661b4",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "frame_install",
+      "va": "0xa27870",
+      "size": 318,
+      "file_offset": 6453360,
+      "sha256": "5841182564a77005455844061c4ecb502d88931d9c42115f2ceff11821c83d44",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "snapshot_copy",
+      "va": "0x66f900",
+      "size": 192,
+      "file_offset": 2554112,
+      "sha256": "95245dd7cd51e0a2a759bd119d50678ac1251d5e9da0cf909bbbdd6a5f8faa60",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "frame_defaults",
+      "va": "0x46e390",
+      "size": 159,
+      "file_offset": 451472,
+      "sha256": "67763029d63f6dd8bd34d14a201d82d4581797665ec740ddcb668396f8c9d637",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "ani_update",
+      "va": "0xa27f60",
+      "size": 286,
+      "file_offset": 6455136,
+      "sha256": "8f7037e898c03f80fbe6df4546bf3c9692e75e6c82e52157ff0e14995f07b55e",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "frame_advance",
+      "va": "0xa27dc0",
+      "size": 416,
+      "file_offset": 6454720,
+      "sha256": "7d81a9b3fe8c3e7da4734ea35e08f8fafbe6eaf5dd0791991596b80419f3836a",
+      "selected_disk_bytes_equal": true
+    }
+  ],
+  "pvf_samples": [
+    {
+      "path": "character/swordman/effect/animation/soulbringer1.ani",
+      "entry": {
+        "file_number": 640149417,
+        "path": "character/swordman/effect/animation/soulbringer1.ani",
+        "size": 760,
+        "crc": "f9debc0e",
+        "relative_offset": 21077760,
+        "absolute_offset": 28644384
+      },
+      "sha256": "16552b6d961349bbea772bdccd636133fcf9c1a12d3eeff3c0153b6de4848953",
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "encoding": "cp949",
+      "crc_verified": true
+    },
+    {
+      "path": "passiveobject/monster/goblin/animation/flybomb.ani",
+      "entry": {
+        "file_number": 56404199,
+        "path": "passiveobject/monster/goblin/animation/flybomb.ani",
+        "size": 633,
+        "crc": "d067e73d",
+        "relative_offset": 1381364,
+        "absolute_offset": 8947988
+      },
+      "sha256": "3496f791605e536a772d7c8de426f47aa089df9b509f7f7c296597360ffd17b9",
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "encoding": "cp949",
+      "crc_verified": true
+    }
+  ],
+  "rea": [
+    {
+      "file": "002-current-pose.json",
+      "evidence_id": "ev_3ffcf83d3186fc6604fc0875302c104b32e7bdc08b8526c04bf2efce617a7f71",
+      "operation": "analyze_function",
+      "parameters": {
+        "procedure": "0xA24950"
+      },
+      "limitations": [
+        "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+        "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+        "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+        "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+        "References cover the complete Ghidra function-body AddressSet and exact entry. Dossier incoming edges omit sources owned by that function; procedure_references also retains those internal edges.",
+        "The dossier combines Ghidra FunctionManager, Listing, ReferenceManager, BasicBlockModel, and decompiler observations; provider-specific pseudocode and assembly are not cross-provider text invariants.",
+        "Resolved reference metadata identifies computed, indirect, external, call, jump, and data edges; unresolved targetless flows remain unknown, and function classifications distinguish thunks and externals.",
+        "Synthetic Ghidra entry-point references without actionable memory sources are omitted.",
+        "The Java bridge serializes one function request per Program and lets each decompilation run until it completes or the caller cancels.",
+        "Windows Ghidra P0 accepts native x86, x86-64, ARMNT (Thumb-2) and ARM64 PE applications and DLLs, and explicitly selected raw 6502 images; managed, hostile, sensitive, and mutable-path targets are unsupported.",
+        "The Windows bridge uses authenticated IPv4 loopback because Node path-based IPC does not expose Java AF_UNIX sockets; the endpoint file contains no bearer token.",
+        "Windows sessions require the matching packaged Windows x64 native addon, local NTFS targets and runtimes, and Windows 10 or later. Native handles enforce path admission, private DACLs, and Job Object ownership automatically."
+      ]
+    },
+    {
+      "file": "003-integer-lerp.json",
+      "evidence_id": "ev_be0751c3ea40e8f82eb388c82a49c0e09455628824714bd49160a78f9e89e194",
+      "operation": "analyze_function",
+      "parameters": {
+        "procedure": "0x473F20"
+      },
+      "limitations": [
+        "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+        "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+        "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+        "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+        "References cover the complete Ghidra function-body AddressSet and exact entry. Dossier incoming edges omit sources owned by that function; procedure_references also retains those internal edges.",
+        "The dossier combines Ghidra FunctionManager, Listing, ReferenceManager, BasicBlockModel, and decompiler observations; provider-specific pseudocode and assembly are not cross-provider text invariants.",
+        "Resolved reference metadata identifies computed, indirect, external, call, jump, and data edges; unresolved targetless flows remain unknown, and function classifications distinguish thunks and externals.",
+        "Synthetic Ghidra entry-point references without actionable memory sources are omitted.",
+        "The Java bridge serializes one function request per Program and lets each decompilation run until it completes or the caller cancels.",
+        "Ghidra Listing reports a terminal call at 0x473f44 to 0xc01544 FUN_00c01544 (external=false, thunk=false, hasNoReturn=false); fallthrough is excluded by Ghidra's flow model. The reason for the terminal flow is not established by this observation.",
+        "Windows Ghidra P0 accepts native x86, x86-64, ARMNT (Thumb-2) and ARM64 PE applications and DLLs, and explicitly selected raw 6502 images; managed, hostile, sensitive, and mutable-path targets are unsupported.",
+        "The Windows bridge uses authenticated IPv4 loopback because Node path-based IPC does not expose Java AF_UNIX sockets; the endpoint file contains no bearer token.",
+        "Windows sessions require the matching packaged Windows x64 native addon, local NTFS targets and runtimes, and Windows 10 or later. Native handles enforce path admission, private DACLs, and Job Object ownership automatically."
+      ]
+    },
+    {
+      "file": "004-float-lerp.json",
+      "evidence_id": "ev_660c8d1343152f17a854226f940dba06271ccccbdf35b49ada97793a9a5c3aa3",
+      "operation": "analyze_function",
+      "parameters": {
+        "procedure": "0xB099B0"
+      },
+      "limitations": [
+        "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+        "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+        "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+        "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+        "References cover the complete Ghidra function-body AddressSet and exact entry. Dossier incoming edges omit sources owned by that function; procedure_references also retains those internal edges.",
+        "The dossier combines Ghidra FunctionManager, Listing, ReferenceManager, BasicBlockModel, and decompiler observations; provider-specific pseudocode and assembly are not cross-provider text invariants.",
+        "Resolved reference metadata identifies computed, indirect, external, call, jump, and data edges; unresolved targetless flows remain unknown, and function classifications distinguish thunks and externals.",
+        "Synthetic Ghidra entry-point references without actionable memory sources are omitted.",
+        "The Java bridge serializes one function request per Program and lets each decompilation run until it completes or the caller cancels.",
+        "Windows Ghidra P0 accepts native x86, x86-64, ARMNT (Thumb-2) and ARM64 PE applications and DLLs, and explicitly selected raw 6502 images; managed, hostile, sensitive, and mutable-path targets are unsupported.",
+        "The Windows bridge uses authenticated IPv4 loopback because Node path-based IPC does not expose Java AF_UNIX sockets; the endpoint file contains no bearer token.",
+        "Windows sessions require the matching packaged Windows x64 native addon, local NTFS targets and runtimes, and Windows 10 or later. Native handles enforce path admission, private DACLs, and Job Object ownership automatically."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "path": "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf_script_preview.cpp",
+      "sha256": "d2611f74ffecf60bf7377de275a539de0fa68f4343aac82eb948a3c0b56d091e",
+      "role": "read-only clue; different client version; not behavioral authority"
+    },
+    {
+      "path": "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf_preview_scene.cpp",
+      "sha256": "84c5b6f08378b14b1cca1f1e98192ac7a5aa3972b10ba7d92294621c8be0bb63",
+      "role": "read-only clue; different client version; not behavioral authority"
+    },
+    {
+      "path": "D:\\dnf-rebuild\\逆向部分结果参考\\1031-UI渲染交接包\\1031-UI渲染交接包\\monster_demo\\src\\resources.cpp",
+      "sha256": "31b1c6417964e4480e18d9f83257a92cba185f9bca2794d97af8f8b8d91ae5b3",
+      "role": "read-only clue; different client version; not behavioral authority"
+    }
+  ],
+  "fields": {
+    "keyframe_interpolation": "frame+0x20",
+    "current_snapshot": "ANI+0xa8",
+    "current_flag": "ANI+0xc8",
+    "current_index": "ANI+0x124",
+    "start_deadline": "ANI+0x128",
+    "next_deadline": "ANI+0x12c",
+    "loop": "ANI+0x130",
+    "ended": "ANI+0x13a"
+  },
+  "contract": {
+    "elapsed": "selected ANI clock - frame start deadline",
+    "duration": "next deadline - start deadline",
+    "float": "t>=duration ? target : t<=0 ? source : source+(target-source)*t/duration",
+    "integer": "truncate entire float-helper result toward zero",
+    "position": "integer helper per axis",
+    "rate": "float helper then float32 memory write",
+    "rotation": "direct numeric interpolation then float32 memory write; no shortest-angle normalization",
+    "rgba": "integer helper per byte, repack low 8 bits",
+    "retained_discrete": [
+      "image pointer/frame index",
+      "graphic effect",
+      "collision boxes"
+    ],
+    "final_frame": "nonloop stays unchanged; loop targets frame0",
+    "update_guards": [
+      "current interpolation enabled",
+      "not ended",
+      "nonempty frame vector"
+    ]
+  },
+  "limitations": [
+    "Local algorithm recovered from original instructions; this is not an actual DFO runtime draw trace.",
+    "Preview supplies source-DELAY rate-100 clock; character rate, pause and real skill scheduling remain unbound.",
+    "Synthetic PE32 validates the updater and helpers, not parser execution or original-game pixel equality."
+  ]
+}

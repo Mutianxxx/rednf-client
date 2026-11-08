@@ -1,0 +1,1014 @@
+{
+  "path": "character/swordman/effect/animation/bloodboom/finish_bloodboom_circle2.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        5
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/ATTimeSlash/timeslash_circle.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -196,
+        -197
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        0.5,
+        0.5
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        202,
+        0,
+        255
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 115
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 125
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 135
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/ATTimeSlash/timeslash_circle.img",
+        0
+      ],
+      "offset": 140
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -196,
+        -197
+      ],
+      "offset": 155
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        0.4000000059604645,
+        0.4000000059604645
+      ],
+      "offset": 170
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        202,
+        0,
+        153
+      ],
+      "offset": 185
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 210
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 220
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 230
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 240
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 250
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/ATTimeSlash/timeslash_circle.img",
+        0
+      ],
+      "offset": 255
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -196,
+        -197
+      ],
+      "offset": 270
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        0.30000001192092896,
+        0.30000001192092896
+      ],
+      "offset": 285
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        202,
+        0,
+        76
+      ],
+      "offset": 300
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 335
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 345
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 355
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 365
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/ATTimeSlash/timeslash_circle.img",
+        0
+      ],
+      "offset": 370
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -196,
+        -197
+      ],
+      "offset": 385
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "offset": 400
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        202,
+        0,
+        0
+      ],
+      "offset": 415
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 440
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 450
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 460
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 470
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 480
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 485
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -196,
+        -197
+      ],
+      "offset": 500
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "offset": 515
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        202,
+        0,
+        0
+      ],
+      "offset": 530
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 555
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 5,
+      "value": 5
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 2152838,
+      "value": "Character/Swordman/Effect/ATTimeSlash/timeslash_circle.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967100,
+      "value": -196
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967099,
+      "value": -197
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 60,
+      "type": 2,
+      "raw": 1056964608,
+      "value": 0.5
+    },
+    {
+      "offset": 65,
+      "type": 2,
+      "raw": 1056964608,
+      "value": 0.5
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 202,
+      "value": 202
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 110,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 115,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 120,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 125,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 130,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 140,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 145,
+      "type": 6,
+      "raw": 2152838,
+      "value": "Character/Swordman/Effect/ATTimeSlash/timeslash_circle.img"
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 4294967100,
+      "value": -196
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 4294967099,
+      "value": -197
+    },
+    {
+      "offset": 170,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 175,
+      "type": 2,
+      "raw": 1053609165,
+      "value": 0.4000000059604645
+    },
+    {
+      "offset": 180,
+      "type": 2,
+      "raw": 1053609165,
+      "value": 0.4000000059604645
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 190,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 202,
+      "value": 202
+    },
+    {
+      "offset": 200,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 205,
+      "type": 0,
+      "raw": 153,
+      "value": 153
+    },
+    {
+      "offset": 210,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 220,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 225,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 230,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 235,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 240,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 245,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 250,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 255,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 260,
+      "type": 6,
+      "raw": 2152838,
+      "value": "Character/Swordman/Effect/ATTimeSlash/timeslash_circle.img"
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 270,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 4294967100,
+      "value": -196
+    },
+    {
+      "offset": 280,
+      "type": 0,
+      "raw": 4294967099,
+      "value": -197
+    },
+    {
+      "offset": 285,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 290,
+      "type": 2,
+      "raw": 1050253722,
+      "value": 0.30000001192092896
+    },
+    {
+      "offset": 295,
+      "type": 2,
+      "raw": 1050253722,
+      "value": 0.30000001192092896
+    },
+    {
+      "offset": 300,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 305,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 310,
+      "type": 0,
+      "raw": 202,
+      "value": 202
+    },
+    {
+      "offset": 315,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 76,
+      "value": 76
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 330,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 335,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 340,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 345,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 350,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 355,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 360,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 365,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 370,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 375,
+      "type": 6,
+      "raw": 2152838,
+      "value": "Character/Swordman/Effect/ATTimeSlash/timeslash_circle.img"
+    },
+    {
+      "offset": 380,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 385,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 390,
+      "type": 0,
+      "raw": 4294967100,
+      "value": -196
+    },
+    {
+      "offset": 395,
+      "type": 0,
+      "raw": 4294967099,
+      "value": -197
+    },
+    {
+      "offset": 400,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 405,
+      "type": 2,
+      "raw": 1045220557,
+      "value": 0.20000000298023224
+    },
+    {
+      "offset": 410,
+      "type": 2,
+      "raw": 1045220557,
+      "value": 0.20000000298023224
+    },
+    {
+      "offset": 415,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 420,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 425,
+      "type": 0,
+      "raw": 202,
+      "value": 202
+    },
+    {
+      "offset": 430,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 440,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 445,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 450,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 455,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 460,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 465,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 470,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 475,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 480,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 485,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 490,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 495,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 500,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 505,
+      "type": 0,
+      "raw": 4294967100,
+      "value": -196
+    },
+    {
+      "offset": 510,
+      "type": 0,
+      "raw": 4294967099,
+      "value": -197
+    },
+    {
+      "offset": 515,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 520,
+      "type": 2,
+      "raw": 1045220557,
+      "value": 0.20000000298023224
+    },
+    {
+      "offset": 525,
+      "type": 2,
+      "raw": 1045220557,
+      "value": 0.20000000298023224
+    },
+    {
+      "offset": 530,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 535,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 540,
+      "type": 0,
+      "raw": 202,
+      "value": 202
+    },
+    {
+      "offset": 545,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 550,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 555,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 560,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    }
+  ],
+  "raw_sha256": "cf201188a4317d5c2736ccc36395c41809a706c2a762f4f5890412055abf2229"
+}

@@ -1,0 +1,96 @@
+{
+  "segments": [
+    {
+      "segment": 0,
+      "body": "character/swordman/animation/tripleslash1.ani",
+      "attack_info": {
+        "tag": "etc attack info",
+        "index": 2
+      },
+      "level_column": 0,
+      "raw_value": 253,
+      "equipment_frame1": [
+        {
+          "path": "equipment/character/swordman/weapon/club/clubb/tripleslash1.ani",
+          "boxes": []
+        },
+        {
+          "path": "equipment/character/swordman/weapon/club/clubc/tripleslash1.ani",
+          "boxes": [
+            [
+              -34,
+              -20,
+              38,
+              156,
+              35,
+              53
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "segment": 1,
+      "body": "character/swordman/animation/tripleslash2.ani",
+      "attack_info": {
+        "tag": "etc attack info",
+        "index": 3
+      },
+      "level_column": 0,
+      "raw_value": 253,
+      "equipment_frame1": [
+        {
+          "path": "equipment/character/swordman/weapon/club/clubb/tripleslash2.ani",
+          "boxes": []
+        },
+        {
+          "path": "equipment/character/swordman/weapon/club/clubc/tripleslash2.ani",
+          "boxes": [
+            [
+              -21,
+              -15,
+              16,
+              123,
+              35,
+              92
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "segment": 2,
+      "body": "character/swordman/animation/tripleslash3.ani",
+      "attack_info": {
+        "tag": "etc attack info",
+        "index": 7
+      },
+      "level_column": 1,
+      "raw_value": 379,
+      "equipment_frame1": [
+        {
+          "path": "equipment/character/swordman/weapon/club/clubb/tripleslash3.ani",
+          "boxes": [
+            [
+              -26,
+              -20,
+              7,
+              131,
+              35,
+              93
+            ]
+          ]
+        },
+        {
+          "path": "equipment/character/swordman/weapon/club/clubc/tripleslash3.ani",
+          "boxes": []
+        }
+      ]
+    }
+  ],
+  "page_errors": [],
+  "server_errors": [],
+  "native_movement_executed": false,
+  "native_continuation_executed": false,
+  "original_game_visual_comparison": false
+}

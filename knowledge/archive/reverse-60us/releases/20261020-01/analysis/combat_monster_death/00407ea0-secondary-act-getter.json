@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x407ea0",
+  "rva": "0x7ea0",
+  "file_offset": 32416,
+  "length": 7,
+  "bytes_sha256": "82dc7fc979614a02fcb9ffba1a1ccecb33488204e431892700f5d4e0fadb7d2d",
+  "status": "native_bytes",
+  "note": "Object.slot108 returns+154, not+150.",
+  "disassembled": true
+}

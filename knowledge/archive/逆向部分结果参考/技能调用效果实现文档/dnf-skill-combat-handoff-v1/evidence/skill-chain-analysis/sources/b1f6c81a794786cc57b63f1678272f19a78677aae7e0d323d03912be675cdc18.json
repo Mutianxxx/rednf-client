@@ -1,0 +1,753 @@
+{
+  "path": "character/swordman/effect/animation/hopsmash/smash.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        7
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        30,
+        -218
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        420
+      ],
+      "offset": 65
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 75
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/d-end.img",
+        0
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        30,
+        -218
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        180
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 130
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/d-end.img",
+        1
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        30,
+        -218
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 175
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 185
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/d-end.img",
+        2
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        30,
+        -218
+      ],
+      "offset": 205
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 220
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 230
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 240
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/d-end.img",
+        3
+      ],
+      "offset": 245
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        30,
+        -218
+      ],
+      "offset": 260
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 275
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 285
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 295
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/d-end.img",
+        4
+      ],
+      "offset": 300
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        30,
+        -218
+      ],
+      "offset": 315
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 330
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 350
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/d-end.img",
+        5
+      ],
+      "offset": 355
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        30,
+        -218
+      ],
+      "offset": 370
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 385
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 395
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967078,
+      "value": -218
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 60,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 420,
+      "value": 420
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 85,
+      "type": 6,
+      "raw": 2897210,
+      "value": "Character/Swordman/Effect/HopSmash/d-end.img"
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 4294967078,
+      "value": -218
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 115,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 180,
+      "value": 180
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 140,
+      "type": 6,
+      "raw": 2897210,
+      "value": "Character/Swordman/Effect/HopSmash/d-end.img"
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 4294967078,
+      "value": -218
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 170,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 195,
+      "type": 6,
+      "raw": 2897210,
+      "value": "Character/Swordman/Effect/HopSmash/d-end.img"
+    },
+    {
+      "offset": 200,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 205,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 4294967078,
+      "value": -218
+    },
+    {
+      "offset": 220,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 225,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 230,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 235,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 240,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 250,
+      "type": 6,
+      "raw": 2897210,
+      "value": "Character/Swordman/Effect/HopSmash/d-end.img"
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 260,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 4294967078,
+      "value": -218
+    },
+    {
+      "offset": 275,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 280,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 285,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 300,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 305,
+      "type": 6,
+      "raw": 2897210,
+      "value": "Character/Swordman/Effect/HopSmash/d-end.img"
+    },
+    {
+      "offset": 310,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 315,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 325,
+      "type": 0,
+      "raw": 4294967078,
+      "value": -218
+    },
+    {
+      "offset": 330,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 335,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 350,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 355,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 360,
+      "type": 6,
+      "raw": 2897210,
+      "value": "Character/Swordman/Effect/HopSmash/d-end.img"
+    },
+    {
+      "offset": 365,
+      "type": 0,
+      "raw": 5,
+      "value": 5
+    },
+    {
+      "offset": 370,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 375,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 380,
+      "type": 0,
+      "raw": 4294967078,
+      "value": -218
+    },
+    {
+      "offset": 385,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 390,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 395,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 400,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    }
+  ],
+  "raw_sha256": "b1f6c81a794786cc57b63f1678272f19a78677aae7e0d323d03912be675cdc18"
+}

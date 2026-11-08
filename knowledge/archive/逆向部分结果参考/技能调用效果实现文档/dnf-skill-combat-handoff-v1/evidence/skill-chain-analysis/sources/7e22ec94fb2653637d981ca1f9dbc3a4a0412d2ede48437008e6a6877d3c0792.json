@@ -1,0 +1,1498 @@
+{
+  "path": "passiveobject/character/swordman/animation/bloodswordexplosion/exp.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        12
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -64,
+        -40,
+        -66,
+        130,
+        77,
+        135
+      ],
+      "offset": 65
+    },
+    {
+      "tag": "[PLAY SOUND]",
+      "values": [
+        "P_BLOODR_FIRE"
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[SET FLAG]",
+      "values": [
+        1
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 120
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        1
+      ],
+      "offset": 125
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 140
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 155
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -92,
+        -58,
+        -91,
+        193,
+        111,
+        185
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 200
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        2
+      ],
+      "offset": 205
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 220
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 235
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -99,
+        -58,
+        -105,
+        208,
+        114,
+        211
+      ],
+      "offset": 245
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 280
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        3
+      ],
+      "offset": 285
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 300
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 315
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -109,
+        -57,
+        -105,
+        221,
+        112,
+        213
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 360
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        4
+      ],
+      "offset": 365
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 380
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 395
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -97,
+        -58,
+        -92,
+        191,
+        115,
+        188
+      ],
+      "offset": 405
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 440
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        5
+      ],
+      "offset": 445
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 460
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 475
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 485
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        6
+      ],
+      "offset": 490
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 505
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 520
+    },
+    {
+      "tag": "[FRAME007]",
+      "values": [],
+      "offset": 530
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        7
+      ],
+      "offset": 535
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 550
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 565
+    },
+    {
+      "tag": "[FRAME008]",
+      "values": [],
+      "offset": 575
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        7
+      ],
+      "offset": 580
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 595
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        204
+      ],
+      "offset": 610
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 635
+    },
+    {
+      "tag": "[FRAME009]",
+      "values": [],
+      "offset": 645
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        7
+      ],
+      "offset": 650
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 665
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        153
+      ],
+      "offset": 680
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 705
+    },
+    {
+      "tag": "[FRAME010]",
+      "values": [],
+      "offset": 715
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        7
+      ],
+      "offset": 720
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 735
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        102
+      ],
+      "offset": 750
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 775
+    },
+    {
+      "tag": "[FRAME011]",
+      "values": [],
+      "offset": 785
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/exp_normal.img",
+        7
+      ],
+      "offset": 790
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -158,
+        -168
+      ],
+      "offset": 805
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        51
+      ],
+      "offset": 820
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 845
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 12,
+      "value": 12
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 4294967232,
+      "value": -64
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 4294967256,
+      "value": -40
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 4294967230,
+      "value": -66
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 130,
+      "value": 130
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 77,
+      "value": 77
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 135,
+      "value": 135
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 13128,
+      "value": "[PLAY SOUND]"
+    },
+    {
+      "offset": 105,
+      "type": 6,
+      "raw": 8917844,
+      "value": "P_BLOODR_FIRE"
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 7158,
+      "value": "[SET FLAG]"
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 125,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 130,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 140,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 4294967204,
+      "value": -92
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 4294967238,
+      "value": -58
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 4294967205,
+      "value": -91
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 193,
+      "value": 193
+    },
+    {
+      "offset": 190,
+      "type": 0,
+      "raw": 111,
+      "value": 111
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 185,
+      "value": 185
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 205,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 210,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 220,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 225,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 230,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 235,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 240,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 250,
+      "type": 0,
+      "raw": 4294967197,
+      "value": -99
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 4294967238,
+      "value": -58
+    },
+    {
+      "offset": 260,
+      "type": 0,
+      "raw": 4294967191,
+      "value": -105
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 208,
+      "value": 208
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 114,
+      "value": 114
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 211,
+      "value": 211
+    },
+    {
+      "offset": 280,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 285,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 290,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 295,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 300,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 305,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 310,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 315,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 330,
+      "type": 0,
+      "raw": 4294967187,
+      "value": -109
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 4294967239,
+      "value": -57
+    },
+    {
+      "offset": 340,
+      "type": 0,
+      "raw": 4294967191,
+      "value": -105
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 221,
+      "value": 221
+    },
+    {
+      "offset": 350,
+      "type": 0,
+      "raw": 112,
+      "value": 112
+    },
+    {
+      "offset": 355,
+      "type": 0,
+      "raw": 213,
+      "value": 213
+    },
+    {
+      "offset": 360,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 365,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 370,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 375,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 380,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 385,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 390,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 395,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 400,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 405,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 410,
+      "type": 0,
+      "raw": 4294967199,
+      "value": -97
+    },
+    {
+      "offset": 415,
+      "type": 0,
+      "raw": 4294967238,
+      "value": -58
+    },
+    {
+      "offset": 420,
+      "type": 0,
+      "raw": 4294967204,
+      "value": -92
+    },
+    {
+      "offset": 425,
+      "type": 0,
+      "raw": 191,
+      "value": 191
+    },
+    {
+      "offset": 430,
+      "type": 0,
+      "raw": 115,
+      "value": 115
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 188,
+      "value": 188
+    },
+    {
+      "offset": 440,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 445,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 450,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 455,
+      "type": 0,
+      "raw": 5,
+      "value": 5
+    },
+    {
+      "offset": 460,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 465,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 470,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 475,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 480,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 485,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 490,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 495,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 500,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 505,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 510,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 515,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 520,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 525,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 530,
+      "type": 3,
+      "raw": 3184,
+      "value": "[FRAME007]"
+    },
+    {
+      "offset": 535,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 540,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 545,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 550,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 555,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 560,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 565,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 570,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 575,
+      "type": 3,
+      "raw": 3206,
+      "value": "[FRAME008]"
+    },
+    {
+      "offset": 580,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 585,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 590,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 595,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 600,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 605,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 610,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 615,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 620,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 625,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 630,
+      "type": 0,
+      "raw": 204,
+      "value": 204
+    },
+    {
+      "offset": 635,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 640,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 645,
+      "type": 3,
+      "raw": 3342,
+      "value": "[FRAME009]"
+    },
+    {
+      "offset": 650,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 655,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 660,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 665,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 670,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 675,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 680,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 685,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 690,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 695,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 700,
+      "type": 0,
+      "raw": 153,
+      "value": 153
+    },
+    {
+      "offset": 705,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 710,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 715,
+      "type": 3,
+      "raw": 3388,
+      "value": "[FRAME010]"
+    },
+    {
+      "offset": 720,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 725,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 730,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 735,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 740,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 745,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 750,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 755,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 760,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 765,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 770,
+      "type": 0,
+      "raw": 102,
+      "value": 102
+    },
+    {
+      "offset": 775,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 780,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 785,
+      "type": 3,
+      "raw": 3410,
+      "value": "[FRAME011]"
+    },
+    {
+      "offset": 790,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 795,
+      "type": 6,
+      "raw": 8917872,
+      "value": "Character/Swordman/Effect/BloodSword/exp_normal.img"
+    },
+    {
+      "offset": 800,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 805,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 810,
+      "type": 0,
+      "raw": 4294967138,
+      "value": -158
+    },
+    {
+      "offset": 815,
+      "type": 0,
+      "raw": 4294967128,
+      "value": -168
+    },
+    {
+      "offset": 820,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 825,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 830,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 835,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 840,
+      "type": 0,
+      "raw": 51,
+      "value": 51
+    },
+    {
+      "offset": 845,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 850,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    }
+  ],
+  "raw_sha256": "7e22ec94fb2653637d981ca1f9dbc3a4a0412d2ede48437008e6a6877d3c0792"
+}

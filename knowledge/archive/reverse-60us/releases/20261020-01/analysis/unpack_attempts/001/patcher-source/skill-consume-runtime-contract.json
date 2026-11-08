@@ -1,0 +1,71 @@
+{
+  "original_v3_backup": "D:\\dnf\\60US\\analysis\\unpack_attempts\\001\\launcher_test\\DFO_fixed_v3.original.exe",
+  "original_v3_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "runtime_dump_sha256": "de987d9a3cd9090259cfe4516357dcd0d619021e2aa130eadf0aa00ddca02c87",
+  "byte_comparisons": [
+    {
+      "label": "Swordman HardAttack command, consumption and state request",
+      "va": "0x72ac9d",
+      "length": 198,
+      "original_sha256": "a36071612e683e95a7293dac85431a30c2a8dc3a7bf2ca9defe82d971125157b",
+      "runtime_sha256": "a36071612e683e95a7293dac85431a30c2a8dc3a7bf2ca9defe82d971125157b",
+      "changed_bytes": 0
+    },
+    {
+      "label": "common consumption wrapper",
+      "va": "0x4c1d30",
+      "length": 192,
+      "original_sha256": "c3b879a8f0c141ef8636b35982a35042a15577716e2edfe8f2378a9f85981324",
+      "runtime_sha256": "c3b879a8f0c141ef8636b35982a35042a15577716e2edfe8f2378a9f85981324",
+      "changed_bytes": 0
+    },
+    {
+      "label": "consumption body through jump to protected stub",
+      "va": "0x4d9040",
+      "length": 1718,
+      "original_sha256": "b2689e4dedd9c7b46aa21f15cc30fdfffc5f4d1915823f9688b9022b2744392e",
+      "runtime_sha256": "b2689e4dedd9c7b46aa21f15cc30fdfffc5f4d1915823f9688b9022b2744392e",
+      "changed_bytes": 0
+    },
+    {
+      "label": "successful consumption return epilogue",
+      "va": "0x4d9758",
+      "length": 21,
+      "original_sha256": "2ae2ac2874ccd0d461b393ac6c7e861baa734ef6c190e7473764c33ae49cbb36",
+      "runtime_sha256": "2ae2ac2874ccd0d461b393ac6c7e861baa734ef6c190e7473764c33ae49cbb36",
+      "changed_bytes": 0
+    },
+    {
+      "label": "pending-state request body",
+      "va": "0x4ed1d0",
+      "length": 269,
+      "original_sha256": "3ec807b05fcb9d0321cb862b8f863ca5fc2ff293a35687f9e4132bda2bcac873",
+      "runtime_sha256": "3ec807b05fcb9d0321cb862b8f863ca5fc2ff293a35687f9e4132bda2bcac873",
+      "changed_bytes": 0
+    },
+    {
+      "label": "network send function",
+      "va": "0xa5f4a0",
+      "length": 201,
+      "original_sha256": "cfad2fca3ebf3902a801dd3d6281e6b16c5e00deb17a8a3b8a5fa94be280555d",
+      "runtime_sha256": "cfad2fca3ebf3902a801dd3d6281e6b16c5e00deb17a8a3b8a5fa94be280555d",
+      "changed_bytes": 0
+    }
+  ],
+  "launcher_replaced_vm_branch": {
+    "entry": "0x4d96f1",
+    "patched_stub": "0x13b37c2",
+    "runtime_instructions": [
+      "call 0xa5f4a0",
+      "jmp 0x4d9758"
+    ],
+    "epilogue": "AL=1; ret 0x10",
+    "classification": "supplied-launcher compatibility patch; not recovered original VM semantics"
+  },
+  "scope": "saved bytes and static control flow, not a per-skill dynamic call trace",
+  "remaining_unknowns": [
+    "Original VM branch semantics and equivalence of launcher replacement.",
+    "Whether a particular skill use in the user test traversed this branch.",
+    "Full upstream conditions and indirect-callee behavior outside compared ranges."
+  ]
+}

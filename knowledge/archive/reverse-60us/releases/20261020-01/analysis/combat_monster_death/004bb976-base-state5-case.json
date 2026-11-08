@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4bb976",
+  "rva": "0xbb976",
+  "file_offset": 768374,
+  "length": 342,
+  "bytes_sha256": "e5991cf33b8a22e35380bd313e6067c6a7c22f1c9f8ecad958a770573c21496f",
+  "status": "native_bytes",
+  "note": "Pause current ANI and stop/reset movement; conditional vertical stop.",
+  "disassembled": true
+}

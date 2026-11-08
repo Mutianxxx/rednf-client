@@ -1,0 +1,14 @@
+{
+  "run_id": "1792433527101-16676",
+  "started_unix_ms": 1792433527101,
+  "status": "completed",
+  "binary_sha256": "7c12c8ca38b717d6da5ec2eeb16ac1f25df372a965e03de836417bfe174db4a0",
+  "identity": {
+    "content_id": "dbb6d4b7cd315e7b1d52c64689c22663f8c1fbde36912f593cdbb6bcb3dec237",
+    "pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "archive_manifest_hash": "a40401716b7acfb62d5f1b61d1dc2802e0a9caecb2f586412d35b03b566a20cc",
+    "cache_id": "626c179f2cdfca619ede80a3560b3444524df3724d0a27a8576c120e3feed5d2"
+  },
+  "binary_path": "D:\\dnf-rebuild\\reverse-60us\\checkpoints\\20261019T180535224236Z-R60-03\\runtime\\native\\dnf_native.exe",
+  "save_directory": "D:\\dnf-rebuild\\reverse-60us\\saves\\content\\dbb6d4b7cd315e7b1d52c64689c22663f8c1fbde36912f593cdbb6bcb3dec237"
+}

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"error\":{\"code\":\"invalid_request\",\"category\":\"invalid_input\",\"message\":\"Evidence file already exists. Choose another path or allow overwrite.\",\"retryable\":true,\"remediation\":{\"action\":\"Evidence file already exists. Choose another path or allow overwrite.\"},\"details\":{\"operation\":\"write\",\"reason\":\"exists\",\"path\":\"D:\\\\dnf\\\\60US\\\\analysis\\\\rea\\\\combat-evidence-bundle.json\"}}}"
+    }
+  ],
+  "isError": true
+}

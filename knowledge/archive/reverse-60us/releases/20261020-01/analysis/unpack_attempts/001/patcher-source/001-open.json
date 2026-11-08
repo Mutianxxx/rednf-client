@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"result\":{\"path\":\"D:\\\\dnf\\\\60US\\\\DFO\\\\5h0w4ll_0v3r.exe\",\"format\":\"pe\",\"kind\":\"executable\",\"sha256\":\"d3991f2b825335f1b59e2689512c3425d0292059e5d12b30153581038e846af0\",\"architecture\":\"x86\"}}"
+    }
+  ],
+  "structuredContent": {
+    "result": {
+      "path": "D:\\dnf\\60US\\DFO\\5h0w4ll_0v3r.exe",
+      "format": "pe",
+      "kind": "executable",
+      "sha256": "d3991f2b825335f1b59e2689512c3425d0292059e5d12b30153581038e846af0",
+      "architecture": "x86"
+    }
+  }
+}

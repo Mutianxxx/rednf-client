@@ -1,0 +1,1953 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "previous_ledger": "D:\\dnf\\60US\\analysis\\combat_skill_dispatch\\local-dispatch-paths.json",
+  "previous_ledger_sha256": "f4ad65998447aa2894d7b499135f82665f90cdb93ea6efa717233946a703c31e",
+  "method": "Read existing local paths in append order; preserve nonliteral return expressions. Assumes normal MSVC x86 nonvolatile-register ABI. Seed zero registers must be checked separately against saved disassembly.",
+  "count": 18,
+  "paths": [
+    {
+      "native_class": "Swordman",
+      "skill_id": 23,
+      "request_call_va": "0x72b5bb",
+      "consume_call_va": "0x72b487",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "16dedfbce5a685de85ce8304d3bf340a3df2c93083fa9bc0424ec17689bc30c6",
+      "previous_path_start_va": "0x72b47f",
+      "previous_path_length": 322,
+      "append_count": 11,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 0,
+      "release_animation_index": 0,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072b4d0",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b4cd",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072b4df",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b4dc",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072b4f2",
+          "temporary": "[ebp - 0x14]",
+          "expression": 23,
+          "write_va": "0x0072b4eb",
+          "source_operand": "0x17"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072b516",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x468430",
+            "call_va": "0x0072b507"
+          },
+          "write_va": "0x0072b513",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072b507",
+            "target": "0x468430"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072b52f",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072b520"
+          },
+          "write_va": "0x0072b52c",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072b520",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072b53e",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b53b",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072b551",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072b54a",
+          "source_operand": "4"
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072b564",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072b55d",
+          "source_operand": "4"
+        },
+        {
+          "index": 8,
+          "append_va": "0x0072b577",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1000,
+          "write_va": "0x0072b570",
+          "source_operand": "0x3e8"
+        },
+        {
+          "index": 9,
+          "append_va": "0x0072b58a",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1000,
+          "write_va": "0x0072b583",
+          "source_operand": "0x3e8"
+        },
+        {
+          "index": 10,
+          "append_va": "0x0072b5a8",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "operation": "sar",
+            "left": {
+              "operation": "sub",
+              "left": {
+                "return_from": "0x54ff60",
+                "call_va": "0x0072b594"
+              },
+              "right": {
+                "sign_extension_of": {
+                  "return_from": "0x54ff60",
+                  "call_va": "0x0072b594"
+                }
+              },
+              "va": "0x0072b59a"
+            },
+            "right": 1,
+            "va": "0x0072b59f"
+          },
+          "write_va": "0x0072b5a5",
+          "source_operand": "eax"
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 24,
+      "request_call_va": "0x72b764",
+      "consume_call_va": "0x72b658",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "d9fac97599dc1d6003e28a60e5489381ad3446a9d988eca474590ce1421f0595",
+      "previous_path_start_va": "0x72b64e",
+      "previous_path_length": 284,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072b69a",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b697",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072b6ac",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b6a9",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072b6c2",
+          "temporary": "[ebp - 0x14]",
+          "expression": 24,
+          "write_va": "0x0072b6bb",
+          "source_operand": "0x18"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072b6f3",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x550080",
+            "call_va": "0x0072b6e1"
+          },
+          "write_va": "0x0072b6e6",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072b6e1",
+            "target": "0x550080"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072b70f",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072b6fd"
+          },
+          "write_va": "0x0072b70c",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072b6fd",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072b725",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1,
+          "write_va": "0x0072b71e",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072b73c",
+          "temporary": "[ebp - 0x14]",
+          "expression": 3,
+          "write_va": "0x0072b739",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x0072b72d",
+            "source_operand": "3"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072b74e",
+          "temporary": "[ebp - 0x14]",
+          "expression": 3,
+          "write_va": "0x0072b74b",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x0072b72d",
+            "source_operand": "3"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 32,
+      "request_call_va": "0x72b8b0",
+      "consume_call_va": "0x72b7c6",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "e3e7ebd3a6bccfd7bb7141be6a09a6dd3239741bebad3f47531278082ee952e6",
+      "previous_path_start_va": "0x72b7bc",
+      "previous_path_length": 250,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072b7fa",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b7f7",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072b80c",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b809",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072b822",
+          "temporary": "[ebp - 0x14]",
+          "expression": 32,
+          "write_va": "0x0072b81b",
+          "source_operand": "0x20"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072b834",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b831",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072b85b",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072b849"
+          },
+          "write_va": "0x0072b84e",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072b849",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072b871",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1,
+          "write_va": "0x0072b86a",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072b888",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072b885",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0072b879",
+            "source_operand": "4"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072b89a",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072b897",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0072b879",
+            "source_operand": "4"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 74,
+      "request_call_va": "0x72ba44",
+      "consume_call_va": "0x72b921",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "894dda73d76dab388c872d98cf86831d7f4d0858ba7f62e2073e6f3242d9825a",
+      "previous_path_start_va": "0x72b919",
+      "previous_path_length": 305,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072b955",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b952",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072b967",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072b964",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072b97d",
+          "temporary": "[ebp - 0x14]",
+          "expression": 74,
+          "write_va": "0x0072b976",
+          "source_operand": "0x4a"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072b9b0",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x468430",
+            "call_va": "0x0072b99e"
+          },
+          "write_va": "0x0072b9ad",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072b99e",
+            "target": "0x468430"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072b9f0",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "operation": "sub",
+            "left": {
+              "return_from": "0x54ff60",
+              "call_va": "0x0072b9c5"
+            },
+            "right": {
+              "return_from": "0xa24ce0",
+              "call_va": "0x0072b9dc"
+            },
+            "va": "0x0072b9e4"
+          },
+          "write_va": "0x0072b9ed",
+          "source_operand": "edi"
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072ba06",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1,
+          "write_va": "0x0072b9ff",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072ba1c",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072ba15",
+          "source_operand": "4"
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072ba2e",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072ba2b",
+          "source_operand": "ebx"
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 47,
+      "request_call_va": "0x72bde0",
+      "consume_call_va": "0x72bcf6",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "a2a75b70e6c4d10e75da942acaf2b7fbd0cf2bc28f8de046402829871196522c",
+      "previous_path_start_va": "0x72bcec",
+      "previous_path_length": 250,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072bd21",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072bd1e",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072bd33",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072bd30",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072bd49",
+          "temporary": "[ebp - 0x14]",
+          "expression": 47,
+          "write_va": "0x0072bd42",
+          "source_operand": "0x2f"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072bd70",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x468430",
+            "call_va": "0x0072bd5e"
+          },
+          "write_va": "0x0072bd63",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072bd5e",
+            "target": "0x468430"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072bd8b",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072bd79"
+          },
+          "write_va": "0x0072bd88",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072bd79",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072bda1",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1,
+          "write_va": "0x0072bd9a",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072bdb8",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072bdb5",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0072bda9",
+            "source_operand": "4"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072bdca",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072bdc7",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0072bda9",
+            "source_operand": "4"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 18,
+      "request_call_va": "0x72bf49",
+      "consume_call_va": "0x72be42",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "96bef5acc15cc7704e55ede4bbdc0b6f2b7a3ba35a2b3871bfcdb2351628eba1",
+      "previous_path_start_va": "0x72be38",
+      "previous_path_length": 279,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 0,
+      "release_animation_index": 0,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072be76",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072be73",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072be88",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072be85",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072be9e",
+          "temporary": "[ebp - 0x14]",
+          "expression": 18,
+          "write_va": "0x0072be97",
+          "source_operand": "0x12"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072bed1",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x468430",
+            "call_va": "0x0072bebf"
+          },
+          "write_va": "0x0072bece",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072bebf",
+            "target": "0x468430"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072bef8",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072bee6"
+          },
+          "write_va": "0x0072beeb",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072bee6",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072bf0a",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072bf07",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072bf21",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072bf1e",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0072bf12",
+            "source_operand": "4"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072bf33",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072bf30",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0072bf12",
+            "source_operand": "4"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 30,
+      "request_call_va": "0x72c0b9",
+      "consume_call_va": "0x72bfab",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "b063ab6d6370854e0323b3c343c7664b309795bf5e63385fde8e3a6070a8a934",
+      "previous_path_start_va": "0x72bfa1",
+      "previous_path_length": 286,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072bfdf",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072bfdc",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072bff1",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072bfee",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072c007",
+          "temporary": "[ebp - 0x14]",
+          "expression": 30,
+          "write_va": "0x0072c000",
+          "source_operand": "0x1e"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072c03a",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x468430",
+            "call_va": "0x0072c028"
+          },
+          "write_va": "0x0072c037",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072c028",
+            "target": "0x468430"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072c061",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072c04f"
+          },
+          "write_va": "0x0072c054",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072c04f",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072c077",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1,
+          "write_va": "0x0072c070",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072c08d",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072c086",
+          "source_operand": "4"
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072c0a3",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072c09c",
+          "source_operand": "4"
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 84,
+      "request_call_va": "0x72c21f",
+      "consume_call_va": "0x72c115",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "8a1c9b03e8e778edfbcdf69c9b9fcd23cfc13fb3245ff9ba42052b444d9af766",
+      "previous_path_start_va": "0x72c10b",
+      "previous_path_length": 282,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 0,
+      "release_animation_index": 0,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072c149",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072c146",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072c15b",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072c158",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072c171",
+          "temporary": "[ebp - 0x14]",
+          "expression": 84,
+          "write_va": "0x0072c16a",
+          "source_operand": "0x54"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072c1a4",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x468430",
+            "call_va": "0x0072c192"
+          },
+          "write_va": "0x0072c1a1",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072c192",
+            "target": "0x468430"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072c1cb",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072c1b9"
+          },
+          "write_va": "0x0072c1be",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072c1b9",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072c1dd",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072c1da",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072c1f3",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072c1ec",
+          "source_operand": "4"
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072c209",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072c202",
+          "source_operand": "4"
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 34,
+      "request_call_va": "0x72c3ef",
+      "consume_call_va": "0x72c2ed",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "0817777b5d0dab6c014b864fdbeb6a6f5878000ec75a628b5993e892eb30febf",
+      "previous_path_start_va": "0x72c2e3",
+      "previous_path_length": 274,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072c32f",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072c32c",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072c341",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072c33e",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072c357",
+          "temporary": "[ebp - 0x14]",
+          "expression": 34,
+          "write_va": "0x0072c350",
+          "source_operand": "0x22"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072c37e",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x468430",
+            "call_va": "0x0072c36c"
+          },
+          "write_va": "0x0072c37b",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072c36c",
+            "target": "0x468430"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072c39a",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072c388"
+          },
+          "write_va": "0x0072c397",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072c388",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072c3b0",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1,
+          "write_va": "0x0072c3a9",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072c3c7",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072c3c4",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0072c3b9",
+            "source_operand": "4"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072c3d9",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072c3d6",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0072c3b9",
+            "source_operand": "4"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 44,
+      "request_call_va": "0x72c567",
+      "consume_call_va": "0x72c451",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "5fa140d10fa37e603355c69bae4cc40384cfaab710c42ffb32fe88334e6508cf",
+      "previous_path_start_va": "0x72c447",
+      "previous_path_length": 294,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072c493",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072c490",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072c4a5",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072c4a2",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072c4bb",
+          "temporary": "[ebp - 0x14]",
+          "expression": 44,
+          "write_va": "0x0072c4b4",
+          "source_operand": "0x2c"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072c4e2",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x468430",
+            "call_va": "0x0072c4d0"
+          },
+          "write_va": "0x0072c4df",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072c4d0",
+            "target": "0x468430"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072c513",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x550080",
+            "call_va": "0x0072c501"
+          },
+          "write_va": "0x0072c506",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072c501",
+            "target": "0x550080"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072c529",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1,
+          "write_va": "0x0072c522",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072c53f",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0072c538",
+          "source_operand": "4"
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072c551",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072c54e",
+          "source_operand": "ebx"
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 85,
+      "request_call_va": "0x72f974",
+      "consume_call_va": "0x72f884",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "b0fe8c05205589ecaa090468597a3f7ed8dbef3943bc06efd240eb9f93bbc0b4",
+      "previous_path_start_va": "0x72f87a",
+      "previous_path_length": 256,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x0072f8c0",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072f8bd",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x0072f8d2",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0072f8cf",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x0072f8e8",
+          "temporary": "[ebp - 0x14]",
+          "expression": 85,
+          "write_va": "0x0072f8e1",
+          "source_operand": "0x55"
+        },
+        {
+          "index": 3,
+          "append_va": "0x0072f903",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072f8f1"
+          },
+          "write_va": "0x0072f8f6",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072f8f1",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x0072f91f",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x0072f90d"
+          },
+          "write_va": "0x0072f91c",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x0072f90d",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x0072f935",
+          "temporary": "[ebp - 0x14]",
+          "expression": 1,
+          "write_va": "0x0072f92e",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0072f94c",
+          "temporary": "[ebp - 0x14]",
+          "expression": 3,
+          "write_va": "0x0072f949",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x0072f93d",
+            "source_operand": "3"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x0072f95e",
+          "temporary": "[ebp - 0x14]",
+          "expression": 3,
+          "write_va": "0x0072f95b",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x0072f93d",
+            "source_operand": "3"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Swordman",
+      "skill_id": 76,
+      "request_call_va": "0x730174",
+      "consume_call_va": "0x73005a",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "previous_path_bytes_sha256": "59c55233a93ecc661410821713c2ef170964c32fa73e2e9d426427faaa4b8d2d",
+      "previous_path_start_va": "0x730052",
+      "previous_path_length": 296,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 0,
+      "release_animation_index": 0,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x007300a1",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x0073009e",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 1,
+          "append_va": "0x007300b3",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x007300b0",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 2,
+          "append_va": "0x007300c9",
+          "temporary": "[ebp - 0x14]",
+          "expression": 76,
+          "write_va": "0x007300c2",
+          "source_operand": "0x4c"
+        },
+        {
+          "index": 3,
+          "append_va": "0x007300fc",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x468430",
+            "call_va": "0x007300ea"
+          },
+          "write_va": "0x007300ef",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x007300ea",
+            "target": "0x468430"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x00730123",
+          "temporary": "[ebp - 0x14]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x00730111"
+          },
+          "write_va": "0x00730116",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x00730111",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x00730135",
+          "temporary": "[ebp - 0x14]",
+          "expression": 0,
+          "write_va": "0x00730132",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 6,
+          "append_va": "0x0073014c",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x00730149",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0073013d",
+            "source_operand": "4"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x0073015e",
+          "temporary": "[ebp - 0x14]",
+          "expression": 4,
+          "write_va": "0x0073015b",
+          "source_operand": "edi",
+          "source_origin": {
+            "expression": 4,
+            "write_va": "0x0073013d",
+            "source_operand": "4"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "ebx": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Fighter",
+      "skill_id": 13,
+      "request_call_va": "0x6a4ac6",
+      "consume_call_va": "0x6a49f8",
+      "rea_body_evidence_id": "ev_27c602490de77e05588acac08613a0340512e03172ce9229071bc50dc5ce269c",
+      "previous_path_bytes_sha256": "85dde7e37cb44838478479f40f9c64510ed895ef4fdb1d2a35d851b031009a54",
+      "previous_path_start_va": "0x6a49ee",
+      "previous_path_length": 222,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 0,
+      "release_animation_index": 0,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x006a4a2e",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006a4a2b",
+          "source_operand": "edi"
+        },
+        {
+          "index": 1,
+          "append_va": "0x006a4a3d",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006a4a3a",
+          "source_operand": "edi"
+        },
+        {
+          "index": 2,
+          "append_va": "0x006a4a50",
+          "temporary": "[ebp - 0x10]",
+          "expression": 13,
+          "write_va": "0x006a4a49",
+          "source_operand": "0xd"
+        },
+        {
+          "index": 3,
+          "append_va": "0x006a4a68",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006a4a59"
+          },
+          "write_va": "0x006a4a5e",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006a4a59",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x006a4a81",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006a4a72"
+          },
+          "write_va": "0x006a4a7e",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006a4a72",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x006a4a90",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006a4a8d",
+          "source_operand": "edi"
+        },
+        {
+          "index": 6,
+          "append_va": "0x006a4aa4",
+          "temporary": "[ebp - 0x10]",
+          "expression": 2,
+          "write_va": "0x006a4aa1",
+          "source_operand": "esi",
+          "source_origin": {
+            "expression": 2,
+            "write_va": "0x006a4a98",
+            "source_operand": "2"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x006a4ab3",
+          "temporary": "[ebp - 0x10]",
+          "expression": 2,
+          "write_va": "0x006a4ab0",
+          "source_operand": "esi",
+          "source_origin": {
+            "expression": 2,
+            "write_va": "0x006a4a98",
+            "source_operand": "2"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "edi": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Gunner_variants_2_5",
+      "skill_id": 45,
+      "request_call_va": "0x6d7692",
+      "consume_call_va": "0x6d759c",
+      "rea_body_evidence_id": "ev_ba66c93343ceef740f659d4cda1ea1165fc8591fb9a62d09adec9f7086ea6957",
+      "previous_path_bytes_sha256": "db356718c11a551a72d77c0113bbcb32b50edc5b70bf919b516aca1477ccfbb5",
+      "previous_path_start_va": "0x6d7592",
+      "previous_path_length": 262,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x006d75de",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d75db",
+          "source_operand": "edi"
+        },
+        {
+          "index": 1,
+          "append_va": "0x006d75f0",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d75ed",
+          "source_operand": "edi"
+        },
+        {
+          "index": 2,
+          "append_va": "0x006d7606",
+          "temporary": "[ebp - 0x10]",
+          "expression": 45,
+          "write_va": "0x006d75ff",
+          "source_operand": "0x2d"
+        },
+        {
+          "index": 3,
+          "append_va": "0x006d7622",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006d7610"
+          },
+          "write_va": "0x006d7615",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006d7610",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x006d763d",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006d762b"
+          },
+          "write_va": "0x006d763a",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006d762b",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x006d7653",
+          "temporary": "[ebp - 0x10]",
+          "expression": 1,
+          "write_va": "0x006d764c",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x006d766a",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d7667",
+          "source_operand": "ebx",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x006d765b",
+            "source_operand": "3"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x006d767c",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d7679",
+          "source_operand": "ebx",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x006d765b",
+            "source_operand": "3"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "edi": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Gunner_variants_2_5",
+      "skill_id": 70,
+      "request_call_va": "0x6d7c80",
+      "consume_call_va": "0x6d7b8a",
+      "rea_body_evidence_id": "ev_ba66c93343ceef740f659d4cda1ea1165fc8591fb9a62d09adec9f7086ea6957",
+      "previous_path_bytes_sha256": "80cc64a5c65ff43bc9a352fc1ae8ede1e697f901b2fb5784aa373d33e1206c49",
+      "previous_path_start_va": "0x6d7b80",
+      "previous_path_length": 262,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x006d7bcc",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d7bc9",
+          "source_operand": "edi"
+        },
+        {
+          "index": 1,
+          "append_va": "0x006d7bde",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d7bdb",
+          "source_operand": "edi"
+        },
+        {
+          "index": 2,
+          "append_va": "0x006d7bf4",
+          "temporary": "[ebp - 0x10]",
+          "expression": 70,
+          "write_va": "0x006d7bed",
+          "source_operand": "0x46"
+        },
+        {
+          "index": 3,
+          "append_va": "0x006d7c0f",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006d7bfd"
+          },
+          "write_va": "0x006d7c0c",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006d7bfd",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x006d7c2b",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006d7c19"
+          },
+          "write_va": "0x006d7c28",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006d7c19",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x006d7c41",
+          "temporary": "[ebp - 0x10]",
+          "expression": 1,
+          "write_va": "0x006d7c3a",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x006d7c58",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d7c55",
+          "source_operand": "ebx",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x006d7c4a",
+            "source_operand": "3"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x006d7c6a",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d7c67",
+          "source_operand": "ebx",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x006d7c4a",
+            "source_operand": "3"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "edi": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Gunner_variants_2_5",
+      "skill_id": 54,
+      "request_call_va": "0x6d7e1d",
+      "consume_call_va": "0x6d7d27",
+      "rea_body_evidence_id": "ev_ba66c93343ceef740f659d4cda1ea1165fc8591fb9a62d09adec9f7086ea6957",
+      "previous_path_bytes_sha256": "fb3f0fc608808c6534a454eae7be1eff79f395958e1f49785da56b7c340ae21d",
+      "previous_path_start_va": "0x6d7d1d",
+      "previous_path_length": 262,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 1,
+      "release_animation_index": 1,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x006d7d69",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d7d66",
+          "source_operand": "edi"
+        },
+        {
+          "index": 1,
+          "append_va": "0x006d7d7b",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d7d78",
+          "source_operand": "edi"
+        },
+        {
+          "index": 2,
+          "append_va": "0x006d7d91",
+          "temporary": "[ebp - 0x10]",
+          "expression": 54,
+          "write_va": "0x006d7d8a",
+          "source_operand": "0x36"
+        },
+        {
+          "index": 3,
+          "append_va": "0x006d7dac",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006d7d9a"
+          },
+          "write_va": "0x006d7d9f",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006d7d9a",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x006d7dc8",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006d7db6"
+          },
+          "write_va": "0x006d7dc5",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006d7db6",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x006d7dde",
+          "temporary": "[ebp - 0x10]",
+          "expression": 1,
+          "write_va": "0x006d7dd7",
+          "source_operand": "1"
+        },
+        {
+          "index": 6,
+          "append_va": "0x006d7df5",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d7df2",
+          "source_operand": "ebx",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x006d7de6",
+            "source_operand": "3"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x006d7e07",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d7e04",
+          "source_operand": "ebx",
+          "source_origin": {
+            "expression": 3,
+            "write_va": "0x006d7de6",
+            "source_operand": "3"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "edi": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Gunner_variants_2_5",
+      "skill_id": 76,
+      "request_call_va": "0x6d9122",
+      "consume_call_va": "0x6d902c",
+      "rea_body_evidence_id": "ev_ba66c93343ceef740f659d4cda1ea1165fc8591fb9a62d09adec9f7086ea6957",
+      "previous_path_bytes_sha256": "03b85ec68877a7be1e1e34eb69aa6f99d1398dae20dc33ba639b8a2abbfa389a",
+      "previous_path_start_va": "0x6d9022",
+      "previous_path_length": 262,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 3,
+      "release_animation_index": 3,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x006d906e",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d906b",
+          "source_operand": "edi"
+        },
+        {
+          "index": 1,
+          "append_va": "0x006d9080",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d907d",
+          "source_operand": "edi"
+        },
+        {
+          "index": 2,
+          "append_va": "0x006d9096",
+          "temporary": "[ebp - 0x10]",
+          "expression": 76,
+          "write_va": "0x006d908f",
+          "source_operand": "0x4c"
+        },
+        {
+          "index": 3,
+          "append_va": "0x006d90b2",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006d90a0"
+          },
+          "write_va": "0x006d90a5",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006d90a0",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x006d90cd",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006d90bb"
+          },
+          "write_va": "0x006d90ca",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006d90bb",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 5,
+          "append_va": "0x006d90e3",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d90dc",
+          "source_operand": "3"
+        },
+        {
+          "index": 6,
+          "append_va": "0x006d90fa",
+          "temporary": "[ebp - 0x10]",
+          "expression": 2,
+          "write_va": "0x006d90f7",
+          "source_operand": "ebx",
+          "source_origin": {
+            "expression": 2,
+            "write_va": "0x006d90eb",
+            "source_operand": "2"
+          }
+        },
+        {
+          "index": 7,
+          "append_va": "0x006d910c",
+          "temporary": "[ebp - 0x10]",
+          "expression": 2,
+          "write_va": "0x006d9109",
+          "source_operand": "ebx",
+          "source_origin": {
+            "expression": 2,
+            "write_va": "0x006d90eb",
+            "source_operand": "2"
+          }
+        }
+      ],
+      "register_seed_assumption": {
+        "edi": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    },
+    {
+      "native_class": "Gunner_variants_2_5",
+      "skill_id": 78,
+      "request_call_va": "0x6d98a7",
+      "consume_call_va": "0x6d97b4",
+      "rea_body_evidence_id": "ev_ba66c93343ceef740f659d4cda1ea1165fc8591fb9a62d09adec9f7086ea6957",
+      "previous_path_bytes_sha256": "bba59964fca0bfc7b76d6416f5028c88b50f79282fab77ef0cfd1701ea99a56a",
+      "previous_path_start_va": "0x6d97aa",
+      "previous_path_length": 259,
+      "append_count": 8,
+      "phase": 0,
+      "mode": 0,
+      "casting_animation_index": 3,
+      "release_animation_index": 3,
+      "append_values": [
+        {
+          "index": 0,
+          "append_va": "0x006d97f6",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d97f3",
+          "source_operand": "edi"
+        },
+        {
+          "index": 1,
+          "append_va": "0x006d9808",
+          "temporary": "[ebp - 0x10]",
+          "expression": 0,
+          "write_va": "0x006d9805",
+          "source_operand": "edi"
+        },
+        {
+          "index": 2,
+          "append_va": "0x006d981e",
+          "temporary": "[ebp - 0x10]",
+          "expression": 78,
+          "write_va": "0x006d9817",
+          "source_operand": "0x4e"
+        },
+        {
+          "index": 3,
+          "append_va": "0x006d983a",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "return_from": "0x54ff60",
+            "call_va": "0x006d9828"
+          },
+          "write_va": "0x006d982d",
+          "source_operand": "eax",
+          "source_origin": {
+            "call_va": "0x006d9828",
+            "target": "0x54ff60"
+          }
+        },
+        {
+          "index": 4,
+          "append_va": "0x006d984f",
+          "temporary": "[ebp - 0x10]",
+          "expression": {
+            "operation": "or",
+            "left": {
+              "return_from": "dword ptr [edx + 0x67c]",
+              "call_va": "0x006d97c8"
+            },
+            "right": 4294967295,
+            "va": "0x006d9843"
+          },
+          "write_va": "0x006d984c",
+          "source_operand": "ebx"
+        },
+        {
+          "index": 5,
+          "append_va": "0x006d9865",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d985e",
+          "source_operand": "3"
+        },
+        {
+          "index": 6,
+          "append_va": "0x006d987b",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d9874",
+          "source_operand": "3"
+        },
+        {
+          "index": 7,
+          "append_va": "0x006d9891",
+          "temporary": "[ebp - 0x10]",
+          "expression": 3,
+          "write_va": "0x006d988a",
+          "source_operand": "3"
+        }
+      ],
+      "register_seed_assumption": {
+        "edi": 0
+      },
+      "boundary": "Proven local request success path only. Upstream input/job/state guards are not fully recovered. Symbolic call returns are not evaluated; no runtime execution."
+    }
+  ],
+  "observed_execution": false
+}

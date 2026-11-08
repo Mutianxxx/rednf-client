@@ -1,0 +1,8 @@
+{
+    "expected_exit_code":  1,
+    "actual_exit_code":  1,
+    "passed":  true,
+    "visible_error_handler_used":  true,
+    "diagnostic":  "PVF path is not a file\n",
+    "error_file":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\runtime\\20261019-141853-35468\\errors.log"
+}

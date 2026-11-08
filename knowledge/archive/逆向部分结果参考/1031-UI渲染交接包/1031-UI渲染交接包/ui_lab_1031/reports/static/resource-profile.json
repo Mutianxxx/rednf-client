@@ -1,0 +1,69 @@
+{
+  "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+  "snapshot_sha256": "ab950286ad291236086beae21ef75b1732d4cd5e52db482e261f4c548969ea44",
+  "sites": [
+    {
+      "id": 21,
+      "name": "buffer_begin",
+      "va": 18533184,
+      "size": 6,
+      "guard": "558bec83ec188b450853568bf1c745f400000000c745f800000000c745fc0000"
+    },
+    {
+      "id": 22,
+      "name": "buffer_return_zero",
+      "va": 18533389,
+      "size": 6,
+      "guard": "8be55dc20c00689c978501e8d332ffff83c40450682c03000068d0948501e8c0"
+    },
+    {
+      "id": 23,
+      "name": "buffer_return_one",
+      "va": 18533457,
+      "size": 6,
+      "guard": "8be55dc20c00cccccccccccccccccc558bec8b450883ec0c5356578bf9508d4d"
+    },
+    {
+      "id": 24,
+      "name": "parser_begin",
+      "va": 18507968,
+      "size": 9,
+      "guard": "558bec81ec18040000a19063a40133c58945fc8b450c538b5d08568b7510578b"
+    },
+    {
+      "id": 25,
+      "name": "parser_failed",
+      "va": 18508143,
+      "size": 6,
+      "guard": "8be55dc20c00837e040272366a006a028d8df4fbffff518b0ee843f7ffff8b0e"
+    },
+    {
+      "id": 26,
+      "name": "parser_text_end",
+      "va": 18508253,
+      "size": 6,
+      "guard": "8be55dc20c0083f8010f8574ffffff8b46088b4e045185c074418b95f8fbffff"
+    },
+    {
+      "id": 27,
+      "name": "parser_stream_end",
+      "va": 18508338,
+      "size": 6,
+      "guard": "8be55dc20c00e857ae21008b56048b0e83c4046a0052508985f4fbffffe87cf6"
+    },
+    {
+      "id": 28,
+      "name": "parser_buffer_end",
+      "va": 18508415,
+      "size": 6,
+      "guard": "8be55dc20c00cccccccccccccccccccccc558bec6aff6816694c0164a1000000"
+    }
+  ],
+  "buffer_contract": "ECX manager; UTF16 path, output pointer address, output length address; EAX raw (0 usual success, 1 failure branch)",
+  "parser_contract": "ECX parser; root/type, UTF16 path, optional stream; AL raw; parser+0x14 mode",
+  "limitations": [
+    "Baseline includes existing plugins. Live guards mandatory.",
+    "Exceptions/abnormal unwinds have no normal exit event.",
+    "Alternate streams and caches may bypass the buffer entry."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "checked_at_utc": "2026-10-19T16:56:01.394451+00:00",
+  "scope": "Snapshot integrity, current task overlay and copied preview; not original-game visual equality",
+  "frontend_started": false,
+  "original_game_modified": false,
+  "runtime_migrated": false,
+  "snapshot": {
+    "release_id": "20261020-01",
+    "checked_files": 3739,
+    "total_bytes": 567206780
+  },
+  "verified_workspace_backups": 9,
+  "checked_handoff_document_links": 89,
+  "integration_tasks": {
+    "count": 7,
+    "next_task": "R60-01",
+    "runtime_integration": "not_started_in_this_handoff",
+    "acyclic": true
+  },
+  "historical_plan": {
+    "preexisting_source_hash_mismatches": 11,
+    "source_documents_changed_by_handoff": [
+      {
+        "path": "agent.md",
+        "before": "8a32f91b5f3fe8966c7d91055a8f247d7a13d9690059a2e335e6346e94fc11a5",
+        "after": "3367b513a576d3764c84b856b0c1fd87abb6918b3656c13e4610ccf7bd7347e1"
+      },
+      {
+        "path": "dnf-native-demo/CURRENT_TASK.md",
+        "before": "b0e6ad0fef94e75158de58e8a734b60cc1bf667a822b86da583e21769d0da944",
+        "after": "40d27895c690f81d7e76a0dc4583856b414c5294529a112029f318327885d6a3"
+      }
+    ],
+    "historical_evidence_index_refreshed": false,
+    "original_full_plan_validation": "Not rerun; historical hashes are preserved, not current implementation status"
+  },
+  "copied_preview": {
+    "http_status": "all requested APIs returned 200",
+    "registered_skills": 688,
+    "resolved_skill_names": 688,
+    "executable_binding": "verified-imports-only-derivative",
+    "ghost_slash_scene": true,
+    "releasewave_scene": true,
+    "barrel_scene": true,
+    "horizontal_reaction": true,
+    "imported_snapshot_modules": {
+      "server": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\combat-preview\\server.py",
+      "catalog": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\combat-preview\\catalog.py",
+      "pvf60": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\analysis\\pvf60.py",
+      "controllers": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\combat-preview\\controllers.py",
+      "executable_source": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\combat-preview\\executable_source.py",
+      "string_names": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\combat-preview\\string_names.py",
+      "resources": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\combat-preview\\resources.py",
+      "scene_preview_loader": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\analysis\\combat_native_collision\\scene_preview_loader.py",
+      "scene_state_model": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\analysis\\combat_native_collision\\scene_state_model.py",
+      "reaction_model": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\analysis\\combat_reaction_motion\\reaction_model.py"
+    },
+    "motion_model": "D:\\dnf-rebuild\\reverse-60us\\releases\\20261020-01\\analysis\\combat_motion\\motion_model.py",
+    "source_names": {
+      "hardattack": "鬼斩",
+      "releasewave": "波动爆发"
+    }
+  },
+  "passed": true,
+  "errors": []
+}

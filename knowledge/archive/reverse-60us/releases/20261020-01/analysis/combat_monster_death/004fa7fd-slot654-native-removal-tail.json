@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4fa7fd",
+  "rva": "0xfa7fd",
+  "file_offset": 1026045,
+  "length": 81,
+  "bytes_sha256": "ce473601922bf2ae2bc90b4e8ff03afec7cb50d3090d46d123d74c85ba216f38",
+  "status": "native_bytes",
+  "note": "Local authority check and slot164(0). Entry-to-tail reachability unknown.",
+  "disassembled": true
+}

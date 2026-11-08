@@ -1,0 +1,188 @@
+{
+  "schema": "60us-bounded-numeric-evidence-v1",
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "observed_execution": false,
+  "captures": [
+    {
+      "start_va": "0x8b7ab0",
+      "length": 315,
+      "file_offset": 4946608,
+      "sha256": "258d5475a36b435683bb8b08f8860df685c270037794b517c224a85e0e0b11b4",
+      "capture": "008B7AB0-critical.bin"
+    },
+    {
+      "start_va": "0x8b7c90",
+      "length": 404,
+      "file_offset": 4947088,
+      "sha256": "5f375d3eef2c1ae04c1cf65f046feccde21f2e192714daa73a29f64dfc410235",
+      "capture": "008B7C90-defense.bin"
+    },
+    {
+      "start_va": "0x8b87eb",
+      "length": 854,
+      "file_offset": 4949995,
+      "sha256": "b00277fa354dbd662c6838e3f506fdc6755ccdbbd1fb39d64495bc07ebb2dcc4",
+      "capture": "008B87EB-numeric_consumers.bin"
+    },
+    {
+      "start_va": "0x4eb780",
+      "length": 4736,
+      "file_offset": 964480,
+      "sha256": "15aa024f4fc6c2706659995265dbe3b036267824627707353d7257e41bd20b02",
+      "capture": "004EB780-numeric_packing.bin"
+    },
+    {
+      "start_va": "0x8377fd",
+      "length": 880,
+      "file_offset": 4421629,
+      "sha256": "f9f545c96b7d81b8bd3ba075168aa00ba46ada856b574174744c82706656ad22",
+      "capture": "008377FD-atk_critical_and_category_parse.bin"
+    },
+    {
+      "start_va": "0xcc10ac",
+      "length": 4,
+      "file_offset": 9179308,
+      "sha256": "0d66bd808e9247acb560fe33efaa62ad6f11ee6f85cc4f61bd17673263de04ee",
+      "capture": "00CC10AC-percent_constant.bin",
+      "f32": 0.009999999776482582,
+      "hex": "0ad7233c"
+    },
+    {
+      "start_va": "0xcc1f58",
+      "length": 4,
+      "file_offset": 9183064,
+      "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+      "capture": "00CC1F58-one_constant.bin",
+      "f32": 1.0,
+      "hex": "0000803f"
+    },
+    {
+      "start_va": "0xccb578",
+      "length": 4,
+      "file_offset": 9221496,
+      "sha256": "ea2845900b5856c9bf354b1aa9761b5aa6888e5ed61738fe9579ca42bc0f6054",
+      "capture": "00CCB578-critical_base_constant.bin",
+      "f32": 3.0,
+      "hex": "00004040"
+    },
+    {
+      "start_va": "0xccb9d8",
+      "length": 4,
+      "file_offset": 9222616,
+      "sha256": "2238f30df488055daf5e8f362cf904e370011a172d20df193c1b7ae8e5db8e01",
+      "capture": "00CCB9D8-critical_scale_constant.bin",
+      "f32": 100.0,
+      "hex": "0000c842"
+    },
+    {
+      "start_va": "0xe9d7a4",
+      "length": 4,
+      "file_offset": 11130788,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "capture": "00E9D7A4-low_defense_constant.bin",
+      "f32": 0.0,
+      "hex": "00000000"
+    },
+    {
+      "start_va": "0xd5a848",
+      "length": 4,
+      "file_offset": 9807944,
+      "sha256": "48d80cf1e5f92c5011698b07ad46af99eb7506f6b8ff0cfc73e648dfc3651738",
+      "capture": "00D5A848-low_level_defense_constant.bin",
+      "f32": 0.0024999999441206455,
+      "hex": "0ad7233b"
+    },
+    {
+      "start_va": "0xdf5190",
+      "length": 4,
+      "file_offset": 10441104,
+      "sha256": "e7d9a957c3c942d3551b291f30acbb11064e373eb6adcf4dc54671f8a64f965f",
+      "capture": "00DF5190-postcritical_constant.bin",
+      "f32": 1.100000023841858,
+      "hex": "cdcc8c3f"
+    }
+  ],
+  "rea": [
+    {
+      "source": "D:\\dnf\\60US\\analysis\\rea\\results\\095-damage-defense.json",
+      "sha256": "7d5a839b73b32217c8f2ca643465dc9abc3d385be04be6b545cc590051d05528",
+      "evidence_id": "ev_d82869c3e4643c0141da03ffea9e7400b67d50767e98122956bfabbd160b0d57",
+      "procedure": {
+        "address": "0x8b7c90",
+        "name": "FUN_008b7c90",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x8b7c90",
+              "end": "0x8b7e23"
+            }
+          ],
+          "total_bytes": 404,
+          "span_bytes": 404,
+          "non_contiguous": false,
+          "contains_entry": true
+        },
+        "signature": "undefined FUN_008b7c90()",
+        "locals": [
+          {
+            "description": "undefined4 local_10 @ Stack[-0x10]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_8 @ Stack[-0x8]:4",
+            "provenance": "ghidra-function-database"
+          },
+          {
+            "description": "undefined4 local_c @ Stack[-0xc]:4",
+            "provenance": "ghidra-function-database"
+          }
+        ]
+      }
+    },
+    {
+      "source": "D:\\dnf\\60US\\analysis\\rea\\results\\096-damage-scale.json",
+      "sha256": "3807bddb619af5eba2448c70840a67fc5f8a9e20e0653368db81023606c3c6f4",
+      "evidence_id": "ev_ce827908c58bf6cd60cf19b2149626a58da2476888fe307f8aa381bedb351131",
+      "procedure": {
+        "address": "0x8b7ab0",
+        "name": "FUN_008b7ab0",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x8b7ab0",
+              "end": "0x8b7bea"
+            }
+          ],
+          "total_bytes": 315,
+          "span_bytes": 315,
+          "non_contiguous": false,
+          "contains_entry": true
+        },
+        "signature": "undefined FUN_008b7ab0()",
+        "locals": [
+          {
+            "description": "undefined4 local_8 @ Stack[-0x8]:4",
+            "provenance": "ghidra-function-database"
+          }
+        ]
+      }
+    }
+  ]
+}

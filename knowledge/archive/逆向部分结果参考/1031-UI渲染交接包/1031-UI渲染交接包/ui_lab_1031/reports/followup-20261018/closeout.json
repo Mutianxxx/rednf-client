@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "utc": "2026-10-18T12:17:25.447999+00:00",
+  "observer_revision": 6,
+  "deployed_sha256": "bbb78bd3ff282eb64ae3b27cefa85b63a69e04b8b9bc17e7af0aec6875fe0dfa",
+  "checks": {
+    "resource follow-up evidence matches report and source hashes": true,
+    "resource follow-up output hashes remain unchanged": true,
+    "resource follow-up does not change installed archives or helper build inputs": true,
+    "resource supplement reconciles unresolved data": true,
+    "resource provenance and specialized-container regression passed": true,
+    "resource regression binds current decoder and helper": true,
+    "verification.json": true,
+    "resource-verification.json": true,
+    "resource-stream-verification.json": true,
+    "trace-recovery-verification.json": true,
+    "monitor-delivery-verification.json": true,
+    "revision6 deployed": true,
+    "revision6 configuration and geometry bind deployed DLL": true,
+    "preview-verification/verification.json": true,
+    "notification-verification.json": true,
+    "board native evidence and targeted preview verified": true,
+    "board implementation and verification hashes match current files": true,
+    "board native byte artifacts retain exact hashes": true,
+    "board resource render artifacts retain exact hashes": true,
+    "remaining offline supplement binds implemented geometry and unchanged DLL": true,
+    "remaining supplement sources match current files": true,
+    "remaining native byte and dump report evidence retains hashes": true,
+    "remaining plugin evidence is pinned without modifying plugin": true,
+    "build artifact inventory matches deployed DLL": true,
+    "native source inventory matches current files": true,
+    "verification.json binds deployed DLL": true,
+    "resource-verification.json binds deployed DLL": true,
+    "resource-stream-verification.json binds deployed DLL": true,
+    "client exited": true,
+    "sealed archive manifest unchanged": true,
+    "68 types reconcile with existing inventory": true,
+    "static seal unchanged": true,
+    "CBT offline evidence verified": true,
+    "EVN offline evidence verified": true,
+    "matrix includes verified EVN supplement": true,
+    "STM/WDM offline evidence verified": true,
+    "matrix includes verified .stm supplement": true,
+    "matrix includes verified .wdm supplement": true,
+    "STM/WDM source and CSV hashes unchanged": true,
+    "all changed documentation links exist": true,
+    "documentation contains no encoding replacement runs": true,
+    "Python sources compile": true
+  },
+  "verification_evidence": {
+    "resource-followup/report.json": {
+      "sha256": "a4d38302ad48b6beef83a59b5dd4522b47074b2d88d86203d1bfbc545da26451",
+      "evidence_sha256": "3f7f5a7ae47f82c3d9c1fcb499cfcbfb35d0e15fdddd726e3848389a2eca0536",
+      "outputs": 28
+    },
+    "resource-verification-followup/verification.json": {
+      "sha256": "886bf53e2c402b79950a0364c127d525e419287c2056da391561d2a827d78565",
+      "checks": 30
+    },
+    "verification.json": {
+      "sha256": "89984d9e6eb502a2db51671e8c2a0c4d023c15670c0209a1177895223c79842a",
+      "checks": 41
+    },
+    "resource-verification.json": {
+      "sha256": "6f2c9be177063c223df90ff09c466b365322e05fc0f6230051805d00a1955a91",
+      "checks": 15
+    },
+    "resource-stream-verification.json": {
+      "sha256": "0b0dcab08b48d335fea3b472a5e31dd0971aa765859e455502a149cd2f0565f2",
+      "checks": 16
+    },
+    "trace-recovery-verification.json": {
+      "sha256": "9badde0f59e3ba108eea9138b1bb42cf66fa6fb01340b26e76228352df9eea7b",
+      "checks": 10
+    },
+    "monitor-delivery-verification.json": {
+      "sha256": "7f175f75e02d978ec6900efc4de516b95c78ede96d4156bcdddf7f213f54f5c3",
+      "checks": 0
+    },
+    "preview-verification/verification.json": {
+      "sha256": "0f3227f7ac7fda5a51580aff7ed7c07129967185f3a5fe2df59c48d49258d5ab",
+      "checks": 16
+    },
+    "notification-verification.json": {
+      "sha256": "6ae3795d525a925a69779dc18cfc06baf1bb4f82822eff2395f3f076fd4a3f35",
+      "checks": 15
+    },
+    "board-followup/verification.json": {
+      "sha256": "b88b66fe77601f39eaadd8dac10c0adb7ca30bb4751a56d9bf4dad77e85d0971",
+      "checks": 79,
+      "evidence_sha256": "46cc937234e0398d1f53ac28c40f74fee1d59ea8660c028411c0a81d91605a8a"
+    },
+    "remaining-followup/verification.json": {
+      "sha256": "842bd41fdeda2f2e0b6cbd92f5aa5447808b53de5a4c8fa41f561ac3cd8362f1",
+      "checks": 63,
+      "evidence_sha256": "6189efabceafdbfe76c7d6de0972cfd538b66869ee525599643982f89812f3aa"
+    },
+    "spatial-chain-verification.json": {
+      "sha256": "b170791a527db82e5431f8eefca112d8a2d697e5f466eb0b09e4951bf7011a7c",
+      "checks": 239,
+      "evidence_sha256": "d777afb5fc1e93e867f8cb7cc5b4d74aca3439664a746a8b2f1e96fe09ddd50f"
+    }
+  },
+  "missing_links": [],
+  "client_liveness": {
+    "status": "exited",
+    "exit_code": 3221225477
+  },
+  "real_client_validation": "pending; no new capture requested for current offline work"
+}

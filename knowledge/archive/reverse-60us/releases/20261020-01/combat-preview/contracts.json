@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "source_exe_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "source_pvf_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+  "evidence_type": "current-client static PE and PVF; no original-game runtime equivalence check",
+  "skills": [
+    {
+      "class_id": 0,
+      "skill_id": 5,
+      "variant": "normal-no-charge",
+      "label": "普通鬼斩（技能 6 未学习）",
+      "status": "partial_controller",
+      "state": 20,
+      "substate": 0,
+      "required_context": {
+        "skill_6_level": 0,
+        "mode": "dungeon",
+        "baseline_animation_speed": 1
+      },
+      "motion": {
+        "tag": "etc motion",
+        "index": 1
+      },
+      "attack_info": {
+        "tag": "etc attack info",
+        "index": 0
+      },
+      "effect_scale": {
+        "skill_id": 5,
+        "tag": "static data",
+        "scope": [
+          "dungeon"
+        ],
+        "index": 0,
+        "multiplier_float32": 0.009999999776482582,
+        "target": "image_rate_override"
+      },
+      "level_consumption": {
+        "tag": "level info",
+        "scope": [
+          "dungeon"
+        ],
+        "column": 0,
+        "native_value_query": "0x4CAA20 -> 0x550150 -> 0x550080",
+        "install": "0x73207C..0x732089",
+        "attackinfo_bonus_offset": "0x10",
+        "operation": "raw_column0 - 100",
+        "early_multiplier": "1 + bonus * float32(0.01)",
+        "multiplier_float32": 0.009999999776482582,
+        "evidence": "analysis/combat_attackinfo/hardattack-attackinfo-contract.json",
+        "scope_note": "Raw PVF query and early numeric stage only; runtime modifiers and complete damage formula are not executed"
+      },
+      "effects": [
+        {
+          "layer": 1,
+          "path": "character/swordman/effect/animation/hardattack1.ani",
+          "offset": [
+            40,
+            0,
+            0
+          ]
+        },
+        {
+          "layer": 2,
+          "path": "character/swordman/effect/animation/hardattack2.ani",
+          "offset": [
+            40,
+            0,
+            0
+          ]
+        }
+      ],
+      "evidence": [
+        "analysis/combat_skill_dispatch/",
+        "analysis/combat_native_skill_slots/slot-contract.json",
+        "analysis/combat_hardattack/evidence-index.json",
+        "analysis/combat_native_collision/geometry-contract.json",
+        "analysis/combat_native_skill_slots/hardattack-equipment-contract.json",
+        "analysis/combat_render/evidence-index.json",
+        "analysis/combat_attackinfo/hardattack-attackinfo-contract.json"
+      ],
+      "unknown": [
+        "角色与装备属性最终动画速度",
+        "浏览器与原生 D3D8 光栅/颜色精度等效性",
+        "命中接受条件的完整重建与多段命中生命周期",
+        "伤害公式、击退击飞、受击/死亡状态执行",
+        "原客户端实际画面对照"
+      ]
+    },
+    {
+      "class_id": 0,
+      "skill_id": 8,
+      "variant": "three-segment-0",
+      "label": "普通三段斩 · 第 1 段",
+      "status": "partial_segment_inspection",
+      "preview_scope": "manual independent segment; native movement, continuation and hit acceptance not executed",
+      "state": 22,
+      "segment": 0,
+      "segment_count": 3,
+      "continuation_min_frame": 3,
+      "required_context": {
+        "mode": "dungeon",
+        "baseline_animation_speed": 1,
+        "segment_selected_manually": true,
+        "body_frame_zero_is_preview_policy": true
+      },
+      "motion": {
+        "tag": "etc motion",
+        "index": 3
+      },
+      "attack_info": {
+        "tag": "etc attack info",
+        "index": 2
+      },
+      "effect_scale": null,
+      "level_consumption": {
+        "tag": "level info",
+        "scope": [
+          "dungeon"
+        ],
+        "column": 0,
+        "native_value_query": "0x4CAA20 -> 0x550150 -> 0x550080",
+        "install": "0x732B66..0x732BCE",
+        "attackinfo_bonus_offset": "0x10",
+        "operation": "raw_column0 - 100",
+        "early_multiplier": "1 + bonus * float32(0.01)",
+        "multiplier_float32": 0.009999999776482582,
+        "evidence": "analysis/combat_tripleslash/tripleslash-contract.json",
+        "scope_note": "Raw PVF query and early numeric stage only; runtime modifiers and complete damage formula are not executed"
+      },
+      "effects": [
+        {
+          "layer": 2,
+          "path": "character/swordman/effect/animation/tripleslash/slash1.ani",
+          "offset": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "layer": 1,
+          "path": "character/swordman/effect/animation/tripleslash/move1.ani",
+          "offset": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "evidence": [
+        "analysis/combat_tripleslash/tripleslash-contract.json",
+        "analysis/combat_native_skill_slots/hardattack-equipment-contract.json"
+      ],
+      "derivation": {
+        "source_contract_sha256": "58a1c215023f865a13c4fd8124a85d904763737336b21a117369505915545814"
+      },
+      "unknown": [
+        "Static evidence only. Original client has not run this skill for frame-by-frame comparison.",
+        "State request transport/application to transition reset flags is not closed; choose logical frame0 for an independent preview and retain this distinction.",
+        "Movement integration and collision-constrained displacement remain unknown; literal600/-1000 are setter inputs, not a proved x(t) equation.",
+        "Five-hit resources/slots/columns are known; an eligible weapon EQU/LAY selection must be resolved separately. Club example is three-hit only.",
+        "Mastery/stat/environment modifiers, hit acceptance, repeated-hit filtering, hit pause, target reactions and final damage rounding are separate chains.",
+        "No missing body attack boxes are synthesized. Hit geometry comes from selected equipment layers.",
+        "Every runtime claim derives from current EXE/PVF; no dnf-rebuild guesses are used."
+      ]
+    },
+    {
+      "class_id": 0,
+      "skill_id": 8,
+      "variant": "three-segment-1",
+      "label": "普通三段斩 · 第 2 段",
+      "status": "partial_segment_inspection",
+      "preview_scope": "manual independent segment; native movement, continuation and hit acceptance not executed",
+      "state": 22,
+      "segment": 1,
+      "segment_count": 3,
+      "continuation_min_frame": 3,
+      "required_context": {
+        "mode": "dungeon",
+        "baseline_animation_speed": 1,
+        "segment_selected_manually": true,
+        "body_frame_zero_is_preview_policy": true
+      },
+      "motion": {
+        "tag": "etc motion",
+        "index": 4
+      },
+      "attack_info": {
+        "tag": "etc attack info",
+        "index": 3
+      },
+      "effect_scale": null,
+      "level_consumption": {
+        "tag": "level info",
+        "scope": [
+          "dungeon"
+        ],
+        "column": 0,
+        "native_value_query": "0x4CAA20 -> 0x550150 -> 0x550080",
+        "install": "0x732B66..0x732BCE",
+        "attackinfo_bonus_offset": "0x10",
+        "operation": "raw_column0 - 100",
+        "early_multiplier": "1 + bonus * float32(0.01)",
+        "multiplier_float32": 0.009999999776482582,
+        "evidence": "analysis/combat_tripleslash/tripleslash-contract.json",
+        "scope_note": "Raw PVF query and early numeric stage only; runtime modifiers and complete damage formula are not executed"
+      },
+      "effects": [
+        {
+          "layer": 2,
+          "path": "character/swordman/effect/animation/tripleslash/slash2.ani",
+          "offset": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "layer": 1,
+          "path": "character/swordman/effect/animation/tripleslash/move2.ani",
+          "offset": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "evidence": [
+        "analysis/combat_tripleslash/tripleslash-contract.json",
+        "analysis/combat_native_skill_slots/hardattack-equipment-contract.json"
+      ],
+      "derivation": {
+        "source_contract_sha256": "58a1c215023f865a13c4fd8124a85d904763737336b21a117369505915545814"
+      },
+      "unknown": [
+        "Static evidence only. Original client has not run this skill for frame-by-frame comparison.",
+        "State request transport/application to transition reset flags is not closed; choose logical frame0 for an independent preview and retain this distinction.",
+        "Movement integration and collision-constrained displacement remain unknown; literal600/-1000 are setter inputs, not a proved x(t) equation.",
+        "Five-hit resources/slots/columns are known; an eligible weapon EQU/LAY selection must be resolved separately. Club example is three-hit only.",
+        "Mastery/stat/environment modifiers, hit acceptance, repeated-hit filtering, hit pause, target reactions and final damage rounding are separate chains.",
+        "No missing body attack boxes are synthesized. Hit geometry comes from selected equipment layers.",
+        "Every runtime claim derives from current EXE/PVF; no dnf-rebuild guesses are used."
+      ]
+    },
+    {
+      "class_id": 0,
+      "skill_id": 8,
+      "variant": "three-segment-2",
+      "label": "普通三段斩 · 第 3 段",
+      "status": "partial_segment_inspection",
+      "preview_scope": "manual independent segment; native movement, continuation and hit acceptance not executed",
+      "state": 22,
+      "segment": 2,
+      "segment_count": 3,
+      "continuation_min_frame": null,
+      "required_context": {
+        "mode": "dungeon",
+        "baseline_animation_speed": 1,
+        "segment_selected_manually": true,
+        "body_frame_zero_is_preview_policy": true
+      },
+      "motion": {
+        "tag": "etc motion",
+        "index": 5
+      },
+      "attack_info": {
+        "tag": "etc attack info",
+        "index": 7
+      },
+      "effect_scale": null,
+      "level_consumption": {
+        "tag": "level info",
+        "scope": [
+          "dungeon"
+        ],
+        "column": 1,
+        "native_value_query": "0x4CAA20 -> 0x550150 -> 0x550080",
+        "install": "0x732B66..0x732BCE",
+        "attackinfo_bonus_offset": "0x10",
+        "operation": "raw_column0 - 100",
+        "early_multiplier": "1 + bonus * float32(0.01)",
+        "multiplier_float32": 0.009999999776482582,
+        "evidence": "analysis/combat_tripleslash/tripleslash-contract.json",
+        "scope_note": "Raw PVF query and early numeric stage only; runtime modifiers and complete damage formula are not executed"
+      },
+      "effects": [
+        {
+          "layer": 2,
+          "path": "character/swordman/effect/animation/tripleslash/slash3.ani",
+          "offset": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "layer": 1,
+          "path": "character/swordman/effect/animation/tripleslash/move1.ani",
+          "offset": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "evidence": [
+        "analysis/combat_tripleslash/tripleslash-contract.json",
+        "analysis/combat_native_skill_slots/hardattack-equipment-contract.json"
+      ],
+      "derivation": {
+        "source_contract_sha256": "58a1c215023f865a13c4fd8124a85d904763737336b21a117369505915545814"
+      },
+      "unknown": [
+        "Static evidence only. Original client has not run this skill for frame-by-frame comparison.",
+        "State request transport/application to transition reset flags is not closed; choose logical frame0 for an independent preview and retain this distinction.",
+        "Movement integration and collision-constrained displacement remain unknown; literal600/-1000 are setter inputs, not a proved x(t) equation.",
+        "Five-hit resources/slots/columns are known; an eligible weapon EQU/LAY selection must be resolved separately. Club example is three-hit only.",
+        "Mastery/stat/environment modifiers, hit acceptance, repeated-hit filtering, hit pause, target reactions and final damage rounding are separate chains.",
+        "No missing body attack boxes are synthesized. Hit geometry comes from selected equipment layers.",
+        "Every runtime claim derives from current EXE/PVF; no dnf-rebuild guesses are used."
+      ]
+    }
+  ]
+}

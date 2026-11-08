@@ -1,0 +1,1591 @@
+{
+  "path": "passiveobject/character/swordman/animation/blastbloodexend.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        12
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/blood-d1.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 65
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 75
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 85
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/blood-d1.img",
+        0
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 130
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 140
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 150
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/blood-d1.img",
+        0
+      ],
+      "offset": 155
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 170
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 185
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 195
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 205
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 215
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/blood-d1.img",
+        0
+      ],
+      "offset": 220
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 235
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        200
+      ],
+      "offset": 250
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 275
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 285
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 295
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 305
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/blood-d1.img",
+        0
+      ],
+      "offset": 310
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        150
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 365
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 375
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 385
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 395
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/blood-d1.img",
+        0
+      ],
+      "offset": 400
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 415
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        20
+      ],
+      "offset": 430
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 455
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 465
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 475
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 485
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 490
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 505
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "offset": 520
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 545
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 555
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 565
+    },
+    {
+      "tag": "[FRAME007]",
+      "values": [],
+      "offset": 575
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 580
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 595
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "offset": 610
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 635
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 645
+    },
+    {
+      "tag": "[FRAME008]",
+      "values": [],
+      "offset": 655
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 660
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 675
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 690
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 700
+    },
+    {
+      "tag": "[FRAME009]",
+      "values": [],
+      "offset": 710
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 715
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 730
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 745
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 755
+    },
+    {
+      "tag": "[FRAME010]",
+      "values": [],
+      "offset": 765
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 770
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 785
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 800
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 810
+    },
+    {
+      "tag": "[FRAME011]",
+      "values": [],
+      "offset": 820
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 825
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 840
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 855
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 865
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 12,
+      "value": 12
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 9564920,
+      "value": "Character/Swordman/Effect/BlastBlood/blood-d1.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 70,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 95,
+      "type": 6,
+      "raw": 9564920,
+      "value": "Character/Swordman/Effect/BlastBlood/blood-d1.img"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 110,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 135,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 140,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 160,
+      "type": 6,
+      "raw": 9564920,
+      "value": "Character/Swordman/Effect/BlastBlood/blood-d1.img"
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 170,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 190,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 195,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 200,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 205,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 215,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 220,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 225,
+      "type": 6,
+      "raw": 9564920,
+      "value": "Character/Swordman/Effect/BlastBlood/blood-d1.img"
+    },
+    {
+      "offset": 230,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 235,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 240,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 245,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 250,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 260,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 200,
+      "value": 200
+    },
+    {
+      "offset": 275,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 280,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 285,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 290,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 300,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 305,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 310,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 315,
+      "type": 6,
+      "raw": 9564920,
+      "value": "Character/Swordman/Effect/BlastBlood/blood-d1.img"
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 330,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 350,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 355,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 360,
+      "type": 0,
+      "raw": 150,
+      "value": 150
+    },
+    {
+      "offset": 365,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 370,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 375,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 380,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 385,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 390,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 395,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 400,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 405,
+      "type": 6,
+      "raw": 9564920,
+      "value": "Character/Swordman/Effect/BlastBlood/blood-d1.img"
+    },
+    {
+      "offset": 410,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 415,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 420,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 425,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 430,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 440,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 445,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 450,
+      "type": 0,
+      "raw": 20,
+      "value": 20
+    },
+    {
+      "offset": 455,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 460,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 465,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 470,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 475,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 480,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 485,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 490,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 495,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 500,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 505,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 510,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 515,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 520,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 525,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 530,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 535,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 540,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 545,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 550,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 555,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 560,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 565,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 570,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 575,
+      "type": 3,
+      "raw": 3184,
+      "value": "[FRAME007]"
+    },
+    {
+      "offset": 580,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 585,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 590,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 595,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 600,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 605,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 610,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 615,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 620,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 625,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 630,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 635,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 640,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 645,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 650,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 655,
+      "type": 3,
+      "raw": 3206,
+      "value": "[FRAME008]"
+    },
+    {
+      "offset": 660,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 665,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 670,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 675,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 680,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 685,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 690,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 695,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 700,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 705,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 710,
+      "type": 3,
+      "raw": 3342,
+      "value": "[FRAME009]"
+    },
+    {
+      "offset": 715,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 720,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 725,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 730,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 735,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 740,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 745,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 750,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 755,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 760,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 765,
+      "type": 3,
+      "raw": 3388,
+      "value": "[FRAME010]"
+    },
+    {
+      "offset": 770,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 775,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 780,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 785,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 790,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 795,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 800,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 805,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 810,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 815,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 820,
+      "type": 3,
+      "raw": 3410,
+      "value": "[FRAME011]"
+    },
+    {
+      "offset": 825,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 830,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 835,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 840,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 845,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 850,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 855,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 860,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 865,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 870,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    }
+  ],
+  "raw_sha256": "51fd9d8d7d211f65a2fef2ae030fa6470d24e76cdec90ce501d4fa14b59c030b"
+}

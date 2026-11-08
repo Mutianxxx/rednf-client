@@ -1,0 +1,346 @@
+[
+  {
+    "tick": 103,
+    "kind": "sound",
+    "name": "MW_1ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 140,
+    "kind": "sound",
+    "name": "MW_2ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 172,
+    "kind": "sound",
+    "name": "MW_3ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 196,
+    "kind": "sound",
+    "name": "MW_4ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 391,
+    "kind": "sound",
+    "name": "MW_1ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 428,
+    "kind": "sound",
+    "name": "MW_2ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 460,
+    "kind": "sound",
+    "name": "MW_3ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 484,
+    "kind": "sound",
+    "name": "MW_4ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 528,
+    "kind": "sound",
+    "name": "MW_1ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 565,
+    "kind": "sound",
+    "name": "MW_2ATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 838,
+    "kind": "skill_rejected",
+    "name": "experimental_action_busy",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 874,
+    "kind": "skill_rejected",
+    "name": "experimental_action_busy",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 885,
+    "kind": "skill_rejected",
+    "name": "experimental_action_busy",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 895,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 905,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 912,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 921,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 1149,
+    "kind": "sound",
+    "name": "MW_DASHATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 1220,
+    "kind": "sound",
+    "name": "MW_DASHATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 1360,
+    "kind": "sound",
+    "name": "MW_DASHATK",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 2033,
+    "kind": "sound",
+    "name": "PR_4ATK0",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 2050,
+    "kind": "skill_rejected",
+    "name": "manual_source_binding_required",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 2418,
+    "kind": "skill_rejected",
+    "name": "experimental_insufficient_mp",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 2447,
+    "kind": "skill_rejected",
+    "name": "experimental_insufficient_mp",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 2457,
+    "kind": "skill_rejected",
+    "name": "experimental_insufficient_mp",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 2466,
+    "kind": "skill_rejected",
+    "name": "experimental_insufficient_mp",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 2473,
+    "kind": "skill_rejected",
+    "name": "experimental_insufficient_mp",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 2481,
+    "kind": "skill_rejected",
+    "name": "experimental_insufficient_mp",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 2489,
+    "kind": "skill_rejected",
+    "name": "experimental_insufficient_mp",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3101,
+    "kind": "skill_rejected",
+    "name": "manual_source_binding_required",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3111,
+    "kind": "skill_rejected",
+    "name": "manual_source_binding_required",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3120,
+    "kind": "skill_rejected",
+    "name": "manual_source_binding_required",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3129,
+    "kind": "skill_rejected",
+    "name": "manual_source_binding_required",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3140,
+    "kind": "skill_rejected",
+    "name": "manual_source_binding_required",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3154,
+    "kind": "skill_rejected",
+    "name": "experimental_action_busy",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3164,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3171,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3196,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3205,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3213,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3221,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3228,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  },
+  {
+    "tick": 3235,
+    "kind": "skill_rejected",
+    "name": "experimental_cooldown",
+    "source": 0,
+    "target": 0,
+    "value": 0
+  }
+]

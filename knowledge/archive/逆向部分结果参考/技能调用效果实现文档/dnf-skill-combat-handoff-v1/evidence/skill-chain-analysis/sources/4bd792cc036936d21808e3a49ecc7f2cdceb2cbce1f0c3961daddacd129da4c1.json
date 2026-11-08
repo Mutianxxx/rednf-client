@@ -1,0 +1,171 @@
+{
+  "path": "passiveobject/character/swordman/blastbloodpresubex.obj",
+  "fields": [
+    {
+      "tag": "[floating height]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[layer]",
+      "values": [
+        "[bottom]"
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[pass type]",
+      "values": [
+        "[pass all]"
+      ],
+      "offset": 20
+    },
+    {
+      "tag": "[piercing power]",
+      "values": [
+        1000
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[basic motion]",
+      "values": [
+        "Animation/BlastBloodPreSub_back.ani"
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[attack info]",
+      "values": [
+        "AttackInfo/BlastBloodPreSubEx.atk"
+      ],
+      "offset": 50
+    },
+    {
+      "tag": "[etc motion]",
+      "values": [
+        "Animation/BlastBloodPreSub_front.ani"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[/etc motion]",
+      "values": [],
+      "offset": 70
+    },
+    {
+      "tag": "[name]",
+      "values": [
+        "怒气爆发 隐藏"
+      ],
+      "offset": 75
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 16526498,
+      "value": "[floating height]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 16526534,
+      "value": "[layer]"
+    },
+    {
+      "offset": 15,
+      "type": 6,
+      "raw": 17808,
+      "value": "[bottom]"
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 16526550,
+      "value": "[pass type]"
+    },
+    {
+      "offset": 25,
+      "type": 6,
+      "raw": 11348366,
+      "value": "[pass all]"
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 16526574,
+      "value": "[piercing power]"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 1000,
+      "value": 1000
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 16526608,
+      "value": "[basic motion]"
+    },
+    {
+      "offset": 45,
+      "type": 6,
+      "raw": 16991326,
+      "value": "Animation/BlastBloodPreSub_back.ani"
+    },
+    {
+      "offset": 50,
+      "type": 3,
+      "raw": 16526836,
+      "value": "[attack info]"
+    },
+    {
+      "offset": 55,
+      "type": 6,
+      "raw": 16991776,
+      "value": "AttackInfo/BlastBloodPreSubEx.atk"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 16526710,
+      "value": "[etc motion]"
+    },
+    {
+      "offset": 65,
+      "type": 6,
+      "raw": 16991462,
+      "value": "Animation/BlastBloodPreSub_front.ani"
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 16526808,
+      "value": "[/etc motion]"
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 14059926,
+      "value": "[name]"
+    },
+    {
+      "offset": 80,
+      "type": 6,
+      "raw": 228019,
+      "value": "怒气爆发 隐藏"
+    }
+  ],
+  "raw_sha256": "4bd792cc036936d21808e3a49ecc7f2cdceb2cbce1f0c3961daddacd129da4c1"
+}

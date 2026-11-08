@@ -1,0 +1,57 @@
+[name] <3::name_27966>
+[name2] <3::name2_27966>
+[basic explain] <3::basic_explain_27966>
+[detail explain] <3::detail_explain_27966>
+[flavor text] <3::flavor_text_27966>
+[grade] 42
+[attach type] `[sealing]`
+[rarity] 2
+[weight] 3400
+[usable job]
+`[swordman]`
+[/usable job]
+[minimum level] 40
+
+[icon] `Item/weapon/swordman/club.img` 20
+[field image] `Item/FieldImage.img` 8
+
+[equipment type] `[weapon]` 22
+
+[sub type] 2
+[durability] 35
+[price] 58800
+[value] 47040
+[cool time] 10000
+
+[physical attack] +20
+[equipment physical attack] +409 +383
+[equipment magical attack] +353 +331
+[attack speed] -30
+
+[if] 
+[cooltime] 1000
+[attack success] 1
+[/if] 
+[then] 
+[target] `enemy`
+[duration] 5000
+[probability] 5
+[active status] `stun` 40
+[/then] 
+
+[stuck] -1
+
+[skill levelup] 
+`[swordman]` 24 1
+[/skill levelup] 
+
+[variation] 2 6
+[layer variation] 2600 `clubc`
+<include> `equipment/character/swordman.lay`
+[layer variation] 650 `clubb`
+<include> `equipment/character/swordman.lay`
+
+[move wav] `STICK_TOUCH`
+
+
+

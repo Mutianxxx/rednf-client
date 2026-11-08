@@ -1,0 +1,62 @@
+[
+  {
+    "path": "monster/lugaru/lugaru.mob",
+    "ids": [
+      5001
+    ],
+    "nodes": 47,
+    "edges": 140,
+    "diagnostics": 0,
+    "output": "5001/graph.json"
+  },
+  {
+    "path": "monster/goblin/goblin.mob",
+    "ids": [
+      1
+    ],
+    "nodes": 42,
+    "edges": 102,
+    "diagnostics": 0,
+    "output": "1/graph.json"
+  },
+  {
+    "path": "monster/act8/ghost_flu/ghost_flu.mob",
+    "ids": [
+      61491
+    ],
+    "nodes": 68,
+    "edges": 235,
+    "diagnostics": 0,
+    "output": "61491/graph.json"
+  },
+  {
+    "path": "monster/act8/chiefsars/chiefsars.mob",
+    "ids": [
+      56013
+    ],
+    "nodes": 116,
+    "edges": 467,
+    "diagnostics": 0,
+    "output": "56013/graph.json"
+  },
+  {
+    "path": "monster/act8/wooden_doll/wooden_doll.mob",
+    "ids": [
+      59005
+    ],
+    "nodes": 145,
+    "edges": 627,
+    "diagnostics": 0,
+    "output": "59005/graph.json"
+  },
+  {
+    "path": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+    "ids": [
+      62638
+    ],
+    "nodes": 51,
+    "edges": 135,
+    "diagnostics": 0,
+    "output": "62638/graph.json"
+  }
+]

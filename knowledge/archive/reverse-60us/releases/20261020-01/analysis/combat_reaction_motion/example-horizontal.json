@@ -1,0 +1,66 @@
+{
+  "parameters": {
+    "speed": 400,
+    "acceleration": -2666,
+    "duration": 250,
+    "deceleration_duration": 150
+  },
+  "samples": [
+    {
+      "time_input": 50,
+      "x_axis": {
+        "position": 16.667499542236328,
+        "velocity": 266.6999816894531,
+        "acceleration": -2666,
+        "remaining": 100
+      },
+      "result_code": 1,
+      "duration_reached": false
+    },
+    {
+      "time_input": 100,
+      "x_axis": {
+        "position": 26.669998168945312,
+        "velocity": 133.3999786376953,
+        "acceleration": -2666,
+        "remaining": 50
+      },
+      "result_code": 1,
+      "duration_reached": false
+    },
+    {
+      "time_input": 150,
+      "x_axis": {
+        "position": 30.007497787475586,
+        "velocity": 0.09997230768203735,
+        "acceleration": 0,
+        "remaining": 0
+      },
+      "result_code": 2,
+      "duration_reached": false
+    },
+    {
+      "time_input": 200,
+      "x_axis": {
+        "position": 30.012496948242188,
+        "velocity": 0.09997230768203735,
+        "acceleration": 0,
+        "remaining": 0
+      },
+      "result_code": 2,
+      "duration_reached": false
+    },
+    {
+      "time_input": 250,
+      "x_axis": {
+        "position": 30.01749610900879,
+        "velocity": 0.09997230768203735,
+        "acceleration": 0,
+        "remaining": 0
+      },
+      "result_code": 2,
+      "duration_reached": true
+    }
+  ],
+  "scope": "free horizontal axis only; explicit runtime stats/deltas; no automatic hit or state transition"
+}

@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+  "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+  "rules": {
+    "ui_load": {
+      "level": "native-confirmed",
+      "consumers": [
+        "01067EC0",
+        "01064D20",
+        "01074B70",
+        "010669F0"
+      ],
+      "implementation": [
+        "tools/model.py",
+        "tools/assets.py"
+      ],
+      "evidence": [
+        "reports/static/profile.json"
+      ],
+      "scope": "Observed binding is not a complete lifecycle; counted prefix is not a per-type schema"
+    },
+    "geometry": {
+      "level": "native-confirmed",
+      "consumers": [
+        "011B3950",
+        "011B41E0",
+        "011DB510"
+      ],
+      "implementation": [
+        "tools/native_geometry.py",
+        "tools/image_contract.py"
+      ],
+      "evidence": [
+        "reports/geometry-revision6/evidence.json",
+        "reports/remaining-followup/evidence.json"
+      ],
+      "scope": "Verified source type7; request-local identity clip only; destination surface branches incomplete"
+    },
+    "board": {
+      "level": "native-confirmed",
+      "consumers": [
+        "01072820",
+        "011EA1D0",
+        "011E9C30",
+        "011E9E20"
+      ],
+      "implementation": [
+        "tools/board_layout.py"
+      ],
+      "evidence": [
+        "reports/board-followup/evidence.json"
+      ],
+      "scope": "Authored board layout/order; not business visibility, dynamic resize or GPU rasterization"
+    },
+    "cbt": {
+      "level": "native-confirmed",
+      "consumers": [
+        "01003770",
+        "01002C40",
+        "011C35D0"
+      ],
+      "implementation": [
+        "tools/cbt_schema.py",
+        "tools/config_preview.py"
+      ],
+      "evidence": [
+        "reports/followup-20261018/cbt-chain-evidence.json",
+        "reports/remaining-followup/evidence.json"
+      ],
+      "scope": "Manual native group/predicate only; numeric IMG index and alternate mode unresolved"
+    },
+    "evn": {
+      "level": "native-confirmed",
+      "consumers": [
+        "004EB120",
+        "004E9520",
+        "004E7790"
+      ],
+      "implementation": [
+        "tools/evn_schema.py",
+        "tools/config_preview.py"
+      ],
+      "evidence": [
+        "reports/followup-20261018/evn-chain-evidence.json"
+      ],
+      "scope": "Frame/path selection and local arrangement, not actual visible/business list"
+    },
+    "wdm": {
+      "level": "native-confirmed",
+      "consumers": [
+        "012EC6C0",
+        "0111A374",
+        "0111A393"
+      ],
+      "implementation": [
+        "tools/spatial_schema.py",
+        "tools/config_preview.py"
+      ],
+      "evidence": [
+        "reports/followup-20261018/spatial-chain-evidence.json"
+      ],
+      "scope": "Region/Common independent loads; not balloon, switchbox, ACT, visibility or z-order"
+    },
+    "stm": {
+      "level": "native-confirmed",
+      "consumers": [
+        "01314800",
+        "00575EA0"
+      ],
+      "implementation": [
+        "tools/spatial_schema.py",
+        "tools/config_preview.py"
+      ],
+      "evidence": [
+        "reports/followup-20261018/spatial-chain-evidence.json"
+      ],
+      "scope": "Five/four column schema and ID index; no inferred stage coordinates or main/append alignment"
+    },
+    "asset_decode": {
+      "level": "resource-decoder",
+      "consumers": [],
+      "implementation": [
+        "src/assets.cpp",
+        "../monster_demo/src/resources.cpp",
+        "tools/assets.py"
+      ],
+      "evidence": [
+        "reports/resource-followup/evidence.json"
+      ],
+      "scope": "Implemented resource decoding/provenance, not all native pixel consumers"
+    },
+    "ani_sample": {
+      "level": "resource-decoder",
+      "consumers": [],
+      "implementation": [
+        "../monster_demo/src/resources.cpp",
+        "tools/preview_layout.py"
+      ],
+      "evidence": [
+        "reports/preview-verification/verification.json"
+      ],
+      "scope": "External time/loop and pose sampling; native ACT scheduling and complete blending unresolved"
+    },
+    "static_candidate": {
+      "level": "candidate",
+      "consumers": [],
+      "implementation": [
+        "tools/preview.py",
+        "tools/preview_layout.py"
+      ],
+      "evidence": [
+        "reports/PREVIEW-FIXES.md"
+      ],
+      "scope": "Authored parent/resource candidates and Qt substitutes; no universal native layer order"
+    }
+  },
+  "full_native_reconstruction": false
+}

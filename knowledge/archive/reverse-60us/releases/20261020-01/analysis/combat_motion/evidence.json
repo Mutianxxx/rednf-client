@@ -1,0 +1,624 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "image_base": "0x00400000",
+  "evidence_kind": "static native bytes; extracted arithmetic execution is separately labeled",
+  "excerpts": [
+    {
+      "name": "state22_motion_setup",
+      "va": "0x00732c63",
+      "file_offset": 3353699,
+      "size": 120,
+      "sha256": "30bb2383d8fd9f4e8ff58d15f4ff45278240d2961e4df29c8ec7a25d021cb7f9",
+      "binary": "00732c63-state22_motion_setup.bin",
+      "assembly": "00732c63-state22_motion_setup.asm"
+    },
+    {
+      "name": "actor_axis_config",
+      "va": "0x004b9d80",
+      "file_offset": 761216,
+      "size": 387,
+      "sha256": "5a1e7806860ad689e2565ac56682ca812783a053ab5d47b2b9a3e15a5d95e876",
+      "binary": "004b9d80-actor_axis_config.bin",
+      "assembly": "004b9d80-actor_axis_config.asm"
+    },
+    {
+      "name": "actor_axis_apply",
+      "va": "0x004b99c0",
+      "file_offset": 760256,
+      "size": 337,
+      "sha256": "624be23935daddecc0fce97da67d0d4455197cd56553a5b86a2510afc92d83e4",
+      "binary": "004b99c0-actor_axis_apply.bin",
+      "assembly": "004b99c0-actor_axis_apply.asm"
+    },
+    {
+      "name": "actor_direction_apply",
+      "va": "0x004b9b20",
+      "file_offset": 760608,
+      "size": 249,
+      "sha256": "9a349a9598d94920a4b83aea38e96b4a226dd05b15155196c901ff8e3a3e8abb",
+      "binary": "004b9b20-actor_direction_apply.bin",
+      "assembly": "004b9b20-actor_direction_apply.asm"
+    },
+    {
+      "name": "swordman_direction_apply",
+      "va": "0x00745c30",
+      "file_offset": 3431472,
+      "size": 65,
+      "sha256": "de876cdf521fb8753c5f810ff267896a5aa6ce75e1e03b41c55f65f7c74964f6",
+      "binary": "00745c30-swordman_direction_apply.bin",
+      "assembly": "00745c30-swordman_direction_apply.asm"
+    },
+    {
+      "name": "actor_mode_set",
+      "va": "0x004b9c60",
+      "file_offset": 760928,
+      "size": 267,
+      "sha256": "018d711be2d8ce566bdee96f647a9211a6d9076bfc9954600b6e49a3e0f58afb",
+      "binary": "004b9c60-actor_mode_set.bin",
+      "assembly": "004b9c60-actor_mode_set.asm"
+    },
+    {
+      "name": "mode_scale_get",
+      "va": "0x004b9bf0",
+      "file_offset": 760816,
+      "size": 112,
+      "sha256": "74fe5aed10768d0901c17b8de372a1f8e26bf332d8bf484056cdb237c9c2e3ed",
+      "binary": "004b9bf0-mode_scale_get.bin",
+      "assembly": "004b9bf0-mode_scale_get.asm"
+    },
+    {
+      "name": "mode2_effective_stat",
+      "va": "0x004b55a0",
+      "file_offset": 742816,
+      "size": 102,
+      "sha256": "4de007f3a3c9ec21bac81df9b7f5f8ec7daf71860f65969e9ed81cd59e761838",
+      "binary": "004b55a0-mode2_effective_stat.bin",
+      "assembly": "004b55a0-mode2_effective_stat.asm"
+    },
+    {
+      "name": "move_scale_set",
+      "va": "0x004b9e40",
+      "file_offset": 761408,
+      "size": 102,
+      "sha256": "0d4c04a1252cfb443b20bc1c7d7de03be65d4970242e1df22ca64fba8eaa2898",
+      "binary": "004b9e40-move_scale_set.bin",
+      "assembly": "004b9e40-move_scale_set.asm"
+    },
+    {
+      "name": "ani_scale_set",
+      "va": "0x004b9eb0",
+      "file_offset": 761520,
+      "size": 233,
+      "sha256": "3097e6865c362a0c81b87ddab3b3a8df2aebc30ade2d52ae323c9976e10f8d02",
+      "binary": "004b9eb0-ani_scale_set.bin",
+      "assembly": "004b9eb0-ani_scale_set.asm"
+    },
+    {
+      "name": "periodic_scale_refresh_excerpt",
+      "va": "0x004bcb77",
+      "file_offset": 772983,
+      "size": 183,
+      "sha256": "0d0369832c5ca1e4ac12d6cd6e723702839bd71f06a52c4799897c720eb009d4",
+      "binary": "004bcb77-periodic_scale_refresh_excerpt.bin",
+      "assembly": "004bcb77-periodic_scale_refresh_excerpt.asm"
+    },
+    {
+      "name": "live_direction_input_gate",
+      "va": "0x004cbd90",
+      "file_offset": 834960,
+      "size": 275,
+      "sha256": "d51311c3f061d29f366d2fd8f3a9f45164bd568b003c0d4272f699e00b3cbe3b",
+      "binary": "004cbd90-live_direction_input_gate.bin",
+      "assembly": "004cbd90-live_direction_input_gate.asm"
+    },
+    {
+      "name": "local_owner_gate",
+      "va": "0x0049c090",
+      "file_offset": 639120,
+      "size": 32,
+      "sha256": "75f60bacd0b45e5abcd7dec8bc25968c470bc1c88611d25caaec4ceb6db345bc",
+      "binary": "0049c090-local_owner_gate.bin",
+      "assembly": "0049c090-local_owner_gate.asm"
+    },
+    {
+      "name": "provider_position_velocity_methods",
+      "va": "0x0049c0b0",
+      "file_offset": 639152,
+      "size": 80,
+      "sha256": "dd098eab8b5915dda444f5cd39e23a4c4708af58f8b026b5785fc21016831446",
+      "binary": "0049c0b0-provider_position_velocity_methods.bin",
+      "assembly": "0049c0b0-provider_position_velocity_methods.asm"
+    },
+    {
+      "name": "movement_constructor",
+      "va": "0x0049c440",
+      "file_offset": 640064,
+      "size": 180,
+      "sha256": "15d6e295114f44b4e06f267df0a0b880f465f0d87b31a8f68cf95edf5377630a",
+      "binary": "0049c440-movement_constructor.bin",
+      "assembly": "0049c440-movement_constructor.asm"
+    },
+    {
+      "name": "movement_reset",
+      "va": "0x00511160",
+      "file_offset": 1118560,
+      "size": 297,
+      "sha256": "5ec40f769d45c2654d404d2f3d4a96e741a9d82e4e0b6dcb8a541e8fcb87aa6d",
+      "binary": "00511160-movement_reset.bin",
+      "assembly": "00511160-movement_reset.asm"
+    },
+    {
+      "name": "velocity_set",
+      "va": "0x00511040",
+      "file_offset": 1118272,
+      "size": 125,
+      "sha256": "b2431a15df72d7e9290dc7869ad78fc53cbbf9f761a11d7703045e4613647d89",
+      "binary": "00511040-velocity_set.bin",
+      "assembly": "00511040-velocity_set.asm"
+    },
+    {
+      "name": "countdown_set",
+      "va": "0x005110c0",
+      "file_offset": 1118400,
+      "size": 74,
+      "sha256": "f381bf8b0614e8d332ba0d67ae9f92a16b15ca184e1fde87abd782bbd45c6da4",
+      "binary": "005110c0-countdown_set.bin",
+      "assembly": "005110c0-countdown_set.asm"
+    },
+    {
+      "name": "acceleration_set",
+      "va": "0x00511dd0",
+      "file_offset": 1121744,
+      "size": 192,
+      "sha256": "7c0aeacd12abd835bd722ed03048fc674cbd5c8c7ae6e45b747660faa0fef816",
+      "binary": "00511dd0-acceleration_set.bin",
+      "assembly": "00511dd0-acceleration_set.asm"
+    },
+    {
+      "name": "deceleration_countdown",
+      "va": "0x00510d70",
+      "file_offset": 1117552,
+      "size": 113,
+      "sha256": "91bccf1d2b046ca1a730dd310985331ba4b40241fd192eb7a04b871a0789c719",
+      "binary": "00510d70-deceleration_countdown.bin",
+      "assembly": "00510d70-deceleration_countdown.asm"
+    },
+    {
+      "name": "axis_integrator",
+      "va": "0x0050fde0",
+      "file_offset": 1113568,
+      "size": 1035,
+      "sha256": "62b2d403beeec503df75b0ebada819b097b51259cd150af8869f1b95c3b0c3b4",
+      "binary": "0050fde0-axis_integrator.bin",
+      "assembly": "0050fde0-axis_integrator.asm"
+    },
+    {
+      "name": "movement_tick",
+      "va": "0x00511400",
+      "file_offset": 1119232,
+      "size": 1968,
+      "sha256": "c4480afc2cc89bfc8087a138d7803545c8f85879a6f729944e7cab12c9b02ec6",
+      "binary": "00511400-movement_tick.bin",
+      "assembly": "00511400-movement_tick.asm"
+    },
+    {
+      "name": "movement_timer_reset",
+      "va": "0x00512390",
+      "file_offset": 1123216,
+      "size": 112,
+      "sha256": "13aaee4649617bd2eeb9a8c69396b93b0c76459d1843254279e9449b02bc9427",
+      "binary": "00512390-movement_timer_reset.bin",
+      "assembly": "00512390-movement_timer_reset.asm"
+    },
+    {
+      "name": "movement_owner_set",
+      "va": "0x00512400",
+      "file_offset": 1123328,
+      "size": 32,
+      "sha256": "fc2aea9129efc2a0536fe9f3cefd89d17277b8122a118038849bbaf79ea0079f",
+      "binary": "00512400-movement_owner_set.bin",
+      "assembly": "00512400-movement_owner_set.asm"
+    },
+    {
+      "name": "actor_tick_motion_call_excerpt",
+      "va": "0x0049be80",
+      "file_offset": 638592,
+      "size": 74,
+      "sha256": "96df676242dbd00f5ba9120fccf3c7ea26a88737b082088178ddd37bbc45d342",
+      "binary": "0049be80-actor_tick_motion_call_excerpt.bin",
+      "assembly": "0049be80-actor_tick_motion_call_excerpt.asm"
+    },
+    {
+      "name": "position_round",
+      "va": "0x00447ff0",
+      "file_offset": 294896,
+      "size": 176,
+      "sha256": "038ffb37bf94bb5904084c19a106fa338af35aff4ed2f4416f91a07a66a28805",
+      "binary": "00447ff0-position_round.bin",
+      "assembly": "00447ff0-position_round.asm"
+    },
+    {
+      "name": "msvc_float_truncate",
+      "va": "0x00c01544",
+      "file_offset": 8394052,
+      "size": 117,
+      "sha256": "5333b186c02836974c6f792303aeb2c00d856316b93ccbbe65f51def6ae661b4",
+      "binary": "00c01544-msvc_float_truncate.bin",
+      "assembly": "00c01544-msvc_float_truncate.asm"
+    },
+    {
+      "name": "timer_elapsed",
+      "va": "0x00b06f00",
+      "file_offset": 7368448,
+      "size": 85,
+      "sha256": "7e4adb4b9bd1ff4a7a5bb4fd99258621f79d71f376a3f2d728f07d02a9f9d4a3",
+      "binary": "00b06f00-timer_elapsed.bin",
+      "assembly": "00b06f00-timer_elapsed.asm"
+    },
+    {
+      "name": "clock_channel_get",
+      "va": "0x00b12a80",
+      "file_offset": 7416448,
+      "size": 40,
+      "sha256": "17e5eaed83d992f5e0981182162604fe9f8e4c89f282829a074ba6aad9176f30",
+      "binary": "00b12a80-clock_channel_get.bin",
+      "assembly": "00b12a80-clock_channel_get.asm"
+    },
+    {
+      "name": "clock_channels_advance",
+      "va": "0x00b12ab0",
+      "file_offset": 7416496,
+      "size": 467,
+      "sha256": "ce60d57a96012e9881852d8b00559ec082013dcb9014b86ec938279e6639a5fe",
+      "binary": "00b12ab0-clock_channels_advance.bin",
+      "assembly": "00b12ab0-clock_channels_advance.asm"
+    },
+    {
+      "name": "movement_clock_channel_set",
+      "va": "0x00510f20",
+      "file_offset": 1117984,
+      "size": 43,
+      "sha256": "f63bb770416e6a28b4a2c4fd8d7fd32107c32e430e4f26144ea8562caf095463",
+      "binary": "00510f20-movement_clock_channel_set.bin",
+      "assembly": "00510f20-movement_clock_channel_set.asm"
+    },
+    {
+      "name": "body_ani_install_rate",
+      "va": "0x004b4da0",
+      "file_offset": 740768,
+      "size": 96,
+      "sha256": "ff7d49cdcd2633c29a4cac6ba86f3899c9b3e898fd3365df0193071b58890cb6",
+      "binary": "004b4da0-body_ani_install_rate.bin",
+      "assembly": "004b4da0-body_ani_install_rate.asm"
+    },
+    {
+      "name": "effect_ani_install_rate",
+      "va": "0x004acf80",
+      "file_offset": 708480,
+      "size": 161,
+      "sha256": "ea61769bd5a37fe5bb4bed11da4b76ec31b89cb2f4021385f4824c497e777a20",
+      "binary": "004acf80-effect_ani_install_rate.bin",
+      "assembly": "004acf80-effect_ani_install_rate.asm"
+    },
+    {
+      "name": "ani_rate_set",
+      "va": "0x00a29c70",
+      "file_offset": 6462576,
+      "size": 247,
+      "sha256": "8603fb746ff587d6225c2097b69339bf6551f81d5f78f3d65a3b438c01f6a8fd",
+      "binary": "00a29c70-ani_rate_set.bin",
+      "assembly": "00a29c70-ani_rate_set.asm"
+    },
+    {
+      "name": "ani_total_duration",
+      "va": "0x00a24bb0",
+      "file_offset": 6441904,
+      "size": 263,
+      "sha256": "b5faf9d889ee97b95870e18b9d906d0c08cc34ef383e47b902858245a6ba5935",
+      "binary": "00a24bb0-ani_total_duration.bin",
+      "assembly": "00a24bb0-ani_total_duration.asm"
+    },
+    {
+      "name": "ani_frame_deadline_set",
+      "va": "0x00a27870",
+      "file_offset": 6453360,
+      "size": 322,
+      "sha256": "a3ea935b9491788edef1c6d00539ac27cf74e07e42b025ba197d7c05a0e03c7b",
+      "binary": "00a27870-ani_frame_deadline_set.bin",
+      "assembly": "00a27870-ani_frame_deadline_set.asm"
+    },
+    {
+      "name": "ani_tree_clock_advance",
+      "va": "0x00a27dc0",
+      "file_offset": 6454720,
+      "size": 416,
+      "sha256": "7d81a9b3fe8c3e7da4734ea35e08f8fafbe6eaf5dd0791991596b80419f3836a",
+      "binary": "00a27dc0-ani_tree_clock_advance.bin",
+      "assembly": "00a27dc0-ani_tree_clock_advance.asm"
+    },
+    {
+      "name": "global_ani_install_factor_init",
+      "va": "0x00ca1c00",
+      "file_offset": 9051136,
+      "size": 42,
+      "sha256": "5ebe97c065e9b32f7eb3d6553837d4d9e50b7b54593490a3a8f5178ae8621f4b",
+      "binary": "00ca1c00-global_ani_install_factor_init.bin",
+      "assembly": "00ca1c00-global_ani_install_factor_init.asm"
+    }
+  ],
+  "constants": [
+    {
+      "va": "0x00cc11f8",
+      "file_offset": 9179640,
+      "bytes": "6f12833a",
+      "format": "f",
+      "value": 0.0010000000474974513,
+      "use": "movement 0.001 and ANI install multiplier"
+    },
+    {
+      "va": "0x00cc8830",
+      "file_offset": 9209904,
+      "bytes": "cdcccc3d",
+      "format": "f",
+      "value": 0.10000000149011612,
+      "use": "ANI refresh multiplier 0.1"
+    },
+    {
+      "va": "0x00cd6928",
+      "file_offset": 9267496,
+      "bytes": "00007ac4",
+      "format": "f",
+      "value": -1000.0,
+      "use": "deceleration countdown numerator -1000"
+    },
+    {
+      "va": "0x00ccb260",
+      "file_offset": 9220704,
+      "bytes": "0000000000000000",
+      "format": "d",
+      "value": 0.0,
+      "use": "zero used by countdown product comparison"
+    },
+    {
+      "va": "0x00cd4bd0",
+      "file_offset": 9259984,
+      "bytes": "0000003f",
+      "format": "f",
+      "value": 0.5,
+      "use": "mean velocity multiplier 0.5"
+    },
+    {
+      "va": "0x00cd6828",
+      "file_offset": 9267240,
+      "bytes": "0000fac4",
+      "format": "f",
+      "value": -2000.0,
+      "use": "negative displacement clamp"
+    },
+    {
+      "va": "0x00cd682c",
+      "file_offset": 9267244,
+      "bytes": "0000fa44",
+      "format": "f",
+      "value": 2000.0,
+      "use": "positive displacement clamp"
+    },
+    {
+      "va": "0x00cab8e8",
+      "file_offset": 9091304,
+      "bytes": "000000000000803e",
+      "format": "d",
+      "value": 1.1920928955078125e-07,
+      "use": "relative float comparison epsilon"
+    },
+    {
+      "va": "0x00e9d7a4",
+      "file_offset": 11130788,
+      "bytes": "00000000",
+      "format": "f",
+      "value": 0.0,
+      "use": "zero"
+    },
+    {
+      "va": "0x00cc1f58",
+      "file_offset": 9183064,
+      "bytes": "0000803f",
+      "format": "f",
+      "value": 1.0,
+      "use": "one for duration reciprocal"
+    },
+    {
+      "va": "0x00ccb9d8",
+      "file_offset": 9222616,
+      "bytes": "0000c842",
+      "format": "f",
+      "value": 100.0,
+      "use": "duration scale +100"
+    },
+    {
+      "va": "0x00df053c",
+      "file_offset": 10421564,
+      "bytes": "0000c8c2",
+      "format": "f",
+      "value": -100.0,
+      "use": "deadline scale -100"
+    },
+    {
+      "va": "0x00cc10ac",
+      "file_offset": 9179308,
+      "bytes": "0ad7233c",
+      "format": "f",
+      "value": 0.009999999776482582,
+      "use": "clock-channel percentage multiplier 0.01"
+    }
+  ],
+  "vtables": [
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0xa8",
+      "va": "0x00d8103c",
+      "file_offset": 9965628,
+      "bytes": "00c14a00",
+      "target": "0x004ac100"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0xac",
+      "va": "0x00d81040",
+      "file_offset": 9965632,
+      "bytes": "f0004b00",
+      "target": "0x004b00f0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x274",
+      "va": "0x00d81208",
+      "file_offset": 9966088,
+      "bytes": "b0974b00",
+      "target": "0x004b97b0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x344",
+      "va": "0x00d812d8",
+      "file_offset": 9966296,
+      "bytes": "50477400",
+      "target": "0x00744750"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x488",
+      "va": "0x00d8141c",
+      "file_offset": 9966620,
+      "bytes": "809d4b00",
+      "target": "0x004b9d80"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x494",
+      "va": "0x00d81428",
+      "file_offset": 9966632,
+      "bytes": "609c4b00",
+      "target": "0x004b9c60"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x498",
+      "va": "0x00d8142c",
+      "file_offset": 9966636,
+      "bytes": "c0994b00",
+      "target": "0x004b99c0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x49c",
+      "va": "0x00d81430",
+      "file_offset": 9966640,
+      "bytes": "305c7400",
+      "target": "0x00745c30"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x584",
+      "va": "0x00d81518",
+      "file_offset": 9966872,
+      "bytes": "f09b4b00",
+      "target": "0x004b9bf0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x588",
+      "va": "0x00d8151c",
+      "file_offset": 9966876,
+      "bytes": "409e4b00",
+      "target": "0x004b9e40"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x58c",
+      "va": "0x00d81520",
+      "file_offset": 9966880,
+      "bytes": "b09e4b00",
+      "target": "0x004b9eb0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x770",
+      "va": "0x00d81704",
+      "file_offset": 9967364,
+      "bytes": "90bd4c00",
+      "target": "0x004cbd90"
+    },
+    {
+      "vtable": "0x00cce978",
+      "slot": "0x0",
+      "va": "0x00cce978",
+      "file_offset": 9234808,
+      "bytes": "b0c04900",
+      "target": "0x0049c0b0"
+    },
+    {
+      "vtable": "0x00cce978",
+      "slot": "0x4",
+      "va": "0x00cce97c",
+      "file_offset": 9234812,
+      "bytes": "c0c04900",
+      "target": "0x0049c0c0"
+    },
+    {
+      "vtable": "0x00cce978",
+      "slot": "0x8",
+      "va": "0x00cce980",
+      "file_offset": 9234816,
+      "bytes": "e0c04900",
+      "target": "0x0049c0e0"
+    },
+    {
+      "vtable": "0x00cce978",
+      "slot": "0xc",
+      "va": "0x00cce984",
+      "file_offset": 9234820,
+      "bytes": "f0c04900",
+      "target": "0x0049c0f0"
+    },
+    {
+      "vtable": "0x00cce978",
+      "slot": "0x10",
+      "va": "0x00cce988",
+      "file_offset": 9234824,
+      "bytes": "d0498e00",
+      "target": "0x008e49d0"
+    }
+  ],
+  "imports": [
+    {
+      "dll": "winmm.dll",
+      "name": "timeGetTime",
+      "iat_va": "0x0140f0d8"
+    }
+  ],
+  "rea_support": [
+    {
+      "path": "../rea/054-motion-axis-set.c",
+      "sha256": "f58037a4308368c5cdacf7c08bdeaebc4dde285d1abfcddbb9f7c9fc7e2f6583"
+    },
+    {
+      "path": "../rea/055-motion-control-set.c",
+      "sha256": "d566e381a7841dc1e4d612490b46770806ea10d427fbfc5278d49d470c0a4fca"
+    },
+    {
+      "path": "../rea/067-motion-integrate-axis.c",
+      "sha256": "d853fc6f79f7eb7e86c438b0a9323a9469b70b9c9f3da13834ad54646f45f6dd"
+    },
+    {
+      "path": "../rea/068-motion-tick.c",
+      "sha256": "58b22f595be9fadd1c0e431e5711a86169e4f7b208c45115aa9639bf8e4d3030"
+    }
+  ],
+  "limitations": [
+    "Some ranges are excerpts and do not assert recovered function boundaries.",
+    "Ghidra types for 50FDE0 parameters are wrong: axis and dt are int32.",
+    "Original-client runtime states and owner/controller collision behavior are not observed."
+  ]
+}

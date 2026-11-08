@@ -1,0 +1,26 @@
+// 문자열 저장 파일 리스트
+
+// 고유번호 `파일이름` 으로 된 리스트를 작성한다.
+// 고유번호는 반드시 연속적이거나 순서대로 정렬할 필요는 없으며, 중복되지 말아야 한다.
+
+0	`Character/Character.usa.str`
+1	`Common/Common.usa.str`
+2	`Dungeon/Dungeon.usa.str`
+3	`equipment/equipment.usa.str`
+4	`Etc/Etc.usa.str`
+5	`ItemShop/ItemShop.usa.str`
+6	`Map/Map.usa.str`
+7	`Monster/Monster.usa.str`
+8	`Npc/Npc.usa.str`
+9	`PassiveObject/PassiveObject.usa.str`
+10	`Pet/Pet.usa.str`
+11	`Quest/Quest.usa.str`
+12	`Skill/Skill.usa.str`
+13	`stackable/Stackable.usa.str`
+14	`Town/Town.usa.str`
+15	`WorldMap/WorldMap.usa.str`
+16	`Creature/Creature.usa.str`
+17	`AICharacter/AICharacter.usa.str`
+18	`Quest/EpicQuest.usa.str`
+19	`Region/Region.usa.str`
+20	`UI/UI.usa.str`

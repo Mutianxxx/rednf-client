@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "monster": "monster/lugaru/lugaru.mob",
+  "source": {
+    "client": "DNF1031",
+    "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+    "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+    "preferred_image_base": "0x00400000",
+    "observed_plugins": [
+      "0725.dll",
+      "stringtable.dll"
+    ],
+    "behavior_capture_session": "20261018-025801-50428",
+    "instrumentation_validation_session": "20261018-032859-17200"
+  },
+  "exported_member_counts": {
+    "pvf": 37,
+    "npk": 10
+  },
+  "all_exported_member_hashes_match_graph": true
+}

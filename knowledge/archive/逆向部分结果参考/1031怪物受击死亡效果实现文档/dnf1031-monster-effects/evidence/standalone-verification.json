@@ -1,0 +1,2335 @@
+{
+  "ok": true,
+  "rendered_main_animation_frames": 52,
+  "cases": [
+    {
+      "id": 61491,
+      "name": "巨灵布鲁",
+      "path": "monster/act8/ghost_flu/ghost_flu.mob",
+      "states": [
+        {
+          "state": "idle",
+          "frames": 4,
+          "duration_ms": 940.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\61491-idle.png"
+        },
+        {
+          "state": "damage1",
+          "frames": 1,
+          "duration_ms": 150.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\61491-damage1.png"
+        },
+        {
+          "state": "damage2",
+          "frames": 1,
+          "duration_ms": 150.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\61491-damage2.png"
+        },
+        {
+          "state": "death",
+          "frames": 8,
+          "duration_ms": 1600.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\61491-death.png"
+        }
+      ],
+      "bindings": {
+        "damage1": {
+          "available": true,
+          "entry": "monster/act8/ghost_flu/action/damage1.act",
+          "duration_ms": 150.0,
+          "tracks": [
+            {
+              "path": "monster/act8/ghost_flu/animation/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 150.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 1,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 6
+        },
+        "damage2": {
+          "available": true,
+          "entry": "monster/act8/ghost_flu/action/damage1.act",
+          "duration_ms": 150.0,
+          "tracks": [
+            {
+              "path": "monster/act8/ghost_flu/animation/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 150.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 1,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 6
+        },
+        "death": {
+          "available": true,
+          "entry": "monster/act8/ghost_flu/action/die.act",
+          "duration_ms": 1600.0,
+          "tracks": [
+            {
+              "path": "monster/act8/ghost_flu/animation/die.ani",
+              "start_ms": 0.0,
+              "end_ms": 1600.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 8
+            }
+          ],
+          "visible_image_frames": 8,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "idle": {
+          "available": true,
+          "entry": "monster/act8/ghost_flu/action/stay.act",
+          "duration_ms": 940.0,
+          "tracks": [
+            {
+              "path": "monster/act8/ghost_flu/animation/stay.ani",
+              "start_ms": 0.0,
+              "end_ms": 940.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 4
+            }
+          ],
+          "visible_image_frames": 4,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        }
+      }
+    },
+    {
+      "id": 62638,
+      "name": "伪装树魔",
+      "path": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "states": [
+        {
+          "state": "idle",
+          "frames": 1,
+          "duration_ms": 100.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\62638-idle.png"
+        },
+        {
+          "state": "damage1",
+          "frames": 1,
+          "duration_ms": 200.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\62638-damage1.png"
+        },
+        {
+          "state": "damage2",
+          "frames": 1,
+          "duration_ms": 200.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\62638-damage2.png"
+        },
+        {
+          "state": "death",
+          "frames": 2,
+          "duration_ms": 370.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\62638-death.png"
+        }
+      ],
+      "bindings": {
+        "damage1": {
+          "available": true,
+          "entry": "monster/event/bluemarble/dendroid_disguise/action/damage1.act",
+          "duration_ms": 200.0,
+          "tracks": [
+            {
+              "path": "monster/event/bluemarble/dendroid_disguise/animation/normaldamage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 200.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 1,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "damage2": {
+          "available": true,
+          "entry": "monster/event/bluemarble/dendroid_disguise/action/damage2.act",
+          "duration_ms": 200.0,
+          "tracks": [
+            {
+              "path": "monster/event/bluemarble/dendroid_disguise/animation/normaldamage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 200.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 1,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "death": {
+          "available": true,
+          "entry": "monster/event/bluemarble/dendroid_disguise/action/die.act",
+          "duration_ms": 370.0,
+          "tracks": [
+            {
+              "path": "monster/event/bluemarble/dendroid_disguise/animation/die.ani",
+              "start_ms": 0.0,
+              "end_ms": 370.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 2
+            }
+          ],
+          "visible_image_frames": 2,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 48
+        },
+        "idle": {
+          "available": true,
+          "entry": "monster/event/bluemarble/dendroid_disguise/action/stay.act",
+          "duration_ms": 100.0,
+          "tracks": [
+            {
+              "path": "monster/event/bluemarble/dendroid_disguise/animation/stay.ani",
+              "start_ms": 0.0,
+              "end_ms": 100.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 1,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        }
+      }
+    },
+    {
+      "id": 56013,
+      "name": "首领萨斯",
+      "path": "monster/act8/chiefsars/chiefsars.mob",
+      "states": [
+        {
+          "state": "idle",
+          "frames": 1,
+          "duration_ms": 80.0,
+          "tracks": 3,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\56013-idle.png"
+        },
+        {
+          "state": "damage1",
+          "frames": 2,
+          "duration_ms": 200.0,
+          "tracks": 3,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\56013-damage1.png"
+        },
+        {
+          "state": "damage2",
+          "frames": 2,
+          "duration_ms": 200.0,
+          "tracks": 3,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\56013-damage2.png"
+        },
+        {
+          "state": "death",
+          "frames": 2,
+          "duration_ms": 3700.0,
+          "tracks": 4,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\56013-death.png"
+        }
+      ],
+      "bindings": {
+        "damage1": {
+          "available": true,
+          "entry": "monster/act8/chiefsars/action/damage1.act",
+          "duration_ms": 200.0,
+          "tracks": [
+            {
+              "path": "monster/act8/chiefsars/animation/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 200.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 2
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/foot/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 200.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 2
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/hand/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 200.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 2
+            }
+          ],
+          "visible_image_frames": 6,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "damage2": {
+          "available": true,
+          "entry": "monster/act8/chiefsars/action/damage2.act",
+          "duration_ms": 200.0,
+          "tracks": [
+            {
+              "path": "monster/act8/chiefsars/animation/damage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 200.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 2
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/foot/damage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 200.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 2
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/hand/damage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 200.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 2
+            }
+          ],
+          "visible_image_frames": 6,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "death": {
+          "available": true,
+          "entry": "monster/act8/chiefsars/action/die.act",
+          "duration_ms": 3700.0,
+          "tracks": [
+            {
+              "path": "monster/act8/chiefsars/animation/die.ani",
+              "start_ms": 0.0,
+              "end_ms": 3700.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 2
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/ef/boom1.ani",
+              "start_ms": 0.0,
+              "end_ms": 2230.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 13
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/ef/boom2.ani",
+              "start_ms": 0.0,
+              "end_ms": 2620.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 23
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/ef/boomeye.ani",
+              "start_ms": 0.0,
+              "end_ms": 1630.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 6
+            }
+          ],
+          "visible_image_frames": 19,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "down": {
+          "available": true,
+          "entry": "monster/act8/chiefsars/action/down.act",
+          "duration_ms": 400.0,
+          "tracks": [
+            {
+              "path": "monster/act8/chiefsars/animation/down.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 5
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/foot/down.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 5
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/hand/down.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 5
+            }
+          ],
+          "visible_image_frames": 15,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "idle": {
+          "available": true,
+          "entry": "monster/act8/chiefsars/action/stay.act",
+          "duration_ms": 80.0,
+          "tracks": [
+            {
+              "path": "monster/act8/chiefsars/animation/stay.ani",
+              "start_ms": 0.0,
+              "end_ms": 80.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/foot/stay.ani",
+              "start_ms": 0.0,
+              "end_ms": 80.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 1
+            },
+            {
+              "path": "monster/act8/chiefsars/animation/hand/stay.ani",
+              "start_ms": 0.0,
+              "end_ms": 80.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 3,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        }
+      }
+    },
+    {
+      "id": 59005,
+      "name": "杰诺",
+      "path": "monster/act8/wooden_doll/wooden_doll.mob",
+      "states": [
+        {
+          "state": "idle",
+          "frames": 1,
+          "duration_ms": 1000.0,
+          "tracks": 2,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\59005-idle.png"
+        },
+        {
+          "state": "damage1",
+          "frames": 1,
+          "duration_ms": 400.0,
+          "tracks": 4,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\59005-damage1.png"
+        },
+        {
+          "state": "damage2",
+          "frames": 1,
+          "duration_ms": 400.0,
+          "tracks": 4,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\59005-damage2.png"
+        },
+        {
+          "state": "death",
+          "frames": 11,
+          "duration_ms": 30910.0,
+          "tracks": 5,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\59005-death.png"
+        }
+      ],
+      "bindings": {
+        "damage1": {
+          "available": true,
+          "entry": "monster/act8/wooden_doll/action/damage1.act",
+          "duration_ms": 400.0,
+          "tracks": [
+            {
+              "path": "monster/act8/wooden_doll/animation/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/weapon/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 1
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/ball/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 1
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/ball_eff/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 4,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 26
+        },
+        "damage2": {
+          "available": true,
+          "entry": "monster/act8/wooden_doll/action/damage2.act",
+          "duration_ms": 400.0,
+          "tracks": [
+            {
+              "path": "monster/act8/wooden_doll/animation/damage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/weapon/damage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 1
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/ball/damage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 1
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/ball_eff/damage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 400.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 4,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 26
+        },
+        "death": {
+          "available": true,
+          "entry": "monster/act8/wooden_doll/action/die.act",
+          "duration_ms": 30910.0,
+          "tracks": [
+            {
+              "path": "monster/act8/wooden_doll/animation/die.ani",
+              "start_ms": 0.0,
+              "end_ms": 30910.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 11
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/ball/die.ani",
+              "start_ms": 0.0,
+              "end_ms": 3910.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 11
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/ball_eff/die.ani",
+              "start_ms": 0.0,
+              "end_ms": 30910.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 11
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/ball_eff/die.ani",
+              "start_ms": 0.0,
+              "end_ms": 30910.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 11
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/weapon/die.ani",
+              "start_ms": 0.0,
+              "end_ms": 30910.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 11
+            }
+          ],
+          "visible_image_frames": 51,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 24
+        },
+        "down": {
+          "available": true,
+          "entry": "monster/act8/wooden_doll/action/down.act",
+          "duration_ms": 1260.0,
+          "tracks": [
+            {
+              "path": "monster/act8/wooden_doll/animation/down.ani",
+              "start_ms": 0.0,
+              "end_ms": 1260.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 5
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/ball/down.ani",
+              "start_ms": 0.0,
+              "end_ms": 1260.0,
+              "layer": 1,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 5
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/ball_eff/down.ani",
+              "start_ms": 0.0,
+              "end_ms": 1260.0,
+              "layer": 2,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 5
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/weapon/down.ani",
+              "start_ms": 0.0,
+              "end_ms": 1260.0,
+              "layer": 3,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 5
+            }
+          ],
+          "visible_image_frames": 19,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "idle": {
+          "available": true,
+          "entry": "monster/act8/wooden_doll/action/wait_stay.act",
+          "duration_ms": 1000.0,
+          "tracks": [
+            {
+              "path": "monster/act8/wooden_doll/animation/wait_stay.ani",
+              "start_ms": 0.0,
+              "end_ms": 1000.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            },
+            {
+              "path": "monster/act8/wooden_doll/animation/weapon/wait_stay.ani",
+              "start_ms": 0.0,
+              "end_ms": 1000.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "sub",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 2,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 28
+        }
+      }
+    },
+    {
+      "id": 5001,
+      "name": "猫妖",
+      "path": "monster/lugaru/lugaru.mob",
+      "states": [
+        {
+          "state": "idle",
+          "frames": 4,
+          "duration_ms": 500.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\5001-idle.png"
+        },
+        {
+          "state": "damage1",
+          "frames": 1,
+          "duration_ms": 10000.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\5001-damage1.png"
+        },
+        {
+          "state": "damage2",
+          "frames": 1,
+          "duration_ms": 10000.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\5001-damage2.png"
+        }
+      ],
+      "bindings": {
+        "damage1": {
+          "available": true,
+          "entry": "monster/lugaru/animation_lugaru/damage1.ani",
+          "duration_ms": 10000.0,
+          "tracks": [
+            {
+              "path": "monster/lugaru/animation_lugaru/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 10000.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 1,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "damage2": {
+          "available": true,
+          "entry": "monster/lugaru/animation_lugaru/damage2.ani",
+          "duration_ms": 10000.0,
+          "tracks": [
+            {
+              "path": "monster/lugaru/animation_lugaru/damage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 10000.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 1,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "down": {
+          "available": true,
+          "entry": "monster/lugaru/animation_lugaru/down.ani",
+          "duration_ms": 20660.0,
+          "tracks": [
+            {
+              "path": "monster/lugaru/animation_lugaru/down.ani",
+              "start_ms": 0.0,
+              "end_ms": 20660.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 5
+            }
+          ],
+          "visible_image_frames": 5,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "idle": {
+          "available": true,
+          "entry": "monster/lugaru/animation_lugaru/stay_2.ani",
+          "duration_ms": 500.0,
+          "tracks": [
+            {
+              "path": "monster/lugaru/animation_lugaru/stay_2.ani",
+              "start_ms": 0.0,
+              "end_ms": 500.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 4
+            }
+          ],
+          "visible_image_frames": 4,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        }
+      }
+    },
+    {
+      "id": 59001,
+      "name": "拉宾特的灵魂",
+      "path": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "states": [
+        {
+          "state": "idle",
+          "frames": 4,
+          "duration_ms": 720.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\59001-idle.png"
+        },
+        {
+          "state": "damage1",
+          "frames": 1,
+          "duration_ms": 100.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\59001-damage1.png"
+        },
+        {
+          "state": "damage2",
+          "frames": 1,
+          "duration_ms": 100.0,
+          "tracks": 1,
+          "screenshot": ".\\monster_demo\\effects_handoff\\build\\verification\\59001-damage2.png"
+        }
+      ],
+      "bindings": {
+        "damage1": {
+          "available": true,
+          "entry": "monster/act8/chiefmongghost/action/damage1.act",
+          "duration_ms": 100.0,
+          "tracks": [
+            {
+              "path": "monster/act8/chiefmongghost/animation/damage1.ani",
+              "start_ms": 0.0,
+              "end_ms": 100.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 1,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "damage2": {
+          "available": true,
+          "entry": "monster/act8/chiefmongghost/action/damage2.act",
+          "duration_ms": 100.0,
+          "tracks": [
+            {
+              "path": "monster/act8/chiefmongghost/animation/damage2.ani",
+              "start_ms": 0.0,
+              "end_ms": 100.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 1
+            }
+          ],
+          "visible_image_frames": 1,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        },
+        "death": {
+          "available": false,
+          "entry": "monster/act8/chiefmongghost/action/die.act",
+          "duration_ms": 1440.0,
+          "tracks": [],
+          "visible_image_frames": 0,
+          "error": "Source IMG frames are fully transparent placeholders; no visible animation",
+          "issues": [],
+          "unexecuted_act_tags": 39
+        },
+        "idle": {
+          "available": true,
+          "entry": "monster/act8/chiefmongghost/action/stay.act",
+          "duration_ms": 720.0,
+          "tracks": [
+            {
+              "path": "monster/act8/chiefmongghost/animation/stay.ani",
+              "start_ms": 0.0,
+              "end_ms": 720.0,
+              "layer": 0,
+              "x": 0.0,
+              "y": 0.0,
+              "role": "base",
+              "frames": 4
+            }
+          ],
+          "visible_image_frames": 4,
+          "error": "",
+          "issues": [],
+          "unexecuted_act_tags": 0
+        }
+      }
+    }
+  ],
+  "source": {
+    "client": "DNF1031",
+    "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+    "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+    "preferred_image_base": "0x00400000",
+    "observed_plugins": [
+      "0725.dll",
+      "stringtable.dll"
+    ],
+    "behavior_capture_session": "20261018-025801-50428",
+    "instrumentation_validation_session": "20261018-032859-17200"
+  },
+  "events": [
+    {
+      "wall_ms": 0.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 0.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 0.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 0.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 0.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 151.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 150.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 151.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 151.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 302.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 150.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 302.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 302.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 1903.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 1600.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 1903.0,
+      "event": "action_rejected",
+      "state": "death",
+      "time_ms": 1600.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "dead"
+    },
+    {
+      "wall_ms": 1903.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 1903.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 1903.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 1903.0,
+      "event": "frame_step",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 1903.0,
+      "event": "timeline_seek",
+      "state": "damage1",
+      "time_ms": 76.036866359447,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 1903.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 1903.0,
+      "event": "sequence_started",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 2603.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 2743.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 150.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 3403.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 3543.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 150.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 4203.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 5793.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 1600.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 5793.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 5793.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 5793.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 5793.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 5994.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 200.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 5994.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 5994.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6195.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 200.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6195.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6195.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6566.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 370.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6566.0,
+      "event": "action_rejected",
+      "state": "death",
+      "time_ms": 370.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "dead"
+    },
+    {
+      "wall_ms": 6566.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6566.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6566.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6566.0,
+      "event": "frame_step",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6566.0,
+      "event": "timeline_seek",
+      "state": "damage1",
+      "time_ms": 101.38248847926268,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6566.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 6566.0,
+      "event": "sequence_started",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 7266.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 7456.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 200.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 8116.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 8306.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 200.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 8966.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9326.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 370.0,
+      "monster": "monster/event/bluemarble/dendroid_disguise/dendroid_disguise.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9326.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9326.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9326.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9326.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9527.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 200.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9527.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9527.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9728.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 200.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9728.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 9728.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 13429.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 3700.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 13429.0,
+      "event": "action_rejected",
+      "state": "death",
+      "time_ms": 3700.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "dead"
+    },
+    {
+      "wall_ms": 13429.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 13429.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 13429.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 13429.0,
+      "event": "frame_step",
+      "state": "damage1",
+      "time_ms": 100.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 13429.0,
+      "event": "timeline_seek",
+      "state": "damage1",
+      "time_ms": 101.38248847926268,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 13429.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 13429.0,
+      "event": "sequence_started",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 14129.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 14319.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 200.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 14979.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 15169.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 200.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 15829.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 19519.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 3700.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 19519.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 19519.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 19519.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 19519.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 19920.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 400.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 19920.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 19920.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 20321.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 400.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 20321.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 20321.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 51232.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 30910.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 51232.0,
+      "event": "action_rejected",
+      "state": "death",
+      "time_ms": 30910.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "dead"
+    },
+    {
+      "wall_ms": 51232.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 51232.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 51232.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 51232.0,
+      "event": "frame_step",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 51232.0,
+      "event": "timeline_seek",
+      "state": "damage1",
+      "time_ms": 202.76497695852535,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 51232.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 51232.0,
+      "event": "sequence_started",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 51932.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 52322.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 400.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 52982.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 53372.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 400.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 54032.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 84932.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 30910.0,
+      "monster": "monster/act8/wooden_doll/wooden_doll.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 84932.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 84932.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 84932.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 84932.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 94933.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 10000.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 94933.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 94933.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 10000.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "frame_step",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "timeline_seek",
+      "state": "damage1",
+      "time_ms": 5069.124423963134,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "action_rejected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "death"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "sequence_rejected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "no_death_animation"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 104934.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105035.0,
+      "event": "action_completed",
+      "state": "damage1",
+      "time_ms": 100.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105035.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105035.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "action_completed",
+      "state": "damage2",
+      "time_ms": 100.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "frame_step",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "timeline_seek",
+      "state": "damage1",
+      "time_ms": 50.69124423963134,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "action_rejected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "death"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "sequence_rejected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefmongghost/chiefmongghost.mob",
+      "result": "no_death_animation"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 105136.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 108366.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 3220.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 108366.0,
+      "event": "action_rejected",
+      "state": "death",
+      "time_ms": 3220.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "dead"
+    },
+    {
+      "wall_ms": 108366.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 108366.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/goblin/goblin.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 108366.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/goblin/goblin.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 108366.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/goblin/goblin.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 111596.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 3220.0,
+      "monster": "monster/goblin/goblin.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 111596.0,
+      "event": "action_rejected",
+      "state": "death",
+      "time_ms": 3220.0,
+      "monster": "monster/goblin/goblin.mob",
+      "result": "dead"
+    },
+    {
+      "wall_ms": 111596.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/goblin/goblin.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 111596.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 111596.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 111596.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 114826.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 3220.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 114826.0,
+      "event": "action_rejected",
+      "state": "death",
+      "time_ms": 3220.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "dead"
+    },
+    {
+      "wall_ms": 114826.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/chiefsars/chiefsars.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 114826.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 114826.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 114826.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 118056.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 3220.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 118056.0,
+      "event": "action_rejected",
+      "state": "death",
+      "time_ms": 3220.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "dead"
+    },
+    {
+      "wall_ms": 118056.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/act8/ghost_flu/ghost_flu.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 118056.0,
+      "event": "monster_selected",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 118056.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 118056.0,
+      "event": "death_mode_changed",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "1"
+    },
+    {
+      "wall_ms": 118056.0,
+      "event": "reset",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 118056.0,
+      "event": "sequence_started",
+      "state": "idle",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 118756.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 119906.0,
+      "event": "action_started",
+      "state": "damage2",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 121056.0,
+      "event": "action_started",
+      "state": "damage1",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 121056.0,
+      "event": "action_started",
+      "state": "death",
+      "time_ms": 0.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    },
+    {
+      "wall_ms": 124266.0,
+      "event": "action_completed",
+      "state": "death",
+      "time_ms": 3220.0,
+      "monster": "monster/lugaru/lugaru.mob",
+      "result": "ok"
+    }
+  ],
+  "unconsumed_render_nodes": [],
+  "scope": "Resource/frame and reconstructed preview behavior verification; not original-client pixel parity or full combat/death controller acceptance"
+}

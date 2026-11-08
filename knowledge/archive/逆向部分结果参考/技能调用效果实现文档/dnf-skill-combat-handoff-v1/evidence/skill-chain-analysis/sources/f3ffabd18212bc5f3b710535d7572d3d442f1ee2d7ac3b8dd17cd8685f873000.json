@@ -1,0 +1,102 @@
+{
+  "path": "character/swordman/particle/gorecross.ptl",
+  "fields": [
+    {
+      "tag": "[x axis]",
+      "values": [],
+      "offset": 0
+    },
+    {
+      "tag": "[move type]",
+      "values": [
+        "[straight line]"
+      ],
+      "offset": 5
+    },
+    {
+      "tag": "[move variable 1]",
+      "values": [
+        400,
+        0
+      ],
+      "offset": 15
+    },
+    {
+      "tag": "[changing term]",
+      "values": [
+        280
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[changing type]",
+      "values": [
+        "[keep last value]"
+      ],
+      "offset": 40
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 19617044,
+      "value": "[x axis]"
+    },
+    {
+      "offset": 5,
+      "type": 3,
+      "raw": 19617062,
+      "value": "[move type]"
+    },
+    {
+      "offset": 10,
+      "type": 6,
+      "raw": 19617086,
+      "value": "[straight line]"
+    },
+    {
+      "offset": 15,
+      "type": 3,
+      "raw": 19617118,
+      "value": "[move variable 1]"
+    },
+    {
+      "offset": 20,
+      "type": 0,
+      "raw": 400,
+      "value": 400
+    },
+    {
+      "offset": 25,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 19618820,
+      "value": "[changing term]"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 280,
+      "value": 280
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 19618852,
+      "value": "[changing type]"
+    },
+    {
+      "offset": 45,
+      "type": 6,
+      "raw": 19630080,
+      "value": "[keep last value]"
+    }
+  ],
+  "raw_sha256": "f3ffabd18212bc5f3b710535d7572d3d442f1ee2d7ac3b8dd17cd8685f873000"
+}

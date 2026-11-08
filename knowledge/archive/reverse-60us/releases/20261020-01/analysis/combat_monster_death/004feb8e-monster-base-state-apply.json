@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4feb8e",
+  "rva": "0xfeb8e",
+  "file_offset": 1043342,
+  "length": 23,
+  "bytes_sha256": "f6cde3dfd4de4467111739d5d51b9bc0c98e4921a2b49e1e8313dd573c83e769",
+  "status": "native_bytes",
+  "note": "Pass unchanged four args to base4BAD60.",
+  "disassembled": true
+}

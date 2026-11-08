@@ -1,0 +1,1332 @@
+{
+  "schema": "60us-releasewave-scalar-verification-v1",
+  "passed": 187,
+  "total": 187,
+  "observed_native_execution": false,
+  "checks": [
+    {
+      "name": "source executable identity",
+      "passed": true,
+      "detail": {
+        "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+      }
+    },
+    {
+      "name": "current PVF archive identity",
+      "passed": true,
+      "detail": {
+        "actual": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+        "expected": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      }
+    },
+    {
+      "name": "capture 0054FC40-0054FF55.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 0054FC40-0054FF55.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00550080-00550149.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00550080-00550149.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00550150-00550365.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00550150-00550365.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 0043ABF0-0043AC36.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 0043ABF0-0043AC36.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 0043A310-0043A32E.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 0043A310-0043A32E.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00447FF0-00448099.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00447FF0-00448099.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00448150-004481F0.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00448150-004481F0.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00553BA0-00553BC8.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00553BA0-00553BC8.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00551B8F-00551BE8.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00551B8F-00551BE8.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00551CA9-00551D87.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00551CA9-00551D87.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 008A1052-008A1084.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 008A1052-008A1084.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 008A110B-008A116F.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 008A110B-008A116F.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00C01544-00C015BA.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00C01544-00C015BA.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00F5E954-00F5E95C.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00F5E954-00F5E95C.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 00CC10AC-00CC10B0.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 00CC10AC-00CC10B0.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 0073C254-0073C2C6.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 0073C254-0073C2C6.asm",
+      "passed": true
+    },
+    {
+      "name": "capture 004CAA20-004CAA41.bin",
+      "passed": true
+    },
+    {
+      "name": "assembly 004CAA20-004CAA41.asm",
+      "passed": true
+    },
+    {
+      "name": "reused level_query_bridge",
+      "passed": true
+    },
+    {
+      "name": "reused level_query",
+      "passed": true
+    },
+    {
+      "name": "reused level_value",
+      "passed": true
+    },
+    {
+      "name": "reused skill_load_parse",
+      "passed": true
+    },
+    {
+      "name": "reused skill_levelinfo_materialize",
+      "passed": true
+    },
+    {
+      "name": "reused skl_parser_entry",
+      "passed": true
+    },
+    {
+      "name": "reused skl_levelinfo_parse",
+      "passed": true
+    },
+    {
+      "name": "reused swordman_context_stat",
+      "passed": true
+    },
+    {
+      "name": "REA 0x54FC40",
+      "passed": true
+    },
+    {
+      "name": "REA 0x550150",
+      "passed": true
+    },
+    {
+      "name": "REA 0x550080",
+      "passed": true
+    },
+    {
+      "name": "current SKL export identity",
+      "passed": true,
+      "detail": {
+        "actual": "2f7a979f8e55538821509f73647ac5625c3031ffd7075f9f36e12136a762bb85",
+        "expected": "2f7a979f8e55538821509f73647ac5625c3031ffd7075f9f36e12136a762bb85"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 0",
+      "passed": true,
+      "detail": {
+        "actual": "1",
+        "expected": "1"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 1",
+      "passed": true,
+      "detail": {
+        "actual": "552",
+        "expected": "552"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 2",
+      "passed": true,
+      "detail": {
+        "actual": "635",
+        "expected": "635"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 3",
+      "passed": true,
+      "detail": {
+        "actual": "724",
+        "expected": "724"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 4",
+      "passed": true,
+      "detail": {
+        "actual": "818",
+        "expected": "818"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 5",
+      "passed": true,
+      "detail": {
+        "actual": "917",
+        "expected": "917"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 6",
+      "passed": true,
+      "detail": {
+        "actual": "1022",
+        "expected": "1022"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 7",
+      "passed": true,
+      "detail": {
+        "actual": "1132",
+        "expected": "1132"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 8",
+      "passed": true,
+      "detail": {
+        "actual": "1248",
+        "expected": "1248"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 9",
+      "passed": true,
+      "detail": {
+        "actual": "1368",
+        "expected": "1368"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 10",
+      "passed": true,
+      "detail": {
+        "actual": "1495",
+        "expected": "1495"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 11",
+      "passed": true,
+      "detail": {
+        "actual": "1627",
+        "expected": "1627"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 12",
+      "passed": true,
+      "detail": {
+        "actual": "1764",
+        "expected": "1764"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 13",
+      "passed": true,
+      "detail": {
+        "actual": "1906",
+        "expected": "1906"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 14",
+      "passed": true,
+      "detail": {
+        "actual": "2054",
+        "expected": "2054"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 15",
+      "passed": true,
+      "detail": {
+        "actual": "2208",
+        "expected": "2208"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 16",
+      "passed": true,
+      "detail": {
+        "actual": "2367",
+        "expected": "2367"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 17",
+      "passed": true,
+      "detail": {
+        "actual": "2531",
+        "expected": "2531"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 18",
+      "passed": true,
+      "detail": {
+        "actual": "2700",
+        "expected": "2700"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 19",
+      "passed": true,
+      "detail": {
+        "actual": "2875",
+        "expected": "2875"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 20",
+      "passed": true,
+      "detail": {
+        "actual": "3056",
+        "expected": "3056"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 21",
+      "passed": true,
+      "detail": {
+        "actual": "3242",
+        "expected": "3242"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 22",
+      "passed": true,
+      "detail": {
+        "actual": "3433",
+        "expected": "3433"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 23",
+      "passed": true,
+      "detail": {
+        "actual": "3630",
+        "expected": "3630"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 24",
+      "passed": true,
+      "detail": {
+        "actual": "3832",
+        "expected": "3832"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 25",
+      "passed": true,
+      "detail": {
+        "actual": "4039",
+        "expected": "4039"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 26",
+      "passed": true,
+      "detail": {
+        "actual": "4252",
+        "expected": "4252"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 27",
+      "passed": true,
+      "detail": {
+        "actual": "4470",
+        "expected": "4470"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 28",
+      "passed": true,
+      "detail": {
+        "actual": "4694",
+        "expected": "4694"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 29",
+      "passed": true,
+      "detail": {
+        "actual": "4923",
+        "expected": "4923"
+      }
+    },
+    {
+      "name": "dungeon current SKL token 30",
+      "passed": true,
+      "detail": {
+        "actual": "5158",
+        "expected": "5158"
+      }
+    },
+    {
+      "name": "pvp current SKL token 0",
+      "passed": true,
+      "detail": {
+        "actual": "1",
+        "expected": "1"
+      }
+    },
+    {
+      "name": "pvp current SKL token 1",
+      "passed": true,
+      "detail": {
+        "actual": "172",
+        "expected": "172"
+      }
+    },
+    {
+      "name": "pvp current SKL token 2",
+      "passed": true,
+      "detail": {
+        "actual": "218",
+        "expected": "218"
+      }
+    },
+    {
+      "name": "pvp current SKL token 3",
+      "passed": true,
+      "detail": {
+        "actual": "269",
+        "expected": "269"
+      }
+    },
+    {
+      "name": "pvp current SKL token 4",
+      "passed": true,
+      "detail": {
+        "actual": "325",
+        "expected": "325"
+      }
+    },
+    {
+      "name": "pvp current SKL token 5",
+      "passed": true,
+      "detail": {
+        "actual": "387",
+        "expected": "387"
+      }
+    },
+    {
+      "name": "pvp current SKL token 6",
+      "passed": true,
+      "detail": {
+        "actual": "454",
+        "expected": "454"
+      }
+    },
+    {
+      "name": "pvp current SKL token 7",
+      "passed": true,
+      "detail": {
+        "actual": "527",
+        "expected": "527"
+      }
+    },
+    {
+      "name": "pvp current SKL token 8",
+      "passed": true,
+      "detail": {
+        "actual": "604",
+        "expected": "604"
+      }
+    },
+    {
+      "name": "pvp current SKL token 9",
+      "passed": true,
+      "detail": {
+        "actual": "688",
+        "expected": "688"
+      }
+    },
+    {
+      "name": "pvp current SKL token 10",
+      "passed": true,
+      "detail": {
+        "actual": "776",
+        "expected": "776"
+      }
+    },
+    {
+      "name": "pvp current SKL token 11",
+      "passed": true,
+      "detail": {
+        "actual": "870",
+        "expected": "870"
+      }
+    },
+    {
+      "name": "pvp current SKL token 12",
+      "passed": true,
+      "detail": {
+        "actual": "969",
+        "expected": "969"
+      }
+    },
+    {
+      "name": "pvp current SKL token 13",
+      "passed": true,
+      "detail": {
+        "actual": "1073",
+        "expected": "1073"
+      }
+    },
+    {
+      "name": "pvp current SKL token 14",
+      "passed": true,
+      "detail": {
+        "actual": "1183",
+        "expected": "1183"
+      }
+    },
+    {
+      "name": "pvp current SKL token 15",
+      "passed": true,
+      "detail": {
+        "actual": "1298",
+        "expected": "1298"
+      }
+    },
+    {
+      "name": "pvp current SKL token 16",
+      "passed": true,
+      "detail": {
+        "actual": "1419",
+        "expected": "1419"
+      }
+    },
+    {
+      "name": "pvp current SKL token 17",
+      "passed": true,
+      "detail": {
+        "actual": "1544",
+        "expected": "1544"
+      }
+    },
+    {
+      "name": "pvp current SKL token 18",
+      "passed": true,
+      "detail": {
+        "actual": "1676",
+        "expected": "1676"
+      }
+    },
+    {
+      "name": "pvp current SKL token 19",
+      "passed": true,
+      "detail": {
+        "actual": "1812",
+        "expected": "1812"
+      }
+    },
+    {
+      "name": "pvp current SKL token 20",
+      "passed": true,
+      "detail": {
+        "actual": "1954",
+        "expected": "1954"
+      }
+    },
+    {
+      "name": "dungeon level-info column count",
+      "passed": true,
+      "detail": {
+        "actual": 1,
+        "expected": 1
+      }
+    },
+    {
+      "name": "dungeon level-info rows",
+      "passed": true,
+      "detail": {
+        "actual": 30,
+        "expected": 30
+      }
+    },
+    {
+      "name": "pvp level-info rows",
+      "passed": true,
+      "detail": {
+        "actual": 20,
+        "expected": 20
+      }
+    },
+    {
+      "name": "maximum-level PVF metadata",
+      "passed": true,
+      "detail": {
+        "actual": 20,
+        "expected": 20
+      }
+    },
+    {
+      "name": "required-level PVF metadata",
+      "passed": true,
+      "detail": {
+        "actual": 20,
+        "expected": 20
+      }
+    },
+    {
+      "name": "required-range PVF metadata",
+      "passed": true,
+      "detail": {
+        "actual": 3,
+        "expected": 3
+      }
+    },
+    {
+      "name": "skill32 native scalar call",
+      "passed": true,
+      "detail": {
+        "actual": "e868e7d8ff",
+        "expected": "e868e7d8ff"
+      }
+    },
+    {
+      "name": "bridge duplicates actor context",
+      "passed": true,
+      "detail": {
+        "actual": "5050",
+        "expected": "5050"
+      }
+    },
+    {
+      "name": "equal context skips base ratio",
+      "passed": true,
+      "detail": {
+        "actual": "3bcf7427",
+        "expected": "3bcf7427"
+      }
+    },
+    {
+      "name": "unsigned level-index bounds",
+      "passed": true,
+      "detail": {
+        "actual": "3bf97209",
+        "expected": "3bf97209"
+      }
+    },
+    {
+      "name": "modifier runtime key from skill+8",
+      "passed": true,
+      "detail": {
+        "actual": "8d4e08",
+        "expected": "8d4e08"
+      }
+    },
+    {
+      "name": "modifier queryKind1 and argument order",
+      "passed": true,
+      "detail": {
+        "actual": "506a01535751",
+        "expected": "506a01535751"
+      }
+    },
+    {
+      "name": "primary mode filter only value2 gates",
+      "passed": true,
+      "detail": {
+        "actual": "85c0741683f8027511",
+        "expected": "85c0741683f8027511"
+      }
+    },
+    {
+      "name": "actor filter wildcard6",
+      "passed": true,
+      "detail": {
+        "actual": "833e06",
+        "expected": "833e06"
+      }
+    },
+    {
+      "name": "primary row stride40",
+      "passed": true,
+      "detail": {
+        "actual": "83c028",
+        "expected": "83c028"
+      }
+    },
+    {
+      "name": "secondary row stride40",
+      "passed": true,
+      "detail": {
+        "actual": "83c328",
+        "expected": "83c328"
+      }
+    },
+    {
+      "name": "23 source slots",
+      "passed": true,
+      "detail": {
+        "actual": "83fb17",
+        "expected": "83fb17"
+      }
+    },
+    {
+      "name": "native ordered percent arithmetic",
+      "passed": true,
+      "detail": {
+        "actual": "d80dac10cc00d84d0cd8450c",
+        "expected": "d80dac10cc00d84d0cd8450c"
+      }
+    },
+    {
+      "name": "native effective-level signed division",
+      "passed": true,
+      "detail": {
+        "actual": "f7f9",
+        "expected": "f7f9"
+      }
+    },
+    {
+      "name": "reference cap is separate skill+178",
+      "passed": true,
+      "detail": {
+        "actual": "8d9e78010000",
+        "expected": "8d9e78010000"
+      }
+    },
+    {
+      "name": "reference query uses equal -1 contexts",
+      "passed": true,
+      "detail": {
+        "actual": "6aff6aff52",
+        "expected": "6aff6aff52"
+      }
+    },
+    {
+      "name": "reference-cap1 slope special case",
+      "passed": true,
+      "detail": {
+        "actual": "83f801",
+        "expected": "83f801"
+      }
+    },
+    {
+      "name": "projection explicit float32 store",
+      "passed": true,
+      "detail": {
+        "actual": "d86d14d91c24",
+        "expected": "d86d14d91c24"
+      }
+    },
+    {
+      "name": "context numerator multiplies rounded float32",
+      "passed": true,
+      "detail": {
+        "actual": "d84d08",
+        "expected": "d84d08"
+      }
+    },
+    {
+      "name": "context numerator explicit float32 store",
+      "passed": true,
+      "detail": {
+        "actual": "d95d08",
+        "expected": "d95d08"
+      }
+    },
+    {
+      "name": "context quotient uses stored numerator",
+      "passed": true,
+      "detail": {
+        "actual": "d87d08",
+        "expected": "d87d08"
+      }
+    },
+    {
+      "name": "global multiplier explicit float32 store",
+      "passed": true,
+      "detail": {
+        "actual": "d84d08d95d08",
+        "expected": "d84d08d95d08"
+      }
+    },
+    {
+      "name": "current native percent constant float32",
+      "passed": true,
+      "detail": {
+        "actual": "0ad7233c",
+        "expected": "0ad7233c"
+      }
+    },
+    {
+      "name": "native multiplier initial values",
+      "passed": true,
+      "detail": {
+        "actual": [
+          1.0,
+          1.0
+        ],
+        "expected": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "43ABF0 native true mode set",
+      "passed": true,
+      "detail": {
+        "actual": [
+          4,
+          6,
+          7,
+          9
+        ],
+        "expected": [
+          4,
+          6,
+          7,
+          9
+        ]
+      }
+    },
+    {
+      "name": "dungeon baseline level1",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "dungeon baseline level20",
+      "passed": true,
+      "detail": {
+        "actual": 3056,
+        "expected": 3056
+      }
+    },
+    {
+      "name": "dungeon baseline level30",
+      "passed": true,
+      "detail": {
+        "actual": 5158,
+        "expected": 5158
+      }
+    },
+    {
+      "name": "dungeon baseline level31",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0
+      }
+    },
+    {
+      "name": "pvp baseline level1",
+      "passed": true,
+      "detail": {
+        "actual": 172,
+        "expected": 172
+      }
+    },
+    {
+      "name": "pvp baseline level20",
+      "passed": true,
+      "detail": {
+        "actual": 1954,
+        "expected": 1954
+      }
+    },
+    {
+      "name": "pvp baseline level30",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0
+      }
+    },
+    {
+      "name": "callsite lower clamp 0",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "callsite lower clamp -1",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "callsite lower clamp -200",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "level30 marked above PVF maximum",
+      "passed": true
+    },
+    {
+      "name": "baseline is not runtime observation",
+      "passed": true
+    },
+    {
+      "name": "missing modifier snapshot not silently empty",
+      "passed": true,
+      "detail": {
+        "actual": "needs_explicit_runtime_input",
+        "expected": "needs_explicit_runtime_input"
+      }
+    },
+    {
+      "name": "incomplete modifier snapshot rejected",
+      "passed": true,
+      "detail": {
+        "actual": "needs_explicit_runtime_input",
+        "expected": "needs_explicit_runtime_input"
+      }
+    },
+    {
+      "name": "additive runtime row",
+      "passed": true,
+      "detail": {
+        "actual": 562,
+        "expected": 562
+      }
+    },
+    {
+      "name": "percent10 truncation",
+      "passed": true,
+      "detail": {
+        "actual": 607,
+        "expected": 607
+      }
+    },
+    {
+      "name": "ordered add then percentage",
+      "passed": true,
+      "detail": {
+        "actual": 618,
+        "expected": 618
+      }
+    },
+    {
+      "name": "ordered percentage then add",
+      "passed": true,
+      "detail": {
+        "actual": 617,
+        "expected": 617
+      }
+    },
+    {
+      "name": "primary before secondary",
+      "passed": true,
+      "detail": {
+        "actual": 617,
+        "expected": 617
+      }
+    },
+    {
+      "name": "wildcard actor filter needs no actor identity",
+      "passed": true,
+      "detail": {
+        "actual": 562,
+        "expected": 562
+      }
+    },
+    {
+      "name": "wrong runtime key excluded",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "runtime skill key not assumed32",
+      "passed": true,
+      "detail": {
+        "actual": "needs_explicit_runtime_input",
+        "expected": "needs_explicit_runtime_input"
+      }
+    },
+    {
+      "name": "wrong query kind excluded",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "wrong column excluded",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "specific matching actor filter",
+      "passed": true,
+      "detail": {
+        "actual": 562,
+        "expected": 562
+      }
+    },
+    {
+      "name": "specific mismatching actor filter",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "primary mode2 requires43ABF0",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "secondary has no mode2 filter",
+      "passed": true,
+      "detail": {
+        "actual": 562,
+        "expected": 562
+      }
+    },
+    {
+      "name": "secondary false secondary_gate_12c",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "secondary false secondary_gate_118",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "out-of-bounds skips additive modifier",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0
+      }
+    },
+    {
+      "name": "additive signed32 wrapping",
+      "passed": true,
+      "detail": {
+        "actual": -2147483097,
+        "expected": -2147483097
+      }
+    },
+    {
+      "name": "negative percentage truncates toward zero",
+      "passed": true,
+      "detail": {
+        "actual": -55,
+        "expected": -55
+      }
+    },
+    {
+      "name": "active mode needs runtime context",
+      "passed": true,
+      "detail": {
+        "actual": "needs_explicit_runtime_input",
+        "expected": "needs_explicit_runtime_input"
+      }
+    },
+    {
+      "name": "active mode needs separate cap",
+      "passed": true,
+      "detail": {
+        "actual": "missing runtime input: runtime_reference_cap_178",
+        "expected": "missing runtime input: runtime_reference_cap_178"
+      }
+    },
+    {
+      "name": "explicit mode4 projection level1",
+      "passed": true,
+      "detail": {
+        "actual": 567,
+        "expected": 567
+      }
+    },
+    {
+      "name": "explicit mode4 projection level30",
+      "passed": true,
+      "detail": {
+        "actual": 4366,
+        "expected": 4366
+      }
+    },
+    {
+      "name": "truncated integer slope",
+      "passed": true,
+      "detail": {
+        "actual": 131,
+        "expected": 131
+      }
+    },
+    {
+      "name": "factor not silently1",
+      "passed": true,
+      "detail": {
+        "actual": "missing runtime input: context_factor_448150",
+        "expected": "missing runtime input: context_factor_448150"
+      }
+    },
+    {
+      "name": "explicit context factor ratio",
+      "passed": true,
+      "detail": {
+        "actual": 6112,
+        "expected": 6112
+      }
+    },
+    {
+      "name": "effective level has no lower clamp",
+      "passed": true,
+      "detail": {
+        "actual": -5,
+        "expected": -5
+      }
+    },
+    {
+      "name": "negative effective projected result",
+      "passed": true,
+      "detail": {
+        "actual": 3842,
+        "expected": 3842
+      }
+    },
+    {
+      "name": "cap1 uses raw row2 minus row1",
+      "passed": true,
+      "detail": {
+        "actual": 83,
+        "expected": 83
+      }
+    },
+    {
+      "name": "cap1 level30 projection",
+      "passed": true,
+      "detail": {
+        "actual": 2959,
+        "expected": 2959
+      }
+    },
+    {
+      "name": "secondary mode selects F5E958",
+      "passed": true,
+      "detail": {
+        "actual": 1134,
+        "expected": 1134
+      }
+    },
+    {
+      "name": "mode gate false 3",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "mode gate false 5",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "mode gate false 8",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "mode gate false 10",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "actor context -1 bypasses environment",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "runtime range0 bypasses environment",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "runtime maximum1 bypasses environment",
+      "passed": true,
+      "detail": {
+        "actual": 552,
+        "expected": 552
+      }
+    },
+    {
+      "name": "447FF0 positive tie",
+      "passed": true,
+      "detail": {
+        "actual": 3,
+        "expected": 3
+      }
+    },
+    {
+      "name": "447FF0 negative tie",
+      "passed": true,
+      "detail": {
+        "actual": -3,
+        "expected": -3
+      }
+    },
+    {
+      "name": "float32 nearest-even tie",
+      "passed": true,
+      "detail": {
+        "actual": "16777216",
+        "expected": "16777216"
+      }
+    },
+    {
+      "name": "float32 subnormal nearest-even zero",
+      "passed": true,
+      "detail": {
+        "actual": "0",
+        "expected": "0"
+      }
+    },
+    {
+      "name": "float32 subnormal nearest-even up",
+      "passed": true,
+      "detail": {
+        "actual": "1/356811923176489970264571492362373784095686656",
+        "expected": "1/356811923176489970264571492362373784095686656"
+      }
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "path": "passiveobject/character/swordman/outragebreakbloodexp.obj",
+  "fields": [
+    {
+      "tag": "[name]",
+      "values": [
+        "银光落刃的飞溅"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[layer]",
+      "values": [
+        "[bottom]"
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[pass type]",
+      "values": [
+        "[pass all]"
+      ],
+      "offset": 20
+    },
+    {
+      "tag": "[piercing power]",
+      "values": [
+        1000
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[basic motion]",
+      "values": [
+        "Animation/OutRageBreak/bloodexp_damage.ani"
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[etc motion]",
+      "values": [],
+      "offset": 50
+    },
+    {
+      "tag": "[/etc motion]",
+      "values": [],
+      "offset": 55
+    },
+    {
+      "tag": "[attack info]",
+      "values": [
+        "AttackInfo/OutRageBreakBloodExp.atk"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[object destroy condition]",
+      "values": [
+        "[destroy condition]",
+        "[on end of animation]"
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[/object destroy condition]",
+      "values": [],
+      "offset": 85
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 14059926,
+      "value": "[name]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 189755,
+      "value": "银光落刃的飞溅"
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 16526534,
+      "value": "[layer]"
+    },
+    {
+      "offset": 15,
+      "type": 6,
+      "raw": 17808,
+      "value": "[bottom]"
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 16526550,
+      "value": "[pass type]"
+    },
+    {
+      "offset": 25,
+      "type": 6,
+      "raw": 11348366,
+      "value": "[pass all]"
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 16526574,
+      "value": "[piercing power]"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 1000,
+      "value": 1000
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 16526608,
+      "value": "[basic motion]"
+    },
+    {
+      "offset": 45,
+      "type": 6,
+      "raw": 17069462,
+      "value": "Animation/OutRageBreak/bloodexp_damage.ani"
+    },
+    {
+      "offset": 50,
+      "type": 3,
+      "raw": 16526710,
+      "value": "[etc motion]"
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 16526808,
+      "value": "[/etc motion]"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 16526836,
+      "value": "[attack info]"
+    },
+    {
+      "offset": 65,
+      "type": 6,
+      "raw": 17069548,
+      "value": "AttackInfo/OutRageBreakBloodExp.atk"
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 16526934,
+      "value": "[object destroy condition]"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 16526988,
+      "value": "[destroy condition]"
+    },
+    {
+      "offset": 80,
+      "type": 6,
+      "raw": 16527028,
+      "value": "[on end of animation]"
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 16527072,
+      "value": "[/object destroy condition]"
+    }
+  ],
+  "raw_sha256": "8ad0dddb24782dec0afed902e9fe00f0c4a030e08933171bbf1d9052c9bc5f28"
+}

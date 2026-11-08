@@ -1,0 +1,159 @@
+{
+  "path": "passiveobject/character/swordman/outragebreakfloor.obj",
+  "fields": [
+    {
+      "tag": "[layer]",
+      "values": [
+        "[bottom]"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[pass type]",
+      "values": [
+        "[pass all]"
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[piercing power]",
+      "values": [
+        1000
+      ],
+      "offset": 20
+    },
+    {
+      "tag": "[basic motion]",
+      "values": [
+        "Animation/OutRageBreak/floor.ani"
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[etc motion]",
+      "values": [
+        "Animation/OutRageBreak/floor_over.ani",
+        "Animation/OutRageBreak/floor_blood.ani"
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[/etc motion]",
+      "values": [],
+      "offset": 55
+    },
+    {
+      "tag": "[attack info]",
+      "values": [
+        "AttackInfo/OutRageBreakFloor.atk"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[name]",
+      "values": [
+        "银光落刃的飞溅"
+      ],
+      "offset": 70
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 16526534,
+      "value": "[layer]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 17808,
+      "value": "[bottom]"
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 16526550,
+      "value": "[pass type]"
+    },
+    {
+      "offset": 15,
+      "type": 6,
+      "raw": 11348366,
+      "value": "[pass all]"
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 16526574,
+      "value": "[piercing power]"
+    },
+    {
+      "offset": 25,
+      "type": 0,
+      "raw": 1000,
+      "value": 1000
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 16526608,
+      "value": "[basic motion]"
+    },
+    {
+      "offset": 35,
+      "type": 6,
+      "raw": 17070652,
+      "value": "Animation/OutRageBreak/floor.ani"
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 16526710,
+      "value": "[etc motion]"
+    },
+    {
+      "offset": 45,
+      "type": 6,
+      "raw": 17070718,
+      "value": "Animation/OutRageBreak/floor_over.ani"
+    },
+    {
+      "offset": 50,
+      "type": 6,
+      "raw": 17070794,
+      "value": "Animation/OutRageBreak/floor_blood.ani"
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 16526808,
+      "value": "[/etc motion]"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 16526836,
+      "value": "[attack info]"
+    },
+    {
+      "offset": 65,
+      "type": 6,
+      "raw": 17070872,
+      "value": "AttackInfo/OutRageBreakFloor.atk"
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 14059926,
+      "value": "[name]"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 189755,
+      "value": "银光落刃的飞溅"
+    }
+  ],
+  "raw_sha256": "acd7314197a8f81d713d372f81949aa3172823f270cbbc89dd9e43b34d57f510"
+}

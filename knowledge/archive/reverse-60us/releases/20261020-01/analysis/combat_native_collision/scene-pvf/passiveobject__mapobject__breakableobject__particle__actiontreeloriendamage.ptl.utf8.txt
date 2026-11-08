@@ -1,0 +1,33 @@
+[random range] 40			// 랜덤 범위 (%값)
+
+[gravity] 450
+
+[x axis]				// 이동 편집할 축. 이 표시 이후의 값은 x축
+[move type] `[straight line]`		// 이동 타입. `[stop]` `[straight line]` `[sin]` `[cos]` 중 택일
+[move variable 1] 200 200		// 이동 변수 1. 초기값과 최종값
+
+[z axis]				// 이동 편집할 축. 이 표시 이후의 값은 x축
+[move type] `[straight line]`		// 이동 타입. `[stop]` `[straight line]` `[sin]` `[cos]` 중 택일
+[move variable 1] 30 30		// 이동 변수 1. 초기값과 최종값
+
+[rotation angle range type] `[circle]`	// 생성각의 범위를 지정하는 방법. `[rectangle]`과 `[circle]`중 택일
+[rotation angle variable] 70 70		// 생성각의 변수 1, 2
+
+[rotation angle] 0 70 0		// 회전각. 수평각 / 수직각 / 회전각
+
+[creation frequency] -1			// 초당 파티클 생성 빈도
+[maximum create number] 30			// 파티클 최대 생성수
+[maximum create time] 0		// 파티클 최대 생성시간
+
+[object type] `[animation]`
+[object]			// 오브젝트 리스트
+`../Animation/ActionTree/Lorien/ActionTreeParticle1.ani` -1
+`../Animation/ActionTree/Lorien/ActionTreeParticle2.ani` -1
+[/object]			// 이것으로 닫아줘야 함
+
+[life time] 2000
+
+[landing type] `[vanish]`
+
+[create area size] 50 0 30	// 생성 공간 크기
+[display effect rate] 0 50 100		// 이펙트 등급 (하-중-상) 에서 생성하는 파티클 비율. %값 (기본은 100 100 100)

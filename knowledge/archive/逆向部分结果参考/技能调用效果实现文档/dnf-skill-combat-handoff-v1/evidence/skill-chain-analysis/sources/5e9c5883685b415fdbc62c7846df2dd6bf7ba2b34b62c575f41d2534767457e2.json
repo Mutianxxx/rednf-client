@@ -1,0 +1,222 @@
+{
+  "path": "passiveobject/character/swordman/hopsmashsub.obj",
+  "fields": [
+    {
+      "tag": "[name]",
+      "values": [
+        "崩山击"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[floating height]",
+      "values": [
+        1
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[layer]",
+      "values": [
+        "[normal]"
+      ],
+      "offset": 20
+    },
+    {
+      "tag": "[pass type]",
+      "values": [
+        "[pass all]"
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[piercing power]",
+      "values": [
+        1000
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[basic motion]",
+      "values": [
+        "Animation/HopSmashSubFront1.ani"
+      ],
+      "offset": 50
+    },
+    {
+      "tag": "[attack info]",
+      "values": [
+        "AttackInfo/HopSmashSub.atk"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[add object effect]",
+      "values": [
+        "Animation/HopSmashSubFront2.ani",
+        1,
+        0
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[/add object effect]",
+      "values": [],
+      "offset": 90
+    },
+    {
+      "tag": "[object destroy condition]",
+      "values": [
+        "[destroy condition]",
+        "[on end of animation]"
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[/object destroy condition]",
+      "values": [],
+      "offset": 110
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 14059926,
+      "value": "[name]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 229989,
+      "value": "崩山击"
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 16526498,
+      "value": "[floating height]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 16526534,
+      "value": "[layer]"
+    },
+    {
+      "offset": 25,
+      "type": 6,
+      "raw": 6653656,
+      "value": "[normal]"
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 16526550,
+      "value": "[pass type]"
+    },
+    {
+      "offset": 35,
+      "type": 6,
+      "raw": 11348366,
+      "value": "[pass all]"
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 16526574,
+      "value": "[piercing power]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 1000,
+      "value": 1000
+    },
+    {
+      "offset": 50,
+      "type": 3,
+      "raw": 16526608,
+      "value": "[basic motion]"
+    },
+    {
+      "offset": 55,
+      "type": 6,
+      "raw": 17034732,
+      "value": "Animation/HopSmashSubFront1.ani"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 16526836,
+      "value": "[attack info]"
+    },
+    {
+      "offset": 65,
+      "type": 6,
+      "raw": 17034796,
+      "value": "AttackInfo/HopSmashSub.atk"
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 16696454,
+      "value": "[add object effect]"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 17034850,
+      "value": "Animation/HopSmashSubFront2.ani"
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 16696632,
+      "value": "[/add object effect]"
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 16526934,
+      "value": "[object destroy condition]"
+    },
+    {
+      "offset": 100,
+      "type": 6,
+      "raw": 16526988,
+      "value": "[destroy condition]"
+    },
+    {
+      "offset": 105,
+      "type": 6,
+      "raw": 16527028,
+      "value": "[on end of animation]"
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 16527072,
+      "value": "[/object destroy condition]"
+    }
+  ],
+  "raw_sha256": "5e9c5883685b415fdbc62c7846df2dd6bf7ba2b34b62c575f41d2534767457e2"
+}

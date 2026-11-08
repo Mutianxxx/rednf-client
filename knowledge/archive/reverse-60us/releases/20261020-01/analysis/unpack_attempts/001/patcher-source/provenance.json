@@ -1,0 +1,119 @@
+{
+  "patcher_path": "D:\\dnf\\60US\\DFO\\5h0w4ll_0v3r.exe",
+  "patcher_sha256": "d3991f2b825335f1b59e2689512c3425d0292059e5d12b30153581038e846af0",
+  "overlay_path": "D:\\dnf\\60US\\DFO\\Dfo60US-Server-Tools\\client-overlay\\5h0w4ll_0v3r.exe",
+  "overlay_sha256": "d3991f2b825335f1b59e2689512c3425d0292059e5d12b30153581038e846af0",
+  "overlay_identical": true,
+  "byte_checks": {
+    "crt_gate_matches_saved_runtime": true,
+    "crt_entry_matches_saved_runtime": true,
+    "skill_patch_matches_saved_runtime": true,
+    "monster_entry_matches_saved_runtime": true
+  },
+  "monster_builder_literal_matches": [
+    {
+      "source_va": "0x43773e",
+      "runtime_va": "0x377000e",
+      "bytes": "81b9e800000011020000",
+      "match": true
+    },
+    {
+      "source_va": "0x43774e",
+      "runtime_va": "0x377002c",
+      "bytes": "3d40000000",
+      "match": true
+    },
+    {
+      "source_va": "0x437759",
+      "runtime_va": "0x3770093",
+      "bytes": "81b9e800000000f00000",
+      "match": true
+    },
+    {
+      "source_va": "0x437763",
+      "runtime_va": "0x37700b5",
+      "bytes": "8b9260000000",
+      "match": true
+    }
+  ],
+  "source_ranges": [
+    {
+      "label": "crt-gate-builder",
+      "va": "0x402120",
+      "size": 376,
+      "file_offset": "0x1520",
+      "sha256": "e6846ba648b0d6e9b2b16cd09ec1f10449bd09ca19565389340fe67479787a91",
+      "asm_file": "crt-gate-builder.asm"
+    },
+    {
+      "label": "skill-protected-branch-writer",
+      "va": "0x404c1d",
+      "size": 98,
+      "file_offset": "0x401d",
+      "sha256": "ede4f7b1b4f4d67df04d37c02c7580683fa9731fc310a436c71bc9bae18f1c89",
+      "asm_file": "skill-protected-branch-writer.asm"
+    },
+    {
+      "label": "monster-hook-allocation-and-writer",
+      "va": "0x404db8",
+      "size": 177,
+      "file_offset": "0x41b8",
+      "sha256": "450766b3c25d1438baa7d56a13c4db68b5e6ff316b443117c634da719748b176",
+      "asm_file": "monster-hook-allocation-and-writer.asm"
+    },
+    {
+      "label": "validated-write-wrapper",
+      "va": "0x407186",
+      "size": 127,
+      "file_offset": "0x6586",
+      "sha256": "31526eab005d5f40233a27d2cc07c9ac4ee0dd85e098a5a094ae665fdb1c6e80",
+      "asm_file": "validated-write-wrapper.asm"
+    },
+    {
+      "label": "remote-write-helper",
+      "va": "0x407205",
+      "size": 51,
+      "file_offset": "0x6605",
+      "sha256": "94de1fbf8ed40f8d05e6daea7d8b4843d778ce1707bf81e609187597df85f598",
+      "asm_file": "remote-write-helper.asm"
+    },
+    {
+      "label": "remote-read-helper",
+      "va": "0x40747e",
+      "size": 30,
+      "file_offset": "0x687e",
+      "sha256": "0ac8a1c8b7627eb4323391ebd62aa04d077155a82a86d6bca8883e4a4189ae33",
+      "asm_file": "remote-read-helper.asm"
+    },
+    {
+      "label": "rel32-helper",
+      "va": "0x408722",
+      "size": 43,
+      "file_offset": "0x7b22",
+      "sha256": "3536cf323f39543bbdb46d62abd492e80cfeef974f9131cd49d69224fc0cc5f4",
+      "asm_file": "rel32-helper.asm"
+    }
+  ],
+  "api_bindings": [
+    {
+      "thunk": "0x434b4a",
+      "iat_slot": "0x46fec8",
+      "api": "WriteProcessMemory"
+    },
+    {
+      "thunk": "0x434ad2",
+      "iat_slot": "0x46fe78",
+      "api": "FlushInstructionCache"
+    },
+    {
+      "thunk": "0x434b14",
+      "iat_slot": "0x46fea4",
+      "api": "ReadProcessMemory"
+    }
+  ],
+  "limits": [
+    "Static patch writer plus runtime-byte agreement and process ancestry establish supplied-launcher provenance; this did not record the WriteProcessMemory event.",
+    "The monster generator is decompiled in REA 003-build-monster-hook.json; literal matches are not claimed as full generator emulation.",
+    "Changed bytes in an executable PE section can be data, IAT, counters or code; the count is not a patch count."
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "original_client_runtime": false,
+  "slices": [
+    {
+      "name": "horizontal_motion",
+      "va": "0x4ba620",
+      "file_offset": 763424,
+      "size": 329,
+      "sha256": "6a190757c7d60e6518593f1071c297161a99bc23b033fcbd2cf5112be2372338"
+    },
+    {
+      "name": "horizontal_stat",
+      "va": "0x4bdd40",
+      "file_offset": 777536,
+      "size": 51,
+      "sha256": "b11ed58c4b376601e0c0f1f48e9c1d7cf4d9600be587e0bc4befde05dd98089d"
+    },
+    {
+      "name": "vertical_impulse",
+      "va": "0x4b98f0",
+      "file_offset": 760048,
+      "size": 55,
+      "sha256": "8c5d0e54596d0a84e1f00c79ff366afc9a0300e9c8a2ac3399ac69d8b61d5446"
+    },
+    {
+      "name": "gravity",
+      "va": "0x4b9fa0",
+      "file_offset": 761760,
+      "size": 275,
+      "sha256": "008c0f72a1c21d3319b451b3667c89629fd1631a8204d174123240f921b979bf"
+    },
+    {
+      "name": "gravity_install",
+      "va": "0x4ba0c0",
+      "file_offset": 762048,
+      "size": 81,
+      "sha256": "9af888ae2bb1b6898c7dd121a63279912182b6bef08ecd8ad8a1d0abab0dd2fe"
+    },
+    {
+      "name": "state3_apply",
+      "va": "0x4bb091",
+      "file_offset": 766097,
+      "size": 369,
+      "sha256": "a9ed4e65a621b51819fe4576546fc3ea7fbefd86054ed16a67413a55a3a70d3d"
+    },
+    {
+      "name": "state3_tick_duration_gate",
+      "va": "0x4bd06a",
+      "file_offset": 774250,
+      "size": 77,
+      "sha256": "b74e9920aa0abccbfa88d0f67aa380c4f9c71c898fa090937df4ba0d2c083d75"
+    },
+    {
+      "name": "state0_request_shared",
+      "va": "0x4bd9f2",
+      "file_offset": 776690,
+      "size": 14,
+      "sha256": "090b50d330fa0ab2b9b7505d939e015063e64c6c865788216c2b3f77b2930454"
+    }
+  ],
+  "slots": [
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x344",
+      "file_offset": 9966296,
+      "bytes": "50477400",
+      "target": "0x744750"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x488",
+      "file_offset": 9966620,
+      "bytes": "809d4b00",
+      "target": "0x4b9d80"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x494",
+      "file_offset": 9966632,
+      "bytes": "609c4b00",
+      "target": "0x4b9c60"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x49c",
+      "file_offset": 9966640,
+      "bytes": "305c7400",
+      "target": "0x745c30"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x518",
+      "file_offset": 9966764,
+      "bytes": "20a64b00",
+      "target": "0x4ba620"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x344",
+      "file_offset": 9976736,
+      "bytes": "50477400",
+      "target": "0x744750"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x488",
+      "file_offset": 9977060,
+      "bytes": "809d4b00",
+      "target": "0x4b9d80"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x494",
+      "file_offset": 9977072,
+      "bytes": "609c4b00",
+      "target": "0x4b9c60"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x49c",
+      "file_offset": 9977080,
+      "bytes": "a0f24e00",
+      "target": "0x4ef2a0"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x518",
+      "file_offset": 9977204,
+      "bytes": "20a64b00",
+      "target": "0x4ba620"
+    }
+  ],
+  "constants": [
+    {
+      "va": "0xcc10ac",
+      "file_offset": 9179308,
+      "bytes": "0ad7233c",
+      "float32": 0.009999999776482582
+    },
+    {
+      "va": "0xcd1434",
+      "file_offset": 9245748,
+      "bytes": "00400345",
+      "float32": 2100.0
+    },
+    {
+      "va": "0xcd1438",
+      "file_offset": 9245752,
+      "bytes": "143f463c",
+      "float32": 0.01209999993443489
+    },
+    {
+      "va": "0xcd1440",
+      "file_offset": 9245760,
+      "bytes": "0000803e",
+      "float32": 0.25
+    },
+    {
+      "va": "0xcd145c",
+      "file_offset": 9245788,
+      "bytes": "0080a643",
+      "float32": 333.0
+    }
+  ],
+  "rea_evidence": [
+    {
+      "evidence_id": "ev_d9a16e24c43c9f14c24dc127befeb29635580a01dd26b3826f6e1fe1b9543305",
+      "file": "023-function.json",
+      "parameters": {
+        "procedure": "0x4BAD60"
+      }
+    },
+    {
+      "evidence_id": "ev_949bd691368724091536398f5fbf025c8a1d59b030d010bff16c379268850ec2",
+      "file": "088-hit-motion-setup.json",
+      "parameters": {
+        "procedure": "0x4B98F0"
+      }
+    },
+    {
+      "evidence_id": "ev_ba88c4da3caf52945d7ad9a05558797fd7fe4fa8ffaccc7b1aed85e101811d97",
+      "file": "089-hit-vertical-motion.json",
+      "parameters": {
+        "procedure": "0x4B9FA0"
+      }
+    },
+    {
+      "evidence_id": "ev_b8ea8793108dbb28d2f7b30ba79422fcb1cafdd760c2068b888e06054840e0bc",
+      "file": "090-hit-horizontal-motion.json",
+      "parameters": {
+        "procedure": "0x4BA620"
+      }
+    },
+    {
+      "evidence_id": "ev_5e982533affd7bd5290eecc122bb9d98e586c37efff677c3df0548b36a57abd0",
+      "file": "091-active-state-apply.json",
+      "parameters": {
+        "procedure": "0x4BAD60"
+      }
+    }
+  ]
+}

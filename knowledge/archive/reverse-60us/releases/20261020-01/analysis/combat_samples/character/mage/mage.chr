@@ -1,0 +1,413 @@
+[job]  `[mage]`
+[growtype name]  <0::growtype_name_50> <0::growtype_name_55> <0::growtype_name_60> <0::growtype_name_65> <0::growtype_name_70>
+[width]  40 10
+
+[initial value] 
+[HP MAX]  120.0
+[MP MAX]  200.0
+[physical attack]  4.0
+[physical defense]  4.0
+[magical attack]  7.0
+[magical defense]  7.0
+[inventory limit]  28000.0
+[MP regen speed]  80.0
+[move speed]  800.0
+[attack speed]  1000.0
+[cast speed]  1000.0
+[hit recovery]  500.0
+[jump power]  350.0
+[weight]  40000.0
+[jump speed]  55
+[skill] 
+181 3 // 세공
+182 3 // 방직
+184 2 // 화학
+187 1 // 천 방어구 마스터리
+179 7 // 해체(60레벨 아이템까지 해체 가능하도록 7레벨로 수정)
+11 1 // 매직 미사일
+12 1 // 천격
+[/skill]
+[growtype 1]  // 기본
+[HP MAX]  35.0
+[MP MAX]  35.0
+[physical attack]  2.5
+[physical defense]  2.5
+[magical attack]  3.5
+[magical defense]  3.5
+[inventory limit]  250.0
+[MP regen speed]  4.0
+[hit recovery]  1.0
+[module damage rate] 1.0 1.0 1.0
+
+[growtype 2]  // 엘레멘탈마스터
+[HP MAX]  30.0
+[MP MAX]  40.0
+[physical attack]  2.0
+[physical defense]  2.0
+[magical attack]  4.0
+[magical defense]  4.0
+[inventory limit]  250.0
+[MP regen speed]  5.0
+[hit recovery]  1.0
+[skill] 
+19 1 // 메모라이즈
+[/skill]
+[module damage rate] 1.0 1.0 1.0
+// ==================================================
+// [growtype2] - 각성1 [아크메이지]
+// ==================================================
+[awakening name] <0::growtype_name_56> <0::growtype_name_57>
+[awakening 1]
+[HP MAX]  30.0
+[MP MAX]  40.0
+[physical attack]  2.0
+[physical defense]  2.0
+[magical attack]  4.0
+[magical defense]  4.0
+[inventory limit]  250.0
+[MP regen speed]  5.0
+[hit recovery]  1.0
+[awakening skill]
+73 1	// 원소 집중
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+// ==================================================
+// [growtype2] - 각성2 [미정]
+// ==================================================
+[awakening 2]
+[HP MAX]  30.0
+[MP MAX]  40.0
+[physical attack]  2.0
+[physical defense]  2.0
+[magical attack]  4.0
+[magical defense]  4.0
+[inventory limit]  250.0
+[MP regen speed]  5.0
+[hit recovery]  1.0
+[awakening skill]
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+
+[growtype 3]  // 소환사
+[HP MAX]  32.5
+[MP MAX]  37.5
+[physical attack]  2.3
+[physical defense]  2.2
+[magical attack]  3.8
+[magical defense]  3.7
+[inventory limit]  250.0
+[MP regen speed]  5.0
+[hit recovery]  1.0
+[skill] 
+48 1	// 환수 강화 오라
+[/skill]
+[module damage rate] 1.0 1.0 1.0
+// ==================================================
+// [growtype2] - 각성1 [문 엠프레스]
+// ==================================================
+[awakening name] <0::growtype_name_61> <0::growtype_name_62>
+[awakening 1]
+[HP MAX]  32.5
+[MP MAX]  37.5
+[physical attack]  2.3
+[physical defense]  2.2
+[magical attack]  3.8
+[magical defense]  3.7
+[inventory limit]  250.0
+[MP regen speed]  5.0
+[hit recovery]  1.0
+[awakening skill]
+75 1	// 스피릿 본드
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+// ==================================================
+// [growtype2] - 각성2 [미정]
+// ==================================================
+[awakening 2]
+[HP MAX]  32.5
+[MP MAX]  37.5
+[physical attack]  2.3
+[physical defense]  2.2
+[magical attack]  3.8
+[magical defense]  3.7
+[inventory limit]  250.0
+[MP regen speed]  5.0
+[hit recovery]  1.0
+[awakening skill]
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+
+[growtype 4]  // 배틀메이지
+[HP MAX]  40.0
+[MP MAX]  30.0
+[physical attack]  3.5
+[physical defense]  2.5
+[magical attack]  3.5
+[magical defense]  2.5
+[inventory limit]  250.0
+[hit recovery]  3.0
+[MP regen speed]  4.0
+[skill] 
+67 1	//투기의 가죽 마스터리
+60 1	// 집중의 오라실드
+1 1	// 용화패
+39 1	// 체이서 사출
+[/skill]
+[module damage rate] 0.9 1.0 1.0
+// ==================================================
+// [growtype2] - 각성1 [벨라트릭스]
+// ==================================================
+[awakening name] <0::growtype_name_66> <0::growtype_name_67>
+[awakening 1]
+[HP MAX]  40.0
+[MP MAX]  30.0
+[physical attack]  3.5
+[physical defense]  2.5
+[magical attack]  3.5
+[magical defense]  2.5
+[inventory limit]  250.0
+[hit recovery]  3.0
+[MP regen speed]  4.0
+[awakening skill]
+84 1	// 벨라트릭스 마스터리
+[/awakening skill]
+[module damage rate] 0.9 1.0 1.0
+// ==================================================
+// [growtype2] - 각성2 [미정]
+// ==================================================
+[awakening 2]
+[HP MAX]  40.0
+[MP MAX]  30.0
+[physical attack]  3.5
+[physical defense]  2.5
+[magical attack]  3.5
+[magical defense]  2.5
+[inventory limit]  250.0
+[hit recovery]  3.0
+[MP regen speed]  4.0
+[awakening skill]
+[/awakening skill]
+[module damage rate] 0.9 1.0 1.0
+
+[growtype 5]  // 마도학자
+[HP MAX]  35.0
+[MP MAX]  35.0
+[physical attack]  3.0
+[physical defense]  2.5
+[magical attack]  3.7
+[magical defense]  2.8
+[inventory limit]  250.0
+[MP regen speed]  5.0
+[hit recovery]  2.0
+[skill] 
+184 5 	// 화학 5
+91 1	// 빗자루 다루기
+102 1	// 탐구의 가죽 마스터리
+[/skill]
+[module damage rate] 1.0 1.0 1.0
+// ==================================================
+// [growtype2] - 각성1 [연금술사]
+// ==================================================
+[awakening name] <0::growtype_name_71> <0::growtype_name_72>
+[awakening 1]
+[HP MAX]  35.0
+[MP MAX]  35.0
+[physical attack]  2.5
+[physical defense]  2.5
+[magical attack]  3.5
+[magical defense]  3.5
+[inventory limit]  250.0
+[MP regen speed]  5.0
+[hit recovery]  2.0
+[awakening skill]
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+// ==================================================
+// [growtype2] - 각성2 [미정]
+// ==================================================
+[awakening 2]
+[HP MAX]  35.0
+[MP MAX]  35.0
+[physical attack]  2.5
+[physical defense]  2.5
+[magical attack]  3.5
+[magical defense]  3.5
+[inventory limit]  250.0
+[MP regen speed]  5.0
+[hit recovery]  2.0
+[awakening skill]
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+
+[waiting motion]  `Animation/Stay.ani`
+[move motion]  `Animation/Move.ani`
+[sit motion]  `Animation/Sit.ani`
+[damage motion 1]  `Animation/Damage1.ani`
+[damage motion 2]  `Animation/Damage2.ani`
+[down motion]  `Animation/Down.ani`
+[overturn motion]  `Animation/Overturn.ani`
+[jump motion]  `Animation/Jump.ani`
+[jumpattack motion]  `Animation/JumpAttack.ani`
+[rest motion]  `Animation/Rest.ani`
+[throw motion 1-1]  `Animation/OneHandThrow1.ani`
+[throw motion 1-2]  `Animation/OneHandThrow2.ani`
+[throw motion 2-1]  `Animation/TwoHandThrow1.ani`
+[throw motion 2-2]  `Animation/TwoHandThrow2.ani`
+[throw motion 3-1]  `Animation/Cast1.ani`
+[throw motion 3-2]  `Animation/Cast2.ani`
+[throw motion 4-1]  `Animation/Wink1.ani`
+[throw motion 4-2]  `Animation/Wink2.ani`
+[dash motion]  `Animation/Dash.ani`
+[dashattack motion]  `Animation/DashAttack.ani`
+[getitem motion]  `Animation/GetItem.ani`
+[buff motion]  `Animation/Buff.ani`
+[attack motion] 
+`Animation/Attack1.ani`
+`Animation/Attack2.ani`
+`Animation/Attack3.ani`
+[/attack motion]
+[ghost motion]
+`Animation/Ghost.ani`
+`Animation/Ghost_Dodge.ani`
+[/ghost motion]
+[simple rest motion]  `Animation/SIMPLE_Rest.ani`
+[simple move motion]  `Animation/SIMPLE_Move.ani`
+[back motion]	`Animation/StrengthHandStrike.ani`
+[etc motion] 
+`Animation/Tumble.ani`
+`Animation/Thrust.ani`
+`Animation/UpperSwing.ani`
+`Animation/Swing.ani`
+`Animation/HandStrike.ani`
+`Animation/Whip.ani`
+`Animation/PokeThrowTry.ani`
+`Animation/PokeThrowSmash.ani`
+`Animation/ChasersExplosion.ani`
+`Animation/BattleMageAttack1.ani`
+`Animation/BattleMageAttack2.ani`
+`Animation/BattleMageAttack3.ani`
+`Animation/RandomPierceStrikeTry.ani`
+`Animation/RandomPierceStrikeLoop.ani`
+`Animation/RandomPierceStrikeFinish.ani`
+`Animation/StrengthHandStrike.ani`
+`Animation/StrengthHandStrikeReturn.ani`
+`Animation/DragonSpear.ani`
+`Animation/ChangeBellatrixCast.ani`
+`Animation/ChangeBellatrixUp.ani`
+`Animation/ReturnBellatrix.ani`
+`Animation/JumpAttackSecond.ani`
+`Animation/PowderAttack1.ani`
+`Animation/PowderAttack2.ani`
+`Animation/PowderAttack3.ani`
+`Animation/PowderDashAttack.ani`
+`Animation/PowderJumpAttack.ani`
+`Animation/PowderJumpAttackSecond.ani`
+`Animation/PowderUpperSwing.ani`
+`Animation/PowderThrust.ani`
+`Animation/AirDashSide.ani`
+`Animation/AirDashUp.ani`
+`Animation/AirFloating.ani`
+`Animation/BlackMantle.ani`
+`Animation/BroomSpinReady.ani`
+`Animation/BroomSpinAttack.ani`
+`Animation/BroomSpinDelay.ani`
+`Animation/BroomSpinTumble.ani`
+`Animation/TransformFlapper.ani`
+`Animation/TransformFlapperJump.ani`
+`Animation/AntiGravityStarter.ani`
+`Animation/MegaDrillSuccess.ani`
+`Animation/MegaDrillGreat.ani`
+`Animation/FluoreColliderCast.ani`
+`Animation/FluoreColliderAppear.ani`
+`Animation/FluoreColliderRun.ani`
+`Animation/FluoreColliderShock.ani`
+`Animation/HeatingFurnaceCast.ani`
+`Animation/HeatingFurnaceJump.ani`
+[/etc motion]
+[jumpattack info]  `AttackInfo/JumpAttack.atk`
+[dashattack info]  `AttackInfo/DashAttack.atk`
+[attack info] 
+`AttackInfo/Attack1.atk`
+`AttackInfo/Attack2.atk`
+`AttackInfo/Attack3.atk`
+[/attack info]
+[etc attack info] 
+`AttackInfo/Thrust.atk`
+`AttackInfo/UpperSwing.atk`
+`AttackInfo/Swing.atk`
+`AttackInfo/HandStrike.atk`
+`AttackInfo/WhipToMonster.atk`
+`AttackInfo/WhipToCharacter.atk`
+`AttackInfo/WhipToEnemy.atk`
+`AttackInfo/TryGrab.atk`
+`AttackInfo/PokeThrow.atk`
+`AttackInfo/BattleMageAttack1.atk`
+`AttackInfo/BattleMageAttack2.atk`
+`AttackInfo/BattleMageAttack3.atk`
+`AttackInfo/RandomPierceStrikeLoop.atk`
+`AttackInfo/RandomPierceStrikeFinish.atk`
+`AttackInfo/StrengthHandStrike.atk`
+`AttackInfo/DragonSpear.atk`
+`AttackInfo/BellatrixAttack1.atk`
+`AttackInfo/BellatrixAttack2.atk`
+`AttackInfo/BellatrixAttack3.atk`
+`AttackInfo/BellatrixJumpAttack.atk`
+`AttackInfo/BellatrixDashAttack.atk`
+`AttackInfo/BellatrixUpper.atk`
+`AttackInfo/BellatrixSwing.atk`
+`AttackInfo/JumpAttackSecond.atk`
+`AttackInfo/BlackMantle.atk`
+`AttackInfo/BlackMantleHit.atk`
+`AttackInfo/BroomSpin.atk`
+`AttackInfo/TransformFlapper.atk`
+`AttackInfo/MegaDrill.atk`
+[/etc attack info]
+[weapon wav] 	// 창
+`R_SPEAR`
+`R_SPEAR_HIT`
+[/weapon wav]
+[weapon wav] 	// 봉
+`R_POLE`
+`R_POLE_HIT`
+[/weapon wav]
+[weapon wav] 	// 로드
+`R_ROD`
+`R_ROD_HIT`
+[/weapon wav]
+[weapon wav] 	// 스탭
+`R_STAFF`
+`R_STAFF_HIT`
+[/weapon wav]
+[weapon wav] 	// 빗자루
+`R_BROOM`
+`R_BROOM_HIT`
+[/weapon wav]
+[weapon wav]
+[/weapon wav]	// UNKNOWN
+// 주의! [weapon hit info]와 [weapon skill info]는 항상 [weapon wav] 태그보다 뒤에 와야 한다.
+[weapon hit info] 
+`[cut]` `[blood]` 80 1.3 0.2 -0.15 	// 창
+`[blow]` `[no blood]` 100 1.0 0.1 -0.1	// 봉
+`[blow]` `[no blood]` 60 0.8 -0.2 0.1 	// 로드
+`[blow]` `[no blood]` 120 1.0 -0.1 0.2	// 스탭
+`[blow]` `[no blood]` 80 1.0 0.0 0.1	// 빗자루
+`[blow]` `[no blood]` 100 1.0 0.0 0.0	// UNKNOWN
+[/weapon hit info]
+[weapon skill info]	// 물리 MP, 물리 쿨타임, 마법 MP, 마법 쿨타임 비율
+1.1 1.05 0.95 0.95		// 창
+1.0 1.0 1.0 1.0		// 봉
+0.95 0.95 1.0 1.0		// 로드
+1.0 1.0 1.1 1.1		// 스탭
+1.0 1.0 1.0 1.0		// 빗자루
+1.0 1.0 1.0 1.0		// UNKNOWN
+[/weapon skill info]
+[upgrade weapon attack power rate]	// 물리 공격력, 마법 공격력. 강화로 인한 공격력 증가
+1.2 0.85 	// 창
+1.08 0.9 	// 봉
+0.9 1.1 	// 로드
+0.95 1.2 	// 스탭
+1.0 1.1 	// 빗자루
+1.0 1.0 	// UNKNOWN
+[/upgrade weapon attack power rate]
+
+[body image path] `Character/mage/Equipment/Avatar/skin/mg_body%04d.img`

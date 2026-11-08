@@ -1,0 +1,355 @@
+{
+  "path": "character/swordman/effect/animation/gorecross/slash3.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        4
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -232,
+        -404
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        910
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 65
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/GoreCross/gorecross_3cross.img",
+        0
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -232,
+        -404
+      ],
+      "offset": 85
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        50
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 110
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/GoreCross/gorecross_3cross.img",
+        1
+      ],
+      "offset": 115
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -232,
+        -404
+      ],
+      "offset": 130
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 155
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 160
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -232,
+        -404
+      ],
+      "offset": 175
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967064,
+      "value": -232
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294966892,
+      "value": -404
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 910,
+      "value": 910
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 2828564,
+      "value": "Character/Swordman/Effect/GoreCross/gorecross_3cross.img"
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 4294967064,
+      "value": -232
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 4294966892,
+      "value": -404
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 115,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 120,
+      "type": 6,
+      "raw": 2828564,
+      "value": "Character/Swordman/Effect/GoreCross/gorecross_3cross.img"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 4294967064,
+      "value": -232
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 4294966892,
+      "value": -404
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 160,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 165,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 4294967064,
+      "value": -232
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 4294966892,
+      "value": -404
+    }
+  ],
+  "raw_sha256": "e1a519ec177c2b991f535afa12975ed184801566d0d16658bdade9f6bc88695d"
+}

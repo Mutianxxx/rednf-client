@@ -1,0 +1,49 @@
+{
+  "files": [
+    {
+      "path": "agent.md",
+      "bytes": 25171,
+      "sha256": "8a32f91b5f3fe8966c7d91055a8f247d7a13d9690059a2e335e6346e94fc11a5"
+    },
+    {
+      "path": "dnf-native-demo/CURRENT_TASK.md",
+      "bytes": 86837,
+      "sha256": "b0e6ad0fef94e75158de58e8a734b60cc1bf667a822b86da583e21769d0da944"
+    },
+    {
+      "path": "rep-player-1031-pvf/CURRENT_TASK.md",
+      "bytes": 2375,
+      "sha256": "37c81e94e39e47baf667e7db8ac5904c02bd35d72dde7a26ede525b3d2655ec6"
+    },
+    {
+      "path": "rep-player-1031-pvf/docs/PROGRESS.md",
+      "bytes": 7809,
+      "sha256": "934bcd03fb134c78db50a567e89b2c06d53137d93865c90a700707b3a27db888"
+    },
+    {
+      "path": "dnf-native-build-plan/README.md",
+      "bytes": 5148,
+      "sha256": "ed00cb9b2f12921442b4072abf62326a1ba68656723c42e32f2f63e5e85fbde1"
+    },
+    {
+      "path": "dnf-native-build-plan/13-execution-plan-and-acceptance.md",
+      "bytes": 11494,
+      "sha256": "916b6ec461b64babb83caf506b4e2d7d5d682526eccb46fbcdea4d02af4eb39b"
+    },
+    {
+      "path": "dnf-native-build-plan/appendices/task-graph.json",
+      "bytes": 6846,
+      "sha256": "cf9ecae96b14d607d744b7dc809c7781811e99ab603571225e41badda12fa6b9"
+    },
+    {
+      "path": "dnf-native-build-plan/appendices/evidence-index.json",
+      "bytes": 9812,
+      "sha256": "b66a237813fa5f33377347c0c993a6c1490b41d7f6ce4bd9e955aa9c5f785ba7"
+    },
+    {
+      "path": "dnf-native-build-plan/verification/plan-validation.json",
+      "bytes": 95433,
+      "sha256": "4b25742c779c7d4489e0a1582f47f71105f808b9e5d5b4405ba734b2cd8d0773"
+    }
+  ]
+}

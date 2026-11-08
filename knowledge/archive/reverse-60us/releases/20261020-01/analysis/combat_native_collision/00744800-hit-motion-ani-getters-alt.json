@@ -1,0 +1,9 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x744800",
+  "rva": "0x344800",
+  "file_offset": 3426304,
+  "length": 128,
+  "bytes_sha256": "9535aa9666082f7517a893fe207eef269b3a5522c216f3f40e352cb2bc4dd36f"
+}

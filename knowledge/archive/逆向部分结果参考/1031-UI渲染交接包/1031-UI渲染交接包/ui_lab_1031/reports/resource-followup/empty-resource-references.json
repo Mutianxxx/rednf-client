@@ -1,0 +1,529 @@
+{
+  "members": [
+    {
+      "file_number": 101479063,
+      "path": "monster/act8/woodendoll_ng/animation/weapon/swordman_attack2.ani",
+      "size": 0,
+      "checksum": 101479063,
+      "offset": 30793964,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 145302748,
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_ng/animation/swordman_attack2.ani",
+      "size": 0,
+      "checksum": 145302748,
+      "offset": 32125276,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 189671694,
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_np/animation/ball/swordman_attack1.ani",
+      "size": 0,
+      "checksum": 189671694,
+      "offset": 33368480,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 560682425,
+      "path": "monster/newmonsters/gbl/invader/animation/casteffect.ani",
+      "size": 0,
+      "checksum": 560682425,
+      "offset": 53767776,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/gbl/invader/action/buster.act",
+          "offset": 22,
+          "type": 7,
+          "string_id": 231465,
+          "literal": "../Animation/CastEffect.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 590244799,
+      "path": "monster/newmonsters/aganzo/sinead/animation/weapon/attack1_wp.ani",
+      "size": 0,
+      "checksum": 590244799,
+      "offset": 54622160,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/aganzo/sinead/action/attack1.act",
+          "offset": 22,
+          "type": 7,
+          "string_id": 235642,
+          "literal": "../animation/weapon/attack1_wp.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 632712688,
+      "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/casteffectglow.ani",
+      "size": 0,
+      "checksum": 632712688,
+      "offset": 55826260,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/goblinkingdom/goblincannon/action/buster.act",
+          "offset": 37,
+          "type": 7,
+          "string_id": 231466,
+          "literal": "../Animation/CastEffectGlow.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 742511446,
+      "path": "monster/newmonsters/gbl/invader/animation/buster.ani",
+      "size": 0,
+      "checksum": 742511446,
+      "offset": 58863772,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/gbl/invader/action/buster.act",
+          "offset": 12,
+          "type": 7,
+          "string_id": 231464,
+          "literal": "../Animation/Buster.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 783955752,
+      "path": "monster/newmonsters/gbl_breeding/flare_spawn/animation/starfisheggblast2.ani",
+      "size": 0,
+      "checksum": 783955752,
+      "offset": 59966744,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 966871772,
+      "path": "monster/newmonsters/bloodbutterfly/bloodbutterflynamed/animation/lastaction.ani",
+      "size": 0,
+      "checksum": 966871772,
+      "offset": 65022016,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 982402080,
+      "path": "monster/newmonsters/goblinkingdom/dummytank/animation/smoke.ani",
+      "size": 0,
+      "checksum": 982402080,
+      "offset": 65411048,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 1214447539,
+      "path": "monster/newmonsters/cyclops/animation/sd_attack4.ani",
+      "size": 0,
+      "checksum": 1214447539,
+      "offset": 73786904,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 1255171925,
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_ng/animation/weapon/swordman_attack2.ani",
+      "size": 0,
+      "checksum": 1255171925,
+      "offset": 75041408,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 1313173907,
+      "path": "monster/newmonsters/goblinkingdom/dummytank/animation/attackcylinder.ani",
+      "size": 0,
+      "checksum": 1313173907,
+      "offset": 76720808,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 1315824487,
+      "path": "monster/mj/animation/sit.ani",
+      "size": 0,
+      "checksum": 1315824487,
+      "offset": 76800116,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 1519549236,
+      "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/buster.ani",
+      "size": 0,
+      "checksum": 1519549236,
+      "offset": 82726176,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/goblinkingdom/goblincannon/action/buster.act",
+          "offset": 12,
+          "type": 7,
+          "string_id": 231464,
+          "literal": "../Animation/Buster.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 1728395865,
+      "path": "monster/newmonsters/ranjerus/rx78/animation/bodyoverturn.ani",
+      "size": 0,
+      "checksum": 1728395865,
+      "offset": 89312612,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 1864404023,
+      "path": "monster/newmonsters/riding/masaccio/animation/jumpchainattacknormal_upper_effect.ani",
+      "size": 0,
+      "checksum": 1864404023,
+      "offset": 93113620,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 1954805891,
+      "path": "monster/newmonsters/towerofultimate/firezombie/animation/move2.ani",
+      "size": 0,
+      "checksum": 1954805891,
+      "offset": 96813292,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 1968692461,
+      "path": "monster/newmonsters/towerofultimate/firezombie/animation/stay2.ani",
+      "size": 0,
+      "checksum": 1968692461,
+      "offset": 97182628,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 1975830546,
+      "path": "monster/newmonsters/gbl/invader/animation/casteffectglow.ani",
+      "size": 0,
+      "checksum": 1975830546,
+      "offset": 97352276,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/gbl/invader/action/buster.act",
+          "offset": 37,
+          "type": 7,
+          "string_id": 231466,
+          "literal": "../Animation/CastEffectGlow.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 2020792064,
+      "path": "monster/act8/woodendoll_np/animation/ball_eff/swordman_attack1.ani",
+      "size": 0,
+      "checksum": 2020792064,
+      "offset": 98565580,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 2116832157,
+      "path": "passiveobject/actionobject/monster/yen/animation/dummy.ani",
+      "size": 0,
+      "checksum": 2116832157,
+      "offset": 101237412,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 2246460354,
+      "path": "monster/act8/blackscalemoussambani/animation/wind_bullet_ready2.ani",
+      "size": 0,
+      "checksum": 2246460354,
+      "offset": 104772732,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 2384200976,
+      "path": "monster/newmonsters/shonan/hajin/animation/wing/wingdodge.ani",
+      "size": 0,
+      "checksum": 2384200976,
+      "offset": 108689440,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 2508188590,
+      "path": "passiveobject/actionobject/monster/dimensiongate/bakal/itrenog/animation/crash.ani",
+      "size": 0,
+      "checksum": 2508188590,
+      "offset": 112139056,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "passiveobject/actionobject/monster/dimensiongate/bakal/itrenog/action/crash.act",
+          "offset": 12,
+          "type": 7,
+          "string_id": 264122,
+          "literal": "../Animation/Crash.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 2563702444,
+      "path": "monster/newmonsters/heaven/specialforce/animation/motorcycle/die.ani",
+      "size": 0,
+      "checksum": 2563702444,
+      "offset": 113769880,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/heaven/specialforce/action/die.act",
+          "offset": 12,
+          "type": 7,
+          "string_id": 230254,
+          "literal": "../Animation/MotorCycle/Die.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 2570888375,
+      "path": "monster/newmonsters/bloodbutterfly/bloodbutterfly/animation/lastaction.ani",
+      "size": 0,
+      "checksum": 2570888375,
+      "offset": 113960388,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 2653584336,
+      "path": "monster/act8/woodendoll_np/animation/ball/swordman_attack1.ani",
+      "size": 0,
+      "checksum": 2653584336,
+      "offset": 116986732,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 2695603715,
+      "path": "monster/act8/chiefmong/animation/effect/attack.ani",
+      "size": 0,
+      "checksum": 2695603715,
+      "offset": 118197180,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 2998338300,
+      "path": "monster/newmonsters/event/clown/animation/tripofire.ani",
+      "size": 0,
+      "checksum": 2998338300,
+      "offset": 140098444,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 3159952532,
+      "path": "passiveobject/actionobject/monster/haze/enjosipho/animation/macgee_bullet.ani",
+      "size": 0,
+      "checksum": 3159952532,
+      "offset": 144592684,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 3209285108,
+      "path": "monster/newmonsters/leshphon/hyungteo/animation/wp/p_down.ani",
+      "size": 0,
+      "checksum": 3209285108,
+      "offset": 145924216,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 3395999149,
+      "path": "passiveobject/character/gunner/animation/g1/sdfsdfsdf",
+      "size": 0,
+      "checksum": 3395999149,
+      "offset": 151460532,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 3534937311,
+      "path": "monster/newmonsters/crimebuffalo/grim_crimebuffalo/animation/sit.ani",
+      "size": 0,
+      "checksum": 3534937311,
+      "offset": 155404720,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/crimebuffalo/grim_crimebuffalo/action/sit.act",
+          "offset": 12,
+          "type": 7,
+          "string_id": 224225,
+          "literal": "../animation/sit.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 3580411031,
+      "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/casteffect.ani",
+      "size": 0,
+      "checksum": 3580411031,
+      "offset": 156616456,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/goblinkingdom/goblincannon/action/buster.act",
+          "offset": 22,
+          "type": 7,
+          "string_id": 231465,
+          "literal": "../Animation/CastEffect.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 3775232204,
+      "path": "monster/newmonsters/ranjerus/rx78/animation/bodydown.ani",
+      "size": 0,
+      "checksum": 3775232204,
+      "offset": 162118520,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 3802166595,
+      "path": "monster/newmonsters/cyclops/animation/die.ani",
+      "size": 0,
+      "checksum": 3802166595,
+      "offset": 162857452,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/cyclops/action/die.act",
+          "offset": 12,
+          "type": 7,
+          "string_id": 224287,
+          "literal": "../animation/die.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 3853792862,
+      "path": "monster/act8/woodendoll_ng/animation/swordman_attack2.ani",
+      "size": 0,
+      "checksum": 3853792862,
+      "offset": 164292740,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 3990690203,
+      "path": "monster/newmonsters/gbl_breeding/dendroid_elder/animation/damage1.ani",
+      "size": 0,
+      "checksum": 3990690203,
+      "offset": 168048880,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 4044652369,
+      "path": "aicharacter/atfighter/roychan/animation/throwwebdoublethrow.ani",
+      "size": 0,
+      "checksum": 4044652369,
+      "offset": 169520788,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "aicharacter/atfighter/roychan/action/finsh.act",
+          "offset": 12,
+          "type": 7,
+          "string_id": 299071,
+          "literal": "../animation/ThrowWebDoubleThrow.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 4056092124,
+      "path": "monster/newmonsters/heaven/specialforce/animation/die.ani",
+      "size": 0,
+      "checksum": 4056092124,
+      "offset": 169799356,
+      "exact_stringtable_ids": [],
+      "token_references": [
+        {
+          "source": "monster/newmonsters/heaven/specialforce/action/die.act",
+          "offset": 22,
+          "type": 7,
+          "string_id": 226605,
+          "literal": "../Animation/Die.ani",
+          "association": "source-relative lexical candidate; consumer rules unverified"
+        }
+      ]
+    },
+    {
+      "file_number": 4072094720,
+      "path": "monster/newmonsters/shonan/hajin/animation/weapon/stay2.ani",
+      "size": 0,
+      "checksum": 4072094720,
+      "offset": 170206936,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 4121880936,
+      "path": "monster/newmonsters/riding/masaccio_quest/animation/jumpchainattacknormal_upper_effect.ani",
+      "size": 0,
+      "checksum": 4121880936,
+      "offset": 172876664,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 4185400866,
+      "path": "passiveobject/actionobject/map/dimentiongate/cosmofiend/animation/cube3_ball_effect1.ani",
+      "size": 0,
+      "checksum": 4185400866,
+      "offset": 174540724,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    },
+    {
+      "file_number": 4261868350,
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_np/animation/ball_eff/swordman_attack1.ani",
+      "size": 0,
+      "checksum": 4261868350,
+      "offset": 176658508,
+      "exact_stringtable_ids": [],
+      "token_references": []
+    }
+  ],
+  "token_members_scanned": 147267,
+  "token_reference_hits": 13,
+  "scope": "Exact string literals and lexical source-relative candidates in token5 members only; not a proof of reachability or absence of other readers"
+}

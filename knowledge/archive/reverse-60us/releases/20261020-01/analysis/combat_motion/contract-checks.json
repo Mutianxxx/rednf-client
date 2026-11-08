@@ -1,0 +1,815 @@
+{
+  "kind": "contract composition checks; collision policy synthetic, not original-map evidence",
+  "checks": 5,
+  "passed": true,
+  "cases": [
+    {
+      "name": "collision_positive",
+      "probes": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "after": {
+        "position": 2.0,
+        "velocity": 10000.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "result": 4
+    },
+    {
+      "name": "collision_negative",
+      "probes": [
+        [
+          -1,
+          0,
+          0
+        ],
+        [
+          -2,
+          0,
+          0
+        ],
+        [
+          -3,
+          0,
+          0
+        ]
+      ],
+      "after": {
+        "position": -2.0,
+        "velocity": -10000.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "result": 4
+    },
+    {
+      "name": "xyz_sequential_probe",
+      "calls": [
+        [
+          0,
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        [
+          1,
+          [
+            1,
+            1,
+            0
+          ]
+        ],
+        [
+          2,
+          [
+            1,
+            1,
+            1
+          ]
+        ]
+      ],
+      "result": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "external_controller_rejected",
+      "result": "NotImplementedError"
+    }
+  ],
+  "illustrative_timelines": [
+    {
+      "scale_input": 850,
+      "rate_path": "refresh",
+      "rate_percent": 85.0,
+      "deadlines": [
+        82,
+        164,
+        246,
+        328,
+        680
+      ],
+      "motion_samples": [
+        {
+          "time": 0,
+          "axes": [
+            {
+              "position": 0.0,
+              "velocity": 510.0,
+              "acceleration": -850,
+              "remaining": 600
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ]
+        },
+        {
+          "time": 82,
+          "axes": [
+            {
+              "position": 38.962303161621094,
+              "velocity": 440.29998779296875,
+              "acceleration": -850,
+              "remaining": 518
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 164,
+          "axes": [
+            {
+              "position": 72.20919799804688,
+              "velocity": 370.5999755859375,
+              "acceleration": -850,
+              "remaining": 436
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 246,
+          "axes": [
+            {
+              "position": 99.74069213867188,
+              "velocity": 300.89996337890625,
+              "acceleration": -850,
+              "remaining": 354
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 328,
+          "axes": [
+            {
+              "position": 121.55679321289062,
+              "velocity": 231.19996643066406,
+              "acceleration": -850,
+              "remaining": 272
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 680,
+          "axes": [
+            {
+              "position": 152.99998474121094,
+              "velocity": -4.455074667930603e-05,
+              "acceleration": 0,
+              "remaining": 0
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "scale_input": 850,
+      "rate_path": "installation",
+      "rate_percent": 85.00000762939453,
+      "deadlines": [
+        82,
+        164,
+        246,
+        328,
+        680
+      ],
+      "motion_samples": [
+        {
+          "time": 0,
+          "axes": [
+            {
+              "position": 0.0,
+              "velocity": 510.0,
+              "acceleration": -850,
+              "remaining": 600
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ]
+        },
+        {
+          "time": 82,
+          "axes": [
+            {
+              "position": 38.962303161621094,
+              "velocity": 440.29998779296875,
+              "acceleration": -850,
+              "remaining": 518
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 164,
+          "axes": [
+            {
+              "position": 72.20919799804688,
+              "velocity": 370.5999755859375,
+              "acceleration": -850,
+              "remaining": 436
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 246,
+          "axes": [
+            {
+              "position": 99.74069213867188,
+              "velocity": 300.89996337890625,
+              "acceleration": -850,
+              "remaining": 354
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 328,
+          "axes": [
+            {
+              "position": 121.55679321289062,
+              "velocity": 231.19996643066406,
+              "acceleration": -850,
+              "remaining": 272
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 680,
+          "axes": [
+            {
+              "position": 152.99998474121094,
+              "velocity": -4.455074667930603e-05,
+              "acceleration": 0,
+              "remaining": 0
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "scale_input": 1000,
+      "rate_path": "refresh",
+      "rate_percent": 100.0,
+      "deadlines": [
+        70,
+        140,
+        210,
+        280,
+        580
+      ],
+      "motion_samples": [
+        {
+          "time": 0,
+          "axes": [
+            {
+              "position": 0.0,
+              "velocity": 600.0,
+              "acceleration": -1000,
+              "remaining": 600
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ]
+        },
+        {
+          "time": 70,
+          "axes": [
+            {
+              "position": 39.55000305175781,
+              "velocity": 530.0,
+              "acceleration": -1000,
+              "remaining": 530
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 140,
+          "axes": [
+            {
+              "position": 74.20000457763672,
+              "velocity": 460.0,
+              "acceleration": -1000,
+              "remaining": 460
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 210,
+          "axes": [
+            {
+              "position": 103.95000457763672,
+              "velocity": 390.0,
+              "acceleration": -1000,
+              "remaining": 390
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 280,
+          "axes": [
+            {
+              "position": 128.8000030517578,
+              "velocity": 320.0,
+              "acceleration": -1000,
+              "remaining": 320
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 580,
+          "axes": [
+            {
+              "position": 179.8000030517578,
+              "velocity": 19.99998664855957,
+              "acceleration": -1000,
+              "remaining": 20
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "scale_input": 1000,
+      "rate_path": "installation",
+      "rate_percent": 100.00000762939453,
+      "deadlines": [
+        69,
+        138,
+        207,
+        276,
+        575
+      ],
+      "motion_samples": [
+        {
+          "time": 0,
+          "axes": [
+            {
+              "position": 0.0,
+              "velocity": 600.0,
+              "acceleration": -1000,
+              "remaining": 600
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ]
+        },
+        {
+          "time": 69,
+          "axes": [
+            {
+              "position": 39.019500732421875,
+              "velocity": 531.0,
+              "acceleration": -1000,
+              "remaining": 531
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 138,
+          "axes": [
+            {
+              "position": 73.27799987792969,
+              "velocity": 462.0,
+              "acceleration": -1000,
+              "remaining": 462
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 207,
+          "axes": [
+            {
+              "position": 102.77549743652344,
+              "velocity": 393.0,
+              "acceleration": -1000,
+              "remaining": 393
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 276,
+          "axes": [
+            {
+              "position": 127.51200103759766,
+              "velocity": 324.0,
+              "acceleration": -1000,
+              "remaining": 324
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "time": 575,
+          "axes": [
+            {
+              "position": 179.6875,
+              "velocity": 24.99998664855957,
+              "acceleration": -1000,
+              "remaining": 25
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            },
+            {
+              "position": 0.0,
+              "velocity": 0.0,
+              "acceleration": 0,
+              "remaining": -1
+            }
+          ],
+          "result_codes": [
+            1,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Probe policy is supplied by this verifier; actual +A8/+AC/+274 bodies remain unresolved.",
+    "ANI timelines assume positive decoded delays and fixed rate with no elapsed-preserving rate refresh.",
+    "Frame boundary elapsed tests are not part of this verifier.",
+    "No actual runtime stat of 850 or 1000 is asserted."
+  ]
+}

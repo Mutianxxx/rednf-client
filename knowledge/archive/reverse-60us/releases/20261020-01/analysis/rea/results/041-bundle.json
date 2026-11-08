@@ -1,0 +1,16 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"result\":{\"path\":\"D:\\\\dnf\\\\60US\\\\analysis\\\\rea\\\\combat-evidence-bundle.json\",\"bytes\":31802559,\"records\":25,\"unknowns\":0}}"
+    }
+  ],
+  "structuredContent": {
+    "result": {
+      "path": "D:\\dnf\\60US\\analysis\\rea\\combat-evidence-bundle.json",
+      "bytes": 31802559,
+      "records": 25,
+      "unknowns": 0
+    }
+  }
+}

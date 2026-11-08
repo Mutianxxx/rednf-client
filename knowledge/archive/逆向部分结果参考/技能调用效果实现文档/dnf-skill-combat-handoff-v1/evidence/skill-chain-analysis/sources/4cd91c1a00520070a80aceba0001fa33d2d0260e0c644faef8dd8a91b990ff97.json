@@ -1,0 +1,258 @@
+{
+  "path": "character/swordman/animation/bloodswordcharge.ani.als",
+  "fields": [
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/BloodSword/charge_dodge.ani",
+        "charge_dodge"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/BloodSword/charge.ani",
+        "charge"
+      ],
+      "offset": 15
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/BloodSword/charge_body.ani",
+        "charge_body"
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/BloodSword/dust.ani",
+        "dust"
+      ],
+      "offset": 45
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        10,
+        10001,
+        "charge_body"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10002,
+        "charge"
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10003,
+        "charge_dodge"
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[create draw only object]",
+      "values": [
+        8,
+        "dust",
+        0,
+        1,
+        0
+      ],
+      "offset": 120
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 15998092,
+      "value": "../Effect/Animation/BloodSword/charge_dodge.ani"
+    },
+    {
+      "offset": 10,
+      "type": 6,
+      "raw": 14393208,
+      "value": "charge_dodge"
+    },
+    {
+      "offset": 15,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 20,
+      "type": 6,
+      "raw": 15998008,
+      "value": "../Effect/Animation/BloodSword/charge.ani"
+    },
+    {
+      "offset": 25,
+      "type": 6,
+      "raw": 6862366,
+      "value": "charge"
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 35,
+      "type": 6,
+      "raw": 15997914,
+      "value": "../Effect/Animation/BloodSword/charge_body.ani"
+    },
+    {
+      "offset": 40,
+      "type": 6,
+      "raw": 15998538,
+      "value": "charge_body"
+    },
+    {
+      "offset": 45,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 50,
+      "type": 6,
+      "raw": 15998188,
+      "value": "../Effect/Animation/BloodSword/dust.ani"
+    },
+    {
+      "offset": 55,
+      "type": 6,
+      "raw": 93576,
+      "value": "dust"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 65,
+      "type": 0,
+      "raw": 10,
+      "value": 10
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 10001,
+      "value": 10001
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 15998538,
+      "value": "charge_body"
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 10002,
+      "value": 10002
+    },
+    {
+      "offset": 95,
+      "type": 6,
+      "raw": 6862366,
+      "value": "charge"
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 110,
+      "type": 0,
+      "raw": 10003,
+      "value": 10003
+    },
+    {
+      "offset": 115,
+      "type": 6,
+      "raw": 14393208,
+      "value": "charge_dodge"
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 12226,
+      "value": "[create draw only object]"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 8,
+      "value": 8
+    },
+    {
+      "offset": 130,
+      "type": 6,
+      "raw": 93576,
+      "value": "dust"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    }
+  ],
+  "raw_sha256": "4cd91c1a00520070a80aceba0001fa33d2d0260e0c644faef8dd8a91b990ff97"
+}

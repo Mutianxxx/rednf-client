@@ -1,0 +1,426 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "excerpts": [
+    {
+      "name": "spawn_owner_and_register",
+      "va": 9192332,
+      "length": 67,
+      "file_offset": 4998028,
+      "sha256": "8bbc695bc9099366b6d83df5dc3e89bb2ccc0a319c7df31c41bc9b146ccfb78a",
+      "binary": "008C438C-spawn_owner_and_register.bin",
+      "assembly": "008C438C-spawn_owner_and_register.asm"
+    },
+    {
+      "name": "register_full",
+      "va": 5299568,
+      "length": 747,
+      "file_offset": 1105264,
+      "sha256": "6c2562b6cd8ff5a52633f96378498b20133dbe360b3e99ce346e2ebdb3a0c534",
+      "binary": "0050DD70-register_full.bin",
+      "assembly": "0050DD70-register_full.asm"
+    },
+    {
+      "name": "source_atk_install",
+      "va": 4845584,
+      "length": 117,
+      "file_offset": 651280,
+      "sha256": "1af91b57c80b5de30445823bf845e87128cfe1623cb5a99ac9800c4da7e40d66",
+      "binary": "0049F010-source_atk_install.bin",
+      "assembly": "0049F010-source_atk_install.asm"
+    },
+    {
+      "name": "owner_stat_snapshot",
+      "va": 4840720,
+      "length": 419,
+      "file_offset": 646416,
+      "sha256": "ec95ded7ad5ea3e74bc4f8191f7926475de85dbd2eb4bd94c3c3ed8a94198999",
+      "binary": "0049DD10-owner_stat_snapshot.bin",
+      "assembly": "0049DD10-owner_stat_snapshot.asm"
+    },
+    {
+      "name": "snapshot_operand_getters",
+      "va": 4427968,
+      "length": 135,
+      "file_offset": 233664,
+      "sha256": "d3fcb98c767fe08b6ff62404b5b9c08772aa4d66683f3920f7ff385daf4c1615",
+      "binary": "004390C0-snapshot_operand_getters.bin",
+      "assembly": "004390C0-snapshot_operand_getters.asm"
+    },
+    {
+      "name": "releasewave_vtable",
+      "va": 13653972,
+      "length": 900,
+      "file_offset": 9459668,
+      "sha256": "f27c93c36aa756a7fa9896ce8219dcebb2fa8b2cf646c155700891a2cd280fa7",
+      "binary": "00D057D4-releasewave_vtable.bin",
+      "assembly": "00D057D4-releasewave_vtable.asm"
+    },
+    {
+      "name": "numeric_full",
+      "va": 9143888,
+      "length": 2125,
+      "file_offset": 4949584,
+      "sha256": "47191821bef2bf6980b397603696f5f87bc6a1cd4059f19f75a8c940e39bcfde",
+      "binary": "008B8650-numeric_full.bin",
+      "assembly": "008B8650-numeric_full.asm"
+    },
+    {
+      "name": "alternate_base",
+      "va": 9143648,
+      "length": 70,
+      "file_offset": 4949344,
+      "sha256": "0e72f71d4fc326ed7debc82e9cabb9baa6767367735d9d118df8c583f2723112",
+      "binary": "008B8560-alternate_base.bin",
+      "assembly": "008B8560-alternate_base.asm"
+    },
+    {
+      "name": "action_atk_validity",
+      "va": 4617344,
+      "length": 58,
+      "file_offset": 423040,
+      "sha256": "2c2779857e2dc16d5b3707e88744b22d5fa8bfe9c36cff41400831018a7b5f56",
+      "binary": "00467480-action_atk_validity.bin",
+      "assembly": "00467480-action_atk_validity.asm"
+    },
+    {
+      "name": "atk_ctor_defaults",
+      "va": 4422960,
+      "length": 625,
+      "file_offset": 228656,
+      "sha256": "8d4c0c0f08cfb028dfff6f4096ed730d317058cc9916c93ae49ae6cacd7fdedc",
+      "binary": "00437D30-atk_ctor_defaults.bin",
+      "assembly": "00437D30-atk_ctor_defaults.asm"
+    },
+    {
+      "name": "numeric_defaults",
+      "va": 4545104,
+      "length": 441,
+      "file_offset": 350800,
+      "sha256": "96dc9e9b7f450c1df08264bd64e47bf16a912ad8b4b9b368da5fb690737f5c48",
+      "binary": "00455A50-numeric_defaults.bin",
+      "assembly": "00455A50-numeric_defaults.asm"
+    },
+    {
+      "name": "passive_type_and_snapshot_defaults",
+      "va": 4845168,
+      "length": 111,
+      "file_offset": 650864,
+      "sha256": "1ed65e0910f9ded3b8e6dcde280bb902085e6429fed9f97ab61812074e7d7fc7",
+      "binary": "0049EE70-passive_type_and_snapshot_defaults.bin",
+      "assembly": "0049EE70-passive_type_and_snapshot_defaults.asm"
+    },
+    {
+      "name": "passive_owner_getters",
+      "va": 4427904,
+      "length": 56,
+      "file_offset": 233600,
+      "sha256": "89a7f8a313381c59078fd0c1e1e686532ea8b22fbfb4a0204c8d011e784f50e5",
+      "binary": "00439080-passive_owner_getters.bin",
+      "assembly": "00439080-passive_owner_getters.asm"
+    },
+    {
+      "name": "swordman_false_slot",
+      "va": 9324976,
+      "length": 3,
+      "file_offset": 5130672,
+      "sha256": "01cb47d078b4841b8408ec4fe278efa83115c6f6e101972987507d2b2b57dcf0",
+      "binary": "008E49B0-swordman_false_slot.bin",
+      "assembly": "008E49B0-swordman_false_slot.asm"
+    },
+    {
+      "name": "type_mask_getter",
+      "va": 4225888,
+      "length": 7,
+      "file_offset": 31584,
+      "sha256": "5dab826e294f52b1cc85e02e007434fc0cda436477f3db22da94d6d0108ce87d",
+      "binary": "00407B60-type_mask_getter.bin",
+      "assembly": "00407B60-type_mask_getter.asm"
+    },
+    {
+      "name": "swordman_owner_1bc_slot",
+      "va": 14160208,
+      "length": 4,
+      "file_offset": 9965904,
+      "sha256": "881421de66b61a76dbc21300a8ffab78ea17012dad4c60f40cfa431abed2621e",
+      "binary": "00D81150-swordman_owner_1bc_slot.bin",
+      "assembly": "00D81150-swordman_owner_1bc_slot.asm"
+    },
+    {
+      "name": "victim_damage_to_hp",
+      "va": 4927110,
+      "length": 1230,
+      "file_offset": 732806,
+      "sha256": "90164a0329d1fcffa7adde2aa945633dc9676fb1518c3fc2da40d21f957f4944",
+      "binary": "004B2E86-victim_damage_to_hp.bin",
+      "assembly": "004B2E86-victim_damage_to_hp.asm"
+    },
+    {
+      "name": "monster_numeric_wrapper",
+      "va": 5200928,
+      "length": 150,
+      "file_offset": 1006624,
+      "sha256": "ec4b25e6779a089d9416f584c20b396c74ac0a67deed33d5c637e9361f254037",
+      "binary": "004F5C20-monster_numeric_wrapper.bin",
+      "assembly": "004F5C20-monster_numeric_wrapper.asm"
+    }
+  ],
+  "reused_excerpts": [
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "atk_damage_and_bonus_parse",
+      "va": "0x00836cb4",
+      "file_offset": 4418740,
+      "size": 279,
+      "sha256": "6619bbfcf071f7fee29f5a4ad891ba62ff70c25635fdf86701355f4a4dcaea8c",
+      "binary": "00836cb4-atk_damage_and_bonus_parse.bin",
+      "assembly": "00836cb4-atk_damage_and_bonus_parse.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "atk_weapon_apply_parse",
+      "va": "0x00836e57",
+      "file_offset": 4419159,
+      "size": 58,
+      "sha256": "dc8948b389d1764340a6aa5e6fdc195597bf2e880ca6911a16cb17210a7b1ab3",
+      "binary": "00836e57-atk_weapon_apply_parse.bin",
+      "assembly": "00836e57-atk_weapon_apply_parse.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "atk_install_copy",
+      "va": "0x004edcd0",
+      "file_offset": 974032,
+      "size": 60,
+      "sha256": "9b280fca7051e14546c84e956d0184a3956aa2d79eb8ed9b09e396a4a6f5f854",
+      "binary": "004edcd0-atk_install_copy.bin",
+      "assembly": "004edcd0-atk_install_copy.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "current_atk_get",
+      "va": "0x00438650",
+      "file_offset": 230992,
+      "size": 7,
+      "sha256": "b41d9e8f3f3eceedeb7cd4788bf5d05708bfadb71405bff4ffd295c177798734",
+      "binary": "00438650-current_atk_get.bin",
+      "assembly": "00438650-current_atk_get.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "atk_copy",
+      "va": "0x004a27e0",
+      "file_offset": 665568,
+      "size": 2888,
+      "sha256": "e443869eec5442065e4342e72a2d4d4374fda92f9beee4e76fbbf5c625ee3924",
+      "binary": "004a27e0-atk_copy.bin",
+      "assembly": "004a27e0-atk_copy.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "atk_reset_core",
+      "va": "0x00435430",
+      "file_offset": 218160,
+      "size": 247,
+      "sha256": "0cf8c89f8a9c176523d0c84d94431684ac17b915171d5a8f453764edacbc1eb5",
+      "binary": "00435430-atk_reset_core.bin",
+      "assembly": "00435430-atk_reset_core.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "damage_pack_atk_core",
+      "va": "0x004eb960",
+      "file_offset": 964960,
+      "size": 279,
+      "sha256": "f5e809bc9ebdc22ecd7b2af77ce81f2336cf78658f2088b5a6edd712e48e9c99",
+      "binary": "004eb960-damage_pack_atk_core.bin",
+      "assembly": "004eb960-damage_pack_atk_core.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "damage_pack_stats",
+      "va": "0x004ebc36",
+      "file_offset": 965686,
+      "size": 142,
+      "sha256": "53266f0a5dd0cf5b65e9b3fb10fa2fba2d07f5da655bb1631ab846b3f0529ba9",
+      "binary": "004ebc36-damage_pack_stats.bin",
+      "assembly": "004ebc36-damage_pack_stats.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "damage_pack_full",
+      "va": "0x004eb780",
+      "file_offset": 964480,
+      "size": 4762,
+      "sha256": "61d85aa91a3cfc0e840652aa9e965d24377d73360c430d428ad72754c2f358b3",
+      "binary": "004eb780-damage_pack_full.bin",
+      "assembly": "004eb780-damage_pack_full.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "damage_base_dispatch",
+      "va": "0x008b85f0",
+      "file_offset": 4949488,
+      "size": 94,
+      "sha256": "a8c477ddf59775d106767b96ec61541c3dc8b64b5a3ddb758d14f2447f2c10e2",
+      "binary": "008b85f0-damage_base_dispatch.bin",
+      "assembly": "008b85f0-damage_base_dispatch.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "damage_weapon_percent",
+      "va": "0x008b79c0",
+      "file_offset": 4946368,
+      "size": 239,
+      "sha256": "63d8892a40835b93bab7903f23fc24becfb43604e67139bd25d127797cc1ab06",
+      "binary": "008b79c0-damage_weapon_percent.bin",
+      "assembly": "008b79c0-damage_weapon_percent.asm"
+    },
+    {
+      "base": "analysis/combat_spawned_object",
+      "name": "005C77B0-005C7824",
+      "va": "0x5c77b0",
+      "size": 116,
+      "sha256": "4aa19b24f953e0fc63ba9ffc52f83338903356509917691b95fac0d04b9981b2",
+      "file_offset": 1865648,
+      "binary": "005C77B0-005C7824.bin",
+      "assembly": "005C77B0-005C7824.asm"
+    },
+    {
+      "base": "analysis/combat_spawned_object",
+      "name": "005CE740-005CE796",
+      "va": "0x5ce740",
+      "size": 86,
+      "sha256": "ed2dcb71701283ed5dc446afd25d5f4c654ec4ee92dc11e79e1f348ce84ec7a5",
+      "file_offset": 1894208,
+      "binary": "005CE740-005CE796.bin",
+      "assembly": "005CE740-005CE796.asm"
+    },
+    {
+      "base": "analysis/combat_spawned_object",
+      "name": "00490720-0049082B",
+      "va": "0x490720",
+      "size": 267,
+      "sha256": "6be2fc88a24c254a466619da36da07c7b64e7d9f54a84dd56e2a5e3d27ee2355",
+      "file_offset": 591648,
+      "binary": "00490720-0049082B.bin",
+      "assembly": "00490720-0049082B.asm"
+    },
+    {
+      "base": "analysis/combat_spawned_object",
+      "name": "0049FAAC-0049FB30",
+      "va": "0x49faac",
+      "size": 132,
+      "sha256": "51456c19c050161f6a0c39612524f3eeca16e05e2ac72e92e053bb58d044570c",
+      "file_offset": 653996,
+      "binary": "0049FAAC-0049FB30.bin",
+      "assembly": "0049FAAC-0049FB30.asm"
+    }
+  ],
+  "rea_evidence": [
+    {
+      "path": "analysis\\rea\\results\\057-passiveobject-loader.json",
+      "sha256": "d54ee6f8ee2c0bd6b401ddee53ecab7770947ee59bfcc0bb4c1af8136e3d624f",
+      "evidence_id": "ev_1bc887f2b12a3439895019e1c4acecf03d27e793de6a759db6b93e6635328cb7",
+      "parameters": {
+        "procedure": "0x49F4D0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      }
+    },
+    {
+      "path": "analysis\\rea\\results\\058-releasewave-constructor-setup.json",
+      "sha256": "7ae153ff791c1bc18a6776d71200f5a01f1318b20f438393006eac621e97fb16",
+      "evidence_id": "ev_4118faea0bf1d88925b0e69eed60a6943572d4cb562ae7b801465742e69d9662",
+      "parameters": {
+        "procedure": "0x5C77B0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      }
+    },
+    {
+      "path": "analysis\\rea\\results\\059-passiveobject-registration-consume.json",
+      "sha256": "2dc6c69dbc00294f57badf201b4b0bd88c9e843661825e2e2be28142768fee75",
+      "evidence_id": "ev_eebea8b3f4c7797df0830f7fc84b9791f6bc15f669918d957ee3737033592dd4",
+      "parameters": {
+        "procedure": "0x4A0DA0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      }
+    },
+    {
+      "path": "analysis\\rea\\results\\070-attackinfo-install.json",
+      "sha256": "5f8a51ad6c64a8243f00cb4f40ca97fbc9ee174be32766978ab288da0dc83c88",
+      "evidence_id": "ev_615a3c4e307efffaacce5ce7a7004c7d433977d14095d2c077a2adde83df656b",
+      "parameters": {
+        "procedure": "0x4EDCD0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      }
+    },
+    {
+      "path": "analysis\\rea\\results\\094-numeric-damage.json",
+      "sha256": "1947b0fc10dfeed3748d172c87a6cd116c5e03b78607d6c39f6cfd82f9e2ec7f",
+      "evidence_id": "ev_024070fd59aa731af1393fb95b4ec6ac7993692721919acde7bcc6cebde7152f",
+      "parameters": {
+        "procedure": "0x8B8650"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      }
+    }
+  ],
+  "external_references": [
+    {
+      "path": "analysis/combat_native_collision/hit-contract.json",
+      "sha256": "0479ceee78e0e4bddad39ad35fbab3ea8790a417a007f95172f3e3155d22167e"
+    },
+    {
+      "path": "analysis/combat_hit_lifecycle/history-contract.json",
+      "sha256": "41f193fd2354ff9e8d78ee407bec6df7a2b4d3daa8702dd083debdcef5ab6bbf"
+    },
+    {
+      "path": "analysis/combat_hit_lifecycle/evidence-index.json",
+      "sha256": "5d9dec731877325dd0a8e9d8a90d2cad53c3e40363c6f8d63e1e66d4e077ff45"
+    },
+    {
+      "path": "analysis/combat_hit_lifecycle/passive_reset_and_install.bin",
+      "sha256": "1af91b57c80b5de30445823bf845e87128cfe1623cb5a99ac9800c4da7e40d66"
+    }
+  ],
+  "observed_execution": false
+}

@@ -1,0 +1,88 @@
+00744780 8d8130120000             lea       eax, [ecx + 0x1230]
+00744786 c3                       ret       
+00744787 cc                       int3      
+00744788 cc                       int3      
+00744789 cc                       int3      
+0074478a cc                       int3      
+0074478b cc                       int3      
+0074478c cc                       int3      
+0074478d cc                       int3      
+0074478e cc                       int3      
+0074478f cc                       int3      
+00744790 8d8140120000             lea       eax, [ecx + 0x1240]
+00744796 c3                       ret       
+00744797 cc                       int3      
+00744798 cc                       int3      
+00744799 cc                       int3      
+0074479a cc                       int3      
+0074479b cc                       int3      
+0074479c cc                       int3      
+0074479d cc                       int3      
+0074479e cc                       int3      
+0074479f cc                       int3      
+007447a0 8b8144120000             mov       eax, dword ptr [ecx + 0x1244]
+007447a6 c3                       ret       
+007447a7 cc                       int3      
+007447a8 cc                       int3      
+007447a9 cc                       int3      
+007447aa cc                       int3      
+007447ab cc                       int3      
+007447ac cc                       int3      
+007447ad cc                       int3      
+007447ae cc                       int3      
+007447af cc                       int3      
+007447b0 8b8148120000             mov       eax, dword ptr [ecx + 0x1248]
+007447b6 c3                       ret       
+007447b7 cc                       int3      
+007447b8 cc                       int3      
+007447b9 cc                       int3      
+007447ba cc                       int3      
+007447bb cc                       int3      
+007447bc cc                       int3      
+007447bd cc                       int3      
+007447be cc                       int3      
+007447bf cc                       int3      
+007447c0 8b815c120000             mov       eax, dword ptr [ecx + 0x125c]
+007447c6 c3                       ret       
+007447c7 cc                       int3      
+007447c8 cc                       int3      
+007447c9 cc                       int3      
+007447ca cc                       int3      
+007447cb cc                       int3      
+007447cc cc                       int3      
+007447cd cc                       int3      
+007447ce cc                       int3      
+007447cf cc                       int3      
+007447d0 8b81e0120000             mov       eax, dword ptr [ecx + 0x12e0]
+007447d6 c3                       ret       
+007447d7 cc                       int3      
+007447d8 cc                       int3      
+007447d9 cc                       int3      
+007447da cc                       int3      
+007447db cc                       int3      
+007447dc cc                       int3      
+007447dd cc                       int3      
+007447de cc                       int3      
+007447df cc                       int3      
+007447e0 8b81e4120000             mov       eax, dword ptr [ecx + 0x12e4]
+007447e6 c3                       ret       
+007447e7 cc                       int3      
+007447e8 cc                       int3      
+007447e9 cc                       int3      
+007447ea cc                       int3      
+007447eb cc                       int3      
+007447ec cc                       int3      
+007447ed cc                       int3      
+007447ee cc                       int3      
+007447ef cc                       int3      
+007447f0 8b81e8120000             mov       eax, dword ptr [ecx + 0x12e8]
+007447f6 c3                       ret       
+007447f7 cc                       int3      
+007447f8 cc                       int3      
+007447f9 cc                       int3      
+007447fa cc                       int3      
+007447fb cc                       int3      
+007447fc cc                       int3      
+007447fd cc                       int3      
+007447fe cc                       int3      
+007447ff cc                       int3      

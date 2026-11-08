@@ -1,0 +1,58 @@
+﻿{
+    "scope":  "template-reconstruction; not native skill or final beta acceptance",
+    "compiler":  "D:\\dnf-rebuild\\dnf-native-demo\\third_party\\llvm-mingw-20261006-ucrt-x86_64\\bin\\clang++.exe",
+    "compiler_sha256":  "EE85BEF2C733E24A26C22BE3DF94BD631CF9528A048FCE91241C182A936737FE",
+    "exe_sha256":  "190D0E5DCC05EAEF8578C9DA20FBE5A2B884B9A72FA6E7D3A0FAAC1D8771267E",
+    "pvf":  "D:\\dnf-rebuild\\DNF1031瀹㈡埛绔痋Script.pvf",
+    "image_root":  "D:\\dnf-rebuild\\DNF1031瀹㈡埛绔痋ImagePacks2",
+    "sources":  [
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\protocol.cpp",
+                        "sha256":  "4C02090DFB8B555E387C8FD945134B041645D9B85A4BF9359CF97E77C32A1C77"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\resources.cpp",
+                        "sha256":  "5EEB6EEDF08F400D3388CC380CD0F7CF47ECAD04351CCFA40394DD3288AAC079"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\gpu.cpp",
+                        "sha256":  "A505B3BBA2B4A3169B159FC8BFD429C22BAF8FE0F4B249A4A1EF726DB39C5CE6"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf.cpp",
+                        "sha256":  "2909EC875AB42B1A39E42965D1C2BF92B05263E1DE32883666C512F4FEF50C97"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf_animation.cpp",
+                        "sha256":  "B84C5FE3CBB33CE7C1DBFED912D4FD72CAB412F964058A7D239582B065F136F2"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf_als.cpp",
+                        "sha256":  "D3E7C3931AE969DE1A2059DA97CB27276A3F24CE7F6B3DEE60955F50079CB4DF"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf_playback.cpp",
+                        "sha256":  "D493F25CE214A21BDE70A8B965AFF7E88C1904EB9438F4F608DE2FEE7B9C99CC"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf_script_preview.cpp",
+                        "sha256":  "D2611F74FFECF60BF7377DE275A539DE0FA68F4343AAC82EB948A3C0B56D091E"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf_template_preview.cpp",
+                        "sha256":  "9874D6FA2B8D068756F2E0BF10C289BFA33827BB1D1CD0378B671C029A4659C8"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf_preview_catalog.cpp",
+                        "sha256":  "E600B012FAB977130FA762F84E8BCEE63097028E2503B0E694192F0C137EDE9E"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\src\\pvf_preview_scene.cpp",
+                        "sha256":  "84C5B6F08378B14B1CCA1F1E98192AC7A5AA3972B10BA7D92294621C8BE0BB63"
+                    },
+                    {
+                        "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\tests\\audit-template-flows.cpp",
+                        "sha256":  "FE0951FF55CAFE14F4CD7710A27CBCCCA4CF332C373363D290CCF71A5E5FCDF9"
+                    }
+                ]
+}

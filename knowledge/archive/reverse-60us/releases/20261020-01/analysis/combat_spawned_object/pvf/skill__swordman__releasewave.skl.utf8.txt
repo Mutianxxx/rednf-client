@@ -1,0 +1,129 @@
+[name2]  <12::name2_eng_355>
+
+[purchase cost] 
+30
+[/purchase cost]
+[steel learning skill] 
+1 // 무조건 1
+50 // 최대 레벨 리듀스%
+200 // 추가 구입비용%
+4 // 추가 요구레벨+
+
+[required level]  20
+[required level range]  3
+
+[type]  `[active]`
+[skill class]  0
+[maximum level]  20
+[growtype maximum level]  0 5 5 5 10
+
+[skill fitness growtype] 
+4
+[/skill fitness growtype]
+
+[durability decrease rate] 10
+
+[icon] 
+`Character/Swordman/Effect/SkillIcon.img` 100
+`Character/Swordman/Effect/SkillIcon.img` 101
+
+[command] 
+(UP), (UP), (SKILL)
+[/command]
+[skill command advantage] 10 20	// 쿨타임 감소비율(0.1%단위), MP소모량 감소비율(0.1%단위)
+
+[dungeon]
+[consume MP]  10 25
+[cool time]  15000 5000
+[static data] 
+600	// 발동 후 딜레이
+[/static data]
+[level info]
+1
+// 0.공격력
+552 
+635 
+724 
+818 
+917 
+1022 
+1132 
+1248 
+1368 
+1495 
+1627 
+1764 
+1906 
+2054 
+2208 
+2367 
+2531 
+2700 
+2875 
+3056 
+3242 
+3433 
+3630 
+3832 
+4039 
+4252 
+4470 
+4694 
+4923 
+5158 
+[/level info]
+[/dungeon]
+
+[pvp]
+[cool time]  25000 6000
+[static data] 
+800	// 발동 후 딜레이
+[/static data]
+[level info]
+1
+// 0.공격력
+172 
+218 
+269 
+325 
+387 
+454 
+527 
+604 
+688 
+776 
+870 
+969 
+1073 
+1183 
+1298 
+1419 
+1544 
+1676 
+1812 
+1954  
+[/level info]
+[/pvp]
+
+[death tower]
+[/death tower]
+
+[warroom]
+[/warroom]
+
+
+[name]  <12::name_4430>
+[explain] 
+<12::explain_18010>
+[basic explain] <12::release_wave_basic_explain> 
+[command key explain]  <12::command_key_explain_16115>
+[level property] 
+1 99
+<12::level_property_18015>
+-1 0 1.0
+[/level property]
+
+[skill preloading image]
+`Character/Swordman/Effect/ReleaseWave1.img`
+`Character/Swordman/Effect/ReleaseWave2.img`
+[/skill preloading image]

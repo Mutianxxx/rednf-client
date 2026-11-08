@@ -1,0 +1,51 @@
+[
+  {
+    "address": "0x550e10",
+    "name": "func_00550e10",
+    "blocks": 32,
+    "size": 311,
+    "output": "00550e10_func_00550e10.c"
+  },
+  {
+    "address": "0x550f60",
+    "name": "func_00550f60",
+    "blocks": 27,
+    "size": 270,
+    "output": "00550f60_func_00550f60.c"
+  },
+  {
+    "address": "0x551ad0",
+    "name": "func_00551ad0",
+    "blocks": 307,
+    "size": 5854,
+    "output": "00551ad0_func_00551ad0.c"
+  },
+  {
+    "address": "0xb099b0",
+    "name": "func_00b099b0",
+    "blocks": 5,
+    "size": 42,
+    "output": "00b099b0_func_00b099b0.c"
+  },
+  {
+    "address": "0x8316f0",
+    "name": "func_008316f0",
+    "blocks": 66,
+    "size": 881,
+    "output": "008316f0_func_008316f0.c"
+  },
+  {
+    "address": "0xb8b5c0",
+    "name": "func_00b8b5c0",
+    "blocks": 23,
+    "size": 353,
+    "output": "00b8b5c0_func_00b8b5c0.c"
+  },
+  {
+    "address": "0xa56000",
+    "name": "func_00a56000",
+    "blocks": 28,
+    "size": 380,
+    "output": "00a56000_func_00a56000.c"
+  }
+]

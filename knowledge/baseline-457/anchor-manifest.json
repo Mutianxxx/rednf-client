@@ -1,0 +1,40 @@
+{
+  "status": "byte-identical",
+  "files": [
+    {
+      "origin": "D:\\dnf-rebuild\\dnf-native-demo\\checkpoints\\20261020T224815926748Z-mage-upper457\\manifest.json",
+      "archived": "manifest.json",
+      "sha256": "609db31d67f003d6206890f646dc74445d2f7a07b407edaff8e5f5eb3cfff9c2"
+    },
+    {
+      "origin": "D:\\dnf-rebuild\\dnf-native-demo\\checkpoints\\20261020T224815926748Z-mage-upper457\\source\\CMakeLists.txt",
+      "archived": "source\\CMakeLists.txt",
+      "sha256": "430896b00012ab340857015b54f6399a1ed0c60983347980f527112f7159619e"
+    },
+    {
+      "origin": "D:\\dnf-rebuild\\dnf-native-demo\\checkpoints\\20261020T224815926748Z-mage-upper457\\source\\include\\dnf\\resources.hpp",
+      "archived": "source\\include\\dnf\\resources.hpp",
+      "sha256": "c9c695ea0a32d6022fc65b37c9a4fe835ae32d3088d314a9ca8ffc2fa7412ba9"
+    },
+    {
+      "origin": "D:\\dnf-rebuild\\dnf-native-demo\\checkpoints\\20261020T224815926748Z-mage-upper457\\source\\include\\dnf\\experimental_character.hpp",
+      "archived": "source\\include\\dnf\\experimental_character.hpp",
+      "sha256": "61b2bf83e638e97bbfe085d419bed1f6752c0d9a369652d8509fa122c7dfae1a"
+    },
+    {
+      "origin": "D:\\dnf-rebuild\\dnf-native-demo\\checkpoints\\20261020T224815926748Z-mage-upper457\\source\\include\\dnf\\renderer.hpp",
+      "archived": "source\\include\\dnf\\renderer.hpp",
+      "sha256": "9814559e28d8a991122ec0e3596fed6c78dc1fa98f58bd57f3bdde25830d034f"
+    },
+    {
+      "origin": "D:\\dnf-rebuild\\dnf-native-demo\\checkpoints\\20261020T224815926748Z-mage-upper457\\source\\src\\renderer.cpp",
+      "archived": "source\\src\\renderer.cpp",
+      "sha256": "855a35110ddf6bd0538ecb2a980257d52db38341847fd2dfcae311a4d339ad10"
+    },
+    {
+      "origin": "D:\\dnf-rebuild\\dnf-native-demo\\checkpoints\\20261020T224815926748Z-mage-upper457\\source\\src\\main.cpp",
+      "archived": "source\\src\\main.cpp",
+      "sha256": "674fd1e1693220bc27e28ded0c43a21eb4911194f6e6533b57b33fd4975fb99d"
+    }
+  ]
+}

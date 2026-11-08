@@ -1,0 +1,167 @@
+{
+  "context": {
+    "name": "Explicit unmodified mode3 baseline; not a native memory observation",
+    "mode_id": 3,
+    "secondary_mode_gate": false,
+    "modifier_snapshot_complete": true,
+    "modifier_sources": []
+  },
+  "results": [
+    {
+      "schema": "60us-skill32-scalar-result-v1",
+      "skill_id": 32,
+      "section": "dungeon",
+      "input_level": 1,
+      "native_query_level": 1,
+      "raw_table_value": 552,
+      "raw_table_rows": 30,
+      "beyond_current_maximum": false,
+      "initial_modified_value": 552,
+      "environment_branch_entered": false,
+      "scalar": 552,
+      "constructor_atk_damage_float32": 552.0,
+      "trace": [
+        {
+          "event": "query",
+          "level": 1,
+          "raw": 552,
+          "value": 552,
+          "with_actor": true
+        }
+      ],
+      "observed_runtime": false,
+      "arithmetic_model": "Declared reconstruction: x87 64-bit significand, nearest-even intermediate rounding; explicit float32 stores; C01544 truncates toward zero in supported int32 domain. Actual target x87 control word is unobserved; overflow/NaN/Infinity are unsupported.",
+      "scope": "Generated object ATK.damage scalar only; does not compute final victim damage or prove learnability."
+    },
+    {
+      "schema": "60us-skill32-scalar-result-v1",
+      "skill_id": 32,
+      "section": "dungeon",
+      "input_level": 20,
+      "native_query_level": 20,
+      "raw_table_value": 3056,
+      "raw_table_rows": 30,
+      "beyond_current_maximum": false,
+      "initial_modified_value": 3056,
+      "environment_branch_entered": false,
+      "scalar": 3056,
+      "constructor_atk_damage_float32": 3056.0,
+      "trace": [
+        {
+          "event": "query",
+          "level": 20,
+          "raw": 3056,
+          "value": 3056,
+          "with_actor": true
+        }
+      ],
+      "observed_runtime": false,
+      "arithmetic_model": "Declared reconstruction: x87 64-bit significand, nearest-even intermediate rounding; explicit float32 stores; C01544 truncates toward zero in supported int32 domain. Actual target x87 control word is unobserved; overflow/NaN/Infinity are unsupported.",
+      "scope": "Generated object ATK.damage scalar only; does not compute final victim damage or prove learnability."
+    },
+    {
+      "schema": "60us-skill32-scalar-result-v1",
+      "skill_id": 32,
+      "section": "dungeon",
+      "input_level": 30,
+      "native_query_level": 30,
+      "raw_table_value": 5158,
+      "raw_table_rows": 30,
+      "beyond_current_maximum": true,
+      "initial_modified_value": 5158,
+      "environment_branch_entered": false,
+      "scalar": 5158,
+      "constructor_atk_damage_float32": 5158.0,
+      "trace": [
+        {
+          "event": "query",
+          "level": 30,
+          "raw": 5158,
+          "value": 5158,
+          "with_actor": true
+        }
+      ],
+      "observed_runtime": false,
+      "arithmetic_model": "Declared reconstruction: x87 64-bit significand, nearest-even intermediate rounding; explicit float32 stores; C01544 truncates toward zero in supported int32 domain. Actual target x87 control word is unobserved; overflow/NaN/Infinity are unsupported.",
+      "scope": "Generated object ATK.damage scalar only; does not compute final victim damage or prove learnability."
+    },
+    {
+      "schema": "60us-skill32-scalar-result-v1",
+      "skill_id": 32,
+      "section": "pvp",
+      "input_level": 1,
+      "native_query_level": 1,
+      "raw_table_value": 172,
+      "raw_table_rows": 20,
+      "beyond_current_maximum": false,
+      "initial_modified_value": 172,
+      "environment_branch_entered": false,
+      "scalar": 172,
+      "constructor_atk_damage_float32": 172.0,
+      "trace": [
+        {
+          "event": "query",
+          "level": 1,
+          "raw": 172,
+          "value": 172,
+          "with_actor": true
+        }
+      ],
+      "observed_runtime": false,
+      "arithmetic_model": "Declared reconstruction: x87 64-bit significand, nearest-even intermediate rounding; explicit float32 stores; C01544 truncates toward zero in supported int32 domain. Actual target x87 control word is unobserved; overflow/NaN/Infinity are unsupported.",
+      "scope": "Generated object ATK.damage scalar only; does not compute final victim damage or prove learnability."
+    },
+    {
+      "schema": "60us-skill32-scalar-result-v1",
+      "skill_id": 32,
+      "section": "pvp",
+      "input_level": 20,
+      "native_query_level": 20,
+      "raw_table_value": 1954,
+      "raw_table_rows": 20,
+      "beyond_current_maximum": false,
+      "initial_modified_value": 1954,
+      "environment_branch_entered": false,
+      "scalar": 1954,
+      "constructor_atk_damage_float32": 1954.0,
+      "trace": [
+        {
+          "event": "query",
+          "level": 20,
+          "raw": 1954,
+          "value": 1954,
+          "with_actor": true
+        }
+      ],
+      "observed_runtime": false,
+      "arithmetic_model": "Declared reconstruction: x87 64-bit significand, nearest-even intermediate rounding; explicit float32 stores; C01544 truncates toward zero in supported int32 domain. Actual target x87 control word is unobserved; overflow/NaN/Infinity are unsupported.",
+      "scope": "Generated object ATK.damage scalar only; does not compute final victim damage or prove learnability."
+    },
+    {
+      "schema": "60us-skill32-scalar-result-v1",
+      "skill_id": 32,
+      "section": "pvp",
+      "input_level": 30,
+      "native_query_level": 30,
+      "raw_table_value": 0,
+      "raw_table_rows": 20,
+      "beyond_current_maximum": true,
+      "initial_modified_value": 0,
+      "environment_branch_entered": false,
+      "scalar": 0,
+      "constructor_atk_damage_float32": 0.0,
+      "trace": [
+        {
+          "event": "query",
+          "level": 30,
+          "raw": 0,
+          "reason": "unsigned index outside current table",
+          "with_actor": true
+        }
+      ],
+      "observed_runtime": false,
+      "arithmetic_model": "Declared reconstruction: x87 64-bit significand, nearest-even intermediate rounding; explicit float32 stores; C01544 truncates toward zero in supported int32 domain. Actual target x87 control word is unobserved; overflow/NaN/Infinity are unsupported.",
+      "scope": "Generated object ATK.damage scalar only; does not compute final victim damage or prove learnability."
+    }
+  ]
+}

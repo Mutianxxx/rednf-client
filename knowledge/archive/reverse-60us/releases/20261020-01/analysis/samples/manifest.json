@@ -1,0 +1,86 @@
+[
+  {
+    "file_number": 3075958854,
+    "path": "skill/skilllist.usa.lst",
+    "size": 312,
+    "crc": "f9bd27af",
+    "relative_offset": 96656720,
+    "absolute_offset": 104223344,
+    "sha256": "fa7a77d0131e9f045099ee8c1a65e6b43f8276f9aaae389137008c25f02ea094",
+    "raw_file": "skill__skilllist.usa.lst.raw",
+    "strict_decoding": "cp949",
+    "text_file": "skill__skilllist.usa.lst.utf8.txt"
+  },
+  {
+    "file_number": 2999170174,
+    "path": "skill/swordmanskill.lst",
+    "size": 6071,
+    "crc": "31d93d45",
+    "relative_offset": 94640168,
+    "absolute_offset": 102206792,
+    "sha256": "36e7c46b3ea3e62b212f06ce81f8dcc21ef7dab08fa916cfaebe78ad0b8a6f0e",
+    "raw_file": "skill__swordmanskill.lst.raw",
+    "strict_decoding": "cp949",
+    "text_file": "skill__swordmanskill.lst.utf8.txt"
+  },
+  {
+    "file_number": 13816316,
+    "path": "skill/swordman/hardattack.skl",
+    "size": 1305,
+    "crc": "94e7bc98",
+    "relative_offset": 340300,
+    "absolute_offset": 7906924,
+    "sha256": "1cc0c639f70efab493d8d9d38ebb438c21c6132a5f6b3ff3e7e8d38b88e7f846",
+    "raw_file": "skill__swordman__hardattack.skl.raw",
+    "strict_decoding": "cp949",
+    "text_file": "skill__swordman__hardattack.skl.utf8.txt"
+  },
+  {
+    "file_number": 1380602348,
+    "path": "skill/swordman/upperslash.skl",
+    "size": 1733,
+    "crc": "3cee29ee",
+    "relative_offset": 42452728,
+    "absolute_offset": 50019352,
+    "sha256": "88c1bddd29d14092c423af117474b69c576643a37f6f7c8bfc47882782a124d8",
+    "raw_file": "skill__swordman__upperslash.skl.raw",
+    "strict_decoding": "cp949",
+    "text_file": "skill__swordman__upperslash.skl.utf8.txt"
+  },
+  {
+    "file_number": 3113472198,
+    "path": "character/character.usa.lst",
+    "size": 318,
+    "crc": "cb30bfc5",
+    "relative_offset": 97772468,
+    "absolute_offset": 105339092,
+    "sha256": "855ac85c61235d390f634887d0ef64457afc4e49d5f587d48207663236a3e7da",
+    "raw_file": "character__character.usa.lst.raw",
+    "strict_decoding": "cp949",
+    "text_file": "character__character.usa.lst.utf8.txt"
+  },
+  {
+    "file_number": 4233484881,
+    "path": "character/swordman/swordman.chr",
+    "size": 14519,
+    "crc": "9ae456b5",
+    "relative_offset": 130925504,
+    "absolute_offset": 138492128,
+    "sha256": "969316b7284f0bdd654fb013ff52f148199f2fc1eb668dd6b130da980160b73e",
+    "raw_file": "character__swordman__swordman.chr.raw",
+    "strict_decoding": "cp949",
+    "text_file": "character__swordman__swordman.chr.utf8.txt"
+  },
+  {
+    "file_number": 2284670068,
+    "path": "string.usa.lst",
+    "size": 769,
+    "crc": "90aa4cc8",
+    "relative_offset": 74116228,
+    "absolute_offset": 81682852,
+    "sha256": "5a592ea2c4aa3ac67bdbaf6d44428b98cd6c65bbd9398fa3175335baba41f50e",
+    "raw_file": "string.usa.lst.raw",
+    "strict_decoding": "cp949",
+    "text_file": "string.usa.lst.utf8.txt"
+  }
+]

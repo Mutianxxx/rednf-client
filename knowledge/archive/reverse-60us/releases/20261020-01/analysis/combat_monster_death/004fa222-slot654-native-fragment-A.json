@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4fa222",
+  "rva": "0xfa222",
+  "file_offset": 1024546,
+  "length": 509,
+  "bytes_sha256": "591eb38ba4ba4f195841cfea5a1f48f021d38a931d84cbe8fc2d596d00b1666b",
+  "status": "native_bytes",
+  "note": "Local native CFG only; original entry reachability unknown. Ends at protection jump.",
+  "disassembled": true
+}

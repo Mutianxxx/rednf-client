@@ -1,0 +1,131 @@
+﻿native_class,skill_id,state,consume_call_va,request_call_va,pvf_registration_candidates,variant_boundary,status
+Swordman,1,19,0x72aba9,0x72ac33,0:skill/swordman/guard.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,5,20,0x72acf3,0x72ad5e,0:skill/swordman/hardattack.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,3,14,0x72aeaa,0x72aef4,0:skill/swordman/autoguard.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,8,22,0x72af5b,0x72afb0,0:skill/swordman/tripleslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,8,22,0x72b047,0x72b0a3,0:skill/swordman/tripleslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,9,23,0x72b276,0x72b28b,0:skill/swordman/momentaryslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,23,10,0x72b487,0x72b5bb,0:skill/swordman/sacrifice.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,24,10,0x72b658,0x72b764,0:skill/swordman/bloodblast.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,32,10,0x72b7c6,0x72b8b0,0:skill/swordman/releasewave.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,74,10,0x72b921,0x72ba44,0:skill/swordman/wavespinarea.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,47,10,0x72bcf6,0x72bde0,0:skill/swordman/wavemark.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,18,10,0x72be42,0x72bf49,0:skill/swordman/ghoststep.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,30,10,0x72bfab,0x72c0b9,0:skill/swordman/darktoleranceup.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,84,10,0x72c115,0x72c21f,0:skill/swordman/keiga.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,34,10,0x72c2ed,0x72c3ef,0:skill/swordman/diehard.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,44,10,0x72c451,0x72c567,0:skill/swordman/tombstonerain.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,16,25,0x72c88e,0x72c8a3,0:skill/swordman/ashenfork.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,11,29,0x72cb3a,0x72cb4f,0:skill/swordman/dashattackmultihit.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,57,31,0x72cbcd,0x72cc13,0:skill/swordman/shockwavearea.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,60,33,0x72cd8b,0x72cdd1,0:skill/swordman/ghoststepslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,62,34,0x72cfea,0x72d030,0:skill/swordman/standalonewave.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,58,32,0x72d1f8,0x72d23e,0:skill/swordman/vaneslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,65,36,0x72d493,0x72d4d9,0:skill/swordman/hopsmash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,72,39,0x72d686,0x72d6ec,0:skill/swordman/rapidmoveslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,72,39,0x72d85b,0x72d8aa,0:skill/swordman/rapidmoveslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,73,40,0x72d929,0x72d96f,0:skill/swordman/illusionslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,79,43,0x72dbe5,0x72dc2f,0:skill/swordman/bloodyrave.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,68,37,0x72e30b,0x72e367,0:skill/swordman/chargecrash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,67,8,0x72e707,0x72e76e,0:skill/swordman/weaponcombo.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,46,28,0x72e935,0x72e999,0:skill/swordman/upperslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,31,26,0x72ea9b,0x72eafb,0:skill/swordman/grabblastblood.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,49,7,0x72ebf3,0x72ec37,0:skill/swordman/backstepcutter.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,2,38,0x72ecc3,0x72ecd8,0:skill/swordman/reflectguard.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,77,42,0x72ed91,0x72edd7,0:skill/swordman/moonlightslash.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,81,45,0x72f07a,0x72f0d7,0:skill/swordman/outragebreak.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,50,27,0x72f25b,0x72f2b7,0:skill/swordman/grandwave.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,52,14,0x72f77a,0x72f7c4,0:skill/swordman/dotarea.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,85,10,0x72f884,0x72f974,0:skill/swordman/hellbenter.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,86,47,0x72fa44,0x72fa98,0:skill/swordman/hundredsword.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,87,50,0x72fc40,0x72fc84,0:skill/swordman/blache.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,88,51,0x72fe21,0x72fe65,0:skill/swordman/waveeye.skl,upstream guards still required,local_success_fallthrough_verified
+Swordman,76,10,0x73005a,0x730174,0:skill/swordman/frenzy.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,1,47,0x6a371f,0x6a3734,1:skill/fighter/shouldercharge.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,2,19,0x6a37a5,0x6a37ba,1:skill/fighter/crouch.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,71,61,0x6a38a7,0x6a38ed,1:skill/fighter/strongestlowkick.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,5,30,0x6a3cba,0x6a3ccf,1:skill/fighter/liftupper.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,67,49,0x6a4118,0x6a412d,1:skill/fighter/nenflower.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,13,10,0x6a49f8,0x6a4ac6,1:skill/fighter/throwsand.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,52,43,0x6a4b3e,0x6a4b82,1:skill/fighter/throwweb.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,14,26,0x6a4bdb,0x6a4bf0,1:skill/fighter/mount.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,17,28,0x6a5217,0x6a522c,1:skill/fighter/stomp.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,19,29,0x6a5411,0x6a5426,1:skill/fighter/closepunch.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,46,48,0x6a55a4,0x6a55b9,1:skill/fighter/singlekick.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,58,34,0x6a5669,0x6a567e,1:skill/fighter/whirlwindkick.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,3,31,0x6a56ec,0x6a5732,1:skill/fighter/grabexplosion.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,80,51,0x6a5822,0x6a5837,1:skill/fighter/dashpunch.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,81,52,0x6a58c8,0x6a58dd,1:skill/fighter/punchafterreturn.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,82,53,0x6a5952,0x6a5998,1:skill/fighter/randomkick.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,83,54,0x6a5b9c,0x6a5be2,1:skill/fighter/risingupper.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,84,55,0x6a5d4e,0x6a5d94,1:skill/fighter/dashafterdash.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,84,55,0x6a5e65,0x6a5eb2,1:skill/fighter/dashafterdash.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,86,56,0x6a5fb3,0x6a6009,1:skill/fighter/earthbreak.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,87,57,0x6a60da,0x6a6120,1:skill/fighter/holdup.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,88,58,0x6a62c6,0x6a630c,1:skill/fighter/wildcannonspike.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,90,60,0x6a65ea,0x6a65ff,1:skill/fighter/lightningdragon.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,54,33,0x6a66fe,0x6a675e,1:skill/fighter/shouldertackle.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,60,35,0x6a691a,0x6a692f,1:skill/fighter/blockbuster.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,75,44,0x6a69c0,0x6a69d5,1:skill/fighter/hiddensting.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,62,36,0x6a6a37,0x6a6a4c,1:skill/fighter/legsuplex.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,64,40,0x6a6dde,0x6a6df3,1:skill/fighter/poisonmist.skl,upstream guards still required,local_success_fallthrough_verified
+Fighter,68,42,0x6a6fed,0x6a7033,1:skill/fighter/lightningdance.skl,upstream guards still required,local_success_fallthrough_verified
+Gunner_variants_2_5,3,19,0x6d5683,0x6d56cd,2:skill/gunner/windmill.skl | 5:skill/atgunner/windmill.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,4,20,0x6d5731,0x6d577b,2:skill/gunner/aerialknee.skl | 5:skill/atgunner/aerialknee.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,7,23,0x6d5985,0x6d599a,2:skill/gunner/fastknee.skl | 5:skill/atgunner/fastknee.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,6,21,0x6d5a13,0x6d5a28,2:skill/gunner/punisher.skl | 5:skill/atgunner/punisher.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,5,28,0x6d5dc9,0x6d5e29,2:skill/gunner/headshot.skl | 5:skill/atgunner/headshot.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,5,28,0x6d5e98,0x6d5ef8,2:skill/gunner/headshot.skl | 5:skill/atgunner/headshot.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,47,28,0x6d5f77,0x6d5fd7,2:skill/gunner/liftshot.skl | 5:skill/atgunner/liftshot.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,53,28,0x6d603c,0x6d609c,2:skill/gunner/napalmbomb.skl | 5:skill/atgunner/napalmbomb.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,11,28,0x6d60f7,0x6d6153,2:skill/gunner/fastshoot.skl | 5:skill/atgunner/fastshoot.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,10,25,0x6d6403,0x6d6418,2:skill/gunner/bulletguard.skl | 5:skill/atgunner/bulletguard.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,15,27,0x6d69ef,0x6d6a39,2:skill/gunner/walkshoot.skl | 5:skill/atgunner/walkshoot.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,45,10,0x6d759c,0x6d7692,2:skill/gunner/uraniumbomb.skl | 5:skill/atgunner/uraniumbomb.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,64,33,0x6d772f,0x6d7779,2:skill/gunner/desperado.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,70,10,0x6d7b8a,0x6d7c80,2:skill/gunner/blackrose.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,54,10,0x6d7d27,0x6d7e1d,2:skill/gunner/satellitelaser.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,67,34,0x6d7e91,0x6d7ea6,2:skill/gunner/gaebolgpunch.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,48,31,0x6d80be,0x6d80d3,2:skill/gunner/crossshoot.skl | 5:skill/atgunner/crossshoot.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,71,36,0x6d8589,0x6d85cf,2:skill/gunner/extruder.skl | 5:skill/atgunner/extruder.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,72,37,0x6d892a,0x6d8974,2:skill/gunner/multiheadshot.skl | 5:skill/atgunner/multiheadshot.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,73,28,0x6d8cf6,0x6d8d5a,2:skill/gunner/cannonball.skl | 5:skill/atgunner/cannonball.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,35,38,0x6d8efe,0x6d8f13,2:skill/gunner/airraid.skl | 5:skill/atgunner/airraid.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,76,10,0x6d902c,0x6d9122,2:skill/gunner/flashmine.skl | 5:skill/atgunner/flashmine.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,26,40,0x6d9629,0x6d966f,2:skill/gunner/countershoot.skl | 5:skill/atgunner/countershoot.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,78,10,0x6d97b4,0x6d98a7,2:skill/gunner/nielsniping.skl | 5:skill/atgunner/nielsniping.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Gunner_variants_2_5,51,41,0x6da339,0x6da3bd,2:skill/gunner/doublegunhawk.skl | 5:skill/atgunner/doublegunhawk.skl,job2/job5 applicability unresolved,local_success_fallthrough_verified
+Mage,37,14,0x6efd41,0x6efd8b,3:skill/mage/aurashield.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,65,26,0x6f07d3,0x6f0819,3:skill/mage/pokethrow.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,66,27,0x6f089c,0x6f08e2,3:skill/mage/randompiercestrike.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,4,22,0x6f0c65,0x6f0caf,3:skill/mage/thrust.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,69,29,0x6f0d39,0x6f0d7e,3:skill/mage/dragonspear.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,83,31,0x6f0ff5,0x6f103e,3:skill/mage/bellatrix.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,12,23,0x6f2a1b,0x6f2a65,3:skill/mage/upperswing.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,13,24,0x6f2b1e,0x6f2b68,3:skill/mage/swing.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,20,24,0x6f2bde,0x6f2c28,3:skill/mage/whip.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,14,25,0x6f2ce7,0x6f2d47,3:skill/mage/handstrike.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,68,25,0x6f2ddb,0x6f2e3b,3:skill/mage/strengthhandstrike.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,92,35,0x6f300a,0x6f301f,3:skill/mage/blackmantle.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,95,36,0x6f30cf,0x6f311e,3:skill/mage/transformflapper.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,103,39,0x6f33fa,0x6f345f,3:skill/mage/antigravitystarter.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,105,41,0x6f3717,0x6f377c,3:skill/mage/fluorecollider.skl,upstream guards still required,local_success_fallthrough_verified
+Mage,106,43,0x6f3aca,0x6f3b2f,3:skill/mage/heatingfurnace.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,1,20,0x7103c1,0x7103d8,4:skill/priest/antiairupper.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,11,26,0x71042a,0x71043f,4:skill/priest/quakearea.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,13,27,0x7104e9,0x710502,4:skill/priest/willdriver.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,30,31,0x710662,0x710699,4:skill/priest/holycounter.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,43,36,0x710729,0x71073e,4:skill/priest/bladeofpurewhite.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,8,25,0x7107b7,0x7107ee,4:skill/priest/smasher.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,41,35,0x710999,0x7109d0,4:skill/priest/homerun.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,37,34,0x710b70,0x710b85,4:skill/priest/hurricaneofjudgement.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,31,32,0x710bfe,0x710c13,4:skill/priest/gorgeouscombination.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,61,29,0x710d06,0x710d1b,4:skill/priest/luckystraight.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,63,30,0x710da2,0x710db7,4:skill/priest/secondupper.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,2,21,0x710e1d,0x710e32,4:skill/priest/ducking.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,3,22,0x710f4e,0x710f63,4:skill/priest/sway.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,33,33,0x710fc0,0x710fd5,4:skill/priest/choppinghammer.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,4,37,0x71104e,0x711085,4:skill/priest/hurricaneroll.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,5,23,0x71125f,0x711296,4:skill/priest/giantswing.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,49,24,0x711588,0x7115bf,4:skill/priest/repeatedsmash.skl,upstream guards still required,local_success_fallthrough_verified
+Priest,50,38,0x7118a0,0x7118d9,4:skill/priest/throwweapon.skl,upstream guards still required,local_success_fallthrough_verified

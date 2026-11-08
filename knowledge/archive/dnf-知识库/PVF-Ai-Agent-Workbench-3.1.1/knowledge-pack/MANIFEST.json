@@ -1,0 +1,1535 @@
+{
+  "schemaVersion": "2.0",
+  "purpose": "Integrity-only manifest for the portable clean knowledge pack.",
+  "entries": [
+    {
+      "dest": "dictionaries/actionobject-mapobject-breakable-spc-fields.zh-CN.md",
+      "bytes": 6125,
+      "sha256": "b7cb31082057128a5d6d5f6f2faf708d7089dc5b95d997a37195858841c241cc"
+    },
+    {
+      "dest": "dictionaries/apc-character-status-fields.zh-CN.md",
+      "bytes": 5881,
+      "sha256": "b4174ff51f2f9d9babb7e78e140ea664ff0728f6ada0396df1d2def576af0eb8"
+    },
+    {
+      "dest": "dictionaries/appendage-item-common-equipment-special-effect-fields.zh-CN.md",
+      "bytes": 4843,
+      "sha256": "4a8f877ffe26b285276d1d68119a7ea04354910562a5fe27fef5c5f630369761"
+    },
+    {
+      "dest": "dictionaries/atomic-content-generation-fields.zh-CN.md",
+      "bytes": 1952,
+      "sha256": "556af9d0b3391ae7c507f55381106e841f7cd69844bd7c2548b6c6b938169f48"
+    },
+    {
+      "dest": "dictionaries/attackinfo-atk-fields.zh-CN.md",
+      "bytes": 4244,
+      "sha256": "b3f9edb1911532f022533f6d159a33e08068742b2ee2b3822dc091d72cd3f7ae"
+    },
+    {
+      "dest": "dictionaries/attackinfo-payload-damage-element-activestatus-fields.zh-CN.md",
+      "bytes": 7061,
+      "sha256": "cdf6e5286597eccd411d21859bdf3d7dd34b0bc374f0200065f1ed1a4a267ca3"
+    },
+    {
+      "dest": "dictionaries/audio-soundpacks-music-fields.zh-CN.md",
+      "bytes": 4042,
+      "sha256": "15d5fa1a16fa8d6485f719a38971b0e50803bbc270ed8ba6c48b10831a6fbee3"
+    },
+    {
+      "dest": "dictionaries/avatar-emblem-socket-clone-aura-fashion-package-fields.zh-CN.md",
+      "bytes": 5006,
+      "sha256": "22071094299b839abb3baba9bdd820650465e0aed8e8cd2a29bc8bddebdfe408"
+    },
+    {
+      "dest": "dictionaries/character-job-growtype-class-enum-fields.zh-CN.md",
+      "bytes": 6336,
+      "sha256": "1d5a4e7404b3dfc82a1a633787981710ab082f401344ea494e10febb4886e9b2"
+    },
+    {
+      "dest": "dictionaries/clear-reward-card-flip-independent-drop-probability-fields.zh-CN.md",
+      "bytes": 7806,
+      "sha256": "fab5cbf05a545fe4b93a5b8fc35a273f91bf94d367cdbf7aa7b0e01625744c65"
+    },
+    {
+      "dest": "dictionaries/client-assets-imagepacks-ui-fields.zh-CN.md",
+      "bytes": 2733,
+      "sha256": "5048981dbef7dae919d2f804b9877e8d1079a13b7703f21522c4bb706bfec39e"
+    },
+    {
+      "dest": "dictionaries/client-compatibility-matrix-boundary-quick.zh-CN.md",
+      "bytes": 2031,
+      "sha256": "67ce2d0cb30a5524a359e20cc63a29f43d88379ca0cbc0799965fb8c2a67c263"
+    },
+    {
+      "dest": "dictionaries/client-ui-layout-pos-lay-fields.zh-CN.md",
+      "bytes": 8039,
+      "sha256": "ff2a2f5837e72a02c889c8b3dcb2c8322cec1af676e1b0521bf1f603517d9878"
+    },
+    {
+      "dest": "dictionaries/content-lifecycle-dungeon-full-lifecycle-fields.zh-CN.md",
+      "bytes": 1125,
+      "sha256": "ad20cada21579b18fd141532863da54966800730cd3c007211a9558d4555f953"
+    },
+    {
+      "dest": "dictionaries/creature-pet-fields.zh-CN.md",
+      "bytes": 4950,
+      "sha256": "864d285141d3890371477bf430f9c42aeb9ab1c0f645a620e6ac27ab9336266b"
+    },
+    {
+      "dest": "dictionaries/dependency-planner-boundary-quick.zh-CN.md",
+      "bytes": 2773,
+      "sha256": "ff3cdcb0ab7a32c04ce3bbbd2710ee46d9156a89c6572010eb420bb308cebb7d"
+    },
+    {
+      "dest": "dictionaries/dungeon-difficulty-ultimate-list-fields.zh-CN.md",
+      "bytes": 4055,
+      "sha256": "267f86a67fccb30414550c4a60fa26f05b49e24a687aa8751c31eb8effb44b28"
+    },
+    {
+      "dest": "dictionaries/dungeon-map-spawn-entry-clear-resource-fields.zh-CN.md",
+      "bytes": 9343,
+      "sha256": "a9c1e2d02e43fa9f312d0ac62dd59a1d5042076cfeab58041b5c439be11fa5fc"
+    },
+    {
+      "dest": "dictionaries/economy-gold-fatigue-mileage-token-counter-fields.zh-CN.md",
+      "bytes": 7657,
+      "sha256": "97e50971b5652cbc28adece4a3bbcaca5e419a2347fbccd725a8e3362db45dd3"
+    },
+    {
+      "dest": "dictionaries/equipment-fields.zh-CN.md",
+      "bytes": 6578,
+      "sha256": "d303b73be6e225b5105025d15bcae28bb04cd00651dc3bd197a005bc1f0ed5ca"
+    },
+    {
+      "dest": "dictionaries/etc-event-config-fields.zh-CN.md",
+      "bytes": 7992,
+      "sha256": "8afac58ac1217b845d2104145586ee86170c4b8d36762129eb3acdf544a9972d"
+    },
+    {
+      "dest": "dictionaries/event-reward-delivery-mail-attendance-fields.zh-CN.md",
+      "bytes": 5868,
+      "sha256": "e845d36e094aabb72354154f4d7479223bb9bd5879a4fec9a65e8630ea90ff17"
+    },
+    {
+      "dest": "dictionaries/formal-region-town-worldmap-area-entry-fields.zh-CN.md",
+      "bytes": 5947,
+      "sha256": "b30a7fa6d6d25579a42e8b48ef168174be55f915dda919d08edc960949940e6f"
+    },
+    {
+      "dest": "dictionaries/hellparty-visualization-fields.zh-CN.md",
+      "bytes": 4298,
+      "sha256": "f29394fdbeab7b491b33e20552ad4756fa65cf4bf9316c8d659f99296dffc4fe"
+    },
+    {
+      "dest": "dictionaries/independent-drop-normalization-fields.zh-CN.md",
+      "bytes": 2368,
+      "sha256": "156e609b7cb1248839954059cb3d98960631ff52b93833e933689b71f2109f78"
+    },
+    {
+      "dest": "dictionaries/item-source-graph-fields.zh-CN.md",
+      "bytes": 1779,
+      "sha256": "5b676d57fdf18915263434c430bc62d0a9bbd69f2b07e0cfcecf948a1eadabc2"
+    },
+    {
+      "dest": "dictionaries/lst-registry-lifecycle-fields.zh-CN.md",
+      "bytes": 2448,
+      "sha256": "fe47d5c475b699fdf68dd91058d1503065d62ac8fa36634cfafc2d42647092ac"
+    },
+    {
+      "dest": "dictionaries/map-widescreen-structural-migration-fields.zh-CN.md",
+      "bytes": 4685,
+      "sha256": "8376dc68a5dd6f532599dcc936b6b42ac2ca7a51133ff5dab39aa67b0f161607"
+    },
+    {
+      "dest": "dictionaries/monster-action-animation-fields.zh-CN.md",
+      "bytes": 4180,
+      "sha256": "093f219ada21dd32e13326c0bd3bd8bb607c77b28ef2e9de47999091d1845fa6"
+    },
+    {
+      "dest": "dictionaries/monster-ai-action-attack-cross-layer-fields.zh-CN.md",
+      "bytes": 4703,
+      "sha256": "4516a952e01bee1318e78f39a6f7cd542519897035c2f9695fc774787000a749"
+    },
+    {
+      "dest": "dictionaries/monster-ai-fields.zh-CN.md",
+      "bytes": 2494,
+      "sha256": "7f6ff3b12e631f0e32a2041d683bba336f0a186d5bb48dac4adb18d95fe19a70"
+    },
+    {
+      "dest": "dictionaries/monster-fields.zh-CN.md",
+      "bytes": 8271,
+      "sha256": "2dd94e4d63fec2c5cec8b4d9df2dab8ed92768d74e2f1a62d8ea9d2a04425e17"
+    },
+    {
+      "dest": "dictionaries/npc-shop-fields.zh-CN.md",
+      "bytes": 4413,
+      "sha256": "032b20c2783a79d0ad7ba82f00b12eb2226238e953d7f7d8bdb6e2638c106f38"
+    },
+    {
+      "dest": "dictionaries/nut-runtime-api-boundary-quick.zh-CN.md",
+      "bytes": 5448,
+      "sha256": "447222b956c0b4f96d9ee54b41f2c79c4423fad590100461f0477bbbccf4dfa6"
+    },
+    {
+      "dest": "dictionaries/nut-runtime-api-boundary.zh-CN.md",
+      "bytes": 42647,
+      "sha256": "45dc41cedae246af4604670d215e9510cef9e0842d3c12e170b161828ff493f7"
+    },
+    {
+      "dest": "dictionaries/passiveobject-action-fields.zh-CN.md",
+      "bytes": 12502,
+      "sha256": "73e4ff6d8e8febbb18fe3f43f30c66a8853ca75965ac4fd0a9eaed2638745291"
+    },
+    {
+      "dest": "dictionaries/passiveobject-obj-fields.zh-CN.md",
+      "bytes": 6143,
+      "sha256": "a861ac671e6ca277b2bc324a8d5e09e1af82d0e8b8e681552813a7add20295f2"
+    },
+    {
+      "dest": "dictionaries/pvf-quality-semantic-analysis-fields.zh-CN.md",
+      "bytes": 3164,
+      "sha256": "03d35f2cc029c807d0c91c3e90f80f8d8ff5c3b4a7c91b2f6a1442b4083d478a"
+    },
+    {
+      "dest": "dictionaries/pvf-registry-lst-topology-fields.zh-CN.md",
+      "bytes": 3266,
+      "sha256": "214ad4cf7579c05a4b5f163f41e2a558e1932c1f3febdea0dbfb95d817213df7"
+    },
+    {
+      "dest": "dictionaries/pvf-semantic-lineage-boundary-quick.zh-CN.md",
+      "bytes": 1384,
+      "sha256": "54943c1af4105c06f902c3e741f123ae7044d10ace44879ba94380329ed6c4b0"
+    },
+    {
+      "dest": "dictionaries/pvf-tag-source-boundary-quick.zh-CN.md",
+      "bytes": 1474,
+      "sha256": "5ecfb4c18b6996a13b98ad3d43534ff240039e19feb6575fe3da7ad9f7b6b475"
+    },
+    {
+      "dest": "dictionaries/pvf-tags.zh-CN.md",
+      "bytes": 3887,
+      "sha256": "5807e130151ed54aff925e823b3cbcf192bec6eda84acb81bdccd98141574bdd"
+    },
+    {
+      "dest": "dictionaries/pvf-task-bookmarks-boundary-quick.zh-CN.md",
+      "bytes": 1071,
+      "sha256": "86f217004f0972ab223bd40d3cdf65eb8899112d0cc3ddaf41b652b143e6129e"
+    },
+    {
+      "dest": "dictionaries/pvp-mission-fields.zh-CN.md",
+      "bytes": 6594,
+      "sha256": "a2698b678ff79b9f6a31993a7a6848fc35191d8e0441440b5bf8dc364b6332e1"
+    },
+    {
+      "dest": "dictionaries/quest-drop-reward-ticket-fields.zh-CN.md",
+      "bytes": 7396,
+      "sha256": "537ebd1ebe1329411843ee4b4d56371c23064fe8af1530a1e741596f70570b29"
+    },
+    {
+      "dest": "dictionaries/quest-type-condition-fields.zh-CN.md",
+      "bytes": 7633,
+      "sha256": "58920073fcf0c0feefc06c785fe21f0b1286de7c871aa2749b47a5eacddf0d7e"
+    },
+    {
+      "dest": "dictionaries/randomoption-mystic-fields.zh-CN.md",
+      "bytes": 4457,
+      "sha256": "06169deaa36156f0652d43583cac2e5e55e43dc661c493e3508669c13ebb5a4f"
+    },
+    {
+      "dest": "dictionaries/README.zh-CN.md",
+      "bytes": 1165,
+      "sha256": "c09173bedf7c5d53a4933035ac0b994d185c6c2f33bb0a63522d2f48996efda9"
+    },
+    {
+      "dest": "dictionaries/serverparameter-premium-pcroom-growth-buff-fields.zh-CN.md",
+      "bytes": 9056,
+      "sha256": "76086b8f4a7c41a0976622a640af0e2998de171c645404837808c0099ba779fb"
+    },
+    {
+      "dest": "dictionaries/skill-learnability-command-cooldown-fields.zh-CN.md",
+      "bytes": 6144,
+      "sha256": "9444995c42d61a74c6d224cd052498b6df01432942aacba7d8d42ea5ba17d829"
+    },
+    {
+      "dest": "dictionaries/skill-static-level-parameter-columns.zh-CN.md",
+      "bytes": 4165,
+      "sha256": "7cb13dedfb790e59b7abeb2d13bf7a1abec5cea4211439ebfc9c24ee22b6be41"
+    },
+    {
+      "dest": "dictionaries/skill-tree-layout-merge-fields.zh-CN.md",
+      "bytes": 1818,
+      "sha256": "57d3da2c2434c3bf0638d19f0b16f38422ed8be318cefd9571c75923878860a0"
+    },
+    {
+      "dest": "dictionaries/stackable-container-package-fields.zh-CN.md",
+      "bytes": 5308,
+      "sha256": "ec8dc4b8ba8f0193e2842dd67d5695f69cb2528cf5a3d3c801505edb6bf6759f"
+    },
+    {
+      "dest": "dictionaries/stackable-fields.zh-CN.md",
+      "bytes": 7110,
+      "sha256": "b7cf60f3f7cd800497aa695b508497df6eaa6e395d648e490dc1b27fcc89790a"
+    },
+    {
+      "dest": "dictionaries/text-stringlink-encoding-fields.zh-CN.md",
+      "bytes": 8291,
+      "sha256": "ee89830bedbbd89f1df6b64c317d09ec47b2f3898c3c2e77eecdbe1a6f723a81"
+    },
+    {
+      "dest": "dictionaries/unified-knowledge-query-boundary-quick.zh-CN.md",
+      "bytes": 2066,
+      "sha256": "b25746ab9a4b4518d59246fd495bc978ebfc3350e1a802f7b01bca93dd429b99"
+    },
+    {
+      "dest": "dictionaries/upgrade-reinforce-amplify-enchant-recipe-fields.zh-CN.md",
+      "bytes": 8137,
+      "sha256": "c84a88dac54196aceb8bb859cd13b21549d0fef4959500591921a613f4152d55"
+    },
+    {
+      "dest": "dictionaries/worldmap-dungeon-interface-layout-fields.zh-CN.md",
+      "bytes": 3107,
+      "sha256": "2682b89c9d39187fad6fc57c58e7f5c771ebd653c0279774bb4f4590163e516b"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/apc-ai-key-stream.zh-CN.md",
+      "bytes": 2999,
+      "sha256": "5689b16d6efa6edecd3a9b1a9ddef39a4412e2d77502a7cd65e4f2481be8bbba"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/assets-imagepacks-ui.zh-CN.md",
+      "bytes": 1155,
+      "sha256": "139f457c4a66f87db1a2471804288571e9ea9f11527609dff5299317f2ab5ebc"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/audio-soundpacks-music.zh-CN.md",
+      "bytes": 1996,
+      "sha256": "5000cac6238e64c0c92ccaf3df14afab4331a274403ffaf6a65f1d319218eaf8"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/avatar-emblem-aura-package.zh-CN.md",
+      "bytes": 2413,
+      "sha256": "1fb882450d2e874de7377bea021541487b32ed77ac9e8bb1783279820248a041"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/clearreward-independentdrop-probability.zh-CN.md",
+      "bytes": 3010,
+      "sha256": "c1371bf1f5d3d5c0466fe2a16e02a959c9d1efe68f4663aaff95b3f0a0935f33"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/client-ui-layout-pos-lay.zh-CN.md",
+      "bytes": 2892,
+      "sha256": "02d26c898d2ec9a8000576c11b49f7e3fa5c299549d66e225d02bce59af43b39"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/content-lifecycle-dungeon-full-lifecycle.zh-CN.md",
+      "bytes": 2725,
+      "sha256": "a1a934c3558c9373d95bb5bfa3acf6e2996087da921d1310161ffbac9edc2c57"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/dungeon-map-worldmap.zh-CN.md",
+      "bytes": 1812,
+      "sha256": "b4c3e725771de8c47a2a0ba83bcf65fcb52e50e5883609c9b09e270e0d24e897"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/dungeon-world-standardization.zh-CN.md",
+      "bytes": 2718,
+      "sha256": "268381af74b64bf7bdfbd57f5aaa416323f74e9c21e007d350a38f1b9b109d2c"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/economy-gold-fatigue-mileage-token-counter.zh-CN.md",
+      "bytes": 4778,
+      "sha256": "ac2dc53c135d5204b7e459181d5eca79f0308c553852abd71615ac9682f3e84d"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/equipment-stackable.zh-CN.md",
+      "bytes": 3281,
+      "sha256": "7c25e53137c8a232bd50c5416696e6c1b9258ba855efe7633c4145440b580e2f"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/etc-event-config.zh-CN.md",
+      "bytes": 3053,
+      "sha256": "ae908b420e14e0a5de68159cb83f8137b52e57a074fccc3359cea007d042c43b"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/event-reward-mail-attendance.zh-CN.md",
+      "bytes": 3540,
+      "sha256": "9b57d398746521364b287ab69f8f4d6b6f62684793bb73df2ae50e05d2489174"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/itemshop-shp.zh-CN.md",
+      "bytes": 2641,
+      "sha256": "481e76310f57db48fae07b78eb30c5c98433628b1c3e3a55507ba8fb143f4cf9"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/lst-registry-topology.zh-CN.md",
+      "bytes": 2397,
+      "sha256": "b95ee129e1fa510114eef9f87bbae150a8cdd8a57e701e62daf9e2c12ba2a957"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/monster-mob.zh-CN.md",
+      "bytes": 2088,
+      "sha256": "0dfdfd2b93725452edecc09ec827993ee781ca4beddcdf7163239b5522076fb5"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/nut-api-runtime.zh-CN.md",
+      "bytes": 1220,
+      "sha256": "b420f245f4cad8320db90c530dfbaed8258b821bb0abaac8228b49b73ed8929b"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/passiveobject-attackinfo-hitbox.zh-CN.md",
+      "bytes": 4124,
+      "sha256": "2b5d214c568157d58f3f64368e3aeab62b5b51f1159c7bc6b11ac74ac7f0ddd0"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/pvf-crosscutting-productivity.zh-CN.md",
+      "bytes": 3069,
+      "sha256": "abc8da950405aa2422854fc8fcc7fc44d750fc56f24617ae2a0ed79590f4d48e"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/README.zh-CN.md",
+      "bytes": 375,
+      "sha256": "31966c2eb53dcf6f773d4ef7fb104af1ee16f6a935f3349c8ddc1d3ebe58467d"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/region-town-worldmap-area-entry.zh-CN.md",
+      "bytes": 2810,
+      "sha256": "749d4680aa9421d651d8e628cf1029a4ad8f9dd86c642bf1acf4ff29ec1c39c0"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/serverparameter-premium-pcroom-growth-buff.zh-CN.md",
+      "bytes": 3566,
+      "sha256": "8ba19d4b18efc1a5424ca0ba1a73141c5007106bb84ccbda38e088f8eabf52b9"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/skill-skl.zh-CN.md",
+      "bytes": 1045,
+      "sha256": "bdd2079600dc139be921c5f8df51c3efbd845782f0c6dd27db10cc92cec5eac0"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/text-stringlink-localization.zh-CN.md",
+      "bytes": 3998,
+      "sha256": "3cd10b8e6d750316776064b7817af61dd025da5c910903e417dd0bd612f03f5e"
+    },
+    {
+      "dest": "encyclopedia/pvf-file-types/upgrade-reinforce-amplify-enchant-recipe.zh-CN.md",
+      "bytes": 4217,
+      "sha256": "ac44a23e12dd7008e710466ca2900e0b12dbc800904b2ba1c6925df042bcfc5a"
+    },
+    {
+      "dest": "encyclopedia/README.zh-CN.md",
+      "bytes": 1056,
+      "sha256": "e32f9cee527aaa24e4a608053072ad3a49899066ce310410b6eb7e3de9f8a908"
+    },
+    {
+      "dest": "EXPORT-POLICY.zh-CN.md",
+      "bytes": 2472,
+      "sha256": "c739add1e4809f3c2075bcb7dc8a0bb0d14ec6e420b7f8a4dd46c4534a8ba363"
+    },
+    {
+      "dest": "health-check/README.md",
+      "bytes": 246,
+      "sha256": "3749e22ffacab03fc454222a4e0678f41f8255e324617a2a5e900df94e3627c7"
+    },
+    {
+      "dest": "indexes/actionobject-mapobject-breakable-spc-boundary.zh-CN.md",
+      "bytes": 7570,
+      "sha256": "9eb144823ebd34c163504022188f0bf9d98108caa29667faaba523d50472218c"
+    },
+    {
+      "dest": "indexes/apc-extraction-boundary.zh-CN.md",
+      "bytes": 1158,
+      "sha256": "41e239718ae5a5de4bfd48293d0b6bdb35cdacff7ed3058add46c44cd2f39e4c"
+    },
+    {
+      "dest": "indexes/apc-fair-duel-level-equipment-standardization-boundary.zh-CN.md",
+      "bytes": 2265,
+      "sha256": "bce1cfa244290c92a7ff15e1d53580dd60d37fb17a515a06eafa4ffa16f7bc67"
+    },
+    {
+      "dest": "indexes/appendage-item-common-equipment-special-effect-boundary.zh-CN.md",
+      "bytes": 3689,
+      "sha256": "1d132dc76fc7bdedb479099d6171d334c5c36ffb4dc9b28f1b83fed8c44de213"
+    },
+    {
+      "dest": "indexes/attackinfo-atk-backtick-token-router.zh-CN.md",
+      "bytes": 602,
+      "sha256": "95f1d0c5b3a3d2f63018e6edb23cc1fd67fddf12d6c3dd6edf489ca10ca18af5"
+    },
+    {
+      "dest": "indexes/attackinfo-atk-observed-tag-router.zh-CN.md",
+      "bytes": 759,
+      "sha256": "bcb886d99abb76081e92a36ff1564502e8c3ebeb4be941830cbbf73e5136c4ea"
+    },
+    {
+      "dest": "indexes/attackinfo-payload-damage-element-activestatus-boundary.zh-CN.md",
+      "bytes": 2547,
+      "sha256": "73954f3f52c831bc0c826da56f9d1438509ac14ea7e13e8dede9817fdcb944c2"
+    },
+    {
+      "dest": "indexes/audio-soundpacks-music-boundary.zh-CN.md",
+      "bytes": 5607,
+      "sha256": "c9dee9e24c78b21067dbf7212af8f4c69c0b9dd0e5a2eb2cb134abc47b4ad39a"
+    },
+    {
+      "dest": "indexes/avatar-aura-fields.zh-CN.md",
+      "bytes": 4413,
+      "sha256": "e8b5b7f96df11d01591030c6bce09984c280839f1e90046cc8bfc0194b8e4032"
+    },
+    {
+      "dest": "indexes/avatar-emblem-socket-clone-aura-fashion-package-boundary.zh-CN.md",
+      "bytes": 6571,
+      "sha256": "f149ca92bb8def4e92479865eab21415bb31a45473ebe8fdcaa735990d7d0b94"
+    },
+    {
+      "dest": "indexes/avatar-select-ability.zh-CN.md",
+      "bytes": 4183,
+      "sha256": "89a028d8e58bfa454404a6cdd26ee7b7679e37a19acd3fad63cc0eff0ac5cc72"
+    },
+    {
+      "dest": "indexes/avatar-type-select.zh-CN.md",
+      "bytes": 4586,
+      "sha256": "2e3ff7286fe0e305061f0f23ef112394a83670f9c9d130a09900d9f7786c2e87"
+    },
+    {
+      "dest": "indexes/character-job-growtype-class-enum-boundary.zh-CN.md",
+      "bytes": 7734,
+      "sha256": "94c6a906c7a7cdf0f8eea9054bde0f57300ab2c95b4783182f00a19821bbdf9c"
+    },
+    {
+      "dest": "indexes/clear-reward-card-flip-independent-drop-probability-boundary.zh-CN.md",
+      "bytes": 8547,
+      "sha256": "abc3a5cd1ebf1542858ebc473bae1fbc4d85e2ef9472b0f89658306f7041ca9a"
+    },
+    {
+      "dest": "indexes/client-asset-path-boundary.zh-CN.md",
+      "bytes": 768,
+      "sha256": "6adc29d468a3a49295f2a76ee50d7612b0d1eb97fa86c052d6e83fcd90dca11e"
+    },
+    {
+      "dest": "indexes/client-assets-imagepacks-ui-boundary.zh-CN.md",
+      "bytes": 3893,
+      "sha256": "b4ff5aaefc466aa3b9491d48f99d651d25d4c9ba0342230b7c6fdb6071e8adea"
+    },
+    {
+      "dest": "indexes/client-ui-layout-pos-lay-boundary.zh-CN.md",
+      "bytes": 5392,
+      "sha256": "eb61c4cc5563ead5ac27a1078cbd6a3d7b3f9df175f640fbf8e68d65a11272de"
+    },
+    {
+      "dest": "indexes/content-lifecycle-dungeon-full-lifecycle-boundary.zh-CN.md",
+      "bytes": 1092,
+      "sha256": "a06c45d7190c905babc5198b0f25eb3410614af3a9496da79d2103a18b27d919"
+    },
+    {
+      "dest": "indexes/creature-pet-boundary.zh-CN.md",
+      "bytes": 3727,
+      "sha256": "a639a555349bf0d8491198b88a71cc9f0975dd45c2c7003d1e3c1a174ab32dba"
+    },
+    {
+      "dest": "indexes/dungeon-extraction-boundary.zh-CN.md",
+      "bytes": 1101,
+      "sha256": "9f3efe0a38ea451192504e789537f8d8242949535e263206af4124d0c36ab237"
+    },
+    {
+      "dest": "indexes/dungeon-map-spawn-entry-clear-resource-boundary.zh-CN.md",
+      "bytes": 5071,
+      "sha256": "731e56982244980bd76f67cda10b5144bc20efc4ca5206ee3610ab30c1149fbb"
+    },
+    {
+      "dest": "indexes/dungeon-world-standardization-capability-router.zh-CN.md",
+      "bytes": 4356,
+      "sha256": "bce786e0c3edac286038491f95ff2278fd1acec39b266f5fd26fbd66d86a7e1e"
+    },
+    {
+      "dest": "indexes/economy-gold-fatigue-mileage-token-counter-boundary.zh-CN.md",
+      "bytes": 9576,
+      "sha256": "2efc1489de24da7b3d90dcd68654b1862cdf38e8e6f51d07fd3c69ccbf8b6d9a"
+    },
+    {
+      "dest": "indexes/equipment-aura-data-fields.zh-CN.md",
+      "bytes": 5874,
+      "sha256": "03d765eff691c50e132719d51f7864149a2b636a631059ae4fc01e7c9301f79b"
+    },
+    {
+      "dest": "indexes/equipment-avatar-aura-creature-extraction-boundary.zh-CN.md",
+      "bytes": 1086,
+      "sha256": "8bf31657fc172fff356f01079c58cc13ee732c1057e6c2e12879f5784f1be14b"
+    },
+    {
+      "dest": "indexes/equipment-avatar-motion-fields.zh-CN.md",
+      "bytes": 7763,
+      "sha256": "f84008c5a060c852dba2469c2a2df684de071446b95a016950366b8981469d3e"
+    },
+    {
+      "dest": "indexes/equipment-basic-fields.zh-CN.md",
+      "bytes": 8456,
+      "sha256": "f3df9422d89a491b4b2b202b931ffed6d81a1f703e4d61db1b3ff566eb7c76d4"
+    },
+    {
+      "dest": "indexes/equipment-bracket-value-tokens.zh-CN.md",
+      "bytes": 12927,
+      "sha256": "f29735caded8b1ad3fcd06bdc86cc3fedc483e0a674939a223266b337728150a"
+    },
+    {
+      "dest": "indexes/equipment-conditional-stat-fields.zh-CN.md",
+      "bytes": 5532,
+      "sha256": "0afbaf3d7b8fffe8534708f1515995ebe814feb99b4bbea3b60a79aab4493adc"
+    },
+    {
+      "dest": "indexes/equipment-effect-fields.zh-CN.md",
+      "bytes": 19001,
+      "sha256": "3cbb00e5a54b950ce51ceb66fd389efc18d46d8e3c94271489b99a4b7552c2d3"
+    },
+    {
+      "dest": "indexes/equipment-hardcoded-legacy-fields.zh-CN.md",
+      "bytes": 3939,
+      "sha256": "6a55b77e6c846eb1da853dc69e77ccb6888470d1b0cadc2c7431f90db40f3a30"
+    },
+    {
+      "dest": "indexes/equipment-resistance-stats.zh-CN.md",
+      "bytes": 6423,
+      "sha256": "50fd0fa6b7f90affaaa67a6ff19cd84f7f0fd149dd2822f5fe01b32f377036a3"
+    },
+    {
+      "dest": "indexes/equipment-rule-fields.zh-CN.md",
+      "bytes": 6714,
+      "sha256": "6a84cece102018521a820220edb3522e167cc39b4f8757c620287de692bb9e90"
+    },
+    {
+      "dest": "indexes/equipment-runtime-trigger-fields.zh-CN.md",
+      "bytes": 6509,
+      "sha256": "cc591660bc9b6300a79cb56d61cb3ee6bf9909443dc46b41fef3d93fec3596e8"
+    },
+    {
+      "dest": "indexes/equipment-upgrade-profession-fields.zh-CN.md",
+      "bytes": 4860,
+      "sha256": "6917b63b052437c32e3ddafec0562a0a0330cfd48f1259e11e3fea58e5c00b65"
+    },
+    {
+      "dest": "indexes/equipment-visual-fields.zh-CN.md",
+      "bytes": 4152,
+      "sha256": "c9ea84b24d1c25042bd7a1568ee3e3c6f07b70f57cec02c2165f2605d8ed8eda"
+    },
+    {
+      "dest": "indexes/etc-event-config-activity-family-boundary.zh-CN.md",
+      "bytes": 9833,
+      "sha256": "52fe8359bdd923a7a94840144bee234f2f00e6f0d27b961c1c37656983ae3b36"
+    },
+    {
+      "dest": "indexes/event-reward-delivery-mail-attendance-boundary.zh-CN.md",
+      "bytes": 9105,
+      "sha256": "55ab149d49ffd175519f46971daebdef07484a7f8247c1c90d43727140b1a64a"
+    },
+    {
+      "dest": "indexes/extraction-capability-router.zh-CN.md",
+      "bytes": 2908,
+      "sha256": "6e87e29a37f118a8f62da6b21026c3a0d5554ec47aaf3b9d536142c4fab88a9c"
+    },
+    {
+      "dest": "indexes/formal-region-town-worldmap-area-entry-boundary.zh-CN.md",
+      "bytes": 6589,
+      "sha256": "b656c76078450df32f08c8f14b736c526836a9e7cc116574d258f7d51982db0d"
+    },
+    {
+      "dest": "indexes/item-stackable-dependency-planner-boundary.zh-CN.md",
+      "bytes": 2060,
+      "sha256": "bccbc91a04019b964a2c4c43a74f6287f86f4e6da4e92c0a539903ce7c647c46"
+    },
+    {
+      "dest": "indexes/knowledge-index.json",
+      "bytes": 14093,
+      "sha256": "bb060272fcef6a14e5a7a1101e7c66360b3657ce9423d424c66b11f2389334ef"
+    },
+    {
+      "dest": "indexes/knowledge-topic-routes.full.json",
+      "bytes": 175379,
+      "sha256": "847ba72cc57c32f3553f9ca10dddb03253bc6d4221578504b8ea46a507d27d32"
+    },
+    {
+      "dest": "indexes/monster-action-animation-act-observed-tag-router.zh-CN.md",
+      "bytes": 619,
+      "sha256": "94c45badf7a4d957e76a9edd6de6320907608e33940bc90e937a7ae83733c991"
+    },
+    {
+      "dest": "indexes/monster-action-animation-ani-observed-tag-router.zh-CN.md",
+      "bytes": 739,
+      "sha256": "c06d95c3f2c1eb6cd9c83a45017ecd14673ef8649bf13d365468ba735ee986e9"
+    },
+    {
+      "dest": "indexes/monster-action-animation-backtick-token-router.zh-CN.md",
+      "bytes": 371,
+      "sha256": "0db772a1cb8235e9dd73564f1cfa0bb8ab5d87daf1a308b9c59f8c4ee317340e"
+    },
+    {
+      "dest": "indexes/monster-ai-action-attack-cross-layer-boundary.zh-CN.md",
+      "bytes": 1576,
+      "sha256": "7ef6654e95a448093bfd29d3017097e1e11b092f6f3ddf3873a8cfb78b35c384"
+    },
+    {
+      "dest": "indexes/monster-ai-expression-router.zh-CN.md",
+      "bytes": 461,
+      "sha256": "49028a20ad891cd3dc229102615279b7bd5c143f9ef063487dd10810498584ca"
+    },
+    {
+      "dest": "indexes/monster-ai-observed-tag-router.zh-CN.md",
+      "bytes": 550,
+      "sha256": "47b35af43d5563b23cf98558bc70c6a09af6cff33671c6fae45b051117e35c67"
+    },
+    {
+      "dest": "indexes/monster-backtick-token-router.zh-CN.md",
+      "bytes": 408,
+      "sha256": "1d5ad90dca7c1dc3b59dec8299be1449d81a274cf5b54030e9482a906e80f78c"
+    },
+    {
+      "dest": "indexes/monster-created-passiveobject-act-observed-tag-router.zh-CN.md",
+      "bytes": 529,
+      "sha256": "150755ec3325cda6b8aa1d1f276b5c1d11fe12e97cd93fc1ef4336daf064deee"
+    },
+    {
+      "dest": "indexes/monster-created-passiveobject-obj-observed-tag-router.zh-CN.md",
+      "bytes": 491,
+      "sha256": "5dfde88033667b6e2f1b2fd792c85f9066e5a3bc0c70fb0e39f30ac8638fc146"
+    },
+    {
+      "dest": "indexes/monster-entry-link-router.zh-CN.md",
+      "bytes": 594,
+      "sha256": "0d3eab23856e4a12e4dee904220435c77db85c0ea5f1d525b04d5d0737c99331"
+    },
+    {
+      "dest": "indexes/monster-field-router-basic.zh-CN.md",
+      "bytes": 4516,
+      "sha256": "c7e889afdaa1fc11a0f61746bc0897acdf119bd2e16e6549fffe9994582271e7"
+    },
+    {
+      "dest": "indexes/monster-observed-tag-router.zh-CN.md",
+      "bytes": 578,
+      "sha256": "833852031ed4c32a5cb9fcca19c3312bd44e4e59dcff11f686c3b7700e1df73b"
+    },
+    {
+      "dest": "indexes/npc-shop-itemshop-exchange-price-boundary.zh-CN.md",
+      "bytes": 4512,
+      "sha256": "509304676d9652fbcd1d8f4a69f52ecf65a17ab95c92a6d7936912a0decb0c10"
+    },
+    {
+      "dest": "indexes/nut-api-facts.compact.json",
+      "bytes": 1432349,
+      "sha256": "b79f3694994e42520a7f3464a90df442b2fc0e35fe3d56cb2c0065cdd11d3073"
+    },
+    {
+      "dest": "indexes/nut-runtime-callback-data-ui-act-boundary.zh-CN.md",
+      "bytes": 4626,
+      "sha256": "a858b0f7d472c9f4ab9f4073d43b052fd0a276493b65a9ec791250035cc4596d"
+    },
+    {
+      "dest": "indexes/passiveobject-attackinfo-hitbox-compact-router.zh-CN.md",
+      "bytes": 1820,
+      "sha256": "24c2b1c7dda4afa668434d5d56af9f09e87414303d6dd2c474cc7385a0c12802"
+    },
+    {
+      "dest": "indexes/pvf-registry-lst-topology-orphan-boundary.zh-CN.md",
+      "bytes": 7045,
+      "sha256": "c0978f28763e6910c08634a5ddba2184ebfea4a323da377dc53822847a103b65"
+    },
+    {
+      "dest": "indexes/pvf-tag-facts.compact.json",
+      "bytes": 859255,
+      "sha256": "f4a78021028ecd0dfb90a5e87c8e01bca77e9f907de31d215c91712f91727bdd"
+    },
+    {
+      "dest": "indexes/pvf-tag-router-equipment-avatar-visual.zh-CN.md",
+      "bytes": 14899,
+      "sha256": "3963f2aba92a46043555d778c747c013d97a86042b6a4d850982f214078a1d59"
+    },
+    {
+      "dest": "indexes/pvf-tag-router-equipment-basic-rules.zh-CN.md",
+      "bytes": 18488,
+      "sha256": "34d8bfaa5b6b43234b4a45ad3fc5805f252d1dd5a67e6a8ce304ad3f148a68e3"
+    },
+    {
+      "dest": "indexes/pvf-tag-router-equipment-effect.zh-CN.md",
+      "bytes": 17115,
+      "sha256": "bdf30b4cb1c5a8cf19d4d43ddb8032b77f52d62d0faad615d967d343df19cc84"
+    },
+    {
+      "dest": "indexes/pvf-task-bookmarks.compact.json",
+      "bytes": 40366,
+      "sha256": "35a1de2339530821fc68056ef91f5652d01b06a6421b94400f6b75cbbd4888c4"
+    },
+    {
+      "dest": "indexes/pvp-mission-msn-boundary.zh-CN.md",
+      "bytes": 9355,
+      "sha256": "ae9f5e12300f7568508744eeff46439216cbf8b0b28113b4b454fd1d3f7db5e1"
+    },
+    {
+      "dest": "indexes/quest-chain-requirement-boundary.zh-CN.md",
+      "bytes": 5879,
+      "sha256": "7bc7b9d2802c6be43da15978d6b69b07a4001c3be0d642b61b622542e31a587f"
+    },
+    {
+      "dest": "indexes/quest-drop-reward-ticket-boundary.zh-CN.md",
+      "bytes": 6615,
+      "sha256": "d80a7f6b37da9af856476b8cdb0ce56a764083d78094329979db2e21b6ffeac8"
+    },
+    {
+      "dest": "indexes/randomoption-mystic-equipment-boundary.zh-CN.md",
+      "bytes": 3817,
+      "sha256": "fcc020efbb91c541b65f8712e078c0d4170b7ce10ce6609eb500e18e47da7749"
+    },
+    {
+      "dest": "indexes/serverparameter-premium-pcroom-growth-buff-boundary.zh-CN.md",
+      "bytes": 6906,
+      "sha256": "a3d4b1beeaae8c75a7223f2fdcf4c60c6330079e42b51adfb0796bbfdca5ae4a"
+    },
+    {
+      "dest": "indexes/skill-atmage-bluedragonwill-state-target-po-chain.zh-CN.md",
+      "bytes": 7021,
+      "sha256": "5e52aab1a140cc7aa789c606188a3bd9485981d05029b46c78de0febc242aa69"
+    },
+    {
+      "dest": "indexes/skill-atmage-chainlightning-state-po-chain.zh-CN.md",
+      "bytes": 14233,
+      "sha256": "b9e6509eae465b18498cf84464ee8d65b56260b301ecd5b682becd78e7d6329e"
+    },
+    {
+      "dest": "indexes/skill-atmage-crystalattack-native-chain.zh-CN.md",
+      "bytes": 6674,
+      "sha256": "08f3bcdc46bdb104b516f919081f6a0f2bb3dd8ec3519815aa17661cf4b84915"
+    },
+    {
+      "dest": "indexes/skill-atmage-darkchange-state-blind-attackinfo-chain.zh-CN.md",
+      "bytes": 6557,
+      "sha256": "6c3a6f5bc65fb1cf7e768e6e66bcbbfebbbb61da6768d98825ad16c34b5864e0"
+    },
+    {
+      "dest": "indexes/skill-atmage-elementalchange-throw-appendage-chain.zh-CN.md",
+      "bytes": 7363,
+      "sha256": "6741fac16902f0b7d2aa3687030745d9ff8e6bff37347ded87e38e1e3449b9d0"
+    },
+    {
+      "dest": "indexes/skill-atmage-fireroad-state-po-chain.zh-CN.md",
+      "bytes": 12654,
+      "sha256": "339c4d7530fbc06b0524b2d59daeb8684087235cd4134578c454ce888a8ccd6d"
+    },
+    {
+      "dest": "indexes/skill-atmage-flamecircle-state-po-appendage-chain.zh-CN.md",
+      "bytes": 14733,
+      "sha256": "822334a4647149ac8f268188aeccf5cc29da2819e94175e8cfd483308eb01949"
+    },
+    {
+      "dest": "indexes/skill-atmage-frozenland-state-po-appendage-chain.zh-CN.md",
+      "bytes": 10388,
+      "sha256": "70b8c17d0a7a16fd86df394635331900b46cc399bfd6bbc9c8144aa853371318"
+    },
+    {
+      "dest": "indexes/skill-atmage-holonglight-state-po-skillload-buff-chain.zh-CN.md",
+      "bytes": 15886,
+      "sha256": "5a6eeb34b6cc07980339e6311855dea2c7e0369b0df93409cf998d2afb9bc0f5"
+    },
+    {
+      "dest": "indexes/skill-atmage-iceroad-state-appendage-disabled-po-boundary.zh-CN.md",
+      "bytes": 8410,
+      "sha256": "29854888ee53befafe207cc14b2f6d71c88031aa7953dce3a24957b4940c767f"
+    },
+    {
+      "dest": "indexes/skill-atmage-icesword-state-attackinfo-ex-rewind-chain.zh-CN.md",
+      "bytes": 5671,
+      "sha256": "df29ebf5f3bfb9366feeda132b7f5583ee10c2581ce27685c1c20601cf9b861a"
+    },
+    {
+      "dest": "indexes/skill-atmage-lightningwall-state-po-appendage-chain.zh-CN.md",
+      "bytes": 15026,
+      "sha256": "91de59f8b89f46c403625efc8607b743ee956dae2cc3a986ce9f288392661a88"
+    },
+    {
+      "dest": "indexes/skill-atmage-magiccannon-state-po-chain.zh-CN.md",
+      "bytes": 11098,
+      "sha256": "8c4749fb8cf6a4fd77df3da9be237915b7a63390c5283b81ea5a5452ca98d1d0"
+    },
+    {
+      "dest": "indexes/skill-atmage-magicshield-buff-appendage-chain.zh-CN.md",
+      "bytes": 8792,
+      "sha256": "c1a97ec359533e98a4d8388a266af90c1f656e9d0ab347b50e2a11d859bf6133"
+    },
+    {
+      "dest": "indexes/skill-atmage-manaburst-throw-buff-chain.zh-CN.md",
+      "bytes": 7163,
+      "sha256": "a4bd7db9b5cdfe0c8179b6af74ac5201ba034e99d087cb7f948921bccbbeaa10"
+    },
+    {
+      "dest": "indexes/skill-atmage-pieceofice-state-core-shard-po-chain.zh-CN.md",
+      "bytes": 15380,
+      "sha256": "5b72c5613bfb03d0cacd63be31dfa4f8c36611937e8882d202e492e9c93deafb"
+    },
+    {
+      "dest": "indexes/skill-atmage-teleport-movement-state-chain.zh-CN.md",
+      "bytes": 7764,
+      "sha256": "b1b9cff7ee0070790ee523355daa326496266d96cfb8226d11fbbd2479229672"
+    },
+    {
+      "dest": "indexes/skill-atmage-watercannon-native-chain.zh-CN.md",
+      "bytes": 7403,
+      "sha256": "a641f9c32f587b1160cb67546feab1c868fcca6dd46710848b407ec9440530ce"
+    },
+    {
+      "dest": "indexes/skill-atmage-windstrike-native-chain.zh-CN.md",
+      "bytes": 6001,
+      "sha256": "1d7a565ed2556f43cad7df7f071d13204e2ad3fef36802e8eb8a41733488542c"
+    },
+    {
+      "dest": "indexes/skill-bloodyrave-bloodsword-frame-window.zh-CN.md",
+      "bytes": 4207,
+      "sha256": "7aadbc976234859c5fe4b73fcbd3909380b4505cbe57be12c3572193f7edcb31"
+    },
+    {
+      "dest": "indexes/skill-data-up-types.zh-CN.md",
+      "bytes": 5718,
+      "sha256": "de1c24fd200806674b0324de5e38579eef4fdee5556c8153c7338d654e4c95bf"
+    },
+    {
+      "dest": "indexes/skill-learnability-cost-sp-tp-ui-boundary.zh-CN.md",
+      "bytes": 7643,
+      "sha256": "14d7ba46b7599c0ef0d686419710b1c042e378d684d965cdcf5985b037917060"
+    },
+    {
+      "dest": "indexes/skill-learnability-tree-command-cooldown-boundary.zh-CN.md",
+      "bytes": 2400,
+      "sha256": "0f440f745eae5d991ced7e5027dd82ce5f96058ac834c2b10e3f23912e8ca698"
+    },
+    {
+      "dest": "indexes/skill-levelup.zh-CN.md",
+      "bytes": 2482,
+      "sha256": "6a691258c3b04133cfa15d64a15edcac13ab21aacbe17a30733f73eb7bcec5a3"
+    },
+    {
+      "dest": "indexes/skill-outragebreak-state45-substate-boundary.zh-CN.md",
+      "bytes": 3910,
+      "sha256": "755726b8b8fca42c8a98f75c1f44d41a071a8b17ad1c4e440b6c82ac218d1f74"
+    },
+    {
+      "dest": "indexes/skill-parameter-facts.compact.json",
+      "bytes": 1812855,
+      "sha256": "e8428666583750a2ade77621c76f404b7a4579296455f7dab71d48e0992242c9"
+    },
+    {
+      "dest": "indexes/skill-parameter-index.zh-CN.md",
+      "bytes": 2837,
+      "sha256": "261f2aa056a017b99e97c0f126f4a56cc2abc2cf23fd8fdcd46841895bb83197"
+    },
+    {
+      "dest": "indexes/skill-parameter-routes.json",
+      "bytes": 1477,
+      "sha256": "523514d99d171077d1fd24d6e99cd13fc6f296d606c57fba845e20ff8c8ed389"
+    },
+    {
+      "dest": "indexes/skill-registry-routing.zh-CN.md",
+      "bytes": 2913,
+      "sha256": "028c5c02479578048a77847ff9a87507c9fa7a8959ed961827fe9381ea623ce3"
+    },
+    {
+      "dest": "indexes/skill-state-nut-runtime-api-group-boundary.zh-CN.md",
+      "bytes": 2925,
+      "sha256": "9c7c1bd69b3a3acb07f99656e487f22ba4ebe1d9ad6f3e3baeb861c9dc874c86"
+    },
+    {
+      "dest": "indexes/skill-swordman-comminterrupt-lifecycle.zh-CN.md",
+      "bytes": 6949,
+      "sha256": "14a13ef93bdfd0ce6c31cb135482c337f10c7198fd1ebdc1bbaffdb4a69fdf9f"
+    },
+    {
+      "dest": "indexes/skill-swordman-comminterrupt-reachability.zh-CN.md",
+      "bytes": 4111,
+      "sha256": "9c4f7de821dedd31065179d70026053008783e9da4262b1c4b95559ff1fc92b0"
+    },
+    {
+      "dest": "indexes/skill-tree-default-pvp-entry-boundary.zh-CN.md",
+      "bytes": 5392,
+      "sha256": "9f39f0bce79d44ff24a508780457a8765bf6018d57ed3b00a416db2313f09e46"
+    },
+    {
+      "dest": "indexes/stackable-container-package-boundary.zh-CN.md",
+      "bytes": 2638,
+      "sha256": "70f9a0c73aa6aa65c3e26d5ced4538c887df914a96cc92bcae2291b4a4536a19"
+    },
+    {
+      "dest": "indexes/stackable-package-orb-card-extraction-boundary.zh-CN.md",
+      "bytes": 1106,
+      "sha256": "bfe2b193ee0b3f50df2a6faac8f9073b0fc00242f44b1aedbf546ea656c5641a"
+    },
+    {
+      "dest": "indexes/text-stringlink-encoding-localization-boundary.zh-CN.md",
+      "bytes": 8351,
+      "sha256": "d9ded1a858525621203c25d818296b34b5a97c0d9ea2e73d139060cdffed338d"
+    },
+    {
+      "dest": "indexes/upgrade-reinforce-amplify-enchant-recipe-boundary.zh-CN.md",
+      "bytes": 8559,
+      "sha256": "3adc762c0f124b05a753c7f633009690926028f74c9b0551172dc66932c6819b"
+    },
+    {
+      "dest": "README.zh-CN.md",
+      "bytes": 2917,
+      "sha256": "7186cc11dc2caff505bde145523f3e95cb51bdaa4ee7a8a8a3dddf00fdceea53"
+    },
+    {
+      "dest": "safety/README.zh-CN.md",
+      "bytes": 26726,
+      "sha256": "d197f1717366a339f7abaa6e0dcae53046f77a6f33dc22fea97ad81527d74abe"
+    },
+    {
+      "dest": "task-cards/action-combat-cross-version-porting.zh-CN.md",
+      "bytes": 5895,
+      "sha256": "289dee98aa0f2d0fd63d1271d648978f115ad2ceeb859b6e77c841ba7a06be6b"
+    },
+    {
+      "dest": "task-cards/actionobject-mapobject-breakable-spc-readonly-audit.zh-CN.md",
+      "bytes": 2372,
+      "sha256": "9451f894267da0d37314e3de47d11fb30d13b1fb1c47b340fc536c849df9bf9e"
+    },
+    {
+      "dest": "task-cards/apc-character-status-hardness-readonly-audit.zh-CN.md",
+      "bytes": 4019,
+      "sha256": "5931dbdbfa2874602dfb77f1021925f79e79a16786e5d6169f0203a21bc1c3a9"
+    },
+    {
+      "dest": "task-cards/apc-combat-attribute-intent-readonly-audit.zh-CN.md",
+      "bytes": 4860,
+      "sha256": "dda0b9d5de61e647d6cde8673a5a5e98d20d31b1b27fe1a1fd6c05e4a073abfe"
+    },
+    {
+      "dest": "task-cards/apc-extraction-preview.zh-CN.md",
+      "bytes": 1064,
+      "sha256": "345e91a3d9491cf76fc5db42f1bb485cd9179d4205c441d999d267c363974f3a"
+    },
+    {
+      "dest": "task-cards/apc-fair-duel-level-equipment-standardization.zh-CN.md",
+      "bytes": 2318,
+      "sha256": "12aa0d03e4241668670474b724e3e89b5806643fddae9086ca5d609d0d51b1c9"
+    },
+    {
+      "dest": "task-cards/apc-opening-action-single-execution-readonly-audit.zh-CN.md",
+      "bytes": 2928,
+      "sha256": "dc4d26fc599f495e2d4d45b4770ff03f21b73f09e16a9ec358145153c60914db"
+    },
+    {
+      "dest": "task-cards/appendage-item-common-equipment-special-effect-readonly-audit.zh-CN.md",
+      "bytes": 2237,
+      "sha256": "822838522e84c0a9298d5fe24cb3275a377727e1453efbbdd411a8cb5556f60c"
+    },
+    {
+      "dest": "task-cards/atomic-content-generation-readonly-plan.zh-CN.md",
+      "bytes": 1240,
+      "sha256": "bdbdf959c5fc54e959b9c07ef0cb2aa87f95aecbfc1ebd1f112e5388c5066e6c"
+    },
+    {
+      "dest": "task-cards/attackinfo-payload-damage-element-activestatus-readonly-audit.zh-CN.md",
+      "bytes": 2150,
+      "sha256": "3cfc923166f1cce07ee1ccc804a12b8161bb8b2e6da5fde612ef26c3aaa2789c"
+    },
+    {
+      "dest": "task-cards/audio-soundpacks-music-readonly-audit.zh-CN.md",
+      "bytes": 2993,
+      "sha256": "9dcf0576376ec1fb66f06901b452bc4923b87b901d39d077c781c6a6d91fee00"
+    },
+    {
+      "dest": "task-cards/avatar-emblem-socket-clone-aura-fashion-package-readonly-audit.zh-CN.md",
+      "bytes": 4094,
+      "sha256": "7b7ceb524c6ab71ec51df900ef50b663ecb35debfa2e5e03edae42edb35b2541"
+    },
+    {
+      "dest": "task-cards/cashshop-avatar-price-readonly-audit.zh-CN.md",
+      "bytes": 4342,
+      "sha256": "4b451148d63d65d32d1a1d5d397b638d07863bb71377a5fbc86ae15105640e11"
+    },
+    {
+      "dest": "task-cards/character-job-growtype-class-enum-readonly-audit.zh-CN.md",
+      "bytes": 2398,
+      "sha256": "ba587ef74f5baf03c14052e062a1a21c4bf45201c8b9e3380404480997ca0188"
+    },
+    {
+      "dest": "task-cards/clear-reward-card-flip-independent-drop-probability-readonly-audit.zh-CN.md",
+      "bytes": 2860,
+      "sha256": "e9edfaaeb406f6e04548ecb0ab09f00f2591da1ac6fca09adfa5bfe8d6afefe0"
+    },
+    {
+      "dest": "task-cards/client-asset-path-preview.zh-CN.md",
+      "bytes": 952,
+      "sha256": "9ff1f7484088743a81d9a27fb53bfc7b50604280d5073fe28fd53305347c1d6a"
+    },
+    {
+      "dest": "task-cards/client-assets-imagepacks-ui-readonly-audit.zh-CN.md",
+      "bytes": 2683,
+      "sha256": "fc1a687d91b5d466b3ba006df05d29bb0bc5c5417bca0f47857b9867f1d9cb5b"
+    },
+    {
+      "dest": "task-cards/client-pvf-compatibility-matrix-readonly.zh-CN.md",
+      "bytes": 923,
+      "sha256": "6ba6584841b69ba7f05f4dabd21d4cb4129aae581b9a21f3fa3873b36d2b832f"
+    },
+    {
+      "dest": "task-cards/client-ui-layout-pos-lay-readonly-audit.zh-CN.md",
+      "bytes": 4670,
+      "sha256": "e5496348768a0fa4bc116bff8c1daffdeacfa8e60dfd99659eb326893961a7df"
+    },
+    {
+      "dest": "task-cards/complex-dungeon-mechanism-shell-readonly-audit.zh-CN.md",
+      "bytes": 5242,
+      "sha256": "2a30884e898c4e7c64cd501e30ac3486c6a2ab80fc17ed219e6cfd9bd948a4e1"
+    },
+    {
+      "dest": "task-cards/content-lifecycle-dungeon-full-lifecycle-readonly-audit.zh-CN.md",
+      "bytes": 2048,
+      "sha256": "39dc64a73c0ef8aa54b3a06b40675b8418671c2d0cca2f14fc760e460baff28c"
+    },
+    {
+      "dest": "task-cards/creature-pet-readonly-audit.zh-CN.md",
+      "bytes": 2224,
+      "sha256": "30e4abb532616d1134df63bc2b2b9ca98c2e46daeb49d3c7e2a5189a86e80afb"
+    },
+    {
+      "dest": "task-cards/dungeon-difficulty-ultimate-list-readonly-audit.zh-CN.md",
+      "bytes": 1496,
+      "sha256": "7cc4e575c6d91af7860a634052d9ebd5eb68a1a9aa2c5b30578c5599f7230264"
+    },
+    {
+      "dest": "task-cards/dungeon-extraction-preview.zh-CN.md",
+      "bytes": 852,
+      "sha256": "557a59be975610b01af75b496a73d047741fd102810babea518bbe72b76df961"
+    },
+    {
+      "dest": "task-cards/dungeon-map-spawn-entry-clear-resource-readonly-audit.zh-CN.md",
+      "bytes": 2725,
+      "sha256": "a3b5a54eab7862c95dc7a2295b309b31cc2156ce50a271a2d514f8df474e0bf9"
+    },
+    {
+      "dest": "task-cards/dungeon-revive-coin-limit-readonly-audit.zh-CN.md",
+      "bytes": 3305,
+      "sha256": "3510004bfe543dfa624f48b51e251b99c46a5f3e7435d7c455d54783956f0dd8"
+    },
+    {
+      "dest": "task-cards/economy-gold-fatigue-mileage-token-counter-readonly-audit.zh-CN.md",
+      "bytes": 3428,
+      "sha256": "19bf5cd951e79032835cb80052c449156fba92a3fec1b3f1fb486a1ed31503a8"
+    },
+    {
+      "dest": "task-cards/equipment-avatar-aura-creature-extraction-preview.zh-CN.md",
+      "bytes": 1636,
+      "sha256": "82cce69af4104dc2025bcce7a0c08acbcbe8e431f3b8ce7dc05740fd32d951ef"
+    },
+    {
+      "dest": "task-cards/equipment-stackable-controlled-change.zh-CN.md",
+      "bytes": 1937,
+      "sha256": "f74489722a68b3ec6bb183f1b09b998f824ee4d0d855cbe95f08572c923ab1bd"
+    },
+    {
+      "dest": "task-cards/equipment-stackable-readonly-audit.zh-CN.md",
+      "bytes": 5394,
+      "sha256": "e2cea6fbb1bcd07fe7208d8bf7c2ca6ca44d4813fd9cb07be835ae9fa00c1e5f"
+    },
+    {
+      "dest": "task-cards/etc-event-config-readonly-audit.zh-CN.md",
+      "bytes": 2261,
+      "sha256": "5b5eebc8e30cf19610c3e520a98d0448a881585cbb91648632cf99ef76c464f6"
+    },
+    {
+      "dest": "task-cards/event-reward-delivery-mail-attendance-readonly-audit.zh-CN.md",
+      "bytes": 2988,
+      "sha256": "59c7d0ca94dfb8e5b589f3b8553a37d0d7fa4cd51b34c63a37c8c724ce874615"
+    },
+    {
+      "dest": "task-cards/formal-region-town-worldmap-area-entry-readonly-audit.zh-CN.md",
+      "bytes": 2997,
+      "sha256": "b68fd2785b5e08d94891690dc87fc1313dce355ed9985ca7858ecb1272825e6e"
+    },
+    {
+      "dest": "task-cards/hellparty-visualization-readonly-plan.zh-CN.md",
+      "bytes": 2023,
+      "sha256": "29ffd941581e2e17eb8184afd3e835bd50b21c14c7ed99d173c84d76ae325799"
+    },
+    {
+      "dest": "task-cards/independent-drop-normalization-readonly-plan.zh-CN.md",
+      "bytes": 1545,
+      "sha256": "60e558c05ba38cffd7fac61912bdbc86d98b3a468a7f2d3110596f80b0b4ce8a"
+    },
+    {
+      "dest": "task-cards/item-source-graph-readonly.zh-CN.md",
+      "bytes": 851,
+      "sha256": "bb7c8820170656854a824f70ac04b064e19966ec1ed0f07bb2fc4bd3c641cec9"
+    },
+    {
+      "dest": "task-cards/lst-registry-lifecycle-readonly-plan.zh-CN.md",
+      "bytes": 1268,
+      "sha256": "31ceab2d6096d9d693afc3a7b49fa504d7217f099389c0f0fa0f11250a960fcc"
+    },
+    {
+      "dest": "task-cards/map-widescreen-structural-migration-readonly-plan.zh-CN.md",
+      "bytes": 2032,
+      "sha256": "892ff4c1149b69beb2d66679aea7a8b8f4a44e54f4ba18e1c004ec9f43f85832"
+    },
+    {
+      "dest": "task-cards/monster-action-animation-readonly-audit.zh-CN.md",
+      "bytes": 2137,
+      "sha256": "e421b669a10694251d2d9be21e198c382ef63ec7f096eeb97d3c61dff3003a74"
+    },
+    {
+      "dest": "task-cards/monster-ai-action-attack-cross-layer-readonly-audit.zh-CN.md",
+      "bytes": 3420,
+      "sha256": "933df1f284eca4d6a371bb1d8ccc049e4c3a14172407d7c4bbf2d03f42466846"
+    },
+    {
+      "dest": "task-cards/monster-ai-summon-spawn-drop-readonly-audit.zh-CN.md",
+      "bytes": 3037,
+      "sha256": "8aa3c60d989df087ead4e55b5fd2038f690cb06503c7e5cfcf4f516d5a25c69f"
+    },
+    {
+      "dest": "task-cards/monster-attackinfo-atk-readonly-audit.zh-CN.md",
+      "bytes": 1403,
+      "sha256": "bedd829b40c6c2b6ad8dee61a82a97f6b9b8026a373097ba9e0fa5360615951d"
+    },
+    {
+      "dest": "task-cards/monster-created-passiveobject-readonly-audit.zh-CN.md",
+      "bytes": 2067,
+      "sha256": "bc5a78e1ad52b2fde01fb2a99b5dd0e433f662a7bb3b776ce79a5b954994fbd8"
+    },
+    {
+      "dest": "task-cards/monster-mob-readonly-audit.zh-CN.md",
+      "bytes": 2258,
+      "sha256": "37016a7edde8c3bc1f8e4632c46378b26759d792cc076571a9525caaea4503d2"
+    },
+    {
+      "dest": "task-cards/npc-shop-controlled-change.zh-CN.md",
+      "bytes": 1328,
+      "sha256": "4d73909175c041685b36b5412f16e67d4e34599fdad0f2df9e67e50de3b762de"
+    },
+    {
+      "dest": "task-cards/npc-shop-readonly-audit.zh-CN.md",
+      "bytes": 1769,
+      "sha256": "a079bd96e76d8d11bcbfa63d55f21f3bd3b6cea76aa4e172ab53e0a22399e6ee"
+    },
+    {
+      "dest": "task-cards/passiveobject-nonmonster-readonly-audit.zh-CN.md",
+      "bytes": 2400,
+      "sha256": "e1782912d5bbd1c88687ba2529bdc77f282a1ebca6dd02a97ab5ad3a5b70e691"
+    },
+    {
+      "dest": "task-cards/pvf-controlled-change-routing.zh-CN.md",
+      "bytes": 2039,
+      "sha256": "e39e41d971f5eee19a95c460b6ef4dc492b064669102f961e7eb4837528d8096"
+    },
+    {
+      "dest": "task-cards/pvf-entity-name-search-readonly.zh-CN.md",
+      "bytes": 6814,
+      "sha256": "1faecb90d47ce7ea06210ad353565f00870ee9117108a8d3b3b19ee1a71d1c06"
+    },
+    {
+      "dest": "task-cards/pvf-existing-ani-delay-controlled-change.zh-CN.md",
+      "bytes": 2781,
+      "sha256": "ae25dcd9714cb4cd550fd8d2363b159eb87437f6a920f607cb31d2b4b19b1444"
+    },
+    {
+      "dest": "task-cards/pvf-existing-nut-controlled-change.zh-CN.md",
+      "bytes": 11650,
+      "sha256": "a4012f217c80a7b8d2b90bdea38049a3512e9076399b6aca019c3528cb90ee63"
+    },
+    {
+      "dest": "task-cards/pvf-high-risk-new-file-controlled-change.zh-CN.md",
+      "bytes": 4578,
+      "sha256": "142d315c6dc942aefddf2ddae664c8892c4021ad673fb07f4bc8f4c5c7473314"
+    },
+    {
+      "dest": "task-cards/pvf-package-quality-audit-readonly.zh-CN.md",
+      "bytes": 1568,
+      "sha256": "6b9d0f8009ee176a0d198f0c1db51dbbfdc9122ab74fec84d70f6d4a42192116"
+    },
+    {
+      "dest": "task-cards/pvf-registry-lst-topology-readonly-audit.zh-CN.md",
+      "bytes": 3428,
+      "sha256": "df628f6f83aa323a6ff69317d9ff420557dcb9e4a26cdc04a148a8e6d23f5536"
+    },
+    {
+      "dest": "task-cards/pvf-same-pvf-file-copy-controlled-change.zh-CN.md",
+      "bytes": 3105,
+      "sha256": "5515677850bf3859478f8fe6db88a5c6b0aac69314270f5239b44f49c8cbe075"
+    },
+    {
+      "dest": "task-cards/pvf-scalar-text-controlled-change.zh-CN.md",
+      "bytes": 2340,
+      "sha256": "f18de9817a9f599c1cfbcf64294b5d376467e4df3290da8a407369db987c29de"
+    },
+    {
+      "dest": "task-cards/pvf-semantic-compare-workset-readonly.zh-CN.md",
+      "bytes": 1005,
+      "sha256": "c8fbb9cd70e8e7ed667d415336a971b2db853ec7688981716c70a9d0711ea1b0"
+    },
+    {
+      "dest": "task-cards/pvf-upgrade-amplification-table-controlled-change.zh-CN.md",
+      "bytes": 4684,
+      "sha256": "ea59a5f294524fa7ba07b0df5817ebb2e1931d0bc30eaa01a2f992e970923651"
+    },
+    {
+      "dest": "task-cards/pvp-mission-readonly-audit.zh-CN.md",
+      "bytes": 1822,
+      "sha256": "c54e94349e856d1246f1c4e790d0a17c42370dd8153a40fe64f849f6e7e2a14e"
+    },
+    {
+      "dest": "task-cards/quest-drop-reward-ticket-readonly-audit.zh-CN.md",
+      "bytes": 3468,
+      "sha256": "b61de2cf8d86fef5cca049e6967c3156a1c771b9590f31a3fac15b7039a5d7f6"
+    },
+    {
+      "dest": "task-cards/randomoption-mystic-readonly-audit.zh-CN.md",
+      "bytes": 2082,
+      "sha256": "8ec044c17ebaa2e77e609af270d1690faeb0824e69a1c8b425651a1fb8193214"
+    },
+    {
+      "dest": "task-cards/README.zh-CN.md",
+      "bytes": 1708,
+      "sha256": "90b4664d21a6abd1a9791c21c9070368a1d8fc660ef7430a99c21a94d4a206f1"
+    },
+    {
+      "dest": "task-cards/runtime-pass-absorption-checklist.zh-CN.md",
+      "bytes": 1766,
+      "sha256": "45d40e471b3e45f8342f9145e016498cd544d06cc1ee7e9bde669be37068c4e4"
+    },
+    {
+      "dest": "task-cards/serverparameter-premium-pcroom-growth-buff-readonly-audit.zh-CN.md",
+      "bytes": 2621,
+      "sha256": "f836598b058f0b583cd23c223103efdeff2f91c06c1d9c00e33d503054e132d8"
+    },
+    {
+      "dest": "task-cards/skill-learnability-tree-command-cooldown-readonly-audit.zh-CN.md",
+      "bytes": 5612,
+      "sha256": "dc327364922168e1b0de9411b33197466de1f1c94dcf08c45f17480e30329741"
+    },
+    {
+      "dest": "task-cards/skill-parameter-current-value-readonly-query.zh-CN.md",
+      "bytes": 2748,
+      "sha256": "750df4df8d77c394eddbe975f80d55d553c9e3b45bc94c40e477902924220ca8"
+    },
+    {
+      "dest": "task-cards/skill-state-nut-runtime-readonly-audit.zh-CN.md",
+      "bytes": 6126,
+      "sha256": "db80d357c6d24d904b15c7eefcaccb889fc69fe9b3f502b87f80f8ade64a951c"
+    },
+    {
+      "dest": "task-cards/skill-tree-layout-merge-readonly-plan.zh-CN.md",
+      "bytes": 1462,
+      "sha256": "85511bc3b5b30f5f1cfe6a5cb462ad0e39a29c9bc23e9cb606b51e59f8b45a19"
+    },
+    {
+      "dest": "task-cards/stackable-container-package-readonly-audit.zh-CN.md",
+      "bytes": 2459,
+      "sha256": "310c19775e0bb1e6234e9e174c5985733c84e2093a26f2a004113230a3e5ba56"
+    },
+    {
+      "dest": "task-cards/stackable-package-orb-card-extraction-preview.zh-CN.md",
+      "bytes": 1799,
+      "sha256": "99b0c43deb0d6585a5812dad9c45ace002b22767dd26be472486c3e225d82c60"
+    },
+    {
+      "dest": "task-cards/stackable-stringlink-detach-controlled-change.zh-CN.md",
+      "bytes": 2548,
+      "sha256": "67d2fc3aefbab9895741709405e3fda008a2ca50f8fbcb2e518d5a1f5306bf78"
+    },
+    {
+      "dest": "task-cards/text-stringlink-encoding-readonly-audit.zh-CN.md",
+      "bytes": 6852,
+      "sha256": "7bbcae18e3dd0d15f0f1f252a3737351727d56370a9803bca5ff7b180edc9409"
+    },
+    {
+      "dest": "task-cards/titlebook-reward-display-delivery-readonly-audit.zh-CN.md",
+      "bytes": 5281,
+      "sha256": "ded4490ece093bee33298c89e1ff1304ff8e52760453adc4d04b9b40285734cf"
+    },
+    {
+      "dest": "task-cards/tournament-dungeon-native-structure-readonly-audit.zh-CN.md",
+      "bytes": 4494,
+      "sha256": "a58b5077f7158f68f0f68f3169f3fa6a38e6ab0b8c3de1be64485a303b66463c"
+    },
+    {
+      "dest": "task-cards/unified-dependency-planner-readonly-preview.zh-CN.md",
+      "bytes": 1873,
+      "sha256": "c84d7ee71eb3b31b0bbf0a7b0e19f7bc16b32dec1f4597c3b7818a8130aca4cf"
+    },
+    {
+      "dest": "task-cards/unified-knowledge-query-readonly.zh-CN.md",
+      "bytes": 914,
+      "sha256": "0d8d0e620b1e3453c9c76bff50307d175c143734f70cc3327c0ca2e87ef6a83e"
+    },
+    {
+      "dest": "task-cards/upgrade-reinforce-amplify-enchant-recipe-readonly-audit.zh-CN.md",
+      "bytes": 3683,
+      "sha256": "175b3934835b1a03daa3f59447503ce4906cdc4da18682facbec48cf3952b222"
+    },
+    {
+      "dest": "task-cards/validated-dungeon-numeric-tuning-readonly.zh-CN.md",
+      "bytes": 4246,
+      "sha256": "439df12f115879d44aac4ee2a3c2903e44b899a4d5b1a6340c2144e0d55c7f35"
+    },
+    {
+      "dest": "task-cards/worldmap-dungeon-interface-layout-readonly-plan.zh-CN.md",
+      "bytes": 1425,
+      "sha256": "6bdf2f71ac55e9a3947900ac29b75ee30afa9c957635d3c16997071177ad8cda"
+    },
+    {
+      "dest": "workflows/action-combat-cross-version-porting.zh-CN.md",
+      "bytes": 16479,
+      "sha256": "970a1534e5bfe7fc61f1c38bd40e6e932a2d6230c5b59c08bd76ea708a0026b7"
+    },
+    {
+      "dest": "workflows/apc-extraction-planner.zh-CN.md",
+      "bytes": 3009,
+      "sha256": "13fd1abedc1b71119900be084d0d55710642ccc385be1e26b7d303361db551e7"
+    },
+    {
+      "dest": "workflows/apc-fair-duel-level-equipment-standardization.zh-CN.md",
+      "bytes": 4082,
+      "sha256": "c1d7478ad815d8b483586fce5e14d8321bb1284bc63c2612f151256099ce4513"
+    },
+    {
+      "dest": "workflows/atomic-content-generation.zh-CN.md",
+      "bytes": 4387,
+      "sha256": "474d08d7ac2ea728565ce45c9886ac4f8b9b27e9dd9e697575d396fe4d28e5d4"
+    },
+    {
+      "dest": "workflows/client-asset-path-preview.zh-CN.md",
+      "bytes": 1833,
+      "sha256": "5d9d1aaa13c5687aa9671da820f3258951b06c58df56ebdfc3060555ffab2bf4"
+    },
+    {
+      "dest": "workflows/client-pvf-compatibility-matrix.zh-CN.md",
+      "bytes": 2390,
+      "sha256": "488d8d711a3940d041f9a46ccc4eba8dd8bd8d5ff313ad999a8d91a48daca9c0"
+    },
+    {
+      "dest": "workflows/client-pvf-controlled-deployment.zh-CN.md",
+      "bytes": 3621,
+      "sha256": "2a6e8439a91661a160c681dc796bb53f725a3c5b19fcca386afcb03ddffa4623"
+    },
+    {
+      "dest": "workflows/dungeon-difficulty-and-ultimate-list-audit.zh-CN.md",
+      "bytes": 2040,
+      "sha256": "1a4022c997bbc2c809307814ef7b155a1730465d8692aa6806e7d7f237d4e2ae"
+    },
+    {
+      "dest": "workflows/dungeon-extraction-planner.zh-CN.md",
+      "bytes": 3036,
+      "sha256": "96a38069afb3e5b15bffe4948b88ff2f11f271ba3d29d19ccffcd0792cf3effe"
+    },
+    {
+      "dest": "workflows/equipment-avatar-aura-creature-extraction-planner.zh-CN.md",
+      "bytes": 3256,
+      "sha256": "ec038176fc8ac128863005df901061e60f93a8e0902989875ab80f5189f89070"
+    },
+    {
+      "dest": "workflows/hellparty-visualization-and-edit-plan.zh-CN.md",
+      "bytes": 4366,
+      "sha256": "5f22c436c1418ef53c5c825e2c6b675204a97839b44f8cb35833f6ba29bb6f73"
+    },
+    {
+      "dest": "workflows/independent-drop-normalization-and-heroic-fill.zh-CN.md",
+      "bytes": 3100,
+      "sha256": "f129daad621fc0631c6d8b454daa3e95af30967bf0edd510d4e1f7a1142948fc"
+    },
+    {
+      "dest": "workflows/item-source-graph.zh-CN.md",
+      "bytes": 2060,
+      "sha256": "521b350c239df135ad807681e94f3f0971ea8da36f51c43e7c062e92ecda17b4"
+    },
+    {
+      "dest": "workflows/item-stackable-dependency-planner.zh-CN.md",
+      "bytes": 2514,
+      "sha256": "841a7f8383615c8a869813456fbbda2f311ddeff4cce80001681aad58b71d721"
+    },
+    {
+      "dest": "workflows/lst-registry-lifecycle.zh-CN.md",
+      "bytes": 2992,
+      "sha256": "566fc3f0243c22ebdecd05a7a7c3bcf5ac44fad02f1857f6db80d7fa038b14a3"
+    },
+    {
+      "dest": "workflows/map-widescreen-structural-migration.zh-CN.md",
+      "bytes": 4981,
+      "sha256": "41c8ca07669d0e4dd257b466b9c5bfade2e585c53961506b523a652f17fe6d3d"
+    },
+    {
+      "dest": "workflows/npc-shop-edit.zh-CN.md",
+      "bytes": 2703,
+      "sha256": "7050a1fea581ede04eeeed20e3ed8ad002bff9948d7d2d0409ebdff4df50b09b"
+    },
+    {
+      "dest": "workflows/pvf-package-quality-audit.zh-CN.md",
+      "bytes": 4010,
+      "sha256": "b4a96cbff9591102b9b40ac26d012845e3042f238e36e947fe380951f7e20595"
+    },
+    {
+      "dest": "workflows/pvf-semantic-compare-workset.zh-CN.md",
+      "bytes": 2551,
+      "sha256": "01837bae61d15706e7fa94acd258b35c4d2c611bda9dc493782124e61ff6bc3e"
+    },
+    {
+      "dest": "workflows/pvf-semantic-lineage-query.zh-CN.md",
+      "bytes": 1175,
+      "sha256": "225ebadddcde7536992d1e5ec43f709036d45975794361cd02cdb6c279ed0e82"
+    },
+    {
+      "dest": "workflows/pvf-tag-joint-query.zh-CN.md",
+      "bytes": 1791,
+      "sha256": "bb93e914836a8f2fcffd08ff260dc4a113b8153cdddaf3559f5649b9aa00e4dd"
+    },
+    {
+      "dest": "workflows/quest-drop-reward-ticket-edit.zh-CN.md",
+      "bytes": 4868,
+      "sha256": "108469e73f3129e9f7bfe68c473ffc5bd9f8a1535d33a9ac201fe0459db617cc"
+    },
+    {
+      "dest": "workflows/README.zh-CN.md",
+      "bytes": 1425,
+      "sha256": "a7019f2ead9392fb07c71cb646c7c407e4bfce899311676e3a2484778af5b576"
+    },
+    {
+      "dest": "workflows/runtime-validation-absorption.zh-CN.md",
+      "bytes": 3602,
+      "sha256": "f5977574b59034cce93b048c14f8a7af5297f01505d219ff0e34a7e79bfaa4ef"
+    },
+    {
+      "dest": "workflows/skill-derivative-and-cancel.zh-CN.md",
+      "bytes": 2716,
+      "sha256": "f8106a1b9098beea043e3819a2cf4e88c564033cbf2d74a1d83cf9556a564a7d"
+    },
+    {
+      "dest": "workflows/skill-runtime-parameter-edit.zh-CN.md",
+      "bytes": 3669,
+      "sha256": "9855c307b27866cffd65f4710ce9bc9145dc8742e838a3bc4ad52717fa73560e"
+    },
+    {
+      "dest": "workflows/skill-tree-layout-and-merge-safety.zh-CN.md",
+      "bytes": 2982,
+      "sha256": "22a1cbbf29f14fa01baac3ffdef32319cb4f56178edb1c61afb2115fad208de9"
+    },
+    {
+      "dest": "workflows/stackable-package-orb-card-extraction-planner.zh-CN.md",
+      "bytes": 3496,
+      "sha256": "305bab005acce4f649fe13afc462b24f4986d139e3d89f7f5b5e09afc3a5e188"
+    },
+    {
+      "dest": "workflows/unified-dependency-planner.zh-CN.md",
+      "bytes": 3289,
+      "sha256": "fd5dd9b3350adfaa66c5b91359256c065e66bd5497fdc6b7638a18a9ec7ec7fd"
+    },
+    {
+      "dest": "workflows/unified-knowledge-query.zh-CN.md",
+      "bytes": 1908,
+      "sha256": "e9e3197605e47d9abc61fac3d0d99f9a1793a18f38e8908ca342b12046889ef8"
+    },
+    {
+      "dest": "workflows/worldmap-dungeon-interface-layout.zh-CN.md",
+      "bytes": 3545,
+      "sha256": "2c54b73f06fd23d85569fcc71c15652d767490b3403db900e48ebf28ec53fb63"
+    }
+  ],
+  "summary": {
+    "entryCount": 305,
+    "totalBytes": 5692303
+  }
+}

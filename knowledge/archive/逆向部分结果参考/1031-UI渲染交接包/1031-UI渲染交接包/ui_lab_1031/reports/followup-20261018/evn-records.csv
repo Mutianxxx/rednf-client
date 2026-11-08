@@ -1,0 +1,61 @@
+﻿file_record,id,image_start_index,img_path,frame_0,frame_1,frame_2,frame_3,highlight_frame,tooltip_0_disable,tooltip_1_default,tooltip_2_timer,raw_tooltip_entries,has_tooltip
+0,0,1,Interface2/HUD/Information_button/Information_button.img,1,1,2,3,0,,任务条件已满足\n点击后可查看任务手册,,1,True
+1,1,4,Interface2/HUD/Information_button/Information_button.img,4,4,5,6,0,,出现新任务！\n点击后可查看城镇地图,,1,True
+2,2,7,Interface2/HUD/Information_button/Information_button.img,7,7,8,9,0,,出现新主线任务！\n点击后可查看任务手册,,1,True
+3,4,13,Interface2/HUD/Information_button/Information_button.img,13,13,14,15,0,,DNF广播进行中。\n点击后开启广播。,,1,True
+4,5,16,Interface2/HUD/Information_button/Information_button.img,16,16,17,18,0,,DNF广播进行中。\n点击后关闭广播。,,1,True
+5,6,19,Interface2/HUD/Information_button/Information_button.img,19,19,20,21,0,,,,0,False
+6,7,22,Interface2/HUD/Information_button/Information_button.img,22,22,23,24,0,,您有未读邮件！\n点击后可打开邮件箱,,1,True
+7,8,25,Interface2/HUD/Information_button/Information_button.img,25,25,26,27,0,,,,0,False
+8,9,31,Interface2/HUD/Information_button/Information_button.img,31,31,32,33,0,,查看同校好友列表,,1,True
+9,10,28,Interface2/HUD/Information_button/Information_button.img,28,28,29,30,0,,暂停游戏,,1,True
+10,11,34,Interface2/HUD/Information_button/Information_button.img,34,34,35,36,0,,网吧朋友,,1,True
+11,12,37,Interface2/HUD/Information_button/Information_button.img,37,37,38,39,0,,,,0,False
+12,13,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,角色日活动,,1,True
+13,14,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,角色日活动,,1,True
+14,15,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,角色日活动,,1,True
+15,16,1,Interface2/HUD/Information_button/Information_button.img,1,1,2,3,0,,任务自动开启,,1,True
+16,17,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,NPC好感度活动,,1,True
+17,18,43,Interface2/HUD/Information_button/Information_button.img,43,43,44,45,0,,商城限量贩售活动,,1,True
+18,19,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,势力战说明,,1,True
+19,20,46,Interface2/HUD/Information_button/Information_button.img,46,46,47,48,0,,无尽的祭坛开放活动,,1,True
+20,21,46,Interface2/HUD/Information_button/Information_button.img,46,46,47,48,0,,组队活动,,1,True
+21,23,0,Interface2/HUD/Information_button/Information_button.img,0,0,1,2,0,,按此按钮， 您就可以设置今天的心情状态,,1,True
+22,24,0,Interface2/HUD/Information_button/Information_button_tw.img,0,0,1,2,0,,请领取免费复活币,,1,True
+23,25,58,Interface2/HUD/Information_button/Information_button.img,58,58,59,60,0,,,,2,True
+24,26,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,统合决斗场活动,,1,True
+25,27,79,Interface2/HUD/Information_button/Information_button.img,79,79,80,81,0,,,,0,False
+26,28,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,,,0,False
+27,29,85,Interface2/HUD/Information_button/Information_button.img,85,85,86,87,0,,,,0,False
+28,30,88,Interface2/HUD/Information_button/Information_button.img,88,88,89,90,0,,开启称号簿活动。,,1,True
+29,31,94,Interface2/HUD/Information_button/Information_button.img,94,94,95,96,0,,,,0,False
+30,32,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,元气加值活动,,1,True
+31,33,91,Interface2/HUD/Information_button/Information_button.img,91,91,92,93,0,,可以查看使用中的期限道具的相关信息,,1,True
+32,34,97,Interface2/HUD/Information_button/Information_button.img,97,97,98,99,0,佣兵归队,佣兵归队,,2,True
+33,35,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,万圣节活动,,1,True
+34,36,100,Interface2/HUD/Information_button/Information_button.img,100,100,101,102,0,,触发紧急任务。\n可点击任务栏查询。,,1,True
+35,37,106,Interface2/HUD/Information_button/Information_button.img,106,106,107,108,0,,,,0,False
+36,38,109,Interface2/HUD/Information_button/Information_button.img,109,109,110,111,0,,获得新称号， 可开启称号簿查看。,,1,True
+37,39,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,,,0,False
+38,40,1,Interface2/HUD/Information_button/Information_button.img,1,1,2,3,0,,,,0,False
+39,41,40,Interface2/HUD/Information_button/Information_button.img,40,40,41,42,0,,愚人节活动进行中。,,1,True
+40,42,112,Interface2/HUD/Information_button/Information_button.img,112,112,113,114,0,,黑钻特权携手前行\n可点击任务栏查询,,1,True
+41,43,46,Interface2/HUD/Information_button/Information_button.img,46,46,47,48,0,,,,0,False
+42,44,46,Interface2/HUD/Information_button/Information_button.img,46,46,47,48,0,,活动进行中。,,1,True
+43,45,115,Interface2/HUD/Information_button/Information_button.img,115,115,116,117,0,,开端服务器资讯,,1,True
+44,46,58,Interface2/HUD/Information_button/Information_button.img,58,58,59,60,0,,,,0,False
+45,104,253,Interface2/HUD/Information_button/Information_button_tw.img,253,253,254,255,0,,安全中心正在保护您的游戏,,1,True
+46,105,45,Interface2/HUD/Information_button/Information_button_tw.img,45,45,46,47,0,,领主之塔进行中,,1,True
+47,124,66,Interface2/HUD/Information_button/Information_button_tw.img,66,66,67,68,0,,正在进行[每日数字解密]活动！,,1,True
+48,126,73,Interface2/HUD/Information_button/Information_button_tw.img,73,73,74,75,0,,缔造者升级送礼,,1,True
+49,300,1,Interface2/HUD/Information_button/Information_button_tw.img,1,1,2,3,0,,夏日最强勇者！,,1,True
+50,301,7,Interface2/HUD/Information_button/Information_button_tw.img,7,7,8,9,0,,<在家最好优惠实施中>\n- 放弃地下城时不会有虚弱模式\n- 强化时成功率提升！\n- 任务道具掉落率提升！\n- 一般地下城中死亡时有一定机率不需要复活币即可复活！\n- 城镇中移动速度+30%%！\n- 地下城中套用武器强化+11效果！,,1,True
+51,302,19,Interface2/HUD/Information_button/Information_button_tw.img,19,19,20,21,0,,黄金周末祝福,,1,True
+52,303,10,Interface2/HUD/Information_button/Information_button_tw.img,10,10,11,12,0,,七夕情人祭,,1,True
+53,304,16,Interface2/HUD/Information_button/Information_button_tw.img,16,16,17,18,0,,Level Up！ 迈向85！活动,,1,True
+54,305,13,Interface2/HUD/Information_button/Information_button_tw.img,13,13,14,15,0,,邀请您进入冒险的决斗世界！,,1,True
+55,306,22,Interface2/HUD/Information_button/Information_button_tw.img,22,22,23,24,0,,阿拉德点点名!,,1,True
+56,307,25,Interface2/HUD/Information_button/Information_button_tw.img,25,25,26,27,0,,一夕致富！ 财富九宫格！,,1,True
+57,308,28,Interface2/HUD/Information_button/Information_button_tw.img,28,28,29,30,0,,<在家最好优惠实施中>\n- 放弃地下城时不会有虚弱模式\n- 强化时成功率提升！\n- 任务道具掉落率提升！\n- 一般地下城中死亡时不需要复活币即可复活！\n- 城镇中移动速度+30%%！\n- 地下城中套用武器强化+11效果！,,1,True
+58,309,34,Interface2/HUD/Information_button/Information_button_tw.img,34,34,35,36,0,,说出你的愿望\n开启流星商店,,1,True
+59,310,32,Interface2/HUD/Information_button/Information_button_tw.img,32,32,33,34,0,,回归冒险家的礼物,,1,True

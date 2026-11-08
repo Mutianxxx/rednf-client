@@ -1,0 +1,149 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "evidence": [
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4245584,
+      "length": 800,
+      "rva": 51280,
+      "file_offset": 51280,
+      "chunk_sha256": "6cb04d22490e6a4ddfe8efbf0c34fe42ed66d3140709ad8e80440068c9bf0be6",
+      "bin": "0040C850-0040CB70.bin",
+      "asm": "0040C850-0040CB70.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11588512,
+      "length": 67,
+      "rva": 7394208,
+      "file_offset": 7394208,
+      "chunk_sha256": "360fa4c78e7971ed243e197e8e9d474e0e3d951130d48f44b910a03e05ac702a",
+      "bin": "00B0D3A0-00B0D3E3.bin",
+      "asm": "00B0D3A0-00B0D3E3.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11314048,
+      "length": 27,
+      "rva": 7119744,
+      "file_offset": 7119744,
+      "chunk_sha256": "e94d925d1c9752a4386adb993a94d268ad577031de7915aff0d81c9d0a37dacb",
+      "bin": "00ACA380-00ACA39B.bin",
+      "asm": "00ACA380-00ACA39B.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11313344,
+      "length": 683,
+      "rva": 7119040,
+      "file_offset": 7119040,
+      "chunk_sha256": "54c714c19b94c5c8094273518d88636c45f70e3f087530ca30eef0407ee76244",
+      "bin": "00ACA0C0-00ACA36B.bin",
+      "asm": "00ACA0C0-00ACA36B.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11308544,
+      "length": 276,
+      "rva": 7114240,
+      "file_offset": 7114240,
+      "chunk_sha256": "8f62f20b616a953f232a0a498482455c3b33295be3d62e74b6b964fd386db285",
+      "bin": "00AC8E00-00AC8F14.bin",
+      "asm": "00AC8E00-00AC8F14.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11312688,
+      "length": 540,
+      "rva": 7118384,
+      "file_offset": 7118384,
+      "chunk_sha256": "3a6e0c2ea6451544ccebc30d66aa6c866f883778f8fa3cf979e88876623607e7",
+      "bin": "00AC9E30-00ACA04C.bin",
+      "asm": "00AC9E30-00ACA04C.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11318592,
+      "length": 132,
+      "rva": 7124288,
+      "file_offset": 7124288,
+      "chunk_sha256": "08f4402e5fc0d3862d350900c2a0f9734be39be94adcb04d720d28695de8d19a",
+      "bin": "00ACB540-00ACB5C4.bin",
+      "asm": "00ACB540-00ACB5C4.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11310512,
+      "length": 217,
+      "rva": 7116208,
+      "file_offset": 7116208,
+      "chunk_sha256": "128539086bb61d66a6a0eee95501f76231b25b6f79f153610523e9ceb389ad17",
+      "bin": "00AC95B0-00AC9689.bin",
+      "asm": "00AC95B0-00AC9689.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11309600,
+      "length": 208,
+      "rva": 7115296,
+      "file_offset": 7115296,
+      "chunk_sha256": "9329e39f174f897b1bc5024e25c9a5fe7d48b4e8c542d8f8231c9a0ab94d6ef9",
+      "bin": "00AC9220-00AC92F0.bin",
+      "asm": "00AC9220-00AC92F0.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 12600098,
+      "length": 221,
+      "rva": 8405794,
+      "file_offset": 8405794,
+      "chunk_sha256": "e8fd749ec47980e7d98998bf42e7404fecb69f7efe1079a1c3b29c8b860e7408",
+      "bin": "00C04322-00C043FF.bin",
+      "asm": "00C04322-00C043FF.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 12600319,
+      "length": 209,
+      "rva": 8406015,
+      "file_offset": 8406015,
+      "chunk_sha256": "66ab838a312e3a504317c66f69f1a2afa2d8a517a29f59ca74589d7a5e4d6d8e",
+      "bin": "00C043FF-00C044D0.bin",
+      "asm": "00C043FF-00C044D0.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11477216,
+      "length": 337,
+      "rva": 7282912,
+      "file_offset": 7282912,
+      "chunk_sha256": "bcee70676d606ac59b67fbd3d59f81445831eae86cf9cb9f1922b01c10d5fe60",
+      "bin": "00AF20E0-00AF2231.bin",
+      "asm": "00AF20E0-00AF2231.asm"
+    },
+    {
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 11312144,
+      "length": 227,
+      "rva": 7117840,
+      "file_offset": 7117840,
+      "chunk_sha256": "38114cb7b0f6f2e15aafa62c9710562f7218d0469f063ba03ba80f3377a5c80c",
+      "bin": "00AC9C10-00AC9CF3.bin",
+      "asm": "00AC9C10-00AC9CF3.asm"
+    }
+  ]
+}

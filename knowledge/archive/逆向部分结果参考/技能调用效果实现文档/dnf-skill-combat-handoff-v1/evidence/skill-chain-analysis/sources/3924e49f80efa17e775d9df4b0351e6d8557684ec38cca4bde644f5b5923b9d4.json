@@ -1,0 +1,511 @@
+{
+  "path": "passiveobject/character/swordman/animation/gorecross4.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        4
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME011]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -268,
+        -136
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 65
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/GoreCross/gorecross_obj_3cross_dodge.img",
+        0
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -323,
+        -332
+      ],
+      "offset": 85
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        140
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 120
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/GoreCross/gorecross_obj_3cross_dodge.img",
+        0
+      ],
+      "offset": 125
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -323,
+        -332
+      ],
+      "offset": 140
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        64
+      ],
+      "offset": 155
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 180
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 200
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/GoreCross/gorecross_obj_3cross_dodge.img",
+        0
+      ],
+      "offset": 205
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -323,
+        -332
+      ],
+      "offset": 220
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "offset": 235
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 260
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 270
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 3410,
+      "value": "[FRAME011]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967028,
+      "value": -268
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967160,
+      "value": -136
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 9656618,
+      "value": "Character/Swordman/Effect/GoreCross/gorecross_obj_3cross_dodge.img"
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 4294966973,
+      "value": -323
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 4294966964,
+      "value": -332
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 105,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 140,
+      "value": 140
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 125,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 130,
+      "type": 6,
+      "raw": 9656618,
+      "value": "Character/Swordman/Effect/GoreCross/gorecross_obj_3cross_dodge.img"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 140,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 4294966973,
+      "value": -323
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 4294966964,
+      "value": -332
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 64,
+      "value": 64
+    },
+    {
+      "offset": 180,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 185,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 205,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 210,
+      "type": 6,
+      "raw": 9656618,
+      "value": "Character/Swordman/Effect/GoreCross/gorecross_obj_3cross_dodge.img"
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 220,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 225,
+      "type": 0,
+      "raw": 4294966973,
+      "value": -323
+    },
+    {
+      "offset": 230,
+      "type": 0,
+      "raw": 4294966964,
+      "value": -332
+    },
+    {
+      "offset": 235,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 240,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 245,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 250,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 260,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 265,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 270,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    }
+  ],
+  "raw_sha256": "3924e49f80efa17e775d9df4b0351e6d8557684ec38cca4bde644f5b5923b9d4"
+}

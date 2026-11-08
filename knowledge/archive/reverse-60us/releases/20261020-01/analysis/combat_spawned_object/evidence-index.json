@@ -1,0 +1,675 @@
+{
+  "source": {
+    "executable": "DFO/DFO_fixed_v3.exe",
+    "executable_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "pvf": "DFO/Script.pvf",
+    "pvf_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+  },
+  "native_captures": [
+    {
+      "path": "00407BC0-00407BE3.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4225984,
+      "length": 35,
+      "file_offset": 31680,
+      "chunk_sha256": "127ebdb801798647ea85b00ece3eda3cedeb0a8b58294d38723533d2e1ae8538",
+      "observed_execution": false
+    },
+    {
+      "path": "0044ADDB-0044ADEF.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4500955,
+      "length": 20,
+      "file_offset": 306651,
+      "chunk_sha256": "ab385d436e7050dbf8d3e83f5ae1492ea1de9abe154cae57b06a9a0cd30de7cf",
+      "observed_execution": false
+    },
+    {
+      "path": "0044B14E-0044B16F.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4501838,
+      "length": 33,
+      "file_offset": 307534,
+      "chunk_sha256": "746e99d799e2a30b2cbb8beb254d5874879547b673e54569bbeac15b743d9731",
+      "observed_execution": false
+    },
+    {
+      "path": "00472B54-00472B7E.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4664148,
+      "length": 42,
+      "file_offset": 469844,
+      "chunk_sha256": "fa623269a497a6a1630900dd4dad6b82ebae28f9b7bf388a86d2d183a76b51b6",
+      "observed_execution": false
+    },
+    {
+      "path": "00490720-0049082B.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4785952,
+      "length": 267,
+      "file_offset": 591648,
+      "chunk_sha256": "6be2fc88a24c254a466619da36da07c7b64e7d9f54a84dd56e2a5e3d27ee2355",
+      "observed_execution": false
+    },
+    {
+      "path": "0049B250-0049B2CC.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4829776,
+      "length": 124,
+      "file_offset": 635472,
+      "chunk_sha256": "42c417d01e2592eb3a7d7c2eadc7cc22584ea8382d8499010ee5964711e24e8a",
+      "observed_execution": false
+    },
+    {
+      "path": "0049C090-0049C0AF.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4833424,
+      "length": 31,
+      "file_offset": 639120,
+      "chunk_sha256": "3e40cedb27d68f3efe3ed9a1fd3167778260211ab78a273e4dd57d7849a62e95",
+      "observed_execution": false
+    },
+    {
+      "path": "0049D070-0049D094.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4837488,
+      "length": 36,
+      "file_offset": 643184,
+      "chunk_sha256": "0d52e70688f96b6aa544aef3aa7a2c82c130590cbc0eef0340a817f1f89ba3fa",
+      "observed_execution": false
+    },
+    {
+      "path": "0049E840-0049E867.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4843584,
+      "length": 39,
+      "file_offset": 649280,
+      "chunk_sha256": "ae8ee0fb07dce5e95837cd8adcbd656cabb2f5009e0f4ea7e5f1335ecf9bf873",
+      "observed_execution": false
+    },
+    {
+      "path": "0049F4D0-0049F575.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4846800,
+      "length": 165,
+      "file_offset": 652496,
+      "chunk_sha256": "4df47a087fd9b6f65dc92d68ff9af5db8b8cb4bf6888c8caa684da302cb740aa",
+      "observed_execution": false
+    },
+    {
+      "path": "0049F65A-0049F6C8.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4847194,
+      "length": 110,
+      "file_offset": 652890,
+      "chunk_sha256": "f2594b8b4c8fe20d8c2570f86686e366401b1ec9366c40daffd18dcbaf7018d5",
+      "observed_execution": false
+    },
+    {
+      "path": "0049FAAC-0049FB30.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4848300,
+      "length": 132,
+      "file_offset": 653996,
+      "chunk_sha256": "51456c19c050161f6a0c39612524f3eeca16e05e2ac72e92e053bb58d044570c",
+      "observed_execution": false
+    },
+    {
+      "path": "004A0DA0-004A0E0E.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 4853152,
+      "length": 110,
+      "file_offset": 658848,
+      "chunk_sha256": "4716586f27c6a42b41c22870eae4c1ba8fedea95a5e41d2e78a961f0795676e8",
+      "observed_execution": false
+    },
+    {
+      "path": "004CAA20-004CAA41.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 5024288,
+      "length": 33,
+      "file_offset": 829984,
+      "chunk_sha256": "2905c0c898ce3b04318d4cdd11441ae691d1d14a8e750ea5588699258db0b08b",
+      "observed_execution": false
+    },
+    {
+      "path": "004E9EA0-004EA0F9.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 5152416,
+      "length": 601,
+      "file_offset": 958112,
+      "chunk_sha256": "661e782b1397a755148f67140c6fb51b0e755dc5fe6dad6f7d0a7b4ff5c7392e",
+      "observed_execution": false
+    },
+    {
+      "path": "004EA4D0-004EA61E.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 5154000,
+      "length": 334,
+      "file_offset": 959696,
+      "chunk_sha256": "7b10e5e318e7390cc6f35861b61e2829c2750a6627efca656337ebc23fd0c423",
+      "observed_execution": false
+    },
+    {
+      "path": "005C77B0-005C7824.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 6059952,
+      "length": 116,
+      "file_offset": 1865648,
+      "chunk_sha256": "4aa19b24f953e0fc63ba9ffc52f83338903356509917691b95fac0d04b9981b2",
+      "observed_execution": false
+    },
+    {
+      "path": "005CE740-005CE796.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 6088512,
+      "length": 86,
+      "file_offset": 1894208,
+      "chunk_sha256": "ed2dcb71701283ed5dc446afd25d5f4c654ec4ee92dc11e79e1f348ce84ec7a5",
+      "observed_execution": false
+    },
+    {
+      "path": "005CE7A0-005CE7D0.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 6088608,
+      "length": 48,
+      "file_offset": 1894304,
+      "chunk_sha256": "d04be355c32f6bee392b42e68ebad69e2bc952aa85521d6fe0bcad31d19d1d8f",
+      "observed_execution": false
+    },
+    {
+      "path": "005E8500-005E8546.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 6194432,
+      "length": 70,
+      "file_offset": 2000128,
+      "chunk_sha256": "ff6cf63a87a992123191b28c060da002b36f8f3b7c1572009de2a26f8085b3bf",
+      "observed_execution": false
+    },
+    {
+      "path": "005EA005-005EA03B.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 6201349,
+      "length": 54,
+      "file_offset": 2007045,
+      "chunk_sha256": "2f48d2494d1d45393cf329ae95e48ed7accaa51244d10722ffa8eccad9ee348c",
+      "observed_execution": false
+    },
+    {
+      "path": "005EA482-005EA494.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 6202498,
+      "length": 18,
+      "file_offset": 2008194,
+      "chunk_sha256": "236f8ca36e506f7ef30e7951006fdf2e201aa6740c167183c5e6d477f09e1cb5",
+      "observed_execution": false
+    },
+    {
+      "path": "005EA79A-005EA7B0.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 6203290,
+      "length": 22,
+      "file_offset": 2008986,
+      "chunk_sha256": "fe964edab44de8bdd970627c216c7dbe251472ec9fa3b9eec34fcf94ec2dcaa1",
+      "observed_execution": false
+    },
+    {
+      "path": "005EA85E-005EA898.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 6203486,
+      "length": 58,
+      "file_offset": 2009182,
+      "chunk_sha256": "0254aa148eaab95453dee6ea8eb896512e965e2e05906a6ca7732a24d6d8df1c",
+      "observed_execution": false
+    },
+    {
+      "path": "005F1F54-005F1F7C.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 6233940,
+      "length": 40,
+      "file_offset": 2039636,
+      "chunk_sha256": "ebb2d8b72d8465b2b28ea6d478c3b336ce43124bd6ff6a9dd8964ef8d8caf574",
+      "observed_execution": false
+    },
+    {
+      "path": "0072B78F-0072B8D9.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 7518095,
+      "length": 330,
+      "file_offset": 3323791,
+      "chunk_sha256": "e717ee755350adf6f44d68e3785908d5bfea91feef82436e01cddd1c86e3ef5e",
+      "observed_execution": false
+    },
+    {
+      "path": "0073B42C-0073B47C.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 7582764,
+      "length": 80,
+      "file_offset": 3388460,
+      "chunk_sha256": "bcf10fd62b5acddc6d90f1784d48af7711e2f90ab3392db6db8201f5e94c534b",
+      "observed_execution": false
+    },
+    {
+      "path": "0073C13C-0073C2D9.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 7586108,
+      "length": 413,
+      "file_offset": 3391804,
+      "chunk_sha256": "c7302216685d08710c86349fa7ba813fdc0e38bb878017405b780dcbc6992910",
+      "observed_execution": false
+    },
+    {
+      "path": "00744A50-00744A61.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 7621200,
+      "length": 17,
+      "file_offset": 3426896,
+      "chunk_sha256": "374b6f7e5bef3ccc845defdd4aa4402badfa6e169bfa0016264c98b28146ffaf",
+      "observed_execution": false
+    },
+    {
+      "path": "0082F710-0082F784.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 8582928,
+      "length": 116,
+      "file_offset": 4388624,
+      "chunk_sha256": "5accbc31b74fc2454fc0b95b720b5b9abdb3d6a23d7c5f62be03911ab17de883",
+      "observed_execution": false
+    },
+    {
+      "path": "00831AD0-00831C57.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 8592080,
+      "length": 391,
+      "file_offset": 4397776,
+      "chunk_sha256": "cc1dfda154318142502947670929d53dcf6ef485245a01a5bb47cde72ba30a87",
+      "observed_execution": false
+    },
+    {
+      "path": "00882A50-00882ACA.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 8923728,
+      "length": 122,
+      "file_offset": 4729424,
+      "chunk_sha256": "3805ed3ebe50082b67deb35feca4bf3084b156a736b980815220efa78c2c6f2c",
+      "observed_execution": false
+    },
+    {
+      "path": "00884720-00884791.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 8931104,
+      "length": 113,
+      "file_offset": 4736800,
+      "chunk_sha256": "faad01ed53a88ba19d32af5ee2552a4cd58083f6c94b6b312354ed6c7ff63b9b",
+      "observed_execution": false
+    },
+    {
+      "path": "00884A70-00884A96.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 8931952,
+      "length": 38,
+      "file_offset": 4737648,
+      "chunk_sha256": "de9a3f70304af925750e168913452c28767cf78a6ab9493f8ad35bee26244e70",
+      "observed_execution": false
+    },
+    {
+      "path": "00884C99-00884CBF.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 8932505,
+      "length": 38,
+      "file_offset": 4738201,
+      "chunk_sha256": "787fc678cb54fea7572a07a6feef0b08a8ad613e96b958e0684990626a46eeaf",
+      "observed_execution": false
+    },
+    {
+      "path": "008C4248-008C460E.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 9192008,
+      "length": 966,
+      "file_offset": 4997704,
+      "chunk_sha256": "75089ec61acd9599cc2b13b0097fb3401bcc394ce98ed61ebc6d5a7c40ed1e60",
+      "observed_execution": false
+    },
+    {
+      "path": "008C5EB8-008C5EBC.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 9199288,
+      "length": 4,
+      "file_offset": 5004984,
+      "chunk_sha256": "d452f9bb6cfc6fbf936469e861ca183e882cd6bfc96878a792b56c9d89b469b6",
+      "observed_execution": false
+    },
+    {
+      "path": "00A614D0-00A614FD.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 10884304,
+      "length": 45,
+      "file_offset": 6690000,
+      "chunk_sha256": "252dd164baeb7fb54c44469f224cc18e1ab7b9f79a8e017693a9caf303a7b0e1",
+      "observed_execution": false
+    },
+    {
+      "path": "00A618E0-00A61910.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 10885344,
+      "length": 48,
+      "file_offset": 6691040,
+      "chunk_sha256": "332ee42b80e08aa199e42261c00872ea056dd9dcfab893841d3a933a0c4c1289",
+      "observed_execution": false
+    },
+    {
+      "path": "00A619C2-00A61A1C.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 10885570,
+      "length": 90,
+      "file_offset": 6691266,
+      "chunk_sha256": "6f4308c44ad66a76bf6e330ddaa403565f95be9d0c32c6b8e27e53cd5fe91d8e",
+      "observed_execution": false
+    },
+    {
+      "path": "00A61FEC-00A62040.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 10887148,
+      "length": 84,
+      "file_offset": 6692844,
+      "chunk_sha256": "1f4512b9a2485a79003e67c85cdb26bb769cb04731334cc8abc44521d843fe4a",
+      "observed_execution": false
+    },
+    {
+      "path": "00B7CF2F-00B7CF57.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 12046127,
+      "length": 40,
+      "file_offset": 7851823,
+      "chunk_sha256": "db26cac547a4893c727ee7d1bd8d8f3662c0f542d843bbf98b559c8c732025eb",
+      "observed_execution": false
+    },
+    {
+      "path": "00CCAF9C-00CCAFE8.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 13414300,
+      "length": 76,
+      "file_offset": 9219996,
+      "chunk_sha256": "d04f7d4f28193d852a4213dd222a15b436945445d295a041e656e4817ba5b7d1",
+      "observed_execution": false
+    },
+    {
+      "path": "00CF08A0-00CF08B8.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 13568160,
+      "length": 24,
+      "file_offset": 9373856,
+      "chunk_sha256": "44b51518fc8a28e58baed899047ecd939a716e55ff24ac5cb817d45680104a55",
+      "observed_execution": false
+    },
+    {
+      "path": "00D7C708-00D7C78E.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 14141192,
+      "length": 134,
+      "file_offset": 9946888,
+      "chunk_sha256": "61662f97e73ef33bb8f716b7250e0523fd7c8114594e47dc26d09cfdfca34ea7",
+      "observed_execution": false
+    },
+    {
+      "path": "00E1F15C-00E1F178.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 14807388,
+      "length": 28,
+      "file_offset": 10613084,
+      "chunk_sha256": "9b948a94f0e3d1f4642ce371a72546365f7fbd3492e9d3fb46be1af37a20fd63",
+      "observed_execution": false
+    },
+    {
+      "path": "00E23520-00E23540.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 14824736,
+      "length": 32,
+      "file_offset": 10630432,
+      "chunk_sha256": "69ea5125353895f45a8fcc536adb293efe9fb7e37881dc918c8ecbe60ab03b4b",
+      "observed_execution": false
+    },
+    {
+      "path": "00E4C4F4-00E4C504.json",
+      "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "start_va": 14992628,
+      "length": 16,
+      "file_offset": 10798324,
+      "chunk_sha256": "75ddb193ae9b307b245078c11904dfedbf47abbad73d8a8a795107ee6e9c4321",
+      "observed_execution": false
+    }
+  ],
+  "rea_evidence": [
+    {
+      "path": "analysis\\rea\\results\\015-state-function.json",
+      "sha256": "52f9cd0a984b456ba490eec5c8b632b9ce150ad0481568330604e060688502c2",
+      "evidence_id": "ev_d5a20a9df4046515d44da1f508ada209e46fd5798039b1fb62ac4f22db98f062",
+      "parameters": {
+        "procedure": "0x7307b0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "observed_execution": false
+    },
+    {
+      "path": "analysis\\rea\\results\\051-spawn-passiveobject.json",
+      "sha256": "d82a539c58cbcf2749caf96b335120cda1e26518e21e5d9278e4add1bb73460f",
+      "evidence_id": "ev_2f7867de61c875a505cc1faae80d222c5bba4e3cfe9ad8abb8bba4b3cde0fdf5",
+      "parameters": {
+        "procedure": "0x4EA4D0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "observed_execution": false
+    },
+    {
+      "path": "analysis\\rea\\results\\052-spawn-message-write.json",
+      "sha256": "76d8fc5f4f88b85bf4e89ea8addfae00379296b535353fb37676cb16c4477280",
+      "evidence_id": "ev_d558604b24668e139d4d79cc0fc2efe747cea03abf894c3a0aa92ee5d74c3ed0",
+      "parameters": {
+        "procedure": "0x4E9EA0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "observed_execution": false
+    },
+    {
+      "path": "analysis\\rea\\results\\057-passiveobject-loader.json",
+      "sha256": "d54ee6f8ee2c0bd6b401ddee53ecab7770947ee59bfcc0bb4c1af8136e3d624f",
+      "evidence_id": "ev_1bc887f2b12a3439895019e1c4acecf03d27e793de6a759db6b93e6635328cb7",
+      "parameters": {
+        "procedure": "0x49F4D0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "observed_execution": false
+    },
+    {
+      "path": "analysis\\rea\\results\\058-releasewave-constructor-setup.json",
+      "sha256": "7ae153ff791c1bc18a6776d71200f5a01f1318b20f438393006eac621e97fb16",
+      "evidence_id": "ev_4118faea0bf1d88925b0e69eed60a6943572d4cb562ae7b801465742e69d9662",
+      "parameters": {
+        "procedure": "0x5C77B0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "observed_execution": false
+    },
+    {
+      "path": "analysis\\rea\\results\\059-passiveobject-registration-consume.json",
+      "sha256": "2dc6c69dbc00294f57badf201b4b0bd88c9e843661825e2e2be28142768fee75",
+      "evidence_id": "ev_eebea8b3f4c7797df0830f7fc84b9791f6bc15f669918d957ee3737033592dd4",
+      "parameters": {
+        "procedure": "0x4A0DA0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "observed_execution": false
+    },
+    {
+      "path": "analysis\\rea\\results\\060-ani-frame-advance.json",
+      "sha256": "fe7456d7beb3a24798aae2bc33f099277c3d2013a181794e0eeeb580d4c33b79",
+      "evidence_id": "ev_eb4d3736a0582b425f42d433493c70e1ca2b7cd272717881ded62b1bbfaee4c2",
+      "parameters": {
+        "procedure": "0xA27DC0"
+      },
+      "subject": {
+        "name": "DFO_fixed_v3.exe",
+        "digest": {
+          "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+        },
+        "local_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "format": "pe",
+        "architecture": "x86"
+      },
+      "observed_execution": false
+    }
+  ],
+  "selected_request": {
+    "native_class": "Swordman",
+    "search_envelope_start": "0x726150",
+    "search_envelope_end": "0x730280",
+    "skill_id": 32,
+    "consume_call_va": "0x72b7c6",
+    "skill_push_va": "0x72b7c2",
+    "state": 10,
+    "request_call_va": "0x72b8b0",
+    "state_push_va": "0x72b8ac",
+    "distance": 234,
+    "context_start_va": "0x72b78f",
+    "context_end_va": "0x72b8d9",
+    "status": "local_success_fallthrough_verified",
+    "consume_this_assignment": {
+      "va": "0x72b7c4",
+      "expression": "esi"
+    },
+    "request_this_assignment": {
+      "va": "0x72b8ae",
+      "expression": "esi"
+    },
+    "consume_stack_args_in_callee_order": [
+      {
+        "va": "0x72b7c2",
+        "expression": "0x20",
+        "literal": 32
+      },
+      {
+        "va": "0x72b7c0",
+        "expression": "1",
+        "literal": 1
+      },
+      {
+        "va": "0x72b7be",
+        "expression": "1",
+        "literal": 1
+      },
+      {
+        "va": "0x72b7bc",
+        "expression": "1",
+        "literal": 1
+      }
+    ],
+    "failure_branch_va": "0x72b7ce",
+    "failure_target_va": "0x72b8c8",
+    "path_asm": "0072B7C6 ff9068070000         call     dword ptr [eax + 0x768]\n0072B7CC 84c0                 test     al, al\n0072B7CE 0f84f4000000         je       0x72b8c8\n0072B7D4 899d10ffffff         mov      dword ptr [ebp - 0xf0], ebx\n0072B7DA 899d14ffffff         mov      dword ptr [ebp - 0xec], ebx\n0072B7E0 899d18ffffff         mov      dword ptr [ebp - 0xe8], ebx\n0072B7E6 8d4dec               lea      ecx, [ebp - 0x14]\n0072B7E9 51                   push     ecx\n0072B7EA 8d8d0cffffff         lea      ecx, [ebp - 0xf4]\n0072B7F0 c745fc26000000       mov      dword ptr [ebp - 4], 0x26\n0072B7F7 895dec               mov      dword ptr [ebp - 0x14], ebx\n0072B7FA e821b9cdff           call     0x407120\n0072B7FF 8d55ec               lea      edx, [ebp - 0x14]\n0072B802 52                   push     edx\n0072B803 8d8d0cffffff         lea      ecx, [ebp - 0xf4]\n0072B809 895dec               mov      dword ptr [ebp - 0x14], ebx\n0072B80C e80fb9cdff           call     0x407120\n0072B811 8d45ec               lea      eax, [ebp - 0x14]\n0072B814 50                   push     eax\n0072B815 8d8d0cffffff         lea      ecx, [ebp - 0xf4]\n0072B81B c745ec20000000       mov      dword ptr [ebp - 0x14], 0x20\n0072B822 e8f9b8cdff           call     0x407120\n0072B827 8d4dec               lea      ecx, [ebp - 0x14]\n0072B82A 51                   push     ecx\n0072B82B 8d8d0cffffff         lea      ecx, [ebp - 0xf4]\n0072B831 895dec               mov      dword ptr [ebp - 0x14], ebx\n0072B834 e8e7b8cdff           call     0x407120\n0072B839 8b16                 mov      edx, dword ptr [esi]\n0072B83B 56                   push     esi\n0072B83C 53                   push     ebx\n0072B83D 6a20                 push     0x20\n0072B83F 8bce                 mov      ecx, esi\n0072B841 ff927c060000         call     dword ptr [edx + 0x67c]\n0072B847 8bc8                 mov      ecx, eax\n0072B849 e81247e2ff           call     0x54ff60\n0072B84E 8945ec               mov      dword ptr [ebp - 0x14], eax\n0072B851 8d45ec               lea      eax, [ebp - 0x14]\n0072B854 50                   push     eax\n0072B855 8d8d0cffffff         lea      ecx, [ebp - 0xf4]\n0072B85B e8c0b8cdff           call     0x407120\n0072B860 8d4dec               lea      ecx, [ebp - 0x14]\n0072B863 51                   push     ecx\n0072B864 8d8d0cffffff         lea      ecx, [ebp - 0xf4]\n0072B86A c745ec01000000       mov      dword ptr [ebp - 0x14], 1\n0072B871 e8aab8cdff           call     0x407120\n0072B876 8d55ec               lea      edx, [ebp - 0x14]\n0072B879 bf04000000           mov      edi, 4\n0072B87E 52                   push     edx\n0072B87F 8d8d0cffffff         lea      ecx, [ebp - 0xf4]\n0072B885 897dec               mov      dword ptr [ebp - 0x14], edi\n0072B888 e893b8cdff           call     0x407120\n0072B88D 8d45ec               lea      eax, [ebp - 0x14]\n0072B890 50                   push     eax\n0072B891 8d8d0cffffff         lea      ecx, [ebp - 0xf4]\n0072B897 897dec               mov      dword ptr [ebp - 0x14], edi\n0072B89A e881b8cdff           call     0x407120\n0072B89F 8b16                 mov      edx, dword ptr [esi]\n0072B8A1 53                   push     ebx\n0072B8A2 53                   push     ebx\n0072B8A3 6a01                 push     1\n0072B8A5 8d850cffffff         lea      eax, [ebp - 0xf4]\n0072B8AB 50                   push     eax\n0072B8AC 6a0a                 push     0xa\n0072B8AE 8bce                 mov      ecx, esi\n0072B8B0 ff928c020000         call     dword ptr [edx + 0x28c]",
+    "path_bytes_start_va": "0x72b7bc",
+    "path_bytes_file_offset": 3323836,
+    "path_bytes_length": 250,
+    "path_bytes_sha256": "e3e7ebd3a6bccfd7bb7141be6a09a6dd3239741bebad3f47531278082ee952e6",
+    "path_bytes_hex": "6a016a016a016a208bceff906807000084c00f84f4000000899d10ffffff899d14ffffff899d18ffffff8d4dec518d8d0cffffffc745fc26000000895dece821b9cdff8d55ec528d8d0cffffff895dece80fb9cdff8d45ec508d8d0cffffffc745ec20000000e8f9b8cdff8d4dec518d8d0cffffff895dece8e7b8cdff8b1656536a208bceff927c0600008bc8e81247e2ff8945ec8d45ec508d8d0cffffffe8c0b8cdff8d4dec518d8d0cffffffc745ec01000000e8aab8cdff8d55ecbf04000000528d8d0cffffff897dece893b8cdff8d45ec508d8d0cffffff897dece881b8cdff8b1653536a018d850cffffff506a0a8bceff928c020000",
+    "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+    "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution"
+  },
+  "failed_provider_query": "056-passiveobject-factory.json failed to find procedure; no decompiler claim used",
+  "observed_execution": false
+}

@@ -1,0 +1,201 @@
+{
+  "path": "passiveobject/character/swordman/animation/outragebreak/bloodexp_damage.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        1
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -416,
+        -313
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        760
+      ],
+      "offset": 65
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -220,
+        -65,
+        -41,
+        440,
+        130,
+        212
+      ],
+      "offset": 75
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294966880,
+      "value": -416
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294966983,
+      "value": -313
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 60,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 760,
+      "value": 760
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 4294967076,
+      "value": -220
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 4294967231,
+      "value": -65
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 4294967255,
+      "value": -41
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 440,
+      "value": 440
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 130,
+      "value": 130
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 212,
+      "value": 212
+    }
+  ],
+  "raw_sha256": "18e403953fdaec1e06979bbd66600f75af0a88fa1a1b6f60fa0d4d158ff1f889"
+}

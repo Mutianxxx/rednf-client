@@ -1,0 +1,86 @@
+{
+  "ok": true,
+  "source": {
+    "client": "DNF1031",
+    "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+    "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+    "preferred_image_base": "0x00400000",
+    "observed_plugins": [
+      "0725.dll",
+      "stringtable.dll"
+    ],
+    "behavior_capture_session": "20261018-025801-50428",
+    "instrumentation_validation_session": "20261018-032859-17200"
+  },
+  "checks": [
+    {
+      "check": "all_packaged_file_hashes_and_sizes",
+      "passed": true,
+      "files": 165
+    },
+    {
+      "check": "all_top_level_markdown_relative_links",
+      "passed": true,
+      "links": 108
+    },
+    {
+      "check": "actual_source_symbol_line_locations",
+      "passed": true
+    },
+    {
+      "check": "catalog_2070_and_explicit_death_357_contract_version",
+      "passed": true
+    },
+    {
+      "check": "six_monster_complete_resolved_graphs",
+      "passed": true,
+      "examples": [
+        {
+          "id": 5001,
+          "nodes": 47,
+          "edges": 140
+        },
+        {
+          "id": 1,
+          "nodes": 42,
+          "edges": 102
+        },
+        {
+          "id": 61491,
+          "nodes": 68,
+          "edges": 235
+        },
+        {
+          "id": 56013,
+          "nodes": 116,
+          "edges": 467
+        },
+        {
+          "id": 59005,
+          "nodes": 145,
+          "edges": 627
+        },
+        {
+          "id": 62638,
+          "nodes": 51,
+          "edges": 135
+        }
+      ]
+    },
+    {
+      "check": "all_29_palette_images_and_23_common_ani_ptl",
+      "passed": true
+    },
+    {
+      "check": "portable_python_tools_compile_without_optional_packages",
+      "passed": true
+    },
+    {
+      "check": "independently_built_reference_actual_rendering",
+      "passed": true,
+      "main_frames": 52,
+      "shared_cases": 4
+    }
+  ],
+  "scope": "Package consistency and dependency resolution; optional exact reference behavior check, not original-client parity."
+}

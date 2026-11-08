@@ -1,0 +1,338 @@
+{
+  "path": "passiveobject/character/swordman/animation/outragebreak/particle/outragebreak_light_part_1.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        2
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_part.img",
+        4
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -4,
+        -5
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.2999999523162842,
+        1.2999999523162842
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        2800
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 100
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_part.img",
+        4
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -4,
+        -5
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.2999999523162842,
+        1.2999999523162842
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 160
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        2800
+      ],
+      "offset": 170
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 3057356,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_part.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967292,
+      "value": -4
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967291,
+      "value": -5
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 60,
+      "type": 2,
+      "raw": 1067869798,
+      "value": 1.2999999523162842
+    },
+    {
+      "offset": 65,
+      "type": 2,
+      "raw": 1067869798,
+      "value": 1.2999999523162842
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 85,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 2800,
+      "value": 2800
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 110,
+      "type": 6,
+      "raw": 3057356,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_part.img"
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 4294967292,
+      "value": -4
+    },
+    {
+      "offset": 130,
+      "type": 0,
+      "raw": 4294967291,
+      "value": -5
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 140,
+      "type": 2,
+      "raw": 1067869798,
+      "value": 1.2999999523162842
+    },
+    {
+      "offset": 145,
+      "type": 2,
+      "raw": 1067869798,
+      "value": 1.2999999523162842
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 160,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 165,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 170,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 2800,
+      "value": 2800
+    }
+  ],
+  "raw_sha256": "589094efd9b9713543dc04b3eaf0de9b4b04f9b35a0e0e54771bd6b3522d7a81"
+}

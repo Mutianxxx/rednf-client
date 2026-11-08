@@ -1,0 +1,28 @@
+{
+    "executable_sha256":  "d52a1e00c805f9d51479c17f2f2a7575cb4f8869395c07284ecd5acbd7067553",
+    "imports":  [
+                    "bcrypt.dll",
+                    "d3d11.dll",
+                    "dxgi.dll",
+                    "D3DCOMPILER_47.dll",
+                    "COMCTL32.dll",
+                    "SHELL32.dll",
+                    "comdlg32.dll",
+                    "GDI32.dll",
+                    "USER32.dll",
+                    "api-ms-win-crt-stdio-l1-1-0.dll",
+                    "api-ms-win-crt-string-l1-1-0.dll",
+                    "api-ms-win-crt-runtime-l1-1-0.dll",
+                    "api-ms-win-crt-locale-l1-1-0.dll",
+                    "api-ms-win-crt-math-l1-1-0.dll",
+                    "api-ms-win-crt-heap-l1-1-0.dll",
+                    "api-ms-win-crt-private-l1-1-0.dll",
+                    "api-ms-win-crt-convert-l1-1-0.dll",
+                    "KERNEL32.dll",
+                    "api-ms-win-crt-time-l1-1-0.dll",
+                    "api-ms-win-crt-multibyte-l1-1-0.dll",
+                    "api-ms-win-crt-environment-l1-1-0.dll",
+                    "api-ms-win-crt-filesystem-l1-1-0.dll"
+                ],
+    "non_system_runtime_dependency":  false
+}

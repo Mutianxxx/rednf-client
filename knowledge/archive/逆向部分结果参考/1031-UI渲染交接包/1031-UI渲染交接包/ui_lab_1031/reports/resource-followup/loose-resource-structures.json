@@ -1,0 +1,986 @@
+{
+  "Tenparty": {
+    "size": 13066,
+    "sha256": "e56df78fddea3f5cc9de69708b6dc9b734d0277d3352e9b7e2c56b185e789e43",
+    "magic": "4d4f53414e473030",
+    "byte_entropy_bits_per_byte": 7.762854782772986,
+    "ascii_strings": [
+      "MOSANG00",
+      "2nE[H}",
+      ",\"C\"H",
+      "Nm\\6{",
+      "OV',!",
+      "FU'N`",
+      "O:_KSw",
+      "B>qi!",
+      ":4 6pF",
+      "1EOV ",
+      "AL\"\"T:\"",
+      "?AUg>",
+      "`Nx3@k/:",
+      "v>:7+3",
+      "jU*\\C",
+      "4/,d;",
+      "U<h}8^",
+      "h HO2",
+      "zBO_R",
+      "&V9^5",
+      ">#@dcP7",
+      "*Uf:L%R",
+      "j6:(<G",
+      ">ii._",
+      "Wv`pwM",
+      "0a5$}",
+      "c)nH,",
+      "k\\F2y\">1",
+      "8J{js^",
+      "cTe?]",
+      "{fBP ak",
+      ".+0.BEz",
+      "fiBdaV",
+      "&xkWq",
+      "<COws",
+      "Z-r7Y",
+      "[Rxg~",
+      "y*8kc",
+      "UYd8Dk",
+      "v}RO4",
+      "LmF7pZ",
+      "5$C?t",
+      "]MZ#2Hz",
+      "P$R*}",
+      "~3fVU",
+      "9b!0zu"
+    ],
+    "status": "MOSANG00 recognized; no matching parser contract identified in this pass"
+  },
+  "TenSLX": {
+    "source_size": 29439,
+    "source_sha256": "25a5295a190e7f328b4d597a96250f170a398a5da01dd3427d2d1cb10834a520",
+    "cfb": {
+      "major_version": 3,
+      "sector_size": 512,
+      "directory_chain": [
+        1
+      ],
+      "entries": [
+        {
+          "name": "Root Entry",
+          "type": 5,
+          "start": 4294967294,
+          "size": 0,
+          "directory_offset": 0
+        },
+        {
+          "name": "TS0001.dat",
+          "type": 2,
+          "start": 2,
+          "size": 19578,
+          "directory_offset": 128
+        },
+        {
+          "name": "",
+          "type": 2,
+          "start": 4294967294,
+          "size": 0,
+          "directory_offset": 256
+        }
+      ],
+      "sector_count": 56,
+      "referenced_sectors": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "unreferenced_full_sectors": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "unreferenced_nonzero_sectors": [
+        {
+          "index": 41,
+          "nonzero_bytes": 6,
+          "sha256": "8da66deccce87943af972da3297e1a433bb352a74a448aa0d5f91ca51a047859",
+          "head_hex": "88a0410028a14100000000000000000000000000000000000000000000000000"
+        },
+        {
+          "index": 55,
+          "nonzero_bytes": 372,
+          "sha256": "b1e3fb2d9b447b7a7a74ef6935c45dd0d765cebd1877129a72fef13a2a03da46",
+          "head_hex": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      ],
+      "unreferenced_sector_nonzero_bytes": 378,
+      "tail_after_last_referenced_sector": {
+        "offset": 21504,
+        "length": 7935,
+        "sha256": "2e298383e873e6ba343de1c723d09aba5aaca715c768f0f4a0b20eb9e614fbc8"
+      },
+      "final_unaligned_tail": {
+        "offset": 29184,
+        "length": 255,
+        "nonzero_bytes": 243,
+        "sha256": "164261635ec53e8547d3c041615725ee3b38b571d9b16796f36129e9ce8983e7"
+      }
+    },
+    "streams": [
+      {
+        "name": "TS0001.dat",
+        "type": 2,
+        "start": 2,
+        "size": 19578,
+        "directory_offset": 128,
+        "sector_chain": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "sha256": "7f71d8573769ed0a8fc74707db2eb9c1e1b4c2d522517df52a77523ba313c470",
+        "head_hex": "c0ef11e00100000024000000564c0000f3dd2ad45d00001000000000da4801004560a605002a14c534ab041f8db7a3e7ff695f488110ccb0bd88e5583fdef470",
+        "container_decode": {
+          "version": 1,
+          "header_size": 36,
+          "compressed_size": 19542,
+          "stored_crc": 3559579123,
+          "properties_hex": "5d00001000",
+          "dictionary_size": 1048576,
+          "lc": 3,
+          "lp": 0,
+          "pb": 2,
+          "reserved_hex": "000000",
+          "declared_output_size": 84186,
+          "actual_output_size": 84187,
+          "size_matches": false,
+          "output_sha256": "cad1608b34ac83fd4db8c50b8af497d24f3f1aae85cfb38338c00e489e89742c",
+          "output_head_hex": "545349463230313100000000000000005746533131313900dc97f99c32000000a7d7f69e2f050000360000009095000002004ab336005751465f56435752545f",
+          "output_magic": "TSIF2011",
+          "decoder_eof": false,
+          "unused_compressed_bytes": 0,
+          "crc32": 3931362216,
+          "checksum_verified": false,
+          "checksum_note": "Stored wrapper checksum has not been identified or validated",
+          "candidate_output_file": "TenSLX-TS0001-lzma-output.bin"
+        }
+      },
+      {
+        "name": "",
+        "type": 2,
+        "start": 4294967294,
+        "size": 0,
+        "directory_offset": 256,
+        "sector_chain": [],
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "head_hex": ""
+      }
+    ]
+  },
+  "TenSLX_dll": {
+    "path": "TenSLX.dll",
+    "size": 1237880,
+    "sha256": "36f91618005a2eae09b6a7140732f004a71bfb921e4fea62235810c7901c734f",
+    "pe": {
+      "machine": 332,
+      "pe32_plus": false,
+      "sections": [
+        {
+          "name": ".text",
+          "rva": 4096,
+          "virtual_size": 573737,
+          "raw_offset": 1024,
+          "raw_size": 573952
+        },
+        {
+          "name": ".rdata",
+          "rva": 581632,
+          "virtual_size": 82345,
+          "raw_offset": 574976,
+          "raw_size": 82432
+        },
+        {
+          "name": ".data",
+          "rva": 667648,
+          "virtual_size": 69028,
+          "raw_offset": 657408,
+          "raw_size": 36352
+        },
+        {
+          "name": ".rsrc",
+          "rva": 737280,
+          "virtual_size": 1288,
+          "raw_offset": 693760,
+          "raw_size": 1536
+        },
+        {
+          "name": ".tvm0",
+          "rva": 741376,
+          "virtual_size": 512000,
+          "raw_offset": 695296,
+          "raw_size": 509952
+        },
+        {
+          "name": ".reloc",
+          "rva": 1253376,
+          "virtual_size": 28672,
+          "raw_offset": 1205248,
+          "raw_size": 26112
+        }
+      ],
+      "imports": [
+        {
+          "dll": "PSAPI.DLL",
+          "symbols": [
+            {
+              "name": "GetMappedFileNameA"
+            },
+            {
+              "name": "EnumProcessModules"
+            },
+            {
+              "name": "GetModuleInformation"
+            },
+            {
+              "name": "GetModuleFileNameExA"
+            }
+          ]
+        },
+        {
+          "dll": "VERSION.dll",
+          "symbols": [
+            {
+              "name": "GetFileVersionInfoA"
+            },
+            {
+              "name": "VerQueryValueA"
+            },
+            {
+              "name": "GetFileVersionInfoSizeA"
+            }
+          ]
+        },
+        {
+          "dll": "KERNEL32.dll",
+          "symbols": [
+            {
+              "name": "CreateFileW"
+            },
+            {
+              "name": "RaiseException"
+            },
+            {
+              "name": "IsDebuggerPresent"
+            },
+            {
+              "name": "SetUnhandledExceptionFilter"
+            },
+            {
+              "name": "UnhandledExceptionFilter"
+            },
+            {
+              "name": "OutputDebugStringA"
+            },
+            {
+              "name": "DeviceIoControl"
+            },
+            {
+              "name": "SetEnvironmentVariableA"
+            },
+            {
+              "name": "CompareStringW"
+            },
+            {
+              "name": "Sleep"
+            },
+            {
+              "name": "SetFilePointer"
+            },
+            {
+              "name": "CloseHandle"
+            },
+            {
+              "name": "ReadFile"
+            },
+            {
+              "name": "CreateFileA"
+            },
+            {
+              "name": "GetModuleFileNameA"
+            },
+            {
+              "name": "GetModuleHandleA"
+            },
+            {
+              "name": "FindClose"
+            },
+            {
+              "name": "ReadProcessMemory"
+            },
+            {
+              "name": "VirtualQueryEx"
+            },
+            {
+              "name": "GetTickCount"
+            },
+            {
+              "name": "SetThreadPriority"
+            },
+            {
+              "name": "GetCurrentThread"
+            },
+            {
+              "name": "GetVersionExA"
+            },
+            {
+              "name": "GetCurrentProcess"
+            },
+            {
+              "name": "LoadLibraryA"
+            },
+            {
+              "name": "GetProcAddress"
+            },
+            {
+              "name": "VirtualProtect"
+            },
+            {
+              "name": "VirtualFree"
+            },
+            {
+              "name": "VirtualAlloc"
+            },
+            {
+              "name": "GetEnvironmentVariableA"
+            },
+            {
+              "name": "GetWindowsDirectoryA"
+            },
+            {
+              "name": "GetSystemDirectoryA"
+            },
+            {
+              "name": "GetCurrentDirectoryA"
+            },
+            {
+              "name": "GetFileAttributesA"
+            },
+            {
+              "name": "IsBadReadPtr"
+            },
+            {
+              "name": "UnmapViewOfFile"
+            },
+            {
+              "name": "MapViewOfFile"
+            },
+            {
+              "name": "CreateFileMappingA"
+            },
+            {
+              "name": "OpenFileMappingA"
+            },
+            {
+              "name": "GetCurrentProcessId"
+            },
+            {
+              "name": "FreeLibrary"
+            },
+            {
+              "name": "GetFileSize"
+            },
+            {
+              "name": "GetLastError"
+            },
+            {
+              "name": "Process32Next"
+            },
+            {
+              "name": "Process32First"
+            },
+            {
+              "name": "CreateToolhelp32Snapshot"
+            },
+            {
+              "name": "WideCharToMultiByte"
+            },
+            {
+              "name": "lstrlenW"
+            },
+            {
+              "name": "FindNextFileA"
+            },
+            {
+              "name": "FindFirstFileA"
+            },
+            {
+              "name": "GetSystemTime"
+            },
+            {
+              "name": "WriteFile"
+            },
+            {
+              "name": "LocalFree"
+            },
+            {
+              "name": "GetCommandLineW"
+            },
+            {
+              "name": "CreateThread"
+            },
+            {
+              "name": "EnterCriticalSection"
+            },
+            {
+              "name": "LeaveCriticalSection"
+            },
+            {
+              "name": "FormatMessageA"
+            },
+            {
+              "name": "SetLastError"
+            },
+            {
+              "name": "WaitForSingleObject"
+            },
+            {
+              "name": "TerminateThread"
+            },
+            {
+              "name": "InitializeCriticalSection"
+            },
+            {
+              "name": "DeleteCriticalSection"
+            },
+            {
+              "name": "lstrcpynA"
+            },
+            {
+              "name": "lstrcmpiA"
+            },
+            {
+              "name": "OpenThread"
+            },
+            {
+              "name": "Thread32Next"
+            },
+            {
+              "name": "Thread32First"
+            },
+            {
+              "name": "CreateEventA"
+            },
+            {
+              "name": "SetEvent"
+            },
+            {
+              "name": "ResetEvent"
+            },
+            {
+              "name": "CreateSemaphoreA"
+            },
+            {
+              "name": "ReleaseSemaphore"
+            },
+            {
+              "name": "VirtualQuery"
+            },
+            {
+              "name": "InterlockedCompareExchange"
+            },
+            {
+              "name": "GetCurrentThreadId"
+            },
+            {
+              "name": "ResumeThread"
+            },
+            {
+              "name": "FlushInstructionCache"
+            },
+            {
+              "name": "GetThreadContext"
+            },
+            {
+              "name": "SetThreadContext"
+            },
+            {
+              "name": "SuspendThread"
+            },
+            {
+              "name": "CompareStringA"
+            },
+            {
+              "name": "GetProcessHeap"
+            },
+            {
+              "name": "SetEndOfFile"
+            },
+            {
+              "name": "GetTimeZoneInformation"
+            },
+            {
+              "name": "WriteConsoleW"
+            },
+            {
+              "name": "GetConsoleOutputCP"
+            },
+            {
+              "name": "WriteConsoleA"
+            },
+            {
+              "name": "FlushFileBuffers"
+            },
+            {
+              "name": "SetStdHandle"
+            },
+            {
+              "name": "InitializeCriticalSectionAndSpinCount"
+            },
+            {
+              "name": "InterlockedExchange"
+            },
+            {
+              "name": "IsValidLocale"
+            },
+            {
+              "name": "EnumSystemLocalesA"
+            },
+            {
+              "name": "GetUserDefaultLCID"
+            },
+            {
+              "name": "GetDateFormatA"
+            },
+            {
+              "name": "GetTimeFormatA"
+            },
+            {
+              "name": "GetStringTypeW"
+            },
+            {
+              "name": "GetStringTypeA"
+            },
+            {
+              "name": "GetConsoleMode"
+            },
+            {
+              "name": "GetConsoleCP"
+            },
+            {
+              "name": "GetLocaleInfoA"
+            },
+            {
+              "name": "TerminateProcess"
+            },
+            {
+              "name": "GetLocaleInfoW"
+            },
+            {
+              "name": "SetConsoleCtrlHandler"
+            },
+            {
+              "name": "QueryPerformanceCounter"
+            },
+            {
+              "name": "GetEnvironmentStringsW"
+            },
+            {
+              "name": "FreeEnvironmentStringsW"
+            },
+            {
+              "name": "GetEnvironmentStrings"
+            },
+            {
+              "name": "FreeEnvironmentStringsA"
+            },
+            {
+              "name": "HeapDestroy"
+            },
+            {
+              "name": "HeapCreate"
+            },
+            {
+              "name": "HeapReAlloc"
+            },
+            {
+              "name": "FatalAppExitA"
+            },
+            {
+              "name": "GetStartupInfoA"
+            },
+            {
+              "name": "GetFileType"
+            },
+            {
+              "name": "SetHandleCount"
+            },
+            {
+              "name": "LCMapStringW"
+            },
+            {
+              "name": "MultiByteToWideChar"
+            },
+            {
+              "name": "LCMapStringA"
+            },
+            {
+              "name": "ExitProcess"
+            },
+            {
+              "name": "HeapSize"
+            },
+            {
+              "name": "IsValidCodePage"
+            },
+            {
+              "name": "GetOEMCP"
+            },
+            {
+              "name": "GetACP"
+            },
+            {
+              "name": "GetCPInfo"
+            },
+            {
+              "name": "GetStdHandle"
+            },
+            {
+              "name": "InterlockedDecrement"
+            },
+            {
+              "name": "InterlockedIncrement"
+            },
+            {
+              "name": "TlsFree"
+            },
+            {
+              "name": "TlsSetValue"
+            },
+            {
+              "name": "TlsAlloc"
+            },
+            {
+              "name": "TlsGetValue"
+            },
+            {
+              "name": "GetModuleHandleW"
+            },
+            {
+              "name": "GetCommandLineA"
+            },
+            {
+              "name": "HeapFree"
+            },
+            {
+              "name": "HeapAlloc"
+            },
+            {
+              "name": "ExitThread"
+            },
+            {
+              "name": "RtlUnwind"
+            },
+            {
+              "name": "GetSystemTimeAsFileTime"
+            }
+          ]
+        },
+        {
+          "dll": "USER32.dll",
+          "symbols": [
+            {
+              "name": "GetWindowThreadProcessId"
+            },
+            {
+              "name": "GetWindowLongA"
+            },
+            {
+              "name": "GetClassNameA"
+            },
+            {
+              "name": "PostMessageA"
+            },
+            {
+              "name": "GetWindowTextA"
+            },
+            {
+              "name": "GetWindow"
+            },
+            {
+              "name": "GetDesktopWindow"
+            },
+            {
+              "name": "EnumWindows"
+            },
+            {
+              "name": "DestroyWindow"
+            },
+            {
+              "name": "DispatchMessageA"
+            },
+            {
+              "name": "TranslateMessage"
+            },
+            {
+              "name": "PeekMessageA"
+            },
+            {
+              "name": "IsWindow"
+            },
+            {
+              "name": "DefWindowProcA"
+            },
+            {
+              "name": "SetWindowLongA"
+            },
+            {
+              "name": "CreateWindowExA"
+            }
+          ]
+        },
+        {
+          "dll": "SHELL32.dll",
+          "symbols": [
+            {
+              "name": "CommandLineToArgvW"
+            }
+          ]
+        },
+        {
+          "dll": "ole32.dll",
+          "symbols": [
+            {
+              "name": "CoTaskMemFree"
+            },
+            {
+              "name": "CreateILockBytesOnHGlobal"
+            },
+            {
+              "name": "StgOpenStorageOnILockBytes"
+            },
+            {
+              "name": "CoCreateGuid"
+            }
+          ]
+        },
+        {
+          "dll": "WS2_32.dll",
+          "symbols": [
+            {
+              "ordinal": 8
+            },
+            {
+              "ordinal": 14
+            },
+            {
+              "ordinal": 12
+            },
+            {
+              "ordinal": 52
+            },
+            {
+              "ordinal": 116
+            },
+            {
+              "ordinal": 11
+            },
+            {
+              "ordinal": 111
+            },
+            {
+              "ordinal": 19
+            },
+            {
+              "ordinal": 16
+            },
+            {
+              "ordinal": 3
+            },
+            {
+              "ordinal": 151
+            },
+            {
+              "ordinal": 18
+            },
+            {
+              "ordinal": 21
+            },
+            {
+              "ordinal": 4
+            },
+            {
+              "ordinal": 9
+            },
+            {
+              "ordinal": 23
+            },
+            {
+              "ordinal": 20
+            },
+            {
+              "ordinal": 115
+            }
+          ]
+        },
+        {
+          "dll": "SHLWAPI.dll",
+          "symbols": [
+            {
+              "name": "PathRemoveFileSpecA"
+            },
+            {
+              "name": "PathFindFileNameA"
+            },
+            {
+              "name": "StrStrIA"
+            },
+            {
+              "name": "PathStripPathA"
+            },
+            {
+              "name": "PathFileExistsA"
+            },
+            {
+              "name": "StrToIntA"
+            }
+          ]
+        },
+        {
+          "dll": "WININET.dll",
+          "symbols": [
+            {
+              "name": "InternetOpenUrlA"
+            },
+            {
+              "name": "InternetReadFile"
+            },
+            {
+              "name": "HttpQueryInfoA"
+            },
+            {
+              "name": "InternetOpenA"
+            },
+            {
+              "name": "InternetSetOptionA"
+            },
+            {
+              "name": "InternetCloseHandle"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "ordinal": 1,
+          "names": [
+            "GetTSObject"
+          ],
+          "rva": 13776,
+          "forwarded": false
+        }
+      ]
+    },
+    "related_strings": [
+      "TenSLX.dll",
+      "TSIF2011",
+      "Extension",
+      "TenSLX",
+      "TF0001.dat",
+      "TS0001.dat",
+      "TenSLX.dat",
+      "singlesign.dat",
+      "TR0001.dat",
+      "tenslx.dll",
+      "d:\\ied_sec_client_proj\\branches\\Sanlix2\\2.1.x\\output\\vc9\\TenSLX.pdb",
+      "TenSLX.dll"
+    ],
+    "game_executable_imports": [],
+    "game_executable_import_table_count": 32,
+    "executable_string_candidates": [],
+    "status": "TenSLX.dll exports GetTSObject; DNF.exe does not import it by name. Static PE clues do not establish dynamic callsites; no DLL code was executed"
+  }
+}

@@ -1,0 +1,686 @@
+{
+  "SchemaVersion": 1,
+  "FileType": "ui",
+  "Comments": [
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "auction_button",
+      "Title": "拍卖行按钮",
+      "Comment": "拍卖行按钮。主界面中打开拍卖行的UI按钮控件，玩家可通过此按钮进入拍卖行进行物品交易。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "aura_gauge_lineardodge",
+      "Title": "光环槽相关UI标识（待目标验证）",
+      "Comment": "旧注释将其猜测为光环槽按钮或线性闪避控件，但该标签没有可核验的 OfficialDescription。保留为版本差异 UI 标识线索；控件类型、资源、事件和功能均需目标版本客户端验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "balloon",
+      "Title": "副本UI气泡按钮",
+      "Comment": "副本UI气泡按钮。地下城选择画面中的气泡型按钮控件，用于显示和选择副本入口，包含坐标、图像和副本索引等参数。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "zed"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "cell basic data",
+      "Title": "单元格基本数据",
+      "Comment": "单元格基本数据\nui文件中常见\n0 0 33 34\n代表 X Y坐标偏移和X Y间距",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "sum665"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "cerashop_button",
+      "Title": "商城按钮",
+      "Comment": "商城按钮。主界面中打开游戏商城的UI按钮控件，玩家可通过此按钮进入商城购买道具。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "CHECKED NO",
+      "Title": "CHECKED NO",
+      "Comment": "CHECKED NO\n判定 异界金龙格子 人数",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "无名氏"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "IDC_WORLDMAP_BUTTON1",
+      "Title": "展示的背景",
+      "Comment": "展示的背景\n三个数字：X坐标  Y坐标  模式1（开启）",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "依旧"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "IDC_WORLDMAP_BUTTON2",
+      "Title": "副本选择气泡按钮2",
+      "Comment": "副本选择气泡按钮2。世界地图中第二个地下城选择气泡按钮，定义其X/Y坐标、图像路径和对应的地下城索引号。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "123"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "IDC_WORLDMAP_BUTTON3",
+      "Title": "展示的背景",
+      "Comment": "展示的背景\n\n通常指的是选择副本的顺序\n\n出现相同的数字则会乱顺序\n\n按照1-9的数字排列则不会出现乱顺序",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "释然"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "IDC_WORLDMAP_EXPAND_DIMENSION_BACKGROUND",
+      "Title": "异次元裂缝扩展背景",
+      "Comment": "异次元裂缝扩展背景。地下城选择画面中异次元/异界地下城专用背景图像，用于替代默认的副本选择背景。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "123"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "inventory_button",
+      "Title": "背包按钮",
+      "Comment": "背包按钮。主界面中打开角色背包/物品栏的UI按钮控件，玩家可通过此按钮查看和管理物品。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "main_menu",
+      "Title": "主菜单",
+      "Comment": "主菜单。游戏主界面中的主菜单按钮或面板，提供系统设置、角色信息、退出游戏等功能入口。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "大拿"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "myinfo_button",
+      "Title": "个人信息按钮",
+      "Comment": "个人信息按钮。主界面中打开角色个人信息和属性面板的UI按钮控件，显示角色的力量、智力等属性。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "quest_button",
+      "Title": "任务按钮",
+      "Comment": "任务按钮。主界面中打开任务列表/任务手册的UI按钮控件，玩家可通过此按钮查看和追踪任务。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "radiobutton",
+      "Title": "组合按钮",
+      "Comment": "组合按钮\nimg 对应数字\n14 2 6 7 8 9 0 0 10 11 12 13 0 0 0\n14代表总控数值\n2代表 两个按钮\n6 7 8 9代表 4个按钮状态png\n0 0代表 xy坐标偏移\n后面同理\n最后一个0 是固定值",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "sum665"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "skill_button",
+      "Title": "技能按钮",
+      "Comment": "技能按钮。主界面中打开技能面板/技能树的UI按钮控件，玩家可通过此按钮学习和配置技能。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "ui controls",
+      "Title": "UI控件",
+      "Comment": "UI控件。地下城选择画面的UI控件定义入口，用于设置背景图像（image控件）、副本气泡按钮（balloon控件）和难度开关（switchbox控件），包含控件类型、名称、坐标、图像路径和int参数。",
+      "OfficialDescription": "#### 官方示例: dungeonselect_uisample.ui\n\n```pvf\n// 1号标签 : 设置地下城选择画面背景的标签\n// 其他内容请不要修改（其他内容为硬编码，由客户端组设置），仅修改背景 img 路径及索引即可。\n[ui controls]\n    `[image]`\n    `IDC_WORLDMAP_BACKGROUND`    // 控件名称\n    0            //X\n    0            //Y\n    1            //string 数据数量\n    `WorldMap/AradCartel.img`\n    1            //int 数据数量\n    0            //图像索引\n    //[common action]  `Action/banner_common.act`\n[/ui controls]\n```\n\n```pvf\n// 2号标签 : 设置地下城选择画面中地狱派对背景的标签\n// 其他内容请不要修改（其他内容为硬编码，由客户端组设置），仅修改背景 img 路径及索引即可。\n[ui controls]\n    `[image]`\n    `IDC_WORLDMAP_HELLPARTY_MODE_BACKGROUND`    // 地狱派对背景\n    0            // X\n    0            // Y\n    1            // string 数据数量\n    `Interface2/SelectDungeon/SelectDungeonHell/SelectDungeonHell.img`\n    3            // int 数据数量\n    0            // 图像索引\n    0            // 初始显示时显示\n    0            // 横幅不应接收事件，因此 Enable 属性设为 false\n    [common action]  `Action/background_event.act`\n[/ui controls]\n```\n\n```pvf\n// 3号标签 : 设置地下城选择画面中练习模式背景的标签\n// 其他内容请不要修改（其他内容为硬编码，由客户端组设置），仅修改背景 img 路径及索引即可。\n[ui controls]\n    `[image]`\n    `IDC_WORLDMAP_EXERCISE_MODE_BACKGROUND`    // 地下城练习模式背景\n    0            // X\n    0            // Y\n    1            // string 数据数量\n    `Interface2/DungeonExercise/DungeonExercise.img`\n    3            // int 数据数量\n    0            // 图像索引\n    0            // 初始显示时显示\n    0            // 横幅不应接收事件，因此 Enable 属性设为 false\n    [common action]  `Action/background_event.act`\n[/ui controls]\n```\n\n```pvf\n// 4号标签 : 设置地下城选择画面中异次元裂缝扩展（改异界地下城）背景的标签\n// 其他内容请不要修改（其他内容为硬编码，由客户端组设置），仅修改背景 img 路径及索引即可。\n[ui controls]\n    `[image]`\n    `IDC_WORLDMAP_EXPAND_DIMENSION_BACKGROUND`    // 异次元裂缝扩展背景\n    0            // X\n    0            // Y\n    1            // string 数据数量\n    `Interface2/DungeonExercise/DungeonExercise.img`\n    3            // int 数据数量\n    2            // 图像索引\n    0            // 初始显示时显示\n    0            // 横幅不应接收事件，因此 Enable 属性设为 false\n    [common action]  `Action/background_event.act`\n[/ui controls]\n```\n\n```pvf\n// 从这里开始设置地下城选择画面图像（气泡图像）\n// 按钮图像定义（奥德赛城市战）\n[ui controls]\n    `[balloon]`        // ui控件具有的属性（`balloon` 类的控件用于地下城选择画面）\n    `IDC_WORLDMAP_BUTTON1`    // 控件名称（不可重复！！ // 从0开始写也可以，但建议从1开始写）\n    451            // X （气泡的 x 坐标）\n    158            // Y （气泡的 y 坐标）\n    1            // string 数据数量（请勿修改！咨询客户端组）\n    `WorldMap/selectdungeon02.img`    // （请勿修改！！咨询客户端组）\n    3            // int 数据数量（请勿修改！！咨询客户端组）\n    1            // 气泡控件类型（0. 普通气泡，1. 地下城选择气泡） //（请勿修改！！使用1号即可）\n    2            // 气泡控件图案（显示与 WorldMapPatternTable2ND.tbl 中设置的图案匹配的气泡形状）\n                // 目前有0~17号图案，如需额外添加形状，请咨询地下城客户端组。\n                // 0~17号图案形状可参考 \\\\192.168.20.35\\dnfshare\\graphic\\2_완성본\\02_interface\\UI_ver03\\UI\\SelectDungeon_ver2.0\\png\n                // 文件夹中的 030~047 文件图像。\n    60            // 要显示的地下城索引\n    [common action]  `Action/worldmap_balloon.act`    // 气泡动作路径（请勿修改！！咨询客户端组）\n[/ui controls]\n```\n\n```pvf\n// 按钮图像定义（绿色都市 格罗兹尼）\n[ui controls]\n    `[balloon]`\n    `IDC_WORLDMAP_BUTTON2`    // 控件名称\n    288            // X\n    428            // Y\n    1            // string 数据数量\n    `WorldMap/selectdungeon02.img`\n    3            // int 数据数量\n    1            // 气泡控件类型（0. 普通气泡，1. 地下城选择气泡）\n    3            // 气泡控件图案\n    61        // 要显示的地下城索引\n    [common action]  `Action/worldmap_balloon.act`\n[/ui controls]\n```\n\n```pvf\n// 按钮图像定义\n[ui controls]\n    `[switchbox]`\n    `IDC_WORLDMAP_SWITCHBOX`    // 控件名称\n    400            // X\n    100            // Y\n    1            // string 数据数量\n    `WorldMap/selectdungeon02.img`\n    14            // int 数据数量\n    1            // 开关控件类型（0. 普通开关，1. 地下城选择开关）\n    24            // 主体部分索引\n    3            // 上一个按钮（普通）\n    4            // 上一个按钮（鼠标悬停）\n    5            // 上一个按钮（鼠标按下）\n    6            // 上一个按钮（禁用）\n    7            // 下一个按钮（普通）\n    8           // 下一个按钮（鼠标悬停）\n    9           // 下一个按钮（鼠标按下）\n    10          // 下一个按钮（禁用）\n    11            // 普通\n    12            // 冒险\n    13            // 王者\n    14            // 英雄\n[/ui controls]\n```",
+      "Closing": true,
+      "Authors": "lostluna1"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "window",
+      "Title": "窗口",
+      "Comment": "窗口。UI窗口控件，定义窗口的尺寸、位置和包含的子控件，是UI布局的基础容器。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "lostluna1"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "common action",
+      "Title": "气泡动作路径（请勿修改！！咨询客户端组）",
+      "Comment": "通用动作。UI控件上绑定的通用动作/动画路径（请勿修改这些设置，如有需要请咨询客户端组）。",
+      "OfficialDescription": "#### 官方示例: dungeonselect_uisample.ui\n\n```pvf\n[common action]  `Action/worldmap_balloon.act`    // 气泡动作路径（请勿修改！！咨询客户端组）\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "type",
+      "Title": "类型",
+      "Comment": "客户端 UI数据中的 [type] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "horizontal alignment",
+      "Title": "horizontal alignment（原始标签）",
+      "Comment": "客户端 UI数据中的 [horizontal alignment] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "horizontal distance",
+      "Title": "横向距离",
+      "Comment": "客户端 UI数据中的 [horizontal distance] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "vertical alignment",
+      "Title": "vertical alignment（原始标签）",
+      "Comment": "客户端 UI数据中的 [vertical alignment] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "vertical distance",
+      "Title": "纵向距离",
+      "Comment": "客户端 UI数据中的 [vertical distance] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "tile type",
+      "Title": "tile type（原始标签）",
+      "Comment": "客户端 UI数据中的 [tile type] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "size",
+      "Title": "尺寸",
+      "Comment": "客户端 UI数据中的 [size] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "alpha",
+      "Title": "透明度",
+      "Comment": "客户端 UI数据中的 [alpha] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "title string",
+      "Title": "标题字符串",
+      "Comment": "客户端 UI数据中的 [title string] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "title string start",
+      "Title": "标题字符串开始",
+      "Comment": "客户端 UI数据中的 [title string start] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "title accesorry type",
+      "Title": "title accesorry type（原始标签）",
+      "Comment": "客户端 UI数据中的 [title accesorry type] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "title bar",
+      "Title": "title bar（原始标签）",
+      "Comment": "客户端 UI数据中的 [title bar] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "draggable",
+      "Title": "draggable（原始标签）",
+      "Comment": "客户端 UI数据中的 [draggable] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "close button",
+      "Title": "close button（原始标签）",
+      "Comment": "客户端 UI数据中的 [close button] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "imagepack",
+      "Title": "imagepack（原始标签）",
+      "Comment": "客户端 UI数据中的 [imagepack] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。资源路径或名称只说明客户端资源引用；是否存在、能加载及表现正确需另行检查 ImagePacks2/NPK 或目标资源。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "starting frame",
+      "Title": "starting frame（原始标签）",
+      "Comment": "客户端 UI数据中的 [starting frame] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "tile offset",
+      "Title": "tile offset（原始标签）",
+      "Comment": "客户端 UI数据中的 [tile offset] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "tile width",
+      "Title": "tile width（原始标签）",
+      "Comment": "客户端 UI数据中的 [tile width] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "tile height",
+      "Title": "tile height（原始标签）",
+      "Comment": "客户端 UI数据中的 [tile height] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "controls",
+      "Title": "controls（原始标签）",
+      "Comment": "客户端 UI数据中的 [controls] 闭合块。内部继续包含子标签，具体列义由父块和相邻记录共同决定。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "title guide link",
+      "Title": "标题引导关联",
+      "Comment": "客户端 UI数据中的 [title guide link] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "goDir",
+      "Title": "goDir（原始标签）",
+      "Comment": "客户端 UI数据中的 [goDir] 闭合块。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "parent tab",
+      "Title": "parent tab（原始标签）",
+      "Comment": "客户端 UI数据中的 [parent tab] 字段。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "ui path",
+      "Title": "ui path（原始标签）",
+      "Comment": "客户端 UI数据中的 [ui path] 闭合块。已见数据形态为一个或多个反引号字符串/token；字符串内容应按数据处理。资源路径或名称只说明客户端资源引用；是否存在、能加载及表现正确需另行检查 ImagePacks2/NPK 或目标资源。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "variable",
+      "Title": "variable（原始标签）",
+      "Comment": "客户端 UI数据中的 [variable] 闭合块。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "check unable type",
+      "Title": "检查不可用类型",
+      "Comment": "客户端 UI数据中的 [check unable type] 闭合块。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "parent",
+      "Title": "parent（原始标签）",
+      "Comment": "客户端 UI数据中的 [parent] 字段。已见数据形态为一个或多个反引号字符串/token；字符串内容应按数据处理。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "int option",
+      "Title": "int option（原始标签）",
+      "Comment": "客户端 UI数据中的 [int option] 闭合块。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "user option",
+      "Title": "用户选项",
+      "Comment": "客户端 UI数据中的 [user option] 闭合块。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "parent radio",
+      "Title": "parent radio（原始标签）",
+      "Comment": "客户端 UI数据中的 [parent radio] 字段。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "string option",
+      "Title": "字符串选项",
+      "Comment": "客户端 UI数据中的 [string option] 闭合块。已见数据形态为一个或多个反引号字符串/token；字符串内容应按数据处理。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "unit",
+      "Title": "unit（原始标签）",
+      "Comment": "客户端 UI数据中的 [unit] 闭合块。内部继续包含子标签，具体列义由父块和相邻记录共同决定。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "title",
+      "Title": "标题",
+      "Comment": "客户端 UI数据中的 [title] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "isNew",
+      "Title": "isNew（原始标签）",
+      "Comment": "客户端 UI数据中的 [isNew] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "isOpen",
+      "Title": "isOpen（原始标签）",
+      "Comment": "客户端 UI数据中的 [isOpen] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "startControlIdx",
+      "Title": "startControlIdx（原始标签）",
+      "Comment": "客户端 UI数据中的 [startControlIdx] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "content ui",
+      "Title": "content ui（原始标签）",
+      "Comment": "客户端 UI数据中的 [content ui] 字段。已见数据形态为一个或多个反引号字符串/token；字符串内容应按数据处理。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "wishbox",
+      "Title": "wishbox（原始标签）",
+      "Comment": "客户端 UI数据中的 [wishbox] 闭合块。内部继续包含子标签，具体列义由父块和相邻记录共同决定。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "reward idx",
+      "Title": "reward idx（原始标签）",
+      "Comment": "客户端 UI数据中的 [reward idx] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。奖励或邮件静态配置不证明服务端必定发放，数量、期限和领取条件仍需实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "box img",
+      "Title": "box img（原始标签）",
+      "Comment": "客户端 UI数据中的 [box img] 字段。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "box",
+      "Title": "box（原始标签）",
+      "Comment": "客户端 UI数据中的 [box] 闭合块。内部继续包含子标签，具体列义由父块和相邻记录共同决定。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "no",
+      "Title": "no（原始标签）",
+      "Comment": "客户端 UI数据中的 [no] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "pos",
+      "Title": "坐标",
+      "Comment": "客户端 UI数据中的 [pos] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。坐标原点、轴向、单位和相对/绝对基准需结合父块确认。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "status pos",
+      "Title": "status pos（原始标签）",
+      "Comment": "客户端 UI数据中的 [status pos] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。坐标原点、轴向、单位和相对/绝对基准需结合父块确认。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "reward pos",
+      "Title": "奖励坐标",
+      "Comment": "客户端 UI数据中的 [reward pos] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。奖励或邮件静态配置不证明服务端必定发放，数量、期限和领取条件仍需实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "reward button pos",
+      "Title": "奖励按钮坐标",
+      "Comment": "客户端 UI数据中的 [reward button pos] 字段。已见数据形态为单值或数值序列；列数、单位和取值刻度不能只凭字段名推断。奖励或邮件静态配置不证明服务端必定发放，数量、期限和领取条件仍需实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "message",
+      "Title": "message（原始标签）",
+      "Comment": "客户端 UI数据中的 [message] 闭合块。内部继续包含子标签，具体列义由父块和相邻记录共同决定。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "text",
+      "Title": "文本",
+      "Comment": "客户端 UI数据中的 [text] 字段。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "ui",
+      "Section": "hyper text",
+      "Title": "hyper text（原始标签）",
+      "Comment": "客户端 UI数据中的 [hyper text] 字段。已见数据形态为反引号字符串/token 与数值的混合记录，字段顺序必须完整保留。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    }
+  ]
+}

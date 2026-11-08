@@ -1,0 +1,323 @@
+﻿path,member_sha256,authored_controls,expanded_controls,instances,support_counts,full_native_reconstruction
+ui/actionsample/1.introduce/sample.ui,a217e30340bce75b914357ec0b6b62cf93f1bd1c3b5fc79e989c4d228bebc4ca,1,0,1,"{""unknown_structure"": 1}",False
+ui/actionsample/2.selectdungeon/selectdungeon.ui,e523d630d732ebf93036e1ddd91264c848473f460390c6b53ea0ac4215cf7a7d,8,8,1,"{""resource_layout_candidate"": 1, ""unknown_structure"": 7}",False
+ui/advancealtar/advancealtarrewardwindow.ui,8512b309f0d355daebd7a7a52946a599dd1d97a55b9b85de1d49185d93329656,11,11,1,"{""nonvisual_or_metadata"": 2, ""resource_layout_candidate"": 7, ""external_substitute"": 2}",False
+ui/advancealtar/advancealtarshopconfirmwindow.ui,f4caa9810b26d30839142e3402d31b213fdbb31c1bf0bd0ef4af209f698f00ee,9,9,1,"{""nonvisual_or_metadata"": 1, ""resource_layout_candidate"": 7, ""external_substitute"": 1}",False
+ui/advancealtar/advancealtarshopwindow.ui,1214aaba9de38e0eb1743906667caefa33038453859c09ac661548180e723e2d,40,40,1,"{""nonvisual_or_metadata"": 12, ""resource_layout_candidate"": 18, ""external_substitute"": 5, ""unknown_structure"": 5}",False
+ui/advancealtar/result.ui,2599bf9735f8759a0eb1b40cab5a560a238f127ddecdd8b46973c54fdd26add6,9,9,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 4, ""resource_animation_candidate"": 1}",False
+ui/amplify/amplifyselectwindow.ui,3df28cc8343e01911aaeb0aabf3e443105b6fc09cc012e9020c76c1b7a45125c,16,16,1,"{""resource_layout_candidate"": 10, ""external_substitute"": 6}",False
+ui/avatrarchangeoption/avatrarchangeoptionresultwindow.ui,7616fc256ead965d028acf5011c29697e25fcecd6afa6097530322446ba0a506,7,7,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 4}",False
+ui/avatrarchangeoption/avatrarchangeoptionwindow.ui,86d19773c4eac342a6bdb4e60f4efb1991ac54317c0a2317894aae2958255848,11,11,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 5, ""unknown_structure"": 3}",False
+ui/blooddungeon/result.ui,702109c52616015f503ab21c0b3dcc4f2ef410ee6ae1b91f8ba1fb308e7699b8,13,13,1,"{""resource_layout_candidate"": 5, ""unknown_structure"": 7, ""resource_animation_candidate"": 1}",False
+ui/blooddungeon/result800600.ui,672058303200de43c2a61a48ca6dc0686f39a225e53e840c43b92133b9a763c6,12,12,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 7, ""resource_animation_candidate"": 1}",False
+ui/bluemarble/bluemarble.ui,2fb66a228651013f5571bde7dd07d09402178f0d84c9bc9f598f5c19da6cbf5f,1,1,1,"{""resource_layout_candidate"": 1}",False
+ui/bluemarble/bluemarblechannelinfowindow.ui,59cd086468f36af0a0929cd6ef9aa89cd313cc012a59e35ce5a5a0b779952b74,1,1,1,"{""resource_layout_candidate"": 1}",False
+ui/bluemarble/bluemarbleinfowindow.ui,aad354e5641c4c90f083a0123ca2defaf010263f948a1587fe754f1e55abc34d,6,6,1,"{""resource_layout_candidate"": 6}",False
+ui/boosterselect/boosterselectpass.ui,bd633fe70d42166fd94d4ad82e0d54d4abe292e5cf04d5b11909fd23e95f2e06,31,31,1,"{""native_layout"": 1, ""external_substitute"": 6, ""unknown_structure"": 6, ""nonvisual_or_metadata"": 1, ""resource_layout_candidate"": 12, ""resource_animation_candidate"": 5}",False
+ui/boosterselect/boosterselectpass1.ui,9a116c91b516f0682ebc35b6c33db72f864abd309103184793c243840d825fff,1,1,1,"{""unknown_structure"": 1}",False
+ui/boosterselect/boosterselectpass2.ui,7f2774c48f701bf99824e5be2ec3258f8f1bc99e5099159889aac4bf657aa4d7,1,1,1,"{""unknown_structure"": 1}",False
+ui/boosterselect/boosterselectwindow.ui,14ac467172aff43bba92abb01191d27ed76a2319676008f609a4467557533282,3,36,4,"{""nonvisual_or_metadata"": 3}",False
+ui/cargo/cargo_certify.ui,328b901412bbf2e9996a82614a6a30fce425406a4dcae8eea6f608bb8b3d42ee,6,6,1,"{""external_substitute"": 4, ""unknown_structure"": 1, ""resource_layout_candidate"": 1}",False
+ui/cargo/cargo_modify.ui,d8a7a035c47ffd898e1e9c0f2b3eff5f17696691e8b1394286c7324438065a3a,9,9,1,"{""external_substitute"": 5, ""unknown_structure"": 3, ""resource_layout_candidate"": 1}",False
+ui/cargo/cargo_password.ui,87252a0bbee98f6da0f50f91589a7084e10d28a8d0e1416f0c51a76151b68b32,37,37,1,"{""resource_layout_candidate"": 37}",False
+ui/cargo/cargo_register.ui,d2ca13c3e5db7c4cc721df16c469670595b75130b76d414cb7621e299388f107,8,8,1,"{""external_substitute"": 6, ""unknown_structure"": 2}",False
+ui/cargo/cargo_unregister.ui,248bcd81a0fcb7588fa925b322fa514562b71712a3f8a257dc0b21271addf19d,5,5,1,"{""external_substitute"": 3, ""unknown_structure"": 1, ""resource_layout_candidate"": 1}",False
+ui/cargo/cargoconfirmwindow.ui,3311c81159654ae0fbd044373bad464a01e9571954bb5dbb2fbc6e678e466cdf,3,3,1,"{""external_substitute"": 3}",False
+ui/cargo/cargowindow.ui,a855e5674f90a29d2a623048cf1fc7ce2f5e4086d8fd8292a50b0c8f91154f81,8,73,6,"{""native_layout"": 1, ""external_substitute"": 3, ""nonvisual_or_metadata"": 4}",False
+ui/cashshop/changeavatarcolorwindow.ui,06b87b774e11ea0c148d8f62e22e1d9504737d95e14c47ab89a46a40eed23ced,8,8,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 4, ""nonvisual_or_metadata"": 1}",False
+ui/cashshop/selectavatarcolorpass.ui,61b79c3e0382d5f0c5051b94c21f05810f2c3facf256ceda06e3713325e56802,40,40,1,"{""resource_layout_candidate"": 40}",False
+ui/cashshop/selectavatarcolorwindow.ui,ac90f7affd93dca6782d5241f2e555d8ccea0c14285639ce82bea6f56b7f732c,10,50,2,"{""native_layout"": 2, ""resource_layout_candidate"": 3, ""external_substitute"": 3, ""unknown_structure"": 1, ""nonvisual_or_metadata"": 1}",False
+ui/channel/channels.ui,3a8fa163dd032ecf1c15600b64cc373659c9e94b55aa08a12393e6a7a30fd6ba,33,33,1,"{""resource_layout_candidate"": 33}",False
+ui/channel/selectchannel.ui,26f05b5a68e93e886c33c840b6e6952e103512f5f884d0710c0efa683290a2d2,17,17,1,"{""resource_layout_candidate"": 8, ""resource_animation_candidate"": 7, ""external_substitute"": 1, ""native_layout"": 1}",False
+ui/channel/selectchannelbytype.ui,8d87faa631119f8d6c2e853093249cd7c31b3591fcc95ab9ebed52d822918ba6,0,0,1,{},False
+ui/channel/selectchannelwindow.ui,38aa8e8440ec3ff5403878f6f3dab9198a92c5512f68826732138f1149174181,0,50,3,{},False
+ui/characterinfowindow/avatarcreatureinfo.ui,7cd3dab374ebeab56d474802a4068dc0882153b7c85eb5e21a199b021553452f,17,17,1,"{""resource_layout_candidate"": 2, ""nonvisual_or_metadata"": 15}",False
+ui/characterinfowindow/characterinfo.ui,8f8b048f05d3c60715099e25578d046de10983f19b7ed122bfaf060e20dcfe29,29,29,1,"{""resource_layout_candidate"": 7, ""nonvisual_or_metadata"": 14, ""external_substitute"": 7, ""unknown_structure"": 1}",False
+ui/characterinfowindow/characterinfowindow.ui,15d12f9d8be3cbd07952da979469fbd11ac2cac38206f59655df19c1836f6fdd,4,105,4,"{""external_substitute"": 1, ""nonvisual_or_metadata"": 3}",False
+ui/characterinfowindow/favorinfo.ui,18d94bcbb59accccbf68bc6e12a2dd146512dfc47deb7f4830f6208d64f49704,8,8,1,"{""resource_layout_candidate"": 3, ""unknown_structure"": 2, ""external_substitute"": 3}",False
+ui/characterinfowindow/makingiteminfo.ui,73f05745c3ceb667f9762f74472abb4363e72f44a347b858fe2f1eb4422cdb96,55,55,1,"{""native_layout"": 1, ""external_substitute"": 27, ""resource_layout_candidate"": 14, ""unknown_structure"": 11, ""nonvisual_or_metadata"": 2}",False
+ui/characterinfowindow/powerwarinfo.ui,875f6501ddca59151aca7f0b86c390f2e8381ea7717595ddc0d2eb53d838db7e,43,43,1,"{""resource_layout_candidate"": 22, ""external_substitute"": 20, ""nonvisual_or_metadata"": 1}",False
+ui/chat/chatemoticon.ui,1d2991a5409fc46aac06ae18f8c72ce27d49170e77d0fca2d42cc68c06318e21,7,70,3,"{""native_layout"": 1, ""nonvisual_or_metadata"": 5, ""external_substitute"": 1}",False
+ui/chat/chatemoticonconfig.ui,79bd51ec94cbbcc3b1e1b11a378b4a5d5c39aa7765ff896b989eea148b30ab53,7,7,1,"{""resource_layout_candidate"": 2, ""nonvisual_or_metadata"": 4, ""external_substitute"": 1}",False
+ui/chat/chatemoticoninven.ui,6e9474dc4dd7b13ada552312d563528e12647737978b2a75225e100cf364300f,56,56,1,"{""native_layout"": 1, ""resource_animation_candidate"": 24, ""unknown_structure"": 2, ""resource_layout_candidate"": 5, ""nonvisual_or_metadata"": 24}",False
+ui/chat/chatwindow.ui,c2e408472ba9322bdb75ecc352daa4d306714a94e586a5794a898980aceb5613,43,113,4,"{""external_substitute"": 3, ""unknown_structure"": 14, ""resource_layout_candidate"": 16, ""nonvisual_or_metadata"": 10}",False
+ui/chat/doublechat1.ui,489f6aa41f91d9e893b76a01f1a17f09fe4420afc923e84965bccfc031a248bf,4,4,1,"{""external_substitute"": 1, ""resource_layout_candidate"": 1, ""nonvisual_or_metadata"": 1, ""unknown_structure"": 1}",False
+ui/chat/doublechat2.ui,4e7624815f76038742d8979383515755a897a7903d80ace2fbc2d6193a243c27,2,2,1,"{""external_substitute"": 1, ""unknown_structure"": 1}",False
+ui/chat/doublechat3.ui,e7698b8eef960d3a51d4f5f67bcac0dca2d3054b5343c9f8cba5bc7ea3b3b1ea,16,16,1,"{""external_substitute"": 1, ""resource_layout_candidate"": 5, ""nonvisual_or_metadata"": 5, ""unknown_structure"": 5}",False
+ui/chat/modepanel.ui,82a3db290ef4602b1a995c3775681af0b19be7f4ff2423eebe602f3ac3b0dead,4,4,1,"{""resource_layout_candidate"": 1, ""nonvisual_or_metadata"": 3}",False
+ui/chronicle/chronicle.ui,832d79d19740c15bbe02910207c93cc0a204db8e522e5536817f92a368819b91,3,3,1,"{""external_substitute"": 3}",False
+ui/chronicle/chronicleconfirm.ui,62ef950006c4db5e6690a04efac7e47639a6479bf3bcd9bc9897681465425cc5,2,2,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 1}",False
+ui/chronicle/chroniclenotice.ui,40f8676abe37d57b85f14b35a3ae68e7f46a1df628ea3ec9a88502ae3cfa61d0,3,3,1,"{""external_substitute"": 3}",False
+ui/common/commonautomationwindow.ui,4353d107de5ee40aaa1f3eb4035e635a97c728b69265426af225a5573de276c5,0,0,1,{},False
+ui/common/commonnoticepopup.ui,c63b7ac1b320cb4e7d22530f3af377297066405ebd4d2b2a11ef7d65c6f20117,2,2,1,"{""external_substitute"": 2}",False
+ui/common/eventaccountrewardpopup.ui,cdc181dc2f116257a971aa997a3a8d1450596ecf8d341e762c67fdddf1060f31,3,3,1,"{""resource_layout_candidate"": 2, ""unknown_structure"": 1}",False
+ui/common/hypertextinfo.ui,70492ac7321ea1c55bbc476cad15a6f5e5fd020493bc4cea06565fd21f03c833,0,0,1,{},False
+ui/common/hypertextmessagecongratulationwindow.ui,3f106650eef38b0b2c0a9ea9d3f7da6471f6217797791cc56eaf752549b254f7,6,6,1,"{""resource_layout_candidate"": 2, ""unknown_structure"": 1, ""nonvisual_or_metadata"": 3}",False
+ui/common/hypertextmessagemobilerestrictionwindow.ui,1589657ef05dce2007c0b37b147be890c08b2ba6407fa53a0f54b5806de4520d,5,5,1,"{""unknown_structure"": 1, ""resource_layout_candidate"": 1, ""nonvisual_or_metadata"": 3}",False
+ui/common/hypertextmessagewindow.ui,592e6b17986c0406e99466fc8ce2ee2ebe607c54f4252cadb0c9c596e0673dfe,5,5,1,"{""unknown_structure"": 1, ""resource_layout_candidate"": 1, ""nonvisual_or_metadata"": 3}",False
+ui/common/randomimagelist.ui,b043323af4d4532fd0599b2e98521e578681d8baaa6a503d8b440ada9ba5c5f6,0,0,1,{},False
+ui/common/randomimagewindow.ui,d8d558a27a4d80cd775667b887c5e34df6d00d8cdb265b5db955875e94a68c80,2,2,1,"{""resource_layout_candidate"": 2}",False
+ui/common/returnuserpackagepopup.ui,af6db28418219a4b1fe04ed4901be92e40047de49ccbaf6088f7a7fa3f4b72a2,4,4,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 2, ""unknown_structure"": 1}",False
+ui/community/addpvpbuddy.ui,6ccbef19260249f698cffc33da114d50745337d2f86afaae440de49e250e5504,5,5,1,"{""external_substitute"": 3, ""unknown_structure"": 2}",False
+ui/compoundemblem/compoundui.ui,05e96687e4236736a9d130afdd831621943ade4911880eed55d6e01bc0e639e7,11,11,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 6, ""resource_animation_candidate"": 2}",False
+ui/craneminigame/craneminigamewin.ui,9a5242c2a2dfa23724a6dec09b4c4ec72600c65a2163d721369ecd9b4a06b444,22,22,1,"{""resource_layout_candidate"": 10, ""external_substitute"": 3, ""unknown_structure"": 2, ""resource_animation_candidate"": 3, ""nonvisual_or_metadata"": 4}",False
+ui/cubecontract/cubecontractwindow.ui,ce6eafec828bef0105c70cea15214d552fe82834f1df26cd7108842c61246740,7,7,1,"{""native_layout"": 1, ""external_substitute"": 4, ""resource_layout_candidate"": 2}",False
+ui/dualraid/ingameui/ingametext.ui,5266ba51d676d37fdd1951137c93ee1d3be52e38ee2a2d8efcc1032a68acae50,4,4,1,"{""resource_layout_candidate"": 2, ""external_substitute"": 2}",False
+ui/dualraid/matching/dualraidmatchingwindow.ui,e31c391d89a934c645f77cc0c070330b8c265110359732913e80a44a0b24d7a0,6,6,1,"{""resource_layout_candidate"": 5, ""unknown_structure"": 1}",False
+ui/dualraid/minimap/dualraidminimapwindow.ui,e2d4f80e3bd5754bed94943d31343322e79b1f67628c9a7157d660c441e7cec3,1,1,1,"{""resource_layout_candidate"": 1}",False
+ui/dungeonloading/dungeonloading.ui,def1fe3af5fc61ab387cdc7d24f028b9994cbdaedcb8fb87f6296679d6d0124c,2,2,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 1}",False
+ui/dungeonminimap/dungeonminimap.ui,33faff360e5bc4da072525c746673c32f7d203d0872c6a3547ce2dbc819cd902,0,0,1,{},False
+ui/event/accountfatigueevent/accountfatigueevent.ui,9433fcc969b961ce39a2ceac6c47425d016cb78ded491d19882017034a5c8600,4,4,1,"{""native_layout"": 1, ""external_substitute"": 2, ""resource_layout_candidate"": 1}",False
+ui/event/bingo/bingopopupwindow.ui,675154b92d2a9175533435e4eaff5516ccfa649e9d342c6b562e2be7a15deaec,18,18,1,"{""resource_layout_candidate"": 9, ""nonvisual_or_metadata"": 1, ""external_substitute"": 2, ""native_layout"": 1, ""resource_animation_candidate"": 5}",False
+ui/event/bingo/bingoquizpopupwindow.ui,232a6cb5c317c61e4c854893932461f51ce973619f6f03626d62da2d64500343,7,7,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 2, ""unknown_structure"": 2}",False
+ui/event/calendar/eventcalendar.ui,ac15ac515c9837e84aebc42292c694fe6db45706dc12c4acc1085a4890538140,20,20,1,"{""native_layout"": 1, ""resource_layout_candidate"": 19}",False
+ui/event/childrensday/childrensdaytooltipwindow.ui,1aeee432b41caa84e0d4a4de0db8bb865974aedc6c4a5d479062159caf9f52ea,16,16,1,"{""resource_layout_candidate"": 7, ""external_substitute"": 8, ""unknown_structure"": 1}",False
+ui/event/creatednftwevent/creatednftwconfirm.ui,a40b4fc64b48a4f0636592b118019ad30a85fa62b0f5cc4589c4c25d06337689,5,5,1,"{""resource_layout_candidate"": 4, ""external_substitute"": 1}",False
+ui/event/creatednftwevent/creatednftwevent.ui,d23ff618266ed8e901cca6379d8111164ea36ebf0fb8247b60022ff791b5bd20,10,10,1,"{""resource_layout_candidate"": 1, ""native_layout"": 1, ""unknown_structure"": 2, ""nonvisual_or_metadata"": 6}",False
+ui/event/dimensionrentalitem/dimensionrentalitemwindow.ui,d66b88541c88521f54911076c86846c69daf9550f46ba54eb8224bacacb881f5,16,16,1,"{""resource_layout_candidate"": 7, ""native_layout"": 1, ""external_substitute"": 3, ""nonvisual_or_metadata"": 3, ""unknown_structure"": 2}",False
+ui/event/eventfolderlistpopupwindow/eventfolderlistwindow.ui,d6748e1207ff459bf64c6fc3098a831b7ca66f737cb634e4ba902a5edf394c91,3,3,1,"{""native_layout"": 1, ""unknown_structure"": 1, ""resource_layout_candidate"": 1}",False
+ui/event/eventfolderlistpopupwindow/eventnotice001.ui,0ace096668e7cb128edffd9729e46b90f589f0ca08faee4865e07ce4eb57fdd5,7,7,1,"{""native_layout"": 1, ""unknown_structure"": 1, ""resource_layout_candidate"": 3, ""external_substitute"": 2}",False
+ui/event/eventfolderlistpopupwindow/eventnotice002.ui,72a3d6f7fcc4143cf345d280e2751a668d94b37482a43c349fb817580af5202a,2,2,1,"{""native_layout"": 1, ""unknown_structure"": 1}",False
+ui/event/eventfolderlistpopupwindow/eventnotice003.ui,ffd36eb76490a702d551972d5e01f522572566ce767bdd8aeb81dfd856e6e9a7,12,12,1,"{""native_layout"": 1, ""unknown_structure"": 1, ""external_substitute"": 2, ""resource_layout_candidate"": 5, ""nonvisual_or_metadata"": 3}",False
+ui/event/eventfolderlistpopupwindow/eventnotice004.ui,1e8b0baaefa7f3b1dcf44f20dd524ecb9598347b48403f0f2c3647aa2463881b,6,6,1,"{""native_layout"": 1, ""unknown_structure"": 2, ""external_substitute"": 1, ""resource_layout_candidate"": 2}",False
+ui/event/eventfolderlistpopupwindow/eventnoticedatalist.ui,b043323af4d4532fd0599b2e98521e578681d8baaa6a503d8b440ada9ba5c5f6,0,0,1,{},False
+ui/event/eventlistpopupwindow/eventdesignwindow.ui,371bc8daf458d79f06597975ca6df93aad32a54b4677e9b6f05492369cac2412,6,6,1,"{""native_layout"": 1, ""resource_layout_candidate"": 3, ""external_substitute"": 1, ""unknown_structure"": 1}",False
+ui/event/eventlistpopupwindow/eventlistpopupwindow.ui,dc18c0bc93187b8bb5d7403876891324c167094fb5036f7288dfee3a49f5fa2c,3,3,1,"{""native_layout"": 1, ""resource_layout_candidate"": 1, ""unknown_structure"": 1}",False
+ui/event/everydayhappyhour/everydayhappyhourwindow.ui,bf9112464aa4d8b3aed819db1eeacaddcc606cb6d3def3090b7b1f108cb83e68,5,5,1,"{""resource_layout_candidate"": 1, ""native_layout"": 1, ""external_substitute"": 3}",False
+ui/event/everydaytictactoe/everydaytictactoeconfirmwindow.ui,bdd60fb713ef1fca2616338bd3855a3e9291c54b259df7e587d8970a573785f3,4,4,1,"{""external_substitute"": 1, ""resource_layout_candidate"": 2, ""unknown_structure"": 1}",False
+ui/event/everydaytictactoe/everydaytictactoesubwindow.ui,04bbf7b4846821ac7925ba3fce75abd2e59597bfba9f2990b79a6a369134fdb8,4,4,1,"{""resource_layout_candidate"": 2, ""native_layout"": 1, ""external_substitute"": 1}",False
+ui/event/everydaytictactoe/everydaytictactoewindow.ui,697e74249db39020e3352afaaf99faf5c3a3e9b3d84e077f44e560a1ef8a8c67,19,19,1,"{""resource_layout_candidate"": 6, ""nonvisual_or_metadata"": 1, ""unknown_structure"": 4, ""external_substitute"": 8}",False
+ui/event/fighterevent/fighter_event.ui,edba5578cecb7dac9134aa7ec71a8247608cca21fecc3dc9399d26c49e01f749,1,1,1,"{""resource_animation_candidate"": 1}",False
+ui/event/givegrowcreaturewindow/givegrowcreaturewindow.ui,7a61658cffa670fedea3b5f88d732f275a0555c50cb3b35023c6974eed0fc36e,20,20,1,"{""resource_layout_candidate"": 9, ""native_layout"": 1, ""external_substitute"": 6, ""unknown_structure"": 2, ""resource_animation_candidate"": 1, ""nonvisual_or_metadata"": 1}",False
+ui/event/growthcapsule/growcapsulewindow.ui,ed56f8c7c933b3c47c5668095f42df31a4c576a3e4937f5f8e69846e97dfdac5,10,10,1,"{""resource_layout_candidate"": 4, ""native_layout"": 1, ""external_substitute"": 2, ""unknown_structure"": 2, ""nonvisual_or_metadata"": 1}",False
+ui/event/growthitempopupwindow/growthitemwindow.ui,0dad3513e2bf6a611bb4b92030c57e21988be9aa3de7cdeed77c4c2f7207454e,27,27,1,"{""resource_layout_candidate"": 18, ""native_layout"": 1, ""external_substitute"": 3, ""unknown_structure"": 2, ""nonvisual_or_metadata"": 3}",False
+ui/event/halloween/halloweenwitch/halloweenui.ui,3454157200d7bee04f20879985e357f7568a9522f9d73064322914ecc7abf5f9,11,11,1,"{""resource_animation_candidate"": 6, ""resource_layout_candidate"": 1, ""external_substitute"": 4}",False
+ui/event/heromission/heromissionsubwindow.ui,c6239e8a8eece252f67f6ddda89af9c55550abbd5092ac0d6291c4822a1089a8,4,4,1,"{""resource_layout_candidate"": 2, ""native_layout"": 1, ""external_substitute"": 1}",False
+ui/event/heromission/heromissionwindow.ui,9b15b03063f6e2ce310602fadf684e1da0a7f67383934201f46bb29489d2df64,1,1,1,"{""resource_layout_candidate"": 1}",False
+ui/event/heromission/missionboxuidata.ui,571583409ab380711220bdbbcd9f0f1a64ae6f93397e27d0b6a3dd66a07c8cdb,0,0,1,{},False
+ui/event/horrorpackagepayback/horrorpackagepayback.ui,261ae8f78fe495500b3d255ee196634f17638eea11418716ad2b45fba4e5de08,14,14,1,"{""native_layout"": 1, ""external_substitute"": 2, ""resource_layout_candidate"": 5, ""unknown_structure"": 2, ""nonvisual_or_metadata"": 2, ""resource_animation_candidate"": 2}",False
+ui/event/idoleflowerpot/idoleflowerpotselectwindow.ui,919d3f220d026c94629229ea5beb407a212c75007ddc67b406f5fbf6fa20916d,5,5,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 2, ""nonvisual_or_metadata"": 2}",False
+ui/event/july7thsoulmate/soulmaterequestwindow.ui,1a898019fe45a6711169168d77252825531ab404cac6628c40080704e6dfd9c1,3,3,1,"{""external_substitute"": 1, ""resource_layout_candidate"": 2}",False
+ui/event/july7thsoulmate/soulmatestatuswindow.ui,5c0e01371d8293306dbe784983d8ac51c31efbefc8d1473974ff2c2c3326a7b0,22,22,1,"{""native_layout"": 1, ""resource_layout_candidate"": 2, ""external_substitute"": 13, ""nonvisual_or_metadata"": 6}",False
+ui/event/jumpingcharacterpopupwindow/jumpingcharacter.ui,0c5a6f52942187c95acd79461dfbf222e1d03180559d572dcaa4251003ed2e11,10,10,1,"{""resource_layout_candidate"": 3, ""native_layout"": 1, ""external_substitute"": 4, ""nonvisual_or_metadata"": 1, ""unknown_structure"": 1}",False
+ui/event/levelupsupporttwevent/levelupsupporttwconfirm.ui,9884bd72fbaea3d21d8bfa4e6411c412001757d551b02fe1b0cb0e4378324b63,6,6,1,"{""resource_layout_candidate"": 5, ""external_substitute"": 1}",False
+ui/event/levelupsupporttwevent/levelupsupporttwevent.ui,053ff70ca8fbcb4d3aafa27b89929ed02af830a2bd5e82b4cf7f716f2644ad37,11,11,1,"{""resource_layout_candidate"": 9, ""native_layout"": 1, ""external_substitute"": 1}",False
+ui/event/newaccountlevelup/newaccountlevelup.ui,e771b6b6c3a7cf43f50936b0b9f3117dc941dcfcfb1994a2a80420c05658c90c,14,14,1,"{""resource_layout_candidate"": 7, ""native_layout"": 1, ""external_substitute"": 4, ""nonvisual_or_metadata"": 1, ""unknown_structure"": 1}",False
+ui/event/pandoraboxpopupwindow/(f)pandorabox.ui,e5c9d05c36597f523aa8901e6b416a826b7f8a69c0c94e2eabc15b9bc96df761,7,7,1,"{""resource_layout_candidate"": 3, ""native_layout"": 1, ""external_substitute"": 1, ""nonvisual_or_metadata"": 1, ""unknown_structure"": 1}",False
+ui/event/pandoraboxpopupwindow/(r)pandorabox.ui,786a0453b0298c160de6f31d8b8d1869aafd1ceb7dc8a3e0879f03e6d20f05b1,7,7,1,"{""resource_layout_candidate"": 3, ""native_layout"": 1, ""external_substitute"": 1, ""nonvisual_or_metadata"": 1, ""unknown_structure"": 1}",False
+ui/event/pcbang/pcbangbenefitlist.ui,2cff70fd691f6f3d933ddf4b710aa2d77b6b4776e9b596e4e736b2c0e7644b26,5,5,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 2}",False
+ui/event/pcbang/pcbangdata_evt_daily_reward.ui,3a8fcf2bc0f3ea6b28e319566b2965964d127c6ab6878be53140b3ee370db4d3,7,7,1,"{""native_layout"": 1, ""external_substitute"": 3, ""resource_layout_candidate"": 2, ""nonvisual_or_metadata"": 1}",False
+ui/event/pcbang/pcbangdata_evt_playtime.ui,436d4d5afe02fad9bbafcecf9702e2c4bef81424fd951a10a4b47f3d3c6889a5,6,6,1,"{""native_layout"": 1, ""external_substitute"": 3, ""resource_layout_candidate"": 1, ""unknown_structure"": 1}",False
+ui/event/pcbang/pcbangdata_evt_rentalservice.ui,a654714d6df717307623b7e21eb171ac4a9b75f8ed7655cf07d67942b1fead76,6,6,1,"{""native_layout"": 1, ""external_substitute"": 2, ""resource_layout_candidate"": 2, ""nonvisual_or_metadata"": 1}",False
+ui/event/pcbang/pcbangdata_giveitem.ui,123b532cd29e8a1344c2778610d7178458cd8f572607ce829d736d37013c8a5c,2,2,1,"{""native_layout"": 1, ""unknown_structure"": 1}",False
+ui/event/pcbang/pcbangdata_notice.ui,abcc6fb4d1e47d6a8682eaff6b388bc7e143427007b06e854e585db66e188e4d,2,2,1,"{""native_layout"": 1, ""external_substitute"": 1}",False
+ui/event/pcbang/pcbangdatalist.ui,3b9ed79854d97bba5279d943afe03801906468f43fc51c29a6337cc20ff70ddd,0,0,1,{},False
+ui/event/pcbangbenefitplaytime/pcbangplaytime.ui,e0b26924b77368f18148d6adc2ddbf6cf269bf2af61560c39690653b26f4ee3e,10,10,1,"{""resource_layout_candidate"": 3, ""native_layout"": 1, ""external_substitute"": 4, ""unknown_structure"": 2}",False
+ui/event/racing/racingminimapwindow.ui,f580d95f5cbf3fd669c0b4049f2413cc8c081655c73958e235517daf1adb6237,1,1,1,"{""resource_layout_candidate"": 1}",False
+ui/event/shootingstar/shootingstarshopsubwindow.ui,7d2f23075bcf9801319d9b1fee58407931648f5efdae287cee58c5b02334ba97,3,3,1,"{""native_layout"": 1, ""external_substitute"": 1, ""resource_layout_candidate"": 1}",False
+ui/event/shootingstar/shootingstarshopwindow.ui,c9c6858be75531a775eaddab80a635259b538300aff8bb4d182738d49d1added,6,6,1,"{""resource_layout_candidate"": 5, ""nonvisual_or_metadata"": 1}",False
+ui/event/shootingstar/wishboxuidata.ui,8fa09139b6b50ae972ed415b502d9ff068cf471beb1b2ee977821e792218a56c,0,0,1,{},False
+ui/event/social/socialconfirm.ui,3f70a02c0426a2bc3090501104d616b09eab9bca357040b5b66358eea11e37df,2,15,3,"{""nonvisual_or_metadata"": 2}",False
+ui/event/social/socialconfirmchkuser.ui,c2098da7c30ea61a49f4f2469e17ac1ecc706acc731728b093e3e8e4c8848905,5,5,1,"{""external_substitute"": 2, ""resource_layout_candidate"": 2, ""unknown_structure"": 1}",False
+ui/event/social/socialconfirmsend.ui,97bd92f197c890395c7283965f0ed5c3beebb8e8c6bae172d5033c97861a38cf,8,8,1,"{""resource_layout_candidate"": 5, ""external_substitute"": 3}",False
+ui/event/social/socialrequestlist.ui,878ed28e17fe5dc55af73163900c1df39aa0f38c151d142362d995f2634217d7,4,3,1,"{""external_substitute"": 1, ""resource_layout_candidate"": 1, ""unknown_structure"": 2}",False
+ui/event/social/socialresponse.ui,fee9c19d0fcca3a4a857b22d61a99346cbd8a2ff26488864e7304adf270b83d1,8,8,1,"{""resource_layout_candidate"": 5, ""external_substitute"": 3}",False
+ui/event/social/socialreward.ui,1c7e518ce9b6b483e276db381bd1ba91d8264a40bfe687c656a66df5c2d56358,5,5,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 2}",False
+ui/event/social/socialslot.ui,b345a780f31200e3b04e237546cb31ad5d7734f0087c77fef05f9d5877fbadd6,40,40,1,"{""resource_layout_candidate"": 17, ""external_substitute"": 6, ""unknown_structure"": 2, ""native_layout"": 1, ""nonvisual_or_metadata"": 14}",False
+ui/event/starterserver/noticeclasschange.ui,d561417015625ad9adf377b453a818b4de97b6c9fbca7e55b5095c34379c40df,4,4,1,"{""native_layout"": 1, ""external_substitute"": 3}",False
+ui/event/starterserver/noticecontinue.ui,a8bc71228c3f8de832d8400bdb9ae3fe5c022b222b18447552a10c0ba68d73bf,2,2,1,"{""native_layout"": 1, ""external_substitute"": 1}",False
+ui/event/starterserver/noticelevellimit.ui,8ec5a47c64007183561e2fbcbf711e50d43133afe422e13378561fdde69f3aac,2,2,1,"{""native_layout"": 1, ""unknown_structure"": 1}",False
+ui/event/starterserver/noticepartyplay.ui,07040b2af40c99a025f461db2c1a8be75d65b85d0906f4d7e61929b36b63acb3,3,3,1,"{""native_layout"": 1, ""external_substitute"": 2}",False
+ui/event/starterserver/noticeservermove.ui,8331bf20d3c9ba7dda885a102888c7d076e381f42bb2c3cd475bf23d65566488,2,2,1,"{""native_layout"": 1, ""unknown_structure"": 1}",False
+ui/event/starterserver/noticeux.ui,7c2d4a300e49b9efad4cb7fb60fe2743814e74f0e563442f0c6c0b3a4a315a59,4,4,1,"{""native_layout"": 1, ""external_substitute"": 3}",False
+ui/event/starterserver/starterserverinfodatalist.ui,62510f8f645ae98cfab412a9557f9a71be4f790ba1e624f29eac481cf89bf20e,0,0,1,{},False
+ui/event/starterserver/starterserverinfowindow.ui,69d177c1bba7cfbf3393c62d7cc55c096a2c37ebcaccdeb44460a9246cf1d346,3,3,1,"{""native_layout"": 1, ""unknown_structure"": 1, ""resource_layout_candidate"": 1}",False
+ui/event/thanksgivingpackageevent/thanksgivingpackageevent.ui,da3d7d7c53efa9cbf566e8b911476e8e9f962b9345a9c824216466c8b41c3d52,7,7,1,"{""native_layout"": 1, ""external_substitute"": 3, ""unknown_structure"": 1, ""resource_layout_candidate"": 2}",False
+ui/event/twdf/tw_130808_levelupevent_3rd/levelupsupport3rdwindow.ui,7f8e67d3cdc783a9b0660bec40708f51ab7f13f39806feced64ad16cdf350087,25,25,1,"{""resource_layout_candidate"": 20, ""native_layout"": 1, ""external_substitute"": 1, ""resource_animation_candidate"": 3}",False
+ui/event/twdf/tw_130822_challengeattendance/challengeattendancewindow.ui,965fadbbfeebf2d150b29464e910b50569741d48b72b1b6b959a58cea0f0de98,31,31,1,"{""resource_layout_candidate"": 23, ""native_layout"": 1, ""external_substitute"": 3, ""nonvisual_or_metadata"": 1, ""unknown_structure"": 1, ""resource_animation_candidate"": 2}",False
+ui/event/twdf/tw_131017_dimensionpocket_event/dimensionpocketconfirmwindow.ui,ce1c013a6c75d540a2cb5e1110fd10caee3eb3020f7e502c8541ec46cc52f6f2,3,3,1,"{""external_substitute"": 1, ""unknown_structure"": 2}",False
+ui/event/twdf/tw_131017_dimensionpocket_event/dimensionpocketwindow.ui,9508a44b3937b644c0a15aca35fb9b58fcd886b9d67e2f7d7f3c2b4c13e99212,9,9,1,"{""resource_layout_candidate"": 6, ""nonvisual_or_metadata"": 1, ""unknown_structure"": 1, ""external_substitute"": 1}",False
+ui/event/twdf/tw_131017_returnaccelerate_event/friendgiftwindow_.ui,ec43e9e433be6d87d4fbe4e9d6b79389940499927228366a793926687188bc43,8,8,1,"{""resource_layout_candidate"": 2, ""unknown_structure"": 1, ""external_substitute"": 4, ""nonvisual_or_metadata"": 1}",False
+ui/expertjob/enchanttoolforenchanter.ui,fa463ad142b523df3a14fb078b6d9dc1cba7165f974dc115c237dcf195bc4da5,7,7,1,"{""resource_layout_candidate"": 2, ""external_substitute"": 3, ""resource_animation_candidate"": 2}",False
+ui/expertjob/enchanttoolforrequester.ui,21f349ff84bdbacc5ec523e6ecbac183639cbebccb0bd615ae18201f41a5a1c5,9,9,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 3, ""resource_animation_candidate"": 3}",False
+ui/expertjob/new2enchanttoolforenchanter.ui,f2726a6384c57bed13066644f40c954fb88192166a5e90acc9c88560f410d116,7,7,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 3, ""resource_animation_candidate"": 3}",False
+ui/expertjob/new2enchanttoolforrequester.ui,9e826ef0cd3d590957dc46b35fdbea34c69b882e2d9ae3c2cf65acdc9ed3397c,10,10,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 3, ""resource_animation_candidate"": 4}",False
+ui/expertjob/new2enchanttoolforself.ui,95fc6704562321ca221ba64f1006a199c5452d70a4de3b4e7cbada83f23605a1,5,5,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 2, ""resource_animation_candidate"": 2}",False
+ui/expertjob/newenchanttoolforenchanter.ui,bcb66fbe0333e2db120c369b7135e2e31b32ea2670bc860e9b1fa3c01804de2a,6,6,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 3, ""resource_animation_candidate"": 2}",False
+ui/expertjob/newenchanttoolforrequester.ui,3acd7155c338ff2267cfefdcf53e2e8d41cca3b3050f7fdf3d4e68aad571c16c,8,8,1,"{""resource_layout_candidate"": 2, ""external_substitute"": 3, ""resource_animation_candidate"": 3}",False
+ui/gbosstower/result.ui,0b255acf804da27497505061fa3501e01bff89460a4a276035790d79355b4fc3,9,9,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 4, ""resource_animation_candidate"": 1}",False
+ui/genuinedamageupgrade/genuinedamageupgrade.ui,7a4c30b44a833f5c143a4adb7a69a40afbe2fbfc6faa940d156b34b63d281199,3,3,1,"{""external_substitute"": 3}",False
+ui/guide/guide.ui,9a349c4297659d887caa5ce99072a5c8a3773894d4760798f303cd9b13990667,10,10,1,"{""resource_layout_candidate"": 4, ""external_substitute"": 3, ""unknown_structure"": 3}",False
+ui/guild/guildfreeboard.ui,62f36fe666c2c07eab4e658529aec5464bf285978ce6701ad94aa1edc7dc8742,8,8,1,"{""resource_layout_candidate"": 5, ""external_substitute"": 1, ""unknown_structure"": 2}",False
+ui/hellparty/hellpartyreleasewindow.ui,785dfc3e8ea209f0a6962fb5ffce43612514d886dbf2531488fa19664a4d0e58,6,6,1,"{""external_substitute"": 2, ""resource_layout_candidate"": 3, ""native_layout"": 1}",False
+ui/hotkey/confirmwindow.ui,0815831c37d9ebf12aab013d1d7c7f68d01b5a6c94bd0f1eddcf51de37143c2b,4,4,1,"{""external_substitute"": 1, ""unknown_structure"": 3}",False
+ui/hotkey/hotkeywindow.ui,5f23a911eccd339e640a5d1458bf9684cc82dcdd4bd66c1230395d2d4aaf0010,26,235,2,"{""native_layout"": 2, ""unknown_structure"": 8, ""external_substitute"": 10, ""nonvisual_or_metadata"": 2, ""resource_layout_candidate"": 4}",False
+ui/hotkey/keyboard.ui,c121ccf7dceec6885e5b15aed31d93f5fbd4d93895c2ca03bbb7081b43c4b101,209,209,1,"{""resource_layout_candidate"": 208, ""nonvisual_or_metadata"": 1}",False
+ui/hud/hud.ui,55f40f0b99e5e8034086e05d7ee2dc476d370fea8c3aa30fe984575ed0c16da5,12,12,1,"{""resource_layout_candidate"": 11, ""resource_animation_candidate"": 1}",False
+ui/hud/mainmenuwindow.ui,be8e0f511c7bcbb96bfc5cd43d30d758237e086954ded58123dac52c5964a5b8,35,35,1,"{""resource_layout_candidate"": 35}",False
+ui/imagecommunication/imagecommunication.ui,ea0ade4b404680053fd4755018d4368e3f701f700112b98a9cd2035da881c9c1,3,3,1,"{""external_substitute"": 2, ""unknown_structure"": 1}",False
+ui/inventory/inventory_avatar.ui,f3be88d432ac0418210747db6b555934c97d78814c583f73636e3ca24f8ec6f0,14,24,2,"{""nonvisual_or_metadata"": 9, ""resource_layout_candidate"": 2, ""external_substitute"": 1, ""native_layout"": 1, ""unknown_structure"": 1}",False
+ui/inventory/inventory_avatar_control_group.ui,4da1cf1bc6801fad649471c8d71f9ceb01f4459af643eb2d201db49d62a793ea,10,10,1,"{""nonvisual_or_metadata"": 10}",False
+ui/inventory/inventory_bottom.ui,10c36d8e20ffffa9dc6d9aadc1926f912c90fcbac57fabe81822df0986dbb318,42,42,1,"{""nonvisual_or_metadata"": 21, ""resource_layout_candidate"": 13, ""external_substitute"": 7, ""unknown_structure"": 1}",False
+ui/inventory/inventory_creature.ui,0c2b36d4f3c736e58e57da400ddafd954cc677e032fa80b9bf524d2dc7cd5164,27,31,2,"{""nonvisual_or_metadata"": 13, ""resource_layout_candidate"": 6, ""external_substitute"": 4, ""unknown_structure"": 3, ""native_layout"": 1}",False
+ui/inventory/inventory_creature_control_group.ui,8857ed35809d84756d7416567bfd57b4008a223d646e111fa75e362fb38c18ea,4,4,1,"{""nonvisual_or_metadata"": 4}",False
+ui/inventory/inventory_item.ui,fe999ed4ed7133ee4e5782b4ec157b47ddc38a738e1a1a7f989d6e9cdcb03179,28,40,2,"{""nonvisual_or_metadata"": 19, ""resource_layout_candidate"": 6, ""external_substitute"": 1, ""native_layout"": 1, ""unknown_structure"": 1}",False
+ui/inventory/inventory_item_control_group.ui,4f71ad368311cea29ee02b9d75f3f91f2d794fb487fe33137f9c83d1d9e8a582,12,12,1,"{""nonvisual_or_metadata"": 12}",False
+ui/inventory/iteminventorywindow.ui,1b624e80f72ac5606062f3a40b41624ef308cc97d69d79bf3e9962c98d28171d,5,142,8,"{""external_substitute"": 1, ""nonvisual_or_metadata"": 4}",False
+ui/inventory/japan/inventory_avatar_control_group_jpn.ui,4da1cf1bc6801fad649471c8d71f9ceb01f4459af643eb2d201db49d62a793ea,10,10,1,"{""nonvisual_or_metadata"": 10}",False
+ui/inventory/japan/inventory_avatar_jpn.ui,540e8d31297708e675979f39252d37edcc2b82562f05bc5f02fb6d78672a1ce0,14,24,2,"{""nonvisual_or_metadata"": 9, ""resource_layout_candidate"": 2, ""external_substitute"": 1, ""native_layout"": 1, ""unknown_structure"": 1}",False
+ui/inventory/japan/inventory_bottom_jpn.ui,54aad09ba9951c19625751ad3ce87920e17d5638f9fd06ad5f7668969038648a,29,29,1,"{""nonvisual_or_metadata"": 18, ""resource_layout_candidate"": 5, ""external_substitute"": 5, ""unknown_structure"": 1}",False
+ui/inventory/japan/inventory_creature_control_group_jpn.ui,8857ed35809d84756d7416567bfd57b4008a223d646e111fa75e362fb38c18ea,4,4,1,"{""nonvisual_or_metadata"": 4}",False
+ui/inventory/japan/inventory_creature_jpn.ui,be9415cf4108263de41d8618101437751d30a0cc06fcb932d2ba4747bfb7f541,27,31,2,"{""nonvisual_or_metadata"": 13, ""resource_layout_candidate"": 6, ""external_substitute"": 4, ""unknown_structure"": 3, ""native_layout"": 1}",False
+ui/inventory/japan/inventory_item_control_group_jpn.ui,4f71ad368311cea29ee02b9d75f3f91f2d794fb487fe33137f9c83d1d9e8a582,12,12,1,"{""nonvisual_or_metadata"": 12}",False
+ui/inventory/japan/inventory_item_jpn.ui,3f6a1e5852b5f077ff999d5d7323b04e32faecf59e334a6e46d0808e075f186b,30,42,2,"{""nonvisual_or_metadata"": 19, ""resource_layout_candidate"": 8, ""external_substitute"": 1, ""native_layout"": 1, ""unknown_structure"": 1}",False
+ui/inventory/japan/inventory_katagaki_control_group_jpn.ui,477b6b1dc88b8dc93bd35ef3b0af1d3ccb71e241dff4d0b3f74ae7b30e488ba9,2,2,1,"{""nonvisual_or_metadata"": 2}",False
+ui/inventory/japan/inventory_katagaki_jpn.ui,8a88dcb2e55fc985f26d7036bb36fd138c1f8e903eeb444db0c8e473b25f6127,20,22,2,"{""nonvisual_or_metadata"": 8, ""resource_layout_candidate"": 7, ""native_layout"": 1, ""resource_animation_candidate"": 2, ""external_substitute"": 1, ""unknown_structure"": 1}",False
+ui/inventory/japan/iteminventorywindow_jpn.ui,269d82ae630f795a6b35cb4ce75bc2661c06b9652d1b0b8ada4f6f6b22fb2208,6,167,10,"{""external_substitute"": 1, ""nonvisual_or_metadata"": 5}",False
+ui/itemdictionary/itemdictionarywindow.ui,0866851675d2cc1d7279fea695e50966dff24cffbafffddd13405f9ddefc90ef,22,22,1,"{""resource_layout_candidate"": 10, ""external_substitute"": 3, ""unknown_structure"": 7, ""nonvisual_or_metadata"": 2}",False
+ui/itemtool/compoundmonstercard.ui,7c6fa63a1c50013d47dbcf47d47a12a491a8a1f8b8f6db90a5b5467097971718,14,14,1,"{""resource_layout_candidate"": 4, ""resource_animation_candidate"": 3, ""unknown_structure"": 2, ""external_substitute"": 2, ""nonvisual_or_metadata"": 3}",False
+ui/itemtool/compoundmonstercardresult.ui,d5221e750d6100575527247f44ab5631fabb1dcb34ee9929b4897b46bafa5bab,4,4,1,"{""unknown_structure"": 2, ""nonvisual_or_metadata"": 1, ""native_layout"": 1}",False
+ui/levelupmessagepopupwindow/levelupmessagepopupwindow.ui,310d22840e318f0d992da97a5fa8a35f939a23f6759ab6172d68f250ea04b8dd,4,4,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 1}",False
+ui/limitcube/limitcubeui.ui,2c11494ab66c3cb894b67a827cf82d8c963532b1fbdec226ec80a38c54fcf99b,9,9,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 4, ""resource_animation_candidate"": 2}",False
+ui/mail/createmailframe.ui,5db70816615146dfa0a35d7274019f70c5ce8f5f970aeabe0eee04eaf95d089a,34,34,1,"{""resource_layout_candidate"": 14, ""unknown_structure"": 2, ""external_substitute"": 8, ""nonvisual_or_metadata"": 10}",False
+ui/mail/mailboxframe.ui,44e5bbc5d7eb648828f89501c670994b61cec6ad3a4b3a31326f55285ee4243a,5,5,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 4}",False
+ui/mail/mailcontentwindow.ui,1526f969e42809ec50c7c922b4b21ceafdfce4d27afc0720827ad228f55ad983,17,17,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 5, ""unknown_structure"": 1, ""nonvisual_or_metadata"": 10}",False
+ui/mercenary/infotab.ui,e90e2815c1599d74e1a2a3caad033e40ed3b03103148ad9ca73caf8c85bfed05,19,19,1,"{""resource_layout_candidate"": 19}",False
+ui/mercenary/mercenaryrewardwindow.ui,973eee8db17dfb4df79d3327151cee3d23c45f2a73682739775362d856677207,8,8,1,"{""resource_layout_candidate"": 4, ""external_substitute"": 4}",False
+ui/mercenary/mercenarysystemwindow.ui,96486d6bf1b29b7d593b0904c72d16c1e49ffd9910588b2ebc23339a0c7cce62,3,3,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 2}",False
+ui/mercenary/mercenarysystemwindowver2.ui,a424077b82134fe75ca6a89b3cd00128f99bde5133fdd02ee2c9538a1b2b57e2,4,32,4,"{""external_substitute"": 1, ""nonvisual_or_metadata"": 3}",False
+ui/mercenary/mercenarytab.ui,2cff801d839ab74d7964fe61d6911e67f6b284272b281bf4228baf29de6f44f1,3,3,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 2}",False
+ui/mercenary/strikertab.ui,b312a0b49db24b3be27c22f759a7fc22d336ee685f14ff7ffd517e0394c43760,6,6,1,"{""resource_layout_candidate"": 4, ""nonvisual_or_metadata"": 1, ""external_substitute"": 1}",False
+ui/messenger/messengerinvite.ui,dfd58de7c13cc09dd0b915fce091db9743cb940bbcd00c27b32192408e9282a0,7,7,1,"{""native_layout"": 1, ""unknown_structure"": 2, ""external_substitute"": 1, ""resource_layout_candidate"": 3}",False
+ui/nowloading/intro/intro_12.ui,48c0807921b58af5d062b09e24f33324717785917ccbe40c39fa1650b56a654d,6,6,1,"{""resource_animation_candidate"": 6}",False
+ui/nowloading/intro/intro_15.ui,2f42151502a0c92c8cd419e55e682552314f0741448f5ee838f5fd9485dcef5d,6,6,1,"{""resource_animation_candidate"": 6}",False
+ui/nowloading/intro/intro_18.ui,39a7537deac68ac935acece817ab695b67adf11115473286f856a6846ec96fa2,6,6,1,"{""resource_animation_candidate"": 6}",False
+ui/optionwindow/optiongraphic.ui,5d47902211fe35927086c5838688386220e291fea157de97766b2487715bd3dd,28,28,1,"{""native_layout"": 1, ""external_substitute"": 8, ""unknown_structure"": 13, ""resource_layout_candidate"": 3, ""nonvisual_or_metadata"": 3}",False
+ui/optionwindow/optionsound.ui,670a2c8d88c7aff2592984ac895aac41ae41f93d2e357a39ea5586a22cc01a4f,7,7,1,"{""native_layout"": 1, ""external_substitute"": 3, ""unknown_structure"": 3}",False
+ui/optionwindow/optionsystem.ui,b23046c3482bb9af491e59a5445977a83d8a5deffaab857864cc9d9eb8686c4d,76,76,1,"{""native_layout"": 1, ""external_substitute"": 20, ""nonvisual_or_metadata"": 22, ""unknown_structure"": 33}",False
+ui/optionwindow/optionwindow.ui,2cdf3dbba55adfe2c816e131e2ba72947b12f3f32f36329b14691b452a8d144d,6,117,4,"{""external_substitute"": 3, ""nonvisual_or_metadata"": 3}",False
+ui/party/partycreate.ui,51f509b30ceceeca15dd5e9258310b8db754a5cbc3e839e1a021d070b1c00013,12,12,1,"{""external_substitute"": 7, ""unknown_structure"": 5}",False
+ui/party/partyjoin.ui,f9f2dd2a195c81a2f79668d25bfda4b0c570d9503a433bf0e8ca0200ea460424,1,0,1,"{""unknown_structure"": 1}",False
+ui/party/partylist.ui,db7d71cd85c10eeda14bc873605a424b6718f42942d1feff7c290cf48c8fcca0,7,7,1,"{""external_substitute"": 4, ""unknown_structure"": 3}",False
+ui/party/quickpartyretry.ui,9431a9fa503bb81172e6c7bc2e5de4cb488599d06872e222cb1f4ccc58b7bede,7,7,1,"{""resource_layout_candidate"": 4, ""resource_animation_candidate"": 1, ""nonvisual_or_metadata"": 2}",False
+ui/party/quickpartyselectdungeon.ui,21571c9a9021491a6895b68004cbfa2e3153ab5692dff423497a83457e2d6ffa,13,13,1,"{""resource_layout_candidate"": 7, ""external_substitute"": 1, ""nonvisual_or_metadata"": 4, ""resource_animation_candidate"": 1}",False
+ui/partyteleport/partyteleportconfirm.ui,9c8c8f60786b3db30a3df52a73d3c03e6eccd4b1760ab279434d64e0b9cbf9b7,3,3,1,"{""external_substitute"": 1, ""resource_layout_candidate"": 2}",False
+ui/partyteleport/partyteleportstatus.ui,d00d43a8dde8b3574fbe448c84281bb7b18ae590fb117482d4245c0b20fc11c0,12,12,1,"{""external_substitute"": 1, ""unknown_structure"": 1, ""resource_layout_candidate"": 7, ""resource_animation_candidate"": 3}",False
+ui/player/movielistwindow.ui,6343304f60ee807d80d517ccff064f5c57e7ce2a93139447e2668718b9583dc5,3,3,1,"{""unknown_structure"": 3}",False
+ui/player/movieplayer.ui,0bfd06dec95251b9b7c0522957da5425e4bd691388225701a20f9cdc80c43901,1,1,1,"{""nonvisual_or_metadata"": 1}",False
+ui/powerwar/joinpower.ui,586c0e777f8c5b45d93b6b3fa2786a1d40535fecbb5a615ac5b0b9e0b9356af6,13,13,1,"{""external_substitute"": 6, ""resource_layout_candidate"": 7}",False
+ui/pvp/channel/buttons_01.ui,81bd1e1b09c1b55d2698187ee2126b7cc99bb16d52b02175fec30c03923b7222,3,15,4,"{""unknown_structure"": 3}",False
+ui/pvp/channel/buttons_02.ui,9672f61b4ce059608cd18f2684ba3b3ff014c03a25074d7e086794a3ad3fd5a1,6,26,6,"{""unknown_structure"": 6}",False
+ui/pvp/channel/buttontext.ui,9531ad002d5f73a3ee57ec748f3aab566066f11c98ea2be4fb09d29d832da16a,4,4,1,"{""external_substitute"": 3, ""nonvisual_or_metadata"": 1}",False
+ui/pvp/channel/channellist.ui,25ce55d34a64fdf340e088b117b85c521dd7e42711e0f0e43bf19961fe5fb7bc,3,185,45,"{""external_substitute"": 1, ""nonvisual_or_metadata"": 2}",False
+ui/pvp/channel/tab_01.ui,2e9c6eec43f959c45fbbc1ed2416f05c9e59dc8a3ff5baaff5d4796d9d662829,9,99,25,"{""resource_layout_candidate"": 1, ""external_substitute"": 1, ""unknown_structure"": 1, ""nonvisual_or_metadata"": 6}",False
+ui/pvp/channel/tab_02.ui,9b677ad7ce8833e675e8734d32f0f1636d9905e75948bbd5bd07cf22f9123766,5,83,19,"{""resource_layout_candidate"": 4, ""external_substitute"": 1}",False
+ui/pvp/channel/window.ui,1a52198effd1a7512d42a6f7dc7cde90e4bae6df864b7dee18d84afc16da3729,2,101,26,"{""external_substitute"": 1, ""nonvisual_or_metadata"": 1}",False
+ui/pvp/fair/blankuser.ui,58c15cd6c39daa824d4e8d078c84ea1393935e34ab2ab7a648e48def2c71b6a0,9,9,1,"{""resource_layout_candidate"": 6, ""resource_animation_candidate"": 3}",False
+ui/pvp/fair/blankuser_800x600.ui,fd7e505fbb4859e86d4370e2abde03faf682ea2fe4b511e0950dafa7c1575c78,9,9,1,"{""resource_layout_candidate"": 6, ""resource_animation_candidate"": 3}",False
+ui/pvp/fair/lobby.ui,d828d73972520980bf5e9c8c5f4b1bc11779a02ec563ce80e09848a1d9c2d576,7,7,1,"{""resource_layout_candidate"": 2, ""external_substitute"": 5}",False
+ui/pvp/fair/missionwindow.ui,d6881f7ab972c92cad332d0ac892e21c99e60d9ff4dbcc6cbeb1dce77d9ed04c,15,15,1,"{""resource_layout_candidate"": 9, ""unknown_structure"": 2, ""external_substitute"": 4}",False
+ui/pvp/fair/record.ui,5b6cf379b4fb0414aff38e41382988c6c23678ffa5663c72563ea7627beef249,5,28,4,"{""resource_layout_candidate"": 2, ""nonvisual_or_metadata"": 2, ""external_substitute"": 1}",False
+ui/pvp/fair/record_0.ui,469165032f6c733e3700490e11703033aa1c9879bfa5304eb63066fcdec889a2,16,16,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 15}",False
+ui/pvp/fair/record_1.ui,8cfd10fff463990bdfd11d7279d17b82e4981691f051b41be8d7d0f34c23a383,1,1,1,"{""external_substitute"": 1}",False
+ui/pvp/fair/record_2.ui,4b39fa3e9828a507f735aa5c7cc559ff3a7b5fddcfe088a28ea9b5e51d2fb024,6,6,1,"{""unknown_structure"": 3, ""external_substitute"": 3}",False
+ui/pvp/fair/rematch.ui,7c9af2ae12c5602f1dce74591ba89a314992b63a53f2e97f2a0fea2e7ed4ecd9,5,5,1,"{""unknown_structure"": 3, ""resource_layout_candidate"": 1, ""external_substitute"": 1}",False
+ui/pvp/fair/waitingroom.ui,96fdce8f3f2ca7f9d0ac3abc775e6c493adec2bc61849363307f0496c69c3638,10,10,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 5, ""resource_animation_candidate"": 1, ""unknown_structure"": 1}",False
+ui/pvp/fair/waitingroom_800x600.ui,51015c27caf47078edf2e5af47cc9858fedc3991a8e236d89a04316c623c1abc,10,10,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 5, ""resource_animation_candidate"": 1, ""unknown_structure"": 1}",False
+ui/quest/questshop.ui,402b4cd9aa624a9e3f7b84384665c3bc7efc1e239385cfdd95d01aca4160aaf9,0,0,1,{},False
+ui/randombox/result.ui,f689ea5f4ae9e8de7caa1d81c229680ee6a3e4b8d085b2ea137f84b0d6b8b93d,7,7,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 4}",False
+ui/randomboxbooster/instantrandomboxresult.ui,dbdb38cc60bb4f598cf5733290492652699f430b4c4471ad74b5fb8f8eaf7f21,8,8,1,"{""resource_layout_candidate"": 4, ""external_substitute"": 4}",False
+ui/randomoption/randomoptionchange.ui,f9265430388380ca6216d6f513511f3cbd41f3b31d042432a47447cd21229edd,21,21,1,"{""resource_layout_candidate"": 8, ""unknown_structure"": 5, ""external_substitute"": 4, ""resource_animation_candidate"": 4}",False
+ui/randomoption/randomoptionchangepass.ui,3ce77937359aa987a83afcd9c59fe6e3e4faeb95b9025c321bafae50d5050c44,22,22,1,"{""resource_layout_candidate"": 8, ""unknown_structure"": 5, ""external_substitute"": 4, ""resource_animation_candidate"": 5}",False
+ui/randomoption/randomoptionregenerationpass.ui,7172141d4e02681ed83665afcbef97919be53b0764757fb60c5a6abafbf7dda8,16,39,5,"{""resource_layout_candidate"": 4, ""resource_animation_candidate"": 5, ""nonvisual_or_metadata"": 5, ""external_substitute"": 2}",False
+ui/randomoption/randomoptiontotal.ui,38386bb48e4fbc8cf13af3296e289c28e3149f467f29bd196b4fa350f8eb6cb3,4,81,8,"{""external_substitute"": 1, ""nonvisual_or_metadata"": 3}",False
+ui/randomoption/randomoptionunseal.ui,7de9926b7fffcb8d6a69d4c0955e6de0a1b11ea96cf83a2e3d1e5250124d7cce,11,11,1,"{""resource_layout_candidate"": 5, ""unknown_structure"": 2, ""resource_animation_candidate"": 4}",False
+ui/randomoption/randomoptionunsealpass.ui,79ff55e1d7bf3599b847bc9da8e8d6f8696ddfd90ea1926d1a185fe2de1dea19,16,16,1,"{""resource_layout_candidate"": 6, ""unknown_structure"": 2, ""resource_animation_candidate"": 5, ""external_substitute"": 3}",False
+ui/randomoption/regeneration_addtion.ui,59c9d455d23f22cbbee164f401b6119e415e7382abe2333de223aad8cd7de63e,3,3,1,"{""resource_layout_candidate"": 1, ""unknown_structure"": 2}",False
+ui/randomoption/regeneration_default.ui,d1ba8ffc8809f099becaf3243d0cafae62d253eef3bb142517423e19bb5c9de4,6,6,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 3}",False
+ui/randomoption/regeneration_rare.ui,5ffa11360fc6fd0c75256b963f101f6a4ed8c2767d32899d4918d4e232b43c47,7,7,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 4}",False
+ui/randomoption/regeneration_unique.ui,fa246c565e1ad8cecd85f2c2a78641b3b5cb25620c3d08b05f6af87a947e3065,7,7,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 4}",False
+ui/randomoptionregeneration/randomoptionregeneration.ui,f31824876de2ebc031a4a1e569252d2ac487201d6c57530dbdc10a1b028f1749,15,38,5,"{""resource_layout_candidate"": 4, ""resource_animation_candidate"": 4, ""nonvisual_or_metadata"": 5, ""external_substitute"": 2}",False
+ui/randomoptionregeneration/regeneration_addtion.ui,adeaf0d634a0ba224d59b32f6e86670b81b053594f1c64f7b76a04bd0f3be1df,3,3,1,"{""resource_layout_candidate"": 1, ""unknown_structure"": 2}",False
+ui/randomoptionregeneration/regeneration_default.ui,5d46997e55166d466da069b1b95fb87fd619254cad97e4da0fcb0f3908b04b5c,6,6,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 3}",False
+ui/randomoptionregeneration/regeneration_rare.ui,62193afc0704b9d99f3cb091b95cec42bf5b0522108913ff305bea9693339301,7,7,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 4}",False
+ui/randomoptionregeneration/regeneration_unique.ui,52262b8493723308b68b317e12bd8558964b394041ac407cf2c364078fdce0b0,7,7,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 4}",False
+ui/rapidparty/rapidparty.ui,d2ed3469220cd9f68cac19e9671d6fa6850b7ae243ce2cfbf7339ebf1a1195b3,25,25,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 14, ""unknown_structure"": 10}",False
+ui/rapidparty/rapidparty2nd.ui,74f78304fabc93e4a72d6b83b84dd43d15acb72abf4f371f5f5b099540bb8b8c,9,9,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 8}",False
+ui/security/securitywarningwindow.ui,a43f277c7533117ef27aa491c7af4be83c9343537dec8be08fe3d271402dad9c,9,9,1,"{""external_substitute"": 3, ""resource_layout_candidate"": 2, ""native_layout"": 1, ""unknown_structure"": 1, ""nonvisual_or_metadata"": 2}",False
+ui/selectcharacter/createcharacterselectserverwindow.ui,34affd83b3a4c5190f70c9f927bf41536219b042c463ee950260243ba21a003f,8,8,1,"{""resource_layout_candidate"": 8}",False
+ui/selectcharacter/selectcharacterover.ui,43e365bb5b1d629c412dcd23ce57363a961d5a74e403b9acdcaa51f2af00acda,82,82,1,"{""external_substitute"": 37, ""resource_animation_candidate"": 21, ""resource_layout_candidate"": 24}",False
+ui/selectcharacter/selectcharacterover_eventserver.ui,8aa2c0c3a7a792d7fd984f3f353bd8a2600129e3948fe2fa267161205cfe4d73,74,74,1,"{""external_substitute"": 37, ""resource_layout_candidate"": 36, ""resource_animation_candidate"": 1}",False
+ui/selectcharacter/selectcharacterover_starterserver.ui,8aa2c0c3a7a792d7fd984f3f353bd8a2600129e3948fe2fa267161205cfe4d73,74,74,1,"{""external_substitute"": 37, ""resource_layout_candidate"": 36, ""resource_animation_candidate"": 1}",False
+ui/selectcharacter/selectcharacterunder.ui,e194ccec3c22a7bcf49c0769f725fe81e76775374a6245db1344dbd549d43fc5,80,80,1,"{""resource_layout_candidate"": 76, ""resource_animation_candidate"": 3, ""native_layout"": 1}",False
+ui/selectcharacter/selectcharacterunder_eventserver.ui,dbef14161e03dfb53729f5d2911b9179332c8abb6ad9c72d15d2fe1b570e8b8e,63,63,1,"{""resource_layout_candidate"": 59, ""resource_animation_candidate"": 3, ""native_layout"": 1}",False
+ui/selectcharacter/selectcharacterunder_starterserver.ui,373865ebe4b0346638c856c187936398ac97fb2bbc1dc8501a4a8aa985dc1583,63,63,1,"{""resource_layout_candidate"": 58, ""resource_animation_candidate"": 3, ""native_layout"": 1, ""external_substitute"": 1}",False
+ui/selectdungeon/enterconditionwindow.ui,809dc1db9c68601f58cc9b229efdb05dd422c6649366213a34cf414ea7f04056,6,6,1,"{""resource_layout_candidate"": 3, ""external_substitute"": 3}",False
+ui/selectdungeon/selectdungeondropitemwindow.ui,22673616a072493f05811475f94ac20ade7806dfd7f41ed46f8e83f4bfc7acaf,15,15,1,"{""nonvisual_or_metadata"": 11, ""external_substitute"": 3, ""resource_layout_candidate"": 1}",False
+ui/selectdungeon/ultimatenoticewindow.ui,afc2a9490e3c34b08fbe3fee0725da423014a03b548c8c96b7a19d3e1b721e5a,3,3,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 2}",False
+ui/selectserver/effect/selectservereffect.ui,e53c200573a767ab3b39261ebc28832e8865ec2541379d488d9aaaec642673be,3,3,1,"{""resource_animation_candidate"": 3}",False
+ui/shutdown/servicehourswindow.ui,f6f80fc3cabfa983cdf3b836d001233f48c82354ece12d14454cf2c6c91275c1,0,0,1,{},False
+ui/simpleid/simpleidmydropitempopup.ui,f6830baa22f9c204c5ef7eec2904036179d98b51a61e7918d55cf1ea63156f5a,3,3,1,"{""external_substitute"": 1, ""resource_layout_candidate"": 2}",False
+ui/simpleid/simpleidmylimitpopup.ui,a16b58e484f5ed14630aa0b509f6d0afaf1a6cee1f5c9239d79fec0ddf48a02e,2,2,1,"{""external_substitute"": 1, ""resource_layout_candidate"": 1}",False
+ui/simpleid/simpleidotherlimitpopup.ui,0c439979ccf70d2fb4c76be26e094b416d1f68ae253abde51073d5eab12abac3,2,2,1,"{""external_substitute"": 1, ""resource_layout_candidate"": 1}",False
+ui/skill/guildskillbuywindow.ui,a9d5a481dec3c1866f299565505c64a81617a14ad1ed4fb255bcdef4ef44b047,3,3,1,"{""resource_layout_candidate"": 1, ""external_substitute"": 2}",False
+ui/skill/skillbuywindow.ui,4f8c7711856b02b2217dbde931e428c036ff9767057a20fff8829554b5114814,15,15,1,"{""native_layout"": 1, ""resource_layout_candidate"": 7, ""external_substitute"": 3, ""nonvisual_or_metadata"": 4}",False
+ui/skill/skillrefundwindow.ui,672625fa5293b3d3c009b3baedd7cece1cb9f779edde241853f1785d1b413efd,6,6,1,"{""resource_layout_candidate"": 4, ""external_substitute"": 2}",False
+ui/skill/skillshopcombogrid.ui,2b9289f6045f8cb2882c24bb77f98b6eac8d03e8ea734ed2e0ff64634f986205,14,14,1,"{""unknown_structure"": 8, ""resource_layout_candidate"": 6}",False
+ui/skill/skillshopdarkknightcontrol.ui,e7d1fb68fd9fd9b15a446b112ec6383e31d0d8bb1a21e171c3464fd8afa5f64b,2,2,1,"{""nonvisual_or_metadata"": 1, ""unknown_structure"": 1}",False
+ui/skill/skillshopexplain.ui,fb5de95c7a7d73a426db324984f3cd09817806d46164ace47579884347af6fec,9,9,1,"{""resource_layout_candidate"": 5, ""nonvisual_or_metadata"": 1, ""external_substitute"": 1, ""unknown_structure"": 2}",False
+ui/skill/skillshopsppage.ui,3a19f10f104cf6ec72f4bcc4083230d8c16bf5c76623cb56755a35f27dac35e8,2,2,1,"{""nonvisual_or_metadata"": 1, ""external_substitute"": 1}",False
+ui/skill/skillshoptppage.ui,27221426cabae2fd322074988c7693cd0fd5285e40af9d78593e6bc1ae3a56c1,2,2,1,"{""nonvisual_or_metadata"": 1, ""external_substitute"": 1}",False
+ui/skill/skillshopwindow.ui,26708ac9bdc29861d9cbf925f9e4287b9ec4731c276cc6fafdfb2fb91d47d018,38,53,5,"{""resource_layout_candidate"": 14, ""unknown_structure"": 13, ""native_layout"": 1, ""nonvisual_or_metadata"": 3, ""external_substitute"": 7}",False
+ui/soloteleport/soloteleportconfirm.ui,b92e7f20b10cdb6160c32dc1394d9cd9d1280623cf4f5f49f8d3fc25291c3d7a,7,7,1,"{""resource_layout_candidate"": 4, ""external_substitute"": 3}",False
+ui/soloteleport/soloteleportwindow.ui,8ce7d7b81e1d000f1eaf4a2215c244f83875403c14e89049ccfb501368c4496c,9,9,1,"{""native_layout"": 1, ""external_substitute"": 5, ""resource_layout_candidate"": 1, ""unknown_structure"": 2}",False
+ui/strikerskillselect/strikerskillselectwindow.ui,f748d7c12602d353df10e91b55241feb01fdcf605824133b9869c2b8981ab47c,2,2,1,"{""unknown_structure"": 2}",False
+ui/strikerskillselect/strikerskillselectwindow3.ui,dfd58de7c13cc09dd0b915fce091db9743cb940bbcd00c27b32192408e9282a0,7,7,1,"{""native_layout"": 1, ""unknown_structure"": 2, ""external_substitute"": 1, ""resource_layout_candidate"": 3}",False
+ui/test/testbutton.ui,0be5a9f60f45ea698360d69e46955236f05dcf9f18ee1cb16bd3ccd1e7cd0b7a,41,78,8,"{""resource_layout_candidate"": 6, ""unknown_structure"": 23, ""native_layout"": 1, ""external_substitute"": 7, ""resource_animation_candidate"": 1, ""nonvisual_or_metadata"": 3}",False
+ui/test/uiscriptpopupwindowsample.ui,aa7af2f80828f7e49213c4375f30cee607d170b5524aae773eaf878d39cf5abd,11,11,1,"{""resource_layout_candidate"": 5, ""unknown_structure"": 2, ""resource_animation_candidate"": 4}",False
+ui/test/windowsample.ui,055f389248d08ca1d7b065b39926df5eddd5bd292cb990d66c287f5726e3a2f4,13,13,1,"{""external_substitute"": 6, ""resource_layout_candidate"": 7}",False
+ui/timelimiteditemsinfowindow/timelimiteditemsinfowindow.ui,8f90b4d08548691229cf8fa84dc2c4b6c1ee3e570a69d86d3205da3627d4f00d,3,3,1,"{""external_substitute"": 2, ""unknown_structure"": 1}",False
+ui/titlebook/achievementtab.ui,7f826e9ee83131c9f30f909479342329cebf92abb4162f019c669ef36c3ef07d,13,13,1,"{""native_layout"": 1, ""resource_layout_candidate"": 3, ""external_substitute"": 6, ""unknown_structure"": 3}",False
+ui/titlebook/despairtab.ui,a217e30340bce75b914357ec0b6b62cf93f1bd1c3b5fc79e989c4d228bebc4ca,1,0,1,"{""unknown_structure"": 1}",False
+ui/titlebook/eventtab.ui,a217e30340bce75b914357ec0b6b62cf93f1bd1c3b5fc79e989c4d228bebc4ca,1,0,1,"{""unknown_structure"": 1}",False
+ui/titlebook/normaltab.ui,e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855,0,0,1,{},False
+ui/titlebook/specialtab.ui,a217e30340bce75b914357ec0b6b62cf93f1bd1c3b5fc79e989c4d228bebc4ca,1,0,1,"{""unknown_structure"": 1}",False
+ui/titlebook/titlebook.ui,68024bae3a319ff1deb2171d0b80587b8bbeb4dd75687e31ba0cb40650300b1e,15,28,2,"{""external_substitute"": 3, ""nonvisual_or_metadata"": 5, ""native_layout"": 3, ""unknown_structure"": 1, ""resource_layout_candidate"": 3}",False
+ui/tournament/matching.ui,36fdd7f80869d4bd9d6c91cea953ed54d7692b0d902bcd4e53fab0f4aba80282,242,242,1,"{""resource_animation_candidate"": 119, ""resource_layout_candidate"": 93, ""external_substitute"": 30}",False
+ui/tournament/reward.ui,de4f34d73bd71be8f04befb107b5b9f2a9af7be0e0b5379b7b2dc1e7a5cf48bb,40,40,1,"{""resource_layout_candidate"": 13, ""unknown_structure"": 1, ""resource_animation_candidate"": 26}",False
+ui/tournament/victory.ui,1e7610442347073df018f0c6e79fefbf1ba32a05710e606a5d9c5ab22bf7ebd1,3,3,1,"{""resource_animation_candidate"": 3}",False
+ui/towerofdespair/reward.ui,f0681eef507cf25f7919e9a0c350db38e6d9b62a7f6947bd1681742899fdaa2b,1,1,1,"{""unknown_structure"": 1}",False
+ui/tutorial/goguide.ui,3ada2682c08c50d46a6ca5a9644fe1a153aed66e33234f343b8fcb66fc5fb8a7,0,0,1,{},False
+ui/tutorial/tutorial.ui,60ed04b3c40f6fb0b0a2f444821835305c38a707e4b54c900855b92c56cf4668,38,38,1,"{""resource_layout_candidate"": 33, ""resource_animation_candidate"": 4, ""external_substitute"": 1}",False
+ui/tutorial/tutorialminiguide.ui,61c70b633e01083812a9a452c2c1f66ba3ad5d6efcc804673eab6bfc7913f61d,11,11,1,"{""resource_layout_candidate"": 3, ""resource_animation_candidate"": 6, ""external_substitute"": 1, ""unknown_structure"": 1}",False
+ui/usecoin/usecoinwindow.ui,74678beaad01b3e7a2fc78c098b15a2dbeb13c26144e27af83eb1ed3af08b2c3,11,11,1,"{""resource_layout_candidate"": 9, ""external_substitute"": 2}",False
+ui/warroom/warroomdifficultlist.ui,4d4601ff6ac5e4960e176223de21b4c1a030cb44472d834da3a70201b1212880,0,0,1,{},False
+ui/worldminimap/worldminimap.ui,8d593ade927f7b9efdf912f1ebf1759ac8b742e2fc212865cab98b1d12c00738,2,2,1,"{""resource_layout_candidate"": 2}",False
+worldmap/ui/antberr.ui,cbb033db591c0535da1319f7f42ba595a7f98ef6a2ec50c01d762e45eade62be,13,13,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 9}",False
+worldmap/ui/antonawakening.ui,4e94cef85bcf5942270dc021011bab7c797a6ea247c9bb9c4d257acce089f4f7,6,6,1,"{""resource_layout_candidate"": 4, ""resource_animation_candidate"": 1, ""unknown_structure"": 1}",False
+worldmap/ui/aradcartel.ui,d0b808d1c033e22757078e8a8fded8070b0416846f38571b9b98b1177a4de877,7,7,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 3}",False
+worldmap/ui/behemoth.ui,6ef4b5a641402c7847f890d6c28eb67393338ae289a53ee88b6569184253fab6,14,14,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 10}",False
+worldmap/ui/castleofthedead.ui,a1b08f8ea7eeb3726c002888e2a2e64480e701d48a16752c08aea299648cd4c3,5,5,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 1}",False
+worldmap/ui/charnak.ui,57f11d45f722b98cb7894e0cbf2443fc485d59c98a2f4b593141d360c126ad1f,12,12,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 8}",False
+worldmap/ui/chn_shonan_holy.ui,e3b36a6849f076adad98dddfc8df663e0501b63f9d37169adee525dc4f0bb468,10,10,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 6}",False
+worldmap/ui/common/common.ui,7b76959c910f3261e031cdea6f023ca609276547b5d1cc29b88263cec99b5a9e,10,10,1,"{""resource_layout_candidate"": 9, ""external_substitute"": 1}",False
+worldmap/ui/darkelf_temple.ui,459d938e5a7eb69cd2cfd83296bd0183154f7bfbbc84a7b366587b35b38c6462,6,6,1,"{""resource_layout_candidate"": 4, ""resource_animation_candidate"": 1, ""unknown_structure"": 1}",False
+worldmap/ui/dimensiongate.ui,a7303e917f028a1250c739d38f8de95d05209c734fa8633297e5d1df37f7524e,11,11,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 7}",False
+worldmap/ui/forestofsilent.ui,d1ada3f4dee95c58e9c7e688bb4afd8eccd89dcb8905499b97b05d8f0c73537f,10,10,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 5, ""resource_animation_candidate"": 1}",False
+worldmap/ui/gblgrim.ui,f08f647644ce87bfe7d71fbf899a5630b090866f460dc1b0d92fda78a4ca695d,8,8,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 4}",False
+worldmap/ui/granfloris.ui,2f4c5f41693e8ca6ad3858e4886a249fa9dd6a323a396ac23952a14f8066c539,21,21,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 17}",False
+worldmap/ui/granflorishillside.ui,5bf3c0ab0792a2efd59e84aa703caf5cfce82c79c4d964500fe2aa34736c54b3,6,6,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 2}",False
+worldmap/ui/lorien.ui,e5db08a80f40d09af0884b319f4fdac095f1fe45c76b52b29925bdfd1bf95ce9,9,9,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 5}",False
+worldmap/ui/lufthafen.ui,bacdf0f9f76ff7a869db467df79ae8e969d80f136f9ead8152ebb03ef2265736,13,13,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 9}",False
+worldmap/ui/moonlightpub.ui,8cf2c59e41fcb43f7d48350793125558d70f78c65906e67c61400a2e17c48bc0,11,11,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 7}",False
+worldmap/ui/noirpera.ui,042b27d71034888830b51172ec896dec92f42d32ce009cfdff1952232f30037c,9,9,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 5}",False
+worldmap/ui/northmyre.ui,e91e8b979ee5baa3886cde5c6a8a7e927205dab384a2fce4c0b6d7b729ae9437,10,10,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 6}",False
+worldmap/ui/poongjintrainingroom.ui,96f1a9d96b403d303e0866af1a454101f157b905298ec465a5d59d3c1e414952,6,6,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 2}",False
+worldmap/ui/powerstation.ui,ca63935e1ef8ee894ec11b9d7d3c9047aebf0548e6732bebcf68dea41f628949,11,11,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 7}",False
+worldmap/ui/sharingdifficulty/sharingdifficulty.ui,cbda967b7271e94d84a2ad2d3ba9bec3ee7c008dc1cf92fe676d364c04812d2e,5,5,1,"{""resource_animation_candidate"": 5}",False
+worldmap/ui/shonan.ui,be08f4043723019d298315c97fedff4c5a159ff49ce6517cda8a6d3c9810aefa,7,7,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 3}",False
+worldmap/ui/skycastle.ui,db5d808cd4529408428dba5394c681602d51a377068380cde62b9c3f35b3d733,12,12,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 8}",False
+worldmap/ui/timegate.ui,8ee668aa9df95ec9bd5a3827f81cdb1173526a6f9ac544006989832f528c14d5,19,19,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 15}",False
+worldmap/ui/timegaterequiem.ui,6f896ca621e27b24ba59f672f1710cb059715df99c3f3c95bd90877b5a82c821,12,12,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 8}",False
+worldmap/ui/towers.ui,d8abbfdcd79448c5fedbb1101f5072471aef27208b167a702671d1de14b2f86f,11,11,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 7}",False
+worldmap/ui/underfoot.ui,90781d348b9eca2b4837a85d6cf5cb175235e1902c697368a4bf1155a058138a,9,9,1,"{""resource_layout_candidate"": 4, ""unknown_structure"": 5}",False

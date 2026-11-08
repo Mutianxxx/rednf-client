@@ -1,0 +1,65 @@
+{
+  "pid": 50524,
+  "exe": "D:\\game\\DNF1031客户端-20260708\\DNF\\DNF\\DNF.exe",
+  "exe_sha256": "1f8244d3f7309bbe2fde4299e1863a894f6b28d5707bf01732980585b20b00dd",
+  "utc": "2026-10-17T18:16:31.780284+00:00",
+  "directory_count": 713685,
+  "decoded_paths": 713685,
+  "player_skill_files": 2810,
+  "skill_directories": {
+    "atfighter": 236,
+    "atgunner": 221,
+    "atmage": 135,
+    "atswordman": 210,
+    "autoskill": 14,
+    "creatormage": 68,
+    "demoniclancer": 107,
+    "demonicswordman": 211,
+    "fighter": 218,
+    "gunner": 223,
+    "knight": 161,
+    "mage": 256,
+    "priest": 267,
+    "skillattackdata": 14,
+    "swordman": 231,
+    "thief": 238
+  },
+  "artifacts": {
+    "decoded-header-globals.bin": {
+      "bytes": 96,
+      "sha256": "4d7b1ad3b88d2203d328f8e33e098165f879dfc0d23d97c1f9e8c52dc769ef86",
+      "address": "0x4e1eec8"
+    },
+    "shared-strings-object.bin": {
+      "bytes": 56,
+      "sha256": "c451f02c80e2753c12d588536b5f79560a83697a52e2e816d961592be475dcfc",
+      "address": "0x4e25c88"
+    },
+    "runtime-path-pool.bin": {
+      "bytes": 38684351,
+      "sha256": "b09f699c1a09ef2915cf4de02aab289e8b02ec462f151e2b6deb62f95f6200e4",
+      "address": "0x2925f020"
+    },
+    "runtime-wide-pool.bin": {
+      "bytes": 11652402,
+      "sha256": "12f86b0889e8a83f6a49c05adbbda685068cefe03cdd7f2e9913a54769745b65",
+      "address": "0x2b754020"
+    },
+    "runtime-directory.bin": {
+      "bytes": 17128440,
+      "sha256": "09e0c1561597dfc5123f27736d7edc402382f1b200be40c009d6889f341e7e68",
+      "address": "0x25b80080"
+    },
+    "runtime-chunk-descriptors.bin": {
+      "bytes": 46520,
+      "sha256": "ed9131fe3af7af0f47e6beff7d68ac313c99b14a0afcd63f35fa8c4100dd8a59",
+      "address": "0x27a20080"
+    },
+    "runtime-packed-body.bin": {
+      "bytes": 40162854,
+      "sha256": "eaa0387055c904ed525768816d839c0cf4b243e130d5134191abc67d1598e9e0",
+      "address": "0x2c280080"
+    }
+  },
+  "scope": "Live read-only resource snapshot. Packed bodies and runtime string references are preserved; skill logic and render semantics are not yet decoded."
+}

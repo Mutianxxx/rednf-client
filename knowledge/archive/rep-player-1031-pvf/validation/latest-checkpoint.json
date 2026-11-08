@@ -1,0 +1,13 @@
+{
+    "node":  "node-05-cross-character-templates",
+    "created":  "2026-10-19T17:18:55.7639605+08:00",
+    "project":  "D:\\dnf-rebuild\\rep-player-1031-pvf",
+    "checkpoint":  "D:\\dnf-rebuild\\rep-player-1031-pvf-checkpoints\\node-05-cross-character-templates-20261019-171855",
+    "source":  "D:\\dnf-rebuild\\rep-player-1031-pvf-checkpoints\\node-05-cross-character-templates-20261019-171855\\source",
+    "launcher":  "D:\\dnf-rebuild\\rep-player-1031-pvf-checkpoints\\node-05-cross-character-templates-20261019-171855\\source\\Start-1031.cmd",
+    "executable":  "D:\\dnf-rebuild\\rep-player-1031-pvf-checkpoints\\node-05-cross-character-templates-20261019-171855\\source\\build\\rep_pvf_preview.exe",
+    "executable_sha256":  "a10b6fad96bb334610820dbe4895ff830c29f8d39a4889267eae618d36a8f1c4",
+    "independent_of_native_demo":  true,
+    "user_visual_acceptance":  "pending",
+    "native_dynamic_comparison":  "pending"
+}

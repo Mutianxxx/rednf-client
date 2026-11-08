@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4fe547",
+  "rva": "0xfe547",
+  "file_offset": 1041735,
+  "length": 32,
+  "bytes_sha256": "39b6376c1185e97c8835d3a64a7e887719531ebdb758f6f085650b30f36f8440",
+  "status": "native_bytes",
+  "note": "State minus3 remap then table dispatch.",
+  "disassembled": true
+}

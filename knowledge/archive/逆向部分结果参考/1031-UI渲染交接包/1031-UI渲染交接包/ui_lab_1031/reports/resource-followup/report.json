@@ -1,0 +1,2162 @@
+{
+  "generated_utc": "2026-10-18T12:15:45.374055+00:00",
+  "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+  "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+  "duplicate_resolution": {
+    "groups": 49,
+    "byte_identical": 39,
+    "content_conflicts": 10,
+    "physical_candidates": 98,
+    "policy": "Byte-identical candidates may render equivalently while retaining every source; conflicting candidates require explicit archive selection; neither establishes native priority"
+  },
+  "ani_references": {
+    "gap_paths": 1402,
+    "format_templates": 1107,
+    "templates_with_filename_candidates": 1008,
+    "concrete_filename_candidates": 50075,
+    "literal_paths": 295,
+    "literal_paths_with_candidates": 0,
+    "literal_paths_with_exact_loose_images": 0,
+    "map_targets": [
+      {
+        "requested": "sprite/worldmap/selectdungeon02_cn.img",
+        "exact_candidates": [],
+        "same_basename": [],
+        "nearby_worldmap_names": [],
+        "status": "missing",
+        "policy": "No candidate is substituted without path or runtime evidence"
+      },
+      {
+        "requested": "sprite/worldmap/timegate.img",
+        "exact_candidates": [],
+        "same_basename": [
+          "sprite/map/cutscene/timegate.img",
+          "sprite/map/title/timegate.img",
+          "sprite/worldmap/selectdungeonslot/timegate.img"
+        ],
+        "nearby_worldmap_names": [
+          "sprite/worldmap/selectdungeonslot/timegate.img",
+          "sprite/worldmap/selectdungeonslot/timegaterequiem.img"
+        ],
+        "status": "missing",
+        "policy": "No candidate is substituted without path or runtime evidence"
+      }
+    ]
+  },
+  "rtf": {
+    "files": 12,
+    "decoded": 12,
+    "empty": 0,
+    "failed": 0,
+    "decoded_language": "Korean text decoded from declared CP949 plus RTF Unicode escapes",
+    "limitation": "Plain-text reconstruction; original RTF retained in hash-bound PVF; formatting/layout/fonts not reproduced"
+  },
+  "ani_reference_usage": {
+    "gap_paths": 1380,
+    "paths_with_exact_ani_sources": 1380,
+    "parsed_frame_references": 673611,
+    "audit_frame_references": 673611,
+    "matched_normalized_paths": 1380,
+    "source_scan": 187396,
+    "failed_animations": 44,
+    "limitation": "Exact strings in decoded ANI frames only; no proof of template argument values, NPK selection, load success, animation scheduling or drawing",
+    "native_table_file": "ani-reference-usage-native.json"
+  },
+  "empty_pvf_resources": {
+    "members": 45,
+    "with_token_candidates": 13,
+    "token_reference_hits": 13,
+    "token_members_scanned": 147267
+  },
+  "ani_source_summary": {
+    "ok": true,
+    "scanned": 187396,
+    "matched_paths": 1380,
+    "frame_references": 673611,
+    "failed": 44,
+    "failures": [
+      {
+        "path": "aicharacter/atfighter/roychan/animation/throwwebdoublethrow.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/act8/blackscalemoussambani/animation/wind_bullet_ready2.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/act8/chiefmong/animation/effect/attack.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/act8/woodendoll_ng/animation/swordman_attack2.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/act8/woodendoll_ng/animation/weapon/swordman_attack2.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/act8/woodendoll_np/animation/ball/swordman_attack1.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/act8/woodendoll_np/animation/ball_eff/swordman_attack1.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/mj/animation/sit.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/aganzo/sinead/animation/weapon/attack1_wp.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/bloodbutterfly/bloodbutterfly/animation/lastaction.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/bloodbutterfly/bloodbutterflynamed/animation/lastaction.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/crimebuffalo/grim_crimebuffalo/animation/sit.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/cyclops/animation/die.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/cyclops/animation/sd_attack4.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/event/clown/animation/tripofire.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/gbl/invader/animation/buster.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/gbl/invader/animation/casteffect.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/gbl/invader/animation/casteffectglow.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/gbl_breeding/dendroid_elder/animation/damage1.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/gbl_breeding/flare_spawn/animation/starfisheggblast2.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/goblinkingdom/dummytank/animation/attackcylinder.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/goblinkingdom/dummytank/animation/smoke.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/buster.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/casteffect.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/casteffectglow.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/heaven/specialforce/animation/die.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/heaven/specialforce/animation/motorcycle/die.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/leshphon/hyungteo/animation/wp/p_down.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/ranjerus/rx78/animation/bodydown.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/ranjerus/rx78/animation/bodyoverturn.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/riding/masaccio/animation/jumpchainattacknormal_upper_effect.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/riding/masaccio_quest/animation/jumpchainattacknormal_upper_effect.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_ng/animation/swordman_attack2.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_ng/animation/weapon/swordman_attack2.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_np/animation/ball/swordman_attack1.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_np/animation/ball_eff/swordman_attack1.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/shonan/hajin/animation/weapon/stay2.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/shonan/hajin/animation/wing/wingdodge.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/towerofultimate/firezombie/animation/move2.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "monster/newmonsters/towerofultimate/firezombie/animation/stay2.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "passiveobject/actionobject/map/dimentiongate/cosmofiend/animation/cube3_ball_effect1.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "passiveobject/actionobject/monster/dimensiongate/bakal/itrenog/animation/crash.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "passiveobject/actionobject/monster/haze/enjosipho/animation/macgee_bullet.ani",
+        "error": "Binary bounds at 0"
+      },
+      {
+        "path": "passiveobject/actionobject/monster/yen/animation/dummy.ani",
+        "error": "Binary bounds at 0"
+      }
+    ],
+    "file": "ani-reference-usage-native.json"
+  },
+  "structured_pvf": {
+    ".gdata": {
+      "file_count": 76,
+      "parsed_files": 76,
+      "tag_occurrences": {
+        "[new page]": 159,
+        "[text]": 150,
+        "[image]": 146,
+        "[index]": 76,
+        "[hyperlink text]": 11
+      },
+      "resource_path_references": 146,
+      "references": [
+        {
+          "path": "etc/guide/30.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/security.img"
+        },
+        {
+          "path": "etc/guide/27.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/27.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/11.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/45.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/45.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/45.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/26.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/26.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/10.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/10.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/44.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/44.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/44.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/25.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/25.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/9.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/9.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/9.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/59.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/59.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/43.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/43.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/43.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/24.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/24.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/61.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/61.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/61.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/8.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/8.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/8.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/8.gdata",
+          "tag": "[image]",
+          "offset": 272,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/58.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/58.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/42.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/39.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/production.img"
+        },
+        {
+          "path": "etc/guide/39.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/production.img"
+        },
+        {
+          "path": "etc/guide/23.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/23.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/23.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/60.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/60.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/60.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/60.gdata",
+          "tag": "[image]",
+          "offset": 272,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/60.gdata",
+          "tag": "[image]",
+          "offset": 357,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/7.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/7.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/57.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/57.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/57.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/57.gdata",
+          "tag": "[image]",
+          "offset": 272,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/57.gdata",
+          "tag": "[image]",
+          "offset": 357,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/41.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/production.img"
+        },
+        {
+          "path": "etc/guide/38.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/production.img"
+        },
+        {
+          "path": "etc/guide/38.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/production.img"
+        },
+        {
+          "path": "etc/guide/22.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/19.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/pvp.img"
+        },
+        {
+          "path": "etc/guide/19.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/pvp.img"
+        },
+        {
+          "path": "etc/guide/75.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/75.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/75.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/6.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/56.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/pvp.img"
+        },
+        {
+          "path": "etc/guide/56.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/pvp.img"
+        },
+        {
+          "path": "etc/guide/56.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/pvp.img"
+        },
+        {
+          "path": "etc/guide/56.gdata",
+          "tag": "[image]",
+          "offset": 272,
+          "resource": "Interface/newstyle/windows/Guide/pvp.img"
+        },
+        {
+          "path": "etc/guide/40.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/production.img"
+        },
+        {
+          "path": "etc/guide/37.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/37.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/21.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/pvp.img"
+        },
+        {
+          "path": "etc/guide/18.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/dungeon.img"
+        },
+        {
+          "path": "etc/guide/74.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/74.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/74.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/74.gdata",
+          "tag": "[image]",
+          "offset": 272,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/74.gdata",
+          "tag": "[image]",
+          "offset": 357,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/5.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/5.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/55.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/55.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/55.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/55.gdata",
+          "tag": "[image]",
+          "offset": 272,
+          "resource": "Interface/newstyle/windows/Guide/item.img"
+        },
+        {
+          "path": "etc/guide/36.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/36.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/36.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/20.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/pvp.img"
+        },
+        {
+          "path": "etc/guide/20.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/pvp.img"
+        },
+        {
+          "path": "etc/guide/17.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/dungeon.img"
+        },
+        {
+          "path": "etc/guide/73.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/73.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/73.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/4.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/4.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/54.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/54.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/54.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/35.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/35.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/16.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/dungeon.img"
+        },
+        {
+          "path": "etc/guide/16.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/dungeon.img"
+        },
+        {
+          "path": "etc/guide/3.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/3.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/53.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/53.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/53.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/34.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/34.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/34.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/15.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/growth.img"
+        },
+        {
+          "path": "etc/guide/15.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/growth.img"
+        },
+        {
+          "path": "etc/guide/2.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/52.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/52.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/49.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/49.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/49.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/33.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/33.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/14.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/growth.img"
+        },
+        {
+          "path": "etc/guide/14.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/growth.img"
+        },
+        {
+          "path": "etc/guide/1.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/1.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/tutorial.img"
+        },
+        {
+          "path": "etc/guide/51.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/48.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/48.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/32.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/32.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/community.img"
+        },
+        {
+          "path": "etc/guide/29.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/security.img"
+        },
+        {
+          "path": "etc/guide/29.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/security.img"
+        },
+        {
+          "path": "etc/guide/13.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/growth.img"
+        },
+        {
+          "path": "etc/guide/13.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/growth.img"
+        },
+        {
+          "path": "etc/guide/1005.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content_cn.img"
+        },
+        {
+          "path": "etc/guide/1005.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content_cn.img"
+        },
+        {
+          "path": "etc/guide/50.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/47.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/47.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/47.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/31.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/security.img"
+        },
+        {
+          "path": "etc/guide/28.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/security.img"
+        },
+        {
+          "path": "etc/guide/28.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/security.img"
+        },
+        {
+          "path": "etc/guide/12.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/growth.img"
+        },
+        {
+          "path": "etc/guide/12.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/growth.img"
+        },
+        {
+          "path": "etc/guide/46.gdata",
+          "tag": "[image]",
+          "offset": 17,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/46.gdata",
+          "tag": "[image]",
+          "offset": 102,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        },
+        {
+          "path": "etc/guide/46.gdata",
+          "tag": "[image]",
+          "offset": 187,
+          "resource": "Interface/newstyle/windows/Guide/content.img"
+        }
+      ],
+      "samples": [
+        {
+          "path": "etc/guide/30.gdata",
+          "fields": [
+            {
+              "tag": "[index]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                30
+              ]
+            },
+            {
+              "tag": "[new page]",
+              "token_index": 2,
+              "offset": 12,
+              "values": []
+            },
+            {
+              "tag": "[image]",
+              "token_index": 3,
+              "offset": 17,
+              "values": [
+                1.0,
+                7,
+                22,
+                0,
+                0,
+                0,
+                "Interface/newstyle/windows/Guide/security.img",
+                4
+              ]
+            },
+            {
+              "tag": "[text]",
+              "token_index": 12,
+              "offset": 62,
+              "values": [
+                10,
+                265,
+                310,
+                0,
+                "密保卡相关，后续确认。"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "etc/guide/27.gdata",
+          "fields": [
+            {
+              "tag": "[index]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                27
+              ]
+            },
+            {
+              "tag": "[new page]",
+              "token_index": 2,
+              "offset": 12,
+              "values": []
+            },
+            {
+              "tag": "[image]",
+              "token_index": 3,
+              "offset": 17,
+              "values": [
+                1.0,
+                7,
+                22,
+                0,
+                0,
+                0,
+                "Interface/newstyle/windows/Guide/item.img",
+                11
+              ]
+            },
+            {
+              "tag": "[text]",
+              "token_index": 12,
+              "offset": 62,
+              "values": [
+                10,
+                265,
+                310,
+                0,
+                "在物品栏中， 使用Alt + 鼠标左键点击任意物品， 即可锁定该物品。 已锁定的物品将无法进行交易、 强化、 分解、 丢弃等操作。 "
+              ]
+            },
+            {
+              "tag": "[new page]",
+              "token_index": 19,
+              "offset": 97,
+              "values": []
+            },
+            {
+              "tag": "[image]",
+              "token_index": 20,
+              "offset": 102,
+              "values": [
+                1.0,
+                7,
+                22,
+                0,
+                0,
+                0,
+                "Interface/newstyle/windows/Guide/item.img",
+                12
+              ]
+            },
+            {
+              "tag": "[text]",
+              "token_index": 29,
+              "offset": 147,
+              "values": [
+                10,
+                265,
+                310,
+                0,
+                "按住Alt键后， 鼠标左键点击物品栏中的锁定物品， 即可发送解锁申请。 发出解锁申请后， 需经过72小时才能解除该物品的锁定状态。"
+              ]
+            }
+          ]
+        },
+        {
+          "path": "etc/guide/11.gdata",
+          "fields": [
+            {
+              "tag": "[index]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                11
+              ]
+            },
+            {
+              "tag": "[new page]",
+              "token_index": 2,
+              "offset": 12,
+              "values": []
+            },
+            {
+              "tag": "[image]",
+              "token_index": 3,
+              "offset": 17,
+              "values": [
+                1.0,
+                7,
+                22,
+                0,
+                0,
+                0,
+                "Interface/newstyle/windows/Guide/tutorial.img",
+                17
+              ]
+            },
+            {
+              "tag": "[text]",
+              "token_index": 12,
+              "offset": 62,
+              "values": [
+                10,
+                265,
+                310,
+                0,
+                "按〈O〉键可以打开游戏设置窗口； 根据个人喜好， 可以设置窗口、 窗口(最大化)或全屏模式。"
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "token structure and explicit path strings inventoried; native consumer and complete semantics remain unknown"
+    },
+    ".glist": {
+      "file_count": 1,
+      "parsed_files": 1,
+      "tag_occurrences": {
+        "[guide exception]": 3,
+        "[/guide exception]": 3,
+        "[notice exception]": 1,
+        "[/notice exception]": 1
+      },
+      "resource_path_references": 0,
+      "references": [],
+      "samples": [
+        {
+          "path": "etc/guide/guidelist.glist",
+          "fields": [
+            {
+              "tag": "[notice exception]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                14,
+                19,
+                56,
+                13,
+                21,
+                18,
+                15,
+                54,
+                "demonic swordman",
+                "creator mage"
+              ]
+            },
+            {
+              "tag": "[/notice exception]",
+              "token_index": 11,
+              "offset": 57,
+              "values": []
+            },
+            {
+              "tag": "[guide exception]",
+              "token_index": 12,
+              "offset": 62,
+              "values": [
+                1,
+                "creator mage"
+              ]
+            },
+            {
+              "tag": "[/guide exception]",
+              "token_index": 15,
+              "offset": 77,
+              "values": []
+            },
+            {
+              "tag": "[guide exception]",
+              "token_index": 16,
+              "offset": 82,
+              "values": [
+                54,
+                "demonic swordman",
+                "creator mage"
+              ]
+            },
+            {
+              "tag": "[/guide exception]",
+              "token_index": 20,
+              "offset": 102,
+              "values": []
+            },
+            {
+              "tag": "[guide exception]",
+              "token_index": 21,
+              "offset": 107,
+              "values": [
+                75,
+                "swordman",
+                "fighter",
+                "gunner",
+                "mage",
+                "priest",
+                "at gunner",
+                "thief",
+                "at fighter",
+                "at mage",
+                "demonic swordman"
+              ]
+            },
+            {
+              "tag": "[/guide exception]",
+              "token_index": 33,
+              "offset": 167,
+              "values": []
+            }
+          ]
+        }
+      ],
+      "status": "token structure and explicit path strings inventoried; native consumer and complete semantics remain unknown"
+    },
+    ".pos": {
+      "file_count": 9,
+      "parsed_files": 9,
+      "tag_occurrences": {
+        "[pos]": 52,
+        "[uidata]": 43,
+        "[index]": 43,
+        "[/uidata]": 43,
+        "[main]": 9,
+        "[tiletype]": 9,
+        "[unitnumber]": 9,
+        "[/main]": 9,
+        "[gap]": 4
+      },
+      "resource_path_references": 0,
+      "references": [],
+      "samples": [
+        {
+          "path": "ui/japan/avatarhiddenoptionchange/avatarhiddenoptionchange.pos",
+          "fields": [
+            {
+              "tag": "[MAIN]",
+              "token_index": 0,
+              "offset": 2,
+              "values": []
+            },
+            {
+              "tag": "[TILETYPE]",
+              "token_index": 1,
+              "offset": 7,
+              "values": [
+                "COMMON"
+              ]
+            },
+            {
+              "tag": "[POS]",
+              "token_index": 3,
+              "offset": 17,
+              "values": [
+                290,
+                240
+              ]
+            },
+            {
+              "tag": "[UNITNUMBER]",
+              "token_index": 6,
+              "offset": 32,
+              "values": [
+                12,
+                14
+              ]
+            },
+            {
+              "tag": "[/MAIN]",
+              "token_index": 9,
+              "offset": 47,
+              "values": []
+            },
+            {
+              "tag": "[UIDATA]",
+              "token_index": 10,
+              "offset": 52,
+              "values": [
+                "POS"
+              ]
+            },
+            {
+              "tag": "[INDEX]",
+              "token_index": 12,
+              "offset": 62,
+              "values": [
+                0
+              ]
+            },
+            {
+              "tag": "[POS]",
+              "token_index": 14,
+              "offset": 72,
+              "values": [
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "path": "ui/japan/emblemcompound/emblemcompoundnotice.pos",
+          "fields": [
+            {
+              "tag": "[MAIN]",
+              "token_index": 0,
+              "offset": 2,
+              "values": []
+            },
+            {
+              "tag": "[TILETYPE]",
+              "token_index": 1,
+              "offset": 7,
+              "values": [
+                "COMMON"
+              ]
+            },
+            {
+              "tag": "[POS]",
+              "token_index": 3,
+              "offset": 17,
+              "values": [
+                180,
+                200
+              ]
+            },
+            {
+              "tag": "[UNITNUMBER]",
+              "token_index": 6,
+              "offset": 32,
+              "values": [
+                19,
+                8
+              ]
+            },
+            {
+              "tag": "[/MAIN]",
+              "token_index": 9,
+              "offset": 47,
+              "values": []
+            },
+            {
+              "tag": "[UIDATA]",
+              "token_index": 10,
+              "offset": 52,
+              "values": [
+                "POS"
+              ]
+            },
+            {
+              "tag": "[INDEX]",
+              "token_index": 12,
+              "offset": 62,
+              "values": [
+                0
+              ]
+            },
+            {
+              "tag": "[POS]",
+              "token_index": 14,
+              "offset": 72,
+              "values": [
+                5,
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "path": "ui/japan/avatarrecharge/avatarrechargenotice.pos",
+          "fields": [
+            {
+              "tag": "[MAIN]",
+              "token_index": 0,
+              "offset": 2,
+              "values": []
+            },
+            {
+              "tag": "[TILETYPE]",
+              "token_index": 1,
+              "offset": 7,
+              "values": [
+                "COMMON"
+              ]
+            },
+            {
+              "tag": "[POS]",
+              "token_index": 3,
+              "offset": 17,
+              "values": [
+                240,
+                200
+              ]
+            },
+            {
+              "tag": "[UNITNUMBER]",
+              "token_index": 6,
+              "offset": 32,
+              "values": [
+                13,
+                6
+              ]
+            },
+            {
+              "tag": "[/MAIN]",
+              "token_index": 9,
+              "offset": 47,
+              "values": []
+            },
+            {
+              "tag": "[UIDATA]",
+              "token_index": 10,
+              "offset": 52,
+              "values": [
+                "POS"
+              ]
+            },
+            {
+              "tag": "[INDEX]",
+              "token_index": 12,
+              "offset": 62,
+              "values": [
+                0
+              ]
+            },
+            {
+              "tag": "[POS]",
+              "token_index": 14,
+              "offset": 72,
+              "values": [
+                80,
+                20
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "token structure and explicit path strings inventoried; native consumer and complete semantics remain unknown"
+    },
+    ".hsp": {
+      "file_count": 6,
+      "parsed_files": 6,
+      "tag_occurrences": {
+        "[point count]": 6,
+        "[is loop]": 6,
+        "[point datas]": 6
+      },
+      "resource_path_references": 0,
+      "references": [],
+      "samples": [
+        {
+          "path": "character/thief/effect/animation/slantcutlbswingup.hsp",
+          "fields": [
+            {
+              "tag": "[point count]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                2
+              ]
+            },
+            {
+              "tag": "[is loop]",
+              "token_index": 2,
+              "offset": 12,
+              "values": [
+                0
+              ]
+            },
+            {
+              "tag": "[point datas]",
+              "token_index": 4,
+              "offset": 22,
+              "values": [
+                220,
+                88,
+                42,
+                0.0,
+                -1.0,
+                0,
+                -9,
+                63,
+                -600.0,
+                5.0
+              ]
+            }
+          ]
+        },
+        {
+          "path": "character/thief/effect/animation/slantcutlbswingdown.hsp",
+          "fields": [
+            {
+              "tag": "[point count]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                2
+              ]
+            },
+            {
+              "tag": "[is loop]",
+              "token_index": 2,
+              "offset": 12,
+              "values": [
+                0
+              ]
+            },
+            {
+              "tag": "[point datas]",
+              "token_index": 4,
+              "offset": 22,
+              "values": [
+                220,
+                89,
+                53,
+                0.0,
+                -1.0,
+                0,
+                -11,
+                37,
+                -600.0,
+                5.0
+              ]
+            }
+          ]
+        },
+        {
+          "path": "character/thief/effect/animation/uppercutlb.hsp",
+          "fields": [
+            {
+              "tag": "[point count]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                2
+              ]
+            },
+            {
+              "tag": "[is loop]",
+              "token_index": 2,
+              "offset": 12,
+              "values": [
+                0
+              ]
+            },
+            {
+              "tag": "[point datas]",
+              "token_index": 4,
+              "offset": 22,
+              "values": [
+                220,
+                80,
+                29,
+                0.0,
+                -1.0,
+                0,
+                28,
+                174,
+                -415.0,
+                105.0
+              ]
+            }
+          ]
+        }
+      ],
+      "status": "token structure and explicit path strings inventoried; native consumer and complete semantics remain unknown"
+    },
+    ".rep": {
+      "file_count": 484,
+      "parsed_files": 484,
+      "tag_occurrences": {
+        "[my position]": 484,
+        "[apc position]": 484,
+        "[minimum info]": 484,
+        "[status]": 484,
+        "[quick skill]": 484,
+        "[/quick skill]": 484,
+        "[quick skill expend]": 484,
+        "[/quick skill expend]": 484,
+        "[skill]": 484,
+        "[/skill]": 484,
+        "[equipment]": 484,
+        "[/equipment]": 484,
+        "[avatar]": 484,
+        "[/avatar]": 484,
+        "[normal key]": 484,
+        "[skill key]": 484,
+        "[down key]": 484
+      },
+      "resource_path_references": 0,
+      "references": [],
+      "samples": [
+        {
+          "path": "etc/pvppracticecombo/replay/atfighter/combo728.rep",
+          "fields": [
+            {
+              "tag": "[my position]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                468,
+                226,
+                0,
+                1
+              ]
+            },
+            {
+              "tag": "[apc position]",
+              "token_index": 5,
+              "offset": 27,
+              "values": [
+                634,
+                227,
+                0,
+                1
+              ]
+            },
+            {
+              "tag": "[minimum info]",
+              "token_index": 10,
+              "offset": 52,
+              "values": [
+                7,
+                1,
+                0,
+                70
+              ]
+            },
+            {
+              "tag": "[status]",
+              "token_index": 15,
+              "offset": 77,
+              "values": [
+                9500,
+                10000,
+                9300,
+                4700,
+                31593,
+                27700,
+                3105,
+                3945
+              ]
+            },
+            {
+              "tag": "[quick skill]",
+              "token_index": 24,
+              "offset": 122,
+              "values": [
+                0,
+                69,
+                1,
+                0,
+                1,
+                169,
+                1,
+                1,
+                2,
+                42,
+                10,
+                0,
+                3,
+                58,
+                1,
+                1,
+                4,
+                12,
+                30,
+                1,
+                5,
+                86,
+                25,
+                1
+              ]
+            },
+            {
+              "tag": "[/quick skill]",
+              "token_index": 49,
+              "offset": 247,
+              "values": []
+            },
+            {
+              "tag": "[quick skill expend]",
+              "token_index": 50,
+              "offset": 252,
+              "values": [
+                216,
+                108,
+                1,
+                0,
+                218,
+                16,
+                8,
+                1,
+                219,
+                15,
+                16,
+                1,
+                220,
+                46,
+                10,
+                1
+              ]
+            },
+            {
+              "tag": "[/quick skill expend]",
+              "token_index": 67,
+              "offset": 337,
+              "values": []
+            }
+          ]
+        },
+        {
+          "path": "etc/pvppracticecombo/replay/mage/combo361.rep",
+          "fields": [
+            {
+              "tag": "[my position]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                647,
+                208,
+                0,
+                1
+              ]
+            },
+            {
+              "tag": "[apc position]",
+              "token_index": 5,
+              "offset": 27,
+              "values": [
+                857,
+                213,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "[minimum info]",
+              "token_index": 10,
+              "offset": 52,
+              "values": [
+                3,
+                3,
+                0,
+                70
+              ]
+            },
+            {
+              "tag": "[status]",
+              "token_index": 15,
+              "offset": 77,
+              "values": [
+                10000,
+                10000,
+                8200,
+                3500,
+                27712,
+                31050,
+                3685,
+                3885
+              ]
+            },
+            {
+              "tag": "[quick skill]",
+              "token_index": 24,
+              "offset": 122,
+              "values": [
+                0,
+                11,
+                1,
+                0,
+                1,
+                169,
+                1,
+                1,
+                2,
+                4,
+                20,
+                1,
+                3,
+                14,
+                20,
+                1,
+                4,
+                37,
+                7,
+                0,
+                5,
+                65,
+                20,
+                1
+              ]
+            },
+            {
+              "tag": "[/quick skill]",
+              "token_index": 49,
+              "offset": 247,
+              "values": []
+            },
+            {
+              "tag": "[quick skill expend]",
+              "token_index": 50,
+              "offset": 252,
+              "values": [
+                216,
+                12,
+                10,
+                0,
+                219,
+                40,
+                1,
+                0,
+                220,
+                39,
+                1,
+                0
+              ]
+            },
+            {
+              "tag": "[/quick skill expend]",
+              "token_index": 63,
+              "offset": 317,
+              "values": []
+            }
+          ]
+        },
+        {
+          "path": "etc/pvppracticecombo/replay/gunner/combo210_new.rep",
+          "fields": [
+            {
+              "tag": "[my position]",
+              "token_index": 0,
+              "offset": 2,
+              "values": [
+                831,
+                223,
+                0,
+                1
+              ]
+            },
+            {
+              "tag": "[apc position]",
+              "token_index": 5,
+              "offset": 27,
+              "values": [
+                857,
+                220,
+                0,
+                0
+              ]
+            },
+            {
+              "tag": "[minimum info]",
+              "token_index": 10,
+              "offset": 52,
+              "values": [
+                2,
+                0,
+                0,
+                70
+              ]
+            },
+            {
+              "tag": "[status]",
+              "token_index": 15,
+              "offset": 77,
+              "values": [
+                9500,
+                8000,
+                8400,
+                4400,
+                28650,
+                29800,
+                3530,
+                3520
+              ]
+            },
+            {
+              "tag": "[quick skill]",
+              "token_index": 24,
+              "offset": 122,
+              "values": [
+                0,
+                6,
+                5,
+                1,
+                1,
+                169,
+                1,
+                1,
+                2,
+                3,
+                28,
+                1,
+                3,
+                7,
+                28,
+                1,
+                4,
+                14,
+                5,
+                1,
+                5,
+                56,
+                20,
+                0
+              ]
+            },
+            {
+              "tag": "[/quick skill]",
+              "token_index": 49,
+              "offset": 247,
+              "values": []
+            },
+            {
+              "tag": "[quick skill expend]",
+              "token_index": 50,
+              "offset": 252,
+              "values": [
+                216,
+                13,
+                20,
+                1,
+                221,
+                47,
+                20,
+                1
+              ]
+            },
+            {
+              "tag": "[/quick skill expend]",
+              "token_index": 59,
+              "offset": 297,
+              "values": []
+            }
+          ]
+        }
+      ],
+      "status": "token structure and explicit path strings inventoried; native consumer and complete semantics remain unknown"
+    }
+  },
+  "loose_containers": {
+    "Tenparty": "MOSANG00 magic recorded; schema/caller not recovered",
+    "TenSLX": "CFB directory and stream chain checked; bounded LZMA output is a candidate and checksum/TSIF2011 semantics remain unresolved",
+    "TenSLX_dll": "PE import/export/string inventory only; no execution or caller chain proof"
+  },
+  "client_started": false,
+  "plugin_modified": false,
+  "archive_modified": false,
+  "remaining": [
+    "295 literal ANI image references absent from both the physical NPK index and loose IMG files; no near-name substitution was made",
+    "format template filename candidates are not proven runtime argument bindings or successful loads",
+    "two requested worldmap IMG paths remain absent; nearby files are not replacements",
+    "native NPK precedence for all ten content-conflict groups is unknown",
+    "Tenparty.dat parser/consumer, TSIF2011 internal record schema and TenSLX file consumer callsite remain unknown",
+    "PVF structured-schema census does not recover complete .gdata/.glist/.pos/.hsp/.rep behavior"
+  ]
+}

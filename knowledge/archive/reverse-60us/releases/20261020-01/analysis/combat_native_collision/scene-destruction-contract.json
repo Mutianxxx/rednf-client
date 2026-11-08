@@ -1,0 +1,205 @@
+{
+  "source": {
+    "path": "DFO/DFO_fixed_v3.exe",
+    "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "image_base": "0x400000",
+    "evidence_kind": "local static PE bytes and Capstone x86 disassembly",
+    "runtime_observed": false,
+    "rea_provider_evidence": false
+  },
+  "scope": "Exact CNRDPassiveObject vtable CBB7D4 and its common world-removal path; specialized scene-object controllers are not generalized from it.",
+  "rea_crosschecks": [
+    {
+      "function": "0x49D960",
+      "evidence_id": "ev_6b3f2403afd092bb7e58538736203da2adeea8d193e3c83b0d87a107f8b99fb6",
+      "result": "../rea/results/064-passiveobject-destroy-tick.json",
+      "body_inclusive": [
+        "0x49D960",
+        "0x49DC6A"
+      ]
+    },
+    {
+      "function": "0x49D0E0",
+      "evidence_id": "ev_71073ca6199bb66f0592e1439ec6181103c2825af0ce7bbc77ce93f50e88d673",
+      "result": "../rea/results/065-passiveobject-hp-destroy.json",
+      "body_inclusive": [
+        "0x49D0E0",
+        "0x49D11D"
+      ]
+    },
+    {
+      "function": "0x4A0840",
+      "evidence_id": "ev_d522e10c7b5fd580a6d75359efba9bdbfc800ded43c81783074f5565ea944821",
+      "result": "../rea/results/069-passive-destroy-notify.json",
+      "body_inclusive": [
+        "0x4A0840",
+        "0x4A0D94"
+      ]
+    }
+  ],
+  "observed_static": {
+    "identity": {
+      "type_descriptor": "0xF428A0",
+      "rtti": ".?AVCNRDPassiveObject@@",
+      "vtable": "0xCBB7D4"
+    },
+    "hp_source": {
+      "parser": "0x884720",
+      "hp_max": {
+        "tag": "[hp max]",
+        "literal": "0xE23374",
+        "integer_read": "0x884E67 -> 0x82F7D0",
+        "template_write": "0x884E7C -> protected(template+0xAC)"
+      },
+      "hp_destroy": {
+        "tag": "[hp destroy]",
+        "literal": "0xE23358",
+        "integer_read": "0x884E9C -> 0x82F7D0",
+        "template_write": "0x884EAA -> byte(template+0x61)=(integer==1)"
+      },
+      "instantiation": "0x49F4D0: positive template maxHP -> slot360(maxHP) at49FD5E then slot35C(slot238()) at49FD73; template+61 true -> slot33C()+34=1 at49FD8A",
+      "runtime": {
+        "hp": "this+0x524",
+        "max_hp": "this+0x528",
+        "hp_destroy": "byte(this+0x558)",
+        "slot33C": "439070 returns &this+524",
+        "hp_getter_slot234": "4391E0",
+        "max_getter_slot238": "439200",
+        "hp_setter_slot35C": "4391D0",
+        "max_setter_slot360": "4391F0"
+      }
+    },
+    "accepted_hit_to_hp": {
+      "slot260": "0x49F310",
+      "entry_gates": "maxHP(slot238)>0 and argument3 byte false",
+      "calculation_gate": "49C090 local owner predicate",
+      "calculation": "slot310(&scale,attacker), scale initially100; slot2F8=4EB780; oldHP(slot234)-calculated_damage at49F3AB",
+      "payload_builder": "49F3F5 -> 49F090; int vector [damage,new_absolute_HP,contact_x,contact_y,contact_z,attacker.slot2A0().slot3C,attacker.slot2A0().slot40]; absent attacker IDs areFFFF/FFFF",
+      "queue_and_send": "49F409 slot28C(state1,vector,0,0,0) -> 4ED1D0; 49F413 slot290 -> 4EDAC0",
+      "apply_state1": "49D7D0 state1:49D832 writes payload[1] to *slot33C() (HP); damage display conditional on oldHP!=newHP;49D884 resolves IDs through50B820;49D89B invokes slot348",
+      "hp_clamp_at_this_write": false,
+      "hp_destroy_callback": "slot348=49D0E0:hp_destroy byte true and maxHP>0 and HP<=0 -> slot164(0) at49D114"
+    },
+    "destroy_conditions": {
+      "container_tag": "[object destroy condition]",
+      "literal": "0xE23320",
+      "selector_tag": "[destroy condition]",
+      "selector_literal": "0xE232F8",
+      "parser_cases": [
+        {
+          "literal": "0xE232CC",
+          "tag": "[on end of animation]",
+          "enum": 0,
+          "template_write": "0x884F22"
+        },
+        {
+          "literal": "0xE232A4",
+          "tag": "[z pos equal zero]",
+          "enum": 1,
+          "template_write": "0x884F42"
+        },
+        {
+          "literal": "0xE23288",
+          "tag": "[time limite]",
+          "enum": 2,
+          "template_write": "0x884F64",
+          "extra_integer": "template+12C at884F76"
+        },
+        {
+          "literal": "0xE23240",
+          "tag": "[not destroy and z pos equal zero]",
+          "enum": 3,
+          "template_write": "0x884F96; unrecognized value yields-1"
+        }
+      ],
+      "runtime_copy": "4A0140..4A0158 template+E0 -> this+55C, template+E4 -> this+560; template vector+EC/+F0 -> this+568/+56C at4A0190..4A01AA",
+      "timer_copy": "4A02AE template+12C -> this+5BC;4A02BA GetTickCount() -> start+5C0",
+      "tick_chain": "49C046 -> slot188=49DC70 ->49D960 at49DC7A",
+      "clock": {
+        "iat": "0x140F05C",
+        "import_dll": "kernel32.dll",
+        "import_name": "GetTickCount",
+        "unit": "Win32 milliseconds, with native32-bit wrap/signed comparison preserved"
+      },
+      "runtime_conditions": [
+        {
+          "enum": -1,
+          "behavior": "49D978 skips the entire remainder of49D960"
+        },
+        {
+          "enum": 0,
+          "predicate": "current ANI slotF4().byte13A!=0 and byte5A4==0"
+        },
+        {
+          "enum": 1,
+          "predicate": "slot9C()==0 and byte5A4==0"
+        },
+        {
+          "enum": 2,
+          "predicate": "int32(GetTickCount()-start5C0)>int32(limit5BC) and byte5A4==0",
+          "strict_greater": true
+        },
+        {
+          "enum": 3,
+          "predicate": "slot9C()==0 and byte5A4==0",
+          "keeps_original_object": true
+        }
+      ],
+      "trigger": "local49C090 && byte5A4==0: action1 creates listed IDs through4E9EA0 at49DAA1 and then byte5A4=1; action0 only marks byte5A4=1; other action values do not mark",
+      "removal_gate": "49DB17..49DB2D invokes slot164(0) unless condition enum==3; this removal call is outside the local49C090 branch",
+      "action_parser": [
+        {
+          "tag": "[only destroy]",
+          "literal": "0xE231FC",
+          "enum": 0,
+          "template_write": "0x884FCF"
+        },
+        {
+          "tag": "[object create after destroy]",
+          "literal": "0xE231C0",
+          "enum": 1,
+          "template_write": "0x884FF3; unrecognized yields-1"
+        }
+      ],
+      "id_list": "[add object index] count followed by ordered IDs -> template vector+E8 (begin+EC/end+F0) through88505B..8850A6"
+    },
+    "removal_to_self_notification": {
+      "request": "PassiveObject.slot164=49E840 ->499120 at49E862 ->opcode0x17; finishes disabling attack/damage gates via slot2D0(0),slot2D8(0)",
+      "receive": "8C1A30 ->8C5E64[23]=8C4D73 ->50B820 ->object.slot60(0)",
+      "deactivate": "PassiveObject.slot60=5E14E0 ->byte184=0",
+      "cleanup": "50CA50 loop50CAE0:slot64 at50CAF2=407BB0 readsbyte184;false enters type-dependent cleanup branches leading to50C6F0",
+      "self": "50C760..50C76B calls removed.slot15C(removed); exact PassiveObject target4A0840",
+      "peer": "50C7BF..50C7D7 calls other.slot15C(removed), excluding self and an optional excluded-list argument",
+      "not_all_scene_removals_use_network": "50C6F0 and direct slot60 consumers also exist; opcode17 is one confirmed request/receive path"
+    },
+    "last_action_execution": {
+      "tag_parser": "884B16..884B3C reads [last action] through8304E0 ->template+5C",
+      "preload": "49F9C2..49FA73 creates ACT into+150, ACT+2CC=11, ownerA2D020; also copies original path to this+7F4",
+      "actual_source": "4A0840 self notification checks nonempty storedpath+7F4, then4A08DC/4A08F1 constructs a fresh ACT using4A3900(basepath+244,storedpath,0); it does not execute by reading+150",
+      "transient": "4A0935 ->4A3820(ACT,1,0) allocates0x870, vtableCCEC5C; RTTI F586DC .?AVCNRDPooledObjectAddAction@@",
+      "activation": "4A3820 ->49F240(ANI=0,endFlag=1,ACT);49F2C3 slot70=407BF0 sets defaultACT+14C; if currentACT+148 null then slot100=4E9480 ->499F10, sets currentACT+148 and initializes/attaches owner",
+      "scene": "4A095E ->50DD70(this,0x21,source.slot40(),transient,source,0,0); copies sourceXYZ through transient.slot88 at4A0988 and source direction through transient.slotB8 at4A099D",
+      "playback_and_end": "generic object update49BE80 runs currentACT throughA31240 at49C01E; transient.slot20=49D220 checks byte185==1 and ACT.currentANI.byte13A!=0 ->slot60(0), then calls49BE80",
+      "scope_limit": "This closes Generic PassiveObject stored-path execution. It does not prove Monster last-action execution: Monster.slot15C=4F4440, not4A0840."
+    },
+    "destroy_particle": {
+      "tag_parser": "884C73..884C99 reads [destroy particle] through8304E0 ->template+6C",
+      "instantiation": "49FD8E..49FDFE constructs4A3440(basepath,path,owner) ->this+794; vtableCC89CC RTTI F54A18 .?AVCNRDObjectParticleCreater@@",
+      "self_emit": "4A0A00..4A0A86 if+794 nonnull:creater.slotC(0),slot28(sourceXYZ),slot5C(outvector);50E060(source,2,0,outvector,0) at4A0A6A",
+      "other_spawn_fallback": "4A0A86..4A0B20 local49C090 && !byte5A4 && action560==1 spawns orderedIDs through4E9EA0 at4A0B0E, thenbyte5A4=1; prevents repeating the earlier condition-spawn path",
+      "not_yet_recovered": "Particle generator internals, emission distribution, velocities, collision, rendering and lifetimes are not established by this dispatch alone."
+    }
+  },
+  "current_pvf_examples": {
+    "evidence": "scene-resources.json",
+    "telephone": "Current telephone.obj declares basicACT,5000HP,hp_destroy1,destroyPTL. Its last-action line is commented out and is not an active field.",
+    "barrel_tree_grass": "Selected barrel.obj/actiontree2lorien.obj/smallgrasslorien.obj declare basic/etc ANI and ordered int/string data. Their precise factory selection and specialized field consumers are recovered separately in scene-specialized-contract.json; do not substitute this generic-only chain for their overrides."
+  },
+  "unknown": [
+    "Full auxiliary output-vector and delayed-controller behavior beyond the selected specialized counter subset in scene-specialized-contract.json",
+    "Monster last-action execution (preload and protected death fragments remain in death-lifecycle-contract.json)",
+    "Particle internals and native runtime visual/timing equivalence",
+    "All scene cleanup authorities, rewards and one-time transaction semantics"
+  ],
+  "preview_rule": "Separate generic HP destroy, condition destroy, self-removal ACT spawn and particle emission. Preserve native selection, flags and strict signed32 millisecond expiry; do not apply generic HP rules to all specialized map objects or auto-play a commented last action."
+}

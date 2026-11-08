@@ -1,0 +1,10 @@
+#pragma once
+struct GeometryWindow { unsigned va,size; const char* sha256; };
+static const GeometryWindow GeometryWindows[]={
+    {0x11db180,150,"7d7092c644e112fdd981e998c5263888597c74e277201a7a82fa25d23e91f23c"},
+    {0x11db510,515,"b5f334cadc8761e4f9ee6cb1af7000b2f9c3e00ba2beccee88a17108babe670b"},
+    {0x11db390,369,"350bc7ae287343561d0c726fab0c75bf34315fde30ea21546ee798b0c64ae674"},
+    {0x11b3680,60,"8e03fe151e8269ddcf8304cfb30a13ee7a2719523191130531e7880679e73d77"},
+    {0x11b3d80,53,"e15660e111e49fd5d7ef815817f6b2630530fdccbcf2b7aa42094bace4acb971"},
+    {0x11f2460,2864,"b8885cd414cf81a57c56f882b73aaf49bc3b9c646828258ae1269a34f8cb12b6"}
+};

@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4fa476",
+  "rva": "0xfa476",
+  "file_offset": 1025142,
+  "length": 5,
+  "bytes_sha256": "325b7ea0da8eeed30c4653f117e9d638a954786100817a12c88690415011cea7",
+  "status": "native_bytes",
+  "note": "Conditional target of4FA418; immediately jumps to protection thunk.",
+  "disassembled": true
+}

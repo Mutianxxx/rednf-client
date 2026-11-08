@@ -1,0 +1,851 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "322 layouts retain unique instance-scoped keys",
+      "passed": true
+    },
+    {
+      "name": "board dimensions are not frame IDs",
+      "passed": true
+    },
+    {
+      "name": "verified loop parameters retain counts instead of pixel sizes",
+      "passed": true
+    },
+    {
+      "name": "radio count and six-value entries decoded",
+      "passed": true
+    },
+    {
+      "name": "nine-slice corners preserve logical bottom row",
+      "passed": true
+    },
+    {
+      "name": "composed board exact resource dimensions",
+      "passed": true
+    },
+    {
+      "name": "state change updates crop without moving logical anchor",
+      "passed": true
+    },
+    {
+      "name": "Qt text adds no four-pixel document margin",
+      "passed": true
+    },
+    {
+      "name": "same child loaded twice keeps separate keys",
+      "passed": true
+    },
+    {
+      "name": "parent position and tab condition inherited exactly once",
+      "passed": true
+    },
+    {
+      "name": "actual UI binary ANI yields authored poses and source hash",
+      "passed": true
+    },
+    {
+      "name": "ANI interpolates transforms but retains discrete image",
+      "passed": true
+    },
+    {
+      "name": "ANI boundary, one-shot and explicit loop",
+      "passed": true
+    },
+    {
+      "name": "real PVF windows render with explicit diagnostics",
+      "passed": true
+    },
+    {
+      "name": "offline bundle includes ANI and all referenced frame images",
+      "passed": true
+    },
+    {
+      "name": "unsupported controls are enumerated rather than silently dropped",
+      "passed": true
+    }
+  ],
+  "renders": [
+    {
+      "source": "ui/boosterselect/boosterselectpass.ui",
+      "image": "D:\\game\\DNF1031客户端-20260708\\ui_lab_1031\\reports\\preview-verification\\boosterselectpass.png",
+      "diagnostics": {
+        "issues": [
+          {
+            "category": "runtime_evidence",
+            "reason": "Static UI candidate; native state and visual acceptance pending"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/boosterselect/boosterselectpass.ui#197",
+            "type": "[tree]",
+            "name": "1100"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/boosterselect/boosterselectpass.ui#567",
+            "type": "[basic check box]",
+            "name": "1113"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/boosterselect/boosterselectpass.ui#937",
+            "type": "[basic check box]",
+            "name": "1123"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/boosterselect/boosterselectpass.ui#1312",
+            "type": "[basic check box]",
+            "name": "1133"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/boosterselect/boosterselectpass.ui#1682",
+            "type": "[basic check box]",
+            "name": "1143"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/boosterselect/boosterselectpass.ui#2052",
+            "type": "[basic check box]",
+            "name": "1153"
+          }
+        ],
+        "summary": {
+          "unknown_structure": 6,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 1
+        },
+        "support": "partial PVF layout candidate",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "unknown_structure": 0,
+        "unknown_state": 0,
+        "missing_resource": 0,
+        "resource_ambiguity": 0,
+        "unconfirmed_geometry": 0,
+        "runtime_evidence": 0
+      },
+      "resources": {
+        "interface/windowcommon.img:57": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:68": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:215": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:15": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:214": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:27": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:219": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:14": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:26": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/newstyle/windows/quest.img:27": {
+          "interface/newstyle/windows/quest.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows.NPK",
+            "offset": 2413807,
+            "length": 486678,
+            "member_sha256": "7382920786ae5756ba28102699d94391f5373c5a5ca63e332a5a3baf9d96039d"
+          }
+        },
+        "interface/windowcommon.img:69": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:220": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:216": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:217": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:66": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:12": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:67": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:213": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:221": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:13": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:218": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/inventory/iteminventorywindow.ui",
+      "image": "D:\\game\\DNF1031客户端-20260708\\ui_lab_1031\\reports\\preview-verification\\iteminventorywindow.png",
+      "diagnostics": {
+        "issues": [
+          {
+            "category": "runtime_evidence",
+            "reason": "Static UI candidate; native state and visual acceptance pending"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/inventory/iteminventorywindow.ui/child0-0#1177",
+            "type": "[grid]",
+            "name": "1114"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/inventory/iteminventorywindow.ui/child3-0#1087",
+            "type": "[gauge]",
+            "name": "9100"
+          }
+        ],
+        "summary": {
+          "unknown_structure": 2,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 1
+        },
+        "support": "partial PVF layout candidate",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "unknown_structure": 0,
+        "unknown_state": 0,
+        "missing_resource": 0,
+        "resource_ambiguity": 0,
+        "unconfirmed_geometry": 0,
+        "runtime_evidence": 0
+      },
+      "resources": {
+        "interface/newstyle/windows/inventory/inventory.img:19": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:42": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:44": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/windowcommon.img:215": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:15": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:214": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory_tw.img:0": {
+          "interface/newstyle/windows/inventory/inventory_tw.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 197415,
+            "length": 2857,
+            "member_sha256": "0a7e030d651b23813c6a164639e730fadf4a3ef2f7d0935a64cdb0e8422de33f"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory_tw.img:5": {
+          "interface/newstyle/windows/inventory/inventory_tw.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 197415,
+            "length": 2857,
+            "member_sha256": "0a7e030d651b23813c6a164639e730fadf4a3ef2f7d0935a64cdb0e8422de33f"
+          }
+        },
+        "interface/windowcommon.img:219": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory_tw.img:6": {
+          "interface/newstyle/windows/inventory/inventory_tw.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 197415,
+            "length": 2857,
+            "member_sha256": "0a7e030d651b23813c6a164639e730fadf4a3ef2f7d0935a64cdb0e8422de33f"
+          }
+        },
+        "interface/windowcommon.img:14": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:220": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory_tw.img:1": {
+          "interface/newstyle/windows/inventory/inventory_tw.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 197415,
+            "length": 2857,
+            "member_sha256": "0a7e030d651b23813c6a164639e730fadf4a3ef2f7d0935a64cdb0e8422de33f"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:9": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:4": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:21": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:8": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/windowcommon.img:216": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory_tw.img:7": {
+          "interface/newstyle/windows/inventory/inventory_tw.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 197415,
+            "length": 2857,
+            "member_sha256": "0a7e030d651b23813c6a164639e730fadf4a3ef2f7d0935a64cdb0e8422de33f"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:10": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:0": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:3": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:51": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/windowcommon.img:217": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:12": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:6": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:20": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:50": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory_tw.img:4": {
+          "interface/newstyle/windows/inventory/inventory_tw.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 197415,
+            "length": 2857,
+            "member_sha256": "0a7e030d651b23813c6a164639e730fadf4a3ef2f7d0935a64cdb0e8422de33f"
+          }
+        },
+        "interface/windowcommon.img:213": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/windowcommon.img:221": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:5": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/windowcommon.img:13": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:7": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:54": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/newstyle/windows/inventory/inventory.img:52": {
+          "interface/newstyle/windows/inventory/inventory.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows_inventory.NPK",
+            "offset": 844,
+            "length": 196571,
+            "member_sha256": "d5b5f4174838aeedf2f0df4f34291ad6e3fa1dfb0f787b17f2d744fda14d3276"
+          }
+        },
+        "interface/windowcommon.img:218": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/blooddungeon/result.ui",
+      "image": "D:\\game\\DNF1031客户端-20260708\\ui_lab_1031\\reports\\preview-verification\\result.png",
+      "diagnostics": {
+        "issues": [
+          {
+            "category": "runtime_evidence",
+            "reason": "Static UI candidate; native state and visual acceptance pending"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/blooddungeon/result.ui#227",
+            "type": "[numberset]",
+            "name": "Today Round"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/blooddungeon/result.ui#307",
+            "type": "[numberset]",
+            "name": "Today Total Round"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/blooddungeon/result.ui#387",
+            "type": "[time]",
+            "name": "Today Time"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/blooddungeon/result.ui#477",
+            "type": "[numberset]",
+            "name": "BEST Round"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/blooddungeon/result.ui#557",
+            "type": "[numberset]",
+            "name": "BEST Total Round"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/blooddungeon/result.ui#637",
+            "type": "[time]",
+            "name": "BEST Time"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "ui/blooddungeon/result.ui#782",
+            "type": "[numberset]",
+            "name": "EXP"
+          }
+        ],
+        "summary": {
+          "unknown_structure": 7,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 1
+        },
+        "support": "partial PVF layout candidate",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "unknown_structure": 0,
+        "unknown_state": 0,
+        "missing_resource": 0,
+        "resource_ambiguity": 0,
+        "unconfirmed_geometry": 0,
+        "runtime_evidence": 0
+      },
+      "resources": {
+        "interface2/deathtower/rewardlist.img:25": {
+          "interface2/deathtower/rewardlist.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_deathtower.NPK",
+            "offset": 132664,
+            "length": 152132,
+            "member_sha256": "65a70d824cbba0b0b9408fbcfa6c23a55ee0b24454ad5dad6ad8913767803995"
+          }
+        },
+        "interface/bloodwar/bloodreward.img:0": {
+          "interface/bloodwar/bloodreward.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_bloodwar.NPK",
+            "offset": 2164,
+            "length": 56033,
+            "member_sha256": "3a00ac2caf5a9f75f6ffb45e52921c8e7de6325f22817f205e539888abfe240c"
+          }
+        },
+        "interface2/deathtower/rewardlist.img:24": {
+          "interface2/deathtower/rewardlist.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_deathtower.NPK",
+            "offset": 132664,
+            "length": 152132,
+            "member_sha256": "65a70d824cbba0b0b9408fbcfa6c23a55ee0b24454ad5dad6ad8913767803995"
+          }
+        },
+        "interface2/deathtower/rewardlist.img:27": {
+          "interface2/deathtower/rewardlist.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_deathtower.NPK",
+            "offset": 132664,
+            "length": 152132,
+            "member_sha256": "65a70d824cbba0b0b9408fbcfa6c23a55ee0b24454ad5dad6ad8913767803995"
+          }
+        },
+        "interface2/deathtower/rewardlist.img:26": {
+          "interface2/deathtower/rewardlist.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_deathtower.NPK",
+            "offset": 132664,
+            "length": 152132,
+            "member_sha256": "65a70d824cbba0b0b9408fbcfa6c23a55ee0b24454ad5dad6ad8913767803995"
+          }
+        },
+        "interface2/deathtower/rewardlist.img:31": {
+          "interface2/deathtower/rewardlist.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_deathtower.NPK",
+            "offset": 132664,
+            "length": 152132,
+            "member_sha256": "65a70d824cbba0b0b9408fbcfa6c23a55ee0b24454ad5dad6ad8913767803995"
+          }
+        },
+        "interface/bloodwar/bloodreward.img:1": {
+          "interface/bloodwar/bloodreward.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_bloodwar.NPK",
+            "offset": 2164,
+            "length": 56033,
+            "member_sha256": "3a00ac2caf5a9f75f6ffb45e52921c8e7de6325f22817f205e539888abfe240c"
+          }
+        },
+        "interface/deathtower_rank.img:3": {
+          "interface/deathtower_rank.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 7622940,
+            "length": 63327,
+            "member_sha256": "8c09e3dd1035cdf9376b6da6dfd6965b1c47ef3af5379e07ef714b70ae4a897e"
+          }
+        },
+        "interface/deathtower_reward.img:22": {
+          "interface/deathtower_reward.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 7686267,
+            "length": 84516,
+            "member_sha256": "3e8234d68d7e6e37a3b1ecaeabb750a373e01ef4721be8660efdbb5fc1f40379"
+          }
+        },
+        "interface2/deathtower/rewardlist.img:29": {
+          "interface2/deathtower/rewardlist.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_deathtower.NPK",
+            "offset": 132664,
+            "length": 152132,
+            "member_sha256": "65a70d824cbba0b0b9408fbcfa6c23a55ee0b24454ad5dad6ad8913767803995"
+          }
+        },
+        "interface2/deathtower/rewardlist.img:30": {
+          "interface2/deathtower/rewardlist.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_deathtower.NPK",
+            "offset": 132664,
+            "length": 152132,
+            "member_sha256": "65a70d824cbba0b0b9408fbcfa6c23a55ee0b24454ad5dad6ad8913767803995"
+          }
+        },
+        "interface2/deathtower/rewardlist.img:28": {
+          "interface2/deathtower/rewardlist.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_deathtower.NPK",
+            "offset": 132664,
+            "length": 152132,
+            "member_sha256": "65a70d824cbba0b0b9408fbcfa6c23a55ee0b24454ad5dad6ad8913767803995"
+          }
+        }
+      }
+    }
+  ],
+  "helper_sha256": "2b018e486786e98d9016d3797f479b267d2c28c29be7bb8d1be032a2e805f8a3",
+  "diagnostic_baseline_sha256": "6bdf0f3f9c02680d0b1bca4c8a7fabfb1c7d5196b100d9cccfeb7272cf738860",
+  "diagnostic_baseline_file": "previous-verification.json",
+  "limitation": "Offline resource/geometry verification; no original-client visual comparison or all-window native acceptance."
+}

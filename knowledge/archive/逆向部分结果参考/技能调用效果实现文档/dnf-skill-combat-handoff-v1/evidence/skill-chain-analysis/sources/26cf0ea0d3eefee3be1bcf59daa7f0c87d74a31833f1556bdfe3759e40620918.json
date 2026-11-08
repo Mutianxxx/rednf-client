@@ -1,0 +1,67 @@
+{
+  "path": "passiveobject/character/swordman/animation/bloodswordexplosion/exp.ani.als",
+  "fields": [
+    {
+      "tag": "[use animation]",
+      "values": [
+        "exp_dodge.ani",
+        "d"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10,
+        "d"
+      ],
+      "offset": 15
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 1647220,
+      "value": "exp_dodge.ani"
+    },
+    {
+      "offset": 10,
+      "type": 6,
+      "raw": 213474,
+      "value": "d"
+    },
+    {
+      "offset": 15,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 20,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 25,
+      "type": 0,
+      "raw": 10,
+      "value": 10
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 213474,
+      "value": "d"
+    }
+  ],
+  "raw_sha256": "26cf0ea0d3eefee3be1bcf59daa7f0c87d74a31833f1556bdfe3759e40620918"
+}

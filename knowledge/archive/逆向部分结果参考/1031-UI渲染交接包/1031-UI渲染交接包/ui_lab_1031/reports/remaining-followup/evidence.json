@@ -1,0 +1,1618 @@
+{
+  "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+  "snapshot_sha256": "ab950286ad291236086beae21ef75b1732d4cd5e52db482e261f4c548969ea44",
+  "code_windows": [
+    {
+      "va": 18724112,
+      "size": 515,
+      "purpose": "rotation-zero gated 2^32 center substitution",
+      "file": "011db510.bin",
+      "bytes_sha256": "b5f334cadc8761e4f9ee6cb1af7000b2f9c3e00ba2beccee88a17108babe670b",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14529808,
+        "file_offset": 14526736,
+        "size": 515
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18563552,
+      "size": 198,
+      "purpose": "wrapper retains source image ECX and pushes destination context",
+      "file": "011b41e0.bin",
+      "bytes_sha256": "d42a2aa6431f15bd4dbec98c0293964e2fb22cf0b681e4de8bf5de836caf8ac9",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14369248,
+        "file_offset": 14366176,
+        "size": 198
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18561360,
+      "size": 35,
+      "purpose": "simple wrapper switches ECX to source image before virtual B4",
+      "file": "011b3950.bin",
+      "bytes_sha256": "416347c44e60ade2adc97118f912caf4f3df82ca9e8ced0376ae8c81f12b7535",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14367056,
+        "file_offset": 14363984,
+        "size": 35
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18562432,
+      "size": 53,
+      "purpose": "source logical unsigned dimensions and signed crop getters",
+      "file": "011b3d80.bin",
+      "bytes_sha256": "e15660e111e49fd5d7ef815817f6b2630530fdccbcf2b7aa42094bace4acb971",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14368128,
+        "file_offset": 14365056,
+        "size": 53
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 6000768,
+      "size": 4,
+      "purpose": "surface type getter reads ECX +8",
+      "file": "005b9080.bin",
+      "bytes_sha256": "916ae10aa3fd76a4d5b25b2fb66e9df0fd04957c7ab10930268d1ed7808be689",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 1806464,
+        "file_offset": 1803392,
+        "size": 4
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18723200,
+      "size": 150,
+      "purpose": "destination context types 8/14/15/16 route to alternate consumer",
+      "file": "011db180.bin",
+      "bytes_sha256": "7d7092c644e112fdd981e998c5263888597c74e277201a7a82fa25d23e91f23c",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14528896,
+        "file_offset": 14525824,
+        "size": 150
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18722272,
+      "size": 788,
+      "purpose": "alternate surface consumer with type-specific pixel conversion",
+      "file": "011dade0.bin",
+      "bytes_sha256": "11576edf0b967d07112d98e72ce9c40e3954f049188422beb6b549d2517cb202",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14527968,
+        "file_offset": 14524896,
+        "size": 788
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18560656,
+      "size": 44,
+      "purpose": "signed WORD context rectangle expansion",
+      "file": "011b3690.bin",
+      "bytes_sha256": "0a353482e13cef64d4d9a57bf9bbd4598c0025ef31d205107eecf35b296b7856",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14366352,
+        "file_offset": 14363280,
+        "size": 44
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18609376,
+      "size": 33,
+      "purpose": "scalar deleting destructor; optional free on flag bit 0",
+      "file": "011bf4e0.bin",
+      "bytes_sha256": "79a1c92dabee4c1ed2c320f43f144acc355a29790a9eaa0ff037931838cebb6c",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14415072,
+        "file_offset": 14412000,
+        "size": 33
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18608544,
+      "size": 255,
+      "purpose": "base teardown; not proof of all derived lifecycle paths",
+      "file": "011bf1a0.bin",
+      "bytes_sha256": "34b3f348d23bb566a2b6a0686869ba2d7b7fd882a8785ac8d92febcc9fba0497",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14414240,
+        "file_offset": 14411168,
+        "size": 255
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18606208,
+      "size": 53,
+      "purpose": "child-list nodes cleared, not recursive child object destruction",
+      "file": "011be880.bin",
+      "bytes_sha256": "fd2393b847339c4fcd8172f66ddd53c0e1112d146238b3d3c7ba59837291bdc1",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14411904,
+        "file_offset": 14408832,
+        "size": 53
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18604880,
+      "size": 13,
+      "purpose": "enabled setter is not hide",
+      "file": "011be350.bin",
+      "bytes_sha256": "b217e6acb4a966c71b4686e0a5c6b9e18048389e1313a20b0f8fcbfd89e093e2",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14410576,
+        "file_offset": 14407504,
+        "size": 13
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18605584,
+      "size": 88,
+      "purpose": "visibility gate +0C setter with callback event 10/11 on transitions",
+      "file": "011be610.bin",
+      "bytes_sha256": "64fd0058d16f164b85db904029554cb0629158870691e54bbfeff85f5619cf0b",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14411280,
+        "file_offset": 14408208,
+        "size": 88
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18592176,
+      "size": 34,
+      "purpose": "numeric IMG getter bounds checks manager +24/+28 pointer vector",
+      "file": "011bb1b0.bin",
+      "bytes_sha256": "64ca067164974e469f5f1c3985b6e1778efd2b97c8360214c3d7ed178f7c312f",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14397872,
+        "file_offset": 14394800,
+        "size": 34
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 7706496,
+      "size": 455,
+      "purpose": "numeric manager initialization prefix with first 17 registration requests; not a whole function",
+      "file": "00759780.bin",
+      "bytes_sha256": "b14e0d613462ad48e28badf63cd9a6d70f37f647e67347a523439788901c252e",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 3512192,
+        "file_offset": 3509120,
+        "size": 455
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18598016,
+      "size": 116,
+      "purpose": "numeric manager singleton factory",
+      "file": "011bc880.bin",
+      "bytes_sha256": "d20ea93e4e24c9c3005a9435fc35e9e01adf9bd3583928b421d7d169c616694d",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14403712,
+        "file_offset": 14400640,
+        "size": 116
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18596496,
+      "size": 161,
+      "purpose": "numeric manager constructor prefix initializes vector +20, not a whole function",
+      "file": "011bc290.bin",
+      "bytes_sha256": "5f93295b0f764f9ecd022a42b5dd2937088bef25631aad5c96538818b93e3b66",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14402192,
+        "file_offset": 14399120,
+        "size": 161
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18598144,
+      "size": 240,
+      "purpose": "registration allocates pack and passes it to vector helper",
+      "file": "011bc900.bin",
+      "bytes_sha256": "db099f2ad364c481c76401ac076554d5edf045ba747256e01c270a893b258341",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14403840,
+        "file_offset": 14400768,
+        "size": 240
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 4798320,
+      "size": 103,
+      "purpose": "vector helper has an unresolved protected entry transfer",
+      "file": "00493770.bin",
+      "bytes_sha256": "04f1c8c80ecc956d1a44be3a0f023e1ee7ce4e6c445f06b08b2238aac72ba154",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 604016,
+        "file_offset": 600944,
+        "size": 103
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 34535602,
+      "size": 5,
+      "purpose": "protected entry transfer second hop",
+      "file": "020ef8b2.bin",
+      "bytes_sha256": "f562a1c270a3d33a31a28baf8667d5ba05cc568c66a5232f2f8999de5f8ed690",
+      "disk": {
+        "section_index": 4,
+        "section_name": "nsn",
+        "rva": 30341298,
+        "file_offset": 26601650,
+        "size": 5
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 46743487,
+      "size": 18,
+      "purpose": "protected basic block; stack and flags transformation unresolved",
+      "file": "02c93fbf.bin",
+      "bytes_sha256": "bf6aa79a8b87a63f06e2d01e2c7a9d8584ce82e290bcc98322f99a54e6a904db",
+      "disk": {
+        "section_index": 8,
+        "section_name": "nsn",
+        "rva": 42549183,
+        "file_offset": 38742463,
+        "size": 18
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18603920,
+      "size": 72,
+      "purpose": "CBT state reset and enabled active-id comparison",
+      "file": "011bdf90.bin",
+      "bytes_sha256": "558ff1cca92a10f3698453683d4ecccd64850f2894f15e508b174cef89d68cee",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14409616,
+        "file_offset": 14406544,
+        "size": 72
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18604064,
+      "size": 104,
+      "purpose": "CBT active id matches control +34 only when enabled",
+      "file": "011be020.bin",
+      "bytes_sha256": "8c384338bf112e0457ccc9ed915690de02623d83be97cf4ef944b52c7b7a6687",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14409760,
+        "file_offset": 14406688,
+        "size": 104
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18604720,
+      "size": 16,
+      "purpose": "CBT forced id comparison against control +34",
+      "file": "011be2b0.bin",
+      "bytes_sha256": "d88240ee927857c6ee6557a4b042e73453753b476c2215558f30db97eed8581c",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14410416,
+        "file_offset": 14407344,
+        "size": 16
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18605152,
+      "size": 61,
+      "purpose": "CBT forced-id setter and adjacent control fields",
+      "file": "011be460.bin",
+      "bytes_sha256": "0a93797bd58e9ede9db8b0da46782b7f338d36e596ba1e2e08faac0a1789ff75",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14410848,
+        "file_offset": 14407776,
+        "size": 61
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18610400,
+      "size": 180,
+      "purpose": "one native dispatch path stores object +34 as active id",
+      "file": "011bf8e0.bin",
+      "bytes_sha256": "5d952e3351c27ce5597ea8ebb866db8de7a43a9f0235a60dc39097e49097a7bc",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14416096,
+        "file_offset": 14413024,
+        "size": 180
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18644512,
+      "size": 18,
+      "purpose": "CBT input-state getter returns global value unchanged",
+      "file": "011c7e20.bin",
+      "bytes_sha256": "0cfa9ccbd6d2f8dfa3113eb9274bc4eb4d0c87d81ded7759dd2832665736bd2d",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14450208,
+        "file_offset": 14447136,
+        "size": 18
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18647056,
+      "size": 756,
+      "purpose": "input-state event handler with manager-bit and event-code writes",
+      "file": "011c8810.bin",
+      "bytes_sha256": "9366161c136d3ffd412bd273d282a0ca4d0b5b947fa99055409ecf5b618c817f",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14452752,
+        "file_offset": 14449680,
+        "size": 756
+      },
+      "snapshot_matches": true
+    },
+    {
+      "va": 18609424,
+      "size": 522,
+      "purpose": "text dispatch and traversal for bounded call checks",
+      "file": "011bf510.bin",
+      "bytes_sha256": "c3c55c250431b089913dc30e0eb6c85972a8df105eb1e81f94f74762b9fc743f",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14415120,
+        "file_offset": 14412048,
+        "size": 522
+      },
+      "snapshot_matches": true
+    }
+  ],
+  "calls": [
+    {
+      "va": 18723339,
+      "target": 18722272,
+      "raw_hex": "e8d0fbffff"
+    },
+    {
+      "va": 18609382,
+      "target": 18608544,
+      "raw_hex": "e8b5fcffff"
+    },
+    {
+      "va": 18609394,
+      "target": 18547648,
+      "raw_hex": "e8c90effff"
+    },
+    {
+      "va": 18609561,
+      "target": 18648176,
+      "raw_hex": "e8d2960000"
+    },
+    {
+      "va": 18724191,
+      "target": 18562432,
+      "raw_hex": "e81c88fdff"
+    },
+    {
+      "va": 18724200,
+      "target": 18562448,
+      "raw_hex": "e82388fdff"
+    },
+    {
+      "va": 18723212,
+      "target": 6000768,
+      "raw_hex": "e8efde3dff"
+    },
+    {
+      "va": 18722342,
+      "target": 6000768,
+      "raw_hex": "e855e23dff"
+    },
+    {
+      "va": 7706513,
+      "target": 18598016,
+      "raw_hex": "e8ea30a600"
+    },
+    {
+      "va": 18598089,
+      "target": 18596496,
+      "raw_hex": "e8c2f9ffff"
+    },
+    {
+      "va": 18598347,
+      "target": 4798320,
+      "raw_hex": "e8a06d2dff"
+    },
+    {
+      "va": 7706531,
+      "target": 18480880,
+      "raw_hex": "e84867a400"
+    },
+    {
+      "va": 7706546,
+      "target": 18598144,
+      "raw_hex": "e84931a600"
+    },
+    {
+      "va": 7706556,
+      "target": 18480880,
+      "raw_hex": "e82f67a400"
+    },
+    {
+      "va": 7706571,
+      "target": 18598144,
+      "raw_hex": "e83031a600"
+    },
+    {
+      "va": 7706581,
+      "target": 18480880,
+      "raw_hex": "e81667a400"
+    },
+    {
+      "va": 7706596,
+      "target": 18598144,
+      "raw_hex": "e81731a600"
+    },
+    {
+      "va": 7706606,
+      "target": 18480880,
+      "raw_hex": "e8fd66a400"
+    },
+    {
+      "va": 7706621,
+      "target": 18598144,
+      "raw_hex": "e8fe30a600"
+    },
+    {
+      "va": 7706631,
+      "target": 18480880,
+      "raw_hex": "e8e466a400"
+    },
+    {
+      "va": 7706646,
+      "target": 18598144,
+      "raw_hex": "e8e530a600"
+    },
+    {
+      "va": 7706656,
+      "target": 18480880,
+      "raw_hex": "e8cb66a400"
+    },
+    {
+      "va": 7706671,
+      "target": 18598144,
+      "raw_hex": "e8cc30a600"
+    },
+    {
+      "va": 7706681,
+      "target": 18480880,
+      "raw_hex": "e8b266a400"
+    },
+    {
+      "va": 7706696,
+      "target": 18598144,
+      "raw_hex": "e8b330a600"
+    },
+    {
+      "va": 7706706,
+      "target": 18480880,
+      "raw_hex": "e89966a400"
+    },
+    {
+      "va": 7706721,
+      "target": 18598144,
+      "raw_hex": "e89a30a600"
+    },
+    {
+      "va": 7706731,
+      "target": 18480880,
+      "raw_hex": "e88066a400"
+    },
+    {
+      "va": 7706746,
+      "target": 18598144,
+      "raw_hex": "e88130a600"
+    },
+    {
+      "va": 7706756,
+      "target": 18480880,
+      "raw_hex": "e86766a400"
+    },
+    {
+      "va": 7706771,
+      "target": 18598144,
+      "raw_hex": "e86830a600"
+    },
+    {
+      "va": 7706781,
+      "target": 18480880,
+      "raw_hex": "e84e66a400"
+    },
+    {
+      "va": 7706796,
+      "target": 18598144,
+      "raw_hex": "e84f30a600"
+    },
+    {
+      "va": 7706806,
+      "target": 18480880,
+      "raw_hex": "e83566a400"
+    },
+    {
+      "va": 7706821,
+      "target": 18598144,
+      "raw_hex": "e83630a600"
+    },
+    {
+      "va": 7706831,
+      "target": 18480880,
+      "raw_hex": "e81c66a400"
+    },
+    {
+      "va": 7706846,
+      "target": 18598144,
+      "raw_hex": "e81d30a600"
+    },
+    {
+      "va": 7706856,
+      "target": 18480880,
+      "raw_hex": "e80366a400"
+    },
+    {
+      "va": 7706871,
+      "target": 18598144,
+      "raw_hex": "e80430a600"
+    },
+    {
+      "va": 7706881,
+      "target": 18480880,
+      "raw_hex": "e8ea65a400"
+    },
+    {
+      "va": 7706896,
+      "target": 18598144,
+      "raw_hex": "e8eb2fa600"
+    },
+    {
+      "va": 7706906,
+      "target": 18480880,
+      "raw_hex": "e8d165a400"
+    },
+    {
+      "va": 7706921,
+      "target": 18598144,
+      "raw_hex": "e8d22fa600"
+    },
+    {
+      "va": 7706931,
+      "target": 18480880,
+      "raw_hex": "e8b865a400"
+    },
+    {
+      "va": 7706946,
+      "target": 18598144,
+      "raw_hex": "e8b92fa600"
+    }
+  ],
+  "virtuals": [
+    {
+      "va": 25536020,
+      "target": 18609376,
+      "raw_hex": "e0f41b01"
+    },
+    {
+      "va": 25536048,
+      "target": 18606208,
+      "raw_hex": "80e81b01"
+    },
+    {
+      "va": 25536036,
+      "target": 18605584,
+      "raw_hex": "10e61b01"
+    },
+    {
+      "va": 25536044,
+      "target": 18604880,
+      "raw_hex": "50e31b01"
+    },
+    {
+      "va": 25544728,
+      "target": 18724112,
+      "raw_hex": "10b51d01"
+    },
+    {
+      "va": 25544736,
+      "target": 18723200,
+      "raw_hex": "80b11d01"
+    }
+  ],
+  "constants": [
+    {
+      "va": 22438320,
+      "raw_hex": "00000000",
+      "value": 0.0
+    },
+    {
+      "va": 22438324,
+      "raw_hex": "0000804f",
+      "value": 4294967296.0
+    }
+  ],
+  "operand_probes": [
+    {
+      "va": 18563555,
+      "raw_hex": "8bd18b4d10",
+      "meaning": "EDX receives destination; ECX becomes source argument"
+    },
+    {
+      "va": 18563644,
+      "raw_hex": "8b31",
+      "meaning": "source ECX supplies the virtual table"
+    },
+    {
+      "va": 18563729,
+      "raw_hex": "528b550c528b96ac00000050ffd2",
+      "meaning": "destination EDX is third virtual argument; source ECX unchanged"
+    },
+    {
+      "va": 18724132,
+      "raw_hex": "8b5d10568bf1",
+      "meaning": "EBX is destination argument; ESI is source ECX"
+    },
+    {
+      "va": 18724189,
+      "raw_hex": "8bcee81c88fdff8bce8bf8e82388fdff",
+      "meaning": "both dimension getters use source ESI"
+    },
+    {
+      "va": 18724219,
+      "raw_hex": "9ff6c4447a4a",
+      "meaning": "ordered equal rotation falls through; unequal and unordered skip"
+    },
+    {
+      "va": 18723205,
+      "raw_hex": "8b7d108bf18bcf",
+      "meaning": "EDI is destination argument; type getter ECX receives EDI"
+    },
+    {
+      "va": 18722290,
+      "raw_hex": "8b75108bd9",
+      "meaning": "alternate consumer ESI is destination; EBX is source"
+    },
+    {
+      "va": 18603938,
+      "raw_hex": "a3f024a401",
+      "meaning": "state reset writes active-id global"
+    },
+    {
+      "va": 18605203,
+      "raw_hex": "8b4508a30025a401",
+      "meaning": "setter stack argument writes forced-id global; ECX usage not implied"
+    },
+    {
+      "va": 18610539,
+      "raw_hex": "8b53348915f024a401",
+      "meaning": "dispatch path copies control +34 into active-id global"
+    },
+    {
+      "va": 18604073,
+      "raw_hex": "8b15f024a40133c03b51340f94c0",
+      "meaning": "enabled active-id comparison is against control +34"
+    },
+    {
+      "va": 18604720,
+      "raw_hex": "8b150025a40133c03b51340f94c0",
+      "meaning": "forced-id comparison is against control +34"
+    },
+    {
+      "va": 18644512,
+      "raw_hex": "a10c65b501c3",
+      "meaning": "input-state getter returns global unchanged"
+    },
+    {
+      "va": 18647279,
+      "raw_hex": "89150c65b501",
+      "meaning": "event handler stores computed input-state value"
+    },
+    {
+      "va": 18647483,
+      "raw_hex": "891d0c65b501",
+      "meaning": "event handler clears input-state value"
+    },
+    {
+      "va": 18647552,
+      "raw_hex": "c7050c65b50140000000",
+      "meaning": "event handler stores 0x40 input-state value"
+    },
+    {
+      "va": 18647564,
+      "raw_hex": "c7050c65b50108000000",
+      "meaning": "event handler stores 8 input-state value"
+    }
+  ],
+  "crash": {
+    "plugin": {
+      "path": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\plugins\\stringtable.dll",
+      "sha256": "9d218abc3e9a3f12b9b5ae2f5c27d58b03a07faf1d2079ab095b1ec11aca4cc1",
+      "file_size": 140800,
+      "preferred_base": 268435456,
+      "timestamp": 1663253240,
+      "image_size": 184320
+    },
+    "code_windows": [
+      {
+        "rva": 92378,
+        "file_offset": 89306,
+        "size": 54,
+        "section": ".text",
+        "executable": true,
+        "preferred_va": 268527834,
+        "purpose": "callback load at +BC and indirect call EAX",
+        "file": "plugin-000168da.bin",
+        "sha256": "153f951cf6df4b595e58b5fc0e686cc30ff63f2aa11af9f57705437aa425eec7"
+      },
+      {
+        "rva": 20272,
+        "file_offset": 17200,
+        "size": 199,
+        "section": ".text",
+        "executable": true,
+        "preferred_va": 268455728,
+        "purpose": "reason-zero detach branch and virtual +68",
+        "file": "plugin-00004f30.bin",
+        "sha256": "a0321c34cc425791e204bcef288be4f5509e743fd041cee96abe4428587d2ddf"
+      },
+      {
+        "rva": 22936,
+        "file_offset": 19864,
+        "size": 246,
+        "section": ".text",
+        "executable": true,
+        "preferred_va": 268458392,
+        "purpose": "module dispatch wrapper",
+        "file": "plugin-00005998.bin",
+        "sha256": "5a0f19d64df1b5eeabdb8d4dcd5e541a84307218479724dfdc58774fe3c1b16d"
+      },
+      {
+        "rva": 23182,
+        "file_offset": 20110,
+        "size": 33,
+        "section": ".text",
+        "executable": true,
+        "preferred_va": 268458638,
+        "purpose": "PE entry wrapper",
+        "file": "plugin-00005a8e.bin",
+        "sha256": "3b3f96269187e4d83dfe76c081a6b7ac89c5766d960ecde1aeb8e20a428fcef2"
+      }
+    ],
+    "dumps": [
+      {
+        "report": "reports\\crash-analysis\\DNF.exe.29164.json",
+        "report_sha256": "1771e5a0bd4ea4d1f261712df82470f5639d36c47274bf7eb2776155f33f550f",
+        "dump_sha256": "0aa0dc1f57bcbff5886c5f7df9fec3a658f858fb20a92bdd5094b6518d11a13f",
+        "original_dump_available": true,
+        "module": {
+          "base": 2089222144,
+          "size": 184320,
+          "name": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\plugins\\stringtable.dll",
+          "timestamp": 1663253240
+        },
+        "module_match": "timestamp and SizeOfImage only; not full loaded-code identity",
+        "exception_code": "0xC0000005",
+        "exception_address": "0x61636F4C",
+        "exception_information": [
+          "0x8",
+          "0x61636F4C"
+        ],
+        "registers": {
+          "edi": "0x2FB465C8",
+          "esi": "0x7C88F23C",
+          "ebx": "0x0433FD5C",
+          "edx": "0x00000006",
+          "ecx": "0x001AE668",
+          "eax": "0x61636F4C",
+          "ebp": "0x001AE638",
+          "eip": "0x61636F4C",
+          "eflags": "0x00010202",
+          "esp": "0x001AE624"
+        },
+        "top_return": {
+          "stack_offset": 0,
+          "address": 2089314571,
+          "module": "stringtable.dll",
+          "rva": 92427
+        },
+        "frame_pointer_chain": [
+          {
+            "ebp": 1762872,
+            "return_address": 2089245188,
+            "owner": {
+              "module": "stringtable.dll",
+              "rva": 23044
+            }
+          },
+          {
+            "ebp": 1762936,
+            "return_address": 2089245356,
+            "owner": {
+              "module": "stringtable.dll",
+              "rva": 23212
+            }
+          },
+          {
+            "ebp": 1762948,
+            "return_address": 2005048166,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 498534
+            }
+          },
+          {
+            "ebp": 1762980,
+            "return_address": 2005279620,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 729988
+            }
+          },
+          {
+            "ebp": 1763016,
+            "return_address": 2004791923,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 242291
+            }
+          },
+          {
+            "ebp": 1763088,
+            "return_address": 2004775849,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 226217
+            }
+          },
+          {
+            "ebp": 1763248,
+            "return_address": 2004763150,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 213518
+            }
+          },
+          {
+            "ebp": 1763460,
+            "return_address": 1986179955,
+            "owner": {
+              "module": "kernel32.dll",
+              "rva": 177011
+            }
+          },
+          {
+            "ebp": 1763480,
+            "return_address": 20827784,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 16633480
+            }
+          },
+          {
+            "ebp": 1763492,
+            "return_address": 20828340,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 16634036
+            }
+          },
+          {
+            "ebp": 1763568,
+            "return_address": 20828378,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 16634074
+            }
+          },
+          {
+            "ebp": 1763588,
+            "return_address": 7713705,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 3519401
+            }
+          },
+          {
+            "ebp": 1763628,
+            "return_address": 7426360,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 3232056
+            }
+          },
+          {
+            "ebp": 1763652,
+            "return_address": 7480343,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 3286039
+            }
+          },
+          {
+            "ebp": 1763680,
+            "return_address": 7372245,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 3177941
+            }
+          },
+          {
+            "ebp": 1764064,
+            "return_address": 18037104,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 13842800
+            }
+          }
+        ],
+        "memory_probes": [
+          {
+            "label": "top_return",
+            "address": 1762852,
+            "size": 4,
+            "captured": true,
+            "raw_hex": "0b69887c",
+            "reason": null
+          },
+          {
+            "label": "callback_slot",
+            "address": 2089349880,
+            "size": 4,
+            "captured": true,
+            "raw_hex": "4c6f6361",
+            "reason": null
+          },
+          {
+            "label": "indirect_call",
+            "address": 2089314569,
+            "size": 2,
+            "captured": false,
+            "raw_hex": null,
+            "reason": "range absent from retained dump; disk is not substituted"
+          }
+        ],
+        "esi_location": {
+          "rva": 127548,
+          "file_offset": 119868,
+          "size": 4,
+          "section": ".data",
+          "executable": false
+        },
+        "disk_callback_slot": {
+          "rva": 127736,
+          "file_offset": 120056,
+          "size": 4,
+          "section": ".data",
+          "executable": false,
+          "raw_hex": "4c6f6361",
+          "value": 1633906508
+        },
+        "candidate_call_consistent": true
+      },
+      {
+        "report": "reports\\crash-analysis\\DNF.exe.61396.json",
+        "report_sha256": "b7c60da74232b8e9107a36b1bc674c32c94c94033f9166da86901801d5239125",
+        "dump_sha256": "5ea184bce9f257f717ecd1ff8e73a028c6be658928f7dbdb83712074a9a1e263",
+        "original_dump_available": true,
+        "module": {
+          "base": 2089222144,
+          "size": 184320,
+          "name": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\plugins\\stringtable.dll",
+          "timestamp": 1663253240
+        },
+        "module_match": "timestamp and SizeOfImage only; not full loaded-code identity",
+        "exception_code": "0xC0000005",
+        "exception_address": "0x61636F4C",
+        "exception_information": [
+          "0x8",
+          "0x61636F4C"
+        ],
+        "registers": {
+          "edi": "0x4AEC0CC8",
+          "esi": "0x7C88F23C",
+          "ebx": "0x042357B4",
+          "edx": "0x00000006",
+          "ecx": "0x001AE668",
+          "eax": "0x61636F4C",
+          "ebp": "0x001AE638",
+          "eip": "0x61636F4C",
+          "eflags": "0x00010202",
+          "esp": "0x001AE624"
+        },
+        "top_return": {
+          "stack_offset": 0,
+          "address": 2089314571,
+          "module": "stringtable.dll",
+          "rva": 92427
+        },
+        "frame_pointer_chain": [
+          {
+            "ebp": 1762872,
+            "return_address": 2089245188,
+            "owner": {
+              "module": "stringtable.dll",
+              "rva": 23044
+            }
+          },
+          {
+            "ebp": 1762936,
+            "return_address": 2089245356,
+            "owner": {
+              "module": "stringtable.dll",
+              "rva": 23212
+            }
+          },
+          {
+            "ebp": 1762948,
+            "return_address": 2005048166,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 498534
+            }
+          },
+          {
+            "ebp": 1762980,
+            "return_address": 2005279620,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 729988
+            }
+          },
+          {
+            "ebp": 1763016,
+            "return_address": 2004791923,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 242291
+            }
+          },
+          {
+            "ebp": 1763088,
+            "return_address": 2004775849,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 226217
+            }
+          },
+          {
+            "ebp": 1763248,
+            "return_address": 2004763150,
+            "owner": {
+              "module": "ntdll.dll",
+              "rva": 213518
+            }
+          },
+          {
+            "ebp": 1763460,
+            "return_address": 1986179955,
+            "owner": {
+              "module": "kernel32.dll",
+              "rva": 177011
+            }
+          },
+          {
+            "ebp": 1763480,
+            "return_address": 20827784,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 16633480
+            }
+          },
+          {
+            "ebp": 1763492,
+            "return_address": 20828340,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 16634036
+            }
+          },
+          {
+            "ebp": 1763568,
+            "return_address": 20828378,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 16634074
+            }
+          },
+          {
+            "ebp": 1763588,
+            "return_address": 7713705,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 3519401
+            }
+          },
+          {
+            "ebp": 1763628,
+            "return_address": 7426360,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 3232056
+            }
+          },
+          {
+            "ebp": 1763652,
+            "return_address": 7480343,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 3286039
+            }
+          },
+          {
+            "ebp": 1763680,
+            "return_address": 7372245,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 3177941
+            }
+          },
+          {
+            "ebp": 1764064,
+            "return_address": 18037104,
+            "owner": {
+              "module": "DNF.exe",
+              "rva": 13842800
+            }
+          }
+        ],
+        "memory_probes": [
+          {
+            "label": "top_return",
+            "address": 1762852,
+            "size": 4,
+            "captured": true,
+            "raw_hex": "0b69887c",
+            "reason": null
+          },
+          {
+            "label": "callback_slot",
+            "address": 2089349880,
+            "size": 4,
+            "captured": true,
+            "raw_hex": "4c6f6361",
+            "reason": null
+          },
+          {
+            "label": "indirect_call",
+            "address": 2089314569,
+            "size": 2,
+            "captured": false,
+            "raw_hex": null,
+            "reason": "range absent from retained dump; disk is not substituted"
+          }
+        ],
+        "esi_location": {
+          "rva": 127548,
+          "file_offset": 119868,
+          "size": 4,
+          "section": ".data",
+          "executable": false
+        },
+        "disk_callback_slot": {
+          "rva": 127736,
+          "file_offset": 120056,
+          "size": 4,
+          "section": ".data",
+          "executable": false,
+          "raw_hex": "4c6f6361",
+          "value": 1633906508
+        },
+        "candidate_call_consistent": true
+      }
+    ],
+    "conclusion": "Both dumps capture the same ESI+BC value (ASCII bytes Loca), and the matching top return lands after the disk indirect call. The code/data relationship is established; the field writer and fault responsibility remain unproven",
+    "limitations": [
+      "Raw stack candidates/EBP links are not a validated unwind",
+      "Disk data initializers do not establish runtime object identity or its last writer",
+      "No plugin modification, injection, client launch or controlled baseline was performed"
+    ]
+  },
+  "object_contract": {
+    "wrapper_ecx": "destination context",
+    "virtual_ecx": "source image",
+    "virtual_third_argument": "destination context",
+    "center_dimensions": "source image +1C/+1E",
+    "simple_dispatch_type": "destination context +8; not source image_type"
+  },
+  "cbt_state": {
+    "active_id": {
+      "address": 27534576,
+      "reset": 4294967295,
+      "writer": "011BF96E copies a control object +34 on one dispatch path",
+      "predicate": "011BE020 checks control +0D and then compares active id to control +34"
+    },
+    "forced_id": {
+      "address": 27534592,
+      "setter": "011BE490 stores its stack argument unchanged",
+      "predicate": "011BE2B0 compares forced id to control +34"
+    },
+    "input_state": {
+      "address": 28665100,
+      "getter": "011C7E20 returns the DWORD unchanged",
+      "event_handler": "011C8810 computes 1 or 8 from bit 7 of manager +18; event 0x201 clears; other observed branches store 0x40 or 8",
+      "names": "No mouse/key/business-state name assigned; caller and meanings remain unconfirmed"
+    },
+    "branches": [
+      "active/control +34 equality is enabled by control +0D",
+      "forced/control +34 equality is exposed separately",
+      "existing preview branch selector remains an explicit user-supplied predicate, not live state"
+    ]
+  },
+  "numeric_manager": {
+    "global_pointer": 27699312,
+    "singleton": 28664760,
+    "registrations": [
+      {
+        "request_ordinal": 0,
+        "va": 7706526,
+        "raw_hex": "68a0c85b01e84867a4008b0d70a8a60183c40450e84931a600",
+        "literal": {
+          "va": "015BC8A0",
+          "header_hex": "0054712a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/SelectCharacter.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6fee548fafc2c1d9125f299cc7b31af6e4bea1343f80f32950d1a37bfc219bd152a12364f1994d2be",
+          "stored_sha256": "01e64983ff15bd7927f8cdec7fba1a42af2b32fc6d6eedcb2af7abfc537b011b",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 1,
+        "va": 7706551,
+        "raw_hex": "6848c85b01e82f67a4008b0d70a8a60183c40450e83031a600",
+        "literal": {
+          "va": "015BC848",
+          "header_hex": "0054712a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/CharacterIllust.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6eee545fae12c09912aeed4cd003609a09b34b07a30a6fc43526cafa0dae1b996202b3a0f7b3ed6da",
+          "stored_sha256": "ba061224e37f0189ebbd8f2896b7f05ab7541f370637a9d2238e7ea49e977c64",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 2,
+        "va": 7706576,
+        "raw_hex": "680cc85b01e81667a4008b0d70a8a60183c40450e81731a600",
+        "literal": {
+          "va": "015BC80C",
+          "header_hex": "00544e2a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/Base.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6efe54cfa0c2c119130ee98cb4a2bdf30296b",
+          "stored_sha256": "6e391f6e466d0028700bc73f474e5ee1a328f275b3612b45fdf8a40b78ee235c",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 3,
+        "va": 7706601,
+        "raw_hex": "68b0c75b01e8fd66a4008b0d70a8a60183c40450e8fe30a600",
+        "literal": {
+          "va": "015BC7B0",
+          "header_hex": "00547d2a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/ItemInventoryWindow.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6e4e559fae32cea9180efc8d01c942d590b5769f9c9dbe54eda07cc572930128fbd379d4f1d4ed3acfb9c1c9219353ca4",
+          "stored_sha256": "885ee9f8cb51ccd6aa3c6c8911d867699928aa9835d9366b32d16b049056ed3c",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 4,
+        "va": 7706626,
+        "raw_hex": "6830c75b01e8e466a4008b0d70a8a60183c40450e8e530a600",
+        "literal": {
+          "va": "015BC730",
+          "header_hex": "00546e2a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/newstyle/windows/Inventory/inventory.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6c3e548fadc2c0b9182f882ccf5d65b726f9dd01d2025fe4c6a4bb1d70fc562203d71ebe4dbf35144b6de61c6fd1a70be184e69cafa0a00bab57436e08c7c5830479ed7dd301fce90b08feb9d87e800c3abef",
+          "stored_sha256": "d8eadc7491dd11711c0bd3484fac11888fe0ba0b0f071bf9fbe8d93a15f4654a",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 5,
+        "va": 7706651,
+        "raw_hex": "68e0c65b01e8cb66a4008b0d70a8a60183c40450e8cc30a600",
+        "literal": {
+          "va": "015BC6E0",
+          "header_hex": "0054762a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/WindowCommon.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6fae544fafa2c18912bf39fcd896fe0ac7e51cd77bca0a370370c88c2506baff58027",
+          "stored_sha256": "8ceb2e7556e351b6949e3205ad5303af40920b96b29f9bedde1cc04de70c0b5f",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 6,
+        "va": 7706676,
+        "raw_hex": "6880c65b01e8b266a4008b0d70a8a60183c40450e8b330a600",
+        "literal": {
+          "va": "015BC680",
+          "header_hex": "00547f2a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/AvatarInventoryWindow.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6ece55bfa1f2cfd91aced59d1c917697a519a42085a6a8a010c2b847db3afabff2ac135ff4490bcd7aa77721d8b57bf390dbe1bbd",
+          "stored_sha256": "40a13a0bfdb4ed1c9f72c4a6a4252deb2b191f65784998771604bb2c1401ec5e",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 7,
+        "va": 7706701,
+        "raw_hex": "6820c65b01e89966a4008b0d70a8a60183c40450e89a30a600",
+        "literal": {
+          "va": "015BC620",
+          "header_hex": "00547d2a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/StackableShopWindow.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6fee559faf12ce49150f2fdd0f82ea9567249b45a8053435f0d01146c1fbdbaa4b40cf590e7cc7b96cde874ff59d7940c",
+          "stored_sha256": "22935e48a784f9888afb34c24e8e077c133db9c47114eed3cd15fdeba6620849",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 8,
+        "va": 7706726,
+        "raw_hex": "68a8c55b01e88066a4008b0d70a8a60183c40450e88130a600",
+        "literal": {
+          "va": "015BC5A8",
+          "header_hex": "0054632a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/newstyle/windows/ItemTool_window4.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6c3e548fadc2c0b9182f882ccf5d65b726f9dd01d2025fe4c6a4bb1d70fc562203d71ebe4c1f34244b4deaac5641cb9b93ead46bcea61ef4a0fc207578a20b6817670d8ee3b22d5cea061b5f3",
+          "stored_sha256": "bd1f6192e05211bdbe0c94ec345f316b4e6ef00175afab9cb7b8461695c2ca04",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 9,
+        "va": 7706751,
+        "raw_hex": "6858c55b01e86766a4008b0d70a8a60183c40450e86830a600",
+        "literal": {
+          "va": "015BC558",
+          "header_hex": "0054702a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/SkillBuyWindow.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6fee546faf92c12912ff22cceff302dcd5cc14c88fc4fe081cd1d97dfdeccfe18384ff50df59e",
+          "stored_sha256": "550d80c9182559329a02c2bb6cc636cf97f0df50fa800c81d8080041dfb02d8c",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 10,
+        "va": 7706776,
+        "raw_hex": "6808c55b01e84e66a4008b0d70a8a60183c40450e84f30a600",
+        "literal": {
+          "va": "015BC508",
+          "header_hex": "0054762a",
+          "key": 2591116532,
+          "text": "Sprite/Interface2/Popup/popup.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541b0a682e560fa032c509205e920f66705509e1c4320ea773850aa52b339de96d57eb6b887",
+          "stored_sha256": "f266904f54af1e05323fdec26b7fd3a996d088b0bbab62110c2811d5eb193a6b",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 11,
+        "va": 7706801,
+        "raw_hex": "68b0c45b01e83566a4008b0d70a8a60183c40450e83630a600",
+        "literal": {
+          "va": "015BC4B0",
+          "header_hex": "0054722a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/NewResult/Result.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6e3e548fafc2c2a9173f1a9cc1fe6756ae381bc1c824e39086f827c0fd90dd8b32d6fa137ae05c6ba3fa3",
+          "stored_sha256": "6119bef13c964849997e620adbbcda65b30ec630dace77673f124f77ecde0f7f",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 12,
+        "va": 7706826,
+        "raw_hex": "6850c45b01e81c66a4008b0d70a8a60183c40450e81d30a600",
+        "literal": {
+          "va": "015BC450",
+          "header_hex": "00547e2a",
+          "key": 2591116532,
+          "text": "Sprite/Interface2/CountDown/CountDown.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541b0a682e573fa032c66921ee956f37005bdd51a3b739f7f76d2284cbd87fbc8b477013c715e40b8ed10cc86c619535bb09e883bb1",
+          "stored_sha256": "3af596d4ba8e271dd5fe538ebb210514afc610af06b215efd1e0211c3fe23ddc",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 13,
+        "va": 7706851,
+        "raw_hex": "6800c45b01e80366a40083c4048b0d70a8a60150e80430a600",
+        "literal": {
+          "va": "015BC400",
+          "header_hex": "0054772a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/SelectDungeon.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6fee548fafc2c1d9125f299cc7c31b26e45ea0943800f1698502d188627bb1507959ef5b3",
+          "stored_sha256": "b39bcfe2444671f85b7a9b6156ab0109b20b7eda5f3a010ecdc1913c8c65b963",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 14,
+        "va": 7706876,
+        "raw_hex": "68b0c35b01e8ea65a4008b0d70a8a60183c40450e8eb2fa600",
+        "literal": {
+          "va": "015BC3B0",
+          "header_hex": "0054702a",
+          "key": 2591116532,
+          "text": "Sprite/WorldMap/selectdungeon02.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd9474618b95898d381f7b86fff69c32f3bc89ddddbcce298ed5c504036935d8d68b15c6d88040a35172d271205c073de8c4f38a1b61ef21dd4af0",
+          "stored_sha256": "ac941227460a76fdee395c842ff8a45728cb29507c8dfdf0ccd766b189c5426e",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 15,
+        "va": 7706901,
+        "raw_hex": "6888675701e8d165a4008b0d70a8a60183c40450e8d22fa600",
+        "literal": {
+          "va": "01576788",
+          "header_hex": "0054632a",
+          "key": 2591116532,
+          "text": "Sprite/Interface/common/digit/white_stroke_small02.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecd8a74608bad8985387978e3ff75c442e27541ada6cee542facd2cef9158f605cfb229a70b190d06e5d75a3273eb3ad95ea5e9204dd4e805056f8d7653e4c4dc6e92b22f3d1e7b78148ea095f580b2198898fb07953c8a97b8968ed87577eaf8c8",
+          "stored_sha256": "f163c5ec437f88c0ed405096cc20c2ca46f4a3dce32a29117c98f541f0a35e16",
+          "roundtrip": true
+        }
+      },
+      {
+        "request_ordinal": 16,
+        "va": 7706926,
+        "raw_hex": "6858c35b01e8b865a4008b0d70a8a60183c40450e8b92fa600",
+        "literal": {
+          "va": "015BC358",
+          "header_hex": "0054712a",
+          "key": 2591116532,
+          "text": "Sprite/common/digit/DungeonCount.img",
+          "stored_hex": "a74c019a2df02c4fa7279b724ecda074618b9e898c38057ea2ff5c55c6f3ef0725f529ced15b88b74b8e768e9bf50481dc879acd8266d737ed54c11403cc236d6f4f15b5408126f98080",
+          "stored_sha256": "146d8eb96677b887b056216e331c03f2fb60d6b6d29e6201d95762e771c013e8",
+          "roundtrip": true
+        }
+      }
+    ],
+    "protected_transfers": [
+      {
+        "va": 4798323,
+        "target": 34535602,
+        "raw_hex": "e93ac1c501"
+      },
+      {
+        "va": 34535602,
+        "target": 46743487,
+        "raw_hex": "e90847ba00"
+      },
+      {
+        "va": 46743500,
+        "target": 46752673,
+        "raw_hex": "e9d0230000"
+      }
+    ],
+    "index_mapping_confirmed": false,
+    "limitation": "Request ordinals are not verified vector indices: protected entry, allocation failures, prior contents and repeated initialization remain unresolved"
+  },
+  "implemented": [
+    "2^32 center substitution from source image dimensions for exactly zero rotation, independently per axis",
+    "specific alternate image consumer diagnostics with raw state and evidence reference"
+  ],
+  "static_only": [
+    "base scalar deleting destructor -> teardown -> optional free",
+    "visibility gate +0C setter with event 10/11; does not imply detach or destruction",
+    "numeric IMG manager factory, vector initialization and first 17 literal registration requests; runtime index mapping not established",
+    "alternate image destination formats, surface and pixel conversion routing",
+    "generic +48 text has font dispatch, not a universal window title"
+  ],
+  "unknown": [
+    "hide and derived destruction coverage, runtime pointer reuse",
+    "title/font contents and glyph atlas",
+    "transformed rectangle pixel semantics and complete render state",
+    "CBT input event names, numeric manager index mapping and dedicated mode; EVN business/ANI, STM stage consumers, WDM ACT/switchbox",
+    "ANI/ACT/HSP scheduling and packet/texture lifetime",
+    "resource redirects and ambiguous physical priorities",
+    "real-client stability, exit responsibility and controlled <=5% performance acceptance"
+  ],
+  "source_hashes": {
+    "tools/analyze_remaining.py": "54f856252ef363a4e6eebbc4fac493a28fef811c53b49d3f3e52bb6c484a6bd3",
+    "tools/crash_followup.py": "0db65ccdfcca0a95d50525bda077cdb98c60e865fe522bdf600e97eb9fe97ed2",
+    "tools/image_contract.py": "ec2397d0f5fb783f77c08be2cf5307ede62c6e3c9ada92b616f6dbb7b25581de",
+    "tools/model.py": "70d0d6ea72a240eedf081219649d74e52b0ced2d7a7b4f539f1a78e413de845f",
+    "tools/native_geometry.py": "c0685ccfa973820a8ddc065ff397335f6a52e949e727a9e3527c6bcfcf6671b4",
+    "tools/preview.py": "461deff7a71f9e211e3fd59052c7f936f9cdb30d28a2b83caca8cbf054fa77df",
+    "tools/config_preview.py": "946b33a799e74a27fbae57654bb1576f22348b0e51b2f20255a5cd84cde41469",
+    "tools/verify.py": "6b493f211510eaf87340d68a3ebe8c21357fca0655d5e894d9510508affc101a",
+    "tools/verify_remaining.py": "5b2d8d22803ea068aac2c8e8ab17ab8a33f64520694d1c214196e7ececd0d2a0",
+    "tools/verify_revision6.py": "099721983c9546adb70b427e61fb4b75253f77f96f0d86e506d4a5055f050484",
+    "tools/resource_formats.py": "e9bb1f628b34ef8eac7dc08c612fb19d48abeb929f4cc97eb3324af7c7d5204c",
+    "tools/resource_followup.py": "f3f51521dfbd8f55c937f4b554f466133b2af973596917edd52e8f58650ec90e"
+  },
+  "dll_sha256": "bbb78bd3ff282eb64ae3b27cefa85b63a69e04b8b9bc17e7af0aec6875fe0dfa",
+  "scope": "1031 offline only; no changes to native DLL, deployed plugins, archive or static audit"
+}

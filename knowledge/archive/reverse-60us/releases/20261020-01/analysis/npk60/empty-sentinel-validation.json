@@ -1,0 +1,29 @@
+{
+  "counts": [
+    {
+      "color": 14,
+      "compression": 5,
+      "raw": "0000",
+      "count": 622175
+    },
+    {
+      "color": 14,
+      "compression": 6,
+      "raw": "0000",
+      "count": 10
+    },
+    {
+      "color": 16,
+      "compression": 6,
+      "raw": "00000000",
+      "count": 63
+    },
+    {
+      "color": 16,
+      "compression": 5,
+      "raw": "00000000",
+      "count": 3
+    }
+  ],
+  "nonzero_examples": []
+}

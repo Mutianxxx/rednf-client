@@ -1,0 +1,48 @@
+{
+  "schemaVersion": "1.1",
+  "status": "需验证",
+  "purpose": "Compact route metadata for path-keyed skill static/level parameter lookup.",
+  "boundary": {
+    "defaultStatus": "需验证",
+    "primaryKey": "skillPath",
+    "pvfWriteAuthorized": false,
+    "requiresTargetSklReadback": true
+  },
+  "internalIndexes": [
+    {
+      "id": "skill-parameter-facts-compact",
+      "kind": "portable-structured-facts",
+      "knowledgePackPath": "indexes/skill-parameter-facts.compact.json",
+      "note": "Skill path is the primary key; every task still confirms the corresponding target .skl before concluding."
+    }
+  ],
+  "summary": {
+    "parsedSkillCount": 2204,
+    "jobDirCount": 14,
+    "staticDataSkillCount": 1608,
+    "dynamicDataSkillCount": 2157,
+    "parseAnomalyCount": 0
+  },
+  "lookupKeys": [
+    "skillName",
+    "jobDir",
+    "skillPath",
+    "staticData.columnIndex",
+    "levelInfo.columnIndex",
+    "levelProperty.staticRef",
+    "levelProperty.dynamicRef"
+  ],
+  "readOrder": [
+    "task-cards/skill-parameter-current-value-readonly-query.zh-CN.md",
+    "indexes/skill-parameter-index.zh-CN.md",
+    "indexes/skill-parameter-facts.compact.json",
+    "dictionaries/skill-static-level-parameter-columns.zh-CN.md",
+    "task-cards/skill-state-nut-runtime-readonly-audit.zh-CN.md"
+  ],
+  "doNotUseFor": [
+    "runtime validation",
+    "direct PVF write recipe",
+    "cross-version universal skill rules",
+    "client or animation resource validation"
+  ]
+}

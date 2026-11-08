@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x49bc20",
+  "rva": "0x9bc20",
+  "file_offset": 637984,
+  "length": 348,
+  "bytes_sha256": "c718913387243519a00df564024b4787ada280a79d6b1bd26e44494e88d76b95",
+  "status": "native_bytes",
+  "note": "Exact body; calls current ACT and secondary ACT slot8, not last ACT.",
+  "disassembled": true
+}

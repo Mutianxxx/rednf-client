@@ -1,0 +1,55 @@
+{
+  "context": {
+    "name": "Declared successful template installation/no override/normal route; not native memory observation",
+    "slot10_registration_reached": true,
+    "current_atk_snapshot_unchanged": true,
+    "action_atk_override": null,
+    "normal_base_route_established": true
+  },
+  "results": [
+    {
+      "schema": "60us-skill32-scalar-consumer-result-v1",
+      "input_dynamic_scalar": 552,
+      "installed_current_atk": {
+        "damage": 552.0,
+        "absolute_damage": 0,
+        "damage_bonus": 0,
+        "attack_type": 1,
+        "weapon_damage_apply": false,
+        "elemental_properties": []
+      },
+      "source": "template+5DC via49F010/4EDCD0 to current+260",
+      "first_numeric_stage": {
+        "stage": "8B79C8..8B7A02",
+        "value_f32": 552.0,
+        "exact_fraction": "552",
+        "is_final_damage": false
+      },
+      "final_victim_damage": null,
+      "final_damage_boundary": "8B79C0 continues attacker factors;8B8650 continues random/defense/other factors and C01544;4B28D0 may modify the returned integer before HP subtraction.",
+      "observed_runtime": false
+    },
+    {
+      "schema": "60us-skill32-scalar-consumer-result-v1",
+      "input_dynamic_scalar": 5158,
+      "installed_current_atk": {
+        "damage": 5158.0,
+        "absolute_damage": 0,
+        "damage_bonus": 0,
+        "attack_type": 1,
+        "weapon_damage_apply": false,
+        "elemental_properties": []
+      },
+      "source": "template+5DC via49F010/4EDCD0 to current+260",
+      "first_numeric_stage": {
+        "stage": "8B79C8..8B7A02",
+        "value_f32": 5158.0,
+        "exact_fraction": "5158",
+        "is_final_damage": false
+      },
+      "final_victim_damage": null,
+      "final_damage_boundary": "8B79C0 continues attacker factors;8B8650 continues random/defense/other factors and C01544;4B28D0 may modify the returned integer before HP subtraction.",
+      "observed_runtime": false
+    }
+  ]
+}

@@ -1,0 +1,721 @@
+{
+  "kind": "original A30D20 + original A4A380 type17 path + original A49220 selector0 + original A2D1C0 literal decode; synthetic context/locality fixtures and A48C80 recorder; no DFO runtime capture",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "harness_sha256": "46c6fa83505f99e5b463887d78984781e532b07e2c6c6a210b14beffe49b8d74",
+  "output_sha256": "43658e078e9aceb7d39800025e777ee3038cea95176349a22e3550c04e0e21cb",
+  "matches": 34,
+  "mismatches": 0,
+  "vectors": [
+    {
+      "name": "default_axis0",
+      "axis": 0,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        1
+      ],
+      "native_counts": [
+        1
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 3,
+      "match": true
+    },
+    {
+      "name": "default_axis1",
+      "axis": 1,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        1
+      ],
+      "native_counts": [
+        1
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 3,
+      "match": true
+    },
+    {
+      "name": "default_axis2",
+      "axis": 2,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "default_axis3",
+      "axis": 3,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        1
+      ],
+      "native_counts": [
+        1
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 3,
+      "match": true
+    },
+    {
+      "name": "default_axis-1",
+      "axis": -1,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        1
+      ],
+      "native_counts": [
+        1
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 3,
+      "match": true
+    },
+    {
+      "name": "null_owner",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "nonlocal_owner",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "empty_context",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "trigger_disabled",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "trigger_blocked19",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "limit_reached",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        2
+      ],
+      "native_counts": [
+        2
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "limit_negative_unbounded",
+      "axis": 0,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        8
+      ],
+      "native_counts": [
+        8
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 3,
+      "match": true
+    },
+    {
+      "name": "no_collision_marker_xy",
+      "axis": 0,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 7,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 7,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        1
+      ],
+      "native_counts": [
+        1
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 7,
+      "match": true
+    },
+    {
+      "name": "no_collision_marker_other_axis",
+      "axis": 3,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "axis2_selection_event0",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "axis2_selection_event1",
+      "axis": 1,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "axis2_selection_event2",
+      "axis": 2,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 4,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 4,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        1
+      ],
+      "native_counts": [
+        1
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 4,
+      "match": true
+    },
+    {
+      "name": "axis_selection_carries_between_triggers",
+      "axis": 1,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0,
+        0
+      ],
+      "native_counts": [
+        0,
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "invalid_selection_keeps_xy",
+      "axis": 1,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 4,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 4,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        1
+      ],
+      "native_counts": [
+        1
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 4,
+      "match": true
+    },
+    {
+      "name": "multiple_do_exceeds_limit_in_one_scan",
+      "axis": 0,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 1,
+          "proc_flag": 0
+        },
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 2,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 1,
+          "proc_flag": 0
+        },
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 2,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        2
+      ],
+      "native_counts": [
+        2
+      ],
+      "native_A48C80_request_count": 2,
+      "native_decoded_last_behavior": 2,
+      "match": true
+    },
+    {
+      "name": "wrong_event_6",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "wrong_event_9",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "wrong_event_10",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "wrong_event_11",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "wrong_event_12",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "wrong_event_13",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "wrong_event_14",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "wrong_event_15",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "wrong_event_16",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "proc33_requires_collision_marker",
+      "axis": 2,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 33,
+          "behavior": 5,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 33,
+          "behavior": 5,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        1
+      ],
+      "native_counts": [
+        1
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 5,
+      "match": true
+    },
+    {
+      "name": "proc33_no_marker",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "proc49_owner_v108_false",
+      "axis": 0,
+      "expected_calls": [],
+      "native_calls": [],
+      "expected_counts": [
+        0
+      ],
+      "native_counts": [
+        0
+      ],
+      "native_A48C80_request_count": 0,
+      "native_decoded_last_behavior": -1,
+      "match": true
+    },
+    {
+      "name": "proc49_owner_v108_true",
+      "axis": 0,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 49,
+          "behavior": 6,
+          "proc_flag": 1
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 49,
+          "behavior": 6,
+          "proc_flag": 1
+        }
+      ],
+      "expected_counts": [
+        1
+      ],
+      "native_counts": [
+        1
+      ],
+      "native_A48C80_request_count": 1,
+      "native_decoded_last_behavior": 6,
+      "match": true
+    },
+    {
+      "name": "two_triggers_index_order",
+      "axis": 1,
+      "expected_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        },
+        {
+          "trigger": 1,
+          "condition_kind": 0,
+          "behavior": 8,
+          "proc_flag": 0
+        }
+      ],
+      "native_calls": [
+        {
+          "trigger": 0,
+          "condition_kind": 0,
+          "behavior": 3,
+          "proc_flag": 0
+        },
+        {
+          "trigger": 1,
+          "condition_kind": 0,
+          "behavior": 8,
+          "proc_flag": 0
+        }
+      ],
+      "expected_counts": [
+        1,
+        1
+      ],
+      "native_counts": [
+        1,
+        1
+      ],
+      "native_A48C80_request_count": 2,
+      "native_decoded_last_behavior": 8,
+      "match": true
+    }
+  ],
+  "boundaries": [
+    "A49220 executes selector0 only; other selector branches unsupported by these fixtures",
+    "A48C80 is recorded; native behavior interpreter and message0x33 not executed",
+    "Original type17 filter executes; other filter conditions unsupported"
+  ]
+}

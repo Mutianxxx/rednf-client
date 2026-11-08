@@ -1,0 +1,29 @@
+008e49b0 32c0                     xor       al, al
+008e49b2 c3                       ret       
+008e49b3 cc                       int3      
+008e49b4 cc                       int3      
+008e49b5 cc                       int3      
+008e49b6 cc                       int3      
+008e49b7 cc                       int3      
+008e49b8 cc                       int3      
+008e49b9 cc                       int3      
+008e49ba cc                       int3      
+008e49bb cc                       int3      
+008e49bc cc                       int3      
+008e49bd cc                       int3      
+008e49be cc                       int3      
+008e49bf cc                       int3      
+008e49c0 c21000                   ret       0x10
+008e49c3 cc                       int3      
+008e49c4 cc                       int3      
+008e49c5 cc                       int3      
+008e49c6 cc                       int3      
+008e49c7 cc                       int3      
+008e49c8 cc                       int3      
+008e49c9 cc                       int3      
+008e49ca cc                       int3      
+008e49cb cc                       int3      
+008e49cc cc                       int3      
+008e49cd cc                       int3      
+008e49ce cc                       int3      
+008e49cf cc                       int3      

@@ -1,0 +1,754 @@
+{
+  "path": "passiveobject/character/swordman/animation/hopsmashsubfront1.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        6
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -165,
+        -103
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -43,
+        -18,
+        1,
+        85,
+        39,
+        22
+      ],
+      "offset": 65
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 100
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img",
+        1
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -165,
+        -103
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -125,
+        -40,
+        0,
+        250,
+        80,
+        60
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 180
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img",
+        2
+      ],
+      "offset": 185
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -165,
+        -103
+      ],
+      "offset": 200
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 215
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -142,
+        -40,
+        0,
+        282,
+        80,
+        60
+      ],
+      "offset": 225
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 260
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img",
+        3
+      ],
+      "offset": 265
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -165,
+        -103
+      ],
+      "offset": 280
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 295
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -145,
+        -40,
+        -1,
+        292,
+        80,
+        60
+      ],
+      "offset": 305
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 340
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img",
+        4
+      ],
+      "offset": 345
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -165,
+        -103
+      ],
+      "offset": 360
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 375
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 385
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img",
+        5
+      ],
+      "offset": 390
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -165,
+        -103
+      ],
+      "offset": 405
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 420
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 9770084,
+      "value": "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967131,
+      "value": -165
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967193,
+      "value": -103
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 4294967253,
+      "value": -43
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 4294967278,
+      "value": -18
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 85,
+      "value": 85
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 39,
+      "value": 39
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 22,
+      "value": 22
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 110,
+      "type": 6,
+      "raw": 9770084,
+      "value": "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img"
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 4294967131,
+      "value": -165
+    },
+    {
+      "offset": 130,
+      "type": 0,
+      "raw": 4294967193,
+      "value": -103
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 4294967171,
+      "value": -125
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 4294967256,
+      "value": -40
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 250,
+      "value": 250
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 180,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 190,
+      "type": 6,
+      "raw": 9770084,
+      "value": "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img"
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 205,
+      "type": 0,
+      "raw": 4294967131,
+      "value": -165
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 4294967193,
+      "value": -103
+    },
+    {
+      "offset": 215,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 220,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 225,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 230,
+      "type": 0,
+      "raw": 4294967154,
+      "value": -142
+    },
+    {
+      "offset": 235,
+      "type": 0,
+      "raw": 4294967256,
+      "value": -40
+    },
+    {
+      "offset": 240,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 245,
+      "type": 0,
+      "raw": 282,
+      "value": 282
+    },
+    {
+      "offset": 250,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 260,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 265,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 270,
+      "type": 6,
+      "raw": 9770084,
+      "value": "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img"
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 280,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 285,
+      "type": 0,
+      "raw": 4294967131,
+      "value": -165
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 4294967193,
+      "value": -103
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 300,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 305,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 310,
+      "type": 0,
+      "raw": 4294967151,
+      "value": -145
+    },
+    {
+      "offset": 315,
+      "type": 0,
+      "raw": 4294967256,
+      "value": -40
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 325,
+      "type": 0,
+      "raw": 292,
+      "value": 292
+    },
+    {
+      "offset": 330,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 345,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 350,
+      "type": 6,
+      "raw": 9770084,
+      "value": "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img"
+    },
+    {
+      "offset": 355,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 360,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 365,
+      "type": 0,
+      "raw": 4294967131,
+      "value": -165
+    },
+    {
+      "offset": 370,
+      "type": 0,
+      "raw": 4294967193,
+      "value": -103
+    },
+    {
+      "offset": 375,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 380,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 385,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 390,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 395,
+      "type": 6,
+      "raw": 9770084,
+      "value": "Character/Swordman/Effect/HopSmash/b_bottom_01_n.img"
+    },
+    {
+      "offset": 400,
+      "type": 0,
+      "raw": 5,
+      "value": 5
+    },
+    {
+      "offset": 405,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 410,
+      "type": 0,
+      "raw": 4294967131,
+      "value": -165
+    },
+    {
+      "offset": 415,
+      "type": 0,
+      "raw": 4294967193,
+      "value": -103
+    },
+    {
+      "offset": 420,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 425,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    }
+  ],
+  "raw_sha256": "e58724cd07d2e4231154a7ab14e928c465db74385d19fdd902b2f1811bfe56e5"
+}

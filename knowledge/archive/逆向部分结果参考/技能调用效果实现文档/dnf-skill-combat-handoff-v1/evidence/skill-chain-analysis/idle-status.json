@@ -1,0 +1,236 @@
+{
+  "checked_utc": "2026-10-17T23:12:48.886400+00:00",
+  "identity_verified": true,
+  "header": {
+    "event": "session",
+    "schema": "dnf-memory-events-v3",
+    "session_id": "52844-5766087819678",
+    "pid": 52844,
+    "process_creation_filetime": 134367505790004641,
+    "qpc_origin": 5766087819678,
+    "qpc_frequency": 10000000,
+    "exe": "D:\\game\\DNF1031客户端-20260708\\DNF\\DNF\\DNF.exe",
+    "module_base": 4194304,
+    "dll": "D:\\game\\DNF1031客户端-20260708\\DNF\\DNF\\probe\\zz_runtime_probe_v3.dll",
+    "dll_sha256": "ace6841c6446506a48aef8bd8e4a8f0fa03de3672b405675d85a027f9dda408f",
+    "fixture": false,
+    "engine_frame_status": "not_located",
+    "profile_provenance": "reviewed runtime snapshot; live callback validation pending"
+  },
+  "status": {
+    "pid": 52844,
+    "session_id": "52844-5766087819678",
+    "session": "D:\\game\\DNF1031客户端-20260708\\DNF\\DNF\\trace-v3\\52844-5766087819678",
+    "profile_status": "installed",
+    "profile_error": "",
+    "recording": false,
+    "loss_latched": false,
+    "io_ready": true,
+    "guided_capture": {
+      "state": "off",
+      "label": {
+        "phase": "queuefix-bloodyrave-hold-release-alt1",
+        "job": "swordman_user_confirmed",
+        "weapon": "katana_user_confirmed",
+        "skill": "嗜魂封魔斩",
+        "key": "F",
+        "duration_ms": 12000,
+        "note": "保持血之狂暴开启、太刀。开始后按住F约2秒再松开，只释放一次，不移动、不按普攻/跳跃或其他技能。保持前台直到12秒自动结束。按住操作据当前SKL说明选择，内部松开切换谓词未证实。",
+        "source": "manual_live_calibration",
+        "annotation_is_skill_proof": false
+      },
+      "start_key": "Alt+1",
+      "stop_key": "Alt+2",
+      "notice_api_bound": true
+    },
+    "writer": {
+      "encoding": "cached_lossless_json_v1",
+      "queue_capacity": 8192,
+      "queue_storage_bytes": 26738696,
+      "row_bytes": 3256,
+      "pending_events_high_water_approx": 355,
+      "wake_every_events": 128,
+      "drain_limit": 1024,
+      "drain_rows_max": 424,
+      "drain_max_us": 3551,
+      "flush_max_us": 3317,
+      "bytes_written": 2443944361
+    },
+    "last_command_ok": true,
+    "last_command_error": "",
+    "counters": {
+      "seen": 11305934,
+      "filtered_disarmed": 9912397,
+      "offered": 1393537,
+      "accepted": 1393537,
+      "written": 1393537,
+      "queue_full": 0,
+      "queue_contention": 0,
+      "invalid_memory_views": 0,
+      "write_errors": 0,
+      "status_publish_errors": 0,
+      "status_publish_retries": 0,
+      "last_status_error": 0,
+      "last_status_retry_error": 0,
+      "callbacks_inflight": 0
+    },
+    "points": [
+      {
+        "name": "entity.create.dispatch",
+        "calls": 3,
+        "installed": true
+      },
+      {
+        "name": "entity.create.core",
+        "calls": 3,
+        "installed": true
+      },
+      {
+        "name": "entity.relative.resolve",
+        "calls": 2,
+        "installed": true
+      },
+      {
+        "name": "entity.relative.result_holder",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "animation.frame.threshold",
+        "calls": 502,
+        "installed": true
+      },
+      {
+        "name": "animation.flag.check",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "animation.clock.query",
+        "calls": 790350,
+        "installed": true
+      },
+      {
+        "name": "animation.speed.request",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "animation.scale.request",
+        "calls": 30,
+        "installed": true
+      },
+      {
+        "name": "animation.resource.request",
+        "calls": 127,
+        "installed": true
+      },
+      {
+        "name": "animation.resource.result",
+        "calls": 127,
+        "installed": true
+      },
+      {
+        "name": "animation.construct.path",
+        "calls": 131,
+        "installed": true
+      },
+      {
+        "name": "drawonly.construct",
+        "calls": 80,
+        "installed": true
+      },
+      {
+        "name": "drawonly.destroy",
+        "calls": 16,
+        "installed": true
+      },
+      {
+        "name": "scene.attach",
+        "calls": 3120,
+        "installed": true
+      },
+      {
+        "name": "position.write",
+        "calls": 281839,
+        "installed": true
+      },
+      {
+        "name": "direction.write",
+        "calls": 21942,
+        "installed": true
+      },
+      {
+        "name": "position.relative.calculate",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "hopsmash.motion.update",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "hopsmash.input.store",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "hopsmash.backlayers.update",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "als.command.parsed",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "object.draw.enter",
+        "calls": 1009899,
+        "installed": true
+      },
+      {
+        "name": "object.draw.main.callsite",
+        "calls": 823265,
+        "installed": true
+      },
+      {
+        "name": "object.draw.layer.before",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "object.draw.layer.after",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "object.draw.layer.depth",
+        "calls": 0,
+        "installed": true
+      },
+      {
+        "name": "animation.draw.depth.request",
+        "calls": 823265,
+        "installed": true
+      },
+      {
+        "name": "animation.draw.flat.request",
+        "calls": 2423295,
+        "installed": true
+      },
+      {
+        "name": "animation.draw.packet.consume",
+        "calls": 5127938,
+        "installed": true
+      },
+      {
+        "name": "composite.draw.request",
+        "calls": 0,
+        "installed": true
+      }
+    ]
+  },
+  "read_only": true
+}

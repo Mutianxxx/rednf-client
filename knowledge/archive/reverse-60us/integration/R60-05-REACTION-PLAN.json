@@ -1,0 +1,1221 @@
+{
+  "schema": 1,
+  "task": "R60-05",
+  "status": "read-only-audit-and-implementation-plan",
+  "reviewed_date": "2026-10-20",
+  "companion": "R60-05-REACTION-PLAN.md",
+  "production_changed_for_r60_05": false,
+  "production_build_run_for_r60_05": false,
+  "new_reverse_engineering_run": false,
+  "native_original_client_executed": false,
+  "new_automatic_verification_pass_claimed": false,
+  "implementation_complete": false,
+  "node_backup_created_for_plan": false,
+  "sequence": {
+    "after": [
+      "R60-03",
+      "R60-04"
+    ],
+    "before": [
+      "R60-06"
+    ],
+    "note": "Read-only preparation is not R60-05 completion; source must be rebased after prior nodes"
+  },
+  "release_root": "reverse-60us/releases/20261020-01",
+  "content_profiles": {
+    "1031": {
+      "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+      "pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+      "source_kind": "existing separately attributed local evidence; current compiled-token resource snapshots"
+    },
+    "60US": {
+      "exe_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "pvf_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "source_kind": "frozen local static evidence; not live-client observation"
+    }
+  },
+  "package_hashes_recomputed_in_this_audit": false,
+  "classification": {
+    "existing_1031_geometry": "1031-native-static-local-contract; not full combat controller",
+    "native60US": "version-specific-local-static-PE-evidence",
+    "transfer_to1031": "explicit-cross-version-inference",
+    "existing_reaction_physics": "inferred-controller-calibration",
+    "existing_legacy_objects": "local-test-candidate; not native durability",
+    "existing_reward_save_idempotence": "project-transaction-guarantee; not native reward proof",
+    "monster_last_action": "preload known in60US; actual Monster execution unestablished",
+    "scene_last_action": "60US self-removal temporary ACT consumer confirmed statically; cannot generalize to Monster",
+    "particle_keep_last": "1031local-arithmetic-contract; standalone function without general PTL producer/consumer"
+  },
+  "source_snapshot": {
+    "captured_utc": "2026-10-19T17:59:29.0765850Z",
+    "inputs": [
+      {
+        "path": "agent.md",
+        "bytes": 27552,
+        "sha256": "05242dbc1f2a7e524ef9b32d9d62b8bcda6415c866244a9359a8445cf38cab2c",
+        "modified_utc": "2026-10-19T17:22:34.6186192Z",
+        "role": "instructions-or-sequence"
+      },
+      {
+        "path": "dnf-native-demo/include/dnf/collision.hpp",
+        "bytes": 1715,
+        "sha256": "48f501610983209cf2143d1ff2008ab02ce6348602c17b95c1da558fffdebe45",
+        "modified_utc": "2026-10-18T06:50:36.6341142Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/include/dnf/objects.hpp",
+        "bytes": 6687,
+        "sha256": "1f89e655314ece11895449dae45ed0605c6b878dffb6621666dd8376a3dd6fba",
+        "modified_utc": "2026-10-18T16:39:14.7914005Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/include/dnf/combat.hpp",
+        "bytes": 30144,
+        "sha256": "42a06b169402613b9e94f73b1d00239bda09b137ce6f3d35cb89e4d9b0260331",
+        "modified_utc": "2026-10-19T17:39:01.7206328Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/combat.cpp",
+        "bytes": 170170,
+        "sha256": "0e26569175685f6d43cea0d28c8dc90f45dc9a3d743227b970ac58b0668feb90",
+        "modified_utc": "2026-10-19T17:47:33.3927490Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/monster_effects.cpp",
+        "bytes": 23504,
+        "sha256": "668c8a3ebd2c52628e9a620cb65d9b3c1e5dba8cb3b63d4b1385c14b98285df1",
+        "modified_utc": "2026-10-18T07:46:28.3402029Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/monster_behavior.cpp",
+        "bytes": 18351,
+        "sha256": "28fb9ea972ddc56adbf7cbdd8abce4ef188035b084dd83104645ff8138fcb646",
+        "modified_utc": "2026-10-18T17:49:31.4386134Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/monster_event_ai_service.cpp",
+        "bytes": 14438,
+        "sha256": "95487f8e68de15d21ab520829a0beddc6416a627b57e0276a84d3625e4e2664a",
+        "modified_utc": "2026-10-18T19:09:46.4484132Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/act_service.cpp",
+        "bytes": 7345,
+        "sha256": "1fec4ed718d1882fc2f60e7976c35e8acbf03eb9c036ee101b7eb3b311ecb2c7",
+        "modified_utc": "2026-10-18T19:47:43.6196483Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/act_world_host.cpp",
+        "bytes": 64702,
+        "sha256": "1c8805ae287bb63e2ef9e554bafe40b380b2904787031f8f9aab7005cfb4ca0d",
+        "modified_utc": "2026-10-18T18:48:13.4001560Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/objects.cpp",
+        "bytes": 31027,
+        "sha256": "d98108fc7b3c35ff2c2f9f4fc841d39e6ab897b6ea265f33bb987a880431618c",
+        "modified_utc": "2026-10-18T16:39:15.5786329Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/object_damage_runtime.cpp",
+        "bytes": 5085,
+        "sha256": "6acc1ba2a3d5dab812faae6bfda92192b54217d091cc9e2d6487e550f23056d1",
+        "modified_utc": "2026-10-18T18:17:57.5062305Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/scene.cpp",
+        "bytes": 20038,
+        "sha256": "59ed980c598258697ee7dd489b7d6ae58a96a0865fa4ece6d060fd7f3b09c87a",
+        "modified_utc": "2026-10-18T19:58:11.4284901Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/particle_motion.cpp",
+        "bytes": 1916,
+        "sha256": "20a72bb27d40d422f58b0e3063996e81705d69e2331201de09fc3cf2ef098d92",
+        "modified_utc": "2026-10-18T08:53:04.6705193Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/main.cpp",
+        "bytes": 132326,
+        "sha256": "8837360e68a0ebbfe51c382852edaf96e3306ec670768bff3ba836f5fe236d02",
+        "modified_utc": "2026-10-19T17:27:44.0096381Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/progression.cpp",
+        "bytes": 30346,
+        "sha256": "946667f0693c182871e9ddc36905dd5b956ab73d9cc32fb25b98cef4b54f05ce",
+        "modified_utc": "2026-10-18T14:32:59.9763343Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/session.cpp",
+        "bytes": 29133,
+        "sha256": "6ffc3b98ea80f20a2f90e779c1979b8ddd3a8dc32f1edbe554d91635190e1cd7",
+        "modified_utc": "2026-10-18T17:42:03.4406728Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/src/storage.cpp",
+        "bytes": 57516,
+        "sha256": "2016610d3f9961cec3ffbab985f346025182a87c63a437ac1b1438fad0b21f7b",
+        "modified_utc": "2026-10-18T18:25:21.1529307Z",
+        "role": "historical-production-review-input"
+      },
+      {
+        "path": "dnf-native-demo/tests/test_objects.cpp",
+        "bytes": 27775,
+        "sha256": "8db76913573a775194467457b5c962770e0f641eec18824548938cf919b7a0b5",
+        "modified_utc": "2026-10-18T10:50:30.7825793Z",
+        "role": "existing-regression-reference"
+      },
+      {
+        "path": "dnf-native-demo/tests/test_object_damage_world.cpp",
+        "bytes": 5839,
+        "sha256": "f5d9b6c709ffb1615ae514620383f4086828ff041b9d48d8eba1204c4aaee44b",
+        "modified_utc": "2026-10-18T17:04:54.6697490Z",
+        "role": "existing-regression-reference"
+      },
+      {
+        "path": "dnf-native-demo/tests/monster_effects_tests.cpp",
+        "bytes": 14681,
+        "sha256": "95e12493139657bfd49be91ba4f6ca96005ca35f40e055fa8aff7b54f1bd2ba7",
+        "modified_utc": "2026-10-18T00:34:25.5412374Z",
+        "role": "existing-regression-reference"
+      },
+      {
+        "path": "dnf-native-demo/tests/test_monster_behavior.cpp",
+        "bytes": 18144,
+        "sha256": "2de282019e32751f06932dfd6802cbb11123fccd61c5a30590ff9bc9c4693926",
+        "modified_utc": "2026-10-18T17:50:17.5302903Z",
+        "role": "existing-regression-reference"
+      },
+      {
+        "path": "dnf-native-demo/tests/test_monster_event_ai_world.cpp",
+        "bytes": 19303,
+        "sha256": "30877b861f826cd565c7284457ad8d5d71bda9f21c987bd72afab01e7c691949",
+        "modified_utc": "2026-10-18T18:57:25.8372472Z",
+        "role": "existing-regression-reference"
+      },
+      {
+        "path": "dnf-native-demo/tests/test_particle_motion.cpp",
+        "bytes": 4400,
+        "sha256": "744e305cfdd29b182bf3dc3af6d728924d3fad8bd45839bfeac0799474f64511",
+        "modified_utc": "2026-10-18T08:56:28.6775723Z",
+        "role": "existing-regression-reference"
+      },
+      {
+        "path": "dnf-native-demo/tests/test_transaction_storage.cpp",
+        "bytes": 55539,
+        "sha256": "61d83081f51ee357e99cfa7e44416f5c982e15f82e5ee80910b1e57599004442",
+        "modified_utc": "2026-10-18T15:06:29.5365316Z",
+        "role": "existing-regression-reference"
+      },
+      {
+        "path": "dnf-native-demo/tests/test_session_layout.cpp",
+        "bytes": 17055,
+        "sha256": "86823b55c42c28ebf169b7190e28ddaba2da1a327f21360506e06a87e79f6df1",
+        "modified_utc": "2026-10-18T15:41:39.5048260Z",
+        "role": "existing-regression-reference"
+      },
+      {
+        "path": "reverse-60us/PORTING_PLAN.md",
+        "bytes": 4710,
+        "sha256": "f470673b969c5700690898efa43ce801a74640b51a07819b0979be9d4da570d6",
+        "modified_utc": "2026-10-19T17:18:46.9931209Z",
+        "role": "instructions-or-sequence"
+      },
+      {
+        "path": "reverse-60us/integration/R60-03-CLOCK-PLAN.json",
+        "bytes": 23048,
+        "sha256": "a8a1dc5d551f2739e977ce3811233acff33075a79c0e2c305caea9db2779ea62",
+        "modified_utc": "2026-10-19T17:09:55.2537820Z",
+        "role": "instructions-or-sequence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_native_collision/README.md",
+        "bytes": 19512,
+        "sha256": "e62b5f2c0fa7b563d102b55384f6878243ec8a0349d6cfd603208e479379da10",
+        "modified_utc": "2026-10-19T13:15:39.2925019Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_native_collision/geometry-contract.json",
+        "bytes": 3911,
+        "sha256": "5d394d2b8469dc6d53daaa82493634001aed355ecbddf79a24cd72f9250cfeda",
+        "modified_utc": "2026-10-19T11:26:10.4448073Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_native_collision/hit-contract.json",
+        "bytes": 4365,
+        "sha256": "0479ceee78e0e4bddad39ad35fbab3ea8790a417a007f95172f3e3155d22167e",
+        "modified_utc": "2026-10-19T13:14:33.0740140Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_native_collision/monster-reaction-contract.json",
+        "bytes": 8123,
+        "sha256": "88fe2fa70b7d749e974294297f5058df7b8be77d7cc74054c518e181f334103c",
+        "modified_utc": "2026-10-19T13:14:33.0745206Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_native_collision/death-lifecycle-contract.json",
+        "bytes": 7626,
+        "sha256": "01d92957de3403eb9016e305451f40e58170629e4c592af03ced9a1948767f63",
+        "modified_utc": "2026-10-19T13:14:33.0745206Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_native_collision/scene-destruction-contract.json",
+        "bytes": 10735,
+        "sha256": "892e51ebcd41aa8586af59c056225798f7cb036e4c71b7241d9a7eec04128412",
+        "modified_utc": "2026-10-19T13:14:33.0750278Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_native_collision/scene-specialized-contract.json",
+        "bytes": 11009,
+        "sha256": "3b454c4a1399ca602b2323a552a50233f22159de08edb26fba9d5cdd10ad07ea",
+        "modified_utc": "2026-10-19T13:14:33.0750278Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_native_collision/scene-resources.json",
+        "bytes": 832054,
+        "sha256": "d034768a85b956e792c75286aa767ed85b0fdf2f1d8a46b6bd8ac5fb94f45293",
+        "modified_utc": "2026-10-19T13:12:01.7835096Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_hit_lifecycle/README.md",
+        "bytes": 2849,
+        "sha256": "5dbb2910db3cd4bfa9568965c2947bbaefed6b3721d8db0a26d819c02d9ba5a4",
+        "modified_utc": "2026-10-19T12:53:10.6619336Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "reverse-60us/releases/20261020-01/analysis/combat_hit_lifecycle/evidence-index.json",
+        "bytes": 11982,
+        "sha256": "5d9dec731877325dd0a8e9d8a90d2cad53c3e40363c6f8d63e1e66d4e077ff45",
+        "modified_utc": "2026-10-19T12:53:16.3160538Z",
+        "role": "frozen-version-specific-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/collision/README.md",
+        "bytes": 10200,
+        "sha256": "305cd10034b1568ae8b003a231b9637cafb970b6adb2b7271e5d3d88de9dcc77",
+        "modified_utc": "2026-10-18T07:06:17.8001343Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/collision/contracts.json",
+        "bytes": 17130,
+        "sha256": "4f3eacfbbc1714cbb5e98e494fb8890950207d61dc3d0f6c0df49669a7f1536a",
+        "modified_utc": "2026-10-18T07:07:44.7325244Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/hit-acceptance/README.md",
+        "bytes": 8657,
+        "sha256": "ba83c40ee6563c89f411187988d9f86ffeb9bef1944bbddc102067164ba44dee",
+        "modified_utc": "2026-10-18T07:17:41.2757754Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/hit-acceptance/contracts.json",
+        "bytes": 15037,
+        "sha256": "4cc2269f1a54514c2a42ce5274c6e1d0ff4686f1686ec5b3baf5a7259eca2dfa",
+        "modified_utc": "2026-10-18T07:18:17.3664121Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/objects/README.md",
+        "bytes": 7521,
+        "sha256": "dff66e0158d68ffa295e1db85a89272cd51472705cbe40a3d6547e670aa80df4",
+        "modified_utc": "2026-10-18T10:50:14.8945790Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/objects/native-int-data-consumers.md",
+        "bytes": 5261,
+        "sha256": "c2df0da59da80d926975ab7ae1e8ca616610478e3a900ca2e8da81785ebf527d",
+        "modified_utc": "2026-10-18T10:42:10.7844765Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/objects/runtime-integration-review.md",
+        "bytes": 4784,
+        "sha256": "b90ddad36345109a27e2b857c5a0ad3b7eb64e5255edd545c8705ae9fe061ecc",
+        "modified_utc": "2026-10-18T10:49:55.2869325Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/objects/object-box-review.md",
+        "bytes": 7171,
+        "sha256": "6fd3fffda1110f75f34a42205c5b211059dc0adbe2ed2716fd81dfd8e8f13f81",
+        "modified_utc": "2026-10-18T10:50:00.6449261Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/objects/definitions.json",
+        "bytes": 24679,
+        "sha256": "e95769c94db36896b87af92119fc323930e2fa9c8af0cd016b7b7065e96ca407",
+        "modified_utc": "2026-10-18T10:04:35.0669686Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/objects/source-manifest.json",
+        "bytes": 23834,
+        "sha256": "40a17c916e5df2e307bd29532cdea57529e74f95aa67df576ff73ef195437e4f",
+        "modified_utc": "2026-10-18T10:04:35.0638084Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/particles/README.md",
+        "bytes": 3758,
+        "sha256": "a7014e5945d7816cc1dc65015212805e2b76ace8111d1b413f614666269a1d1f",
+        "modified_utc": "2026-10-18T09:23:40.2197064Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/particles/contract.json",
+        "bytes": 12951,
+        "sha256": "4fa73b3cba0884d9aa5ae1fac6f5112554aaef97ba7238b8bfa366245f086296",
+        "modified_utc": "2026-10-18T09:19:42.5749978Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/particles/movement-consumer.md",
+        "bytes": 3559,
+        "sha256": "0b81f094510e929a960032c86b440fef6e8cfa4c4b77325776290233d0bba190",
+        "modified_utc": "2026-10-18T09:11:06.2581179Z",
+        "role": "existing1031-evidence"
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/particles/actor-modifier-defaults.md",
+        "bytes": 3257,
+        "sha256": "4c10c604e6fb18b56d3f9f9a1a37ef569c4c6769524e3e81b78d60fe7b91abe8",
+        "modified_utc": "2026-10-18T09:23:39.4851039Z",
+        "role": "existing1031-evidence"
+      }
+    ],
+    "historical_review_snapshot": true,
+    "must_not_restore_production_from_snapshot": true,
+    "rebase_required_before_implementation": true,
+    "note": "Snapshot is a read-only review boundary while root integrates R60-03/R60-04; later production hashes may legitimately differ."
+  },
+  "findings": [
+    {
+      "id": "geometry-numerical-policy",
+      "topic": "XYZ geometry",
+      "versions": [
+        "1031-native-static-local",
+        "60US-native-static-local"
+      ],
+      "current": [
+        "dnf-native-demo/include/dnf/collision.hpp:combatBox/intersectCombatBoxes"
+      ],
+      "facts": [
+        "Mirror localX=-x-width; entity translation includes XYZ",
+        "Strict separation admits edge/corner touching; overlap output may contain a zero extent",
+        "1031 evidence remains independently attributed; 60US f32 storage/conversion must not overwrite 1031 evidence"
+      ],
+      "gap": [
+        "Current portable volume uses double and permits finite negative extents",
+        "Normal positive-domain contract, legacy signed extents and unsupported NaN/Inf must have separate declared policies"
+      ],
+      "proposal": [
+        "Preserve legacy strategy and raw source data",
+        "Introduce explicit comparable f32 strategy where applicable and trace policy/rounding/domain",
+        "Return both overlap and successful transformed target world box"
+      ],
+      "checks": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "id": "contact-acceptance-history",
+      "topic": "Contact versus accepted hit",
+      "current": [
+        "dnf-native-demo/src/combat.cpp:World::strike/World::damage/effect iteration",
+        "dnf-native-demo/src/objects.cpp:ObjectSystem::acceptsContact/contact"
+      ],
+      "facts": [
+        "60US ATK installation resets history even for same ATK/null; ANI frame change does not",
+        "60US history uses attacker owner forwarding and target owner keys, plus original target key when different",
+        "60US emission records before sending, independent of eventual target HP success",
+        "1031 qualification and downstream HP protected gaps are preserved"
+      ],
+      "gap": [
+        "Body/effect/object histories are separate",
+        "No unified attack install/ownership cleanup trace",
+        "Mode2 raw threshold1000 has unestablished wall time unit"
+      ],
+      "proposal": [
+        "Consume R60-04 stable attack install/instance and ownership events",
+        "Trace geometry/qualification/register/miss/HP/reaction independently",
+        "Keep legacy reset/dedup until explicit version policy; do not change history registration to HP-success-only"
+      ],
+      "checks": [
+        "B",
+        "C",
+        "L"
+      ]
+    },
+    {
+      "id": "monster-reaction-act",
+      "topic": "Reaction resource selection and real ACT execution",
+      "current": [
+        "dnf-native-demo/src/monster_behavior.cpp:selectMonsterAction",
+        "dnf-native-demo/src/monster_effects.cpp:stateTags/compileMonsterMotion",
+        "dnf-native-demo/src/combat.cpp:World::damage",
+        "dnf-native-demo/src/act_service.cpp:prepareSourceActionBoundary",
+        "dnf-native-demo/src/act_world_host.cpp:hasCommandConsumer"
+      ],
+      "facts": [
+        "60US state3 first needs resolved reaction ANI, then can prefer ACT",
+        "60US state4 downACT -> downANI -> sitANI fallback; state0 waitingACT -> waitingANI",
+        "Current source ACT service is real but damage state uses visual compiler, not reaction action requests"
+      ],
+      "gap": [
+        "Visual compiler is motion-first and ACT parsing only extracts motion subset",
+        "Ordinary action queue delays requests during stun/recovery; cannot use unchanged for immediate reaction",
+        "ACT host has limited command consumers"
+      ],
+      "proposal": [
+        "One versioned selection result used by visual and behavior consumers",
+        "Use dedicated transaction/boundary for accepted reaction and explicit AI-counter ordering",
+        "Report each unsupported ACT dependency with source tag/offset/path",
+        "Keep handles across publication; do not retain Actor references across host commit"
+      ],
+      "checks": [
+        "D",
+        "E",
+        "L"
+      ]
+    },
+    {
+      "id": "reaction-physics",
+      "topic": "Physics, protection and recovery",
+      "current": [
+        "dnf-native-demo/src/combat.cpp:attackResponse/applyResponse/monster recovery"
+      ],
+      "facts": [
+        "Source ATK push/lift/down/none and MOB weight are read",
+        "Current mass sqrt/clamp, push/lift conversions,350ms stun,.93/.86 damping and recovery clamps are reconstruction"
+      ],
+      "gap": [
+        "Full native force/time conversion not recovered",
+        "Grabs,superarmor,invincibility and no-reaction must remain distinct"
+      ],
+      "proposal": [
+        "Central named comparable reaction policy with source/value trace",
+        "Do not claim force formulas or native timer units restored",
+        "Ensure no reaction ACT after death; protection/grab cleanup at lifecycle boundaries"
+      ],
+      "checks": [
+        "E",
+        "F",
+        "L"
+      ]
+    },
+    {
+      "id": "monster-death",
+      "topic": "Death lifecycle and Monster last action",
+      "current": [
+        "dnf-native-demo/src/combat.cpp:beginDeath/advanceLife",
+        "dnf-native-demo/src/monster_effects.cpp:restoreMonsterVisuals",
+        "dnf-native-demo/src/session.cpp:saveActor/loadActor"
+      ],
+      "facts": [
+        "60US Monster preloads lastACT but execution is not established",
+        "60US state5 freezes direct ANI, exposes fade/grayscale/mode-scale fragments with raw timer counts",
+        "Protected death callback continuation reachability remains unknown",
+        "Current last-action route is executable visual reconstruction and must retain that classification"
+      ],
+      "gap": [
+        "Current valid last action always selects independent death route",
+        "No equivalent native request/receive/remove chain established in current World"
+      ],
+      "proposal": [
+        "Preserve old saved route; add explicit selected strategy identity for new deaths",
+        "Separate logical death,visual phase,requestremove,actualremove",
+        "Keep scene lastACT evidence separate from Monster",
+        "Rehydration never emits kill/reward or redraws random"
+      ],
+      "checks": [
+        "F",
+        "J",
+        "L"
+      ]
+    },
+    {
+      "id": "generic-scene-lifecycle",
+      "topic": "Generic passive-object destruction",
+      "current": [
+        "dnf-native-demo/src/objects.cpp:advance/destroy/remove",
+        "dnf-native-demo/src/scene.cpp:Scene::updateObjects"
+      ],
+      "facts": [
+        "60US source conditions include ANI end,z==0,strict signed elapsed>limit in GetTickCount milliseconds,and z==0 keep-original",
+        "Request/deactivation/self/peer notifications are distinct",
+        "Scene self removal can construct temporary pooled ACT from stored path at original XYZ/direction"
+      ],
+      "gap": [
+        "Current uniform Reacting completion restores basic and Destroying completion removes/marks destroyed",
+        "OBJ actions are retained without this full scene-lastACT consumer"
+      ],
+      "proposal": [
+        "Compile ordered source destroy conditions/actions and once markers",
+        "Use actual temporary scene ACT entity with source identity and lifecycle",
+        "Keep timer units/type32 wrap explicit; do not assume Monster rawcounts are ms"
+      ],
+      "checks": [
+        "J",
+        "L"
+      ]
+    },
+    {
+      "id": "barrel-controller",
+      "topic": "Barrel221",
+      "current": [
+        "dnf-native-demo/src/objects.cpp:currentObjectBehavior",
+        "dnf-native-demo/src/object_damage_runtime.cpp:objectDamageTarget",
+        "dnf-native-demo/src/scene.cpp:explicitHp damage gate"
+      ],
+      "facts": [
+        "Selected1031 and60US int/string arrays match",
+        "1031 source-model->instance vector copy remains protected",
+        "60US explicitHP<=0 event increments counter, resets HP, emits destroy PTL/sound and requestremove under configured gate"
+      ],
+      "gap": [
+        "Current two accepted attack durability is local test, no specialized counter/HP reset",
+        "Constructor-derived HP currently excluded from shared object numerical adapter"
+      ],
+      "proposal": [
+        "Profile/path/member-hash gated cross-version inferred controller; preserve legacy saves",
+        "Require>=7 ints to read0..6; do not emulate native guard/read mismatch",
+        "Extend shared numerical target contract for constructor-derived maxHP with trace; no demo damage bypass"
+      ],
+      "checks": [
+        "G",
+        "K",
+        "F"
+      ]
+    },
+    {
+      "id": "tree-controller",
+      "topic": "Tree224",
+      "current": [
+        "dnf-native-demo/src/objects.cpp:currentObjectBehavior/advance"
+      ],
+      "facts": [
+        "ints[1,2,0,0,0,100,1],limit2,destroyflag0",
+        "Selected1031 has one etc motion slot",
+        "60US etcANI0 counter equality path does not set restoreflag; etcANI1 fallback path does"
+      ],
+      "gap": [
+        "Current generic Reacting always restores basic after duration",
+        "No real HP reset/count/limit/restoreflag state"
+      ],
+      "proposal": [
+        "Versioned persisted specialized controller with explicit branches",
+        "Do not restart shake on every hit or add missing1031etcANI1",
+        "No removal just because count reaches2 with destroyflag0"
+      ],
+      "checks": [
+        "H",
+        "K",
+        "F"
+      ]
+    },
+    {
+      "id": "grass-controller",
+      "topic": "Grass244",
+      "current": [
+        "dnf-native-demo/src/objects.cpp:directionalReaction/contact/advance"
+      ],
+      "facts": [
+        "1031 source has ints[32,1],etc destroy/left/right and pass all",
+        "60US contact increments regardless genericHP handler return; threshold2 whenetcANI0 exists",
+        "PTL Z is absolute int0; left/right clips are proximity bend, not attack direction",
+        "Direct scan/register/target260 path exists without explicit global4EDF70"
+      ],
+      "gap": [
+        "Current attack direction drives left/right and no cut counter",
+        "Current uniform animation-end restores basic"
+      ],
+      "proposal": [
+        "Separate cut/contact controller from proximity bend capability",
+        "First contact plays cut and output, second requests removal; no ANI-end auto remove",
+        "Keep missing scan predicates explicit; do not inject unproven global qualifier"
+      ],
+      "checks": [
+        "I",
+        "K",
+        "F"
+      ]
+    },
+    {
+      "id": "particle-audio-consumers",
+      "topic": "Actual PTL/sound consumption",
+      "current": [
+        "dnf-native-demo/include/dnf/objects.hpp:ObjectDefinition",
+        "dnf-native-demo/src/scene.cpp:pending event bridge",
+        "dnf-native-demo/src/main.cpp:audioEvent",
+        "dnf-native-demo/src/particle_motion.cpp:particleStraightKeepLast"
+      ],
+      "facts": [
+        "60US scene creator->position->emit->submit chain is established",
+        "1031 straight keep-last float32 arithmetic plus origin-refresh movement binding is locally recovered",
+        "Global axis factors[100,29,100]are disk values only,not established immutable runtime values"
+      ],
+      "gap": [
+        "Object particleReferences/sounds are not consumed into general presentation instances",
+        "Object events are relabeled object_hit/object_destroyed; main only consumes kind=sound",
+        "particleStraightKeepLast has no production call site; no general PTL generation/motion/render completion"
+      ],
+      "proposal": [
+        "Source-preserving PTL compiler and creator/instance/tick/render/cleanup consumer",
+        "Consume explicit audio IDs and acknowledge only after successful accepted command",
+        "Keep generator distributions and unsupported motion modes diagnostic; complete inferred beta strategy allowed with evidence/impact"
+      ],
+      "checks": [
+        "K",
+        "L",
+        "F"
+      ]
+    },
+    {
+      "id": "persistent-history-transactions",
+      "topic": "History cleanup and durable transactions",
+      "current": [
+        "dnf-native-demo/src/objects.cpp:retireAttack/consumePayload/save/restore",
+        "dnf-native-demo/src/scene.cpp:restoreObjects",
+        "dnf-native-demo/src/main.cpp:recordKill handling/persist",
+        "dnf-native-demo/src/progression.cpp:Progression::recordKill",
+        "dnf-native-demo/src/storage.cpp:pending commit"
+      ],
+      "facts": [
+        "retireAttack has no production caller",
+        "Scene restore retires owner0 transient attacks after outerWorld cancellation",
+        "Kill ledger,random stream and reward are privately prepared; main persists final session state with rewards",
+        "Dead visual restore retains fragment initial conditions and avoids beginDeath"
+      ],
+      "gap": [
+        "Long-lived active room may retain old object attack keys without lifecycle retirement",
+        "New specialized counters/output/pending need same-generation schema"
+      ],
+      "proposal": [
+        "Wire actual attack exit/owner removal cleanup; test memory boundedness and active keys",
+        "Preserve durable payload tokens,unknown fields and old death policies",
+        "Save sourceprofile/controllerstate/random/pending/ack with world/rewards; immutable failure retries"
+      ],
+      "checks": [
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ]
+    }
+  ],
+  "verification": [
+    {
+      "id": "A",
+      "name": "geometry-domain-and-arithmetic",
+      "requirements": [
+        "XYZ face/edge/corner separation and touching",
+        "zero input extent vs zero optional overlap",
+        "mirror -x-width and nonzero local offsets",
+        "double/f32 boundary distinction with named policy",
+        "NaN/Inf/negative domain diagnosed without mutation"
+      ],
+      "existing": [
+        "dnf-native-demo/include/dnf/collision.hpp",
+        "dnf-native-demo/tests/test_objects.cpp"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "B",
+      "name": "actual-primary-and-child-query",
+      "requirements": [
+        "body no box child has source type15 attack",
+        "removed child cannot hit",
+        "target source type14 box and XYZ separation",
+        "overlap and transformed targetBox distinct",
+        "instantaneous vs existing Xsweep declared"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "C",
+      "name": "acceptance-and-history",
+      "requirements": [
+        "contact qualification rejection miss HP trace separation",
+        "blocked/duplicate consumes no unintended combat RNG",
+        "same/null ATK install reset vs mere ANI frame change",
+        "owner/target forwarding and independent attacks",
+        "mode2 raw timer threshold not globally interpreted as1000ms"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "D",
+      "name": "reaction-resource-and-act-host",
+      "requirements": [
+        "ANI+ACT ANIonly missingANI badACT down->sit bothmissing",
+        "actual source reaction ACT sound/motion consumer",
+        "source tag offset path on unsupported dependency",
+        "immediate reaction not deferred until stun expires",
+        "body/ALS clock and cleanup on finish/cancel"
+      ],
+      "existing": [
+        "dnf-native-demo/tests/test_monster_behavior.cpp"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "E",
+      "name": "reaction-state-and-protection",
+      "requirements": [
+        "standing airborne relaunch down followup sit recover",
+        "ATK none and differing weight",
+        "grab release superarmor takesHP/nointerrupt invincibility rejects separately",
+        "AI accepted counter event once with explicit ordering",
+        "AIpause hitstop and anim clock distinct"
+      ],
+      "existing": [
+        "dnf-native-demo/tests/test_monster_event_ai_world.cpp"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "F",
+      "name": "death-and-atomic-recovery",
+      "requirements": [
+        "beginDeath twice same tick one killed",
+        "reload at visual/request/confirmation boundaries",
+        "preserve old chosen lastaction/death route",
+        "fragment/RNG/XP/drop ledger identical after restore",
+        "storage fault retry/restart yields complete old/new generation"
+      ],
+      "existing": [
+        "dnf-native-demo/tests/monster_effects_tests.cpp",
+        "dnf-native-demo/tests/test_transaction_storage.cpp",
+        "dnf-native-demo/tests/test_session_layout.cpp"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "G",
+      "name": "barrel-specialized",
+      "requirements": [
+        "profile path memberHash gate",
+        "depletion->count1->HPreset->PTLXYZoffset->sound->remove request ordered",
+        "repeated attack box no duplicate",
+        "short/conflicting fields diagnostic and unknownpayload preserved",
+        "constructorHP uses unified damage"
+      ],
+      "existing": [
+        "dnf-native-demo/tests/test_objects.cpp",
+        "dnf-native-demo/tests/test_object_damage_world.cpp"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "H",
+      "name": "tree-specialized",
+      "requirements": [
+        "firstdepletion1 second2 then cap",
+        "destroyflag0 retainsobject",
+        "etcANI0 end doesnot restorebasic",
+        "only actual etcANI1branch setsrestoreflag",
+        "no invented missing1031slot"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "I",
+      "name": "grass-specialized",
+      "requirements": [
+        "firstcontact cutoutput second remove",
+        "ANIend no remove",
+        "nonzeroobjectZ confirms absoluteparticleZ",
+        "bend proximity vs attackdir separation",
+        "directcontact route declared independent of unproven global qualification"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "J",
+      "name": "generic-scene-and-notifications",
+      "requirements": [
+        "four source destroy conditions",
+        "strict>timeout and32bitwrap",
+        "orderedspawn condition3 retain",
+        "request/remove/self/peer exactly once",
+        "scene lastACT temporary XYZ/dir normaltick failurecleanup"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "K",
+      "name": "real-particle-and-audio",
+      "requirements": [
+        "actualspawn instance tick draw command sound command",
+        "missing/ambiguous path unknownmode creator/IMG/audiofailure concrete diagnostic",
+        "particle ownercleanup pause end switchscene restore",
+        "origin-refresh separate from integral/projectedposition",
+        "dispatch/ack failure doesnot duplicate or lose pending"
+      ],
+      "existing": [
+        "dnf-native-demo/tests/test_particle_motion.cpp"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    },
+    {
+      "id": "L",
+      "name": "fixed-step-lifecycle-regression",
+      "requirements": [
+        "30/60/144/240Hz equalperTickTrace",
+        "2secondstall catchup equality",
+        "AIpause hitstop step and scenexit independent",
+        "attackhistory retirement bounded on active room",
+        "relative saved ages stable across process clocks",
+        "existing legal682placements payload and explicitHPdrum regression retained"
+      ],
+      "existing": [
+        "dnf-native-demo/tests/test_objects.cpp",
+        "dnf-native-demo/tests/test_object_damage_world.cpp",
+        "dnf-native-demo/tests/test_transaction_storage.cpp"
+      ],
+      "execution_status": "not_run_for_r60_05"
+    }
+  ],
+  "work_packages": [
+    {
+      "id": "05A",
+      "status": "not_started",
+      "depends_on": [
+        "R60-04"
+      ],
+      "name": "Geometry acceptance and attack history consumers",
+      "target_files": [
+        "include/dnf/collision.hpp",
+        "include/dnf/combat.hpp",
+        "src/combat.cpp",
+        "src/objects.cpp",
+        "src/scene.cpp"
+      ],
+      "finding_ids": [
+        "geometry-numerical-policy",
+        "contact-acceptance-history"
+      ],
+      "required_real_consumer": "normal body/weapon-child/generated attack and Scene objects query trace with install/ownership/lifecycle",
+      "verification": [
+        "A",
+        "B",
+        "C",
+        "L"
+      ]
+    },
+    {
+      "id": "05B",
+      "status": "not_started",
+      "depends_on": [
+        "05A"
+      ],
+      "name": "Actual monster reaction resource/ACT state execution",
+      "target_files": [
+        "src/monster_behavior.cpp",
+        "src/monster_effects.cpp",
+        "src/act_service.cpp",
+        "src/act_world_host.cpp",
+        "src/monster_event_ai_service.cpp",
+        "src/combat.cpp"
+      ],
+      "finding_ids": [
+        "monster-reaction-act",
+        "reaction-physics"
+      ],
+      "required_real_consumer": "damage commit to selected reaction boundary to ACT/ANI motion/sound/recovery and cleanup",
+      "verification": [
+        "D",
+        "E",
+        "L"
+      ]
+    },
+    {
+      "id": "05C",
+      "status": "not_started",
+      "depends_on": [
+        "05B"
+      ],
+      "name": "Death strategy and request/remove lifecycle with reward preservation",
+      "target_files": [
+        "src/combat.cpp",
+        "src/monster_effects.cpp",
+        "src/session.cpp",
+        "src/storage.cpp"
+      ],
+      "finding_ids": [
+        "monster-death",
+        "persistent-history-transactions"
+      ],
+      "required_real_consumer": "normal kill restore old/new dead snapshots request/remove trace no repeat reward/random",
+      "verification": [
+        "F",
+        "J",
+        "L"
+      ]
+    },
+    {
+      "id": "05D",
+      "status": "not_started",
+      "depends_on": [
+        "05A",
+        "05C"
+      ],
+      "name": "Generic OBJ and profile-specific barrel tree grass",
+      "target_files": [
+        "include/dnf/objects.hpp",
+        "src/objects.cpp",
+        "src/object_damage_runtime.cpp",
+        "src/scene.cpp",
+        "src/session.cpp"
+      ],
+      "finding_ids": [
+        "generic-scene-lifecycle",
+        "barrel-controller",
+        "tree-controller",
+        "grass-controller"
+      ],
+      "required_real_consumer": "real source attack objectcontroller tick obstacle lifetime temporary ACT and save/restore",
+      "verification": [
+        "G",
+        "H",
+        "I",
+        "J",
+        "F",
+        "L"
+      ]
+    },
+    {
+      "id": "05E",
+      "status": "not_started",
+      "depends_on": [
+        "05D"
+      ],
+      "name": "PTL and object audio source-to-presentation consumers",
+      "target_files": [
+        "src/particle_motion.cpp",
+        "src/objects.cpp",
+        "src/scene.cpp",
+        "src/main.cpp",
+        "source-preserving PTL compiler/instance new files if needed"
+      ],
+      "finding_ids": [
+        "particle-audio-consumers"
+      ],
+      "required_real_consumer": "creator emit source instance movement render/audio cleanup ack and restore",
+      "verification": [
+        "K",
+        "F",
+        "L"
+      ]
+    },
+    {
+      "id": "05F",
+      "status": "not_started",
+      "depends_on": [
+        "05A",
+        "05B",
+        "05C",
+        "05D",
+        "05E"
+      ],
+      "name": "Targeted regressions isolated candidate and node checkpoint",
+      "target_files": [
+        "tests affected above",
+        "D-drive isolated candidate/checkpoint"
+      ],
+      "finding_ids": [
+        "persistent-history-transactions"
+      ],
+      "required_real_consumer": "normal-input user steps and binary/source/report identity closure; actual implementation checkpoint",
+      "verification": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ]
+    }
+  ],
+  "selected_source_objects": [
+    {
+      "profile": "1031",
+      "id": 221,
+      "path": "passiveobject/mapobject/breakableobject/barrel.obj",
+      "int_data": {
+        "offset": 57,
+        "values": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          30,
+          1
+        ]
+      },
+      "string_data": {
+        "offset": 102,
+        "values": [
+          "",
+          "",
+          "Particle/BarrelDestroy.ptl",
+          "",
+          "WOOD_HIT",
+          "WOOD_CRASH"
+        ]
+      },
+      "classification": "content match to selected60US; source-model to instance copy still protected in1031"
+    },
+    {
+      "profile": "1031",
+      "id": 224,
+      "path": "passiveobject/mapobject/breakableobject/actiontree2lorien.obj",
+      "int_data": {
+        "offset": 72,
+        "values": [
+          1,
+          2,
+          0,
+          0,
+          0,
+          100,
+          1
+        ]
+      },
+      "etc_motion": {
+        "offset": 57,
+        "values": [
+          "Animation/ActionTree/Lorien/ActionTree2-1.ani"
+        ]
+      },
+      "string_data": {
+        "offset": 117,
+        "values": [
+          "",
+          "Particle/ActionTreeLorienDamage.ptl",
+          "",
+          "",
+          "TREE_SHAKE",
+          ""
+        ]
+      },
+      "classification": "one authoredetcANI only; no inventedslot1"
+    },
+    {
+      "profile": "1031",
+      "id": 244,
+      "path": "passiveobject/mapobject/breakableobject/smallgrasslorien.obj",
+      "int_data": {
+        "offset": 82,
+        "values": [
+          32,
+          1
+        ]
+      },
+      "etc_motion": {
+        "offset": 57,
+        "values": [
+          "Animation/SmallGrassDestroyLorien.ani",
+          "Animation/SmallGrassLeftLorien.ani",
+          "Animation/SmallGrassRightLorien.ani"
+        ]
+      },
+      "string_data": {
+        "offset": 102,
+        "values": [
+          "Particle/GrassDestroy.ptl"
+        ]
+      },
+      "pass_type": "[pass all]",
+      "classification": "cut and bend separate in inferred transferred controller"
+    }
+  ],
+  "preserve_invariants": [
+    "source bytes offsets ordered/repeated/empty/unknown fields encoding and hashes",
+    "independent60US/1031evidence and profile identities",
+    "60Hz and R60-03clock modes; rendering doesnot advance simulation independently",
+    "existing once-only killed,recordKill eventKey ledger and namedLootRNG",
+    "samecommit world/random/reward/pending and immutable retry",
+    "death visual rehydrate without beginDeath or new particle RNG draw",
+    "persistent object payload tokens/pending independent of transient owner0 attack retirement",
+    "source movement footprint not promoted to damage geometry",
+    "user fragment displaycap700ms and last150msfade separate from nativePTL",
+    "legacy candidate/save routes preserved on read",
+    "ten nonCreator careers/full beta final scope; PVPnontextUI retained"
+  ],
+  "unknowns": [
+    "1031protected contact-to-acceptance-to-HP full chain and independent armor/invincibility gates",
+    "60USmode2 timer scaling,all active reset cadence and ownership producers",
+    "complete native reaction force,time,and downstate formulas",
+    "MonsterlastACT execution,protected death callback entry-to-continuation reachability",
+    "complete scene/PTL distributions,projection/restrictions/rendering and runtime globalfactor mutation",
+    "grass proximity/directscan exact predicate and extraoutputvector behaviors",
+    "uncovered specialized scene subclasses and malformed native numericdomain semantics"
+  ],
+  "user_validation": {
+    "visuals": "pending",
+    "audio": "pending",
+    "feel": "pending",
+    "original_dynamic_comparison": "pending",
+    "font_target": [
+      "菜单",
+      "商城"
+    ],
+    "font_work_in_this_node": false,
+    "pvp_nontext_ui_still_in_final_scope": true
+  },
+  "completion_gate": [
+    "all05A-05F real consumers exercised",
+    "corresponding positive/negative checks and retained regressions pass against exact sources/binary",
+    "normal input path and user test steps available",
+    "independent D-drive candidate and source/artifact/report checkpoint with hashes",
+    "inference/unknown capability matrix complete; no models/preview/fixtures counted as implementation"
+  ],
+  "safe_write_scope": [
+    "reverse-60us/integration/R60-05-REACTION-PLAN.md",
+    "reverse-60us/integration/R60-05-REACTION-PLAN.json"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "node": "R60-02",
+  "status": "automated_pass_user_comparison_pending",
+  "checked_utc": "2026-10-19T17:22:36.068813+00:00",
+  "source_inputs_unchanged": true,
+  "historical_candidates_overwritten": false,
+  "profiles": [
+    "legacy1031",
+    "inferred60us1031"
+  ],
+  "cross_version_verified": false,
+  "native_game_clock_restored": false,
+  "full_skill_controllers_added": 0,
+  "source_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+  "native": {
+    "exe_sha256": "128fdb1a2a3b533f973179061a8a5bcaa9ef06900592c0f71b2bd05ac0d608eb",
+    "sources": 283,
+    "reports": 83,
+    "core_audio_pass": true,
+    "sdl_dummy_smoke_pass": true,
+    "smoke_scope": "3 seconds; partial diagnostic fixture, no full lifecycle acceptance"
+  },
+  "preview": {
+    "exe_sha256": "5ce28085505260006a2d5664920e681109b6d7818ac74ceccaac8540ea647ea7",
+    "offscreen_checks": 48,
+    "hidden_ui_frames": 78,
+    "source_flow_checks": 184,
+    "template_records": 1677,
+    "template_checks": 24104,
+    "template_native_verified": false
+  },
+  "contract": {
+    "native_vectors": 24,
+    "portable_checks": 145,
+    "real_1031_ani": 8,
+    "adapter_checks": 353
+  },
+  "names_icons": {
+    "resolved_names": 688,
+    "source_icon_fields": 688,
+    "all_icon_pixels_checked": false
+  },
+  "user_visual_audio_feel": "pending",
+  "original_game_dynamic_comparison": "pending",
+  "reports": [
+    "rep-player-1031-pvf/candidate-r60-02-final/validation/preview-verify-1792429992358-0/verification.json",
+    "rep-player-1031-pvf/candidate-r60-02-final/validation/template-flows-20261020-011414-618-38a9337a/template-flow-audit-1792430080302-0/report.json",
+    "rep-player-1031-pvf/validation/skill-flows-20261020-011319-685/skill-flow-audit-1792430026092-0/report.json",
+    "reverse-60us/integration/validation/render-contract-20261020-010654-864068-54da53f6/manifest.json",
+    "reverse-60us/integration/validation/name-icon-evidence-20261020-010800-194c3e83/report.json"
+  ],
+  "report_identities": [
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-02-final/validation/preview-verify-1792429992358-0/verification.json",
+      "sha256": "02a41bcf1c8c7cbe2e8d6b76f898cc7c42e7834640a5824e7147e479cf3daf7f"
+    },
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-02-final/validation/template-flows-20261020-011414-618-38a9337a/template-flow-audit-1792430080302-0/report.json",
+      "sha256": "469e99a2e6f92f3673cd09605f7c44e17a960fc4cef43fbab447109dc12e5594"
+    },
+    {
+      "path": "rep-player-1031-pvf/validation/skill-flows-20261020-011319-685/skill-flow-audit-1792430026092-0/report.json",
+      "sha256": "e030fe9c349653d5acbb9813ca0868fed201a83fca5da08908c4f8ed26c89d4d"
+    },
+    {
+      "path": "reverse-60us/integration/validation/render-contract-20261020-010654-864068-54da53f6/manifest.json",
+      "sha256": "0627f93eee804a0d440c10ab06c0d06c2c3de9d0f4d45f75df0c9f1c1be07d3c"
+    },
+    {
+      "path": "reverse-60us/integration/validation/name-icon-evidence-20261020-010800-194c3e83/report.json",
+      "sha256": "7131a2a617a1ba46762bacb6a2b7c1162f6e9ac27341e6f1316d49d643c18936"
+    }
+  ]
+}

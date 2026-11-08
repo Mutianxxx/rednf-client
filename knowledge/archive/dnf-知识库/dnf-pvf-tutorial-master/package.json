@@ -1,0 +1,22 @@
+{
+  "name": "pvf-course-reader",
+  "version": "0.1.0",
+  "description": "A server to read data from the pvfCourse directory.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node scripts/generate-file-list.js",
+    "dev": "node server.js",
+    "validate:docker": "node validate-docker-config.js",
+    "verify:build": "node scripts/verify-docker-build.js",
+    "docker:simple": "docker-compose -f docker-compose.simple.yml up -d",
+    "docker:full": "docker-compose up -d",
+    "docker:stop": "docker-compose down && docker-compose -f docker-compose.simple.yml down"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "glob": "^10.4.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

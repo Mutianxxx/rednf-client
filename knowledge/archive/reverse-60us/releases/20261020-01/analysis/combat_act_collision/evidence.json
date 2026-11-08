@@ -1,0 +1,665 @@
+{
+  "schema": "60US-act-collision-evidence/1",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "pvf_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+  "image_base": "0x400000",
+  "excerpts": [
+    {
+      "name": "owner_forward",
+      "va": "0x4e8a30",
+      "file_offset": 952880,
+      "size": 67,
+      "sha256": "a3e510314747dfe496f51459983dc3ca12177d244c8e68b510df16634c6fa791",
+      "binary": "004e8a30-owner_forward.bin",
+      "assembly": "004e8a30-owner_forward.asm"
+    },
+    {
+      "name": "current_act_install",
+      "va": "0x499f10",
+      "file_offset": 630544,
+      "size": 139,
+      "sha256": "42cf42d34c6ae67cad0334a983cb14887c23025de265304c70b83e6dfd3e39f3",
+      "binary": "00499f10-current_act_install.bin",
+      "assembly": "00499f10-current_act_install.asm"
+    },
+    {
+      "name": "current_act_wrapper",
+      "va": "0x4e9480",
+      "file_offset": 955520,
+      "size": 87,
+      "sha256": "6bc4c58da514fd45fc71d63f40c963908cbc53211ecebd680da582455c386fec",
+      "binary": "004e9480-current_act_wrapper.bin",
+      "assembly": "004e9480-current_act_wrapper.asm"
+    },
+    {
+      "name": "secondary_monster_construct",
+      "va": "0x501cd3",
+      "file_offset": 1055955,
+      "size": 166,
+      "sha256": "8d10fc7a5f25848999f53ce85b4dc0554e946dd360bd599aba529eb8183542f5",
+      "binary": "00501cd3-secondary_monster_construct.bin",
+      "assembly": "00501cd3-secondary_monster_construct.asm"
+    },
+    {
+      "name": "parse_proc_action",
+      "va": "0x88c8ad",
+      "file_offset": 4769965,
+      "size": 51,
+      "sha256": "d472f705755e5260b896208e34504e51453a15042596e85a30b744776d00262f",
+      "binary": "0088c8ad-parse_proc_action.bin",
+      "assembly": "0088c8ad-parse_proc_action.asm"
+    },
+    {
+      "name": "action_constructor",
+      "va": "0x4a3900",
+      "file_offset": 669952,
+      "size": 358,
+      "sha256": "7be4a6d9e7138f5d90df2100fb06247168b6a15ba75a26660c616ffa10757e1d",
+      "binary": "004a3900-action_constructor.bin",
+      "assembly": "004a3900-action_constructor.asm"
+    },
+    {
+      "name": "action_owner_set",
+      "va": "0xa2d020",
+      "file_offset": 6475808,
+      "size": 13,
+      "sha256": "af45f89e99c7849bd594e746645d880104392a40771a15e96091fe4569ec516e",
+      "binary": "00a2d020-action_owner_set.bin",
+      "assembly": "00a2d020-action_owner_set.asm"
+    },
+    {
+      "name": "scalar_parameter_decode",
+      "va": "0xa2d1c0",
+      "file_offset": 6476224,
+      "size": 318,
+      "sha256": "47f09cde7b47b8282abcdfb4f8849cf0e83ed0e2a8bb0691530e205181875443",
+      "binary": "00a2d1c0-scalar_parameter_decode.bin",
+      "assembly": "00a2d1c0-scalar_parameter_decode.asm"
+    },
+    {
+      "name": "scalar_literal_encode",
+      "va": "0xa3f0a4",
+      "file_offset": 6549668,
+      "size": 25,
+      "sha256": "3f93bebe35b35b1f5f94e9e2848aefbfac2087fc96de679625a79ccce7d111f4",
+      "binary": "00a3f0a4-scalar_literal_encode.bin",
+      "assembly": "00a3f0a4-scalar_literal_encode.asm"
+    },
+    {
+      "name": "action_install_helper",
+      "va": "0xa2d790",
+      "file_offset": 6477712,
+      "size": 416,
+      "sha256": "8c7d0223c1b87ba351f004d253e9b4d803ce224493b9539acfed469b68423a9f",
+      "binary": "00a2d790-action_install_helper.bin",
+      "assembly": "00a2d790-action_install_helper.asm"
+    },
+    {
+      "name": "collision_consumer_and_tables",
+      "va": "0xa30d20",
+      "file_offset": 6491424,
+      "size": 1310,
+      "sha256": "6caf95fa3b0f4ce957d7c66dccfe36dd9bfa06bea08a2ea383949feceee00133",
+      "binary": "00a30d20-collision_consumer_and_tables.bin",
+      "assembly": "00a30d20-collision_consumer_and_tables.asm"
+    },
+    {
+      "name": "int_parameter_get",
+      "va": "0x533100",
+      "file_offset": 1257728,
+      "size": 43,
+      "sha256": "5119c588bf30115f3b8a4b0be7486a2706229e2194e73c174d5c177367c15123",
+      "binary": "00533100-int_parameter_get.bin",
+      "assembly": "00533100-int_parameter_get.asm"
+    },
+    {
+      "name": "vector_index",
+      "va": "0xa3e780",
+      "file_offset": 6547328,
+      "size": 73,
+      "sha256": "532b22855ac453acc58b48342c66134b91201ff1f78e9265c516ff41cb7c8075",
+      "binary": "00a3e780-vector_index.bin",
+      "assembly": "00a3e780-vector_index.asm"
+    },
+    {
+      "name": "trigger_reset",
+      "va": "0xa48250",
+      "file_offset": 6586960,
+      "size": 75,
+      "sha256": "d478bb9e3c1358c1aff993fe1cc9d730568eba7e9f9521e190ade388d0ea6013",
+      "binary": "00a48250-trigger_reset.bin",
+      "assembly": "00a48250-trigger_reset.asm"
+    },
+    {
+      "name": "parse_move_collision",
+      "va": "0xa45c72",
+      "file_offset": 6577266,
+      "size": 39,
+      "sha256": "37d4c9fca278ccf4575c8fb88231ba8c1e472e59c5b4305fd9c9f457620e241d",
+      "binary": "00a45c72-parse_move_collision.bin",
+      "assembly": "00a45c72-parse_move_collision.asm"
+    },
+    {
+      "name": "parse_axis_index",
+      "va": "0xa46a31",
+      "file_offset": 6580785,
+      "size": 63,
+      "sha256": "45534a9bbac317ea34c6d6bcb2be234999b243cf01e8bb16b7e641cc67c04fa0",
+      "binary": "00a46a31-parse_axis_index.bin",
+      "assembly": "00a46a31-parse_axis_index.asm"
+    },
+    {
+      "name": "parse_do_behavior_match",
+      "va": "0xa4541a",
+      "file_offset": 6575130,
+      "size": 28,
+      "sha256": "43b7d2fe6e8f50f7fe6fbf155b7a540cc6b93f0596e1cec683b29cb224869182",
+      "binary": "00a4541a-parse_do_behavior_match.bin",
+      "assembly": "00a4541a-parse_do_behavior_match.asm"
+    },
+    {
+      "name": "parse_do_behavior_target",
+      "va": "0xa46bb7",
+      "file_offset": 6581175,
+      "size": 351,
+      "sha256": "664ea3c5028e58b92eb48b14a85ea420120ac563b7bcd2e50acfc333f50259c2",
+      "binary": "00a46bb7-parse_do_behavior_target.bin",
+      "assembly": "00a46bb7-parse_do_behavior_target.asm"
+    },
+    {
+      "name": "parse_condition_append",
+      "va": "0xa46d28",
+      "file_offset": 6581544,
+      "size": 61,
+      "sha256": "d0e2f44769683b042db29e5c50ba45135154b65dc3ea9ba34db9bcd4fa6f2e2b",
+      "binary": "00a46d28-parse_condition_append.bin",
+      "assembly": "00a46d28-parse_condition_append.asm"
+    },
+    {
+      "name": "behavior_target_selector",
+      "va": "0xa49220",
+      "file_offset": 6591008,
+      "size": 1103,
+      "sha256": "6065f187a64e2660896c5796cc5db9d72e4c5988b778169eb9864334ccb9f3fa",
+      "binary": "00a49220-behavior_target_selector.bin",
+      "assembly": "00a49220-behavior_target_selector.asm"
+    },
+    {
+      "name": "behavior_request",
+      "va": "0xa48c80",
+      "file_offset": 6589568,
+      "size": 393,
+      "sha256": "44d3c125022ffdc33cd9ceb092816a1fdcc496727a9f1b61cbb0429dec60e9e1",
+      "binary": "00a48c80-behavior_request.bin",
+      "assembly": "00a48c80-behavior_request.asm"
+    },
+    {
+      "name": "actor_behavior_route",
+      "va": "0x4ac850",
+      "file_offset": 706640,
+      "size": 644,
+      "sha256": "b511ebff4719469de2fdb98074a2cbf5bfc4b90d42cd0b5bf09e898279f3b299",
+      "binary": "004ac850-actor_behavior_route.bin",
+      "assembly": "004ac850-actor_behavior_route.asm"
+    },
+    {
+      "name": "base_behavior_route",
+      "va": "0x49a0a0",
+      "file_offset": 630944,
+      "size": 48,
+      "sha256": "96ba009057a7a77986bc901af9d2e6a46f4fc2eee451628c677b348eea416f58",
+      "binary": "0049a0a0-base_behavior_route.bin",
+      "assembly": "0049a0a0-base_behavior_route.asm"
+    },
+    {
+      "name": "behavior_interpreter_entry",
+      "va": "0xa36050",
+      "file_offset": 6512720,
+      "size": 133,
+      "sha256": "a9d1dd913bcf3061acec2f15c71d7b20abafd135a3207d5497f5a2d4d7c3dda2",
+      "binary": "00a36050-behavior_interpreter_entry.bin",
+      "assembly": "00a36050-behavior_interpreter_entry.asm"
+    },
+    {
+      "name": "condition_filter",
+      "va": "0xa4a380",
+      "file_offset": 6595456,
+      "size": 6205,
+      "sha256": "1aaacb54ebf27a0627b8870159df61ff410daaa26d2b3ecc11812a341bb1422d",
+      "binary": "00a4a380-condition_filter.bin",
+      "assembly": "00a4a380-condition_filter.asm"
+    }
+  ],
+  "dynamic_class": {
+    "vtable": "0xccefd0",
+    "col": "0xeaa6d8",
+    "descriptor": "0xf58704",
+    "rtti": ".?AVCNRDAction@@",
+    "slots": {
+      "0x0": "0x4a3a70",
+      "0x4": "0xa2d5f0",
+      "0x8": "0xa2ffd0",
+      "0xc": "0xa302a0",
+      "0x10": "0xa302b0",
+      "0x14": "0xa302f0",
+      "0x18": "0xa30990",
+      "0x1c": "0xa30d20"
+    }
+  },
+  "literals": [
+    {
+      "va": "0xe4712c",
+      "file_offset": 10776876,
+      "text": "[ON MOVE COLLISION]",
+      "bytes": "5b004f004e0020004d004f0056004500200043004f004c004c004900530049004f004e005d000000"
+    },
+    {
+      "va": "0xe47484",
+      "file_offset": 10777732,
+      "text": "[DO BEHAVIOR]",
+      "bytes": "5b0044004f0020004200450048004100560049004f0052005d000000"
+    },
+    {
+      "va": "0xe4745c",
+      "file_offset": 10777692,
+      "text": "[DO PROC BEHAVIOR]",
+      "bytes": "5b0044004f002000500052004f00430020004200450048004100560049004f0052005d000000"
+    },
+    {
+      "va": "0xe22f5c",
+      "file_offset": 10628956,
+      "text": "[ME]",
+      "bytes": "5b004d0045005d000000"
+    },
+    {
+      "va": "0xe46c40",
+      "file_offset": 10775616,
+      "text": "[AXIS INDEX]",
+      "bytes": "5b004100580049005300200049004e004400450058005d000000"
+    },
+    {
+      "va": "0xe22a84",
+      "file_offset": 10627716,
+      "text": "[proc action]",
+      "bytes": "5b00700072006f006300200061006300740069006f006e005d000000"
+    }
+  ],
+  "condition_dispatch": [
+    {
+      "kind": 0,
+      "index": 0,
+      "target": "0xa30f3c"
+    },
+    {
+      "kind": 1,
+      "index": 1,
+      "target": "0xa3114f"
+    },
+    {
+      "kind": 2,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 3,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 4,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 5,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 6,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 7,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 8,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 9,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 10,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 11,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 12,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 13,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 14,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 15,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 16,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 17,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 18,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 19,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 20,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 21,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 22,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 23,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 24,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 25,
+      "index": 2,
+      "target": "0xa31132"
+    },
+    {
+      "kind": 26,
+      "index": 3,
+      "target": "0xa3117d"
+    },
+    {
+      "kind": 27,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 28,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 29,
+      "index": 4,
+      "target": "0xa30ed9"
+    },
+    {
+      "kind": 30,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 31,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 32,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 33,
+      "index": 5,
+      "target": "0xa310dd"
+    },
+    {
+      "kind": 34,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 35,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 36,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 37,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 38,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 39,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 40,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 41,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 42,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 43,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 44,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 45,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 46,
+      "index": 9,
+      "target": "0xa31167"
+    },
+    {
+      "kind": 47,
+      "index": 6,
+      "target": "0xa30e6a"
+    },
+    {
+      "kind": 48,
+      "index": 7,
+      "target": "0xa310a8"
+    },
+    {
+      "kind": 49,
+      "index": 8,
+      "target": "0xa30fe2"
+    }
+  ],
+  "rea_support": [
+    {
+      "source": "../rea/results/097-act-collision.json",
+      "sha256": "69af8bb9e4d2591aa9e038cea28ebb7085c969dd5a60d23b7595ab6b102c18d8",
+      "pseudocode": "097-act-collision.c"
+    },
+    {
+      "source": "../rea/results/098-act-install-helper.json",
+      "sha256": "f0b0f6580414d3385e9c19b725381d921065e310a02f10d4d43d58ec68a28bc0",
+      "pseudocode": "098-act-install-helper.c"
+    },
+    {
+      "source": "../rea/results/105-act-behavior-dispatch.json",
+      "sha256": "dd851239e4cfdd7663ab8d01d96499de221d9cc94bb2d470ce9ba545a510ff4c",
+      "pseudocode": "105-act-behavior-dispatch.c"
+    },
+    {
+      "source": "../rea/results/106-act-target-selector.json",
+      "sha256": "12ad2a35698ef519a52738ca7bed1084c785e19dff476e820e58a60a09e98b4c",
+      "pseudocode": "106-act-target-selector.c"
+    }
+  ],
+  "pvf_act_scanned": 3165,
+  "pvf_resources": [
+    {
+      "file_number": 961405843,
+      "path": "monster/newmonsters/lizardman/avengers/megaira/action/damage1.act",
+      "size": 253,
+      "crc": "6c174d02",
+      "relative_offset": 29473056,
+      "absolute_offset": 37039680,
+      "raw": "pvf/monster__newmonsters__lizardman__avengers__megaira__action__damage1.act",
+      "sha256": "d88f2fcfdc5982a3018297b01c4242ffb987a51c117f9389c39425c657357c2c",
+      "display_encoding": "cp949 with replacement for comments; raw authoritative",
+      "collision_tags": [
+        {
+          "line": 9,
+          "text": "[ON MOVE COLLISION]"
+        }
+      ],
+      "text": "[MOTION]\r\n\t[BASE ANI] `../Animation/Damage1.ani`\r\n\t[SUB ANI]\r\n\t\t`../Animation/wp/Damage1.ani` 0 0\r\n\t[/SUB ANI]\r\n[/MOTION]\r\n\r\n[TRIGGER]\r\n[ON MOVE COLLISION]\r\n[DO BEHAVIOR] [ME] 0\r\n[/TRIGGER]\r\n\r\n[BEHAVIOR] \r\n\t[SET ACTION] [ATTACK] 3 [NOW]\t\r\n[/BEHAVIOR] \r\n"
+    },
+    {
+      "file_number": 1000541236,
+      "path": "monster/newmonsters/lizardman/avengers/megaira/action/damage2.act",
+      "size": 253,
+      "crc": "9e63c773",
+      "relative_offset": 30859972,
+      "absolute_offset": 38426596,
+      "raw": "pvf/monster__newmonsters__lizardman__avengers__megaira__action__damage2.act",
+      "sha256": "55d2fdf4bda4ad7bd196776c5fed41aec821bc6413d1b04ffb09ff3e5ed95d92",
+      "display_encoding": "cp949 with replacement for comments; raw authoritative",
+      "collision_tags": [
+        {
+          "line": 9,
+          "text": "[ON MOVE COLLISION]"
+        }
+      ],
+      "text": "[MOTION]\r\n\t[BASE ANI] `../Animation/Damage2.ani`\r\n\t[SUB ANI]\r\n\t\t`../Animation/wp/Damage2.ani` 0 0\r\n\t[/SUB ANI]\r\n[/MOTION]\r\n\r\n[TRIGGER]\r\n[ON MOVE COLLISION]\r\n[DO BEHAVIOR] [ME] 0\r\n[/TRIGGER]\r\n\r\n[BEHAVIOR] \r\n\t[SET ACTION] [ATTACK] 3 [NOW]\t\r\n[/BEHAVIOR] \r\n"
+    },
+    {
+      "file_number": 3413909955,
+      "path": "monster/newmonsters/goblinkingdom/golgo/action/chair_dash.act",
+      "size": 1413,
+      "crc": "07d6ba9c",
+      "relative_offset": 105763936,
+      "absolute_offset": 113330560,
+      "raw": "pvf/monster__newmonsters__goblinkingdom__golgo__action__chair_dash.act",
+      "sha256": "2c695d17bb9c9691589ab9b7f2cd3745002135daf38ec1a3999636a89618c78a",
+      "display_encoding": "cp949 with replacement for comments; raw authoritative",
+      "collision_tags": [
+        {
+          "line": 55,
+          "text": "\t[ON MOVE COLLISION]"
+        }
+      ],
+      "text": "[MOTION]\r\n\t[BASE ANI] `../Animation/Server/chair_server2_dash.ani`\r\n\t[SUB ANI]\r\n\t\t`../Animation/Server/chair_server1_dash.ani` 0 1\r\n\t\t`../Animation/Server/chair_server3_dash.ani` 0 2\r\n\t\t`../Animation/Wagon_Back/Wagon_Back_dash.ani` 0 3\r\n\t\t`../Animation/chair_dash.ani` 0 4\r\n\t\t`../Animation/Stick/Stick_chair_dash.ani` 0 5\r\n\t\t`../Animation/Server/chair_server4_dash.ani` 0 6\r\n\t\t`../Animation/Server/chair_server5_dash.ani` 0 7\r\n\t\t`../Animation/Server/chair_server6_dash.ani` 0 8\r\n\t\t`../Animation/Wagon_Front/Wagon_Front_dash.ani` 0 9\r\n\t[/SUB ANI]\r\n[/MOTION]\r\n\r\n\r\n[TRIGGER]\r\n\t[ON SET ACTION]\r\n\t[DO BEHAVIOR] [ME] 0\r\n[/TRIGGER]\r\n\r\n[BEHAVIOR]\r\n\t[DIM] `dashtime` [=] [GET TIME] [/DIM]\r\n\t[SET SPEED]\r\n\t\t[X AXIS] 600\r\n\t\t[Y AXIS] [RANDOM] -100 100\r\n\t[/SET SPEED]\r\n\t[TRIGGER] 1 [ON]\r\n[/BEHAVIOR]\r\n\r\n[TRIGGER]\t// 몇 초동안 대쉬할 것인가?\r\n\t[ENABLE] [OFF]\r\n\t[IF] `dashtime` [+] 3000  [<=] [GET TIME] [/IF]\r\n\t[DO BEHAVIOR] [ME] 1\r\n[/TRIGGER]\r\n\r\n[BEHAVIOR]\r\n\t[SET SPEED]\r\n\t\t[X AXIS] 0\r\n\t[/SET SPEED]\r\n\t[TRIGGER] 1 [OFF]\r\n\t[SET ACTION] [STAND] [NOW]\r\n[/BEHAVIOR]\r\n\r\n[TRIGGER]\r\n\t[FRAME] 0 0\r\n\t[DO BEHAVIOR] [ME] 2\r\n[/TRIGGER]\r\n\r\n[BEHAVIOR]\r\n\t[ATTACKRECT] [RESET]\r\n[/BEHAVIOR]\r\n\r\n[TRIGGER]\r\n\t[ON MOVE COLLISION]\r\n\t[DO BEHAVIOR] [ME] 3\r\n[/TRIGGER]\r\n\r\n[BEHAVIOR]\r\n\t[SHAKING] 3 100\t\t\t\t\t// 화면 흔들기의 파워, 지진이 지속될 시간\r\n\t[SET SPEED]\r\n\t\t[X AXIS] 0\r\n\t[/SET SPEED]\r\n\t[TRIGGER] 1 [OFF]\r\n\t[SET ACTION] [STAND] [NOW]\r\n[/BEHAVIOR]"
+    },
+    {
+      "file_number": 3725826746,
+      "path": "monster/newmonsters/lizardman/avengers/megaira/action/move.act",
+      "size": 247,
+      "crc": "48c273c2",
+      "relative_offset": 114737228,
+      "absolute_offset": 122303852,
+      "raw": "pvf/monster__newmonsters__lizardman__avengers__megaira__action__move.act",
+      "sha256": "3d0671bc142debd8d2c6c026355a19671bebf1e6ef8049d57cb36cc3a5f77c1f",
+      "display_encoding": "cp949 with replacement for comments; raw authoritative",
+      "collision_tags": [
+        {
+          "line": 9,
+          "text": "[ON MOVE COLLISION]"
+        }
+      ],
+      "text": "[MOTION]\r\n\t[BASE ANI] `../Animation/Move.ani`\r\n\t[SUB ANI]\r\n\t\t`../Animation/wp/Move.ani` 0 0\r\n\t[/SUB ANI]\r\n[/MOTION]\r\n\r\n[TRIGGER]\r\n[ON MOVE COLLISION]\r\n[DO BEHAVIOR] [ME] 0\r\n[/TRIGGER]\r\n\r\n[BEHAVIOR] \r\n\t[SET ACTION] [ATTACK] 3 [NOW]\t\r\n[/BEHAVIOR] \r\n"
+    }
+  ],
+  "pvf_owner_resources": [
+    {
+      "file_number": 1878406954,
+      "path": "monster/newmonsters/lizardman/avengers/megaira/body.mob",
+      "size": 8314,
+      "crc": "e9bcb52d",
+      "relative_offset": 60444008,
+      "absolute_offset": 68010632,
+      "raw": "pvf/monster__newmonsters__lizardman__avengers__megaira__body.mob",
+      "sha256": "82cdb1f920362817128fdb49433031939b8691ffcea16c5897d50c0c52a35872",
+      "notes": "Raw owner resource only; commented alternatives are not marked active by this exporter."
+    },
+    {
+      "file_number": 1950032878,
+      "path": "monster/newmonsters/goblinkingdom/golgo/golgo.mob",
+      "size": 11751,
+      "crc": "e5a6004a",
+      "relative_offset": 62517132,
+      "absolute_offset": 70083756,
+      "raw": "pvf/monster__newmonsters__goblinkingdom__golgo__golgo.mob",
+      "sha256": "78e4f302a09324c10a7bc7fb7731873804f805bc826e121b822eede96a0edab8",
+      "notes": "Raw owner resource only; commented alternatives are not marked active by this exporter."
+    }
+  ],
+  "runtime_observed": false,
+  "cautions": [
+    "Enclosing static excerpts are not all asserted function body sizes.",
+    "Only selected collision trigger branches have executable model coverage."
+  ]
+}

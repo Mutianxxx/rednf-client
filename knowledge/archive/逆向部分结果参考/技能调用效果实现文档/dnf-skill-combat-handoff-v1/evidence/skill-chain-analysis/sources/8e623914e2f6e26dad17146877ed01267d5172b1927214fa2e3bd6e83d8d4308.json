@@ -1,0 +1,509 @@
+{
+  "path": "monster/common/animation/monsterdieblood.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        3
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Monster/Common/MonsterDieBlood.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -21,
+        -20
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        150,
+        0,
+        0,
+        0
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        700
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 115
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Monster/Common/MonsterDieBlood.img",
+        0
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -21,
+        -20
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        0.6000000238418579,
+        0.20000000298023224
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        150,
+        0,
+        0,
+        255
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        3000
+      ],
+      "offset": 200
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 210
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Monster/Common/MonsterDieBlood.img",
+        0
+      ],
+      "offset": 215
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -21,
+        -20
+      ],
+      "offset": 230
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.0,
+        0.5
+      ],
+      "offset": 245
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        150,
+        0,
+        0,
+        0
+      ],
+      "offset": 260
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 4037216,
+      "value": "Monster/Common/MonsterDieBlood.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967275,
+      "value": -21
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967276,
+      "value": -20
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 60,
+      "type": 2,
+      "raw": 1045220557,
+      "value": 0.20000000298023224
+    },
+    {
+      "offset": 65,
+      "type": 2,
+      "raw": 1045220557,
+      "value": 0.20000000298023224
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 150,
+      "value": 150
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 110,
+      "type": 0,
+      "raw": 700,
+      "value": 700
+    },
+    {
+      "offset": 115,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 125,
+      "type": 6,
+      "raw": 4037216,
+      "value": "Monster/Common/MonsterDieBlood.img"
+    },
+    {
+      "offset": 130,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 4294967275,
+      "value": -21
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 4294967276,
+      "value": -20
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 155,
+      "type": 2,
+      "raw": 1058642330,
+      "value": 0.6000000238418579
+    },
+    {
+      "offset": 160,
+      "type": 2,
+      "raw": 1045220557,
+      "value": 0.20000000298023224
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 150,
+      "value": 150
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 205,
+      "type": 0,
+      "raw": 3000,
+      "value": 3000
+    },
+    {
+      "offset": 210,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 215,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 220,
+      "type": 6,
+      "raw": 4037216,
+      "value": "Monster/Common/MonsterDieBlood.img"
+    },
+    {
+      "offset": 225,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 230,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 235,
+      "type": 0,
+      "raw": 4294967275,
+      "value": -21
+    },
+    {
+      "offset": 240,
+      "type": 0,
+      "raw": 4294967276,
+      "value": -20
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 250,
+      "type": 2,
+      "raw": 1065353216,
+      "value": 1.0
+    },
+    {
+      "offset": 255,
+      "type": 2,
+      "raw": 1056964608,
+      "value": 0.5
+    },
+    {
+      "offset": 260,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 150,
+      "value": 150
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 280,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    }
+  ],
+  "raw_sha256": "8e623914e2f6e26dad17146877ed01267d5172b1927214fa2e3bd6e83d8d4308"
+}

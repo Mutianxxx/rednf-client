@@ -1,0 +1,1727 @@
+[
+  {
+    "va": "0xcabf70",
+    "file_offset": "0x8abf70",
+    "text": "[skill]"
+  },
+  {
+    "va": "0xcac278",
+    "file_offset": "0x8ac278",
+    "text": "ENUM_CMDPACKET_CHANGE_ANOTHER_SKILL_TREE"
+  },
+  {
+    "va": "0xcae000",
+    "file_offset": "0x8ae000",
+    "text": "ENUM_CMDPACKET_CREATURE_SCRIPT_MESSAGE"
+  },
+  {
+    "va": "0xcaf85c",
+    "file_offset": "0x8af85c",
+    "text": "ENUM_CMDPACKET_USE_SKILL"
+  },
+  {
+    "va": "0xcafaac",
+    "file_offset": "0x8afaac",
+    "text": "ENUM_CMDPACKET_BUY_SKILL"
+  },
+  {
+    "va": "0xcafae0",
+    "file_offset": "0x8afae0",
+    "text": "ENUM_CMDPACKET_CHANGE_SKILLSLOT"
+  },
+  {
+    "va": "0xcb1580",
+    "file_offset": "0x8b1580",
+    "text": "ENUM_NOTIPACKET_CREATURE_SCRIPT_MESSAGE"
+  },
+  {
+    "va": "0xcb326c",
+    "file_offset": "0x8b326c",
+    "text": "ENUM_NOTIPACKET_SKILLINFO"
+  },
+  {
+    "va": "0xcb39f0",
+    "file_offset": "0x8b39f0",
+    "text": "_EncryptedScriptPacks"
+  },
+  {
+    "va": "0xcb52fc",
+    "file_offset": "0x8b52fc",
+    "text": "Script ver %d"
+  },
+  {
+    "va": "0xcb5388",
+    "file_offset": "0x8b5388",
+    "text": "Script error"
+  },
+  {
+    "va": "0xcb53a4",
+    "file_offset": "0x8b53a4",
+    "text": "Script/"
+  },
+  {
+    "va": "0xcb8db8",
+    "file_offset": "0x8b8db8",
+    "text": "SlotIndex %d, SkillIndex %d, Level %d"
+  },
+  {
+    "va": "0xcb8e04",
+    "file_offset": "0x8b8e04",
+    "text": "GrowType %d, SkillNumber %d"
+  },
+  {
+    "va": "0xcb9370",
+    "file_offset": "0x8b9370",
+    "text": "Skill : "
+  },
+  {
+    "va": "0xcb939a",
+    "file_offset": "0x8b939a",
+    "text": " skill_index : %d, skill_slot : %d"
+  },
+  {
+    "va": "0xcb93e0",
+    "file_offset": "0x8b93e0",
+    "text": "ERROR : character %x, skillManager %x"
+  },
+  {
+    "va": "0xcb9430",
+    "file_offset": "0x8b9430",
+    "text": "Sp %d, SlotIndex %d, SkillIndex %d, Level %d"
+  },
+  {
+    "va": "0xcba898",
+    "file_offset": "0x8ba898",
+    "text": "TownScript = NULL, TownIndex = %d, TownIndex Critical Failed (TownIndex > 0)"
+  },
+  {
+    "va": "0xcba934",
+    "file_offset": "0x8ba934",
+    "text": "TownScript Failed"
+  },
+  {
+    "va": "0xcbc6f8",
+    "file_offset": "0x8bc6f8",
+    "text": " OPTION_HOTKEY_TOGGLE_SKILL_INFORMATION      "
+  },
+  {
+    "va": "0xcbcab8",
+    "file_offset": "0x8bcab8",
+    "text": " OPTION_HOTKEY_EXSKILL6                      "
+  },
+  {
+    "va": "0xcbcb18",
+    "file_offset": "0x8bcb18",
+    "text": " OPTION_HOTKEY_EXSKILL5                      "
+  },
+  {
+    "va": "0xcbcb78",
+    "file_offset": "0x8bcb78",
+    "text": " OPTION_HOTKEY_EXSKILL4                      "
+  },
+  {
+    "va": "0xcbcbd8",
+    "file_offset": "0x8bcbd8",
+    "text": " OPTION_HOTKEY_EXSKILL3                      "
+  },
+  {
+    "va": "0xcbcc38",
+    "file_offset": "0x8bcc38",
+    "text": " OPTION_HOTKEY_EXSKILL2                      "
+  },
+  {
+    "va": "0xcbcc98",
+    "file_offset": "0x8bcc98",
+    "text": " OPTION_HOTKEY_EXSKILL1                      "
+  },
+  {
+    "va": "0xcbccf8",
+    "file_offset": "0x8bccf8",
+    "text": " OPTION_HOTKEY_QUICK_SKILL6                  "
+  },
+  {
+    "va": "0xcbcd58",
+    "file_offset": "0x8bcd58",
+    "text": " OPTION_HOTKEY_QUICK_SKILL5                  "
+  },
+  {
+    "va": "0xcbcdb8",
+    "file_offset": "0x8bcdb8",
+    "text": " OPTION_HOTKEY_QUICK_SKILL4                  "
+  },
+  {
+    "va": "0xcbce18",
+    "file_offset": "0x8bce18",
+    "text": " OPTION_HOTKEY_QUICK_SKILL3                  "
+  },
+  {
+    "va": "0xcbce78",
+    "file_offset": "0x8bce78",
+    "text": " OPTION_HOTKEY_QUICK_SKILL2                  "
+  },
+  {
+    "va": "0xcbced8",
+    "file_offset": "0x8bced8",
+    "text": " OPTION_HOTKEY_QUICK_SKILL1                  "
+  },
+  {
+    "va": "0xcbd238",
+    "file_offset": "0x8bd238",
+    "text": " OPTION_HOTKEY_SKILL_WINDOW                  "
+  },
+  {
+    "va": "0xcbd2f8",
+    "file_offset": "0x8bd2f8",
+    "text": " OPTION_HOTKEY_SKILL2                        "
+  },
+  {
+    "va": "0xcbd358",
+    "file_offset": "0x8bd358",
+    "text": " OPTION_HOTKEY_SKILL                         "
+  },
+  {
+    "va": "0xcc238e",
+    "file_offset": "0x8c238e",
+    "text": " : ScriptLineNum %d, ItemUniqueId %d, ItemIndex %d, Data %d, Durability %d, amplify type %d, amplify value %d"
+  },
+  {
+    "va": "0xcc2b3c",
+    "file_offset": "0x8c2b3c",
+    "text": "SkillIndex %d, BonusSp %d"
+  },
+  {
+    "va": "0xcc2b94",
+    "file_offset": "0x8c2b94",
+    "text": "SKILL"
+  },
+  {
+    "va": "0xcc3d88",
+    "file_offset": "0x8c3d88",
+    "text": "getRoomListModule()->getCurrentTownAreaScript() == NULL"
+  },
+  {
+    "va": "0xcc476c",
+    "file_offset": "0x8c476c",
+    "text": "SkillIndex %d, SkillLevel %d"
+  },
+  {
+    "va": "0xcc47a8",
+    "file_offset": "0x8c47a8",
+    "text": "SkillNumber %d"
+  },
+  {
+    "va": "0xcc5400",
+    "file_offset": "0x8c5400",
+    "text": "areaIndex_ %d, mapScriptFileName_ %s, customIntDatas_.size() == 0"
+  },
+  {
+    "va": "0xcc5484",
+    "file_offset": "0x8c5484",
+    "text": "townAreaScript == NULL"
+  },
+  {
+    "va": "0xcc7998",
+    "file_offset": "0x8c7998",
+    "text": "Sprite/Interface/SkillInventoryWindow.img"
+  },
+  {
+    "va": "0xcc79f0",
+    "file_offset": "0x8c79f0",
+    "text": "Sprite/Interface/SkillBuyWindow.img"
+  },
+  {
+    "va": "0xcc83e0",
+    "file_offset": "0x8c83e0",
+    "text": "[dead tower high skill initial cool time rate]"
+  },
+  {
+    "va": "0xcc8658",
+    "file_offset": "0x8c8658",
+    "text": "[dead tower skill damage equalization rate]"
+  },
+  {
+    "va": "0xcc9058",
+    "file_offset": "0x8c9058",
+    "text": "[PVP high skill initial cool time rate]"
+  },
+  {
+    "va": "0xcc90a8",
+    "file_offset": "0x8c90a8",
+    "text": "[PVP skill damage equalization rate]"
+  },
+  {
+    "va": "0xcc9400",
+    "file_offset": "0x8c9400",
+    "text": "[skill durability decrease rate]"
+  },
+  {
+    "va": "0xcc947c",
+    "file_offset": "0x8c947c",
+    "text": "[script version]"
+  },
+  {
+    "va": "0xccae54",
+    "file_offset": "0x8cae54",
+    "text": "Skill/"
+  },
+  {
+    "va": "0xccae64",
+    "file_offset": "0x8cae64",
+    "text": "SkillList.usa.lst"
+  },
+  {
+    "va": "0xcccc58",
+    "file_offset": "0x8ccc58",
+    "text": "%d, ScriptLineNum %d, ItemUniqueId %d, ItemIndex %d"
+  },
+  {
+    "va": "0xcccde8",
+    "file_offset": "0x8ccde8",
+    "text": " %d, ScriptLineNum %d, ItemUniqueId %d, ItemIndex %d"
+  },
+  {
+    "va": "0xcce2a8",
+    "file_offset": "0x8ce2a8",
+    "text": "ERROR : can't find %s script"
+  },
+  {
+    "va": "0xcd18f2",
+    "file_offset": "0x8d18f2",
+    "text": "Uuse skill"
+  },
+  {
+    "va": "0xcd1930",
+    "file_offset": "0x8d1930",
+    "text": "on use skill"
+  },
+  {
+    "va": "0xcd194c",
+    "file_offset": "0x8d194c",
+    "text": "on use cube skill"
+  },
+  {
+    "va": "0xcd1be8",
+    "file_offset": "0x8d1be8",
+    "text": "equipment get script %d %d"
+  },
+  {
+    "va": "0xcd1c60",
+    "file_offset": "0x8d1c60",
+    "text": "load AI Script %s"
+  },
+  {
+    "va": "0xcd24d8",
+    "file_offset": "0x8d24d8",
+    "text": "skillManager_ == NULL, isMyCharacter=%s"
+  },
+  {
+    "va": "0xcd3ac8",
+    "file_offset": "0x8d3ac8",
+    "text": "-> CMDPACKET_USE_SKILL : SkillIndex %d, coolTime %d"
+  },
+  {
+    "va": "0xcd3b30",
+    "file_offset": "0x8d3b30",
+    "text": "CRITICAL ERROR : IRDCharacter::flushSkillParameter - skill %d is NULL"
+  },
+  {
+    "va": "0xcd3e98",
+    "file_offset": "0x8d3e98",
+    "text": "AttackInfoScript Load Error - %s%s"
+  },
+  {
+    "va": "0xcd4668",
+    "file_offset": "0x8d4668",
+    "text": "CRITICAL ERROR : IRDCharacter::getSkill() "
+  },
+  {
+    "va": "0xcd46de",
+    "file_offset": "0x8d46de",
+    "text": "! job %d skillInddex %d"
+  },
+  {
+    "va": "0xcd4710",
+    "file_offset": "0x8d4710",
+    "text": "CRITICAL ERROR : IRDCharacter::getSkill() "
+  },
+  {
+    "va": "0xcd4784",
+    "file_offset": "0x8d4784",
+    "text": "! job %d skillIndex %d"
+  },
+  {
+    "va": "0xcd7e98",
+    "file_offset": "0x8d7e98",
+    "text": "SCORE_SKILL_COUNT"
+  },
+  {
+    "va": "0xcd8930",
+    "file_offset": "0x8d8930",
+    "text": "SKILL_02_CHARGE"
+  },
+  {
+    "va": "0xcd8950",
+    "file_offset": "0x8d8950",
+    "text": "SKILL_01_CHARGE"
+  },
+  {
+    "va": "0xcd8a68",
+    "file_offset": "0x8d8a68",
+    "text": "Creature/Common/Animation/RecoverOverSkillEffect.ani"
+  },
+  {
+    "va": "0xcd8ad8",
+    "file_offset": "0x8d8ad8",
+    "text": "Creature/Common/Animation/RecoverSkillEffect.ani"
+  },
+  {
+    "va": "0xcd9170",
+    "file_offset": "0x8d9170",
+    "text": "Common/Emoticon/NpcSkillIcon.ani"
+  },
+  {
+    "va": "0xcd9c00",
+    "file_offset": "0x8d9c00",
+    "text": "Common/Etc/Animation/SkillReset1.ani"
+  },
+  {
+    "va": "0xcd9c4c",
+    "file_offset": "0x8d9c4c",
+    "text": "SKILL_ICON"
+  },
+  {
+    "va": "0xcd9e74",
+    "file_offset": "0x8d9e74",
+    "text": "is the skill in cooltime()"
+  },
+  {
+    "va": "0xcda15c",
+    "file_offset": "0x8da15c",
+    "text": "[skill cooltime correction]"
+  },
+  {
+    "va": "0xcda244",
+    "file_offset": "0x8da244",
+    "text": "[check skill on]"
+  },
+  {
+    "va": "0xcda268",
+    "file_offset": "0x8da268",
+    "text": "[check use skill]"
+  },
+  {
+    "va": "0xcda448",
+    "file_offset": "0x8da448",
+    "text": "[use skill]"
+  },
+  {
+    "va": "0xcdaa64",
+    "file_offset": "0x8daa64",
+    "text": "skill:"
+  },
+  {
+    "va": "0xcdad62",
+    "file_offset": "0x8dad62",
+    "text": "ACTION BEHAVIOR SCRIPT ERROR! - PASSIVE OBJECT"
+  },
+  {
+    "va": "0xcdade0",
+    "file_offset": "0x8dade0",
+    "text": "ACTION BEHAVIOR SCRIPT ERROR! - PASSIVE OBJECT"
+  },
+  {
+    "va": "0xcdae62",
+    "file_offset": "0x8dae62",
+    "text": "ACTION BEHAVIOR SCRIPT ERROR! - PASSIVE OBJECT"
+  },
+  {
+    "va": "0xcdaef8",
+    "file_offset": "0x8daef8",
+    "text": "ACTION BEHAVIOR SCRIPT ERROR! - PASSIVE OBJECT"
+  },
+  {
+    "va": "0xcdaf90",
+    "file_offset": "0x8daf90",
+    "text": "ACTION BEHAVIOR SCRIPT ERROR! - PASSIVE OBJECT"
+  },
+  {
+    "va": "0xcdb012",
+    "file_offset": "0x8db012",
+    "text": "ACTION BEHAVIOR SCRIPT ERROR! - PASSIVE OBJECT"
+  },
+  {
+    "va": "0xcdb090",
+    "file_offset": "0x8db090",
+    "text": "ACTION BEHAVIOR SCRIPT ERROR! - PASSIVE OBJECT"
+  },
+  {
+    "va": "0xcdb112",
+    "file_offset": "0x8db112",
+    "text": "ACTION BEHAVIOR SCRIPT ERROR! - PASSIVE OBJECT"
+  },
+  {
+    "va": "0xcdbd58",
+    "file_offset": "0x8dbd58",
+    "text": "Error - ActionScript - SummonType "
+  },
+  {
+    "va": "0xcdcdd8",
+    "file_offset": "0x8dcdd8",
+    "text": "SKILL CREATE FAIL! FILENAME[%s]"
+  },
+  {
+    "va": "0xcdce18",
+    "file_offset": "0x8dce18",
+    "text": "job %d, skillIndex %d - "
+  },
+  {
+    "va": "0xd516b0",
+    "file_offset": "0x9516b0",
+    "text": "C:\\Work\\USA\\DNF_SRC\\RDAR\\PassiveObject\\CNMapObject.cpp _ line %d detected NULL"
+  },
+  {
+    "va": "0xd63144",
+    "file_offset": "0x963144",
+    "text": "COOLTIME_SKILL_END"
+  },
+  {
+    "va": "0xd64876",
+    "file_offset": "0x964876",
+    "text": "cSkill/Fighter.sd"
+  },
+  {
+    "va": "0xd6a09c",
+    "file_offset": "0x96a09c",
+    "text": "Skill/Gunner.sd"
+  },
+  {
+    "va": "0xd6f748",
+    "file_offset": "0x96f748",
+    "text": "Skill/Mage.sd"
+  },
+  {
+    "va": "0xd755d8",
+    "file_offset": "0x9755d8",
+    "text": "Character/Mage/Effect/SkillIcon.img"
+  },
+  {
+    "va": "0xd7737c",
+    "file_offset": "0x97737c",
+    "text": "Skill/Priest.sd"
+  },
+  {
+    "va": "0xd79acc",
+    "file_offset": "0x979acc",
+    "text": "Skill/Swordman.sd"
+  },
+  {
+    "va": "0xe09d18",
+    "file_offset": "0xa09d18",
+    "text": "HM_SKILL"
+  },
+  {
+    "va": "0xe0ab6c",
+    "file_offset": "0xa0ab6c",
+    "text": "HAKUDO_SKILL"
+  },
+  {
+    "va": "0xe0b8bc",
+    "file_offset": "0xa0b8bc",
+    "text": "BELZ_SKILL_01"
+  },
+  {
+    "va": "0xe0b914",
+    "file_offset": "0xa0b914",
+    "text": "BELZEBE_SKILL"
+  },
+  {
+    "va": "0xe0b94c",
+    "file_offset": "0xa0b94c",
+    "text": "BELZEBE_OVERSKILL"
+  },
+  {
+    "va": "0xe0ba32",
+    "file_offset": "0xa0ba32",
+    "text": "VBERITH_SKILL_01"
+  },
+  {
+    "va": "0xe0ba54",
+    "file_offset": "0xa0ba54",
+    "text": "BERITH_SKILL_02"
+  },
+  {
+    "va": "0xe0ba74",
+    "file_offset": "0xa0ba74",
+    "text": "BERITH_SKILL_02_READY"
+  },
+  {
+    "va": "0xe0bd10",
+    "file_offset": "0xa0bd10",
+    "text": ">---- Haagenti skill effect off ----<"
+  },
+  {
+    "va": "0xe0bd60",
+    "file_offset": "0xa0bd60",
+    "text": ">---- Haagenti skill effect on : %d ----<"
+  },
+  {
+    "va": "0xe0c028",
+    "file_offset": "0xa0c028",
+    "text": "NAZARL_SKILL_01"
+  },
+  {
+    "va": "0xe0c048",
+    "file_offset": "0xa0c048",
+    "text": "NAZARL_SKILL_02"
+  },
+  {
+    "va": "0xe0c144",
+    "file_offset": "0xa0c144",
+    "text": "BRONZEPIG_SKILL"
+  },
+  {
+    "va": "0xe0c518",
+    "file_offset": "0xa0c518",
+    "text": "Error on importing stackable script for 2008 New year creature script!!!"
+  },
+  {
+    "va": "0xe13520",
+    "file_offset": "0xa13520",
+    "text": "UseResource_Script.txt"
+  },
+  {
+    "va": "0xe1385c",
+    "file_offset": "0xa1385c",
+    "text": "Script.pvf"
+  },
+  {
+    "va": "0xe13874",
+    "file_offset": "0xa13874",
+    "text": "!CompiledScript"
+  },
+  {
+    "va": "0xe13894",
+    "file_offset": "0xa13894",
+    "text": "_CompiledScript"
+  },
+  {
+    "va": "0xe138b4",
+    "file_offset": "0xa138b4",
+    "text": "!ScriptPacks"
+  },
+  {
+    "va": "0xe138d0",
+    "file_offset": "0xa138d0",
+    "text": "_ScriptPacks"
+  },
+  {
+    "va": "0xe13970",
+    "file_offset": "0xa13970",
+    "text": "RDARScriptStringManager::ERROR::input NULL string"
+  },
+  {
+    "va": "0xe13ba0",
+    "file_offset": "0xa13ba0",
+    "text": "SCRIPT FILE LIST LOAD FAIL! [%s%s][%d]"
+  },
+  {
+    "va": "0xe13bf0",
+    "file_offset": "0xa13bf0",
+    "text": "SCRIPT FILE LIST ADD FAIL! - DUPLICATED DATA [%s%s][%d]"
+  },
+  {
+    "va": "0xe13f40",
+    "file_offset": "0xa13f40",
+    "text": "AICHARACTER SCRIPT TAG ERROR! [%s] %s"
+  },
+  {
+    "va": "0xe140c8",
+    "file_offset": "0xa140c8",
+    "text": "[custom skill level]"
+  },
+  {
+    "va": "0xe141f0",
+    "file_offset": "0xa141f0",
+    "text": "[%s] AI Script error in %s, line:%d, %s - invalid speech type"
+  },
+  {
+    "va": "0xe144f8",
+    "file_offset": "0xa144f8",
+    "text": "[skill correction]"
+  },
+  {
+    "va": "0xe1453c",
+    "file_offset": "0xa1453c",
+    "text": "[quick skill]"
+  },
+  {
+    "va": "0xe14614",
+    "file_offset": "0xa14614",
+    "text": "SCRIPT TAG ERROR! [%s] %s"
+  },
+  {
+    "va": "0xe14f3a",
+    "file_offset": "0xa14f3a",
+    "text": " Receved Channel Script Data Read Complete and channel_maps set"
+  },
+  {
+    "va": "0xe14fc2",
+    "file_offset": "0xa14fc2",
+    "text": " bool applyChannelScript(channel_script_t *script) END"
+  },
+  {
+    "va": "0xe150a2",
+    "file_offset": "0xa150a2",
+    "text": " Receved Channel Script Data Read Compelete And Apply channel_maps"
+  },
+  {
+    "va": "0xe15128",
+    "file_offset": "0xa15128",
+    "text": "importChannelScript - invalid type. %s is not acceptable"
+  },
+  {
+    "va": "0xe151a0",
+    "file_offset": "0xa151a0",
+    "text": "importChannelScript - invalid level GridPercent(%d). (required Float)"
+  },
+  {
+    "va": "0xe15230",
+    "file_offset": "0xa15230",
+    "text": "importChannelScript - invalid dungeon bonus rate. (required INT)"
+  },
+  {
+    "va": "0xe152b8",
+    "file_offset": "0xa152b8",
+    "text": "importChannelScript - invalid dungeon classification. %s does not exist"
+  },
+  {
+    "va": "0xe15348",
+    "file_offset": "0xa15348",
+    "text": "importChannelScript - invalid dungeon classification (requires STR)"
+  },
+  {
+    "va": "0xe153d0",
+    "file_offset": "0xa153d0",
+    "text": "importChannelScript - invalid channel type (requires INT)"
+  },
+  {
+    "va": "0xe15448",
+    "file_offset": "0xa15448",
+    "text": "importChannelScript - invalid channel name (requires STR)"
+  },
+  {
+    "va": "0xe154c0",
+    "file_offset": "0xa154c0",
+    "text": "importChannelScript - invalid channel number. %d already exists"
+  },
+  {
+    "va": "0xe1575c",
+    "file_offset": "0xa1575c",
+    "text": "Channel Script Ptr: %08x"
+  },
+  {
+    "va": "0xe15792",
+    "file_offset": "0xa15792",
+    "text": " bool applyChannelScript(channel_script_t *script) START OPERATION"
+  },
+  {
+    "va": "0xe15818",
+    "file_offset": "0xa15818",
+    "text": "importChannelScript - can't find channel_info.etc"
+  },
+  {
+    "va": "0xe15934",
+    "file_offset": "0xa15934",
+    "text": "Creature/script/"
+  },
+  {
+    "va": "0xe15cfc",
+    "file_offset": "0xa15cfc",
+    "text": "over skill waiting"
+  },
+  {
+    "va": "0xe15d24",
+    "file_offset": "0xa15d24",
+    "text": "over skill gauge full"
+  },
+  {
+    "va": "0xe15d50",
+    "file_offset": "0xa15d50",
+    "text": "skill gauge full"
+  },
+  {
+    "va": "0xe15d74",
+    "file_offset": "0xa15d74",
+    "text": "using overskill"
+  },
+  {
+    "va": "0xe16104",
+    "file_offset": "0xa16104",
+    "text": "[skill prob]"
+  },
+  {
+    "va": "0xe16120",
+    "file_offset": "0xa16120",
+    "text": "[skill info]"
+  },
+  {
+    "va": "0xe162e8",
+    "file_offset": "0xa162e8",
+    "text": "[%s] : Error - DungeonScript [/monster difficulty bonus]"
+  },
+  {
+    "va": "0xe16398",
+    "file_offset": "0xa16398",
+    "text": "[%s] : Error - DungeonScript MonsterDifficultyBouns Number"
+  },
+  {
+    "va": "0xe166c0",
+    "file_offset": "0xa166c0",
+    "text": "[tower high skill initial cool time rate]"
+  },
+  {
+    "va": "0xe16718",
+    "file_offset": "0xa16718",
+    "text": "[tower high skill initial cool time]"
+  },
+  {
+    "va": "0xe1946c",
+    "file_offset": "0xa1946c",
+    "text": "[over skill]"
+  },
+  {
+    "va": "0xe1a330",
+    "file_offset": "0xa1a330",
+    "text": "[SKILL INDEX]"
+  },
+  {
+    "va": "0xe1b6b8",
+    "file_offset": "0xa1b6b8",
+    "text": "[/skill levelup]"
+  },
+  {
+    "va": "0xe1b70c",
+    "file_offset": "0xa1b70c",
+    "text": "[skill levelup]"
+  },
+  {
+    "va": "0xe1c700",
+    "file_offset": "0xa1c700",
+    "text": "ImportEquipmentScript - file %s, invalid job tag %s"
+  },
+  {
+    "va": "0xe1c798",
+    "file_offset": "0xa1c798",
+    "text": "[skill levelup]"
+  },
+  {
+    "va": "0xe1c82c",
+    "file_offset": "0xa1c82c",
+    "text": "[skill data up]"
+  },
+  {
+    "va": "0xe1edd0",
+    "file_offset": "0xa1edd0",
+    "text": "[creature skill over charge time rate]"
+  },
+  {
+    "va": "0xe1ee20",
+    "file_offset": "0xa1ee20",
+    "text": "[creature skill charge time rate]"
+  },
+  {
+    "va": "0xe1ee68",
+    "file_offset": "0xa1ee68",
+    "text": "[creature skill consume mp rate]"
+  },
+  {
+    "va": "0xe1effc",
+    "file_offset": "0xa1effc",
+    "text": "[required skill]"
+  },
+  {
+    "va": "0xe1f9e0",
+    "file_offset": "0xa1f9e0",
+    "text": "[creature skill over charge time rate] %.2f"
+  },
+  {
+    "va": "0xe1fa40",
+    "file_offset": "0xa1fa40",
+    "text": "[creature skill charge time rate] %.2f"
+  },
+  {
+    "va": "0xe1fa90",
+    "file_offset": "0xa1fa90",
+    "text": "[creature skill consume mp rate] %d"
+  },
+  {
+    "va": "0xe1fe38",
+    "file_offset": "0xa1fe38",
+    "text": "[required skill] %d"
+  },
+  {
+    "va": "0xe20188",
+    "file_offset": "0xa20188",
+    "text": "CNRDItemInfoList::UpdateStackableScript - "
+  },
+  {
+    "va": "0xe20200",
+    "file_offset": "0xa20200",
+    "text": "CNRDItemInfoList::UpdateEquipmentScript - "
+  },
+  {
+    "va": "0xe229f0",
+    "file_offset": "0xa229f0",
+    "text": "[/skill]"
+  },
+  {
+    "va": "0xe22a04",
+    "file_offset": "0xa22a04",
+    "text": "[skill]"
+  },
+  {
+    "va": "0xe22aa0",
+    "file_offset": "0xa22aa0",
+    "text": "[/weapon skill info]"
+  },
+  {
+    "va": "0xe22af8",
+    "file_offset": "0xa22af8",
+    "text": "[weapon skill info]"
+  },
+  {
+    "va": "0xe22fb8",
+    "file_offset": "0xa22fb8",
+    "text": "error in script <%s>"
+  },
+  {
+    "va": "0xe23708",
+    "file_offset": "0xa23708",
+    "text": "creature script loading error : %s : %s"
+  },
+  {
+    "va": "0xe237e8",
+    "file_offset": "0xa237e8",
+    "text": "[over skill level values]"
+  },
+  {
+    "va": "0xe2381c",
+    "file_offset": "0xa2381c",
+    "text": "[skill level values]"
+  },
+  {
+    "va": "0xe23848",
+    "file_offset": "0xa23848",
+    "text": "[skill string]"
+  },
+  {
+    "va": "0xe23a1c",
+    "file_offset": "0xa23a1c",
+    "text": "[over skill over effect]"
+  },
+  {
+    "va": "0xe23a50",
+    "file_offset": "0xa23a50",
+    "text": "[skill over effect]"
+  },
+  {
+    "va": "0xe23b4c",
+    "file_offset": "0xa23b4c",
+    "text": "[over skill under effect]"
+  },
+  {
+    "va": "0xe23b80",
+    "file_offset": "0xa23b80",
+    "text": "[skill under effect]"
+  },
+  {
+    "va": "0xe23c70",
+    "file_offset": "0xa23c70",
+    "text": "[over skill motion]"
+  },
+  {
+    "va": "0xe23c98",
+    "file_offset": "0xa23c98",
+    "text": "[skill motion]"
+  },
+  {
+    "va": "0xe23cf0",
+    "file_offset": "0xa23cf0",
+    "text": "[over skill type]"
+  },
+  {
+    "va": "0xe23d3c",
+    "file_offset": "0xa23d3c",
+    "text": "[skill type]"
+  },
+  {
+    "va": "0xe23d58",
+    "file_offset": "0xa23d58",
+    "text": "[over skill MP]"
+  },
+  {
+    "va": "0xe23d78",
+    "file_offset": "0xa23d78",
+    "text": "[skill MP]"
+  },
+  {
+    "va": "0xe23d90",
+    "file_offset": "0xa23d90",
+    "text": "[learn overskill level]"
+  },
+  {
+    "va": "0xe23e84",
+    "file_offset": "0xa23e84",
+    "text": "[over skill recovery time]"
+  },
+  {
+    "va": "0xe23ebc",
+    "file_offset": "0xa23ebc",
+    "text": "[skill recovery time]"
+  },
+  {
+    "va": "0xe23ee8",
+    "file_offset": "0xa23ee8",
+    "text": "script loading failed. | file <%s> tag <%s>"
+  },
+  {
+    "va": "0xe255c4",
+    "file_offset": "0xa255c4",
+    "text": "[summon skill status up rate]"
+  },
+  {
+    "va": "0xe2574c",
+    "file_offset": "0xa2574c",
+    "text": "[weapon skill info]"
+  },
+  {
+    "va": "0xe25850",
+    "file_offset": "0xa25850",
+    "text": "[awakening skill]"
+  },
+  {
+    "va": "0xe26790",
+    "file_offset": "0xa26790",
+    "text": "[summon skill status up rate]"
+  },
+  {
+    "va": "0xe27ff8",
+    "file_offset": "0xa27ff8",
+    "text": "questScript->classChangeQuestType_(%d) > 0  and questScript->growType_(%d) != -1"
+  },
+  {
+    "va": "0xe28f88",
+    "file_offset": "0xa28f88",
+    "text": "skillscript separating : "
+  },
+  {
+    "va": "0xe29098",
+    "file_offset": "0xa29098",
+    "text": "SKILL ERROR : "
+  },
+  {
+    "va": "0xe290e4",
+    "file_offset": "0xa290e4",
+    "text": "[skill command advantage]"
+  },
+  {
+    "va": "0xe2917c",
+    "file_offset": "0xa2917c",
+    "text": "[skill preloading image]"
+  },
+  {
+    "va": "0xe29304",
+    "file_offset": "0xa29304",
+    "text": "[skill under cooltime effect]"
+  },
+  {
+    "va": "0xe293e4",
+    "file_offset": "0xa293e4",
+    "text": "[skill fitness growtype]"
+  },
+  {
+    "va": "0xe29470",
+    "file_offset": "0xa29470",
+    "text": "[skill fitness second growtype]"
+  },
+  {
+    "va": "0xe2954c",
+    "file_offset": "0xa2954c",
+    "text": "[skill class]"
+  },
+  {
+    "va": "0xe29568",
+    "file_offset": "0xa29568",
+    "text": "[steel learning skill]"
+  },
+  {
+    "va": "0xe29598",
+    "file_offset": "0xa29598",
+    "text": "[pre required skill]"
+  },
+  {
+    "va": "0xe2a0c0",
+    "file_offset": "0xa2a0c0",
+    "text": "ERROR! CScriptStringManagerClassVer::processGainedStringBuffer - '%s' has %d duplicated tags."
+  },
+  {
+    "va": "0xe2a360",
+    "file_offset": "0xa2a360",
+    "text": "CNRDScriptData::Error"
+  },
+  {
+    "va": "0xe2a3d0",
+    "file_offset": "0xa2a3d0",
+    "text": "error : %s script Data "
+  },
+  {
+    "va": "0xe2a4bc",
+    "file_offset": "0xa2a4bc",
+    "text": "[SKILL_LEVEL]"
+  },
+  {
+    "va": "0xe2fa04",
+    "file_offset": "0xa2fa04",
+    "text": "CHANGE_SKILL_EFFECT"
+  },
+  {
+    "va": "0xe2fa2c",
+    "file_offset": "0xa2fa2c",
+    "text": "USE_SKILL"
+  },
+  {
+    "va": "0xe31b58",
+    "file_offset": "0xa31b58",
+    "text": "UDPPACKET_CHANGE_SKILL_EFFECT"
+  },
+  {
+    "va": "0xe31b94",
+    "file_offset": "0xa31b94",
+    "text": "UDPPACKET_USE_SKILL"
+  },
+  {
+    "va": "0xe358f0",
+    "file_offset": "0xa358f0",
+    "text": "Interface/SkillShop.img"
+  },
+  {
+    "va": "0xe39f48",
+    "file_offset": "0xa39f48",
+    "text": "GET_SKILL"
+  },
+  {
+    "va": "0xe3a8d4",
+    "file_offset": "0xa3a8d4",
+    "text": "CNRDCommunityWindow.cpp - 528"
+  },
+  {
+    "va": "0xe3a910",
+    "file_offset": "0xa3a910",
+    "text": "CNRDCommunityWindow.cpp - 428"
+  },
+  {
+    "va": "0xe3aa50",
+    "file_offset": "0xa3aa50",
+    "text": "CNRDCommunityWindow.cpp - 827"
+  },
+  {
+    "va": "0xe3aa8c",
+    "file_offset": "0xa3aa8c",
+    "text": "CNRDCommunityWindow.cpp - 822"
+  },
+  {
+    "va": "0xe3ad6c",
+    "file_offset": "0xa3ad6c",
+    "text": "CNRDCommunityWindow.cpp - 205"
+  },
+  {
+    "va": "0xe3b758",
+    "file_offset": "0xa3b758",
+    "text": "CRITICAL ERROR : EXPERT JOB SCRIPT FAIL! %d"
+  },
+  {
+    "va": "0xe3c948",
+    "file_offset": "0xa3c948",
+    "text": "Error occured on create lottery reward item! scriptIndex = %d, itemIndex = %d"
+  },
+  {
+    "va": "0xe3d804",
+    "file_offset": "0xa3d804",
+    "text": "extended skill slot on x"
+  },
+  {
+    "va": "0xe3d838",
+    "file_offset": "0xa3d838",
+    "text": "extended skill slot on y"
+  },
+  {
+    "va": "0xe3d9cc",
+    "file_offset": "0xa3d9cc",
+    "text": "skill cutscene on x"
+  },
+  {
+    "va": "0xe3d9f4",
+    "file_offset": "0xa3d9f4",
+    "text": "skill cutscene on y"
+  },
+  {
+    "va": "0xe40260",
+    "file_offset": "0xa40260",
+    "text": "Interface/ExSkillQuickSlot.img"
+  },
+  {
+    "va": "0xe40814",
+    "file_offset": "0xa40814",
+    "text": "[/skill]"
+  },
+  {
+    "va": "0xe40844",
+    "file_offset": "0xa40844",
+    "text": "[/quick skill]"
+  },
+  {
+    "va": "0xe408b8",
+    "file_offset": "0xa408b8",
+    "text": "[quick skill]"
+  },
+  {
+    "va": "0xe410a4",
+    "file_offset": "0xa410a4",
+    "text": "UI/ExpertJob/SkillRequest.cbt"
+  },
+  {
+    "va": "0xe410e0",
+    "file_offset": "0xa410e0",
+    "text": "UI/ExpertJob/SkillUsing.cbt"
+  },
+  {
+    "va": "0xe41610",
+    "file_offset": "0xa41610",
+    "text": "[usa Q/A script version]"
+  },
+  {
+    "va": "0xe41f20",
+    "file_offset": "0xa41f20",
+    "text": "Error on setAvatarItemVector()!!! script == NULL"
+  },
+  {
+    "va": "0xe43c80",
+    "file_offset": "0xa43c80",
+    "text": "etc/UltimateSkillCutScene.etc"
+  },
+  {
+    "va": "0xe43cc0",
+    "file_offset": "0xa43cc0",
+    "text": "Skill CutScene : ani file load fail"
+  },
+  {
+    "va": "0xe450d8",
+    "file_offset": "0xa450d8",
+    "text": "ERROR! %s - importing script failed. file='%s/%s'"
+  },
+  {
+    "va": "0xe45546",
+    "file_offset": "0xa45546",
+    "text": " : script"
+  },
+  {
+    "va": "0xe4556a",
+    "file_offset": "0xa4556a",
+    "text": "ERROR! %s - importing script failed. file='%s/%s'"
+  },
+  {
+    "va": "0xe45960",
+    "file_offset": "0xa45960",
+    "text": "Action Script Behavior - Trigger Control Error : "
+  },
+  {
+    "va": "0xe45a48",
+    "file_offset": "0xa45a48",
+    "text": "Action Script Behavior - Trigger Control Error : "
+  },
+  {
+    "va": "0xe45b40",
+    "file_offset": "0xa45b40",
+    "text": "Error - ActionScript - [SHAKING] Parent"
+  },
+  {
+    "va": "0xe45ba0",
+    "file_offset": "0xa45ba0",
+    "text": "Error - ActionScript - [SHAKING] "
+  },
+  {
+    "va": "0xe45c70",
+    "file_offset": "0xa45c70",
+    "text": "Error - ActionScript - [CASTING] ActiveObject"
+  },
+  {
+    "va": "0xe45cf0",
+    "file_offset": "0xa45cf0",
+    "text": "Error - ActionScript - [CASTING] "
+  },
+  {
+    "va": "0xe46100",
+    "file_offset": "0xa46100",
+    "text": "Action Script Behavior - Trigger Control Error : "
+  },
+  {
+    "va": "0xe46520",
+    "file_offset": "0xa46520",
+    "text": "Action Script Load Error - [DO BEHAVIOR] - "
+  },
+  {
+    "va": "0xe4658a",
+    "file_offset": "0xa4658a",
+    "text": "Action Script Load Error - [DO BEHAVIOR] - %s "
+  },
+  {
+    "va": "0xe466e8",
+    "file_offset": "0xa466e8",
+    "text": "ActionScript Load Error! - [TRIGGER CHECK]"
+  },
+  {
+    "va": "0xe4676a",
+    "file_offset": "0xa4676a",
+    "text": "ActionScript Load Error! - [TRIGGER CHECK]"
+  },
+  {
+    "va": "0xe475e0",
+    "file_offset": "0xa475e0",
+    "text": "Action Script Load Error - [CHANGE ACTION] - "
+  },
+  {
+    "va": "0xe47652",
+    "file_offset": "0xa47652",
+    "text": "Action Script Load Error - [CHANGE ACTION] - %s "
+  },
+  {
+    "va": "0xe476c8",
+    "file_offset": "0xa476c8",
+    "text": "ActionScript Load Error! - [SHAKE INPUT]"
+  },
+  {
+    "va": "0xe47742",
+    "file_offset": "0xa47742",
+    "text": "ActionScript Load Error! - [SHAKE INPUT]"
+  },
+  {
+    "va": "0xe477ba",
+    "file_offset": "0xa477ba",
+    "text": "Action Script Load Error - [SET ACTION] - "
+  },
+  {
+    "va": "0xe47820",
+    "file_offset": "0xa47820",
+    "text": "Action Script Load Error - [SET ACTION] - "
+  },
+  {
+    "va": "0xe4788a",
+    "file_offset": "0xa4788a",
+    "text": "Action Script Load Error - [SET ACTION] - %s "
+  },
+  {
+    "va": "0xe478f8",
+    "file_offset": "0xa478f8",
+    "text": "Action Script Load Error - [SET ACTION] - NOW or OLD Error"
+  },
+  {
+    "va": "0xe47972",
+    "file_offset": "0xa47972",
+    "text": "Action Script Load Error - [SET ACTION] - NOW or OLD Error"
+  },
+  {
+    "va": "0xe479e8",
+    "file_offset": "0xa479e8",
+    "text": "ActionScriptLoad Error : ANIMATION OBJECT"
+  },
+  {
+    "va": "0xe47a42",
+    "file_offset": "0xa47a42",
+    "text": "ActionScriptLoad Error : ANIMATION OBJECT"
+  },
+  {
+    "va": "0xe47a98",
+    "file_offset": "0xa47a98",
+    "text": "ActionScript Load Error! - [RESTORE]"
+  },
+  {
+    "va": "0xe47b0a",
+    "file_offset": "0xa47b0a",
+    "text": "ActionScript Load Error! - [RESTORE]"
+  },
+  {
+    "va": "0xe47b78",
+    "file_offset": "0xa47b78",
+    "text": "ActionScript Load Error! - [RESTORE]"
+  },
+  {
+    "va": "0xe47bf2",
+    "file_offset": "0xa47bf2",
+    "text": "ActionScript Load Error! - [RESTORE]"
+  },
+  {
+    "va": "0xe47c68",
+    "file_offset": "0xa47c68",
+    "text": "ActionScript Load Error! - [RESTORE]"
+  },
+  {
+    "va": "0xe47cf2",
+    "file_offset": "0xa47cf2",
+    "text": "ActionScript Load Error! - [RESTORE]"
+  },
+  {
+    "va": "0xe47d78",
+    "file_offset": "0xa47d78",
+    "text": "ActionScript Load Error! - [TRIGGER]"
+  },
+  {
+    "va": "0xe47dea",
+    "file_offset": "0xa47dea",
+    "text": "ActionScript Load Error! - [TRIGGER]"
+  },
+  {
+    "va": "0xe47e58",
+    "file_offset": "0xa47e58",
+    "text": "ActionScriptLoad Error : CHANGE ATTACKINFO"
+  },
+  {
+    "va": "0xe47eb2",
+    "file_offset": "0xa47eb2",
+    "text": "ActionScriptLoad Error : CHANGE ATTACKINFO"
+  },
+  {
+    "va": "0xe48c00",
+    "file_offset": "0xa48c00",
+    "text": "Action Script Load Error - [SET DIRECTION] - "
+  },
+  {
+    "va": "0xe49112",
+    "file_offset": "0xa49112",
+    "text": "ActionScriptLoad Error - default AttackInfo "
+  },
+  {
+    "va": "0xe49178",
+    "file_offset": "0xa49178",
+    "text": "ActionScriptLoad Error - default AttackInfo "
+  },
+  {
+    "va": "0xe49c1c",
+    "file_offset": "0xa49c1c",
+    "text": "SKILL FUNCTION SEAL"
+  },
+  {
+    "va": "0xe49c44",
+    "file_offset": "0xa49c44",
+    "text": "SKILL COMMAND SEAL"
+  },
+  {
+    "va": "0xe49d08",
+    "file_offset": "0xa49d08",
+    "text": "USE EXTENDED SKILL SLOT"
+  },
+  {
+    "va": "0xe49d38",
+    "file_offset": "0xa49d38",
+    "text": "SKILL_CUTSCENE"
+  },
+  {
+    "va": "0xe4a508",
+    "file_offset": "0xa4a508",
+    "text": "c:\\work\\usa\\dnf_src\\rdar\\library\\packsvn\\Pack.h"
+  },
+  {
+    "va": "0xe4a5a0",
+    "file_offset": "0xa4a5a0",
+    "text": "_C_DNF_SCRIPT_CRYPTER_ is turned on!!"
+  },
+  {
+    "va": "0xe4a5f0",
+    "file_offset": "0xa4a5f0",
+    "text": "C:\\Work\\USA\\DNF_SRC\\RDAR\\Library\\PackSVN\\Pack.cpp"
+  },
+  {
+    "va": "0xe4abac",
+    "file_offset": "0xa4abac",
+    "text": "!@#$ can't find script file"
+  },
+  {
+    "va": "0xe4cc60",
+    "file_offset": "0xa4cc60",
+    "text": "ExQuickSkill1ExQuickSkill2ExQuickSkill3ExQuickSkill4ExQuickSkill5ExQuickSkill6QuickItem1"
+  },
+  {
+    "va": "0xe4cd14",
+    "file_offset": "0xa4cd14",
+    "text": "QuickSkill6"
+  },
+  {
+    "va": "0xe4cd2c",
+    "file_offset": "0xa4cd2c",
+    "text": "QuickSkill5"
+  },
+  {
+    "va": "0xe4cd44",
+    "file_offset": "0xa4cd44",
+    "text": "QuickSkill4"
+  },
+  {
+    "va": "0xe4cd5c",
+    "file_offset": "0xa4cd5c",
+    "text": "QuickSkill3"
+  },
+  {
+    "va": "0xe4cd74",
+    "file_offset": "0xa4cd74",
+    "text": "QuickSkill2"
+  },
+  {
+    "va": "0xe4cd8c",
+    "file_offset": "0xa4cd8c",
+    "text": "QuickSkill1"
+  },
+  {
+    "va": "0xe4cdd4",
+    "file_offset": "0xa4cdd4",
+    "text": "Skill"
+  },
+  {
+    "va": "0xe5f260",
+    "file_offset": "0xa5f260",
+    "text": "CNEntranceChannel::getChannelScriptFileName - %d error"
+  },
+  {
+    "va": "0xe5f2d0",
+    "file_offset": "0xa5f2d0",
+    "text": "ChannelScript.pvf"
+  },
+  {
+    "va": "0xe5f652",
+    "file_offset": "0xa5f652",
+    "text": " ChannelScript.pvf Save Failed (%d)"
+  },
+  {
+    "va": "0xe5f6a0",
+    "file_offset": "0xa5f6a0",
+    "text": "CNEntranceChannel::saveNewChannelScript errorCode (%d)"
+  },
+  {
+    "va": "0xe5f712",
+    "file_offset": "0xa5f712",
+    "text": " bool CNEntranceChannel::saveNewChannelScript() END"
+  },
+  {
+    "va": "0xe5f782",
+    "file_offset": "0xa5f782",
+    "text": " ChannelScript.pvf Save Succeed"
+  },
+  {
+    "va": "0xe5f7ca",
+    "file_offset": "0xa5f7ca",
+    "text": " ChannelScriptFileName Create File Failed"
+  },
+  {
+    "va": "0xe5f822",
+    "file_offset": "0xa5f822",
+    "text": " ChannelScriptFileName : %s"
+  },
+  {
+    "va": "0xe5f862",
+    "file_offset": "0xa5f862",
+    "text": " bool CNEntranceChannel::saveNewChannelScript() START OPERATION"
+  },
+  {
+    "va": "0xe5f91a",
+    "file_offset": "0xa5f91a",
+    "text": " int CNEntranceChannel::recvChannelScript(SOCKET& sock, ... ) END"
+  },
+  {
+    "va": "0xe5f9a2",
+    "file_offset": "0xa5f9a2",
+    "text": " channelScriptData_ Recv New Data Apply Succeed"
+  },
+  {
+    "va": "0xe5fa0a",
+    "file_offset": "0xa5fa0a",
+    "text": " Memory new channelScriptDataSize_ Failed (%d)"
+  },
+  {
+    "va": "0xe5fbda",
+    "file_offset": "0xa5fbda",
+    "text": " int CNEntranceChannel::recvChannelScript(SOCKET& sock, ... ) START OPERATION"
+  },
+  {
+    "va": "0xe606c2",
+    "file_offset": "0xa606c2",
+    "text": " SOKET ERROR : FAILED_SCRIPT_DATA    "
+  },
+  {
+    "va": "0xe60712",
+    "file_offset": "0xa60712",
+    "text": " SOKET ERROR : FAILED_SCRIPT_VERSION "
+  },
+  {
+    "va": "0xe60942",
+    "file_offset": "0xa60942",
+    "text": " recvChannelScript Succeed!!"
+  },
+  {
+    "va": "0xe60982",
+    "file_offset": "0xa60982",
+    "text": " recvChannelScript Failed reSend Count: (%d)"
+  },
+  {
+    "va": "0xe609e2",
+    "file_offset": "0xa609e2",
+    "text": " sendChannelScript Failed reSend Count: (%d)"
+  },
+  {
+    "va": "0xe60c72",
+    "file_offset": "0xa60c72",
+    "text": " Script data %d CHANNELSERVER_TEST         : %d, %s"
+  },
+  {
+    "va": "0xe60ce2",
+    "file_offset": "0xa60ce2",
+    "text": " Script data %d CHANNELSERVER_RELEASE_TEST : %d, %s"
+  },
+  {
+    "va": "0xe60d52",
+    "file_offset": "0xa60d52",
+    "text": " Script data %d CHANNELSERVER_RELEASE      : %d, %s"
+  },
+  {
+    "va": "0xe60dc2",
+    "file_offset": "0xa60dc2",
+    "text": " Script data %d CHANNELSERVER_FIRST        : %d, %s"
+  },
+  {
+    "va": "0xe60e32",
+    "file_offset": "0xa60e32",
+    "text": " Script data %d CHANNELSERVER_DEVZONE      : %d, %s"
+  },
+  {
+    "va": "0xe62f42",
+    "file_offset": "0xa62f42",
+    "text": " CNEntranceChannel::applyScriptData - Channel Script Buffer == 0"
+  },
+  {
+    "va": "0xe62fc8",
+    "file_offset": "0xa62fc8",
+    "text": "CNEntranceChannel::applyScriptData - Channel Script Size == 0"
+  },
+  {
+    "va": "0xe630a8",
+    "file_offset": "0xa630a8",
+    "text": "   CNEntranceChannel::applyScriptData() - Operation Succeed"
+  },
+  {
+    "va": "0xe63122",
+    "file_offset": "0xa63122",
+    "text": " CNEntranceChannel::applyScriptData() - Operation Succeed"
+  },
+  {
+    "va": "0xe6319a",
+    "file_offset": "0xa6319a",
+    "text": " int CNEntranceChannel::applyScriptData() END"
+  },
+  {
+    "va": "0xe631fa",
+    "file_offset": "0xa631fa",
+    "text": " CNEntranceChannel::applyScriptData() - Operation Failed"
+  },
+  {
+    "va": "0xe63272",
+    "file_offset": "0xa63272",
+    "text": " channelScriptData_ apply CHANNEL_SCRIPT channel_maps and dungeons"
+  },
+  {
+    "va": "0xe632fa",
+    "file_offset": "0xa632fa",
+    "text": " CHANNEL_SCRIPT.dungeons.clear();"
+  },
+  {
+    "va": "0xe63342",
+    "file_offset": "0xa63342",
+    "text": " CLEAR CHANNEL_SCRIPT.channel_maps.clear();"
+  },
+  {
+    "va": "0xe633b2",
+    "file_offset": "0xa633b2",
+    "text": " int CNEntranceChannel::applyScriptData() START OPERATION"
+  },
+  {
+    "va": "0xe6342a",
+    "file_offset": "0xa6342a",
+    "text": " Error : Script File Read Failed"
+  },
+  {
+    "va": "0xe63472",
+    "file_offset": "0xa63472",
+    "text": " Error : Script Buffer Memory Create Failed"
+  },
+  {
+    "va": "0xe634d2",
+    "file_offset": "0xa634d2",
+    "text": " Error : Script Data Memory Create Failed"
+  },
+  {
+    "va": "0xe6352a",
+    "file_offset": "0xa6352a",
+    "text": " Error : Script Auth Failed"
+  },
+  {
+    "va": "0xe6356a",
+    "file_offset": "0xa6356a",
+    "text": " Error : Script Data Size Failed"
+  },
+  {
+    "va": "0xe635b2",
+    "file_offset": "0xa635b2",
+    "text": " Error : Script Version Failed"
+  },
+  {
+    "va": "0xe635f2",
+    "file_offset": "0xa635f2",
+    "text": " Error : Script Crypt Key Failed "
+  },
+  {
+    "va": "0xe6363a",
+    "file_offset": "0xa6363a",
+    "text": " Error : Script File Open Failed (%s)"
+  },
+  {
+    "va": "0xe6368a",
+    "file_offset": "0xa6368a",
+    "text": " CNEntranceChannel::importIndependentChannelScriptFile - errorCode (%d)"
+  },
+  {
+    "va": "0xe63c92",
+    "file_offset": "0xa63c92",
+    "text": " channelScriptData_: 0x%08x, channelScriptDataSize_: %d"
+  },
+  {
+    "va": "0xe63d06",
+    "file_offset": "0xa63d06",
+    "text": " isValidScriptVersion: %s"
+  },
+  {
+    "va": "0xe63f9a",
+    "file_offset": "0xa63f9a",
+    "text": " importIndependentChannelScriptFile Failed"
+  },
+  {
+    "va": "0xe63ff2",
+    "file_offset": "0xa63ff2",
+    "text": " importIndependentChannelScriptFile(&CHANNEL_SCRIPT)"
+  },
+  {
+    "va": "0x12ad28e",
+    "file_offset": "0xead28e",
+    "text": "FileDescription"
+  },
+  {
+    "va": "0x140ce22",
+    "file_offset": "0x100ce22",
+    "text": "FileDescription"
+  }
+]

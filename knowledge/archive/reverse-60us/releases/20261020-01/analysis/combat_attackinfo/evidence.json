@@ -1,0 +1,535 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "image_base": "0x00400000",
+  "excerpts": [
+    {
+      "name": "atk_parser_entry",
+      "va": "0x00836c20",
+      "file_offset": 4418592,
+      "size": 148,
+      "sha256": "6c5244c9ef1f6dee85ea3acbdbcdcf7555e9cad424e5a21855fc4a904f5633fc",
+      "binary": "00836c20-atk_parser_entry.bin",
+      "assembly": "00836c20-atk_parser_entry.asm"
+    },
+    {
+      "name": "atk_damage_and_bonus_parse",
+      "va": "0x00836cb4",
+      "file_offset": 4418740,
+      "size": 279,
+      "sha256": "6619bbfcf071f7fee29f5a4ad891ba62ff70c25635fdf86701355f4a4dcaea8c",
+      "binary": "00836cb4-atk_damage_and_bonus_parse.bin",
+      "assembly": "00836cb4-atk_damage_and_bonus_parse.asm"
+    },
+    {
+      "name": "atk_type_parse",
+      "va": "0x00836dcb",
+      "file_offset": 4419019,
+      "size": 140,
+      "sha256": "99cf0234834f84a59db1c838ff89f98fa8c2e511c69d4c0b71a6351fe8582453",
+      "binary": "00836dcb-atk_type_parse.bin",
+      "assembly": "00836dcb-atk_type_parse.asm"
+    },
+    {
+      "name": "atk_weapon_apply_parse",
+      "va": "0x00836e57",
+      "file_offset": 4419159,
+      "size": 58,
+      "sha256": "dc8948b389d1764340a6aa5e6fdc195597bf2e880ca6911a16cb17210a7b1ab3",
+      "binary": "00836e57-atk_weapon_apply_parse.bin",
+      "assembly": "00836e57-atk_weapon_apply_parse.asm"
+    },
+    {
+      "name": "atk_element_parse",
+      "va": "0x00836f3f",
+      "file_offset": 4419391,
+      "size": 69,
+      "sha256": "01bb95d94433bc611399d5006ae839d440c84c55d96c522a0ea7fbc80aea7d16",
+      "binary": "00836f3f-atk_element_parse.bin",
+      "assembly": "00836f3f-atk_element_parse.asm"
+    },
+    {
+      "name": "atk_reaction_push_lift_parse",
+      "va": "0x008376e5",
+      "file_offset": 4421349,
+      "size": 280,
+      "sha256": "f5801f9af0ac0e49f6a408a5e56990df0ce22775bb309d4d8256d33bbe98071c",
+      "binary": "008376e5-atk_reaction_push_lift_parse.bin",
+      "assembly": "008376e5-atk_reaction_push_lift_parse.asm"
+    },
+    {
+      "name": "element_name_enum",
+      "va": "0x0082fc70",
+      "file_offset": 4390000,
+      "size": 240,
+      "sha256": "195912e27bd0542a0c30624622094504d4c57c4d702923d78307481c5f40bb47",
+      "binary": "0082fc70-element_name_enum.bin",
+      "assembly": "0082fc70-element_name_enum.asm"
+    },
+    {
+      "name": "atk_element_set",
+      "va": "0x0046d830",
+      "file_offset": 448560,
+      "size": 103,
+      "sha256": "fdcd26204b42e09daf007ba1304f29a4cf93cf15d5af13ac6f2c731bf05debc2",
+      "binary": "0046d830-atk_element_set.bin",
+      "assembly": "0046d830-atk_element_set.asm"
+    },
+    {
+      "name": "atk_normalize_install",
+      "va": "0x004cf680",
+      "file_offset": 849536,
+      "size": 389,
+      "sha256": "0c13301ebc44d15fe596eaec37a1ff3495345ce9865ad4c9080b778635158007",
+      "binary": "004cf680-atk_normalize_install.bin",
+      "assembly": "004cf680-atk_normalize_install.asm"
+    },
+    {
+      "name": "atk_install_copy",
+      "va": "0x004edcd0",
+      "file_offset": 974032,
+      "size": 60,
+      "sha256": "9b280fca7051e14546c84e956d0184a3956aa2d79eb8ed9b09e396a4a6f5f854",
+      "binary": "004edcd0-atk_install_copy.bin",
+      "assembly": "004edcd0-atk_install_copy.asm"
+    },
+    {
+      "name": "current_atk_get",
+      "va": "0x00438650",
+      "file_offset": 230992,
+      "size": 7,
+      "sha256": "b41d9e8f3f3eceedeb7cd4788bf5d05708bfadb71405bff4ffd295c177798734",
+      "binary": "00438650-current_atk_get.bin",
+      "assembly": "00438650-current_atk_get.asm"
+    },
+    {
+      "name": "atk_copy",
+      "va": "0x004a27e0",
+      "file_offset": 665568,
+      "size": 2888,
+      "sha256": "e443869eec5442065e4342e72a2d4d4374fda92f9beee4e76fbbf5c625ee3924",
+      "binary": "004a27e0-atk_copy.bin",
+      "assembly": "004a27e0-atk_copy.asm"
+    },
+    {
+      "name": "atk_reset_core",
+      "va": "0x00435430",
+      "file_offset": 218160,
+      "size": 247,
+      "sha256": "0cf8c89f8a9c176523d0c84d94431684ac17b915171d5a8f453764edacbc1eb5",
+      "binary": "00435430-atk_reset_core.bin",
+      "assembly": "00435430-atk_reset_core.asm"
+    },
+    {
+      "name": "hardattack_setup",
+      "va": "0x00731fa7",
+      "file_offset": 3350439,
+      "size": 303,
+      "sha256": "75468251c4012ce0dc8690443877d3edb65d142824a4ff87f1d2e06f54059ef0",
+      "binary": "00731fa7-hardattack_setup.bin",
+      "assembly": "00731fa7-hardattack_setup.asm"
+    },
+    {
+      "name": "hardattack_charge_ratio",
+      "va": "0x007320db",
+      "file_offset": 3350747,
+      "size": 155,
+      "sha256": "c762d3ab0f3d6577b20cd51677da130b9065d973706dbf8db9430dcc6934fd6d",
+      "binary": "007320db-hardattack_charge_ratio.bin",
+      "assembly": "007320db-hardattack_charge_ratio.asm"
+    },
+    {
+      "name": "level_query_bridge",
+      "va": "0x004caa20",
+      "file_offset": 829984,
+      "size": 33,
+      "sha256": "2905c0c898ce3b04318d4cdd11441ae691d1d14a8e750ea5588699258db0b08b",
+      "binary": "004caa20-level_query_bridge.bin",
+      "assembly": "004caa20-level_query_bridge.asm"
+    },
+    {
+      "name": "level_query",
+      "va": "0x00550150",
+      "file_offset": 1376592,
+      "size": 533,
+      "sha256": "9dd2c0e6319b9a6508efe193c0ca94b68f233fb2ab766a5ceb0db31bc9fa66a2",
+      "binary": "00550150-level_query.bin",
+      "assembly": "00550150-level_query.asm"
+    },
+    {
+      "name": "level_value",
+      "va": "0x00550080",
+      "file_offset": 1376384,
+      "size": 201,
+      "sha256": "cc3a6716e06df0372a59ead75485399c4bf9e4f1561b2636657bca9c3a24d9d1",
+      "binary": "00550080-level_value.bin",
+      "assembly": "00550080-level_value.asm"
+    },
+    {
+      "name": "skill_load_parse",
+      "va": "0x00551ad0",
+      "file_offset": 1383120,
+      "size": 205,
+      "sha256": "fa3bdf39a20f61e371e797fb7fe9053f0ce7a52ab83cbc55b7b6aa521bd7ad6a",
+      "binary": "00551ad0-skill_load_parse.bin",
+      "assembly": "00551ad0-skill_load_parse.asm"
+    },
+    {
+      "name": "skill_levelinfo_materialize",
+      "va": "0x00553265",
+      "file_offset": 1389157,
+      "size": 474,
+      "sha256": "e8c81e14d94d4856de0a14c7fd99668d53f8eadc9a1a5d7948ab4a7c9136d750",
+      "binary": "00553265-skill_levelinfo_materialize.bin",
+      "assembly": "00553265-skill_levelinfo_materialize.asm"
+    },
+    {
+      "name": "skl_parser_entry",
+      "va": "0x008a0da0",
+      "file_offset": 4853152,
+      "size": 174,
+      "sha256": "910af362f84cbdf5f4e2cc32d126062d0d20bb470e8f38ec50b3f7940e5f5b53",
+      "binary": "008a0da0-skl_parser_entry.bin",
+      "assembly": "008a0da0-skl_parser_entry.asm"
+    },
+    {
+      "name": "skl_levelinfo_parse",
+      "va": "0x008a1e5b",
+      "file_offset": 4857435,
+      "size": 183,
+      "sha256": "3785555aa54ab68da5d682b55424c9c668a4d0bd798bfe2b25fac35644c02686",
+      "binary": "008a1e5b-skl_levelinfo_parse.bin",
+      "assembly": "008a1e5b-skl_levelinfo_parse.asm"
+    },
+    {
+      "name": "static_value",
+      "va": "0x0054ff60",
+      "file_offset": 1376096,
+      "size": 91,
+      "sha256": "4249fda25b185f31ff01f8e60a3a575082b002e02971c9930bcddfc04ac3824e",
+      "binary": "0054ff60-static_value.bin",
+      "assembly": "0054ff60-static_value.asm"
+    },
+    {
+      "name": "damage_pack_entry",
+      "va": "0x004eb780",
+      "file_offset": 964480,
+      "size": 68,
+      "sha256": "992f16bd46f932fe5f4771ff3a6555007223263d9ff721f18ae8772b8c314e04",
+      "binary": "004eb780-damage_pack_entry.bin",
+      "assembly": "004eb780-damage_pack_entry.asm"
+    },
+    {
+      "name": "damage_pack_atk_core",
+      "va": "0x004eb960",
+      "file_offset": 964960,
+      "size": 279,
+      "sha256": "f5e809bc9ebdc22ecd7b2af77ce81f2336cf78658f2088b5a6edd712e48e9c99",
+      "binary": "004eb960-damage_pack_atk_core.bin",
+      "assembly": "004eb960-damage_pack_atk_core.asm"
+    },
+    {
+      "name": "damage_pack_stats",
+      "va": "0x004ebc36",
+      "file_offset": 965686,
+      "size": 142,
+      "sha256": "53266f0a5dd0cf5b65e9b3fb10fa2fba2d07f5da655bb1631ab846b3f0529ba9",
+      "binary": "004ebc36-damage_pack_stats.bin",
+      "assembly": "004ebc36-damage_pack_stats.asm"
+    },
+    {
+      "name": "swordman_context_stat",
+      "va": "0x00744a50",
+      "file_offset": 3426896,
+      "size": 17,
+      "sha256": "374b6f7e5bef3ccc845defdd4aa4402badfa6e169bfa0016264c98b28146ffaf",
+      "binary": "00744a50-swordman_context_stat.bin",
+      "assembly": "00744a50-swordman_context_stat.asm"
+    },
+    {
+      "name": "swordman_weapon_type0",
+      "va": "0x00744a90",
+      "file_offset": 3426960,
+      "size": 17,
+      "sha256": "1feced53716203ecb5146e882d40d525a05deb7561265d6c228b0814d6a33a40",
+      "binary": "00744a90-swordman_weapon_type0.bin",
+      "assembly": "00744a90-swordman_weapon_type0.asm"
+    },
+    {
+      "name": "swordman_weapon_type1",
+      "va": "0x00744b10",
+      "file_offset": 3427088,
+      "size": 17,
+      "sha256": "8867807d63f3df8f5ab6975b6555f8d829bccf29f74b953b21887a456f4ca37e",
+      "binary": "00744b10-swordman_weapon_type1.bin",
+      "assembly": "00744b10-swordman_weapon_type1.asm"
+    },
+    {
+      "name": "weapon_type0_value",
+      "va": "0x004b5610",
+      "file_offset": 742928,
+      "size": 104,
+      "sha256": "7ee1d62c056f93d085bb7e4fa96153fc52125fe107e77ac7cfe37f76793c33ed",
+      "binary": "004b5610-weapon_type0_value.bin",
+      "assembly": "004b5610-weapon_type0_value.asm"
+    },
+    {
+      "name": "weapon_type1_value",
+      "va": "0x004b56f0",
+      "file_offset": 743152,
+      "size": 104,
+      "sha256": "5482256c25578a70dc8225f1c3d1d77b15fcec70676279bd8021327cc4f1daff",
+      "binary": "004b56f0-weapon_type1_value.bin",
+      "assembly": "004b56f0-weapon_type1_value.asm"
+    },
+    {
+      "name": "damage_pack_full",
+      "va": "0x004eb780",
+      "file_offset": 964480,
+      "size": 4762,
+      "sha256": "61d85aa91a3cfc0e840652aa9e965d24377d73360c430d428ad72754c2f358b3",
+      "binary": "004eb780-damage_pack_full.bin",
+      "assembly": "004eb780-damage_pack_full.asm"
+    },
+    {
+      "name": "damage_base_dispatch",
+      "va": "0x008b85f0",
+      "file_offset": 4949488,
+      "size": 94,
+      "sha256": "a8c477ddf59775d106767b96ec61541c3dc8b64b5a3ddb758d14f2447f2c10e2",
+      "binary": "008b85f0-damage_base_dispatch.bin",
+      "assembly": "008b85f0-damage_base_dispatch.asm"
+    },
+    {
+      "name": "damage_weapon_percent",
+      "va": "0x008b79c0",
+      "file_offset": 4946368,
+      "size": 239,
+      "sha256": "63d8892a40835b93bab7903f23fc24becfb43604e67139bd25d127797cc1ab06",
+      "binary": "008b79c0-damage_weapon_percent.bin",
+      "assembly": "008b79c0-damage_weapon_percent.asm"
+    },
+    {
+      "name": "damage_common_entry",
+      "va": "0x008b8650",
+      "file_offset": 4949584,
+      "size": 1232,
+      "sha256": "41f30fdf6f89532dfdbef93b00b0a4f5d93f70582271b5641ef11f2799d78ee9",
+      "binary": "008b8650-damage_common_entry.bin",
+      "assembly": "008b8650-damage_common_entry.asm"
+    },
+    {
+      "name": "protected_int_get",
+      "va": "0x00402060",
+      "file_offset": 8288,
+      "size": 221,
+      "sha256": "420f12175413ba1feceb26b6d3005b6bd7c3e38c9a38e927cb1025696cefd37b",
+      "binary": "00402060-protected_int_get.bin",
+      "assembly": "00402060-protected_int_get.asm"
+    },
+    {
+      "name": "protected_float_get",
+      "va": "0x004333b0",
+      "file_offset": 209840,
+      "size": 221,
+      "sha256": "01cce2423afe822d3095d614bcaeeb8dd39b8de2f207c1e5c84de214178c0130",
+      "binary": "004333b0-protected_float_get.bin",
+      "assembly": "004333b0-protected_float_get.asm"
+    },
+    {
+      "name": "protected_value_set",
+      "va": "0x00404560",
+      "file_offset": 17760,
+      "size": 143,
+      "sha256": "dd537605281a142e603352e5d45daef6478410464d46858c89ebdef90f1b709c",
+      "binary": "00404560-protected_value_set.bin",
+      "assembly": "00404560-protected_value_set.asm"
+    }
+  ],
+  "strings": [
+    {
+      "va": "0x00e14b28",
+      "file_offset": 10570536,
+      "value": "[elemental property]",
+      "bytes": "5b0065006c0065006d0065006e00740061006c002000700072006f00700065007200740079005d000000"
+    },
+    {
+      "va": "0x00e14bb4",
+      "file_offset": 10570676,
+      "value": "[weapon damage apply]",
+      "bytes": "5b0077006500610070006f006e002000640061006d0061006700650020006100700070006c0079005d000000"
+    },
+    {
+      "va": "0x00cda4a4",
+      "file_offset": 9282724,
+      "value": "[attack type]",
+      "bytes": "5b00610074007400610063006b00200074007900700065005d000000"
+    },
+    {
+      "va": "0x00e14c04",
+      "file_offset": 10570756,
+      "value": "[magic]",
+      "bytes": "5b006d0061006700690063005d000000"
+    },
+    {
+      "va": "0x00e14c14",
+      "file_offset": 10570772,
+      "value": "[physic]",
+      "bytes": "5b007000680079007300690063005d000000"
+    },
+    {
+      "va": "0x00e14be0",
+      "file_offset": 10570720,
+      "value": "[ignore defense]",
+      "bytes": "5b00690067006e006f0072006500200064006500660065006e00730065005d000000"
+    },
+    {
+      "va": "0x00e13eb4",
+      "file_offset": 10567348,
+      "value": "[damage]",
+      "bytes": "5b00640061006d006100670065005d000000"
+    },
+    {
+      "va": "0x00e13ea4",
+      "file_offset": 10567332,
+      "value": "[down]",
+      "bytes": "5b0064006f0077006e005d000000"
+    },
+    {
+      "va": "0x00e1499c",
+      "file_offset": 10570140,
+      "value": "[damage except human]",
+      "bytes": "5b00640061006d0061006700650020006500780063006500700074002000680075006d0061006e005d000000"
+    },
+    {
+      "va": "0x00cc3d74",
+      "file_offset": 9190772,
+      "value": "[none]",
+      "bytes": "5b006e006f006e0065005d000000"
+    },
+    {
+      "va": "0x00e14c48",
+      "file_offset": 10570824,
+      "value": "[absolute damage]",
+      "bytes": "5b006100620073006f006c007500740065002000640061006d006100670065005d000000"
+    },
+    {
+      "va": "0x00e14c28",
+      "file_offset": 10570792,
+      "value": "[damage bonus]",
+      "bytes": "5b00640061006d00610067006500200062006f006e00750073005d000000"
+    },
+    {
+      "va": "0x00e149c8",
+      "file_offset": 10570184,
+      "value": "[damage reaction]",
+      "bytes": "5b00640061006d0061006700650020007200650061006300740069006f006e005d000000"
+    },
+    {
+      "va": "0x00e14980",
+      "file_offset": 10570112,
+      "value": "[push aside]",
+      "bytes": "5b0070007500730068002000610073006900640065005d000000"
+    },
+    {
+      "va": "0x00e1496c",
+      "file_offset": 10570092,
+      "value": "[lift up]",
+      "bytes": "5b006c006900660074002000750070005d000000"
+    },
+    {
+      "va": "0x00e13800",
+      "file_offset": 10565632,
+      "value": "[fire element]",
+      "bytes": "5b006600690072006500200065006c0065006d0065006e0074005d000000"
+    },
+    {
+      "va": "0x00e137e0",
+      "file_offset": 10565600,
+      "value": "[water element]",
+      "bytes": "5b0077006100740065007200200065006c0065006d0065006e0074005d000000"
+    },
+    {
+      "va": "0x00e137c0",
+      "file_offset": 10565568,
+      "value": "[dark element]",
+      "bytes": "5b006400610072006b00200065006c0065006d0065006e0074005d000000"
+    },
+    {
+      "va": "0x00e137a0",
+      "file_offset": 10565536,
+      "value": "[light element]",
+      "bytes": "5b006c006900670068007400200065006c0065006d0065006e0074005d000000"
+    },
+    {
+      "va": "0x00e29210",
+      "file_offset": 10654224,
+      "value": "[level info]",
+      "bytes": "5b006c006500760065006c00200069006e0066006f005d000000"
+    }
+  ],
+  "constants": [
+    {
+      "va": "0x00cc10ac",
+      "file_offset": 9179308,
+      "bytes": "0ad7233c",
+      "float32": 0.009999999776482582
+    },
+    {
+      "va": "0x00cc1f58",
+      "file_offset": 9183064,
+      "bytes": "0000803f",
+      "float32": 1.0
+    }
+  ],
+  "swordman_vtable": [
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x19c",
+      "va": "0x00d81130",
+      "file_offset": 9965872,
+      "bytes": "50864300",
+      "target": "0x00438650"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x1d0",
+      "va": "0x00d81164",
+      "file_offset": 9965924,
+      "bytes": "504a7400",
+      "target": "0x00744a50"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x1d8",
+      "va": "0x00d8116c",
+      "file_offset": 9965932,
+      "bytes": "904a7400",
+      "target": "0x00744a90"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x1e8",
+      "va": "0x00d8117c",
+      "file_offset": 9965948,
+      "bytes": "104b7400",
+      "target": "0x00744b10"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x64c",
+      "va": "0x00d815e0",
+      "file_offset": 9967072,
+      "bytes": "90f24c00",
+      "target": "0x004cf290"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x67c",
+      "va": "0x00d81610",
+      "file_offset": 9967120,
+      "bytes": "000d4e00",
+      "target": "0x004e0d00"
+    }
+  ]
+}

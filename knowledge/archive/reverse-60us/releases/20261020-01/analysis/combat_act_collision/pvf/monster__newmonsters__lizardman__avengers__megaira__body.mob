@@ -1,0 +1,425 @@
+// 메가이라
+
+[floating height] 0		// 0이면 지상형, 1이상이면 부유형 (값 = 부유 높이)
+
+[name] <7::lizardman_avengers_3>		// monster.kor.str 파일 내의 인덱스를 적어준다.\
+
+[face image] `Monster/MonsterFace.img` 348	// 몬스터 얼굴 이미지의 파일과 프레임 인덱스
+
+[die effect] 0 3 0	// 죽을 때 보여줄 이펙트 지정
+
+// param1 : 0 - 사망이펙트 있음 ([die effect] 태그가 있을때는 무조건 0으로 할 것) -> 2007.8.22추가 사항 : 0보다 크면 심의 등급에 관계없이 무조검 보여줌(얼음파편등)
+// param2 : 육편의 색상번호
+// param3 : 사망이펙트 중 보여주지않을 것들의 비트값
+// 0 : 모두 보여준다. (육편 + 피 + 스모크 + 번쩍플래쉬) 1 : 육편만 빼고 2 : 피만 빼고 4 : 스모크만 빼고 8 : 번쩍플래쉬만 빼고
+
+//[attack sound] `GOLEM_ATK`
+//[appear sound] `R_BASHI_MEET` //100
+[damage sound] `R_MEGAIRA_DMG` //20
+[die sound] `MEGAIRA_DIE`
+[ambient sound] `MEGAIRA_AMB`
+
+[ability table] 0	// 따라갈 능력치 테이블 인덱스. 0이 기본, 1이 소환수, 경쟁던전 2. 기본값 0
+
+[overhead gauge type] 1
+
+[ability category]
+`[HP MAX]` `*` 1700
+`[EQUIPMENT_PHYSICAL_ATTACK]` `*` 200
+`[EQUIPMENT_PHYSICAL_DEFENSE]` `*` 200
+`[EQUIPMENT_MAGICAL_ATTACK]` `*` 150
+`[EQUIPMENT_MAGICAL_DEFENSE]` `*` 150
+[/ability category]
+
+[targeting bonus] 
+100	// 가까운 녀석의 보너스
+0	// 가장 최근에 날 때린 녀석
+0	// 날 가장 많이 때린 녀석
+0	// 근거리 공격자
+0	// 원거리 공격자
+0	// 물리 공격력이 낮은 녀석
+0	// 물리 공격력이 높은 녀석
+0	// 물리 방어력 낮은 녀석
+0	// 물리 방어력 높은 녀석
+0	// 마법 공격력 낮은 녀석
+0	// 마법 공격력 높은 녀석
+0	// 마법 방어력 낮은 녀석
+0	// 마법 방어력 높은 녀석
+0	// 체력 낮은 녀석
+0	// 체력 높은 녀석
+0	// X축으로 가까운 녀석의 보너스
+0	// Y축으로 가까운 녀석의 보너스
+0	// 잡히는 적이라면 보너스
+0	// 슈퍼아머 상태라면 보너스
+0	// 높이 떠있을수록 보너스
+0 `[stand]` `[dash]` 0		// 스테이트를 체크하여 주는 보너스 값. 맨 뒤에 0을 꼭 넣어야 함(가운데 상태 태그가 끝났다는 의미)
+0 `[stun]` 0
+// 아래와 같은 특정상태변화인 적의 보너스
+// [slow],         [freeze],    [poison], [stun],  [curse],
+// [blind],        [lightning], [stone],  [sleep], [burn],
+// [weapon break], [bleeding],  [haste],  [bless],
+// [element],      [confuse],   [hold],   [armor break]
+// 여러개 지정이 가능하며 해당될때마다 점수추가 입니다.
+// 맨 끝의 의미없는 0 은 꼭 붙여주셔야합니다.
+
+[category]
+`[dragon]`
+// 카테고리 목록
+// 종족 : `[human]``[beast]``[plant]``[insect]``[machine]``[hybrid]``[undead]``[devil]``[spirit]``[dragon]`
+// 아머 : `[human armor]``[fort armor]``[divine armor]`
+// 기타 : `[goblin]``[tau]``[lugaru]` `[fixture]` `[stay]`
+[/category]
+
+[HP regen speed] 20 20 // 초당 회복률. 100이면 1초당 1씩 찬다.
+[MP regen speed] 0 0
+[level] 60 60		// 앞의 것이 최소 레벨, 뒤의 것이 최대 레벨
+[fire resistance] 20 20		// 화속성 내성
+[water resistance] 20 20		// 수속성 내성
+[dark resistance] 20 20		// 암속성 내성
+[light resistance] 20 20		// 명속성 내성
+
+[slow resistance]  30 30	// 둔화 내성
+[freeze resistance]  30 30	// 빙결 내성
+[poison resistance]  30 30	// 중독 내성
+[stun resistance]  30 30	// 기절 내성
+[curse resistance] 30 30		// 저주 내성
+[blind resistance] 30 30	// 암흑 내성
+[sleep resistance] 30 30		// 수면 내성
+[lightning resistance] 30 30	// 감전 내성
+[stone resistance]  30 30	// 석화 내성
+[bleeding resistance] 30 30	// 출혈 내성
+[confuse resistance] 30 30	// 혼란 내성
+[hold resistance] 30 30		// 구속 내성
+[burn resistance] 30 30		// 화상 내성
+
+[move speed] 800 800	// 단위 : px/sec
+[attack speed] 800 800	// 1000이 100%. 해당 애니메이션 전체의 속도를 자체를 % 단위로 조절.
+[cast speed] 1000 1000		// 1000이 100%. 해당 애니메이션 전체의 속도를 자체를 % 단위로 조절. 몬스터의 경우에는 보로딘 외에는 의미 없음.
+[hit recovery] 1000 1000	// 2초에서 해당 수치만큼 빼줌. 애니메이션 프레임 딜레이의 합이 2초를 넘을 경우 애니메이션이 짤림.
+[weight] 80000 80000		// (단위 : 10g)
+
+[lie frame] 1 2 3 3 4 // 누워서 올라가는 프레임, 누워서 떨어지는 프레임, 누워서 튕겨올라가는 프레임, 누워서 튕겨올라가서 떨어질때 프레임, 누운 프레임.
+
+[item] 
+//3227 1604		// 마력용해제
+[/item]
+
+[independent drop]
+0 10000 0 0 0 1 1 1 1 1 1	//크로니클 리스트 드랍
+[list]
+420140	1
+280030	1
+420068	1
+300023	1
+420393	1
+310067	1
+420141	1
+420330	1
+420087	1
+420039	1
+420017	1
+420099	1
+280111	1
+300069	1
+310009	1
+290018	1
+420363	1
+420137	1
+420113	1
+280113	1
+420102	1
+420104	1
+420062	1
+420080	1
+420056	1
+420121	1
+420050	1
+420397	1
+300067	1
+320036	1
+2637185	1
+2645048	1
+2637168	1
+2637190	1
+2642110	1
+2637200	1
+2641153	1
+2642097	1
+2643109	1
+2637170	1
+2642104	1
+2637195	1
+2643096	1
+2644100	1
+2645049	1
+[/list]
+0 0 10000 0 0 1 1 1 1 1 1	//크로니클 리스트 드랍
+[list]
+410091	1
+220047	1
+250076	1
+220008	1
+240068	1
+410391	1
+230030	1
+410117	1
+220103	1
+240031	1
+250065	1
+410395	1
+410393	1
+220031	1
+410342	1
+250001	1
+410331	1
+410044	1
+410064	1
+410113	1
+260013	1
+260014	1
+410356	1
+410035	1
+240024	1
+220030	1
+240002	1
+240072	1
+410361	1
+220098	1
+2637076	1
+2641104	1
+2643069	1
+2642075	1
+2641106	1
+2644076	1
+2641115	1
+2641101	1
+2637131	1
+2637134	1
+2644067	1
+2637108	1
+2637074	1
+2637117	1
+2643067	1
+[/list]
+0 0 0 10000 0 1 1 1 1 1 1	//크로니클 리스트 드랍
+[list]
+400343	1
+400322	1
+400120	1
+400337	1
+370076	1
+360010	1
+400032	1
+400325	1
+340004	1
+350025	1
+350075	1
+360072	1
+340037	1
+360073	1
+360030	1
+400394	1
+400009	1
+400104	1
+400063	1
+400058	1
+370029	1
+350064	1
+400050	1
+400359	1
+400056	1
+370016	1
+400052	1
+400356	1
+400140	1
+400029	1
+400090	1
+350005	1
+400071	1
+360071	1
+2644137	1
+2645065	1
+2637030	1
+2637035	1
+2641213	1
+2637012	1
+2643139	1
+2642133	1
+2637008	1
+2637022	1
+2637038	1
+2637000	1
+2642132	1
+2644136	1
+2641214	1
+2637053	1
+2645066	1
+2641198	1
+[/list]
+0 0 0 0 10000 1 1 1 1 1 1	//크로니클 리스트 드랍
+[list]
+300047	1
+310040	1
+230063	1
+420270	1
+410200	1
+370057	1
+410249	1
+400297	1
+250038	1
+410279	1
+410292	1
+400193	1
+410296	1
+420233	1
+340074	1
+420230	1
+230058	1
+360063	1
+200016	1
+180054	1
+420162	1
+250044	1
+420245	1
+410179	1
+300033	1
+260031	1
+380023	1
+230061	1
+420239	1
+400164	1
+160061	1
+190057	1
+420178	1
+250034	1
+240057	1
+300063	1
+420294	1
+320026	1
+180055	1
+220059	1
+190055	1
+410224	1
+280053	1
+240033	1
+350059	1
+160082	1
+410270	1
+410268	1
+180052	1
+420200	1
+290046	1
+400219	1
+220055	1
+310041	1
+280051	1
+160053	1
+410266	1
+380031	1
+420263	1
+340050	1
+280056	1
+410229	1
+280083	1
+230033	1
+160070	1
+420306	1
+220056	1
+410197	1
+230055	1
+410251	1
+290035	1
+160076	1
+370053	1
+240061	1
+370059	1
+340082	1
+410294	1
+200017	1
+420258	1
+400194	1
+[/list]
+//4332 300 300 300 300 1 1 1 1 1 0	// 회색의 크리스탈
+[/independent drop]
+
+[waiting action]  `action/Stay.act`
+[move action]  `action/Move.act`
+[sit action]  `action/Sit.act`
+[down action]  `Action/Down.act`
+[overturn action]  `action/Overturn.act`
+[damage action 1]  `action/Damage1.act`
+[damage action 2]  `action/Damage2.act`
+[last action]  `action/last.act`
+
+[attack action]
+`Action/Scratching.act` // 현재 사용하지 않음
+`Action/Hisss.act`
+`Action/Pull.act`
+`Action/Moveup.act`
+`Action/Drop.act`
+`Action/TailAttack.act`
+[/attack action]
+
+[etc motion]
+`animation/hikari.ani`
+[/etc motion]
+
+[etc action]
+`Action/Move4.act` // 공중 횡이동
+[/etc action]
+
+[attack info]
+`AttackInfo/Attack.atk`
+``
+``
+``
+`AttackInfo/Drop.atk`
+`AttackInfo/Tail.atk`
+[/attack info]
+
+[cooltime]
+3000
+9000
+18000
+6000
+0
+6000
+[/cooltime]
+
+[stuckbonus on damage]  0 0 0 0
+[vision] 500
+[warlike]  50
+[think term] 300		// ms단위로 타겟설정, 공격방식, 이동방식 을 결정하는 생각을 한다.
+[destination change term] 300	// ms단위로 이동할 위치를 결정한다. 이게 짧으면 오도방정을 떤다.
+[keep distance with target] 100
+
+[ai pattern]			// 던전의 난이도 별로 다른 ai를 지정해 줄 수 있음. 만약 난이도에 상관없이 모두 같은 ai를 쓰고 싶다면 그냥 똑같이 복사해서 적어두면 됨.
+[normal]
+`ai/Event.ai`
+`ai/DestinationSelect.ai`
+`ai/Action.ai`
+`ai/MoveMethod.ai`
+[/normal]
+
+[expert]
+`ai/Event.ai`
+`ai/DestinationSelect.ai`
+`ai/Action.ai`
+`ai/MoveMethod.ai`
+[/expert]
+
+[master]
+`ai/Event.ai`
+`ai/DestinationSelect.ai`
+`ai/Action.ai`
+`ai/MoveMethod.ai`
+[/master]
+
+[king]
+`ai/Event.ai`
+`ai/DestinationSelect.ai`
+`ai/Action.ai`
+`ai/MoveMethod.ai`
+[/king]
+
+[/ai pattern]

@@ -1,0 +1,72 @@
+{
+  "observations": [
+    {
+      "class_id": 0,
+      "skill_id": 23,
+      "phase": 0,
+      "path": "character/swordman/animation/throw1.ani",
+      "conditional_variant": false,
+      "full_controller": false
+    },
+    {
+      "class_id": 0,
+      "skill_id": 23,
+      "phase": 1,
+      "path": "character/swordman/animation/throw2.ani",
+      "conditional_variant": false,
+      "full_controller": false
+    },
+    {
+      "class_id": 1,
+      "skill_id": 13,
+      "phase": 0,
+      "path": "character/fighter/animation/throw1.ani",
+      "conditional_variant": false,
+      "full_controller": false
+    },
+    {
+      "class_id": 1,
+      "skill_id": 13,
+      "phase": 1,
+      "path": "character/fighter/animation/throw2.ani",
+      "conditional_variant": false,
+      "full_controller": false
+    },
+    {
+      "class_id": 2,
+      "skill_id": 45,
+      "phase": 0,
+      "path": "character/gunner/animation/command1.ani",
+      "conditional_variant": true,
+      "full_controller": false
+    },
+    {
+      "class_id": 2,
+      "skill_id": 45,
+      "phase": 1,
+      "path": "character/gunner/animation/command2.ani",
+      "conditional_variant": true,
+      "full_controller": false
+    },
+    {
+      "class_id": 5,
+      "skill_id": 45,
+      "phase": 0,
+      "path": "character/gunner/atanimation/command1.ani",
+      "conditional_variant": true,
+      "full_controller": false
+    },
+    {
+      "class_id": 5,
+      "skill_id": 45,
+      "phase": 1,
+      "path": "character/gunner/atanimation/command2.ani",
+      "conditional_variant": true,
+      "full_controller": false
+    }
+  ],
+  "page_errors": [],
+  "server_errors": [],
+  "unregistered_skill_rejected": true,
+  "original_game_visual_comparison": false
+}

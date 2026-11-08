@@ -1,0 +1,615 @@
+{
+  "schema": 1,
+  "task": "R60-03",
+  "status": "read-only-audit-and-implementation-plan",
+  "reviewed_date": "2026-10-20",
+  "companion": "R60-03-CLOCK-PLAN.md",
+  "production_changed_for_r60_03": false,
+  "production_build_run_for_r60_03": false,
+  "new_reverse_engineering_run": false,
+  "native_1031_clock_verified": false,
+  "native_runtime_channel_observed": false,
+  "r60_02_clock_recovered": false,
+  "release_root": "reverse-60us/releases/20261020-01",
+  "static_evidence_exe_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "classification": {
+    "60us_arithmetic": "captured-local-native-instruction-vectors-and-static-bytes",
+    "60us_clock_binding": "selected-scaled-pausable-ms-clock; actual actor channel not observed",
+    "1031_transfer": "explicit-cross-version-inference",
+    "existing_60hz": "project-reconstruction-preserve",
+    "existing_hitpause": "milliseconds-to-ceil-ticks-inference-preserve-until-explicit-adapter"
+  },
+  "evidence": [
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_motion/motion-contract.json",
+      "claim": "clock gates, ANI rate paths, deadline and rate-change arithmetic",
+      "native_runtime_observed": false
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_motion/README.md",
+      "claim": "arithmetic scope and uncaptured runtime inputs",
+      "native_runtime_observed": false
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_motion/native-ani-vectors.json",
+      "claim": "46 captured outputs from two x87 precisions; supplied decoded delay and rate only",
+      "expected_native_output_count": 46,
+      "rerun_in_this_audit": false
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_timeline/README.md",
+      "claim": "last-frame retention and separate removal consumer; attachment order"
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_timeline/evidence-index.json",
+      "claim": "native identity and frozen slice hashes"
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_timeline/frame_advance.asm",
+      "claim": "deadline equality advances; root ANI time; ended and catch-up branches"
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_native_skill_slots/equipment-contract.md",
+      "claim": "shared root, min decoded delay copy, rate inheritance, signed stable layer key order"
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_hardattack/README.md",
+      "claim": "effect layer reset at installation, conditional rate inheritance and position offset are separate"
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/combat-preview/web/timeline.js",
+      "claim": "preview body/elapsed/frozen clock interfaces; source-delay only"
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/combat-preview/controllers.py",
+      "claim": "preview body/equipment and generated effect clock roles"
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/combat-preview/spawned.py",
+      "claim": "frozen body reference distinct from independent visual objects"
+    }
+  ],
+  "arithmetic": {
+    "refresh": "f32(Sani * f32(0.1))",
+    "installation": "f32(f32(Sani) * G * f32(0.001))",
+    "deadline": "nextDeadline -= trunc(decodedDelay / rate * f32(-100))",
+    "total_duration_separate": "sum(trunc(decodedDelay * (1/rate) * f32(100)))",
+    "rate_change": "trunc(oldElapsed / newRate * oldRate)",
+    "boundary": "now >= deadline advances",
+    "normal_profile_domain": "finite positive rate; finite nonnegative decoded delay; overflow explicit rejection",
+    "zero_rate_native_helper": "substitutes 1.0; preserve in arithmetic fixture coverage",
+    "runtime_facts_not_asserted": [
+      "actual Sani",
+      "actual timer channel",
+      "fractional carry",
+      "complete native callbacks",
+      "1031 protected layouts"
+    ]
+  },
+  "audit": [
+    {
+      "id": "A01",
+      "paths": [
+        "dnf-native-demo/include/dnf/simulation.hpp",
+        "dnf-native-demo/src/simulation.cpp"
+      ],
+      "consumer": "FixedStepClock",
+      "current": "60 Hz integer accumulator, 16/17 ms delta and saved catch-up debt",
+      "decision": "preserve"
+    },
+    {
+      "id": "A02",
+      "paths": [
+        "dnf-native-demo/src/combat.cpp",
+        "dnf-native-demo/src/main.cpp"
+      ],
+      "consumer": "World::advance and UI pause",
+      "current": "World/object/ACT once per fixed tick; paused wall dt not submitted; single-step retains debt",
+      "decision": "preserve-boundary; publish ANI snapshots once per tick"
+    },
+    {
+      "id": "A03",
+      "paths": [
+        "dnf-native-demo/include/dnf/resources.hpp",
+        "dnf-native-demo/src/resources.cpp"
+      ],
+      "consumer": "Animation::frameAt/samplePose",
+      "current": "resource DELAY lookup; override freezes local interpolation time",
+      "decision": "add-runtime-frame-interval-input; keep-raw-clip-immutable"
+    },
+    {
+      "id": "A04",
+      "paths": [
+        "dnf-native-demo/src/combat.cpp"
+      ],
+      "consumer": "basicLocalAge/attackFrames",
+      "current": "ordinary attacks scale local age by source effective speed; skill elapsed mostly unscaled DELAY; poseFrame overrides rendering",
+      "decision": "unify-frame-event-contact-end-cursor; preserve-existing-policy-comparison"
+    },
+    {
+      "id": "A05",
+      "paths": [
+        "dnf-native-demo/include/dnf/experimental_character.hpp",
+        "dnf-native-demo/src/experimental_character.cpp",
+        "dnf-native-demo/src/experimental_world_adapter.cpp"
+      ],
+      "consumer": "experimental attack age",
+      "current": "scaled age with hitstop/blocked gates; adapter exports pose frame and animStart",
+      "decision": "consume-shared-clock-without-importing-preview-templates"
+    },
+    {
+      "id": "A06",
+      "paths": [
+        "dnf-native-demo/src/renderer.cpp",
+        "dnf-native-demo/src/character_attack.cpp"
+      ],
+      "consumer": "body and equipment",
+      "current": "weapon boxes use body index; visuals share elapsed or frame override but no effective delay binding",
+      "decision": "root-clock-plus-per-child-effective-delays-view"
+    },
+    {
+      "id": "A07",
+      "paths": [
+        "dnf-native-demo/src/combat.cpp"
+      ],
+      "consumer": "hit stop",
+      "current": "ceil milliseconds to ticks; shifts animStart/stage/effect timestamps; world age continues",
+      "decision": "one-pause-mask; avoid-double-compensation; retain-inference-label"
+    },
+    {
+      "id": "A08",
+      "paths": [
+        "dnf-native-demo/include/dnf/combat.hpp",
+        "dnf-native-demo/src/combat.cpp",
+        "dnf-native-demo/src/renderer.cpp"
+      ],
+      "consumer": "Effect",
+      "current": "independent born/expires elapsed; attached follows player and pauses with player",
+      "decision": "separate-position-rate-clock-end-bindings"
+    },
+    {
+      "id": "A09",
+      "paths": [
+        "dnf-native-demo/include/dnf/effect_plan.hpp",
+        "dnf-native-demo/src/effect_plan.cpp"
+      ],
+      "consumer": "bounded ALS effect plan",
+      "current": "source-frame-delay sums flatten add/remove birth/end; child starts at add time",
+      "decision": "runtime-parent-frame-visits; retain-add-time-inference-classification"
+    },
+    {
+      "id": "A10",
+      "paths": [
+        "dnf-native-demo/include/dnf/act_runtime.hpp",
+        "dnf-native-demo/src/act_runtime.cpp",
+        "dnf-native-demo/src/act_service.cpp",
+        "dnf-native-demo/src/act_world_host.cpp"
+      ],
+      "consumer": "ACT",
+      "current": "exclusive source-ms/external-delta; paused external delta0; pending elapsedMs separate from animationUs",
+      "decision": "reuse-exclusive-input-contract; explicit-frame-cursor-bridge; no-second-rate"
+    },
+    {
+      "id": "A11",
+      "paths": [
+        "dnf-native-demo/src/objects.cpp",
+        "dnf-native-demo/src/monster_effects.cpp"
+      ],
+      "consumer": "objects and monster/death tracks",
+      "current": "independent source elapsed and actionAgeUs",
+      "decision": "retain-first-batch; migrate-per-owner-later-with-diagnostics"
+    },
+    {
+      "id": "A12",
+      "paths": [
+        "dnf-native-demo/src/combat.cpp",
+        "dnf-native-demo/src/storage.cpp",
+        "dnf-native-demo/src/act_world_host.cpp"
+      ],
+      "consumer": "cleanup and restore",
+      "current": "normal save cancels transient actions/effects; typed ACT continuation has separate identity and restore gates",
+      "decision": "clock-lifecycle-owner-cancellation; no-implicit-save-continuation"
+    },
+    {
+      "id": "A13",
+      "paths": [
+        "rep-player-1031-pvf/src/pvf_animation.hpp",
+        "rep-player-1031-pvf/src/pvf_animation.cpp",
+        "rep-player-1031-pvf/src/pvf_preview_scene.hpp",
+        "rep-player-1031-pvf/src/pvf_preview_scene.cpp",
+        "rep-player-1031-pvf/src/pvf_preview.cpp"
+      ],
+      "consumer": "independent preview",
+      "current": "wall-dt inspection cursor and per-track source-rate multiplier; scrub; ALS add-time child clock",
+      "decision": "separate-fixed-clock-review-mode; preview-speed-only-affects-submission"
+    }
+  ],
+  "existing_test_sources_reviewed_not_rerun": [
+    "dnf-native-demo/tests/test_simulation.cpp",
+    "dnf-native-demo/tests/test_character_attack.cpp",
+    "dnf-native-demo/tests/test_act_world_host.cpp"
+  ],
+  "proposed_interfaces": {
+    "new_header": "reverse-60us/integration/include/dnf_ani_clock.hpp",
+    "created_in_this_task": false,
+    "clock_policy": [
+      "SourceDelay100",
+      "Inferred60UsPercentDeadlines"
+    ],
+    "rate_path": [
+      "Installation",
+      "Refresh",
+      "ExplicitPercent"
+    ],
+    "state_fields": [
+      "owner/action/source/policy identity",
+      "rootId",
+      "currentFrame",
+      "frameStartMs",
+      "nextDeadlineMs",
+      "rootElapsedMs",
+      "storedRateFloat32",
+      "ended",
+      "loop",
+      "loopVisit",
+      "lastSimulationTick"
+    ],
+    "snapshot_fields": [
+      "currentFrame",
+      "nextFrame",
+      "visit",
+      "elapsedInFrame",
+      "actualDeadlineSpan",
+      "ended",
+      "loop",
+      "orderedCrossedVisits"
+    ],
+    "independent_bindings": [
+      "clockBinding",
+      "rateBinding",
+      "positionBinding",
+      "endBehavior"
+    ],
+    "normal_save_policy": "cancel-transient-actions-input-and-effect-instances-v1",
+    "render_policy_independent": true,
+    "production_tick_frequency": 60,
+    "update_owner": "simulation-only; one publication per owner per fixed tick",
+    "callback_policy": "existing ordered once-per-visit reconstruction; full native skip/callback scheduler not yet verified"
+  },
+  "patch_groups": [
+    {
+      "id": "03A",
+      "scope": "portable arithmetic and cursor fixture",
+      "files": [
+        "reverse-60us/integration/include/dnf_ani_clock.hpp",
+        "reverse-60us/integration/tests/clock-contract-test.cpp",
+        "reverse-60us/integration/tools/verify_clock_contract.py"
+      ],
+      "runtime_complete_alone": false
+    },
+    {
+      "id": "03B",
+      "scope": "live ordinary/dash/jump attack snapshot consumers",
+      "files": [
+        "dnf-native-demo/include/dnf/resources.hpp",
+        "dnf-native-demo/src/resources.cpp",
+        "dnf-native-demo/include/dnf/combat.hpp",
+        "dnf-native-demo/src/combat.cpp",
+        "dnf-native-demo/include/dnf/renderer.hpp",
+        "dnf-native-demo/src/renderer.cpp",
+        "dnf-native-demo/include/dnf/experimental_character.hpp",
+        "dnf-native-demo/src/experimental_character.cpp",
+        "dnf-native-demo/src/experimental_world_adapter.cpp",
+        "dnf-native-demo/src/character_attack.cpp"
+      ],
+      "depends_on": [
+        "03A"
+      ]
+    },
+    {
+      "id": "03C",
+      "scope": "pause, effect attachment and exclusive ACT bridge",
+      "files": [
+        "dnf-native-demo/include/dnf/effect_plan.hpp",
+        "dnf-native-demo/src/effect_plan.cpp",
+        "dnf-native-demo/src/act_service.cpp",
+        "dnf-native-demo/src/act_world_host.cpp"
+      ],
+      "conditional_files": [
+        "dnf-native-demo/include/dnf/act_runtime.hpp",
+        "dnf-native-demo/src/act_runtime.cpp"
+      ],
+      "depends_on": [
+        "03A",
+        "03B"
+      ],
+      "must_ship_with_03B_for_touched_attachments": true
+    },
+    {
+      "id": "03D",
+      "scope": "independent preview clock review mode",
+      "files": [
+        "rep-player-1031-pvf/src/pvf_animation.hpp",
+        "rep-player-1031-pvf/src/pvf_animation.cpp",
+        "rep-player-1031-pvf/src/pvf_preview_scene.hpp",
+        "rep-player-1031-pvf/src/pvf_preview_scene.cpp",
+        "rep-player-1031-pvf/src/pvf_preview.cpp"
+      ],
+      "depends_on": [
+        "03A"
+      ],
+      "template_migration_authorized_by_this_plan": false
+    },
+    {
+      "id": "03E",
+      "scope": "build, source/hash closure, tests, documentation and isolated candidate",
+      "files": [],
+      "file_scope_note": "Integrator assigns each project's CMake/build/manifest/tests/docs. Normal save cancellation requires no new continuation schema.",
+      "depends_on": [
+        "03B",
+        "03C",
+        "03D"
+      ]
+    }
+  ],
+  "minimum_live_checkpoint": [
+    "03A",
+    "03B",
+    "03C-for-all-touched-pause-and-attachment-consumers",
+    "identity-and-tests-from-03E"
+  ],
+  "tests_to_add_or_extend": [
+    {
+      "id": "T01",
+      "expected": "46 native vector outputs; no generated expected values from tested implementation; exact integer and float32 contract"
+    },
+    {
+      "id": "T02",
+      "expected": "deadline equality; nonloop hold ended; single/multi loop; zero-delay prefix; all-zero rejection; overflow refusal"
+    },
+    {
+      "id": "T03",
+      "expected": "body/child different delays and frame counts; min effective delay copy; shared root and own discrete resources/boxes"
+    },
+    {
+      "id": "T04",
+      "expected": "30/60/120/144/240 render rates and budgeted catch-up yield identical cursor, visits, hits and sounds"
+    },
+    {
+      "id": "T05",
+      "expected": "UI pause and single-step; actor hitstop; independent objects; AI pause; stun/death cancellation"
+    },
+    {
+      "id": "T06",
+      "expected": "live real 1031 attack frame agrees across body/weapon visuals, collision, authored sound and end/chain gates"
+    },
+    {
+      "id": "T07",
+      "expected": "short crossed frames and persistent frames neither skip events nor duplicate hit/spawn/MP/CD/RNG"
+    },
+    {
+      "id": "T08",
+      "expected": "ALS source order, unique-name replace/remove and parent interruption/owner-lifecycle cleanup"
+    },
+    {
+      "id": "T09",
+      "expected": "ACT rejects missing/second external clock; no double speed; existing elapsedMs vs animationUs semantics retained"
+    },
+    {
+      "id": "T10",
+      "expected": "ordinary old saves cancel transient cursors; continuation only with same-generation source/owner/pending graph and atomic refusal"
+    }
+  ],
+  "remaining_unknowns": [
+    "Actual 60US runtime channel, effective Sani, timer scale and pause topology",
+    "1031-specific verification of borrowed rate and root/child behavior",
+    "Native hitpause unit conversion and attacker/target split",
+    "Full native frame callback/ACT order and large-step skip behavior",
+    "Full skill-specific cast/attack-rate selection and generated-object controllers",
+    "Centered pivot, native dynamic audiovisual and pixel comparison"
+  ],
+  "input_identities": [
+    {
+      "path": "dnf-native-demo/include/dnf/act_runtime.hpp",
+      "sha256": "50524bc10550524a0145e032dd719e040d01de40abeee4e24bb4f451e35d442f",
+      "size": 15233
+    },
+    {
+      "path": "dnf-native-demo/include/dnf/combat.hpp",
+      "sha256": "062c9bc13fcbcbb382962870667c3e7de190b69a12a994d1156bbf5eeb360f2c",
+      "size": 28563
+    },
+    {
+      "path": "dnf-native-demo/include/dnf/effect_plan.hpp",
+      "sha256": "9ba51c48cf3d9bfdb1818e69abb076d57d0d5a353012783c563fd9c2382b7fd9",
+      "size": 751
+    },
+    {
+      "path": "dnf-native-demo/include/dnf/experimental_character.hpp",
+      "sha256": "55558e4b80285d4ee4768a888ba18f36dfc422d5b24811b54ed853593bae0cae",
+      "size": 8802
+    },
+    {
+      "path": "dnf-native-demo/include/dnf/resources.hpp",
+      "sha256": "7cee6b6ee8671570acabb4c43a4e58351fbc488591a82e133246653733799a0e",
+      "size": 6590
+    },
+    {
+      "path": "dnf-native-demo/include/dnf/simulation.hpp",
+      "sha256": "05c824c2910b35d6e4b2ddcebd011ea883620fabf5217bfb3f4670be20a74fe2",
+      "size": 9326
+    },
+    {
+      "path": "dnf-native-demo/src/act_runtime.cpp",
+      "sha256": "6f57baa391ff776ae8d40e7ca9a25e7a32b326960f7188f0399a9b96b0b7c12f",
+      "size": 120998
+    },
+    {
+      "path": "dnf-native-demo/src/act_service.cpp",
+      "sha256": "1fec4ed718d1882fc2f60e7976c35e8acbf03eb9c036ee101b7eb3b311ecb2c7",
+      "size": 7345
+    },
+    {
+      "path": "dnf-native-demo/src/act_world_host.cpp",
+      "sha256": "1c8805ae287bb63e2ef9e554bafe40b380b2904787031f8f9aab7005cfb4ca0d",
+      "size": 64702
+    },
+    {
+      "path": "dnf-native-demo/src/character_attack.cpp",
+      "sha256": "5a591c665b8ee6cf1caadf4e488dff525af25980e58f6dde005d0518efb1d9cd",
+      "size": 1708
+    },
+    {
+      "path": "dnf-native-demo/src/combat.cpp",
+      "sha256": "04c8ca344c01be4838f51888cc682767add0769a0bd4dbfa3f7f919239725811",
+      "size": 153569
+    },
+    {
+      "path": "dnf-native-demo/src/effect_plan.cpp",
+      "sha256": "71208cb8da791ca055a73f9559838a37c43c4e3beedaca1e9b93eb0663227695",
+      "size": 6574
+    },
+    {
+      "path": "dnf-native-demo/src/experimental_character.cpp",
+      "sha256": "92550bcc0251098fc3eb51d311632eabe001b4f0b871c03dc267f8bc3c708d51",
+      "size": 37879
+    },
+    {
+      "path": "dnf-native-demo/src/experimental_world_adapter.cpp",
+      "sha256": "81edec04a68010683a48d906f9e6bcd2107b9755a451229da365ef376a7e36c2",
+      "size": 17994
+    },
+    {
+      "path": "dnf-native-demo/src/main.cpp",
+      "sha256": "f505a1d6e63199dbbc945329778419a9d9412c02f697f7c33faec78e2fc7cde1",
+      "size": 131561
+    },
+    {
+      "path": "dnf-native-demo/src/monster_effects.cpp",
+      "sha256": "668c8a3ebd2c52628e9a620cb65d9b3c1e5dba8cb3b63d4b1385c14b98285df1",
+      "size": 23504
+    },
+    {
+      "path": "dnf-native-demo/src/objects.cpp",
+      "sha256": "d98108fc7b3c35ff2c2f9f4fc841d39e6ab897b6ea265f33bb987a880431618c",
+      "size": 31027
+    },
+    {
+      "path": "dnf-native-demo/src/renderer.cpp",
+      "sha256": "e25cfd1cff10fdfe984ba66cebfdf008a4c371b7a7e3709e7f4c5db83c463ea6",
+      "size": 38418
+    },
+    {
+      "path": "dnf-native-demo/src/resources.cpp",
+      "sha256": "7d0b5cf9335217dcb8cecabf1f149de8f3731c535a8e73d06546f644c99cabed",
+      "size": 38120
+    },
+    {
+      "path": "dnf-native-demo/src/simulation.cpp",
+      "sha256": "6513a85cab5c87299b754e728595464afef715c11695f4904c77683bcfaa5f77",
+      "size": 13580
+    },
+    {
+      "path": "dnf-native-demo/src/storage.cpp",
+      "sha256": "2016610d3f9961cec3ffbab985f346025182a87c63a437ac1b1438fad0b21f7b",
+      "size": 57516
+    },
+    {
+      "path": "dnf-native-demo/tests/test_act_world_host.cpp",
+      "sha256": "2a65c59897e7a0e1419398c7466201f8439a9c9ee667c995e8a334649a094356",
+      "size": 33547
+    },
+    {
+      "path": "dnf-native-demo/tests/test_character_attack.cpp",
+      "sha256": "41c12ddad8f7d839e1e065c588f7b637d96871ca8b9414b7f9c685993bc9d875",
+      "size": 13745
+    },
+    {
+      "path": "dnf-native-demo/tests/test_simulation.cpp",
+      "sha256": "81dca213de7881a2af6e01b966ae3adc6af1676667f32f2957532814dfd3511b",
+      "size": 37636
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_animation.cpp",
+      "sha256": "369d4823fa12911daf72f12c9a780af195cb2f0c8bac5e2898def9d8ca73cd1f",
+      "size": 13085
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_animation.hpp",
+      "sha256": "0a78c8691dbc001b222dfa649455c55a5d0c7e97ced60c13b14d5f76e9830b20",
+      "size": 2890
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview.cpp",
+      "sha256": "7aa79def8d0a4d9bf8cdaf0cb9b9915aa418e5136b2ab07437ca57fce83e146e",
+      "size": 33936
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview_scene.cpp",
+      "sha256": "4c19d1ceebbd3bc2753e67aa4b19f63203a8a9d0658318b3f0b7dae2ed4724ee",
+      "size": 36381
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview_scene.hpp",
+      "sha256": "af70d53fca598a943887e15484aaaed0e377c5dfbe11c61e4579cf6b1fe50685",
+      "size": 2719
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_hardattack/README.md",
+      "sha256": "20b94ac4dd1cf607be17b358d58ad7eabe05f765ee4cbf5e82ea0cadaa59f1f4",
+      "size": 3214
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_motion/README.md",
+      "sha256": "1a5ae006fa54460454ae313a57ef1fa21a38280a5887bca0ab69a80b28d93681",
+      "size": 10959
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_motion/motion-contract.json",
+      "sha256": "f7a3663348bcab45e14e69c5b7eaa1c8118cd56a4485afb0e03ef7de6b89f1de",
+      "size": 11370
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_motion/native-ani-vectors.json",
+      "sha256": "4df4d32f2cece0d9658eba32c43bddbd024dca1548f505efb1b5ca4c32fb41ae",
+      "size": 13591
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_native_skill_slots/equipment-contract.md",
+      "sha256": "873a923fa5901bcc4865ef91d8bb3ceab55ad4d738eafd4e186a3cae37369523",
+      "size": 8698
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_timeline/README.md",
+      "sha256": "e31c292b8b5110d112f37376ab7eb9eb0660a28a501f958deabbb747a3054406",
+      "size": 1791
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_timeline/evidence-index.json",
+      "sha256": "0934fe078feae3482e3d06cb94ea7e655e5a224d8f5850e84bfa380deed7046a",
+      "size": 2096
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/analysis/combat_timeline/frame_advance.asm",
+      "sha256": "55ac08f1659e7102722c271e303e96012d645812003423c377f980992568d4dd",
+      "size": 7813
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/combat-preview/controllers.py",
+      "sha256": "d58a1b841d5a2e0a758d170c7181a8646874f7e83ad0db8ea5ed26499a582e4e",
+      "size": 8679
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/combat-preview/spawned.py",
+      "sha256": "ca8d33893a22cf9edf877f5f2e65e086deee3549180ef6d246607288030f4d8b",
+      "size": 4020
+    },
+    {
+      "path": "reverse-60us/releases/20261020-01/combat-preview/web/timeline.js",
+      "sha256": "49c3fe0aab14a5161d68a843f055409bb6b6da67b108b242969bb083eba7b106",
+      "size": 1472
+    }
+  ],
+  "identity_capture_utc": "2026-10-19T17:09:55.253008+00:00",
+  "companion_sha256": "c061233f12e13a45c5dc9a508b73e4bb05010fa35fa445737b411c355bdb2503"
+}

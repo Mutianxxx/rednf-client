@@ -1,0 +1,1269 @@
+{
+  "path": "character/swordman/effect/animation/bloodboom/finish_bloodboom_shockwave.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        6
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Priest/Effect/BlueDragon/exp_nova.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -173,
+        -49
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[FLIP TYPE]",
+      "values": [
+        "HORIZON"
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 120
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Priest/Effect/BlueDragon/exp_nova.img",
+        0
+      ],
+      "offset": 125
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -173,
+        -49
+      ],
+      "offset": 140
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.2000000476837158,
+        1.2000000476837158
+      ],
+      "offset": 155
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "offset": 170
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 195
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 205
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 215
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 225
+    },
+    {
+      "tag": "[FLIP TYPE]",
+      "values": [
+        "HORIZON"
+      ],
+      "offset": 235
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 245
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Priest/Effect/BlueDragon/exp_nova.img",
+        0
+      ],
+      "offset": 250
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -173,
+        -49
+      ],
+      "offset": 265
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.2999999523162842,
+        1.2999999523162842
+      ],
+      "offset": 280
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        0,
+        0,
+        204
+      ],
+      "offset": 295
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 320
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 330
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 350
+    },
+    {
+      "tag": "[FLIP TYPE]",
+      "values": [
+        "HORIZON"
+      ],
+      "offset": 360
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 370
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Priest/Effect/BlueDragon/exp_nova.img",
+        0
+      ],
+      "offset": 375
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -173,
+        -49
+      ],
+      "offset": 390
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.350000023841858,
+        1.350000023841858
+      ],
+      "offset": 405
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        0,
+        0,
+        153
+      ],
+      "offset": 420
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 445
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 455
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 465
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 475
+    },
+    {
+      "tag": "[FLIP TYPE]",
+      "values": [
+        "HORIZON"
+      ],
+      "offset": 485
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 495
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Priest/Effect/BlueDragon/exp_nova.img",
+        0
+      ],
+      "offset": 500
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -173,
+        -49
+      ],
+      "offset": 515
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.399999976158142,
+        1.399999976158142
+      ],
+      "offset": 530
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        0,
+        0,
+        0
+      ],
+      "offset": 545
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 570
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 580
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 590
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 600
+    },
+    {
+      "tag": "[FLIP TYPE]",
+      "values": [
+        "HORIZON"
+      ],
+      "offset": 610
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 620
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 625
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -173,
+        -49
+      ],
+      "offset": 640
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.399999976158142,
+        1.399999976158142
+      ],
+      "offset": 655
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        0,
+        0,
+        0
+      ],
+      "offset": 670
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 695
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 2444436,
+      "value": "Character/Priest/Effect/BlueDragon/exp_nova.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967123,
+      "value": -173
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967247,
+      "value": -49
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 65,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 95,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 208432,
+      "value": "[FLIP TYPE]"
+    },
+    {
+      "offset": 115,
+      "type": 6,
+      "raw": 208456,
+      "value": "HORIZON"
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 125,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 130,
+      "type": 6,
+      "raw": 2444436,
+      "value": "Character/Priest/Effect/BlueDragon/exp_nova.img"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 140,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 4294967123,
+      "value": -173
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 4294967247,
+      "value": -49
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 160,
+      "type": 2,
+      "raw": 1067030938,
+      "value": 1.2000000476837158
+    },
+    {
+      "offset": 165,
+      "type": 2,
+      "raw": 1067030938,
+      "value": 1.2000000476837158
+    },
+    {
+      "offset": 170,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 190,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 195,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 200,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 205,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 210,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 215,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 220,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 225,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 230,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 235,
+      "type": 3,
+      "raw": 208432,
+      "value": "[FLIP TYPE]"
+    },
+    {
+      "offset": 240,
+      "type": 6,
+      "raw": 208456,
+      "value": "HORIZON"
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 250,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 255,
+      "type": 6,
+      "raw": 2444436,
+      "value": "Character/Priest/Effect/BlueDragon/exp_nova.img"
+    },
+    {
+      "offset": 260,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 265,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 4294967123,
+      "value": -173
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 4294967247,
+      "value": -49
+    },
+    {
+      "offset": 280,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 285,
+      "type": 2,
+      "raw": 1067869798,
+      "value": 1.2999999523162842
+    },
+    {
+      "offset": 290,
+      "type": 2,
+      "raw": 1067869798,
+      "value": 1.2999999523162842
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 300,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 305,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 310,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 315,
+      "type": 0,
+      "raw": 204,
+      "value": 204
+    },
+    {
+      "offset": 320,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 325,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 330,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 335,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 350,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 355,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 360,
+      "type": 3,
+      "raw": 208432,
+      "value": "[FLIP TYPE]"
+    },
+    {
+      "offset": 365,
+      "type": 6,
+      "raw": 208456,
+      "value": "HORIZON"
+    },
+    {
+      "offset": 370,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 375,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 380,
+      "type": 6,
+      "raw": 2444436,
+      "value": "Character/Priest/Effect/BlueDragon/exp_nova.img"
+    },
+    {
+      "offset": 385,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 390,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 395,
+      "type": 0,
+      "raw": 4294967123,
+      "value": -173
+    },
+    {
+      "offset": 400,
+      "type": 0,
+      "raw": 4294967247,
+      "value": -49
+    },
+    {
+      "offset": 405,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 410,
+      "type": 2,
+      "raw": 1068289229,
+      "value": 1.350000023841858
+    },
+    {
+      "offset": 415,
+      "type": 2,
+      "raw": 1068289229,
+      "value": 1.350000023841858
+    },
+    {
+      "offset": 420,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 425,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 430,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 440,
+      "type": 0,
+      "raw": 153,
+      "value": 153
+    },
+    {
+      "offset": 445,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 450,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 455,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 460,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 465,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 470,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 475,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 480,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 485,
+      "type": 3,
+      "raw": 208432,
+      "value": "[FLIP TYPE]"
+    },
+    {
+      "offset": 490,
+      "type": 6,
+      "raw": 208456,
+      "value": "HORIZON"
+    },
+    {
+      "offset": 495,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 500,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 505,
+      "type": 6,
+      "raw": 2444436,
+      "value": "Character/Priest/Effect/BlueDragon/exp_nova.img"
+    },
+    {
+      "offset": 510,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 515,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 520,
+      "type": 0,
+      "raw": 4294967123,
+      "value": -173
+    },
+    {
+      "offset": 525,
+      "type": 0,
+      "raw": 4294967247,
+      "value": -49
+    },
+    {
+      "offset": 530,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 535,
+      "type": 2,
+      "raw": 1068708659,
+      "value": 1.399999976158142
+    },
+    {
+      "offset": 540,
+      "type": 2,
+      "raw": 1068708659,
+      "value": 1.399999976158142
+    },
+    {
+      "offset": 545,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 550,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 555,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 560,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 565,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 570,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 575,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 580,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 585,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 590,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 595,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 600,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 605,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 610,
+      "type": 3,
+      "raw": 208432,
+      "value": "[FLIP TYPE]"
+    },
+    {
+      "offset": 615,
+      "type": 6,
+      "raw": 208456,
+      "value": "HORIZON"
+    },
+    {
+      "offset": 620,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 625,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 630,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 635,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 640,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 645,
+      "type": 0,
+      "raw": 4294967123,
+      "value": -173
+    },
+    {
+      "offset": 650,
+      "type": 0,
+      "raw": 4294967247,
+      "value": -49
+    },
+    {
+      "offset": 655,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 660,
+      "type": 2,
+      "raw": 1068708659,
+      "value": 1.399999976158142
+    },
+    {
+      "offset": 665,
+      "type": 2,
+      "raw": 1068708659,
+      "value": 1.399999976158142
+    },
+    {
+      "offset": 670,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 675,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 680,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 685,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 690,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 695,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 700,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    }
+  ],
+  "raw_sha256": "dd6408064b7c1e0f218dd883bd8ae2df74585c9c4d7fdd2fb4fdea178d09384a"
+}

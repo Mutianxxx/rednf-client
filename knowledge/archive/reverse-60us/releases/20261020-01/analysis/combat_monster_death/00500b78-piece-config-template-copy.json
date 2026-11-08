@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x500b78",
+  "rva": "0x100b78",
+  "file_offset": 1051512,
+  "length": 36,
+  "bytes_sha256": "b0680d932f4a35bd01757f331217aedf042717dd0ea3621330f2e66f72e55757",
+  "status": "native_bytes",
+  "note": "MOB+7B4/+7B8/+7BC to Monster+1BA0/+1BA4/+1BA8.",
+  "disassembled": true
+}

@@ -1,0 +1,124 @@
+{
+  "created_at_utc": "2026-10-19T16:48:30.018773+00:00",
+  "release_id": "20261020-01",
+  "snapshot_manifest_sha256": "63ac1bcb6a204e1c0ae340dc2cc5d95402b5828fed7cb669bcfda9fde7d3aa7a",
+  "snapshot_verification_sha256": "f9faa5317f0afd1e6121103946f51590fe7b7a475973ab08f6d2e4fae9692670",
+  "changed_existing_files": [
+    {
+      "path": "agent.md",
+      "before_sha256": "8a32f91b5f3fe8966c7d91055a8f247d7a13d9690059a2e335e6346e94fc11a5",
+      "after_sha256": "3367b513a576d3764c84b856b0c1fd87abb6918b3656c13e4610ccf7bd7347e1"
+    },
+    {
+      "path": "dnf-native-demo/CURRENT_TASK.md",
+      "before_sha256": "b0e6ad0fef94e75158de58e8a734b60cc1bf667a822b86da583e21769d0da944",
+      "after_sha256": "40d27895c690f81d7e76a0dc4583856b414c5294529a112029f318327885d6a3"
+    },
+    {
+      "path": "rep-player-1031-pvf/CURRENT_TASK.md",
+      "before_sha256": "37c81e94e39e47baf667e7db8ac5904c02bd35d72dde7a26ede525b3d2655ec6",
+      "after_sha256": "44fa4b1d618d31bb5450436dbe294a7cb7b8d7c0e15d17f2bc0d7950f733a5ca"
+    },
+    {
+      "path": "rep-player-1031-pvf/docs/PROGRESS.md",
+      "before_sha256": "934bcd03fb134c78db50a567e89b2c06d53137d93865c90a700707b3a27db888",
+      "after_sha256": "48dedb5dc7c60c46b0a484f41f0f638df21d052cd9aa4f2e7743b67c99a0b9b5"
+    },
+    {
+      "path": "dnf-native-build-plan/README.md",
+      "before_sha256": "ed00cb9b2f12921442b4072abf62326a1ba68656723c42e32f2f63e5e85fbde1",
+      "after_sha256": "4a6346429757db3d81aa6962092e761f5d8cfd9dc4a78d6a1f80c6c7dea75a77"
+    },
+    {
+      "path": "dnf-native-build-plan/13-execution-plan-and-acceptance.md",
+      "before_sha256": "916b6ec461b64babb83caf506b4e2d7d5d682526eccb46fbcdea4d02af4eb39b",
+      "after_sha256": "cb816a3c016e3260d70ee9b7ed69a9f39fce1cbe6d2ea2785b00ed3d3ce3514e"
+    },
+    {
+      "path": "dnf-native-build-plan/appendices/task-graph.json",
+      "before_sha256": "cf9ecae96b14d607d744b7dc809c7781811e99ab603571225e41badda12fa6b9",
+      "after_sha256": "44b265e231060eb81514ffce5f91b9397fa7dd176895002eb0444f66510c937f"
+    }
+  ],
+  "new_task_graph": "dnf-native-build-plan/appendices/60us-integration-tasks.json",
+  "next_task": "R60-01",
+  "runtime_code_changed": false,
+  "game_exe_changed": false,
+  "integration_file_identities": [
+    {
+      "path": "reverse-60us/AGENTS.md",
+      "bytes": 1041,
+      "sha256": "511607fdedc460b014d0b00d3abfde05c72fc2ea83963d4607fd11d2db43ce47"
+    },
+    {
+      "path": "reverse-60us/README.md",
+      "bytes": 4719,
+      "sha256": "a1c6729003401b8fab561939bc56d28326c8b0b71556d240ee839126fd3ba285"
+    },
+    {
+      "path": "reverse-60us/CURRENT_TASK.md",
+      "bytes": 2690,
+      "sha256": "3abcd719914d1dd466cf47bd631861f0958bd48bbcf805046079ec458276ea10"
+    },
+    {
+      "path": "reverse-60us/PORTING_PLAN.md",
+      "bytes": 4232,
+      "sha256": "dd0df9c176b6e9fc7a5983aaf488098e3c4067f50d401947c47083dbdaf11783"
+    },
+    {
+      "path": "reverse-60us/MODULE_MAP.md",
+      "bytes": 5664,
+      "sha256": "7d1c38003e0aa2fe273d14c351a2af8819316dc0e6f44399f057514578eb27ec"
+    },
+    {
+      "path": "reverse-60us/Start-60US.cmd",
+      "bytes": 393,
+      "sha256": "d8daaa2fba5b4c784c9ae04a724f4c7f45b3b7e6c497067a40baa33c71475113"
+    },
+    {
+      "path": "reverse-60us/tools/verify_handoff.py",
+      "bytes": 9831,
+      "sha256": "0d1f0470221f82a9e82c4f562fe5b0b85f544f320920e6e6e6652b94bc1fce72"
+    },
+    {
+      "path": "agent.md",
+      "bytes": 26935,
+      "sha256": "3367b513a576d3764c84b856b0c1fd87abb6918b3656c13e4610ccf7bd7347e1"
+    },
+    {
+      "path": "dnf-native-demo/CURRENT_TASK.md",
+      "bytes": 88267,
+      "sha256": "40d27895c690f81d7e76a0dc4583856b414c5294529a112029f318327885d6a3"
+    },
+    {
+      "path": "rep-player-1031-pvf/CURRENT_TASK.md",
+      "bytes": 3722,
+      "sha256": "44fa4b1d618d31bb5450436dbe294a7cb7b8d7c0e15d17f2bc0d7950f733a5ca"
+    },
+    {
+      "path": "rep-player-1031-pvf/docs/PROGRESS.md",
+      "bytes": 8285,
+      "sha256": "48dedb5dc7c60c46b0a484f41f0f638df21d052cd9aa4f2e7743b67c99a0b9b5"
+    },
+    {
+      "path": "dnf-native-build-plan/README.md",
+      "bytes": 5752,
+      "sha256": "4a6346429757db3d81aa6962092e761f5d8cfd9dc4a78d6a1f80c6c7dea75a77"
+    },
+    {
+      "path": "dnf-native-build-plan/13-execution-plan-and-acceptance.md",
+      "bytes": 13316,
+      "sha256": "cb816a3c016e3260d70ee9b7ed69a9f39fce1cbe6d2ea2785b00ed3d3ce3514e"
+    },
+    {
+      "path": "dnf-native-build-plan/appendices/task-graph.json",
+      "bytes": 7071,
+      "sha256": "44b265e231060eb81514ffce5f91b9397fa7dd176895002eb0444f66510c937f"
+    },
+    {
+      "path": "dnf-native-build-plan/appendices/60us-integration-tasks.json",
+      "bytes": 4167,
+      "sha256": "f4f5fbae0a15ea4aaccd1f57f672cbd909d0f778d299caa8edcc9cb4a3e11f67"
+    }
+  ]
+}

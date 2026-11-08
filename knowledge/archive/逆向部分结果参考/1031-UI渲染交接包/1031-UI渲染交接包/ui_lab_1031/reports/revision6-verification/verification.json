@@ -1,0 +1,1083 @@
+{
+  "passed": true,
+  "observer_revision": 6,
+  "checks": [
+    {
+      "name": "all bounded native evidence files retain pinned hashes",
+      "passed": true
+    },
+    {
+      "name": "six runtime geometry guards bind the exact native evidence ranges",
+      "passed": true
+    },
+    {
+      "name": "36 configuration entries expose support and runtime gaps",
+      "passed": true
+    },
+    {
+      "name": "CBT group 1 preserves independent highlighter",
+      "passed": true
+    },
+    {
+      "name": "CBT group 2 preserves independent highlighter",
+      "passed": true
+    },
+    {
+      "name": "CBT group 3 preserves independent highlighter",
+      "passed": true
+    },
+    {
+      "name": "CBT group 4 preserves independent highlighter",
+      "passed": true
+    },
+    {
+      "name": "CBT group 5 preserves independent highlighter",
+      "passed": true
+    },
+    {
+      "name": "CBT group 6 preserves independent highlighter",
+      "passed": true
+    },
+    {
+      "name": "CBT group 7 preserves independent highlighter",
+      "passed": true
+    },
+    {
+      "name": "CBT group 8 preserves independent highlighter",
+      "passed": true
+    },
+    {
+      "name": "CBT native group refuses 0",
+      "passed": true
+    },
+    {
+      "name": "CBT native group refuses 9",
+      "passed": true
+    },
+    {
+      "name": "CBT native group refuses -1",
+      "passed": true
+    },
+    {
+      "name": "CBT numeric IMG remains explicitly missing",
+      "passed": true
+    },
+    {
+      "name": "CBT numeric IMG exposes protected-entry evidence without assuming an ordinal mapping",
+      "passed": true
+    },
+    {
+      "name": "CBT absent highlight is never frame minus one",
+      "passed": true
+    },
+    {
+      "name": "EVN 60-record schematic uses 12 columns",
+      "passed": true
+    },
+    {
+      "name": "EVN two image branches and linked string provenance",
+      "passed": true
+    },
+    {
+      "name": "WDM 216 records and 100 internal markers survive integration",
+      "passed": true
+    },
+    {
+      "name": "WDM region and Common retain separate instance identities",
+      "passed": true
+    },
+    {
+      "name": "both unlocated map images remain diagnosed",
+      "passed": true
+    },
+    {
+      "name": "STM draws only main and chosen append frame",
+      "passed": true
+    },
+    {
+      "name": "STM five-column slots and four-column stages remain raw",
+      "passed": true
+    },
+    {
+      "name": "STM ID index uses district-local ordinal",
+      "passed": true
+    },
+    {
+      "name": "rectangle conversion clamps negative then truncates positive WORD",
+      "passed": true
+    },
+    {
+      "name": "native negative rotation with screen-axis nonuniform scaling",
+      "passed": true
+    },
+    {
+      "name": "negative crop and reflected nonuniform scale remain independent",
+      "passed": true
+    },
+    {
+      "name": "wrapper center sentinel uses integer half logical size",
+      "passed": true
+    },
+    {
+      "name": "secondary center resolves from source image half-size at zero rotation",
+      "passed": true
+    },
+    {
+      "name": "nonzero rotation does not invent a secondary center substitution",
+      "passed": true
+    },
+    {
+      "name": "interleaved draw operations retain sequence and instance generation",
+      "passed": true
+    },
+    {
+      "name": "per-request clipping restores independently without a stack",
+      "passed": true
+    },
+    {
+      "name": "draw coordinates avoid adding parent position again",
+      "passed": true
+    },
+    {
+      "name": "preview applies zero-rotation secondary center from source image rather than texture dimensions",
+      "passed": true
+    },
+    {
+      "name": "preview keeps nonzero-rotation secondary center explicitly unsupported",
+      "passed": true
+    },
+    {
+      "name": "scene clip cuts pixels at the recorded screen edge",
+      "passed": true
+    },
+    {
+      "name": "later overlapping image is painted above earlier image",
+      "passed": true
+    },
+    {
+      "name": "same resource in two instances retains independent generation and clip",
+      "passed": true
+    },
+    {
+      "name": "legacy images-only view remains readable without invented state",
+      "passed": true
+    },
+    {
+      "name": "old unclassified diagnostics remain readable",
+      "passed": true
+    },
+    {
+      "name": "source type7 is not drawn when destination takes an alternate consumer",
+      "passed": true
+    },
+    {
+      "name": "raw captured destination type is honored without model enrichment",
+      "passed": true
+    },
+    {
+      "name": "captured destination type7 retains legitimate drawing without legacy destination gaps",
+      "passed": true
+    },
+    {
+      "name": "out-of-bound transform has a specific diagnostic",
+      "passed": true
+    },
+    {
+      "name": "missing captured generation retains the association reason",
+      "passed": true
+    },
+    {
+      "name": "cbt offline package retains configuration and diagnostics",
+      "passed": true
+    },
+    {
+      "name": "evn offline package retains configuration and diagnostics",
+      "passed": true
+    },
+    {
+      "name": "stm offline package retains configuration and diagnostics",
+      "passed": true
+    },
+    {
+      "name": "wdm offline package retains configuration and diagnostics",
+      "passed": true
+    },
+    {
+      "name": "ambiguous physical members never select an implicit priority",
+      "passed": true
+    },
+    {
+      "name": "byte-identical duplicate IMG may render with every physical candidate retained",
+      "passed": true
+    },
+    {
+      "name": "content-conflicting duplicate IMG requires an explicit physical candidate",
+      "passed": true
+    },
+    {
+      "name": "missing WDM map IMG is not replaced by a near-name candidate",
+      "passed": true
+    },
+    {
+      "name": "TenSLX CFB directory and LZMA wrapper remain explicitly partial",
+      "passed": true
+    },
+    {
+      "name": "TenSLX DLL static export does not imply a recovered caller",
+      "passed": true
+    },
+    {
+      "name": "CP949 RTF text extraction preserves Korean without replacement",
+      "passed": true
+    },
+    {
+      "name": "resource follow-up reconciles all gap and format counts",
+      "passed": true
+    },
+    {
+      "name": "new geometry and statistics diagnostics are transition-limited",
+      "passed": true
+    },
+    {
+      "name": "stop result includes graphics ownership failure",
+      "passed": true
+    },
+    {
+      "name": "resource ambiguity notice retains evidence and suppresses repeated previews",
+      "passed": true
+    },
+    {
+      "name": "listener configuration controls update actual preview",
+      "passed": true
+    },
+    {
+      "name": "resource panel enumerates every explicit archive candidate",
+      "passed": true
+    }
+  ],
+  "renders": [
+    {
+      "source": "ui/pvp/channel/channelbutton.cbt",
+      "image": "cbt.png",
+      "diagnostics": {
+        "issues": [
+          {
+            "category": "runtime_evidence",
+            "reason": "Configuration candidate; runtime visibility and business state are unobserved"
+          },
+          {
+            "category": "unknown_state",
+            "reason": "CBT input names and actual runtime group are unconfirmed"
+          }
+        ],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 1,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 1
+        },
+        "support": "partial configuration preview",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "resources": {
+        "interface/newstyle/windows/pvp_channel_list.img:0": {
+          "source_reads": {
+            "interface/newstyle/windows/pvp_channel_list.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows.NPK",
+              "offset": 2167311,
+              "length": 246496,
+              "member_sha256": "9560cb6fe13b353e80dbe076b73946d4213d5d73dbba05de4b7464223bfaa510"
+            }
+          }
+        },
+        "interface/newstyle/windows/pvp_channel_list.img:7": {
+          "source_reads": {
+            "interface/newstyle/windows/pvp_channel_list.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_newstyle_windows.NPK",
+              "offset": 2167311,
+              "length": 246496,
+              "member_sha256": "9560cb6fe13b353e80dbe076b73946d4213d5d73dbba05de4b7464223bfaa510"
+            }
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/event/informationbuttoninfo.evn",
+      "image": "evn.png",
+      "diagnostics": {
+        "issues": [
+          {
+            "category": "runtime_evidence",
+            "reason": "Configuration candidate; runtime visibility and business state are unobserved"
+          },
+          {
+            "category": "unknown_state",
+            "reason": "EVN business visibility, ID24 special path, dynamic tooltip and ANI clock unobserved"
+          }
+        ],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 1,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 1
+        },
+        "support": "partial configuration preview",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "resources": {
+        "interface2/hud/information_button/information_button.img:1": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:4": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:7": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:13": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:16": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:19": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:22": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:25": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:31": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:28": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:34": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:37": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:40": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:43": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:46": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:0": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:0": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:58": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:79": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:85": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:88": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:94": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:91": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:97": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:100": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:106": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:109": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:112": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button.img:115": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 580,
+              "length": 175033,
+              "member_sha256": "62b8e5a3e621bea294fcc679773cb3e34620fa0e8d248e751c81e7fcf7fb6117"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:253": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:45": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:66": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:73": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:1": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:7": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:19": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:10": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:16": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:13": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:22": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:25": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:28": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:34": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        },
+        "interface2/hud/information_button/information_button_tw.img:32": {
+          "source_reads": {
+            "interface2/hud/information_button/information_button_tw.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_hud_information_button.NPK",
+              "offset": 175613,
+              "length": 270096,
+              "member_sha256": "6253d3777f99a29e7ee234c76f25c40202f42798afb908da7c67a5a8a3cbed2a"
+            }
+          }
+        }
+      }
+    },
+    {
+      "source": "stagemap/advancealtar.stm",
+      "image": "stm.png",
+      "diagnostics": {
+        "issues": [
+          {
+            "category": "runtime_evidence",
+            "reason": "Configuration candidate; runtime visibility and business state are unobserved"
+          },
+          {
+            "category": "unknown_state",
+            "reason": "STM slot columns 2..5 and stage columns 2..4 have no verified draw consumer; retained raw"
+          },
+          {
+            "category": "unconfirmed_geometry",
+            "reason": "STM main/append alignment shown at preview origin; native placement unconfirmed"
+          }
+        ],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 1,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 1,
+          "runtime_evidence": 1
+        },
+        "support": "partial configuration preview",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "resources": {
+        "interface/advancealtar/selectstage/advancealtar_map01.img:0": {
+          "source_reads": {
+            "interface/advancealtar/selectstage/advancealtar_map01.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_advancealtar_selectstage.NPK",
+              "offset": 1900,
+              "length": 2361928,
+              "member_sha256": "da0c3a0a4700a6db45a55e68b741bada5d38b16addf986b2bc6f0b25796e0dd1"
+            }
+          }
+        },
+        "interface/advancealtar/selectstage/advancealtar_map01.img:2": {
+          "source_reads": {
+            "interface/advancealtar/selectstage/advancealtar_map01.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface_advancealtar_selectstage.NPK",
+              "offset": 1900,
+              "length": 2361928,
+              "member_sha256": "da0c3a0a4700a6db45a55e68b741bada5d38b16addf986b2bc6f0b25796e0dd1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "source": "worldmap/2018_epicroad2.wdm",
+      "image": "wdm.png",
+      "diagnostics": {
+        "issues": [
+          {
+            "category": "runtime_evidence",
+            "reason": "Configuration candidate; runtime visibility and business state are unobserved"
+          },
+          {
+            "category": "unconfirmed_geometry",
+            "reason": "PVF 布局候选，未与本次原生实例绑定",
+            "role": "region"
+          },
+          {
+            "category": "unconfirmed_geometry",
+            "reason": "根窗口 tile type/size、对齐、裁剪、控件状态与字体待核验；原值保存在 instances",
+            "role": "region"
+          },
+          {
+            "category": "unconfirmed_geometry",
+            "reason": "PVF 布局候选，未与本次原生实例绑定",
+            "role": "common"
+          },
+          {
+            "category": "unconfirmed_geometry",
+            "reason": "根窗口 tile type/size、对齐、裁剪、控件状态与字体待核验；原值保存在 instances",
+            "role": "common"
+          },
+          {
+            "category": "unknown_state",
+            "reason": "WDM dungeon conditions, balloon, switchbox and ACT scheduling unconfirmed"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "worldmap/2018_epicroad2.wdm:region:worldmap/ui/forestofsilent.ui#262",
+            "type": "[balloon]",
+            "name": "IDC_WORLDMAP_BUTTON1"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "worldmap/2018_epicroad2.wdm:region:worldmap/ui/forestofsilent.ui#332",
+            "type": "[balloon]",
+            "name": "IDC_WORLDMAP_BUTTON2"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "worldmap/2018_epicroad2.wdm:region:worldmap/ui/forestofsilent.ui#402",
+            "type": "[balloon]",
+            "name": "IDC_WORLDMAP_BUTTON6"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "worldmap/2018_epicroad2.wdm:region:worldmap/ui/forestofsilent.ui#472",
+            "type": "[balloon]",
+            "name": "IDC_WORLDMAP_BUTTON7"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "dedicated control schema not implemented; raw fields retained",
+            "key": "worldmap/2018_epicroad2.wdm:region:worldmap/ui/forestofsilent.ui#587",
+            "type": "[switchbox]",
+            "name": "IDC_WORLDMAP_SWITCHBOX"
+          },
+          {
+            "category": "unknown_structure",
+            "reason": "native string ID unresolved: 36187",
+            "key": "worldmap/2018_epicroad2.wdm:common:worldmap/ui/common/common.ui#592",
+            "type": "[text]",
+            "name": "IDC_WORLDMAP_DIFFICULTY_GUIDE_TEXT"
+          }
+        ],
+        "summary": {
+          "unknown_structure": 6,
+          "unknown_state": 1,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 4,
+          "runtime_evidence": 1
+        },
+        "support": "partial configuration preview",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "resources": {
+        "replica/framework/background.img:0": {
+          "source_reads": {
+            "replica/framework/background.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_map_guildagit_2019.NPK",
+              "offset": 19643592,
+              "length": 534057,
+              "member_sha256": "69ab66ddabf70a2c9d10675edf15e99043c238d83dc35cddc1ab9d06aebb79fe"
+            }
+          }
+        },
+        "interface2/selectdungeon/selectdungeonhell/selectdungeonhell.img:0": {
+          "source_reads": {
+            "interface2/selectdungeon/selectdungeonhell/selectdungeonhell.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_selectdungeon_selectdungeonhell.NPK",
+              "offset": 580,
+              "length": 522506,
+              "member_sha256": "963ba07633942718ad6b13e8e33d150f81301b4542666e8df905c461e0488c08"
+            }
+          }
+        },
+        "interface2/dungeonexercise/dungeonexercise.img:0": {
+          "source_reads": {
+            "interface2/dungeonexercise/dungeonexercise.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_dungeonexercise.NPK",
+              "offset": 316,
+              "length": 457885,
+              "member_sha256": "78feb3766e6ee4f78c9b6a50815351bd3c19b0cf413f03bab367a92e239236b5"
+            }
+          }
+        },
+        "interface2/dungeonexercise/dungeonexercise.img:2": {
+          "source_reads": {
+            "interface2/dungeonexercise/dungeonexercise.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_dungeonexercise.NPK",
+              "offset": 316,
+              "length": 457885,
+              "member_sha256": "78feb3766e6ee4f78c9b6a50815351bd3c19b0cf413f03bab367a92e239236b5"
+            }
+          }
+        },
+        "worldmap/selectdungeon02.img:79": {
+          "source_reads": {
+            "worldmap/selectdungeon02.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_worldmap.NPK",
+              "offset": 17911211,
+              "length": 326902,
+              "member_sha256": "99fafebbf418390a5a616b6ce80f13362e14b8c132bfa2fd2ffdce311b6ec36e"
+            }
+          }
+        },
+        "worldmap/selectdungeon02.img:64": {
+          "source_reads": {
+            "worldmap/selectdungeon02.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_worldmap.NPK",
+              "offset": 17911211,
+              "length": 326902,
+              "member_sha256": "99fafebbf418390a5a616b6ce80f13362e14b8c132bfa2fd2ffdce311b6ec36e"
+            }
+          }
+        },
+        "worldmap/selectdungeon02.img:76": {
+          "source_reads": {
+            "worldmap/selectdungeon02.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_worldmap.NPK",
+              "offset": 17911211,
+              "length": 326902,
+              "member_sha256": "99fafebbf418390a5a616b6ce80f13362e14b8c132bfa2fd2ffdce311b6ec36e"
+            }
+          }
+        },
+        "worldmap/selectdungeon02.img:80": {
+          "source_reads": {
+            "worldmap/selectdungeon02.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_worldmap.NPK",
+              "offset": 17911211,
+              "length": 326902,
+              "member_sha256": "99fafebbf418390a5a616b6ce80f13362e14b8c132bfa2fd2ffdce311b6ec36e"
+            }
+          }
+        },
+        "interface/windowcommon.img:66": {
+          "source_reads": {
+            "interface/windowcommon.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+              "offset": 52489763,
+              "length": 188805,
+              "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+            }
+          }
+        },
+        "interface/windowcommon.img:67": {
+          "source_reads": {
+            "interface/windowcommon.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+              "offset": 52489763,
+              "length": 188805,
+              "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+            }
+          }
+        },
+        "interface/windowcommon.img:68": {
+          "source_reads": {
+            "interface/windowcommon.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+              "offset": 52489763,
+              "length": 188805,
+              "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+            }
+          }
+        },
+        "interface/windowcommon.img:69": {
+          "source_reads": {
+            "interface/windowcommon.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+              "offset": 52489763,
+              "length": 188805,
+              "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+            }
+          }
+        },
+        "interface/windowcommon.img:239": {
+          "source_reads": {
+            "interface/windowcommon.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+              "offset": 52489763,
+              "length": 188805,
+              "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+            }
+          }
+        },
+        "replica_interface/select_map.img:0": {
+          "source_reads": {
+            "replica_interface/select_map.img": {
+              "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_map_guildagit_2019.NPK",
+              "offset": 20177649,
+              "length": 40766,
+              "member_sha256": "2e20075c0cf5dff291fcd8d32f4c18e0ff33f4f61507b661e1d167adea1e507f"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "dll_sha256": "bbb78bd3ff282eb64ae3b27cefa85b63a69e04b8b9bc17e7af0aec6875fe0dfa",
+  "geometry_evidence_sha256": "f5987846674b0cc23b25614109321667a624c747056cbc668eab4501fac99c6a",
+  "remaining_evidence_sha256": "6189efabceafdbfe76c7d6de0972cfd538b66869ee525599643982f89812f3aa",
+  "native_visual_acceptance": "pending",
+  "performance_overhead": "pending"
+}

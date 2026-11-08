@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4fdbb6",
+  "rva": "0xfdbb6",
+  "file_offset": 1039286,
+  "length": 40,
+  "bytes_sha256": "d2fd545f739cb1adc9c01eee7d655cdf80eb8e1da5fcde9da94fb5c046bf5307",
+  "status": "native_bytes",
+  "note": "Zero initialization; no native setter-to-one established.",
+  "disassembled": true
+}

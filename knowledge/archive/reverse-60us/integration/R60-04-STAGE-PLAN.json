@@ -1,0 +1,1461 @@
+{
+  "schema": "dnf-r60-04-stage-preparation-v1",
+  "prepared_for": "root integration, R60-03 currently being integrated",
+  "date_local": "2026-10-20",
+  "status": "read_only_preparation_complete_no_production_implementation",
+  "companion_markdown": "reverse-60us/integration/R60-04-STAGE-PLAN.md",
+  "scope": {
+    "order": [
+      "鬼斩 / HardAttack",
+      "三段斩 / TripleSlash",
+      "波动爆发 / ReleaseWave"
+    ],
+    "job_id": 0,
+    "source_confirmed_skill_ids": [
+      5,
+      8,
+      32
+    ],
+    "excluded_substitution": {
+      "skill_id": 20,
+      "path": "skill/swordman/normalwave.skl",
+      "name": "地裂 · 波动剑",
+      "reason": "Existing projectile is a different source skill; retain regression."
+    },
+    "final_gate": "All ten non-Creator 1031 characters, supported advancements, awakenings, all active/passive skills and P01-P19 remain required.",
+    "write_scope": [
+      "reverse-60us/integration/R60-04-STAGE-PLAN.md",
+      "reverse-60us/integration/R60-04-STAGE-PLAN.json"
+    ]
+  },
+  "evidence_policy": {
+    "source_verified": "1031 source member fields and current registries only",
+    "native_static": "60US byte/resource contract within stated branch; no original-client observed execution",
+    "cross_version": "All recovered 60US controller behavior adapted to 1031 remains cross_version_inference unless independently confirmed.",
+    "do_not_transplant": [
+      "addresses",
+      "object offsets",
+      "state IDs",
+      "unverified skill/weapon enums",
+      "text PVF grammar",
+      "resource frame tables or attack boxes"
+    ],
+    "do_not_claim": [
+      "complete skill controller",
+      "all-character beta completion",
+      "original-client timing, pixel, audio or feel equivalence",
+      "historical frozen verification counts as current runtime checks"
+    ]
+  },
+  "source_identities": {
+    "release": "reverse-60us/releases/20261020-01",
+    "native_exe_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "native_pvf_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "current_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "current_exe_sha256_from_existing_inventory": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+    "current_exe_rehashed_this_review": false,
+    "current_pvf_rehashed_this_review": true
+  },
+  "input_snapshot": {
+    "captured_at_utc": "2026-10-19T17:45:06.080367+00:00",
+    "frozen_manifest": {
+      "path": "reverse-60us/package-manifest.json",
+      "sha256": "63ac1bcb6a204e1c0ae340dc2cc5d95402b5828fed7cb669bcfda9fde7d3aa7a",
+      "release": "20261020-01",
+      "groups": [
+        {
+          "group": "combat_hardattack",
+          "checked_file_count": 17,
+          "all_match": true,
+          "failures": []
+        },
+        {
+          "group": "combat_tripleslash",
+          "checked_file_count": 144,
+          "all_match": true,
+          "failures": []
+        },
+        {
+          "group": "combat_cast_state",
+          "checked_file_count": 153,
+          "all_match": true,
+          "failures": []
+        },
+        {
+          "group": "combat_spawned_object",
+          "checked_file_count": 154,
+          "all_match": true,
+          "failures": []
+        }
+      ],
+      "consumed_documents": [
+        {
+          "path": "analysis/combat_hardattack/evidence-index.json",
+          "sha256": "578116078d438a5b48d34ac96d4b9806c18913cd259c3854bc25953a0c55b28f",
+          "bytes": 2488,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_hardattack/README.md",
+          "sha256": "20b94ac4dd1cf607be17b358d58ad7eabe05f765ee4cbf5e82ea0cadaa59f1f4",
+          "bytes": 3214,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_tripleslash/evidence.json",
+          "sha256": "58add76c3b21e17d68cb53b2008c8bbbb9de8a11f01a34a1b4e129ab7939620f",
+          "bytes": 16451,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_tripleslash/pvf-sources.json",
+          "sha256": "74a3d12521271ce54b7882fdb18e56e3809393d699897853580a98e20ce7b77d",
+          "bytes": 23539,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_tripleslash/README.md",
+          "sha256": "8c1fb3b783c3ea4a97f772c7866f4b8ddc5e5f83f9a9853c91b596b5872d389b",
+          "bytes": 10239,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_tripleslash/tripleslash-contract.json",
+          "sha256": "58a1c215023f865a13c4fd8124a85d904763737336b21a117369505915545814",
+          "bytes": 726974,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_cast_state/evidence-index.json",
+          "sha256": "8ea5385549825c631cb621446591f4f347c04234191e24a1013018ecc33a3b0b",
+          "bytes": 20548,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_cast_state/phase-animation-contract.json",
+          "sha256": "2927c8aa23cda8ebea873a0ba84fc319c8f9dd48f04a125a8cb98277c0266ead",
+          "bytes": 123598,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_cast_state/README.md",
+          "sha256": "cde04d8bf835fcfa849eb7092b2528adb12baa23b22f4e57a8607fea0155eb4a",
+          "bytes": 9439,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_spawned_object/evidence-index.json",
+          "sha256": "6267a6d8ba3d08a643a7afd6bd75660a370c4ea031ecd7986436d2dfb0f97871",
+          "bytes": 30905,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_spawned_object/preview-contract.json",
+          "sha256": "33d86d45ae73963390aaeabf6545e9a95c35e3c3a8f026eb3bdd8baa524d9b8f",
+          "bytes": 165694,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_spawned_object/README.md",
+          "sha256": "54ed372002fc779d0fc0edc4531cb449779d9b21f93541237cb03eb2d1c255be",
+          "bytes": 9372,
+          "manifest_match": true
+        },
+        {
+          "path": "analysis/combat_spawned_object/resources.json",
+          "sha256": "d8a455103c3997fba3501ca93ee181ff72ec3b62e1b1a8b6b6a8835798a09a30",
+          "bytes": 303145,
+          "manifest_match": true
+        }
+      ]
+    },
+    "current_inputs": [
+      {
+        "path": "dnf-native-demo/src/combat.cpp",
+        "sha256": "7fea526719afa03e37cdee1d06b442fa52db407290db8722755e185e860aa3e3",
+        "bytes": 169801
+      },
+      {
+        "path": "dnf-native-demo/src/experimental_character.cpp",
+        "sha256": "4ab44bc3db99a9f8672e2e0004cf5a560acc9a0ee28602e0f35fff3f1bee576e",
+        "bytes": 45246
+      },
+      {
+        "path": "dnf-native-demo/src/experimental_world_adapter.cpp",
+        "sha256": "dbcff9e45e86f3d173e82d9dded621da8ef00c3f0b2082d3f9c3420872d8493a",
+        "bytes": 18361
+      },
+      {
+        "path": "dnf-native-demo/src/character_attack.cpp",
+        "sha256": "9946a88dc04cf4ca280d99ac36f05c70118df64ba6971170cd498eeb1996a41f",
+        "bytes": 2341
+      },
+      {
+        "path": "dnf-native-demo/src/appearance.cpp",
+        "sha256": "306012c5747b1e9e1e4599ca0a4e27093ea847e8cc5d99af8b1b8394314642f8",
+        "bytes": 11743
+      },
+      {
+        "path": "dnf-native-demo/src/equipment_motion.cpp",
+        "sha256": "3df117068ec5f8b9acd7d4ba8acc70a1fd858501e6aa17cb5b2819752e73e93c",
+        "bytes": 6556
+      },
+      {
+        "path": "dnf-native-demo/src/resources.cpp",
+        "sha256": "e52d817354514be7d8bf31e606c56b58ef53ce2d44d974e4b52aa634f5014978",
+        "bytes": 39955
+      },
+      {
+        "path": "dnf-native-demo/src/renderer.cpp",
+        "sha256": "5e1364f19564c87a212d7b9fb3f08618797a98619552ca3d8e25fc43e066f165",
+        "bytes": 39235
+      },
+      {
+        "path": "dnf-native-demo/src/main.cpp",
+        "sha256": "8837360e68a0ebbfe51c382852edaf96e3306ec670768bff3ba836f5fe236d02",
+        "bytes": 132326
+      },
+      {
+        "path": "dnf-native-demo/src/damage_runtime.cpp",
+        "sha256": "1a70e474781e7c415da068bc66c6e43accbe6cc237b4e76b1ff9b74a3aa087c4",
+        "bytes": 26852
+      },
+      {
+        "path": "dnf-native-demo/src/combat_attributes.cpp",
+        "sha256": "3a127b94f3c07b70a2dedfd2c0ce8ec8127a7b35a8c48b60949d938baed8f2d9",
+        "bytes": 36614
+      },
+      {
+        "path": "dnf-native-demo/src/effect_plan.cpp",
+        "sha256": "078d39f35b9a129965402f164be7474995133f2ead292b4c44f28db10f30d956",
+        "bytes": 13990
+      },
+      {
+        "path": "dnf-native-demo/include/dnf/combat.hpp",
+        "sha256": "42a06b169402613b9e94f73b1d00239bda09b137ce6f3d35cb89e4d9b0260331",
+        "bytes": 30144
+      },
+      {
+        "path": "dnf-native-demo/include/dnf/resources.hpp",
+        "sha256": "bbfd5aef70c8b836a8685ebfe1c2cedeba58b0c7575d8d7ff4641c7a06f73ada",
+        "bytes": 8017
+      },
+      {
+        "path": "dnf-native-demo/include/dnf/effect_plan.hpp",
+        "sha256": "8a9426d3cd58697cc03a35a488d8c4d2a394e98c85b63e45cf7a9c4b4d36471b",
+        "bytes": 1820
+      },
+      {
+        "path": "dnf-native-demo/tests/test_skill_effects.cpp",
+        "sha256": "c6a8e4966aa013b8bdbd9e1364355f39e9a6623b992c69a702dd98111d446469",
+        "bytes": 32026
+      },
+      {
+        "path": "dnf-native-demo/tests/test_native_attack.cpp",
+        "sha256": "3c8f257b14e03b098c334b2c98fc8611838dad3afd4eb8ddff0ee2bb2f8849db",
+        "bytes": 4221
+      },
+      {
+        "path": "dnf-native-demo/tests/test_character_attack.cpp",
+        "sha256": "41c12ddad8f7d839e1e065c588f7b637d96871ca8b9414b7f9c685993bc9d875",
+        "bytes": 13745
+      },
+      {
+        "path": "dnf-native-demo/tests/test_skill_eligibility.cpp",
+        "sha256": "7bac32e3587bd1dc521ad52eee13f3682bd467440a2346652b42239a523fd1e3",
+        "bytes": 8767
+      },
+      {
+        "path": "dnf-native-demo/reports/skill-preview-1031/skill-preview-map.json",
+        "sha256": "8a37a7f151b3fdf4f76669a43245782a49658d24edefd7b86ba62f87ebce0b01",
+        "bytes": 4430266
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/all-characters/inventory.json",
+        "sha256": "dcdaca1e9ee68b152b27b896ebb99003874757a14a59439056a7100136932309",
+        "bytes": 1991843
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/all-characters/skills/00-swordman.json",
+        "sha256": "163bf95c1aae01736b5f843133c4d49d0a0a4cc00731f098908eca804994f28b",
+        "bytes": 22989523
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/all-characters/animation-models.json",
+        "sha256": "b0d2a8dac997dae5621da3eff72a3a11474e32182ecffc76b0344bb5eb13e07f",
+        "bytes": 8060903
+      },
+      {
+        "path": "dnf-native-demo/reports/combat-native-reverse/all-characters/attackinfo-models.json",
+        "sha256": "dabd41c00a42c19fef478d36f28ac22b4436f116723b935ce0a70ab86f472d77",
+        "bytes": 3590102
+      },
+      {
+        "path": "dnf-native-demo/reports/skill-chain-rework/animations.json",
+        "sha256": "39def42c90ad9dd8bfd23127b949dfec296ad2bae260eb24da4e20dce8df506e",
+        "bytes": 657192
+      },
+      {
+        "path": "dnf-native-demo/reports/skill-chain-rework/scripts.json",
+        "sha256": "db3ffc2b1e5dfb79aa32e842b7a39e9b25686fb5b89c464ebae92de7912c4184",
+        "bytes": 5145601
+      },
+      {
+        "path": "dnf-native-demo/reports/skill-chain-rework/source-version.json",
+        "sha256": "b7a4841c7bec9bfdebe5dc47db9c46f052e5c8bae2bfbf5f72397941fbe3c30d",
+        "bytes": 715
+      },
+      {
+        "path": "dnf-result/tools/pvf_reader.py",
+        "sha256": "7f4f3c62d4923c8a3db9a2e21cc67b60651c02430d9e17760f7b6c1ca64f827e",
+        "bytes": 7998
+      },
+      {
+        "path": "dnf-result/tools/pc_animation.py",
+        "sha256": "384ed0f1562bf9b13510be6eb1e6001f7eed8054ea6319c61902368db775629e",
+        "bytes": 3830
+      },
+      {
+        "path": "reverse-60us/integration/R60-03-REVIEW.md",
+        "sha256": "a38d6db15aff2ce53c39d48483078aa811950d97c40bbedc52b2fc70ab2f600f",
+        "bytes": 13200
+      }
+    ]
+  },
+  "runtime_snapshot_note": "Source hashes describe R60-03 integration inputs, not a built artifact. Recheck before implementing; parent changes must be adapted without overwriting current source.",
+  "current_source_binding_facts": {
+    "character": {
+      "path": "character/swordman/swordman.chr",
+      "sha256": "4e6b75601f4c15fdef9f9c3e70c162c89dab195fde12b7d2785e659f40787729"
+    },
+    "skills": [
+      {
+        "id": 5,
+        "name": "鬼斩",
+        "path": "skill/swordman/hardattack.skl",
+        "sha256": "5a7e6077118e70c50baf6c07de14a367bd147d8c5e66c5c0381c979b6c7a179c",
+        "motion_slots": [
+          1
+        ],
+        "attack_slots": [
+          0
+        ],
+        "level_info_width": 2
+      },
+      {
+        "id": 8,
+        "name": "三段斩",
+        "path": "skill/swordman/tripleslash.skl",
+        "sha256": "031c2f0741efaf4783f7200da634c05de810a3844099b3f94956089231cd5e1c",
+        "motion_slots": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "attack_slots": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "level_info_width": 6
+      },
+      {
+        "id": 32,
+        "name": "波动爆发",
+        "path": "skill/swordman/releasewave.skl",
+        "sha256": "0584cea678e3f0f7b1107f685a0cc39603675d8073db2f3dcf1b968efe02bfe5",
+        "required_level": 25,
+        "fitness_growtype": [
+          4
+        ],
+        "growtype_maximum_level": [
+          0,
+          10,
+          10,
+          10,
+          30,
+          10
+        ],
+        "level_info_width": 1,
+        "runtime_registered_in_main_skill_table": false
+      },
+      {
+        "id": 6,
+        "name": "噬灵鬼斩",
+        "path": "skill/swordman/hardattackcharge.skl",
+        "sha256": "f8d15af729eb9068b961c0ad58a873cdab39fead082504bb52d3765ab3da62c5",
+        "fitness_growtype": [
+          2
+        ],
+        "ordinary_hardattack_native_contract_requires_level": 0
+      },
+      {
+        "id": 4,
+        "name": "光剑精通",
+        "path": "skill/swordman/lightswordmastery.skl",
+        "sha256": "76dcdee981b9cd75dbe8a92207f12bc33902e843d2a5f0b646e67f1eeb24c523",
+        "dungeon_static_data": [
+          3,
+          5,
+          9,
+          7,
+          2,
+          500,
+          1500,
+          0,
+          0,
+          1000,
+          5000
+        ],
+        "level_info_width": 16
+      },
+      {
+        "id": 13,
+        "name": "太刀精通",
+        "path": "skill/swordman/blademastery.skl",
+        "sha256": "ae911145a97bac8c542b1cc24dd9e7939a49ce57bff5c98b9f6b2e5914ce2253",
+        "dungeon_static_data": [
+          5,
+          3,
+          7,
+          3,
+          350,
+          3
+        ],
+        "level_info_width": 14
+      },
+      {
+        "id": 27,
+        "name": "武器奥义",
+        "path": "skill/swordman/weaponmasteryup.skl",
+        "sha256": "479d1ea12efa488ac182d440a58cdfe45d6780054b3c6444b4dddbe4d4d88eb9",
+        "fitness_growtype": [
+          1
+        ],
+        "static_data": [
+          12,
+          13,
+          14,
+          15,
+          4
+        ],
+        "level_info_width": 5
+      }
+    ],
+    "motion_refs": [
+      {
+        "tag": "[etc motion]",
+        "slot": 1,
+        "path": "character/swordman/animation/hardattack.ani",
+        "sha256": "a2678e37dacbbb4f0005fead4cc55b346111631f357d58ca97699dc2ad0baa2e",
+        "frames": 18,
+        "duration_ms": 950,
+        "attack_box_count": 0
+      },
+      {
+        "tag": "[throw motion 2-1]",
+        "slot": 0,
+        "path": "character/swordman/animation/summon1.ani",
+        "sha256": "d904fbcec4e94805a37b2829000bf3b4fd2a0050a2cb81a83f633ac086f05ec1",
+        "frames": 3,
+        "duration_ms": 150
+      },
+      {
+        "tag": "[throw motion 2-2]",
+        "slot": 0,
+        "path": "character/swordman/animation/summon2.ani",
+        "sha256": "23f8689780a790171496fc1b505b4794c9464b1c49ee099e8d682ccbcbf0d43b",
+        "frames": 12,
+        "duration_ms": 600
+      }
+    ],
+    "tripleslash_body": {
+      "paths": "character/swordman/animation/tripleslash{1..5}.ani",
+      "frames_each": 5,
+      "delays_ms_each": [
+        70,
+        70,
+        70,
+        70,
+        300
+      ],
+      "duration_ms_each": 580,
+      "attack_box_count_each": 0,
+      "ani_sound_count_each": 0
+    },
+    "tripleslash_effects": {
+      "paths": "character/swordman/effect/animation/tripleslash/{slash1..5,move1..2}.ani",
+      "selected_existing_report_effects_verified": [
+        "slash1",
+        "slash2",
+        "slash3",
+        "move1",
+        "move2"
+      ],
+      "selected_effect_delays_ms": [
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "selected_effect_attack_box_count_each": 0,
+      "selected_effect_ani_sound_count_each": 0
+    },
+    "hardattack_effects": {
+      "paths": [
+        "character/swordman/effect/animation/hardattack1.ani",
+        "character/swordman/effect/animation/hardattack2.ani"
+      ],
+      "frames_each": 8,
+      "duration_ms_each": 550,
+      "attack_box_count_each": 0
+    },
+    "tripleslash_stage_initializer": {
+      "field_order": [
+        "animation",
+        "moveSpeed",
+        "armor",
+        "invincible",
+        "duration",
+        "movement",
+        "motion"
+      ],
+      "current_peak_speeds": [
+        360,
+        360,
+        300
+      ],
+      "current_duration_override": 0,
+      "note": "360/360/300 are moveSpeed, not duration; current actual completion uses ANI duration580."
+    },
+    "tripleslash_three_end_atk": {
+      "tag": "[etc attack info]",
+      "slot": 7,
+      "path": "character/swordman/attackinfo/tripleslash3down.atk",
+      "sha256": "c7c49463539ec272284d0561002dc2c596444e9d2fb6459c6818ee661b02082d",
+      "push": 300,
+      "lift": 200,
+      "down": true
+    }
+  },
+  "current_releasewave_resource_probe": {
+    "source_pvf": "DNF1031客户端\\Script.pvf",
+    "source_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "resources": [
+      {
+        "path": "skill/swordman/releasewave.skl",
+        "sha256": "0584cea678e3f0f7b1107f685a0cc39603675d8073db2f3dcf1b968efe02bfe5",
+        "bytes": 1197,
+        "archive_offset": 69971356,
+        "exists": true,
+        "fields": [
+          {
+            "tag": "[required level]",
+            "offset": 32,
+            "values": [
+              25
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[type]",
+            "offset": 52,
+            "values": [
+              "[active]"
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[growtype maximum level]",
+            "offset": 82,
+            "values": [
+              0,
+              10,
+              10,
+              10,
+              30,
+              10
+            ],
+            "full_count": 6
+          },
+          {
+            "tag": "[skill fitness growtype]",
+            "offset": 117,
+            "values": [
+              4
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[command]",
+            "offset": 167,
+            "values": [
+              "(UP)",
+              ",",
+              "(UP)",
+              ",",
+              "(SKILL)"
+            ],
+            "full_count": 5
+          },
+          {
+            "tag": "[consume MP]",
+            "offset": 222,
+            "values": [
+              65,
+              630
+            ],
+            "full_count": 2
+          },
+          {
+            "tag": "[cool time]",
+            "offset": 237,
+            "values": [
+              15000,
+              0
+            ],
+            "full_count": 2
+          },
+          {
+            "tag": "[static data]",
+            "offset": 252,
+            "values": [
+              600
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[level info]",
+            "offset": 267,
+            "values": [
+              1,
+              929,
+              1016,
+              1105,
+              1194,
+              1282,
+              1370,
+              1459,
+              1547,
+              1636,
+              1724,
+              1813,
+              1901,
+              1990,
+              2078,
+              2166,
+              2255,
+              2344,
+              2431,
+              2520
+            ],
+            "full_count": 71
+          },
+          {
+            "tag": "[cool time]",
+            "offset": 642,
+            "values": [
+              25000,
+              0
+            ],
+            "full_count": 2
+          },
+          {
+            "tag": "[static data]",
+            "offset": 657,
+            "values": [
+              800
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[level info]",
+            "offset": 672,
+            "values": [
+              1,
+              62,
+              68,
+              74,
+              80,
+              85,
+              91,
+              97,
+              103,
+              109,
+              115,
+              121,
+              127,
+              133,
+              139,
+              144,
+              150,
+              156,
+              162,
+              168
+            ],
+            "full_count": 71
+          },
+          {
+            "tag": "[name]",
+            "offset": 1062,
+            "values": [
+              "波动爆发"
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[level property]",
+            "offset": 1122,
+            "values": [
+              1,
+              99,
+              "魔法攻击力 : <int>",
+              -2,
+              0,
+              1
+            ],
+            "full_count": 6
+          }
+        ]
+      },
+      {
+        "path": "passiveobject/character/swordman/releasewave.obj",
+        "sha256": "e18ed3b2925db2ae7fe2a3a4bcb9f3c85bd71b7077421afb4fc1d5d4bebb913e",
+        "bytes": 77,
+        "archive_offset": 84238692,
+        "exists": true,
+        "fields": [
+          {
+            "tag": "[floating height]",
+            "offset": 2,
+            "values": [
+              1
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[basic motion]",
+            "offset": 42,
+            "values": [
+              "Animation/ReleaseWave.ani"
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[attack info]",
+            "offset": 52,
+            "values": [
+              "AttackInfo/ReleaseWave.atk"
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[name]",
+            "offset": 62,
+            "values": [
+              "波动爆发"
+            ],
+            "full_count": 1
+          }
+        ]
+      },
+      {
+        "path": "passiveobject/character/swordman/attackinfo/releasewave.atk",
+        "sha256": "51cc5a9383fc9a6823b8ef5f8b5040353a3772ab27df3c660b1a6c5ed456b880",
+        "bytes": 97,
+        "archive_offset": 105890748,
+        "exists": true,
+        "fields": [
+          {
+            "tag": "[attack type]",
+            "offset": 2,
+            "values": [],
+            "full_count": 0
+          },
+          {
+            "tag": "[no element]",
+            "offset": 27,
+            "values": [],
+            "full_count": 0
+          },
+          {
+            "tag": "[down]",
+            "offset": 37,
+            "values": [],
+            "full_count": 0
+          },
+          {
+            "tag": "[push aside]",
+            "offset": 42,
+            "values": [
+              400
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[lift up]",
+            "offset": 52,
+            "values": [
+              400
+            ],
+            "full_count": 1
+          },
+          {
+            "tag": "[hit wav]",
+            "offset": 62,
+            "values": [
+              "R_SHOCKWAVE_HIT"
+            ],
+            "full_count": 1
+          }
+        ]
+      },
+      {
+        "path": "character/swordman/effect/animation/releasewave1.ani",
+        "sha256": "605f88bbbd99f8ea735974732b4d494517396131014b6be4126d2c2aeba9bdfe",
+        "bytes": 235,
+        "archive_offset": 143587692,
+        "exists": true,
+        "frame_count": 7,
+        "duration_ms": 490,
+        "delays": [
+          70,
+          70,
+          70,
+          70,
+          70,
+          70,
+          70
+        ],
+        "images": [
+          "Character/Swordman/Effect/ReleaseWave1.img",
+          "Character/Swordman/Effect/ReleaseWave1.img",
+          "Character/Swordman/Effect/ReleaseWave1.img",
+          "Character/Swordman/Effect/ReleaseWave1.img",
+          "Character/Swordman/Effect/ReleaseWave1.img",
+          "Character/Swordman/Effect/ReleaseWave1.img",
+          null
+        ],
+        "attack_boxes": [
+          {
+            "frame": 0,
+            "boxes": []
+          },
+          {
+            "frame": 1,
+            "boxes": []
+          },
+          {
+            "frame": 2,
+            "boxes": []
+          },
+          {
+            "frame": 3,
+            "boxes": []
+          },
+          {
+            "frame": 4,
+            "boxes": []
+          },
+          {
+            "frame": 5,
+            "boxes": []
+          },
+          {
+            "frame": 6,
+            "boxes": []
+          }
+        ],
+        "issues": []
+      },
+      {
+        "path": "character/swordman/effect/animation/releasewave2.ani",
+        "sha256": "8b5a79104db217a5c52df07f017e7169a777a8882a1168dd4737916b4640c17e",
+        "bytes": 209,
+        "archive_offset": 144679016,
+        "exists": true,
+        "frame_count": 6,
+        "duration_ms": 420,
+        "delays": [
+          70,
+          70,
+          70,
+          70,
+          70,
+          70
+        ],
+        "images": [
+          "Character/Swordman/Effect/ReleaseWave2.img",
+          "Character/Swordman/Effect/ReleaseWave2.img",
+          "Character/Swordman/Effect/ReleaseWave2.img",
+          "Character/Swordman/Effect/ReleaseWave2.img",
+          "Character/Swordman/Effect/ReleaseWave2.img",
+          null
+        ],
+        "attack_boxes": [
+          {
+            "frame": 0,
+            "boxes": []
+          },
+          {
+            "frame": 1,
+            "boxes": []
+          },
+          {
+            "frame": 2,
+            "boxes": []
+          },
+          {
+            "frame": 3,
+            "boxes": []
+          },
+          {
+            "frame": 4,
+            "boxes": []
+          },
+          {
+            "frame": 5,
+            "boxes": []
+          }
+        ],
+        "issues": []
+      },
+      {
+        "path": "passiveobject/character/swordman/animation/releasewave.ani",
+        "sha256": "7649cf39533b015c11b23139b05f958dba1fd50421a314d83ee28ebc2b9d5303",
+        "bytes": 259,
+        "archive_offset": 164351832,
+        "exists": true,
+        "frame_count": 5,
+        "duration_ms": 400,
+        "delays": [
+          80,
+          80,
+          80,
+          80,
+          80
+        ],
+        "images": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "attack_boxes": [
+          {
+            "frame": 0,
+            "boxes": [
+              {
+                "type": 15,
+                "values": [
+                  -84,
+                  -50,
+                  0,
+                  168,
+                  100,
+                  234
+                ],
+                "offset": 11,
+                "end": 37
+              }
+            ]
+          },
+          {
+            "frame": 1,
+            "boxes": [
+              {
+                "type": 15,
+                "values": [
+                  -84,
+                  -50,
+                  0,
+                  168,
+                  100,
+                  234
+                ],
+                "offset": 61,
+                "end": 87
+              }
+            ]
+          },
+          {
+            "frame": 2,
+            "boxes": [
+              {
+                "type": 15,
+                "values": [
+                  -84,
+                  -50,
+                  0,
+                  168,
+                  100,
+                  234
+                ],
+                "offset": 111,
+                "end": 137
+              }
+            ]
+          },
+          {
+            "frame": 3,
+            "boxes": [
+              {
+                "type": 15,
+                "values": [
+                  -84,
+                  -50,
+                  0,
+                  168,
+                  100,
+                  234
+                ],
+                "offset": 161,
+                "end": 187
+              }
+            ]
+          },
+          {
+            "frame": 4,
+            "boxes": [
+              {
+                "type": 15,
+                "values": [
+                  -84,
+                  -50,
+                  0,
+                  168,
+                  100,
+                  200
+                ],
+                "offset": 211,
+                "end": 237
+              }
+            ]
+          }
+        ],
+        "issues": []
+      }
+    ],
+    "passiveobject_registrations": [
+      {
+        "id": 20018,
+        "value": "Character/Swordman/ReleaseWave.obj",
+        "token_index": 2302
+      }
+    ],
+    "scope": "Read six current PVF resources with existing pvf_reader/pc_animation, plus source object registration. No writes or native execution.",
+    "fields_are_bounded_excerpts": true,
+    "field_values_limit": 20,
+    "full_raw_source": "Original current PVF retained read-only; existing skill audit retains ordered tokens. Repeated mode fields are not collapsed by this probe.",
+    "animation_structural_check": "Three complete ANI decodes, structural_issues empty; not a native parser/rendering oracle.",
+    "material_version_difference": {
+      "resource": "passiveobject/character/swordman/animation/releasewave.ani",
+      "native_60us_all_frame_boxes": [
+        -84,
+        -50,
+        0,
+        168,
+        100,
+        234
+      ],
+      "current_1031_frame0_to3_box": [
+        -84,
+        -50,
+        0,
+        168,
+        100,
+        234
+      ],
+      "current_1031_frame4_box": [
+        -84,
+        -50,
+        0,
+        168,
+        100,
+        200
+      ],
+      "action": "Consume each actual source frame. Do not copy 60US height234 into final1031 frame."
+    }
+  },
+  "findings": [
+    {
+      "id": "04-COMMON-CLOCK",
+      "source": "src/combat.cpp::startStage/attackFrames/simulateTick",
+      "status": "gap",
+      "current": "Skill stages clear basic playback, advance by stage elapsed, and publish poseFrame; clocked attackFrames is restricted to active_<0.",
+      "preserve": "R60-03 ordinary/experimental cursors and character_attack Snapshot equipment projection.",
+      "minimum": "Add one phase cursor and frame visits for selected skill controllers; same body/weapon/boxes/sounds/phase boundary snapshot.",
+      "classification": "cross_version_inference"
+    },
+    {
+      "id": "04-COMMON-EFFECT",
+      "source": "src/combat.cpp::advanceEffectClocks and Effect",
+      "status": "partial",
+      "current": "Effects have independent cursors/ALS visits but install SourceDelay100 rate100; attached infers pauseWithPlayer.",
+      "minimum": "Explicit clock/position/rate/lifetime bindings, independent reset per attach; do not double-apply rate/pause."
+    },
+    {
+      "id": "04-HA-VISUAL",
+      "source": "src/combat.cpp::stageEffects, src/renderer.cpp::effect",
+      "status": "gap",
+      "current": "HardAttack1/2 created at offset0 and default layer1; no instance IMAGE RATE override.",
+      "native_static": "OffsetX40 mirrored, Y0, signed keys1/2; static0*f32(.01) overwrites visual IMAGE RATE X/Y; selected rate inheritance.",
+      "minimum": "Version-profile descriptor plus instance sampling override, separate from attack geometry."
+    },
+    {
+      "id": "04-HA-GEOMETRY",
+      "source": "src/combat.cpp::attackFrames",
+      "status": "conflicting_reconstruction",
+      "current": "Actual source weapon boxes plus reconstructed hardattack frames3..5 volume160x40x110.",
+      "source_fact": "Current body and both effect ANI have no attack boxes.",
+      "minimum": "New named profile suppresses old synthetic volume and consumes current weapon boxes; preserve legacy comparison and explicit missing-layer diagnostics."
+    },
+    {
+      "id": "04-TS-ATK",
+      "source": "src/combat.cpp::attackResponse, src/damage_runtime.cpp::damageSkillModifiers",
+      "status": "partial",
+      "current": "Three-segment percent/fixed columns0/3,0/3,1/4 exist; ATK path is tripleslash{phase+1}.atk.",
+      "minimum": "Explicit CHR ordinal binding: ordinary final uses slot7 TripleSlash3Down; five-stage mapping2..6. Current six-column SKL must not use frozen three-column out-of-range conclusions."
+    },
+    {
+      "id": "04-TS-QUEUE",
+      "source": "src/combat.cpp::requestSkill/matchCommand/simulateTick",
+      "status": "gap",
+      "current": "Early same-skill/key6 sets queued; continuation waits until ANI duration.",
+      "native_static": "Current frame>=3 admits next-segment request; priority1 continuation survives priority0 ended-idle.",
+      "minimum": "Owner/phase-bound pending arbitration using cursor frame, deliberate named early-input policy, once-only charge/CD commit."
+    },
+    {
+      "id": "04-TS-VARIANT",
+      "source": "src/combat.cpp constructor/passive list; source SKL4/13/27",
+      "status": "gap",
+      "current": "Only three stages; legacy four-weapon selector and passive subset cannot grant qualified five-stage branch.",
+      "minimum": "Current EQU subtype+source skill ledger adapter; threshold source facts preserved; 1031 mastery lift columns independently checked."
+    },
+    {
+      "id": "04-TS-FX",
+      "source": "src/combat.cpp::stageEffects",
+      "status": "partial",
+      "current": "Slash1..3 and SM_TRIPLE1..3 exist; Move1 always, hand offsets, default same layer; R_TSLASH absent from selected source ANI and branch.",
+      "minimum": "Slash key2/Move key1, Move1/2 alternation, independent reset+rate, per-segment detach, R_TSLASH once; end-sound rule for five segments."
+    },
+    {
+      "id": "04-TS-MOVEMENT",
+      "source": "Stage/MotionProfile and applyInput",
+      "status": "reconstructed_unresolved_native",
+      "current": "Peak360/360/300 and90/110ms ramp; left/right turns active skill, held turn after hitstop.",
+      "native_static": "Static600/-1000 setters and direction gates; full integration/clamping/collision constraints unresolved; particle index2 resource unresolved.",
+      "minimum": "Keep comparison policy and trace; do not claim native x(t), assign guessed type enums or fabricate particle asset."
+    },
+    {
+      "id": "04-RW-IDENTITY",
+      "source": "current registry and src/combat.cpp constructor",
+      "status": "missing_main_controller",
+      "current": "No skill32 registration; existing skill20 NormalWave projectile is different.",
+      "minimum": "Register current source32 behind normal source qualifications; retain separate20 regression."
+    },
+    {
+      "id": "04-RW-PHASE",
+      "source": "frozen combat_cast_state/combat_spawned_object and current CHR",
+      "status": "gap",
+      "native_static": "Phase0 apply emits two visuals, then gated object; phase0->1 retains skill/index; duration helper semantics unresolved.",
+      "minimum": "Pure descriptor+phase adapter; explicit inferred duration/owner gate; never generic phase1 spawn or source ANI duration as proven phase duration."
+    },
+    {
+      "id": "04-RW-ENTITY",
+      "source": "current OBJ/ANI/ATK; src/combat.cpp effects collision whitelist",
+      "status": "gap",
+      "current": "Whitelist only20/64/58/65, no32 entity factory/consumer.",
+      "minimum": "Separate visual and invisible attack instance roles, current registered OBJ resolver, actorXYZ speed0, source frames, owner/action/attack IDs, named scalar policy and trace."
+    },
+    {
+      "id": "04-RW-LIFECYCLE",
+      "status": "gap",
+      "native_static": "ANI ended holds tail; specific logical entity consumer requests remove, ANI update does not reset per-frame hit history.",
+      "minimum": "Entity-specific ended removal and persistent per-instance target ledger policy; owner cancellation paths; do not globally delete ended visuals."
+    },
+    {
+      "id": "04-EXPERIMENTAL",
+      "source": "src/experimental_character.cpp and src/experimental_world_adapter.cpp",
+      "status": "preserve_partial",
+      "current": "Actual job motion/ATK/cost/cursor/weapon consumer with private preflight candidate; 100% named ATK strategy and no specialized controllers.",
+      "minimum": "Reuse public mechanisms without stamping native_complete; no Swordman controller substitution for other jobs."
+    }
+  ],
+  "future_patch_sequence": [
+    {
+      "id": "04A",
+      "title": "Current-version source and qualification bindings",
+      "files": "New version descriptor; bounded combat binding entry; source checks",
+      "result": "Exact source registry/CHR/ATK/SKL/EQU references and preflight before MP/CD."
+    },
+    {
+      "id": "04B",
+      "title": "Skill-stage clock consumer",
+      "files": "combat.hpp/cpp; existing AnimationPlayback/Snapshot interfaces as needed",
+      "depends_on": [
+        "R60-03 integrated verified checkpoint",
+        "04A"
+      ],
+      "result": "One phase cursor, stable pending, same-tick first visits, pause/cancel."
+    },
+    {
+      "id": "04C",
+      "title": "Ordinary HardAttack closed consumer",
+      "depends_on": [
+        "04B"
+      ],
+      "result": "Version-bound anchor/layers/rate/IMAGE RATE override/source geometry, ordinary branch only."
+    },
+    {
+      "id": "04D",
+      "title": "Qualified TripleSlash3/5 consumer",
+      "depends_on": [
+        "04C"
+      ],
+      "result": "Frame3 pending priority, actual source end ATK, qualifications/columns/lift policy, sounds/effects and exit cleanup."
+    },
+    {
+      "id": "04E",
+      "title": "ReleaseWave phase/visual/invisible attack consumer",
+      "depends_on": [
+        "04D"
+      ],
+      "result": "Source qualification and true phase0 spawn/gate, empty-image collision, current frame4 box, hit ledger and ended removal; NormalWave20 preserved."
+    },
+    {
+      "id": "04F",
+      "title": "Isolated candidate and checkpoint",
+      "depends_on": [
+        "04E"
+      ],
+      "owner": "root serialized integration/build",
+      "result": "D drive new build/saves, bound source/EXE/evidence manifest, user/native status and complete checkpoint."
+    }
+  ],
+  "proposed_independent_04a32_scope": {
+    "status": "read_only_suggestion_only_no_implementation_authorized_by_this_document",
+    "candidate_files": [
+      "dnf-native-demo/include/dnf/releasewave_plan.hpp",
+      "dnf-native-demo/src/releasewave_plan.cpp",
+      "dnf-native-demo/tests/test_releasewave_plan.cpp"
+    ],
+    "root_owned_files": [
+      "combat.hpp/cpp",
+      "renderer.hpp/cpp",
+      "main.cpp",
+      "damage_runtime.cpp",
+      "CMakeLists.txt",
+      "build/package/checkpoint tools",
+      "shared progress/coverage files"
+    ],
+    "data_contract": "ReleaseWaveSourceContract: current SkillKey+SourceRef+SkillSourceData; CHR throw2 phase bindings; source OBJ registration/basic ANI/ATK; two visual source references; ordered phase0 visual then conditional logical-spawn plan; frame-wise source boxes; explicit policy identities and diagnostics.",
+    "pure_apis_suggested": [
+      "readReleaseWaveSourceContract(current content, current CharacterSource)",
+      "evaluateReleaseWaveQualification(current identity/learning snapshot, overrides isolated)",
+      "planReleaseWavePhaseEvent(contract, owner/action/phase snapshot, ownerGateResult, named scalar/timing policies)"
+    ],
+    "no_world_mutation": "Return value plans only; no MP/CD writes, World effects append, damage, RNG, rendering, live owner lookup or save mutation.",
+    "verification_scope": "Isolated source closure/phase ordering/owner-gate failure/empty-image boxes/frame4 height200 tests; root separately verifies actual World consumption, source learning costs, cleanup and build.",
+    "unresolved_boundaries": [
+      "native dynamic scalar formula",
+      "native phase duration helper",
+      "full ownership/network semantics",
+      "native accepted-hit repeat history",
+      "signed visual attachment argument full semantics"
+    ],
+    "progress_boundary": "A pure source/activation plan is infrastructure only; skill32 completion requires root actual World/normal input and collision/lifecycle integration."
+  },
+  "proposed_runtime_checks": [
+    {
+      "id": "source_identity_preflight",
+      "status": "not_run",
+      "assertions": [
+        "5/8/20/32 never substituted",
+        "current CHR slot7 and throw2 pair",
+        "20018 registered source object",
+        "bad resource before MP/CD commit; no half-published events/IDs/RNG"
+      ]
+    },
+    {
+      "id": "skill_clock_fixed_tick",
+      "status": "not_run",
+      "assertions": [
+        "30/60/144Hz and backlog equality",
+        "frame3 independent of source milliseconds/speed",
+        "same-tick frame0 and zero/short frame visits exactly once",
+        "paused rate refresh freezes pose; resume once"
+      ]
+    },
+    {
+      "id": "hardattack_visual_geometry",
+      "status": "not_run",
+      "assertions": [
+        "both-facing offset40 and keys1/2",
+        "nonunit source IMAGE RATE overwritten, not multiplied",
+        "source/cache not mutated; boxes unscaled",
+        "actual EQU source only; no synthetic box"
+      ]
+    },
+    {
+      "id": "tripleslash_variants",
+      "status": "not_run",
+      "assertions": [
+        "frame2/frame3 boundary and explicit early-input policy",
+        "priority1 continuation wins ended-idle0",
+        "three ATK2/3/7, five2..6",
+        "qualified subtype and mastery threshold gates",
+        "once MP and exitCD; new attackID per segment",
+        "alternating Move1/2 and sounds; detach only outgoing segment"
+      ]
+    },
+    {
+      "id": "equipment_root",
+      "status": "not_run",
+      "assertions": [
+        "body final300 vs child source70 projected clock",
+        "current real EQU/LAY body/weapon render/collision agreement",
+        "different frame count source preserved; unsupported layers diagnosed"
+      ]
+    },
+    {
+      "id": "releasewave_entity",
+      "status": "not_run",
+      "assertions": [
+        "phase0 two visuals before gate",
+        "gate fail visuals only; success one logical entity",
+        "actorXYZ speed0, floatingheight not blindly Z+1",
+        "empty image still samples attack boxes; final source height200",
+        "no per-frame ledger reset; newly entering target contact",
+        "specific ended removal; unrelated visuals retained"
+      ]
+    },
+    {
+      "id": "cancellation_restore",
+      "status": "not_run",
+      "assertions": [
+        "hitstop/end/interruption/death/map/character/script failure cleanup",
+        "no lingering protection/pending/layers/boxes",
+        "normal reload cancels transient actions and does not replay skills/rewards"
+      ]
+    },
+    {
+      "id": "existing_consumers",
+      "status": "not_run",
+      "assertions": [
+        "NormalWave20 separate regression",
+        "ordinary attacks and experimental actual-job equipment",
+        "ALS live instances/private preflight faults",
+        "related existing source/damage/room/restore checks"
+      ]
+    }
+  ],
+  "verification_this_review": {
+    "production_code_changed": false,
+    "builds_started": false,
+    "game_tests_run": false,
+    "original_client_run": false,
+    "full_rea_run": false,
+    "frozen_evidence_generators_run": false,
+    "frozen_integrity": {
+      "file_count": 468,
+      "all_match": true,
+      "meaning": "Byte identity only."
+    },
+    "source_read_checks": "Bounded source/report reads; six direct current PVF resources and object registration; full current PVF SHA256.",
+    "prior_test_source_read_only": [
+      "test_native_attack.cpp",
+      "test_character_attack.cpp",
+      "test_skill_effects.cpp",
+      "test_skill_eligibility.cpp"
+    ],
+    "user_play": "pending future candidate; user performs visuals, audio and feel",
+    "native_dynamic_comparison": "not_performed",
+    "delivery_claim": "Preparation documentation only; zero newly completed native controllers."
+  },
+  "final_input_recheck": {
+    "checked_at_utc": "2026-10-19T17:50:38.535908+00:00",
+    "source_inputs_rechecked": 30,
+    "stable_count": 28,
+    "changed_during_parent_integration": [
+      {
+        "path": "dnf-native-demo/src/combat.cpp",
+        "review_snapshot_sha256": "7fea526719afa03e37cdee1d06b442fa52db407290db8722755e185e860aa3e3",
+        "end_recheck_sha256": "0e26569175685f6d43cea0d28c8dc90f45dc9a3d743227b970ac58b0668feb90",
+        "bytes": 170170
+      },
+      {
+        "path": "reverse-60us/integration/R60-03-REVIEW.md",
+        "review_snapshot_sha256": "a38d6db15aff2ce53c39d48483078aa811950d97c40bbedc52b2fc70ab2f600f",
+        "end_recheck_sha256": "b1bcb6f70f88e08c4af982662e1cb9f014e5bbc67e1a5be7c2e54ce8cad49bfa",
+        "bytes": 15038
+      }
+    ],
+    "document_consistency_checks": [
+      {
+        "name": "scope exactly two outputs",
+        "pass": true
+      },
+      {
+        "name": "all six current source resources exist",
+        "pass": true
+      },
+      {
+        "name": "all three animations structurally decoded",
+        "pass": true
+      },
+      {
+        "name": "1031 releasewave no-image five frames",
+        "pass": true
+      },
+      {
+        "name": "1031 last frame box height200",
+        "pass": true
+      },
+      {
+        "name": "1031 first four boxes height234",
+        "pass": true
+      },
+      {
+        "name": "all future runtime checks remain not_run",
+        "pass": true
+      },
+      {
+        "name": "four frozen groups468 verified",
+        "pass": true
+      },
+      {
+        "name": "frozen manifest still unchanged",
+        "pass": true
+      },
+      {
+        "name": "companion markdown exists and machine link resolves",
+        "pass": true
+      },
+      {
+        "name": "future standalone module names unused",
+        "pass": true
+      }
+    ],
+    "changed_source_targeted_reread": {
+      "path": "dnf-native-demo/src/combat.cpp",
+      "sha256": "0e26569175685f6d43cea0d28c8dc90f45dc9a3d743227b970ac58b0668feb90",
+      "rechecked_functions": [
+        "constructor Stage mappings",
+        "requestSkill/startStage",
+        "attackFrames clock eligibility",
+        "stageEffects",
+        "advanceEffectClocks"
+      ],
+      "outcome": "R60-03/R4 parent changes retained; all documented three-skill gaps remain. No production mutation by this review.",
+      "review_document_sha256": "b1bcb6f70f88e08c4af982662e1cb9f014e5bbc67e1a5be7c2e54ce8cad49bfa"
+    }
+  }
+}

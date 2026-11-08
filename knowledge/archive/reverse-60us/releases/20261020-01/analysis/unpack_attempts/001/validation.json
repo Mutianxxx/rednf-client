@@ -1,0 +1,56 @@
+{
+  "sections": [
+    {
+      "name": ".text",
+      "original_raw_section_unchanged": true
+    },
+    {
+      "name": ".rsrc",
+      "original_raw_section_unchanged": true
+    },
+    {
+      "name": ".idata  ",
+      "original_raw_section_unchanged": true
+    },
+    {
+      "name": "jsrwqdbk",
+      "original_raw_section_unchanged": true
+    },
+    {
+      "name": "lfkklsnv",
+      "original_raw_section_unchanged": true
+    },
+    {
+      "name": ".SCY",
+      "original_raw_section_unchanged": true
+    },
+    {
+      "name": ".chui",
+      "original_raw_section_unchanged": true
+    }
+  ],
+  "originals": [
+    {
+      "path": "D:\\dnf\\60US\\DFO\\DFO.exe",
+      "sha256": "583928ddc0391396401440bd76391521b138c616b235ed18e615d5ab7333960a",
+      "matches_pre_attempt_hash": true
+    },
+    {
+      "path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "matches_pre_attempt_hash": true
+    },
+    {
+      "path": "D:\\dnf\\60US\\DFO\\Script.pvf",
+      "sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "matches_pre_attempt_hash": true
+    }
+  ],
+  "standalone_pid": 21936,
+  "check_remote_debugger_present_success": true,
+  "debugger_present": false,
+  "derived_descriptors": 189,
+  "derived_symbols": 965,
+  "preserved_unresolved_slot": "0xCAB634",
+  "all_gameplay_verified": false
+}

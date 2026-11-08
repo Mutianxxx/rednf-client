@@ -1,0 +1,76 @@
+name: Docker Publish to GHCR
+
+# 推送镜像到 GitHub Container Registry (ghcr.io)
+# 服务器端只需 docker compose pull 即可更新，无需本地 docker build
+on:
+  push:
+    branches: [ "master", "main" ]
+    paths-ignore:
+      - 'docs/**'
+      - '**.md'
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 QEMU（多架构支持）
+        uses: docker/setup-qemu-action@v3
+
+      - name: 设置 Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: 登录 GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 提取镜像元数据
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest
+            type=sha,prefix=
+
+      - name: 构建并推送镜像
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          target: production
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      # GHCR 包默认私有，改为 public 让部署服务器免登录拉取。
+      # 修改可见性需要 admin:packages 权限，GITHUB_TOKEN 通常 404，
+      # 失败不阻塞构建，首次需手动到 package settings 设置一次
+      - name: 尝试设置镜像为公开
+        continue-on-error: true
+        run: |
+          code=$(curl -s -o /tmp/vis.json -w '%{http_code}' -X PATCH \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/user/packages/container/dnf-pvf-tutorial \
+            -d '{"visibility":"public"}')
+          echo "HTTP $code"; cat /tmp/vis.json
+          if [ "$code" != "200" ]; then
+            echo "::warning::无法自动设置 public，请手动访问 https://github.com/users/springandme/packages/container/dnf-pvf-tutorial/settings 将可见性设为 Public"
+          fi

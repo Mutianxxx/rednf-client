@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4f0480",
+  "rva": "0xf0480",
+  "file_offset": 984192,
+  "length": 16,
+  "bytes_sha256": "a27bdf34bb8626ecf8468f473e6f41f25b6646d171b27a37843403b9c387b874",
+  "status": "native_bytes",
+  "note": "Reads byte24FC before dispatching4AC5F0; no field write here.",
+  "disassembled": true
+}

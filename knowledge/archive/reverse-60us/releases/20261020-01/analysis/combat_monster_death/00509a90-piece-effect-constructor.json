@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x509a90",
+  "rva": "0x109a90",
+  "file_offset": 1088144,
+  "length": 106,
+  "bytes_sha256": "df9c7429dc7605d799e8d244f37e8fbc7668aa609c295cfaf31d233a1cf59eb7",
+  "status": "native_bytes",
+  "note": "Installs exact vtableCD5B5C then81CFA0 with six explicit arguments.",
+  "disassembled": true
+}

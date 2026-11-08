@@ -1,0 +1,111 @@
+{
+  "source": {
+    "path": "D:\\dnf\\60US\\DFO\\Script.pvf",
+    "size": 140179584,
+    "sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "header": {
+      "guid": "13ff9a94-0204-0410-845a-ceeffe637190",
+      "version": 71295,
+      "tree_size": 7566568,
+      "tree_crc": "51647fbe",
+      "entry_count": 99501,
+      "key": "00000000",
+      "data_base": 7566624,
+      "tree_crc_verified": true,
+      "parsed_tree_bytes": 7566567,
+      "tree_padding_hex": "00"
+    }
+  },
+  "class_count": 6,
+  "classes": [
+    {
+      "class_id": 0,
+      "label": "Swordman",
+      "path": "character/swordman/swordman.chr",
+      "registered_skill_count": 117,
+      "animation_slots": 123,
+      "attack_info_slots": 72,
+      "empty_slots": 0
+    },
+    {
+      "class_id": 1,
+      "label": "Fighter",
+      "path": "character/fighter/fighter.chr",
+      "registered_skill_count": 121,
+      "animation_slots": 108,
+      "attack_info_slots": 53,
+      "empty_slots": 0
+    },
+    {
+      "class_id": 2,
+      "label": "Gunner",
+      "path": "character/gunner/gunner.chr",
+      "registered_skill_count": 115,
+      "animation_slots": 91,
+      "attack_info_slots": 14,
+      "empty_slots": 2
+    },
+    {
+      "class_id": 3,
+      "label": "Mage",
+      "path": "character/mage/mage.chr",
+      "registered_skill_count": 131,
+      "animation_slots": 79,
+      "attack_info_slots": 34,
+      "empty_slots": 0
+    },
+    {
+      "class_id": 4,
+      "label": "Priest",
+      "path": "character/priest/priest.chr",
+      "registered_skill_count": 97,
+      "animation_slots": 64,
+      "attack_info_slots": 35,
+      "empty_slots": 0
+    },
+    {
+      "class_id": 5,
+      "label": "ATGunner",
+      "path": "character/gunner/atgunner.chr",
+      "registered_skill_count": 107,
+      "animation_slots": 91,
+      "attack_info_slots": 14,
+      "empty_slots": 9
+    }
+  ],
+  "registered_skill_rows": 688,
+  "registered_distinct_skill_paths": 688,
+  "archive_skill_files": 690,
+  "unregistered_skill_files": [
+    "sample/skillsample.skl",
+    "sample/skillscriptmoduleseparationsample.skl"
+  ],
+  "missing_registered_skills": [],
+  "controller_status": {
+    "unknown": 688
+  },
+  "type_field_counts": {
+    "['[active]']": 362,
+    "['[passive]']": 326
+  },
+  "missing_chr_slots": [],
+  "parsed_document_count": 702,
+  "parse_warnings": [
+    {
+      "path": "skill/fighter/dashpunch.skl",
+      "kind": "unclosed_nested_block",
+      "name": "level info",
+      "offset": 2714,
+      "stopped_at": 4212
+    },
+    {
+      "path": "skill/mage/summonspiritwaterhigher.skl",
+      "kind": "unclosed_nested_block",
+      "name": "level info",
+      "offset": 3985,
+      "stopped_at": 6502
+    }
+  ],
+  "warnings": [],
+  "evidence_boundary": "PVF registration and ordered resource slots only; skill controllers, hit rules and runtime behavior unknown"
+}

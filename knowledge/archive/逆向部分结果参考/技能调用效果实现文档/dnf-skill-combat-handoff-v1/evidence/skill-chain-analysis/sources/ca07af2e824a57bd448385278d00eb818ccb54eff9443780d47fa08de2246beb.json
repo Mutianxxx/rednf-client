@@ -1,0 +1,890 @@
+{
+  "path": "passiveobject/character/swordman/animation/blastbloodpresub_back.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        7
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -162,
+        -81
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 65
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/b-01.img",
+        0
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -162,
+        -81
+      ],
+      "offset": 85
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        50
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -42,
+        -18,
+        -22,
+        82,
+        36,
+        38
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 145
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/b-01.img",
+        1
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -162,
+        -81
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        50
+      ],
+      "offset": 180
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -107,
+        -24,
+        -54,
+        220,
+        43,
+        86
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 225
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/b-01.img",
+        2
+      ],
+      "offset": 230
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -162,
+        -81
+      ],
+      "offset": 245
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        50
+      ],
+      "offset": 260
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -129,
+        -26,
+        -60,
+        254,
+        50,
+        103
+      ],
+      "offset": 270
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 305
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/b-01.img",
+        3
+      ],
+      "offset": 310
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -162,
+        -81
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        50
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -128,
+        -26,
+        -64,
+        248,
+        48,
+        115
+      ],
+      "offset": 350
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 385
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/b-01.img",
+        4
+      ],
+      "offset": 390
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -162,
+        -81
+      ],
+      "offset": 405
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        50
+      ],
+      "offset": 420
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -127,
+        -24,
+        -64,
+        254,
+        48,
+        116
+      ],
+      "offset": 430
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 465
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BlastBlood/b-01.img",
+        5
+      ],
+      "offset": 470
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -162,
+        -81
+      ],
+      "offset": 485
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        50
+      ],
+      "offset": 500
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967134,
+      "value": -162
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967215,
+      "value": -81
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 8919234,
+      "value": "Character/Swordman/Effect/BlastBlood/b-01.img"
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 4294967134,
+      "value": -162
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 4294967215,
+      "value": -81
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 4294967254,
+      "value": -42
+    },
+    {
+      "offset": 120,
+      "type": 0,
+      "raw": 4294967278,
+      "value": -18
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 4294967274,
+      "value": -22
+    },
+    {
+      "offset": 130,
+      "type": 0,
+      "raw": 82,
+      "value": 82
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 36,
+      "value": 36
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 38,
+      "value": 38
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 155,
+      "type": 6,
+      "raw": 8919234,
+      "value": "Character/Swordman/Effect/BlastBlood/b-01.img"
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 4294967134,
+      "value": -162
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 4294967215,
+      "value": -81
+    },
+    {
+      "offset": 180,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 4294967189,
+      "value": -107
+    },
+    {
+      "offset": 200,
+      "type": 0,
+      "raw": 4294967272,
+      "value": -24
+    },
+    {
+      "offset": 205,
+      "type": 0,
+      "raw": 4294967242,
+      "value": -54
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 220,
+      "value": 220
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 43,
+      "value": 43
+    },
+    {
+      "offset": 220,
+      "type": 0,
+      "raw": 86,
+      "value": 86
+    },
+    {
+      "offset": 225,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 230,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 235,
+      "type": 6,
+      "raw": 8919234,
+      "value": "Character/Swordman/Effect/BlastBlood/b-01.img"
+    },
+    {
+      "offset": 240,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 250,
+      "type": 0,
+      "raw": 4294967134,
+      "value": -162
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 4294967215,
+      "value": -81
+    },
+    {
+      "offset": 260,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    },
+    {
+      "offset": 270,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 4294967167,
+      "value": -129
+    },
+    {
+      "offset": 280,
+      "type": 0,
+      "raw": 4294967270,
+      "value": -26
+    },
+    {
+      "offset": 285,
+      "type": 0,
+      "raw": 4294967236,
+      "value": -60
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 254,
+      "value": 254
+    },
+    {
+      "offset": 295,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    },
+    {
+      "offset": 300,
+      "type": 0,
+      "raw": 103,
+      "value": 103
+    },
+    {
+      "offset": 305,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 310,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 315,
+      "type": 6,
+      "raw": 8919234,
+      "value": "Character/Swordman/Effect/BlastBlood/b-01.img"
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 330,
+      "type": 0,
+      "raw": 4294967134,
+      "value": -162
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 4294967215,
+      "value": -81
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    },
+    {
+      "offset": 350,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 355,
+      "type": 0,
+      "raw": 4294967168,
+      "value": -128
+    },
+    {
+      "offset": 360,
+      "type": 0,
+      "raw": 4294967270,
+      "value": -26
+    },
+    {
+      "offset": 365,
+      "type": 0,
+      "raw": 4294967232,
+      "value": -64
+    },
+    {
+      "offset": 370,
+      "type": 0,
+      "raw": 248,
+      "value": 248
+    },
+    {
+      "offset": 375,
+      "type": 0,
+      "raw": 48,
+      "value": 48
+    },
+    {
+      "offset": 380,
+      "type": 0,
+      "raw": 115,
+      "value": 115
+    },
+    {
+      "offset": 385,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 390,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 395,
+      "type": 6,
+      "raw": 8919234,
+      "value": "Character/Swordman/Effect/BlastBlood/b-01.img"
+    },
+    {
+      "offset": 400,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 405,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 410,
+      "type": 0,
+      "raw": 4294967134,
+      "value": -162
+    },
+    {
+      "offset": 415,
+      "type": 0,
+      "raw": 4294967215,
+      "value": -81
+    },
+    {
+      "offset": 420,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 425,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    },
+    {
+      "offset": 430,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 4294967169,
+      "value": -127
+    },
+    {
+      "offset": 440,
+      "type": 0,
+      "raw": 4294967272,
+      "value": -24
+    },
+    {
+      "offset": 445,
+      "type": 0,
+      "raw": 4294967232,
+      "value": -64
+    },
+    {
+      "offset": 450,
+      "type": 0,
+      "raw": 254,
+      "value": 254
+    },
+    {
+      "offset": 455,
+      "type": 0,
+      "raw": 48,
+      "value": 48
+    },
+    {
+      "offset": 460,
+      "type": 0,
+      "raw": 116,
+      "value": 116
+    },
+    {
+      "offset": 465,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 470,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 475,
+      "type": 6,
+      "raw": 8919234,
+      "value": "Character/Swordman/Effect/BlastBlood/b-01.img"
+    },
+    {
+      "offset": 480,
+      "type": 0,
+      "raw": 5,
+      "value": 5
+    },
+    {
+      "offset": 485,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 490,
+      "type": 0,
+      "raw": 4294967134,
+      "value": -162
+    },
+    {
+      "offset": 495,
+      "type": 0,
+      "raw": 4294967215,
+      "value": -81
+    },
+    {
+      "offset": 500,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 505,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    }
+  ],
+  "raw_sha256": "ca07af2e824a57bd448385278d00eb818ccb54eff9443780d47fa08de2246beb"
+}

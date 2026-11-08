@@ -1,0 +1,10 @@
+[attack type] `[physic]`		// 공격의 타입. `[physic]` `[magic]` 중 택1
+[weapon damage apply] 1
+//[human damage rate] 70.0	// 살상 (대 휴먼) 공격 비율. 소수점 가능, %값, 100이 기본
+[attack enemy] 1			// 적(자신과 아군을 제외한 모두)을 공격할지 여부. 기본값 1
+[elemental property] `[no element]`			// 공격의 원소속성. `[no element]` `[fire element]` `[water element]` `[dark element]` `[light element]` 중 택1. 안쓰면 기본값 `[no element]`
+[damage reaction] `[damage]`		// 공격에 맞았을 때의 반응 `[none]` `[damage]` `[down]` 중 택1
+[push aside] 200			// 뒤로 날리는 힘
+[lift up] 0			// 위로 띄우는 힘
+[attack direction] `[hit down]`
+[hit wav] `R_SQUARESWDC_HIT`

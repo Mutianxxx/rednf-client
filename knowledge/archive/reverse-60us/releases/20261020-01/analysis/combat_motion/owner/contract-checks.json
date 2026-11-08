@@ -1,0 +1,33 @@
+{
+  "kind": "synthetic composition checks; actual DFO world/query state not observed",
+  "passed": true,
+  "checks": 8,
+  "sampled_cells": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "checked": [
+    "registration gate",
+    "first blocker order/self skip",
+    "ignore identity list",
+    "inactive retained cast delegation",
+    "later failed cast clears retained pointer",
+    "state5 shortcut",
+    "attachment forwarding order",
+    "inclusive footprint end cell traversal"
+  ]
+}

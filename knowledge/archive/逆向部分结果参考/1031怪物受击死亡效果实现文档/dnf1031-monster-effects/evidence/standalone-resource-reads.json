@@ -1,0 +1,627 @@
+{
+  "pvf": {
+    "stringtable.bin": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 124303792,
+      "size": 11323464,
+      "crc": 870372083
+    },
+    "n_string.lst": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 66687872,
+      "size": 262,
+      "crc": 1854748219
+    },
+    "character/character.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 95992316,
+      "size": 4564,
+      "crc": 1762368830
+    },
+    "common/common.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 144930648,
+      "size": 2,
+      "crc": 3307231320
+    },
+    "dungeon/dungeon.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 155844596,
+      "size": 45096,
+      "crc": 134923786
+    },
+    "equipment/equipment.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 42967052,
+      "size": 7999182,
+      "crc": 3563837825
+    },
+    "etc/etc.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 94989540,
+      "size": 183071,
+      "crc": 3567557824
+    },
+    "itemshop/itemshop.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 62369440,
+      "size": 3813,
+      "crc": 484345769
+    },
+    "map/map.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 108208240,
+      "size": 186,
+      "crc": 654469063
+    },
+    "monster/monster.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 31148060,
+      "size": 98240,
+      "crc": 3476811349
+    },
+    "npc/npc.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 172459448,
+      "size": 202358,
+      "crc": 2769811575
+    },
+    "passiveobject/passiveobject.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 71880336,
+      "size": 32543,
+      "crc": 1977292199
+    },
+    "pet/pet.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 163696220,
+      "size": 25,
+      "crc": 2482101240
+    },
+    "n_quest/quest.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 114224888,
+      "size": 824708,
+      "crc": 3852767198
+    },
+    "skill/skill.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 170978248,
+      "size": 814245,
+      "crc": 3846449678
+    },
+    "stackable/stackable.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 119157572,
+      "size": 1878271,
+      "crc": 1079121728
+    },
+    "town/town.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 136140544,
+      "size": 475,
+      "crc": 526871944
+    },
+    "worldmap/worldmap.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 141318156,
+      "size": 626,
+      "crc": 3414100920
+    },
+    "creature/creature.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 113525696,
+      "size": 144078,
+      "crc": 258417363
+    },
+    "aicharacter/aicharacter.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 147762436,
+      "size": 78964,
+      "crc": 1857972820
+    },
+    "n_quest/epicquest.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 154091804,
+      "size": 35241,
+      "crc": 2427673213
+    },
+    "region/region.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 84961176,
+      "size": 174,
+      "crc": 321504044
+    },
+    "ui/ui.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 87351092,
+      "size": 32436,
+      "crc": 1759483000
+    },
+    "pvp_mission/mission.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 38147468,
+      "size": 9227,
+      "crc": 2685004132
+    },
+    "etc/randomoption/randomoption.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 168463584,
+      "size": 33526,
+      "crc": 1760191296
+    },
+    "event/event.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 148846056,
+      "size": 61145,
+      "crc": 9061560
+    },
+    "chatemoticon/chatemoticon.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 152938668,
+      "size": 1642,
+      "crc": 1753267255
+    },
+    "clientonly/clientonly.kor.str": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 163305164,
+      "size": 3334,
+      "crc": 1874046579
+    },
+    "monster/lugaru/animation_lugaru/stay_2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 93391640,
+      "size": 409,
+      "crc": 1092187259
+    },
+    "monster/lugaru/animation_lugaru/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 121531932,
+      "size": 83,
+      "crc": 3702535063
+    },
+    "monster/lugaru/animation_lugaru/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 122960788,
+      "size": 109,
+      "crc": 1140335321
+    },
+    "monster/lugaru/animation_lugaru/down.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 81633668,
+      "size": 301,
+      "crc": 2418951030
+    },
+    "monster/common/particle/monsterdiepiece.ptl": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 101300636,
+      "size": 187,
+      "crc": 3049677745
+    },
+    "monster/common/animation/monsterdiepiece.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 123421896,
+      "size": 110,
+      "crc": 1589984169
+    },
+    "monster/common/animation/monsterdieflash.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 27949336,
+      "size": 131,
+      "crc": 3665020499
+    },
+    "monster/common/animation/monsterdiesmoke.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 56689440,
+      "size": 161,
+      "crc": 942593602
+    },
+    "monster/act8/ghost_flu/animation/stay.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 145637100,
+      "size": 344,
+      "crc": 1367239046
+    },
+    "monster/act8/ghost_flu/animation/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 141751048,
+      "size": 122,
+      "crc": 747009469
+    },
+    "monster/act8/ghost_flu/animation/die.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 144670036,
+      "size": 224,
+      "crc": 4067194748
+    },
+    "monster/event/bluemarble/dendroid_disguise/animation/stay.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 84579824,
+      "size": 98,
+      "crc": 1102332740
+    },
+    "monster/event/bluemarble/dendroid_disguise/animation/normaldamage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 91402228,
+      "size": 95,
+      "crc": 218542372
+    },
+    "monster/event/bluemarble/dendroid_disguise/animation/normaldamage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 92570908,
+      "size": 95,
+      "crc": 631319792
+    },
+    "monster/event/bluemarble/dendroid_disguise/animation/die.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 79835464,
+      "size": 123,
+      "crc": 3216717852
+    },
+    "monster/act8/chiefsars/animation/stay.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 71292780,
+      "size": 98,
+      "crc": 2613189496
+    },
+    "monster/act8/chiefsars/animation/foot/stay.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 140421676,
+      "size": 72,
+      "crc": 1073395277
+    },
+    "monster/act8/chiefsars/animation/hand/stay.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 75615124,
+      "size": 72,
+      "crc": 3855012979
+    },
+    "monster/act8/chiefsars/animation/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 139623204,
+      "size": 151,
+      "crc": 480171785
+    },
+    "monster/act8/chiefsars/animation/foot/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 99151044,
+      "size": 91,
+      "crc": 3770143789
+    },
+    "monster/act8/chiefsars/animation/hand/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 116594148,
+      "size": 91,
+      "crc": 1844726745
+    },
+    "monster/act8/chiefsars/animation/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 140669004,
+      "size": 151,
+      "crc": 3415144877
+    },
+    "monster/act8/chiefsars/animation/foot/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 100214912,
+      "size": 91,
+      "crc": 4203627616
+    },
+    "monster/act8/chiefsars/animation/hand/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 117684696,
+      "size": 91,
+      "crc": 1632810911
+    },
+    "monster/act8/chiefsars/animation/down.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 80705752,
+      "size": 307,
+      "crc": 395114402
+    },
+    "monster/act8/chiefsars/animation/foot/down.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 149684572,
+      "size": 157,
+      "crc": 2829818232
+    },
+    "monster/act8/chiefsars/animation/hand/down.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 85090484,
+      "size": 157,
+      "crc": 9176263
+    },
+    "monster/act8/chiefsars/animation/die.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 110482376,
+      "size": 132,
+      "crc": 4144541731
+    },
+    "monster/act8/chiefsars/animation/ef/boom1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 153701596,
+      "size": 401,
+      "crc": 2907919517
+    },
+    "monster/act8/chiefsars/animation/ef/boom2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 154829968,
+      "size": 571,
+      "crc": 3881920343
+    },
+    "monster/act8/chiefsars/animation/ef/boomeye.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 88531864,
+      "size": 240,
+      "crc": 1513317831
+    },
+    "monster/act8/wooden_doll/animation/wait_stay.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 88463700,
+      "size": 80,
+      "crc": 1810124127
+    },
+    "monster/act8/wooden_doll/animation/weapon/wait_stay.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 105839656,
+      "size": 78,
+      "crc": 774988461
+    },
+    "monster/act8/wooden_doll/animation/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 151690220,
+      "size": 103,
+      "crc": 3331787310
+    },
+    "monster/act8/wooden_doll/animation/weapon/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 76102804,
+      "size": 78,
+      "crc": 4279663151
+    },
+    "monster/act8/wooden_doll/animation/ball/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 31360572,
+      "size": 77,
+      "crc": 794492875
+    },
+    "monster/act8/wooden_doll/animation/ball_eff/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 80157792,
+      "size": 87,
+      "crc": 1905792886
+    },
+    "monster/act8/wooden_doll/animation/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 152817676,
+      "size": 103,
+      "crc": 307439243
+    },
+    "monster/act8/wooden_doll/animation/weapon/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 77232072,
+      "size": 78,
+      "crc": 3257754374
+    },
+    "monster/act8/wooden_doll/animation/ball/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 32515060,
+      "size": 77,
+      "crc": 55507286
+    },
+    "monster/act8/wooden_doll/animation/ball_eff/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 81286792,
+      "size": 90,
+      "crc": 3966350737
+    },
+    "monster/act8/wooden_doll/animation/down.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 86005220,
+      "size": 342,
+      "crc": 3726445555
+    },
+    "monster/act8/wooden_doll/animation/ball/down.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 70681000,
+      "size": 210,
+      "crc": 4079615548
+    },
+    "monster/act8/wooden_doll/animation/ball_eff/down.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 80035440,
+      "size": 245,
+      "crc": 3222904351
+    },
+    "monster/act8/wooden_doll/animation/weapon/down.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 176029564,
+      "size": 169,
+      "crc": 3352555456
+    },
+    "monster/act8/wooden_doll/animation/die.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 72008120,
+      "size": 297,
+      "crc": 599292429
+    },
+    "monster/act8/wooden_doll/animation/ball/die.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 42698648,
+      "size": 333,
+      "crc": 525331375
+    },
+    "monster/act8/wooden_doll/animation/ball_eff/die.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 146462312,
+      "size": 430,
+      "crc": 1471216095
+    },
+    "monster/act8/wooden_doll/animation/weapon/die.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 33413296,
+      "size": 301,
+      "crc": 3462778345
+    },
+    "monster/act8/chiefmongghost/animation/stay.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 88883980,
+      "size": 263,
+      "crc": 739638771
+    },
+    "monster/act8/chiefmongghost/animation/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 162192236,
+      "size": 153,
+      "crc": 4072372172
+    },
+    "monster/act8/chiefmongghost/animation/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 163289764,
+      "size": 153,
+      "crc": 1730613395
+    },
+    "monster/act8/chiefmongghost/animation/die.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 177454856,
+      "size": 785,
+      "crc": 3463257537
+    },
+    "monster/goblin/animation_goblin2/stay.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 36844000,
+      "size": 92,
+      "crc": 894309785
+    },
+    "monster/goblin/animation_goblin2/damage1.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 108321884,
+      "size": 89,
+      "crc": 3120404512
+    },
+    "monster/goblin/animation_goblin2/damage2.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 109530068,
+      "size": 115,
+      "crc": 2119193296
+    },
+    "monster/goblin/animation_goblin2/down.ani": {
+      "pvf": ".\\DNF1031客户端\\Script.pvf",
+      "offset": 55850500,
+      "size": 307,
+      "crc": 4215504590
+    }
+  },
+  "npk": {
+    "monster/lugaru/lugaru.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_lugaru.NPK",
+      "offset": 561508,
+      "length": 49187
+    },
+    "monster/common/m0009.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_common.NPK",
+      "offset": 1216417,
+      "length": 891
+    },
+    "monster/act8/bigghost_flu/flu_body.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_bigghost_flu.NPK",
+      "offset": 1804935,
+      "length": 531555
+    },
+    "monster/gbl_breeding/goliden_hide.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_gbl_breeding.NPK",
+      "offset": 537322,
+      "length": 206896
+    },
+    "monster/common/m0010.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_common.NPK",
+      "offset": 1217308,
+      "length": 832
+    },
+    "monster/act8/chiefsars/chief_body.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_chiefsars.NPK",
+      "offset": 1900,
+      "length": 102448
+    },
+    "monster/act8/chiefsars/chief_foot.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_chiefsars.NPK",
+      "offset": 104348,
+      "length": 14921
+    },
+    "monster/act8/chiefsars/chief_hand.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_chiefsars.NPK",
+      "offset": 119269,
+      "length": 11780
+    },
+    "monster/act8/chiefsars/die/boom_start_dodge.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_chiefsars_die.NPK",
+      "offset": 124178,
+      "length": 29287
+    },
+    "monster/act8/chiefsars/die/boom_dodge.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_chiefsars_die.NPK",
+      "offset": 1108,
+      "length": 123070
+    },
+    "monster/act8/chiefsars/die/chief_eye_dodge.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_chiefsars_die.NPK",
+      "offset": 154579,
+      "length": 431
+    },
+    "monster/common/m0003.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_common.NPK",
+      "offset": 1211129,
+      "length": 893
+    },
+    "monster/act8/wooden_doll/wooden_doll_body.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_wooden_doll.NPK",
+      "offset": 462474,
+      "length": 101899
+    },
+    "monster/act8/wooden_doll/wooden_doll_sword.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_wooden_doll.NPK",
+      "offset": 564373,
+      "length": 34560
+    },
+    "monster/act8/wooden_doll/wooden_doll_ball.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_wooden_doll.NPK",
+      "offset": 278143,
+      "length": 8625
+    },
+    "monster/act8/wooden_doll/wooden_doll_balleff.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_wooden_doll.NPK",
+      "offset": 312800,
+      "length": 149674
+    },
+    "monster/act8/dark_ghost/lavineter.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_act8_dark_ghost.NPK",
+      "offset": 249675,
+      "length": 166013
+    },
+    "monster/common/m0014.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_common.NPK",
+      "offset": 1220808,
+      "length": 887
+    },
+    "monster/common/monsterdieflash.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_common.NPK",
+      "offset": 1236338,
+      "length": 10230
+    },
+    "monster/common/monsterdiesmoke.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_common.NPK",
+      "offset": 1248933,
+      "length": 406
+    },
+    "monster/goblin/event/goblin.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_goblin_event.NPK",
+      "offset": 73229,
+      "length": 20175
+    },
+    "monster/common/m0001.img": {
+      "archive": ".\\DNF1031客户端\\ImagePacks2\\sprite_monster_common.NPK",
+      "offset": 1209357,
+      "length": 882
+    }
+  },
+  "archive_index_errors": []
+}

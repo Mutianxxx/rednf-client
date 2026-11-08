@@ -1,0 +1,1303 @@
+{
+  "scope": "Source identity, capture bounds, disassembly coverage, exact vtable dispatch, retained REA function identity, PVF archive/entry CRC and exports. No runtime behavior equivalence asserted.",
+  "passed": 216,
+  "total": 216,
+  "checks": [
+    {
+      "name": "binary_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "00889440-mob-die-effect-parser:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "00889440-mob-die-effect-parser:sha256",
+      "passed": true,
+      "actual": "3c62e909a3a8066113c05019db0b5c51cf1c3eea6487c58e3b2a209f86b25594",
+      "expected": "3c62e909a3a8066113c05019db0b5c51cf1c3eea6487c58e3b2a209f86b25594"
+    },
+    {
+      "name": "00889440-mob-die-effect-parser:decode_coverage",
+      "passed": true,
+      "actual": 65,
+      "expected": 65
+    },
+    {
+      "name": "0044be53-death-global-particle-creators:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "0044be53-death-global-particle-creators:sha256",
+      "passed": true,
+      "actual": "5ff38a42716cf5c57ee81f4477fee28573b39eb8195eed5824f90e266a87b50f",
+      "expected": "5ff38a42716cf5c57ee81f4477fee28573b39eb8195eed5824f90e266a87b50f"
+    },
+    {
+      "name": "0044be53-death-global-particle-creators:decode_coverage",
+      "passed": true,
+      "actual": 307,
+      "expected": 307
+    },
+    {
+      "name": "004f4440-monster-notification:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004f4440-monster-notification:sha256",
+      "passed": true,
+      "actual": "e8a183dd5f3d4f28e8d363075d1d600a4d623ce1afcb315298b961d79272ef73",
+      "expected": "e8a183dd5f3d4f28e8d363075d1d600a4d623ce1afcb315298b961d79272ef73"
+    },
+    {
+      "name": "004f4440-monster-notification:decode_coverage",
+      "passed": true,
+      "actual": 278,
+      "expected": 278
+    },
+    {
+      "name": "004b20d0-active-notification:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004b20d0-active-notification:sha256",
+      "passed": true,
+      "actual": "3b1ada6cbebe0d9f2a434a14b6d553fa941beb74a70001b6ce310f0232d829ef",
+      "expected": "3b1ada6cbebe0d9f2a434a14b6d553fa941beb74a70001b6ce310f0232d829ef"
+    },
+    {
+      "name": "004b20d0-active-notification:decode_coverage",
+      "passed": true,
+      "actual": 513,
+      "expected": 513
+    },
+    {
+      "name": "004edd10-common-notification:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004edd10-common-notification:sha256",
+      "passed": true,
+      "actual": "b6a4a544ac9bdd98e13408da71d256d599d8ea0a26f7f08cbe4f35828a1877c9",
+      "expected": "b6a4a544ac9bdd98e13408da71d256d599d8ea0a26f7f08cbe4f35828a1877c9"
+    },
+    {
+      "name": "004edd10-common-notification:decode_coverage",
+      "passed": true,
+      "actual": 260,
+      "expected": 260
+    },
+    {
+      "name": "0049bc20-base-notification:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "0049bc20-base-notification:sha256",
+      "passed": true,
+      "actual": "c718913387243519a00df564024b4787ada280a79d6b1bd26e44494e88d76b95",
+      "expected": "c718913387243519a00df564024b4787ada280a79d6b1bd26e44494e88d76b95"
+    },
+    {
+      "name": "0049bc20-base-notification:decode_coverage",
+      "passed": true,
+      "actual": 348,
+      "expected": 348
+    },
+    {
+      "name": "004f2a40-monster-retention-gate:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004f2a40-monster-retention-gate:sha256",
+      "passed": true,
+      "actual": "f820f736c900bd74e118b89b1506a1b052b9fb1149d1b3c57dfc9906a058d3d5",
+      "expected": "f820f736c900bd74e118b89b1506a1b052b9fb1149d1b3c57dfc9906a058d3d5"
+    },
+    {
+      "name": "004f2a40-monster-retention-gate:decode_coverage",
+      "passed": true,
+      "actual": 169,
+      "expected": 169
+    },
+    {
+      "name": "008e49b0-monster-slot38-false:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "008e49b0-monster-slot38-false:sha256",
+      "passed": true,
+      "actual": "01cb47d078b4841b8408ec4fe278efa83115c6f6e101972987507d2b2b57dcf0",
+      "expected": "01cb47d078b4841b8408ec4fe278efa83115c6f6e101972987507d2b2b57dcf0"
+    },
+    {
+      "name": "008e49b0-monster-slot38-false:decode_coverage",
+      "passed": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "0050155b-monster-lastpath-copy:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "0050155b-monster-lastpath-copy:sha256",
+      "passed": true,
+      "actual": "03286a33476c4a06657a6d1a2717656045d4fc87f6e2451d546ac1160e34f9cc",
+      "expected": "03286a33476c4a06657a6d1a2717656045d4fc87f6e2451d546ac1160e34f9cc"
+    },
+    {
+      "name": "0050155b-monster-lastpath-copy:decode_coverage",
+      "passed": true,
+      "actual": 62,
+      "expected": 62
+    },
+    {
+      "name": "00501c2d-monster-lastact-preload:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "00501c2d-monster-lastact-preload:sha256",
+      "passed": true,
+      "actual": "17cb56a45a187c8df133bfcb5735f6c714b24fdc34821c04041adc9f826ac30c",
+      "expected": "17cb56a45a187c8df133bfcb5735f6c714b24fdc34821c04041adc9f826ac30c"
+    },
+    {
+      "name": "00501c2d-monster-lastact-preload:decode_coverage",
+      "passed": true,
+      "actual": 166,
+      "expected": 166
+    },
+    {
+      "name": "0049bb48-lastact-destruction:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "0049bb48-lastact-destruction:sha256",
+      "passed": true,
+      "actual": "cb556962d3a7c454a8a22922dbc66625be86261a96e565747226c636102d1c27",
+      "expected": "cb556962d3a7c454a8a22922dbc66625be86261a96e565747226c636102d1c27"
+    },
+    {
+      "name": "0049bb48-lastact-destruction:decode_coverage",
+      "passed": true,
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "00407e90-current-act-getter:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "00407e90-current-act-getter:sha256",
+      "passed": true,
+      "actual": "c87f62e603b486f686c002ec1f1086ac4c3cbd88aa1c761828bdb0c9d87eef12",
+      "expected": "c87f62e603b486f686c002ec1f1086ac4c3cbd88aa1c761828bdb0c9d87eef12"
+    },
+    {
+      "name": "00407e90-current-act-getter:decode_coverage",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "00407ea0-secondary-act-getter:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "00407ea0-secondary-act-getter:sha256",
+      "passed": true,
+      "actual": "82dc7fc979614a02fcb9ffba1a1ccecb33488204e431892700f5d4e0fadb7d2d",
+      "expected": "82dc7fc979614a02fcb9ffba1a1ccecb33488204e431892700f5d4e0fadb7d2d"
+    },
+    {
+      "name": "00407ea0-secondary-act-getter:decode_coverage",
+      "passed": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "004fe547-monster-state-switch:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fe547-monster-state-switch:sha256",
+      "passed": true,
+      "actual": "39b6376c1185e97c8835d3a64a7e887719531ebdb758f6f085650b30f36f8440",
+      "expected": "39b6376c1185e97c8835d3a64a7e887719531ebdb758f6f085650b30f36f8440"
+    },
+    {
+      "name": "004fe547-monster-state-switch:decode_coverage",
+      "passed": true,
+      "actual": 32,
+      "expected": 32
+    },
+    {
+      "name": "004fe7e7-monster-state5-case:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fe7e7-monster-state5-case:sha256",
+      "passed": true,
+      "actual": "3f28dbcdaa15713432333cdc1e955278674f379e486c525702343888ae3cb3d5",
+      "expected": "3f28dbcdaa15713432333cdc1e955278674f379e486c525702343888ae3cb3d5"
+    },
+    {
+      "name": "004fe7e7-monster-state5-case:decode_coverage",
+      "passed": true,
+      "actual": 935,
+      "expected": 935
+    },
+    {
+      "name": "004feb8e-monster-base-state-apply:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004feb8e-monster-base-state-apply:sha256",
+      "passed": true,
+      "actual": "f6cde3dfd4de4467111739d5d51b9bc0c98e4921a2b49e1e8313dd573c83e769",
+      "expected": "f6cde3dfd4de4467111739d5d51b9bc0c98e4921a2b49e1e8313dd573c83e769"
+    },
+    {
+      "name": "004feb8e-monster-base-state-apply:decode_coverage",
+      "passed": true,
+      "actual": 23,
+      "expected": 23
+    },
+    {
+      "name": "004bb976-base-state5-case:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004bb976-base-state5-case:sha256",
+      "passed": true,
+      "actual": "e5991cf33b8a22e35380bd313e6067c6a7c22f1c9f8ecad958a770573c21496f",
+      "expected": "e5991cf33b8a22e35380bd313e6067c6a7c22f1c9f8ecad958a770573c21496f"
+    },
+    {
+      "name": "004bb976-base-state5-case:decode_coverage",
+      "passed": true,
+      "actual": 342,
+      "expected": 342
+    },
+    {
+      "name": "004bc645-base-state-timer-reset:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004bc645-base-state-timer-reset:sha256",
+      "passed": true,
+      "actual": "200278082290ce5d43adda10edc9199bb03648caab0285e3f0863a69d3bbcc32",
+      "expected": "200278082290ce5d43adda10edc9199bb03648caab0285e3f0863a69d3bbcc32"
+    },
+    {
+      "name": "004bc645-base-state-timer-reset:decode_coverage",
+      "passed": true,
+      "actual": 31,
+      "expected": 31
+    },
+    {
+      "name": "004bd649-base-state5-tick:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004bd649-base-state5-tick:sha256",
+      "passed": true,
+      "actual": "f9f1a22e72e7327339af265f06ab9e65b5594e662f1220b2fb26d374c30df3e1",
+      "expected": "f9f1a22e72e7327339af265f06ab9e65b5594e662f1220b2fb26d374c30df3e1"
+    },
+    {
+      "name": "004bd649-base-state5-tick:decode_coverage",
+      "passed": true,
+      "actual": 77,
+      "expected": 77
+    },
+    {
+      "name": "004fc892-monster-tick-state-switch:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fc892-monster-tick-state-switch:sha256",
+      "passed": true,
+      "actual": "14119681a61fae11f91a4afc4b5e05c908175b9327386f368aca9ddabb1bf5b3",
+      "expected": "14119681a61fae11f91a4afc4b5e05c908175b9327386f368aca9ddabb1bf5b3"
+    },
+    {
+      "name": "004fc892-monster-tick-state-switch:decode_coverage",
+      "passed": true,
+      "actual": 34,
+      "expected": 34
+    },
+    {
+      "name": "004fcb2a-monster-state5-tick:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fcb2a-monster-state5-tick:sha256",
+      "passed": true,
+      "actual": "6db2fe5dc362be3e94539f04fcc6e1abe6945642bc0811575b812a37bd733fd5",
+      "expected": "6db2fe5dc362be3e94539f04fcc6e1abe6945642bc0811575b812a37bd733fd5"
+    },
+    {
+      "name": "004fcb2a-monster-state5-tick:decode_coverage",
+      "passed": true,
+      "actual": 578,
+      "expected": 578
+    },
+    {
+      "name": "004fa1d0-slot654-protected-entry:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fa1d0-slot654-protected-entry:sha256",
+      "passed": true,
+      "actual": "9a4d3f9d8610c8282aec1274d52c82ebfa38db7c765007a9daab63a30ca2c09b",
+      "expected": "9a4d3f9d8610c8282aec1274d52c82ebfa38db7c765007a9daab63a30ca2c09b"
+    },
+    {
+      "name": "004fa1d0-slot654-protected-entry:decode_coverage",
+      "passed": true,
+      "actual": 37,
+      "expected": 37
+    },
+    {
+      "name": "013baa5f-slot654-entry-thunk:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "013baa5f-slot654-entry-thunk:sha256",
+      "passed": true,
+      "actual": "cd16b554ada5838a91e6da9d2950d6164a1dee580e6075cc5ed82164d811ea5e",
+      "expected": "cd16b554ada5838a91e6da9d2950d6164a1dee580e6075cc5ed82164d811ea5e"
+    },
+    {
+      "name": "013baa5f-slot654-entry-thunk:decode_coverage",
+      "passed": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "name": "004fa222-slot654-native-fragment-A:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fa222-slot654-native-fragment-A:sha256",
+      "passed": true,
+      "actual": "591eb38ba4ba4f195841cfea5a1f48f021d38a931d84cbe8fc2d596d00b1666b",
+      "expected": "591eb38ba4ba4f195841cfea5a1f48f021d38a931d84cbe8fc2d596d00b1666b"
+    },
+    {
+      "name": "004fa222-slot654-native-fragment-A:decode_coverage",
+      "passed": true,
+      "actual": 509,
+      "expected": 509
+    },
+    {
+      "name": "013bebef-slot654-fragment-A-thunk:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "013bebef-slot654-fragment-A-thunk:sha256",
+      "passed": true,
+      "actual": "f1a4e44a4bc521ae2570bf06d2007eeab612ff23396e72ad7ed10899efffde0d",
+      "expected": "f1a4e44a4bc521ae2570bf06d2007eeab612ff23396e72ad7ed10899efffde0d"
+    },
+    {
+      "name": "013bebef-slot654-fragment-A-thunk:decode_coverage",
+      "passed": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "name": "004fa476-slot654-native-fragment-B:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fa476-slot654-native-fragment-B:sha256",
+      "passed": true,
+      "actual": "325b7ea0da8eeed30c4653f117e9d638a954786100817a12c88690415011cea7",
+      "expected": "325b7ea0da8eeed30c4653f117e9d638a954786100817a12c88690415011cea7"
+    },
+    {
+      "name": "004fa476-slot654-native-fragment-B:decode_coverage",
+      "passed": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "013c22f9-slot654-fragment-B-thunk:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "013c22f9-slot654-fragment-B-thunk:sha256",
+      "passed": true,
+      "actual": "1839ffd09e85361c18da37c59c2104b84fe6536b80561db3955d8df17988ccb0",
+      "expected": "1839ffd09e85361c18da37c59c2104b84fe6536b80561db3955d8df17988ccb0"
+    },
+    {
+      "name": "013c22f9-slot654-fragment-B-thunk:decode_coverage",
+      "passed": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "name": "004fa7fd-slot654-native-removal-tail:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fa7fd-slot654-native-removal-tail:sha256",
+      "passed": true,
+      "actual": "ce473601922bf2ae2bc90b4e8ff03afec7cb50d3090d46d123d74c85ba216f38",
+      "expected": "ce473601922bf2ae2bc90b4e8ff03afec7cb50d3090d46d123d74c85ba216f38"
+    },
+    {
+      "name": "004fa7fd-slot654-native-removal-tail:decode_coverage",
+      "passed": true,
+      "actual": 81,
+      "expected": 81
+    },
+    {
+      "name": "004f0480-monster-slot548-gate:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004f0480-monster-slot548-gate:sha256",
+      "passed": true,
+      "actual": "a27bdf34bb8626ecf8468f473e6f41f25b6646d171b27a37843403b9c387b874",
+      "expected": "a27bdf34bb8626ecf8468f473e6f41f25b6646d171b27a37843403b9c387b874"
+    },
+    {
+      "name": "004f0480-monster-slot548-gate:decode_coverage",
+      "passed": true,
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "name": "004fdbb6-monster-field24fc-initializer:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fdbb6-monster-field24fc-initializer:sha256",
+      "passed": true,
+      "actual": "d2fd545f739cb1adc9c01eee7d655cdf80eb8e1da5fcde9da94fb5c046bf5307",
+      "expected": "d2fd545f739cb1adc9c01eee7d655cdf80eb8e1da5fcde9da94fb5c046bf5307"
+    },
+    {
+      "name": "004fdbb6-monster-field24fc-initializer:decode_coverage",
+      "passed": true,
+      "actual": 40,
+      "expected": 40
+    },
+    {
+      "name": "00500b78-piece-config-template-copy:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "00500b78-piece-config-template-copy:sha256",
+      "passed": true,
+      "actual": "b0680d932f4a35bd01757f331217aedf042717dd0ea3621330f2e66f72e55757",
+      "expected": "b0680d932f4a35bd01757f331217aedf042717dd0ea3621330f2e66f72e55757"
+    },
+    {
+      "name": "00500b78-piece-config-template-copy:decode_coverage",
+      "passed": true,
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "00509a90-piece-effect-constructor:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "00509a90-piece-effect-constructor:sha256",
+      "passed": true,
+      "actual": "df9c7429dc7605d799e8d244f37e8fbc7668aa609c295cfaf31d233a1cf59eb7",
+      "expected": "df9c7429dc7605d799e8d244f37e8fbc7668aa609c295cfaf31d233a1cf59eb7"
+    },
+    {
+      "name": "00509a90-piece-effect-constructor:decode_coverage",
+      "passed": true,
+      "actual": 106,
+      "expected": 106
+    },
+    {
+      "name": "0081cfa0-piece-effect-initializer:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "0081cfa0-piece-effect-initializer:sha256",
+      "passed": true,
+      "actual": "f0e2ba55c40e27e68a7508b27483d4dca46daceba27040e936465e7d1b381654",
+      "expected": "f0e2ba55c40e27e68a7508b27483d4dca46daceba27040e936465e7d1b381654"
+    },
+    {
+      "name": "0081cfa0-piece-effect-initializer:decode_coverage",
+      "passed": true,
+      "actual": 758,
+      "expected": 758
+    },
+    {
+      "name": "0081d2a0-piece-effect-tick:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "0081d2a0-piece-effect-tick:sha256",
+      "passed": true,
+      "actual": "085a03dd075a53d1ed75c55be09aed40f8375566e691480c38eea3db00e7d3c8",
+      "expected": "085a03dd075a53d1ed75c55be09aed40f8375566e691480c38eea3db00e7d3c8"
+    },
+    {
+      "name": "0081d2a0-piece-effect-tick:decode_coverage",
+      "passed": true,
+      "actual": 3673,
+      "expected": 3673
+    },
+    {
+      "name": "004fef68-monster-apply-dispatch-tables:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fef68-monster-apply-dispatch-tables:sha256",
+      "passed": true,
+      "actual": "a2701d323765e45b2effabc38480f4e6e8d419af4c7431b85f29225542b546c1",
+      "expected": "a2701d323765e45b2effabc38480f4e6e8d419af4c7431b85f29225542b546c1"
+    },
+    {
+      "name": "004fce68-monster-tick-dispatch-tables:source_bytes",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "004fce68-monster-tick-dispatch-tables:sha256",
+      "passed": true,
+      "actual": "c5ba4f69af8c958e552e9ed421b4b06fa207e338d627dff9ce0491b4502df867",
+      "expected": "c5ba4f69af8c958e552e9ed421b4b06fa207e338d627dff9ce0491b4502df867"
+    },
+    {
+      "name": "slot:0xd83894",
+      "passed": true,
+      "actual": "0x8e49b0",
+      "expected": "0x8e49b0"
+    },
+    {
+      "name": "slot:0xd838bc",
+      "passed": true,
+      "actual": "0x4efc80",
+      "expected": "0x4efc80"
+    },
+    {
+      "name": "slot:0xd8395c",
+      "passed": true,
+      "actual": "0x4e9480",
+      "expected": "0x4e9480"
+    },
+    {
+      "name": "slot:0xd83960",
+      "passed": true,
+      "actual": "0x407e90",
+      "expected": "0x407e90"
+    },
+    {
+      "name": "slot:0xd83964",
+      "passed": true,
+      "actual": "0x407ea0",
+      "expected": "0x407ea0"
+    },
+    {
+      "name": "slot:0xd839b8",
+      "passed": true,
+      "actual": "0x4f4440",
+      "expected": "0x4f4440"
+    },
+    {
+      "name": "slot:0xd839c0",
+      "passed": true,
+      "actual": "0x499120",
+      "expected": "0x499120"
+    },
+    {
+      "name": "slot:0xd839e4",
+      "passed": true,
+      "actual": "0x4fb720",
+      "expected": "0x4fb720"
+    },
+    {
+      "name": "slot:0xd83bd4",
+      "passed": true,
+      "actual": "0x4ac7f0",
+      "expected": "0x4ac7f0"
+    },
+    {
+      "name": "slot:0xd83bfc",
+      "passed": true,
+      "actual": "0x744820",
+      "expected": "0x744820"
+    },
+    {
+      "name": "slot:0xd83da4",
+      "passed": true,
+      "actual": "0x4f0480",
+      "expected": "0x4f0480"
+    },
+    {
+      "name": "slot:0xd83dfc",
+      "passed": true,
+      "actual": "0x4f2a40",
+      "expected": "0x4f2a40"
+    },
+    {
+      "name": "slot:0xd83e2c",
+      "passed": true,
+      "actual": "0x750cd0",
+      "expected": "0x750cd0"
+    },
+    {
+      "name": "slot:0xd83eb0",
+      "passed": true,
+      "actual": "0x4fa1d0",
+      "expected": "0x4fa1d0"
+    },
+    {
+      "name": "slot:0xcbb930",
+      "passed": true,
+      "actual": "0x4a0840",
+      "expected": "0x4a0840"
+    },
+    {
+      "name": "slot:0xcd5bbc",
+      "passed": true,
+      "actual": "0x5e14e0",
+      "expected": "0x5e14e0"
+    },
+    {
+      "name": "slot:0xcd5c60",
+      "passed": true,
+      "actual": "0x407e90",
+      "expected": "0x407e90"
+    },
+    {
+      "name": "slot:0xcd5c64",
+      "passed": true,
+      "actual": "0x407ea0",
+      "expected": "0x407ea0"
+    },
+    {
+      "name": "slot:0xcd5cb8",
+      "passed": true,
+      "actual": "0x49bc20",
+      "expected": "0x49bc20"
+    },
+    {
+      "name": "slot:0xcd5cc0",
+      "passed": true,
+      "actual": "0x499120",
+      "expected": "0x499120"
+    },
+    {
+      "name": "slot:0xcd5ce4",
+      "passed": true,
+      "actual": "0x81d2a0",
+      "expected": "0x81d2a0"
+    },
+    {
+      "name": "050-monster-death-callback.json:evidence_id",
+      "passed": true,
+      "actual": "ev_f12cbd9cf3515a2bd49d1d6be29f521879abba0515f70fd6f70e9aa6d0681ace",
+      "expected": "ev_f12cbd9cf3515a2bd49d1d6be29f521879abba0515f70fd6f70e9aa6d0681ace"
+    },
+    {
+      "name": "050-monster-death-callback.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "050-monster-death-callback.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x4fa1d0",
+      "expected": "0x4fa1d0"
+    },
+    {
+      "name": "053-monster-state-tick.json:evidence_id",
+      "passed": true,
+      "actual": "ev_2a43bf6ec4f4c0448af3cf08236d51460c7335b467bb6ee529e628ccb6a2e260",
+      "expected": "ev_2a43bf6ec4f4c0448af3cf08236d51460c7335b467bb6ee529e628ccb6a2e260"
+    },
+    {
+      "name": "053-monster-state-tick.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "053-monster-state-tick.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x4fb720",
+      "expected": "0x4fb720"
+    },
+    {
+      "name": "091-active-state-apply.json:evidence_id",
+      "passed": true,
+      "actual": "ev_5e982533affd7bd5290eecc122bb9d98e586c37efff677c3df0548b36a57abd0",
+      "expected": "ev_5e982533affd7bd5290eecc122bb9d98e586c37efff677c3df0548b36a57abd0"
+    },
+    {
+      "name": "091-active-state-apply.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "091-active-state-apply.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x4bad60",
+      "expected": "0x4bad60"
+    },
+    {
+      "name": "099-monster-death-apply.json:evidence_id",
+      "passed": true,
+      "actual": "ev_f417344aea4d3c4a34efc07a2b6a47357f310e63de451d4356521912d3bd67c7",
+      "expected": "ev_f417344aea4d3c4a34efc07a2b6a47357f310e63de451d4356521912d3bd67c7"
+    },
+    {
+      "name": "099-monster-death-apply.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "099-monster-death-apply.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x4f4440",
+      "expected": "0x4f4440"
+    },
+    {
+      "name": "100-active-death-common.json:evidence_id",
+      "passed": true,
+      "actual": "ev_088351fc786949a233ae3a8661412819cd1c0bd27afcef0ea3715c66e9178255",
+      "expected": "ev_088351fc786949a233ae3a8661412819cd1c0bd27afcef0ea3715c66e9178255"
+    },
+    {
+      "name": "100-active-death-common.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "100-active-death-common.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x4b20d0",
+      "expected": "0x4b20d0"
+    },
+    {
+      "name": "101-removal-notification.json:evidence_id",
+      "passed": true,
+      "actual": "ev_0e0493af71c4555a46448661e27718f6263a04078faeb6d53847920d75b2efb7",
+      "expected": "ev_0e0493af71c4555a46448661e27718f6263a04078faeb6d53847920d75b2efb7"
+    },
+    {
+      "name": "101-removal-notification.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "101-removal-notification.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x4edd10",
+      "expected": "0x4edd10"
+    },
+    {
+      "name": "102-monster-destroy-request.json:evidence_id",
+      "passed": true,
+      "actual": "ev_e2e6646e062b535607051bf7cc44feb28f1b67349b3ffc6495450f3cba0f37ad",
+      "expected": "ev_e2e6646e062b535607051bf7cc44feb28f1b67349b3ffc6495450f3cba0f37ad"
+    },
+    {
+      "name": "102-monster-destroy-request.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "102-monster-destroy-request.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x4f2a40",
+      "expected": "0x4f2a40"
+    },
+    {
+      "name": "107-monster-state-apply.json:evidence_id",
+      "passed": true,
+      "actual": "ev_627eaacd5dc1ef290b2dfccb8314cfc16d5dd804daafec863b4770c9b98d33d9",
+      "expected": "ev_627eaacd5dc1ef290b2dfccb8314cfc16d5dd804daafec863b4770c9b98d33d9"
+    },
+    {
+      "name": "107-monster-state-apply.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "107-monster-state-apply.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x4fe290",
+      "expected": "0x4fe290"
+    },
+    {
+      "name": "108-monster-death-attachment.json:evidence_id",
+      "passed": true,
+      "actual": "ev_257cd68d3b066e089476428fc19218579de1cdfdcfbe4d5ac10d80f6b4b4ea53",
+      "expected": "ev_257cd68d3b066e089476428fc19218579de1cdfdcfbe4d5ac10d80f6b4b4ea53"
+    },
+    {
+      "name": "108-monster-death-attachment.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "108-monster-death-attachment.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x509a90",
+      "expected": "0x509a90"
+    },
+    {
+      "name": "109-base-remove-notify.json:evidence_id",
+      "passed": true,
+      "actual": "ev_19bddf756192d5e19d8216439f9ffde80197d12d84f980ce728462f38448d7b1",
+      "expected": "ev_19bddf756192d5e19d8216439f9ffde80197d12d84f980ce728462f38448d7b1"
+    },
+    {
+      "name": "109-base-remove-notify.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "109-base-remove-notify.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x49bc20",
+      "expected": "0x49bc20"
+    },
+    {
+      "name": "110-monster-piece-effect-init.json:evidence_id",
+      "passed": true,
+      "actual": "ev_cf14a3ca5a89059169a284ee794c5e26ccf2cd6448c7920104a94068f732cb7d",
+      "expected": "ev_cf14a3ca5a89059169a284ee794c5e26ccf2cd6448c7920104a94068f732cb7d"
+    },
+    {
+      "name": "110-monster-piece-effect-init.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "110-monster-piece-effect-init.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x81cfa0",
+      "expected": "0x81cfa0"
+    },
+    {
+      "name": "111-monster-piece-effect-tick.json:evidence_id",
+      "passed": true,
+      "actual": "ev_4a3bfed012657c8c27f00599c2935b6d8bb7b427f8f405c62e82a5fba0e877fd",
+      "expected": "ev_4a3bfed012657c8c27f00599c2935b6d8bb7b427f8f405c62e82a5fba0e877fd"
+    },
+    {
+      "name": "111-monster-piece-effect-tick.json:source_sha256",
+      "passed": true,
+      "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+    },
+    {
+      "name": "111-monster-piece-effect-tick.json:canonical_procedure",
+      "passed": true,
+      "actual": "0x81d2a0",
+      "expected": "0x81d2a0"
+    },
+    {
+      "name": "pvf_sha256",
+      "passed": true,
+      "actual": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "expected": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+    },
+    {
+      "name": "monster/common/particle/monsterdieblood.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/monsterdieblood.ptl:sha256",
+      "passed": true,
+      "actual": "8e5a0166e68a3728ee9d81ec1ee5e97c8bb2d5d92c3bdf1a6dba517d22dc017e",
+      "expected": "8e5a0166e68a3728ee9d81ec1ee5e97c8bb2d5d92c3bdf1a6dba517d22dc017e"
+    },
+    {
+      "name": "monster/common/particle/monsterdiebloodyoung.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/monsterdiebloodyoung.ptl:sha256",
+      "passed": true,
+      "actual": "4056b063cae0247453cb4a13be1cb67e2651dfc9068439083f49c85ae246a3e3",
+      "expected": "4056b063cae0247453cb4a13be1cb67e2651dfc9068439083f49c85ae246a3e3"
+    },
+    {
+      "name": "monster/common/particle/monsterdiepiece.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/monsterdiepiece.ptl:sha256",
+      "passed": true,
+      "actual": "aebecbfaed52e29ce9789718182d2ff5fe584156cad2a8b797b31d14164c25f2",
+      "expected": "aebecbfaed52e29ce9789718182d2ff5fe584156cad2a8b797b31d14164c25f2"
+    },
+    {
+      "name": "monster/common/particle/monsterdiepieceyoung.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/monsterdiepieceyoung.ptl:sha256",
+      "passed": true,
+      "actual": "9d6811679b21b0b50e2c8b57ba381bf5b78e4c8f9d19b84f48e399e30d5b6682",
+      "expected": "9d6811679b21b0b50e2c8b57ba381bf5b78e4c8f9d19b84f48e399e30d5b6682"
+    },
+    {
+      "name": "monster/common/particle/monsterdiepieceveryyoung.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/monsterdiepieceveryyoung.ptl:sha256",
+      "passed": true,
+      "actual": "87dd4ba1e1ba8ea40435294caab00eacc351ef2c4e008345e5d4f9565fc56fc4",
+      "expected": "87dd4ba1e1ba8ea40435294caab00eacc351ef2c4e008345e5d4f9565fc56fc4"
+    },
+    {
+      "name": "monster/common/particle/monsterdieflashyoung.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/monsterdieflashyoung.ptl:sha256",
+      "passed": true,
+      "actual": "a4eb6d45ddc26743be817ad149169738f3cbf428d0265b1dd39250985100a2b0",
+      "expected": "a4eb6d45ddc26743be817ad149169738f3cbf428d0265b1dd39250985100a2b0"
+    },
+    {
+      "name": "monster/common/particle/teen_monster_die_down_01.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/teen_monster_die_down_01.ptl:sha256",
+      "passed": true,
+      "actual": "555f7c7e07781929ffb195541c1e0b394d01909b4e52c1fe3baafc905cdf8cfc",
+      "expected": "555f7c7e07781929ffb195541c1e0b394d01909b4e52c1fe3baafc905cdf8cfc"
+    },
+    {
+      "name": "monster/common/particle/teen_monster_die_down_02.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/teen_monster_die_down_02.ptl:sha256",
+      "passed": true,
+      "actual": "a208514ed28725f68ebcdb89ae213e873b7f687b70d713e204449c963b8c153d",
+      "expected": "a208514ed28725f68ebcdb89ae213e873b7f687b70d713e204449c963b8c153d"
+    },
+    {
+      "name": "monster/common/particle/teen_monster_die_stand_01.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/teen_monster_die_stand_01.ptl:sha256",
+      "passed": true,
+      "actual": "ec4a3df2d302eb020ec0fde10df79c18eb91a10cd9298440b857c220d012a42f",
+      "expected": "ec4a3df2d302eb020ec0fde10df79c18eb91a10cd9298440b857c220d012a42f"
+    },
+    {
+      "name": "monster/common/particle/teen_monster_die_stand_02.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/teen_monster_die_stand_02.ptl:sha256",
+      "passed": true,
+      "actual": "a529d79fd43fc4ef0822d75e8227bdadc1edb2e99867194278b15cfb6714d841",
+      "expected": "a529d79fd43fc4ef0822d75e8227bdadc1edb2e99867194278b15cfb6714d841"
+    },
+    {
+      "name": "monster/common/particle/monsterdiesmoke.ptl:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/particle/monsterdiesmoke.ptl:sha256",
+      "passed": true,
+      "actual": "faacc7ba747814242db579e53eb46063889e7d377ef93d8e9c4ed2bec5185af1",
+      "expected": "faacc7ba747814242db579e53eb46063889e7d377ef93d8e9c4ed2bec5185af1"
+    },
+    {
+      "name": "monster/common/animation/monsterdieflash.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/monsterdieflash.ani:sha256",
+      "passed": true,
+      "actual": "897d403d1fb563ff0847bcbe65b8de300f178acb6c69f3a46651163b62ed70ef",
+      "expected": "897d403d1fb563ff0847bcbe65b8de300f178acb6c69f3a46651163b62ed70ef"
+    },
+    {
+      "name": "monster/common/animation/monsterdieblood.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/monsterdieblood.ani:sha256",
+      "passed": true,
+      "actual": "b308dd5eb02912d61291bac3e62191ba35ecaaf4b00c68fc00a4299fc92a7132",
+      "expected": "b308dd5eb02912d61291bac3e62191ba35ecaaf4b00c68fc00a4299fc92a7132"
+    },
+    {
+      "name": "monster/common/animation/monsterdiebloodyoung.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/monsterdiebloodyoung.ani:sha256",
+      "passed": true,
+      "actual": "b308dd5eb02912d61291bac3e62191ba35ecaaf4b00c68fc00a4299fc92a7132",
+      "expected": "b308dd5eb02912d61291bac3e62191ba35ecaaf4b00c68fc00a4299fc92a7132"
+    },
+    {
+      "name": "monster/common/animation/monsterdiepiece.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/monsterdiepiece.ani:sha256",
+      "passed": true,
+      "actual": "9ea59e19c01309497091033ce0ced939aeb302f032b5143ac770bdc38a51274d",
+      "expected": "9ea59e19c01309497091033ce0ced939aeb302f032b5143ac770bdc38a51274d"
+    },
+    {
+      "name": "monster/common/animation/monsterdiepieceyoung.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/monsterdiepieceyoung.ani:sha256",
+      "passed": true,
+      "actual": "e828ed82aeb2cf82fcb3363fc3d1741f567693c2f325f6127c631602e21a3ef1",
+      "expected": "e828ed82aeb2cf82fcb3363fc3d1741f567693c2f325f6127c631602e21a3ef1"
+    },
+    {
+      "name": "monster/common/animation/monsterdiepieceveryyoung.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/monsterdiepieceveryyoung.ani:sha256",
+      "passed": true,
+      "actual": "2bb4c5557e57d1cda38c495d649db2cb051641c0d0c967f8d51353f9b9ef4f99",
+      "expected": "2bb4c5557e57d1cda38c495d649db2cb051641c0d0c967f8d51353f9b9ef4f99"
+    },
+    {
+      "name": "monster/common/animation/monsterdieflashyoung.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/monsterdieflashyoung.ani:sha256",
+      "passed": true,
+      "actual": "5246a253b1d4b77a28834ed6a05cfebc357fdaad0b636d2d4d8975905fe2813f",
+      "expected": "5246a253b1d4b77a28834ed6a05cfebc357fdaad0b636d2d4d8975905fe2813f"
+    },
+    {
+      "name": "monster/common/animation/teen_monster_die_particle_1.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/teen_monster_die_particle_1.ani:sha256",
+      "passed": true,
+      "actual": "e6184e5936234206b378fa2672554650c6fdfc02361ddbefd23ece671f9ecf3b",
+      "expected": "e6184e5936234206b378fa2672554650c6fdfc02361ddbefd23ece671f9ecf3b"
+    },
+    {
+      "name": "monster/common/animation/teen_monster_die_particle_2.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/teen_monster_die_particle_2.ani:sha256",
+      "passed": true,
+      "actual": "4738f6edd5ee1d5ed5324df3f8aa1b11daf360f4ea289a966e70818fce2b47dd",
+      "expected": "4738f6edd5ee1d5ed5324df3f8aa1b11daf360f4ea289a966e70818fce2b47dd"
+    },
+    {
+      "name": "monster/common/animation/teen_monster_die_light_1.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/teen_monster_die_light_1.ani:sha256",
+      "passed": true,
+      "actual": "e455bc3ccab7bb5d73e5686128593593e1b97ab9d474a0f328893a143bbd8103",
+      "expected": "e455bc3ccab7bb5d73e5686128593593e1b97ab9d474a0f328893a143bbd8103"
+    },
+    {
+      "name": "monster/common/animation/teen_monster_die_light_2.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/teen_monster_die_light_2.ani:sha256",
+      "passed": true,
+      "actual": "c1832ccf2cc609bea6e62f1bfaccd9af5da7a0c23d637d526b66bde5044e9f68",
+      "expected": "c1832ccf2cc609bea6e62f1bfaccd9af5da7a0c23d637d526b66bde5044e9f68"
+    },
+    {
+      "name": "monster/common/animation/monsterdiesmoke.ani:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/common/animation/monsterdiesmoke.ani:sha256",
+      "passed": true,
+      "actual": "78bd82cc63bfaaa40b691ef0315de9b8709d2bb56e4d069df50008d3b1905c11",
+      "expected": "78bd82cc63bfaaa40b691ef0315de9b8709d2bb56e4d069df50008d3b1905c11"
+    },
+    {
+      "name": "monster/goblin/goblin.mob:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/goblin/goblin.mob:sha256",
+      "passed": true,
+      "actual": "8a94ee8244d3904de4f6f0262830cc0a59fdb15739547d6ca75281448ab48a7b",
+      "expected": "8a94ee8244d3904de4f6f0262830cc0a59fdb15739547d6ca75281448ab48a7b"
+    },
+    {
+      "name": "monster/newmonsters/goblinkingdom/redgoblin/redgoblin.mob:archive_bytes_crc_checked",
+      "passed": true,
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "monster/newmonsters/goblinkingdom/redgoblin/redgoblin.mob:sha256",
+      "passed": true,
+      "actual": "a8ae949690b92715cada635416a5dca39bdacca0607e09ece9ac9e909f57a47e",
+      "expected": "a8ae949690b92715cada635416a5dca39bdacca0607e09ece9ac9e909f57a47e"
+    },
+    {
+      "name": "resource_unresolved_edges",
+      "passed": true,
+      "actual": 0,
+      "expected": 0
+    }
+  ]
+}

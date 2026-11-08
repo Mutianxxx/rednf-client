@@ -1,0 +1,223 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "image_base": "0x400000",
+  "excerpts": [
+    {
+      "name": "pvf_decrypt_verify",
+      "va": "0xa54e70",
+      "rva": "0x654e70",
+      "end_va_exclusive": "0xa54f39",
+      "file_offset": "0x654e70",
+      "size": 201,
+      "sha256": "d18cdfbbf8c0cf2cec008550f789d986341595a6fd6580e7a7660020b5516068"
+    },
+    {
+      "name": "path_hash_including_nul",
+      "va": "0xa54f80",
+      "rva": "0x654f80",
+      "end_va_exclusive": "0xa54fa1",
+      "file_offset": "0x654f80",
+      "size": 33,
+      "sha256": "9a0bcec714f6c9edce4199772310f211da6f4f9035bbecea3aba9d8e0684274b"
+    },
+    {
+      "name": "tree_entry",
+      "va": "0xa55fa0",
+      "rva": "0x655fa0",
+      "end_va_exclusive": "0xa55fef",
+      "file_offset": "0x655fa0",
+      "size": 79,
+      "sha256": "0dafbec41720e56a8cef816fb80f2df61f842052dbe0798d41921289b1b48f74"
+    },
+    {
+      "name": "archive_open",
+      "va": "0xa570d0",
+      "rva": "0x6570d0",
+      "end_va_exclusive": "0xa57431",
+      "file_offset": "0x6570d0",
+      "size": 865,
+      "sha256": "19642fcd56f24e643ae07339495bf70e44d56566ee8a347b9a5df3d217c88709"
+    },
+    {
+      "name": "lookup_hash_and_name",
+      "va": "0xa56000",
+      "rva": "0x656000",
+      "end_va_exclusive": "0xa56180",
+      "file_offset": "0x656000",
+      "size": 384,
+      "sha256": "1b9640edefd2689c40e14694bcdac317f1ce32a9106918aed391b766c2fe7433"
+    },
+    {
+      "name": "archive_read_bridge",
+      "va": "0xa56180",
+      "rva": "0x656180",
+      "end_va_exclusive": "0xa56213",
+      "file_offset": "0x656180",
+      "size": 147,
+      "sha256": "d9e432a326214fe742d0a9d66c97ab2a40f045999f6a418032aca285ccc40690"
+    },
+    {
+      "name": "read_entry_and_crc",
+      "va": "0xa55320",
+      "rva": "0x655320",
+      "end_va_exclusive": "0xa55500",
+      "file_offset": "0x655320",
+      "size": 480,
+      "sha256": "2ba7c23ca5748238d8f9b1d0e2b15680261c9d84f459be54f9b14b6afc502f70"
+    },
+    {
+      "name": "script_init",
+      "va": "0x82fde0",
+      "rva": "0x42fde0",
+      "end_va_exclusive": "0x82ff2e",
+      "file_offset": "0x42fde0",
+      "size": 334,
+      "sha256": "36a4c3bc6fb185c7c683c7f19477a43ff103309411ab63ecee6f8f70386a8de0"
+    },
+    {
+      "name": "script_open",
+      "va": "0x82f790",
+      "rva": "0x42f790",
+      "end_va_exclusive": "0x82f7c8",
+      "file_offset": "0x42f790",
+      "size": 56,
+      "sha256": "009aff81cdb62a2050b6279446bec362454041a366411f4a3b2884a1228ff009"
+    },
+    {
+      "name": "read_integer_and_float",
+      "va": "0x82f7d0",
+      "rva": "0x42f7d0",
+      "end_va_exclusive": "0x82f8f4",
+      "file_offset": "0x42f7d0",
+      "size": 292,
+      "sha256": "54409e90dd2a4150bdaafc02398e13ec8d6e50af8b39c4587798ff80780811e4"
+    },
+    {
+      "name": "reader_dispatch",
+      "va": "0x8b2950",
+      "rva": "0x4b2950",
+      "end_va_exclusive": "0x8b29ec",
+      "file_offset": "0x4b2950",
+      "size": 156,
+      "sha256": "0d1024ed94823f7a288f492206d2f3805c2c862b0faa7698da451d8cf6caccd7"
+    },
+    {
+      "name": "reader_open_text",
+      "va": "0xb8ba50",
+      "rva": "0x78ba50",
+      "end_va_exclusive": "0xb8ba8c",
+      "file_offset": "0x78ba50",
+      "size": 60,
+      "sha256": "8ab96f920de52b2f9990490d8111bb5166fc155eb8cd8330ba2d425d7eddf5cf"
+    },
+    {
+      "name": "reader_push_text",
+      "va": "0xb8b5c0",
+      "rva": "0x78b5c0",
+      "end_va_exclusive": "0xb8b77c",
+      "file_offset": "0x78b5c0",
+      "size": 444,
+      "sha256": "04625ea645db740fe576d806772349f1c5d8d001357242b6cef0279aa1924514"
+    },
+    {
+      "name": "read_script_from_archive",
+      "va": "0x8316f0",
+      "rva": "0x4316f0",
+      "end_va_exclusive": "0x831ab0",
+      "file_offset": "0x4316f0",
+      "size": 960,
+      "sha256": "6be39a12e7955ca8c8ac49f7a30edce2e4593f4c8ce37e49a0c83e8b9f6e2ef5"
+    },
+    {
+      "name": "startup_register_skills",
+      "va": "0x44ae47",
+      "rva": "0x4ae47",
+      "end_va_exclusive": "0x44ae60",
+      "file_offset": "0x4ae47",
+      "size": 25,
+      "sha256": "29bbb16cfdf3817cc63e08462fba731b9d40f1dd2174ab1e45506a5fb70c22a2"
+    },
+    {
+      "name": "skill_class_lists",
+      "va": "0x8a0ae0",
+      "rva": "0x4a0ae0",
+      "end_va_exclusive": "0x8a0da0",
+      "file_offset": "0x4a0ae0",
+      "size": 704,
+      "sha256": "d651e3647be55d099b7af32a3a496c3cbf1871ea7e253428ecba4cfc664fd504"
+    },
+    {
+      "name": "skill_load_class",
+      "va": "0x8a2940",
+      "rva": "0x4a2940",
+      "end_va_exclusive": "0x8a2a7f",
+      "file_offset": "0x4a2940",
+      "size": 319,
+      "sha256": "f73e0e36602ce9093c9e7c1674a76c95b008d5b7a3afe747b05c40aadbb81e27"
+    },
+    {
+      "name": "skill_parse_properties",
+      "va": "0x8a0da0",
+      "rva": "0x4a0da0",
+      "end_va_exclusive": "0x8a2340",
+      "file_offset": "0x4a0da0",
+      "size": 5536,
+      "sha256": "efd79fc6f4ff7f9b900678cc84ef902212ee4c66ae0958a50f9a469ca88e76c1"
+    },
+    {
+      "name": "consume_mp_branch",
+      "va": "0x8a167f",
+      "rva": "0x4a167f",
+      "end_va_exclusive": "0x8a1700",
+      "file_offset": "0x4a167f",
+      "size": 129,
+      "sha256": "ff128568c92cc855341dd0d1e2b663b329d5cfd29e8382ebd416fd80bae95bed"
+    },
+    {
+      "name": "skill_runtime_materialization",
+      "va": "0x551ad0",
+      "rva": "0x151ad0",
+      "end_va_exclusive": "0x5535e0",
+      "file_offset": "0x151ad0",
+      "size": 6928,
+      "sha256": "1594f66cd264bf9e664a1a83842a3fb90adae20566ff6246f02b00fb758e345b"
+    },
+    {
+      "name": "linear_interpolation",
+      "va": "0xb099b0",
+      "rva": "0x7099b0",
+      "end_va_exclusive": "0xb099da",
+      "file_offset": "0x7099b0",
+      "size": 42,
+      "sha256": "51ee24d4d921514fa069d9033dc67943d38be9131d97a5ae2da2ac4bccffdd8d"
+    },
+    {
+      "name": "runtime_mp_getter",
+      "va": "0x550e10",
+      "rva": "0x150e10",
+      "end_va_exclusive": "0x550f5b",
+      "file_offset": "0x150e10",
+      "size": 331,
+      "sha256": "12aff696ca639f3cfca0520e770b9417456dda42a90f056e6f8b555602dedcf3"
+    },
+    {
+      "name": "mp_qualification_check",
+      "va": "0x4d6417",
+      "rva": "0xd6417",
+      "end_va_exclusive": "0x4d6444",
+      "file_offset": "0xd6417",
+      "size": 45,
+      "sha256": "0f152c32d5c68afc61c6da230994f1bf76387eb507055cdbdc1ac1e6f9e9def4"
+    },
+    {
+      "name": "mp_debit",
+      "va": "0x4d954f",
+      "rva": "0xd954f",
+      "end_va_exclusive": "0x4d9575",
+      "file_offset": "0xd954f",
+      "size": 38,
+      "sha256": "b733c638fca18caf26a9be83fc0bd933669adf45d697a77f1e27a8ad4aac6f71"
+    }
+  ]
+}

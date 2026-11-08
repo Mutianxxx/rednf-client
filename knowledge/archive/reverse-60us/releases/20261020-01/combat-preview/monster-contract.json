@@ -1,0 +1,18 @@
+{
+  "source_exe_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "source_pvf_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+  "scope": "Base Active state resource routing for MOB templates, manually inspected; subclass behavior and ACT instructions are not executed",
+  "evidence": "../analysis/combat_native_collision/monster-reaction-contract.json",
+  "states": {
+    "0": {"label": "待机", "entry": "0x4BAD60", "roles": ["waiting"]},
+    "3": {"label": "受击", "entry": "0x4BB091", "roles": ["damage1", "damage2"], "requires_resolved_motion": true},
+    "4": {"label": "倒地", "entry": "0x4BB249", "roles": ["down", "sit"], "fallback": "sit motion only"}
+  },
+  "act_base_ani": {
+    "scope": ["MOTION"], "tag": "BASE ANI",
+    "native_directory_append": "0xA3F151 / 0xA3F286",
+    "native_consumer": "0xA321B0 / 0xA3224A",
+    "native_dot_segment_normalization": "unknown; preview preserves concatenation and labels any normalized lookup as a reconstruction"
+  },
+  "excluded": ["automatic hit acceptance", "damage computation", "physics", "ACT conditions and events", "state duration and exit", "death animation and last action"]
+}

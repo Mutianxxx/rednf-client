@@ -1,0 +1,339 @@
+[
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "static double boundary(",
+    "line": 47,
+    "all_matches": [
+      47
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "struct Track",
+    "line": 51,
+    "all_matches": [
+      51
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "struct Plan",
+    "line": 52,
+    "all_matches": [
+      52
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "struct Content",
+    "line": 54,
+    "all_matches": [
+      54
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void addTrack(",
+    "line": 58,
+    "all_matches": [
+      58
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void select(int index)",
+    "line": 86,
+    "all_matches": [
+      86,
+      277
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "Texture& sprite(",
+    "line": 142,
+    "all_matches": [
+      142
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void plan(",
+    "line": 183,
+    "all_matches": [
+      183
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "std::array<double,4> bounds(",
+    "line": 201,
+    "all_matches": [
+      201
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void effectSprite(",
+    "line": 210,
+    "all_matches": [
+      210
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "struct Demo",
+    "line": 221,
+    "all_matches": [
+      221
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "bool useShared(",
+    "line": 235,
+    "all_matches": [
+      235
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void prepareShared(",
+    "line": 237,
+    "all_matches": [
+      237
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void freeze(",
+    "line": 258,
+    "all_matches": [
+      258
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void sharedDraw(",
+    "line": 265,
+    "all_matches": [
+      265
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "Plan* current(",
+    "line": 280,
+    "all_matches": [
+      280
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void start(",
+    "line": 281,
+    "all_matches": [
+      281
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void reset(",
+    "line": 287,
+    "all_matches": [
+      287
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void step(",
+    "line": 289,
+    "all_matches": [
+      289
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void frameStep(",
+    "line": 295,
+    "all_matches": [
+      295
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "void seek(",
+    "line": 296,
+    "all_matches": [
+      296
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "static fs::path findClient(",
+    "line": 357,
+    "all_matches": [
+      357
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "static void verify(",
+    "line": 364,
+    "all_matches": [
+      364
+    ]
+  },
+  {
+    "file": "source/src/main.cpp",
+    "symbol": "static int run(",
+    "line": 416,
+    "all_matches": [
+      416
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "std::string normalize(",
+    "line": 11,
+    "all_matches": [
+      11
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "Pvf::Pvf(",
+    "line": 103,
+    "all_matches": [
+      103
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "Bytes Pvf::read(",
+    "line": 170,
+    "all_matches": [
+      170
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "Script Pvf::script(",
+    "line": 180,
+    "all_matches": [
+      180
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "static Json property(",
+    "line": 254,
+    "all_matches": [
+      254
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "Animation decodeAni(",
+    "line": 322,
+    "all_matches": [
+      322
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "size_t Animation::frameAt(",
+    "line": 376,
+    "all_matches": [
+      376
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "AniPose Animation::samplePose(",
+    "line": 390,
+    "all_matches": [
+      390
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "Assets::Assets(",
+    "line": 453,
+    "all_matches": [
+      453
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "Bytes Assets::blob(",
+    "line": 504,
+    "all_matches": [
+      504
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "std::shared_ptr<Animation> Assets::animation(",
+    "line": 526,
+    "all_matches": [
+      526
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "Pixels Assets::pixels(",
+    "line": 535,
+    "all_matches": [
+      535
+    ]
+  },
+  {
+    "file": "source/src/resources.cpp",
+    "symbol": "Pixels decodeImg(",
+    "line": 547,
+    "all_matches": [
+      547
+    ]
+  },
+  {
+    "file": "source/include/dnf/shared_death.hpp",
+    "symbol": "struct DeathProfile",
+    "line": 9,
+    "all_matches": [
+      9
+    ]
+  },
+  {
+    "file": "source/include/dnf/shared_death.hpp",
+    "symbol": "inline uint32_t deathSeed(",
+    "line": 28,
+    "all_matches": [
+      28
+    ]
+  },
+  {
+    "file": "source/include/dnf/shared_death.hpp",
+    "symbol": "inline std::vector<DeathParticle> deathParticles(",
+    "line": 29,
+    "all_matches": [
+      29
+    ]
+  },
+  {
+    "file": "source/include/dnf/shared_death.hpp",
+    "symbol": "inline ParticlePosition deathPosition(",
+    "line": 36,
+    "all_matches": [
+      36
+    ]
+  },
+  {
+    "file": "source/include/dnf/geometry.hpp",
+    "symbol": "inline std::array<Point2, 4> imageQuad(",
+    "line": 15,
+    "all_matches": [
+      15
+    ]
+  }
+]

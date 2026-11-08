@@ -1,0 +1,741 @@
+{
+  "source": {
+    "path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+    "size": 16859648,
+    "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "image_base": "0x400000"
+  },
+  "excerpts": [
+    {
+      "name": "chr_parser_entry",
+      "va": "0x88b2d0",
+      "rva": "0x48b2d0",
+      "file_offset": "0x48b2d0",
+      "size": 200,
+      "sha256": "6d300bd908d0606af08315d2169572c866054260e8dbae7d4eb35fefce3dd1cc",
+      "bin": "chr_parser_entry.bin",
+      "asm": "chr_parser_entry.asm"
+    },
+    {
+      "name": "chr_etc_motion_parse",
+      "va": "0x88c136",
+      "rva": "0x48c136",
+      "file_offset": "0x48c136",
+      "size": 90,
+      "sha256": "eee3aff288453be046ca20382c1abe20d482e8437f5f6676afad091d1c37189f",
+      "bin": "chr_etc_motion_parse.bin",
+      "asm": "chr_etc_motion_parse.asm"
+    },
+    {
+      "name": "chr_etc_attack_parse",
+      "va": "0x88c238",
+      "rva": "0x48c238",
+      "file_offset": "0x48c238",
+      "size": 88,
+      "sha256": "6a4d956f7a43d902e314e0ee1d611118ed8cd74bc29bc4ae6098e53eec42cc1c",
+      "bin": "chr_etc_attack_parse.bin",
+      "asm": "chr_etc_attack_parse.asm"
+    },
+    {
+      "name": "chr_factory",
+      "va": "0xa61910",
+      "rva": "0x661910",
+      "file_offset": "0x661910",
+      "size": 83,
+      "sha256": "334da4ed83d96c0d5f5e8b09e4d4dc7dcbf4b2c1678315543814487c9ad9261b",
+      "bin": "chr_factory.bin",
+      "asm": "chr_factory.asm"
+    },
+    {
+      "name": "chr_materialize_entry",
+      "va": "0x4da140",
+      "rva": "0xda140",
+      "file_offset": "0xda140",
+      "size": 130,
+      "sha256": "12dc66cf360386405231e9df1614df5f1b80150a47e3a88287f8ab5474e111a7",
+      "bin": "chr_materialize_entry.bin",
+      "asm": "chr_materialize_entry.asm"
+    },
+    {
+      "name": "etc_motion_materialize",
+      "va": "0x4db255",
+      "rva": "0xdb255",
+      "file_offset": "0xdb255",
+      "size": 433,
+      "sha256": "7981e8af1b987af9a12c7206a7be4356f7d4c107e198949ab16f47a4efeaf2cb",
+      "bin": "etc_motion_materialize.bin",
+      "asm": "etc_motion_materialize.asm"
+    },
+    {
+      "name": "etc_attack_materialize",
+      "va": "0x4db594",
+      "rva": "0xdb594",
+      "file_offset": "0xdb594",
+      "size": 224,
+      "sha256": "138e560aeb445dcc892b4af50c432fabecef04c681f09d8390404b49d8e4c646",
+      "bin": "etc_attack_materialize.bin",
+      "asm": "etc_attack_materialize.asm"
+    },
+    {
+      "name": "attack_vector_append",
+      "va": "0x4a3630",
+      "rva": "0xa3630",
+      "file_offset": "0xa3630",
+      "size": 93,
+      "sha256": "909290320da660e3f12a938464c5563bb48633de828739e62fb91129516e8018",
+      "bin": "attack_vector_append.bin",
+      "asm": "attack_vector_append.asm"
+    },
+    {
+      "name": "etc_motion_getter",
+      "va": "0x4d3ce0",
+      "rva": "0xd3ce0",
+      "file_offset": "0xd3ce0",
+      "size": 86,
+      "sha256": "65f77a2a52427e5d0c279167bafa910dbb3aefe2f9ef9158e0fc94395142fa62",
+      "bin": "etc_motion_getter.bin",
+      "asm": "etc_motion_getter.asm"
+    },
+    {
+      "name": "etc_attack_getter",
+      "va": "0x5270f0",
+      "rva": "0x1270f0",
+      "file_offset": "0x1270f0",
+      "size": 65,
+      "sha256": "386b5f8f0321db73c68092caa247ef5e55bab97d2d7d6388f81c43da617f2761",
+      "bin": "etc_attack_getter.bin",
+      "asm": "etc_attack_getter.asm"
+    },
+    {
+      "name": "attack_vector_index",
+      "va": "0x527090",
+      "rva": "0x127090",
+      "file_offset": "0x127090",
+      "size": 96,
+      "sha256": "76a805277c1cdae4432bca9b084ba905f0005d95a68e5f6e29c19a405e72225e",
+      "bin": "attack_vector_index.bin",
+      "asm": "attack_vector_index.asm"
+    },
+    {
+      "name": "swordman_constructor_vtable",
+      "va": "0x7469b0",
+      "rva": "0x3469b0",
+      "file_offset": "0x3469b0",
+      "size": 67,
+      "sha256": "afbf35effd4ae657d8b7215ef14b4148c1c0a47232682992f6b720b3665b4bbc",
+      "bin": "swordman_constructor_vtable.bin",
+      "asm": "swordman_constructor_vtable.asm"
+    },
+    {
+      "name": "swordman_atk_setter",
+      "va": "0x746c30",
+      "rva": "0x346c30",
+      "file_offset": "0x346c30",
+      "size": 27,
+      "sha256": "e5952fc3c99d9a676e5dbfb05c96faface5bdc9e80e3c0369284b26749440929",
+      "bin": "swordman_atk_setter.bin",
+      "asm": "swordman_atk_setter.asm"
+    },
+    {
+      "name": "atk_normalizing_setter",
+      "va": "0x4cf680",
+      "rva": "0xcf680",
+      "file_offset": "0xcf680",
+      "size": 320,
+      "sha256": "73c0dedfd251e9aeb57fe2198cd95ddc06d305b58bf93a40b436c42dd94d6a23",
+      "bin": "atk_normalizing_setter.bin",
+      "asm": "atk_normalizing_setter.asm"
+    },
+    {
+      "name": "atk_setter_copy_bridge",
+      "va": "0x4afa10",
+      "rva": "0xafa10",
+      "file_offset": "0xafa10",
+      "size": 88,
+      "sha256": "c4fcd0670a282d8c395cf7d8d67aa9cf6672806e806ebdf2f7267c91f3269f76",
+      "bin": "atk_setter_copy_bridge.bin",
+      "asm": "atk_setter_copy_bridge.asm"
+    },
+    {
+      "name": "atk_install_current",
+      "va": "0x4edcd0",
+      "rva": "0xedcd0",
+      "file_offset": "0xedcd0",
+      "size": 60,
+      "sha256": "9b280fca7051e14546c84e956d0184a3956aa2d79eb8ed9b09e396a4a6f5f854",
+      "bin": "atk_install_current.bin",
+      "asm": "atk_install_current.asm"
+    },
+    {
+      "name": "animation_setter",
+      "va": "0x4b4da0",
+      "rva": "0xb4da0",
+      "file_offset": "0xb4da0",
+      "size": 96,
+      "sha256": "ff7d49cdcd2633c29a4cac6ba86f3899c9b3e898fd3365df0193071b58890cb6",
+      "bin": "animation_setter.bin",
+      "asm": "animation_setter.asm"
+    },
+    {
+      "name": "animation_install_current",
+      "va": "0x49b250",
+      "rva": "0x9b250",
+      "file_offset": "0x9b250",
+      "size": 122,
+      "sha256": "3d1044bab793aa5f6db79707d283df873e1eedc0f420ec6dce1df68c617c6762",
+      "bin": "animation_install_current.bin",
+      "asm": "animation_install_current.asm"
+    },
+    {
+      "name": "hardattack_slot_selection",
+      "va": "0x731f0c",
+      "rva": "0x331f0c",
+      "file_offset": "0x331f0c",
+      "size": 196,
+      "sha256": "de383952191877c7e8caa98fc8dc8c578e47c066470f55bfc0d44b7cbbf7edb6",
+      "bin": "hardattack_slot_selection.bin",
+      "asm": "hardattack_slot_selection.asm"
+    },
+    {
+      "name": "chargeafter_slot_selection",
+      "va": "0x73219d",
+      "rva": "0x33219d",
+      "file_offset": "0x33219d",
+      "size": 44,
+      "sha256": "e7fb9476c0b6689911f10ea98de9a52481c77af5cca9e5d29eca76b9603c5df1",
+      "bin": "chargeafter_slot_selection.bin",
+      "asm": "chargeafter_slot_selection.asm"
+    },
+    {
+      "name": "equipment_animation_bind",
+      "va": "0x4b4a80",
+      "rva": "0xb4a80",
+      "file_offset": "0xb4a80",
+      "size": 788,
+      "sha256": "5fd53bad8b9b3310dbbcdd2c672a820e2f343243f6030aec2c1ebd5bd9b30284",
+      "bin": "equipment_animation_bind.bin",
+      "asm": "equipment_animation_bind.asm"
+    },
+    {
+      "name": "equipment_layer_variation_parse",
+      "va": "0x866600",
+      "rva": "0x466600",
+      "file_offset": "0x466600",
+      "size": 309,
+      "sha256": "c0b4ae031c609070af1d815ed708516fad12e1ee5ba07f630a36b526e8a2e21a",
+      "bin": "equipment_layer_variation_parse.bin",
+      "asm": "equipment_layer_variation_parse.asm"
+    },
+    {
+      "name": "equipment_etc_motion_template_parse",
+      "va": "0x8679d5",
+      "rva": "0x4679d5",
+      "file_offset": "0x4679d5",
+      "size": 432,
+      "sha256": "80e25823d9461408659a24531baf67314cc543a8c9a9b7c78b075850b951e887",
+      "bin": "equipment_etc_motion_template_parse.bin",
+      "asm": "equipment_etc_motion_template_parse.asm"
+    },
+    {
+      "name": "equipment_variation_parse",
+      "va": "0x867cea",
+      "rva": "0x467cea",
+      "file_offset": "0x467cea",
+      "size": 91,
+      "sha256": "28e10c2b964648a3ecd0843f5845edaac2d85e23816f39568ae38206a0578f56",
+      "bin": "equipment_variation_parse.bin",
+      "asm": "equipment_variation_parse.asm"
+    },
+    {
+      "name": "equipment_effective_layer_vector",
+      "va": "0x455dd0",
+      "rva": "0x55dd0",
+      "file_offset": "0x55dd0",
+      "size": 17,
+      "sha256": "f9deedd78b389737d3fab03d47b3379fe22828a925cf6094dae89283840504c9",
+      "bin": "equipment_effective_layer_vector.bin",
+      "asm": "equipment_effective_layer_vector.asm"
+    },
+    {
+      "name": "equipment_layer_override_resolve",
+      "va": "0x4acd30",
+      "rva": "0xacd30",
+      "file_offset": "0xacd30",
+      "size": 254,
+      "sha256": "2820f8338edc8653bfe7158e1598512811746aa27f7efda595102291db4f6bc8",
+      "bin": "equipment_layer_override_resolve.bin",
+      "asm": "equipment_layer_override_resolve.asm"
+    },
+    {
+      "name": "equipment_layer_attach_bridge",
+      "va": "0x4b8266",
+      "rva": "0xb8266",
+      "file_offset": "0xb8266",
+      "size": 153,
+      "sha256": "ea2e116adb162338f75f6d424659bf27b7adf022847f27a1ced1365b72128a40",
+      "bin": "equipment_layer_attach_bridge.bin",
+      "asm": "equipment_layer_attach_bridge.asm"
+    },
+    {
+      "name": "equipment_layer_attach_etc",
+      "va": "0x4b89a2",
+      "rva": "0xb89a2",
+      "file_offset": "0xb89a2",
+      "size": 144,
+      "sha256": "c10ba9e3175e21297876f991e5a81bb14174583afe0fa0ae3b5be30391700e66",
+      "bin": "equipment_layer_attach_etc.bin",
+      "asm": "equipment_layer_attach_etc.asm"
+    },
+    {
+      "name": "equipment_same_motion_attach",
+      "va": "0x4b8690",
+      "rva": "0xb8690",
+      "file_offset": "0xb8690",
+      "size": 930,
+      "sha256": "d305b78e1aeb89ce3e177db3fca4dd2b5f4b48fd09f5ae401c62e387a27e5657",
+      "bin": "equipment_same_motion_attach.bin",
+      "asm": "equipment_same_motion_attach.asm"
+    },
+    {
+      "name": "equipment_layer_lazy_load",
+      "va": "0x4b2650",
+      "rva": "0xb2650",
+      "file_offset": "0xb2650",
+      "size": 400,
+      "sha256": "c3ccc32845e4fb1fd683fd7db9be84db653b7d03a2a6e6444246001ab26bdcbb",
+      "bin": "equipment_layer_lazy_load.bin",
+      "asm": "equipment_layer_lazy_load.asm"
+    },
+    {
+      "name": "equipment_lazy_placeholder_test",
+      "va": "0x4af8d0",
+      "rva": "0xaf8d0",
+      "file_offset": "0xaf8d0",
+      "size": 90,
+      "sha256": "85b4d2bebd013f07369721366c45a1c5510386390c0cd9eefb12c8cd45c21a52",
+      "bin": "equipment_lazy_placeholder_test.bin",
+      "asm": "equipment_lazy_placeholder_test.asm"
+    },
+    {
+      "name": "equipment_same_motion_box_merge_gate",
+      "va": "0x4b4960",
+      "rva": "0xb4960",
+      "file_offset": "0xb4960",
+      "size": 278,
+      "sha256": "ac5d86c62a2e5bd85fbc54051c62495743cdec0e0b9f1802bab1526fe16e2a93",
+      "bin": "equipment_same_motion_box_merge_gate.bin",
+      "asm": "equipment_same_motion_box_merge_gate.asm"
+    },
+    {
+      "name": "equipment_same_motion_box_merge",
+      "va": "0x456770",
+      "rva": "0x56770",
+      "file_offset": "0x56770",
+      "size": 190,
+      "sha256": "0feb87bac3ee98e6829d9d2e8bc50bbdec45a75858e1c8ec3826f12724f9bb24",
+      "bin": "equipment_same_motion_box_merge.bin",
+      "asm": "equipment_same_motion_box_merge.asm"
+    },
+    {
+      "name": "motion_boxes_clear_bridge",
+      "va": "0x4ae9a0",
+      "rva": "0xae9a0",
+      "file_offset": "0xae9a0",
+      "size": 41,
+      "sha256": "0b80a94f2df72962cc66b184327109ca13656820aac781361178d936e13bf50f",
+      "bin": "motion_boxes_clear_bridge.bin",
+      "asm": "motion_boxes_clear_bridge.asm"
+    },
+    {
+      "name": "motion_boxes_append_bridge",
+      "va": "0x4aeb90",
+      "rva": "0xaeb90",
+      "file_offset": "0xaeb90",
+      "size": 119,
+      "sha256": "527f9430a1010dcadc31f422e9aa17fd93a3d69539d121eca830d613203fec98",
+      "bin": "motion_boxes_append_bridge.bin",
+      "asm": "motion_boxes_append_bridge.asm"
+    },
+    {
+      "name": "animation_frame_box_append",
+      "va": "0xa27500",
+      "rva": "0x627500",
+      "file_offset": "0x627500",
+      "size": 392,
+      "sha256": "5d9fd791f7e731e85582f5c9f66bfeeb8c6b66ab9678b0aa455b3b41624549e2",
+      "bin": "animation_frame_box_append.bin",
+      "asm": "animation_frame_box_append.asm"
+    },
+    {
+      "name": "animation_frame_box_clear",
+      "va": "0xa27690",
+      "rva": "0x627690",
+      "file_offset": "0x627690",
+      "size": 170,
+      "sha256": "01dca3fc8260cbe21816828fa9c36bedd0244eae04c02d43ad072df5188bf382",
+      "bin": "animation_frame_box_clear.bin",
+      "asm": "animation_frame_box_clear.asm"
+    },
+    {
+      "name": "animation_child_find_order",
+      "va": "0xa24dc0",
+      "rva": "0x624dc0",
+      "file_offset": "0x624dc0",
+      "size": 54,
+      "sha256": "847359d3377a9e5cba4bad9e74bd9d9b7f311cb7b25a30b627adbd1512e492e4",
+      "bin": "animation_child_find_order.bin",
+      "asm": "animation_child_find_order.asm"
+    },
+    {
+      "name": "animation_child_remove",
+      "va": "0xa277c0",
+      "rva": "0x6277c0",
+      "file_offset": "0x6277c0",
+      "size": 103,
+      "sha256": "ec986e74f66d66bfcd034867088842e58551ce3676511be343a864a2375f1c13",
+      "bin": "animation_child_remove.bin",
+      "asm": "animation_child_remove.asm"
+    },
+    {
+      "name": "animation_child_attach_sorted",
+      "va": "0xa29d70",
+      "rva": "0x629d70",
+      "file_offset": "0x629d70",
+      "size": 132,
+      "sha256": "cdb0ef7a68738c828bab85189e7dff27fe57e17fa12c6fc2f41c49d9ddc62ba4",
+      "bin": "animation_child_attach_sorted.bin",
+      "asm": "animation_child_attach_sorted.asm"
+    },
+    {
+      "name": "animation_body_delay_to_child",
+      "va": "0x4ccdb0",
+      "rva": "0xccdb0",
+      "file_offset": "0xccdb0",
+      "size": 229,
+      "sha256": "461714aa2d5ac7841be33637d6a57f7ff6fde2218e70ba4609033296cd03b5e8",
+      "bin": "animation_body_delay_to_child.bin",
+      "asm": "animation_body_delay_to_child.asm"
+    },
+    {
+      "name": "animation_child_root_time",
+      "va": "0x4caa00",
+      "rva": "0xcaa00",
+      "file_offset": "0xcaa00",
+      "size": 24,
+      "sha256": "e788948b871ceccd89dce4e23f4985baa9d8178e8d4ba25640a749131df19837",
+      "bin": "animation_child_root_time.bin",
+      "asm": "animation_child_root_time.asm"
+    },
+    {
+      "name": "animation_frame_advance_parent_time",
+      "va": "0xa27dc0",
+      "rva": "0x627dc0",
+      "file_offset": "0x627dc0",
+      "size": 410,
+      "sha256": "4c50397e2ec467d4e2cba829dc63a8fe3d2bef0cd8580cc6cc2506ba5be5c485",
+      "bin": "animation_frame_advance_parent_time.bin",
+      "asm": "animation_frame_advance_parent_time.asm"
+    },
+    {
+      "name": "animation_frame_set",
+      "va": "0xa27870",
+      "rva": "0x627870",
+      "file_offset": "0x627870",
+      "size": 318,
+      "sha256": "5841182564a77005455844061c4ecb502d88931d9c42115f2ceff11821c83d44",
+      "bin": "animation_frame_set.bin",
+      "asm": "animation_frame_set.asm"
+    },
+    {
+      "name": "animation_reset_tree",
+      "va": "0xa27360",
+      "rva": "0x627360",
+      "file_offset": "0x627360",
+      "size": 416,
+      "sha256": "fd30fbf96c3d1e3c14ef46b4f3618d5a74a1bb0e0ce9e280e6b3e14c9ec778f1",
+      "bin": "animation_reset_tree.bin",
+      "asm": "animation_reset_tree.asm"
+    },
+    {
+      "name": "animation_speed_tree",
+      "va": "0xa29c70",
+      "rva": "0x629c70",
+      "file_offset": "0x629c70",
+      "size": 245,
+      "sha256": "7f03325fb62f88c06275793222c6a247fee37b1e0a2f86f7019134fddbd01800",
+      "bin": "animation_speed_tree.bin",
+      "asm": "animation_speed_tree.asm"
+    },
+    {
+      "name": "animation_child_draw_order",
+      "va": "0xa26220",
+      "rva": "0x626220",
+      "file_offset": "0x626220",
+      "size": 495,
+      "sha256": "e316de119a28a348173b781d9b6bbac6c5442860522c5dd2d942659873e17c3d",
+      "bin": "animation_child_draw_order.bin",
+      "asm": "animation_child_draw_order.asm"
+    },
+    {
+      "name": "animation_frame_index",
+      "va": "0xa25c90",
+      "rva": "0x625c90",
+      "file_offset": "0x625c90",
+      "size": 70,
+      "sha256": "c63737475d4089407193a0cc888d41fb5345461dd7c6482c812b01f02e25c7f4",
+      "bin": "animation_frame_index.bin",
+      "asm": "animation_frame_index.asm"
+    },
+    {
+      "name": "animation_tag_ids_delay_and_boxes",
+      "va": "0xa288d6",
+      "rva": "0x6288d6",
+      "file_offset": "0x6288d6",
+      "size": 327,
+      "sha256": "fbcd71fb6dc9ae24ac00c493c9ba414be3b39e182be9d03b41d4318f5928c1c4",
+      "bin": "animation_tag_ids_delay_and_boxes.bin",
+      "asm": "animation_tag_ids_delay_and_boxes.asm"
+    },
+    {
+      "name": "animation_tag_switch",
+      "va": "0xa28ca7",
+      "rva": "0x628ca7",
+      "file_offset": "0x628ca7",
+      "size": 19,
+      "sha256": "3e7a899b52914d65270ac53420c0c6e1bdccc5bd3da6f08d8e86628adfa43dfe",
+      "bin": "animation_tag_switch.bin",
+      "asm": "animation_tag_switch.asm"
+    },
+    {
+      "name": "animation_parse_delay",
+      "va": "0xa29308",
+      "rva": "0x629308",
+      "file_offset": "0x629308",
+      "size": 37,
+      "sha256": "d6f23ece6ee7c82ca9c3949ab785cbd5d1ea268f77f1e39da5e2a22b20539006",
+      "bin": "animation_parse_delay.bin",
+      "asm": "animation_parse_delay.asm"
+    },
+    {
+      "name": "animation_parse_damage_box",
+      "va": "0xa293c8",
+      "rva": "0x6293c8",
+      "file_offset": "0x6293c8",
+      "size": 226,
+      "sha256": "550940588cf12b8ee71801e65adce392d929c9b6fee74392409bd9c8abf9b877",
+      "bin": "animation_parse_damage_box.bin",
+      "asm": "animation_parse_damage_box.asm"
+    },
+    {
+      "name": "animation_parse_attack_box",
+      "va": "0xa294aa",
+      "rva": "0x6294aa",
+      "file_offset": "0x6294aa",
+      "size": 226,
+      "sha256": "ce7543144e4307de54117d1f73239eba20ee510c30c741bec6a935a5f65f30b3",
+      "bin": "animation_parse_attack_box.bin",
+      "asm": "animation_parse_attack_box.asm"
+    },
+    {
+      "name": "animation_image_format_arguments",
+      "va": "0xa28f64",
+      "rva": "0x628f64",
+      "file_offset": "0x628f64",
+      "size": 179,
+      "sha256": "d6edcf1735f8717790aacb8e9aae8239c2b7e22bff49645134d0862d717b6805",
+      "bin": "animation_image_format_arguments.bin",
+      "asm": "animation_image_format_arguments.asm"
+    },
+    {
+      "name": "animation_constructor_variation_forward",
+      "va": "0x472c74",
+      "rva": "0x72c74",
+      "file_offset": "0x72c74",
+      "size": 51,
+      "sha256": "4ea717b9e3c35532c820abb7a62c34ee9cb447d7bbe1f9fa3ed0a1fff8e5ab23",
+      "bin": "animation_constructor_variation_forward.bin",
+      "asm": "animation_constructor_variation_forward.asm"
+    },
+    {
+      "name": "animation_loader_variation_forward",
+      "va": "0xa29ad0",
+      "rva": "0x629ad0",
+      "file_offset": "0x629ad0",
+      "size": 136,
+      "sha256": "d0764e7b8c00908712156dd4797e95edfdba823491e502fe47c0b8ec4c40de14",
+      "bin": "animation_loader_variation_forward.bin",
+      "asm": "animation_loader_variation_forward.asm"
+    },
+    {
+      "name": "animation_cached_image_format",
+      "va": "0xa60810",
+      "rva": "0x660810",
+      "file_offset": "0x660810",
+      "size": 297,
+      "sha256": "49a5636f42f1903b29a081574a28a738e565fffd5e977c4f138eae2b984fd57c",
+      "bin": "animation_cached_image_format.bin",
+      "asm": "animation_cached_image_format.asm"
+    },
+    {
+      "name": "animation_directory_join",
+      "va": "0xa60940",
+      "rva": "0x660940",
+      "file_offset": "0x660940",
+      "size": 76,
+      "sha256": "5258d9076aa33376f86c346ca44a7d6a209b2e1f4f8d96fc8fc08f0e8be543ad",
+      "bin": "animation_directory_join.bin",
+      "asm": "animation_directory_join.asm"
+    },
+    {
+      "name": "wide_format_wrapper",
+      "va": "0x401df0",
+      "rva": "0x1df0",
+      "file_offset": "0x1df0",
+      "size": 42,
+      "sha256": "135d1141afec4f639f85d759755c924d9161dcf765769ff0004241f82cc990cf",
+      "bin": "wide_format_wrapper.bin",
+      "asm": "wide_format_wrapper.asm"
+    },
+    {
+      "name": "wide_format_vargs_wrapper",
+      "va": "0x4011f0",
+      "rva": "0x11f0",
+      "file_offset": "0x11f0",
+      "size": 90,
+      "sha256": "1f8f1f7997ae78268f4d4d58c3dc9d1eed169c20a60e1980cac2d93cb9725efe",
+      "bin": "wide_format_vargs_wrapper.bin",
+      "asm": "wide_format_vargs_wrapper.asm"
+    }
+  ],
+  "data": [
+    {
+      "name": "swordman_type_descriptor",
+      "va": "0xf6740c",
+      "rva": "0xb6740c",
+      "file_offset": "0xb6740c",
+      "size": 32,
+      "sha256": "7eaa7a8a03bb0d7339ad804add40196ed25ccc594d1394da40097b9b6b8fab04",
+      "hex": "70d1e900000000002e3f4156434e53776f72646d616e40400000000070d1e900"
+    },
+    {
+      "name": "swordman_complete_object_locator",
+      "va": "0xebb354",
+      "rva": "0xabb354",
+      "file_offset": "0xabb354",
+      "size": 20,
+      "sha256": "d786256371195abe5fecf4db42299e9f84676a35c8ee33f481180ebd4fcc5d53",
+      "hex": "0000000000000000000000000c74f60044b3eb00"
+    },
+    {
+      "name": "swordman_vtable_prefix",
+      "va": "0xd80f90",
+      "rva": "0x980f90",
+      "file_offset": "0x980f90",
+      "size": 2048,
+      "sha256": "584976144ca119272cc786d843a509e619ca5e39d5c4340ef51aac55cdf75f80",
+      "hex": "54b3eb00506c740000e64b00107d4000607d4000e0364c00f0ff710020e14a0080a6490080be490060804000507b4000f08f4900607b400010fc4b00b0498e00707b4000f07f400000804000807b400010ac490070934900e0aa4900907b4000a07b400070ea4b00b07b4000b09e4900c07b4000f07b4000207c4000908040002080400010904900909049005090490000c04c00b0904900307c4000407c4000507c4000607c4000807c400000c14a00f0004b00f0944900c09a4900c0904900e090490000914900b07c4000e07c400080944900109c4900b07d4000107e4000109d4900609d4900707e4000807e4000f0c67100a04d4b00f09e490080cf4a00a0ab490080944e00907e4000a07e4000b092490010934900f0fb4100b07e400070b34900c07e4000d07e4000e07e4000007f4000107f4000b0914900307f4000407f400010924900c07f4000507f4000607f4000907f4000a07f400050c67100b0207200f0e44b0020914900b07f4000f01f4c00e09d4900c0dcae0050c84a00e0ca4a00b0be7100d0e84b0050617200e0c552002089430040864300306c7400508643009089430020de4e0050ce4e0060864300c0e34b00d0874e0070864300b0498e0050c04c0090864300903b5500e0884300504a7400704a7400904a7400b04a7400d04a7400f04a7400104b7400304b7400504b7400e0944e0040d64a00f087430000884300d0864300d086430010884300408843006088430090884300c0487400f048740010c34a0070c34a00b0077300304c7400904b7400a04b740070df4e0080ef4a0000b64e00d0814e0060824e0080e07100b0407200a0e1710020117200405b7200d0b37100801f720080e14e00803b9100b0974b0090c04a00e09d4e00c0435000e0025700f0864300d0d14e00c0da4e000087430010874300804b7200903b5500903b5500903b5500e0c55200b0844e0060b24e00d0a44e0020a64e00808a4e00907f4e0050a74e0010804e002087430030874300704e740050874300e0914e00b0884300d0884300f04d7400b0cd71006087430080b74e0070874300a0874300b087430000cb4e00d0e24e0000b47100e087430000854e0030864e0000b04e00803b9100c0e74b00b0894e00c0894e00d0854e0030db4b0090d64a00304f74005047740010ff4b00405b740030064c0000e84b00e0677400504f74008047740090477400a0477400b047740030c84a00c0c74a00f0c74a0010c84a00c047740010de6d00d0eb7100e03c4d00d0477400e0477400f04774000048740020487400304874004048740050487400804f7400c04f74006048740090864b00408a4b007048740010df4a00f0d94a00e0d14a0050db4a0060d94a00704b740040f54a0040c44a0040f14a0030fc4b0060fc4a0090024b00e04b7400f04b740070bf4a00b0044b00e0204c008048740020c04a0050c04a00e0ee4c00f0814b0060f04c00e0844b0000f54c00f07c4b00507b4b00407d4b00c07f4b00207a4b00a048740050e54b00007b4b00307b4b00c0f44a001049740090db4c00404c740080e671002049740020dc4b0090984b00304974004049740010984b00707a4b0070944b00f08d4b00809d4b005049740060497400609c4b00c0994b00305c7400d0dd4a0070497400c01e4c0000be710090204c00504c74008049740090497400a0497400a0d24a0090d34a00d0c74c0030c14a00a0c24a0030be4a00604c7400a04c7400e04c7400204d7400604d7400a04d7400c04d7400303c4b00603f4b00207a6b00e04e7400e04d7400b0497400c049740040424b0020a64b0020e04a0070d44a00008c4b00105c4d00705d4d00708c4b00f0c34a0030c34c00f00a4c0040ea4b00f0144c00f0c54a00b0ec4b00d0498e00b0c24a00d0497400e049740020d44a00f0497400e0c24a0060ed4b00c0af4c00f0b64c0020094b0060954b0050974b00f09b4b00409e4b00b09e4b00104a740070394b00c0c74b0090ec4b0080b3710080384d00a0ad4c00305f7400305b740030f94c0020fa4c00904a4d00b0db4c00505b740040eb4c00f0ae4c00e05e7400305d7400605b7400705b7400805b7400a05b7400c05b740020de6d00d05b7400e05b740030054d00d0d14c0030b34c00a0b24c00a0ce4c0070d04c0040d34c0060f54c00f0b44c00e0b54c00f0d74c00b0e27100d0f84c0010e2710080e27100f05b7400005c7400105c7400205c740050e34b0050204d0090f24c00300a4d009030720030884d0070f37100405d7400805d7400c05d7400005e7400405e740030ce710070ec7100000d4e00d0e9710040074d0080c94c00f0b7710060b77100d0304d00a0334d0000344d0020354d0080354d0060344d00c0344d00e0354d00605c7400705c7400b0b94c00805c740080c14c00c0c14c00a0104d0060cc7100803b9100905c7400a05c7400b05c740000f34c00c05c740000f34d00d05c740090f44d00e05c740050f64d00f05c7400e0fe4d0000034e0080074e00000b4e00f0d34c0050214d00005d7400805e7400905e740010524d0010cb7100f0c34c0090c04c0030c24c0070c24c0000e04b00e0df4b00f0df4b0080634d00a00f4d00c0ba7100d0c64c0020c74c003023720080b44c00301d4c0070ba710090bd4c0070b47100a05e7400105d7400205d7400b0ca710050cd4c00803b9100a02a720010c67100403d4d0050e64b0020e74b00801f4c0080014c0040f64b0010e84b00f067740010687400c0374c00e0294c00d00c7500a0644c00c0ec4b00c05a4c0080194c0000000000bcb3eb00d071740000e64b00107d4000607d40009031690090fd4a0020e14a00"
+    },
+    {
+      "name": "etc_motion_tag_utf16",
+      "va": "0xe1e88c",
+      "rva": "0xa1e88c",
+      "file_offset": "0xa1e88c",
+      "size": 26,
+      "sha256": "ce83cd28ed707040a4a78946b213ca14fcec477b173d31fd614197045d3cebda",
+      "hex": "5b0065007400630020006d006f00740069006f006e005d000000"
+    },
+    {
+      "name": "etc_attack_info_tag_utf16",
+      "va": "0xe233ec",
+      "rva": "0xa233ec",
+      "file_offset": "0xa233ec",
+      "size": 36,
+      "sha256": "13c98cdc0f2e1b2791912ef5f36b751c54ac0decd1b153467b7da60f0c030d4d",
+      "hex": "5b006500740063002000610074007400610063006b00200069006e0066006f005d000000"
+    },
+    {
+      "name": "ani_tag_switch_table",
+      "va": "0xa29758",
+      "rva": "0x629758",
+      "file_offset": "0x629758",
+      "size": 80,
+      "sha256": "856d95cdd71822d578f6f4c8d7ef60367b422f2d2022baaff353087378def6e8",
+      "hex": "ba8ca200d68ca200f28ca2000f8da200238da200648fa200cd90a200f190a2002b91a2004491a2009191a200af91a200d091a2000893a2002d93a200c893a200aa94a2008c95a200b195a200f695a200"
+    },
+    {
+      "name": "ani_box_tags_utf16",
+      "va": "0xe44f64",
+      "rva": "0xa44f64",
+      "file_offset": "0xa44f64",
+      "size": 46,
+      "sha256": "75ab2d8f79435b5a41eca8659037f6ecb070b4f7cfb7776db1709e935b4966ba",
+      "hex": "5b00410054005400410043004b00200042004f0058005d00000000005b00440041004d0041004700450020004200"
+    },
+    {
+      "name": "ani_delay_tag_utf16",
+      "va": "0xe44fb8",
+      "rva": "0xa44fb8",
+      "file_offset": "0xa44fb8",
+      "size": 16,
+      "sha256": "153ffb7266a450b586a2fec4cd58b929d3c62b7458d55e03a0ecd76fd58831f2",
+      "hex": "5b00440045004c00410059005d000000"
+    },
+    {
+      "name": "equipment_layer_tags_utf16",
+      "va": "0xe1ebec",
+      "rva": "0xa1ebec",
+      "file_offset": "0xa1ebec",
+      "size": 51,
+      "sha256": "ed0dcf2c965f596f9a22ad1ea593a399415f9d8428aeff12ff5c25fc5b0ddd68",
+      "hex": "5b004c0041005900450052005d0000005b006c006100790065007200200076006100720069006100740069006f006e005d0000"
+    }
+  ],
+  "rtti": {
+    "type_descriptor": "0xf6740c",
+    "complete_object_locator": "0xebb354",
+    "vtable": "0xd80f94",
+    "constructor_write_va": "0x7469e8",
+    "slots": [
+      {
+        "slot": "0xf0",
+        "va": "0xd81084",
+        "file_offset": "0x981084",
+        "bytes_hex": "a04d4b00",
+        "target": "0x4b4da0"
+      },
+      {
+        "slot": "0x198",
+        "va": "0xd8112c",
+        "file_offset": "0x98112c",
+        "bytes_hex": "306c7400",
+        "target": "0x746c30"
+      },
+      {
+        "slot": "0x38c",
+        "va": "0xd81320",
+        "file_offset": "0x981320",
+        "bytes_hex": "e03c4d00",
+        "target": "0x4d3ce0"
+      },
+      {
+        "slot": "0x67c",
+        "va": "0xd81610",
+        "file_offset": "0x981610",
+        "bytes_hex": "000d4e00",
+        "target": "0x4e0d00"
+      },
+      {
+        "slot": "0x694",
+        "va": "0xd81628",
+        "file_offset": "0x981628",
+        "bytes_hex": "d0304d00",
+        "target": "0x4d30d0"
+      }
+    ]
+  },
+  "limitations": [
+    "Static byte evidence; original game not executed",
+    "Function names are analyst labels, not recovered symbols",
+    "No claim of complete skill controller or hit acceptance recovery"
+  ]
+}

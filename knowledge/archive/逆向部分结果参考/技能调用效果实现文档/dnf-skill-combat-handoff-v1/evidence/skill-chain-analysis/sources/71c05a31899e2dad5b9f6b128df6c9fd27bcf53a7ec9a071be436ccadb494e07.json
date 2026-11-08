@@ -1,0 +1,802 @@
+{
+  "path": "character/swordman/effect/animation/bloodsword/dust.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        7
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Guard/guard_attack_none.img",
+        1
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -209,
+        -207
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        -1.0,
+        1.0
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 80
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Guard/guard_attack_none.img",
+        2
+      ],
+      "offset": 85
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -209,
+        -207
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        -1.0,
+        1.0
+      ],
+      "offset": 115
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 130
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 140
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Guard/guard_attack_none.img",
+        3
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -209,
+        -207
+      ],
+      "offset": 160
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        -1.0,
+        1.0
+      ],
+      "offset": 175
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 200
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Guard/guard_attack_none.img",
+        4
+      ],
+      "offset": 205
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -209,
+        -207
+      ],
+      "offset": 220
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        -1.0,
+        1.0
+      ],
+      "offset": 235
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 250
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 260
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Guard/guard_attack_none.img",
+        5
+      ],
+      "offset": 265
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -209,
+        -207
+      ],
+      "offset": 280
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        -1.0,
+        1.0
+      ],
+      "offset": 295
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 310
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 320
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Guard/guard_attack_none.img",
+        6
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -209,
+        -207
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        -1.0,
+        1.0
+      ],
+      "offset": 355
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 370
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 380
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Guard/guard_attack_none.img",
+        7
+      ],
+      "offset": 385
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -209,
+        -207
+      ],
+      "offset": 400
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        -1.0,
+        1.0
+      ],
+      "offset": 415
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        60
+      ],
+      "offset": 430
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 2107776,
+      "value": "Character/Swordman/Effect/Guard/guard_attack_none.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967087,
+      "value": -209
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967089,
+      "value": -207
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 60,
+      "type": 2,
+      "raw": 3212836864,
+      "value": -1.0
+    },
+    {
+      "offset": 65,
+      "type": 2,
+      "raw": 1065353216,
+      "value": 1.0
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 90,
+      "type": 6,
+      "raw": 2107776,
+      "value": "Character/Swordman/Effect/Guard/guard_attack_none.img"
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 4294967087,
+      "value": -209
+    },
+    {
+      "offset": 110,
+      "type": 0,
+      "raw": 4294967089,
+      "value": -207
+    },
+    {
+      "offset": 115,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 120,
+      "type": 2,
+      "raw": 3212836864,
+      "value": -1.0
+    },
+    {
+      "offset": 125,
+      "type": 2,
+      "raw": 1065353216,
+      "value": 1.0
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 140,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 150,
+      "type": 6,
+      "raw": 2107776,
+      "value": "Character/Swordman/Effect/Guard/guard_attack_none.img"
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 160,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 4294967087,
+      "value": -209
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 4294967089,
+      "value": -207
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 180,
+      "type": 2,
+      "raw": 3212836864,
+      "value": -1.0
+    },
+    {
+      "offset": 185,
+      "type": 2,
+      "raw": 1065353216,
+      "value": 1.0
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 205,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 210,
+      "type": 6,
+      "raw": 2107776,
+      "value": "Character/Swordman/Effect/Guard/guard_attack_none.img"
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 220,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 225,
+      "type": 0,
+      "raw": 4294967087,
+      "value": -209
+    },
+    {
+      "offset": 230,
+      "type": 0,
+      "raw": 4294967089,
+      "value": -207
+    },
+    {
+      "offset": 235,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 240,
+      "type": 2,
+      "raw": 3212836864,
+      "value": -1.0
+    },
+    {
+      "offset": 245,
+      "type": 2,
+      "raw": 1065353216,
+      "value": 1.0
+    },
+    {
+      "offset": 250,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 260,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 265,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 270,
+      "type": 6,
+      "raw": 2107776,
+      "value": "Character/Swordman/Effect/Guard/guard_attack_none.img"
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 5,
+      "value": 5
+    },
+    {
+      "offset": 280,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 285,
+      "type": 0,
+      "raw": 4294967087,
+      "value": -209
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 4294967089,
+      "value": -207
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 300,
+      "type": 2,
+      "raw": 3212836864,
+      "value": -1.0
+    },
+    {
+      "offset": 305,
+      "type": 2,
+      "raw": 1065353216,
+      "value": 1.0
+    },
+    {
+      "offset": 310,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 315,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 320,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 330,
+      "type": 6,
+      "raw": 2107776,
+      "value": "Character/Swordman/Effect/Guard/guard_attack_none.img"
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 4294967087,
+      "value": -209
+    },
+    {
+      "offset": 350,
+      "type": 0,
+      "raw": 4294967089,
+      "value": -207
+    },
+    {
+      "offset": 355,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 360,
+      "type": 2,
+      "raw": 3212836864,
+      "value": -1.0
+    },
+    {
+      "offset": 365,
+      "type": 2,
+      "raw": 1065353216,
+      "value": 1.0
+    },
+    {
+      "offset": 370,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 375,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    },
+    {
+      "offset": 380,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 385,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 390,
+      "type": 6,
+      "raw": 2107776,
+      "value": "Character/Swordman/Effect/Guard/guard_attack_none.img"
+    },
+    {
+      "offset": 395,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 400,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 405,
+      "type": 0,
+      "raw": 4294967087,
+      "value": -209
+    },
+    {
+      "offset": 410,
+      "type": 0,
+      "raw": 4294967089,
+      "value": -207
+    },
+    {
+      "offset": 415,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 420,
+      "type": 2,
+      "raw": 3212836864,
+      "value": -1.0
+    },
+    {
+      "offset": 425,
+      "type": 2,
+      "raw": 1065353216,
+      "value": 1.0
+    },
+    {
+      "offset": 430,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 60,
+      "value": 60
+    }
+  ],
+  "raw_sha256": "71c05a31899e2dad5b9f6b128df6c9fd27bcf53a7ec9a071be436ccadb494e07"
+}

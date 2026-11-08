@@ -1,0 +1,587 @@
+{
+  "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+  "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+  "session": "20261018T071256-61396",
+  "analysis_sha256": "343e027fe3e9d41966534a3b0cd3008dbf8961287363646578a5b45a377cc1fa",
+  "audit_artifact_manifest_sha256": "8ebcdcd360b9850b41db62c87cb15b5127ad0eb22a45a880a0e67c920e3de08a",
+  "total_types": 68,
+  "observed_types": 42,
+  "total_members": 334927,
+  "observed_members": 7481,
+  "types": [
+    {
+      "extension": ".act",
+      "total_members": 19087,
+      "observed_members": 40,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "行为/动作脚本；UI、怪物等上下文分别解释",
+      "unfinished": "token 可读；不是完整行为执行器"
+    },
+    {
+      "extension": ".ai",
+      "total_members": 7105,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "AI 思考/条件/行为模式",
+      "unfinished": "状态机、优先级及全部操作码待恢复"
+    },
+    {
+      "extension": ".aic",
+      "total_members": 544,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "AI 角色模板与角色状态",
+      "unfinished": "APC 模板用途可辨；创建/调度栈未恢复"
+    },
+    {
+      "extension": ".als",
+      "total_members": 1179,
+      "observed_members": 365,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "动画附加层及其位置/时间等参数",
+      "unfinished": "结构可读，触发和全部运行规则未闭合"
+    },
+    {
+      "extension": ".als__",
+      "total_members": 1,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "动画附层的保留成员",
+      "unfinished": "结构像 ALS；是否被当前客户端引用未知"
+    },
+    {
+      "extension": ".ani",
+      "total_members": 187396,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "动画帧、时长、图像引用和帧属性",
+      "unfinished": "部分字段已解析；并非全部属性/混合规则"
+    },
+    {
+      "extension": ".ani__",
+      "total_members": 1,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "ANI 文本 token 形式的保留成员",
+      "unfinished": "不能认定为当前生效 ANI；加载入口未知"
+    },
+    {
+      "extension": ".ani_new",
+      "total_members": 1,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "ANI 文本 token 形式的另存版本",
+      "unfinished": "不能认定优先于 .ani；运行是否引用未知"
+    },
+    {
+      "extension": ".apd",
+      "total_members": 294,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "附加状态/效果定义",
+      "unfinished": "部分样本为属性修改；全类型执行规则未恢复"
+    },
+    {
+      "extension": ".atk",
+      "total_members": 6394,
+      "observed_members": 600,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "攻击属性、判定/伤害相关参数",
+      "unfinished": "不能仅据文件得出完整伤害公式"
+    },
+    {
+      "extension": ".bin",
+      "total_members": 1,
+      "observed_members": 1,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "本包 stringtable.bin：脚本字符串表",
+      "unfinished": "本包只有这一项；不能泛化所有 .bin"
+    },
+    {
+      "extension": ".blu",
+      "total_members": 1,
+      "observed_members": 1,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "大富翁活动整体准入等配置",
+      "unfinished": "活动流程和骰子等规则未恢复"
+    },
+    {
+      "extension": ".bm",
+      "total_members": 5,
+      "observed_members": 5,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "大富翁活动棋盘格数据",
+      "unfinished": "不是场景 .map；格编码和玩法栈未恢复"
+    },
+    {
+      "extension": ".bt",
+      "total_members": 13,
+      "observed_members": 13,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "大富翁活动格子类型/进入行为配置",
+      "unfinished": "不是通用行为树；格效果枚举待恢复"
+    },
+    {
+      "extension": ".cbt",
+      "total_members": 8,
+      "observed_members": 4,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "changeable button 外观/状态配置",
+      "unfinished": "8/8 静态结构、24 组及主图/高亮消费者已恢复；运行仍为 4/8；输入分发、数字 IMG 映射、专用模式和实机状态对照待完成"
+    },
+    {
+      "extension": ".chr",
+      "total_members": 11,
+      "observed_members": 11,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "角色模板与动作/装备资源入口",
+      "unfinished": "部分解析；角色系统未全恢复"
+    },
+    {
+      "extension": ".cmb",
+      "total_members": 1,
+      "observed_members": 1,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "特定职业连击冷却/伤害奖励参数",
+      "unfinished": "完整连击资格及计数重置规则未恢复"
+    },
+    {
+      "extension": ".co",
+      "total_members": 34,
+      "observed_members": 13,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "客户端专用多种系统配置",
+      "unfinished": "不是单一 schema；需逐文件恢复"
+    },
+    {
+      "extension": ".cre",
+      "total_members": 136,
+      "observed_members": 2,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "宠物实体模板及其动作等引用",
+      "unfinished": "与宠物装备 .equ 区分；完整生命周期未恢复"
+    },
+    {
+      "extension": ".dat",
+      "total_members": 4,
+      "observed_members": 4,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "多种数据表：NPC 好感度、指令索引、道具资料等",
+      "unfinished": "iteminfo.dat 的行列含义和客户端加载栈未完整恢复；空的 oldequipmentstatinfolist.dat 无业务内容可解析"
+    },
+    {
+      "extension": ".dgn",
+      "total_members": 346,
+      "observed_members": 7,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "地下城入口、拓扑和 MAP 候选等配置",
+      "unfinished": "MAP 候选不能只取首项"
+    },
+    {
+      "extension": ".dl",
+      "total_members": 1,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "快速组队的地下城列表",
+      "unfinished": "类型用途明确，字段须核对本版"
+    },
+    {
+      "extension": ".emo",
+      "total_members": 36,
+      "observed_members": 6,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "聊天表情、动画与输入短语关联",
+      "unfinished": "资源关联可读，原生播放栈未恢复"
+    },
+    {
+      "extension": ".equ",
+      "total_members": 68499,
+      "observed_members": 1887,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "装备、装扮、宠物装备等配置",
+      "unfinished": "token 可读；类型相关字段尚未全面解释"
+    },
+    {
+      "extension": ".etc",
+      "total_members": 564,
+      "observed_members": 126,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "多种系统配置集合",
+      "unfinished": "后缀用途过宽；每个文件有不同 schema"
+    },
+    {
+      "extension": ".evn",
+      "total_members": 1,
+      "observed_members": 1,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "活动信息按钮的图像和提示等配置",
+      "unfinished": "1/1 静态结构、60 条配置及双 IMG/四帧/高亮/跨 STR 提示消费者已恢复，配置预览已接入；业务条件、ID24、通知 ANI/字体和运行状态对照待完成"
+    },
+    {
+      "extension": ".evt",
+      "total_members": 80,
+      "observed_members": 17,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "活动配置集合",
+      "unfinished": "每个活动有独立 schema，未全部解释"
+    },
+    {
+      "extension": ".exj",
+      "total_members": 4,
+      "observed_members": 4,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "副职业相关任务/转职成本等配置",
+      "unfinished": "副职业执行与业务条件未闭合"
+    },
+    {
+      "extension": ".gdata",
+      "total_members": 76,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "帮助/指南页面的图片、文字、链接布局",
+      "unfinished": "它也参与 UI；不能只处理 .ui 后缀"
+    },
+    {
+      "extension": ".gdata_",
+      "total_members": 1,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "指南布局的样例/保留成员",
+      "unfinished": "不能因可解析就认定运行会加载"
+    },
+    {
+      "extension": ".glist",
+      "total_members": 1,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "指南可见性/例外等规则列表",
+      "unfinished": "索引和职业例外可读，显示条件栈待恢复"
+    },
+    {
+      "extension": ".hsp",
+      "total_members": 6,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "动作特效的控制点/路径数据",
+      "unfinished": "具体曲线类型、单位和插值算法仍未知"
+    },
+    {
+      "extension": ".info",
+      "total_members": 2,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "特定活动/副本的独立规则配置",
+      "unfinished": "后缀不提供通用 schema；仅确认这两项内容"
+    },
+    {
+      "extension": ".key",
+      "total_members": 5864,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "AI 角色的按键/动作序列",
+      "unfinished": "不是密钥；输入时序和完整状态条件未恢复"
+    },
+    {
+      "extension": ".lay",
+      "total_members": 10,
+      "observed_members": 10,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "角色装备图层的动作/ANI 路径模板",
+      "unfinished": "层顺序、格式替换与装配时机待恢复"
+    },
+    {
+      "extension": ".lst",
+      "total_members": 53,
+      "observed_members": 43,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "ID 到文件/字符串等映射目录",
+      "unfinished": "不同列表内容不同；并非普通文字文件"
+    },
+    {
+      "extension": ".map",
+      "total_members": 2948,
+      "observed_members": 76,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "场景地砖、背景动画、物件、怪物等放置",
+      "unfinished": "可恢复资源依赖；原生完整绘制调度仍待动态证据"
+    },
+    {
+      "extension": ".mm",
+      "total_members": 4,
+      "observed_members": 3,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "小地图相关数据",
+      "unfinished": "小地图投影/图标规则未完整实现"
+    },
+    {
+      "extension": ".mob",
+      "total_members": 2070,
+      "observed_members": 2,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "怪物模板及动作等引用",
+      "unfinished": "怪物交接工程另有实现；并非所有 AI 已恢复"
+    },
+    {
+      "extension": ".msn",
+      "total_members": 121,
+      "observed_members": 18,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "PvP 任务配置",
+      "unfinished": "条件枚举、进度与奖励规则未完整解释"
+    },
+    {
+      "extension": ".npc",
+      "total_members": 198,
+      "observed_members": 55,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "NPC 定义、交互和资源引用",
+      "unfinished": "token 可读；全部交互分支未恢复"
+    },
+    {
+      "extension": ".nut",
+      "total_members": 189,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "Squirrel 风格脚本源",
+      "unfinished": "文本可读；客户端宿主 API/执行栈未恢复"
+    },
+    {
+      "extension": ".obj",
+      "total_members": 6867,
+      "observed_members": 5,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "被动物件、场景机关和相关动作配置",
+      "unfinished": "部分解析；触发/生命周期仍有缺项"
+    },
+    {
+      "extension": ".ora",
+      "total_members": 12,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "光环配置",
+      "unfinished": "类型用途明确，全部作用规则未恢复"
+    },
+    {
+      "extension": ".pet",
+      "total_members": 1,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "宠物相关配置",
+      "unfinished": "类型用途明确，完整执行规则未恢复"
+    },
+    {
+      "extension": ".pos",
+      "total_members": 9,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "专用 UI 的位置、尺寸和组成参数",
+      "unfinished": "地区专用 schema，不能并入普通 .ui 格式"
+    },
+    {
+      "extension": ".ptl",
+      "total_members": 4438,
+      "observed_members": 58,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "粒子效果配置",
+      "unfinished": "结构可读；未实现完整粒子执行器"
+    },
+    {
+      "extension": ".qst",
+      "total_members": 3222,
+      "observed_members": 200,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "任务条件、进度与奖励等配置",
+      "unfinished": "token 可读；任务执行器未全恢复"
+    },
+    {
+      "extension": ".rep",
+      "total_members": 484,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "录像/回放资料候选",
+      "unfinished": "用途有线索；完整二进制/输入调度尚未在本工程验证"
+    },
+    {
+      "extension": ".rgn",
+      "total_members": 4,
+      "observed_members": 3,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "大区域名称和城镇成员关系",
+      "unfinished": "显示/跳转调用栈待恢复"
+    },
+    {
+      "extension": ".rtf",
+      "total_members": 12,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "RTF 文档数据",
+      "unfinished": "可识别容器；不作为可执行游戏规则"
+    },
+    {
+      "extension": ".sd",
+      "total_members": 15,
+      "observed_members": 10,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "命名整数/浮点常量与技能运行参数",
+      "unfinished": "名称可辨，代码读取点和覆盖优先级未全部恢复"
+    },
+    {
+      "extension": ".shp",
+      "total_members": 80,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "商店售卖内容与相关配置",
+      "unfinished": "token 可读；不是网络/商店业务实现"
+    },
+    {
+      "extension": ".skl",
+      "total_members": 2008,
+      "observed_members": 1711,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "技能定义、等级参数与动作引用",
+      "unfinished": "独立技能研究负责执行逻辑；不合并结果"
+    },
+    {
+      "extension": ".stk",
+      "total_members": 10346,
+      "observed_members": 2022,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "堆叠道具、消耗品等配置",
+      "unfinished": "token 可读；业务规则未全恢复"
+    },
+    {
+      "extension": ".stm",
+      "total_members": 1,
+      "observed_members": 1,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "阶段选择地图的图片、区域、槽位配置",
+      "unfinished": "1/1 五整数槽位、四整数 stage、area/district/append 结构与 stage ID 索引消费者已恢复；状态列/坐标的实际绘制、交互和实机对照待完成"
+    },
+    {
+      "extension": ".str",
+      "total_members": 26,
+      "observed_members": 26,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "本地化键和值文本",
+      "unfinished": "可读；部分文本还由客户端本地字符串表供应"
+    },
+    {
+      "extension": ".tbl",
+      "total_members": 57,
+      "observed_members": 15,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "数值表集合（如经验与 PvP 价格表）",
+      "unfinished": "用途依文件变化，行列维度/索引基准待逐个确认"
+    },
+    {
+      "extension": ".til",
+      "total_members": 3561,
+      "observed_members": 18,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "地图图块图像引用与通行信息",
+      "unfinished": "部分解析；网格/像素换算需逐类型核对"
+    },
+    {
+      "extension": ".tlk",
+      "total_members": 1,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "战斗对白/演出命令序列",
+      "unfinished": "含头像/背景图片命令；全部命令与时间语义待恢复"
+    },
+    {
+      "extension": ".twn",
+      "total_members": 17,
+      "observed_members": 17,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "城镇区域、场景及传送关系",
+      "unfinished": "token 可读；原生进出场调度待核对"
+    },
+    {
+      "extension": ".txt",
+      "total_members": 5,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "纯文本或文本配置",
+      "unfinished": "不是统一脚本格式，逐文件解释"
+    },
+    {
+      "extension": ".ui",
+      "total_members": 322,
+      "observed_members": 51,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "界面窗口、控件、子 UI 和资源引用",
+      "unfinished": "通用前缀已解析；47 种控件未全部还原"
+    },
+    {
+      "extension": ".vm",
+      "total_members": 3,
+      "observed_members": 3,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "材料与产出组配置",
+      "unfinished": "兑换/抽取用途候选；权重、消耗与抽取栈待恢复"
+    },
+    {
+      "extension": ".wdm",
+      "total_members": 26,
+      "observed_members": 26,
+      "runtime_evidence": "确切 buffer 成员；不证明实际显示/执行",
+      "purpose": "世界地图/地下城选择地图数据",
+      "unfinished": "26/26、216 地下城条目和 100 内部标记已解析，ui path→区域/公共 UI 原生加载已恢复；balloon/switchbox、ACT、业务状态、两条未定位 IMG 与实机对照待完成"
+    },
+    {
+      "extension": ".wrd",
+      "total_members": 117,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "宠物情景台词/对白集合",
+      "unfinished": "触发、随机选择和优先级未恢复"
+    },
+    {
+      "extension": ".xml",
+      "total_members": 2,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "XML 结构数据",
+      "unfinished": "容器格式明确；每份业务用途单独核对"
+    },
+    {
+      "extension": "<无后缀>",
+      "total_members": 1,
+      "observed_members": 0,
+      "runtime_evidence": "保留证据中未观察到；不能判定未使用",
+      "purpose": "用途待确认",
+      "unfinished": "未建立专用解析器/调用契约"
+    }
+  ],
+  "offline_supplements": {
+    ".cbt": {
+      "path": "cbt-chain-evidence.json",
+      "sha256": "8f8f2e91d990884393f50353797ab60112aff9ce98cf88b7ce3afc135cced197",
+      "static_members": 8,
+      "groups": 24
+    },
+    ".evn": {
+      "path": "evn-chain-evidence.json",
+      "sha256": "216ad865ad2eb25d8a7ca5fabf29aaa97c0a2643c33eeb25202d9607c01766a9",
+      "static_members": 1,
+      "records": 60
+    },
+    ".stm": {
+      "path": "spatial-chain-evidence.json",
+      "sha256": "d777afb5fc1e93e867f8cb7cc5b4d74aca3439664a746a8b2f1e96fe09ddd50f",
+      "static_members": 1,
+      "verification_checks": 239
+    },
+    ".wdm": {
+      "path": "spatial-chain-evidence.json",
+      "sha256": "d777afb5fc1e93e867f8cb7cc5b4d74aca3439664a746a8b2f1e96fe09ddd50f",
+      "static_members": 26,
+      "verification_checks": 239
+    }
+  },
+  "limits": [
+    "Only retained raw resource logs and explicitly incomplete late snapshots.",
+    "Type and member observation never proves full schema, visible UI, execution, pixel decode or all callers."
+  ]
+}

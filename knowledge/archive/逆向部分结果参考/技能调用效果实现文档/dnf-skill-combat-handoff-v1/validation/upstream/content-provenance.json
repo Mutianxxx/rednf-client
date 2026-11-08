@@ -1,0 +1,106 @@
+{
+  "snapshot": "reverse_lab\\v2\\reports\\new-client-pvf-snapshot",
+  "snapshot_sha256": "e836501116c7f8b93dfd4dd03ff797fa20a20662953ff849056fc1bb996eb5e5",
+  "exe_sha256": "1f8244d3f7309bbe2fde4299e1863a894f6b28d5707bf01732980585b20b00dd",
+  "entries": 35920,
+  "source_graph_sha256": "dfe4e1bc06587f5b43ecec6d220a10bfa75b18ae0f8865c4fc3982219ddc625b",
+  "skills": [
+    {
+      "key": "hopsmash",
+      "effect_instances": 6,
+      "controller_complete": false
+    },
+    {
+      "key": "gorecross",
+      "effect_instances": 3,
+      "controller_complete": false
+    },
+    {
+      "key": "bloodblast",
+      "effect_instances": 15,
+      "controller_complete": false
+    },
+    {
+      "key": "outragebreak",
+      "effect_instances": 94,
+      "controller_complete": false
+    },
+    {
+      "key": "bloodblastex",
+      "effect_instances": 24,
+      "controller_complete": false
+    },
+    {
+      "key": "bloodsword",
+      "effect_instances": 8,
+      "controller_complete": false
+    },
+    {
+      "key": "bloodboom",
+      "effect_instances": 24,
+      "controller_complete": false
+    },
+    {
+      "key": "frenzy",
+      "effect_instances": 5,
+      "controller_complete": false
+    }
+  ],
+  "monsters": [
+    {
+      "path": "monster/goblin/goblin.mob",
+      "sha256": "6d3abc6e25e0df2378f2775a0f96fee7af32c5c9ce31e8b8bd4ca11775d0af02",
+      "states": [
+        "idle",
+        "damage1",
+        "damage2",
+        "down"
+      ]
+    },
+    {
+      "path": "monster/lugaru/lugaru.mob",
+      "sha256": "7bed318f22166caf7931d23dfcb3776d10507a4a6f5ba20961a916450479d236",
+      "states": [
+        "idle",
+        "damage1",
+        "damage2",
+        "down"
+      ]
+    },
+    {
+      "path": "monster/dragondungeon/rockgolem/rockgolem.mob",
+      "sha256": "84ad895ac40ed9aa78c9f8e17292b5f62aa74cb421d49adaec447b5bab8dd6b2",
+      "states": [
+        "idle",
+        "death"
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "source": "passiveobject/character/swordman/animation/blastblood1ex.ani.als",
+      "offset": 180,
+      "missing": "BlastBloodEx/sub_dodge.ani"
+    },
+    {
+      "source": "character/swordman/animation/bloodboom.ani.als",
+      "offset": 110,
+      "unexecuted": "Unresolved ALS frame -1: character/swordman/animation/bloodboom.ani"
+    },
+    {
+      "source": "character/swordman/animation/bloodboom.ani.als",
+      "offset": 150,
+      "unexecuted": "Unresolved ALS frame -1: character/swordman/animation/bloodboom.ani"
+    },
+    {
+      "source": "character/swordman/animation/bloodboom.ani.als",
+      "offset": 170,
+      "unexecuted": "Unresolved ALS frame -1: character/swordman/animation/bloodboom.ani"
+    },
+    {
+      "source": "character/swordman/animation/bloodboom.ani.als",
+      "offset": 190,
+      "unexecuted": "Unresolved ALS frame -1: character/swordman/animation/bloodboom.ani"
+    }
+  ]
+}

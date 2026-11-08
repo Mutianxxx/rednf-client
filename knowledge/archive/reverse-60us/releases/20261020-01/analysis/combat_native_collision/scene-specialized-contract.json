@@ -1,0 +1,230 @@
+{
+  "source": {
+    "path": "DFO/DFO_fixed_v3.exe",
+    "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "image_base": "0x400000",
+    "evidence_kind": "local static PE bytes and Capstone x86 disassembly",
+    "runtime_observed": false,
+    "rea_provider_evidence": false
+  },
+  "scope": "Current selected OBJ IDs221/224/244; static native controller reconstruction, no runtime equivalence claim.",
+  "resource_evidence": "scene-resources.json",
+  "rea_crosschecks": [
+    {
+      "function": "0x5F6640",
+      "evidence_id": "ev_aafc44ae73f82492fb97d100cc9c833686fbda7a8caba37af92bfb913fd24c93",
+      "result": "../rea/results/077-mapobject-data-init.json",
+      "ranges_inclusive": [
+        [
+          "0x5f6640",
+          "0x5f67e9"
+        ]
+      ]
+    },
+    {
+      "function": "0x5F5FB0",
+      "evidence_id": "ev_f6ce707254dbdf145618c5888f82c45bb05467cd1eedafc67ef04c0d37124da5",
+      "result": "../rea/results/078-mapobject-hit.json",
+      "ranges_inclusive": [
+        [
+          "0x5f5fb0",
+          "0x5f6103"
+        ]
+      ]
+    },
+    {
+      "function": "0x5F5B40",
+      "evidence_id": "ev_f2dff51a0a8002fe163cbcb8e477c25a9650b6f780cbe18525b8736bbfa7df35",
+      "result": "../rea/results/079-mapobject-hp-event.json",
+      "ranges_inclusive": [
+        [
+          "0x5f5b40",
+          "0x5f5c19"
+        ]
+      ]
+    },
+    {
+      "function": "0x5F3500",
+      "evidence_id": "ev_0b1b5ec2049e3c6047cd0491d545cf09aa503427cbce86e6939392020a503650",
+      "result": "../rea/results/080-grass-controller.json",
+      "ranges_inclusive": [
+        [
+          "0x5f3500",
+          "0x5f3635"
+        ],
+        [
+          "0x5f3640",
+          "0x5f370a"
+        ]
+      ]
+    }
+  ],
+  "factory": {
+    "entry": "0x5E8500; first argument is copied intoESI at5E8519",
+    "low_id_route": "IDs1..240 use byte table5F1620[id-1] then target table5F1604[case]; IDs241..250 use direct5E8685 case",
+    "selected": [
+      {
+        "id": 221,
+        "resource": "passiveobject/mapobject/breakableobject/barrel.obj",
+        "case": "0x5E904D",
+        "constructor": "0x490830",
+        "vtable": "0xCCC88C",
+        "descriptor": "0xF57E7C",
+        "rtti": ".?AVCNMapObject@@",
+        "allocation": "0x94C"
+      },
+      {
+        "id": 224,
+        "resource": "passiveobject/mapobject/breakableobject/actiontree2lorien.obj",
+        "case": "0x5E85F6",
+        "constructor": "0x5E70C0",
+        "vtable": "0xD4D26C",
+        "descriptor": "0xF6C75C",
+        "rtti": ".?AVCNActionTree@@",
+        "allocation": "0x94C"
+      },
+      {
+        "id": 244,
+        "resource": "passiveobject/mapobject/breakableobject/smallgrasslorien.obj",
+        "case": "0x5E8685",
+        "constructor": "0x5C8660",
+        "vtable": "0xCF10F4",
+        "descriptor": "0xF69378",
+        "rtti": ".?AVCNCutableGrass@@",
+        "allocation": "0x8B0"
+      }
+    ],
+    "base_init": "490720 ->4A0DA0 storesID+868 and looks it up in10BE3E8; found resource path ->49F4D0. MapObject490830 and Grass5C8660 both invoke490720 before specialized initialization.",
+    "hp_defaults": "490758 ->437AD0(this+524):437B11/437B13 writeHP/maxHP0;437B36 writeshp_destroybyte+34=0. SelectedGrass hasnohpmaxdeclarationorspecializedHPassignment."
+  },
+  "pvf_data_chain": {
+    "int": "[int data] UTF16literalE1D8E8 ->884D12..884D76 ->template vector+84;49FC38..49FC45 ->507940 copies tothis vector+230,begin+234,end+238",
+    "string": "[string data] UTF16literalE1D8CC ->884D76..884DD0 ->template vector+94;49FC4A..49FC57 ->4392E0 copies tothis vector+548,begin+54C,end+550",
+    "pass_type": "[pass all] literalE2364C ->template+18=0;[do not pass] literalE23600 ->template+18=2;49F622..49F625 copies toruntime+52C"
+  },
+  "mapobject_actiontree": {
+    "shared_slots": {
+      "0x260": "0x5F5FB0",
+      "0x348": "0x5F5B40",
+      "0x188": "0x5F6B60",
+      "0x22C": "0x5F7700",
+      "0x15C": "0x5F5CA0",
+      "0x164": "0x5F4FA0",
+      "0x388": "0x5F5AE0",
+      "0x38C": "0x5F5E80"
+    },
+    "init": "490830 ->5F6260 ->5F6640;ActionTree5E70C0 invokes490830,then5F6260 and5F6640 again,then60C650(ret)",
+    "integers": [
+      {
+        "index": 0,
+        "runtime": "+880",
+        "consumer": "Counter trigger equality tested at5F5AF1"
+      },
+      {
+        "index": 1,
+        "runtime": "+884",
+        "consumer": "Counter increment limit at5F5B75"
+      },
+      {
+        "index": 2,
+        "runtime": "byte+888",
+        "consumer": "Nonzero converted bool at5F6792;destroy when counter>=limit at5F5BFC"
+      },
+      {
+        "index": 3,
+        "runtime": "+870",
+        "consumer": "ParticleX offset"
+      },
+      {
+        "index": 4,
+        "runtime": "+874",
+        "consumer": "ParticleY offset"
+      },
+      {
+        "index": 5,
+        "runtime": "+878",
+        "consumer": "ParticleZ offset"
+      },
+      {
+        "index": 6,
+        "runtime": "HP+524,maxHP+528",
+        "consumer": "5F67BE slot35C and5F67D4 slot360"
+      }
+    ],
+    "native_guard_caveat": "5F6775 guards size>=6 but then readsindex6. The selected current objects have7 values. The executable model requires>=7 and does not emulate the native out-of-range case.",
+    "strings": [
+      {
+        "indices": [
+          0,
+          1,
+          2
+        ],
+        "runtime": [
+          "+8E4",
+          "+8E8",
+          "+8EC"
+        ],
+        "consumer": "5F6690..5F670E ->4A3440 particle creators; index1 used onhit andindex2 ondestruction; index0 emission not established here"
+      },
+      {
+        "indices": [
+          3,
+          4,
+          5
+        ],
+        "runtime": [
+          "+8F0",
+          "+8F4",
+          "+8F8"
+        ],
+        "consumer": "5F672A..5F675F copied strings; index4 hit sound andindex5 destroy sound throughslot10C"
+      }
+    ],
+    "received_hit": "5F5FB0 first qualifies optional hitPTL/sound using attackerATK protectedfields+1C,basefloat,+8; optional effects then49F310 at5F60ED. NumericHP calculation remains separate.",
+    "hp_event": [
+      "49D7D0 state1 writes newabsoluteHP then invokes348=5F5B40;callback first calls generic49D0E0.",
+      "HP<=0 && counter+87C<limit+884:counter++;slot388=5F5AE0;HP=slot238(maxHP).",
+      "Otherwise,etcANI1 when present:mark+93C=1,resetANI A27360,selectslotF0(etcANI1).",
+      "After either branch,counter>=limit && byte888==1 ->slot38C=5F5E80(attacker)."
+    ],
+    "counter_selector": "5F5AE0 comparescounter+87C==trigger+880:equal ->slot394 then,etcANI0 ifpresent;unequal ->slot398(retstub5F4FF0 forselectedvtables). It does not set+93C.",
+    "counter_outputs": "MapObject.slot394=5F7750;ActionTree.slot394=60C660 ->5F7750:byte949=1;5F74C0 fromvector900;5F57A0 fromvector910;5F5CD0 fromvector920. Selected constructors initialize those vectors empty; no speculative debris generation is added.",
+    "frame_end_restore": "5F6C42 callsbase49DC70;when+93C!=0 andcurrentANI.byte13A==1:clear+93C,resetbasicANI+118 viaA27360,selectbasicANI viaF0. This flag is set for theetcANI1 branch,not thecounter-selectedetcANI0 branch.",
+    "destroy": "5F5E80 skips ifbyte889 true; otherwise emitsPTL+8EC atXYZ+int[3..5],playsstring5,local49C090 ->slot164(0).5F4FA0 may invoke394 when!949&&948,then49E840. Actual world removal remains a laternative event.",
+    "remove_notify": "5F5CA0 ->4A0840;thus confirmed Generic PassiveObject stored-path lastACT/destroyPTL remains reachable for this subclass when configured.",
+    "state2": "5F7700 first calls49D7D0;state2 ->5F6E10 creates Common/CommonEffect/Animation/TrapExclamation.ani asauxiliaryentity,then recursivelyslot22C(state0). Its delayed timing/outputvector system is outside the executablecounter subset."
+  },
+  "cutablegrass": {
+    "slots": {
+      "0x260": "0x5F33C0",
+      "0x188": "0x5F3500",
+      "0x15C": "0x5F3B00",
+      "0x374": "0x5C86F0(counter++)",
+      "0x378": "0x5F32E0"
+    },
+    "init": "5F3770 string0 ->4A3440 creator+87C;int1==1 ->byte88C=1;etcANI0 nonnull ->threshold+878=2,else1;etcANI1&&etcANI2 nonnull ->bend-enablebyte880=1;pass_type+52C==0 ->byte870=1",
+    "hit": "5F33C0 firstcalls49F310,thenincrementscounter+874 regardlessof itsreturn;counter<threshold ->selectetcANI0 via378;else ->slot164(byte870). ThenalwaysdispatchconfiguredPTL atX,Y,int0 andplaysavailable string1/string2,thenbend-enable=0.",
+    "end_behavior": "There is noANI-end restore in5F33C0.5F32E0 directlyselectsetcANI0 withoutA27360. Neverauto-remove solelybecause thisANIends.",
+    "bend": "5F3300 onlywhenbend-enableand directionstatechanges:enum4 ->basic;enum0 ->etcANI1;other ->etcANI2;resetselectedcurrentANI A27360.5F3500 tracksnearbyeligibleobjects;exactpredicate5F31A0 isretainedasstatic evidence,not approximatedby the countermodel.",
+    "direct_contact": "Ifpassallbyte870:5F3500 temporarilyenablesdamagebox(slot2D8),scanssceneobjects;optionalint1 attackinfo+17C gate;attacker.slot1A8 query,attacker.slot240 contact;ontrueattacker.slot1A4 registersgrass then grass.slot260 at5F36CD;afterloopdisablesdamagebox. It doesnotcall4EDF70 explicitly inthislocalpath.",
+    "remove_notify": "5F3B00 calls4A0840;selfremoval emitsPTL/sounds onceifcounter<threshold,sets counter=threshold,then5F3940 extraoutputvector;peerremovalclearstrackedbendobject ifmatched."
+  },
+  "selected_pvf_behavior": {
+    "barrel221": "ints[1,1,1,0,0,30,1];afterexplicitHPwrite<=0,counter1,HPreset1,destroyPTL BarrelDestroy at+Z30,WOOD_CRASH,localremovalrequest. Hitwrappermay separatelyemitWOOD_HIT.",
+    "tree224": "ints[1,2,0,0,0,100,1];firstHPdepletioncounter1selectsetcANI0(ActionTree2-1,LOOP1);secondcounter2takesunequalstub;destroyflag0preventscontrollerremoval;laterHPwritesdo notincrementpast2. Do notinfereveryhitrestartsashake.",
+    "grass244": "ints[32,1];3etcANIs;passall;firstacceptednativecontactselectsetcANI0(SmallGrassDestroy,LOOP0)andemitsGrassDestroy atZ32;secondcontactrequestsremoval,stilldispatchesPTL. Nativepacket/visualtimingmaydifferfrommanualcontactcount."
+  },
+  "executable_model": {
+    "module": "scene_state_model.py",
+    "loader": "scene_preview_loader.py (ScenePreviewCatalog.object/sampler)",
+    "input": "Explicit nativeHPwrite forMapObject/ActionTree,explicitnativeacceptedcontact forGrass;frame-endedflag andactualremovalnotificationareseparateinputs.",
+    "output": "OrderedANIselection,HPreset,countertrigger,PTLdispatchrequest,soundrequest,removalrequestevents;PTLinternalsandnumericdamageareexcluded.",
+    "validation": "scene-model-cases.json"
+  },
+  "unknown": [
+    "PTL internals and native runtime visual/timing equivalence",
+    "All MapObject auxiliary output vectors and delayed state2 scheduling",
+    "Whole-client collision qualification/authority for every subclass",
+    "All scene object classes beyond selected221/224/244"
+  ]
+}

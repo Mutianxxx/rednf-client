@@ -1,0 +1,109 @@
+{
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "evidence_kind": "static PE bytes plus separately identified API headers",
+  "slices": [
+    {
+      "name": "ani_graphic_effect_parse",
+      "va": "0xa291d0",
+      "file_offset": 6459856,
+      "size": 312,
+      "sha256": "d0f5310d120a0bdfc839f3f71267dd282b7ed4ce6f065b76dc78a06f2a2193cf"
+    },
+    {
+      "name": "current_frame_draw",
+      "va": "0xa23d60",
+      "file_offset": 6438240,
+      "size": 304,
+      "sha256": "aca815b25425ef898ac5007193ddcdd0a08c1e223db638a83f82a2d6b2ec5345"
+    },
+    {
+      "name": "blend_dispatch",
+      "va": "0x401020",
+      "file_offset": 4128,
+      "size": 136,
+      "sha256": "595ca15a54d085f1cc36d67d894612c98f3668c317cba9531fab78f9426f2ed5"
+    },
+    {
+      "name": "blend_restore",
+      "va": "0x4010b0",
+      "file_offset": 4272,
+      "size": 52,
+      "sha256": "a265a40399193a76fd440845b8b66209b277b51152d30c48bd677f78971aa70c"
+    },
+    {
+      "name": "blend_record_setter",
+      "va": "0xb084b0",
+      "file_offset": 7374000,
+      "size": 23,
+      "sha256": "6d4f17b7d94b15a6738c60b9a42ffddb1d3aab648544b54199eb2528fdebf7e6"
+    },
+    {
+      "name": "device_blend_apply",
+      "va": "0xb084f0",
+      "file_offset": 7374064,
+      "size": 340,
+      "sha256": "0fd5d5bdf6f1f6e75cea7ef328417911e64973b864003b6df48ad99ed5232745"
+    },
+    {
+      "name": "draw_batch_mode_copy",
+      "va": "0xb091ff",
+      "file_offset": 7377407,
+      "size": 32,
+      "sha256": "a90f904498b4cf1e8313b14e34ade241ad6efd8eaaa5bc9dc433ceb2b13dc543"
+    },
+    {
+      "name": "device_setup",
+      "va": "0xb08200",
+      "file_offset": 7373312,
+      "size": 672,
+      "sha256": "c2550237fb18d5f4f0b2a79825b81257221c38d7867bbad6300c9615b2f4db93"
+    }
+  ],
+  "headers": [
+    {
+      "file": "d3d8.h",
+      "url": "https://raw.githubusercontent.com/mingw-w64/mingw-w64/master/mingw-w64-headers/include/d3d8.h",
+      "acquired_date": "2026-10-19",
+      "sha256": "e93563a03f30a83dae6afe20ad0061558f6a56fe7d101b3d883749b47d1edeef",
+      "authority": "external API reference; not DNF behavior evidence"
+    },
+    {
+      "file": "d3d8types.h",
+      "url": "https://raw.githubusercontent.com/mingw-w64/mingw-w64/master/mingw-w64-headers/include/d3d8types.h",
+      "acquired_date": "2026-10-19",
+      "sha256": "6443383135f69c8199f4c9c1b81717b94ade16ae625f760f198d7c49d864353d",
+      "authority": "external API reference; not DNF behavior evidence"
+    }
+  ],
+  "d3d8_slots": {
+    "0x5c": "CreateVertexBuffer",
+    "0x60": "CreateIndexBuffer",
+    "0xc8": "SetRenderState",
+    "0xfc": "SetTextureStageState",
+    "0x130": "SetVertexShader",
+    "0x14c": "SetStreamSource",
+    "0x154": "SetIndices"
+  },
+  "blend_jump_table": [
+    "0xb08515",
+    "0xb08529",
+    "0xb0853d",
+    "0xb08551",
+    "0xb08565"
+  ],
+  "graphic_effects": {
+    "NONE": {
+      "enum": 0,
+      "srcblend": 5,
+      "destblend": 6
+    },
+    "LINEARDODGE": {
+      "enum": 2,
+      "srcblend": 5,
+      "destblend": 2
+    }
+  },
+  "limitations": [
+    "D3D8 RGB blend operators established statically; GPU precision, gamma, interpolation and original-game visual equality not measured"
+  ]
+}

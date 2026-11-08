@@ -1,0 +1,15 @@
+[MOTION]
+	[BASE ANI] `../Animation/Damage1.ani`
+	[SUB ANI]
+		`../Animation/wp/Damage1.ani` 0 0
+	[/SUB ANI]
+[/MOTION]
+
+[TRIGGER]
+[ON MOVE COLLISION]
+[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+
+[BEHAVIOR] 
+	[SET ACTION] [ATTACK] 3 [NOW]	
+[/BEHAVIOR] 

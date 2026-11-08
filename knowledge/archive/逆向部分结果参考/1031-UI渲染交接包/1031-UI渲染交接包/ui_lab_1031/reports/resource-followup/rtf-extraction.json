@@ -1,0 +1,230 @@
+[
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 15351,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/apc function history.rtf",
+    "source_size": 15351,
+    "source_sha256": "88b2fa716c26b793a9f0741721e08fdf163144ba80c21823f2992569489c4c7c",
+    "text_size": 3919,
+    "text_sha256": "303f6980fecb42c711d738a6dce2628ccea2ee658b0f7b29314ba55c255a66f4",
+    "output": "apc function history.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 11226,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/how to edit key.rtf",
+    "source_size": 11226,
+    "source_sha256": "97e9bb1292dc4b2f32a471d54bf6d26ed2b5eabce7b924bb6b95145a6060b536",
+    "text_size": 3771,
+    "text_sha256": "20937ec9cdbad66f96c034bf757c41028e076f022d91b3645f7dcd8cbc727d75",
+    "output": "how to edit key.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 11108,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/destination select.rtf",
+    "source_size": 11108,
+    "source_sha256": "59b982b1e65181ab6f4f33fe1ad94f94d00bc033ca95ddfa26d666562b96aed5",
+    "text_size": 2632,
+    "text_sha256": "03ff2b8aa680f19e6096108166ed15a1fe4ca7959b7762e01773f3ed617c6643",
+    "output": "destination select.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 1578,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/apc function & use.rtf",
+    "source_size": 1578,
+    "source_sha256": "e192dd08efca331dba7b6ad824f8ef431cd57b78d14badb6a718ad7adb3a59de",
+    "text_size": 334,
+    "text_sha256": "ab5fa8ccfb33c9704f7b84b29e61b64c643ab0a5243dc7336b7b7ef8431bac65",
+    "output": "apc function & use.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 7776,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/apc tool info.rtf",
+    "source_size": 7776,
+    "source_sha256": "f4dd746f1ff371a6edfd2685c3e15114bf4e9a8c3a2ec7505681e65ac7ee8ff5",
+    "text_size": 1473,
+    "text_sha256": "05dbfed428086190f8478b3f44e5acd8c974d88868ddbd2e93f4113039afc1f6",
+    "output": "apc tool info.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 5189,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/apc bug report.rtf",
+    "source_size": 5189,
+    "source_sha256": "86a92dead8bda89e5fd3462eed0e3331d40249a4d218f0d78ca8c0d294ab8200",
+    "text_size": 1042,
+    "text_sha256": "e80cad4b526c7a22b7bae925ebdf5a9e60d87eaba8cba141c588b615ebc19a67",
+    "output": "apc bug report.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 31224,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/how to edit ai.rtf",
+    "source_size": 31224,
+    "source_sha256": "a1e995a3cd68c4bd3385f0dd2343b1b4de518c472882d550fb7df8f2abcedbe7",
+    "text_size": 10548,
+    "text_sha256": "f7d3d37e3249f2f36a93378c37b8a33dd7a2f93038bf4d0a93be94416dedf46e",
+    "output": "how to edit ai.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 953,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/death tower bug report.rtf",
+    "source_size": 953,
+    "source_sha256": "4640d5315758dc9363a86f9410bcf0028d41fcda992c3cc32e72326b73686f87",
+    "text_size": 134,
+    "text_sha256": "59534e9104d63f8af7f583c6e2e70fa8990f617cccfbc202353746288d0bf8d5",
+    "output": "death tower bug report.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 4301,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/apc suggestion.rtf",
+    "source_size": 4301,
+    "source_sha256": "3cee4e4ebbc92916766c81617edb69c79b04930b9732d5caa035c15e6aa1699f",
+    "text_size": 782,
+    "text_sha256": "eb3b5eaf03bfec6888ef99e8db7ce7ddc93f8606430d879ea96531f3b3ec2d12",
+    "output": "apc suggestion.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 1307,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/on off skill list.rtf",
+    "source_size": 1307,
+    "source_sha256": "3471a5f06ea52cbd393a65afe589d13b6c2ea32d6d09434b472fc120ba1def0c",
+    "text_size": 221,
+    "text_sha256": "75ca6b88269197600a21857d136fce8bccf535f3c51a0d86b42bc42301f61025",
+    "output": "on off skill list.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 7756,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/how to edit aic.rtf",
+    "source_size": 7756,
+    "source_sha256": "32bc059896a311de60bdc73bd0c311765ebf44ae1e74246a40c2da3409bcf2fa",
+    "text_size": 1792,
+    "text_sha256": "18a11250b6a3e7d79c17e36dec20ec086dba6f0565032b0a809e54db0ba3439d",
+    "output": "how to edit aic.rtf.txt"
+  },
+  {
+    "declared_codepage": 949,
+    "parser": "bounded RTF control-word/group parser; CP codepage and Unicode escapes",
+    "source_bytes": 1726,
+    "decoded_ansi_runs_with_replacement": 0,
+    "embedded_controls": {
+      "object": 0,
+      "objdata": 0,
+      "pict": 0,
+      "field": 0
+    },
+    "formatting": "Original RTF retained; formatting, layout, font-specific codepages and embedded objects are not reproduced",
+    "path": "aicharacter/doc/apc knowhow & attention.rtf",
+    "source_size": 1726,
+    "source_sha256": "91ec82f1447e68cc2d9015404e95185c09ec1fdb9aceab2041451dfcfbf97f25",
+    "text_size": 318,
+    "text_sha256": "171f9d980f69951e91d9726735d3472b26021db82eccf8058d1394abf9200e5f",
+    "output": "apc knowhow & attention.rtf.txt"
+  }
+]

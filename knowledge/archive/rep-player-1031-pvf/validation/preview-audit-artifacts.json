@@ -1,0 +1,213 @@
+{
+    "schema":  "dnf1031-preview-audit-artifacts-v1",
+    "created_utc":  "2026-10-19T06:25:18.7429327Z",
+    "pvf_sha256":  "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+    "catalog_recipes":  1450,
+    "registration_groups":  49,
+    "registration_slots":  223,
+    "existing_registration_slots":  223,
+    "registered_complete_groups":  49,
+    "registered_visible_groups":  49,
+    "registered_image_frames":  1315,
+    "registered_invalid_images":  0,
+    "character_complete_records":  20,
+    "character_visible_records":  20,
+    "character_image_frames":  139,
+    "character_invalid_images":  0,
+    "all_current_audits_passed":  true,
+    "scope":  "Explicit source ANI/IMG inspection and offscreen visibility, not complete skill controllers, gameplay acceptance or native dynamic comparison.",
+    "files":  [
+                  {
+                      "path":  "src/pvf_preview_catalog.hpp",
+                      "bytes":  1202,
+                      "sha256":  "1a49b57fd7657f051198102f5d239cf05290e3a7ec5c2f0480edda753d7db23b"
+                  },
+                  {
+                      "path":  "src/pvf_preview_catalog.cpp",
+                      "bytes":  45519,
+                      "sha256":  "94dfe0442820aa78c47effc32a4a08d1d3a994c2641d26e185db444228775d92"
+                  },
+                  {
+                      "path":  "tests/audit-preview-characters.cpp",
+                      "bytes":  17789,
+                      "sha256":  "fa9efc1386f639d5d74e5a67f0a2326cb36f3ecb2b3c69a0174649d1cc252026"
+                  },
+                  {
+                      "path":  "tests/audit-registered-effects.cpp",
+                      "bytes":  9424,
+                      "sha256":  "9ee1a51a2cdb7c33e47f02e301dab23e250921517df436381fd83f0d084fbd0d"
+                  },
+                  {
+                      "path":  "build/rep_pvf_preview.exe",
+                      "bytes":  2527232,
+                      "sha256":  "d52a1e00c805f9d51479c17f2f2a7575cb4f8869395c07284ecd5acbd7067553"
+                  },
+                  {
+                      "path":  "build/audit_preview_characters.exe",
+                      "bytes":  2416128,
+                      "sha256":  "4dd3c3c3cb4a8c122cca9d0bfa9fc86ea953d4cf95702f6975d9df6d1c74fe71"
+                  },
+                  {
+                      "path":  "build/audit_registered_effects.exe",
+                      "bytes":  2391040,
+                      "sha256":  "61ea1718cc4ee8506c8b132f76525636b6dcb9bcd394e2aa65c1bb2e822c2f9f"
+                  },
+                  {
+                      "path":  "validation/skill-effect-registration-audit.json",
+                      "bytes":  116818,
+                      "sha256":  "09a4fa1deeedf677b05cdd97714be61a4dc99feef0a88f2b48434444333669e4"
+                  },
+                  {
+                      "path":  "validation/registered-effect-render-audit.json",
+                      "bytes":  1033689,
+                      "sha256":  "c325a6681fe9191bcf5eba45f3c0ca1a62948caad79c07f59a8a88383478acd5"
+                  },
+                  {
+                      "path":  "validation/character-preview-audit.json",
+                      "bytes":  124150,
+                      "sha256":  "9f3f0e2fbabd1dd4c1a8c665dc4d9cfa945a60a838245411d3bdee33fde18ae0"
+                  },
+                  {
+                      "path":  "validation/preview-audit-cli-build.log",
+                      "bytes":  687,
+                      "sha256":  "37ad8c0ade51a5506c4ea3f316069d52fefacaf8eb766f1a449068a1bba46cb5"
+                  },
+                  {
+                      "path":  "validation/skill-effect-registration-audit.log",
+                      "bytes":  258,
+                      "sha256":  "3d1a1aa259853c428f15e11e61d68f050df06940c3b06f0cc0a711aca9fbbd13"
+                  },
+                  {
+                      "path":  "validation/registered-effect-render-audit.log",
+                      "bytes":  6296,
+                      "sha256":  "76d7aebd4a0fc6c63b1d90679407d1fc5a6665df21f68f35cc0df1c7cb46ba2a"
+                  },
+                  {
+                      "path":  "validation/character-preview-audit.log",
+                      "bytes":  3168,
+                      "sha256":  "317013f63af450ac8238f9688e6a6ad6792849e81692365cf8706e240b9a773d"
+                  },
+                  {
+                      "path":  "validation/registered-effect-render-audit-before-bounded-loop.json",
+                      "bytes":  904026,
+                      "sha256":  "796ae03d9551973a131423332f537994f3f8f62e1d65d2471cdc1ad073be200c"
+                  },
+                  {
+                      "path":  "validation/skill-effect-registration-audit-before-bounded-loop.json",
+                      "bytes":  99698,
+                      "sha256":  "ec9c5e85e7720a8e9d0e74caedfcfbf0c23f8290d2c4d12f15e5f2ad0a88223b"
+                  },
+                  {
+                      "path":  "validation/character-preview-audit-stale-objects.json",
+                      "bytes":  111457,
+                      "sha256":  "a9ab6c0a1fb933b640f7d4ea7671defb8a544707bc3c372d82ec340c92c1b167"
+                  },
+                  {
+                      "path":  "validation/character-preview-audit-before-final-build.json",
+                      "bytes":  124150,
+                      "sha256":  "903ee02aa2141fc2ec48c24f2b3a80a75d933d874e370605386701946d6c89c5"
+                  }
+              ],
+    "snapshots":  [
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-0-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "503ba021da400cd38358c15c8618f6fbd004fe03411c066ff5f0885e603e8620"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-0-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "f6bafb8a5a2e291d0268665bcc36d11491611c88aa5d1254ada58f7e481d02e5"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-1-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "1b2be6a7e3acbe06cfb4960ecae93f8e1fe2656e25dcc910d90a144abe26e3e3"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-1-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "e62c9b44381f6929cb2eb6f42cab8595d1d18a6dba07b28e473f32373b3b5847"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-2-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "617a5d0b07fc28863f4a40e996914686b086a24b944afc6c06fdf779f9c2424d"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-2-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "f53c2e18315de50e966ea75f3f7d153f429e17956198b66c57a4a058750c3024"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-3-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "afa3b851fd7befdb6b721f7995e21bb98f38fdaa1b131a9052491c8e090e0b03"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-3-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "e70c17acc36924a4153fdd10f51b2b5e132262583a2aee35a61108a19daa8ff7"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-4-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "3de5b85558524da9d206d8f5525d2c2c45af05626311b9abda70da416cb4d93b"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-4-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "9e5bc26194b0639a491b6ae7ba2bb609a1d6df38b8bd59daca3d1f0297ea8e13"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-5-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "1d475a05c56f00ef12c5e5036bdf2922580318092659aea572961ad4df87e2a7"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-5-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "ee6a770454c4617b07522ec96b48226e75c5530bb88b72660d2c5bb683b27ab1"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-6-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "b03aa96b893b6ff0a6227d08b0e173ca30c7843de7e46ce2b7684118ab4399dc"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-6-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "d9ccb6822e1700ef794d8bd8c87cf19a86a22f0f8b459435fcb08fbe60112bf3"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-7-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "807ae843f843882cc272c1a618ce97a6d3ad0e195f2de0a7c8dfb17d560c715a"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-7-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "ce74387d64297dadb70e678b9ce183c6134a188b92f22cdcfbf41fb14744e506"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-8-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "ea03b31ebfcd81693a62b5edd69269edf615bf9e28a3ab854593b02467a768ba"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-8-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "215878cac14751fcf9e8f36ed74a27c55b117d26dfd96d30ba4f6200e3995086"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-9-waiting.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "503ba021da400cd38358c15c8618f6fbd004fe03411c066ff5f0885e603e8620"
+                      },
+                      {
+                          "path":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\character-preview-snapshots-1792391057308\\character-9-attack.bmp",
+                          "bytes":  2457654,
+                          "sha256":  "f6bafb8a5a2e291d0268665bcc36d11491611c88aa5d1254ada58f7e481d02e5"
+                      }
+                  ]
+}

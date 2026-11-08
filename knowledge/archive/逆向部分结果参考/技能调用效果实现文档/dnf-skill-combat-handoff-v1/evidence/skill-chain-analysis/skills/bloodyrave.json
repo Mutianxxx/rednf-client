@@ -1,0 +1,25 @@
+{
+  "key": "bloodyrave",
+  "name": "嗜魂封魔斩",
+  "file_list_skill_id": 79,
+  "classification": {
+    "groups": [
+      3
+    ],
+    "basis": "[skill fitness growtype]"
+  },
+  "skill_source": "skill/swordman/bloodyrave.skl",
+  "samples": [
+    {
+      "name": "52844-bloodyrave-hold-release",
+      "qualification": "excluded_user_reported_abnormal_behavior",
+      "usable_for_observed_edges": false
+    }
+  ],
+  "source_object_bindings": [],
+  "phase_observations": [],
+  "normal_skill_lifecycle_fully_recovered": false,
+  "excluded_at_user_request": true,
+  "normal_skill_inference_eligible": false,
+  "static_controller_references": []
+}

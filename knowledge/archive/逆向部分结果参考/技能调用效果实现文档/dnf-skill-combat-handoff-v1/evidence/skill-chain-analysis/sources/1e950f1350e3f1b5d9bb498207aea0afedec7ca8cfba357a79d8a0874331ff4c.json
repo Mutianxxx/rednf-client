@@ -1,0 +1,67 @@
+{
+  "path": "character/swordman/effect/animation/bloodboom/readyfinish_bloodboom_casting.ani.als",
+  "fields": [
+    {
+      "tag": "[use animation]",
+      "values": [
+        "readyfinish_bloodboom_casting_back.ani",
+        "bloodboom_casting_back"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        -1,
+        "bloodboom_casting_back"
+      ],
+      "offset": 15
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 2471014,
+      "value": "readyfinish_bloodboom_casting_back.ani"
+    },
+    {
+      "offset": 10,
+      "type": 6,
+      "raw": 16214424,
+      "value": "bloodboom_casting_back"
+    },
+    {
+      "offset": 15,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 20,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 25,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 16214424,
+      "value": "bloodboom_casting_back"
+    }
+  ],
+  "raw_sha256": "1e950f1350e3f1b5d9bb498207aea0afedec7ca8cfba357a79d8a0874331ff4c"
+}

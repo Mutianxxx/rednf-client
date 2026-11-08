@@ -1,0 +1,509 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "runtime_observed": false,
+  "slices": [
+    {
+      "name": "history_clear",
+      "va": "0x438990",
+      "file_offset": 231824,
+      "size": 83,
+      "sha256": "c3b2da1285c18def7e440343643779fcc6cd696c8dfff88df500df63f426da1e"
+    },
+    {
+      "name": "canonical_history_query",
+      "va": "0x4ece50",
+      "file_offset": 970320,
+      "size": 122,
+      "sha256": "cf2fcd329cc08798266a158ab73e07a627454a205dac41e49a318daca8742ab6"
+    },
+    {
+      "name": "attackinfo_install",
+      "va": "0x4edcd0",
+      "file_offset": 974032,
+      "size": 58,
+      "sha256": "34c2f17bd2ab64fe492b1674e1d076df2f2a1e8d0130615f30c034809d4beb0e"
+    },
+    {
+      "name": "object_remove_notification",
+      "va": "0x4edd10",
+      "file_offset": 974096,
+      "size": 258,
+      "sha256": "9bb8fc03ef37ebdbcb8cc863fa148d925a8578e10dc45a0efbd6cc756a595f42"
+    },
+    {
+      "name": "canonical_history_register",
+      "va": "0x4ede20",
+      "file_offset": 974368,
+      "size": 133,
+      "sha256": "8478343e4884e795fd82d8c020e10250e9f4426085e520b674a14fd0730bc62e"
+    },
+    {
+      "name": "mode2_clock_gate",
+      "va": "0x4edeb0",
+      "file_offset": 974512,
+      "size": 177,
+      "sha256": "17fab1ac8a70d9fd196fa7c8df7366092993e79b4c4f968532e2454d9e48262e"
+    },
+    {
+      "name": "entity_reset",
+      "va": "0x4ed140",
+      "file_offset": 971072,
+      "size": 133,
+      "sha256": "3c8f3175d20f8be458a0156b8ee0f045c77743aad2b32ef3963e9f606d240767"
+    },
+    {
+      "name": "active_attackinfo_install",
+      "va": "0x4afa10",
+      "file_offset": 719376,
+      "size": 90,
+      "sha256": "02ba085055631951ceb996e79be6dd5efb1337e1d37116162003d6fb7fa26d21"
+    },
+    {
+      "name": "character_attackinfo_install",
+      "va": "0x4cf680",
+      "file_offset": 849536,
+      "size": 576,
+      "sha256": "0e0cf30e3073e92fdfdb7456e0ede24f5cb61baae6f4933a19ddbaad89e867db"
+    },
+    {
+      "name": "swordman_attackinfo_wrapper",
+      "va": "0x746c30",
+      "file_offset": 3435568,
+      "size": 27,
+      "sha256": "e5952fc3c99d9a676e5dbfb05c96faface5bdc9e80e3c0369284b26749440929"
+    },
+    {
+      "name": "hardattack_install_call",
+      "va": "0x731fbc",
+      "file_offset": 3350460,
+      "size": 20,
+      "sha256": "0d5aebc9d4ce19e1df3318b2392785b264d137e6c3818b72744cfc21a1b1ea2a"
+    },
+    {
+      "name": "tripleslash_install_call",
+      "va": "0x732b19",
+      "file_offset": 3353369,
+      "size": 77,
+      "sha256": "9b788b2e98c25cfc13b8033fccc4dedb6b324c16c855d962efa34f38ef0890d1"
+    },
+    {
+      "name": "tripleslash_clock_reset",
+      "va": "0x729b56",
+      "file_offset": 3316566,
+      "size": 37,
+      "sha256": "8786db6465ebad35cc49e614b153bb89cfd589a93fc20790eb9116347fa2e881"
+    },
+    {
+      "name": "qualification_history_and_mode",
+      "va": "0x4edfad",
+      "file_offset": 974765,
+      "size": 35,
+      "sha256": "a9858434f0d3df389507e697e5e62182cf2498065c5fb4c2a025cfbaf5d2b450"
+    },
+    {
+      "name": "qualification_register_and_emit",
+      "va": "0x4ee130",
+      "file_offset": 975152,
+      "size": 32,
+      "sha256": "6de122f3427b816fffb7dde20cb833dc94f724a84d58f2df7f458fc615d41c9e"
+    },
+    {
+      "name": "passive_reset_and_install",
+      "va": "0x49f010",
+      "file_offset": 651280,
+      "size": 117,
+      "sha256": "1af91b57c80b5de30445823bf845e87128cfe1623cb5a99ac9800c4da7e40d66"
+    }
+  ],
+  "vtable_slots": [
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x198",
+      "va": "0xd8112c",
+      "file_offset": 9965868,
+      "bytes": "306c7400",
+      "target": "0x746c30"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x19c",
+      "va": "0xd81130",
+      "file_offset": 9965872,
+      "bytes": "50864300",
+      "target": "0x438650"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x1a0",
+      "va": "0xd81134",
+      "file_offset": 9965876,
+      "bytes": "90894300",
+      "target": "0x438990"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x1a4",
+      "va": "0xd81138",
+      "file_offset": 9965880,
+      "bytes": "20de4e00",
+      "target": "0x4ede20"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x1a8",
+      "va": "0xd8113c",
+      "file_offset": 9965884,
+      "bytes": "50ce4e00",
+      "target": "0x4ece50"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x1c8",
+      "va": "0xd8115c",
+      "file_offset": 9965916,
+      "bytes": "903b5500",
+      "target": "0x553b90"
+    },
+    {
+      "vtable": "0xd80f94",
+      "slot": "0x298",
+      "va": "0xd8122c",
+      "file_offset": 9966124,
+      "bytes": "10874300",
+      "target": "0x438710"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x198",
+      "va": "0xd839f4",
+      "file_offset": 9976308,
+      "bytes": "10fa4a00",
+      "target": "0x4afa10"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x19c",
+      "va": "0xd839f8",
+      "file_offset": 9976312,
+      "bytes": "50864300",
+      "target": "0x438650"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x1a0",
+      "va": "0xd839fc",
+      "file_offset": 9976316,
+      "bytes": "90894300",
+      "target": "0x438990"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x1a4",
+      "va": "0xd83a00",
+      "file_offset": 9976320,
+      "bytes": "20de4e00",
+      "target": "0x4ede20"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x1a8",
+      "va": "0xd83a04",
+      "file_offset": 9976324,
+      "bytes": "50ce4e00",
+      "target": "0x4ece50"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x1c8",
+      "va": "0xd83a24",
+      "file_offset": 9976356,
+      "bytes": "903b5500",
+      "target": "0x553b90"
+    },
+    {
+      "vtable": "0xd8385c",
+      "slot": "0x298",
+      "va": "0xd83af4",
+      "file_offset": 9976564,
+      "bytes": "10874300",
+      "target": "0x438710"
+    },
+    {
+      "vtable": "0xcbb7d4",
+      "slot": "0x198",
+      "va": "0xcbb96c",
+      "file_offset": 9156972,
+      "bytes": "d0dc4e00",
+      "target": "0x4edcd0"
+    },
+    {
+      "vtable": "0xcbb7d4",
+      "slot": "0x19c",
+      "va": "0xcbb970",
+      "file_offset": 9156976,
+      "bytes": "50864300",
+      "target": "0x438650"
+    },
+    {
+      "vtable": "0xcbb7d4",
+      "slot": "0x1a0",
+      "va": "0xcbb974",
+      "file_offset": 9156980,
+      "bytes": "90894300",
+      "target": "0x438990"
+    },
+    {
+      "vtable": "0xcbb7d4",
+      "slot": "0x1a4",
+      "va": "0xcbb978",
+      "file_offset": 9156984,
+      "bytes": "20de4e00",
+      "target": "0x4ede20"
+    },
+    {
+      "vtable": "0xcbb7d4",
+      "slot": "0x1a8",
+      "va": "0xcbb97c",
+      "file_offset": 9156988,
+      "bytes": "50ce4e00",
+      "target": "0x4ece50"
+    },
+    {
+      "vtable": "0xcbb7d4",
+      "slot": "0x1c8",
+      "va": "0xcbb99c",
+      "file_offset": 9157020,
+      "bytes": "903b5500",
+      "target": "0x553b90"
+    },
+    {
+      "vtable": "0xcbb7d4",
+      "slot": "0x298",
+      "va": "0xcbba6c",
+      "file_offset": 9157228,
+      "bytes": "10874300",
+      "target": "0x438710"
+    },
+    {
+      "vtable": "0xd057d4",
+      "slot": "0x198",
+      "va": "0xd0596c",
+      "file_offset": 9460076,
+      "bytes": "d0dc4e00",
+      "target": "0x4edcd0"
+    },
+    {
+      "vtable": "0xd057d4",
+      "slot": "0x19c",
+      "va": "0xd05970",
+      "file_offset": 9460080,
+      "bytes": "50864300",
+      "target": "0x438650"
+    },
+    {
+      "vtable": "0xd057d4",
+      "slot": "0x1a0",
+      "va": "0xd05974",
+      "file_offset": 9460084,
+      "bytes": "90894300",
+      "target": "0x438990"
+    },
+    {
+      "vtable": "0xd057d4",
+      "slot": "0x1a4",
+      "va": "0xd05978",
+      "file_offset": 9460088,
+      "bytes": "20de4e00",
+      "target": "0x4ede20"
+    },
+    {
+      "vtable": "0xd057d4",
+      "slot": "0x1a8",
+      "va": "0xd0597c",
+      "file_offset": 9460092,
+      "bytes": "50ce4e00",
+      "target": "0x4ece50"
+    },
+    {
+      "vtable": "0xd057d4",
+      "slot": "0x1c8",
+      "va": "0xd0599c",
+      "file_offset": 9460124,
+      "bytes": "903b5500",
+      "target": "0x553b90"
+    },
+    {
+      "vtable": "0xd057d4",
+      "slot": "0x298",
+      "va": "0xd05a6c",
+      "file_offset": 9460332,
+      "bytes": "10874300",
+      "target": "0x438710"
+    }
+  ],
+  "raw_pattern_vcall1a0_candidates": [
+    "0x4ed158",
+    "0x4edcec",
+    "0x4edd01",
+    "0x51ea20",
+    "0x5d2922",
+    "0x5d72ef",
+    "0x5dc11d",
+    "0x5f6fe6",
+    "0x5f71ac",
+    "0x5fd10c",
+    "0x5fd709",
+    "0x600126",
+    "0x604013",
+    "0x6049d8",
+    "0x60575d",
+    "0x607aa0",
+    "0x6095d6",
+    "0x609db1",
+    "0x60b394",
+    "0x60d238",
+    "0x610916",
+    "0x613d4e",
+    "0x613f09",
+    "0x618989",
+    "0x619ddb",
+    "0x61aac8",
+    "0x61cfe7",
+    "0x61ea58",
+    "0x62011a",
+    "0x621fbb",
+    "0x623a7e",
+    "0x62509b",
+    "0x625cfb",
+    "0x62686a",
+    "0x6277c3",
+    "0x62b6b8",
+    "0x62eb28",
+    "0x635e22",
+    "0x638b6c",
+    "0x63b88f",
+    "0x63f2e1",
+    "0x646c75",
+    "0x64c84e",
+    "0x6507fe",
+    "0x65173a",
+    "0x653c62",
+    "0x655e28",
+    "0x655ecb",
+    "0x65b549",
+    "0x65ff8a",
+    "0x661611",
+    "0x66a9cf",
+    "0x66b817",
+    "0x66c188",
+    "0x66cade",
+    "0x66f06c",
+    "0x6765c2",
+    "0x6766b9",
+    "0x67aeda",
+    "0x68239a",
+    "0x682b42",
+    "0x682bf2",
+    "0x682c91",
+    "0x682d11",
+    "0x684e11",
+    "0x6862a2",
+    "0x6862f1",
+    "0x68b8da",
+    "0x68ca2e",
+    "0x68ccec",
+    "0x68cffb",
+    "0x69ed5c",
+    "0x69f070",
+    "0x69f75a",
+    "0x6a3573",
+    "0x6d1aa3",
+    "0x6d1b72",
+    "0x6d4a9d",
+    "0x6eadc1",
+    "0x6eb391",
+    "0x6ec0e9",
+    "0x6ec1c0",
+    "0x6ef1fb",
+    "0x70c2e3",
+    "0x70c3ff",
+    "0x70de0c",
+    "0x70e53f",
+    "0x70f433",
+    "0x715596",
+    "0x7287da",
+    "0x729453",
+    "0x729b75",
+    "0x770578",
+    "0x783e77",
+    "0x7840df",
+    "0x7848e6",
+    "0x785e58",
+    "0x788536",
+    "0x789cee",
+    "0x78a139",
+    "0x79d382",
+    "0x79e4c6",
+    "0x79f8ee",
+    "0x7a0a78",
+    "0x7a2c50",
+    "0x7a392b",
+    "0x7ab13f",
+    "0x7b350f",
+    "0x7b9506",
+    "0x7c3fd7",
+    "0x7c48eb",
+    "0x7cd62a",
+    "0x7dcec7",
+    "0x7effff",
+    "0x7f269f",
+    "0x7f4038",
+    "0x7f5c23",
+    "0x7f827f",
+    "0x7f97ff",
+    "0x7fc022",
+    "0x7fdf9b",
+    "0x7fdfc2",
+    "0x7fdfe9",
+    "0x7ff4c3",
+    "0x80393d",
+    "0x803d4c",
+    "0x8c586f",
+    "0x8e63cc",
+    "0x8f322f",
+    "0x9e640c",
+    "0xa37c97"
+  ],
+  "pattern_scope": "Raw opcode-pattern candidates are not all semantically verified calls on these classes.",
+  "rea_evidence": [
+    {
+      "evidence_id": "ev_615a3c4e307efffaacce5ce7a7004c7d433977d14095d2c077a2adde83df656b",
+      "file": "070-attackinfo-install.json",
+      "parameters": {
+        "procedure": "0x4EDCD0"
+      }
+    },
+    {
+      "evidence_id": "ev_7a0b669468e613dd17274c15e95d1f3ca6572a70e3ee30ee94cd5e1888169ac2",
+      "file": "071-character-attackinfo-install.json",
+      "parameters": {
+        "procedure": "0x4CF680"
+      }
+    },
+    {
+      "evidence_id": "ev_f96fef94e2bfe5a25e507baf3543988659dd3734a2c1c9f1d94077dcbde30840",
+      "file": "072-history-query.json",
+      "parameters": {
+        "procedure": "0x4ECE50"
+      }
+    },
+    {
+      "evidence_id": "ev_dc225f22450b19cabf39d3b2fd1949d09826963618748f50ee1699b09afd20a2",
+      "file": "073-register-hit-history.json",
+      "parameters": {
+        "procedure": "0x4EDE20"
+      }
+    }
+  ]
+}

@@ -1,0 +1,415 @@
+[job]  `[gunner]`
+[growtype name]  <0::growtype_name_25> <0::growtype_name_30> <0::growtype_name_35> <0::growtype_name_40> <0::growtype_name_45>
+[width]  40 10
+
+[initial value] 
+[HP MAX]  160.0
+[MP MAX]  160.0
+[physical attack]  6.0
+[physical defense]  6.0
+[magical attack]  5.0
+[magical defense]  5.0
+[inventory limit]  33000.0
+[MP regen speed]  50.0
+[move speed]  820.0
+[attack speed]  950.0
+[cast speed]  800.0
+[hit recovery]  600.0
+[jump power]  490.0
+[weight]  60000.0
+[jump speed]  80
+[skill] 
+181 2 // 세공
+184 1 // 화학
+185 1 // 가죽
+179 7 // 해체(60레벨 아이템까지 해체 가능하도록 7레벨로 수정)
+4 1 // 잭스파이크
+47 1 // 라이징샷
+[/skill]
+[module damage rate] 1.05 1.0 1.0
+
+[growtype 1] 
+[HP MAX]  40.0
+[MP MAX]  30.0
+[physical attack]  3.0
+[physical defense]  3.0
+[magical attack]  3.0
+[magical defense]  3.0
+[inventory limit]  300.0
+[MP regen speed]  2.5
+[hit recovery]  1.0
+[module damage rate] 1.05 1.0 1.0
+
+[growtype 2]  // 레인저
+[HP MAX]  47.5
+[MP MAX]  22.5
+[physical attack]  4.0
+[physical defense]  4.0
+[magical attack]  2.0
+[magical defense]  2.0
+[inventory limit]  300.0
+[MP regen speed]  2.5
+[hit recovery]  2.0
+[skill] 
+181 3 // 세공
+22 1 // 리볼버 패닝
+23 1 // 리볼버 로딩
+55 1 // 예리한 사격(Sharp shoot)의 가죽 마스터리
+[/skill]
+[module damage rate] 1.0 1.0 1.0
+
+// ==================================================
+// [growtype2] - 각성1 [데스페라도]
+// ==================================================
+[awakening name] <0::growtype_name_31> <0::growtype_name_32>
+
+[awakening 1]
+[HP MAX]  47.5
+[MP MAX]  22.5
+[physical attack]  4.0
+[physical defense]  4.0
+[magical attack]  2.0
+[magical defense]  2.0
+[inventory limit]  300.0
+[MP regen speed]  2.5
+[hit recovery]  2.0
+[awakening skill]
+66 1	// 서든 데스
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+
+// ==================================================
+// [growtype2] - 각성2 [미정]
+// ==================================================
+[awakening 2]
+[HP MAX]  47.5
+[MP MAX]  22.5
+[physical attack]  4.0
+[physical defense]  4.0
+[magical attack]  2.0
+[magical defense]  2.0
+[inventory limit]  300.0
+[MP regen speed]  2.5
+[hit recovery]  2.0
+[awakening skill]
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+
+[growtype 3]  // 런처
+[HP MAX]  45.0
+[MP MAX]  25.0
+[physical attack]  4.0
+[physical defense]  4.0
+[magical attack]  2.0
+[magical defense]  2.0
+[inventory limit]  300.0
+[MP regen speed]  2.5
+[hit recovery]  2.0
+[skill] 
+184 3 // 화학
+173 1 // 중갑
+44 1// 중화기다루기
+[/skill]
+[module damage rate] 1.0 1.0 1.0
+
+// ==================================================
+// [growtype2] - 각성1 [블래스터]
+// ==================================================
+[awakening name] <0::growtype_name_36> <0::growtype_name_37>
+
+[awakening 1]
+[HP MAX]  45.0
+[MP MAX]  25.0
+[physical attack]  4.0
+[physical defense]  4.0
+[magical attack]  2.0
+[magical defense]  2.0
+[inventory limit]  300.0
+[MP regen speed]  2.5
+[hit recovery]  2.0
+[awakening skill]
+65 1	// 스펙트럴 서치 아이
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+
+// ==================================================
+// [growtype2] - 각성2 [미정]
+// ==================================================
+[awakening 2]
+[HP MAX]  45.0
+[MP MAX]  25.0
+[physical attack]  4.0
+[physical defense]  4.0
+[magical attack]  2.0
+[magical defense]  2.0
+[inventory limit]  300.0
+[MP regen speed]  2.5
+[hit recovery]  2.0
+[awakening skill]
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+
+[growtype 4]  // 메카닉
+[HP MAX]  35.0
+[MP MAX]  35.0
+[physical attack]  2.0
+[physical defense]  2.0
+[magical attack]  4.0
+[magical defense]  4.0
+[inventory limit]  300.0
+[MP regen speed]  5.0
+[hit recovery]  1.0
+[skill] 
+187 1 // 천
+183 5 // 기계
+46 1 // 로보틱스
+[/skill]
+[module damage rate] 1.05 1.0 1.0
+// ==================================================
+// [growtype2] - 각성1 [마이스터]
+// ==================================================
+[awakening name] <0::growtype_name_41> <0::growtype_name_42>
+
+[awakening 1]
+[HP MAX]  35.0
+[MP MAX]  35.0
+[physical attack]  2.0
+[physical defense]  2.0
+[magical attack]  4.0
+[magical defense]  4.0
+[inventory limit]  300.0
+[MP regen speed]  5.0
+[hit recovery]  1.0
+[awakening skill]
+68 1	// 최후의 투지 
+[/awakening skill]
+[module damage rate] 1.05 1.0 1.0
+
+// ==================================================
+// [growtype2] - 각성2 [미정]
+// ==================================================
+[awakening 2]
+[HP MAX]  35.0
+[MP MAX]  35.0
+[physical attack]  2.0
+[physical defense]  2.0
+[magical attack]  4.0
+[magical defense]  4.0
+[inventory limit]  300.0
+[MP regen speed]  5.0
+[hit recovery]  1.0
+[awakening skill]
+[/awakening skill]
+[module damage rate] 1.05 1.0 1.0
+
+[growtype 5]  // 스핏파이어
+[HP MAX]  40.0
+[MP MAX]  30.0
+[physical attack]  3.2
+[physical defense]  2.8
+[magical attack]  3.2
+[magical defense]  2.8
+[inventory limit]  300.0
+[MP regen speed]  3.0
+[hit recovery]  2.0
+[skill] 
+61 1 // 숙련된 전투의 가죽 마스터리
+38 1 // 경직강화탄
+82 1 // 장탄 공급
+[/skill]
+[module damage rate] 1.0 1.0 1.0
+// ==================================================
+// [growtype2] - 각성1 [제너럴]
+// ==================================================
+[awakening name] <0::growtype_name_46> <0::growtype_name_47>
+
+[awakening 1]
+[HP MAX]  40.0
+[MP MAX]  30.0
+[physical attack]  3.2
+[physical defense]  2.8
+[magical attack]  3.2
+[magical defense]  2.8
+[inventory limit]  300.0
+[MP regen speed]  3.0
+[hit recovery]  2.0
+[awakening skill]
+69 1	// 듀얼 플리커
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+
+// ==================================================
+// [growtype2] - 각성2 [미정]
+// ==================================================
+[awakening 2]
+[HP MAX]  40.0
+[MP MAX]  30.0
+[physical attack]  3.2
+[physical defense]  2.8
+[magical attack]  3.2
+[magical defense]  2.8
+[inventory limit]  300.0
+[MP regen speed]  3.0
+[hit recovery]  2.0
+[awakening skill]
+[/awakening skill]
+[module damage rate] 1.0 1.0 1.0
+
+[waiting motion]  `Animation/Stay.ani`
+[move motion]  `Animation/Move.ani`
+[sit motion]  `Animation/Sit.ani`
+[damage motion 1]  `Animation/Damage1.ani`
+[damage motion 2]  `Animation/Damage2.ani`
+[down motion]  `Animation/Down.ani`
+[overturn motion]  `Animation/Overturn.ani`
+[jump motion]  `Animation/Jump.ani`
+[jumpattack motion]  `Animation/JumpAttack.ani`
+[rest motion]  `Animation/Rest.ani`
+[throw motion 1-1]  `Animation/Throw1.ani`
+[throw motion 1-2]  `Animation/Throw2.ani`
+[throw motion 2-1]  `Animation/Command1.ani`
+[throw motion 2-2]  `Animation/Command2.ani`
+[throw motion 3-1]  `Animation/MomentaryThrow1.ani`
+[throw motion 3-2]  `Animation/MomentaryThrow2.ani`
+[throw motion 4-1]  `Animation/SetRobot.ani`
+[throw motion 4-2]  `Animation/SetRobot.ani`
+[dash motion]  `Animation/Dash.ani`
+[dashattack motion]  `Animation/DashAttack.ani`
+[getitem motion]  `Animation/GetItem.ani`
+[buff motion]  `Animation/Buff.ani`
+[simple rest motion]  `Animation/SIMPLE_Rest.ani`
+[simple move motion]  `Animation/SIMPLE_Move.ani`
+[back motion]	`Animation/Attack2ShootUp.ani`
+[attack motion] 
+`Animation/Attack1.ani`
+`Animation/Attack2.ani`
+[/attack motion]
+[ghost motion]
+`Animation/Ghost.ani`
+`Animation/Ghost_Dodge.ani`
+[/ghost motion]
+[etc motion] 
+`Animation/Attack1ShootUp.ani`
+`Animation/Attack1ShootDown.ani`
+`Animation/Attack2ShootUp.ani`
+`Animation/Attack2ShootDown.ani`
+`Animation/Reload.ani`
+`Animation/JumpAttackReady.ani`
+`Animation/JumpAttackRight.ani`
+`Animation/JumpAttackLeft.ani`
+`Animation/JumpAttackEnd.ani`
+`Animation/WindmillRoll.ani`
+`Animation/WindmillStand.ani`
+`Animation/AerialKnee.ani`
+`Animation/TryTread.ani`
+`Animation/TreadShoot.ani`
+`Animation/FastKnee.ani`
+`Animation/RandomShoot.ani`
+`Animation/BulletGuard.ani`
+`Animation/SubWeaponFrontOnce1.ani`
+`Animation/SubWeaponFrontOnce2.ani`
+`Animation/SubWeaponFrontRapid1.ani`
+`Animation/SubWeaponFrontRapid2.ani`
+`Animation/SubWeaponUpOnce1.ani`
+`Animation/SubWeaponUpOnce2.ani`
+`Animation/SubWeaponUpRapid1.ani`
+`Animation/SubWeaponUpRapid2.ani`
+`Animation/WalkShootReadyStay.ani`
+`Animation/WalkShootReadyFront.ani`
+`Animation/WalkShootReadyBack.ani`
+`Animation/WalkShootLeftStay.ani`
+`Animation/WalkShootLeftFront.ani`
+`Animation/WalkShootLeftBack.ani`
+`Animation/WalkShootRightStay.ani`
+`Animation/WalkShootRightFront.ani`
+`Animation/WalkShootRightBack.ani`
+`Animation/SetRobot.ani`
+`Animation/CrossShoot.ani`
+`Animation/ReloadInHand.ani`
+`Animation/ExtruderReady.ani`
+`Animation/ExtruderCharge.ani`
+`Animation/ExtruderShoot.ani`
+`Animation/MultiHeadShotReady.ani`
+`Animation/MultiHeadShotShoot1.ani`
+`Animation/MultiHeadShotShoot2.ani`
+`Animation/MultiHeadShotShoot3.ani`
+`Animation/MultiHeadShotShoot4.ani`
+`Animation/MultiHeadShotFinish.ani`
+`Animation/AirRaid.ani`
+`Animation/C4RemoteReady.ani`
+`Animation/C4RemoteThrow.ani`
+`Animation/CounterShootReady.ani`
+`Animation/CounterShootShoot.ani`
+`Animation/DoubleGunhawkThrow.ani`
+`Animation/DoubleGunhawkCatch.ani`
+// 이하 남성 전용
+`Animation/DesperadoReady1.ani`
+`Animation/DesperadoReady2.ani`
+`Animation/DesperadoReady3.ani`
+`Animation/DesperadoAerial.ani`
+`Animation/DesperadoFinish.ani`
+`Animation/DesperadoLand.ani`
+`Animation/GaebolgPunch.ani`
+`Animation/BlackRose.ani`
+// 이하 여성 전용
+``
+[/etc motion]
+[jumpattack info]  `AttackInfo/JumpAttack.atk`
+[dashattack info]  `AttackInfo/DashAttack.atk`
+[attack info] 
+`AttackInfo/Attack1.atk`
+`AttackInfo/Attack2.atk`
+[/attack info]
+[etc attack info] 
+`AttackInfo/Windmill.atk`
+`AttackInfo/AerialKnee.atk`
+`AttackInfo/TryTread.atk`
+`AttackInfo/FastKnee.atk`
+`AttackInfo/HitOnSubWeapon.atk`
+`AttackInfo/AirRaid.atk`
+`AttackInfo/C4Remote.atk`
+`AttackInfo/CounterShoot.atk`
+// 이하 남성 전용
+`AttackInfo/DesperadoCrash.atk`
+// 이하 여성 전용
+``
+[/etc attack info]
+[weapon wav]	// 리볼버
+[/weapon wav]
+[weapon wav] 	// 오토매틱
+[/weapon wav]
+[weapon wav] 	// 머스켓
+[/weapon wav]
+[weapon wav] 	// 핸드캐넌
+[/weapon wav]
+[weapon wav] 	// 보우건
+[/weapon wav]
+[weapon wav] 	// UNKNOWN
+[/weapon wav]
+// 주의! [weapon hit info]와 [weapon skill info]는 항상 [weapon wav] 태그보다 뒤에 와야 한다.
+[weapon hit info] 
+`[blow]` `[no blood]` 50 0.7 0.0 -0.1	// 리볼버
+`[blow]` `[no blood]` 50 0.61 -0.25 0.1	// 오토매틱
+`[blow]` `[no blood]` 50 0.8 0.15 0.0	// 머스켓
+`[blow]` `[no blood]` 50 0.85 0.25 -0.25	// 핸드캐넌
+`[blow]` `[no blood]` 50 0.61 -0.1 0.0 	// 보우건
+`[blow]` `[no blood]` 50 1.00 0.0 0.0	// UNKNOWN
+[/weapon hit info]
+[weapon skill info]	// 물리 MP, 물리 쿨타임, 마법 MP, 마법 쿨타임 비율
+1.0 1.0 0.9 1.0		// 리볼버
+0.7 0.9 1.1 1.0		// 오토매틱
+1.1 1.05 0.95 1.0	// 머스켓
+1.25 1.1 0.75 1.0	// 핸드캐넌
+0.9 0.9 1.0 1.0		// 보우건
+1.0 1.0 1.0 1.0		// UNKNOWN
+[/weapon skill info]
+[upgrade weapon attack power rate]	// 물리 공격력, 마법 공격력. 강화로 인한 공격력 증가
+0.85 0.77 	// 리볼버
+0.64 0.94 	// 오토매틱
+1.0 0.85 	// 머스켓
+1.06 0.64 	// 핸드캐넌
+0.76 0.85 	// 보우건
+1.0 1.0 	// UNKNOWN
+[/upgrade weapon attack power rate]
+
+[body image path] `Character/gunner/Equipment/Avatar/skin/gn_body%04d.img`

@@ -1,0 +1,114 @@
+[
+  {
+    "file_number": 3113472198,
+    "path": "character/character.usa.lst",
+    "size": 318,
+    "crc": "cb30bfc5",
+    "relative_offset": 97772468,
+    "absolute_offset": 105339092
+  },
+  {
+    "file_number": 3075958854,
+    "path": "skill/skilllist.usa.lst",
+    "size": 312,
+    "crc": "f9bd27af",
+    "relative_offset": 96656720,
+    "absolute_offset": 104223344
+  },
+  {
+    "file_number": 4233484881,
+    "path": "character/swordman/swordman.chr",
+    "size": 14519,
+    "crc": "9ae456b5",
+    "relative_offset": 130925504,
+    "absolute_offset": 138492128
+  },
+  {
+    "file_number": 13816316,
+    "path": "skill/swordman/hardattack.skl",
+    "size": 1305,
+    "crc": "94e7bc98",
+    "relative_offset": 340300,
+    "absolute_offset": 7906924
+  },
+  {
+    "file_number": 657016135,
+    "path": "character/swordman/animation/hardattack.ani",
+    "size": 6450,
+    "crc": "ee15e900",
+    "relative_offset": 21474940,
+    "absolute_offset": 29041564
+  },
+  {
+    "file_number": 4207869171,
+    "path": "character/swordman/attackinfo/hardattack.atk",
+    "size": 553,
+    "crc": "b0f20bc0",
+    "relative_offset": 130239584,
+    "absolute_offset": 137806208
+  },
+  {
+    "file_number": 212344921,
+    "path": "character/gunner/gunner.chr",
+    "size": 11313,
+    "crc": "90afed2c",
+    "relative_offset": 6506012,
+    "absolute_offset": 14072636
+  },
+  {
+    "file_number": 1209802032,
+    "path": "sample/charactersample.chr",
+    "size": 9639,
+    "crc": "33fa1fe2",
+    "relative_offset": 36988584,
+    "absolute_offset": 44555208
+  },
+  {
+    "file_number": 1354636782,
+    "path": "character/gunner/atgunner.chr",
+    "size": 11355,
+    "crc": "6b48cef2",
+    "relative_offset": 41779124,
+    "absolute_offset": 49345748
+  },
+  {
+    "file_number": 2616547983,
+    "path": "character/mage/mage.chr",
+    "size": 11533,
+    "crc": "1e312275",
+    "relative_offset": 84205112,
+    "absolute_offset": 91771736
+  },
+  {
+    "file_number": 2815852429,
+    "path": "character/fighter/fighter.chr",
+    "size": 13362,
+    "crc": "bbdca782",
+    "relative_offset": 89754092,
+    "absolute_offset": 97320716
+  },
+  {
+    "file_number": 3730042089,
+    "path": "character/priest/priest.chr",
+    "size": 7510,
+    "crc": "9656b2fb",
+    "relative_offset": 114841932,
+    "absolute_offset": 122408556
+  },
+  {
+    "file_number": 82331480,
+    "path": "monster/newmonsters/goblin/guardiantraper/guardiantraper1.mob",
+    "size": 3871,
+    "crc": "20245a47",
+    "relative_offset": 3014184,
+    "absolute_offset": 10580808
+  },
+  {
+    "file_number": 116355818,
+    "path": "monster/newmonsters/goblinkingdom/redgoblin/redgoblin.mob",
+    "size": 3392,
+    "crc": "ba7c5ea0",
+    "relative_offset": 3891736,
+    "absolute_offset": 11458360
+  }
+]

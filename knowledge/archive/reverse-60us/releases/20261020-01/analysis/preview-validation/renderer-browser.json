@@ -1,0 +1,320 @@
+{
+  "pixels": {
+    "tint": [
+      47,
+      0,
+      50,
+      255
+    ],
+    "right": [
+      [
+        200,
+        100,
+        50,
+        255
+      ],
+      [
+        0,
+        0,
+        255,
+        255
+      ]
+    ],
+    "left": [
+      [
+        200,
+        100,
+        50,
+        255
+      ],
+      [
+        0,
+        0,
+        255,
+        255
+      ]
+    ],
+    "alpha": [
+      199,
+      100,
+      52,
+      64
+    ],
+    "additive": [
+      60,
+      45,
+      43,
+      255
+    ],
+    "rotation": {
+      "rgba": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "rate": [
+        2,
+        1
+      ],
+      "source_rotation_radians": 1.5707963267948966,
+      "canvas_rotation_radians": -1.5707963267948966,
+      "image_position": [
+        3,
+        2
+      ],
+      "graphic_effect": "NONE",
+      "composite": "source-over",
+      "effect_supported": true
+    }
+  },
+  "real_pvf_case": {
+    "path": "character/swordman/effect/animation/soulbringer2.ani",
+    "source": {
+      "file_number": 679284810,
+      "path": "character/swordman/effect/animation/soulbringer2.ani",
+      "size": 525,
+      "crc": "74eadccd",
+      "relative_offset": 22072984,
+      "absolute_offset": 29639608,
+      "sha256": "74cd53b285afd7946faebd943df54b85c88b49ac11c8f4a12e62cc6e4d5743a4",
+      "encoding": "cp949",
+      "crc_verified": true,
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+    },
+    "frame": 0,
+    "render": {
+      "rgba": [
+        60,
+        0,
+        255,
+        255
+      ],
+      "rate": [
+        0.4000000059604645,
+        0.20000000298023224
+      ],
+      "source_rotation_radians": 0,
+      "canvas_rotation_radians": 0,
+      "image_position": [
+        -7,
+        -65
+      ],
+      "graphic_effect": "LINEARDODGE",
+      "composite": "lighter",
+      "effect_supported": true,
+      "interpolation": {
+        "requested": true,
+        "enabled": true,
+        "active": true,
+        "next_frame": 1,
+        "elapsed": 0,
+        "span": 500,
+        "ratio": 0,
+        "clock": "source-delay-rate-100",
+        "native_game_clock_observed": false
+      }
+    },
+    "image_source": {
+      "logical": "sprite/character/swordman/effect/soulbringer.img",
+      "package": "sprite_character_swordman_effect.npk",
+      "offset": 3725905,
+      "length": 6019,
+      "table_index": 53,
+      "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f736f756c6272696e6765722e696d67",
+      "npk_path": "D:\\dnf\\60US\\DFO\\ImagePacks2\\sprite_character_swordman_effect.npk",
+      "npk_sha256": "40101eae170c21caac3e880c0c7856f9f913f4394a6bb9dcd6c92fdf19bc00ae",
+      "npk_size": 4364465,
+      "img_sha256": "91c48e2f5f84a923c6917696959b7e558722ec85bd0f632d797a1a841e2b73f2",
+      "img_version": 1,
+      "table_record_offset": 14012,
+      "selected_explicitly": false,
+      "record_offset": 32,
+      "record_length": 36,
+      "pixel_offset": 68,
+      "pixel_length": 5951,
+      "record_absolute_offset": 3725937,
+      "pixel_absolute_offset": 3725973,
+      "record_raw_values": [
+        16,
+        6,
+        14,
+        130,
+        5951,
+        0,
+        0,
+        14,
+        130
+      ],
+      "requested_index": 0,
+      "resolved_index": 0,
+      "link_chain": [],
+      "requested_record_offset": 32,
+      "requested_record_raw_values": [
+        16,
+        6,
+        14,
+        130,
+        5951,
+        0,
+        0,
+        14,
+        130
+      ],
+      "link_record_offsets": [],
+      "rgba_sha256": "9bb39c1d931f25b4679a82367cd0fbc478a4af27e55a31d75421f8f7438551dd"
+    }
+  },
+  "real_rotation_case": {
+    "path": "character/swordman/effect/animation/hundredsword/finishcircle1.ani",
+    "source": {
+      "file_number": 703431288,
+      "path": "character/swordman/effect/animation/hundredsword/finishcircle1.ani",
+      "size": 1672,
+      "crc": "3e01651b",
+      "relative_offset": 22720608,
+      "absolute_offset": 30287232,
+      "sha256": "e705085f4803c2b7778d582271917c66f9d396fe908039cca82685d34a4ed41c",
+      "encoding": "cp949",
+      "crc_verified": true,
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+    },
+    "frame": 1,
+    "render": {
+      "rgba": [
+        255,
+        255,
+        255,
+        255
+      ],
+      "rate": [
+        -1.4,
+        1.4
+      ],
+      "source_rotation_radians": -2.443461,
+      "canvas_rotation_radians": 2.443461,
+      "image_position": [
+        -370,
+        -171
+      ],
+      "graphic_effect": "LINEARDODGE",
+      "composite": "lighter",
+      "effect_supported": true,
+      "interpolation": {
+        "requested": false,
+        "enabled": true,
+        "active": false,
+        "next_frame": 2,
+        "elapsed": 0,
+        "span": 50,
+        "ratio": 0,
+        "clock": "source-delay-rate-100",
+        "native_game_clock_observed": false
+      }
+    },
+    "image_source": {
+      "logical": "sprite/character/swordman/effect/hundredsword/finish_slash_circle.img",
+      "package": "sprite_character_swordman_effect_hundredsword.npk",
+      "offset": 2272153,
+      "length": 34424,
+      "table_index": 18,
+      "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f68756e6472656473776f72642f66696e6973685f736c6173685f636972636c652e696d67",
+      "npk_path": "D:\\dnf\\60US\\DFO\\ImagePacks2\\sprite_character_swordman_effect_hundredsword.npk",
+      "npk_sha256": "3ab86592ca48f9c029e4370537f23041b6496987885d1d5e8cb9609187ace65e",
+      "npk_size": 2559718,
+      "img_sha256": "ebb14be1e8429b6a3aad58716db611760369ce3bc6ac0d4b8d5d5bbffe9fd2a3",
+      "img_version": 1,
+      "table_record_offset": 4772,
+      "selected_explicitly": false,
+      "record_offset": 32,
+      "record_length": 36,
+      "pixel_offset": 68,
+      "pixel_length": 6037,
+      "record_absolute_offset": 2272185,
+      "pixel_absolute_offset": 2272221,
+      "record_raw_values": [
+        16,
+        6,
+        247,
+        91,
+        6037,
+        216,
+        213,
+        640,
+        480
+      ],
+      "requested_index": 0,
+      "resolved_index": 0,
+      "link_chain": [],
+      "requested_record_offset": 32,
+      "requested_record_raw_values": [
+        16,
+        6,
+        247,
+        91,
+        6037,
+        216,
+        213,
+        640,
+        480
+      ],
+      "link_record_offsets": [],
+      "rgba_sha256": "ff4af184772b7347e139e265aab3c08938680b879bbc041432dd91e1baf0d050"
+    }
+  },
+  "executable_source": {
+    "path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+    "observed_sha256": "bdd14a558658dd0b20def0aa9fa4b355b98855075a05ba6de7f60c4da695495e",
+    "static_evidence_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "binding": "verified-imports-only-derivative",
+    "runtime_equivalence_verified": false,
+    "original_path": "D:\\dnf\\60US\\analysis\\unpack_attempts\\001\\launcher_test\\DFO_fixed_v3.original.exe",
+    "unchanged_original_sections": [
+      {
+        "name": ".text",
+        "rva": "0x1000",
+        "size": 15384576,
+        "sha256": "872a4fd7c4a6582d638c77209cd9f4d8aa058fda22bc467f723f9d8386ad0085"
+      },
+      {
+        "name": ".rsrc",
+        "rva": "0xead000",
+        "size": 229376,
+        "sha256": "c9c90dae1523546f622837d1d08a2cb2f56b4bfc3807bef787b37076fe28c9e7"
+      },
+      {
+        "name": ".idata  ",
+        "rva": "0xee5000",
+        "size": 4096,
+        "sha256": "a8bd00db2bd5a1e2afb1b3f3a59ec48101c1aeabab1588c605aa75b7ac8aca62"
+      },
+      {
+        "name": "jsrwqdbk",
+        "rva": "0xee6000",
+        "size": 1212416,
+        "sha256": "76ff2115b33d3e52201b747feb9c461a288e89a50dd0f09b1e3a23137ece3a92"
+      },
+      {
+        "name": "lfkklsnv",
+        "rva": "0x100e000",
+        "size": 4096,
+        "sha256": "b11431c3664a4dd5db94aa2f960170e81f895c53223d34b5422539484ea8e100"
+      },
+      {
+        "name": ".SCY",
+        "rva": "0x100f000",
+        "size": 20480,
+        "sha256": "471f8773e8322ba84e5f9bafa0ade84b1559d4baeee7ad4e4c64a4c442c83581"
+      },
+      {
+        "name": ".chui",
+        "rva": "0x1014000",
+        "size": 512,
+        "sha256": "42a3a8405e2b51c2111411388e38b9966c3dac695f89d4a0d93947726d3b985f"
+      }
+    ],
+    "limitation": "Static disk contracts only; launcher replaces protected combat branches at runtime."
+  },
+  "page_errors": [],
+  "original_game_pixel_comparison": false
+}

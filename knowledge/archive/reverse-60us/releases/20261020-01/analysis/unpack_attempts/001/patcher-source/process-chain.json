@@ -1,0 +1,20 @@
+﻿[
+    {
+        "ProcessId":  54088,
+        "Name":  "DFO60US启动器.exe",
+        "ParentProcessId":  13672,
+        "ExecutablePath":  "D:\\dnf\\60US\\DFO\\DFO60US启动器.exe"
+    },
+    {
+        "ProcessId":  52436,
+        "Name":  "5h0w4ll_0v3r.exe",
+        "ParentProcessId":  54088,
+        "ExecutablePath":  "D:\\dnf\\60US\\DFO\\5h0w4ll_0v3r.exe"
+    },
+    {
+        "ProcessId":  56460,
+        "Name":  "DFO_fixed_v3.exe",
+        "ParentProcessId":  52436,
+        "ExecutablePath":  "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe"
+    }
+]

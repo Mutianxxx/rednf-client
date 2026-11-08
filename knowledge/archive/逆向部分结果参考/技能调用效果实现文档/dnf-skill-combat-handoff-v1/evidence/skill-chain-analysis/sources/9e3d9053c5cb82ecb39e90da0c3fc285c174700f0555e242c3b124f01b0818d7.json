@@ -1,0 +1,389 @@
+{
+  "path": "passiveobject/character/swordman/animation/outragebreak/bloodexp_glow.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        3
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_bloodsexp_glow.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -472,
+        -268
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 65
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 75
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_bloodsexp_glow.img",
+        1
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -472,
+        -268
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 130
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_bloodsexp_glow.img",
+        1
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -472,
+        -268
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        100
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 200
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 9847662,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_bloodsexp_glow.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294966824,
+      "value": -472
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967028,
+      "value": -268
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 60,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 85,
+      "type": 6,
+      "raw": 9847662,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_bloodsexp_glow.img"
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 4294966824,
+      "value": -472
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 4294967028,
+      "value": -268
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 115,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 140,
+      "type": 6,
+      "raw": 9847662,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_bloodsexp_glow.img"
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 4294966824,
+      "value": -472
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 4294967028,
+      "value": -268
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 195,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 205,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    }
+  ],
+  "raw_sha256": "9e3d9053c5cb82ecb39e90da0c3fc285c174700f0555e242c3b124f01b0818d7"
+}

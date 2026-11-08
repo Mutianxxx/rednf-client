@@ -1,0 +1,32 @@
+[
+    {
+        "original":  "D:\\dnf-rebuild\\dnf-native-demo\\reports\\combat-native-reverse\\resource-render\\contract.json",
+        "copy":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\docs\\native-evidence\\animation-render.json",
+        "sha256":  "4386e6b10b1e2e19b901c507e8ab6b3af8cc9d210c2fde52a4ed5f09ed558958"
+    },
+    {
+        "original":  "D:\\dnf-rebuild\\dnf-native-demo\\reports\\combat-native-reverse\\skill-controllers\\swordman\\source-manifest.json",
+        "copy":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\docs\\native-evidence\\swordman-source-manifest.json",
+        "sha256":  "54ab80cf5c9bbeaa952ee7d9f255dba611fafac7c60da8d9f33b959e5bb794a1"
+    },
+    {
+        "original":  "D:\\dnf-rebuild\\dnf-native-demo\\reports\\combat-native-reverse\\skill-controllers\\swordman\\contract.json",
+        "copy":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\docs\\native-evidence\\swordman-controller.json",
+        "sha256":  "f5b1b9a9e6188c255165be954bd6fd8fe1a6d4cdbf6c162b5fbe94d9acc25929"
+    },
+    {
+        "original":  "D:\\dnf-rebuild\\dnf-native-demo\\reports\\combat-native-reverse\\collision\\README.md",
+        "copy":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\docs\\native-evidence\\collision.md",
+        "sha256":  "305cd10034b1568ae8b003a231b9637cafb970b6adb2b7271e5d3d88de9dcc77"
+    },
+    {
+        "original":  "D:\\dnf-rebuild\\dnf-native-demo\\reports\\combat-native-reverse\\hit-acceptance\\README.md",
+        "copy":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\docs\\native-evidence\\hit-acceptance.md",
+        "sha256":  "ba83c40ee6563c89f411187988d9f86ffeb9bef1944bbddc102067164ba44dee"
+    },
+    {
+        "original":  "D:\\dnf-rebuild\\dnf-native-demo\\reports\\combat-native-reverse\\particles\\straight-keep-last.json",
+        "copy":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\docs\\native-evidence\\particle-straight-keep-last.json",
+        "sha256":  "f313281d5ee5fa3d0dab0a443cd51eb3dbfcfc9dc4d1b629cf424eab4ea5add5"
+    }
+]

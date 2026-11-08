@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"result\":{\"path\":\"D:\\\\dnf\\\\60US\\\\analysis\\\\unpack_attempts\\\\001\\\\launcher_test\\\\DFO_fixed_v3.original.exe\",\"format\":\"pe\",\"kind\":\"executable\",\"sha256\":\"a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b\",\"architecture\":\"x86\"}}"
+    }
+  ],
+  "structuredContent": {
+    "result": {
+      "path": "D:\\dnf\\60US\\analysis\\unpack_attempts\\001\\launcher_test\\DFO_fixed_v3.original.exe",
+      "format": "pe",
+      "kind": "executable",
+      "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "architecture": "x86"
+    }
+  }
+}

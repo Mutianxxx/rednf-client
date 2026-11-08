@@ -1,0 +1,4 @@
+interface:
+  display_name: "DNF PVF 官方注释参考"
+  short_description: "核对本地 DNF PVF 官方样例的编码、图层坐标与技能字段语义"
+  default_prompt: "使用 $dnf-pvf-reference 阅读本地 DNF PVF 官方注释样例，以文件与行号核对当前客户端字段，并明确版本差异和未知规则。"

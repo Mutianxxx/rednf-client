@@ -1,0 +1,51 @@
+{
+  "sources": [
+    {
+      "path": "D:\\dnf\\60US\\DFO\\DFO.exe",
+      "sha256": "583928ddc0391396401440bd76391521b138c616b235ed18e615d5ab7333960a",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+      "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+      "unchanged": true
+    },
+    {
+      "path": "D:\\dnf\\60US\\DFO\\Script.pvf",
+      "sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "unchanged": true
+    }
+  ],
+  "python_verification": 99501,
+  "cpp_verification": {
+    "version": 71295,
+    "files_verified": 99501,
+    "path_hash_mismatches": 0,
+    "duplicate_hashes": 1,
+    "parsed_tree_bytes": 7566567,
+    "tree_bytes": 7566568,
+    "tree_crc_verified": true,
+    "key": 0
+  },
+  "wrong_key_rejected": {
+    "key": "0x81a79011",
+    "exit_code": 1,
+    "error": "CRC mismatch"
+  },
+  "tools": {
+    "angr": "10.0.4.post1",
+    "pefile": "2024.8.26",
+    "capstone": "5.0.9"
+  },
+  "game_executed": false,
+  "original_exe_independently_unpacked": false,
+  "pseudocode_count": 24,
+  "skill": {
+    "name": "ghidra-rpc",
+    "repository": "https://github.com/cellebrite-labs/ghidra-rpc",
+    "path": "C:/Users/16908/.codex/skills/ghidra-rpc",
+    "sha256": "e0315df7a04b5247201aa738beb419c548bbd298578b8503e1a3db077b8e8563",
+    "runtime_ready": false,
+    "reason": "Official Ghidra release download incomplete; offline angr used."
+  }
+}

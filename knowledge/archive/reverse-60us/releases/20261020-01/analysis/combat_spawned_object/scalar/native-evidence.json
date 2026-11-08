@@ -1,0 +1,225 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "excerpts": [
+    {
+      "start_va": 5569600,
+      "length": 789,
+      "file_offset": 1375296,
+      "sha256": "52b38bab6635e94ee84ae9059e4d4c6574e4f90c5bd7ee98ddf61b11b749f4a7",
+      "binary": "0054FC40-0054FF55.bin",
+      "assembly": "0054FC40-0054FF55.asm"
+    },
+    {
+      "start_va": 5570688,
+      "length": 201,
+      "file_offset": 1376384,
+      "sha256": "cc3a6716e06df0372a59ead75485399c4bf9e4f1561b2636657bca9c3a24d9d1",
+      "binary": "00550080-00550149.bin",
+      "assembly": "00550080-00550149.asm"
+    },
+    {
+      "start_va": 5570896,
+      "length": 533,
+      "file_offset": 1376592,
+      "sha256": "9dd2c0e6319b9a6508efe193c0ca94b68f233fb2ab766a5ceb0db31bc9fa66a2",
+      "binary": "00550150-00550365.bin",
+      "assembly": "00550150-00550365.asm"
+    },
+    {
+      "start_va": 4434928,
+      "length": 70,
+      "file_offset": 240624,
+      "sha256": "8a3699ce972d1e7aff0d02e6b437b7d494206ec5026e6a08a382c45bd97a6925",
+      "binary": "0043ABF0-0043AC36.bin",
+      "assembly": "0043ABF0-0043AC36.asm"
+    },
+    {
+      "start_va": 4432656,
+      "length": 30,
+      "file_offset": 238352,
+      "sha256": "1fe6da051c256540ba967304a4181ea5ff69149dde407ec7b53a73e184648c61",
+      "binary": "0043A310-0043A32E.bin",
+      "assembly": "0043A310-0043A32E.asm"
+    },
+    {
+      "start_va": 4489200,
+      "length": 169,
+      "file_offset": 294896,
+      "sha256": "ea24d3f98792557030f0fe2f13c31ee929ac727ceeb824b4baa1da02b116dbc6",
+      "binary": "00447FF0-00448099.bin",
+      "assembly": "00447FF0-00448099.asm"
+    },
+    {
+      "start_va": 4489552,
+      "length": 160,
+      "file_offset": 295248,
+      "sha256": "22a653c3dcbe55808d823e152a2404b63ac62bad73fd93d818691d264ebd2d5e",
+      "binary": "00448150-004481F0.bin",
+      "assembly": "00448150-004481F0.asm"
+    },
+    {
+      "start_va": 5585824,
+      "length": 40,
+      "file_offset": 1391520,
+      "sha256": "aafe48823669e429cbfe2802f63d93c85f6ec5acba34c22dd3f73bf224d2ba82",
+      "binary": "00553BA0-00553BC8.bin",
+      "assembly": "00553BA0-00553BC8.asm"
+    },
+    {
+      "start_va": 5577615,
+      "length": 89,
+      "file_offset": 1383311,
+      "sha256": "bdf18a62543962e0586c31e0ad025d6ab4a9d97f6965ba0dd6ea51925a562621",
+      "binary": "00551B8F-00551BE8.bin",
+      "assembly": "00551B8F-00551BE8.asm"
+    },
+    {
+      "start_va": 5577897,
+      "length": 222,
+      "file_offset": 1383593,
+      "sha256": "182efc0d815c684a1a7e18d3136a5f1ee6b0a685e77ed7c6af7286a0050b9183",
+      "binary": "00551CA9-00551D87.bin",
+      "assembly": "00551CA9-00551D87.asm"
+    },
+    {
+      "start_va": 9048146,
+      "length": 50,
+      "file_offset": 4853842,
+      "sha256": "76ccc8e2cd67ffa0654927ede07590308fc6f489e9985fda58ba206c348c8494",
+      "binary": "008A1052-008A1084.bin",
+      "assembly": "008A1052-008A1084.asm"
+    },
+    {
+      "start_va": 9048331,
+      "length": 100,
+      "file_offset": 4854027,
+      "sha256": "6100e74518691f3620338b3eea1f9db2cfd7f9ca9b061c7bb0f22e0a50de2bfa",
+      "binary": "008A110B-008A116F.bin",
+      "assembly": "008A110B-008A116F.asm"
+    },
+    {
+      "start_va": 12588356,
+      "length": 118,
+      "file_offset": 8394052,
+      "sha256": "597ee43b448ae6910ac3fa6a00c54fa7453afbeaa03f56b50bb65e1cc320ec24",
+      "binary": "00C01544-00C015BA.bin",
+      "assembly": "00C01544-00C015BA.asm"
+    },
+    {
+      "start_va": 16116052,
+      "length": 8,
+      "file_offset": 11921748,
+      "sha256": "80b8fd6d60fa85fd14a38b5295cb92abd80dfec5ca406c9f969609a79d36809d",
+      "binary": "00F5E954-00F5E95C.bin",
+      "assembly": "00F5E954-00F5E95C.asm"
+    },
+    {
+      "start_va": 13373612,
+      "length": 4,
+      "file_offset": 9179308,
+      "sha256": "0d66bd808e9247acb560fe33efaa62ad6f11ee6f85cc4f61bd17673263de04ee",
+      "binary": "00CC10AC-00CC10B0.bin",
+      "assembly": "00CC10AC-00CC10B0.asm"
+    },
+    {
+      "start_va": 7586388,
+      "length": 114,
+      "file_offset": 3392084,
+      "sha256": "87a9267f112fc203fd0e7c7159d2013c65f4b4521fa176234c137b8eb6eea785",
+      "binary": "0073C254-0073C2C6.bin",
+      "assembly": "0073C254-0073C2C6.asm"
+    },
+    {
+      "start_va": 5024288,
+      "length": 33,
+      "file_offset": 829984,
+      "sha256": "2905c0c898ce3b04318d4cdd11441ae691d1d14a8e750ea5588699258db0b08b",
+      "binary": "004CAA20-004CAA41.bin",
+      "assembly": "004CAA20-004CAA41.asm"
+    }
+  ],
+  "reused_excerpts": [
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "level_query_bridge",
+      "va": "0x004caa20",
+      "file_offset": 829984,
+      "size": 33,
+      "sha256": "2905c0c898ce3b04318d4cdd11441ae691d1d14a8e750ea5588699258db0b08b",
+      "binary": "004caa20-level_query_bridge.bin",
+      "assembly": "004caa20-level_query_bridge.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "level_query",
+      "va": "0x00550150",
+      "file_offset": 1376592,
+      "size": 533,
+      "sha256": "9dd2c0e6319b9a6508efe193c0ca94b68f233fb2ab766a5ceb0db31bc9fa66a2",
+      "binary": "00550150-level_query.bin",
+      "assembly": "00550150-level_query.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "level_value",
+      "va": "0x00550080",
+      "file_offset": 1376384,
+      "size": 201,
+      "sha256": "cc3a6716e06df0372a59ead75485399c4bf9e4f1561b2636657bca9c3a24d9d1",
+      "binary": "00550080-level_value.bin",
+      "assembly": "00550080-level_value.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "skill_load_parse",
+      "va": "0x00551ad0",
+      "file_offset": 1383120,
+      "size": 205,
+      "sha256": "fa3bdf39a20f61e371e797fb7fe9053f0ce7a52ab83cbc55b7b6aa521bd7ad6a",
+      "binary": "00551ad0-skill_load_parse.bin",
+      "assembly": "00551ad0-skill_load_parse.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "skill_levelinfo_materialize",
+      "va": "0x00553265",
+      "file_offset": 1389157,
+      "size": 474,
+      "sha256": "e8c81e14d94d4856de0a14c7fd99668d53f8eadc9a1a5d7948ab4a7c9136d750",
+      "binary": "00553265-skill_levelinfo_materialize.bin",
+      "assembly": "00553265-skill_levelinfo_materialize.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "skl_parser_entry",
+      "va": "0x008a0da0",
+      "file_offset": 4853152,
+      "size": 174,
+      "sha256": "910af362f84cbdf5f4e2cc32d126062d0d20bb470e8f38ec50b3f7940e5f5b53",
+      "binary": "008a0da0-skl_parser_entry.bin",
+      "assembly": "008a0da0-skl_parser_entry.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "skl_levelinfo_parse",
+      "va": "0x008a1e5b",
+      "file_offset": 4857435,
+      "size": 183,
+      "sha256": "3785555aa54ab68da5d682b55424c9c668a4d0bd798bfe2b25fac35644c02686",
+      "binary": "008a1e5b-skl_levelinfo_parse.bin",
+      "assembly": "008a1e5b-skl_levelinfo_parse.asm"
+    },
+    {
+      "base": "analysis/combat_attackinfo",
+      "name": "swordman_context_stat",
+      "va": "0x00744a50",
+      "file_offset": 3426896,
+      "size": 17,
+      "sha256": "374b6f7e5bef3ccc845defdd4aa4402badfa6e169bfa0016264c98b28146ffaf",
+      "binary": "00744a50-swordman_context_stat.bin",
+      "assembly": "00744a50-swordman_context_stat.asm"
+    }
+  ],
+  "observed_execution": false
+}

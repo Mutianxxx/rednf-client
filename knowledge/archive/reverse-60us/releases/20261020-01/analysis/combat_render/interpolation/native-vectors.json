@@ -1,0 +1,1919 @@
+{
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "kind": "full extracted A24950 and helpers in synthetic PE32; not DFO runtime",
+  "harness_sha256": "ce4c65c68c5dacbf55a16115d9cf02edaa139e4026b921cadbe48114022a26a2",
+  "vectors": [
+    {
+      "name": "before",
+      "precision": 64,
+      "inputs": {
+        "name": "before",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": -1,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "start",
+      "precision": 64,
+      "inputs": {
+        "name": "start",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 0,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "quarter",
+      "precision": 64,
+      "inputs": {
+        "name": "quarter",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 125,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          -1,
+          -50
+        ],
+        "rate": [
+          0.30000001192092896,
+          0.1875
+        ],
+        "angle": 1.5700000524520874,
+        "rgba": [
+          206,
+          191,
+          255,
+          63
+        ]
+      },
+      "native": {
+        "position": [
+          -1,
+          -50
+        ],
+        "rate": [
+          0.30000001192092896,
+          0.1875
+        ],
+        "angle": 1.5700000524520874,
+        "rgba": [
+          206,
+          191,
+          255,
+          63
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "middle",
+      "precision": 64,
+      "inputs": {
+        "name": "middle",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          4,
+          -35
+        ],
+        "rate": [
+          0.4000000059604645,
+          0.32500001788139343
+        ],
+        "angle": 3.140000104904175,
+        "rgba": [
+          157,
+          127,
+          255,
+          127
+        ]
+      },
+      "native": {
+        "position": [
+          4,
+          -35
+        ],
+        "rate": [
+          0.4000000059604645,
+          0.32500001788139343
+        ],
+        "angle": 3.140000104904175,
+        "rgba": [
+          157,
+          127,
+          255,
+          127
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "late",
+      "precision": 64,
+      "inputs": {
+        "name": "late",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 499,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          15,
+          -6
+        ],
+        "rate": [
+          0.5992000102996826,
+          0.5989000201225281
+        ],
+        "angle": 6.267440319061279,
+        "rgba": [
+          60,
+          0,
+          255,
+          254
+        ]
+      },
+      "native": {
+        "position": [
+          15,
+          -6
+        ],
+        "rate": [
+          0.5992000102996826,
+          0.5989000201225281
+        ],
+        "angle": 6.267440319061279,
+        "rgba": [
+          60,
+          0,
+          255,
+          254
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "end",
+      "precision": 64,
+      "inputs": {
+        "name": "end",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 500,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          16,
+          -6
+        ],
+        "rate": [
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "angle": 6.28000020980835,
+        "rgba": [
+          60,
+          0,
+          255,
+          255
+        ]
+      },
+      "native": {
+        "position": [
+          16,
+          -6
+        ],
+        "rate": [
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "angle": 6.28000020980835,
+        "rgba": [
+          60,
+          0,
+          255,
+          255
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "after",
+      "precision": 64,
+      "inputs": {
+        "name": "after",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 501,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          16,
+          -6
+        ],
+        "rate": [
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "angle": 6.28000020980835,
+        "rgba": [
+          60,
+          0,
+          255,
+          255
+        ]
+      },
+      "native": {
+        "position": [
+          16,
+          -6
+        ],
+        "rate": [
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "angle": 6.28000020980835,
+        "rgba": [
+          60,
+          0,
+          255,
+          255
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "disabled",
+      "precision": 64,
+      "inputs": {
+        "name": "disabled",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500,
+        "enabled": false
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "ended",
+      "precision": 64,
+      "inputs": {
+        "name": "ended",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500,
+        "ended": true
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "last_nonloop",
+      "precision": 64,
+      "inputs": {
+        "name": "last_nonloop",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500,
+        "last": true
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "last_loop",
+      "precision": 64,
+      "inputs": {
+        "name": "last_loop",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500,
+        "last": true,
+        "loop": true
+      },
+      "expected": {
+        "position": [
+          4,
+          -35
+        ],
+        "rate": [
+          0.4000000059604645,
+          0.32500001788139343
+        ],
+        "angle": 3.140000104904175,
+        "rgba": [
+          157,
+          127,
+          255,
+          127
+        ]
+      },
+      "native": {
+        "position": [
+          4,
+          -35
+        ],
+        "rate": [
+          0.4000000059604645,
+          0.32500001788139343
+        ],
+        "angle": 3.140000104904175,
+        "rgba": [
+          157,
+          127,
+          255,
+          127
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "negative_coordinate_fraction",
+      "precision": 64,
+      "inputs": {
+        "name": "negative_coordinate_fraction",
+        "a": {
+          "position": [
+            -3,
+            -2
+          ],
+          "rate": [
+            -2,
+            1
+          ],
+          "angle": -6.28,
+          "rgba": [
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "b": {
+          "position": [
+            0,
+            1
+          ],
+          "rate": [
+            2,
+            -1
+          ],
+          "angle": 6.28,
+          "rgba": [
+            254,
+            253,
+            252,
+            0
+          ]
+        },
+        "elapsed": 1,
+        "span": 4
+      },
+      "expected": {
+        "position": [
+          -2,
+          -1
+        ],
+        "rate": [
+          -1.0,
+          0.5
+        ],
+        "angle": -3.140000104904175,
+        "rgba": [
+          64,
+          64,
+          65,
+          191
+        ]
+      },
+      "native": {
+        "position": [
+          -2,
+          -1
+        ],
+        "rate": [
+          -1.0,
+          0.5
+        ],
+        "angle": -3.140000104904175,
+        "rgba": [
+          64,
+          64,
+          65,
+          191
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "before",
+      "precision": 53,
+      "inputs": {
+        "name": "before",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": -1,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "start",
+      "precision": 53,
+      "inputs": {
+        "name": "start",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 0,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "quarter",
+      "precision": 53,
+      "inputs": {
+        "name": "quarter",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 125,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          -1,
+          -50
+        ],
+        "rate": [
+          0.30000001192092896,
+          0.1875
+        ],
+        "angle": 1.5700000524520874,
+        "rgba": [
+          206,
+          191,
+          255,
+          63
+        ]
+      },
+      "native": {
+        "position": [
+          -1,
+          -50
+        ],
+        "rate": [
+          0.30000001192092896,
+          0.1875
+        ],
+        "angle": 1.5700000524520874,
+        "rgba": [
+          206,
+          191,
+          255,
+          63
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "middle",
+      "precision": 53,
+      "inputs": {
+        "name": "middle",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          4,
+          -35
+        ],
+        "rate": [
+          0.4000000059604645,
+          0.32500001788139343
+        ],
+        "angle": 3.140000104904175,
+        "rgba": [
+          157,
+          127,
+          255,
+          127
+        ]
+      },
+      "native": {
+        "position": [
+          4,
+          -35
+        ],
+        "rate": [
+          0.4000000059604645,
+          0.32500001788139343
+        ],
+        "angle": 3.140000104904175,
+        "rgba": [
+          157,
+          127,
+          255,
+          127
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "late",
+      "precision": 53,
+      "inputs": {
+        "name": "late",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 499,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          15,
+          -6
+        ],
+        "rate": [
+          0.5992000102996826,
+          0.5989000201225281
+        ],
+        "angle": 6.267440319061279,
+        "rgba": [
+          60,
+          0,
+          255,
+          254
+        ]
+      },
+      "native": {
+        "position": [
+          15,
+          -6
+        ],
+        "rate": [
+          0.5992000102996826,
+          0.5989000201225281
+        ],
+        "angle": 6.267440319061279,
+        "rgba": [
+          60,
+          0,
+          255,
+          254
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "end",
+      "precision": 53,
+      "inputs": {
+        "name": "end",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 500,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          16,
+          -6
+        ],
+        "rate": [
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "angle": 6.28000020980835,
+        "rgba": [
+          60,
+          0,
+          255,
+          255
+        ]
+      },
+      "native": {
+        "position": [
+          16,
+          -6
+        ],
+        "rate": [
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "angle": 6.28000020980835,
+        "rgba": [
+          60,
+          0,
+          255,
+          255
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "after",
+      "precision": 53,
+      "inputs": {
+        "name": "after",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 501,
+        "span": 500
+      },
+      "expected": {
+        "position": [
+          16,
+          -6
+        ],
+        "rate": [
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "angle": 6.28000020980835,
+        "rgba": [
+          60,
+          0,
+          255,
+          255
+        ]
+      },
+      "native": {
+        "position": [
+          16,
+          -6
+        ],
+        "rate": [
+          0.6000000238418579,
+          0.6000000238418579
+        ],
+        "angle": 6.28000020980835,
+        "rgba": [
+          60,
+          0,
+          255,
+          255
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "disabled",
+      "precision": 53,
+      "inputs": {
+        "name": "disabled",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500,
+        "enabled": false
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "ended",
+      "precision": 53,
+      "inputs": {
+        "name": "ended",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500,
+        "ended": true
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "last_nonloop",
+      "precision": 53,
+      "inputs": {
+        "name": "last_nonloop",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500,
+        "last": true
+      },
+      "expected": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "native": {
+        "position": [
+          -7,
+          -65
+        ],
+        "rate": [
+          0.20000000298023224,
+          0.05000000074505806
+        ],
+        "angle": 0.0,
+        "rgba": [
+          255,
+          255,
+          255,
+          0
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "last_loop",
+      "precision": 53,
+      "inputs": {
+        "name": "last_loop",
+        "a": {
+          "position": [
+            -7,
+            -65
+          ],
+          "rate": [
+            0.2,
+            0.05
+          ],
+          "angle": 0,
+          "rgba": [
+            255,
+            255,
+            255,
+            0
+          ]
+        },
+        "b": {
+          "position": [
+            16,
+            -6
+          ],
+          "rate": [
+            0.6,
+            0.6
+          ],
+          "angle": 6.28,
+          "rgba": [
+            60,
+            0,
+            255,
+            255
+          ]
+        },
+        "elapsed": 250,
+        "span": 500,
+        "last": true,
+        "loop": true
+      },
+      "expected": {
+        "position": [
+          4,
+          -35
+        ],
+        "rate": [
+          0.4000000059604645,
+          0.32500001788139343
+        ],
+        "angle": 3.140000104904175,
+        "rgba": [
+          157,
+          127,
+          255,
+          127
+        ]
+      },
+      "native": {
+        "position": [
+          4,
+          -35
+        ],
+        "rate": [
+          0.4000000059604645,
+          0.32500001788139343
+        ],
+        "angle": 3.140000104904175,
+        "rgba": [
+          157,
+          127,
+          255,
+          127
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    },
+    {
+      "name": "negative_coordinate_fraction",
+      "precision": 53,
+      "inputs": {
+        "name": "negative_coordinate_fraction",
+        "a": {
+          "position": [
+            -3,
+            -2
+          ],
+          "rate": [
+            -2,
+            1
+          ],
+          "angle": -6.28,
+          "rgba": [
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "b": {
+          "position": [
+            0,
+            1
+          ],
+          "rate": [
+            2,
+            -1
+          ],
+          "angle": 6.28,
+          "rgba": [
+            254,
+            253,
+            252,
+            0
+          ]
+        },
+        "elapsed": 1,
+        "span": 4
+      },
+      "expected": {
+        "position": [
+          -2,
+          -1
+        ],
+        "rate": [
+          -1.0,
+          0.5
+        ],
+        "angle": -3.140000104904175,
+        "rgba": [
+          64,
+          64,
+          65,
+          191
+        ]
+      },
+      "native": {
+        "position": [
+          -2,
+          -1
+        ],
+        "rate": [
+          -1.0,
+          0.5
+        ],
+        "angle": -3.140000104904175,
+        "rgba": [
+          64,
+          64,
+          65,
+          191
+        ]
+      },
+      "discrete_fields_unchanged": true,
+      "matches": true
+    }
+  ],
+  "matches": 24,
+  "mismatches": 0,
+  "limitations": [
+    "Synthetic clock, frames and protection key; runtime x87 state not captured.",
+    "Does not execute parser, frame advancement, rendering or an actual game draw."
+  ]
+}

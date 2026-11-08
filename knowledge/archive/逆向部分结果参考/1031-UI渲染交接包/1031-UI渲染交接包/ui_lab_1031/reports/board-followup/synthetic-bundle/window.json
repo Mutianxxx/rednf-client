@@ -1,0 +1,496 @@
+{
+  "version": 1,
+  "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+  "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+  "view": {
+    "mode": "static",
+    "source": "bundle",
+    "static_controls": [
+      {
+        "type": "[board image]",
+        "name": "board",
+        "key": "instance#board",
+        "source": "synthetic.ui",
+        "offset": 7,
+        "strings": [
+          "test.img",
+          "draw by loop"
+        ],
+        "parameters": [
+          1,
+          1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "absolute_x": 0,
+        "absolute_y": 0
+      }
+    ],
+    "base_diagnostics": {
+      "issues": [],
+      "support": "partial captured requests"
+    },
+    "board_previews": {
+      "instance#board": {
+        "mode": "loop",
+        "raw_parameters": [
+          1,
+          1,
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "raw_strings": [
+          "test.img",
+          "draw by loop"
+        ],
+        "origin": [
+          0,
+          0
+        ],
+        "logical_size": [
+          6,
+          6
+        ],
+        "evidence": "reports/board-followup/evidence.json",
+        "consumer": "011E9C30",
+        "draw_ops": [
+          {
+            "order": 0,
+            "event": "board_image",
+            "slot": 0,
+            "path": "test.img",
+            "frame": 0,
+            "x": 0,
+            "y": 0,
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation": 0.0,
+            "center": [
+              0.0,
+              0.0
+            ],
+            "color": 4294967295,
+            "image_crop": [
+              -2,
+              -3
+            ],
+            "image_dimensions": [
+              2,
+              2
+            ],
+            "request": "011B3950",
+            "instance": "instance#board",
+            "source": {
+              "path": "synthetic.ui",
+              "offset": 7,
+              "name": "board"
+            },
+            "confirmed_state": "authored board layout only; no runtime state inferred"
+          },
+          {
+            "order": 1,
+            "event": "board_image",
+            "slot": 1,
+            "path": "test.img",
+            "frame": 1,
+            "x": 2,
+            "y": 0,
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation": 0.0,
+            "center": [
+              0.0,
+              0.0
+            ],
+            "color": 4294967295,
+            "image_crop": [
+              0,
+              0
+            ],
+            "image_dimensions": [
+              2,
+              2
+            ],
+            "request": "011B3950",
+            "instance": "instance#board",
+            "source": {
+              "path": "synthetic.ui",
+              "offset": 7,
+              "name": "board"
+            },
+            "confirmed_state": "authored board layout only; no runtime state inferred"
+          },
+          {
+            "order": 2,
+            "event": "board_image",
+            "slot": 2,
+            "path": "test.img",
+            "frame": 2,
+            "x": 4,
+            "y": 0,
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation": 0.0,
+            "center": [
+              0.0,
+              0.0
+            ],
+            "color": 4294967295,
+            "image_crop": [
+              -1,
+              0
+            ],
+            "image_dimensions": [
+              2,
+              2
+            ],
+            "request": "011B3950",
+            "instance": "instance#board",
+            "source": {
+              "path": "synthetic.ui",
+              "offset": 7,
+              "name": "board"
+            },
+            "confirmed_state": "authored board layout only; no runtime state inferred"
+          },
+          {
+            "order": 3,
+            "event": "board_image",
+            "slot": 3,
+            "path": "test.img",
+            "frame": 3,
+            "x": 0,
+            "y": 2,
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation": 0.0,
+            "center": [
+              0.0,
+              0.0
+            ],
+            "color": 4294967295,
+            "image_crop": [
+              0,
+              0
+            ],
+            "image_dimensions": [
+              2,
+              2
+            ],
+            "request": "011B3950",
+            "instance": "instance#board",
+            "source": {
+              "path": "synthetic.ui",
+              "offset": 7,
+              "name": "board"
+            },
+            "confirmed_state": "authored board layout only; no runtime state inferred"
+          },
+          {
+            "order": 4,
+            "event": "board_image",
+            "slot": 4,
+            "path": "test.img",
+            "frame": 4,
+            "x": 2,
+            "y": 2,
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation": 0.0,
+            "center": [
+              0.0,
+              0.0
+            ],
+            "color": 4294967295,
+            "image_crop": [
+              0,
+              0
+            ],
+            "image_dimensions": [
+              2,
+              2
+            ],
+            "request": "011B3950",
+            "instance": "instance#board",
+            "source": {
+              "path": "synthetic.ui",
+              "offset": 7,
+              "name": "board"
+            },
+            "confirmed_state": "authored board layout only; no runtime state inferred"
+          },
+          {
+            "order": 5,
+            "event": "board_image",
+            "slot": 5,
+            "path": "test.img",
+            "frame": 5,
+            "x": 4,
+            "y": 2,
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation": 0.0,
+            "center": [
+              0.0,
+              0.0
+            ],
+            "color": 4294967295,
+            "image_crop": [
+              0,
+              0
+            ],
+            "image_dimensions": [
+              2,
+              2
+            ],
+            "request": "011B3950",
+            "instance": "instance#board",
+            "source": {
+              "path": "synthetic.ui",
+              "offset": 7,
+              "name": "board"
+            },
+            "confirmed_state": "authored board layout only; no runtime state inferred"
+          },
+          {
+            "order": 6,
+            "event": "board_image",
+            "slot": 6,
+            "path": "test.img",
+            "frame": 6,
+            "x": 0,
+            "y": 4,
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation": 0.0,
+            "center": [
+              0.0,
+              0.0
+            ],
+            "color": 4294967295,
+            "image_crop": [
+              0,
+              0
+            ],
+            "image_dimensions": [
+              2,
+              2
+            ],
+            "request": "011B3950",
+            "instance": "instance#board",
+            "source": {
+              "path": "synthetic.ui",
+              "offset": 7,
+              "name": "board"
+            },
+            "confirmed_state": "authored board layout only; no runtime state inferred"
+          },
+          {
+            "order": 7,
+            "event": "board_image",
+            "slot": 7,
+            "path": "test.img",
+            "frame": 7,
+            "x": 2,
+            "y": 4,
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation": 0.0,
+            "center": [
+              0.0,
+              0.0
+            ],
+            "color": 4294967295,
+            "image_crop": [
+              0,
+              0
+            ],
+            "image_dimensions": [
+              2,
+              2
+            ],
+            "request": "011B3950",
+            "instance": "instance#board",
+            "source": {
+              "path": "synthetic.ui",
+              "offset": 7,
+              "name": "board"
+            },
+            "confirmed_state": "authored board layout only; no runtime state inferred"
+          },
+          {
+            "order": 8,
+            "event": "board_image",
+            "slot": 8,
+            "path": "test.img",
+            "frame": 8,
+            "x": 4,
+            "y": 4,
+            "scale_x": 1.0,
+            "scale_y": 1.0,
+            "rotation": 0.0,
+            "center": [
+              0.0,
+              0.0
+            ],
+            "color": 4294967295,
+            "image_crop": [
+              0,
+              0
+            ],
+            "image_dimensions": [
+              2,
+              2
+            ],
+            "request": "011B3950",
+            "instance": "instance#board",
+            "source": {
+              "path": "synthetic.ui",
+              "offset": 7,
+              "name": "board"
+            },
+            "confirmed_state": "authored board layout only; no runtime state inferred"
+          }
+        ],
+        "status": "confirmed layout; runtime visibility and rasterization pending",
+        "pixel_bounds": [
+          -2,
+          -3,
+          7,
+          6
+        ]
+      }
+    },
+    "preview_diagnostics": {
+      "issues": [],
+      "summary": {
+        "unknown_structure": 0,
+        "unknown_state": 0,
+        "missing_resource": 0,
+        "resource_ambiguity": 0,
+        "unconfirmed_geometry": 0,
+        "runtime_evidence": 0
+      },
+      "support": "partial captured requests",
+      "native_visual_acceptance": "pending",
+      "failed_resources": {},
+      "pending_resources": [],
+      "pending_animations": [],
+      "animation_playback": "external timer; one shot unless loop preview enabled",
+      "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+    }
+  },
+  "definitions": [],
+  "assets": {
+    "test.img:0": {
+      "logical_width": 2,
+      "logical_height": 2,
+      "width": 2,
+      "height": 2,
+      "x": -2,
+      "y": -3,
+      "png_sha256": "43066df49d0ecbbae5b7133158c759b31c532c7597d435f2f1676762e1cbbe5e",
+      "file": "images/0.png"
+    },
+    "test.img:1": {
+      "logical_width": 2,
+      "logical_height": 2,
+      "width": 2,
+      "height": 2,
+      "x": 0,
+      "y": 0,
+      "png_sha256": "3a5530dcfb7c1aa770140d562b6ebbce195e2aecdfef69223a5679103e06fde1",
+      "file": "images/1.png"
+    },
+    "test.img:2": {
+      "logical_width": 2,
+      "logical_height": 2,
+      "width": 4,
+      "height": 2,
+      "x": -1,
+      "y": 0,
+      "png_sha256": "4ea04acd030572e125c67ad7770de44602fcc56e047f5672b13ea1bd5b5d0be8",
+      "file": "images/2.png"
+    },
+    "test.img:3": {
+      "logical_width": 2,
+      "logical_height": 2,
+      "width": 2,
+      "height": 2,
+      "x": 0,
+      "y": 0,
+      "png_sha256": "0e29c9346e4199efb1a0cb9593125d386b74e2d10ee2e435285a253bf64aaf3e",
+      "file": "images/3.png"
+    },
+    "test.img:4": {
+      "logical_width": 2,
+      "logical_height": 2,
+      "width": 2,
+      "height": 2,
+      "x": 0,
+      "y": 0,
+      "png_sha256": "4c51ece579d66f900fcc83db40704a6a7228d70b38d045d6d2e49115abd7ede0",
+      "file": "images/4.png"
+    },
+    "test.img:5": {
+      "logical_width": 2,
+      "logical_height": 2,
+      "width": 2,
+      "height": 2,
+      "x": 0,
+      "y": 0,
+      "png_sha256": "188497beef0c59f47aa388cbb06b4718edc22f9a0c19b54c5ed4a46922b971c3",
+      "file": "images/5.png"
+    },
+    "test.img:6": {
+      "logical_width": 2,
+      "logical_height": 2,
+      "width": 2,
+      "height": 2,
+      "x": 0,
+      "y": 0,
+      "png_sha256": "0a63d2e3d99f3bc61fdf8a7c0c0edd9a927f9548242eb43a80021113ecd7f9af",
+      "file": "images/6.png"
+    },
+    "test.img:7": {
+      "logical_width": 2,
+      "logical_height": 2,
+      "width": 2,
+      "height": 2,
+      "x": 0,
+      "y": 0,
+      "png_sha256": "e75ef27ca4da441018382227ffdecc6a5430d1ccb5a2c4361a3a808d0ba38e41",
+      "file": "images/7.png"
+    },
+    "test.img:8": {
+      "logical_width": 2,
+      "logical_height": 2,
+      "width": 2,
+      "height": 2,
+      "x": 0,
+      "y": 0,
+      "png_sha256": "18e921cc36a865325e919f61978a10012cd4bef96b09313423c139d7d31ee999",
+      "file": "images/8.png"
+    }
+  },
+  "failures": {},
+  "unresolved_assets": [],
+  "capability": {},
+  "animations": {},
+  "unresolved_animations": [],
+  "limitation": "Resource/call reconstruction; no original screenshot. Local interactions do not implement business behavior."
+}

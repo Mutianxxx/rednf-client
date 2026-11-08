@@ -1,0 +1,593 @@
+{
+  "node": "R60-03",
+  "status": "automated_pass_user_comparison_pending",
+  "checked_utc": "2026-10-19T18:03:11.771084+00:00",
+  "source_inputs_unchanged": true,
+  "historical_candidates_overwritten": false,
+  "cross_version_verified": false,
+  "native_timer_channels_recovered": false,
+  "full_skill_controllers_added": 0,
+  "source_pvf_sha256": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+  "native": {
+    "exe_sha256": "7c12c8ca38b717d6da5ec2eeb16ac1f25df372a965e03de836417bfe174db4a0",
+    "sources": 285,
+    "reports": 84,
+    "runtime_clock_checks": 1541,
+    "core_audio_pass": true,
+    "sdl_dummy_smoke_pass": true,
+    "smoke_scope": "partial diagnostic fixture; user frontend pending"
+  },
+  "preview": {
+    "exe_sha256": "d87406f0b25fa7a1cc303816ba9df71aa6025f68a4905ba46016ff2c91df69f3",
+    "offscreen_checks": 72,
+    "hidden_ui_frames": 78,
+    "source_flow_checks": 184,
+    "template_records": 1677,
+    "template_checks": 24104,
+    "template_native_verified": false,
+    "adapter_checks": 20,
+    "audit_header_closure": "separately verified against final candidate build manifest"
+  },
+  "contract": {
+    "native_vectors": 46,
+    "portable_checks": 157,
+    "als_checks": 24
+  },
+  "user_visual_audio_feel": "pending",
+  "original_game_dynamic_comparison": "pending",
+  "known_limits": [
+    "binary64 intermediate arithmetic outside captured vectors is not x87 proof",
+    "skill stage/ACT/object/monster clocks retain explicit source milliseconds",
+    "unknown effect rate inheritance flags remain unresolved",
+    "explicit animation-offset instances retain a diagnosed legacy clock",
+    "preview recipe phase/motion and contact position remain inferred"
+  ],
+  "reports": [
+    "dnf-native-demo/cache/r60-03-build/build-verification.json",
+    "rep-player-1031-pvf/candidate-r60-03-final2/build/build-manifest.json",
+    "rep-player-1031-pvf/candidate-r60-03-final2/validation/ui-check.json",
+    "rep-player-1031-pvf/candidate-r60-03-final2/validation/clock-policy-ui.json",
+    "rep-player-1031-pvf/candidate-r60-03-final2/validation/render-policy-ui.json",
+    "rep-player-1031-pvf/candidate-r60-03-final2/validation/preview-verify-1792432046256-0/verification.json",
+    "rep-player-1031-pvf/candidate-r60-03-final2/validation/template-flows-20261020-014734-158-8deba9c1/template-flow-audit-1792432081317-0/report.json",
+    "rep-player-1031-pvf/candidate-r60-03-final2/validation/template-flows-20261020-014734-158-8deba9c1/build-identity.json",
+    "rep-player-1031-pvf/validation/skill-flows-20261020-014734-595/skill-flow-audit-1792432082880-0/report.json",
+    "rep-player-1031-pvf/validation/skill-flows-20261020-014734-595/build-identity.json",
+    "reverse-60us/integration/validation/clock-contract-20261020-012229-027766-edf4be98/manifest.json",
+    "dnf-native-demo/cache/r60-03-tests-final-r4-checked/reports/animation-clock-tests.json",
+    "dnf-native-demo/cache/r60-03-tests-final-r4-checked/reports/beta-experiment/experimental-character-tests.json",
+    "rep-player-1031-pvf/validation/r60-03-clock-contract-20261020-014341-692/contract-result.json",
+    "dnf-native-demo/cache/r60-03-als-events-20261020-013138-f77861e7/manifest.json",
+    "dnf-native-demo/cache/r60-03-als-events-20261020-013138-f77861e7/test-report.json",
+    "dnf-native-demo/reports/r60-03/audits/sdl-render-smoke/runtime.json",
+    "dnf-native-demo/reports/r60-03/audits/sdl-render-smoke/ani-clock-policy.json",
+    "dnf-native-demo/reports/r60-03/audits/profile/run.json"
+  ],
+  "report_identities": [
+    {
+      "path": "dnf-native-demo/cache/r60-03-build/build-verification.json",
+      "sha256": "e358111f88354f82bf3daf545b9816a7e51d45197771f8c27f0ea19d0607c7e3"
+    },
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-03-final2/build/build-manifest.json",
+      "sha256": "5a8ad9c54c8ef84ebf819c46a311c51c5a25b666335e834854e14fc88d8eb60c"
+    },
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-03-final2/validation/ui-check.json",
+      "sha256": "8a3f5745c4f774ff65bdabad0387dc066fcdc00be577fa165b8328cd73a8be79"
+    },
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-03-final2/validation/clock-policy-ui.json",
+      "sha256": "6a4150de9480360a0fb4db5f0f84c7edc707e6a9d16408b8464fc9ef10c9b4c1"
+    },
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-03-final2/validation/render-policy-ui.json",
+      "sha256": "d1f54f3b833625fa1f6b502c447a3ffc9f51c9276eca0cb682f56aa8dfb6787f"
+    },
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-03-final2/validation/preview-verify-1792432046256-0/verification.json",
+      "sha256": "91ef589275c7384da4891c1ee8bc59623f3f4118967bb8b0af94edeb10a88fd2"
+    },
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-03-final2/validation/template-flows-20261020-014734-158-8deba9c1/template-flow-audit-1792432081317-0/report.json",
+      "sha256": "0e1a473b3bfd69ac564cc96e355b54f31224d6c07e891f44beb3fc8a3ce4596d"
+    },
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-03-final2/validation/template-flows-20261020-014734-158-8deba9c1/build-identity.json",
+      "sha256": "2939128e93453c6cf0fe4b8bb74dbc2ff3bea68e419b471895885efea8818f5f"
+    },
+    {
+      "path": "rep-player-1031-pvf/validation/skill-flows-20261020-014734-595/skill-flow-audit-1792432082880-0/report.json",
+      "sha256": "c51cd9d38acd6afbb7784d56a7cd5f27503fca8a945fa64f4ccd52b7dd45e9c6"
+    },
+    {
+      "path": "rep-player-1031-pvf/validation/skill-flows-20261020-014734-595/build-identity.json",
+      "sha256": "39018584165e3856dbb11b80877ba284e85e4f50e0c675395a55a353e58ad090"
+    },
+    {
+      "path": "reverse-60us/integration/validation/clock-contract-20261020-012229-027766-edf4be98/manifest.json",
+      "sha256": "afbd91df8650a6a8f2e805ed42b0697028240920c19974db207f521e6bbc64ac"
+    },
+    {
+      "path": "dnf-native-demo/cache/r60-03-tests-final-r4-checked/reports/animation-clock-tests.json",
+      "sha256": "888ef569012f9746e2893216c440b171d136c39bc2bdd4f168714538671df455"
+    },
+    {
+      "path": "dnf-native-demo/cache/r60-03-tests-final-r4-checked/reports/beta-experiment/experimental-character-tests.json",
+      "sha256": "bef46b0511df588fdbe9a61760fb2a7a9fb0d3b4e5bb900c90081a4a2fb08803"
+    },
+    {
+      "path": "rep-player-1031-pvf/validation/r60-03-clock-contract-20261020-014341-692/contract-result.json",
+      "sha256": "b824170f80762032035451bb96cc6b650966f26761f52f0189f73a91ac5c55cb"
+    },
+    {
+      "path": "dnf-native-demo/cache/r60-03-als-events-20261020-013138-f77861e7/manifest.json",
+      "sha256": "9251c40f6fefc60fd28ddccd61cb7d2596de822da7053c42f6d2dbb396aa844a"
+    },
+    {
+      "path": "dnf-native-demo/cache/r60-03-als-events-20261020-013138-f77861e7/test-report.json",
+      "sha256": "9f06728e2764db09a9174fd9b7b0d4ee4f17e254e185ce81eb32cb0c215ae824"
+    },
+    {
+      "path": "dnf-native-demo/reports/r60-03/audits/sdl-render-smoke/runtime.json",
+      "sha256": "46dd082d40108016c46738cdf07223e9897f6a2c653c473e8ecb10bdfb5845ce"
+    },
+    {
+      "path": "dnf-native-demo/reports/r60-03/audits/sdl-render-smoke/ani-clock-policy.json",
+      "sha256": "3f2c5b0e85ed1bb2af3ec310455bbf5919f8031e1ed1375e2d983667b362dc20"
+    },
+    {
+      "path": "dnf-native-demo/reports/r60-03/audits/profile/run.json",
+      "sha256": "ad397ed3ccf9d9521cb7e4d3776e9218df31d0aa0eb91a65f9e60b25e4e737db"
+    }
+  ],
+  "input_closure": [
+    {
+      "path": "dnf-native-demo/include/dnf/content_profile.hpp",
+      "sha256": "6d7004ee6a53be46d3787f4d964eb5d2d4e9cf6e82aa6a727215a1a2c237bb8d"
+    },
+    {
+      "path": "dnf-native-demo/include/dnf/effect_plan.hpp",
+      "sha256": "8a9426d3cd58697cc03a35a488d8c4d2a394e98c85b63e45cf7a9c4b4d36471b"
+    },
+    {
+      "path": "dnf-native-demo/include/dnf/resources.hpp",
+      "sha256": "bbfd5aef70c8b836a8685ebfe1c2cedeba58b0c7575d8d7ff4641c7a06f73ada"
+    },
+    {
+      "path": "dnf-native-demo/src/content_profile.cpp",
+      "sha256": "65ee1c689c0fcaf05be5f9b7779e77d69065f51a6c8793b116c6d46edb4db49e"
+    },
+    {
+      "path": "dnf-native-demo/src/effect_plan.cpp",
+      "sha256": "078d39f35b9a129965402f164be7474995133f2ead292b4c44f28db10f30d956"
+    },
+    {
+      "path": "dnf-native-demo/src/resources.cpp",
+      "sha256": "e52d817354514be7d8bf31e606c56b58ef53ce2d44d974e4b52aa634f5014978"
+    },
+    {
+      "path": "dnf-native-demo/tests/test_skill_effects.cpp",
+      "sha256": "c6a8e4966aa013b8bdbd9e1364355f39e9a6623b992c69a702dd98111d446469"
+    },
+    {
+      "path": "rep-player-1031-pvf/build-preview.ps1",
+      "sha256": "8a912da11fc81866740f916629526465679b71017d8af8d1fd8d9e0b3ac6aabe"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/app.cpp",
+      "sha256": "1cf585ce25f6fa0aa33f17b59d2c62df0df3fb27462b81462598a2b43d106005"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/app.rc",
+      "sha256": "a2df995d74573309874a3a198cc4ad31cfe55585712708e3674dbc1967e3b7bf"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/audio.cpp",
+      "sha256": "4f500a6f4fd9eda3f6c66688f2dd9017b1300bcf5b9b8b32b9c02ca5f6b118ba"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/audio.hpp",
+      "sha256": "cf033482ea896c0503f3ad7d4ec7387839b1f0daf571c4bac7c9ae55d560a406"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/audio_resources.cpp",
+      "sha256": "765a0e7847642e9f652c3dd2823902d9aa4be288878628db5949b5fbe293ace5"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/audio_resources.hpp",
+      "sha256": "bf5e4e7beae29edf828c0e35f231cbcb19197c8ca047a4adcecba3fb829afba5"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/bindings.cpp",
+      "sha256": "b62d419b6057b08e04d6d64b5fa5a64df5862d05163a818370599776cc8f7960"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/bindings.hpp",
+      "sha256": "6439bb0872ccdefd1729d0147f217b66941bed1f205993616fb2898f45edbb0d"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/canvas.hpp",
+      "sha256": "ffa2983b29c1184b4ae9844b84d7fa1326eff82b96eada991451de77549f16ae"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/catalog.cpp",
+      "sha256": "fd9f5f4ab50825b7f1c35adcff71be044db36fe60f63eb4e0deb2994c7c0b589"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/catalog.hpp",
+      "sha256": "f1748a0b23b8dd74f3fd797f7eb23b64d4ce162f81c2d5af7ee8b5d3fad58283"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/catalog_validate.cpp",
+      "sha256": "ad235195c2a009d684ad3dc2fc726170f7e806b250f68c514dbd1ff6fcd35245"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/client_protocol.hpp",
+      "sha256": "b5edbc99c745aa2e4541cf2477b33f3c8559fb38c53489b32f7d0a085df0d040"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/engine.cpp",
+      "sha256": "69d70e597993f08abfb3ee5dc1409d06198c41c138363868e490c9fe8f72ba22"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/engine.hpp",
+      "sha256": "ae0419dcae40d70803189238f509934e16a4e52bad188b966c69b331356b96fc"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/export.cpp",
+      "sha256": "579b5d53fa088167782aa667d076296235cffda6cdd36f6738dbcaf864cc4496"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/export.hpp",
+      "sha256": "c386b2b5e8cdca383d65cfa7b6a4c5189d40d0cbd6449f675dc07538219f7782"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/export_validate.cpp",
+      "sha256": "ba51073a898155453fb079b671a713165f80e18a61e35cd49408608bdaad3214"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/fonts.cpp",
+      "sha256": "1953906bf2c2d45f761b969c81033cbf17f6b7f6b40709c08b4ebff6762a16dc"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/fonts.hpp",
+      "sha256": "71246c0be287b60176ffb72c0741c240d748bfa1555ea3859d144080d0ebd499"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/gpu.cpp",
+      "sha256": "a505b3bba2b4a3169b159fc8bfd429c22baf8fe0f4b249a4a1ef726db39c5ce6"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/gpu.hpp",
+      "sha256": "a212ada04bf9c32f8d56b55943f1afe1d3b565efcc0daa17241bb0d2e0d25c2d"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/gpu_validate.cpp",
+      "sha256": "ef4dbddbfcefd32c12d2e4792a0782bbe12e45d14a89923f252fdd19d0da73ca"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/image_categories.hpp",
+      "sha256": "7073f0e517704fb43cec6ee129ff77bb19e1a3b9f8e4346528040f357ff92811"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/migration_table.hpp",
+      "sha256": "1cb0bbd3a5ed71522dfee56f3b72fced73b2d950457f87cc2d450cc7d0789ffb"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/movies.cpp",
+      "sha256": "cb30d41b703d1bd04d7aec424144672e911c67508141a5c1f48d49202d7661e3"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/movies.hpp",
+      "sha256": "554a0f6647b60663f1cde74216ed3ae823947dc9be48e6837e893a735ed28af6"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/preset_table.hpp",
+      "sha256": "d725d6b9e8baafb816e401f412f91c108b27786f8445815255934f7f9bac8230"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/protocol.cpp",
+      "sha256": "4c02090dfb8b555e387c8fd945134b041645d9b85a4bf9359cf97e77c32a1c77"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/protocol.hpp",
+      "sha256": "4edb1847097bae539deb2d9d01f07b61d052c7f7bbb8d9c449428fabad008598"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf.cpp",
+      "sha256": "2909ec875ab42b1a39e42965d1c2bf92b05263e1de32883666c512f4fef50c97"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf.hpp",
+      "sha256": "ccff7ca5107253b86803dd50cd539417b224f3ea9e618520cf7e1ee6d55d0579"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_als.cpp",
+      "sha256": "d3e7c3931ae969de1a2059da97cb27276a3f24ce7f6b3dee60955f50079cb4df"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_als.hpp",
+      "sha256": "ccdb7e27cdafdaf68a72a7064a4aed897cc69b8d244ae1227a3a8f3a9d6eaa94"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_animation.cpp",
+      "sha256": "a7083451f2bab332e083337f8d70261e57ef4013d76bc2a27fb5658673151f36"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_animation.hpp",
+      "sha256": "b9e5306d2eae55ff9482eb2f3213c88db1c10d30de9d6a3ab108f314440a46cb"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_playback.cpp",
+      "sha256": "d493f25ce214a21bde70a8b965aff7e88c1904eb9438f4f608de2fee7b9c99cc"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_playback.hpp",
+      "sha256": "b64f6c303e09b0d6909e3e4634ed7d4bd99e7c1b88a27a033ab8657e29a89be1"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview.cpp",
+      "sha256": "8658cebcab4cb9d43070a6c77423c3b4001c8d4ad69c3e0f81afcc194f408735"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview_catalog.cpp",
+      "sha256": "e600b012fab977130fa762f84e8bcee63097028e2503b0e694192f0c137ede9e"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview_catalog.hpp",
+      "sha256": "1ac11a9af505e056beed6c60d34e0476f0e456aa145fc08386ccdf4754a6b379"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview_scene.cpp",
+      "sha256": "7e3c9b582b9384ab13288dca42601e4f1d07b03dbc50671563c620af91ff2fa5"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview_scene.hpp",
+      "sha256": "45272907c13b54c821fa1c3003a7bf382abbebbce91aecb1f1590b1cab6b942d"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview_verify.cpp",
+      "sha256": "0a51178802ec4dd6847493fad0752652841c1b351204ab2790bb4d0edb374a0e"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_preview_verify.hpp",
+      "sha256": "994ce2c0cef4902f40eba09a44f3b3ac6fb505fa8c295474b0956e5a4efa84af"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_script_preview.cpp",
+      "sha256": "d2611f74ffecf60bf7377de275a539de0fa68f4343aac82eb948a3c0b56d091e"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_script_preview.hpp",
+      "sha256": "8608642f73b398ede96c3bc0ef8d5ac3035a8c322a338b2ba37f18a713ad7bef"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_template_preview.cpp",
+      "sha256": "6198da0879406f5510709450740d3c12b96c647666ae75970e6245ea593e42c1"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_template_preview.hpp",
+      "sha256": "e3f7a946669cde8e88969f9d9f472821af01f55d147a7a4d2885ff7e01aa8709"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/pvf_validate.cpp",
+      "sha256": "782993309ec7988b8facc4397524d70a0c838ad930b182f6f71b9951ee4cacf4"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/resource_data.hpp",
+      "sha256": "0935538af0bbd08c778775f25562598686ed8ec70e50f006b629af0e7687a354"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/resource_validate.cpp",
+      "sha256": "9852c7a3dbd72eb76694576c0e4680790cdfba4a8c483c3ef1974487a99d8d27"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/resources.cpp",
+      "sha256": "5eeb6eedf08f400d3388cc380cd0f7cf47ecad04351ccfa40394dd3288aac079"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/resources.hpp",
+      "sha256": "67d7693e786d2da9219781004372e9bade8d6b1f58108a13d8a84f2ce4365f7f"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/runtime_paths.hpp",
+      "sha256": "b018cef6ac89546d5afdad696510a9859012a78dbd9373f85cf879dd2c8207f9"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/shader_registry.hpp",
+      "sha256": "30f4b85388c7c16b8cd8678202fd6dbbd5273a8868b968d384adf7762a3adaf6"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/ui_playback.cpp",
+      "sha256": "053d41507b321f7c9bd649973606d0d2a8ba19c408019fd38091a7d5b4d51897"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/ui_playback.hpp",
+      "sha256": "15da326fdbc2a1a439bf26c42cec1e6ddc7dbad69d49b121106093546797b5e3"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/ui_widgets.hpp",
+      "sha256": "cd4e8de379a4533b5344a9767e6b2d9230de590e9a7a6a7021e0cedbe86fb931"
+    },
+    {
+      "path": "rep-player-1031-pvf/src/validate.cpp",
+      "sha256": "4fef1fc9153f0a5de929e739908a4078388edccec283d3e0afe5240a48537b3b"
+    },
+    {
+      "path": "rep-player-1031-pvf/tests/audit-skill-flows.cpp",
+      "sha256": "7f4b1e82314f8292b2d98ad6ae3d49d696317bd61401a75f05896d10f95cc16a"
+    },
+    {
+      "path": "rep-player-1031-pvf/tests/audit-template-flows.cpp",
+      "sha256": "e1ca6081e3a5be2685c7cb4b75fad764a2ab12d2ed39328291d53bcc3e29b31f"
+    },
+    {
+      "path": "rep-player-1031-pvf/tests/r60_03_clock_contract.cpp",
+      "sha256": "cdab5ed1188ec6cdecbe69a2423a7783ca1ce18e1a6dda6ba698542666ec0067"
+    },
+    {
+      "path": "reverse-60us/integration/include/dnf_ani_clock.hpp",
+      "sha256": "93563eec417aac04e6511c155b40d8f143cfaa695bb7b0813a543504fb527b60"
+    },
+    {
+      "path": "reverse-60us/integration/include/dnf_ani_render.hpp",
+      "sha256": "9a5684dac2224fc774ed98813926928267e26c05f3417732b9125ca9117e4c46"
+    },
+    {
+      "path": "reverse-60us/integration/tests/clock-contract-test.cpp",
+      "sha256": "bdfc9b70e7a9b658823d2fbfb91e31c129d2aff3dc9dfb7f7886d05beb9e1682"
+    },
+    {
+      "path": "reverse-60us/package-manifest.json",
+      "sha256": "63ac1bcb6a204e1c0ae340dc2cc5d95402b5828fed7cb669bcfda9fde7d3aa7a"
+    },
+    {
+      "path": "reverse-60us/tools/verify_clock_contract.py",
+      "sha256": "61ceff6a3f6a59b038c027137468cbcbcbbf12d450bcdb2af408702bc88498a2"
+    }
+  ],
+  "directories": {
+    "preview_candidate": "rep-player-1031-pvf/candidate-r60-03-final2",
+    "skill_flow": "rep-player-1031-pvf/validation/skill-flows-20261020-014734-595",
+    "template_flow": "rep-player-1031-pvf/candidate-r60-03-final2/validation/template-flows-20261020-014734-158-8deba9c1",
+    "adapter_contract": "rep-player-1031-pvf/validation/r60-03-clock-contract-20261020-014341-692",
+    "als_contract": "dnf-native-demo/cache/r60-03-als-events-20261020-013138-f77861e7",
+    "portable_contract": "reverse-60us/integration/validation/clock-contract-20261020-012229-027766-edf4be98"
+  },
+  "binary_identities": [
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-03-final2/build/rep_pvf_preview.exe",
+      "sha256": "d87406f0b25fa7a1cc303816ba9df71aa6025f68a4905ba46016ff2c91df69f3"
+    },
+    {
+      "path": "rep-player-1031-pvf/candidate-r60-03-final2/validation/template-flows-20261020-014734-158-8deba9c1/audit_template_flows.exe",
+      "sha256": "2782452fd3d1b99d40ac5bb39f2ba16857dad59cfd3bb5cc1df48f30ef6b9c2d"
+    },
+    {
+      "path": "rep-player-1031-pvf/validation/skill-flows-20261020-014734-595/audit_skill_flows.exe",
+      "sha256": "eb30cbdf072fd45fe3ac7abe63b2f2aa78884395dd0b45fb490adefa30b30c6f"
+    },
+    {
+      "path": "rep-player-1031-pvf/validation/r60-03-clock-contract-20261020-014341-692/r60_03_clock_contract.exe",
+      "sha256": "fa31a1a971952348bdf328819b3f92e6843b0df947a856c77afe4cccb1ca0e67"
+    },
+    {
+      "path": "dnf-native-demo/cache/r60-03-als-events-20261020-013138-f77861e7/als-frame-event-test.exe",
+      "sha256": "a5d699b279fb7aaec053b04e5f413118441864260d3e9663f97ba9aab5cbd0cb"
+    }
+  ],
+  "history": {
+    "scope": "Historical attempts and failed audit; excluded from current pass assertions",
+    "failed_skill_flow": {
+      "passed": false,
+      "failed_checks": 1
+    },
+    "files": [
+      {
+        "path": "dnf-native-demo/reports/r60-03/first-pass/build-verification.json",
+        "sha256": "0021f7d11786fea33de6640d1a6303ff1724e0f2c0f8cf9af3064f65cda0d389"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/first-pass/build.log",
+        "sha256": "de818f3b590d7f322c0af4b985d8b4a29bb49e38e67281d10feab6dcefccdebf"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/second-pass/build-verification.json",
+        "sha256": "728c4c822e9c24f7bfb1001ef2c1dcd533df58d48f5f01106bfff06221ce566d"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/second-pass/build.log",
+        "sha256": "ee880f4317137875fc2eef360438e0a83a082837f21657a7c77ff19c6aa948dc"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-regression-failure/build-verification.json",
+        "sha256": "2b5241800fcf695a21e1b2905ae3518daee48973d9265225031dbc85c987ce1a"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-regression-failure/build.log",
+        "sha256": "ac2b01840127fc801a5193e75fad99d6ba50e4139b95c12b657f63fc0cd3ce9e"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03-build.log",
+        "sha256": "de818f3b590d7f322c0af4b985d8b4a29bb49e38e67281d10feab6dcefccdebf"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03-build-final.log",
+        "sha256": "ee880f4317137875fc2eef360438e0a83a082837f21657a7c77ff19c6aa948dc"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03-build-final-r4.log",
+        "sha256": "ac2b01840127fc801a5193e75fad99d6ba50e4139b95c12b657f63fc0cd3ce9e"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03-build-final-r4-checked.log",
+        "sha256": "ec1d064e69294d30a931969182076f745b31667857d7a3f0a106493ddcb0268c"
+      },
+      {
+        "path": "rep-player-1031-pvf/validation/skill-flows-20261020-014013-925/build-identity.json",
+        "sha256": "8e249ed58980ee90c5b0cc996e98e99e8467d11bad9f0d0e2dda2371b83fc710"
+      },
+      {
+        "path": "rep-player-1031-pvf/validation/skill-flows-20261020-014013-925/run.log",
+        "sha256": "8428dfa5542963047ce3192fc9b8495d26746bccf28bf6d2dc4602b164723de7"
+      },
+      {
+        "path": "rep-player-1031-pvf/validation/skill-flows-20261020-014013-925/audit_skill_flows.exe",
+        "sha256": "51cefaa456a98eb89ffcde61dd23b6d255ec722b35edf041ee9967f8798ceb5b"
+      },
+      {
+        "path": "rep-player-1031-pvf/validation/skill-flows-20261020-014013-925/skill-flow-audit-1792431640806-0/report.json",
+        "sha256": "9b21476cf926be2879e5c53304d73d492651583a33fcdc75f7dd6cc567811192"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/checked-manifest.json",
+        "sha256": "6a499842e173ce05b4b7a708dde9a55d742253646734ff0cc8032461ed9b1b06"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/checked-run/clock-consumer-result.json",
+        "sha256": "888ef569012f9746e2893216c440b171d136c39bc2bdd4f168714538671df455"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/checked-run/run.log",
+        "sha256": "18ffc27e7f41ee7065985697f712ba5e01e95bf7cde1b7e8a692b47efbd83261"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/checked-test_animation_clock.cpp",
+        "sha256": "5dc09a1691db9834e00c3af2840f466aad9d303063996dd47650fda3797fcede"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/clock-consumer-checked.exe",
+        "sha256": "4b1747d05024503e1d4a48f5e1663d22be5f378fa93d02c5448c3baa37c9b25e"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/clock-consumer-main.cpp",
+        "sha256": "96fc7144e399bffcb989b997ee3752f55105b05d20e71252f6e5a6dc78c8e48f"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/clock-consumer.exe",
+        "sha256": "66a50db81e2cd4da44d1fe673fbc94a54400aebafd0c27f588ea3011fd7c1457"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/compile-checked.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/compile.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/libunwind.dll",
+        "sha256": "b0636a4281610124704adb2be2edf5642e830d86c68b7f27dbc9c8154705a780"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/reports/animation-clock-roundtrip-failure.json",
+        "sha256": "98771518bc6c0736375193cc46bdae19ed231d31e86cb0d48b27371a36bf4f8a"
+      },
+      {
+        "path": "dnf-native-demo/reports/r60-03/r4-diagnostic-20261020-015339-9817654/run.log",
+        "sha256": "6653cfa3cff6ae7b58fce99d085d91aa504746d6fcf352bd0f0aa83ddaf16874"
+      }
+    ]
+  }
+}

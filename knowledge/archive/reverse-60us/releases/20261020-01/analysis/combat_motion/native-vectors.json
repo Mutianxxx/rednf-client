@@ -1,0 +1,1119 @@
+{
+  "kind": "extracted native 50FDE0 instructions executed in a synthetic PE32 process; not DFO runtime capture",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "native_va": "0x0050fde0",
+  "native_size": 1035,
+  "native_code_sha256": "62b2d403beeec503df75b0ebada819b097b51259cd150af8869f1b95c3b0c3b4",
+  "harness_sha256": "f32653a718e3092b8ce3cd2298f45b424d89f1d37ba64b31dac9f7a5f4f741dd",
+  "output_sha256": "e8603dd52823f3b3d28ccb9ff838fc032c37b0ba8d97160e99990dc631711484",
+  "provider": "synthetic plain position/velocity getter/setter; owner/controller null",
+  "cases_per_precision": 25,
+  "precisions": [
+    64,
+    53
+  ],
+  "matches": 50,
+  "mismatches": 0,
+  "vectors": [
+    {
+      "name": "idle",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 16,
+      "native": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 0
+      },
+      "native_bytes": "000000000000000000000000ffffffff00000000",
+      "model_bytes": "000000000000000000000000ffffffff00000000",
+      "matches": true
+    },
+    {
+      "name": "constant_positive",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 16,
+      "native": {
+        "position": 9.600000381469727,
+        "velocity": 600.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 2
+      },
+      "native_bytes": "9a9919410000164400000000ffffffff02000000",
+      "model_bytes": "9a9919410000164400000000ffffffff02000000",
+      "matches": true
+    },
+    {
+      "name": "constant_negative",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": -600.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 16,
+      "native": {
+        "position": -9.600000381469727,
+        "velocity": -600.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 2
+      },
+      "native_bytes": "9a9919c1000016c400000000ffffffff02000000",
+      "model_bytes": "9a9919c1000016c400000000ffffffff02000000",
+      "matches": true
+    },
+    {
+      "name": "deceleration_before_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 100,
+      "native": {
+        "position": 55.000003814697266,
+        "velocity": 500.0,
+        "acceleration": -1000,
+        "remaining": 500,
+        "result_code": 1
+      },
+      "native_bytes": "01005c420000fa4318fcfffff401000001000000",
+      "model_bytes": "01005c420000fa4318fcfffff401000001000000",
+      "matches": true
+    },
+    {
+      "name": "deceleration_at_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 180.0,
+        "velocity": -2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034430010efb7000000000000000002000000",
+      "model_bytes": "000034430010efb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "deceleration_after_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 180.0,
+        "velocity": -2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034430010efb7000000000000000002000000",
+      "model_bytes": "000034430010efb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "deceleration_negative",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": -600.0,
+        "acceleration": 1000,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": -180.0,
+        "velocity": 2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034c30010ef37000000000000000002000000",
+      "model_bytes": "000034c30010ef37000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "indefinite_acceleration",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 2.5,
+        "velocity": 100.0,
+        "acceleration": 20,
+        "remaining": -1
+      },
+      "dt": 40,
+      "native": {
+        "position": 6.516000270843506,
+        "velocity": 100.80000305175781,
+        "acceleration": 20,
+        "remaining": -1,
+        "result_code": 3
+      },
+      "native_bytes": "1383d0409a99c94214000000ffffffff03000000",
+      "model_bytes": "1383d0409a99c94214000000ffffffff03000000",
+      "matches": true
+    },
+    {
+      "name": "zero_dt",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 2.5,
+        "velocity": 100.0,
+        "acceleration": -20,
+        "remaining": 10
+      },
+      "dt": 0,
+      "native": {
+        "position": 2.5,
+        "velocity": 100.0,
+        "acceleration": -20,
+        "remaining": 10,
+        "result_code": 1
+      },
+      "native_bytes": "000020400000c842ecffffff0a00000001000000",
+      "model_bytes": "000020400000c842ecffffff0a00000001000000",
+      "matches": true
+    },
+    {
+      "name": "zero_remaining_acceleration",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 2.5,
+        "velocity": 100.0,
+        "acceleration": -20,
+        "remaining": 0
+      },
+      "dt": 40,
+      "native": {
+        "position": 6.5,
+        "velocity": 100.0,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "0000d0400000c842000000000000000002000000",
+      "model_bytes": "0000d0400000c842000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "displacement_positive_clamp",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 5.0,
+        "velocity": 300000.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 10000,
+      "native": {
+        "position": 2005.0,
+        "velocity": 300000.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 2
+      },
+      "native_bytes": "00a0fa44007c924800000000ffffffff02000000",
+      "model_bytes": "00a0fa44007c924800000000ffffffff02000000",
+      "matches": true
+    },
+    {
+      "name": "displacement_negative_clamp",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": -5.0,
+        "velocity": -300000.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 10000,
+      "native": {
+        "position": -2005.0,
+        "velocity": -300000.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 2
+      },
+      "native_bytes": "00a0fac4007c92c800000000ffffffff02000000",
+      "model_bytes": "00a0fac4007c92c800000000ffffffff02000000",
+      "matches": true
+    },
+    {
+      "name": "int32_acceleration_product_wrap",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 1.0,
+        "acceleration": 2147483647,
+        "remaining": -1
+      },
+      "dt": 2,
+      "native": {
+        "position": 0.001998000079765916,
+        "velocity": 0.9980000257492065,
+        "acceleration": 2147483647,
+        "remaining": -1,
+        "result_code": 3
+      },
+      "native_bytes": "e1f0023bee7c7f3fffffff7fffffffff03000000",
+      "model_bytes": "e1f0023bee7c7f3fffffff7fffffffff03000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1_at_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 0.6000000238418579,
+        "acceleration": -1,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 0.18000000715255737,
+        "velocity": -4.6566128730773926e-09,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "ec51383e0000a0b1000000000000000002000000",
+      "model_bytes": "ec51383e0000a0b1000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1_cross_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 0.6000000238418579,
+        "acceleration": -1,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 0.18000002205371857,
+        "velocity": -4.6566128730773926e-09,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "ed51383e0000a0b1000000000000000002000000",
+      "model_bytes": "ed51383e0000a0b1000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_850_at_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 510.0,
+        "acceleration": -850,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 153.0,
+        "velocity": -2.4223700165748596e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000019430034cbb7000000000000000002000000",
+      "model_bytes": "000019430034cbb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_850_cross_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 510.0,
+        "acceleration": -850,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 153.0,
+        "velocity": -2.4223700165748596e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000019430034cbb7000000000000000002000000",
+      "model_bytes": "000019430034cbb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_999_at_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 599.4000244140625,
+        "acceleration": -999,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 179.82000732421875,
+        "velocity": -4.055909812450409e-06,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "ecd13343001888b6000000000000000002000000",
+      "model_bytes": "ecd13343001888b6000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_999_cross_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 599.4000244140625,
+        "acceleration": -999,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 179.8200225830078,
+        "velocity": -4.055909812450409e-06,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "edd13343001888b6000000000000000002000000",
+      "model_bytes": "edd13343001888b6000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1000_at_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 180.0,
+        "velocity": -2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034430010efb7000000000000000002000000",
+      "model_bytes": "000034430010efb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1000_cross_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 180.0,
+        "velocity": -2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034430010efb7000000000000000002000000",
+      "model_bytes": "000034430010efb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1001_at_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.6000366210938,
+        "acceleration": -1001,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 180.18002319335938,
+        "velocity": 8.094124495983124e-06,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "162e344300cc0737000000000000000002000000",
+      "model_bytes": "162e344300cc0737000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1001_cross_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.6000366210938,
+        "acceleration": -1001,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 180.18002319335938,
+        "velocity": 8.094124495983124e-06,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "162e344300cc0737000000000000000002000000",
+      "model_bytes": "162e344300cc0737000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1500_at_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 900.0000610351562,
+        "acceleration": -1500,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 270.0000305175781,
+        "velocity": 1.8287450075149536e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "0100874300689937000000000000000002000000",
+      "model_bytes": "0100874300689937000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1500_cross_expiry",
+      "x87_precision": 64,
+      "x87_control_word": "0x037f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 900.0000610351562,
+        "acceleration": -1500,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 270.0000305175781,
+        "velocity": 1.8287450075149536e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "0100874300689937000000000000000002000000",
+      "model_bytes": "0100874300689937000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "idle",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 16,
+      "native": {
+        "position": 0.0,
+        "velocity": 0.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 0
+      },
+      "native_bytes": "000000000000000000000000ffffffff00000000",
+      "model_bytes": "000000000000000000000000ffffffff00000000",
+      "matches": true
+    },
+    {
+      "name": "constant_positive",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 16,
+      "native": {
+        "position": 9.600000381469727,
+        "velocity": 600.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 2
+      },
+      "native_bytes": "9a9919410000164400000000ffffffff02000000",
+      "model_bytes": "9a9919410000164400000000ffffffff02000000",
+      "matches": true
+    },
+    {
+      "name": "constant_negative",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": -600.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 16,
+      "native": {
+        "position": -9.600000381469727,
+        "velocity": -600.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 2
+      },
+      "native_bytes": "9a9919c1000016c400000000ffffffff02000000",
+      "model_bytes": "9a9919c1000016c400000000ffffffff02000000",
+      "matches": true
+    },
+    {
+      "name": "deceleration_before_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 100,
+      "native": {
+        "position": 55.000003814697266,
+        "velocity": 500.0,
+        "acceleration": -1000,
+        "remaining": 500,
+        "result_code": 1
+      },
+      "native_bytes": "01005c420000fa4318fcfffff401000001000000",
+      "model_bytes": "01005c420000fa4318fcfffff401000001000000",
+      "matches": true
+    },
+    {
+      "name": "deceleration_at_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 180.0,
+        "velocity": -2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034430010efb7000000000000000002000000",
+      "model_bytes": "000034430010efb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "deceleration_after_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 180.0,
+        "velocity": -2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034430010efb7000000000000000002000000",
+      "model_bytes": "000034430010efb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "deceleration_negative",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": -600.0,
+        "acceleration": 1000,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": -180.0,
+        "velocity": 2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034c30010ef37000000000000000002000000",
+      "model_bytes": "000034c30010ef37000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "indefinite_acceleration",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 2.5,
+        "velocity": 100.0,
+        "acceleration": 20,
+        "remaining": -1
+      },
+      "dt": 40,
+      "native": {
+        "position": 6.516000270843506,
+        "velocity": 100.80000305175781,
+        "acceleration": 20,
+        "remaining": -1,
+        "result_code": 3
+      },
+      "native_bytes": "1383d0409a99c94214000000ffffffff03000000",
+      "model_bytes": "1383d0409a99c94214000000ffffffff03000000",
+      "matches": true
+    },
+    {
+      "name": "zero_dt",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 2.5,
+        "velocity": 100.0,
+        "acceleration": -20,
+        "remaining": 10
+      },
+      "dt": 0,
+      "native": {
+        "position": 2.5,
+        "velocity": 100.0,
+        "acceleration": -20,
+        "remaining": 10,
+        "result_code": 1
+      },
+      "native_bytes": "000020400000c842ecffffff0a00000001000000",
+      "model_bytes": "000020400000c842ecffffff0a00000001000000",
+      "matches": true
+    },
+    {
+      "name": "zero_remaining_acceleration",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 2.5,
+        "velocity": 100.0,
+        "acceleration": -20,
+        "remaining": 0
+      },
+      "dt": 40,
+      "native": {
+        "position": 6.5,
+        "velocity": 100.0,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "0000d0400000c842000000000000000002000000",
+      "model_bytes": "0000d0400000c842000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "displacement_positive_clamp",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 5.0,
+        "velocity": 300000.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 10000,
+      "native": {
+        "position": 2005.0,
+        "velocity": 300000.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 2
+      },
+      "native_bytes": "00a0fa44007c924800000000ffffffff02000000",
+      "model_bytes": "00a0fa44007c924800000000ffffffff02000000",
+      "matches": true
+    },
+    {
+      "name": "displacement_negative_clamp",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": -5.0,
+        "velocity": -300000.0,
+        "acceleration": 0,
+        "remaining": -1
+      },
+      "dt": 10000,
+      "native": {
+        "position": -2005.0,
+        "velocity": -300000.0,
+        "acceleration": 0,
+        "remaining": -1,
+        "result_code": 2
+      },
+      "native_bytes": "00a0fac4007c92c800000000ffffffff02000000",
+      "model_bytes": "00a0fac4007c92c800000000ffffffff02000000",
+      "matches": true
+    },
+    {
+      "name": "int32_acceleration_product_wrap",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 1.0,
+        "acceleration": 2147483647,
+        "remaining": -1
+      },
+      "dt": 2,
+      "native": {
+        "position": 0.001998000079765916,
+        "velocity": 0.9980000257492065,
+        "acceleration": 2147483647,
+        "remaining": -1,
+        "result_code": 3
+      },
+      "native_bytes": "e1f0023bee7c7f3fffffff7fffffffff03000000",
+      "model_bytes": "e1f0023bee7c7f3fffffff7fffffffff03000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1_at_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 0.6000000238418579,
+        "acceleration": -1,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 0.18000000715255737,
+        "velocity": -4.6566128730773926e-09,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "ec51383e0000a0b1000000000000000002000000",
+      "model_bytes": "ec51383e0000a0b1000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1_cross_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 0.6000000238418579,
+        "acceleration": -1,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 0.18000002205371857,
+        "velocity": -4.6566128730773926e-09,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "ed51383e0000a0b1000000000000000002000000",
+      "model_bytes": "ed51383e0000a0b1000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_850_at_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 510.0,
+        "acceleration": -850,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 153.0,
+        "velocity": -2.4223700165748596e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000019430034cbb7000000000000000002000000",
+      "model_bytes": "000019430034cbb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_850_cross_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 510.0,
+        "acceleration": -850,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 153.0,
+        "velocity": -2.4223700165748596e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000019430034cbb7000000000000000002000000",
+      "model_bytes": "000019430034cbb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_999_at_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 599.4000244140625,
+        "acceleration": -999,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 179.82000732421875,
+        "velocity": -4.055909812450409e-06,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "ecd13343001888b6000000000000000002000000",
+      "model_bytes": "ecd13343001888b6000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_999_cross_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 599.4000244140625,
+        "acceleration": -999,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 179.8200225830078,
+        "velocity": -4.055909812450409e-06,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "edd13343001888b6000000000000000002000000",
+      "model_bytes": "edd13343001888b6000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1000_at_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 180.0,
+        "velocity": -2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034430010efb7000000000000000002000000",
+      "model_bytes": "000034430010efb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1000_cross_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.0,
+        "acceleration": -1000,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 180.0,
+        "velocity": -2.8498470783233643e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "000034430010efb7000000000000000002000000",
+      "model_bytes": "000034430010efb7000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1001_at_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.6000366210938,
+        "acceleration": -1001,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 180.18002319335938,
+        "velocity": 8.094124495983124e-06,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "162e344300cc0737000000000000000002000000",
+      "model_bytes": "162e344300cc0737000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1001_cross_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 600.6000366210938,
+        "acceleration": -1001,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 180.18002319335938,
+        "velocity": 8.094124495983124e-06,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "162e344300cc0737000000000000000002000000",
+      "model_bytes": "162e344300cc0737000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1500_at_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 900.0000610351562,
+        "acceleration": -1500,
+        "remaining": 600
+      },
+      "dt": 600,
+      "native": {
+        "position": 270.0000305175781,
+        "velocity": 1.8287450075149536e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "0100874300689937000000000000000002000000",
+      "model_bytes": "0100874300689937000000000000000002000000",
+      "matches": true
+    },
+    {
+      "name": "setup_scale_1500_cross_expiry",
+      "x87_precision": 53,
+      "x87_control_word": "0x027f",
+      "initial": {
+        "position": 0.0,
+        "velocity": 900.0000610351562,
+        "acceleration": -1500,
+        "remaining": 600
+      },
+      "dt": 700,
+      "native": {
+        "position": 270.0000305175781,
+        "velocity": 1.8287450075149536e-05,
+        "acceleration": 0,
+        "remaining": 0,
+        "result_code": 2
+      },
+      "native_bytes": "0100874300689937000000000000000002000000",
+      "model_bytes": "0100874300689937000000000000000002000000",
+      "matches": true
+    }
+  ]
+}

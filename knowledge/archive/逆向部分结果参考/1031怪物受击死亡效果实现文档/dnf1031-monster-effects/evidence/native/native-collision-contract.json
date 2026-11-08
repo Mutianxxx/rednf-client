@@ -1,0 +1,282 @@
+{
+  "generated_utc": "2026-10-17T20:02:20.287765+00:00",
+  "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+  "snapshot": "D:\\game\\DNF1031客户端-20260708\\combat_ui_1031\\reports\\baseline\\main-readonly-57440-20261017T185135629631Z.json",
+  "snapshot_sha256": "ab950286ad291236086beae21ef75b1732d4cd5e52db482e261f4c548969ea44",
+  "addresses": "VA at preferred image base 0x00400000; this is a version-specific contract.",
+  "function": {
+    "start": "0x876c00",
+    "end_exclusive": "0x8772c6",
+    "abi": "x86 cdecl-compatible: six stack arguments, caller pops 0x18, result in AL; no incoming ECX/EDX receiver",
+    "return_instruction": "0x876e94: C3",
+    "false_assignment": "0x876e77: XOR AL,AL",
+    "true_assignment": "0x8772bf: MOV AL,1"
+  },
+  "arguments": [
+    {
+      "number": 1,
+      "frame_offset": "0x08",
+      "role": "collision entity A; attacker side of this routine"
+    },
+    {
+      "number": 2,
+      "frame_offset": "0x0c",
+      "role": "animation A; box container at animation+0xe0"
+    },
+    {
+      "number": 3,
+      "frame_offset": "0x10",
+      "role": "collision entity B; target side of this routine"
+    },
+    {
+      "number": 4,
+      "frame_offset": "0x14",
+      "role": "animation B; box container at animation+0xf4"
+    },
+    {
+      "number": 5,
+      "frame_offset": "0x18",
+      "role": "optional overlap output passed to box helper as its third stack argument",
+      "output_size": 24,
+      "representation": "six protected float slots; not six plain floats"
+    },
+    {
+      "number": 6,
+      "frame_offset": "0x1c",
+      "role": "optional copy of successful transformed B box; not the overlap box",
+      "output_size": 24,
+      "representation": "six protected float slots copied by 0x582330"
+    }
+  ],
+  "executable_sections_scanned": [
+    {
+      "name": "nsn",
+      "rva": "0x1000",
+      "virtual_size": 18190336
+    },
+    {
+      "name": "nsn",
+      "rva": "0x115a000",
+      "virtual_size": 4714496
+    },
+    {
+      "name": "nsn",
+      "rva": "0x15d9000",
+      "virtual_size": 4194304
+    },
+    {
+      "name": "nsn",
+      "rva": "0x19d9000",
+      "virtual_size": 3235840
+    },
+    {
+      "name": "nsn",
+      "rva": "0x1cef000",
+      "virtual_size": 65536
+    },
+    {
+      "name": "nsn",
+      "rva": "0x1cff000",
+      "virtual_size": 438272
+    },
+    {
+      "name": "nsn",
+      "rva": "0x1d6a000",
+      "virtual_size": 8462336
+    },
+    {
+      "name": "nsn",
+      "rva": "0x257c000",
+      "virtual_size": 3235840
+    },
+    {
+      "name": "nsn",
+      "rva": "0x2892000",
+      "virtual_size": 24576
+    },
+    {
+      "name": ".idata",
+      "rva": "0x2898000",
+      "virtual_size": 17252352
+    }
+  ],
+  "raw_e8_candidates": [
+    "0x825190",
+    "0x825243",
+    "0x879d73"
+  ],
+  "verified_direct_calls": [
+    {
+      "call_va": "0x825190",
+      "return_va": "0x825195",
+      "caller_start": "0x8250a0",
+      "caller_end_exclusive": "0x8252a2",
+      "disassembly": "D:\\game\\DNF1031客户端-20260708\\combat_ui_1031\\reports\\code-008250a0.asm",
+      "bytes_at_call_and_cleanup": "e86b1a050083c41884c0",
+      "caller_stack_cleanup": 24,
+      "arguments_in_callee_order": [
+        "caller ECX",
+        "A.virtual+0x130()",
+        "caller arg1",
+        "B.virtual+0x130()",
+        "caller arg2",
+        "A+0x3758"
+      ],
+      "result_usage": "test AL and branch"
+    },
+    {
+      "call_va": "0x825243",
+      "return_va": "0x825248",
+      "caller_start": "0x8250a0",
+      "caller_end_exclusive": "0x8252a2",
+      "disassembly": "D:\\game\\DNF1031客户端-20260708\\combat_ui_1031\\reports\\code-008250a0.asm",
+      "bytes_at_call_and_cleanup": "e8b819050083c41884c0",
+      "caller_stack_cleanup": 24,
+      "arguments_in_callee_order": [
+        "caller ECX",
+        "[alternate-animation entry+0x10]",
+        "caller arg1",
+        "B.virtual+0x130()",
+        "caller arg2",
+        "A+0x3758"
+      ],
+      "result_usage": "test AL and branch"
+    },
+    {
+      "call_va": "0x879d73",
+      "return_va": "0x879d78",
+      "caller_start": "0x879c80",
+      "caller_end_exclusive": "0x879dac",
+      "disassembly": "D:\\game\\DNF1031客户端-20260708\\combat_ui_1031\\reports\\code-00879c80.asm",
+      "bytes_at_call_and_cleanup": "e888ceffff83c4188d4d",
+      "caller_stack_cleanup": 24,
+      "arguments_in_callee_order": [
+        "caller ECX",
+        "A.virtual+0x130()",
+        "caller arg1",
+        "B.virtual+0x130()",
+        "caller arg2",
+        "NULL"
+      ],
+      "result_usage": "save AL in BL across cleanup then return AL"
+    }
+  ],
+  "baseline_code_ranges": [
+    {
+      "role": "shared_collision",
+      "start": "0x876c00",
+      "end_exclusive": "0x8772c6",
+      "size": 1734,
+      "baseline_sha256": "da7009995bb58bd0165740769cc6b0231219b10d3832de327661199b183efa62"
+    },
+    {
+      "role": "caller_with_alternate_animation_loop",
+      "start": "0x8250a0",
+      "end_exclusive": "0x8252a2",
+      "size": 514,
+      "baseline_sha256": "10c5d8bbb9b33886df4615c4d0adf9211e77822fe06f66d5381760e1282dc810"
+    },
+    {
+      "role": "caller_returning_collision_result",
+      "start": "0x879c80",
+      "end_exclusive": "0x879dac",
+      "size": 300,
+      "baseline_sha256": "ff15e9fcd6f6a0353a627ee0472dd764154f9f2cc4bced953586ebfb3422bbf3"
+    },
+    {
+      "role": "three_argument_box_overlap",
+      "start": "0x1090040",
+      "end_exclusive": "0x1090569",
+      "size": 1321,
+      "baseline_sha256": "7500a461c2623e30f637e7a538cb265f83480898a83a6ff29d1f6ca4e57561ac"
+    },
+    {
+      "role": "six_float_slot_copy",
+      "start": "0x582330",
+      "end_exclusive": "0x58235e",
+      "size": 46,
+      "baseline_sha256": "908118ef0c3065d8337748a5d936dfd99d6515649bcbe7f46fdea785d020f743"
+    },
+    {
+      "role": "successful_collision_contact_offsets",
+      "start": "0x81b720",
+      "end_exclusive": "0x81b7a7",
+      "size": 135,
+      "baseline_sha256": "da362c439c9b26e3120e5ab6245cbaca30a93f2cd120f456339dcccad3e7dec7"
+    }
+  ],
+  "live_verification": {
+    "pid": 17200,
+    "session": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\trace-combat-ui-1031\\20261018-032859-17200",
+    "checks": [
+      {
+        "role": "shared_collision",
+        "start": "0x876c00",
+        "size": 1734,
+        "live_sha256": "da7009995bb58bd0165740769cc6b0231219b10d3832de327661199b183efa62",
+        "matching_baseline": true,
+        "differing_byte_offsets": []
+      },
+      {
+        "role": "caller_with_alternate_animation_loop",
+        "start": "0x8250a0",
+        "size": 514,
+        "live_sha256": "10c5d8bbb9b33886df4615c4d0adf9211e77822fe06f66d5381760e1282dc810",
+        "matching_baseline": true,
+        "differing_byte_offsets": []
+      },
+      {
+        "role": "caller_returning_collision_result",
+        "start": "0x879c80",
+        "size": 300,
+        "live_sha256": "ff15e9fcd6f6a0353a627ee0472dd764154f9f2cc4bced953586ebfb3422bbf3",
+        "matching_baseline": true,
+        "differing_byte_offsets": []
+      },
+      {
+        "role": "three_argument_box_overlap",
+        "start": "0x1090040",
+        "size": 1321,
+        "live_sha256": "7500a461c2623e30f637e7a538cb265f83480898a83a6ff29d1f6ca4e57561ac",
+        "matching_baseline": true,
+        "differing_byte_offsets": []
+      },
+      {
+        "role": "six_float_slot_copy",
+        "start": "0x582330",
+        "size": 46,
+        "live_sha256": "908118ef0c3065d8337748a5d936dfd99d6515649bcbe7f46fdea785d020f743",
+        "matching_baseline": true,
+        "differing_byte_offsets": []
+      },
+      {
+        "role": "successful_collision_contact_offsets",
+        "start": "0x81b720",
+        "size": 135,
+        "live_sha256": "da362c439c9b26e3120e5ab6245cbaca30a93f2cd120f456339dcccad3e7dec7",
+        "matching_baseline": true,
+        "differing_byte_offsets": []
+      }
+    ],
+    "matching_ranges": 6,
+    "scope": "ReadProcessMemory only; no gameplay input or instrumentation mutation."
+  },
+  "followup_consumer": {
+    "function": "0x81b720",
+    "caller": "0x82519f; loop-success branch joins it",
+    "reads": "caller+0x3758 and caller arg2 overlap box",
+    "writes": [
+      "caller+0x7ec",
+      "caller+0x7f0",
+      "caller+0x7f4"
+    ],
+    "meaning": "three derived contact offsets; not a damage or HP write claim"
+  },
+  "limitations": [
+    "Code and ABI evidence do not observe a hit return or any HP/state/animation transition.",
+    "Three direct E8 calls in executable sections do not exclude indirect callers or separate script damage paths.",
+    "Box encodings and ANI box-type association still require loader evidence.",
+    "Matching code bytes do not remove the existing plugins or prove unchanged virtual callees and numeric decoders.",
+    "No function pointer should be called from this report; object lifetime and concrete interface validation remain required."
+  ]
+}

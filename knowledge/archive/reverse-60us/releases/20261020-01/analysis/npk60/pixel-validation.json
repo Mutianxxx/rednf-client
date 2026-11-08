@@ -1,0 +1,374 @@
+{
+  "selected_imgs": 127,
+  "decoded_frames": 2318,
+  "resolved_pixel_formats": {
+    "16": 118,
+    "15": 17,
+    "14": 2183
+  },
+  "errors": [],
+  "seconds": 10.746465399977751,
+  "selection_rule": "all frames of sm_body0000.img, monster/goblin/*, character/swordman/effect/hardattack*",
+  "examples": [
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackblade1.img",
+        "package": "sprite_character_swordman_effect.npk",
+        "offset": 1676776,
+        "length": 62976,
+        "table_index": 29,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b626c616465312e696d67"
+      },
+      "frames": 6,
+      "sha256": "e29221c7ea8f1c99f9c8c27049b12cc4703ddccea3667625c61e469deed9450e"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackblade2.img",
+        "package": "sprite_character_swordman_effect.npk",
+        "offset": 1739752,
+        "length": 81865,
+        "table_index": 30,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b626c616465322e696d67"
+      },
+      "frames": 6,
+      "sha256": "4fb6747eb530fa35b0ed4aa91e6a711881a751c46c1079ab7a211f9c1e4bae0e"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackfullcharge.img",
+        "package": "sprite_character_swordman_effect.npk",
+        "offset": 1821617,
+        "length": 42951,
+        "table_index": 31,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b66756c6c6368617267652e696d67"
+      },
+      "frames": 10,
+      "sha256": "3b1ecada357737300956adf8d17f0e7a100218bdaefbef309c971453b6642885"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackoncharge.img",
+        "package": "sprite_character_swordman_effect.npk",
+        "offset": 1864568,
+        "length": 51118,
+        "table_index": 32,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6f6e6368617267652e696d67"
+      },
+      "frames": 26,
+      "sha256": "4801ec1303c63e982746e15c1778ee6fedd247f471af62e6526d197a37739c53"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackcharge/bremen-down.img",
+        "package": "sprite_character_swordman_effect_hardattackcharge.npk",
+        "offset": 2428,
+        "length": 36756,
+        "table_index": 0,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6368617267652f6272656d656e2d646f776e2e696d67"
+      },
+      "frames": 5,
+      "sha256": "9fb730c75783af083ef31d1a2d8ec81835e16a3ca1afb714ae0ef502d24b20a5"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackcharge/bremen-up.img",
+        "package": "sprite_character_swordman_effect_hardattackcharge.npk",
+        "offset": 39184,
+        "length": 11489,
+        "table_index": 1,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6368617267652f6272656d656e2d75702e696d67"
+      },
+      "frames": 5,
+      "sha256": "5378602a5a3892a3931d467829f0addcf03721125c062f66c8076977346a3072"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackcharge/dust.img",
+        "package": "sprite_character_swordman_effect_hardattackcharge.npk",
+        "offset": 50673,
+        "length": 8799,
+        "table_index": 2,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6368617267652f647573742e696d67"
+      },
+      "frames": 5,
+      "sha256": "4a141f469c51beae6f5e55fc6aae21d145c46ccf0c56f24290cacc04d1c34100"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackcharge/ghost-down.img",
+        "package": "sprite_character_swordman_effect_hardattackcharge.npk",
+        "offset": 59472,
+        "length": 36861,
+        "table_index": 3,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6368617267652f67686f73742d646f776e2e696d67"
+      },
+      "frames": 5,
+      "sha256": "6b11b1c759eee306ee38cc63d43e3165de43ccec7babd6a76ab4f097bdf48bc6"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackcharge/ghost-up.img",
+        "package": "sprite_character_swordman_effect_hardattackcharge.npk",
+        "offset": 96333,
+        "length": 11533,
+        "table_index": 4,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6368617267652f67686f73742d75702e696d67"
+      },
+      "frames": 5,
+      "sha256": "7d378f06cdfcf95ebb463aedcab32d67cf98300ac44e5694e3a8db82677512ee"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackcharge/saya-down.img",
+        "package": "sprite_character_swordman_effect_hardattackcharge.npk",
+        "offset": 107866,
+        "length": 35865,
+        "table_index": 5,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6368617267652f736179612d646f776e2e696d67"
+      },
+      "frames": 5,
+      "sha256": "86152a66680acb6b1665e41ecdf3e34da04143494ed89cf0f7f807a0f26cd7c5"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackcharge/saya-up.img",
+        "package": "sprite_character_swordman_effect_hardattackcharge.npk",
+        "offset": 143731,
+        "length": 10530,
+        "table_index": 6,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6368617267652f736179612d75702e696d67"
+      },
+      "frames": 5,
+      "sha256": "da8ad1cf54090976563deb8267bcf15b5d65d0cf5fa45e5d6649f726b5549e9d"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackcharge/wave-down.img",
+        "package": "sprite_character_swordman_effect_hardattackcharge.npk",
+        "offset": 154261,
+        "length": 26149,
+        "table_index": 7,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6368617267652f776176652d646f776e2e696d67"
+      },
+      "frames": 4,
+      "sha256": "fc700ea04ba3c3b4e6181dc6e65808b917180a64314fc7d1623d279c206dd629"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/effect/hardattackcharge/wave-up.img",
+        "package": "sprite_character_swordman_effect_hardattackcharge.npk",
+        "offset": 180410,
+        "length": 20039,
+        "table_index": 8,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f6861726461747461636b6368617267652f776176652d75702e696d67"
+      },
+      "frames": 4,
+      "sha256": "0948750e41eaca459f1b9fe73e017bfd446480a83eed85ebd2c4ba91f2379ffa"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/equipment/avatar/skin/sm_body0000.img",
+        "package": "sprite_character_swordman_equipment_avatar_skin.npk",
+        "offset": 3748,
+        "length": 305925,
+        "table_index": 0,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f65717569706d656e742f6176617461722f736b696e2f736d5f626f6479303030302e696d67"
+      },
+      "frames": 210,
+      "sha256": "1cc103832e67a57e9df0eee8c73fb756e6bfc9acd3761de2c9b8876b07701609"
+    },
+    {
+      "entry": {
+        "logical": "sprite/character/swordman/equipment/avatar/skin/sm_body0000.img",
+        "package": "sprite_character_swordman_equipment_avatar_skin1.NPK",
+        "offset": 33702,
+        "length": 306694,
+        "table_index": 2,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f65717569706d656e742f6176617461722f736b696e2f736d5f626f6479303030302e696d67"
+      },
+      "frames": 210,
+      "sha256": "4b63e6aa8d66af08fc61e91015c844002b82c9692b785f975797de01caaf59e8"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/archer_gonlin.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 4804,
+        "length": 29369,
+        "table_index": 0,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f6172636865725f676f6e6c696e2e696d67"
+      },
+      "frames": 31,
+      "sha256": "366323398a85e73ec503362c8b280524edc269b0ad09e0b337719e273f498230"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body0.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 34173,
+        "length": 15369,
+        "table_index": 1,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479302e696d67"
+      },
+      "frames": 17,
+      "sha256": "add81c3523efe6b02404502ab03c364412bbf1984eaa978a764854a15441e7a3"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body1.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 49542,
+        "length": 15428,
+        "table_index": 2,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479312e696d67"
+      },
+      "frames": 17,
+      "sha256": "87a11ac2c217da387fb98ca4815bb2b723040e39a3c671933640f60318346f0e"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body2.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 64970,
+        "length": 15382,
+        "table_index": 3,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479322e696d67"
+      },
+      "frames": 17,
+      "sha256": "ce858d28fbcf17da71302890adc831fb46154f7f55bbc365b5f4912fdd7af3bc"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body3.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 80352,
+        "length": 15404,
+        "table_index": 4,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479332e696d67"
+      },
+      "frames": 17,
+      "sha256": "c105c2a84600e98a5e65698f5118549011e0148e8e0f8c2231a759789879825c"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body4.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 95756,
+        "length": 15417,
+        "table_index": 5,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479342e696d67"
+      },
+      "frames": 17,
+      "sha256": "7c9cfcdd4845157c59c7c2456e5076e99958e4d45fbd8209ea7a9a8bdc48f73f"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body5.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 111173,
+        "length": 15458,
+        "table_index": 6,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479352e696d67"
+      },
+      "frames": 17,
+      "sha256": "d053265abd91ffd7dcc095df21ecb35ce4f01320b7952d99901cd088d11629d9"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body6.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 126631,
+        "length": 15384,
+        "table_index": 7,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479362e696d67"
+      },
+      "frames": 17,
+      "sha256": "7a0a50488893f4831bf853debd0a7983fd2cc17ccbc626a3fa43990102526a85"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body7.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 142015,
+        "length": 15387,
+        "table_index": 8,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479372e696d67"
+      },
+      "frames": 17,
+      "sha256": "f2bf06501995b0d2af6bf023dcd3397c8bc63f572bbfeda060049d5295cebfa1"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body8.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 157402,
+        "length": 15410,
+        "table_index": 9,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479382e696d67"
+      },
+      "frames": 17,
+      "sha256": "267b106183f89e80b8853da040df32e0ef4b132e30a88e23dee4d699c25c177e"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/body9.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 172812,
+        "length": 17333,
+        "table_index": 10,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f626f6479392e696d67"
+      },
+      "frames": 21,
+      "sha256": "23b953fb8559fe24d3b1772b3cbfa137c4c1fd0cdab407a8006e5c2813f8b8d9"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/gligdebris.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 190145,
+        "length": 11475,
+        "table_index": 11,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f676c69676465627269732e696d67"
+      },
+      "frames": 34,
+      "sha256": "b8a4589fffbce6cf36d9a2d53d51a8a6401d77b8e2fe4c6809bdbc41ff260cfb"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/gligeat.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 201620,
+        "length": 90309,
+        "table_index": 12,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f676c69676561742e696d67"
+      },
+      "frames": 12,
+      "sha256": "060cb0cc5a7673ef97df91fd9a51ffdce38f5e2efffc784cf26a3d7a059f916f"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/goblincannon.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 291929,
+        "length": 40128,
+        "table_index": 13,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f676f626c696e63616e6e6f6e2e696d67"
+      },
+      "frames": 12,
+      "sha256": "98c15a2ca7b985521c04b4d4a5d115d8376d2701f0045be6c58f95d3ee3dae81"
+    },
+    {
+      "entry": {
+        "logical": "sprite/monster/goblin/goblincannoneffect.img",
+        "package": "sprite_monster_goblin.npk",
+        "offset": 332057,
+        "length": 18419,
+        "table_index": 14,
+        "raw_name_hex": "7370726974652f6d6f6e737465722f676f626c696e2f676f626c696e63616e6e6f6e6566666563742e696d67"
+      },
+      "frames": 6,
+      "sha256": "44cb298296a4e4f0f2864f47e32dbcce6483c34739465343a05bf068eb247b9c"
+    }
+  ]
+}

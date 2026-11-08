@@ -1,0 +1,362 @@
+{
+  "path": "character/swordman/animation/bloodboom.ani.als",
+  "fields": [
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/Bloodboom/casting_bloodboom_circle2.ani",
+        "casting_bloodboom_circle2"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/Bloodboom/casting_bloodboom_circle1.ani",
+        "casting_bloodboom_circle1"
+      ],
+      "offset": 15
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/Bloodboom/casting_bloodboom_boomfront.ani",
+        "casting_bloodboom_boomfront"
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/Bloodboom/casting_bloodboom_casting.ani",
+        "casting_bloodboom_casting"
+      ],
+      "offset": 45
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/Bloodboom/casting_bloodboom_boomback.ani",
+        "casting_bloodboom_boomback"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "../Effect/Animation/Bloodboom/casting_bloodboom_casting_back.ani",
+        "casting_bloodboom_casting_back"
+      ],
+      "offset": 75
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        3,
+        -2,
+        "casting_bloodboom_casting_back"
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        -1,
+        -1,
+        "casting_bloodboom_boomback"
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        3,
+        10001,
+        "casting_bloodboom_casting"
+      ],
+      "offset": 130
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        -1,
+        10002,
+        "casting_bloodboom_boomfront"
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        -1,
+        10003,
+        "casting_bloodboom_circle1"
+      ],
+      "offset": 170
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        -1,
+        10004,
+        "casting_bloodboom_circle2"
+      ],
+      "offset": 190
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 15989006,
+      "value": "../Effect/Animation/Bloodboom/casting_bloodboom_circle2.ani"
+    },
+    {
+      "offset": 10,
+      "type": 6,
+      "raw": 15989126,
+      "value": "casting_bloodboom_circle2"
+    },
+    {
+      "offset": 15,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 20,
+      "type": 6,
+      "raw": 15989178,
+      "value": "../Effect/Animation/Bloodboom/casting_bloodboom_circle1.ani"
+    },
+    {
+      "offset": 25,
+      "type": 6,
+      "raw": 15989298,
+      "value": "casting_bloodboom_circle1"
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 35,
+      "type": 6,
+      "raw": 15989350,
+      "value": "../Effect/Animation/Bloodboom/casting_bloodboom_boomfront.ani"
+    },
+    {
+      "offset": 40,
+      "type": 6,
+      "raw": 15989474,
+      "value": "casting_bloodboom_boomfront"
+    },
+    {
+      "offset": 45,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 50,
+      "type": 6,
+      "raw": 15989530,
+      "value": "../Effect/Animation/Bloodboom/casting_bloodboom_casting.ani"
+    },
+    {
+      "offset": 55,
+      "type": 6,
+      "raw": 15989650,
+      "value": "casting_bloodboom_casting"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 65,
+      "type": 6,
+      "raw": 15989702,
+      "value": "../Effect/Animation/Bloodboom/casting_bloodboom_boomback.ani"
+    },
+    {
+      "offset": 70,
+      "type": 6,
+      "raw": 15989824,
+      "value": "casting_bloodboom_boomback"
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 80,
+      "type": 6,
+      "raw": 15989878,
+      "value": "../Effect/Animation/Bloodboom/casting_bloodboom_casting_back.ani"
+    },
+    {
+      "offset": 85,
+      "type": 6,
+      "raw": 15990008,
+      "value": "casting_bloodboom_casting_back"
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 4294967294,
+      "value": -2
+    },
+    {
+      "offset": 105,
+      "type": 6,
+      "raw": 15990008,
+      "value": "casting_bloodboom_casting_back"
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 120,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 125,
+      "type": 6,
+      "raw": 15989824,
+      "value": "casting_bloodboom_boomback"
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 10001,
+      "value": 10001
+    },
+    {
+      "offset": 145,
+      "type": 6,
+      "raw": 15989650,
+      "value": "casting_bloodboom_casting"
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 10002,
+      "value": 10002
+    },
+    {
+      "offset": 165,
+      "type": 6,
+      "raw": 15989474,
+      "value": "casting_bloodboom_boomfront"
+    },
+    {
+      "offset": 170,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 10003,
+      "value": 10003
+    },
+    {
+      "offset": 185,
+      "type": 6,
+      "raw": 15989298,
+      "value": "casting_bloodboom_circle1"
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 200,
+      "type": 0,
+      "raw": 10004,
+      "value": 10004
+    },
+    {
+      "offset": 205,
+      "type": 6,
+      "raw": 15989126,
+      "value": "casting_bloodboom_circle2"
+    }
+  ],
+  "raw_sha256": "abf765e2f33187c81f988f1d34052928ac03be95efc47a8b8ba287b18a3c029a"
+}

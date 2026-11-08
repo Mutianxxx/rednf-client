@@ -1,0 +1,263 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "fixed 1031 EXE and memory snapshot",
+      "passed": true
+    },
+    {
+      "name": "incremental implementation hashes match current sources",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11db510 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11b41e0 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11b3950 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11b3d80 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x5b9080 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11db180 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11dade0 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11b3690 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11bf4e0 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11bf1a0 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11be880 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11be350 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11be610 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11bb1b0 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x759780 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11bc880 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11bc290 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11bc900 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x493770 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x20ef8b2 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x2c93fbf matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11bdf90 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11be020 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11be2b0 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11be460 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11bf8e0 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11c7e20 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11c8810 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11bf510 matches disk, snapshot and digest",
+      "passed": true
+    },
+    {
+      "name": "all direct calls retain exact targets",
+      "passed": true
+    },
+    {
+      "name": "lifecycle vtable entries and float constants are exact",
+      "passed": true
+    },
+    {
+      "name": "object provenance instructions match disk and snapshot",
+      "passed": true
+    },
+    {
+      "name": "center and dispatch contracts distinguish source ECX from destination argument",
+      "passed": true
+    },
+    {
+      "name": "CBT active and forced IDs bind separate exact control +34 predicates",
+      "passed": true
+    },
+    {
+      "name": "CBT input getter and event writes retain exact values without semantic labels",
+      "passed": true
+    },
+    {
+      "name": "17 registration requests bind exact code and decoded disk/snapshot literals",
+      "passed": true
+    },
+    {
+      "name": "protected vector helper transfers are preserved instead of bypassed",
+      "passed": true
+    },
+    {
+      "name": "registration order is not promoted to a confirmed runtime numeric mapping",
+      "passed": true
+    },
+    {
+      "name": "2^32 center maps to native logical half-size at zero rotation",
+      "passed": true
+    },
+    {
+      "name": "nonzero-rotation 2^32 center remains explicitly unsupported",
+      "passed": true
+    },
+    {
+      "name": "destination type comes only from the matching request context",
+      "passed": true
+    },
+    {
+      "name": "invalid or legacy context payload does not invent a destination type",
+      "passed": true
+    },
+    {
+      "name": "secondary center resolves independently at (4294967296.0, 7)",
+      "passed": true
+    },
+    {
+      "name": "secondary center resolves independently at (5, 4294967296.0)",
+      "passed": true
+    },
+    {
+      "name": "ordered operation enriches destination type without rewriting source event or legacy images",
+      "passed": true
+    },
+    {
+      "name": "destination type 8 gets its native alternate-route diagnostic",
+      "passed": true
+    },
+    {
+      "name": "destination type 14 gets its native alternate-route diagnostic",
+      "passed": true
+    },
+    {
+      "name": "destination type 15 gets its native alternate-route diagnostic",
+      "passed": true
+    },
+    {
+      "name": "destination type 16 gets its native alternate-route diagnostic",
+      "passed": true
+    },
+    {
+      "name": "source type is not mistaken for destination dispatch type",
+      "passed": true
+    },
+    {
+      "name": "transformed wrapper is not assigned the simple B4 alternate route",
+      "passed": true
+    },
+    {
+      "name": "unverified consumer does not gain route-specific support",
+      "passed": true
+    },
+    {
+      "name": "plugin identity remains pinned",
+      "passed": true
+    },
+    {
+      "name": "crash callback code window hash is preserved",
+      "passed": true
+    },
+    {
+      "name": "both dumps match the same indirect callback candidate without claiming root cause",
+      "passed": true
+    },
+    {
+      "name": "dump memory probes report unavailable bytes rather than disk substitution",
+      "passed": true
+    },
+    {
+      "name": "crash disassembly byte windows match the pinned physical plugin",
+      "passed": true
+    },
+    {
+      "name": "PE mapping uses RVA rather than runtime or preferred virtual address",
+      "passed": true
+    },
+    {
+      "name": "dump range lookup preserves captured bytes and absence",
+      "passed": true
+    },
+    {
+      "name": "dump probes reject oversized reads",
+      "passed": true
+    },
+    {
+      "name": "malformed dump descriptor count is rejected",
+      "passed": true
+    }
+  ],
+  "evidence_sha256": "6189efabceafdbfe76c7d6de0972cfd538b66869ee525599643982f89812f3aa",
+  "observer_revision": 6,
+  "dll_sha256": "bbb78bd3ff282eb64ae3b27cefa85b63a69e04b8b9bc17e7af0aec6875fe0dfa",
+  "native_visual_acceptance": "pending",
+  "real_client_stability": "pending",
+  "crash_root_cause": "unproven"
+}

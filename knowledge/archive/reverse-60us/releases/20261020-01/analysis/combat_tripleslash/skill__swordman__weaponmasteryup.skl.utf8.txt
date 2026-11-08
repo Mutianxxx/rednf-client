@@ -1,0 +1,36 @@
+[name]  <12::name_18120>
+[name2]  <12::name2_eng_365>
+[basic explain] <12::weapon_m_up_basic_explain>
+[explain] <12::explain_18125>
+
+[purchase cost] 
+0
+[/purchase cost]
+[type]  `[passive]`
+[skill class]  1
+[maximum level]  1
+[growtype maximum level]  0 1 0 0 0
+
+[skill fitness growtype] 
+1
+[/skill fitness growtype]
+[icon] 
+`Character/Swordman/Effect/SkillIcon.img` 66
+`Character/Swordman/Effect/SkillIcon.img` 67
+
+[static data] 
+12	// 레벨업 스킬 : 소검 마스터리
+13	// 레벨업 스킬 : 도 마스터리
+14	// 레벨업 스킬 : 대검 마스터리
+15	// 레벨업 스킬 : 둔기 마스터리 : 추가할 경우 [explain] 수정하기
+[/static data]
+
+
+
+
+
+ 
+
+ 
+
+

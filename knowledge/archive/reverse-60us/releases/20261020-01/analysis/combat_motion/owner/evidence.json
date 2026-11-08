@@ -1,0 +1,556 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "image_base": "0x00400000",
+  "excerpts": [
+    {
+      "name": "owner_z_nonnegative",
+      "va": "0x004ac100",
+      "file_offset": 704768,
+      "size": 17,
+      "sha256": "6975176ba80de5729260536198b1021fa89e502535bff9f210b08e1c2023efe9",
+      "binary": "004ac100-owner_z_nonnegative.bin",
+      "assembly": "004ac100-owner_z_nonnegative.asm"
+    },
+    {
+      "name": "owner_xy_wrapper",
+      "va": "0x004b00f0",
+      "file_offset": 721136,
+      "size": 279,
+      "sha256": "c1b317bd19112180e85036672c1ee58300aee19a4b08823d2ca72a3773889a66",
+      "binary": "004b00f0-owner_xy_wrapper.bin",
+      "assembly": "004b00f0-owner_xy_wrapper.asm"
+    },
+    {
+      "name": "owner_response_wrapper",
+      "va": "0x004b97b0",
+      "file_offset": 759728,
+      "size": 81,
+      "sha256": "81f22f6938c27924163ca7b84c11fceb7fd1d987ed8a755d11d1350ad34ca667",
+      "binary": "004b97b0-owner_response_wrapper.bin",
+      "assembly": "004b97b0-owner_response_wrapper.asm"
+    },
+    {
+      "name": "position_probe",
+      "va": "0x004e7dd0",
+      "file_offset": 949712,
+      "size": 309,
+      "sha256": "620508c052b000c32dadea289bdf63380a9e73e8475a0778656cb6e6f9840055",
+      "binary": "004e7dd0-position_probe.bin",
+      "assembly": "004e7dd0-position_probe.asm"
+    },
+    {
+      "name": "response_attachment_forward",
+      "va": "0x004e8a30",
+      "file_offset": 952880,
+      "size": 67,
+      "sha256": "a3e510314747dfe496f51459983dc3ca12177d244c8e68b510df16634c6fa791",
+      "binary": "004e8a30-response_attachment_forward.bin",
+      "assembly": "004e8a30-response_attachment_forward.asm"
+    },
+    {
+      "name": "manager_first_blocker",
+      "va": "0x0050b240",
+      "file_offset": 1094208,
+      "size": 154,
+      "sha256": "b305219b4b88fe51a7e50a52043c2e783f32ea7d4385e51092fc8f13ee97ab28",
+      "binary": "0050b240-manager_first_blocker.bin",
+      "assembly": "0050b240-manager_first_blocker.asm"
+    },
+    {
+      "name": "layer_terrain_probe",
+      "va": "0x00485950",
+      "file_offset": 547152,
+      "size": 752,
+      "sha256": "bc2a4408a8fee8176714b2978e5907fc748c38ab67a0a650f469c772629920b4",
+      "binary": "00485950-layer_terrain_probe.bin",
+      "assembly": "00485950-layer_terrain_probe.asm"
+    },
+    {
+      "name": "terrain_cell_read",
+      "va": "0x00485580",
+      "file_offset": 546176,
+      "size": 231,
+      "sha256": "6cc4f63acd5f94f4e67c2fb028ea2c9c487bcc36d865446799f342670306f074",
+      "binary": "00485580-terrain_cell_read.bin",
+      "assembly": "00485580-terrain_cell_read.asm"
+    },
+    {
+      "name": "pair_blocker",
+      "va": "0x004eb600",
+      "file_offset": 964096,
+      "size": 384,
+      "sha256": "8e48620058fed4fff9a7881943c2eb696d66add30edf18bfc1db7b315e7fdb8c",
+      "binary": "004eb600-pair_blocker.bin",
+      "assembly": "004eb600-pair_blocker.asm"
+    },
+    {
+      "name": "pair_bounds_intersection",
+      "va": "0x004e81d0",
+      "file_offset": 950736,
+      "size": 132,
+      "sha256": "ccbe1f4a95e51f37427f2476295b6c9ae55774253daab989e2e39745094927ae",
+      "binary": "004e81d0-pair_bounds_intersection.bin",
+      "assembly": "004e81d0-pair_bounds_intersection.asm"
+    },
+    {
+      "name": "ignore_list_contains",
+      "va": "0x004eb1d0",
+      "file_offset": 963024,
+      "size": 73,
+      "sha256": "b8d24e68b3f18682104c10ba76cc96834e2ae914a1204bee8370eaae863a80bc",
+      "binary": "004eb1d0-ignore_list_contains.bin",
+      "assembly": "004eb1d0-ignore_list_contains.asm"
+    },
+    {
+      "name": "type1_scalar_positive",
+      "va": "0x00484670",
+      "file_offset": 542320,
+      "size": 18,
+      "sha256": "f2bd89f1dc9edb34ef490a9b2556b90d85ebbf2fe3010e4de2b3da2a9e543f08",
+      "binary": "00484670-type1_scalar_positive.bin",
+      "assembly": "00484670-type1_scalar_positive.asm"
+    },
+    {
+      "name": "class_mask_test",
+      "va": "0x00498ff0",
+      "file_offset": 626672,
+      "size": 23,
+      "sha256": "a5aa2d9ec32e670439c912a281626d5356a30266f2eb9afc4b843020720a08b3",
+      "binary": "00498ff0-class_mask_test.bin",
+      "assembly": "00498ff0-class_mask_test.asm"
+    },
+    {
+      "name": "status_slot_active",
+      "va": "0x004ac020",
+      "file_offset": 704544,
+      "size": 43,
+      "sha256": "0e6b701bc6e3a8da0568cb57e1e1c47767807ea6baf3e4c1c6ea11a7cdfd30d1",
+      "binary": "004ac020-status_slot_active.bin",
+      "assembly": "004ac020-status_slot_active.asm"
+    },
+    {
+      "name": "appendage_list_get",
+      "va": "0x00744870",
+      "file_offset": 3426416,
+      "size": 7,
+      "sha256": "d6a6744d413515f713c0f20ebc0580f39057d5fdac2dc207e16879d766ffd3ee",
+      "binary": "00744870-appendage_list_get.bin",
+      "assembly": "00744870-appendage_list_get.asm"
+    },
+    {
+      "name": "native_state_get",
+      "va": "0x00744c30",
+      "file_offset": 3427376,
+      "size": 11,
+      "sha256": "1e7ecb7b2f774d3a39dd4eedfef2fb12bd25ca72792d759a4d0e896fbddbd225",
+      "binary": "00744c30-native_state_get.bin",
+      "assembly": "00744c30-native_state_get.asm"
+    },
+    {
+      "name": "actor_scan_flag_get",
+      "va": "0x00407bb0",
+      "file_offset": 31664,
+      "size": 7,
+      "sha256": "d8c828f41f537435ad49a918e6bead884dcf6daf793480bbf84c6a9725531d21",
+      "binary": "00407bb0-actor_scan_flag_get.bin",
+      "assembly": "00407bb0-actor_scan_flag_get.asm"
+    },
+    {
+      "name": "position_set_xyz",
+      "va": "0x00499050",
+      "file_offset": 626768,
+      "size": 62,
+      "sha256": "d186e23e9af22b3aaee39a53366f5609d4d2b36f836d02102f8b71cb4019c754",
+      "binary": "00499050-position_set_xyz.bin",
+      "assembly": "00499050-position_set_xyz.asm"
+    },
+    {
+      "name": "position_set_axis",
+      "va": "0x00510f50",
+      "file_offset": 1118032,
+      "size": 62,
+      "sha256": "6a492244667232877fc09f5339873259aae11162814e09ee1fab3ff52a507713",
+      "binary": "00510f50-position_set_axis.bin",
+      "assembly": "00510f50-position_set_axis.asm"
+    },
+    {
+      "name": "layer_get",
+      "va": "0x00438690",
+      "file_offset": 231056,
+      "size": 7,
+      "sha256": "c3cf2b78cbabc7f89026048e62be75f4eb246efe99b493657265549f0561cf0a",
+      "binary": "00438690-layer_get.bin",
+      "assembly": "00438690-layer_get.asm"
+    },
+    {
+      "name": "scalar_21c_get",
+      "va": "0x004386d0",
+      "file_offset": 231120,
+      "size": 7,
+      "sha256": "2dfca72780cf0f4f49547e73f41c7d19a8038ee3a0ab34642076d2bcbf306d2d",
+      "binary": "004386d0-scalar_21c_get.bin",
+      "assembly": "004386d0-scalar_21c_get.asm"
+    },
+    {
+      "name": "footprint_width_height",
+      "va": "0x004387f0",
+      "file_offset": 231408,
+      "size": 32,
+      "sha256": "1d2253496035826ad8b466e664f1d72e9558472c8913ec634e52f1a3c4170250",
+      "binary": "004387f0-footprint_width_height.bin",
+      "assembly": "004387f0-footprint_width_height.asm"
+    },
+    {
+      "name": "footprint_bounds",
+      "va": "0x00438810",
+      "file_offset": 231440,
+      "size": 160,
+      "sha256": "41df84d57799e10ed68ef9a953d6eb6c8ce5a23d66fb66421a80a9d904fe945f",
+      "binary": "00438810-footprint_bounds.bin",
+      "assembly": "00438810-footprint_bounds.asm"
+    },
+    {
+      "name": "detour_on_collision",
+      "va": "0x004b9560",
+      "file_offset": 759136,
+      "size": 492,
+      "sha256": "f6c435d03fbb223c54c93ff1502798439dd48df9b496215e0e6ce1d7120311fa",
+      "binary": "004b9560-detour_on_collision.bin",
+      "assembly": "004b9560-detour_on_collision.asm"
+    },
+    {
+      "name": "detour_reset_check",
+      "va": "0x004b9750",
+      "file_offset": 759632,
+      "size": 94,
+      "sha256": "785d5f4b6f078b182453d7399e1a8517cf49c3c59ff9ad70f4285d00da333306",
+      "binary": "004b9750-detour_reset_check.bin",
+      "assembly": "004b9750-detour_reset_check.asm"
+    },
+    {
+      "name": "half_open_rectangle",
+      "va": "0x008adab0",
+      "file_offset": 4905648,
+      "size": 52,
+      "sha256": "97686dd11174686e0a39de126d161423c44b18c12875be4beb759b45ec580c2e",
+      "binary": "008adab0-half_open_rectangle.bin",
+      "assembly": "008adab0-half_open_rectangle.asm"
+    },
+    {
+      "name": "extension_row_blocks",
+      "va": "0x004869d0",
+      "file_offset": 551376,
+      "size": 149,
+      "sha256": "6363ac93dc07d0db1c9f1e2b3081e92a6d308ae2d1adbade53412a97303f7137",
+      "binary": "004869d0-extension_row_blocks.bin",
+      "assembly": "004869d0-extension_row_blocks.asm"
+    },
+    {
+      "name": "tile_column_count",
+      "va": "0x00486a70",
+      "file_offset": 551536,
+      "size": 43,
+      "sha256": "c2e4bc4de08d4d2bd97262a7eebb909e0161078d44242cc35051d2971f996c0a",
+      "binary": "00486a70-tile_column_count.bin",
+      "assembly": "00486a70-tile_column_count.asm"
+    },
+    {
+      "name": "total_tile_rows",
+      "va": "0x00486c30",
+      "file_offset": 551984,
+      "size": 100,
+      "sha256": "8de20d613e1d77a38dd1de651f1743c909c6529cb56099599850cac11e25b2b2",
+      "binary": "00486c30-total_tile_rows.bin",
+      "assembly": "00486c30-total_tile_rows.asm"
+    },
+    {
+      "name": "base_height",
+      "va": "0x00486ca0",
+      "file_offset": 552096,
+      "size": 87,
+      "sha256": "fc30e08422b9dcef83c5d2efe560ed101590b7cb6021d3785f987d4ff21ee1f7",
+      "binary": "00486ca0-base_height.bin",
+      "assembly": "00486ca0-base_height.asm"
+    }
+  ],
+  "swordman_slots": [
+    {
+      "slot": "0x2c",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965504,
+      "bytes": "f08f4900",
+      "target": "0x00498ff0"
+    },
+    {
+      "slot": "0x64",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965560,
+      "bytes": "b07b4000",
+      "target": "0x00407bb0"
+    },
+    {
+      "slot": "0x88",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965596,
+      "bytes": "50904900",
+      "target": "0x00499050"
+    },
+    {
+      "slot": "0xa8",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965628,
+      "bytes": "00c14a00",
+      "target": "0x004ac100"
+    },
+    {
+      "slot": "0xac",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965632,
+      "bytes": "f0004b00",
+      "target": "0x004b00f0"
+    },
+    {
+      "slot": "0xdc",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965680,
+      "bytes": "109d4900",
+      "target": "0x00499d10"
+    },
+    {
+      "slot": "0xe0",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965684,
+      "bytes": "609d4900",
+      "target": "0x00499d60"
+    },
+    {
+      "slot": "0x1c4",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965912,
+      "bytes": "90864300",
+      "target": "0x00438690"
+    },
+    {
+      "slot": "0x1fc",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965968,
+      "bytes": "f0874300",
+      "target": "0x004387f0"
+    },
+    {
+      "slot": "0x200",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965972,
+      "bytes": "00884300",
+      "target": "0x00438800"
+    },
+    {
+      "slot": "0x204",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965976,
+      "bytes": "d0864300",
+      "target": "0x004386d0"
+    },
+    {
+      "slot": "0x208",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965980,
+      "bytes": "d0864300",
+      "target": "0x004386d0"
+    },
+    {
+      "slot": "0x20c",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965984,
+      "bytes": "10884300",
+      "target": "0x00438810"
+    },
+    {
+      "slot": "0x210",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965988,
+      "bytes": "40884300",
+      "target": "0x00438840"
+    },
+    {
+      "slot": "0x214",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965992,
+      "bytes": "60884300",
+      "target": "0x00438860"
+    },
+    {
+      "slot": "0x218",
+      "vtable": "0x00d80f94",
+      "file_offset": 9965996,
+      "bytes": "90884300",
+      "target": "0x00438890"
+    },
+    {
+      "slot": "0x230",
+      "vtable": "0x00d80f94",
+      "file_offset": 9966020,
+      "bytes": "304c7400",
+      "target": "0x00744c30"
+    },
+    {
+      "slot": "0x244",
+      "vtable": "0x00d80f94",
+      "file_offset": 9966040,
+      "bytes": "00b64e00",
+      "target": "0x004eb600"
+    },
+    {
+      "slot": "0x248",
+      "vtable": "0x00d80f94",
+      "file_offset": 9966044,
+      "bytes": "d0814e00",
+      "target": "0x004e81d0"
+    },
+    {
+      "slot": "0x274",
+      "vtable": "0x00d80f94",
+      "file_offset": 9966088,
+      "bytes": "b0974b00",
+      "target": "0x004b97b0"
+    },
+    {
+      "slot": "0x33c",
+      "vtable": "0x00d80f94",
+      "file_offset": 9966288,
+      "bytes": "90d64a00",
+      "target": "0x004ad690"
+    },
+    {
+      "slot": "0x3c4",
+      "vtable": "0x00d80f94",
+      "file_offset": 9966424,
+      "bytes": "70487400",
+      "target": "0x00744870"
+    },
+    {
+      "slot": "0x410",
+      "vtable": "0x00d80f94",
+      "file_offset": 9966500,
+      "bytes": "20c04a00",
+      "target": "0x004ac020"
+    },
+    {
+      "slot": "0x57c",
+      "vtable": "0x00d80f94",
+      "file_offset": 9966864,
+      "bytes": "60954b00",
+      "target": "0x004b9560"
+    }
+  ],
+  "jump_tables": [
+    {
+      "va": "0x00485c30",
+      "file_offset": 547888,
+      "bytes": "d95b4800b2594800ed5b4800fb5b4800",
+      "targets": [
+        "0x00485bd9",
+        "0x004859b2",
+        "0x00485bed",
+        "0x00485bfb"
+      ]
+    },
+    {
+      "va": "0x004eb760",
+      "file_offset": 964448,
+      "bytes": "a8b64e00dfb64e00bbb64e00bbb64e00",
+      "targets": [
+        "0x004eb6a8",
+        "0x004eb6df",
+        "0x004eb6bb",
+        "0x004eb6bb"
+      ]
+    },
+    {
+      "va": "0x004eb770",
+      "file_offset": 964464,
+      "bytes": "12b74e004ab74e0028b74e0028b74e00",
+      "targets": [
+        "0x004eb712",
+        "0x004eb74a",
+        "0x004eb728",
+        "0x004eb728"
+      ]
+    }
+  ],
+  "rtti": [
+    {
+      "va": "0x00f551f4",
+      "file_offset": 11882996,
+      "type_descriptor_bytes": "70d1e900000000002e3f4156495244417070656e64616765404000",
+      "name": ".?AVIRDAppendage@@"
+    },
+    {
+      "va": "0x00f5963c",
+      "file_offset": 11900476,
+      "type_descriptor_bytes": "70d1e900000000002e3f4156434e5468726f7757656250756c6c417070656e64616765404000",
+      "name": ".?AVCNThrowWebPullAppendage@@"
+    },
+    {
+      "va": "0x00f4287c",
+      "file_offset": 11806844,
+      "type_descriptor_bytes": "70d1e900000000002e3f4156495244436f6c6c6973696f6e4f626a656374404000",
+      "name": ".?AVIRDCollisionObject@@"
+    },
+    {
+      "va": "0x00f428a0",
+      "file_offset": 11806880,
+      "type_descriptor_bytes": "70d1e900000000002e3f4156434e5244506173736976654f626a656374404000",
+      "name": ".?AVCNRDPassiveObject@@"
+    }
+  ],
+  "rea_support": [
+    {
+      "source": "../../rea/results/081-actor-collision-axisz.json",
+      "sha256": "7a0eb2b679e3a84093bae93476aae0910a78604b5c2147dbbcdfc1303e7405ea",
+      "pseudocode": "081-actor-collision-axisz.c"
+    },
+    {
+      "source": "../../rea/results/082-actor-collision-axisxy.json",
+      "sha256": "55433bb4d1c83d7104693c1694222952c900644a019e7f5e1475d6aca725ebd9",
+      "pseudocode": "082-actor-collision-axisxy.c"
+    },
+    {
+      "source": "../../rea/results/083-actor-collision-response.json",
+      "sha256": "4ce2134396da096573481aead08e4e09eef9d9f46717624797893e01ffae93ff",
+      "pseudocode": "083-actor-collision-response.c"
+    },
+    {
+      "source": "../../rea/results/084-collision-position-probe.json",
+      "sha256": "a7453708a4915adab4bde53a8fe4bd2f9ee229a92bc37609590f25dc06cf9a27",
+      "pseudocode": "084-collision-position-probe.c"
+    },
+    {
+      "source": "../../rea/results/085-collision-base-response.json",
+      "sha256": "196ec199dfbe1d13ba3b4e4e28b81e257c9b0523a0bff2568af00127a2271b84",
+      "pseudocode": "085-collision-base-response.c"
+    },
+    {
+      "source": "../../rea/results/086-map-position-query.json",
+      "sha256": "ee882eb6c59dd0a0e8553010dfbb2d5a4e75f104a0dd4315e281b2c27f1e50f2",
+      "pseudocode": "086-map-position-query.c"
+    },
+    {
+      "source": "../../rea/results/087-collision-layer-fallback.json",
+      "sha256": "018967d6f69b88cf09981844fca6f6d6679b1398bb964e674f1268e2dfcbac34",
+      "pseudocode": "087-collision-layer-fallback.c"
+    },
+    {
+      "source": "../../rea/results/092-entity-blocking-predicate.json",
+      "sha256": "d0efda16ba6b8e9161377532c6a7cfca6c15c1389697eca346dfdb2a868e1535",
+      "pseudocode": "092-entity-blocking-predicate.c"
+    }
+  ],
+  "coverage": "current Swordman owner collision functions; static evidence, no original-client runtime observation",
+  "cautions": [
+    "Some helper ranges are deliberate excerpts, not asserted complete function boundaries.",
+    "Class masks, state16 status-slot name and scalar21c semantic name are not guessed.",
+    "Manager objects and callback classes remain runtime inputs; read contracts before integrating."
+  ]
+}

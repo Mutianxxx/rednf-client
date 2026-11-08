@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x81cfa0",
+  "rva": "0x41cfa0",
+  "file_offset": 4312992,
+  "length": 758,
+  "bytes_sha256": "f0e2ba55c40e27e68a7508b27483d4dca46daceba27040e936465e7d1b381654",
+  "status": "native_bytes",
+  "note": "Resource selection, raw fields, source-bound numeric interpolation.",
+  "disassembled": true
+}

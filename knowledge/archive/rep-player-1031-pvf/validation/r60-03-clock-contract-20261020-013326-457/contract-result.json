@@ -1,0 +1,48 @@
+﻿{
+    "schema":  "r60-03-player-clock-standalone-v1",
+    "passed":  true,
+    "checks":  19,
+    "production_build":  false,
+    "gpu_verified":  false,
+    "syntax_check_passed":  true,
+    "dependency_objects":  "candidate-r60-02-final/build/preview: protocol/resources/gpu/pvf_als/pvf_playback/pvf_script_preview/pvf_template_preview/pvf_preview_catalog; linked to satisfy unused production functions; no resource/GPU calls executed",
+    "executable_sha256":  "5ac88c982a23da35616187c3409152af258e3da107d030912bb12d8106378ce9",
+    "sources":  [
+                    {
+                        "path":  "rep-player-1031-pvf/src/pvf_animation.hpp",
+                        "sha256":  "b9e5306d2eae55ff9482eb2f3213c88db1c10d30de9d6a3ab108f314440a46cb"
+                    },
+                    {
+                        "path":  "rep-player-1031-pvf/src/pvf_animation.cpp",
+                        "sha256":  "a7083451f2bab332e083337f8d70261e57ef4013d76bc2a27fb5658673151f36"
+                    },
+                    {
+                        "path":  "rep-player-1031-pvf/src/pvf_preview_scene.hpp",
+                        "sha256":  "45272907c13b54c821fa1c3003a7bf382abbebbce91aecb1f1590b1cab6b942d"
+                    },
+                    {
+                        "path":  "rep-player-1031-pvf/src/pvf_preview_scene.cpp",
+                        "sha256":  "39adef6a4000a3838eeef0eb5cfdbfccaab01c2660dd4376a4fc66d6490bb3d8"
+                    },
+                    {
+                        "path":  "rep-player-1031-pvf/src/pvf_preview.cpp",
+                        "sha256":  "8658cebcab4cb9d43070a6c77423c3b4001c8d4ad69c3e0f81afcc194f408735"
+                    },
+                    {
+                        "path":  "rep-player-1031-pvf/src/pvf_preview_verify.cpp",
+                        "sha256":  "29639be2ab9677047040b57bc4600c60533efe2539e7fb2888d250ab31eb4508"
+                    },
+                    {
+                        "path":  "rep-player-1031-pvf/tests/r60_03_clock_contract.cpp",
+                        "sha256":  "329369c95030fbda57c4e8a797217bc1192387980ef4f4a133aaa73f6e389920"
+                    },
+                    {
+                        "path":  "reverse-60us/integration/include/dnf_ani_clock.hpp",
+                        "sha256":  "93563eec417aac04e6511c155b40d8f143cfaa695bb7b0813a543504fb527b60"
+                    },
+                    {
+                        "path":  "reverse-60us/integration/include/dnf_ani_render.hpp",
+                        "sha256":  "9a5684dac2224fc774ed98813926928267e26c05f3417732b9125ca9117e4c46"
+                    }
+                ]
+}

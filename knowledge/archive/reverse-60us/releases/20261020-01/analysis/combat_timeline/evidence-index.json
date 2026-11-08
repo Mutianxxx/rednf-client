@@ -1,0 +1,73 @@
+{
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "runtime_observed": false,
+  "slices": [
+    {
+      "name": "frame_advance",
+      "va": "0xa27dc0",
+      "size": 411,
+      "file_offset": 6454720,
+      "sha256": "0fbc04410574e9cc9b182a03faba41df6adbcc9b547655c34007d5970815747e"
+    },
+    {
+      "name": "set_frame",
+      "va": "0xa27870",
+      "size": 323,
+      "file_offset": 6453360,
+      "sha256": "4f3fea79151272b2c7b52693fd6a2b4fb98db38179c36a65f82ea4995a6a9834"
+    },
+    {
+      "name": "negative_attach_draw",
+      "va": "0x49a359",
+      "size": 130,
+      "file_offset": 631641,
+      "sha256": "cf9abf95b68464bd3244c3b27fbde3a3e56879743cacd9df86f4d1c094b88a6d"
+    },
+    {
+      "name": "nonnegative_attach_draw",
+      "va": "0x49a5b7",
+      "size": 120,
+      "file_offset": 632247,
+      "sha256": "e05eb14c6f709b6f4ec1d45780fc22c9776c78b3da7fe1754f1fd995445fd37b"
+    },
+    {
+      "name": "attach_record",
+      "va": "0x49b7b0",
+      "size": 301,
+      "file_offset": 636848,
+      "sha256": "a0b7f35aef4b678bba51d895a91d7642dd3acd2930621a050e430c504f6fb618"
+    },
+    {
+      "name": "current_draw",
+      "va": "0xa26990",
+      "size": 904,
+      "file_offset": 6449552,
+      "sha256": "cac2d3f73a6a167333e4c9ce40f0d6e7df56f2d32dc97073842a6f591bed54e2"
+    },
+    {
+      "name": "releasewave_ended_tick",
+      "va": "0x5ce7a0",
+      "size": 49,
+      "file_offset": 1894304,
+      "sha256": "2265d8ecb40547e716ddb37d4fd5fb1edbd5f3935df3806ec665af772403b213"
+    },
+    {
+      "name": "set_rate",
+      "va": "0xa29c70",
+      "size": 32,
+      "file_offset": 6462576,
+      "sha256": "b55d11a83932a36323ca7a9c78681d34b93eccac1c74e838d2261ccc7e338684"
+    }
+  ],
+  "negative_percent_constant": {
+    "va": "0xDF053C",
+    "bytes": "0000c8c2",
+    "value": -100.0
+  },
+  "rea_evidence": [
+    {
+      "evidence_id": "ev_eb4d3736a0582b425f42d433493c70e1ca2b7cd272717881ded62b1bbfaee4c2",
+      "file": "060-ani-frame-advance.json"
+    }
+  ]
+}

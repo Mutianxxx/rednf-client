@@ -1,0 +1,1465 @@
+{
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "checks": [
+    {
+      "name": "source sha256",
+      "ok": true
+    },
+    {
+      "name": "004edf70-verified-qualification-body.bin",
+      "ok": true
+    },
+    {
+      "name": "004eabf0-verified-hit-message-send-body.bin",
+      "ok": true
+    },
+    {
+      "name": "008c39b0-verified-message13-receiver-block.bin",
+      "ok": true
+    },
+    {
+      "name": "004f8a30-verified-monster-received-hit-body.bin",
+      "ok": true
+    },
+    {
+      "name": "004b2e78-verified-hit-calc-hp-state-block.bin",
+      "ok": true
+    },
+    {
+      "name": "004af140-verified-absolute-hp-wrapper-block.bin",
+      "ok": true
+    },
+    {
+      "name": "004f58c0-verified-monster-absolute-hp-body.bin",
+      "ok": true
+    },
+    {
+      "name": "004b4e00-verified-active-absolute-hp-body.bin",
+      "ok": true
+    },
+    {
+      "name": "004ad960-verified-death-flag-body.bin",
+      "ok": true
+    },
+    {
+      "name": "004ac440-verified-death-state-choice-block.bin",
+      "ok": true
+    },
+    {
+      "name": "004af540-verified-reaction-state-choice-block.bin",
+      "ok": true
+    },
+    {
+      "name": "004bad60-verified-active-state-apply-body.bin",
+      "ok": true
+    },
+    {
+      "name": "004bc7d0-verified-active-state-tick-body.bin",
+      "ok": true
+    },
+    {
+      "name": "004bc798-verified-active-state-apply-table.bin",
+      "ok": true
+    },
+    {
+      "name": "004bdad0-verified-active-state-tick-table.bin",
+      "ok": true
+    },
+    {
+      "name": "008894b6-verified-mob-motion-parser-cases.bin",
+      "ok": true
+    },
+    {
+      "name": "008896d6-verified-mob-action-parser-cases.bin",
+      "ok": true
+    },
+    {
+      "name": "008898f0-verified-mob-lastaction-parser-case.bin",
+      "ok": true
+    },
+    {
+      "name": "00500bfa-verified-mob-runtime-motion-load.bin",
+      "ok": true
+    },
+    {
+      "name": "0050136f-verified-mob-runtime-wait-move-action-load.bin",
+      "ok": true
+    },
+    {
+      "name": "005015d7-verified-mob-runtime-reaction-action-load.bin",
+      "ok": true
+    },
+    {
+      "name": "00501c2d-verified-mob-runtime-lastaction-load.bin",
+      "ok": true
+    },
+    {
+      "name": "007447b0-verified-sit-motion-getter.bin",
+      "ok": true
+    },
+    {
+      "name": "007447d0-verified-waiting-action-getter.bin",
+      "ok": true
+    },
+    {
+      "name": "007447f0-verified-sit-action-getter.bin",
+      "ok": true
+    },
+    {
+      "name": "00744800-verified-damage-action-getter.bin",
+      "ok": true
+    },
+    {
+      "name": "00744820-verified-down-action-getter.bin",
+      "ok": true
+    },
+    {
+      "name": "00744830-verified-overturn-action-getter.bin",
+      "ok": true
+    },
+    {
+      "name": "004ac7c0-verified-reaction-motion-getters.bin",
+      "ok": true
+    },
+    {
+      "name": "00a2cfb0-verified-act-current-ani-getter.bin",
+      "ok": true
+    },
+    {
+      "name": "00830590-verified-path-directory-helper.bin",
+      "ok": true
+    },
+    {
+      "name": "00778880-verified-path-append-helper.bin",
+      "ok": true
+    },
+    {
+      "name": "00a3f0e0-verified-act-parser-base-directory-block.bin",
+      "ok": true
+    },
+    {
+      "name": "00a3f23b-verified-act-base-ani-parser-case.bin",
+      "ok": true
+    },
+    {
+      "name": "00a321b0-verified-act-base-ani-consumer-block.bin",
+      "ok": true
+    },
+    {
+      "name": "004936d0-verified-ani-full-path-constructor.bin",
+      "ok": true
+    },
+    {
+      "name": "004fe97e-verified-monster-state5-zero-payload-dispatch.bin",
+      "ok": true
+    },
+    {
+      "name": "004fc892-verified-monster-tick-state-dispatch.bin",
+      "ok": true
+    },
+    {
+      "name": "004fce68-verified-monster-tick-state-tables.bin",
+      "ok": true
+    },
+    {
+      "name": "004fcb2a-verified-monster-state5-tick-case.bin",
+      "ok": true
+    },
+    {
+      "name": "004fa1d0-verified-monster-slot654-protected-entry.bin",
+      "ok": true
+    },
+    {
+      "name": "013baa5f-verified-monster-slot654-protected-thunk.bin",
+      "ok": true
+    },
+    {
+      "name": "004fa222-verified-monster-slot654-visible-down-selection.bin",
+      "ok": true
+    },
+    {
+      "name": "00499120-verified-object-removal-request-body.bin",
+      "ok": true
+    },
+    {
+      "name": "008c4d73-verified-object-removal-message17-case.bin",
+      "ok": true
+    },
+    {
+      "name": "004efc80-verified-active-object-slot60-body.bin",
+      "ok": true
+    },
+    {
+      "name": "00498ec0-verified-object-field-initializer.bin",
+      "ok": true
+    },
+    {
+      "name": "00498e60-verified-object-color-mask-helper.bin",
+      "ok": true
+    },
+    {
+      "name": "00b099b0-verified-clamped-linear-interpolation.bin",
+      "ok": true
+    },
+    {
+      "name": "00a297b0-verified-ani-frame-scale-helper.bin",
+      "ok": true
+    },
+    {
+      "name": "008e49b0-verified-false-return-method.bin",
+      "ok": true
+    },
+    {
+      "name": "0049d0e0-verified-passive-hp-destroy-callback.bin",
+      "ok": true
+    },
+    {
+      "name": "0049d7d0-verified-passive-state-apply.bin",
+      "ok": true
+    },
+    {
+      "name": "0049d960-verified-passive-destroy-conditions.bin",
+      "ok": true
+    },
+    {
+      "name": "0049dc70-verified-passive-tick.bin",
+      "ok": true
+    },
+    {
+      "name": "0049f090-verified-passive-hp-state-vector-builder.bin",
+      "ok": true
+    },
+    {
+      "name": "0049f310-verified-passive-received-hit.bin",
+      "ok": true
+    },
+    {
+      "name": "00439070-verified-passive-hp-struct-getter.bin",
+      "ok": true
+    },
+    {
+      "name": "004391d0-verified-passive-hp-getters-setters.bin",
+      "ok": true
+    },
+    {
+      "name": "00884e51-verified-passive-hp-condition-parser-cases.bin",
+      "ok": true
+    },
+    {
+      "name": "0088505b-verified-passive-addobject-id-parser-case.bin",
+      "ok": true
+    },
+    {
+      "name": "0049fc6d-verified-passive-hp-template-consumer.bin",
+      "ok": true
+    },
+    {
+      "name": "004a0140-verified-passive-destroy-enum-list-copy.bin",
+      "ok": true
+    },
+    {
+      "name": "004a02ae-verified-passive-destroy-timer-copy.bin",
+      "ok": true
+    },
+    {
+      "name": "00884b16-verified-passive-lastaction-parser-case.bin",
+      "ok": true
+    },
+    {
+      "name": "0049f9c2-verified-passive-lastaction-preload-path-copy.bin",
+      "ok": true
+    },
+    {
+      "name": "00884c73-verified-passive-destroy-particle-parser-case.bin",
+      "ok": true
+    },
+    {
+      "name": "0049fd8e-verified-passive-destroy-particle-create.bin",
+      "ok": true
+    },
+    {
+      "name": "0049e840-verified-passive-removal-request.bin",
+      "ok": true
+    },
+    {
+      "name": "005e14e0-verified-passive-deactivation.bin",
+      "ok": true
+    },
+    {
+      "name": "00407bb0-verified-object-active-byte-getter.bin",
+      "ok": true
+    },
+    {
+      "name": "0050ca50-verified-world-inactive-cleanup.bin",
+      "ok": true
+    },
+    {
+      "name": "0050c6f0-verified-world-removal-notify-block.bin",
+      "ok": true
+    },
+    {
+      "name": "004a0840-verified-passive-removal-notification.bin",
+      "ok": true
+    },
+    {
+      "name": "004a3820-verified-lastaction-transient-constructor.bin",
+      "ok": true
+    },
+    {
+      "name": "0049f240-verified-transient-object-initializer.bin",
+      "ok": true
+    },
+    {
+      "name": "00407bf0-verified-default-act-assignment.bin",
+      "ok": true
+    },
+    {
+      "name": "004e9480-verified-common-act-switch-wrapper.bin",
+      "ok": true
+    },
+    {
+      "name": "00499f10-verified-current-act-assignment.bin",
+      "ok": true
+    },
+    {
+      "name": "0049d220-verified-transient-act-end-update.bin",
+      "ok": true
+    },
+    {
+      "name": "004a3440-verified-object-particle-creater-constructor.bin",
+      "ok": true
+    },
+    {
+      "name": "00437ad0-verified-scene-hp-struct-defaults.bin",
+      "ok": true
+    },
+    {
+      "name": "005e8500-verified-scene-factory-entry-dispatch.bin",
+      "ok": true
+    },
+    {
+      "name": "005e85f6-verified-scene-tree-grass-factory-cases.bin",
+      "ok": true
+    },
+    {
+      "name": "005e904d-verified-scene-mapobject-factory-case.bin",
+      "ok": true
+    },
+    {
+      "name": "005f1604-verified-scene-factory-low-id-tables.bin",
+      "ok": true
+    },
+    {
+      "name": "00490720-verified-scene-pooled-passive-constructor.bin",
+      "ok": true
+    },
+    {
+      "name": "00490830-verified-scene-mapobject-constructor.bin",
+      "ok": true
+    },
+    {
+      "name": "005c8660-verified-scene-cutablegrass-constructor.bin",
+      "ok": true
+    },
+    {
+      "name": "005e70c0-verified-scene-actiontree-constructor.bin",
+      "ok": true
+    },
+    {
+      "name": "004a0da0-verified-scene-id-resource-resolution.bin",
+      "ok": true
+    },
+    {
+      "name": "00884d12-verified-scene-int-string-data-parser.bin",
+      "ok": true
+    },
+    {
+      "name": "0049fc38-verified-scene-int-string-data-copy.bin",
+      "ok": true
+    },
+    {
+      "name": "0049f610-verified-scene-pass-type-copy.bin",
+      "ok": true
+    },
+    {
+      "name": "008848fe-verified-scene-pass-type-values.bin",
+      "ok": true
+    },
+    {
+      "name": "005f6640-verified-scene-mapobject-data-init.bin",
+      "ok": true
+    },
+    {
+      "name": "005f5fb0-verified-scene-mapobject-hit.bin",
+      "ok": true
+    },
+    {
+      "name": "005f5b40-verified-scene-mapobject-hp-event.bin",
+      "ok": true
+    },
+    {
+      "name": "005f5ae0-verified-scene-mapobject-counter-selector.bin",
+      "ok": true
+    },
+    {
+      "name": "005f5e80-verified-scene-mapobject-destroy-event.bin",
+      "ok": true
+    },
+    {
+      "name": "005f6c42-verified-scene-mapobject-reaction-end-restore.bin",
+      "ok": true
+    },
+    {
+      "name": "005f7700-verified-scene-mapobject-state-apply.bin",
+      "ok": true
+    },
+    {
+      "name": "005f5ca0-verified-scene-mapobject-remove-notify.bin",
+      "ok": true
+    },
+    {
+      "name": "005f7750-verified-scene-mapobject-counter-trigger.bin",
+      "ok": true
+    },
+    {
+      "name": "0060c650-verified-scene-actiontree-extra-dispatch.bin",
+      "ok": true
+    },
+    {
+      "name": "005f3130-verified-scene-grass-defaults.bin",
+      "ok": true
+    },
+    {
+      "name": "005f3770-verified-scene-grass-data-init.bin",
+      "ok": true
+    },
+    {
+      "name": "005c86f0-verified-scene-grass-count-increment.bin",
+      "ok": true
+    },
+    {
+      "name": "005f32e0-verified-scene-grass-damage-ani-select.bin",
+      "ok": true
+    },
+    {
+      "name": "005f3300-verified-scene-grass-bend-ani-select.bin",
+      "ok": true
+    },
+    {
+      "name": "005f33c0-verified-scene-grass-hit.bin",
+      "ok": true
+    },
+    {
+      "name": "005f3500-verified-scene-grass-controller.bin",
+      "ok": true
+    },
+    {
+      "name": "005f3b00-verified-scene-grass-remove-notify.bin",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+22C",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+234",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+238",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+23C",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+240",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+260",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+2F8",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+36C",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+370",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+374",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+378",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+37C",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+390",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+398",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+39C",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+3A0",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+3A4",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+3D8",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+3DC",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+3E0",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+3E4",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+3E8",
+      "ok": true
+    },
+    {
+      "name": "monster vtable+3EC",
+      "ok": true
+    },
+    {
+      "name": "death monster vtable+38",
+      "ok": true
+    },
+    {
+      "name": "death monster vtable+60",
+      "ok": true
+    },
+    {
+      "name": "death monster vtable+164",
+      "ok": true
+    },
+    {
+      "name": "death monster vtable+188",
+      "ok": true
+    },
+    {
+      "name": "death monster vtable+3C4",
+      "ok": true
+    },
+    {
+      "name": "death monster vtable+5A0",
+      "ok": true
+    },
+    {
+      "name": "death monster vtable+5D0",
+      "ok": true
+    },
+    {
+      "name": "death monster vtable+654",
+      "ok": true
+    },
+    {
+      "name": "rel32 4F9AC2->4B28D0",
+      "ok": true
+    },
+    {
+      "name": "rel32 4F59DD->4B4E00",
+      "ok": true
+    },
+    {
+      "name": "rel32 4FEBA0->4BAD60",
+      "ok": true
+    },
+    {
+      "name": "rel32 500D5B->472A60",
+      "ok": true
+    },
+    {
+      "name": "rel32 501C99->4A3900",
+      "ok": true
+    },
+    {
+      "name": "rel32 A3F151->830590",
+      "ok": true
+    },
+    {
+      "name": "rel32 A3F267->8304E0",
+      "ok": true
+    },
+    {
+      "name": "rel32 A3F286->778880",
+      "ok": true
+    },
+    {
+      "name": "rel32 A32229->4936D0",
+      "ok": true
+    },
+    {
+      "name": "rel32 A32238->4936D0",
+      "ok": true
+    },
+    {
+      "name": "rel32 4937D7->A29AD0",
+      "ok": true
+    },
+    {
+      "name": "message 0x13 (=19) case",
+      "ok": true
+    },
+    {
+      "name": "message 0x17 (=23) case",
+      "ok": true
+    },
+    {
+      "name": "monster death tick case remap",
+      "ok": true
+    },
+    {
+      "name": "Monster slot38 false stub",
+      "ok": true
+    },
+    {
+      "name": "Monster slot5D0 ret stub",
+      "ok": true
+    },
+    {
+      "name": "slot654 protected entry jump",
+      "ok": true
+    },
+    {
+      "name": "slot654 shared protection thunk",
+      "ok": true
+    },
+    {
+      "name": "removal message begin opcode",
+      "ok": true
+    },
+    {
+      "name": "removal request pending flag",
+      "ok": true
+    },
+    {
+      "name": "removal receiver resolve",
+      "ok": true
+    },
+    {
+      "name": "death ANI frame scale call",
+      "ok": true
+    },
+    {
+      "name": "death scale threshold f32",
+      "ok": true
+    },
+    {
+      "name": "AuraMaster RTTI",
+      "ok": true
+    },
+    {
+      "name": "apply-state switch",
+      "ok": true
+    },
+    {
+      "name": "tick-state switch",
+      "ok": true
+    },
+    {
+      "name": "geometry epsilon 2^-23",
+      "ok": true
+    },
+    {
+      "name": "literal [waiting motion]",
+      "ok": true
+    },
+    {
+      "name": "literal [sit motion]",
+      "ok": true
+    },
+    {
+      "name": "literal [damage motion 1]",
+      "ok": true
+    },
+    {
+      "name": "literal [damage motion 2]",
+      "ok": true
+    },
+    {
+      "name": "literal [down motion]",
+      "ok": true
+    },
+    {
+      "name": "literal [overturn motion]",
+      "ok": true
+    },
+    {
+      "name": "literal [waiting action]",
+      "ok": true
+    },
+    {
+      "name": "literal [sit action]",
+      "ok": true
+    },
+    {
+      "name": "literal [damage action 1]",
+      "ok": true
+    },
+    {
+      "name": "literal [damage action 2]",
+      "ok": true
+    },
+    {
+      "name": "literal [down action]",
+      "ok": true
+    },
+    {
+      "name": "literal [overturn action]",
+      "ok": true
+    },
+    {
+      "name": "literal [last action]",
+      "ok": true
+    },
+    {
+      "name": "BASE ANI literal",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+60",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+64",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+15C",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+164",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+188",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+22C",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+234",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+238",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+260",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+28C",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+290",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+2F8",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+33C",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+348",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+35C",
+      "ok": true
+    },
+    {
+      "name": "passive vtable+360",
+      "ok": true
+    },
+    {
+      "name": "lastaction transient vtable+20",
+      "ok": true
+    },
+    {
+      "name": "lastaction transient vtable+60",
+      "ok": true
+    },
+    {
+      "name": "lastaction transient vtable+70",
+      "ok": true
+    },
+    {
+      "name": "lastaction transient vtable+100",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 49E862->499120",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 49F3F5->49F090",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 49D884->50B820",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 49DAA1->4E9EA0",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 4A0B0E->4E9EA0",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 4A08DC->4A3900",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 4A08F1->4A3900",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 4A0935->4A3820",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 4A095E->50DD70",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 4A385F->49F240",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 4E948B->499F10",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 4A0A6A->50E060",
+      "ok": true
+    },
+    {
+      "name": "scene rel32 49FDE8->4A3440",
+      "ok": true
+    },
+    {
+      "name": "scene HP subtraction",
+      "ok": true
+    },
+    {
+      "name": "scene state1 HP write",
+      "ok": true
+    },
+    {
+      "name": "scene HP destroy flag write",
+      "ok": true
+    },
+    {
+      "name": "scene HP destroy callback removal",
+      "ok": true
+    },
+    {
+      "name": "scene world active flag virtual read",
+      "ok": true
+    },
+    {
+      "name": "scene world self notification arguments",
+      "ok": true
+    },
+    {
+      "name": "scene timer strict greater branch",
+      "ok": true
+    },
+    {
+      "name": "scene transient marks end flag",
+      "ok": true
+    },
+    {
+      "name": "scene clock kernel32 GetTickCount",
+      "ok": true
+    },
+    {
+      "name": "scene literal [hp max]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [hp destroy]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [object destroy condition]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [destroy condition]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [destroy action]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [destroy particle]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [on end of animation]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [z pos equal zero]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [time limite]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [not destroy and z pos equal zero]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [only destroy]",
+      "ok": true
+    },
+    {
+      "name": "scene literal [object create after destroy]",
+      "ok": true
+    },
+    {
+      "name": "scene RTTI .?AVCNRDPassiveObject@@",
+      "ok": true
+    },
+    {
+      "name": "scene RTTI .?AVCNRDPooledObjectAddAction@@",
+      "ok": true
+    },
+    {
+      "name": "scene RTTI .?AVCNRDObjectParticleCreater@@",
+      "ok": true
+    },
+    {
+      "name": "scene PVF archive identity",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/barrel.obj",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/actiontree2lorien.obj",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/smallgrasslorien.obj",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/actionobject/breakableobject/telephone.obj",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrel.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/particle/barreldestroy.ptl",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/actiontree/lorien/actiontree2-0.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/actiontree/lorien/actiontree2-1.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/particle/actiontreeloriendamage.ptl",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/smallgrasslorien.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/smallgrassdestroylorien.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/smallgrassleftlorien.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/smallgrassrightlorien.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/particle/grassdestroy.ptl",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/actionobject/breakableobject/action/telephone.act",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/actionobject/breakableobject/particle/telephonedestroy.ptl",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle01.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle02.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle03.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle04.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle05.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle06.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle07.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle08.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle09.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle10.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle11.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/barrelparticle12.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/actiontree/lorien/actiontreeparticle1.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/actiontree/lorien/actiontreeparticle2.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle01.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle02.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle03.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle04.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle05.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle06.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle07.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle08.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle09.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/mapobject/breakableobject/animation/grassparticle10.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/actionobject/breakableobject/animation/telephone.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/actionobject/breakableobject/particle/telephonedestroy2.ptl",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/actionobject/breakableobject/animation/telephoneparticle1.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/actionobject/breakableobject/animation/telephoneparticle2.ani",
+      "ok": true
+    },
+    {
+      "name": "scene resource passiveobject/actionobject/breakableobject/animation/telephoneparticle3.ani",
+      "ok": true
+    },
+    {
+      "name": "telephone commented last action excluded",
+      "ok": true
+    },
+    {
+      "name": "scene REA identity 0x49D960",
+      "ok": true
+    },
+    {
+      "name": "scene REA identity 0x49D0E0",
+      "ok": true
+    },
+    {
+      "name": "scene REA identity 0x4A0840",
+      "ok": true
+    },
+    {
+      "name": "scene specialized RTTI .?AVCNMapObject@@",
+      "ok": true
+    },
+    {
+      "name": "scene specialized RTTI .?AVCNActionTree@@",
+      "ok": true
+    },
+    {
+      "name": "scene specialized RTTI .?AVCNCutableGrass@@",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableCCC88C+260",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableCCC88C+348",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableCCC88C+188",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableCCC88C+22C",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableCCC88C+15C",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableCCC88C+164",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableCCC88C+388",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableCCC88C+38C",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableD4D26C+260",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableD4D26C+348",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableD4D26C+188",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableD4D26C+22C",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableD4D26C+15C",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableD4D26C+164",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableD4D26C+388",
+      "ok": true
+    },
+    {
+      "name": "scene specialized vtableD4D26C+38C",
+      "ok": true
+    },
+    {
+      "name": "scene grass vtable+260",
+      "ok": true
+    },
+    {
+      "name": "scene grass vtable+188",
+      "ok": true
+    },
+    {
+      "name": "scene grass vtable+15C",
+      "ok": true
+    },
+    {
+      "name": "scene grass vtable+374",
+      "ok": true
+    },
+    {
+      "name": "scene grass vtable+378",
+      "ok": true
+    },
+    {
+      "name": "scene factory ID221",
+      "ok": true
+    },
+    {
+      "name": "scene factory ID224",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325E8618->5E70C0",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325E86AB->5C8660",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325E9073->490830",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel324908FA->5F6640",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325C86CA->5F3770",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel324A0DEA->49F4D0",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel3249FC45->507940",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel3249FC57->4392E0",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325F60ED->49F310",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325F5B5C->49D0E0",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325F33ED->49F310",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325F3520->49DC70",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325F5CAB->4A0840",
+      "ok": true
+    },
+    {
+      "name": "scene specialized rel325F3B24->4A0840",
+      "ok": true
+    },
+    {
+      "name": "scene specialized literal [int data]",
+      "ok": true
+    },
+    {
+      "name": "scene specialized literal [string data]",
+      "ok": true
+    },
+    {
+      "name": "scene specialized literal [pass all]",
+      "ok": true
+    },
+    {
+      "name": "scene specialized literal [do not pass]",
+      "ok": true
+    },
+    {
+      "name": "scene specialized HP from int6 slot35C",
+      "ok": true
+    },
+    {
+      "name": "scene specialized maxHP from int6 slot360",
+      "ok": true
+    },
+    {
+      "name": "scene specialized counter native increment",
+      "ok": true
+    },
+    {
+      "name": "scene specialized counter HP reset",
+      "ok": true
+    },
+    {
+      "name": "scene specialized counter etc0 ANI selection",
+      "ok": true
+    },
+    {
+      "name": "scene specialized reaction etc1 flag",
+      "ok": true
+    },
+    {
+      "name": "scene specialized reaction end exact flag",
+      "ok": true
+    },
+    {
+      "name": "scene specialized grass independent count method",
+      "ok": true
+    },
+    {
+      "name": "scene specialized grass direct accepted contact",
+      "ok": true
+    },
+    {
+      "name": "scene specialized default HP and maxHP zero",
+      "ok": true
+    },
+    {
+      "name": "scene specialized state1 absolute HP payload1",
+      "ok": true
+    },
+    {
+      "name": "scene specialized state1 after HP write callback",
+      "ok": true
+    },
+    {
+      "name": "scene specialized REA 0x5F6640",
+      "ok": true
+    },
+    {
+      "name": "scene specialized REA 0x5F5FB0",
+      "ok": true
+    },
+    {
+      "name": "scene specialized REA 0x5F5B40",
+      "ok": true
+    },
+    {
+      "name": "scene specialized REA 0x5F3500",
+      "ok": true
+    },
+    {
+      "name": "scene model current PVF config221",
+      "ok": true
+    },
+    {
+      "name": "scene model current PVF config224",
+      "ok": true
+    },
+    {
+      "name": "scene model current PVF config244",
+      "ok": true
+    },
+    {
+      "name": "scene model explicit native input traces",
+      "ok": true
+    },
+    {
+      "name": "scene model marked etcANI1 selected",
+      "ok": true
+    },
+    {
+      "name": "scene model explicit end restores basic only when marked",
+      "ok": true
+    },
+    {
+      "name": "scene model does not confuse contact and HP inputs",
+      "ok": true
+    },
+    {
+      "name": "scene loader current tree binding",
+      "ok": true
+    },
+    {
+      "name": "scene loader current grass binding",
+      "ok": true
+    },
+    {
+      "name": "scene loader sample applies explicit HP event",
+      "ok": true
+    },
+    {
+      "name": "scene loader refuses geometric overlap event",
+      "ok": true
+    }
+  ],
+  "total": 364,
+  "passed": 364,
+  "failed": [],
+  "scope": "Static byte/anchor verification, not native runtime execution or formula/visual validation."
+}

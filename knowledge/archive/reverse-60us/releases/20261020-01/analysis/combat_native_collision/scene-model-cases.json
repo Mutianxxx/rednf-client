@@ -1,0 +1,390 @@
+{
+  "schema": "60us-scene-counter-native-input-traces-v1",
+  "scope": "Deterministic source-derived model fixtures; no original-client execution or PTL simulation.",
+  "traces": [
+    {
+      "case": "barrel explicit HP zero then actual removal",
+      "state": {
+        "config": {
+          "object_id": 221,
+          "kind": "mapobject",
+          "source_path": "passiveobject/mapobject/breakableobject/barrel.obj",
+          "source_sha256": "1fb98430a10562d30460314e2f150b27d38299fdac302cb294c46662f96f96f7",
+          "ints": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            30,
+            1
+          ],
+          "strings": [
+            "",
+            "",
+            "Particle/BarrelDestroy.ptl",
+            "",
+            "WOOD_HIT",
+            "WOOD_CRASH"
+          ],
+          "basic": "Animation/Barrel.ani",
+          "etc": [],
+          "pass_all": false,
+          "hp_destroy": false
+        },
+        "local_authority": true,
+        "xyz": [
+          100,
+          200,
+          0
+        ],
+        "hp": 1,
+        "max_hp": 1,
+        "count": 1,
+        "current_ani": "passiveobject/mapobject/breakableobject/animation/barrel.ani",
+        "restore_basic_on_end": false,
+        "bend_enabled": false,
+        "bend_direction": 4,
+        "active": false
+      },
+      "events": [
+        {
+          "kind": "sound_request",
+          "native_site": "0x5F60D8",
+          "name": "WOOD_HIT"
+        },
+        {
+          "kind": "native_hp_written",
+          "native_site": "0x49D832",
+          "new_absolute_hp": 0
+        },
+        {
+          "kind": "counter_increment",
+          "native_site": "0x5F5B7E",
+          "count": 1
+        },
+        {
+          "kind": "counter_trigger",
+          "native_site": "0x5F5AF7",
+          "slot394": "0x5F7750",
+          "auxiliary_outputs": "Not synthesized; selected initial vectors are empty"
+        },
+        {
+          "kind": "hp_reset_to_max",
+          "native_site": "0x5F5B9C",
+          "absolute_hp": 1
+        },
+        {
+          "kind": "particle_dispatch",
+          "native_site": "0x5F5F29",
+          "raw_path": "Particle/BarrelDestroy.ptl",
+          "report_resolved_path": "passiveobject/mapobject/breakableobject/particle/barreldestroy.ptl",
+          "xyz": [
+            100,
+            200,
+            30
+          ],
+          "internal_simulation_recovered": false
+        },
+        {
+          "kind": "sound_request",
+          "native_site": "0x5F5F75",
+          "name": "WOOD_CRASH"
+        },
+        {
+          "kind": "removal_request",
+          "native_site": "0x5F5F8C",
+          "argument": 0,
+          "actual_removal_applied": false
+        },
+        {
+          "kind": "native_removed",
+          "native_site": "0x5F3B00 / 0x5F5CA0",
+          "generic_last_action_contract": "scene-destruction-contract.json"
+        }
+      ]
+    },
+    {
+      "case": "tree counter cap and no inferred ANI restoration",
+      "state": {
+        "config": {
+          "object_id": 224,
+          "kind": "actiontree",
+          "source_path": "passiveobject/mapobject/breakableobject/actiontree2lorien.obj",
+          "source_sha256": "3dcd30d75c4fbe1412d0395fca160a8170863e633118f10a9edf83c0e2406870",
+          "ints": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            100,
+            1
+          ],
+          "strings": [
+            "",
+            "Particle/ActionTreeLorienDamage.ptl",
+            "",
+            "",
+            "TREE_SHAKE",
+            ""
+          ],
+          "basic": "Animation/ActionTree/Lorien/ActionTree2-0.ani",
+          "etc": [
+            "Animation/ActionTree/Lorien/ActionTree2-1.ani"
+          ],
+          "pass_all": false,
+          "hp_destroy": false
+        },
+        "local_authority": true,
+        "xyz": [
+          0,
+          0,
+          0
+        ],
+        "hp": 0,
+        "max_hp": 1,
+        "count": 2,
+        "current_ani": "passiveobject/mapobject/breakableobject/animation/actiontree/lorien/actiontree2-1.ani",
+        "restore_basic_on_end": false,
+        "bend_enabled": false,
+        "bend_direction": 4,
+        "active": true
+      },
+      "events": [
+        {
+          "kind": "native_hp_written",
+          "native_site": "0x49D832",
+          "new_absolute_hp": 0
+        },
+        {
+          "kind": "counter_increment",
+          "native_site": "0x5F5B7E",
+          "count": 1
+        },
+        {
+          "kind": "counter_trigger",
+          "native_site": "0x5F5AF7",
+          "slot394": "0x60C660 -> 0x5F7750",
+          "auxiliary_outputs": "Not synthesized; selected initial vectors are empty"
+        },
+        {
+          "kind": "select_ani",
+          "native_site": "0x5F5B25",
+          "path": "passiveobject/mapobject/breakableobject/animation/actiontree/lorien/actiontree2-1.ani",
+          "reset": false
+        },
+        {
+          "kind": "hp_reset_to_max",
+          "native_site": "0x5F5B9C",
+          "absolute_hp": 1
+        },
+        {
+          "kind": "native_hp_written",
+          "native_site": "0x49D832",
+          "new_absolute_hp": 0
+        },
+        {
+          "kind": "counter_increment",
+          "native_site": "0x5F5B7E",
+          "count": 2
+        },
+        {
+          "kind": "hp_reset_to_max",
+          "native_site": "0x5F5B9C",
+          "absolute_hp": 1
+        },
+        {
+          "kind": "native_hp_written",
+          "native_site": "0x49D832",
+          "new_absolute_hp": 0
+        }
+      ]
+    },
+    {
+      "case": "grass two explicit contacts; ANI end does not remove; PTL Z is absolute int0",
+      "state": {
+        "config": {
+          "object_id": 244,
+          "kind": "grass",
+          "source_path": "passiveobject/mapobject/breakableobject/smallgrasslorien.obj",
+          "source_sha256": "6b77948c9c833b246a84e28dfe5daaea67fe2e1312ceaf86d512bf0a38485050",
+          "ints": [
+            32,
+            1
+          ],
+          "strings": [
+            "Particle/GrassDestroy.ptl"
+          ],
+          "basic": "Animation/SmallGrassLorien.ani",
+          "etc": [
+            "Animation/SmallGrassDestroyLorien.ani",
+            "Animation/SmallGrassLeftLorien.ani",
+            "Animation/SmallGrassRightLorien.ani"
+          ],
+          "pass_all": true,
+          "hp_destroy": false
+        },
+        "local_authority": true,
+        "xyz": [
+          100,
+          200,
+          50
+        ],
+        "hp": 0,
+        "max_hp": 0,
+        "count": 2,
+        "current_ani": "passiveobject/mapobject/breakableobject/animation/smallgrassdestroylorien.ani",
+        "restore_basic_on_end": false,
+        "bend_enabled": false,
+        "bend_direction": 0,
+        "active": false
+      },
+      "events": [
+        {
+          "kind": "select_ani",
+          "native_site": "0x5F332E / 0x5F334F",
+          "path": "passiveobject/mapobject/breakableobject/animation/smallgrassleftlorien.ani",
+          "reset": true
+        },
+        {
+          "kind": "counter_increment",
+          "native_site": "0x5C86F0",
+          "count": 1
+        },
+        {
+          "kind": "select_ani",
+          "native_site": "0x5F32EB",
+          "path": "passiveobject/mapobject/breakableobject/animation/smallgrassdestroylorien.ani",
+          "reset": false
+        },
+        {
+          "kind": "particle_dispatch",
+          "native_site": "0x5F34AD / 0x5F3BC3",
+          "raw_path": "Particle/GrassDestroy.ptl",
+          "report_resolved_path": "passiveobject/mapobject/breakableobject/particle/grassdestroy.ptl",
+          "xyz": [
+            100,
+            200,
+            32
+          ],
+          "internal_simulation_recovered": false
+        },
+        {
+          "kind": "counter_increment",
+          "native_site": "0x5C86F0",
+          "count": 2
+        },
+        {
+          "kind": "removal_request",
+          "native_site": "0x5F3426",
+          "argument": 1,
+          "actual_removal_applied": false
+        },
+        {
+          "kind": "particle_dispatch",
+          "native_site": "0x5F34AD / 0x5F3BC3",
+          "raw_path": "Particle/GrassDestroy.ptl",
+          "report_resolved_path": "passiveobject/mapobject/breakableobject/particle/grassdestroy.ptl",
+          "xyz": [
+            100,
+            200,
+            32
+          ],
+          "internal_simulation_recovered": false
+        },
+        {
+          "kind": "native_removed",
+          "native_site": "0x5F3B00 / 0x5F5CA0",
+          "generic_last_action_contract": "scene-destruction-contract.json"
+        }
+      ]
+    },
+    {
+      "case": "remote barrel visual dispatch without local removal request",
+      "state": {
+        "config": {
+          "object_id": 221,
+          "kind": "mapobject",
+          "source_path": "passiveobject/mapobject/breakableobject/barrel.obj",
+          "source_sha256": "1fb98430a10562d30460314e2f150b27d38299fdac302cb294c46662f96f96f7",
+          "ints": [
+            1,
+            1,
+            1,
+            0,
+            0,
+            30,
+            1
+          ],
+          "strings": [
+            "",
+            "",
+            "Particle/BarrelDestroy.ptl",
+            "",
+            "WOOD_HIT",
+            "WOOD_CRASH"
+          ],
+          "basic": "Animation/Barrel.ani",
+          "etc": [],
+          "pass_all": false,
+          "hp_destroy": false
+        },
+        "local_authority": false,
+        "xyz": [
+          0,
+          0,
+          0
+        ],
+        "hp": 1,
+        "max_hp": 1,
+        "count": 1,
+        "current_ani": "passiveobject/mapobject/breakableobject/animation/barrel.ani",
+        "restore_basic_on_end": false,
+        "bend_enabled": false,
+        "bend_direction": 4,
+        "active": true
+      },
+      "events": [
+        {
+          "kind": "native_hp_written",
+          "native_site": "0x49D832",
+          "new_absolute_hp": 0
+        },
+        {
+          "kind": "counter_increment",
+          "native_site": "0x5F5B7E",
+          "count": 1
+        },
+        {
+          "kind": "counter_trigger",
+          "native_site": "0x5F5AF7",
+          "slot394": "0x5F7750",
+          "auxiliary_outputs": "Not synthesized; selected initial vectors are empty"
+        },
+        {
+          "kind": "hp_reset_to_max",
+          "native_site": "0x5F5B9C",
+          "absolute_hp": 1
+        },
+        {
+          "kind": "particle_dispatch",
+          "native_site": "0x5F5F29",
+          "raw_path": "Particle/BarrelDestroy.ptl",
+          "report_resolved_path": "passiveobject/mapobject/breakableobject/particle/barreldestroy.ptl",
+          "xyz": [
+            0,
+            0,
+            30
+          ],
+          "internal_simulation_recovered": false
+        },
+        {
+          "kind": "sound_request",
+          "native_site": "0x5F5F75",
+          "name": "WOOD_CRASH"
+        }
+      ]
+    }
+  ]
+}

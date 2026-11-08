@@ -1,0 +1,1619 @@
+{
+  "source_pvf": {
+    "path": "D:\\dnf\\60US\\DFO\\Script.pvf",
+    "size": 140179584,
+    "sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "header": {
+      "guid": "13ff9a94-0204-0410-845a-ceeffe637190",
+      "version": 71295,
+      "tree_size": 7566568,
+      "tree_crc": "51647fbe",
+      "entry_count": 99501,
+      "key": "00000000",
+      "data_base": 7566624,
+      "tree_crc_verified": true,
+      "parsed_tree_bytes": 7566567,
+      "tree_padding_hex": "00"
+    }
+  },
+  "matching_resource_count": 33,
+  "resources": [
+    {
+      "path": "equipment/character/swordman/weapon/beamsword/beamswdc2/hardattack.ani",
+      "source": {
+        "file_number": 172091474,
+        "path": "equipment/character/swordman/weapon/beamsword/beamswdc2/hardattack.ani",
+        "size": 5201,
+        "crc": "1ad9bd0e",
+        "relative_offset": 5385368,
+        "absolute_offset": 12951992,
+        "sha256": "ff3ebbaf273704af29121cea78720ae328f98619478a8f6bc8bcc79948f0ecdd",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/sayoungc/hardattack.ani",
+      "source": {
+        "file_number": 288800271,
+        "path": "equipment/character/swordman/weapon/katana/sayoungc/hardattack.ani",
+        "size": 5156,
+        "crc": "e949778d",
+        "relative_offset": 8545764,
+        "absolute_offset": 16112388,
+        "sha256": "e29079e4e0fffa7953520121060a25a50c0e5c5ba72998dd5298d25ea0d5ca0d",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              11,
+              -35,
+              -13,
+              213,
+              70,
+              170
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              42,
+              -30,
+              -12,
+              169,
+              60,
+              152
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              40,
+              -25,
+              -15,
+              173,
+              50,
+              128
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              48,
+              -20,
+              -1,
+              168,
+              40,
+              90
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/club/clubc/hardattack.ani",
+      "source": {
+        "file_number": 436101253,
+        "path": "equipment/character/swordman/weapon/club/clubc/hardattack.ani",
+        "size": 5077,
+        "crc": "8fe4f140",
+        "relative_offset": 13878804,
+        "absolute_offset": 21445428,
+        "sha256": "9fc7e9471a2888841890586211439daa0f95164a9a5eed47030d5deca7f1a3ef",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/beamsword/beamswdb2/hardattack.ani",
+      "source": {
+        "file_number": 472630833,
+        "path": "equipment/character/swordman/weapon/beamsword/beamswdb2/hardattack.ani",
+        "size": 5066,
+        "crc": "a1990e60",
+        "relative_offset": 14891888,
+        "absolute_offset": 22458512,
+        "sha256": "ff60444e7c8207172072e684d1031e5748a67aec0b87b2605c27036661ccae98",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/bantuc/hardattack.ani",
+      "source": {
+        "file_number": 509576085,
+        "path": "equipment/character/swordman/weapon/ssword/bantuc/hardattack.ani",
+        "size": 5113,
+        "crc": "9adde097",
+        "relative_offset": 17608208,
+        "absolute_offset": 25174832,
+        "sha256": "c663ff18048e9ebc81632123330b97c769899cff1874da4188ecddd76987a74b",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/sasakib/hardattack.ani",
+      "source": {
+        "file_number": 556391460,
+        "path": "equipment/character/swordman/weapon/katana/sasakib/hardattack.ani",
+        "size": 5014,
+        "crc": "54ed8e2f",
+        "relative_offset": 18813896,
+        "absolute_offset": 26380520,
+        "sha256": "44f47e60634e5f499d82de44611c5045f03683c95964f6472b1cc530f7043491",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": [
+        {
+          "kind": "frame_count_mismatch",
+          "declared": [
+            [
+              19
+            ]
+          ],
+          "parsed": 18
+        }
+      ]
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/lgswdb/hardattack.ani",
+      "source": {
+        "file_number": 745095515,
+        "path": "equipment/character/swordman/weapon/ssword/lgswdb/hardattack.ani",
+        "size": 4976,
+        "crc": "eefa63ce",
+        "relative_offset": 23889224,
+        "absolute_offset": 31455848,
+        "sha256": "062c1e057982be3ffaa348d376819fb09b87e64ad493d83509d24b6fb357c055",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/sswdb/hardattack.ani",
+      "source": {
+        "file_number": 1079319035,
+        "path": "equipment/character/swordman/weapon/ssword/sswdb/hardattack.ani",
+        "size": 4940,
+        "crc": "8d0d0af7",
+        "relative_offset": 32996528,
+        "absolute_offset": 40563152,
+        "sha256": "5973f8f6721494121477d38393f3e42fbe12a48d36ce160e8814c674e0a6c7b3",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/hsword/mswdc/hardattack.ani",
+      "source": {
+        "file_number": 1345135563,
+        "path": "equipment/character/swordman/weapon/hsword/mswdc/hardattack.ani",
+        "size": 5075,
+        "crc": "8f7020b8",
+        "relative_offset": 41575992,
+        "absolute_offset": 49142616,
+        "sha256": "24b27ccc26ddc9a6b1a374d5031a0d1f95db59ad3dbef04b84f363daa7b88678",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/katanac/hardattack.ani",
+      "source": {
+        "file_number": 1698817113,
+        "path": "equipment/character/swordman/weapon/katana/katanac/hardattack.ani",
+        "size": 5149,
+        "crc": "41af83ca",
+        "relative_offset": 55571540,
+        "absolute_offset": 63138164,
+        "sha256": "039799e4174e51089bff7837a3f37de00cf0d191e0560fc6a035daa7cbc2cade",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/gemswdc/hardattack.ani",
+      "source": {
+        "file_number": 1752920354,
+        "path": "equipment/character/swordman/weapon/ssword/gemswdc/hardattack.ani",
+        "size": 5147,
+        "crc": "ff10e193",
+        "relative_offset": 57044668,
+        "absolute_offset": 64611292,
+        "sha256": "d7aebc540cf7aa4a3baa06d50ee85939e7390d610812c1bc7abf5cc4b76243c9",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/hsword/lswdb/hardattack.ani",
+      "source": {
+        "file_number": 1816545097,
+        "path": "equipment/character/swordman/weapon/hsword/lswdb/hardattack.ani",
+        "size": 4942,
+        "crc": "7350d827",
+        "relative_offset": 58678628,
+        "absolute_offset": 66245252,
+        "sha256": "78b5a3e921972d1ede7a66a86a72f3a128f6edea8e1138610c4b2d8da117ea6f",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/bswdc/hardattack.ani",
+      "source": {
+        "file_number": 1901222251,
+        "path": "equipment/character/swordman/weapon/ssword/bswdc/hardattack.ani",
+        "size": 5129,
+        "crc": "8e94c930",
+        "relative_offset": 61094080,
+        "absolute_offset": 68660704,
+        "sha256": "018ad2142e1b40e2349b2d7dd8e60831194b9fd678f20d1e873232a29f6de986",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/beamsword/beamswdc1/hardattack.ani",
+      "source": {
+        "file_number": 2003306065,
+        "path": "equipment/character/swordman/weapon/beamsword/beamswdc1/hardattack.ani",
+        "size": 5192,
+        "crc": "8c42954e",
+        "relative_offset": 66579620,
+        "absolute_offset": 74146244,
+        "sha256": "41afe4b157e2020df9bf56a2d6abfde41376f48755928581e2d87368926b42e7",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/sayoungb/hardattack.ani",
+      "source": {
+        "file_number": 2120014862,
+        "path": "equipment/character/swordman/weapon/katana/sayoungb/hardattack.ani",
+        "size": 5014,
+        "crc": "8e0e7685",
+        "relative_offset": 69649472,
+        "absolute_offset": 77216096,
+        "sha256": "a94dfcb504849a2dea94282091b92dc004356d94831960001143e37a98a4d127",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/club/clubb/hardattack.ani",
+      "source": {
+        "file_number": 2267315844,
+        "path": "equipment/character/swordman/weapon/club/clubb/hardattack.ani",
+        "size": 4942,
+        "crc": "0236a919",
+        "relative_offset": 73638184,
+        "absolute_offset": 81204808,
+        "sha256": "e8bedee716ad3da256ebfdbed4e74d124ff2b30b5418b9dea505aaadce31df0b",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/lkatanac/hardattack.ani",
+      "source": {
+        "file_number": 2289183365,
+        "path": "equipment/character/swordman/weapon/katana/lkatanac/hardattack.ani",
+        "size": 5185,
+        "crc": "f623262a",
+        "relative_offset": 74248912,
+        "absolute_offset": 81815536,
+        "sha256": "ff2338d57ae5ce7c7d5d185df4bf40ed899072357a2abcdb8419d184aff615e3",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/beamsword/beamswdb1/hardattack.ani",
+      "source": {
+        "file_number": 2303845424,
+        "path": "equipment/character/swordman/weapon/beamsword/beamswdb1/hardattack.ani",
+        "size": 5192,
+        "crc": "ff3b062b",
+        "relative_offset": 74646468,
+        "absolute_offset": 82213092,
+        "sha256": "71dbd44890b46afcea5e86b70c2665fdc8400f3522aad1ae37f76859b9f7d6b6",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/bantub/hardattack.ani",
+      "source": {
+        "file_number": 2340790676,
+        "path": "equipment/character/swordman/weapon/ssword/bantub/hardattack.ani",
+        "size": 4978,
+        "crc": "96a8fdfa",
+        "relative_offset": 75839120,
+        "absolute_offset": 83405744,
+        "sha256": "12abd941144ccbd13b298ef42bf8c8efc1a31d18b628a490f9c3abe27e540987",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/beamsword/cainusswdc1/hardattack.ani",
+      "source": {
+        "file_number": 2822426943,
+        "path": "equipment/character/swordman/weapon/beamsword/cainusswdc1/hardattack.ani",
+        "size": 5066,
+        "crc": "5bcd5513",
+        "relative_offset": 89970204,
+        "absolute_offset": 97536828,
+        "sha256": "75f5d04dfd268d7d3ddc89694f7727e61aa2fc5f6a61911d2f072f1ada482159",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/beamsword/beamswdb3/hardattack.ani",
+      "source": {
+        "file_number": 2936383538,
+        "path": "equipment/character/swordman/weapon/beamsword/beamswdb3/hardattack.ani",
+        "size": 5066,
+        "crc": "647809d7",
+        "relative_offset": 93014552,
+        "absolute_offset": 100581176,
+        "sha256": "76792187e3133ba6f6e18015874a267783d89c058ae475ed4c643a8b3fb31eaa",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/sasakic/hardattack.ani",
+      "source": {
+        "file_number": 3020144165,
+        "path": "equipment/character/swordman/weapon/katana/sasakic/hardattack.ani",
+        "size": 5149,
+        "crc": "fc02103c",
+        "relative_offset": 95221788,
+        "absolute_offset": 102788412,
+        "sha256": "d78d64a6611f3bd72ebe29c53c461d09232a35ae4f36c0682447b7e28e56b20e",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": [
+        {
+          "kind": "frame_count_mismatch",
+          "declared": [
+            [
+              19
+            ]
+          ],
+          "parsed": 18
+        }
+      ]
+    },
+    {
+      "path": "equipment/character/swordman/weapon/beamsword/cainusswdb1/hardattack.ani",
+      "source": {
+        "file_number": 3122966302,
+        "path": "equipment/character/swordman/weapon/beamsword/cainusswdb1/hardattack.ani",
+        "size": 5066,
+        "crc": "76ec9ed1",
+        "relative_offset": 98022272,
+        "absolute_offset": 105588896,
+        "sha256": "76792187e3133ba6f6e18015874a267783d89c058ae475ed4c643a8b3fb31eaa",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/hsword/mswdb/hardattack.ani",
+      "source": {
+        "file_number": 3176350154,
+        "path": "equipment/character/swordman/weapon/hsword/mswdb/hardattack.ani",
+        "size": 4940,
+        "crc": "72708c21",
+        "relative_offset": 99470924,
+        "absolute_offset": 107037548,
+        "sha256": "7cd607933a84f96b4c689aef53d3681e2d4b6a9e474c6e27e2e2a142c158263f",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/lgswdc/hardattack.ani",
+      "source": {
+        "file_number": 3208848220,
+        "path": "equipment/character/swordman/weapon/ssword/lgswdc/hardattack.ani",
+        "size": 5111,
+        "crc": "9d344eea",
+        "relative_offset": 100312972,
+        "absolute_offset": 107879596,
+        "sha256": "17e9382fecae10cc811fd0632e5639fca443a0c20dff19ad3788f0fb712ad5a5",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/katanab/hardattack.ani",
+      "source": {
+        "file_number": 3530031704,
+        "path": "equipment/character/swordman/weapon/katana/katanab/hardattack.ani",
+        "size": 5014,
+        "crc": "7e4f6b09",
+        "relative_offset": 108836876,
+        "absolute_offset": 116403500,
+        "sha256": "a94dfcb504849a2dea94282091b92dc004356d94831960001143e37a98a4d127",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/sswdc/hardattack.ani",
+      "source": {
+        "file_number": 3543071740,
+        "path": "equipment/character/swordman/weapon/ssword/sswdc/hardattack.ani",
+        "size": 5075,
+        "crc": "c65e5fdc",
+        "relative_offset": 109156632,
+        "absolute_offset": 116723256,
+        "sha256": "25d3c1b6bddcfa33560571aa82e20065e2c7738f220d81007d753ac41aabac77",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/gemswdb/hardattack.ani",
+      "source": {
+        "file_number": 3584134945,
+        "path": "equipment/character/swordman/weapon/ssword/gemswdb/hardattack.ani",
+        "size": 5012,
+        "crc": "b5d86408",
+        "relative_offset": 110288452,
+        "absolute_offset": 117855076,
+        "sha256": "fe9966307ca4bee64bee7fdbe6f81b7ed1281b073dd89fe00d8151b3cd0bfd0f",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/ssword/bswdb/hardattack.ani",
+      "source": {
+        "file_number": 3732436842,
+        "path": "equipment/character/swordman/weapon/ssword/bswdb/hardattack.ani",
+        "size": 4994,
+        "crc": "1a73183b",
+        "relative_offset": 114904416,
+        "absolute_offset": 122471040,
+        "sha256": "663304aef2752e60f73ef6cb9601e7ef719d3afa1e1ba3fd08ebdb535ab7987f",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/beamsword/hellkariumswdc1/hardattack.ani",
+      "source": {
+        "file_number": 3832631146,
+        "path": "equipment/character/swordman/weapon/beamsword/hellkariumswdc1/hardattack.ani",
+        "size": 5066,
+        "crc": "2c53e150",
+        "relative_offset": 117712380,
+        "absolute_offset": 125279004,
+        "sha256": "75f5d04dfd268d7d3ddc89694f7727e61aa2fc5f6a61911d2f072f1ada482159",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/lkatanab/hardattack.ani",
+      "source": {
+        "file_number": 4120397956,
+        "path": "equipment/character/swordman/weapon/katana/lkatanab/hardattack.ani",
+        "size": 5050,
+        "crc": "497d769e",
+        "relative_offset": 127534052,
+        "absolute_offset": 135100676,
+        "sha256": "6dd3d32a7a2068d03087444ba521e45c539e000ef063288d28db14a3ef03ecac",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/beamsword/hellkariumswdb1/hardattack.ani",
+      "source": {
+        "file_number": 4133170505,
+        "path": "equipment/character/swordman/weapon/beamsword/hellkariumswdb1/hardattack.ani",
+        "size": 5066,
+        "crc": "198a97f0",
+        "relative_offset": 127823312,
+        "absolute_offset": 135389936,
+        "sha256": "76792187e3133ba6f6e18015874a267783d89c058ae475ed4c643a8b3fb31eaa",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [],
+      "attack_box_count": 0,
+      "warnings": []
+    },
+    {
+      "path": "equipment/character/swordman/weapon/hsword/lswdc/hardattack.ani",
+      "source": {
+        "file_number": 4280297802,
+        "path": "equipment/character/swordman/weapon/hsword/lswdc/hardattack.ani",
+        "size": 5077,
+        "crc": "ff7c7617",
+        "relative_offset": 132199504,
+        "absolute_offset": 139766128,
+        "sha256": "69468c640c45d85c0d7e89c9956a3418844dcbfa8aa607c39979f7ba99e0213f",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "frame_count": 18,
+      "attack_frames": [
+        {
+          "frame": 3,
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 4,
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 5,
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        },
+        {
+          "frame": 6,
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "delay": [
+            [
+              50
+            ]
+          ]
+        }
+      ],
+      "attack_box_count": 4,
+      "warnings": []
+    }
+  ],
+  "evidence_boundary": "Literal weapon animation files; no arbitrary equipment selection or complete skill controller claim"
+}

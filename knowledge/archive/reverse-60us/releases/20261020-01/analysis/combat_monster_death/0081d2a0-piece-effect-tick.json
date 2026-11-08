@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x81d2a0",
+  "rva": "0x41d2a0",
+  "file_offset": 4313760,
+  "length": 3673,
+  "bytes_sha256": "085a03dd075a53d1ed75c55be09aed40f8375566e691480c38eea3db00e7d3c8",
+  "status": "native_bytes",
+  "note": "Separate effect object, emissions, completion and slot60(0) gates; not a Monster last ACT.",
+  "disassembled": true
+}

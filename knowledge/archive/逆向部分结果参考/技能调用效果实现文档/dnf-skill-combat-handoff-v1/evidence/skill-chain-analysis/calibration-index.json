@@ -1,0 +1,66 @@
+{
+  "samples": [
+    {
+      "name": "60780-movement",
+      "report": "reverse_lab/v3/reports/live-tests/60780-movement/phase-review.json",
+      "report_sha256": "117c2f8ecc75a8bcca7f7399512941de2378c664718c9ecdc22ec0aedf9d03d0",
+      "session_id": "60780-5715995959178",
+      "checks": {
+        "exact_verified_session": true,
+        "completed_phase": true,
+        "sequence_complete": true,
+        "total_matches_accepted": true,
+        "no_queue_loss": true,
+        "no_invalid_memory": true,
+        "no_raw_write_errors": true,
+        "no_status_publish_errors": true,
+        "start_trigger": true
+      },
+      "memory_events": 212433,
+      "actual_duration_ms": 6001.4562,
+      "scope": "calibration report reference; no new body-path or weapon-layer inference"
+    },
+    {
+      "name": "60780-normal-attack",
+      "report": "reverse_lab/v3/reports/live-tests/60780-normal-attack/phase-review.json",
+      "report_sha256": "f8caafdad49de82eecdb9e52b681867d4f25b5fcaea5c8ba837a29a5f2bd1876",
+      "session_id": "60780-5715995959178",
+      "checks": {
+        "verified_live_session": true,
+        "sequence_complete": true,
+        "all_accepted_in_range": true,
+        "no_queue_loss": true,
+        "no_invalid_memory": true,
+        "no_write_errors": true,
+        "Alt1_trigger": true,
+        "duration_complete": true,
+        "matching_input_process": true,
+        "one_X_press_and_release": true,
+        "io_no_loss": true
+      },
+      "memory_events": 367069,
+      "actual_duration_ms": 6000.0933,
+      "scope": "calibration report reference; no new body-path or weapon-layer inference"
+    },
+    {
+      "name": "52844-startup-baseline",
+      "report": "reverse_lab/v3/reports/live-tests/52844-startup-baseline/review.json",
+      "report_sha256": "94e2504a799c4499b625737363eec3cb3732b68587a756e27c5c1a37d25301da",
+      "session_id": "52844-5766087819678",
+      "checks": {
+        "same_verified_session": true,
+        "sequence_complete": true,
+        "offered_accepted_written_equal": true,
+        "actual_render_callbacks": true,
+        "no_queue_loss": true,
+        "no_invalid_views": true,
+        "no_write_or_status_errors": true,
+        "disarmed_drained": true,
+        "record_times_within_phase": true
+      },
+      "memory_events": 67390,
+      "actual_duration_ms": 10612.7737,
+      "scope": "calibration report reference; no new body-path or weapon-layer inference"
+    }
+  ]
+}

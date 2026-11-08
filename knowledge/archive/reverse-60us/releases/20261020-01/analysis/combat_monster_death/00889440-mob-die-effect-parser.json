@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x889440",
+  "rva": "0x489440",
+  "file_offset": 4756544,
+  "length": 65,
+  "bytes_sha256": "3c62e909a3a8066113c05019db0b5c51cf1c3eea6487c58e3b2a209f86b25594",
+  "status": "native_bytes",
+  "note": "Tag match, three integers to template+7B4/+7B8/+7BC.",
+  "disassembled": true
+}

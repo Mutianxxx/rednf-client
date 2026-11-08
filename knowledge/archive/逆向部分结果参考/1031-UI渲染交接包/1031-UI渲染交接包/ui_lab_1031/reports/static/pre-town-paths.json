@@ -1,0 +1,23 @@
+{
+  "source": "combat_ui_1031/reports/all-literal-candidates.json",
+  "snapshot_sha256": "ab950286ad291236086beae21ef75b1732d4cd5e52db482e261f4c548969ea44",
+  "meaning": "Decoded native literal references before town; not proof of runtime execution or universal loading entry coverage.",
+  "references": [
+    {
+      "push_va": "0x6fd704",
+      "call_va": "0x6fd709",
+      "decoder": "0x119fef0",
+      "literal_va": "0x15b35e0",
+      "text": "UI/NowLoading/Intro/Intro_18.ui",
+      "encoded_sha256": "e5c1cca4de1e746cb47262d0765e64cc7c48ec891cef2fd5d4fdf61c1736a40c"
+    },
+    {
+      "push_va": "0xfd431e",
+      "call_va": "0xfd4323",
+      "decoder": "0x119fef0",
+      "literal_va": "0x18286a8",
+      "text": "UI/SelectServer/Effect/SelectServerEffect.ui",
+      "encoded_sha256": "3b35e18c2b6c13188b08b21d8c5bc4d7c3cc38bdb78aa9449108000349e33a02"
+    }
+  ]
+}

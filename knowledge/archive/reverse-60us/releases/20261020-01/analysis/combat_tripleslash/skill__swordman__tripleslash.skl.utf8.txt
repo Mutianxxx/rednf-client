@@ -1,0 +1,142 @@
+[name]  <12::name_18090>
+[name2]  <12::name2_eng_363>
+[basic explain] <12::triple_slash_basic_explain>
+[explain] <12::explain_18095>
+
+[purchase cost] 
+25
+[/purchase cost]
+[required level]  10			// 스킬을 배우기 위해 필요한 캐릭터의 최소 레벨.
+[required level range]  2
+[pre required skill] 
+[/pre required skill]
+[type]  `[active]`
+[skill class]  1
+[maximum level]  30
+[growtype maximum level]  10 20 10 10 10
+[skill fitness growtype] 
+0
+1
+2
+3
+4
+[/skill fitness growtype]
+
+[durability decrease rate] 0
+[auto cooltime apply]  0
+[weapon effect type] `[physical]`
+
+[icon] 
+`Character/Swordman/Effect/SkillIcon.img` 18
+`Character/Swordman/Effect/SkillIcon.img` 19
+
+[command] 
+(RIGHT) &
+(SKILL)
+[/command]
+[command key explain]  <12::command_key_explain_18460>
+
+[dungeon]
+[consume MP]  7 18
+[cool time]  6000 6000
+[static data] 
+600	// 속도
+-1000	// 가속도
+[/static data]
+[level info]
+3
+// 0.A데미지% 1.B데미지% 2.C데미지%
+// 3타때 : A A B
+// 5타때 : A A A B C
+100 	150 	200 
+105 	158 	211 
+111 	166 	221 
+116 	174 	232 
+121 	182 	242 
+126 	189 	253 
+132 	197 	263 
+137 	205 	274 
+142 	213 	284 
+147 	221 	295 
+153 	229 	305 
+158 	237 	316 
+163 	245 	326 
+168 	253 	337 
+174 	261 	347 
+179 	268 	358 
+184 	276 	368 
+189 	284 	379 
+195 	292 	389 
+200 	300 	400 
+205 	308 	411 
+211 	316 	421 
+216 	324 	432 
+221 	332 	442 
+226 	339 	453 
+232 	347 	463 
+237 	355 	474 
+242 	363 	484 
+247 	371 	495 
+253 	379 	505 
+[/level info]
+[/dungeon]
+
+[pvp]
+[cool time]  8000 8000
+[level info]
+3
+// 0.A데미지% 1.B데미지% 2.C데미지%
+// 3타때 : A A B
+// 5타때 : A A A B C
+60 	90 	120 
+63 	95 	126 
+66 	99 	133 
+69 	104 	139 
+73 	109 	145 
+76 	114 	152 
+79 	118 	158 
+82 	123 	164 
+85 	128 	171 
+88 	133 	177 
+92 	137 	183 
+95 	142 	189 
+98 	147 	196 
+101 	152 	202 
+104 	156 	208 
+107 	161 	215 
+111 	166 	221 
+114 	171 	227 
+117 	175 	234 
+120 	180 	240 
+123 	185 	246 
+126 	189 	253 
+129 	194 	259 
+133 	199 	265 
+136 	204 	272 
+139 	208 	278 
+142 	213 	284 
+145 	218 	291 
+148 	223 	297 
+152 	227 	303 
+[/level info]
+[/pvp]
+
+[death tower]
+[/death tower]
+
+[warroom]
+[/warroom]
+
+
+[level property] 
+1 99
+<12::level_property_18100>
+-1 0 1.0
+-1 0 1.0
+-1 1 1.0
+-1 0 1.0
+-1 0 1.0
+-1 0 1.0
+-1 1 1.0
+-1 2 1.0
+[/level property]

@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x13bebef",
+  "rva": "0xfbebef",
+  "file_offset": 16509935,
+  "length": 10,
+  "bytes_sha256": "f1a4e44a4bc521ae2570bf06d2007eeab612ff23396e72ad7ed10899efffde0d",
+  "status": "native_bytes",
+  "note": "Push opaque token08104A87 and jump12EE7C9.",
+  "disassembled": true
+}

@@ -1,0 +1,35 @@
+[width]  58 20
+[floating height]  0
+[layer]  `[normal]`
+[pass type]  `[do not pass]`
+
+[basic motion]  `Animation/ActionTree/Lorien/ActionTree2-0.ani`
+[etc motion] 
+`Animation/ActionTree/Lorien/ActionTree2-1.ani`
+[/etc motion]
+[int data] 
+1			// 액션이 일어날 깊이
+2			// 완전파괴깊이
+0			// 1 = 완전파괴가능, 0 = 완전파괴불가
+0 0 100			// 파티클출력좌표 오프셋 x, y, z 순서
+1			// 체력
+[/int data]
+[string data] 
+``
+`Particle/ActionTreeLorienDamage.ptl`
+``
+
+``
+`TREE_SHAKE`
+``
+[/string data]
+
+
+
+
+[name]  <9::name_4695>
+ 
+
+ 
+
+

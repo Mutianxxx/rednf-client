@@ -1,0 +1,128 @@
+{
+  "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+  "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+  "snapshot_sha256": "ab950286ad291236086beae21ef75b1732d4cd5e52db482e261f4c548969ea44",
+  "provenance": "Baseline contains 0725.dll and stringtable.dll; not a plugin-free original.",
+  "sites": [
+    {
+      "id": 1,
+      "name": "load_begin",
+      "va": "0x1067ec0",
+      "rva": "0xc67ec0",
+      "overwritten": 6,
+      "expected": "558bec535657",
+      "guard": "558bec5356578bf9837f24000f848d0000008b75088bc68d50028d9b00000000",
+      "contract": "ECX=loader; [ESP+4]=UTF16 UI path; returns AL, callee pops 12"
+    },
+    {
+      "id": 2,
+      "name": "load_end",
+      "va": "0x1067f58",
+      "rva": "0xc67f58",
+      "overwritten": 7,
+      "expected": "5f5e5b5dc20c00",
+      "guard": "5f5e5b5dc20c005f5e32c05b5dc20c00cccccccccccccccc558bec81ec240200",
+      "contract": "Successful parser return path; original entry ESP is EBP+4"
+    },
+    {
+      "id": 3,
+      "name": "load_failed",
+      "va": "0x1067f5f",
+      "rva": "0xc67f5f",
+      "overwritten": 6,
+      "expected": "5f5e32c05b5d",
+      "guard": "5f5e32c05b5dc20c00cccccccccccccccc558bec81ec24020000a19063a40133",
+      "contract": "Early failure path; AL becomes 0 in original bytes"
+    },
+    {
+      "id": 4,
+      "name": "bind_control",
+      "va": "0x10669f0",
+      "rva": "0xc669f0",
+      "overwritten": 5,
+      "expected": "6858e08201",
+      "guard": "6858e08201e8f69413008b8d48feffff8bd083c40483c1048d5a02eb038d4900",
+      "contract": "EDI=config+4 runtime; config pointer=[EBP-1D0]; name string at EBP-B0"
+    },
+    {
+      "id": 5,
+      "name": "ui_draw_begin",
+      "va": "0x11bf510",
+      "rva": "0xdbf510",
+      "overwritten": 6,
+      "expected": "558bec83ec1c",
+      "guard": "558bec83ec1c53568bf183beac0200000057742e8b86ac0200008b4e188b780c",
+      "contract": "ECX=control; recursive traversal; balanced with 11BF711"
+    },
+    {
+      "id": 6,
+      "name": "ui_draw_end",
+      "va": "0x11bf711",
+      "rva": "0xdbf711",
+      "overwritten": 5,
+      "expected": "b801000000",
+      "guard": "b8010000008be55dc3cccccccccccc558bec8b550883ec0c53565785d2750eb8",
+      "contract": "All normal traversal exits; before mov eax,1"
+    },
+    {
+      "id": 7,
+      "name": "image_simple",
+      "va": "0x11b3950",
+      "rva": "0xdb3950",
+      "overwritten": 6,
+      "expected": "558bec8b4510",
+      "guard": "558bec8b451085c074158b108b92b4000000518b4d0c518b4d08518bc8ffd25d",
+      "contract": "[ESP+4,+8,+C]=x,y,image; no transforms in this wrapper"
+    },
+    {
+      "id": 8,
+      "name": "image_transform",
+      "va": "0x11b41e0",
+      "rva": "0xdb41e0",
+      "overwritten": 5,
+      "expected": "558bec8bd1",
+      "guard": "558bec8bd18b4d1085c90f84b2000000f30f104d24f30f1015502256010f2eca",
+      "contract": "x,y,image,scaleX,scaleY,rotation,color,centerX,centerY; ret24"
+    },
+    {
+      "id": 9,
+      "name": "clip_raw",
+      "va": "0x11b4710",
+      "rva": "0xdb4710",
+      "overwritten": 6,
+      "expected": "558bec5133d2",
+      "guard": "558bec5133d28955fc8d45083955087f038d45fc668b00668941288955088d45",
+      "contract": "Four raw rectangle arguments; clip semantics not fully recovered"
+    },
+    {
+      "id": 10,
+      "name": "image_lookup",
+      "va": "0x11b4bd0",
+      "rva": "0xdb4bd0",
+      "overwritten": 6,
+      "expected": "558bec568bf1",
+      "guard": "558bec568bf18b46588b4e5c2bc8578b7d08c1f9043bf9727d6818a18501e8fd",
+      "contract": "ECX=IMG pack; [ESP+4]=frame; frame-vector/cache lookup, not a draw"
+    },
+    {
+      "id": 11,
+      "name": "config_factory",
+      "va": "0x1074b70",
+      "rva": "0xc74b70",
+      "overwritten": 5,
+      "expected": "558bec6aff",
+      "guard": "558bec6aff683b7c4b0164a1000000005081eca0040000535657a19063a40133",
+      "contract": "[ESP+4]=UTF16 type tag; returns configuration, not runtime control"
+    }
+  ],
+  "runtime_getter": {
+    "va": "0x11d5270",
+    "bytes": "8b4104c3",
+    "meaning": "return configuration->runtime (+4)"
+  },
+  "limitations": [
+    "Only verified common draw wrappers are reconstructed.",
+    "No universal title field established.",
+    "UI call spans do not prove delayed GPU packet ownership."
+  ]
+}

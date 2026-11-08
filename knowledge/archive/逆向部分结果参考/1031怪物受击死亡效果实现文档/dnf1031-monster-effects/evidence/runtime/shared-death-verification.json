@@ -1,0 +1,210 @@
+{
+  "ok": true,
+  "cases": [
+    {
+      "id": 5001,
+      "profile": {
+        "configured": true,
+        "raw": [
+          0,
+          9,
+          0
+        ],
+        "piece_image": "monster/common/m0009.img",
+        "pieces": true,
+        "smoke": true,
+        "flash": true,
+        "blood_executed": false,
+        "native_route_selection_verified": false,
+        "ptl": "monster/common/particle/monsterdiepiece.ptl",
+        "count": 10,
+        "gravity": 1500.0,
+        "speed": 400.0,
+        "life_ms": 3000.0,
+        "preview_policy": {
+          "white_at_ms": 60,
+          "burst_ms": 220.0,
+          "body_fade_ms": 90,
+          "trajectory": "analytic ballistic then stop; seeded by MOB path"
+        },
+        "available": true,
+        "error": "",
+        "frozen": {
+          "state": "damage1",
+          "entry": "monster/lugaru/animation_lugaru/damage1.ani",
+          "time_ms": 50.0,
+          "loop": false,
+          "bounds": [
+            -21.0,
+            -65.0,
+            53.0,
+            73.0
+          ],
+          "frame": 0
+        }
+      },
+      "frozen_pose_stable": true,
+      "white_changes_source": true,
+      "seek_deterministic": true,
+      "mirrored": true,
+      "completed": true
+    },
+    {
+      "id": 1,
+      "profile": {
+        "configured": true,
+        "raw": [
+          0,
+          1,
+          0
+        ],
+        "piece_image": "monster/common/m0001.img",
+        "pieces": true,
+        "smoke": true,
+        "flash": true,
+        "blood_executed": false,
+        "native_route_selection_verified": false,
+        "ptl": "monster/common/particle/monsterdiepiece.ptl",
+        "count": 10,
+        "gravity": 1500.0,
+        "speed": 400.0,
+        "life_ms": 3000.0,
+        "preview_policy": {
+          "white_at_ms": 60,
+          "burst_ms": 220.0,
+          "body_fade_ms": 90,
+          "trajectory": "analytic ballistic then stop; seeded by MOB path"
+        },
+        "available": true,
+        "error": "",
+        "frozen": {
+          "state": "damage1",
+          "entry": "monster/goblin/animation_goblin2/damage1.ani",
+          "time_ms": 50.0,
+          "loop": false,
+          "bounds": [
+            -19.0,
+            -63.0,
+            53.0,
+            67.0
+          ],
+          "frame": 0
+        }
+      },
+      "frozen_pose_stable": true,
+      "white_changes_source": true,
+      "seek_deterministic": true,
+      "mirrored": true,
+      "completed": true
+    },
+    {
+      "id": 56013,
+      "profile": {
+        "configured": true,
+        "raw": [
+          0,
+          3,
+          0
+        ],
+        "piece_image": "monster/common/m0003.img",
+        "pieces": true,
+        "smoke": true,
+        "flash": true,
+        "blood_executed": false,
+        "native_route_selection_verified": false,
+        "ptl": "monster/common/particle/monsterdiepiece.ptl",
+        "count": 10,
+        "gravity": 1500.0,
+        "speed": 400.0,
+        "life_ms": 3000.0,
+        "preview_policy": {
+          "white_at_ms": 60,
+          "burst_ms": 220.0,
+          "body_fade_ms": 90,
+          "trajectory": "analytic ballistic then stop; seeded by MOB path"
+        },
+        "available": true,
+        "error": "",
+        "frozen": {
+          "state": "damage1",
+          "entry": "monster/act8/chiefsars/action/damage1.act",
+          "time_ms": 50.0,
+          "loop": false,
+          "bounds": [
+            -35.0,
+            -97.0,
+            72.0,
+            110.0
+          ],
+          "frame": 0
+        }
+      },
+      "frozen_pose_stable": true,
+      "white_changes_source": true,
+      "seek_deterministic": true,
+      "mirrored": true,
+      "completed": true
+    },
+    {
+      "id": 61491,
+      "profile": {
+        "configured": true,
+        "raw": [
+          0,
+          24,
+          1
+        ],
+        "piece_image": "monster/common/m0024.img",
+        "pieces": false,
+        "smoke": true,
+        "flash": true,
+        "blood_executed": false,
+        "native_route_selection_verified": false,
+        "ptl": "monster/common/particle/monsterdiepiece.ptl",
+        "count": 10,
+        "gravity": 1500.0,
+        "speed": 400.0,
+        "life_ms": 3000.0,
+        "preview_policy": {
+          "white_at_ms": 60,
+          "burst_ms": 220.0,
+          "body_fade_ms": 90,
+          "trajectory": "analytic ballistic then stop; seeded by MOB path"
+        },
+        "available": true,
+        "error": "",
+        "frozen": {
+          "state": "damage1",
+          "entry": "monster/act8/ghost_flu/action/damage1.act",
+          "time_ms": 50.0,
+          "loop": false,
+          "bounds": [
+            -108.0,
+            -215.0,
+            238.0,
+            239.0
+          ],
+          "frame": 0
+        }
+      },
+      "frozen_pose_stable": true,
+      "white_changes_source": true,
+      "seek_deterministic": true,
+      "mirrored": true,
+      "completed": true
+    }
+  ],
+  "source": {
+    "client": "DNF1031",
+    "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+    "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+    "preferred_image_base": "0x00400000",
+    "observed_plugins": [
+      "0725.dll",
+      "stringtable.dll"
+    ],
+    "behavior_capture_session": "20261018-025801-50428",
+    "instrumentation_validation_session": "20261018-032859-17200"
+  },
+  "scope": "Resource-backed reconstruction; deterministic preview verified, not native pixel/timing parity"
+}

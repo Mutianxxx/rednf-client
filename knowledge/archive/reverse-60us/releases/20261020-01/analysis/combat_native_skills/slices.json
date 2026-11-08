@@ -1,0 +1,48 @@
+{
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "kind": "static raw PE/Capstone; not REA Evidence",
+  "slices": [
+    {
+      "va": "0x71fff0",
+      "file_offset": 3276784,
+      "size": 66384,
+      "sha256": "2be915e1b3bf5a6ec7ad43cb4181ba8e13e1c56dca0f9ecc1b353be4811fee83"
+    },
+    {
+      "va": "0x7307b0",
+      "file_offset": 3344304,
+      "size": 52800,
+      "sha256": "0cacb492f69bd815096fd24379abfe78a3944a93147555c7cc427465b349c860"
+    },
+    {
+      "va": "0x730340",
+      "file_offset": 3343168,
+      "size": 11008,
+      "sha256": "c851ad0099ab50dfbd2f277a1e6f92503dca095dcae92010e668394485197fd8"
+    },
+    {
+      "va": "0x732d00",
+      "file_offset": 3353856,
+      "size": 6144,
+      "sha256": "48a8f48a501840a3803d68e8330d0bc1bd1e386ed596d35148f7c1d949cc91c6"
+    },
+    {
+      "va": "0x7469a0",
+      "file_offset": 3434912,
+      "size": 768,
+      "sha256": "8759e993f2261d5eec2650f34adcab4b77ecb568f2e87c9273132674b2996029"
+    },
+    {
+      "va": "0x4d3ce0",
+      "file_offset": 867552,
+      "size": 192,
+      "sha256": "8919f3a2047a3f2499c1edf84fa2976edcc24eb339dcdb32d95a8f4a2071316a"
+    },
+    {
+      "va": "0x5270f0",
+      "file_offset": 1208560,
+      "size": 256,
+      "sha256": "aeb436bd0635be778a15fcf88791650103583d34e9b197c9933a4d635d4dae6d"
+    }
+  ]
+}

@@ -1,0 +1,423 @@
+[
+  {
+    "path": "DFO\\DFO.exe",
+    "size": 5741240,
+    "sha256": "583928ddc0391396401440bd76391521b138c616b235ed18e615d5ab7333960a",
+    "machine": "0x14c",
+    "timestamp": 1279018151,
+    "image_base": "0x400000",
+    "entrypoint_rva": "0x100e000",
+    "image_size": "0x100f000",
+    "sections": [
+      {
+        "name": "   \u0000    ",
+        "rva": "0x1000",
+        "virtual_size": "0xeac000",
+        "raw_offset": "0x1000",
+        "raw_size": "0x42c000",
+        "flags": "0xe0000040",
+        "entropy": 7.9863
+      },
+      {
+        "name": ".rsrc",
+        "rva": "0xead000",
+        "virtual_size": "0x37f60",
+        "raw_offset": "0x42d000",
+        "raw_size": "0x11000",
+        "flags": "0xc0000040",
+        "entropy": 7.8739
+      },
+      {
+        "name": ".idata  ",
+        "rva": "0xee5000",
+        "virtual_size": "0x1000",
+        "raw_offset": "0x43e000",
+        "raw_size": "0x1000",
+        "flags": "0xc0000040",
+        "entropy": 0.1282
+      },
+      {
+        "name": "jsrwqdbk",
+        "rva": "0xee6000",
+        "virtual_size": "0x128000",
+        "raw_offset": "0x43f000",
+        "raw_size": "0x128000",
+        "flags": "0xe0000040",
+        "entropy": 7.756
+      },
+      {
+        "name": "lfkklsnv",
+        "rva": "0x100e000",
+        "virtual_size": "0x1000",
+        "raw_offset": "0x567000",
+        "raw_size": "0x1000",
+        "flags": "0xe0000040",
+        "entropy": 0.2874
+      }
+    ],
+    "imports": {
+      "kernel32.dll": [
+        {
+          "name": "SetPriorityClass",
+          "iat_va": "0x12e502f"
+        }
+      ]
+    },
+    "relevant_strings": [
+      {
+        "offset": "0x25f1fc",
+        "va": "0x65f1fc",
+        "text": "Upx`'Jm?"
+      },
+      {
+        "offset": "0x441ca1",
+        "va": "0x12e8ca1",
+        "text": "Themida"
+      }
+    ],
+    "debug": []
+  },
+  {
+    "path": "DFO\\DFO_fixed_v3.exe",
+    "size": 16859648,
+    "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "machine": "0x14c",
+    "timestamp": 1279018151,
+    "image_base": "0x400000",
+    "entrypoint_rva": "0x805078",
+    "image_size": "0x1015000",
+    "sections": [
+      {
+        "name": ".text",
+        "rva": "0x1000",
+        "virtual_size": "0xeac000",
+        "raw_offset": "0x1000",
+        "raw_size": "0xeac000",
+        "flags": "0xe0000040",
+        "entropy": 5.5675
+      },
+      {
+        "name": ".rsrc",
+        "rva": "0xead000",
+        "virtual_size": "0x38000",
+        "raw_offset": "0xead000",
+        "raw_size": "0x38000",
+        "flags": "0xc0000040",
+        "entropy": 5.8876
+      },
+      {
+        "name": ".idata  ",
+        "rva": "0xee5000",
+        "virtual_size": "0x1000",
+        "raw_offset": "0xee5000",
+        "raw_size": "0x1000",
+        "flags": "0xc0000040",
+        "entropy": 0.1305
+      },
+      {
+        "name": "jsrwqdbk",
+        "rva": "0xee6000",
+        "virtual_size": "0x128000",
+        "raw_offset": "0xee6000",
+        "raw_size": "0x128000",
+        "flags": "0xe0000040",
+        "entropy": 7.4916
+      },
+      {
+        "name": "lfkklsnv",
+        "rva": "0x100e000",
+        "virtual_size": "0x1000",
+        "raw_offset": "0x100e000",
+        "raw_size": "0x1000",
+        "flags": "0xe0000040",
+        "entropy": 0.2848
+      },
+      {
+        "name": ".SCY",
+        "rva": "0x100f000",
+        "virtual_size": "0x5000",
+        "raw_offset": "0x100f000",
+        "raw_size": "0x5000",
+        "flags": "0xe0000060",
+        "entropy": 5.0584
+      },
+      {
+        "name": ".chui",
+        "rva": "0x1014000",
+        "virtual_size": "0x14",
+        "raw_offset": "0x1014000",
+        "raw_size": "0x200",
+        "flags": "0x40000040",
+        "entropy": 0.1794
+      }
+    ],
+    "imports": {
+      "kernel32.dll": [
+        {
+          "name": "RtlUnwind",
+          "iat_va": "0x140f6d8"
+        }
+      ],
+      "shell32.dll": [
+        {
+          "name": "ShellExecuteExW",
+          "iat_va": "0x140f3d0"
+        }
+      ],
+      "ole32.dll": [
+        {
+          "name": "CoTaskMemRealloc",
+          "iat_va": "0x140f500"
+        }
+      ],
+      "user32.dll": [
+        {
+          "name": "wsprintfA",
+          "iat_va": "0x140f6e0"
+        }
+      ],
+      "ws2_32.dll": [
+        {
+          "name": "select",
+          "iat_va": "0x140f54c"
+        },
+        {
+          "name": "WSARecvFrom",
+          "iat_va": "0x140f550"
+        }
+      ],
+      "oleaut32.dll": [
+        {
+          "name": "VariantChangeType",
+          "iat_va": "0x140f558"
+        }
+      ],
+      "winmm.dll": [
+        {
+          "name": "mmioOpenW",
+          "iat_va": "0x140f4a8"
+        },
+        {
+          "name": "mmioDescend",
+          "iat_va": "0x140f4ac"
+        },
+        {
+          "name": "mmioAscend",
+          "iat_va": "0x140f4b0"
+        },
+        {
+          "name": "mmioClose",
+          "iat_va": "0x140f4b4"
+        },
+        {
+          "name": "mmioSeek",
+          "iat_va": "0x140f4b8"
+        },
+        {
+          "name": "mmioGetInfo",
+          "iat_va": "0x140f4bc"
+        },
+        {
+          "name": "mmioAdvance",
+          "iat_va": "0x140f4c0"
+        },
+        {
+          "name": "mmioSetInfo",
+          "iat_va": "0x140f4c4"
+        },
+        {
+          "name": "mmioWrite",
+          "iat_va": "0x140f4c8"
+        },
+        {
+          "name": "mmioCreateChunk",
+          "iat_va": "0x140f4cc"
+        },
+        {
+          "name": "mmioRead",
+          "iat_va": "0x140f4d0"
+        }
+      ],
+      "gdi32.dll": [
+        {
+          "name": "SelectPalette",
+          "iat_va": "0x140f488"
+        },
+        {
+          "name": "RealizePalette",
+          "iat_va": "0x140f48c"
+        }
+      ],
+      "wininet.dll": [
+        {
+          "name": "InternetOpenA",
+          "iat_va": "0x140f674"
+        },
+        {
+          "name": "InternetSetStatusCallbackA",
+          "iat_va": "0x140f678"
+        },
+        {
+          "name": "InternetConnectA",
+          "iat_va": "0x140f67c"
+        },
+        {
+          "name": "HttpOpenRequestA",
+          "iat_va": "0x140f680"
+        }
+      ],
+      "advapi32.dll": [
+        {
+          "name": "RegOpenKeyA",
+          "iat_va": "0x140f6cc"
+        }
+      ],
+      "comdlg32.dll": [
+        {
+          "name": "GetOpenFileNameW",
+          "iat_va": "0x140f428"
+        }
+      ],
+      "shlwapi.dll": [
+        {
+          "name": "PathFileExistsW",
+          "iat_va": "0x140f4dc"
+        }
+      ],
+      "nmcogame.dll": [
+        {
+          "name": "NMCO_MemoryFree",
+          "iat_va": "0x140f528"
+        },
+        {
+          "name": "NMCO_SetPatchOption",
+          "iat_va": "0x140f52c"
+        },
+        {
+          "name": "NMCO_SetUseFriendModuleOption",
+          "iat_va": "0x140f530"
+        },
+        {
+          "name": "NMCO_SetVersionFileUrlW",
+          "iat_va": "0x140f534"
+        },
+        {
+          "name": "NMCO_SetUseNGMOption",
+          "iat_va": "0x140f538"
+        },
+        {
+          "name": "NMCO_SetLocale",
+          "iat_va": "0x140f53c"
+        },
+        {
+          "name": "NMCO_SetLocaleAndRegion",
+          "iat_va": "0x140f540"
+        },
+        {
+          "name": "NMCO_CallNMFunc",
+          "iat_va": "0x140f544"
+        }
+      ],
+      "DumpReport.dll": [
+        {
+          "name": "RegisterExceptionCallback",
+          "iat_va": "0x140f548"
+        }
+      ],
+      "urlmon.dll": [
+        {
+          "name": "URLDownloadToCacheFileW",
+          "iat_va": "0x140f554"
+        }
+      ],
+      "version.dll": [
+        {
+          "name": "GetFileVersionInfoSizeA",
+          "iat_va": "0x140f650"
+        }
+      ],
+      "psapi.dll": [
+        {
+          "name": "EnumProcesses",
+          "iat_va": "0x140f6c8"
+        }
+      ],
+      "dinput8.dll": [
+        {
+          "name": "DirectInput8Create",
+          "iat_va": "0x140f6d4"
+        }
+      ],
+      "CoreMessaging.dll": [
+        {
+          "name": "MsgBufferShare",
+          "iat_va": "0x140f6dc"
+        }
+      ]
+    },
+    "relevant_strings": [
+      {
+        "offset": "0x8dcb6c",
+        "va": "0xcdcb6c",
+        "text": "nstl::sarray<struct STScriptFileList,6>::operator`[]'"
+      },
+      {
+        "offset": "0xa5ab3e",
+        "va": "0xe5ab3e",
+        "text": "UUPx(("
+      },
+      {
+        "offset": "0xa6339c",
+        "va": "0xe6339c",
+        "text": "ChannelScript.pvf"
+      },
+      {
+        "offset": "0xa82eae",
+        "va": "0xe82eae",
+        "text": "UUPx(("
+      },
+      {
+        "offset": "0xaa84d4",
+        "va": "0xea84d4",
+        "text": "C:\\Work\\USA\\DNF_TESTRUN\\RDAR.pdb"
+      },
+      {
+        "offset": "0xee8ca1",
+        "va": "0x12e8ca1",
+        "text": "Themida"
+      },
+      {
+        "offset": "0xf2752f",
+        "va": "0x132752f",
+        "text": "Software\\WinLicense"
+      },
+      {
+        "offset": "0xf2756c",
+        "va": "0x132756c",
+        "text": "WinLicenseVersion"
+      },
+      {
+        "offset": "0xf2757e",
+        "va": "0x132757e",
+        "text": "WinLicenseDriverVersion"
+      },
+      {
+        "offset": "0xf27596",
+        "va": "0x1327596",
+        "text": "WinLicenseInstance"
+      },
+      {
+        "offset": "0xf2d2af",
+        "va": "0x132d2af",
+        "text": "Software\\WinLicense"
+      }
+    ],
+    "debug": []
+  },
+  {
+    "path": "DFO\\Script.pvf",
+    "size": 140179584,
+    "sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "header_hex": "2400000031336666396139342d303230342d303431302d383435612d6365656666653633373139307f160100e8747300be7f6451ad840100fefa7e513e726451a223bc8de5e5398826e73e88a5a22f8a27a4780c24a3af487524798ae5e73f0be567398b"
+  }
+]

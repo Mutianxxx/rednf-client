@@ -1,0 +1,2177 @@
+{
+  "source_path": "D:\\dnf\\60US\\analysis\\unpack_attempts\\001\\launcher_test\\DFO_fixed_v3.original.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "selected_executable": {
+    "path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+    "observed_sha256": "bdd14a558658dd0b20def0aa9fa4b355b98855075a05ba6de7f60c4da695495e",
+    "static_evidence_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "binding": "verified-imports-only-derivative",
+    "runtime_equivalence_verified": false,
+    "original_path": "D:\\dnf\\60US\\analysis\\unpack_attempts\\001\\launcher_test\\DFO_fixed_v3.original.exe",
+    "unchanged_original_sections": [
+      {
+        "name": ".text",
+        "rva": "0x1000",
+        "size": 15384576,
+        "sha256": "872a4fd7c4a6582d638c77209cd9f4d8aa058fda22bc467f723f9d8386ad0085"
+      },
+      {
+        "name": ".rsrc",
+        "rva": "0xead000",
+        "size": 229376,
+        "sha256": "c9c90dae1523546f622837d1d08a2cb2f56b4bfc3807bef787b37076fe28c9e7"
+      },
+      {
+        "name": ".idata  ",
+        "rva": "0xee5000",
+        "size": 4096,
+        "sha256": "a8bd00db2bd5a1e2afb1b3f3a59ec48101c1aeabab1588c605aa75b7ac8aca62"
+      },
+      {
+        "name": "jsrwqdbk",
+        "rva": "0xee6000",
+        "size": 1212416,
+        "sha256": "76ff2115b33d3e52201b747feb9c461a288e89a50dd0f09b1e3a23137ece3a92"
+      },
+      {
+        "name": "lfkklsnv",
+        "rva": "0x100e000",
+        "size": 4096,
+        "sha256": "b11431c3664a4dd5db94aa2f960170e81f895c53223d34b5422539484ea8e100"
+      },
+      {
+        "name": ".SCY",
+        "rva": "0x100f000",
+        "size": 20480,
+        "sha256": "471f8773e8322ba84e5f9bafa0ade84b1559d4baeee7ad4e4c64a4c442c83581"
+      },
+      {
+        "name": ".chui",
+        "rva": "0x1014000",
+        "size": 512,
+        "sha256": "42a3a8405e2b51c2111411388e38b9966c3dac695f89d4a0d93947726d3b985f"
+      }
+    ],
+    "limitation": "Static disk contracts only; launcher replaces protected combat branches at runtime."
+  },
+  "evidence_kind": "static PE bytes, REA pseudocode, original PVF data",
+  "runtime_draw_trace": false,
+  "slices": [
+    {
+      "name": "ani_rotation_rgba_parse",
+      "va": "0xa2912b",
+      "size": 102,
+      "file_offset": 6459691,
+      "sha256": "5fc784a735216c83980c705418246a84d31a9d34f9a20b1dc546a749baac7d86",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "rgba_texture_dispatch",
+      "va": "0xb0e050",
+      "size": 179,
+      "file_offset": 7397456,
+      "sha256": "545b41204bdd1fdb54af1dc78a4854f202718a93351248486446c62e812ded16",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "texture_quad",
+      "va": "0xadd3d0",
+      "size": 544,
+      "file_offset": 7197648,
+      "sha256": "0ba7035448ba7d74f5d1c21f988b481d9b6da79ef3000bb390834c6f436bd8a2",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "rotation_matrix_dispatch",
+      "va": "0xc3551a",
+      "size": 34,
+      "file_offset": 8607002,
+      "sha256": "bfbcdb1f740eff81aa55505688c7edd9a2c71abb3ad84b373736061c1247288b",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "rotation_matrix_x87",
+      "va": "0xc3553c",
+      "size": 122,
+      "file_offset": 8607036,
+      "sha256": "7740109a9c6e87a475e8a1a5482fb398ff5c4d749e6480687a5b43aa8ba9b14f",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "math_cpu_dispatch",
+      "va": "0xc3788e",
+      "size": 219,
+      "file_offset": 8616078,
+      "sha256": "4a9ff78190fdb0f9a573db96719c6763dd84d8d8b83af2741d07b858ed4a21d4",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "quad_vertex_fill",
+      "va": "0xb08d30",
+      "size": 1248,
+      "file_offset": 7376176,
+      "sha256": "2133adae7c090b66f92dd5002aabf5b37214f54e1e7c7658912dc3f488083d95",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "texture_stage_setup",
+      "va": "0xb08383",
+      "size": 83,
+      "file_offset": 7373699,
+      "sha256": "5c7a0015bf01c7ddaff596c7e114548cc424f21d5e0d0c5a874b32a217cc3360",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "math-dispatch-tables",
+      "va": "0xffb080",
+      "size": 472,
+      "sha256": "18bd0b63519e8860e4528ca2805b448756cf355661e9909b63da3d8dcbba8e12",
+      "kind": "data",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "texture-rtti",
+      "va": "0xff2664",
+      "size": 80,
+      "sha256": "d3c0a6884de3bd501a82bdf04f16889719fd6f71c9eafeca52421ba64dc4efc8",
+      "kind": "data",
+      "selected_disk_bytes_equal": true
+    },
+    {
+      "name": "texture-col",
+      "va": "0xecbcc0",
+      "size": 104,
+      "sha256": "ede0eeaeff27b9c38ac56eeffe3170499827bb30aff155952dab55a6e4ae4103",
+      "kind": "data",
+      "selected_disk_bytes_equal": true
+    }
+  ],
+  "texture_vtables": [
+    {
+      "name": "CND3DBaseTexture",
+      "vtable": "0xe6a074",
+      "complete_object_locator": "0xecbcc0",
+      "type_descriptor": "0xff2664",
+      "decorated_type": ".?AVCND3DBaseTexture@nengine@@",
+      "slot_a0": "0xadd3d0",
+      "sha256": "7ee4d1134c3cb154104e2672df0157879dbb8fab77f144161c5bdf5645c57e63"
+    },
+    {
+      "name": "CND3DTexture32",
+      "vtable": "0xe6a12c",
+      "complete_object_locator": "0xecbd14",
+      "type_descriptor": "0xff268c",
+      "decorated_type": ".?AVCND3DTexture32@nengine@@",
+      "slot_a0": "0xadd3d0",
+      "sha256": "11a0af6a6ed6252a45e6b56784e13c672b277127b7895f36a1688c412b54e1cc"
+    }
+  ],
+  "matrix_dispatch": {
+    "static_pointer": "0xc3551a",
+    "baseline_implementation": "0xc3553c",
+    "cpu_selected_runtime_pointer_observed": false
+  },
+  "reused_rea": [
+    {
+      "evidence_id": "ev_0936b3ddf6298ca577f5f4591db312b782b62e44eff851b1c23b6098208d0e3d",
+      "result_file": "037-function.json",
+      "address": "0x5383d0"
+    },
+    {
+      "evidence_id": "ev_4e8256395d0ddabfdbf0a9055c0a47e5dacd6d9d9f0932e93e92e6d19df9e3f0",
+      "result_file": "040-function.json",
+      "address": "0xb08200"
+    },
+    {
+      "evidence_id": "ev_9f2dc5bde894b9592c30b1abdc470d98945f00059383e3a715de9dad92b24a20",
+      "result_file": "032-function.json",
+      "address": "0xa23d60"
+    }
+  ],
+  "texture_quad_rea": "ev_d7062f931a7f0b1868e46746fc93b88b6e853b7425cc61669a2f0dfa0f2a7aad",
+  "pvf_samples": [
+    {
+      "path": "character/swordman/effect/animation/soulbringer2.ani",
+      "sha256": "74cd53b285afd7946faebd943df54b85c88b49ac11c8f4a12e62cc6e4d5743a4",
+      "size": 525,
+      "encoding": "cp949",
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "crc_verified": true,
+      "entry": {
+        "file_number": 679284810,
+        "path": "character/swordman/effect/animation/soulbringer2.ani",
+        "size": 525,
+        "crc": "74eadccd",
+        "relative_offset": 22072984,
+        "absolute_offset": 29639608
+      },
+      "frames": [
+        {
+          "index": 0,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "Character/Swordman/Effect/SoulBringer.img",
+                0
+              ],
+              "start": 51,
+              "end": 106,
+              "line": 6,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "Character/Swordman/Effect/SoulBringer.img",
+                  "value": "Character/Swordman/Effect/SoulBringer.img",
+                  "start": 59,
+                  "end": 102,
+                  "line": 6,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "0",
+                  "value": 0,
+                  "start": 103,
+                  "end": 104,
+                  "line": 6,
+                  "column": 53
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -7,
+                -65
+              ],
+              "start": 106,
+              "end": 126,
+              "line": 7,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-7",
+                  "value": -7,
+                  "start": 118,
+                  "end": 120,
+                  "line": 7,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-65",
+                  "value": -65,
+                  "start": 121,
+                  "end": 124,
+                  "line": 7,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                0.4,
+                0.2
+              ],
+              "start": 126,
+              "end": 148,
+              "line": 8,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "0.4",
+                  "value": 0.4,
+                  "start": 139,
+                  "end": 142,
+                  "line": 8,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "0.2",
+                  "value": 0.2,
+                  "start": 143,
+                  "end": 146,
+                  "line": 8,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                0.0
+              ],
+              "start": 148,
+              "end": 173,
+              "line": 9,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "0.000000",
+                  "value": 0.0,
+                  "start": 163,
+                  "end": 171,
+                  "line": 9,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                60,
+                0,
+                255,
+                255
+              ],
+              "start": 173,
+              "end": 194,
+              "line": 10,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "60",
+                  "value": 60,
+                  "start": 180,
+                  "end": 182,
+                  "line": 10,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "0",
+                  "value": 0,
+                  "start": 183,
+                  "end": 184,
+                  "line": 10,
+                  "column": 11
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 185,
+                  "end": 188,
+                  "line": 10,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 189,
+                  "end": 192,
+                  "line": 10,
+                  "column": 17
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 213,
+              "end": 245,
+              "line": 12,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 230,
+                  "end": 243,
+                  "line": 12,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "Character/Swordman/Effect/SoulBringer.img",
+                0
+              ],
+              "start": 296,
+              "end": 351,
+              "line": 17,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "Character/Swordman/Effect/SoulBringer.img",
+                  "value": "Character/Swordman/Effect/SoulBringer.img",
+                  "start": 304,
+                  "end": 347,
+                  "line": 17,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "0",
+                  "value": 0,
+                  "start": 348,
+                  "end": 349,
+                  "line": 17,
+                  "column": 53
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -7,
+                -65
+              ],
+              "start": 351,
+              "end": 371,
+              "line": 18,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-7",
+                  "value": -7,
+                  "start": 363,
+                  "end": 365,
+                  "line": 18,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-65",
+                  "value": -65,
+                  "start": 366,
+                  "end": 369,
+                  "line": 18,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                1.0,
+                0.8
+              ],
+              "start": 371,
+              "end": 393,
+              "line": 19,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "1.0",
+                  "value": 1.0,
+                  "start": 384,
+                  "end": 387,
+                  "line": 19,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "0.8",
+                  "value": 0.8,
+                  "start": 388,
+                  "end": 391,
+                  "line": 19,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                0.0
+              ],
+              "start": 393,
+              "end": 418,
+              "line": 20,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "0.000000",
+                  "value": 0.0,
+                  "start": 408,
+                  "end": 416,
+                  "line": 20,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                60,
+                0,
+                255,
+                255
+              ],
+              "start": 418,
+              "end": 439,
+              "line": 21,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "60",
+                  "value": 60,
+                  "start": 425,
+                  "end": 427,
+                  "line": 21,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "0",
+                  "value": 0,
+                  "start": 428,
+                  "end": 429,
+                  "line": 21,
+                  "column": 11
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 430,
+                  "end": 433,
+                  "line": 21,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 434,
+                  "end": 437,
+                  "line": 21,
+                  "column": 17
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 458,
+              "end": 490,
+              "line": 23,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 475,
+                  "end": 488,
+                  "line": 23,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "character/swordman/effect/animation/hundredsword/finishcircle1.ani",
+      "sha256": "e705085f4803c2b7778d582271917c66f9d396fe908039cca82685d34a4ed41c",
+      "size": 1672,
+      "encoding": "cp949",
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "crc_verified": true,
+      "entry": {
+        "file_number": 703431288,
+        "path": "character/swordman/effect/animation/hundredsword/finishcircle1.ani",
+        "size": 1672,
+        "crc": "3e01651b",
+        "relative_offset": 22720608,
+        "absolute_offset": 30287232
+      },
+      "frames": [
+        {
+          "index": 0,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "",
+                0
+              ],
+              "start": 51,
+              "end": 65,
+              "line": 6,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "",
+                  "value": "",
+                  "start": 59,
+                  "end": 61,
+                  "line": 6,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "0",
+                  "value": 0,
+                  "start": 62,
+                  "end": 63,
+                  "line": 6,
+                  "column": 12
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -370,
+                -171
+              ],
+              "start": 65,
+              "end": 88,
+              "line": 7,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-370",
+                  "value": -370,
+                  "start": 77,
+                  "end": 81,
+                  "line": 7,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-171",
+                  "value": -171,
+                  "start": 82,
+                  "end": 86,
+                  "line": 7,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                -1.4,
+                1.4
+              ],
+              "start": 88,
+              "end": 121,
+              "line": 8,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-1.400000",
+                  "value": -1.4,
+                  "start": 101,
+                  "end": 110,
+                  "line": 8,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "1.400000",
+                  "value": 1.4,
+                  "start": 111,
+                  "end": 119,
+                  "line": 8,
+                  "column": 24
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                -2.443461
+              ],
+              "start": 121,
+              "end": 147,
+              "line": 9,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-2.443461",
+                  "value": -2.443461,
+                  "start": 136,
+                  "end": 145,
+                  "line": 9,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "start": 147,
+              "end": 171,
+              "line": 10,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 154,
+                  "end": 157,
+                  "line": 10,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 158,
+                  "end": 161,
+                  "line": 10,
+                  "column": 12
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 162,
+                  "end": 165,
+                  "line": 10,
+                  "column": 16
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 166,
+                  "end": 169,
+                  "line": 10,
+                  "column": 20
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 190,
+              "end": 222,
+              "line": 12,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 207,
+                  "end": 220,
+                  "line": 12,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                0
+              ],
+              "start": 271,
+              "end": 347,
+              "line": 17,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "value": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "start": 279,
+                  "end": 343,
+                  "line": 17,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "0",
+                  "value": 0,
+                  "start": 344,
+                  "end": 345,
+                  "line": 17,
+                  "column": 74
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -370,
+                -171
+              ],
+              "start": 347,
+              "end": 370,
+              "line": 18,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-370",
+                  "value": -370,
+                  "start": 359,
+                  "end": 363,
+                  "line": 18,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-171",
+                  "value": -171,
+                  "start": 364,
+                  "end": 368,
+                  "line": 18,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                -1.4,
+                1.4
+              ],
+              "start": 370,
+              "end": 403,
+              "line": 19,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-1.400000",
+                  "value": -1.4,
+                  "start": 383,
+                  "end": 392,
+                  "line": 19,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "1.400000",
+                  "value": 1.4,
+                  "start": 393,
+                  "end": 401,
+                  "line": 19,
+                  "column": 24
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                -2.443461
+              ],
+              "start": 403,
+              "end": 429,
+              "line": 20,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-2.443461",
+                  "value": -2.443461,
+                  "start": 418,
+                  "end": 427,
+                  "line": 20,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "start": 429,
+              "end": 453,
+              "line": 21,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 436,
+                  "end": 439,
+                  "line": 21,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 440,
+                  "end": 443,
+                  "line": 21,
+                  "column": 12
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 444,
+                  "end": 447,
+                  "line": 21,
+                  "column": 16
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 448,
+                  "end": 451,
+                  "line": 21,
+                  "column": 20
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 472,
+              "end": 504,
+              "line": 23,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 489,
+                  "end": 502,
+                  "line": 23,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                1
+              ],
+              "start": 554,
+              "end": 630,
+              "line": 28,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "value": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "start": 562,
+                  "end": 626,
+                  "line": 28,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "1",
+                  "value": 1,
+                  "start": 627,
+                  "end": 628,
+                  "line": 28,
+                  "column": 74
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -370,
+                -171
+              ],
+              "start": 630,
+              "end": 653,
+              "line": 29,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-370",
+                  "value": -370,
+                  "start": 642,
+                  "end": 646,
+                  "line": 29,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-171",
+                  "value": -171,
+                  "start": 647,
+                  "end": 651,
+                  "line": 29,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                -1.4,
+                1.4
+              ],
+              "start": 653,
+              "end": 686,
+              "line": 30,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-1.400000",
+                  "value": -1.4,
+                  "start": 666,
+                  "end": 675,
+                  "line": 30,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "1.400000",
+                  "value": 1.4,
+                  "start": 676,
+                  "end": 684,
+                  "line": 30,
+                  "column": 24
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                -2.443461
+              ],
+              "start": 686,
+              "end": 712,
+              "line": 31,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-2.443461",
+                  "value": -2.443461,
+                  "start": 701,
+                  "end": 710,
+                  "line": 31,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "start": 712,
+              "end": 736,
+              "line": 32,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 719,
+                  "end": 722,
+                  "line": 32,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 723,
+                  "end": 726,
+                  "line": 32,
+                  "column": 12
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 727,
+                  "end": 730,
+                  "line": 32,
+                  "column": 16
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 731,
+                  "end": 734,
+                  "line": 32,
+                  "column": 20
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 755,
+              "end": 787,
+              "line": 34,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 772,
+                  "end": 785,
+                  "line": 34,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                2
+              ],
+              "start": 837,
+              "end": 913,
+              "line": 39,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "value": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "start": 845,
+                  "end": 909,
+                  "line": 39,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "2",
+                  "value": 2,
+                  "start": 910,
+                  "end": 911,
+                  "line": 39,
+                  "column": 74
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -370,
+                -171
+              ],
+              "start": 913,
+              "end": 936,
+              "line": 40,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-370",
+                  "value": -370,
+                  "start": 925,
+                  "end": 929,
+                  "line": 40,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-171",
+                  "value": -171,
+                  "start": 930,
+                  "end": 934,
+                  "line": 40,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                -1.4,
+                1.4
+              ],
+              "start": 936,
+              "end": 969,
+              "line": 41,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-1.400000",
+                  "value": -1.4,
+                  "start": 949,
+                  "end": 958,
+                  "line": 41,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "1.400000",
+                  "value": 1.4,
+                  "start": 959,
+                  "end": 967,
+                  "line": 41,
+                  "column": 24
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                -2.443461
+              ],
+              "start": 969,
+              "end": 995,
+              "line": 42,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-2.443461",
+                  "value": -2.443461,
+                  "start": 984,
+                  "end": 993,
+                  "line": 42,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "start": 995,
+              "end": 1019,
+              "line": 43,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1002,
+                  "end": 1005,
+                  "line": 43,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1006,
+                  "end": 1009,
+                  "line": 43,
+                  "column": 12
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1010,
+                  "end": 1013,
+                  "line": 43,
+                  "column": 16
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1014,
+                  "end": 1017,
+                  "line": 43,
+                  "column": 20
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 1038,
+              "end": 1070,
+              "line": 45,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 1055,
+                  "end": 1068,
+                  "line": 45,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                3
+              ],
+              "start": 1120,
+              "end": 1196,
+              "line": 50,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "value": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "start": 1128,
+                  "end": 1192,
+                  "line": 50,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "3",
+                  "value": 3,
+                  "start": 1193,
+                  "end": 1194,
+                  "line": 50,
+                  "column": 74
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -370,
+                -171
+              ],
+              "start": 1196,
+              "end": 1219,
+              "line": 51,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-370",
+                  "value": -370,
+                  "start": 1208,
+                  "end": 1212,
+                  "line": 51,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-171",
+                  "value": -171,
+                  "start": 1213,
+                  "end": 1217,
+                  "line": 51,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                -1.4,
+                1.4
+              ],
+              "start": 1219,
+              "end": 1252,
+              "line": 52,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-1.400000",
+                  "value": -1.4,
+                  "start": 1232,
+                  "end": 1241,
+                  "line": 52,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "1.400000",
+                  "value": 1.4,
+                  "start": 1242,
+                  "end": 1250,
+                  "line": 52,
+                  "column": 24
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                -2.443461
+              ],
+              "start": 1252,
+              "end": 1278,
+              "line": 53,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-2.443461",
+                  "value": -2.443461,
+                  "start": 1267,
+                  "end": 1276,
+                  "line": 53,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "start": 1278,
+              "end": 1302,
+              "line": 54,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1285,
+                  "end": 1288,
+                  "line": 54,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1289,
+                  "end": 1292,
+                  "line": 54,
+                  "column": 12
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1293,
+                  "end": 1296,
+                  "line": 54,
+                  "column": 16
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1297,
+                  "end": 1300,
+                  "line": 54,
+                  "column": 20
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 1321,
+              "end": 1353,
+              "line": 56,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 1338,
+                  "end": 1351,
+                  "line": 56,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                4
+              ],
+              "start": 1403,
+              "end": 1479,
+              "line": 61,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "value": "Character/Swordman/Effect/HundredSword/finish_slash_circle.img",
+                  "start": 1411,
+                  "end": 1475,
+                  "line": 61,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "4",
+                  "value": 4,
+                  "start": 1476,
+                  "end": 1477,
+                  "line": 61,
+                  "column": 74
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -370,
+                -171
+              ],
+              "start": 1479,
+              "end": 1502,
+              "line": 62,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-370",
+                  "value": -370,
+                  "start": 1491,
+                  "end": 1495,
+                  "line": 62,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-171",
+                  "value": -171,
+                  "start": 1496,
+                  "end": 1500,
+                  "line": 62,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                -1.4,
+                1.4
+              ],
+              "start": 1502,
+              "end": 1535,
+              "line": 63,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-1.400000",
+                  "value": -1.4,
+                  "start": 1515,
+                  "end": 1524,
+                  "line": 63,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "1.400000",
+                  "value": 1.4,
+                  "start": 1525,
+                  "end": 1533,
+                  "line": 63,
+                  "column": 24
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                -2.443461
+              ],
+              "start": 1535,
+              "end": 1561,
+              "line": 64,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-2.443461",
+                  "value": -2.443461,
+                  "start": 1550,
+                  "end": 1559,
+                  "line": 64,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "start": 1561,
+              "end": 1585,
+              "line": 65,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1568,
+                  "end": 1571,
+                  "line": 65,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1572,
+                  "end": 1575,
+                  "line": 65,
+                  "column": 12
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1576,
+                  "end": 1579,
+                  "line": 65,
+                  "column": 16
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 1580,
+                  "end": 1583,
+                  "line": 65,
+                  "column": 20
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 1604,
+              "end": 1636,
+              "line": 67,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 1621,
+                  "end": 1634,
+                  "line": 67,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "character/swordman/effect/animation/hundredsword/flash1.ani",
+      "sha256": "7c033c49689135ac5fc6745241529a2776efa32edd27a178c4a6e919fb120d69",
+      "size": 568,
+      "encoding": "cp949",
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "crc_verified": true,
+      "entry": {
+        "file_number": 1156782963,
+        "path": "character/swordman/effect/animation/hundredsword/flash1.ani",
+        "size": 568,
+        "crc": "a79ad118",
+        "relative_offset": 35575388,
+        "absolute_offset": 43142012
+      },
+      "frames": [
+        {
+          "index": 0,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "Character/Mage/Effect/Bellatrix/supergirl_change_glows.img",
+                2
+              ],
+              "start": 51,
+              "end": 123,
+              "line": 6,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "Character/Mage/Effect/Bellatrix/supergirl_change_glows.img",
+                  "value": "Character/Mage/Effect/Bellatrix/supergirl_change_glows.img",
+                  "start": 59,
+                  "end": 119,
+                  "line": 6,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "2",
+                  "value": 2,
+                  "start": 120,
+                  "end": 121,
+                  "line": 6,
+                  "column": 70
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -185,
+                -99
+              ],
+              "start": 123,
+              "end": 145,
+              "line": 7,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-185",
+                  "value": -185,
+                  "start": 135,
+                  "end": 139,
+                  "line": 7,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-99",
+                  "value": -99,
+                  "start": 140,
+                  "end": 143,
+                  "line": 7,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                1.8,
+                1.8
+              ],
+              "start": 145,
+              "end": 167,
+              "line": 8,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "1.8",
+                  "value": 1.8,
+                  "start": 158,
+                  "end": 161,
+                  "line": 8,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "1.8",
+                  "value": 1.8,
+                  "start": 162,
+                  "end": 165,
+                  "line": 8,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                0.0
+              ],
+              "start": 167,
+              "end": 192,
+              "line": 9,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "0.000000",
+                  "value": 0.0,
+                  "start": 182,
+                  "end": 190,
+                  "line": 9,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                255,
+                255,
+                255,
+                255
+              ],
+              "start": 192,
+              "end": 216,
+              "line": 10,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 199,
+                  "end": 202,
+                  "line": 10,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 203,
+                  "end": 206,
+                  "line": 10,
+                  "column": 12
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 207,
+                  "end": 210,
+                  "line": 10,
+                  "column": 16
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 211,
+                  "end": 214,
+                  "line": 10,
+                  "column": 20
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 235,
+              "end": 267,
+              "line": 12,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 252,
+                  "end": 265,
+                  "line": 12,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "fields": [
+            {
+              "tag": "IMAGE",
+              "values": [
+                "Character/Mage/Effect/Bellatrix/supergirl_change_glows.img",
+                2
+              ],
+              "start": 318,
+              "end": 390,
+              "line": 17,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "Character/Mage/Effect/Bellatrix/supergirl_change_glows.img",
+                  "value": "Character/Mage/Effect/Bellatrix/supergirl_change_glows.img",
+                  "start": 326,
+                  "end": 386,
+                  "line": 17,
+                  "column": 9
+                },
+                {
+                  "kind": "atom",
+                  "text": "2",
+                  "value": 2,
+                  "start": 387,
+                  "end": 388,
+                  "line": 17,
+                  "column": 70
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE POS",
+              "values": [
+                -185,
+                -99
+              ],
+              "start": 390,
+              "end": 412,
+              "line": 18,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-185",
+                  "value": -185,
+                  "start": 402,
+                  "end": 406,
+                  "line": 18,
+                  "column": 13
+                },
+                {
+                  "kind": "atom",
+                  "text": "-99",
+                  "value": -99,
+                  "start": 407,
+                  "end": 410,
+                  "line": 18,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE RATE",
+              "values": [
+                1.8,
+                1.8
+              ],
+              "start": 412,
+              "end": 434,
+              "line": 19,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "1.8",
+                  "value": 1.8,
+                  "start": 425,
+                  "end": 428,
+                  "line": 19,
+                  "column": 14
+                },
+                {
+                  "kind": "atom",
+                  "text": "1.8",
+                  "value": 1.8,
+                  "start": 429,
+                  "end": 432,
+                  "line": 19,
+                  "column": 18
+                }
+              ]
+            },
+            {
+              "tag": "IMAGE ROTATE",
+              "values": [
+                -0.157
+              ],
+              "start": 434,
+              "end": 460,
+              "line": 20,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "-0.157000",
+                  "value": -0.157,
+                  "start": 449,
+                  "end": 458,
+                  "line": 20,
+                  "column": 16
+                }
+              ]
+            },
+            {
+              "tag": "RGBA",
+              "values": [
+                255,
+                255,
+                255,
+                0
+              ],
+              "start": 460,
+              "end": 482,
+              "line": 21,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 467,
+                  "end": 470,
+                  "line": 21,
+                  "column": 8
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 471,
+                  "end": 474,
+                  "line": 21,
+                  "column": 12
+                },
+                {
+                  "kind": "atom",
+                  "text": "255",
+                  "value": 255,
+                  "start": 475,
+                  "end": 478,
+                  "line": 21,
+                  "column": 16
+                },
+                {
+                  "kind": "atom",
+                  "text": "0",
+                  "value": 0,
+                  "start": 479,
+                  "end": 480,
+                  "line": 21,
+                  "column": 20
+                }
+              ]
+            },
+            {
+              "tag": "GRAPHIC EFFECT",
+              "values": [
+                "LINEARDODGE"
+              ],
+              "start": 501,
+              "end": 533,
+              "line": 23,
+              "scope": [],
+              "value_tokens": [
+                {
+                  "kind": "string",
+                  "text": "LINEARDODGE",
+                  "value": "LINEARDODGE",
+                  "start": 518,
+                  "end": 531,
+                  "line": 23,
+                  "column": 18
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "contract": {
+    "rotation_unit": "radians",
+    "matrix_angle": "negative source angle",
+    "vertex_rgb": "texture.rgb * frame.rgb / 255",
+    "vertex_alpha": "texture.alpha * frame.alpha / 255",
+    "normal_origin_canvas_order": [
+      "translate(actorX,actorY-actorZ)",
+      "scale(directionSign*rateX,rateY)",
+      "rotate(-sourceAngle)",
+      "translate(imagePosX,imagePosY)",
+      "drawImage(cropX,cropY)"
+    ]
+  },
+  "limitations": [
+    "Static disk-byte equality does not establish launcher/runtime equivalence.",
+    "Baseline x87 matrix and CPU dispatcher retained; no live draw trace or runtime CPU-target sample.",
+    "Transform applies to the normal IMAGE POS origin; center-origin mode remains unimplemented.",
+    "Interpolation, native clocks, alternate graphic effects and original-game pixel equality remain unverified."
+  ]
+}

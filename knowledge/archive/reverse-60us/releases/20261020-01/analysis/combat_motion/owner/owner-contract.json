@@ -1,0 +1,189 @@
+{
+  "schema": "60US-owner-collision-contract/1",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "scope": "actual Swordman owner v+A8/v+AC/v+274, delegated blocker/terrain gates and side-effect boundaries",
+  "authority": "current client bytes; dnf-rebuild guesses not used",
+  "original_client_runtime_observed": false,
+  "z": {
+    "slot": "0xa8",
+    "va": "0x004ac100",
+    "formula": "signed int32 z >= 0",
+    "size": 17,
+    "notes": [
+      "No map/layer/status/attachment checks in this callback.",
+      "No velocity, acceleration or state mutation."
+    ]
+  },
+  "xy": {
+    "slot": "0xac",
+    "va": "0x004b00f0",
+    "signature": "bool thiscall(owner,int32 x,int32 y,Object** out)",
+    "wrapper": [
+      "retainedCast=NULL",
+      "if owner+184 byte and owner virtual+3C4() nonnull: iterate appendage vector [list+4,list+8) in order",
+      "only entries whose +4 owner pointer equals this are RTTI-cast IRDAppendage→CNThrowWebPullAppendage; result replaces retainedCast",
+      "nonnull retainedCast with virtual+60 true breaks loop; inactive nonnull cast is retained until a later same-owner cast replaces it",
+      "if owner virtual+410(16) true and retainedCast NULL: return owner virtual+230()==5",
+      "otherwise call4E7DD0(x,y,out)"
+    ],
+    "active_status": {
+      "slot": "0x410",
+      "target": "0x004ac020",
+      "formula": "obj=owner[0x1294+index*4]; return obj!=NULL && obj.virtual+8()",
+      "index": 16,
+      "semantic_name": "unknown; numeric active-status slot retained"
+    },
+    "state": {
+      "slot": "0x230",
+      "target": "0x00744c30",
+      "source": "protected int actor+0x155c"
+    },
+    "appendage_list": {
+      "slot": "0x3c4",
+      "target": "0x00744870",
+      "source": "actor+0x12dc"
+    },
+    "out_pointer": "wrapper status shortcut neither clears nor fills out; 4E7DD0 clears *out at entry",
+    "tripleslash": "when status slot16 active and no retained cast, native state22 returnsfalse directly"
+  },
+  "probe": {
+    "va": "0x004e7dd0",
+    "owner_manager_pointer": "actor+0x100",
+    "order": [
+      "if out nonnull: *out=NULL; if actor+100 NULL: returntrue",
+      "save current provider float32 xyz; current z getter virtual+9C; virtual+88(x,y,currentZ) writes candidate via499050→510F50",
+      "set movement+7C=0; query manager50B240(owner)",
+      "if returned blocker casts IRDCollisionObject→CNRDPassiveObject and its virtual+33C() data+8==0: allow and skip terrain",
+      "other nonnull blocker: deny; write *out=blocker if out supplied",
+      "if blocker NULL and manager+114 and [manager+114]+50 nonnull: deny iff terrain485950(owner) false",
+      "restore saved provider float xyz; set movement+7C=1; returndecision"
+    ],
+    "persistent_effects": [
+      "510F50 writes movement+8C=1 for each candidate coordinate write; restore bypasses510F50, so this flag remains set",
+      "movement+7C is forced1 after normal probe, not restored to its prior value",
+      "owner virtual+88 is polymorphic; Swordman slot maps499050; unusual provider getter/setter side effects not exhaustively modeled"
+    ],
+    "no_direct_changes": "these bodies do not directly clear velocity, acceleration, acceleration countdown, HP or native state"
+  },
+  "manager": {
+    "va": "0x0050b240",
+    "registered": "manager+[10,14) vector of object pointers",
+    "candidates": "manager+[90,94) vector; order preserved",
+    "gates": [
+      "owner must be registered by pointer identity",
+      "owner v+1FC()!=0 OR v+200()!=0",
+      "skip self candidate",
+      "return first candidate satisfying owner v+244(other)"
+    ],
+    "no_match": "NULL; terrain fallback may then execute",
+    "caveat": "candidate vector population/update cadence and runtime contents not traced"
+  },
+  "footprint": {
+    "width": "protected int actor+20C via4387F0",
+    "height": "protected int actor+214 via438800",
+    "left": "x-trunc(width/2)",
+    "right": "left+width",
+    "top": "y-trunc(height/2)",
+    "bottom": "top+height",
+    "bounds_helpers": "438810/438840/438860/438890",
+    "layer": "actor+498 via438690, virtual+1C4",
+    "scalar21c": "int actor+21C via4386D0; current Swordman virtual+204 and+208 share it; semantic name not asserted",
+    "bounds_intersection": "4E81D0: rightA>=leftB && rightB>=leftA && bottomA>=topB && bottomB>=topA; touching counts, no z check"
+  },
+  "pair": {
+    "slot": "0x244",
+    "current_target": "0x004eb600",
+    "bounds_slot": "0x248→0x004e81d0",
+    "prerequisites": [
+      "at least one object satisfies class-mask0x21",
+      "both objects each have nonzero v+1FC and v+200",
+      "v+248 bounds overlap"
+    ],
+    "self_type_rules": {
+      "1": "block iff self v+208<=0 (484670 returns self v+208>0)",
+      "2": "block iff other absent by pointer identity from self+[4D4,4D8) ignore vector",
+      "3 or4": "block iff layers(v+1C4) differ",
+      "other": "no block from self type branch"
+    },
+    "other_type_rules": {
+      "1": "block iff current owner v+204<=0",
+      "2": "block iff current owner absent from other's ignore vector",
+      "3 or4": "block iff layers differ",
+      "other": "no block from other type branch"
+    },
+    "type_source": "only on each object's mask0x21 path: *(object.virtual+33C()+8); this is a polymorphic interface",
+    "polymorphism_caution": "Swordman's own v+33C slot4AD690 is not a generic passive-data pointer getter; do not call it as one outside the guarded class branch",
+    "unmatched": "false; no direct mutation in pair/bounds/list helpers"
+  },
+  "terrain": {
+    "va": "0x00485950",
+    "context": "[manager+114]+50 object",
+    "tile_reader": "0x00485580",
+    "boundary_gate": "owner mask0x11 OR mask0x81 OR (mask0x21 AND data(v+33C)+1D byte)",
+    "center_bounds": "0<=x<baseColumnRecords*224; 0<=y<baseRows*12+extensionRowBlocks*120",
+    "footprint_gate": "if v+1FC==0 AND v+200==0: returntrue after center bounds gate",
+    "rectangle_override": "if context+[174,178) contains Rect{x,y,w,h}: allow iff center belongs to any half-open rectangle; bypass cell grid",
+    "cells": "x from max(0,trunc(left/16)) to min(trunc(right/16),totalColumns-1) inclusive; y from max(0,trunc(top/12)) to min(trunc(bottom/12),totalRows-1) inclusive; x outer,y inner",
+    "cell_type_rules": {
+      "1": "allow iff owner virtual+208>0",
+      "2": "deny",
+      "3": "allow iff owner layer==0",
+      "4": "allow iff owner layer==1",
+      "other": "no restriction"
+    },
+    "cell_geometry": "16 by12 native world-coordinate units; not assigned meter/pixel units",
+    "storage": "context+[218,21C) base column records stride36; each column has row vector at+18/+1C stride16; xCell/14 selects column and xCell%14 selects int32 row cell",
+    "extension": "if yCell>=baseRows: block=(yCell-baseRows)/10, row=(yCell-baseRows)%10;486B80(block,column) finds extension record; invalid record returns celltype2",
+    "dimensions": "columns=baseColumnRecords*14; extensionRowBlocks=extensionRecordCount/baseColumnRecords unsigned division; rows=baseRows+extensionRowBlocks*10",
+    "unresolved": "PVF loader writes into these native structures and numeric celltype source tags not traced in this subtask"
+  },
+  "response": {
+    "slot": "0x274",
+    "va": "0x004b97b0",
+    "base": "0x004e8a30",
+    "order": [
+      "if actor+148 nonnull: attachment.virtual+1C(axis,velocity,collisionObject)",
+      "if actor+154 nonnull: attachment.virtual+1C(axis,velocity,collisionObject)",
+      "if actor+1606 &&actor+1607 &&actor+1678==-1 &&axis in{0,1}: owner.virtual+57C(axis)→4B9560"
+    ],
+    "triple_slash": "both live-input flags false after state22 axis config; no4B9560 detour from this wrapper",
+    "detour": "4B9560 probes +/- transverse coordinates, writes1678/167C/1680/1684, then v+49C direction application; it is not a velocity-zero handler",
+    "unresolved": "concrete actor+148/+154 dynamic classes and virtual+1C bodies remain callback boundary; forwarded code may mutate combat state",
+    "no_direct_zero": "response/base wrappers contain no direct V/A/countdown clear or damage/HP application"
+  },
+  "executable": {
+    "model": "owner_model.py",
+    "native_verifier": "native_owner_verify.py",
+    "native_report": "native-owner-vectors.json",
+    "native_matches": 74,
+    "native_mismatches": 0,
+    "scope": "synthetic getter/RTTI/status/map fixtures with original predicate instructions relocated; no DFO launch",
+    "integration": "top-level motion_model and motion-contract unchanged; these predicates do not make external controller or attachment side effects complete"
+  },
+  "remaining_gaps": [
+    "Manager registration/candidate population and update order",
+    "Actual maps, rectangle vectors, footprint/layer/scalar values at runtime",
+    "PVF→native blocked-grid loader and celltype enum names",
+    "Dynamic attachment148/154 virtual+1C implementations",
+    "Numeric active-status16 name and runtime appendage instances",
+    "External controller type and response outside the ordinary owner path"
+  ],
+  "artifacts": [
+    {
+      "path": "evidence.json",
+      "sha256": "d5733bee37aa148cce0bf49d11491d59af59eaee719a37e1d0997db6068f1c20"
+    },
+    {
+      "path": "owner_model.py",
+      "sha256": "04cffa3e25ecb8b79b241a7b1bb1168bdea2b66360d579fc7101ccdb21c1c1b5"
+    },
+    {
+      "path": "native-owner-vectors.json",
+      "sha256": "6d499689968bad931f4df0c067a584156dbdffbd307afbc5f796b87f98d84a23"
+    },
+    {
+      "path": "contract-checks.json",
+      "sha256": "db2e562508de19e7fd7f894c5abc7f4400c0fe17c80933ec3f25fa71b4533cec"
+    }
+  ]
+}

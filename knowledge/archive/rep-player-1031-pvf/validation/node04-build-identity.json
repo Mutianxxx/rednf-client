@@ -1,0 +1,118 @@
+{
+  "node": "node-04-script-skill-flows",
+  "exe": "D:\\dnf-rebuild\\rep-player-1031-pvf\\build\\rep_pvf_preview.exe",
+  "exe_sha256": "d9c20fb54d5657fcf873eac733d530dcb5fe2bc36ca4479277116ac55908f4ad",
+  "build_manifest": "D:\\dnf-rebuild\\rep-player-1031-pvf\\tools\\dependency-build\\preview-20261019-150933-483-24524\\build-manifest.json",
+  "build_manifest_sha256": "f0029814cbd739a6d99c58bf026641819ed7bcbc5391dfa086b634d7ba272cc3",
+  "source_identity_matches_build": true,
+  "sources": [
+    {
+      "path": "src\\pvf.cpp",
+      "sha256": "2909ec875ab42b1a39e42965d1c2bf92b05263e1de32883666c512f4fef50c97"
+    },
+    {
+      "path": "src\\pvf.hpp",
+      "sha256": "ccff7ca5107253b86803dd50cd539417b224f3ea9e618520cf7e1ee6d55d0579"
+    },
+    {
+      "path": "src\\pvf_als.cpp",
+      "sha256": "d3e7c3931ae969de1a2059da97cb27276a3f24ce7f6b3dee60955f50079cb4df"
+    },
+    {
+      "path": "src\\pvf_als.hpp",
+      "sha256": "ccdb7e27cdafdaf68a72a7064a4aed897cc69b8d244ae1227a3a8f3a9d6eaa94"
+    },
+    {
+      "path": "src\\pvf_animation.cpp",
+      "sha256": "b84c5fe3cbb33ce7c1dbfed912d4fd72cab412f964058a7d239582b065f136f2"
+    },
+    {
+      "path": "src\\pvf_animation.hpp",
+      "sha256": "50ba144f536c14ae70845aad3c9083f6c0cbb4cfe8385a3a73ac6ecfb45deab4"
+    },
+    {
+      "path": "src\\pvf_playback.cpp",
+      "sha256": "d493f25ce214a21bde70a8b965aff7e88c1904eb9438f4f608de2fee7b9c99cc"
+    },
+    {
+      "path": "src\\pvf_playback.hpp",
+      "sha256": "b64f6c303e09b0d6909e3e4634ed7d4bd99e7c1b88a27a033ab8657e29a89be1"
+    },
+    {
+      "path": "src\\pvf_preview.cpp",
+      "sha256": "348d1c41527c9a998dd9fafbcfb6441c32080134d094ff4f111db721bf6d59b2"
+    },
+    {
+      "path": "src\\pvf_preview_catalog.cpp",
+      "sha256": "099f4fe82c689d959896768889a2748588f8b96e1e825a2573ec9a11efdba380"
+    },
+    {
+      "path": "src\\pvf_preview_catalog.hpp",
+      "sha256": "d1925d1ce1e6b2263002131cccaad3d5380d4aa892b5e8093f6ab6d266bbb456"
+    },
+    {
+      "path": "src\\pvf_preview_scene.cpp",
+      "sha256": "e06896a3d8eb0554a3ac02691334684c49033bad1d51ec57ce303d7acd168488"
+    },
+    {
+      "path": "src\\pvf_preview_scene.hpp",
+      "sha256": "a08c737e8ddfffdd50713ff815d789a162d1094a44ed15041f38b1c84157bcbf"
+    },
+    {
+      "path": "src\\pvf_preview_verify.cpp",
+      "sha256": "b2cbfda858070b6381f54e4ce70bd948697ddd7f691c94e6470a7def5bcb9355"
+    },
+    {
+      "path": "src\\pvf_preview_verify.hpp",
+      "sha256": "994ce2c0cef4902f40eba09a44f3b3ac6fb505fa8c295474b0956e5a4efa84af"
+    },
+    {
+      "path": "src\\pvf_script_preview.cpp",
+      "sha256": "d2611f74ffecf60bf7377de275a539de0fa68f4343aac82eb948a3c0b56d091e"
+    },
+    {
+      "path": "src\\pvf_script_preview.hpp",
+      "sha256": "8608642f73b398ede96c3bc0ef8d5ac3035a8c322a338b2ba37f18a713ad7bef"
+    },
+    {
+      "path": "src\\pvf_validate.cpp",
+      "sha256": "782993309ec7988b8facc4397524d70a0c838ad930b182f6f71b9951ee4cacf4"
+    }
+  ],
+  "preview_regression": {
+    "passed_checks": 42,
+    "failed_checks": 0,
+    "report": "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\latest-preview.json"
+  },
+  "hidden_ui": "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\ui-check-node04-final.json",
+  "full_skills_complete": false,
+  "native_dynamic_acceptance": "pending_user",
+  "migration_to_native_demo": false,
+  "skill_flow_audit": {
+    "checks_passed": 184,
+    "checks_failed": 0,
+    "report": "D:\\dnf-rebuild\\rep-player-1031-pvf\\validation\\skill-flows-20261019-151533-674\\skill-flow-audit-1792394155609-0\\report.json"
+  },
+  "tests": [
+    {
+      "path": "tests\\audit-als.cpp",
+      "sha256": "96a1ed7d554b72fa8f49970aaa97bf03d9a0804d8da49934e781d3018bff7e17"
+    },
+    {
+      "path": "tests\\audit-playback.cpp",
+      "sha256": "6e041085e7224d0a76ca23b75ded2e209e74175b25e27b22b0e955cd0137ae40"
+    },
+    {
+      "path": "tests\\audit-preview-characters.cpp",
+      "sha256": "fa9efc1386f639d5d74e5a67f0a2326cb36f3ecb2b3c69a0174649d1cc252026"
+    },
+    {
+      "path": "tests\\audit-registered-effects.cpp",
+      "sha256": "9ee1a51a2cdb7c33e47f02e301dab23e250921517df436381fd83f0d084fbd0d"
+    },
+    {
+      "path": "tests\\audit-skill-flows.cpp",
+      "sha256": "252c82b81582e44807711235826725ad17952d4edad05b37ea118f9801c2d88f"
+    }
+  ]
+}

@@ -1,0 +1,780 @@
+{
+  "path": "passiveobject/character/swordman/animation/blastbloodsub.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        5
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -131,
+        -365
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        1120
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 65
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -131,
+        -365
+      ],
+      "offset": 85
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -73,
+        -50,
+        0,
+        146,
+        100,
+        330
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -110,
+        -33,
+        0,
+        220,
+        66,
+        330
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 180
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 185
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -131,
+        -365
+      ],
+      "offset": 200
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 215
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -73,
+        -50,
+        0,
+        146,
+        100,
+        330
+      ],
+      "offset": 225
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -110,
+        -33,
+        0,
+        220,
+        66,
+        330
+      ],
+      "offset": 260
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 295
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 300
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -131,
+        -365
+      ],
+      "offset": 315
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 330
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -73,
+        -50,
+        0,
+        146,
+        100,
+        330
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -110,
+        -33,
+        0,
+        220,
+        66,
+        330
+      ],
+      "offset": 375
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 410
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 415
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -131,
+        -365
+      ],
+      "offset": 430
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        800
+      ],
+      "offset": 445
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 5,
+      "value": 5
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967165,
+      "value": -131
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294966931,
+      "value": -365
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 1120,
+      "value": 1120
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 4294967165,
+      "value": -131
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 4294966931,
+      "value": -365
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 4294967223,
+      "value": -73
+    },
+    {
+      "offset": 120,
+      "type": 0,
+      "raw": 4294967246,
+      "value": -50
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 130,
+      "type": 0,
+      "raw": 146,
+      "value": 146
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 4294967186,
+      "value": -110
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 4294967263,
+      "value": -33
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 220,
+      "value": 220
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 66,
+      "value": 66
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 180,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 190,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 205,
+      "type": 0,
+      "raw": 4294967165,
+      "value": -131
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 4294966931,
+      "value": -365
+    },
+    {
+      "offset": 215,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 220,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 225,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 230,
+      "type": 0,
+      "raw": 4294967223,
+      "value": -73
+    },
+    {
+      "offset": 235,
+      "type": 0,
+      "raw": 4294967246,
+      "value": -50
+    },
+    {
+      "offset": 240,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 245,
+      "type": 0,
+      "raw": 146,
+      "value": 146
+    },
+    {
+      "offset": 250,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 260,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 4294967186,
+      "value": -110
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 4294967263,
+      "value": -33
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 280,
+      "type": 0,
+      "raw": 220,
+      "value": 220
+    },
+    {
+      "offset": 285,
+      "type": 0,
+      "raw": 66,
+      "value": 66
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 300,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 305,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 310,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 315,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 4294967165,
+      "value": -131
+    },
+    {
+      "offset": 325,
+      "type": 0,
+      "raw": 4294966931,
+      "value": -365
+    },
+    {
+      "offset": 330,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 4294967223,
+      "value": -73
+    },
+    {
+      "offset": 350,
+      "type": 0,
+      "raw": 4294967246,
+      "value": -50
+    },
+    {
+      "offset": 355,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 360,
+      "type": 0,
+      "raw": 146,
+      "value": 146
+    },
+    {
+      "offset": 365,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 370,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 375,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 380,
+      "type": 0,
+      "raw": 4294967186,
+      "value": -110
+    },
+    {
+      "offset": 385,
+      "type": 0,
+      "raw": 4294967263,
+      "value": -33
+    },
+    {
+      "offset": 390,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 395,
+      "type": 0,
+      "raw": 220,
+      "value": 220
+    },
+    {
+      "offset": 400,
+      "type": 0,
+      "raw": 66,
+      "value": 66
+    },
+    {
+      "offset": 405,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 410,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 415,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 420,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 425,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 430,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 4294967165,
+      "value": -131
+    },
+    {
+      "offset": 440,
+      "type": 0,
+      "raw": 4294966931,
+      "value": -365
+    },
+    {
+      "offset": 445,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 450,
+      "type": 0,
+      "raw": 800,
+      "value": 800
+    }
+  ],
+  "raw_sha256": "8037c0849344a9730d79a9a36eb217e2461bcdffebc6e9992e85d41f9c88e55a"
+}

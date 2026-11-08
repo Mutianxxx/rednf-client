@@ -1,0 +1,1313 @@
+{
+  "status": "source_bound_resource_and_native_layer_contract_not_complete_hit_controller",
+  "source_exe": {
+    "path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+    "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+  },
+  "source_pvf": {
+    "path": "D:\\dnf\\60US\\DFO\\Script.pvf",
+    "sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "header": {
+      "guid": "13ff9a94-0204-0410-845a-ceeffe637190",
+      "version": 71295,
+      "tree_size": 7566568,
+      "tree_crc": "51647fbe",
+      "entry_count": 99501,
+      "key": "00000000",
+      "data_base": 7566624,
+      "tree_crc_verified": true,
+      "parsed_tree_bytes": 7566567,
+      "tree_padding_hex": "00"
+    }
+  },
+  "equipment_source": {
+    "file_number": 2924442,
+    "path": "equipment/character/swordman/weapon/club/n_club_axshauta.equ",
+    "size": 1057,
+    "crc": "1fb7ed30",
+    "relative_offset": 79768,
+    "absolute_offset": 7646392,
+    "sha256": "54a3bda415f2a5f202290887c90adae9d8aa64816f3ee22cc9b0e4f24039d8c4",
+    "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "encoding": "cp949",
+    "crc_verified": true
+  },
+  "lay_source": {
+    "file_number": 1482880487,
+    "path": "equipment/character/swordman.lay",
+    "size": 3299,
+    "crc": "ee9bd284",
+    "relative_offset": 45184260,
+    "absolute_offset": 52750884,
+    "sha256": "c52092f1c4990844da35030102b96fe98ca82cefa3e3ed0aa6f646a035ff312f",
+    "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "encoding": "cp949",
+    "crc_verified": true
+  },
+  "equipment_variation": {
+    "tag_offset": 851,
+    "values": [
+      2,
+      6
+    ],
+    "tokens": [
+      {
+        "kind": "atom",
+        "text": "2",
+        "value": 2,
+        "start": 863,
+        "end": 864,
+        "line": 48,
+        "column": 13
+      },
+      {
+        "kind": "atom",
+        "text": "6",
+        "value": 6,
+        "start": 865,
+        "end": 866,
+        "line": 48,
+        "column": 15
+      }
+    ]
+  },
+  "lay_etc_motion_count": 97,
+  "layer_records": [
+    {
+      "source_ordinal": 0,
+      "order_key": 2600,
+      "layer_variation_tag_offset": 868,
+      "order_key_token": {
+        "kind": "atom",
+        "text": "2600",
+        "value": 2600,
+        "start": 886,
+        "end": 890,
+        "line": 49,
+        "column": 19
+      },
+      "folder_token": {
+        "kind": "string",
+        "text": "clubc",
+        "value": "clubc",
+        "start": 891,
+        "end": 898,
+        "line": 49,
+        "column": 24
+      },
+      "include_token": {
+        "kind": "string",
+        "text": "equipment/character/swordman.lay",
+        "value": "equipment/character/swordman.lay",
+        "start": 910,
+        "end": 944,
+        "line": 50,
+        "column": 11
+      },
+      "layer_template": {
+        "kind": "string",
+        "text": "%s/HardAttack.ani",
+        "value": "%s/HardAttack.ani",
+        "start": 770,
+        "end": 789,
+        "line": 28,
+        "column": 1
+      },
+      "etc_motion_index": 1,
+      "resolved_animation_path": "equipment/character/swordman/weapon/club/clubc/hardattack.ani",
+      "animation_source": {
+        "file_number": 436101253,
+        "path": "equipment/character/swordman/weapon/club/clubc/hardattack.ani",
+        "size": 5077,
+        "crc": "8fe4f140",
+        "relative_offset": 13878804,
+        "absolute_offset": 21445428,
+        "sha256": "9fc7e9471a2888841890586211439daa0f95164a9a5eed47030d5deca7f1a3ef",
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+        "encoding": "cp949",
+        "crc_verified": true
+      },
+      "image_templates": [
+        "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img"
+      ],
+      "resolved_images": [
+        "Character/Swordman/Equipment/Weapon/club/club0206c.img"
+      ],
+      "frame_count": 18,
+      "frame_fields": [
+        {
+          "index": 0,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              139
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 1,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              140
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 2,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              141
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 3,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              142
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [
+            [
+              26,
+              -30,
+              8,
+              171,
+              60,
+              133
+            ]
+          ],
+          "damage_boxes": []
+        },
+        {
+          "index": 4,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              143
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [
+            [
+              54,
+              -25,
+              8,
+              141,
+              50,
+              123
+            ]
+          ],
+          "damage_boxes": []
+        },
+        {
+          "index": 5,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              144
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [
+            [
+              43,
+              -20,
+              8,
+              151,
+              40,
+              111
+            ]
+          ],
+          "damage_boxes": []
+        },
+        {
+          "index": 6,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              145
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [
+            [
+              41,
+              -15,
+              8,
+              154,
+              30,
+              82
+            ]
+          ],
+          "damage_boxes": []
+        },
+        {
+          "index": 7,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              146
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 8,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              147
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 9,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              148
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 10,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              149
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 11,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              150
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 12,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              151
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 13,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              152
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 14,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              153
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 15,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              154
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 16,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              155
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 17,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02dc.img",
+              156
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        }
+      ]
+    },
+    {
+      "source_ordinal": 1,
+      "order_key": 650,
+      "layer_variation_tag_offset": 946,
+      "order_key_token": {
+        "kind": "atom",
+        "text": "650",
+        "value": 650,
+        "start": 964,
+        "end": 967,
+        "line": 51,
+        "column": 19
+      },
+      "folder_token": {
+        "kind": "string",
+        "text": "clubb",
+        "value": "clubb",
+        "start": 968,
+        "end": 975,
+        "line": 51,
+        "column": 23
+      },
+      "include_token": {
+        "kind": "string",
+        "text": "equipment/character/swordman.lay",
+        "value": "equipment/character/swordman.lay",
+        "start": 987,
+        "end": 1021,
+        "line": 52,
+        "column": 11
+      },
+      "layer_template": {
+        "kind": "string",
+        "text": "%s/HardAttack.ani",
+        "value": "%s/HardAttack.ani",
+        "start": 770,
+        "end": 789,
+        "line": 28,
+        "column": 1
+      },
+      "etc_motion_index": 1,
+      "resolved_animation_path": "equipment/character/swordman/weapon/club/clubb/hardattack.ani",
+      "animation_source": {
+        "file_number": 2267315844,
+        "path": "equipment/character/swordman/weapon/club/clubb/hardattack.ani",
+        "size": 4942,
+        "crc": "0236a919",
+        "relative_offset": 73638184,
+        "absolute_offset": 81204808,
+        "sha256": "e8bedee716ad3da256ebfdbed4e74d124ff2b30b5418b9dea505aaadce31df0b",
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+        "encoding": "cp949",
+        "crc_verified": true
+      },
+      "image_templates": [
+        "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img"
+      ],
+      "resolved_images": [
+        "Character/Swordman/Equipment/Weapon/club/club0206b.img"
+      ],
+      "frame_count": 18,
+      "frame_fields": [
+        {
+          "index": 0,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              139
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 1,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              140
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 2,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              141
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 3,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              142
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 4,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              143
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 5,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              144
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 6,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              145
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 7,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              146
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 8,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              147
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 9,
+          "delay": [
+            [
+              50
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              148
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 10,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              149
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 11,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              150
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 12,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              151
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 13,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              152
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 14,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              153
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 15,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              154
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 16,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              155
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        },
+        {
+          "index": 17,
+          "delay": [
+            [
+              500
+            ]
+          ],
+          "images": [
+            [
+              "Character/Swordman/Equipment/Weapon/club/club%02d%02db.img",
+              156
+            ]
+          ],
+          "image_positions": [
+            [
+              -232,
+              -333
+            ]
+          ],
+          "attack_boxes": [],
+          "damage_boxes": []
+        }
+      ]
+    }
+  ],
+  "draw_sequence": [
+    {
+      "kind": "body",
+      "path": "character/swordman/animation/hardattack.ani",
+      "order_key": null
+    },
+    {
+      "kind": "weapon",
+      "order_key": 650,
+      "path": "equipment/character/swordman/weapon/club/clubb/hardattack.ani",
+      "source_ordinal": 1
+    },
+    {
+      "kind": "weapon",
+      "order_key": 2600,
+      "path": "equipment/character/swordman/weapon/club/clubc/hardattack.ani",
+      "source_ordinal": 0
+    }
+  ],
+  "body": {
+    "source": {
+      "file_number": 657016135,
+      "path": "character/swordman/animation/hardattack.ani",
+      "size": 6450,
+      "crc": "ee15e900",
+      "relative_offset": 21474940,
+      "absolute_offset": 29041564,
+      "sha256": "8504081df09cd42f4f26f839902bcbddcbd77e5f905da1fe08c7cbbc64566668",
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+      "encoding": "cp949",
+      "crc_verified": true
+    },
+    "frame_count": 18,
+    "original_attack_box_count": 0,
+    "delay_by_frame": [
+      {
+        "index": 0,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 1,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 2,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 3,
+        "delay": [
+          [
+            25
+          ]
+        ]
+      },
+      {
+        "index": 4,
+        "delay": [
+          [
+            25
+          ]
+        ]
+      },
+      {
+        "index": 5,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 6,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 7,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 8,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 9,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 10,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 11,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 12,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 13,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 14,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 15,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 16,
+        "delay": [
+          [
+            50
+          ]
+        ]
+      },
+      {
+        "index": 17,
+        "delay": [
+          [
+            200
+          ]
+        ]
+      }
+    ]
+  },
+  "native_contract": {
+    "motion_selection": {
+      "body_motion_slot": 1,
+      "attack_info_slot": 0,
+      "selection_va": "0x731fa9",
+      "ani_getter": "0x4d3ce0"
+    },
+    "layer_order": {
+      "attach": "0xa29d70",
+      "field": "node+0x8",
+      "comparison": "signed ascending",
+      "tie": "insert after existing equal keys",
+      "draw": "0xa26220",
+      "phases": "negative keys, body current frame, nonnegative keys"
+    },
+    "same_motion": {
+      "actor_vslot": "0x3bc",
+      "target": "0x4b8690",
+      "actor_vtable_pointer": "0xd81350",
+      "table_etc_motion_begin": "+0x38",
+      "table_etc_motion_end": "+0x3c",
+      "layer_record_stride": "0x8c",
+      "layer_record_motion_table": "+0x4",
+      "etc_attach_loop": "0x4b8a00..0x4b8a20"
+    },
+    "image_format": {
+      "variation_values": [
+        2,
+        6
+      ],
+      "printf_arguments": "first=2, second=6",
+      "cached_formatter_call": "0xa608c4",
+      "format_function": "0x401df0",
+      "text_parser_formatter_call": "0xa29004",
+      "constructors": [
+        "0x472b80",
+        "0xa29ad0",
+        "0xa60940",
+        "0xa60810"
+      ]
+    },
+    "synchronization": {
+      "delay_copy": "0x4ccdb0",
+      "delay_field": "frame+0x30",
+      "count": "min(body frame count, child frame count)",
+      "frame_stride": "0x7c",
+      "child_parent": "ANI+0x188",
+      "root_clock": "0x4caa00",
+      "clock_field": "root ANI+0x8c",
+      "child_advance": "0xa27dc0",
+      "speed_copy": "0xa29d70->0xa29c70",
+      "speed_field": "ANI+0x134",
+      "reset": "0xa27360"
+    },
+    "frame_vectors": {
+      "attack": {
+        "tag_id": 16,
+        "parser": "0xa294aa",
+        "vector": "frame+0x38",
+        "begin": "+0x3c",
+        "end": "+0x40"
+      },
+      "damage": {
+        "tag_id": 15,
+        "parser": "0xa293c8",
+        "vector": "frame+0x48",
+        "begin": "+0x4c",
+        "end": "+0x50"
+      },
+      "entry_size": "0x30",
+      "scalar_layout": "six 8-byte float wrappers, integer script inputs"
+    },
+    "conditional_override_merge": {
+      "gate": "0x4b4ce0..0x4b4d88",
+      "worker": "0x4b4960",
+      "merge": "0x456770",
+      "effective_layers": "equipment virtual+0x138",
+      "source_layers": "equipment+0x758",
+      "override": "equipment+0x7a0",
+      "resolver": "0x4acd30",
+      "summary": "clear selected ANI attack boxes in effective_layers[0]; append same-frame source-layer boxes; only when override gates select this branch"
+    },
+    "collision_consumer": {
+      "function": "0x4aef80",
+      "list": "body ANI+0x180",
+      "child_pointer": "node+0x0c",
+      "order": "primary ANI pair, then attacker child ANI list order",
+      "geometry_call": "0x4e9b10->0xa244e0",
+      "separate_evidence": "../combat_native_collision/geometry-contract.json"
+    }
+  },
+  "limitations": [
+    "Static evidence; original client not executed.",
+    "This explicit EQU is a preview selection, not a claim that every Swordman equips this item.",
+    "Original body ATTACK BOX remains absent; do not synthesize a body substitute.",
+    "ATTACK BOX coordinates are retained as six raw numbers; world transform is documented in the separate geometry-contract.json and hit acceptance remains unknown.",
+    "Ordinary no-override equipment renders these source layers; do not unconditionally run the conditional override merge on identical input/output vectors.",
+    "Native asset formatting and binding are established; target screenshots have not validated final sprite pixels."
+  ]
+}

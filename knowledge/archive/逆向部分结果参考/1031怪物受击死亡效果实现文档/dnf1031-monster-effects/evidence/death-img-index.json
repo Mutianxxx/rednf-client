@@ -1,0 +1,1226 @@
+[
+  {
+    "path": "sounds/effect/teen_monster_die.ogg",
+    "frames": []
+  },
+  {
+    "path": "sprite/monster/common/monsterdieyoung.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 28,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "monsterdieyoung-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 28,
+        "height": 20,
+        "x": 0,
+        "y": 4,
+        "file": "monsterdieyoung-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 16,
+        "height": 15,
+        "x": 6,
+        "y": 6,
+        "file": "monsterdieyoung-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 19,
+        "height": 15,
+        "x": 4,
+        "y": 6,
+        "file": "monsterdieyoung-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/monsterdiepieceveryyoung.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 25,
+        "height": 28,
+        "x": 4,
+        "y": 0,
+        "file": "monsterdiepieceveryyoung-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 27,
+        "height": 29,
+        "x": 2,
+        "y": 0,
+        "file": "monsterdiepieceveryyoung-1.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0028.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 7,
+        "height": 7,
+        "x": 6,
+        "y": 6,
+        "file": "m0028-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 13,
+        "height": 15,
+        "x": 3,
+        "y": 2,
+        "file": "m0028-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 13,
+        "height": 18,
+        "x": 3,
+        "y": 0,
+        "file": "m0028-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 18,
+        "height": 19,
+        "x": 0,
+        "y": 0,
+        "file": "m0028-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0026.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0026-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0026-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0026-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0026-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0024.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0024-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0024-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0024-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0024-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0022.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0022-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0022-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0022-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0022-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0021.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0021-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0021-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0021-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0021-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0015.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0015-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0015-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0015-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0015-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0014.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0014-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0014-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0014-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0014-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0013.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0013-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0013-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0013-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0013-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0012.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0012-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0012-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0012-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0012-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0011.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0011-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0011-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0011-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0011-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0010.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0010-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0010-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0010-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0010-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0009.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0009-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0009-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0009-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0009-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0007.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0007-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0007-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0007-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0007-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0006.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0006-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0006-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0006-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0006-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0005.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0005-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0005-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0005-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0005-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0004.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0004-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0004-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0004-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0004-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0003.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0003-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0003-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0003-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0003-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/common/commoneffect/teen_monster_die_light.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 9,
+        "height": 9,
+        "x": 0,
+        "y": 0,
+        "file": "teen_monster_die_light-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 9,
+        "height": 9,
+        "x": 0,
+        "y": 0,
+        "file": "teen_monster_die_light-1.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0002.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0002-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0002-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0002-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0002-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0001.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0001-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0001-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0001-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0001-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0023.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0023-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0023-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0023-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0023-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0020.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0020-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0020-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0020-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0020-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0018.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0018-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0018-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0018-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0018-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0027.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0027-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0027-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0027-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0027-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0008.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0008-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0008-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0008-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0008-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/common/commoneffect/teen_monster_die_particle.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 25,
+        "height": 28,
+        "x": 4,
+        "y": 0,
+        "file": "teen_monster_die_particle-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 27,
+        "height": 29,
+        "x": 2,
+        "y": 0,
+        "file": "teen_monster_die_particle-1.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0017.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0017-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0017-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0017-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0017-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0029.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 16,
+        "height": 11,
+        "x": 15,
+        "y": 22,
+        "file": "m0029-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 12,
+        "height": 19,
+        "x": 20,
+        "y": 19,
+        "file": "m0029-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 9,
+        "height": 15,
+        "x": 21,
+        "y": 20,
+        "file": "m0029-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 8,
+        "height": 10,
+        "x": 22,
+        "y": 23,
+        "file": "m0029-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0016.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0016-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0016-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0016-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0016-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0025.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0025-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0025-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0025-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0025-3.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/monsterdieflash.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 103,
+        "height": 103,
+        "x": 0,
+        "y": 0,
+        "file": "monsterdieflash-0.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/monsterdieblood.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 41,
+        "height": 42,
+        "x": 0,
+        "y": 0,
+        "file": "monsterdieblood-0.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/monsterdiesmoke.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 13,
+        "height": 12,
+        "x": 0,
+        "y": 0,
+        "file": "monsterdiesmoke-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 7,
+        "height": 7,
+        "x": 0,
+        "y": 0,
+        "file": "monsterdiesmoke-1.png"
+      }
+    ]
+  },
+  {
+    "path": "sprite/monster/common/m0019.img",
+    "frames": [
+      {
+        "frame": 0,
+        "width": 36,
+        "height": 28,
+        "x": 0,
+        "y": 0,
+        "file": "m0019-0.png"
+      },
+      {
+        "frame": 1,
+        "width": 29,
+        "height": 35,
+        "x": 0,
+        "y": 0,
+        "file": "m0019-1.png"
+      },
+      {
+        "frame": 2,
+        "width": 26,
+        "height": 21,
+        "x": 0,
+        "y": 0,
+        "file": "m0019-2.png"
+      },
+      {
+        "frame": 3,
+        "width": 17,
+        "height": 18,
+        "x": 0,
+        "y": 0,
+        "file": "m0019-3.png"
+      }
+    ]
+  }
+]

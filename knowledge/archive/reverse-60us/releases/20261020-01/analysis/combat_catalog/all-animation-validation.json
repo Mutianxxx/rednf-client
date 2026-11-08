@@ -1,0 +1,1001 @@
+{
+  "source": {
+    "path": "D:\\dnf\\60US\\DFO\\Script.pvf",
+    "size": 140179584,
+    "sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "header": {
+      "guid": "13ff9a94-0204-0410-845a-ceeffe637190",
+      "version": 71295,
+      "tree_size": 7566568,
+      "tree_crc": "51647fbe",
+      "entry_count": 99501,
+      "key": "00000000",
+      "data_base": 7566624,
+      "tree_crc_verified": true,
+      "parsed_tree_bytes": 7566567,
+      "tree_padding_hex": "00"
+    }
+  },
+  "scope": "Every .ani entry in current Script.pvf; resource structure only, no controller claims",
+  "entry_count": 54531,
+  "counts": {
+    "parsed": 54531,
+    "frames": 265633,
+    "attack_boxes": 12076,
+    "damage_boxes": 40348
+  },
+  "field_counts": {
+    "IMAGE": 265635,
+    "IMAGE POS": 265635,
+    "IMAGE RATE": 265104,
+    "IMAGE ROTATE": 265100,
+    "RGBA": 265129,
+    "INTERPOLATION": 265096,
+    "GRAPHIC EFFECT": 265132,
+    "DELAY": 265630,
+    "DAMAGE TYPE": 265027,
+    "ATTACK BOX": 12076,
+    "DAMAGE BOX": 40348,
+    "PLAY SOUND": 255,
+    "IMAGE FLIP": 168,
+    "SHADOW": 294,
+    "SET FLAG": 3,
+    "LOOP": 6,
+    "FRAME MAX": 6,
+    "PRELOAD": 18,
+    "FLIP TYPE": 12
+  },
+  "box_shapes": {
+    "('attack_boxes', 6)": 12076,
+    "('damage_boxes', 6)": 40347,
+    "('damage_boxes', 9)": 1
+  },
+  "elapsed_seconds": 128.5783289000392,
+  "failures": [],
+  "warnings": [
+    {
+      "path": "equipment/character/common/title/titleanimation/hschool_baejae.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          20
+        ]
+      ],
+      "parsed": 21
+    },
+    {
+      "path": "character/mage/effect/animation/elementalchain/markactivate1.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          4
+        ]
+      ],
+      "parsed": 5
+    },
+    {
+      "path": "equipment/character/priest/avatar/face/face_b/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "character/mage/effect/animation/elementalchain/markactivate2.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          4
+        ]
+      ],
+      "parsed": 5
+    },
+    {
+      "path": "monster/newmonsters/aradman/grim_aradman/animation/weapon/sit.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          1
+        ]
+      ],
+      "parsed": 0
+    },
+    {
+      "path": "monster/newmonsters/aradman/proto_aradman/animation/weapon/sit.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          1
+        ]
+      ],
+      "parsed": 0
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/sasakib/hardattack.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          19
+        ]
+      ],
+      "parsed": 18
+    },
+    {
+      "path": "equipment/character/priest/weapon/totem/totemd/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/weapon/axe/axed/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/face/face_f/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/weapon/rosary/rosaryc/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "character/gunner/effect/animation/musketdust/musketdustlarge.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          11
+        ]
+      ],
+      "parsed": 12
+    },
+    {
+      "path": "equipment/character/priest/weapon/cross/crossd/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "monster/newmonsters/cartel/westcoast/special_rod_aradman/animation/weapon/down_wp.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          6
+        ]
+      ],
+      "parsed": 5
+    },
+    {
+      "path": "character/mage/effect/animation/chillingpowder/thrust3.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          12
+        ],
+        [
+          12
+        ]
+      ],
+      "parsed": 24
+    },
+    {
+      "path": "equipment/character/priest/avatar/pants/pants_b/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "monster/newmonsters/flydragon/looseseri/animation/dasheffect.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          3
+        ]
+      ],
+      "parsed": 4
+    },
+    {
+      "path": "equipment/character/priest/avatar/neck/neck_d/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/cap/cap_b/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "character/mage/effect/animation/deathpowder/thrust3.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          12
+        ],
+        [
+          12
+        ]
+      ],
+      "parsed": 24
+    },
+    {
+      "path": "character/mage/effect/animation/chillingpowder/dashattack3.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          10
+        ],
+        [
+          10
+        ]
+      ],
+      "parsed": 20
+    },
+    {
+      "path": "equipment/character/priest/avatar/pants/pants_d/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/shoes/shoes_b/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/cap/cap_d/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "monster/spirit/magewateranimation/flybombflash.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          5
+        ]
+      ],
+      "parsed": 6
+    },
+    {
+      "path": "equipment/character/priest/avatar/belt/belt_d/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/coat/coat_a/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/weapon/scythe/scythed/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "map/aganzo/animation/back_puck.ani",
+      "kind": "unterminated_tag",
+      "offset": 530
+    },
+    {
+      "path": "map/aganzo/animation/back_puck.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          11
+        ]
+      ],
+      "parsed": 10
+    },
+    {
+      "path": "equipment/monster/spirit/magewaterglow/flybombflash.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          5
+        ]
+      ],
+      "parsed": 6
+    },
+    {
+      "path": "equipment/character/priest/avatar/coat/coat_c/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "monster/newmonsters/lizardman/avengers/megaira/animation/move4.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          6
+        ]
+      ],
+      "parsed": 7
+    },
+    {
+      "path": "monster/newmonsters/aradman/soldier_aradman2/animation/weapon/sit.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          1
+        ]
+      ],
+      "parsed": 0
+    },
+    {
+      "path": "character/priest/animation/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/hair/hair_b/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "monster/newmonsters/aradwoman/grim_aradwoma_n/animation/weapon/sit.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          1
+        ]
+      ],
+      "parsed": 0
+    },
+    {
+      "path": "common/commoneffect/animation/status_effect/hpre.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          3
+        ]
+      ],
+      "parsed": 2
+    },
+    {
+      "path": "monster/newmonsters/dragon/scasa/animation/scasa_shout1_1.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          1
+        ]
+      ],
+      "parsed": 0
+    },
+    {
+      "path": "equipment/character/priest/avatar/hair/hair_d/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/growtype/infighter/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "passiveobject/monster/toy/animation/toyerasesmoke.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          5
+        ],
+        [
+          3
+        ]
+      ],
+      "parsed": 8
+    },
+    {
+      "path": "monster/newmonsters/aradman/boss_aradman/animation/weapon/sit.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          1
+        ]
+      ],
+      "parsed": 0
+    },
+    {
+      "path": "monster/newmonsters/aradwoman/proto_aradwoman/animation/weapon/sit.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          1
+        ]
+      ],
+      "parsed": 0
+    },
+    {
+      "path": "monster/lugaru/animation_whitelugaru/jumpattack2.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          7
+        ]
+      ],
+      "parsed": 10
+    },
+    {
+      "path": "equipment/character/priest/avatar/face/face_a/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/common/title/titleanimation/arad_hourousya.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          42
+        ]
+      ],
+      "parsed": 43
+    },
+    {
+      "path": "passiveobject/actionobject/monster/lizardman/animation/smoke15.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          10
+        ]
+      ],
+      "parsed": 11
+    },
+    {
+      "path": "monster/spirit/wateranimation/flybombflash.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          5
+        ]
+      ],
+      "parsed": 6
+    },
+    {
+      "path": "equipment/character/priest/avatar/face/face_c/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/weapon/totem/totemc/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/weapon/axe/axec/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/weapon/cross/crossc/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/common/title/etcanimation/npcballoon_poongjin_move.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          4
+        ]
+      ],
+      "parsed": 1
+    },
+    {
+      "path": "equipment/character/priest/avatar/neck/neck_a/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "passiveobject/character/swordman/animation/blastblood2.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          14
+        ]
+      ],
+      "parsed": 15
+    },
+    {
+      "path": "equipment/character/priest/weapon/rosary/rosaryd/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/pants/pants_a/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/neck/neck_c/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/swordman/weapon/katana/sasakic/hardattack.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          19
+        ]
+      ],
+      "parsed": 18
+    },
+    {
+      "path": "equipment/character/priest/avatar/cap/cap_a/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "monster/newmonsters/bwanga/animation/gameover.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          12
+        ]
+      ],
+      "parsed": 11
+    },
+    {
+      "path": "monster/newmonsters/aradman/poisonhand/animation/kick1.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          4
+        ]
+      ],
+      "parsed": 3
+    },
+    {
+      "path": "equipment/character/priest/avatar/belt/belt_a/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/shoes/shoes_a/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/cap/cap_c/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "monster/newmonsters/flydragon/serimalion/animation/dasheffect.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          3
+        ]
+      ],
+      "parsed": 4
+    },
+    {
+      "path": "monster/newmonsters/aradman/soldier_aradman/animation/weapon/sit.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          1
+        ]
+      ],
+      "parsed": 0
+    },
+    {
+      "path": "equipment/character/priest/avatar/belt/belt_c/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/avatar/shoes/shoes_c/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/priest/weapon/scythe/scythec/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "monster/newmonsters/ranjerus/fireman/animation/down.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          3
+        ]
+      ],
+      "parsed": 5
+    },
+    {
+      "path": "monster/newmonsters/lizardman/dragon_man/animation/die.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          9
+        ]
+      ],
+      "parsed": 11
+    },
+    {
+      "path": "monster/newmonsters/gbl/gbltentaclenamed/animation/sit.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          0
+        ]
+      ],
+      "parsed": 1
+    },
+    {
+      "path": "character/mage/effect/animation/deathpowder/dashattack3.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          10
+        ],
+        [
+          10
+        ]
+      ],
+      "parsed": 20
+    },
+    {
+      "path": "equipment/character/priest/avatar/coat/coat_b/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/common/title/titleanimation/coke_actionpleasure.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          23
+        ]
+      ],
+      "parsed": 24
+    },
+    {
+      "path": "equipment/character/priest/avatar/coat/coat_d/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "character/gunner/effect/animation/bullet/desperadoeffect.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          13
+        ]
+      ],
+      "parsed": 15
+    },
+    {
+      "path": "passiveobject/mapobject/particlefactory/animation/oceanray.ani",
+      "kind": "unterminated_string",
+      "offset": 258
+    },
+    {
+      "path": "equipment/character/priest/avatar/hair/hair_a/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/character/common/title/titleanimation/usa_hb.ani",
+      "kind": "unterminated_tag",
+      "offset": 10026
+    },
+    {
+      "path": "equipment/character/common/title/titleanimation/usa_hb.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          47
+        ]
+      ],
+      "parsed": 46
+    },
+    {
+      "path": "equipment/monster/soldier/legionexpeller/legionexpellerleganimation/axeslidingattack.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          1
+        ]
+      ],
+      "parsed": 3
+    },
+    {
+      "path": "equipment/character/common/title/titleanimation/usa_hc.ani",
+      "kind": "unterminated_tag",
+      "offset": 9858
+    },
+    {
+      "path": "equipment/character/common/title/titleanimation/usa_hc.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          48
+        ]
+      ],
+      "parsed": 47
+    },
+    {
+      "path": "equipment/character/priest/avatar/hair/hair_c/rest.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          16
+        ]
+      ],
+      "parsed": 17
+    },
+    {
+      "path": "equipment/monster/hunter/hh/claws/spitpoison.ani",
+      "kind": "frame_count_mismatch",
+      "declared": [
+        [
+          9
+        ]
+      ],
+      "parsed": 5
+    }
+  ],
+  "oddities": [
+    {
+      "path": "monster/newmonsters/aradman/grim_aradman/animation/weapon/sit.ani",
+      "kind": "no_frames",
+      "size": 39
+    },
+    {
+      "path": "monster/newmonsters/aradman/proto_aradman/animation/weapon/sit.ani",
+      "kind": "no_frames",
+      "size": 39
+    },
+    {
+      "path": "equipment/monster/skeleton/headlessskeleton_head/guard.ani",
+      "kind": "non_six_number_box",
+      "frame": 0,
+      "box_type": "damage_boxes",
+      "values": [
+        -28,
+        -10,
+        2,
+        55,
+        20,
+        48,
+        "/이건",
+        "안쓰이는거",
+        "같은데"
+      ]
+    },
+    {
+      "path": "passiveobject/actionobject/breakableobject/animation/telephone_destroy.ani",
+      "kind": "no_frames",
+      "size": 0
+    },
+    {
+      "path": "passiveobject/throwitem/animation/earthquake.ani",
+      "kind": "no_frames",
+      "size": 0
+    },
+    {
+      "path": "monster/newmonsters/aradman/soldier_aradman2/animation/weapon/sit.ani",
+      "kind": "no_frames",
+      "size": 39
+    },
+    {
+      "path": "monster/newmonsters/aradwoman/grim_aradwoma_n/animation/weapon/sit.ani",
+      "kind": "no_frames",
+      "size": 39
+    },
+    {
+      "path": "monster/newmonsters/dragon/scasa/animation/scasa_shout1_1.ani",
+      "kind": "no_frames",
+      "size": 39
+    },
+    {
+      "path": "monster/newmonsters/aradman/boss_aradman/animation/weapon/sit.ani",
+      "kind": "no_frames",
+      "size": 39
+    },
+    {
+      "path": "monster/newmonsters/aradwoman/proto_aradwoman/animation/weapon/sit.ani",
+      "kind": "no_frames",
+      "size": 39
+    },
+    {
+      "path": "monster/newmonsters/aradman/soldier_aradman/animation/weapon/sit.ani",
+      "kind": "no_frames",
+      "size": 39
+    }
+  ]
+}

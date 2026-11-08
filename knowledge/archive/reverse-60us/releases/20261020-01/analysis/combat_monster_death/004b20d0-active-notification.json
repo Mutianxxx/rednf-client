@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4b20d0",
+  "rva": "0xb20d0",
+  "file_offset": 729296,
+  "length": 513,
+  "bytes_sha256": "3b1ada6cbebe0d9f2a434a14b6d553fa941beb74a70001b6ce310f0232d829ef",
+  "status": "native_bytes",
+  "note": "Exact body; inherited callback and reference cleanup.",
+  "disassembled": true
+}

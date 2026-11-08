@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "resource follow-up count partition",
+      "passed": true
+    },
+    {
+      "name": "normalized ANI references retain all original spellings and frame uses",
+      "passed": true
+    },
+    {
+      "name": "normalized ANI aliases reconcile exact per-path totals",
+      "passed": true
+    },
+    {
+      "name": "all literal ANI paths checked against NPK and loose IMG files",
+      "passed": true
+    },
+    {
+      "name": "integer placeholder zero-padding and multi-argument splits",
+      "passed": true
+    },
+    {
+      "name": "integer placeholder allows width overflow not arbitrary leading zero",
+      "passed": true
+    },
+    {
+      "name": "template enumeration reports truncated ambiguity explicitly",
+      "passed": true
+    },
+    {
+      "name": "RTF multibyte hex runs, Unicode fallback and ignored destinations",
+      "passed": true
+    },
+    {
+      "name": "malformed RTF groups are rejected",
+      "passed": true
+    },
+    {
+      "name": "all twelve RTF texts are nonempty strict CP949 output",
+      "passed": true
+    },
+    {
+      "name": "all specialized PVF members visited without claiming a native schema",
+      "passed": true
+    },
+    {
+      "name": "all empty ANI and no-extension records retain candidate boundaries",
+      "passed": true
+    },
+    {
+      "name": "TenSLX CFB stream byte range and hash",
+      "passed": true
+    },
+    {
+      "name": "TenSLX orphan CFB sectors and unaligned tail remain explicit",
+      "passed": true
+    },
+    {
+      "name": "TenSLX LZMA output remains a checked partial candidate",
+      "passed": true
+    },
+    {
+      "name": "CFB cyclic stream chain is rejected",
+      "passed": true
+    },
+    {
+      "name": "static PE imports and export names are bounded metadata",
+      "passed": true
+    },
+    {
+      "name": "all 98 duplicate physical member hashes match sealed evidence",
+      "passed": true
+    },
+    {
+      "name": "cache accepts only matching current source bytes",
+      "passed": true
+    },
+    {
+      "name": "cache rejects changed source member without trusting an old PNG",
+      "passed": true
+    },
+    {
+      "name": "cache rejects shifted member extent",
+      "passed": true
+    },
+    {
+      "name": "actual byte-identical IMG retains every physical candidate",
+      "passed": true
+    },
+    {
+      "name": "actual conflicting IMG refuses implicit NPK precedence",
+      "passed": true
+    },
+    {
+      "name": "explicit physical candidates get isolated PNG and provenance keys",
+      "passed": true
+    },
+    {
+      "name": "current-source hash-bound image cache reuses verified PNG",
+      "passed": true
+    },
+    {
+      "name": "successful explicit retry clears stale failure and keeps ambiguity diagnostic",
+      "passed": true
+    },
+    {
+      "name": "version1 offline bundle retains explicit source choice and candidates",
+      "passed": true
+    },
+    {
+      "name": "legacy version1 bundle requires no new resource metadata",
+      "passed": true
+    },
+    {
+      "name": "both exact worldmap paths stay missing",
+      "passed": true
+    },
+    {
+      "name": "physical override outside indexed candidates is rejected",
+      "passed": true
+    }
+  ],
+  "check_count": 30,
+  "evidence_sha256": "3f7f5a7ae47f82c3d9c1fcb499cfcbfb35d0e15fdddd726e3848389a2eca0536",
+  "resource_report_sha256": "a4d38302ad48b6beef83a59b5dd4522b47074b2d88d86203d1bfbc545da26451",
+  "helper_sha256": "2b018e486786e98d9016d3797f479b267d2c28c29be7bb8d1be032a2e805f8a3",
+  "scope": "Offline structural/provenance/preview regressions; not native scheduling, game rendering or performance acceptance"
+}

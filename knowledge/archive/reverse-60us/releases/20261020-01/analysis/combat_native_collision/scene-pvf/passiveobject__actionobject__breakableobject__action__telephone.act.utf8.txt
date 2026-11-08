@@ -1,0 +1,32 @@
+[MOTION]
+	[BASE ANI] `../Animation/telephone.ani`
+[/MOTION]
+
+[TRIGGER]
+	[ON DAMAGE]
+	[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+
+[BEHAVIOR]
+[PARTICLE] `../particle/telephonedestroy2.ptl` 0 0 50 		
+[/BEHAVIOR]
+
+[TRIGGER]
+	[WHICH]	[ME]
+	[CHECKUP]
+		[HP] [=<] 50[%]
+	[/CHECKUP]
+	[DO BEHAVIOR] [ME] 1
+[/TRIGGER]
+
+[BEHAVIOR]
+	[SUMMON APC]			// INDEX, LEVEL, POS 는 반드시 들어가야함. 그 외는 들어가던 말던 상관없음.
+		[INDEX] 10401//인덱스번호 
+		[LEVEL] 40
+		[POS] 20 20 20//x y z
+		[NO EFFECT]
+		[TEAM] 0
+		[USE MY BASEPOS]				// 상대 좌표 이동을 자신의 좌표 기준으로 할 것인지 지정 (기본은 타겟 좌표)
+	[/SUMMON APC]
+	[DESTROY]
+[/BEHAVIOR]

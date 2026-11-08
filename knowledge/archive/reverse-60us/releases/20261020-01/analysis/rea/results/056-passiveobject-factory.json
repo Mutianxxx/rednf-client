@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "provenance": {
+      "untrusted_content": true,
+      "source": "analysis_target"
+    }
+  },
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"error\":{\"code\":\"resource_constraint\",\"category\":\"resource_constraint\",\"message\":\"The operation completed, but its complete MCP response exceeds the stdio response budget. The analysis result was not truncated. Call inspect_analysis_view with the supplied continuation arguments to read retained pseudocode. Follow coverage.next_offset for subsequent pages; reduce the page limit if needed, or export the complete retained Evidence.\",\"retryable\":false,\"remediation\":{\"action\":\"Call inspect_analysis_view with the supplied continuation arguments to read retained pseudocode. Follow coverage.next_offset for subsequent pages; reduce the page limit if needed, or export the complete retained Evidence.\"},\"details\":{\"operation\":\"analyze_function\",\"resource\":\"transport\",\"reason\":\"The operation completed, but its complete MCP response exceeds the stdio response budget. The analysis result was not truncated. Call inspect_analysis_view with the supplied continuation arguments to read retained pseudocode. Follow coverage.next_offset for subsequent pages; reduce the page limit if needed, or export the complete retained Evidence.\",\"reported_limits\":{\"boundary\":\"mcp-response\",\"default_receive_buffer_bytes\":10485760,\"result_budget_bytes\":10484736,\"max_string_code_units\":536869864,\"response_bytes_at_least\":10545259,\"response_code_units_at_least\":10545259,\"constraint\":\"receive-buffer\",\"evidence_id\":\"ev_48ce04b8ee82f8f9df508cb261801868f9d61898485ed6678027faef3060b111\",\"evidence_reference\":{\"kind\":\"retained-evidence\",\"evidence_id\":\"ev_48ce04b8ee82f8f9df508cb261801868f9d61898485ed6678027faef3060b111\"},\"continuation\":{\"name\":\"inspect_analysis_view\",\"arguments\":{\"source\":{\"kind\":\"retained-evidence\",\"evidence_id\":\"ev_48ce04b8ee82f8f9df508cb261801868f9d61898485ed6678027faef3060b111\"},\"view\":{\"kind\":\"native\",\"facet\":\"pseudocode\",\"offset\":0,\"limit\":64}}}}}}}"
+    }
+  ],
+  "isError": true
+}

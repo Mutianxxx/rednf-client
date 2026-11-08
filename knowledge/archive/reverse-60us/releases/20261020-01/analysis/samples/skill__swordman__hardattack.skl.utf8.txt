@@ -1,0 +1,98 @@
+[purchase cost] 
+25
+[/purchase cost]
+[type]  `[active]`
+[skill class]  3
+[maximum level]  30
+[growtype maximum level]  10 10 20 10 10
+[skill fitness growtype] 
+0
+1
+2
+3
+4
+[/skill fitness growtype]
+[required level]  1			// 스킬을 배우기 위해 필요한 캐릭터의 최소 레벨.
+[required level range]  2
+
+[durability decrease rate] 20
+
+[weapon effect type] `[magical]`
+
+[icon] 
+`Character/Swordman/Effect/SkillIcon.img` 10
+`Character/Swordman/Effect/SkillIcon.img` 11
+
+[command] 
+(UP) &
+(SKILL)
+[/command]
+[command key explain]  <12::command_key_explain_18445>
+
+[dungeon]
+[consume MP]  24 60
+[cool time]  6000 6000
+
+[static data]
+100	// 귀참 이펙트 확대 비율 (%) 실제 범위는 확대되지 않음 주의 (APC 요청에 따라 구현)
+[/static data]
+
+[level info]
+1
+// 0.마법무기%
+250 
+263 
+276 
+289 
+303 
+316 
+329 
+342 
+355 
+368 
+382 
+395 
+408 
+421 
+434 
+447 
+461 
+474 
+487 
+500 
+513 
+526 
+539 
+553 
+566 
+579 
+592 
+605 
+618 
+632  
+[/level info]
+[/dungeon]
+
+[pvp]
+[/pvp]
+
+[death tower]
+[/death tower]
+
+[warroom]
+[/warroom]
+
+
+
+[name]  <12::name_17745>
+[explain] <12::explain_17750>
+[basic explain] <12::hard_attack_basic_explain>
+[name2]  <12::name2_17755>
+
+[level property] 
+1 99
+<12::level_property_17760>
+-1 0 1.0
+[/level property]
+
+

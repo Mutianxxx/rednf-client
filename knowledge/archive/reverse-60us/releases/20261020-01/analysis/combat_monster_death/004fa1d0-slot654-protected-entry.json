@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x4fa1d0",
+  "rva": "0xfa1d0",
+  "file_offset": 1024464,
+  "length": 37,
+  "bytes_sha256": "9a4d3f9d8610c8282aec1274d52c82ebfa38db7c765007a9daab63a30ca2c09b",
+  "status": "native_bytes",
+  "note": "The entry jumps to a protection thunk. Do not linear-decode the following opaque bytes.",
+  "disassembled": true
+}

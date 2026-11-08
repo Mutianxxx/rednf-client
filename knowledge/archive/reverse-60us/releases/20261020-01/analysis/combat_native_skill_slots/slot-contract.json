@@ -1,0 +1,180 @@
+{
+  "source_exe_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "source_pvf_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+  "character_source": {
+    "file_number": 4233484881,
+    "path": "character/swordman/swordman.chr",
+    "size": 14519,
+    "crc": "9ae456b5",
+    "relative_offset": 130925504,
+    "absolute_offset": 138492128,
+    "sha256": "969316b7284f0bdd654fb013ff52f148199f2fc1eb668dd6b130da980160b73e",
+    "encoding": "cp949",
+    "crc_verified": true,
+    "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+  },
+  "character_slots": [
+    {
+      "tag": "etc motion",
+      "index": 0,
+      "path": "character/swordman/animation/guard.ani",
+      "source_path": "Animation/Guard.ani",
+      "empty": false,
+      "exists": true,
+      "source_token": {
+        "kind": "string",
+        "text": "Animation/Guard.ani",
+        "value": "Animation/Guard.ani",
+        "start": 7326,
+        "end": 7347,
+        "line": 293,
+        "column": 1
+      },
+      "field_start": 7311,
+      "scope": [],
+      "kind": "animation"
+    },
+    {
+      "tag": "etc motion",
+      "index": 1,
+      "path": "character/swordman/animation/hardattack.ani",
+      "source_path": "Animation/HardAttack.ani",
+      "empty": false,
+      "exists": true,
+      "source_token": {
+        "kind": "string",
+        "text": "Animation/HardAttack.ani",
+        "value": "Animation/HardAttack.ani",
+        "start": 7349,
+        "end": 7375,
+        "line": 294,
+        "column": 1
+      },
+      "field_start": 7311,
+      "scope": [],
+      "kind": "animation"
+    },
+    {
+      "tag": "etc motion",
+      "index": 17,
+      "path": "character/swordman/animation/hardattackchargeafter.ani",
+      "source_path": "Animation/HardAttackChargeAfter.ani",
+      "empty": false,
+      "exists": true,
+      "source_token": {
+        "kind": "string",
+        "text": "Animation/HardAttackChargeAfter.ani",
+        "value": "Animation/HardAttackChargeAfter.ani",
+        "start": 7825,
+        "end": 7862,
+        "line": 310,
+        "column": 1
+      },
+      "field_start": 7311,
+      "scope": [],
+      "kind": "animation"
+    },
+    {
+      "tag": "etc attack info",
+      "index": 0,
+      "path": "character/swordman/attackinfo/hardattack.atk",
+      "source_path": "AttackInfo/HardAttack.atk",
+      "empty": false,
+      "exists": true,
+      "source_token": {
+        "kind": "string",
+        "text": "AttackInfo/HardAttack.atk",
+        "value": "AttackInfo/HardAttack.atk",
+        "start": 10780,
+        "end": 10807,
+        "line": 400,
+        "column": 1
+      },
+      "field_start": 10760,
+      "scope": [],
+      "kind": "attack_info"
+    },
+    {
+      "tag": "etc attack info",
+      "index": 20,
+      "path": "character/swordman/attackinfo/hardattackchargeafter.atk",
+      "source_path": "AttackInfo/HardAttackChargeAfter.atk",
+      "empty": false,
+      "exists": true,
+      "source_token": {
+        "kind": "string",
+        "text": "AttackInfo/HardAttackChargeAfter.atk",
+        "value": "AttackInfo/HardAttackChargeAfter.atk",
+        "start": 11399,
+        "end": 11437,
+        "line": 420,
+        "column": 1
+      },
+      "field_start": 10760,
+      "scope": [],
+      "kind": "attack_info"
+    }
+  ],
+  "chr_parse": {
+    "entry": "0x88b2d0",
+    "motion_tag_va": "0xe1e88c",
+    "motion_compare": "0x88c13f",
+    "motion_vector_object_offset": "0xbbc",
+    "motion_begin_offset": "0xbc0",
+    "motion_end_offset": "0xbc4",
+    "attack_tag_va": "0xe233ec",
+    "attack_compare": "0x88c241",
+    "attack_vector_object_offset": "0xbe4",
+    "attack_begin_offset": "0xbe8",
+    "attack_end_offset": "0xbec"
+  },
+  "runtime": {
+    "materializer": "0x4da140",
+    "motion_materialize_loop": "0x4db255",
+    "motion_vector_object_offset": "0x1274",
+    "motion_begin_offset": "0x1278",
+    "motion_end_offset": "0x127c",
+    "motion_element_bytes": 4,
+    "motion_getter": "0x4d3ce0",
+    "motion_getter_virtual_slot": "0x38c",
+    "motion_setter_virtual_slot": "0xf0",
+    "motion_setter": "0x4b4da0",
+    "current_animation_pointer_offset": "0x104",
+    "attack_materialize_loop": "0x4db594",
+    "attack_vector_object_offset": "0x444",
+    "attack_begin_offset": "0x448",
+    "attack_end_offset": "0x44c",
+    "attack_element_bytes": 440,
+    "attack_getter": "0x5270f0",
+    "attack_setter_virtual_slot": "0x198",
+    "attack_setter": "0x746c30",
+    "current_attack_object_offset": "0x260",
+    "empty_motion": "append NULL at same index",
+    "empty_attack": "append default ATK record at same index"
+  },
+  "native_selection_sites": [
+    {
+      "va": "0x731fa9",
+      "motion_index": 1,
+      "motion_call": "0x731fad",
+      "motion_install": "0x731fb6",
+      "attack_index": 0,
+      "attack_call": "0x731fc2",
+      "attack_install": "0x731fca"
+    },
+    {
+      "va": "0x73219f",
+      "motion_index": 17,
+      "motion_call": "0x7321a6",
+      "motion_install": "0x7321af",
+      "attack_index": 20,
+      "attack_call": "0x7321bb",
+      "attack_install": "0x7321c3"
+    }
+  ],
+  "boundaries": [
+    "Selection sites differ by controller branches; conditions not reconstructed here",
+    "Slots and state20 linkage alone do not recover attack boxes, generated effects, damage rules or complete skill controller",
+    "Motion getter and setter both call equipment attachment hook 0x4b4a80 with type0x13; body ANI alone is insufficient"
+  ]
+}

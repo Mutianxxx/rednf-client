@@ -1,0 +1,1993 @@
+{
+  "path": "passiveobject/character/swordman/animation/blastblood1.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        15
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 65
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 75
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 130
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 175
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 185
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 205
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 220
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 230
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 240
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 245
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 260
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 275
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 285
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 295
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 300
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 315
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 330
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 350
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 355
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 370
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 385
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 395
+    },
+    {
+      "tag": "[FRAME007]",
+      "values": [],
+      "offset": 405
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 410
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 425
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 440
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 450
+    },
+    {
+      "tag": "[FRAME008]",
+      "values": [],
+      "offset": 460
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 465
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 480
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 495
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 505
+    },
+    {
+      "tag": "[FRAME009]",
+      "values": [],
+      "offset": 515
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 520
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 535
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 550
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 560
+    },
+    {
+      "tag": "[FRAME010]",
+      "values": [],
+      "offset": 570
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 575
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 590
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 605
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 615
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -41,
+        -77,
+        0,
+        80,
+        54,
+        330
+      ],
+      "offset": 625
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -61,
+        -68,
+        0,
+        120,
+        36,
+        330
+      ],
+      "offset": 660
+    },
+    {
+      "tag": "[FRAME011]",
+      "values": [],
+      "offset": 695
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 700
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 715
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 730
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 740
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -41,
+        -77,
+        0,
+        80,
+        54,
+        330
+      ],
+      "offset": 750
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -61,
+        -68,
+        0,
+        120,
+        36,
+        330
+      ],
+      "offset": 785
+    },
+    {
+      "tag": "[FRAME012]",
+      "values": [],
+      "offset": 820
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 825
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 840
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 855
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 865
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -41,
+        -77,
+        0,
+        80,
+        54,
+        330
+      ],
+      "offset": 875
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -61,
+        -68,
+        0,
+        120,
+        36,
+        330
+      ],
+      "offset": 910
+    },
+    {
+      "tag": "[FRAME013]",
+      "values": [],
+      "offset": 945
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 950
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 965
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 980
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 990
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -41,
+        -77,
+        0,
+        80,
+        54,
+        330
+      ],
+      "offset": 1000
+    },
+    {
+      "tag": "[ATTACK BOX]",
+      "values": [
+        -61,
+        -68,
+        0,
+        120,
+        36,
+        330
+      ],
+      "offset": 1035
+    },
+    {
+      "tag": "[FRAME014]",
+      "values": [],
+      "offset": 1070
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 1075
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -345,
+        -401
+      ],
+      "offset": 1090
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 1105
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        800
+      ],
+      "offset": 1115
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 15,
+      "value": 15
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 60,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 85,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 115,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 140,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 170,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 195,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 200,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 205,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 220,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 225,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 230,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 235,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 240,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 250,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 260,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 275,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 280,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 285,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 300,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 305,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 310,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 315,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 325,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 330,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 335,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 350,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 355,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 360,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 365,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 370,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 375,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 380,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 385,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 390,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 395,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 400,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 405,
+      "type": 3,
+      "raw": 3184,
+      "value": "[FRAME007]"
+    },
+    {
+      "offset": 410,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 415,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 420,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 425,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 430,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 440,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 445,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 450,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 455,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 460,
+      "type": 3,
+      "raw": 3206,
+      "value": "[FRAME008]"
+    },
+    {
+      "offset": 465,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 470,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 475,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 480,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 485,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 490,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 495,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 500,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 505,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 510,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 515,
+      "type": 3,
+      "raw": 3342,
+      "value": "[FRAME009]"
+    },
+    {
+      "offset": 520,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 525,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 530,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 535,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 540,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 545,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 550,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 555,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 560,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 565,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 570,
+      "type": 3,
+      "raw": 3388,
+      "value": "[FRAME010]"
+    },
+    {
+      "offset": 575,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 580,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 585,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 590,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 595,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 600,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 605,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 610,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 615,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 620,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 625,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 630,
+      "type": 0,
+      "raw": 4294967255,
+      "value": -41
+    },
+    {
+      "offset": 635,
+      "type": 0,
+      "raw": 4294967219,
+      "value": -77
+    },
+    {
+      "offset": 640,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 645,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 650,
+      "type": 0,
+      "raw": 54,
+      "value": 54
+    },
+    {
+      "offset": 655,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 660,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 665,
+      "type": 0,
+      "raw": 4294967235,
+      "value": -61
+    },
+    {
+      "offset": 670,
+      "type": 0,
+      "raw": 4294967228,
+      "value": -68
+    },
+    {
+      "offset": 675,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 680,
+      "type": 0,
+      "raw": 120,
+      "value": 120
+    },
+    {
+      "offset": 685,
+      "type": 0,
+      "raw": 36,
+      "value": 36
+    },
+    {
+      "offset": 690,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 695,
+      "type": 3,
+      "raw": 3410,
+      "value": "[FRAME011]"
+    },
+    {
+      "offset": 700,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 705,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 710,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 715,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 720,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 725,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 730,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 735,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 740,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 745,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 750,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 755,
+      "type": 0,
+      "raw": 4294967255,
+      "value": -41
+    },
+    {
+      "offset": 760,
+      "type": 0,
+      "raw": 4294967219,
+      "value": -77
+    },
+    {
+      "offset": 765,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 770,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 775,
+      "type": 0,
+      "raw": 54,
+      "value": 54
+    },
+    {
+      "offset": 780,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 785,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 790,
+      "type": 0,
+      "raw": 4294967235,
+      "value": -61
+    },
+    {
+      "offset": 795,
+      "type": 0,
+      "raw": 4294967228,
+      "value": -68
+    },
+    {
+      "offset": 800,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 805,
+      "type": 0,
+      "raw": 120,
+      "value": 120
+    },
+    {
+      "offset": 810,
+      "type": 0,
+      "raw": 36,
+      "value": 36
+    },
+    {
+      "offset": 815,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 820,
+      "type": 3,
+      "raw": 3432,
+      "value": "[FRAME012]"
+    },
+    {
+      "offset": 825,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 830,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 835,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 840,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 845,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 850,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 855,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 860,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 865,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 870,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 875,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 880,
+      "type": 0,
+      "raw": 4294967255,
+      "value": -41
+    },
+    {
+      "offset": 885,
+      "type": 0,
+      "raw": 4294967219,
+      "value": -77
+    },
+    {
+      "offset": 890,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 895,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 900,
+      "type": 0,
+      "raw": 54,
+      "value": 54
+    },
+    {
+      "offset": 905,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 910,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 915,
+      "type": 0,
+      "raw": 4294967235,
+      "value": -61
+    },
+    {
+      "offset": 920,
+      "type": 0,
+      "raw": 4294967228,
+      "value": -68
+    },
+    {
+      "offset": 925,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 930,
+      "type": 0,
+      "raw": 120,
+      "value": 120
+    },
+    {
+      "offset": 935,
+      "type": 0,
+      "raw": 36,
+      "value": 36
+    },
+    {
+      "offset": 940,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 945,
+      "type": 3,
+      "raw": 3454,
+      "value": "[FRAME013]"
+    },
+    {
+      "offset": 950,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 955,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 960,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 965,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 970,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 975,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 980,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 985,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 990,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 995,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 1000,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 1005,
+      "type": 0,
+      "raw": 4294967255,
+      "value": -41
+    },
+    {
+      "offset": 1010,
+      "type": 0,
+      "raw": 4294967219,
+      "value": -77
+    },
+    {
+      "offset": 1015,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 1020,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 1025,
+      "type": 0,
+      "raw": 54,
+      "value": 54
+    },
+    {
+      "offset": 1030,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 1035,
+      "type": 3,
+      "raw": 7132,
+      "value": "[ATTACK BOX]"
+    },
+    {
+      "offset": 1040,
+      "type": 0,
+      "raw": 4294967235,
+      "value": -61
+    },
+    {
+      "offset": 1045,
+      "type": 0,
+      "raw": 4294967228,
+      "value": -68
+    },
+    {
+      "offset": 1050,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 1055,
+      "type": 0,
+      "raw": 120,
+      "value": 120
+    },
+    {
+      "offset": 1060,
+      "type": 0,
+      "raw": 36,
+      "value": 36
+    },
+    {
+      "offset": 1065,
+      "type": 0,
+      "raw": 330,
+      "value": 330
+    },
+    {
+      "offset": 1070,
+      "type": 3,
+      "raw": 3476,
+      "value": "[FRAME014]"
+    },
+    {
+      "offset": 1075,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 1080,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 1085,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 1090,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 1095,
+      "type": 0,
+      "raw": 4294966951,
+      "value": -345
+    },
+    {
+      "offset": 1100,
+      "type": 0,
+      "raw": 4294966895,
+      "value": -401
+    },
+    {
+      "offset": 1105,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 1110,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 1115,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 1120,
+      "type": 0,
+      "raw": 800,
+      "value": 800
+    }
+  ],
+  "raw_sha256": "7d0cad098eb18a909c2bac0828835171c9e6f5a18e654e353394a6de6ae414a0"
+}

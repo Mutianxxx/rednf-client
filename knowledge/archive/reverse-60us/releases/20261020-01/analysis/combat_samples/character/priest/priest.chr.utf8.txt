@@ -1,0 +1,276 @@
+[job]  `[priest]`
+[growtype name]  <0::growtype_name_100> <0::growtype_name_105> <0::growtype_name_110> <0::growtype_name_115> <0::growtype_name_120>
+[width]  40 10
+
+[initial value] 
+[HP MAX]  220.0
+[MP MAX]  100.0
+[physical attack]  6.0
+[physical defense]  6.0
+[magical attack]  4.0
+[magical defense]  6.0
+[inventory limit]  40000.0
+[MP regen speed]  50.0
+[move speed]  750.0
+[attack speed]  950.0
+[cast speed]  1000.0
+[hit recovery]  500.0
+[jump power]  500.0
+[weight]  85000.0
+[jump speed]  100
+[skill] 
+181 1 // 세공
+182 1 // 방직
+184 1 // 화학
+179 7 // 해체(60레벨 아이템까지 해체 가능하도록 7레벨로 수정)
+1 1	// 공참타 1레벨
+51 1	// 슬로우 힐 1레벨
+173 1	// 중갑 마스터리
+[/skill]
+
+[growtype 1]  // 기본
+[HP MAX]  50.0
+[MP MAX]  20.0
+[physical attack]  3.2
+[physical defense]  3.3
+[magical attack]  2.5
+[magical defense]  3.0
+[inventory limit]  300.0
+[MP regen speed]  2.5
+[hit recovery]  1.0
+[module damage rate] 1.0 1.0 1.0
+
+[growtype 2]  // 크루세이더
+[HP MAX]  55.0
+[MP MAX]  15.0
+[physical attack]  2.0
+[physical defense]  4.0
+[magical attack]  2.0
+[magical defense]  4.0
+[inventory limit]  300.0
+[MP regen speed]  2.5
+[cast speed]  1.0
+[hit recovery]  2.0
+[skill] 
+54 1 	//신의 은총
+34 1	//신성한 판금 마스터리
+43 1	//순백의 칼날
+[/skill]
+[module damage rate] 1.2 1.0 1.0
+
+[growtype 3]  // 인파이터
+[HP MAX]  50.0
+[MP MAX]  20.0
+[physical attack]  3.7
+[physical defense]  3.5
+[magical attack]  2.4
+[magical defense]  2.4
+[inventory limit]  300.0
+[attack speed]  1.0
+[MP regen speed]  2.5
+[hit recovery]  2.0
+[skill] 
+29 1	// 권기 방출
+13 1	// 윌 드라이버
+172 1	// 경갑 마스터리
+14 1	// 윌 마스터리 : 십자가
+15 1	// 윌 마스터리 : 염주
+16 1	// 윌 마스터리 : 토템
+17 1	// 윌 마스터리 : 낫
+18 1	// 윌 마스터리 : 배틀엑스
+[/skill]
+[module damage rate] 0.9 1.0 1.0
+
+[growtype 4]  // 퇴마사
+[HP MAX]  40.0
+[MP MAX]  30.0
+[physical attack]  3.5
+[physical defense]  2.5
+[magical attack]  3.5
+[magical defense]  2.5
+[inventory limit]  300.0
+[cast speed]  1.0
+[hit recovery]  1.0
+[MP regen speed]  5.0
+[skill]
+187 1	//천 방어구 마스터리
+68 1	//퇴마의 중갑 마스터리
+67 1	//퇴마의 기운 
+[/skill]
+[module damage rate] 1.0 1.0 1.0
+
+[growtype 5]  // 어벤저
+[HP MAX]  45.0
+[MP MAX]  25.0
+[physical attack]  3.8
+[physical defense]  2.2
+[magical attack]  3.8
+[magical defense]  2.2
+[inventory limit]  300.0
+[move speed]  1.0
+[MP regen speed]  2.5
+[hit recovery]  2.0
+[skill] 
+[/skill]
+[module damage rate] 1.0 1.0 1.0
+
+[waiting motion]  `Animation/Stay.ani`
+[move motion]  `Animation/Move.ani`
+[sit motion]  `Animation/Sit.ani`
+[damage motion 1]  `Animation/Damage1.ani`
+[damage motion 2]  `Animation/Damage2.ani`
+[down motion]  `Animation/Down.ani`
+[overturn motion]  `Animation/Overturn.ani`
+[jump motion]  `Animation/Jump.ani`
+[jumpattack motion]  `Animation/JumpAttack.ani`
+[rest motion]  `Animation/Rest.ani`
+[throw motion 1-1]  `Animation/Throw1.ani`
+[throw motion 1-2]  `Animation/Throw2.ani`
+[throw motion 2-1]  `Animation/Pray1.ani`
+[throw motion 2-2]  `Animation/Pray2.ani`
+[throw motion 3-1]  `Animation/Deliver1.ani`
+[throw motion 3-2]  `Animation/Deliver2.ani`
+[throw motion 4-1]  `Animation/Blast1.ani`
+[throw motion 4-2]  `Animation/Blast2.ani`
+[dash motion]  `Animation/Dash.ani`
+[dashattack motion]  `Animation/DashAttack.ani`
+[getitem motion]  `Animation/GetItem.ani`
+[buff motion]  `Animation/Buff.ani`
+[simple rest motion]  `Animation/SIMPLE_Rest.ani`
+[simple move motion]  `Animation/SIMPLE_Move.ani`
+[back motion]	`Animation/DuckingStraight.ani`
+[attack motion] 
+`Animation/Attack1.ani`
+`Animation/Attack2.ani`
+`Animation/Attack3.ani`
+`Animation/Attack4.ani`
+[/attack motion]
+[ghost motion]
+`Animation/Ghost.ani`
+`Animation/Ghost_Dodge.ani`
+[/ghost motion]
+[etc motion]
+`Animation/JumpPunch.ani`
+`Animation/AntiairUpper.ani`
+`Animation/Ducking.ani`
+`Animation/Sway.ani`
+`Animation/GiantSwingReady.ani`
+`Animation/GiantSwing.ani`
+`Animation/GiantSwingFinal.ani`
+`Animation/SmasherTryGrab.ani`
+`Animation/SmasherSuccessGrab.ani`
+`Animation/SmasherDash.ani`
+`Animation/DuckingBodyBlow.ani`
+`Animation/QuakeArea.ani`
+`Animation/WillDriver.ani`
+`Animation/LuckyStraight.ani`
+`Animation/DuckingStraight.ani`
+`Animation/SecondUpper.ani`
+`Animation/DuckingUpper.ani`
+`Animation/HolyCounterPray.ani`
+`Animation/HolyCounterBodyblow.ani`
+`Animation/GorgeousCombination.ani`
+`Animation/ChoppingHammer.ani`
+`Animation/HurricaneOfJudgement.ani`
+`Animation/HomeRunGrab.ani`
+`Animation/HomeRunCharge.ani`
+`Animation/HomeRunSmash.ani`
+`Animation/BladeOfPureWhite.ani`
+`Animation/HurricaneRollHook.ani`
+`Animation/HurricaneRollUpper.ani`
+`Animation/RepeatedSmash.ani`
+`Animation/RepeatedSmashFinal.ani`
+`Animation/ThrowWeaponReady.ani`
+`Animation/ThrowWeaponSwing.ani`
+`Animation/ThrowWeaponThrow.ani`
+[/etc motion]
+[jumpattack info]  `AttackInfo/JumpAttack.atk`
+[dashattack info]  `AttackInfo/DashAttack.atk`
+[attack info]
+`AttackInfo/Attack1.atk`
+`AttackInfo/Attack2.atk`
+`AttackInfo/Attack3.atk`
+`AttackInfo/Attack4.atk`
+[/attack info]
+[etc attack info]
+`AttackInfo/JumpPunch.atk`
+`AttackInfo/DashAttackSmash.atk`
+`AttackInfo/AntiairUpper.atk`
+`AttackInfo/GiantSwing.atk`
+`AttackInfo/GiantSwingFinal.atk`
+`AttackInfo/SmasherTry.atk`
+`AttackInfo/SmasherDash.atk`
+`AttackInfo/SmasherThrow.atk`
+`AttackInfo/QuakeArea.atk`
+`AttackInfo/LuckyStraight.atk`
+`AttackInfo/SecondUpper.atk`
+`AttackInfo/DuckingStraight.atk`
+`AttackInfo/DuckingBodyblow.atk`
+`AttackInfo/DuckingUpper.atk`
+`AttackInfo/HolyCounter.atk`
+`AttackInfo/GorgeousCombination1.atk`
+`AttackInfo/GorgeousCombination2.atk`
+`AttackInfo/GorgeousCombination3.atk`
+`AttackInfo/ChoppingHammer.atk`
+`AttackInfo/HurricaneOfJudgement.atk`
+`AttackInfo/HomeRunGrab.atk`
+`AttackInfo/HomeRunHit.atk`
+`AttackInfo/HomeRunSmash.atk`
+`AttackInfo/BladeOfPureWhite.atk`
+`AttackInfo/HurricaneRollHook.atk`
+`AttackInfo/HurricaneRollUpper.atk`
+`AttackInfo/RepeatedSmash.atk`
+`AttackInfo/RepeatedSmashFinal.atk`
+`AttackInfo/ThrowWeapon.atk`
+[/etc attack info]
+
+[weapon wav] 	// 십자가
+`R_CROSS`
+`R_CROSS_HIT`
+[/weapon wav]
+[weapon wav] 	// 염주
+`ROSANY_01`
+`R_ROSANY_HIT`
+[/weapon wav]
+[weapon wav] 	// 토템
+`R_TOTEM`
+`R_TOTEM_HIT`
+[/weapon wav]
+[weapon wav] 	// 낫
+`R_SCYTHE`
+`R_SCYTHE_HIT`
+[/weapon wav]
+[weapon wav] 	// 배틀 액스
+`R_AXE`
+`R_AXE_HIT`
+[/weapon wav]
+[weapon wav]	// UNKNOWN
+[/weapon wav]
+
+// 주의! [weapon hit info]와 [weapon skill info]는 항상 [weapon wav] 태그보다 뒤에 와야 한다.
+[weapon hit info] 
+`[blow]` `[no blood]` 90 1.0 0.0 -0.05	// 십자가
+`[blow]` `[no blood]` 90 0.95 -0.1 0.15	// 염주
+`[blow]` `[no blood]` 100 1.1 0.5 -0.1	// 토템
+`[cut]` `[blood]` 60 0.9 -0.05 0.0		// 낫
+`[cut]` `[blood]` 120 1.4 0.2 -0.15		// 배틀 액스
+`[blow]` `[no blood]` 100 1.0 0.0 0.0	// UNKNOWN
+[/weapon hit info]
+[weapon skill info]	// 물리 MP, 물리 쿨타임, 마법 MP, 마법 쿨타임 비율
+1.0 1.0 0.95 0.95		// 십자가
+0.9 0.95 1.15 1.05		// 염주
+1.05 1.00 0.9 0.95		// 토템
+0.95 0.95 1.0 1.0		// 낫
+1.2 1.1 0.85 0.9		// 배틀 액스
+1.0 1.0 1.0 1.0		// UNKNOWN
+[/weapon skill info]
+[upgrade weapon attack power rate]	// 물리 공격력, 마법 공격력. 강화로 인한 공격력 증가
+1.0 0.95 	// 십자가
+0.9 1.15 	// 염주
+1.05 0.9 	// 토템
+1.05 1.0 	// 낫
+1.2 0.85 	// 배틀 액스
+1.0 1.0 	// UNKNOWN
+[/upgrade weapon attack power rate]
+
+[body image path] `Character/priest/Equipment/Avatar/skin/pr_body%04d.img`

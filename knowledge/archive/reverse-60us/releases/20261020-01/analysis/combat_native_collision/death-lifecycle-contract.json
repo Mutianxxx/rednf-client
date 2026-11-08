@@ -1,0 +1,108 @@
+{
+  "source": {
+    "path": "DFO/DFO_fixed_v3.exe",
+    "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "image_base": "0x400000",
+    "evidence_kind": "local static PE bytes and Capstone x86 disassembly",
+    "runtime_observed": false,
+    "rea_provider_evidence": false
+  },
+  "observed_static": {
+    "native_state5_tick": {
+      "enclosing_method": "0x4FB720 (Monster.slot188; called from 49C046)",
+      "rea": {
+        "evidence_id": "ev_2a43bf6ec4f4c0448af3cf08236d51460c7335b467bb6ee529e628ccb6a2e260",
+        "artifact": "../rea/053-monster-state-tick.c",
+        "result": "../rea/results/053-monster-state-tick.json",
+        "scope": "Pseudocode includes the state5 consumer, while Ghidra FunctionManager body ranges omit switch cases4FC8B4..4FCD6B. Local captures establish case bytes and table dispatch separately."
+      },
+      "state_read": "0x4FC892 protected(this+0x155C) -> 402060",
+      "dispatch": "0x4FC8A6 remap4FCE84[state] -> table4FCE68[remap]",
+      "state5_case": "0x4FCB2A..0x4FCD6C",
+      "default_case": "0x4FCD6C",
+      "state5_remap_index": 1,
+      "requires_direct_ani": "this+0x104 != null, else jump to final expiry check at 4FCD45",
+      "elapsed": "B06F00(this+0x1564); call-site values are kept as raw timer counts",
+      "lifetime": "this+0x1E18, set by 4FE290 state5 branch before base state application",
+      "ordinary_alpha": "when slot5A0 is false and mode[1002848]+19A8 != 2: native_u8(C01544(lerp(255,0,elapsed+100-lifetime,100))) -> alpha byte of this+1C0; RGB preserved; alpha mask ORed into this+1C4",
+      "gate_true_grayscale": "when slot5A0 is true: native_u8(C01544(lerp(255,100,elapsed+100-lifetime,100))) copied to RGB bytes of this+1C0; alpha preserved; RGB mask ORed into this+1C4",
+      "special_mode": "slot5A0 false and mode==2: timer+24B8 must exceed 25 and elapsed<=lifetime; factor=lerp(1.0,1.05,elapsed+100-lifetime,100), accumulated+24F8*=factor; when accumulated<=float32(1.2), A297B0 applies factor to current ANI and 4577F0 applies it to available extra-layer entries; velocity reset; timer24B8 restarted",
+      "expiry": "4FCD45 elapsed>=this+1E18 and byte(this+1E8)==0 -> virtual.slot654 at4FCD66",
+      "color_reset_helper": "498E60; merges selected color bits into +1C0 and clears them from +1C4, with ANI refresh when needed",
+      "not_a_lastaction_lookup": true
+    },
+    "interpolation": {
+      "function": "0xB099B0",
+      "signature_inferred_from_x86_arguments": "float lerp(float start,float end,int position,int duration)",
+      "exact_branch_order": "if position>=duration return end; else if position<=0 return start; else return start+(end-start)*position/duration",
+      "float_and_integer_conversion": "native x87 evaluation and C01544 conversion; do not substitute browser rounding without separate verification"
+    },
+    "slot654": {
+      "monster_vtable": "0xD8385C",
+      "target": "0x4FA1D0",
+      "state_apply_zero_payload_call": "0x4FE986 when state5 payload[0]==0",
+      "state_tick_expiry_call": "0x4FCD66",
+      "other_tick_call": "0x4FCA98 in state13 when local-authority predicate and elapsed>=0x352",
+      "protected_entry": "0x4FA1F0 -> 0x13BAA5F -> push0x08100E7E; jmp0x12EE7C9",
+      "rea": {
+        "evidence_id": "ev_f12cbd9cf3515a2bd49d1d6be29f521879abba0515f70fd6f70e9aa6d0681ace",
+        "artifact": "../rea/050-monster-death-callback.c",
+        "scope": "REA/Ghidra pseudocode establishes protected entry only. It returns after FUN_013baa5f; it does not decode the virtualized instructions or prove continuation reachability."
+      },
+      "visible_fragment_after_protected_gap": {
+        "range": "0x4FA222..0x4FA2E2",
+        "gate": "AL false then slot5A0 true required for down-resource switching",
+        "act": "slot3A0 downACT if nonnull and differs from current+148: protected+1704 -> A305B0 index, then slot100(ACT) at4FA284",
+        "ani": "else slot378 downANI if nonnull and differs from directANI+104: protected+1704 -> A27870, then slotF0(ANI) at4FA2D2",
+        "continuation": "slot5D0 at4FA2DC (precise Monster vtable maps it to 750CD0 ret stub)",
+        "reachability_limit": "These native bytes and their local CFG are confirmed. The intervening protection interpreter has not been decoded, so normal entry-to-fragment reachability remains unknown."
+      }
+    },
+    "removal_request": {
+      "slot": "0x164",
+      "target": "0x499120",
+      "gates": "argument!=0 or slot160==global104F1D4!=null, plus byte(this+1E8)!=1",
+      "message_opcode_hex": "0x17",
+      "message_opcode_decimal": 23,
+      "send_begin": "0x499159 global1003164.slot8(0x17,2)",
+      "identifiers": "this.slot3C and this.slot40 via global1003164.slot24",
+      "submit": "global10C0790.slot44(1,-1,this,3) at49919B",
+      "mark_pending": "byte(this+1E8)=1 at49919E",
+      "visible_slot654_tail": "4FA7FD..4FA83D: if49C090(this), diagnostic then this.slot164(0) at4FA837; protected entry-to-tail reachability unresolved"
+    },
+    "removal_receive": {
+      "receiver": "0x8C1A30",
+      "dispatch_table": "0x8C5E64",
+      "index": 23,
+      "case": "0x8C4D73",
+      "read_ids": "two slot54 reads; low16 used as object identifiers",
+      "resolve": "0x8C4DB7 -> 0x50B820",
+      "callback": "0x8C4DCB object.slot60(0)",
+      "monster_slot60": "0x4EFC80",
+      "behavior": "if this.slot5A0 true and argument==0: this.slot3C4 returns AuraMaster at+12DC, then565740(this); otherwise byte(this+184)=argument",
+      "aura_master_route": "565740 finds an entry whose+4 equals owner; dynamic_cast descriptorF61E98, then child.slot5C(0) when child.slot60() true; no lastaction field read established",
+      "native_friendly_type": "RTTI raw bytes spell .?AVCNRDAuraMaster@@"
+    },
+    "last_action": {
+      "preload": "MOB template+748 -> ACT ctor501C99 -> object+150; ACT+2CC=11; owner attachA2D020",
+      "initializer": "498EC0 zeroes current+148,default+14C,last+150,secondary+154; not498E60",
+      "destructor": "49BB48 reads+150 and calls ACT.slot0(1), then zeroes+150 at49BB5E; this is destruction, not visual execution",
+      "precise_monster_slot38": "D8385C.slot38=8E49B0 -> xor al,al;ret",
+      "gate_caveat": "The slot38&&nonempty(last action path) early return in4F2A40 is therefore false for this exact Monster vtable; derived overrides must be checked separately.",
+      "execution_established": false
+    }
+  },
+  "inferences": [
+    "Opcode0x17 is an object deactivation/removal request based on call chain and active flag effects; original source enum names are not recovered.",
+    "State5 tick implements a fading/graying death lifecycle in the inspected native consumer, not a general mandatory death ANI tag."
+  ],
+  "unknown": [
+    "Virtualized instructions reached through12EE7C9 and their conditions/call effects",
+    "Entry-to-visible-fragment reachability inside4FA1D0",
+    "Actual lastACT+150 switching/execution and resource-specific special death behaviors",
+    "Timer clock scaling, exact end-to-end removal authority/runtime behavior",
+    "Render pipeline application of+1C0/+1C4 and runtime visual equivalence",
+    "Scene destruction effects and complete scene cleanup lifetime"
+  ],
+  "preview_rule": "Use native-confirmed damage/down resource routing. Keep death lifecycle fragments separate from a recovered full death controller; do not auto-play lastACT or assign generic death ANI. Raw timer counts and native numeric conversions are not assumed to be web milliseconds/Math.round."
+}

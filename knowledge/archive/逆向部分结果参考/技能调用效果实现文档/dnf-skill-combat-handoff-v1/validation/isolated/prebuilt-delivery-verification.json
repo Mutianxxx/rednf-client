@@ -1,0 +1,298 @@
+{
+  "ok": true,
+  "errors": [],
+  "manifest_files": 606,
+  "original_IMG_references": 151,
+  "npk_archives": 45,
+  "evidence": {
+    "ok": true,
+    "machine_code_spans": 5,
+    "raw_source_nodes": 157,
+    "verified_E8_spawn_calls": 13,
+    "chains": [
+      {
+        "skill": "bloodblast",
+        "sample": "60780-bloodblast-retry",
+        "object_id": 20122,
+        "seq": 2231051,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "bloodblast",
+        "sample": "60780-bloodblast-retry",
+        "object_id": 20120,
+        "seq": 2231054,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "bloodblast",
+        "sample": "60780-bloodblast-retry",
+        "object_id": 20121,
+        "seq": 2231057,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "bloodblastex",
+        "sample": "60780-bloodblastex-hold-release",
+        "object_id": 20103,
+        "seq": 2603443,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "bloodblastex",
+        "sample": "60780-bloodblastex-hold-release",
+        "object_id": 20102,
+        "seq": 2603446,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "bloodblastex",
+        "sample": "60780-bloodblastex-hold-release",
+        "object_id": 20104,
+        "seq": 2603449,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "bloodboom",
+        "sample": "60780-bloodboom-single",
+        "object_id": 38002,
+        "seq": 1977189,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "bloodsword",
+        "sample": "60780-bloodsword-single",
+        "object_id": 20066,
+        "seq": 1802388,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "gorecross",
+        "sample": "60780-gorecross-single",
+        "object_id": 20028,
+        "seq": 1529912,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "hopsmash",
+        "sample": "60780-hopsmash",
+        "object_id": 20050,
+        "seq": 615931,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "hopsmash",
+        "sample": "60780-hopsmash-repeat",
+        "object_id": 20050,
+        "seq": 749085,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "outragebreak",
+        "sample": "52844-outragebreak-single",
+        "object_id": 20043,
+        "seq": 499876,
+        "target": "0x162d2f0"
+      },
+      {
+        "skill": "outragebreak",
+        "sample": "52844-outragebreak-single",
+        "object_id": 20044,
+        "seq": 556792,
+        "target": "0x162d2f0"
+      }
+    ],
+    "limit": "Checks exact retained bytes and recorded chain summaries. Full original log replay is outside this package."
+  },
+  "raw_PVF_members": 35920,
+  "asset_closure": {
+    "passed": true,
+    "animations": 492,
+    "logical_images": 150,
+    "unique_image_frames": 2995,
+    "errors": [],
+    "scope": "All ANI frames of packaged current body/effect roots, all appearance layer frame mappings, shared death frames. Does not validate visual equivalence or unsupported source semantics."
+  },
+  "runtime_exit_code": 0,
+  "runtime": {
+    "passed": true,
+    "checks": [
+      {
+        "name": "movement",
+        "passed": true
+      },
+      {
+        "name": "facing",
+        "passed": true
+      },
+      {
+        "name": "generation rejection",
+        "passed": true
+      },
+      {
+        "name": "accepted reaction 1",
+        "passed": true
+      },
+      {
+        "name": "event deduplication",
+        "passed": true
+      },
+      {
+        "name": "accepted reaction 2",
+        "passed": true
+      },
+      {
+        "name": "shared death and frozen pose",
+        "passed": true
+      },
+      {
+        "name": "dead hit rejection",
+        "passed": true
+      },
+      {
+        "name": "pause keeps particle state",
+        "passed": true
+      },
+      {
+        "name": "source boxes cause actual HP damage",
+        "passed": true
+      },
+      {
+        "name": "mirrored weapon boxes cause HP damage",
+        "passed": true
+      },
+      {
+        "name": "held X drives source combo stages",
+        "passed": true
+      },
+      {
+        "name": "focus loss clears movement input",
+        "passed": true
+      },
+      {
+        "name": "Q rejected before frenzy",
+        "passed": true
+      },
+      {
+        "name": "W enables frenzy",
+        "passed": true
+      },
+      {
+        "name": "10 second frenzy close restriction",
+        "passed": true
+      },
+      {
+        "name": "W disables after restriction",
+        "passed": true
+      },
+      {
+        "name": "wave uses verified forward 123 offset after 90 travel",
+        "passed": true
+      },
+      {
+        "name": "source height drives inferred jump arc",
+        "passed": true
+      },
+      {
+        "name": "no missing resource or renderer exceptions",
+        "passed": true
+      },
+      {
+        "name": "catalog inference sampled across five class groups",
+        "passed": true
+      },
+      {
+        "name": "catalog inference has no missing resources",
+        "passed": true
+      },
+      {
+        "name": "explicit last action selected",
+        "passed": true
+      },
+      {
+        "name": "three independent monster instances",
+        "passed": true
+      },
+      {
+        "name": "entity HP isolation",
+        "passed": true
+      },
+      {
+        "name": "full source reaction returns to idle",
+        "passed": true
+      }
+    ],
+    "skills": [
+      {
+        "key": "hopsmash",
+        "render_samples": 7,
+        "effect_instances": 6
+      },
+      {
+        "key": "gorecross",
+        "render_samples": 4,
+        "effect_instances": 3
+      },
+      {
+        "key": "bloodblast",
+        "render_samples": 16,
+        "effect_instances": 15
+      },
+      {
+        "key": "outragebreak",
+        "render_samples": 95,
+        "effect_instances": 94
+      },
+      {
+        "key": "bloodblastex",
+        "render_samples": 25,
+        "effect_instances": 24
+      },
+      {
+        "key": "bloodsword",
+        "render_samples": 9,
+        "effect_instances": 8
+      },
+      {
+        "key": "bloodboom",
+        "render_samples": 25,
+        "effect_instances": 24
+      },
+      {
+        "key": "frenzy",
+        "render_samples": 5,
+        "effect_instances": 5
+      }
+    ],
+    "inferred_catalog_samples": [
+      {
+        "key": "guard",
+        "group": 0,
+        "body_stages": 1
+      },
+      {
+        "key": "reflectguard",
+        "group": 4,
+        "body_stages": 1
+      },
+      {
+        "key": "hitback",
+        "group": 1,
+        "body_stages": 1
+      },
+      {
+        "key": "ghoststepslash",
+        "group": 2,
+        "body_stages": 2
+      },
+      {
+        "key": "hellbenter",
+        "group": 3,
+        "body_stages": 1
+      }
+    ],
+    "errors": [],
+    "renderer": "software",
+    "limitations": "Native formula/state machine not fully recovered; resources and mechanics reconstruction tested"
+  }
+}

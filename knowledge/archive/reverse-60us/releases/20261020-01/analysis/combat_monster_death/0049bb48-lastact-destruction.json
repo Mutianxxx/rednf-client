@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x49bb48",
+  "rva": "0x9bb48",
+  "file_offset": 637768,
+  "length": 30,
+  "bytes_sha256": "cb556962d3a7c454a8a22922dbc66625be86261a96e565747226c636102d1c27",
+  "status": "native_bytes",
+  "note": "ACT destructor call and pointer clear; no playback.",
+  "disassembled": true
+}

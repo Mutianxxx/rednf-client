@@ -1,0 +1,1763 @@
+{
+  "path": "character/swordman/effect/animation/bloodsword/charge_dodge.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        17
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -81,
+        -82
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 65
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 75
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -117,
+        -73
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 130
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -128,
+        -82
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 175
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 185
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -119,
+        -90
+      ],
+      "offset": 205
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 220
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        180
+      ],
+      "offset": 230
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 240
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 245
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -100,
+        -107
+      ],
+      "offset": 260
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 275
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 285
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 295
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 300
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -99,
+        -107
+      ],
+      "offset": 315
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 330
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 350
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 355
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -72,
+        -101
+      ],
+      "offset": 370
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 385
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 395
+    },
+    {
+      "tag": "[FRAME007]",
+      "values": [],
+      "offset": 405
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 410
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        2,
+        -104
+      ],
+      "offset": 425
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 440
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 450
+    },
+    {
+      "tag": "[FRAME008]",
+      "values": [],
+      "offset": 460
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 465
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -1,
+        -104
+      ],
+      "offset": 480
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 495
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 505
+    },
+    {
+      "tag": "[FRAME009]",
+      "values": [],
+      "offset": 515
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 520
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        0,
+        -105
+      ],
+      "offset": 535
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 550
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        20
+      ],
+      "offset": 560
+    },
+    {
+      "tag": "[FRAME010]",
+      "values": [],
+      "offset": 570
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 575
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        0,
+        -105
+      ],
+      "offset": 590
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 605
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        20
+      ],
+      "offset": 615
+    },
+    {
+      "tag": "[FRAME011]",
+      "values": [],
+      "offset": 625
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 630
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        0,
+        -105
+      ],
+      "offset": 645
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 660
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        20
+      ],
+      "offset": 670
+    },
+    {
+      "tag": "[FRAME012]",
+      "values": [],
+      "offset": 680
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 685
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        0,
+        -105
+      ],
+      "offset": 700
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 715
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        15
+      ],
+      "offset": 725
+    },
+    {
+      "tag": "[FRAME013]",
+      "values": [],
+      "offset": 735
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 740
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        0,
+        -105
+      ],
+      "offset": 755
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 770
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 780
+    },
+    {
+      "tag": "[FRAME014]",
+      "values": [],
+      "offset": 790
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 795
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -68,
+        -100
+      ],
+      "offset": 810
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 825
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        30
+      ],
+      "offset": 835
+    },
+    {
+      "tag": "[FRAME015]",
+      "values": [],
+      "offset": 845
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 850
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -99,
+        -106
+      ],
+      "offset": 865
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 880
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        30
+      ],
+      "offset": 890
+    },
+    {
+      "tag": "[FRAME016]",
+      "values": [],
+      "offset": 900
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodSword/sword_dodge.img",
+        0
+      ],
+      "offset": 905
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -100,
+        -106
+      ],
+      "offset": 920
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 935
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        30
+      ],
+      "offset": 945
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 17,
+      "value": 17
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967215,
+      "value": -81
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967214,
+      "value": -82
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 60,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 85,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 4294967179,
+      "value": -117
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 4294967223,
+      "value": -73
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 115,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 140,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 4294967168,
+      "value": -128
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 4294967214,
+      "value": -82
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 170,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 195,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 200,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 205,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 4294967177,
+      "value": -119
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 4294967206,
+      "value": -90
+    },
+    {
+      "offset": 220,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 225,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 230,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 235,
+      "type": 0,
+      "raw": 180,
+      "value": 180
+    },
+    {
+      "offset": 240,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 250,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 260,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 4294967196,
+      "value": -100
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 4294967189,
+      "value": -107
+    },
+    {
+      "offset": 275,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 280,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 285,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 300,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 305,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 310,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 315,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 4294967197,
+      "value": -99
+    },
+    {
+      "offset": 325,
+      "type": 0,
+      "raw": 4294967189,
+      "value": -107
+    },
+    {
+      "offset": 330,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 335,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 350,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 355,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 360,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 365,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 370,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 375,
+      "type": 0,
+      "raw": 4294967224,
+      "value": -72
+    },
+    {
+      "offset": 380,
+      "type": 0,
+      "raw": 4294967195,
+      "value": -101
+    },
+    {
+      "offset": 385,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 390,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 395,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 400,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 405,
+      "type": 3,
+      "raw": 3184,
+      "value": "[FRAME007]"
+    },
+    {
+      "offset": 410,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 415,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 420,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 425,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 430,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 4294967192,
+      "value": -104
+    },
+    {
+      "offset": 440,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 445,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 450,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 455,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 460,
+      "type": 3,
+      "raw": 3206,
+      "value": "[FRAME008]"
+    },
+    {
+      "offset": 465,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 470,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 475,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 480,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 485,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 490,
+      "type": 0,
+      "raw": 4294967192,
+      "value": -104
+    },
+    {
+      "offset": 495,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 500,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 505,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 510,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 515,
+      "type": 3,
+      "raw": 3342,
+      "value": "[FRAME009]"
+    },
+    {
+      "offset": 520,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 525,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 530,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 535,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 540,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 545,
+      "type": 0,
+      "raw": 4294967191,
+      "value": -105
+    },
+    {
+      "offset": 550,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 555,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 560,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 565,
+      "type": 0,
+      "raw": 20,
+      "value": 20
+    },
+    {
+      "offset": 570,
+      "type": 3,
+      "raw": 3388,
+      "value": "[FRAME010]"
+    },
+    {
+      "offset": 575,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 580,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 585,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 590,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 595,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 600,
+      "type": 0,
+      "raw": 4294967191,
+      "value": -105
+    },
+    {
+      "offset": 605,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 610,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 615,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 620,
+      "type": 0,
+      "raw": 20,
+      "value": 20
+    },
+    {
+      "offset": 625,
+      "type": 3,
+      "raw": 3410,
+      "value": "[FRAME011]"
+    },
+    {
+      "offset": 630,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 635,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 640,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 645,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 650,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 655,
+      "type": 0,
+      "raw": 4294967191,
+      "value": -105
+    },
+    {
+      "offset": 660,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 665,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 670,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 675,
+      "type": 0,
+      "raw": 20,
+      "value": 20
+    },
+    {
+      "offset": 680,
+      "type": 3,
+      "raw": 3432,
+      "value": "[FRAME012]"
+    },
+    {
+      "offset": 685,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 690,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 695,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 700,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 705,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 710,
+      "type": 0,
+      "raw": 4294967191,
+      "value": -105
+    },
+    {
+      "offset": 715,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 720,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 725,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 730,
+      "type": 0,
+      "raw": 15,
+      "value": 15
+    },
+    {
+      "offset": 735,
+      "type": 3,
+      "raw": 3454,
+      "value": "[FRAME013]"
+    },
+    {
+      "offset": 740,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 745,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 750,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 755,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 760,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 765,
+      "type": 0,
+      "raw": 4294967191,
+      "value": -105
+    },
+    {
+      "offset": 770,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 775,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 780,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 785,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 790,
+      "type": 3,
+      "raw": 3476,
+      "value": "[FRAME014]"
+    },
+    {
+      "offset": 795,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 800,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 805,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 810,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 815,
+      "type": 0,
+      "raw": 4294967228,
+      "value": -68
+    },
+    {
+      "offset": 820,
+      "type": 0,
+      "raw": 4294967196,
+      "value": -100
+    },
+    {
+      "offset": 825,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 830,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 835,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 840,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 845,
+      "type": 3,
+      "raw": 3498,
+      "value": "[FRAME015]"
+    },
+    {
+      "offset": 850,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 855,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 860,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 865,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 870,
+      "type": 0,
+      "raw": 4294967197,
+      "value": -99
+    },
+    {
+      "offset": 875,
+      "type": 0,
+      "raw": 4294967190,
+      "value": -106
+    },
+    {
+      "offset": 880,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 885,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 890,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 895,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 900,
+      "type": 3,
+      "raw": 3520,
+      "value": "[FRAME016]"
+    },
+    {
+      "offset": 905,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 910,
+      "type": 6,
+      "raw": 2501196,
+      "value": "Character/Swordman/Effect/BloodSword/sword_dodge.img"
+    },
+    {
+      "offset": 915,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 920,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 925,
+      "type": 0,
+      "raw": 4294967196,
+      "value": -100
+    },
+    {
+      "offset": 930,
+      "type": 0,
+      "raw": 4294967190,
+      "value": -106
+    },
+    {
+      "offset": 935,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 940,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 945,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 950,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    }
+  ],
+  "raw_sha256": "d7840b2ad97d3e4915bfc0ba12cfb90ef225a1b4f28bbae301999c039aac6ff1"
+}

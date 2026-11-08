@@ -1,0 +1,67 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "check": "build_hashes_dependencies_and_launcher",
+      "passed": true,
+      "files": 9
+    },
+    {
+      "check": "all_monster_catalog_and_explicit_death_binding",
+      "passed": true
+    },
+    {
+      "check": "real_sdl_frame_rendering",
+      "passed": true,
+      "monsters": 6,
+      "main_frames": 52
+    },
+    {
+      "check": "transparent_source_placeholder_diagnosed_instead_of_empty_playback",
+      "passed": true
+    },
+    {
+      "check": "shared_death_current_pose_hold_seek_reset_facing_and_per_monster_piece_flags",
+      "passed": true,
+      "monsters": 4
+    },
+    {
+      "check": "white_silhouette_visible_and_transparent_holes_preserved",
+      "passed": true,
+      "white_pixels": 12832,
+      "bounding_area": 24024
+    },
+    {
+      "check": "source_npk_decoding_and_no_archive_index_errors",
+      "passed": true,
+      "npk_reads": 22
+    },
+    {
+      "check": "sdl_keyboard_mouse_reset_death_gates_seek_and_missing_state_diagnostics",
+      "passed": true
+    },
+    {
+      "check": "normal_window_full_sequence_and_stable_completed_time",
+      "passed": true,
+      "sequence": [
+        "damage1",
+        "damage2",
+        "death"
+      ],
+      "wall_ms": 7002.903099999996
+    },
+    {
+      "check": "default_cat_normal_window_shared_death_sequence",
+      "passed": true,
+      "wall_ms": 8008.598499999993
+    },
+    {
+      "check": "wrong_version_rejected_before_resource_load",
+      "passed": true
+    }
+  ],
+  "checks_passed": 11,
+  "report_directory": "D:\\game\\DNF1031客户端-20260708\\monster_demo\\reports\\validation\\20261018-050133",
+  "exe_sha256": "0bd9e2ea2a90fef861b19a50ad98c3351e31e47506054fb23bc3e3853c54906f",
+  "scope": "Six resource examples plus four shared-death cases and generic controls; not all monsters or native controller/pixel/timing parity"
+}

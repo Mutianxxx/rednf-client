@@ -1,0 +1,992 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "scope": "9 manually inspected local release/request examples; all are partial controller contracts",
+  "paths": [
+    {
+      "native_class": "Swordman",
+      "search_envelope_start": "0x726150",
+      "search_envelope_end": "0x730280",
+      "skill_id": 5,
+      "consume_call_va": "0x72acf3",
+      "skill_push_va": "0x72acef",
+      "state": 20,
+      "request_call_va": "0x72ad5e",
+      "state_push_va": "0x72ad5a",
+      "distance": 107,
+      "context_start_va": "0x72acbb",
+      "context_end_va": "0x72ad8d",
+      "status": "local_success_fallthrough_verified",
+      "consume_this_assignment": {
+        "va": "0x72acf1",
+        "expression": "esi"
+      },
+      "request_this_assignment": {
+        "va": "0x72ad5c",
+        "expression": "esi"
+      },
+      "consume_stack_args_in_callee_order": [
+        {
+          "va": "0x72acef",
+          "expression": "5",
+          "literal": 5
+        },
+        {
+          "va": "0x72aced",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x72aceb",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x72ace9",
+          "expression": "1",
+          "literal": 1
+        }
+      ],
+      "failure_branch_va": "0x72acfb",
+      "failure_target_va": "0x72ad76",
+      "path_asm": "0072ACF3 ff9068070000         call     dword ptr [eax + 0x768]\n0072ACF9 84c0                 test     al, al\n0072ACFB 7479                 je       0x72ad76\n0072ACFD 899d88fcffff         mov      dword ptr [ebp - 0x378], ebx\n0072AD03 899d8cfcffff         mov      dword ptr [ebp - 0x374], ebx\n0072AD09 899d90fcffff         mov      dword ptr [ebp - 0x370], ebx\n0072AD0F 8b16                 mov      edx, dword ptr [esi]\n0072AD11 6a06                 push     6\n0072AD13 8bce                 mov      ecx, esi\n0072AD15 c745fc1d000000       mov      dword ptr [ebp - 4], 0x1d\n0072AD1C ff924c060000         call     dword ptr [edx + 0x64c]\n0072AD22 33c9                 xor      ecx, ecx\n0072AD24 85c0                 test     eax, eax\n0072AD26 0f9fc1               setg     cl\n0072AD29 8d55ec               lea      edx, [ebp - 0x14]\n0072AD2C 52                   push     edx\n0072AD2D 894dec               mov      dword ptr [ebp - 0x14], ecx\n0072AD30 8d8d84fcffff         lea      ecx, [ebp - 0x37c]\n0072AD36 e8e5c3cdff           call     0x407120\n0072AD3B 8d45ec               lea      eax, [ebp - 0x14]\n0072AD3E 50                   push     eax\n0072AD3F 8d8d84fcffff         lea      ecx, [ebp - 0x37c]\n0072AD45 895dec               mov      dword ptr [ebp - 0x14], ebx\n0072AD48 e8d3c3cdff           call     0x407120\n0072AD4D 8b16                 mov      edx, dword ptr [esi]\n0072AD4F 53                   push     ebx\n0072AD50 53                   push     ebx\n0072AD51 6a01                 push     1\n0072AD53 8d8584fcffff         lea      eax, [ebp - 0x37c]\n0072AD59 50                   push     eax\n0072AD5A 6a14                 push     0x14\n0072AD5C 8bce                 mov      ecx, esi\n0072AD5E ff928c020000         call     dword ptr [edx + 0x28c]",
+      "path_bytes_start_va": "0x72ace9",
+      "path_bytes_file_offset": 3321065,
+      "path_bytes_length": 123,
+      "path_bytes_sha256": "9064f2e255be17da41748c68bcb0389002d85e46c515a8d2d9cbb34105faf6ac",
+      "path_bytes_hex": "6a016a016a016a058bceff906807000084c07479899d88fcffff899d8cfcffff899d90fcffff8b166a068bcec745fc1d000000ff924c06000033c985c00f9fc18d55ec52894dec8d8d84fcffffe8e5c3cdff8d45ec508d8d84fcffff895dece8d3c3cdff8b1653536a018d8584fcffff506a148bceff928c020000",
+      "rea_body_evidence_id": "ev_b1765df1159bb522a4b62a73e97e22131b8f0b277c01a552247426e935d27ebd",
+      "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution",
+      "manual_review": "instruction sequence, literal IDs, command gate and consume failure bypass checked; partial local controller contract",
+      "local_guard_notes": "state 0/11/8; command559140(id5) != -1; vector[(skill6 level>0),0]",
+      "excerpt": {
+        "id": "0072AC9D-0072AD76",
+        "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "start_va": 7515293,
+        "length": 217,
+        "rva": 3320989,
+        "file_offset": 3320989,
+        "chunk_sha256": "b384a0c71e76bfebcbcb43d817643135c4a03a161eb36221326ec4ecda96c219"
+      },
+      "pvf_registration_candidates": [
+        {
+          "class_id": 0,
+          "class_label": "Swordman",
+          "skill_id": 5,
+          "path": "skill/swordman/hardattack.skl",
+          "registration_source": {
+            "file_number": 2999170174,
+            "path": "skill/swordmanskill.lst",
+            "size": 6071,
+            "crc": "31d93d45",
+            "relative_offset": 94640168,
+            "absolute_offset": 102206792,
+            "sha256": "36e7c46b3ea3e62b212f06ce81f8dcc21ef7dab08fa916cfaebe78ad0b8a6f0e",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 13816316,
+            "path": "skill/swordman/hardattack.skl",
+            "size": 1305,
+            "crc": "94e7bc98",
+            "relative_offset": 340300,
+            "absolute_offset": 7906924,
+            "sha256": "1cc0c639f70efab493d8d9d38ebb438c21c6132a5f6b3ff3e7e8d38b88e7f846",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        }
+      ],
+      "class_id_applicability": [
+        0
+      ],
+      "variant_boundary": null
+    },
+    {
+      "native_class": "Fighter",
+      "search_envelope_start": "0x69d4f0",
+      "search_envelope_end": "0x6a71e6",
+      "skill_id": 1,
+      "consume_call_va": "0x6a371f",
+      "skill_push_va": "0x6a371b",
+      "state": 47,
+      "request_call_va": "0x6a3734",
+      "state_push_va": "0x6a3730",
+      "distance": 21,
+      "context_start_va": "0x6a36f4",
+      "context_end_va": "0x6a3756",
+      "status": "local_success_fallthrough_verified",
+      "consume_this_assignment": {
+        "va": "0x6a371d",
+        "expression": "ebx"
+      },
+      "request_this_assignment": {
+        "va": "0x6a3732",
+        "expression": "ebx"
+      },
+      "consume_stack_args_in_callee_order": [
+        {
+          "va": "0x6a371b",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6a3719",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6a3717",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6a3715",
+          "expression": "1",
+          "literal": 1
+        }
+      ],
+      "failure_branch_va": "0x6a3727",
+      "failure_target_va": "0x6a373e",
+      "path_asm": "006A371F ff9068070000         call     dword ptr [eax + 0x768]\n006A3725 84c0                 test     al, al\n006A3727 7415                 je       0x6a373e\n006A3729 8b13                 mov      edx, dword ptr [ebx]\n006A372B 57                   push     edi\n006A372C 57                   push     edi\n006A372D 6a01                 push     1\n006A372F 57                   push     edi\n006A3730 6a2f                 push     0x2f\n006A3732 8bcb                 mov      ecx, ebx\n006A3734 ff928c020000         call     dword ptr [edx + 0x28c]",
+      "path_bytes_start_va": "0x6a3715",
+      "path_bytes_file_offset": 2766613,
+      "path_bytes_length": 37,
+      "path_bytes_sha256": "9e38ad773e4085cc085286ebe9bbf6131cd44c6d9ac9cee973f6e3e49c84267c",
+      "path_bytes_hex": "6a016a016a016a018bcbff906807000084c074158b1357576a01576a2f8bcbff928c020000",
+      "rea_body_evidence_id": "ev_27c602490de77e05588acac08613a0340512e03172ce9229071bc50dc5ce269c",
+      "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution",
+      "manual_review": "instruction sequence, literal IDs, command gate and consume failure bypass checked; partial local controller contract",
+      "local_guard_notes": "command559140(id1,0) != -1; qualification AL !=0; EDI zero within excerpt; state request has null vector",
+      "excerpt": {
+        "id": "006A36F8-006A373E",
+        "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "start_va": 6960888,
+        "length": 70,
+        "rva": 2766584,
+        "file_offset": 2766584,
+        "chunk_sha256": "f56d7e0c2b7a0e8ebe28fe2ac7c52215c1af3a7872c86909268617f5ad872751"
+      },
+      "pvf_registration_candidates": [
+        {
+          "class_id": 1,
+          "class_label": "Fighter",
+          "skill_id": 1,
+          "path": "skill/fighter/shouldercharge.skl",
+          "registration_source": {
+            "file_number": 2483298364,
+            "path": "skill/fighterskill.lst",
+            "size": 6185,
+            "crc": "e2f4ffa1",
+            "relative_offset": 79663856,
+            "absolute_offset": 87230480,
+            "sha256": "1b699d2e41e0199aad089f1d3be106e93d2670e84ff4230f1b18ad6334d5857d",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 901663827,
+            "path": "skill/fighter/shouldercharge.skl",
+            "size": 1806,
+            "crc": "739a7eac",
+            "relative_offset": 27982640,
+            "absolute_offset": 35549264,
+            "sha256": "323318268b1a1bfbce8cbedbe4e153fc0756f979e999c80249ea5f6db22f3376",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        }
+      ],
+      "class_id_applicability": [
+        1
+      ],
+      "variant_boundary": null
+    },
+    {
+      "native_class": "Fighter",
+      "search_envelope_start": "0x69d4f0",
+      "search_envelope_end": "0x6a71e6",
+      "skill_id": 5,
+      "consume_call_va": "0x6a3cba",
+      "skill_push_va": "0x6a3cb6",
+      "state": 30,
+      "request_call_va": "0x6a3ccf",
+      "state_push_va": "0x6a3ccb",
+      "distance": 21,
+      "context_start_va": "0x6a3c8c",
+      "context_end_va": "0x6a3cf1",
+      "status": "local_success_fallthrough_verified",
+      "consume_this_assignment": {
+        "va": "0x6a3cb8",
+        "expression": "ebx"
+      },
+      "request_this_assignment": {
+        "va": "0x6a3ccd",
+        "expression": "ebx"
+      },
+      "consume_stack_args_in_callee_order": [
+        {
+          "va": "0x6a3cb6",
+          "expression": "5",
+          "literal": 5
+        },
+        {
+          "va": "0x6a3cb4",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6a3cb2",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6a3cb0",
+          "expression": "1",
+          "literal": 1
+        }
+      ],
+      "failure_branch_va": "0x6a3cc2",
+      "failure_target_va": "0x6a3cd5",
+      "path_asm": "006A3CBA ff9268070000         call     dword ptr [edx + 0x768]\n006A3CC0 84c0                 test     al, al\n006A3CC2 7411                 je       0x6a3cd5\n006A3CC4 8b03                 mov      eax, dword ptr [ebx]\n006A3CC6 57                   push     edi\n006A3CC7 57                   push     edi\n006A3CC8 6a01                 push     1\n006A3CCA 57                   push     edi\n006A3CCB 6a1e                 push     0x1e\n006A3CCD 8bcb                 mov      ecx, ebx\n006A3CCF ff908c020000         call     dword ptr [eax + 0x28c]",
+      "path_bytes_start_va": "0x6a3cb0",
+      "path_bytes_file_offset": 2768048,
+      "path_bytes_length": 37,
+      "path_bytes_sha256": "f3b7589cec6a2dcf7be2eb38ce14d238a67107b20741d94c622a31678d1b4c4c",
+      "path_bytes_hex": "6a016a016a016a058bcbff926807000084c074118b0357576a01576a1e8bcbff908c020000",
+      "rea_body_evidence_id": "ev_27c602490de77e05588acac08613a0340512e03172ce9229071bc50dc5ce269c",
+      "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution",
+      "manual_review": "instruction sequence, literal IDs, command gate and consume failure bypass checked; partial local controller contract",
+      "local_guard_notes": "command559140(id5,EDI) != -1; qualification AL !=0; upstream helper6B5CD0 and exact zero-register dominance separately retained",
+      "excerpt": {
+        "id": "006A3C95-006A3CD5",
+        "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "start_va": 6962325,
+        "length": 64,
+        "rva": 2768021,
+        "file_offset": 2768021,
+        "chunk_sha256": "5567eb6e1f57d13330c215fa2597ce20c7b58303a80015841d447a1f45ea8bae"
+      },
+      "pvf_registration_candidates": [
+        {
+          "class_id": 1,
+          "class_label": "Fighter",
+          "skill_id": 5,
+          "path": "skill/fighter/liftupper.skl",
+          "registration_source": {
+            "file_number": 2483298364,
+            "path": "skill/fighterskill.lst",
+            "size": 6185,
+            "crc": "e2f4ffa1",
+            "relative_offset": 79663856,
+            "absolute_offset": 87230480,
+            "sha256": "1b699d2e41e0199aad089f1d3be106e93d2670e84ff4230f1b18ad6334d5857d",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 2145684382,
+            "path": "skill/fighter/liftupper.skl",
+            "size": 1361,
+            "crc": "1f1ce678",
+            "relative_offset": 70310596,
+            "absolute_offset": 77877220,
+            "sha256": "0d90d9001a929960c07638bd4a70beadb0a86e44d342d672a8639c963e94c512",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        }
+      ],
+      "class_id_applicability": [
+        1
+      ],
+      "variant_boundary": null
+    },
+    {
+      "native_class": "Gunner_variants_2_5",
+      "search_envelope_start": "0x6cfc30",
+      "search_envelope_end": "0x6dac88",
+      "skill_id": 3,
+      "consume_call_va": "0x6d5683",
+      "skill_push_va": "0x6d567f",
+      "state": 19,
+      "request_call_va": "0x6d56cd",
+      "state_push_va": "0x6d56c9",
+      "distance": 74,
+      "context_start_va": "0x6d5653",
+      "context_end_va": "0x6d56f2",
+      "status": "local_success_fallthrough_verified",
+      "consume_this_assignment": {
+        "va": "0x6d5681",
+        "expression": "esi"
+      },
+      "request_this_assignment": {
+        "va": "0x6d56cb",
+        "expression": "esi"
+      },
+      "consume_stack_args_in_callee_order": [
+        {
+          "va": "0x6d567f",
+          "expression": "3",
+          "literal": 3
+        },
+        {
+          "va": "0x6d567d",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6d567b",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6d5679",
+          "expression": "1",
+          "literal": 1
+        }
+      ],
+      "failure_branch_va": "0x6d568b",
+      "failure_target_va": "0x6d56e5",
+      "path_asm": "006D5683 ff9268070000         call     dword ptr [edx + 0x768]\n006D5689 84c0                 test     al, al\n006D568B 7458                 je       0x6d56e5\n006D568D 89bdd0fbffff         mov      dword ptr [ebp - 0x430], edi\n006D5693 89bdd4fbffff         mov      dword ptr [ebp - 0x42c], edi\n006D5699 89bdd8fbffff         mov      dword ptr [ebp - 0x428], edi\n006D569F 8d45f0               lea      eax, [ebp - 0x10]\n006D56A2 50                   push     eax\n006D56A3 8d8dccfbffff         lea      ecx, [ebp - 0x434]\n006D56A9 c745fc37000000       mov      dword ptr [ebp - 4], 0x37\n006D56B0 c745f003000000       mov      dword ptr [ebp - 0x10], 3\n006D56B7 e8641ad3ff           call     0x407120\n006D56BC 8b16                 mov      edx, dword ptr [esi]\n006D56BE 57                   push     edi\n006D56BF 57                   push     edi\n006D56C0 6a01                 push     1\n006D56C2 8d85ccfbffff         lea      eax, [ebp - 0x434]\n006D56C8 50                   push     eax\n006D56C9 6a13                 push     0x13\n006D56CB 8bce                 mov      ecx, esi\n006D56CD ff928c020000         call     dword ptr [edx + 0x28c]",
+      "path_bytes_start_va": "0x6d5679",
+      "path_bytes_file_offset": 2971257,
+      "path_bytes_length": 90,
+      "path_bytes_sha256": "352e7deff4b7a74bca639c26057b83bf12431f60f85b81f05850ece48fbf0c0c",
+      "path_bytes_hex": "6a016a016a016a038bceff926807000084c0745889bdd0fbffff89bdd4fbffff89bdd8fbffff8d45f0508d8dccfbffffc745fc37000000c745f003000000e8641ad3ff8b1657576a018d85ccfbffff506a138bceff928c020000",
+      "rea_body_evidence_id": "ev_ba66c93343ceef740f659d4cda1ea1165fc8591fb9a62d09adec9f7086ea6957",
+      "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution",
+      "manual_review": "instruction sequence, literal IDs, command gate and consume failure bypass checked; partial local controller contract",
+      "local_guard_notes": "state0/11/12/4/8; command559140(id3) !=-1 OR (state12/4 AND command-object vslot48 succeeds); vector[3]",
+      "excerpt": {
+        "id": "006D55E5-006D56E5",
+        "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "start_va": 7165413,
+        "length": 256,
+        "rva": 2971109,
+        "file_offset": 2971109,
+        "chunk_sha256": "852e55bc915dc88cfc108c1f7276eece2f64fda2d50dbb58e76e96e8842a9269"
+      },
+      "pvf_registration_candidates": [
+        {
+          "class_id": 2,
+          "class_label": "Gunner",
+          "skill_id": 3,
+          "path": "skill/gunner/windmill.skl",
+          "registration_source": {
+            "file_number": 535961346,
+            "path": "skill/gunnerskill.lst",
+            "size": 5972,
+            "crc": "7f2e78d4",
+            "relative_offset": 18301164,
+            "absolute_offset": 25867788,
+            "sha256": "4d4c929909a86482272fca1e4bdf9668f4a7da458647d560fe2b5df93976dd8b",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 2612167401,
+            "path": "skill/gunner/windmill.skl",
+            "size": 2468,
+            "crc": "f9a56aad",
+            "relative_offset": 83912928,
+            "absolute_offset": 91479552,
+            "sha256": "71a603b0ac6c011814165c12d4eaa25c7c8b06baa2802af61074fcbeb0aaa953",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        },
+        {
+          "class_id": 5,
+          "class_label": "ATGunner",
+          "skill_id": 3,
+          "path": "skill/atgunner/windmill.skl",
+          "registration_source": {
+            "file_number": 1039554231,
+            "path": "skill/atgunnerskill.lst",
+            "size": 5763,
+            "crc": "7b8f0cfc",
+            "relative_offset": 31977468,
+            "absolute_offset": 39544092,
+            "sha256": "11128850ba03a0b1190604cc9f9832d79d14e14d3c59d674a810e5a67146ea18",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 197496094,
+            "path": "skill/atgunner/windmill.skl",
+            "size": 2437,
+            "crc": "cf286819",
+            "relative_offset": 6076784,
+            "absolute_offset": 13643408,
+            "sha256": "de36ba14c9e9e1b666efce4b59c97255c2c3635f6860aea88c55b3056a40ecbf",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        }
+      ],
+      "class_id_applicability": null,
+      "variant_boundary": "Shared CNGunner native path; class2/class5 applicability and upstream variant guards remain unresolved, so registration candidates are not asserted behavior bindings"
+    },
+    {
+      "native_class": "Gunner_variants_2_5",
+      "search_envelope_start": "0x6cfc30",
+      "search_envelope_end": "0x6dac88",
+      "skill_id": 4,
+      "consume_call_va": "0x6d5731",
+      "skill_push_va": "0x6d572d",
+      "state": 20,
+      "request_call_va": "0x6d577b",
+      "state_push_va": "0x6d5777",
+      "distance": 74,
+      "context_start_va": "0x6d56fe",
+      "context_end_va": "0x6d57a0",
+      "status": "local_success_fallthrough_verified",
+      "consume_this_assignment": {
+        "va": "0x6d572f",
+        "expression": "esi"
+      },
+      "request_this_assignment": {
+        "va": "0x6d5779",
+        "expression": "esi"
+      },
+      "consume_stack_args_in_callee_order": [
+        {
+          "va": "0x6d572d",
+          "expression": "4",
+          "literal": 4
+        },
+        {
+          "va": "0x6d572b",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6d5729",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6d5727",
+          "expression": "1",
+          "literal": 1
+        }
+      ],
+      "failure_branch_va": "0x6d5739",
+      "failure_target_va": "0x6d5793",
+      "path_asm": "006D5731 ff9068070000         call     dword ptr [eax + 0x768]\n006D5737 84c0                 test     al, al\n006D5739 7458                 je       0x6d5793\n006D573B 89bd30fcffff         mov      dword ptr [ebp - 0x3d0], edi\n006D5741 89bd34fcffff         mov      dword ptr [ebp - 0x3cc], edi\n006D5747 89bd38fcffff         mov      dword ptr [ebp - 0x3c8], edi\n006D574D 8d4df0               lea      ecx, [ebp - 0x10]\n006D5750 51                   push     ecx\n006D5751 8d8d2cfcffff         lea      ecx, [ebp - 0x3d4]\n006D5757 c745fc38000000       mov      dword ptr [ebp - 4], 0x38\n006D575E c745f004000000       mov      dword ptr [ebp - 0x10], 4\n006D5765 e8b619d3ff           call     0x407120\n006D576A 8b16                 mov      edx, dword ptr [esi]\n006D576C 57                   push     edi\n006D576D 57                   push     edi\n006D576E 6a01                 push     1\n006D5770 8d852cfcffff         lea      eax, [ebp - 0x3d4]\n006D5776 50                   push     eax\n006D5777 6a14                 push     0x14\n006D5779 8bce                 mov      ecx, esi\n006D577B ff928c020000         call     dword ptr [edx + 0x28c]",
+      "path_bytes_start_va": "0x6d5727",
+      "path_bytes_file_offset": 2971431,
+      "path_bytes_length": 90,
+      "path_bytes_sha256": "c4fd40e3fa2917824f70c10a6587c9bbb60ed58ff7b896fe43f08bf8267fdf47",
+      "path_bytes_hex": "6a016a016a016a048bceff906807000084c0745889bd30fcffff89bd34fcffff89bd38fcffff8d4df0518d8d2cfcffffc745fc38000000c745f004000000e8b619d3ff8b1657576a018d852cfcffff506a148bceff928c020000",
+      "rea_body_evidence_id": "ev_ba66c93343ceef740f659d4cda1ea1165fc8591fb9a62d09adec9f7086ea6957",
+      "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution",
+      "manual_review": "instruction sequence, literal IDs, command gate and consume failure bypass checked; partial local controller contract",
+      "local_guard_notes": "state0/11/8; command559140(id4) !=-1; vector[4]",
+      "excerpt": {
+        "id": "006D56E5-006D5793",
+        "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "start_va": 7165669,
+        "length": 174,
+        "rva": 2971365,
+        "file_offset": 2971365,
+        "chunk_sha256": "8d301446840c1128d7feb02c7f314ab9d9962f57a67ea032f7f90fdf09f38386"
+      },
+      "pvf_registration_candidates": [
+        {
+          "class_id": 2,
+          "class_label": "Gunner",
+          "skill_id": 4,
+          "path": "skill/gunner/aerialknee.skl",
+          "registration_source": {
+            "file_number": 535961346,
+            "path": "skill/gunnerskill.lst",
+            "size": 5972,
+            "crc": "7f2e78d4",
+            "relative_offset": 18301164,
+            "absolute_offset": 25867788,
+            "sha256": "4d4c929909a86482272fca1e4bdf9668f4a7da458647d560fe2b5df93976dd8b",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 605461434,
+            "path": "skill/gunner/aerialknee.skl",
+            "size": 1421,
+            "crc": "46cd1cb0",
+            "relative_offset": 20118656,
+            "absolute_offset": 27685280,
+            "sha256": "53e721ce49bd2aaf458e3d5deb198e51319b3ce79ba39a8587760ecc568cfc52",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        },
+        {
+          "class_id": 5,
+          "class_label": "ATGunner",
+          "skill_id": 4,
+          "path": "skill/atgunner/aerialknee.skl",
+          "registration_source": {
+            "file_number": 1039554231,
+            "path": "skill/atgunnerskill.lst",
+            "size": 5763,
+            "crc": "7b8f0cfc",
+            "relative_offset": 31977468,
+            "absolute_offset": 39544092,
+            "sha256": "11128850ba03a0b1190604cc9f9832d79d14e14d3c59d674a810e5a67146ea18",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 3843360559,
+            "path": "skill/atgunner/aerialknee.skl",
+            "size": 1454,
+            "crc": "96b5d91a",
+            "relative_offset": 118033272,
+            "absolute_offset": 125599896,
+            "sha256": "1ff65079e0344fd28b1a8400b1a2430df0b5e60c635a833ac29e82a26f252170",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        }
+      ],
+      "class_id_applicability": null,
+      "variant_boundary": "Shared CNGunner native path; class2/class5 applicability and upstream variant guards remain unresolved, so registration candidates are not asserted behavior bindings"
+    },
+    {
+      "native_class": "Mage",
+      "search_envelope_start": "0x6ebc60",
+      "search_envelope_end": "0x6f3dfb",
+      "skill_id": 4,
+      "consume_call_va": "0x6f0c65",
+      "skill_push_va": "0x6f0c61",
+      "state": 22,
+      "request_call_va": "0x6f0caf",
+      "state_push_va": "0x6f0cab",
+      "distance": 74,
+      "context_start_va": "0x6f0c33",
+      "context_end_va": "0x6f0cd9",
+      "status": "local_success_fallthrough_verified",
+      "consume_this_assignment": {
+        "va": "0x6f0c63",
+        "expression": "esi"
+      },
+      "request_this_assignment": {
+        "va": "0x6f0cad",
+        "expression": "esi"
+      },
+      "consume_stack_args_in_callee_order": [
+        {
+          "va": "0x6f0c61",
+          "expression": "4",
+          "literal": 4
+        },
+        {
+          "va": "0x6f0c5f",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6f0c5d",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6f0c5b",
+          "expression": "1",
+          "literal": 1
+        }
+      ],
+      "failure_branch_va": "0x6f0c6d",
+      "failure_target_va": "0x6f0cc3",
+      "path_asm": "006F0C65 ff9068070000         call     dword ptr [eax + 0x768]\n006F0C6B 84c0                 test     al, al\n006F0C6D 7454                 je       0x6f0cc3\n006F0C6F 899d28fcffff         mov      dword ptr [ebp - 0x3d8], ebx\n006F0C75 899d2cfcffff         mov      dword ptr [ebp - 0x3d4], ebx\n006F0C7B 899d30fcffff         mov      dword ptr [ebp - 0x3d0], ebx\n006F0C81 8d4df0               lea      ecx, [ebp - 0x10]\n006F0C84 51                   push     ecx\n006F0C85 8d8d24fcffff         lea      ecx, [ebp - 0x3dc]\n006F0C8B c745fc3b000000       mov      dword ptr [ebp - 4], 0x3b\n006F0C92 c745f004000000       mov      dword ptr [ebp - 0x10], 4\n006F0C99 e88264d1ff           call     0x407120\n006F0C9E 8b16                 mov      edx, dword ptr [esi]\n006F0CA0 53                   push     ebx\n006F0CA1 53                   push     ebx\n006F0CA2 6a01                 push     1\n006F0CA4 8d8524fcffff         lea      eax, [ebp - 0x3dc]\n006F0CAA 50                   push     eax\n006F0CAB 6a16                 push     0x16\n006F0CAD 8bce                 mov      ecx, esi\n006F0CAF ff928c020000         call     dword ptr [edx + 0x28c]",
+      "path_bytes_start_va": "0x6f0c5b",
+      "path_bytes_file_offset": 3083355,
+      "path_bytes_length": 90,
+      "path_bytes_sha256": "4f99b8278b55ade26652b390233d569c711f84863a0cd40ae1d937252311a94f",
+      "path_bytes_hex": "6a016a016a016a048bceff906807000084c07454899d28fcffff899d2cfcffff899d30fcffff8d4df0518d8d24fcffffc745fc3b000000c745f004000000e88264d1ff8b1653536a018d8524fcffff506a168bceff928c020000",
+      "rea_body_evidence_id": "ev_e5e96fd5b528cd390a641fd18b5c1a4c3d454358b54935f9e789e835a91466e0",
+      "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution",
+      "manual_review": "instruction sequence, literal IDs, command gate and consume failure bypass checked; partial local controller contract",
+      "local_guard_notes": "state0/11/8; EBX0 and EDI-1 at excerpt start; command559140(id4) !=-1; vector[4]",
+      "excerpt": {
+        "id": "006F0BD7-006F0CC3",
+        "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "start_va": 7277527,
+        "length": 236,
+        "rva": 3083223,
+        "file_offset": 3083223,
+        "chunk_sha256": "2010c5fa45cda4a5a1c4fd872ba8aa08a6e66d02624aac20e823965fda34a8e1"
+      },
+      "pvf_registration_candidates": [
+        {
+          "class_id": 3,
+          "class_label": "Mage",
+          "skill_id": 4,
+          "path": "skill/mage/thrust.skl",
+          "registration_source": {
+            "file_number": 2144393421,
+            "path": "skill/mageskill.lst",
+            "size": 6785,
+            "crc": "d03b1a3a",
+            "relative_offset": 70282292,
+            "absolute_offset": 77848916,
+            "sha256": "4222d13a2d2cdb414b26783f6ab77e66bf6cc6faa2c9b357a6a2ee47663d0a2b",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 963949918,
+            "path": "skill/mage/thrust.skl",
+            "size": 1825,
+            "crc": "90172de9",
+            "relative_offset": 29535528,
+            "absolute_offset": 37102152,
+            "sha256": "01e088f4052e47f9662414ac1ac991cc2caeaf516d7737b11dddb9b94cb25103",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        }
+      ],
+      "class_id_applicability": [
+        3
+      ],
+      "variant_boundary": null
+    },
+    {
+      "native_class": "Mage",
+      "search_envelope_start": "0x6ebc60",
+      "search_envelope_end": "0x6f3dfb",
+      "skill_id": 12,
+      "consume_call_va": "0x6f2a1b",
+      "skill_push_va": "0x6f2a17",
+      "state": 23,
+      "request_call_va": "0x6f2a65",
+      "state_push_va": "0x6f2a61",
+      "distance": 74,
+      "context_start_va": "0x6f29e4",
+      "context_end_va": "0x6f2a8b",
+      "status": "local_success_fallthrough_verified",
+      "consume_this_assignment": {
+        "va": "0x6f2a19",
+        "expression": "esi"
+      },
+      "request_this_assignment": {
+        "va": "0x6f2a63",
+        "expression": "esi"
+      },
+      "consume_stack_args_in_callee_order": [
+        {
+          "va": "0x6f2a17",
+          "expression": "0xc",
+          "literal": 12
+        },
+        {
+          "va": "0x6f2a15",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6f2a13",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x6f2a11",
+          "expression": "1",
+          "literal": 1
+        }
+      ],
+      "failure_branch_va": "0x6f2a23",
+      "failure_target_va": "0x6f2a97",
+      "path_asm": "006F2A1B ff9068070000         call     dword ptr [eax + 0x768]\n006F2A21 84c0                 test     al, al\n006F2A23 7472                 je       0x6f2a97\n006F2A25 89bd94feffff         mov      dword ptr [ebp - 0x16c], edi\n006F2A2B 89bd98feffff         mov      dword ptr [ebp - 0x168], edi\n006F2A31 89bd9cfeffff         mov      dword ptr [ebp - 0x164], edi\n006F2A37 8d4dec               lea      ecx, [ebp - 0x14]\n006F2A3A 51                   push     ecx\n006F2A3B 8d8d90feffff         lea      ecx, [ebp - 0x170]\n006F2A41 c745fc51000000       mov      dword ptr [ebp - 4], 0x51\n006F2A48 c745ec0c000000       mov      dword ptr [ebp - 0x14], 0xc\n006F2A4F e8cc46d1ff           call     0x407120\n006F2A54 8b16                 mov      edx, dword ptr [esi]\n006F2A56 57                   push     edi\n006F2A57 57                   push     edi\n006F2A58 6a01                 push     1\n006F2A5A 8d8590feffff         lea      eax, [ebp - 0x170]\n006F2A60 50                   push     eax\n006F2A61 6a17                 push     0x17\n006F2A63 8bce                 mov      ecx, esi\n006F2A65 ff928c020000         call     dword ptr [edx + 0x28c]",
+      "path_bytes_start_va": "0x6f2a11",
+      "path_bytes_file_offset": 3090961,
+      "path_bytes_length": 90,
+      "path_bytes_sha256": "a2843b248717fe3a19e727f441ea1bc28d50c6a7d7d5d95b1ebb039033b261b5",
+      "path_bytes_hex": "6a016a016a016a0c8bceff906807000084c0747289bd94feffff89bd98feffff89bd9cfeffff8d4dec518d8d90feffffc745fc51000000c745ec0c000000e8cc46d1ff8b1657576a018d8590feffff506a178bceff928c020000",
+      "rea_body_evidence_id": "ev_e5e96fd5b528cd390a641fd18b5c1a4c3d454358b54935f9e789e835a91466e0",
+      "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution",
+      "manual_review": "instruction sequence, literal IDs, command gate and consume failure bypass checked; partial local controller contract",
+      "local_guard_notes": "command559140(id12) !=-1; vector[12]; upstream state gate admits0/11/8/22 (separate exploratory span6F29C0 from29C1 aligned)",
+      "excerpt": {
+        "id": "006F29F2-006F2A97",
+        "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "start_va": 7285234,
+        "length": 165,
+        "rva": 3090930,
+        "file_offset": 3090930,
+        "chunk_sha256": "aacdd1abe5a8b3516baf24befaceed59ea523d731e20901413fe159d8a7f1ad8"
+      },
+      "pvf_registration_candidates": [
+        {
+          "class_id": 3,
+          "class_label": "Mage",
+          "skill_id": 12,
+          "path": "skill/mage/upperswing.skl",
+          "registration_source": {
+            "file_number": 2144393421,
+            "path": "skill/mageskill.lst",
+            "size": 6785,
+            "crc": "d03b1a3a",
+            "relative_offset": 70282292,
+            "absolute_offset": 77848916,
+            "sha256": "4222d13a2d2cdb414b26783f6ab77e66bf6cc6faa2c9b357a6a2ee47663d0a2b",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 3339345704,
+            "path": "skill/mage/upperswing.skl",
+            "size": 1644,
+            "crc": "5b462df1",
+            "relative_offset": 103662816,
+            "absolute_offset": 111229440,
+            "sha256": "cc57bfb67c917eff1c3a45038251bcb70ae8103ba08273a81d5873693fdb23b0",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        }
+      ],
+      "class_id_applicability": [
+        3
+      ],
+      "variant_boundary": null
+    },
+    {
+      "native_class": "Priest",
+      "search_envelope_start": "0x70d7d0",
+      "search_envelope_end": "0x711b83",
+      "skill_id": 1,
+      "consume_call_va": "0x7103c1",
+      "skill_push_va": "0x7103bd",
+      "state": 20,
+      "request_call_va": "0x7103d8",
+      "state_push_va": "0x7103d4",
+      "distance": 23,
+      "context_start_va": "0x710391",
+      "context_end_va": "0x7103f4",
+      "status": "local_success_fallthrough_verified",
+      "consume_this_assignment": {
+        "va": "0x7103bf",
+        "expression": "esi"
+      },
+      "request_this_assignment": {
+        "va": "0x7103d6",
+        "expression": "esi"
+      },
+      "consume_stack_args_in_callee_order": [
+        {
+          "va": "0x7103bd",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x7103bb",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x7103b9",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x7103b7",
+          "expression": "1",
+          "literal": 1
+        }
+      ],
+      "failure_branch_va": "0x7103c9",
+      "failure_target_va": "0x7103e0",
+      "path_asm": "007103C1 ff9268070000         call     dword ptr [edx + 0x768]\n007103C7 84c0                 test     al, al\n007103C9 7415                 je       0x7103e0\n007103CB 8b06                 mov      eax, dword ptr [esi]\n007103CD 33db                 xor      ebx, ebx\n007103CF 53                   push     ebx\n007103D0 53                   push     ebx\n007103D1 6a01                 push     1\n007103D3 53                   push     ebx\n007103D4 6a14                 push     0x14\n007103D6 8bce                 mov      ecx, esi\n007103D8 ff908c020000         call     dword ptr [eax + 0x28c]",
+      "path_bytes_start_va": "0x7103b7",
+      "path_bytes_file_offset": 3212215,
+      "path_bytes_length": 39,
+      "path_bytes_sha256": "90601767ee0d9f5ffef91d2e1fb10a1eab2a350c39e5d52647c031b44b4e094e",
+      "path_bytes_hex": "6a016a016a016a018bceff926807000084c074158b0633db53536a01536a148bceff908c020000",
+      "rea_body_evidence_id": "ev_4f671615762a44a77e623a872e629e4afc41d3ce8adb35717ef25da8e5dbd7d5",
+      "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution",
+      "manual_review": "instruction sequence, literal IDs, command gate and consume failure bypass checked; partial local controller contract",
+      "local_guard_notes": "state0/11/8; command559140(id1,this+25E4) !=-1; EBX0 before request; null vector",
+      "excerpt": {
+        "id": "0071036D-007103E2",
+        "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "start_va": 7406445,
+        "length": 117,
+        "rva": 3212141,
+        "file_offset": 3212141,
+        "chunk_sha256": "b9fa107e2eb8023741bd859c0675526b2969ad531cc24d7a8b89de20af541a64"
+      },
+      "pvf_registration_candidates": [
+        {
+          "class_id": 4,
+          "class_label": "Priest",
+          "skill_id": 1,
+          "path": "skill/priest/antiairupper.skl",
+          "registration_source": {
+            "file_number": 1768569546,
+            "path": "skill/priestskill.lst",
+            "size": 5096,
+            "crc": "3feccd84",
+            "relative_offset": 57400624,
+            "absolute_offset": 64967248,
+            "sha256": "e9c8a45e7e1065dd7686fb158458bc504b2388ed7c5746687ee0c7a059ba90fb",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 1971230085,
+            "path": "skill/priest/antiairupper.skl",
+            "size": 1219,
+            "crc": "2b7636ce",
+            "relative_offset": 65649744,
+            "absolute_offset": 73216368,
+            "sha256": "6e51492247cd44fce2286894434fbf7afe01cd2ad933762a9cfe4cd4f4bec338",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        }
+      ],
+      "class_id_applicability": [
+        4
+      ],
+      "variant_boundary": null
+    },
+    {
+      "native_class": "Priest",
+      "search_envelope_start": "0x70d7d0",
+      "search_envelope_end": "0x711b83",
+      "skill_id": 11,
+      "consume_call_va": "0x71042a",
+      "skill_push_va": "0x710426",
+      "state": 26,
+      "request_call_va": "0x71043f",
+      "state_push_va": "0x71043b",
+      "distance": 21,
+      "context_start_va": "0x7103fb",
+      "context_end_va": "0x710461",
+      "status": "local_success_fallthrough_verified",
+      "consume_this_assignment": {
+        "va": "0x710428",
+        "expression": "esi"
+      },
+      "request_this_assignment": {
+        "va": "0x71043d",
+        "expression": "esi"
+      },
+      "consume_stack_args_in_callee_order": [
+        {
+          "va": "0x710426",
+          "expression": "0xb",
+          "literal": 11
+        },
+        {
+          "va": "0x710424",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x710422",
+          "expression": "1",
+          "literal": 1
+        },
+        {
+          "va": "0x710420",
+          "expression": "1",
+          "literal": 1
+        }
+      ],
+      "failure_branch_va": "0x710432",
+      "failure_target_va": "0x710445",
+      "path_asm": "0071042A ff9068070000         call     dword ptr [eax + 0x768]\n00710430 84c0                 test     al, al\n00710432 7411                 je       0x710445\n00710434 8b16                 mov      edx, dword ptr [esi]\n00710436 53                   push     ebx\n00710437 53                   push     ebx\n00710438 6a01                 push     1\n0071043A 53                   push     ebx\n0071043B 6a1a                 push     0x1a\n0071043D 8bce                 mov      ecx, esi\n0071043F ff928c020000         call     dword ptr [edx + 0x28c]",
+      "path_bytes_start_va": "0x710420",
+      "path_bytes_file_offset": 3212320,
+      "path_bytes_length": 37,
+      "path_bytes_sha256": "088b62caeb19ac225747500cb15d58fb39aee71137269433e23302cb1037086c",
+      "path_bytes_hex": "6a016a016a016a0b8bceff906807000084c074118b1653536a01536a1a8bceff928c020000",
+      "rea_body_evidence_id": "ev_4f671615762a44a77e623a872e629e4afc41d3ce8adb35717ef25da8e5dbd7d5",
+      "boundary": "Literal skill ID at +768 and literal state at +28C connected on AL-success fallthrough, both calls use the same explicit nonvolatile-register ECX assignment and the register is not written between calls (assuming standard MSVC x86 callee-save ABI); upstream state/input/job gates, vector contents and full controller semantics are separate; no claim of runtime execution",
+      "manual_review": "instruction sequence, literal IDs, command gate and consume failure bypass checked; partial local controller contract",
+      "local_guard_notes": "state0/11/8; command559140(id11,EBX) !=-1; previous block setsEBX0 on both paths; null vector",
+      "excerpt": {
+        "id": "007103E2-00710445",
+        "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+        "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "start_va": 7406562,
+        "length": 99,
+        "rva": 3212258,
+        "file_offset": 3212258,
+        "chunk_sha256": "4f7d9e5883c788ea9c149021b7f1740be61993f1dba3f4e11c1327fd816fc965"
+      },
+      "pvf_registration_candidates": [
+        {
+          "class_id": 4,
+          "class_label": "Priest",
+          "skill_id": 11,
+          "path": "skill/priest/quakearea.skl",
+          "registration_source": {
+            "file_number": 1768569546,
+            "path": "skill/priestskill.lst",
+            "size": 5096,
+            "crc": "3feccd84",
+            "relative_offset": 57400624,
+            "absolute_offset": 64967248,
+            "sha256": "e9c8a45e7e1065dd7686fb158458bc504b2388ed7c5746687ee0c7a059ba90fb",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          },
+          "source": {
+            "file_number": 1862407393,
+            "path": "skill/priest/quakearea.skl",
+            "size": 2371,
+            "crc": "34cb11a6",
+            "relative_offset": 60073184,
+            "absolute_offset": 67639808,
+            "sha256": "89803a292876875d9a2ccaa0d19c3290efba60945ec4b199e1b0416e7f2b3172",
+            "encoding": "cp949",
+            "crc_verified": true,
+            "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+          }
+        }
+      ],
+      "class_id_applicability": [
+        4
+      ],
+      "variant_boundary": null
+    }
+  ],
+  "all_local_paths_verified_against_source": 130,
+  "runtime_execution_observed": false
+}

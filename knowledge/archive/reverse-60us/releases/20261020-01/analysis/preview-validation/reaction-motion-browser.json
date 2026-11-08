@@ -1,0 +1,1431 @@
+{
+  "at250": {
+    "path": "character/swordman/animation/stay.ani",
+    "frame": 0,
+    "source": {
+      "file_number": 653993585,
+      "path": "character/swordman/animation/stay.ani",
+      "size": 2029,
+      "crc": "609de4b1",
+      "relative_offset": 21393952,
+      "absolute_offset": 28960576,
+      "sha256": "5091078dba8167aa3bc7cfb77a1384d7a832d75ab6142c8c5ad2c486ef17712f",
+      "encoding": "cp949",
+      "crc_verified": true,
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+    },
+    "values": {
+      "index": 0,
+      "tag": "FRAME000",
+      "start": 39,
+      "end": 371,
+      "fields": [
+        {
+          "tag": "IMAGE",
+          "values": [
+            "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+            90
+          ],
+          "start": 51,
+          "end": 122,
+          "line": 6,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+              "value": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+              "start": 59,
+              "end": 117,
+              "line": 6,
+              "column": 9
+            },
+            {
+              "kind": "atom",
+              "text": "90",
+              "value": 90,
+              "start": 118,
+              "end": 120,
+              "line": 6,
+              "column": 68
+            }
+          ]
+        },
+        {
+          "tag": "IMAGE POS",
+          "values": [
+            -232,
+            -333
+          ],
+          "start": 122,
+          "end": 145,
+          "line": 7,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "-232",
+              "value": -232,
+              "start": 134,
+              "end": 138,
+              "line": 7,
+              "column": 13
+            },
+            {
+              "kind": "atom",
+              "text": "-333",
+              "value": -333,
+              "start": 139,
+              "end": 143,
+              "line": 7,
+              "column": 18
+            }
+          ]
+        },
+        {
+          "tag": "IMAGE RATE",
+          "values": [
+            1,
+            1
+          ],
+          "start": 145,
+          "end": 177,
+          "line": 8,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "1.000000",
+              "value": 1,
+              "start": 158,
+              "end": 166,
+              "line": 8,
+              "column": 14
+            },
+            {
+              "kind": "atom",
+              "text": "1.000000",
+              "value": 1,
+              "start": 167,
+              "end": 175,
+              "line": 8,
+              "column": 23
+            }
+          ]
+        },
+        {
+          "tag": "IMAGE ROTATE",
+          "values": [
+            0
+          ],
+          "start": 177,
+          "end": 202,
+          "line": 9,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "0.000000",
+              "value": 0,
+              "start": 192,
+              "end": 200,
+              "line": 9,
+              "column": 16
+            }
+          ]
+        },
+        {
+          "tag": "RGBA",
+          "values": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "start": 202,
+          "end": 226,
+          "line": 10,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 209,
+              "end": 212,
+              "line": 10,
+              "column": 8
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 213,
+              "end": 216,
+              "line": 10,
+              "column": 12
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 217,
+              "end": 220,
+              "line": 10,
+              "column": 16
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 221,
+              "end": 224,
+              "line": 10,
+              "column": 20
+            }
+          ]
+        },
+        {
+          "tag": "INTERPOLATION",
+          "values": [
+            0
+          ],
+          "start": 226,
+          "end": 245,
+          "line": 11,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "0",
+              "value": 0,
+              "start": 242,
+              "end": 243,
+              "line": 11,
+              "column": 17
+            }
+          ]
+        },
+        {
+          "tag": "GRAPHIC EFFECT",
+          "values": [
+            "NONE"
+          ],
+          "start": 245,
+          "end": 270,
+          "line": 12,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "NONE",
+              "value": "NONE",
+              "start": 262,
+              "end": 268,
+              "line": 12,
+              "column": 18
+            }
+          ]
+        },
+        {
+          "tag": "DELAY",
+          "values": [
+            120
+          ],
+          "start": 270,
+          "end": 283,
+          "line": 13,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "120",
+              "value": 120,
+              "start": 278,
+              "end": 281,
+              "line": 13,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "tag": "DAMAGE TYPE",
+          "values": [
+            "NORMAL"
+          ],
+          "start": 283,
+          "end": 307,
+          "line": 14,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "NORMAL",
+              "value": "NORMAL",
+              "start": 297,
+              "end": 305,
+              "line": 14,
+              "column": 15
+            }
+          ]
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "values": [
+            -17,
+            -5,
+            0,
+            30,
+            10,
+            97
+          ],
+          "start": 307,
+          "end": 339,
+          "line": 15,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "-17",
+              "value": -17,
+              "start": 320,
+              "end": 323,
+              "line": 15,
+              "column": 14
+            },
+            {
+              "kind": "atom",
+              "text": "-5",
+              "value": -5,
+              "start": 324,
+              "end": 326,
+              "line": 15,
+              "column": 18
+            },
+            {
+              "kind": "atom",
+              "text": "0",
+              "value": 0,
+              "start": 327,
+              "end": 328,
+              "line": 15,
+              "column": 21
+            },
+            {
+              "kind": "atom",
+              "text": "30",
+              "value": 30,
+              "start": 329,
+              "end": 331,
+              "line": 15,
+              "column": 23
+            },
+            {
+              "kind": "atom",
+              "text": "10",
+              "value": 10,
+              "start": 332,
+              "end": 334,
+              "line": 15,
+              "column": 26
+            },
+            {
+              "kind": "atom",
+              "text": "97",
+              "value": 97,
+              "start": 335,
+              "end": 337,
+              "line": 15,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "values": [
+            13,
+            -3,
+            0,
+            13,
+            7,
+            73
+          ],
+          "start": 339,
+          "end": 371,
+          "line": 16,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "13",
+              "value": 13,
+              "start": 352,
+              "end": 354,
+              "line": 16,
+              "column": 14
+            },
+            {
+              "kind": "atom",
+              "text": "-3",
+              "value": -3,
+              "start": 355,
+              "end": 357,
+              "line": 16,
+              "column": 17
+            },
+            {
+              "kind": "atom",
+              "text": "0",
+              "value": 0,
+              "start": 358,
+              "end": 359,
+              "line": 16,
+              "column": 20
+            },
+            {
+              "kind": "atom",
+              "text": "13",
+              "value": 13,
+              "start": 360,
+              "end": 362,
+              "line": 16,
+              "column": 22
+            },
+            {
+              "kind": "atom",
+              "text": "7",
+              "value": 7,
+              "start": 363,
+              "end": 364,
+              "line": 16,
+              "column": 25
+            },
+            {
+              "kind": "atom",
+              "text": "73",
+              "value": 73,
+              "start": 365,
+              "end": 367,
+              "line": 16,
+              "column": 27
+            }
+          ]
+        }
+      ],
+      "unknown_fields": [
+        {
+          "tag": "IMAGE RATE",
+          "values": [
+            1,
+            1
+          ],
+          "start": 145,
+          "end": 177,
+          "line": 8,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "1.000000",
+              "value": 1,
+              "start": 158,
+              "end": 166,
+              "line": 8,
+              "column": 14
+            },
+            {
+              "kind": "atom",
+              "text": "1.000000",
+              "value": 1,
+              "start": 167,
+              "end": 175,
+              "line": 8,
+              "column": 23
+            }
+          ]
+        },
+        {
+          "tag": "IMAGE ROTATE",
+          "values": [
+            0
+          ],
+          "start": 177,
+          "end": 202,
+          "line": 9,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "0.000000",
+              "value": 0,
+              "start": 192,
+              "end": 200,
+              "line": 9,
+              "column": 16
+            }
+          ]
+        },
+        {
+          "tag": "RGBA",
+          "values": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "start": 202,
+          "end": 226,
+          "line": 10,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 209,
+              "end": 212,
+              "line": 10,
+              "column": 8
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 213,
+              "end": 216,
+              "line": 10,
+              "column": 12
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 217,
+              "end": 220,
+              "line": 10,
+              "column": 16
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 221,
+              "end": 224,
+              "line": 10,
+              "column": 20
+            }
+          ]
+        },
+        {
+          "tag": "INTERPOLATION",
+          "values": [
+            0
+          ],
+          "start": 226,
+          "end": 245,
+          "line": 11,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "0",
+              "value": 0,
+              "start": 242,
+              "end": 243,
+              "line": 11,
+              "column": 17
+            }
+          ]
+        },
+        {
+          "tag": "GRAPHIC EFFECT",
+          "values": [
+            "NONE"
+          ],
+          "start": 245,
+          "end": 270,
+          "line": 12,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "NONE",
+              "value": "NONE",
+              "start": 262,
+              "end": 268,
+              "line": 12,
+              "column": 18
+            }
+          ]
+        },
+        {
+          "tag": "DAMAGE TYPE",
+          "values": [
+            "NORMAL"
+          ],
+          "start": 283,
+          "end": 307,
+          "line": 14,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "NORMAL",
+              "value": "NORMAL",
+              "start": 297,
+              "end": 305,
+              "line": 14,
+              "column": 15
+            }
+          ]
+        }
+      ],
+      "images": [
+        [
+          "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+          90
+        ]
+      ],
+      "image_positions": [
+        [
+          -232,
+          -333
+        ]
+      ],
+      "delays": [
+        [
+          120
+        ]
+      ],
+      "attack_boxes": [],
+      "damage_boxes": [
+        [
+          -17,
+          -5,
+          0,
+          30,
+          10,
+          97
+        ],
+        [
+          13,
+          -3,
+          0,
+          13,
+          7,
+          73
+        ]
+      ],
+      "duration_ms": 120
+    },
+    "time": 0,
+    "source_delay_model": false,
+    "spawn_gate_assumed": null,
+    "image_source": {
+      "logical": "sprite/character/swordman/equipment/avatar/skin/sm_body0000.img",
+      "package": "sprite_character_swordman_equipment_avatar_skin.npk",
+      "offset": 3748,
+      "length": 305925,
+      "table_index": 0,
+      "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f65717569706d656e742f6176617461722f736b696e2f736d5f626f6479303030302e696d67",
+      "npk_path": "D:\\dnf\\60US\\DFO\\ImagePacks2\\sprite_character_swordman_equipment_avatar_skin.npk",
+      "npk_sha256": "72d082303fadd29a38332f75aa49d3103159f32d8cc8fae77b1a2b591bc8ed23",
+      "npk_size": 4280119,
+      "img_sha256": "1cc103832e67a57e9df0eee8c73fb756e6bfc9acd3761de2c9b8876b07701609",
+      "img_version": 1,
+      "table_record_offset": 20,
+      "selected_explicitly": true,
+      "record_offset": 131351,
+      "record_length": 36,
+      "pixel_offset": 131387,
+      "pixel_length": 1594,
+      "record_absolute_offset": 135099,
+      "pixel_absolute_offset": 135135,
+      "record_raw_values": [
+        14,
+        6,
+        64,
+        106,
+        1594,
+        200,
+        233,
+        500,
+        500
+      ],
+      "requested_index": 90,
+      "resolved_index": 90,
+      "link_chain": [],
+      "requested_record_offset": 131351,
+      "requested_record_raw_values": [
+        14,
+        6,
+        64,
+        106,
+        1594,
+        200,
+        233,
+        500,
+        500
+      ],
+      "link_record_offsets": [],
+      "rgba_sha256": "904bf31a2e4ee52d6a491867cea9bc6432b1be4f670de9d9cca85f9c9459b136"
+    },
+    "geometry": null,
+    "target": {
+      "path": "monster/goblin/animation_goblin/damage1.ani",
+      "frame": 0,
+      "time_ms": 250,
+      "horizontal_motion": {
+        "inputs": {
+          "kind": 0,
+          "special_flag": false,
+          "scale_integer": 100,
+          "stat218": 1000,
+          "stat220": 1,
+          "motion_enabled": true,
+          "step_delta": 50,
+          "steps": 8,
+          "direction": 1
+        },
+        "parameters": {
+          "speed": 400,
+          "acceleration": -2666,
+          "duration": 250,
+          "deceleration_duration": 150
+        },
+        "x_offset": 30.01749610900879,
+        "sample": {
+          "time_input": 250,
+          "x_axis": {
+            "position": 30.01749610900879,
+            "velocity": 0.09997230768203735,
+            "acceleration": 0,
+            "remaining": 0
+          },
+          "result_code": 2,
+          "duration_reached": true
+        },
+        "native_state_machine_executed": false
+      }
+    },
+    "controller": null,
+    "level_consumption": null,
+    "layers": []
+  },
+  "disabled": {
+    "path": "character/swordman/animation/stay.ani",
+    "frame": 0,
+    "source": {
+      "file_number": 653993585,
+      "path": "character/swordman/animation/stay.ani",
+      "size": 2029,
+      "crc": "609de4b1",
+      "relative_offset": 21393952,
+      "absolute_offset": 28960576,
+      "sha256": "5091078dba8167aa3bc7cfb77a1384d7a832d75ab6142c8c5ad2c486ef17712f",
+      "encoding": "cp949",
+      "crc_verified": true,
+      "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+    },
+    "values": {
+      "index": 0,
+      "tag": "FRAME000",
+      "start": 39,
+      "end": 371,
+      "fields": [
+        {
+          "tag": "IMAGE",
+          "values": [
+            "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+            90
+          ],
+          "start": 51,
+          "end": 122,
+          "line": 6,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+              "value": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+              "start": 59,
+              "end": 117,
+              "line": 6,
+              "column": 9
+            },
+            {
+              "kind": "atom",
+              "text": "90",
+              "value": 90,
+              "start": 118,
+              "end": 120,
+              "line": 6,
+              "column": 68
+            }
+          ]
+        },
+        {
+          "tag": "IMAGE POS",
+          "values": [
+            -232,
+            -333
+          ],
+          "start": 122,
+          "end": 145,
+          "line": 7,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "-232",
+              "value": -232,
+              "start": 134,
+              "end": 138,
+              "line": 7,
+              "column": 13
+            },
+            {
+              "kind": "atom",
+              "text": "-333",
+              "value": -333,
+              "start": 139,
+              "end": 143,
+              "line": 7,
+              "column": 18
+            }
+          ]
+        },
+        {
+          "tag": "IMAGE RATE",
+          "values": [
+            1,
+            1
+          ],
+          "start": 145,
+          "end": 177,
+          "line": 8,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "1.000000",
+              "value": 1,
+              "start": 158,
+              "end": 166,
+              "line": 8,
+              "column": 14
+            },
+            {
+              "kind": "atom",
+              "text": "1.000000",
+              "value": 1,
+              "start": 167,
+              "end": 175,
+              "line": 8,
+              "column": 23
+            }
+          ]
+        },
+        {
+          "tag": "IMAGE ROTATE",
+          "values": [
+            0
+          ],
+          "start": 177,
+          "end": 202,
+          "line": 9,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "0.000000",
+              "value": 0,
+              "start": 192,
+              "end": 200,
+              "line": 9,
+              "column": 16
+            }
+          ]
+        },
+        {
+          "tag": "RGBA",
+          "values": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "start": 202,
+          "end": 226,
+          "line": 10,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 209,
+              "end": 212,
+              "line": 10,
+              "column": 8
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 213,
+              "end": 216,
+              "line": 10,
+              "column": 12
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 217,
+              "end": 220,
+              "line": 10,
+              "column": 16
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 221,
+              "end": 224,
+              "line": 10,
+              "column": 20
+            }
+          ]
+        },
+        {
+          "tag": "INTERPOLATION",
+          "values": [
+            0
+          ],
+          "start": 226,
+          "end": 245,
+          "line": 11,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "0",
+              "value": 0,
+              "start": 242,
+              "end": 243,
+              "line": 11,
+              "column": 17
+            }
+          ]
+        },
+        {
+          "tag": "GRAPHIC EFFECT",
+          "values": [
+            "NONE"
+          ],
+          "start": 245,
+          "end": 270,
+          "line": 12,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "NONE",
+              "value": "NONE",
+              "start": 262,
+              "end": 268,
+              "line": 12,
+              "column": 18
+            }
+          ]
+        },
+        {
+          "tag": "DELAY",
+          "values": [
+            120
+          ],
+          "start": 270,
+          "end": 283,
+          "line": 13,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "120",
+              "value": 120,
+              "start": 278,
+              "end": 281,
+              "line": 13,
+              "column": 9
+            }
+          ]
+        },
+        {
+          "tag": "DAMAGE TYPE",
+          "values": [
+            "NORMAL"
+          ],
+          "start": 283,
+          "end": 307,
+          "line": 14,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "NORMAL",
+              "value": "NORMAL",
+              "start": 297,
+              "end": 305,
+              "line": 14,
+              "column": 15
+            }
+          ]
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "values": [
+            -17,
+            -5,
+            0,
+            30,
+            10,
+            97
+          ],
+          "start": 307,
+          "end": 339,
+          "line": 15,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "-17",
+              "value": -17,
+              "start": 320,
+              "end": 323,
+              "line": 15,
+              "column": 14
+            },
+            {
+              "kind": "atom",
+              "text": "-5",
+              "value": -5,
+              "start": 324,
+              "end": 326,
+              "line": 15,
+              "column": 18
+            },
+            {
+              "kind": "atom",
+              "text": "0",
+              "value": 0,
+              "start": 327,
+              "end": 328,
+              "line": 15,
+              "column": 21
+            },
+            {
+              "kind": "atom",
+              "text": "30",
+              "value": 30,
+              "start": 329,
+              "end": 331,
+              "line": 15,
+              "column": 23
+            },
+            {
+              "kind": "atom",
+              "text": "10",
+              "value": 10,
+              "start": 332,
+              "end": 334,
+              "line": 15,
+              "column": 26
+            },
+            {
+              "kind": "atom",
+              "text": "97",
+              "value": 97,
+              "start": 335,
+              "end": 337,
+              "line": 15,
+              "column": 29
+            }
+          ]
+        },
+        {
+          "tag": "DAMAGE BOX",
+          "values": [
+            13,
+            -3,
+            0,
+            13,
+            7,
+            73
+          ],
+          "start": 339,
+          "end": 371,
+          "line": 16,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "13",
+              "value": 13,
+              "start": 352,
+              "end": 354,
+              "line": 16,
+              "column": 14
+            },
+            {
+              "kind": "atom",
+              "text": "-3",
+              "value": -3,
+              "start": 355,
+              "end": 357,
+              "line": 16,
+              "column": 17
+            },
+            {
+              "kind": "atom",
+              "text": "0",
+              "value": 0,
+              "start": 358,
+              "end": 359,
+              "line": 16,
+              "column": 20
+            },
+            {
+              "kind": "atom",
+              "text": "13",
+              "value": 13,
+              "start": 360,
+              "end": 362,
+              "line": 16,
+              "column": 22
+            },
+            {
+              "kind": "atom",
+              "text": "7",
+              "value": 7,
+              "start": 363,
+              "end": 364,
+              "line": 16,
+              "column": 25
+            },
+            {
+              "kind": "atom",
+              "text": "73",
+              "value": 73,
+              "start": 365,
+              "end": 367,
+              "line": 16,
+              "column": 27
+            }
+          ]
+        }
+      ],
+      "unknown_fields": [
+        {
+          "tag": "IMAGE RATE",
+          "values": [
+            1,
+            1
+          ],
+          "start": 145,
+          "end": 177,
+          "line": 8,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "1.000000",
+              "value": 1,
+              "start": 158,
+              "end": 166,
+              "line": 8,
+              "column": 14
+            },
+            {
+              "kind": "atom",
+              "text": "1.000000",
+              "value": 1,
+              "start": 167,
+              "end": 175,
+              "line": 8,
+              "column": 23
+            }
+          ]
+        },
+        {
+          "tag": "IMAGE ROTATE",
+          "values": [
+            0
+          ],
+          "start": 177,
+          "end": 202,
+          "line": 9,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "0.000000",
+              "value": 0,
+              "start": 192,
+              "end": 200,
+              "line": 9,
+              "column": 16
+            }
+          ]
+        },
+        {
+          "tag": "RGBA",
+          "values": [
+            255,
+            255,
+            255,
+            255
+          ],
+          "start": 202,
+          "end": 226,
+          "line": 10,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 209,
+              "end": 212,
+              "line": 10,
+              "column": 8
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 213,
+              "end": 216,
+              "line": 10,
+              "column": 12
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 217,
+              "end": 220,
+              "line": 10,
+              "column": 16
+            },
+            {
+              "kind": "atom",
+              "text": "255",
+              "value": 255,
+              "start": 221,
+              "end": 224,
+              "line": 10,
+              "column": 20
+            }
+          ]
+        },
+        {
+          "tag": "INTERPOLATION",
+          "values": [
+            0
+          ],
+          "start": 226,
+          "end": 245,
+          "line": 11,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "atom",
+              "text": "0",
+              "value": 0,
+              "start": 242,
+              "end": 243,
+              "line": 11,
+              "column": 17
+            }
+          ]
+        },
+        {
+          "tag": "GRAPHIC EFFECT",
+          "values": [
+            "NONE"
+          ],
+          "start": 245,
+          "end": 270,
+          "line": 12,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "NONE",
+              "value": "NONE",
+              "start": 262,
+              "end": 268,
+              "line": 12,
+              "column": 18
+            }
+          ]
+        },
+        {
+          "tag": "DAMAGE TYPE",
+          "values": [
+            "NORMAL"
+          ],
+          "start": 283,
+          "end": 307,
+          "line": 14,
+          "scope": [],
+          "value_tokens": [
+            {
+              "kind": "string",
+              "text": "NORMAL",
+              "value": "NORMAL",
+              "start": 297,
+              "end": 305,
+              "line": 14,
+              "column": 15
+            }
+          ]
+        }
+      ],
+      "images": [
+        [
+          "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+          90
+        ]
+      ],
+      "image_positions": [
+        [
+          -232,
+          -333
+        ]
+      ],
+      "delays": [
+        [
+          120
+        ]
+      ],
+      "attack_boxes": [],
+      "damage_boxes": [
+        [
+          -17,
+          -5,
+          0,
+          30,
+          10,
+          97
+        ],
+        [
+          13,
+          -3,
+          0,
+          13,
+          7,
+          73
+        ]
+      ],
+      "duration_ms": 120
+    },
+    "time": 0,
+    "source_delay_model": false,
+    "spawn_gate_assumed": null,
+    "image_source": {
+      "logical": "sprite/character/swordman/equipment/avatar/skin/sm_body0000.img",
+      "package": "sprite_character_swordman_equipment_avatar_skin.npk",
+      "offset": 3748,
+      "length": 305925,
+      "table_index": 0,
+      "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f65717569706d656e742f6176617461722f736b696e2f736d5f626f6479303030302e696d67",
+      "npk_path": "D:\\dnf\\60US\\DFO\\ImagePacks2\\sprite_character_swordman_equipment_avatar_skin.npk",
+      "npk_sha256": "72d082303fadd29a38332f75aa49d3103159f32d8cc8fae77b1a2b591bc8ed23",
+      "npk_size": 4280119,
+      "img_sha256": "1cc103832e67a57e9df0eee8c73fb756e6bfc9acd3761de2c9b8876b07701609",
+      "img_version": 1,
+      "table_record_offset": 20,
+      "selected_explicitly": true,
+      "record_offset": 131351,
+      "record_length": 36,
+      "pixel_offset": 131387,
+      "pixel_length": 1594,
+      "record_absolute_offset": 135099,
+      "pixel_absolute_offset": 135135,
+      "record_raw_values": [
+        14,
+        6,
+        64,
+        106,
+        1594,
+        200,
+        233,
+        500,
+        500
+      ],
+      "requested_index": 90,
+      "resolved_index": 90,
+      "link_chain": [],
+      "requested_record_offset": 131351,
+      "requested_record_raw_values": [
+        14,
+        6,
+        64,
+        106,
+        1594,
+        200,
+        233,
+        500,
+        500
+      ],
+      "link_record_offsets": [],
+      "rgba_sha256": "904bf31a2e4ee52d6a491867cea9bc6432b1be4f670de9d9cca85f9c9459b136"
+    },
+    "geometry": null,
+    "target": {
+      "path": "monster/goblin/animation_goblin/damage1.ani",
+      "frame": 0,
+      "time_ms": 250,
+      "horizontal_motion": {
+        "inputs": {
+          "kind": 0,
+          "special_flag": false,
+          "scale_integer": 100,
+          "stat218": 1000,
+          "stat220": 1,
+          "motion_enabled": false,
+          "step_delta": 50,
+          "steps": 8,
+          "direction": 1
+        },
+        "parameters": {
+          "speed": 0,
+          "acceleration": 0,
+          "duration": 250,
+          "deceleration_duration": 150
+        },
+        "x_offset": 0,
+        "sample": {
+          "time_input": 250,
+          "x_axis": {
+            "position": 0,
+            "velocity": 0,
+            "acceleration": 0,
+            "remaining": -1
+          },
+          "result_code": 0,
+          "duration_reached": true
+        },
+        "native_state_machine_executed": false
+      }
+    },
+    "controller": null,
+    "level_consumption": null,
+    "layers": []
+  },
+  "page_errors": [],
+  "server_errors": [],
+  "original_game_visual_comparison": false
+}

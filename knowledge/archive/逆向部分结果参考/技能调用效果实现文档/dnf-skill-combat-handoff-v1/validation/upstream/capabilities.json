@@ -1,0 +1,2660 @@
+{
+  "status_counts": {
+    "inferred_resource_preview": 46,
+    "unmapped": 33,
+    "non_active": 143,
+    "observed_chain_partial_controller": 8,
+    "excluded": 1
+  },
+  "skills": [
+    {
+      "key": "guard",
+      "name": "格挡",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "reflectguard",
+      "name": "鬼印珠",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "autoguard",
+      "name": "自动格挡",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "lightswordmastery",
+      "name": "光剑精通",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "hardattack",
+      "name": "鬼斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "hardattackcharge",
+      "name": "噬灵鬼斩",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "hitback",
+      "name": "逆转反击",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "tripleslash",
+      "name": "三段斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "momentaryslash",
+      "name": "拔刀斩",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "madness",
+      "name": "狂暴血气",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "dashattackmultihit",
+      "name": "连突刺",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "shortswordmastery",
+      "name": "短剑精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "blademastery",
+      "name": "太刀精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "heavyswordmastery",
+      "name": "巨剑精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "bluntmastery",
+      "name": "钝器精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "ashenfork",
+      "name": "银光落刃",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "jumpattackmulti",
+      "name": "空中连斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "ghoststep",
+      "name": "残影之凯贾",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "pinchpowerup",
+      "name": "血气唤醒",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "normalwave",
+      "name": "地裂 · 波动剑",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "icewave",
+      "name": "冰刃 · 波动剑",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "firewave",
+      "name": "爆炎 · 波动剑",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "sacrifice",
+      "name": "嗜血",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "bloodblast",
+      "name": "怒气爆发",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "observed_chain_partial_controller"
+    },
+    {
+      "key": "khazan",
+      "name": "刀魂之卡赞",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "weaponmasteryup",
+      "name": "武器奥义",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "darkfriendship",
+      "name": "暗之亲和",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "darktoleranceup",
+      "name": "暗月降临",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "grabblastblood",
+      "name": "嗜魂之手",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "releasewave",
+      "name": "波动爆发",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "equiplightsword",
+      "name": "光剑掌握",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "diehard",
+      "name": "死亡抗拒",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "ghostpowerup",
+      "name": "封印解除",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "saya",
+      "name": "冰霜之萨亚",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "fastequip",
+      "name": "疾影手",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "overdrive",
+      "name": "破极兵刃",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "durabilityup",
+      "name": "武器节制",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "reckless",
+      "name": "暴走",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "bremen",
+      "name": "侵蚀之普戾蒙",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "disjointitemdark",
+      "name": "((不使用",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "jumpattackhighfast",
+      "name": "((不使用",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "tombstonerain",
+      "name": "死亡墓碑",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "upperslash",
+      "name": "上挑",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "wavemark",
+      "name": "波动刻印",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "backstepcutter",
+      "name": "后跳斩",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "grandwave",
+      "name": "邪光斩",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "grandwavecharge",
+      "name": "修罗邪光斩",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "dotarea",
+      "name": "杀意波动",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "mindflash",
+      "name": "挫折意志",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "senseviolenttemper",
+      "name": "杀气感知",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "armormasteryheavybk",
+      "name": "狂战士重甲专精",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "shockwavearea",
+      "name": "邪光波动阵",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "vaneslash",
+      "name": "裂波斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "ghoststepslash",
+      "name": "鬼影闪",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "armormasteryplatewave",
+      "name": "阿修罗板甲专精",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "standalonewave",
+      "name": "无双波",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "bloodyvigorous",
+      "name": "血气旺盛",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "gorecross",
+      "name": "十字斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "observed_chain_partial_controller"
+    },
+    {
+      "key": "hopsmash",
+      "name": "崩山击",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "observed_chain_partial_controller"
+    },
+    {
+      "key": "weaponcombo",
+      "name": "里 · 鬼剑术",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "chargecrash",
+      "name": "破军升龙击",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "rapidmoveslash",
+      "name": "猛龙断空斩",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "illusionslash",
+      "name": "幻影剑舞",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "wavespinarea",
+      "name": "不动明王阵",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "epidemicrasa",
+      "name": "瘟疫之罗刹",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "frenzy",
+      "name": "血之狂暴",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "observed_chain_partial_controller"
+    },
+    {
+      "key": "moonlightslash",
+      "name": "月光斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "bloodyrave",
+      "name": "嗜魂封魔斩",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "excluded"
+    },
+    {
+      "key": "moonlightslashfull",
+      "name": "满月斩",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "outragebreak",
+      "name": "崩山裂地斩",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "observed_chain_partial_controller"
+    },
+    {
+      "key": "kalla",
+      "name": "冥炎之卡洛",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "hellbenter",
+      "name": "魔狱血刹",
+      "groups": [
+        3
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "hundredsword",
+      "name": "极 · 鬼剑术 (暴风式)",
+      "groups": [
+        1
+      ],
+      "classification_basis": "CHR [awakening skill] exact ID",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "blache",
+      "name": "第7鬼神 : 邪神之怖拉修",
+      "groups": [
+        2
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "waveeye",
+      "name": "暗天波动眼",
+      "groups": [
+        4
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "darkaura",
+      "name": "恐惧光环",
+      "groups": [
+        2
+      ],
+      "classification_basis": "CHR [awakening skill] exact ID",
+      "status": "non_active"
+    },
+    {
+      "key": "bleedingmastery",
+      "name": "鲜血之忆",
+      "groups": [
+        3
+      ],
+      "classification_basis": "CHR [awakening skill] exact ID",
+      "status": "non_active"
+    },
+    {
+      "key": "defensedownoncritical",
+      "name": "极 · 鬼剑术 (斩铁式)",
+      "groups": [
+        1
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "non_active"
+    },
+    {
+      "key": "stuckuponcounter",
+      "name": "心眼",
+      "groups": [
+        4
+      ],
+      "classification_basis": "CHR [awakening skill] exact ID",
+      "status": "non_active"
+    },
+    {
+      "key": "armormasteryclothsb",
+      "name": "鬼泣布甲专精",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "armormasterylightwm",
+      "name": "剑魂轻甲专精",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "tombstonerainex",
+      "name": "墓碑三绝阵",
+      "groups": [
+        2
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "sayaex",
+      "name": "冰晶之萨亚",
+      "groups": [
+        2
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "unmapped"
+    },
+    {
+      "key": "momentaryslashex",
+      "name": "破空拔刀斩",
+      "groups": [
+        1
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "chargeburst",
+      "name": "破军斩龙击",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "firewaveex",
+      "name": "极炎 · 裂波剑",
+      "groups": [
+        4
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "unmapped"
+    },
+    {
+      "key": "icewaveex",
+      "name": "极冰 · 裂波剑",
+      "groups": [
+        4
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "unmapped"
+    },
+    {
+      "key": "bloodblastex",
+      "name": "血气爆发",
+      "groups": [
+        3
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "observed_chain_partial_controller"
+    },
+    {
+      "key": "grabblastbloodex",
+      "name": "灭魂之手",
+      "groups": [
+        3
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "unmapped"
+    },
+    {
+      "key": "bloodsword",
+      "name": "血气之刃",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "observed_chain_partial_controller"
+    },
+    {
+      "key": "flowmind",
+      "name": "流心",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "flowmindone",
+      "name": "流心 : 刺",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "flowmindtwo",
+      "name": "流心 : 跃",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "flowmindthree",
+      "name": "流心 : 升",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "flowmindpowerup",
+      "name": "流心 : 狂",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "ghostsidewind",
+      "name": "鬼影鞭",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "ghostsidewindex",
+      "name": "强化 - 鬼影鞭",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "normalwaveex",
+      "name": "强化 - 地裂 · 波动剑",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "gorecrossex",
+      "name": "强化 - 十字斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "hardattackex",
+      "name": "强化 - 鬼斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "tripleslashex",
+      "name": "强化 - 三段斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "hitbackex",
+      "name": "强化 - 逆转反击",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "autoguardex",
+      "name": "强化 - 自动格挡",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "bremenex",
+      "name": "强化 - 侵蚀之普戾蒙",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "ghoststepex",
+      "name": "强化 - 残影之凯贾",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "diehardex",
+      "name": "强化 - 死亡抗拒",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "recklessex",
+      "name": "强化 - 暴走",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "dotareaex",
+      "name": "强化 - 杀意波动",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "wavemarkex",
+      "name": "强化 - 波动刻印",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "rapidmoveslashex",
+      "name": "强化 - 猛龙断空斩",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "ashenforkex",
+      "name": "强化 - 银光落刃",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "momentaryslashexp",
+      "name": "强化 - 拔刀斩",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "moonlightslashex",
+      "name": "强化 - 月光斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "epidemicrasaex",
+      "name": "强化 - 瘟疫之罗刹",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "hopsmashex",
+      "name": "强化 - 崩山击",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "bloodyraveex",
+      "name": "强化 - 嗜魂封魔斩",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "vaneslashex",
+      "name": "强化 - 裂波斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "reflectguardex",
+      "name": "强化 - 鬼印珠",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "basicattackupex",
+      "name": "强化 - 基础精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "dashattackmultihitex",
+      "name": "强化 - 连突刺",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "guardex",
+      "name": "强化 - 格挡",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "khazanex",
+      "name": "强化 - 刀魂之卡赞",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "grabblastbloodexp",
+      "name": "强化 - 嗜魂之手",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "bloodblastexp",
+      "name": "强化 - 怒气爆发",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "outragebreakex",
+      "name": "强化 - 崩山裂地斩",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "bloodswordex",
+      "name": "强化 - 血气之刃",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "backstep",
+      "name": "后跳",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "armormasterylight",
+      "name": "轻甲精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "armormasteryheavy",
+      "name": "重甲精通",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "basicattackup",
+      "name": "基础精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "jumppowerup",
+      "name": "跃翔",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "magicalattackup",
+      "name": "远古记忆",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "throwmastery",
+      "name": "投掷精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "physicalbackattackcritical",
+      "name": "物理背击",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "disjointitem",
+      "name": "物品分解",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "superarmoroncast",
+      "name": "不屈意志",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "compoundcraft",
+      "name": "精工",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "compoundweaving",
+      "name": "纺织",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "compoundmachine",
+      "name": "机械",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "compoundchemistry",
+      "name": "炼金",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "armormasteryleather",
+      "name": "皮甲精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "physicalcriticalhitup",
+      "name": "物理暴击",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "armormasterycloth",
+      "name": "布甲精通",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "magicalcriticalhitup",
+      "name": "魔法暴击",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "magicalbackattackcritical",
+      "name": "魔法背击",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "quickstanding",
+      "name": "受身蹲伏",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "enchant",
+      "name": "附魔",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "dollmaking",
+      "name": "制作召唤人偶",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "alchemy",
+      "name": "炼金术",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "opendisjointshop",
+      "name": "开启分解商店",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "basichpmaxup",
+      "name": "生命之源",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "armormasteryplate",
+      "name": "板甲精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "conversion",
+      "name": "攻击类型转换",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "statusup",
+      "name": "公会 : 增加角色属性",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "experienceup",
+      "name": "极速成长",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "releasewaveex",
+      "name": "强化 - 波动爆发",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "grandwaveex",
+      "name": "强化 - 邪光斩",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "firewaveexp",
+      "name": "强化 - 爆炎 · 波动剑",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "standalonewaveex",
+      "name": "强化 - 无双波",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "wavespinareaex",
+      "name": "强化 - 不动明王阵",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "upperslashex",
+      "name": "强化 - 上挑",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "icewaveexp",
+      "name": "强化 - 冰刃 · 波动剑",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "illusionslashexp",
+      "name": "强化 - 幻影剑舞",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "chargecrashexp",
+      "name": "强化 - 破军升龙击",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "sayaexp",
+      "name": "强化 - 冰霜之萨亚",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "tombstonerainexp",
+      "name": "强化 - 死亡墓碑",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "ghoststepslashex",
+      "name": "强化 - 鬼影闪",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "kallaex",
+      "name": "强化 - 冥炎之卡洛",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "reflectguardexp",
+      "name": "强化 - 鬼印珠",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "shockwaveareaexp",
+      "name": "强化 - 邪光波动阵",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "forceofthunderer",
+      "name": "雷神之息",
+      "groups": [
+        4
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "non_active"
+    },
+    {
+      "key": "bloodmarble",
+      "name": "魔煞血陨",
+      "groups": [
+        3
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "necromantic",
+      "name": "鬼神诏令",
+      "groups": [
+        2
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "unmapped"
+    },
+    {
+      "key": "bloodinkanet",
+      "name": "汲血之力",
+      "groups": [
+        3
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "non_active"
+    },
+    {
+      "key": "indaramang",
+      "name": "天雷 · 波动剑",
+      "groups": [
+        4
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "swordofmind",
+      "name": "极 · 神剑术 (破空斩)",
+      "groups": [
+        1
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "meteorsword",
+      "name": "极 · 神剑术 (流星落)",
+      "groups": [
+        1
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "bloodboom",
+      "name": "浴血之怒",
+      "groups": [
+        3
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "observed_chain_partial_controller"
+    },
+    {
+      "key": "bloodriven",
+      "name": "血魔 · 弑天",
+      "groups": [
+        3
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "stateoflimit",
+      "name": "极 · 神剑术",
+      "groups": [
+        1
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "non_active"
+    },
+    {
+      "key": "bladephantom",
+      "name": "幽魂剑影阵",
+      "groups": [
+        2
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "unmapped"
+    },
+    {
+      "key": "vajra",
+      "name": "天雷 · 降魔杵",
+      "groups": [
+        4
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "zigadvent",
+      "name": "王者号令 : 吉格降临",
+      "groups": [
+        2
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "lightninggod",
+      "name": "雷神降世 : 裁决",
+      "groups": [
+        4
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "phantommastery",
+      "name": "御鬼之极",
+      "groups": [
+        2
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "non_active"
+    },
+    {
+      "key": "handlingsword",
+      "name": "万剑归宗",
+      "groups": [
+        1
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "mysticequip",
+      "name": "神影手",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "flowmindallex",
+      "name": "强化 - 流心",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "rejection",
+      "name": "燃烧之血",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "berserker",
+      "name": "狂气涌动",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "flashcut",
+      "name": "极 · 神剑术 (瞬斩)",
+      "groups": [
+        1
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "devideonattack",
+      "name": "极 · 鬼剑术 (斩钢式)",
+      "groups": [
+        1
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "non_active"
+    },
+    {
+      "key": "chargeburstex",
+      "name": "强化 - 破军斩龙击",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "armormasteryetc",
+      "name": "基础防具精通",
+      "groups": [],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "activepropertystuckupex",
+      "name": "回避精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelbackstep",
+      "name": "强制 - 后跳",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelbloodblast",
+      "name": "强制 - 怒气爆发",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelbloodsword",
+      "name": "强制 - 血气之刃",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelchargecrash",
+      "name": "强制 - 破军升龙击",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelflowmind",
+      "name": "强制 - 流心",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelghostsidewind",
+      "name": "强制 - 鬼影鞭",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelgorecross",
+      "name": "强制 - 十字斩",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelgrabblastblood",
+      "name": "强制 - 嗜魂之手",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelguard",
+      "name": "强制 - 格挡",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelhardattack",
+      "name": "强制 - 鬼斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelhopsmash",
+      "name": "强制 - 崩山击",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelmoonlightslash",
+      "name": "强制 - 月光斩",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelreflectguard",
+      "name": "强制 - 鬼印珠",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelthrowitem",
+      "name": "强制 - 投掷",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "canceltripleslash",
+      "name": "强制 - 三段斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "canceltriplestab",
+      "name": "强制 - 鬼影三击剑",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelupperslash",
+      "name": "强制 - 上挑",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelvaneslash",
+      "name": "强制 - 裂波斩",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "cancelwave",
+      "name": "强制 - 波动剑",
+      "groups": [
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "darknessblade",
+      "name": "",
+      "groups": [
+        2
+      ],
+      "classification_basis": "inferred 2-per-growtype second-level table, cross-checked against CHR awakening IDs",
+      "status": "non_active"
+    },
+    {
+      "key": "elementattackallupex",
+      "name": "属性攻击精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "elementtoleranceallupex",
+      "name": "属性抗性精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "flowmindoneex",
+      "name": "强化 - 流心 : 刺",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "flowmindthreeex",
+      "name": "强化 - 流心 : 升",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "flowmindtwoex",
+      "name": "强化 - 流心 : 跃",
+      "groups": [
+        1
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "hpregenrateupex",
+      "name": "HP恢复精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "keiga",
+      "name": "残影之凯贾",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "unmapped"
+    },
+    {
+      "key": "magicalattackupex",
+      "name": "智力之源",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "magicaldefenceupex",
+      "name": "精神之源",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "mpregenrateupex",
+      "name": "MP恢复精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "physicalattackupex",
+      "name": "力量之源",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "physicaldefenceupex",
+      "name": "体力之源",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "pinchpowerupex",
+      "name": "强化 - 血气唤醒",
+      "groups": [
+        3
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "stuckupex",
+      "name": "命中精通",
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    },
+    {
+      "key": "triplestab",
+      "name": "鬼影三击剑",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "inferred_resource_preview"
+    },
+    {
+      "key": "triplestabex",
+      "name": "强化 - 鬼影三击剑",
+      "groups": [
+        2
+      ],
+      "classification_basis": "[skill fitness growtype]",
+      "status": "non_active"
+    }
+  ],
+  "monster_types": [
+    {
+      "path": "monster/goblin/goblin.mob",
+      "name": "哥布林",
+      "raw_sha256": "6d3abc6e25e0df2378f2775a0f96fee7af32c5c9ce31e8b8bd4ca11775d0af02",
+      "die_effect": [
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "states": {
+        "idle": {
+          "entry": "monster/goblin/animation_goblin2/stay.ani",
+          "tracks": [
+            {
+              "path": "monster/goblin/animation_goblin2/stay.ani",
+              "begin": 0,
+              "end": 80,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/goblin/animation_goblin2/stay.ani"
+            }
+          ],
+          "duration": 80,
+          "binding_tag": "[waiting motion]"
+        },
+        "damage1": {
+          "entry": "monster/goblin/animation_goblin2/damage1.ani",
+          "tracks": [
+            {
+              "path": "monster/goblin/animation_goblin2/damage1.ani",
+              "begin": 0,
+              "end": 10000,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/goblin/animation_goblin2/damage1.ani"
+            }
+          ],
+          "duration": 10000,
+          "binding_tag": "[damage motion 1]"
+        },
+        "damage2": {
+          "entry": "monster/goblin/animation_goblin2/damage2.ani",
+          "tracks": [
+            {
+              "path": "monster/goblin/animation_goblin2/damage2.ani",
+              "begin": 0,
+              "end": 10000,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/goblin/animation_goblin2/damage2.ani"
+            }
+          ],
+          "duration": 10000,
+          "binding_tag": "[damage motion 2]"
+        },
+        "down": {
+          "entry": "monster/goblin/animation_goblin2/down.ani",
+          "tracks": [
+            {
+              "path": "monster/goblin/animation_goblin2/down.ani",
+              "begin": 0,
+              "end": 20660,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/goblin/animation_goblin2/down.ani"
+            }
+          ],
+          "duration": 20660,
+          "binding_tag": "[down motion]"
+        }
+      },
+      "issues": []
+    },
+    {
+      "path": "monster/lugaru/lugaru.mob",
+      "name": "猫妖",
+      "raw_sha256": "7bed318f22166caf7931d23dfcb3776d10507a4a6f5ba20961a916450479d236",
+      "die_effect": [
+        [
+          0,
+          9,
+          0
+        ]
+      ],
+      "states": {
+        "idle": {
+          "entry": "monster/lugaru/animation_lugaru/stay_2.ani",
+          "tracks": [
+            {
+              "path": "monster/lugaru/animation_lugaru/stay_2.ani",
+              "begin": 0,
+              "end": 500,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/lugaru/animation_lugaru/stay_2.ani"
+            }
+          ],
+          "duration": 500,
+          "binding_tag": "[waiting motion]"
+        },
+        "damage1": {
+          "entry": "monster/lugaru/animation_lugaru/damage1.ani",
+          "tracks": [
+            {
+              "path": "monster/lugaru/animation_lugaru/damage1.ani",
+              "begin": 0,
+              "end": 10000,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/lugaru/animation_lugaru/damage1.ani"
+            }
+          ],
+          "duration": 10000,
+          "binding_tag": "[damage motion 1]"
+        },
+        "damage2": {
+          "entry": "monster/lugaru/animation_lugaru/damage2.ani",
+          "tracks": [
+            {
+              "path": "monster/lugaru/animation_lugaru/damage2.ani",
+              "begin": 0,
+              "end": 10000,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/lugaru/animation_lugaru/damage2.ani"
+            }
+          ],
+          "duration": 10000,
+          "binding_tag": "[damage motion 2]"
+        },
+        "down": {
+          "entry": "monster/lugaru/animation_lugaru/down.ani",
+          "tracks": [
+            {
+              "path": "monster/lugaru/animation_lugaru/down.ani",
+              "begin": 0,
+              "end": 20660,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/lugaru/animation_lugaru/down.ani"
+            }
+          ],
+          "duration": 20660,
+          "binding_tag": "[down motion]"
+        }
+      },
+      "issues": []
+    },
+    {
+      "path": "monster/dragondungeon/rockgolem/rockgolem.mob",
+      "name": "巨石傀儡",
+      "raw_sha256": "84ad895ac40ed9aa78c9f8e17292b5f62aa74cb421d49adaec447b5bab8dd6b2",
+      "die_effect": [
+        [
+          0,
+          3,
+          1
+        ]
+      ],
+      "states": {
+        "idle": {
+          "entry": "monster/dragondungeon/rockgolem/action/stay.act",
+          "tracks": [
+            {
+              "path": "monster/dragondungeon/rockgolem/animation/dummystay.ani",
+              "begin": 0,
+              "end": 1000,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/dragondungeon/rockgolem/animation/dummystay.ani"
+            }
+          ],
+          "duration": 1000,
+          "binding_tag": "[waiting action]"
+        },
+        "death": {
+          "entry": "monster/dragondungeon/rockgolem/action/die.act",
+          "tracks": [
+            {
+              "path": "monster/dragondungeon/rockgolem/animation/die.ani",
+              "begin": 0,
+              "end": 2240,
+              "layer": 0,
+              "position": [
+                0,
+                0,
+                0
+              ],
+              "anchor": "actor",
+              "repeat": false,
+              "basis": "source ANI + ALS frame events",
+              "source": "monster/dragondungeon/rockgolem/animation/die.ani"
+            }
+          ],
+          "duration": 2240,
+          "binding_tag": "[last action]"
+        }
+      },
+      "issues": []
+    }
+  ],
+  "notes": "Status describes source/mapping coverage, not whole-game runtime validation. Current character family is Swordman only."
+}

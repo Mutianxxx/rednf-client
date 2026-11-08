@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x50155b",
+  "rva": "0x10155b",
+  "file_offset": 1054043,
+  "length": 62,
+  "bytes_sha256": "03286a33476c4a06657a6d1a2717656045d4fc87f6e2451d546ac1160e34f9cc",
+  "status": "native_bytes",
+  "note": "MOB template+748 to Monster wstring+1AF0; no playback.",
+  "disassembled": true
+}

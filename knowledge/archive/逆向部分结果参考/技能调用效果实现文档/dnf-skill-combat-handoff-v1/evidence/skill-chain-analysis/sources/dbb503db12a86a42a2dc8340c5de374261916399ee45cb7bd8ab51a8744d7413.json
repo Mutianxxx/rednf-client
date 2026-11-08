@@ -1,0 +1,213 @@
+{
+  "path": "passiveobject/character/swordman/blastbloodex.obj",
+  "fields": [
+    {
+      "tag": "[name]",
+      "values": [
+        "怒气爆发 主要"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[floating height]",
+      "values": [
+        0
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[layer]",
+      "values": [
+        "[normal]"
+      ],
+      "offset": 20
+    },
+    {
+      "tag": "[pass type]",
+      "values": [
+        "[pass all]"
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[piercing power]",
+      "values": [
+        1000
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[basic motion]",
+      "values": [
+        "Animation/BlastBlood1Ex.ani"
+      ],
+      "offset": 50
+    },
+    {
+      "tag": "[etc motion]",
+      "values": [
+        "Animation/BlastBlood2.ani",
+        "Animation/BlastBloodFloor1.ani",
+        "Animation/BlastBloodFloor2.ani",
+        "Animation/BlastBloodEx/sub.ani",
+        "Animation/BlastBloodEx/sub_dodge1.ani",
+        "Animation/BlastBloodEx/sub_dodge2.ani",
+        "Animation/BlastBloodExEnd.ani"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[/etc motion]",
+      "values": [],
+      "offset": 100
+    },
+    {
+      "tag": "[attack info]",
+      "values": [
+        "AttackInfo/BlastBloodEx.atk"
+      ],
+      "offset": 105
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 14059926,
+      "value": "[name]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 228003,
+      "value": "怒气爆发 主要"
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 16526498,
+      "value": "[floating height]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 16526534,
+      "value": "[layer]"
+    },
+    {
+      "offset": 25,
+      "type": 6,
+      "raw": 6653656,
+      "value": "[normal]"
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 16526550,
+      "value": "[pass type]"
+    },
+    {
+      "offset": 35,
+      "type": 6,
+      "raw": 11348366,
+      "value": "[pass all]"
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 16526574,
+      "value": "[piercing power]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 1000,
+      "value": 1000
+    },
+    {
+      "offset": 50,
+      "type": 3,
+      "raw": 16526608,
+      "value": "[basic motion]"
+    },
+    {
+      "offset": 55,
+      "type": 6,
+      "raw": 16989422,
+      "value": "Animation/BlastBlood1Ex.ani"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 16526710,
+      "value": "[etc motion]"
+    },
+    {
+      "offset": 65,
+      "type": 6,
+      "raw": 16988700,
+      "value": "Animation/BlastBlood2.ani"
+    },
+    {
+      "offset": 70,
+      "type": 6,
+      "raw": 16988804,
+      "value": "Animation/BlastBloodFloor1.ani"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 16988866,
+      "value": "Animation/BlastBloodFloor2.ani"
+    },
+    {
+      "offset": 80,
+      "type": 6,
+      "raw": 16989478,
+      "value": "Animation/BlastBloodEx/sub.ani"
+    },
+    {
+      "offset": 85,
+      "type": 6,
+      "raw": 16989540,
+      "value": "Animation/BlastBloodEx/sub_dodge1.ani"
+    },
+    {
+      "offset": 90,
+      "type": 6,
+      "raw": 16989616,
+      "value": "Animation/BlastBloodEx/sub_dodge2.ani"
+    },
+    {
+      "offset": 95,
+      "type": 6,
+      "raw": 16989692,
+      "value": "Animation/BlastBloodExEnd.ani"
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 16526808,
+      "value": "[/etc motion]"
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 16526836,
+      "value": "[attack info]"
+    },
+    {
+      "offset": 110,
+      "type": 6,
+      "raw": 16989752,
+      "value": "AttackInfo/BlastBloodEx.atk"
+    }
+  ],
+  "raw_sha256": "dbb503db12a86a42a2dc8340c5de374261916399ee45cb7bd8ab51a8744d7413"
+}

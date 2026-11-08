@@ -1,0 +1,354 @@
+{
+  "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+  "snapshot_sha256": "ab950286ad291236086beae21ef75b1732d4cd5e52db482e261f4c548969ea44",
+  "code_windows": [
+    {
+      "va": 18609424,
+      "size": 522,
+      "meaning": "control traversal and explicit 800x600 restore",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14415120,
+        "file_offset": 14412048,
+        "size": 522
+      },
+      "bytes_sha256": "c3c55c250431b089913dc30e0eb6c85972a8df105eb1e81f94f74762b9fc743f",
+      "snapshot_matches": true,
+      "file": "011bf510.bin"
+    },
+    {
+      "va": 18564880,
+      "size": 109,
+      "meaning": "positive signed DWORD to low unsigned WORD rectangle",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14370576,
+        "file_offset": 14367504,
+        "size": 109
+      },
+      "bytes_sha256": "08d57534e76bebcf8dee4875507b20aa9a2e08b82915805c54a95f62ed02b206",
+      "snapshot_matches": true,
+      "file": "011b4710.bin"
+    },
+    {
+      "va": 18561360,
+      "size": 35,
+      "meaning": "simple wrapper passes context as third virtual argument",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14367056,
+        "file_offset": 14363984,
+        "size": 35
+      },
+      "bytes_sha256": "416347c44e60ade2adc97118f912caf4f3df82ca9e8ced0376ae8c81f12b7535",
+      "snapshot_matches": true,
+      "file": "011b3950.bin"
+    },
+    {
+      "va": 18563552,
+      "size": 198,
+      "meaning": "transform wrapper, center sentinel and color swap",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14369248,
+        "file_offset": 14366176,
+        "size": 198
+      },
+      "bytes_sha256": "d42a2aa6431f15bd4dbec98c0293964e2fb22cf0b681e4de8bf5de836caf8ac9",
+      "snapshot_matches": true,
+      "file": "011b41e0.bin"
+    },
+    {
+      "va": 18723200,
+      "size": 150,
+      "meaning": "image virtual B4 dispatch, type 7 and alternate type 8",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14528896,
+        "file_offset": 14525824,
+        "size": 150
+      },
+      "bytes_sha256": "7d7092c644e112fdd981e998c5263888597c74e277201a7a82fa25d23e91f23c",
+      "snapshot_matches": true,
+      "file": "011db180.bin"
+    },
+    {
+      "va": 18724112,
+      "size": 515,
+      "meaning": "negative rotation, screen-axis scale and crop-relative center",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14529808,
+        "file_offset": 14526736,
+        "size": 515
+      },
+      "bytes_sha256": "b5f334cadc8761e4f9ee6cb1af7000b2f9c3e00ba2beccee88a17108babe670b",
+      "snapshot_matches": true,
+      "file": "011db510.bin"
+    },
+    {
+      "va": 18723728,
+      "size": 369,
+      "meaning": "identity transform software path versus transformed D3DX path",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14529424,
+        "file_offset": 14526352,
+        "size": 369
+      },
+      "bytes_sha256": "350bc7ae287343561d0c726fab0c75bf34315fde30ea21546ee798b0c64ae674",
+      "snapshot_matches": true,
+      "file": "011db390.bin"
+    },
+    {
+      "va": 18560640,
+      "size": 60,
+      "meaning": "rectangle pointer and signed word expansion",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14366336,
+        "file_offset": 14363264,
+        "size": 60
+      },
+      "bytes_sha256": "8e03fe151e8269ddcf8304cfb30a13ee7a2719523191130531e7880679e73d77",
+      "snapshot_matches": true,
+      "file": "011b3680.bin"
+    },
+    {
+      "va": 18562432,
+      "size": 53,
+      "meaning": "logical unsigned dimensions and signed crop origin",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14368128,
+        "file_offset": 14365056,
+        "size": 53
+      },
+      "bytes_sha256": "e15660e111e49fd5d7ef815817f6b2630530fdccbcf2b7aa42094bace4acb971",
+      "snapshot_matches": true,
+      "file": "011b3d80.bin"
+    },
+    {
+      "va": 18818144,
+      "size": 2864,
+      "meaning": "software image consumer with signed rectangle and format branches",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14623840,
+        "file_offset": 14620768,
+        "size": 2864
+      },
+      "bytes_sha256": "b8885cd414cf81a57c56f882b73aaf49bc3b9c646828258ae1269a34f8cb12b6",
+      "snapshot_matches": true,
+      "file": "011f2460.bin"
+    },
+    {
+      "va": 18606800,
+      "size": 229,
+      "meaning": "relative setter updates absolute position and child deltas",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14412496,
+        "file_offset": 14409424,
+        "size": 229
+      },
+      "bytes_sha256": "0353ea4752a1417dd1a4761c3ee36886fbdafe21a01e573937322eca211b7354",
+      "snapshot_matches": true,
+      "file": "011bead0.bin"
+    },
+    {
+      "va": 18721200,
+      "size": 60,
+      "meaning": "image constructor vtable 0185C76C",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14526896,
+        "file_offset": 14523824,
+        "size": 60
+      },
+      "bytes_sha256": "146f1525463a22f1851a2782df4117605404f15fe1edfe021b23d4835cac4532",
+      "snapshot_matches": true,
+      "file": "011da9b0.bin"
+    },
+    {
+      "va": 18681744,
+      "size": 311,
+      "meaning": "tooltip text setter; not a universal title setter",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14487440,
+        "file_offset": 14484368,
+        "size": 311
+      },
+      "bytes_sha256": "e2fde776717d0dc41a275b542835036d3ef56f04fed44888b33962c311693719",
+      "snapshot_matches": true,
+      "file": "011d0f90.bin"
+    },
+    {
+      "va": 18604880,
+      "size": 13,
+      "meaning": "enabled-byte setter; not hide or destroy",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14410576,
+        "file_offset": 14407504,
+        "size": 13
+      },
+      "bytes_sha256": "b217e6acb4a966c71b4686e0a5c6b9e18048389e1313a20b0f8fcbfd89e093e2",
+      "snapshot_matches": true,
+      "file": "011be350.bin"
+    },
+    {
+      "va": 6000768,
+      "size": 4,
+      "meaning": "image type getter reads object +8",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 1806464,
+        "file_offset": 1803392,
+        "size": 4
+      },
+      "bytes_sha256": "916ae10aa3fd76a4d5b25b2fb66e9df0fd04957c7ab10930268d1ed7808be689",
+      "snapshot_matches": true,
+      "file": "005b9080.bin"
+    },
+    {
+      "va": 18608544,
+      "size": 255,
+      "meaning": "destructor candidate frees +74/+2AC and tears down strings; not a verified lifecycle hook",
+      "disk": {
+        "section_index": 0,
+        "section_name": "nsn",
+        "rva": 14414240,
+        "file_offset": 14411168,
+        "size": 255
+      },
+      "bytes_sha256": "34b3f348d23bb566a2b6a0686869ba2d7b7fd882a8785ac8d92febcc9fba0497",
+      "snapshot_matches": true,
+      "file": "011bf1a0.bin"
+    }
+  ],
+  "calls": [
+    {
+      "va": 18609485,
+      "target": 18564880,
+      "bytes": "e8be51ffff"
+    },
+    {
+      "va": 18609932,
+      "target": 18564880,
+      "bytes": "e8ff4fffff"
+    },
+    {
+      "va": 18724316,
+      "target": 20980250,
+      "bytes": "e8396c2200"
+    },
+    {
+      "va": 18724591,
+      "target": 18723728,
+      "bytes": "e89cfcffff"
+    },
+    {
+      "va": 18723803,
+      "target": 18560640,
+      "bytes": "e8a082fdff"
+    },
+    {
+      "va": 18723821,
+      "target": 18818144,
+      "bytes": "e86e700100"
+    },
+    {
+      "va": 18606995,
+      "target": 18606800,
+      "bytes": "e838ffffff"
+    },
+    {
+      "va": 18417908,
+      "target": 18608544,
+      "bytes": "e8a7e80200"
+    }
+  ],
+  "virtuals": [
+    {
+      "address": 25544728,
+      "target": 18724112,
+      "bytes": "10b51d01"
+    },
+    {
+      "address": 25544736,
+      "target": 18723200,
+      "bytes": "80b11d01"
+    }
+  ],
+  "constants": [
+    {
+      "va": 22422096,
+      "raw_hex": "9976967e",
+      "value": 9.999999680285692e+37
+    },
+    {
+      "va": 22438320,
+      "raw_hex": "00000000",
+      "value": 0.0
+    },
+    {
+      "va": 22438324,
+      "raw_hex": "0000804f",
+      "value": 4294967296.0
+    }
+  ],
+  "raw_arguments": {
+    "simple": [
+      "x",
+      "y",
+      "image"
+    ],
+    "transformed": [
+      "x",
+      "y",
+      "image",
+      "sx",
+      "sy",
+      "rotation",
+      "color",
+      "cx",
+      "cy"
+    ],
+    "rectangle": [
+      "left",
+      "top",
+      "right",
+      "bottom"
+    ],
+    "rectangle_target": "ECX object +28/+2A/+2C/+2E"
+  },
+  "supported": {
+    "transform": "0185C76C virtual AC, explicit finite centers, wrapper sentinel 1e38",
+    "clipping": "identity software branch, signed rectangle from the image request context snapshot"
+  },
+  "unknown": [
+    "type 8 image branch",
+    "secondary center sentinel 2^32",
+    "transformed D3DX clipping and render mode",
+    "draw by loop",
+    "universal title/font contract",
+    "hide/destroy and pointer reuse lifecycle"
+  ]
+}

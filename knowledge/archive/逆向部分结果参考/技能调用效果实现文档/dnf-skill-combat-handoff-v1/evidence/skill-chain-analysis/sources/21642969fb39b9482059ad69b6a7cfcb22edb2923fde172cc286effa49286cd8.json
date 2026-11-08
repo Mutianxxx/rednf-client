@@ -1,0 +1,1082 @@
+{
+  "path": "common/hiteffect/animation/splashbloodlarge.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        7
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/HitEffect/SplashBloodLarge.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -62,
+        -36
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.7000000476837158,
+        1.7000000476837158
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        175,
+        0,
+        0,
+        255
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 105
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/HitEffect/SplashBloodLarge.img",
+        1
+      ],
+      "offset": 110
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -62,
+        -36
+      ],
+      "offset": 125
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.7000000476837158,
+        1.7000000476837158
+      ],
+      "offset": 140
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        175,
+        0,
+        0,
+        255
+      ],
+      "offset": 155
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 180
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 190
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/HitEffect/SplashBloodLarge.img",
+        2
+      ],
+      "offset": 195
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -62,
+        -36
+      ],
+      "offset": 210
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.7000000476837158,
+        1.7000000476837158
+      ],
+      "offset": 225
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        175,
+        0,
+        0,
+        255
+      ],
+      "offset": 240
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 265
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 275
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/HitEffect/SplashBloodLarge.img",
+        3
+      ],
+      "offset": 280
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -62,
+        -36
+      ],
+      "offset": 295
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.7000000476837158,
+        1.7000000476837158
+      ],
+      "offset": 310
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        175,
+        0,
+        0,
+        255
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 350
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 360
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/HitEffect/SplashBloodLarge.img",
+        4
+      ],
+      "offset": 365
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -62,
+        -36
+      ],
+      "offset": 380
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.7000000476837158,
+        1.7000000476837158
+      ],
+      "offset": 395
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        175,
+        0,
+        0,
+        255
+      ],
+      "offset": 410
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 435
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 445
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/HitEffect/SplashBloodLarge.img",
+        5
+      ],
+      "offset": 450
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -62,
+        -36
+      ],
+      "offset": 465
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.7000000476837158,
+        1.7000000476837158
+      ],
+      "offset": 480
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        175,
+        0,
+        0,
+        255
+      ],
+      "offset": 495
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 520
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 530
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/HitEffect/SplashBloodLarge.img",
+        6
+      ],
+      "offset": 535
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -62,
+        -36
+      ],
+      "offset": 550
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.7000000476837158,
+        1.7000000476837158
+      ],
+      "offset": 565
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        175,
+        0,
+        0,
+        255
+      ],
+      "offset": 580
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        40
+      ],
+      "offset": 605
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 4372872,
+      "value": "Common/HitEffect/SplashBloodLarge.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294967234,
+      "value": -62
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967260,
+      "value": -36
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 60,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 65,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 175,
+      "value": 175
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 115,
+      "type": 6,
+      "raw": 4372872,
+      "value": "Common/HitEffect/SplashBloodLarge.img"
+    },
+    {
+      "offset": 120,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 125,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 130,
+      "type": 0,
+      "raw": 4294967234,
+      "value": -62
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 4294967260,
+      "value": -36
+    },
+    {
+      "offset": 140,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 145,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 150,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 175,
+      "value": 175
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 180,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 195,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 200,
+      "type": 6,
+      "raw": 4372872,
+      "value": "Common/HitEffect/SplashBloodLarge.img"
+    },
+    {
+      "offset": 205,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 210,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 4294967234,
+      "value": -62
+    },
+    {
+      "offset": 220,
+      "type": 0,
+      "raw": 4294967260,
+      "value": -36
+    },
+    {
+      "offset": 225,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 230,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 235,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 240,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 245,
+      "type": 0,
+      "raw": 175,
+      "value": 175
+    },
+    {
+      "offset": 250,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 255,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 260,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 265,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 275,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 280,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 285,
+      "type": 6,
+      "raw": 4372872,
+      "value": "Common/HitEffect/SplashBloodLarge.img"
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 300,
+      "type": 0,
+      "raw": 4294967234,
+      "value": -62
+    },
+    {
+      "offset": 305,
+      "type": 0,
+      "raw": 4294967260,
+      "value": -36
+    },
+    {
+      "offset": 310,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 315,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 320,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 330,
+      "type": 0,
+      "raw": 175,
+      "value": 175
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 340,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 350,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 355,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 360,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 365,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 370,
+      "type": 6,
+      "raw": 4372872,
+      "value": "Common/HitEffect/SplashBloodLarge.img"
+    },
+    {
+      "offset": 375,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 380,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 385,
+      "type": 0,
+      "raw": 4294967234,
+      "value": -62
+    },
+    {
+      "offset": 390,
+      "type": 0,
+      "raw": 4294967260,
+      "value": -36
+    },
+    {
+      "offset": 395,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 400,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 405,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 410,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 415,
+      "type": 0,
+      "raw": 175,
+      "value": 175
+    },
+    {
+      "offset": 420,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 425,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 430,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 435,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 440,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 445,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 450,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 455,
+      "type": 6,
+      "raw": 4372872,
+      "value": "Common/HitEffect/SplashBloodLarge.img"
+    },
+    {
+      "offset": 460,
+      "type": 0,
+      "raw": 5,
+      "value": 5
+    },
+    {
+      "offset": 465,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 470,
+      "type": 0,
+      "raw": 4294967234,
+      "value": -62
+    },
+    {
+      "offset": 475,
+      "type": 0,
+      "raw": 4294967260,
+      "value": -36
+    },
+    {
+      "offset": 480,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 485,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 490,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 495,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 500,
+      "type": 0,
+      "raw": 175,
+      "value": 175
+    },
+    {
+      "offset": 505,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 510,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 515,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 520,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 525,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 530,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 535,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 540,
+      "type": 6,
+      "raw": 4372872,
+      "value": "Common/HitEffect/SplashBloodLarge.img"
+    },
+    {
+      "offset": 545,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 550,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 555,
+      "type": 0,
+      "raw": 4294967234,
+      "value": -62
+    },
+    {
+      "offset": 560,
+      "type": 0,
+      "raw": 4294967260,
+      "value": -36
+    },
+    {
+      "offset": 565,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 570,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 575,
+      "type": 2,
+      "raw": 1071225242,
+      "value": 1.7000000476837158
+    },
+    {
+      "offset": 580,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 585,
+      "type": 0,
+      "raw": 175,
+      "value": 175
+    },
+    {
+      "offset": 590,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 595,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 600,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 605,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 610,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    }
+  ],
+  "raw_sha256": "21642969fb39b9482059ad69b6a7cfcb22edb2923fde172cc286effa49286cd8"
+}

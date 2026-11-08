@@ -1,0 +1,13 @@
+{
+  "routes": [
+    "monster/goblin/animation_goblin/damage1.ani",
+    "monster/goblin/animation_goblin/damage2.ani",
+    "monster/goblin/animation_goblin/down.ani"
+  ],
+  "act_path": "monster/newmonsters/goblin/guardianarcher/animation/damage2.ani",
+  "act_instructions_executed": false,
+  "mirrored_contact": "几何接触：equipment/character/swordman/weapon/club/clubc/hardattack.ani · 攻击盒 0 → 受击盒 0。接受命中、扣血和状态变化尚未执行。",
+  "page_errors": [],
+  "server_errors": [],
+  "original_game_visual_comparison": false
+}

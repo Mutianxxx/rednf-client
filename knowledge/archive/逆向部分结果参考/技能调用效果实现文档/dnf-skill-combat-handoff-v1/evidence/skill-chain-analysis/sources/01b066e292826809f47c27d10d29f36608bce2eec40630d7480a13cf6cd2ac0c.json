@@ -1,0 +1,317 @@
+{
+  "path": "passiveobject/character/swordman/particle/outragebreak_drops.ptl",
+  "fields": [
+    {
+      "tag": "[creation pos]",
+      "values": [
+        450,
+        100,
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[changing term]",
+      "values": [
+        1000
+      ],
+      "offset": 20
+    },
+    {
+      "tag": "[changing type]",
+      "values": [
+        "[keep changing]"
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[rotation angle]",
+      "values": [
+        1,
+        1,
+        1
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[life time]",
+      "values": [
+        600
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[transparent value]",
+      "values": [
+        100,
+        95
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[creation frequency]",
+      "values": [
+        30.0
+      ],
+      "offset": 85
+    },
+    {
+      "tag": "[maximum create time]",
+      "values": [
+        500
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[create area size]",
+      "values": [
+        400,
+        300,
+        0
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[rotation angle range type]",
+      "values": [
+        "[rectangle]"
+      ],
+      "offset": 125
+    },
+    {
+      "tag": "[object type]",
+      "values": [
+        "[animation]"
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[object]",
+      "values": [
+        "../Animation/OutRageBreak/particle/outragebreak_drops_1.ani",
+        -1,
+        "../Animation/OutRageBreak/particle/outragebreak_drops_2.ani",
+        -1
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[/object]",
+      "values": [],
+      "offset": 170
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 19630050,
+      "value": "[creation pos]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 450,
+      "value": 450
+    },
+    {
+      "offset": 10,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 19618820,
+      "value": "[changing term]"
+    },
+    {
+      "offset": 25,
+      "type": 0,
+      "raw": 1000,
+      "value": 1000
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 19618852,
+      "value": "[changing type]"
+    },
+    {
+      "offset": 35,
+      "type": 6,
+      "raw": 19627902,
+      "value": "[keep changing]"
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 19630116,
+      "value": "[rotation angle]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 55,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 19615972,
+      "value": "[life time]"
+    },
+    {
+      "offset": 65,
+      "type": 0,
+      "raw": 600,
+      "value": 600
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 19630150,
+      "value": "[transparent value]"
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 95,
+      "value": 95
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 19630190,
+      "value": "[creation frequency]"
+    },
+    {
+      "offset": 90,
+      "type": 2,
+      "raw": 1106247680,
+      "value": 30.0
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 19631228,
+      "value": "[maximum create time]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 500,
+      "value": 500
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 19630280,
+      "value": "[create area size]"
+    },
+    {
+      "offset": 110,
+      "type": 0,
+      "raw": 400,
+      "value": 400
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 300,
+      "value": 300
+    },
+    {
+      "offset": 120,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 125,
+      "type": 3,
+      "raw": 19630318,
+      "value": "[rotation angle range type]"
+    },
+    {
+      "offset": 130,
+      "type": 6,
+      "raw": 19630374,
+      "value": "[rectangle]"
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 19606058,
+      "value": "[object type]"
+    },
+    {
+      "offset": 140,
+      "type": 6,
+      "raw": 19630450,
+      "value": "[animation]"
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 19630474,
+      "value": "[object]"
+    },
+    {
+      "offset": 150,
+      "type": 6,
+      "raw": 43337272,
+      "value": "../Animation/OutRageBreak/particle/outragebreak_drops_1.ani"
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 160,
+      "type": 6,
+      "raw": 43337392,
+      "value": "../Animation/OutRageBreak/particle/outragebreak_drops_2.ani"
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 170,
+      "type": 3,
+      "raw": 19630672,
+      "value": "[/object]"
+    }
+  ],
+  "raw_sha256": "01b066e292826809f47c27d10d29f36608bce2eec40630d7480a13cf6cd2ac0c"
+}

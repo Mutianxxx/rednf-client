@@ -1,0 +1,12 @@
+{
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "all_curated_excerpts_match_source": true,
+  "curated_excerpt_count": 35,
+  "anchor_count": 10,
+  "factory_six_cases_verified": true,
+  "opcode5_branch_verified": true,
+  "constructor_vtable_writes_verified": 6,
+  "checked_by": "build_report.py",
+  "runtime_validation": false,
+  "local_success_fallthrough_paths_verified_against_source": 130
+}

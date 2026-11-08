@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-19T14:58:31.735664+00:00",
+  "target": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "source": "D:\\dnf\\60US\\analysis\\unpack_attempts\\001\\DFO_fixed_v3_imports_v4.exe",
+  "backup": "D:\\dnf\\60US\\analysis\\unpack_attempts\\001\\launcher_test\\DFO_fixed_v3.original.exe",
+  "original_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "installed_sha256": "bdd14a558658dd0b20def0aa9fa4b355b98855075a05ba6de7f60c4da695495e",
+  "normal_launcher_result": "D-drive v4 process identity verified and runtime module captured; user confirmed this D-drive version is normal. This is user-reported gameplay validation, not an instrumented combat trace.",
+  "user_validation": {
+    "reported_date_local": "2026-10-19",
+    "reported_text": "D盘版本一斤确认，没问题",
+    "source": "user message after D-drive restart and path verification",
+    "status": "user-confirmed-normal",
+    "character_and_skill": "not specified",
+    "independent_combat_call_trace_recorded": false
+  },
+  "launcher_configuration_changed": false,
+  "verified_process_pid": 56460,
+  "verified_process_path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "process_disk_sha256": "bdd14a558658dd0b20def0aa9fa4b355b98855075a05ba6de7f60c4da695495e",
+  "runtime_capture": "D:\\dnf\\60US\\analysis\\unpack_attempts\\001\\launcher_test\\live-56460-20261019T150836Z\\capture.json",
+  "capture_did_not_suspend_or_modify_target": true,
+  "previous_g_drive_test_note": "Previous user-reported successful combat occurred in G-drive original v3 process PID 4320, SHA256 a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b. Do not attribute that combat result to the D-drive v4.",
+  "updated_utc": "2026-10-19T15:13:20.385791+00:00"
+}

@@ -1,0 +1,116 @@
+﻿{
+  "SchemaVersion": 1,
+  "FileType": "twn",
+  "Comments": [
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "area",
+      "Title": "城镇区域定义块",
+      "Comment": "城镇区域闭合块。官方样例依次给出从 0 连续编号的 area 索引、map/ 下的直接地图路径、可选 [minimap rect]（各 step 的起点/终点 X/Y），再给区域类型 token；类型可为 normal、gate、fishing place、pub、dungeon gate，后续整数按类型解释。dungeon gate 的入口数字需通过 worldmap/worldmap.lst 解析；静态配置不证明移动、传送或 UI 正常。",
+      "OfficialDescription": "#### 官方示例: townsample.twn\n\n```pvf\n[area]\t\t\t\t\t\t// 区域 (AREA) 的一个信息\n0\t\t\t\t\t\t// 索引。从 0 开始并使用连续的值\n`Town/HendonMyre/Gate.map`\t\t\t// 地图脚本文件名称 (Script/Map 下的相对路径)\n`[minimap rect]`\n1000\t100\t\t2500\t500\t\t\t// 起点(x, y) 终点(x, y) step 0\n100\t\t10\t\t250\t\t50\t\t\t// 起点(x, y) 终点(x, y) step 1\n`[/minimap rect]`\n`[gate]`\t\t\t\t\t// 区域类型。在 `[normal]` `[gate]` `[fishing place]` `[pub]` `[dungeon gate]` 中选择\n273\t\t\t\t\t\t// 根据区域类型的整数数据。使用方法在最底部\n222\n[/area]\n```",
+      "Closing": true,
+      "Authors": "pvf"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "at swordman",
+      "Title": "女鬼剑士",
+      "Comment": "女鬼剑士",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "dungeon gate",
+      "Title": "副本入口",
+      "Comment": "副本入口，在worldmap.lst 中被定义",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "pvf"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "entering title",
+      "Title": "进入城镇时的标题动画",
+      "Comment": "进入城镇时的标题动画\n例如：埃尔文防线，赫顿马尔，这些大字",
+      "OfficialDescription": "#### 官方示例: townsample.twn\n\n```pvf\n[entering title] `TitleAnimation/HendonMyre.ani`\t// 用作标题的动画。将动画的中心对准屏幕中央。\n```",
+      "Closing": false,
+      "Authors": "王良一"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "minimap rect",
+      "Title": "小地图上可以移动的区域",
+      "Comment": "小地图上可以移动的区域",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "依旧"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "name",
+      "Title": "城镇名称",
+      "Comment": "城镇名称：该城镇在世界地图和游戏内显示的显示名称。通过反引号 token 引用字符串表中的文本。",
+      "OfficialDescription": "#### 官方示例: townsample.twn\n\n```pvf\n[name] `亨顿迈尔`\t\t\t\t// 名称\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "cutscene image",
+      "Title": "过场图像",
+      "Comment": "过场图像：进入该城镇时播放的过场画面。第一个参数为 IMG 文件名，第二个参数为帧索引。",
+      "OfficialDescription": "#### 官方示例: townsample.twn\n\n```pvf\n[cutscene image] `CutScene.img` 0\t\t\t// 过场图像文件名称，帧索引\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "dungeon what must be cleared",
+      "Title": "前置副本要求",
+      "Comment": "前置副本要求：进入该城镇前必须通关的副本索引。值为 -1 时表示无前置副本要求，可直接进入。",
+      "OfficialDescription": "#### 官方示例: townsample.twn\n\n```pvf\n[dungeon what must be cleared] -1\t\t\t\t\t// 为进入而必须清除的地下城索引。-1 表示无\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "limit level",
+      "Title": "城镇进入等级限制",
+      "Comment": "城镇或入口层级的单数值等级限制线索。静态数值不证明服务端最终放行、任务条件或角色能实际到达。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "need quest",
+      "Title": "城镇进入任务条件",
+      "Comment": "城镇进入所需的任务 ID 条件线索。数字必须通过任务 registry 解析；静态配置不证明任务已接、已完成或服务端允许进入。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "twn",
+      "Section": "only server parsing dungeon what must be cleared",
+      "Title": "服务端解析的前置副本条件",
+      "Comment": "倾向由服务端解析的前置副本清理条件。数字应通过 dungeon/dungeon.lst 复核；静态存在不能证明服务端实际执行、账号进度或入口放行。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    }
+  ]
+}

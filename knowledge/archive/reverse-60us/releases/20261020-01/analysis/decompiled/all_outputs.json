@@ -1,0 +1,125 @@
+{
+  "warning": "Unreviewed angr pseudocode. Guessed prototypes/register arguments/SEH/protected fields can be wrong. Not original source; not directly compilable.",
+  "outputs": [
+    {
+      "file": "00550e10_func_00550e10.c",
+      "size": 1751,
+      "sha256": "845c9787261ef8061d881289546c65949d13e5d04645a83772ceca7cd260de78"
+    },
+    {
+      "file": "00550f60_func_00550f60.c",
+      "size": 1140,
+      "sha256": "54548fa7a2339c56e8bfb9af507c6ccb49a834561d1ac71e65797259660bb175"
+    },
+    {
+      "file": "00551ad0_func_00551ad0.c",
+      "size": 41493,
+      "sha256": "b0b5190f30dca78d5e29b4159822890d5287f13e7ab1cc39da7b31621600391b"
+    },
+    {
+      "file": "0082f790_script_open.c",
+      "size": 261,
+      "sha256": "53c81bc7c858ccc5719ced09b747fd3cf1d75d75e69c16b7467ecca76ca59b32"
+    },
+    {
+      "file": "0082f7d0_script_read_int.c",
+      "size": 785,
+      "sha256": "c0f4764a50247e0447acecfbcdcb25989a550d842814424c2b0ed1c9062cf905"
+    },
+    {
+      "file": "0082f860_script_read_float.c",
+      "size": 879,
+      "sha256": "5cf8292e68c224d5a8c9a886305f21718e20344f47cae00b5d2f54b0be6725ac"
+    },
+    {
+      "file": "0082fde0_script_init.c",
+      "size": 1801,
+      "sha256": "903dbeb4edecf1c5684e27c0d9674a97e2f14e80ff85c73186cc0ab9493a0ddb"
+    },
+    {
+      "file": "008316f0_func_008316f0.c",
+      "size": 5651,
+      "sha256": "5db7ca7edc83fb4758e3d839d1d70bdebe7868d074f6235d97e76d639719c9b1"
+    },
+    {
+      "file": "008a0ae0_skill_list_init.c",
+      "size": 4193,
+      "sha256": "a0d9c854c08e33cb4f57068ea2c9d944f62dcacc5a17495c70449a4c8faf77a5"
+    },
+    {
+      "file": "008a0da0_skill_parse_properties.c",
+      "size": 50183,
+      "sha256": "4c75d5a26295a8ef2e2d35a162983a046858692343264d95832bbd7d347a899b"
+    },
+    {
+      "file": "008a2940_skill_load_class.c",
+      "size": 2081,
+      "sha256": "9fb937bb298b01362cfb40bd72d0e360f1e4c35fddd573f48662f470c9a4f70a"
+    },
+    {
+      "file": "008b2950_script_reader_open.c",
+      "size": 244,
+      "sha256": "82edbf2a01cbf40508f9ea67bf7579ac6ca116a86fb08edecfea2cb9097ba7d9"
+    },
+    {
+      "file": "008b2970_script_reader_next_type.c",
+      "size": 1097,
+      "sha256": "d52a7f6f89e12ff25ac5ee7439cada2bdf5eb3e6a138fd3c19c728ebe76d2b10"
+    },
+    {
+      "file": "00a54e70_pvf_decrypt_verify.c",
+      "size": 1210,
+      "sha256": "f8e5ecd271f7114f545fcae08b73a53de0e019efc4c38967e01ee9f5f0932ebf"
+    },
+    {
+      "file": "00a54f80_path_hash.c",
+      "size": 405,
+      "sha256": "bbf186b3d62b9ad37f91cc3ebe7b8be69935caca8b41e25115f5322cecbd078d"
+    },
+    {
+      "file": "00a55170_pvf_read_entry_stream.c",
+      "size": 3502,
+      "sha256": "aa2999c35c9685c40e31645627cc36a2f975bd6b0889ea0ad867b59d5d736581"
+    },
+    {
+      "file": "00a55320_pvf_read_entry_buffer.c",
+      "size": 3627,
+      "sha256": "69afda71f019afb81d159596d6cdfcb6f4e1d2b85fd7d32781db32207cd518b3"
+    },
+    {
+      "file": "00a55fa0_pvf_read_tree_entry.c",
+      "size": 795,
+      "sha256": "4874a2aa77ffb98e3d9ba707ca2eb054490d63e616fa8a56668a6a37f8cc84fe"
+    },
+    {
+      "file": "00a56000_func_00a56000.c",
+      "size": 3315,
+      "sha256": "72101ebf5d0e8a93df40bdf346e52c06e902ecd74ebdeee3eb6a306aa4bd39b6"
+    },
+    {
+      "file": "00a570d0_pvf_open_archive.c",
+      "size": 5061,
+      "sha256": "808e1d84f43a96e9c508eb14939b08245443f2db278657d29e694e84e533e8fc"
+    },
+    {
+      "file": "00b099b0_func_00b099b0.c",
+      "size": 256,
+      "sha256": "bd5a5300ccece20dae7105a6370d1592f1c667261cb1b042629d0e8d5b86eed4"
+    },
+    {
+      "file": "00b8b5c0_func_00b8b5c0.c",
+      "size": 3280,
+      "sha256": "0a0ea99158b85824114427411eb8f424e8dc7363793fdc65f059e200d97ef816"
+    },
+    {
+      "file": "00b8b7a0_text_reader_next_token.c",
+      "size": 452,
+      "sha256": "3497cd8be908833eab32843611d12cb0d35bb8b9fd53d7fd778d87f35a8867ef"
+    },
+    {
+      "file": "00b8ba50_text_reader_open.c",
+      "size": 452,
+      "sha256": "158a683933b36f6e4d36b42951c527da501f4f6eddacbbc40b188bc63afc59f1"
+    }
+  ]
+}

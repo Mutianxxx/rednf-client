@@ -1,0 +1,277 @@
+{
+  "schema": "60us-bounded-damage-numeric-contract-v1",
+  "source": {
+    "executable": "DFO/DFO_fixed_v3.exe",
+    "executable_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "pvf": "DFO/Script.pvf",
+    "pvf_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "current_atk": "passiveobject/character/swordman/attackinfo/releasewave.atk",
+    "current_atk_sha256": "fe3e07bef0c29ea27016783ecf9effbb6ab64bc0b149dcaf1db231300d6ca50f",
+    "encoding": "cp949"
+  },
+  "status": "static-client-evidence-and-284-native-arithmetic-fixtures-not-client-runtime-or-final-hp-damage",
+  "interface": {
+    "incoming": "binary32 B at8B8808 after element and random-variation stages",
+    "outgoing": "8B8B41 x87 value and last FST binary32 store; later factors and final integer are excluded",
+    "runtime_operands": "numeric_* byte offsets plus explicitly supplied protected globals, 448C10 samples, RNG return and mode tables",
+    "callback": "victim.slot320 effects excluded; combined model requires an explicit no-mutation snapshot declaration"
+  },
+  "functions": {
+    "defense": "8B7C90; ordinary caller8B8835",
+    "critical": "8B7AB0; caller8B8A82",
+    "defense_caller": "8B8808..8B88BF",
+    "attacker_stat": "8B88BF..8B893A",
+    "absolute": "8B893A..8B8A62",
+    "postcritical": "8B8A87..8B8B41"
+  },
+  "field_origins": [
+    {
+      "numeric_offset": "+5",
+      "storage": "int8",
+      "source": "ATK+18 attack type, packed4EB98D",
+      "meaning": "0 physic,1 magic,2 ignore defense enumeration"
+    },
+    {
+      "numeric_offset": "+e",
+      "storage": "byte",
+      "source": "ATK+138 protected int,4EBA4E..5C; [ignore defense] boolean parser837961..7996",
+      "meaning": "gates defense stage and absolute victim subtraction"
+    },
+    {
+      "numeric_offset": "+f",
+      "storage": "float32",
+      "source": "ATK+8 protected int converted f32,4EBA62..73; [absolute damage] parser836D46",
+      "meaning": "absolute component input"
+    },
+    {
+      "numeric_offset": "+13",
+      "storage": "float32",
+      "source": "ATK+100 protected float,4EBA79..84; [critical hit] parser837800..782D",
+      "meaning": "ATK critical rate addend"
+    },
+    {
+      "numeric_offset": "+17",
+      "storage": "float32",
+      "source": "ATK+1A4 protected float,4EBA8A..8F; parser tag not established",
+      "meaning": "additional rate when numeric1B5 true"
+    },
+    {
+      "numeric_offset": "+1b",
+      "storage": "float32",
+      "source": "ATK+1AC protected float,4EBA9B..AA0; parser tag not established",
+      "meaning": "postcritical multiplier percent"
+    },
+    {
+      "numeric_offset": "+1f/23/27",
+      "storage": "float32",
+      "source": "ATK+140/+148/+150 decoded int to f32,4EBAC0..BB2B",
+      "meaning": "[human/fort/monster damage rate], independent runtime c3/c4/c5 gates"
+    },
+    {
+      "numeric_offset": "+4b/4f/53/57",
+      "storage": "float32 bit patterns",
+      "source": "owner.slot2A4().slot344(3) protected +2C8/+2D0/+2D8/+2E0,4EC5A5..800; absent-owner branch writes0",
+      "meaning": "kind0/1 critical and numeric1B5 critical additions"
+    },
+    {
+      "numeric_offset": "+5b",
+      "storage": "float32",
+      "source": "4EBB63..87,521FF0 from owner context and level",
+      "meaning": "alternate numeric18E critical addend"
+    },
+    {
+      "numeric_offset": "+5f",
+      "storage": "float32",
+      "source": "attacker protected+518,4EBD2F..67",
+      "meaning": "shared victim-reduction coefficient; packing uses max(1-value,0)"
+    },
+    {
+      "numeric_offset": "+63/67",
+      "storage": "int32",
+      "source": "attacker.slot1E0/1F0,4EBD6B..81",
+      "meaning": "weapon contribution to absolute component"
+    },
+    {
+      "numeric_offset": "+6f",
+      "storage": "float32",
+      "source": "owner.slot2A4().slot500(attacker,victim),4EBDCF..E2; no owner writes0",
+      "meaning": "critical multiplier when flags195 mask11 matches"
+    },
+    {
+      "numeric_offset": "+8b",
+      "storage": "int32",
+      "source": "victim.slot344(3) ->4B5680,4EBE48..55",
+      "meaning": "kind0 defense base"
+    },
+    {
+      "numeric_offset": "+8f",
+      "storage": "int32",
+      "source": "victim.slot344(3) protected+310,4EBED0",
+      "meaning": "kind0 defense bonus percent"
+    },
+    {
+      "numeric_offset": "+93",
+      "storage": "float32",
+      "source": "victim.slot344(3) protected+2A8,4EBEE4..EF",
+      "meaning": "kind0 extra reduction percent"
+    },
+    {
+      "numeric_offset": "+97",
+      "storage": "int32",
+      "source": "victim.slot344(3) ->4B5760,4EBEFB..F08",
+      "meaning": "kind1 defense base"
+    },
+    {
+      "numeric_offset": "+9b",
+      "storage": "int32",
+      "source": "victim.slot344(3) protected+320,4EBF95",
+      "meaning": "kind1 defense bonus percent"
+    },
+    {
+      "numeric_offset": "+9f",
+      "storage": "float32",
+      "source": "victim.slot344(3) protected+2C0,4EBFA9..FB4",
+      "meaning": "kind1 extra reduction percent"
+    },
+    {
+      "numeric_offset": "+a3/a7",
+      "storage": "float32",
+      "source": "victim.slot344(3) protected+38/+40 and+58/+60 calculation,4EBFC0..4EC15C",
+      "meaning": "additional flat subtraction, not the defense-ratio numerator"
+    },
+    {
+      "numeric_offset": "+ab",
+      "storage": "float32",
+      "source": "victim protected+510,4EC154..199",
+      "meaning": "weapon absolute contribution coefficient; packing uses max(1-value,0)"
+    },
+    {
+      "numeric_offset": "+af/b3",
+      "storage": "int32",
+      "source": "victim.slot344(3) protected+2A0/+2B8,4EC21C/2AA",
+      "meaning": "absolute subtraction operands"
+    },
+    {
+      "numeric_offset": "+b7/bb",
+      "storage": "int32",
+      "source": "conditional victim.slotE4 protected+294,4EC39F..3EF",
+      "meaning": "additional absolute subtraction operands"
+    },
+    {
+      "numeric_offset": "+bf",
+      "storage": "float32",
+      "source": "victim.slot344(3) protected+2F8,4EC2BE..2C9",
+      "meaning": "critical rate subtractend"
+    },
+    {
+      "numeric_offset": "+18a",
+      "storage": "int8",
+      "source": "global mode packed4EC90F",
+      "meaning": "mode4 fixed level50,mode6/7 runtime table level"
+    },
+    {
+      "numeric_offset": "+18b",
+      "storage": "int8",
+      "source": "attacker.slot1D0 low byte packed4EC930",
+      "meaning": "signed level for ordinary mode"
+    },
+    {
+      "numeric_offset": "+195/199",
+      "storage": "uint32",
+      "source": "runtime type masks, caller packing",
+      "meaning": "attacker/victim branch masks; do not replace with assumed player flags"
+    },
+    {
+      "numeric_offset": "+1b5",
+      "storage": "byte",
+      "source": "4E90F0(victim,attacker) result packed4EB832",
+      "meaning": "direction-dependent rate-addition predicate"
+    },
+    {
+      "numeric_offset": "+1bc",
+      "storage": "byte",
+      "source": "43ABF0(-1) result packed4EC91B",
+      "meaning": "doubles protected denominator scale"
+    }
+  ],
+  "ordinary_defense": {
+    "gate": "(flags199&0x11)==0x11 && type!=2 && !numericE",
+    "defense": "f32(baseInt*(1+bonusInt*f32(.01))); then f32(*448C10(victim,1))",
+    "ratio": "f32(D / max(1, K*level + D)); K is protected10BFEB0(type0) or10BFED0(type1), doubled if1BC",
+    "low_level_exception": "ONLY D<0 && signedEffectiveLevel<10: ratio=f32(D*f32(.0025))",
+    "extra": "f32(numeric93_or9F*f32(.01))",
+    "caller": "f32(B*((1-ratio)-extra*numeric5F)), then flat stat/divisor subtraction"
+  },
+  "critical": {
+    "base_constant": 3,
+    "scale_constant": 100,
+    "threshold": "critical iff x87(effectiveRateF32*100) > signedRNGReturn % 10000; IDIV remainder truncates toward zero",
+    "rate_clamp": false,
+    "return_and_byte": "AL and numeric+1A5",
+    "multiplier": "protected10BFE90 * numeric6F when flags195 mask0x11 matches",
+    "null_pointer": "8B7AB0 returns AL0 for null damage pointer; bounded caller always passes nonnull; standalone model requires a value"
+  },
+  "absolute": {
+    "applies_to_types": [
+      0,
+      1
+    ],
+    "expression": "(numericF + [weaponApply ? int63_or67*numericAB : 0]) * (1+bonus6*.01) * (1+numeric37_or3B*.01)",
+    "precision": "store absolute component f32 before attacker context7/9 multiplier and addition",
+    "victim_subtraction": "when flags199 mask11 && !numericE: f32(intAF_orB3*numeric5F+intB7_orBB)*victimContext8/10",
+    "warning": "bypasses earlier percentage-defense stage, but still receives these bonuses, victim subtraction, critical and later multipliers"
+  },
+  "postcritical": {
+    "conditional_1a6_constant_va": "DF5190",
+    "conditional_1a6_constant_f32": 1.100000023841858,
+    "difference": "numeric1A7=trunc((B*constant)-B), with extended product retained for further multiplication",
+    "scales": "numeric1B*.01*int1AC*.01, conditional categories1F/23/27*.01, optional6B",
+    "minimum": "max(value,1) only at8B8B29; later numeric stages can alter it",
+    "precision": "FST8B8AD2/AE0/AF6/B0C/B26 stores f32 but keeps extended x87 stack value"
+  },
+  "current_releasewave": {
+    "attack_type": 1,
+    "absent_tags": [
+      "damage",
+      "absolute damage",
+      "damage bonus",
+      "weapon damage apply",
+      "critical hit",
+      "ignore defense"
+    ],
+    "inherited_evidence": "existing scalar/consumer contract establishes positive scalar as installed current damage under explicit no-action-override context",
+    "unproven": "Do not derive live critical rate, protected global denominator scales, owner stats or final damage from this ATK alone."
+  },
+  "references": [
+    {
+      "path": "analysis/combat_spawned_object/resources.json",
+      "sha256": "d8a455103c3997fba3501ca93ee181ff72ec3b62e1b1a8b6b6a8835798a09a30"
+    },
+    {
+      "path": "analysis/combat_spawned_object/pvf/passiveobject__character__swordman__attackinfo__releasewave.atk.raw",
+      "sha256": "fe3e07bef0c29ea27016783ecf9effbb6ab64bc0b149dcaf1db231300d6ca50f"
+    },
+    {
+      "path": "analysis/combat_spawned_object/scalar/scalar-contract.json",
+      "sha256": "7da13378bfc6de302ff18f5fc5a1cfd8e17bc83225c862cd32c125fc013250b7"
+    },
+    {
+      "path": "analysis/combat_spawned_object/scalar/consumer/consumer-contract.json",
+      "sha256": "eeb83c5f9398d78d84d9ae312fe93bb89f4ea6dbc6ad9b899ad91257ef7f0fd1"
+    },
+    {
+      "path": "analysis/combat_attackinfo/hardattack-attackinfo-contract.json",
+      "sha256": "3aa3d6ca8a7646676437308e58dfce754ca4ee8ed33e203869324fd2c48fcc7c"
+    },
+    {
+      "path": "analysis/combat_spawned_object/scalar/consumer/008B8650-numeric_full.bin",
+      "sha256": "47191821bef2bf6980b397603696f5f87bc6a1cd4059f19f75a8c940e39bcfde"
+    }
+  ],
+  "boundaries": [
+    "Earlier8B8650 element and random variation are supplied as incoming B, not reconstructed here.",
+    "8B8B41..8B8E9C includes factor arrays, mode4/HP-dependent paths, later additions, C01544 and numeric1BD.",
+    "4B28D0 may change returned numeric integer before ordinary4B312F HP subtraction.",
+    "Original process, collision, graphics and final HP damage are not exercised by the synthetic harness."
+  ]
+}

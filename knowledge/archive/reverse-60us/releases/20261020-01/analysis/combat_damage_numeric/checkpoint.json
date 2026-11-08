@@ -1,0 +1,160 @@
+{
+  "status": "checkpoint_saved_priority_changed_to_unpack_completeness_audit",
+  "native_matches": 284,
+  "native_mismatches": 0,
+  "original_client_runtime": false,
+  "final_victim_damage": null,
+  "files": [
+    {
+      "path": "004EB780-numeric_packing.asm",
+      "size": 86792,
+      "sha256": "130f86195b6379b78cea874f894bbed8ab10c1bc5a9c82f718e45417c3d97013"
+    },
+    {
+      "path": "004EB780-numeric_packing.bin",
+      "size": 4736,
+      "sha256": "15aa024f4fc6c2706659995265dbe3b036267824627707353d7257e41bd20b02"
+    },
+    {
+      "path": "008377FD-atk_critical_and_category_parse.asm",
+      "size": 14915,
+      "sha256": "75e60468cf4584bd9a82636501b599720d0d9f18f9131ddbe16ed2f2d02c44cb"
+    },
+    {
+      "path": "008377FD-atk_critical_and_category_parse.bin",
+      "size": 880,
+      "sha256": "f9f545c96b7d81b8bd3ba075168aa00ba46ada856b574174744c82706656ad22"
+    },
+    {
+      "path": "008B7AB0-critical.asm",
+      "size": 6739,
+      "sha256": "4558d3884a2d8322a09b15804c0eb0ec58400a180eb93a9b223d7d37e495b801"
+    },
+    {
+      "path": "008B7AB0-critical.bin",
+      "size": 315,
+      "sha256": "258d5475a36b435683bb8b08f8860df685c270037794b517c224a85e0e0b11b4"
+    },
+    {
+      "path": "008B7C90-defense.asm",
+      "size": 7544,
+      "sha256": "8202ebd6ba102e4d7a803041400942ee01b0460de45bc598f450968cb3178ae5"
+    },
+    {
+      "path": "008B7C90-defense.bin",
+      "size": 404,
+      "sha256": "5f375d3eef2c1ae04c1cf65f046feccde21f2e192714daa73a29f64dfc410235"
+    },
+    {
+      "path": "008B87EB-numeric_consumers.asm",
+      "size": 15114,
+      "sha256": "1ac3a04dce604edb1f7e5974a8bc344e7865f812ef4979af23d4e708e7ca86b2"
+    },
+    {
+      "path": "008B87EB-numeric_consumers.bin",
+      "size": 854,
+      "sha256": "b00277fa354dbd662c6838e3f506fdc6755ccdbbd1fb39d64495bc07ebb2dcc4"
+    },
+    {
+      "path": "00CC10AC-percent_constant.bin",
+      "size": 4,
+      "sha256": "0d66bd808e9247acb560fe33efaa62ad6f11ee6f85cc4f61bd17673263de04ee"
+    },
+    {
+      "path": "00CC1F58-one_constant.bin",
+      "size": 4,
+      "sha256": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c"
+    },
+    {
+      "path": "00CCB578-critical_base_constant.bin",
+      "size": 4,
+      "sha256": "ea2845900b5856c9bf354b1aa9761b5aa6888e5ed61738fe9579ca42bc0f6054"
+    },
+    {
+      "path": "00CCB9D8-critical_scale_constant.bin",
+      "size": 4,
+      "sha256": "2238f30df488055daf5e8f362cf904e370011a172d20df193c1b7ae8e5db8e01"
+    },
+    {
+      "path": "00D5A848-low_level_defense_constant.bin",
+      "size": 4,
+      "sha256": "48d80cf1e5f92c5011698b07ad46af99eb7506f6b8ff0cfc73e648dfc3651738"
+    },
+    {
+      "path": "00DF5190-postcritical_constant.bin",
+      "size": 4,
+      "sha256": "e7d9a957c3c942d3551b291f30acbb11064e373eb6adcf4dc54671f8a64f965f"
+    },
+    {
+      "path": "00E9D7A4-low_defense_constant.bin",
+      "size": 4,
+      "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119"
+    },
+    {
+      "path": "095-damage-defense.c",
+      "size": 2153,
+      "sha256": "54ff090687aa35aada59b6b3aebf958f6ead4aca81637227a0496b0bcccc7b49"
+    },
+    {
+      "path": "096-damage-scale.c",
+      "size": 2102,
+      "sha256": "b8e7e0b9be71114db03127ccfbb1c7198b9eced7f1e3cc34ea9d89e6fe9e2804"
+    },
+    {
+      "path": "build_contract.py",
+      "size": 9572,
+      "sha256": "01b813efaad9ab85cc2405b0a968b91fd3844ac92c67b03bc6fa94fe4738700b"
+    },
+    {
+      "path": "capture.py",
+      "size": 2080,
+      "sha256": "6f1da4292a9fedce980724d33539ff1a63f1acbe2fa777ce25b14a4e83b208b4"
+    },
+    {
+      "path": "declared-examples.json",
+      "size": 25944,
+      "sha256": "5c9467090683550f59d4c81a3ace852bbcdb60a8abfea1911aa5da13e6ae4f1a"
+    },
+    {
+      "path": "evidence.json",
+      "size": 6088,
+      "sha256": "13bd9e34031e63909a3eb58431f89bb2f6dcc09b1bca40bdd243ad15ee6012d4"
+    },
+    {
+      "path": "native-numeric-harness.exe",
+      "size": 349696,
+      "sha256": "80bf20cb80ff4fe9f7514bd77992160b99ca8a1c176c019b77c64eb38d41104b"
+    },
+    {
+      "path": "native-output.bin",
+      "size": 6816,
+      "sha256": "287952425f8a5c03220a98455b6011935de18d1bd893024962160ed10327e5ad"
+    },
+    {
+      "path": "native-vectors.json",
+      "size": 1012970,
+      "sha256": "40837a8c045939a9b2453d96c7c00b7ebb98f4a6c7a0a3c520da4d9c167b5613"
+    },
+    {
+      "path": "native_verify.py",
+      "size": 13086,
+      "sha256": "4a716c7bb80e39f342f2dabc0fc600675b14d5a7d9d5fec5de517edfe1c076a3"
+    },
+    {
+      "path": "numeric-contract.json",
+      "size": 11389,
+      "sha256": "c18b8cf341b16476fd0c6c77f632eb62a10323aa4a5528e8ef2a2917b5e3f50b"
+    },
+    {
+      "path": "numeric_model.py",
+      "size": 8516,
+      "sha256": "5e4f6709814c0927f4862a48ddb702b17abdbd455a674a3ff5d13a16b567bcd3"
+    },
+    {
+      "path": "README.md",
+      "size": 6646,
+      "sha256": "50b2c9cbe11185a0c9bac8cf2dca951bad09f179deb23817461916336e27b92b"
+    }
+  ],
+  "remaining": "Independent aggregate contract/field-origin verification script not added; later numeric stages remain outside model."
+}

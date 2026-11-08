@@ -1,0 +1,206 @@
+{
+  "native_fixture_comparisons": 24,
+  "native_harness_sha256": "ce4c65c68c5dacbf55a16115d9cf02edaa139e4026b921cadbe48114022a26a2",
+  "native_game_clock_observed": false,
+  "source_delay_clock_rate": 100,
+  "real_cases": [
+    {
+      "path": "character/swordman/effect/animation/soulbringer1.ani",
+      "frame": 0,
+      "time": 250,
+      "render": {
+        "rgba": [
+          255,
+          255,
+          255,
+          127
+        ],
+        "rate": [
+          0.4000000059604645,
+          0.32500001788139343
+        ],
+        "source_rotation_radians": 0,
+        "canvas_rotation_radians": 0,
+        "image_position": [
+          -7,
+          -65
+        ],
+        "graphic_effect": "NONE",
+        "composite": "source-over",
+        "effect_supported": true,
+        "interpolation": {
+          "requested": true,
+          "enabled": true,
+          "active": true,
+          "next_frame": 1,
+          "elapsed": 250,
+          "span": 500,
+          "ratio": 0.5,
+          "clock": "source-delay-rate-100",
+          "native_game_clock_observed": false
+        }
+      },
+      "source": {
+        "file_number": 640149417,
+        "path": "character/swordman/effect/animation/soulbringer1.ani",
+        "size": 760,
+        "crc": "f9debc0e",
+        "relative_offset": 21077760,
+        "absolute_offset": 28644384,
+        "sha256": "16552b6d961349bbea772bdccd636133fcf9c1a12d3eeff3c0153b6de4848953",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "image_source": {
+        "logical": "sprite/character/swordman/effect/soulbringer.img",
+        "package": "sprite_character_swordman_effect.npk",
+        "offset": 3725905,
+        "length": 6019,
+        "table_index": 53,
+        "raw_name_hex": "7370726974652f6368617261637465722f73776f72646d616e2f6566666563742f736f756c6272696e6765722e696d67",
+        "npk_path": "D:\\dnf\\60US\\DFO\\ImagePacks2\\sprite_character_swordman_effect.npk",
+        "npk_sha256": "40101eae170c21caac3e880c0c7856f9f913f4394a6bb9dcd6c92fdf19bc00ae",
+        "npk_size": 4364465,
+        "img_sha256": "91c48e2f5f84a923c6917696959b7e558722ec85bd0f632d797a1a841e2b73f2",
+        "img_version": 1,
+        "table_record_offset": 14012,
+        "selected_explicitly": false,
+        "record_offset": 32,
+        "record_length": 36,
+        "pixel_offset": 68,
+        "pixel_length": 5951,
+        "record_absolute_offset": 3725937,
+        "pixel_absolute_offset": 3725973,
+        "record_raw_values": [
+          16,
+          6,
+          14,
+          130,
+          5951,
+          0,
+          0,
+          14,
+          130
+        ],
+        "requested_index": 0,
+        "resolved_index": 0,
+        "link_chain": [],
+        "requested_record_offset": 32,
+        "requested_record_raw_values": [
+          16,
+          6,
+          14,
+          130,
+          5951,
+          0,
+          0,
+          14,
+          130
+        ],
+        "link_record_offsets": [],
+        "rgba_sha256": "9bb39c1d931f25b4679a82367cd0fbc478a4af27e55a31d75421f8f7438551dd"
+      }
+    },
+    {
+      "path": "passiveobject/monster/goblin/animation/flybomb.ani",
+      "frame": 0,
+      "time": 75,
+      "render": {
+        "rgba": [
+          255,
+          255,
+          255,
+          255
+        ],
+        "rate": [
+          1,
+          1
+        ],
+        "source_rotation_radians": 3.140000104904175,
+        "canvas_rotation_radians": -3.140000104904175,
+        "image_position": [
+          -8,
+          -8
+        ],
+        "graphic_effect": "NONE",
+        "composite": "source-over",
+        "effect_supported": true,
+        "interpolation": {
+          "requested": true,
+          "enabled": true,
+          "active": true,
+          "next_frame": 1,
+          "elapsed": 75,
+          "span": 150,
+          "ratio": 0.5,
+          "clock": "source-delay-rate-100",
+          "native_game_clock_observed": false
+        }
+      },
+      "source": {
+        "file_number": 56404199,
+        "path": "passiveobject/monster/goblin/animation/flybomb.ani",
+        "size": 633,
+        "crc": "d067e73d",
+        "relative_offset": 1381364,
+        "absolute_offset": 8947988,
+        "sha256": "3496f791605e536a772d7c8de426f47aa089df9b509f7f7c296597360ffd17b9",
+        "encoding": "cp949",
+        "crc_verified": true,
+        "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98"
+      },
+      "image_source": {
+        "logical": "sprite/item/throwitem/flybomb.img",
+        "package": "sprite_item_throwitem.npk",
+        "offset": 16282,
+        "length": 244,
+        "table_index": 6,
+        "raw_name_hex": "7370726974652f6974656d2f7468726f776974656d2f666c79626f6d622e696d67",
+        "npk_path": "D:\\dnf\\60US\\DFO\\ImagePacks2\\sprite_item_throwitem.npk",
+        "npk_sha256": "1885a6bc1e6be7349d51368f8f67e413457edc82281d4fb6896c9ac7f250ed53",
+        "npk_size": 27671,
+        "img_sha256": "5de82fb04171f63fd999a1a842fe826cabee48f1bed45f432fee813f357fece0",
+        "img_version": 1,
+        "table_record_offset": 1604,
+        "selected_explicitly": false,
+        "record_offset": 32,
+        "record_length": 36,
+        "pixel_offset": 68,
+        "pixel_length": 176,
+        "record_absolute_offset": 16314,
+        "pixel_absolute_offset": 16350,
+        "record_raw_values": [
+          14,
+          6,
+          17,
+          17,
+          176,
+          0,
+          0,
+          17,
+          17
+        ],
+        "requested_index": 0,
+        "resolved_index": 0,
+        "link_chain": [],
+        "requested_record_offset": 32,
+        "requested_record_raw_values": [
+          14,
+          6,
+          17,
+          17,
+          176,
+          0,
+          0,
+          17,
+          17
+        ],
+        "link_record_offsets": [],
+        "rgba_sha256": "c6cc06b1fdb6691951a5f925b90bc63b55106e955a040aff5595a4bf626265d3"
+      }
+    }
+  ],
+  "page_errors": [],
+  "original_game_visual_comparison": false
+}

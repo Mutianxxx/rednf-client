@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.pvf-agent-workbench/schemas/knowledge-pack-manifest.schema.json",
+  "title": "Portable PVF Agent Workbench knowledge-pack manifest",
+  "type": "object",
+  "required": ["schemaVersion", "purpose", "entries", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "2.0"
+    },
+    "purpose": { "type": "string" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "dest",
+          "bytes",
+          "sha256"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "dest": {
+            "type": "string"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["entryCount", "totalBytes"],
+      "additionalProperties": false,
+      "properties": {
+        "entryCount": { "type": "integer", "minimum": 1 },
+        "totalBytes": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

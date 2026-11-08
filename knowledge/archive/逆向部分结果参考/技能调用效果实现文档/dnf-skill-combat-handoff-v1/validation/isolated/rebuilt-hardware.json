@@ -1,0 +1,181 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "movement",
+      "passed": true
+    },
+    {
+      "name": "facing",
+      "passed": true
+    },
+    {
+      "name": "generation rejection",
+      "passed": true
+    },
+    {
+      "name": "accepted reaction 1",
+      "passed": true
+    },
+    {
+      "name": "event deduplication",
+      "passed": true
+    },
+    {
+      "name": "accepted reaction 2",
+      "passed": true
+    },
+    {
+      "name": "shared death and frozen pose",
+      "passed": true
+    },
+    {
+      "name": "dead hit rejection",
+      "passed": true
+    },
+    {
+      "name": "pause keeps particle state",
+      "passed": true
+    },
+    {
+      "name": "source boxes cause actual HP damage",
+      "passed": true
+    },
+    {
+      "name": "mirrored weapon boxes cause HP damage",
+      "passed": true
+    },
+    {
+      "name": "held X drives source combo stages",
+      "passed": true
+    },
+    {
+      "name": "focus loss clears movement input",
+      "passed": true
+    },
+    {
+      "name": "Q rejected before frenzy",
+      "passed": true
+    },
+    {
+      "name": "W enables frenzy",
+      "passed": true
+    },
+    {
+      "name": "10 second frenzy close restriction",
+      "passed": true
+    },
+    {
+      "name": "W disables after restriction",
+      "passed": true
+    },
+    {
+      "name": "wave uses verified forward 123 offset after 90 travel",
+      "passed": true
+    },
+    {
+      "name": "source height drives inferred jump arc",
+      "passed": true
+    },
+    {
+      "name": "no missing resource or renderer exceptions",
+      "passed": true
+    },
+    {
+      "name": "catalog inference sampled across five class groups",
+      "passed": true
+    },
+    {
+      "name": "catalog inference has no missing resources",
+      "passed": true
+    },
+    {
+      "name": "explicit last action selected",
+      "passed": true
+    },
+    {
+      "name": "three independent monster instances",
+      "passed": true
+    },
+    {
+      "name": "entity HP isolation",
+      "passed": true
+    },
+    {
+      "name": "full source reaction returns to idle",
+      "passed": true
+    }
+  ],
+  "skills": [
+    {
+      "key": "hopsmash",
+      "render_samples": 7,
+      "effect_instances": 6
+    },
+    {
+      "key": "gorecross",
+      "render_samples": 4,
+      "effect_instances": 3
+    },
+    {
+      "key": "bloodblast",
+      "render_samples": 16,
+      "effect_instances": 15
+    },
+    {
+      "key": "outragebreak",
+      "render_samples": 95,
+      "effect_instances": 94
+    },
+    {
+      "key": "bloodblastex",
+      "render_samples": 25,
+      "effect_instances": 24
+    },
+    {
+      "key": "bloodsword",
+      "render_samples": 9,
+      "effect_instances": 8
+    },
+    {
+      "key": "bloodboom",
+      "render_samples": 25,
+      "effect_instances": 24
+    },
+    {
+      "key": "frenzy",
+      "render_samples": 5,
+      "effect_instances": 5
+    }
+  ],
+  "inferred_catalog_samples": [
+    {
+      "key": "guard",
+      "group": 0,
+      "body_stages": 1
+    },
+    {
+      "key": "reflectguard",
+      "group": 4,
+      "body_stages": 1
+    },
+    {
+      "key": "hitback",
+      "group": 1,
+      "body_stages": 1
+    },
+    {
+      "key": "ghoststepslash",
+      "group": 2,
+      "body_stages": 2
+    },
+    {
+      "key": "hellbenter",
+      "group": 3,
+      "body_stages": 1
+    }
+  ],
+  "errors": [],
+  "renderer": "direct3d11",
+  "limitations": "Native formula/state machine not fully recovered; resources and mechanics reconstruction tested"
+}

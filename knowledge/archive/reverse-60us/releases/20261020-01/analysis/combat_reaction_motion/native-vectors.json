@@ -1,0 +1,2592 @@
+{
+  "schema": "60us-native-reaction-vectors-v1",
+  "evidence_kind": "extracted original instructions with declared plain providers in a synthetic PE32; no DFO launch",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "original_client_runtime": false,
+  "extracted_bodies": [
+    {
+      "va": "0x4b98f0",
+      "size": 55,
+      "sha256": "8c5d0e54596d0a84e1f00c79ff366afc9a0300e9c8a2ac3399ac69d8b61d5446"
+    },
+    {
+      "va": "0x4b9fa0",
+      "size": 275,
+      "sha256": "008c0f72a1c21d3319b451b3667c89629fd1631a8204d174123240f921b979bf"
+    },
+    {
+      "va": "0x4ba620",
+      "size": 329,
+      "sha256": "6a190757c7d60e6518593f1071c297161a99bc23b033fcbd2cf5112be2372338"
+    },
+    {
+      "va": "0x4bdd40",
+      "size": 51,
+      "sha256": "b11ed58c4b376601e0c0f1f48e9c1d7cf4d9600be587e0bc4befde05dd98089d"
+    }
+  ],
+  "harness_sha256": "26b71e0f344fd3e6747be4b063aad5808d516f44e14cd628de4531fa948ab83d",
+  "output_sha256": "50da12e1822633c7d18808d11d693cdab86833c6787fcfe54bf10a1153b0e8f0",
+  "matches": 126,
+  "mismatches": 0,
+  "vectors": [
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 2
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 2,
+        "deceleration_duration": 2
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 125
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 125,
+        "deceleration_duration": 30
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250,
+        "deceleration_duration": 30
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 500
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 500,
+        "deceleration_duration": 30
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -200000,
+        "duration": 2
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -200000,
+        "duration": 2,
+        "deceleration_duration": 2
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -3200,
+        "duration": 125
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -3200,
+        "duration": 125,
+        "deceleration_duration": 125
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -266666,
+        "duration": 3
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -266666,
+        "duration": 3,
+        "deceleration_duration": 3
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -4819,
+        "duration": 166
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -4819,
+        "duration": 166,
+        "deceleration_duration": 166
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -2402,
+        "duration": 333
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -2402,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -1201,
+        "duration": 666
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -1201,
+        "duration": 666,
+        "deceleration_duration": 666
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -133333,
+        "duration": 3
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -133333,
+        "duration": 3,
+        "deceleration_duration": 3
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2409,
+        "duration": 166
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2409,
+        "duration": 166,
+        "deceleration_duration": 166
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -1201,
+        "duration": 333
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -1201,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -600,
+        "duration": 666
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -600,
+        "duration": 666,
+        "deceleration_duration": 666
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -200000,
+        "duration": 2
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -200000,
+        "duration": 2,
+        "deceleration_duration": 2
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -3200,
+        "duration": 125
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -3200,
+        "duration": 125,
+        "deceleration_duration": 125
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 0,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1999,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 2000,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 3000,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1001,
+        "stat220": 0.999,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 0.5,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 375
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 375,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": -1000,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 750
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 750,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": true,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 1,
+        "special_flag": true,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -2402,
+        "duration": 333
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -2402,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 2,
+        "special_flag": true,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -1201,
+        "duration": 333
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -1201,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": false
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": false
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 333
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 64,
+      "inputs": {
+        "kind": -1,
+        "special_flag": true,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": false
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": 0,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": 0,
+      "model": 0,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": 0,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": 0,
+      "model": 0,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1000,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -850,
+      "model": -850,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1000,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -786,
+      "model": -786,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1275,
+      "model": -1275,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1211,
+      "model": -1211,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": 0,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1500,
+      "model": -1500,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": 0,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1425,
+      "model": -1425,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": -1000,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1500,
+      "model": -1500,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": -1000,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1425,
+      "model": -1425,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": -1500,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1500,
+      "model": -1500,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": -1500,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1425,
+      "model": -1425,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 100,
+        "stat240": 1,
+        "map_present": false,
+        "map9dc": 0,
+        "actor1660": 0
+      },
+      "native": -1500,
+      "model": -1500,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 101,
+        "stat240": 0.5,
+        "map_present": false,
+        "map9dc": 0,
+        "actor1660": 0
+      },
+      "native": -750,
+      "model": -750,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 1000,
+        "stat240": 1.234,
+        "map_present": false,
+        "map9dc": 0,
+        "actor1660": 0
+      },
+      "native": -18495,
+      "model": -18495,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 64,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 0,
+        "stat240": 1,
+        "map_present": false,
+        "map9dc": 0,
+        "actor1660": 0
+      },
+      "native": 0,
+      "model": 0,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 64,
+      "inputs": {
+        "param1": 400,
+        "param2": 100,
+        "param3": 100
+      },
+      "native": 807.9951171875,
+      "model": 807.9951171875,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 64,
+      "inputs": {
+        "param1": -400,
+        "param2": 100,
+        "param3": 100
+      },
+      "native": -807.9951171875,
+      "model": -807.9951171875,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 64,
+      "inputs": {
+        "param1": 400,
+        "param2": 60000,
+        "param3": 100
+      },
+      "native": 591.4972534179688,
+      "model": 591.4972534179688,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 64,
+      "inputs": {
+        "param1": 400,
+        "param2": 100000,
+        "param3": 100
+      },
+      "native": 501.72467041015625,
+      "model": 501.72467041015625,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 64,
+      "inputs": {
+        "param1": 0,
+        "param2": 100,
+        "param3": 100
+      },
+      "native": 0.0,
+      "model": 0.0,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 64,
+      "inputs": {
+        "param1": 286,
+        "param2": 100000,
+        "param3": 100
+      },
+      "native": 358.733154296875,
+      "model": 358.733154296875,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 64,
+      "inputs": {
+        "param1": 400,
+        "param2": 12345,
+        "param3": 99
+      },
+      "native": 751.2178344726562,
+      "model": 751.2178344726562,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 64,
+      "inputs": {
+        "param1": 400,
+        "param2": 12345,
+        "param3": 101
+      },
+      "native": 752.2734375,
+      "model": 752.2734375,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 64,
+      "inputs": {
+        "param1": 1000000,
+        "param2": 100,
+        "param3": 100
+      },
+      "native": -148957.578125,
+      "model": -148957.578125,
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 2
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 2,
+        "deceleration_duration": 2
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 125
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 125,
+        "deceleration_duration": 30
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250,
+        "deceleration_duration": 30
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": -1,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 500
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 500,
+        "deceleration_duration": 30
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -200000,
+        "duration": 2
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -200000,
+        "duration": 2,
+        "deceleration_duration": 2
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -3200,
+        "duration": 125
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -3200,
+        "duration": 125,
+        "deceleration_duration": 125
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -266666,
+        "duration": 3
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -266666,
+        "duration": 3,
+        "deceleration_duration": 3
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -4819,
+        "duration": 166
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -4819,
+        "duration": 166,
+        "deceleration_duration": 166
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -2402,
+        "duration": 333
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -2402,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -1201,
+        "duration": 666
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -1201,
+        "duration": 666,
+        "deceleration_duration": 666
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -133333,
+        "duration": 3
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -133333,
+        "duration": 3,
+        "deceleration_duration": 3
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2409,
+        "duration": 166
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2409,
+        "duration": 166,
+        "deceleration_duration": 166
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -1201,
+        "duration": 333
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -1201,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 2,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -600,
+        "duration": 666
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -600,
+        "duration": 666,
+        "deceleration_duration": 666
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 0.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 0.009999999776482582,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -200000,
+        "duration": 2
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -200000,
+        "duration": 2,
+        "deceleration_duration": 2
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 0.5,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -3200,
+        "duration": 125
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -3200,
+        "duration": 125,
+        "deceleration_duration": 125
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 3,
+        "special_flag": false,
+        "scale": 2.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 0,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 500,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1999,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 2000,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 3000,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": 0,
+        "duration": 0,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1001,
+        "stat220": 0.999,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 250,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 0.5,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 375
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 375,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": -1000,
+        "stat220": 1,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 750
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -2666,
+        "duration": 750,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": true,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 1,
+        "special_flag": true,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 800,
+        "acceleration": -2402,
+        "duration": 333
+      },
+      "model": {
+        "speed": 800,
+        "acceleration": -2402,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 2,
+        "special_flag": true,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": true
+      },
+      "native": {
+        "speed": 400,
+        "acceleration": -1201,
+        "duration": 333
+      },
+      "model": {
+        "speed": 400,
+        "acceleration": -1201,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 0,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": false
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250,
+        "deceleration_duration": 150
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": 1,
+        "special_flag": false,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": false
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 333
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 333,
+        "deceleration_duration": 333
+      },
+      "matches": true
+    },
+    {
+      "kind": "horizontal",
+      "x87_precision": 53,
+      "inputs": {
+        "kind": -1,
+        "special_flag": true,
+        "scale": 1.0,
+        "stat218": 1000,
+        "stat220": 1.0,
+        "motion_enabled": false
+      },
+      "native": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250
+      },
+      "model": {
+        "speed": 0,
+        "acceleration": 0,
+        "duration": 250,
+        "deceleration_duration": 0
+      },
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": 0,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": 0,
+      "model": 0,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": 0,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": 0,
+      "model": 0,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1000,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -850,
+      "model": -850,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1000,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -786,
+      "model": -786,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1275,
+      "model": -1275,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1211,
+      "model": -1211,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": 0,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1500,
+      "model": -1500,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": 0,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1425,
+      "model": -1425,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": -1000,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1500,
+      "model": -1500,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": -1000,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1425,
+      "model": -1425,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": -1500,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": false,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1500,
+      "model": -1500,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": true,
+        "actor163c": -1500,
+        "stat238": 85,
+        "stat240": 1.0,
+        "map_present": true,
+        "map9dc": 50,
+        "actor1660": 25
+      },
+      "native": -1425,
+      "model": -1425,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 100,
+        "stat240": 1,
+        "map_present": false,
+        "map9dc": 0,
+        "actor1660": 0
+      },
+      "native": -1500,
+      "model": -1500,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 101,
+        "stat240": 0.5,
+        "map_present": false,
+        "map9dc": 0,
+        "actor1660": 0
+      },
+      "native": -750,
+      "model": -750,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 1000,
+        "stat240": 1.234,
+        "map_present": false,
+        "map9dc": 0,
+        "actor1660": 0
+      },
+      "native": -18495,
+      "model": -18495,
+      "matches": true
+    },
+    {
+      "kind": "gravity",
+      "x87_precision": 53,
+      "inputs": {
+        "fixed_base": false,
+        "actor163c": -1500,
+        "stat238": 0,
+        "stat240": 1,
+        "map_present": false,
+        "map9dc": 0,
+        "actor1660": 0
+      },
+      "native": 0,
+      "model": 0,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 53,
+      "inputs": {
+        "param1": 400,
+        "param2": 100,
+        "param3": 100
+      },
+      "native": 807.9951171875,
+      "model": 807.9951171875,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 53,
+      "inputs": {
+        "param1": -400,
+        "param2": 100,
+        "param3": 100
+      },
+      "native": -807.9951171875,
+      "model": -807.9951171875,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 53,
+      "inputs": {
+        "param1": 400,
+        "param2": 60000,
+        "param3": 100
+      },
+      "native": 591.4972534179688,
+      "model": 591.4972534179688,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 53,
+      "inputs": {
+        "param1": 400,
+        "param2": 100000,
+        "param3": 100
+      },
+      "native": 501.72467041015625,
+      "model": 501.72467041015625,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 53,
+      "inputs": {
+        "param1": 0,
+        "param2": 100,
+        "param3": 100
+      },
+      "native": 0.0,
+      "model": 0.0,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 53,
+      "inputs": {
+        "param1": 286,
+        "param2": 100000,
+        "param3": 100
+      },
+      "native": 358.733154296875,
+      "model": 358.733154296875,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 53,
+      "inputs": {
+        "param1": 400,
+        "param2": 12345,
+        "param3": 99
+      },
+      "native": 751.2178344726562,
+      "model": 751.2178344726562,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 53,
+      "inputs": {
+        "param1": 400,
+        "param2": 12345,
+        "param3": 101
+      },
+      "native": 752.2734375,
+      "model": 752.2734375,
+      "matches": true
+    },
+    {
+      "kind": "impulse",
+      "x87_precision": 53,
+      "inputs": {
+        "param1": 1000000,
+        "param2": 100,
+        "param3": 100
+      },
+      "native": -148957.578125,
+      "model": -148957.578125,
+      "matches": true
+    }
+  ],
+  "limitations": [
+    "Runtime protected getters replaced by plain fixture getters.",
+    "Runtime stats assumed unchanged across both horizontal-stat reads.",
+    "Client x87 control word not observed; two explicit fixture settings checked.",
+    "No hit qualification, HP, owner collision, state handler or actual ANI dispatch is executed."
+  ]
+}

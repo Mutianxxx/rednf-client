@@ -1,0 +1,98 @@
+[name2]  <12::name2_eng_364>
+
+[purchase cost] 
+20
+[/purchase cost]
+[pre required skill] 
+[/pre required skill]
+[type]  `[active]`
+[skill class]  1
+[maximum level]  20
+[growtype maximum level]  10 10 10 10 10
+
+[skill fitness growtype] 
+0
+1
+2
+3
+4
+[/skill fitness growtype]
+[required level]  1
+[required level range]  3
+
+[durability decrease rate] 10
+[auto cooltime apply] 1
+
+[icon] 
+`Character/Swordman/Effect/SkillIcon.img` 94
+`Character/Swordman/Effect/SkillIcon.img` 95
+
+[weapon effect type] `[physical]`
+
+[command] 
+(SKILL)
+[/command]
+[command key explain]  <12::command_key_explain_15105>
+
+[dungeon]
+[consume MP]  6 18
+[cool time]  2000 2000
+
+[static data] 
+100	// 미끄러지는 속도
+-250	// 미끄러질 때 가속도
+100	// 커서를 앞으로 하고있을때 +되는 속도
+-50	// 커서를 앞으로 하고있을때 -되는 가속도
+[/static data]
+
+[level info]
+3
+// 0.공격력% (단위 %)
+// 1.띄우는 힘 : 수정할 경우 [level property]을 수정해야 함
+// 2.뒤로 날리는 힘
+100 	350 	100 
+106 	367 	100 
+111 	383 	100 
+117 	400 	100 
+122 	417 	100 
+128 	433 	100 
+133 	450 	100 
+139 	467 	100 
+144 	483 	100 
+150 	500 	100 
+156 	517 	100 
+161 	533 	100 
+167 	550 	100 
+172 	567 	100 
+178 	583 	100 
+183 	600 	100 
+189 	617 	100 
+194 	633 	100 
+200 	650 	100 
+206 	667 	100 
+[/level info]
+[/dungeon]
+
+[pvp]
+[/pvp]
+
+[death tower]
+[/death tower]
+
+[warroom]
+[/warroom]
+
+
+
+[name]  <12::name_18105>
+[explain] <12::explain_18110>
+[basic explain] <12::upper_slash_basic_explain>
+
+[level property] 
+1 99
+<12::level_property_18115>
+-1 0 1.0
+-1 1 0.285714285714285714	     // 0.285714285714285714 는 (100 / 1렙때 띄우는 힘)을 적어야 함. 가능하면 딱 떨어지는 수로 적자
+[/level property]
+
+

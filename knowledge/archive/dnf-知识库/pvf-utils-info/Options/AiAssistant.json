@@ -1,0 +1,5 @@
+{
+  "Endpoint": "https://blackaicoding.com/v1/",
+  "Model": "gpt-6.1-sol",
+  "MaxOutputTokens": 2048
+}

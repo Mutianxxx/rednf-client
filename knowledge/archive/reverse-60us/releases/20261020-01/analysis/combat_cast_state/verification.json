@@ -1,0 +1,14 @@
+{
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "byte_excerpts_verified": 48,
+  "instruction_anchors_verified": 16,
+  "controller_vtable_slots_verified": 40,
+  "native_tag_strings_verified": 8,
+  "state10_request_paths_verified": 18,
+  "phase_resource_rows_verified": 46,
+  "registered_variant_count": 21,
+  "registered_phase_resource_count": 42,
+  "unregistered_variant_count": 2,
+  "observed_execution": false,
+  "status": "static_evidence_and_contract_checks_passed"
+}

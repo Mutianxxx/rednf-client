@@ -1,0 +1,513 @@
+{
+  "source": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+  "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "image_base": "0x00400000",
+  "excerpts": [
+    {
+      "name": "state22_cleanup",
+      "va": "0x00730b30",
+      "file_offset": 3345200,
+      "size": 84,
+      "sha256": "84a45d98844df98ee4f7f4a1993c2efc336f1f1feab63aad91fb73a449927394",
+      "binary": "00730b30-state22_cleanup.bin",
+      "assembly": "00730b30-state22_cleanup.asm"
+    },
+    {
+      "name": "state22_entry_and_variant",
+      "va": "0x007329cf",
+      "file_offset": 3353039,
+      "size": 330,
+      "sha256": "5b7b1fb5c7f21da69175e6d9518b846515017ddf5717926b8810e9313ef1b068",
+      "binary": "007329cf-state22_entry_and_variant.bin",
+      "assembly": "007329cf-state22_entry_and_variant.asm"
+    },
+    {
+      "name": "state22_motion_and_atk",
+      "va": "0x00732b19",
+      "file_offset": 3353369,
+      "size": 77,
+      "sha256": "9b788b2e98c25cfc13b8033fccc4dedb6b324c16c855d962efa34f38ef0890d1",
+      "binary": "00732b19-state22_motion_and_atk.bin",
+      "assembly": "00732b19-state22_motion_and_atk.asm"
+    },
+    {
+      "name": "state22_skill_columns",
+      "va": "0x00732b66",
+      "file_offset": 3353446,
+      "size": 253,
+      "sha256": "69d29a9773e1ec082040869c83673c5785c12a9060eb6512cf734860ebd8fb7e",
+      "binary": "00732b66-state22_skill_columns.bin",
+      "assembly": "00732b66-state22_skill_columns.asm"
+    },
+    {
+      "name": "state22_movement",
+      "va": "0x00732c63",
+      "file_offset": 3353699,
+      "size": 120,
+      "sha256": "30bb2383d8fd9f4e8ff58d15f4ff45278240d2961e4df29c8ec7a25d021cb7f9",
+      "binary": "00732c63-state22_movement.bin",
+      "assembly": "00732c63-state22_movement.asm"
+    },
+    {
+      "name": "state22_sounds_effect_load_attach",
+      "va": "0x00732cdb",
+      "file_offset": 3353819,
+      "size": 459,
+      "sha256": "5195d7cfa26a327e5df9beded870fd57db47cdf9816ce4c80e10113c971d7c24",
+      "binary": "00732cdb-state22_sounds_effect_load_attach.bin",
+      "assembly": "00732cdb-state22_sounds_effect_load_attach.asm"
+    },
+    {
+      "name": "state22_command_start",
+      "va": "0x0072af0c",
+      "file_offset": 3321612,
+      "size": 168,
+      "sha256": "38e7b26e51f2c4502c3b027e3a2d6b5b934e427888314ef2270e8988b75b5d5a",
+      "binary": "0072af0c-state22_command_start.bin",
+      "assembly": "0072af0c-state22_command_start.asm"
+    },
+    {
+      "name": "state22_command_continue_finish",
+      "va": "0x0072afb4",
+      "file_offset": 3321780,
+      "size": 293,
+      "sha256": "71deb1ff8a7380be0fc397a9ee5c8e9e7da27f8c98f483fe4b9501210f65f295",
+      "binary": "0072afb4-state22_command_continue_finish.bin",
+      "assembly": "0072afb4-state22_command_continue_finish.asm"
+    },
+    {
+      "name": "swordman_tick_state_switch",
+      "va": "0x007261d4",
+      "file_offset": 3301844,
+      "size": 34,
+      "sha256": "ce500e85cfd0cfde2bb66960a8fe511268485ba792daaf1fe24ad02321df87a4",
+      "binary": "007261d4-swordman_tick_state_switch.bin",
+      "assembly": "007261d4-swordman_tick_state_switch.asm"
+    },
+    {
+      "name": "state22_visual_tick",
+      "va": "0x00726c9e",
+      "file_offset": 3304606,
+      "size": 246,
+      "sha256": "1f05ca097987d63e6fe80747ffef128d379036ea080742f543d86f54280e9bd3",
+      "binary": "00726c9e-state22_visual_tick.bin",
+      "assembly": "00726c9e-state22_visual_tick.asm"
+    },
+    {
+      "name": "state_queue",
+      "va": "0x004ed1d0",
+      "file_offset": 971216,
+      "size": 263,
+      "sha256": "ab5acb38422625cb7f9ed1a8698e022ccd69d7068ed2072893c2a5f306914dbf",
+      "binary": "004ed1d0-state_queue.bin",
+      "assembly": "004ed1d0-state_queue.asm"
+    },
+    {
+      "name": "state_queue_send",
+      "va": "0x004edaec",
+      "file_offset": 973548,
+      "size": 265,
+      "sha256": "d760de2a691aaab5c73f032b430370dfb12075647dd7c220000dc1d2c7cb8f4d",
+      "binary": "004edaec-state_queue_send.bin",
+      "assembly": "004edaec-state_queue_send.asm"
+    },
+    {
+      "name": "base_transition_timer_reset",
+      "va": "0x004bc640",
+      "file_offset": 771648,
+      "size": 65,
+      "sha256": "5ef0c85b3ebfe457873390bfe706e41d78074de2aaa21e532715e275f5ec918f",
+      "binary": "004bc640-base_transition_timer_reset.bin",
+      "assembly": "004bc640-base_transition_timer_reset.asm"
+    },
+    {
+      "name": "swordman_transition_base_call",
+      "va": "0x0073a168",
+      "file_offset": 3383656,
+      "size": 37,
+      "sha256": "a8ceebe14844825aa6e1bbf1c83055eef2af2747224203d2686ffe0a606213ba",
+      "binary": "0073a168-swordman_transition_base_call.bin",
+      "assembly": "0073a168-swordman_transition_base_call.asm"
+    },
+    {
+      "name": "actor_transition_base_call",
+      "va": "0x004c5780",
+      "file_offset": 808832,
+      "size": 38,
+      "sha256": "60cc72fbf1e05380fad7d8fc60795553fcecbdd90fa8c31fddf4cf5012949b6c",
+      "binary": "004c5780-actor_transition_base_call.bin",
+      "assembly": "004c5780-actor_transition_base_call.asm"
+    },
+    {
+      "name": "actor_transition_base2_call",
+      "va": "0x004deed0",
+      "file_offset": 913104,
+      "size": 48,
+      "sha256": "a8c77ba3f28555b9a923a7084d95a42e177c3f7caeb94446e5e27bcb272502fe",
+      "binary": "004deed0-actor_transition_base2_call.bin",
+      "assembly": "004deed0-actor_transition_base2_call.asm"
+    },
+    {
+      "name": "direction_set_bridge",
+      "va": "0x004990c0",
+      "file_offset": 626880,
+      "size": 29,
+      "sha256": "df8c39ddadd50909f96211bf97410b5bb76a04b23cb5a74cb1b3f9fa4af9c322",
+      "binary": "004990c0-direction_set_bridge.bin",
+      "assembly": "004990c0-direction_set_bridge.asm"
+    },
+    {
+      "name": "direction_set",
+      "va": "0x00511110",
+      "file_offset": 1118480,
+      "size": 75,
+      "sha256": "2d8976db0296ca33b835458dbbc658753a3b4dfb23ae3c228461286d334bf74c",
+      "binary": "00511110-direction_set.bin",
+      "assembly": "00511110-direction_set.asm"
+    },
+    {
+      "name": "direction_get",
+      "va": "0x00499100",
+      "file_offset": 626944,
+      "size": 22,
+      "sha256": "b2a07e297572999df0a022b9e9c414957355ad431e216c52c65c254168c02189",
+      "binary": "00499100-direction_get.bin",
+      "assembly": "00499100-direction_get.asm"
+    },
+    {
+      "name": "effect_attach_speed_wrapper",
+      "va": "0x004acf80",
+      "file_offset": 708480,
+      "size": 161,
+      "sha256": "ea61769bd5a37fe5bb4bed11da4b76ec31b89cb2f4021385f4824c497e777a20",
+      "binary": "004acf80-effect_attach_speed_wrapper.bin",
+      "assembly": "004acf80-effect_attach_speed_wrapper.asm"
+    },
+    {
+      "name": "effect_attach_reset",
+      "va": "0x0049b7b0",
+      "file_offset": 636848,
+      "size": 304,
+      "sha256": "35b980fcc62f45453babcb53358a3854568ae2fea15f5f0e577b5effbaffad67",
+      "binary": "0049b7b0-effect_attach_reset.bin",
+      "assembly": "0049b7b0-effect_attach_reset.asm"
+    },
+    {
+      "name": "animation_reset_tree",
+      "va": "0x00a27360",
+      "file_offset": 6452064,
+      "size": 236,
+      "sha256": "9150d6f3a02eb4980dade48cf8fab6cd9ad16ea52b5d87b259bab344931cafa8",
+      "binary": "00a27360-animation_reset_tree.bin",
+      "assembly": "00a27360-animation_reset_tree.asm"
+    },
+    {
+      "name": "animation_frame_set",
+      "va": "0x00a23c90",
+      "file_offset": 6438032,
+      "size": 172,
+      "sha256": "9d054aee97f8f1eb2af9e1220e2b0a5849175baf5671fafef0a63e05ad7c86b3",
+      "binary": "00a23c90-animation_frame_set.bin",
+      "assembly": "00a23c90-animation_frame_set.asm"
+    },
+    {
+      "name": "animation_update_tree",
+      "va": "0x00a27f60",
+      "file_offset": 6455136,
+      "size": 286,
+      "sha256": "8f7037e898c03f80fbe6df4546bf3c9692e75e6c82e52157ff0e14995f07b55e",
+      "binary": "00a27f60-animation_update_tree.bin",
+      "assembly": "00a27f60-animation_update_tree.asm"
+    },
+    {
+      "name": "animation_advance_parent_time",
+      "va": "0x00a27dc0",
+      "file_offset": 6454720,
+      "size": 416,
+      "sha256": "7d81a9b3fe8c3e7da4734ea35e08f8fafbe6eaf5dd0791991596b80419f3836a",
+      "binary": "00a27dc0-animation_advance_parent_time.bin",
+      "assembly": "00a27dc0-animation_advance_parent_time.asm"
+    },
+    {
+      "name": "motion_axis_set",
+      "va": "0x004b9d80",
+      "file_offset": 761216,
+      "size": 387,
+      "sha256": "5a1e7806860ad689e2565ac56682ca812783a053ab5d47b2b9a3e15a5d95e876",
+      "binary": "004b9d80-motion_axis_set.bin",
+      "assembly": "004b9d80-motion_axis_set.asm"
+    },
+    {
+      "name": "motion_mode_set",
+      "va": "0x004b9c60",
+      "file_offset": 760928,
+      "size": 267,
+      "sha256": "018d711be2d8ce566bdee96f647a9211a6d9076bfc9954600b6e49a3e0f58afb",
+      "binary": "004b9c60-motion_mode_set.bin",
+      "assembly": "004b9c60-motion_mode_set.asm"
+    },
+    {
+      "name": "swordman_motion_direction",
+      "va": "0x00745c30",
+      "file_offset": 3431472,
+      "size": 65,
+      "sha256": "de876cdf521fb8753c5f810ff267896a5aa6ce75e1e03b41c55f65f7c74964f6",
+      "binary": "00745c30-swordman_motion_direction.bin",
+      "assembly": "00745c30-swordman_motion_direction.asm"
+    },
+    {
+      "name": "motion_direction",
+      "va": "0x004b9b20",
+      "file_offset": 760608,
+      "size": 249,
+      "sha256": "9a349a9598d94920a4b83aea38e96b4a226dd05b15155196c901ff8e3a3e8abb",
+      "binary": "004b9b20-motion_direction.bin",
+      "assembly": "004b9b20-motion_direction.asm"
+    },
+    {
+      "name": "input_selection",
+      "va": "0x00559140",
+      "file_offset": 1413440,
+      "size": 243,
+      "sha256": "88593a65d05dca1eba760d720a64f4c0bf098fa5651ceb1a04a5e4cd89243fb3",
+      "binary": "00559140-input_selection.bin",
+      "assembly": "00559140-input_selection.asm"
+    },
+    {
+      "name": "weapon_type_get",
+      "va": "0x004cd7f0",
+      "file_offset": 841712,
+      "size": 80,
+      "sha256": "41a0610463f1eeb6f3e5b98f6dc9bfee2974af5a173435601fd5c18761176eb2",
+      "binary": "004cd7f0-weapon_type_get.bin",
+      "assembly": "004cd7f0-weapon_type_get.asm"
+    }
+  ],
+  "strings": [
+    {
+      "va": "0x00d7f570",
+      "file_offset": 9958768,
+      "value": "Effect/Animation/TripleSlash/Move%d.ani",
+      "bytes": "4500660066006500630074002f0041006e0069006d006100740069006f006e002f0054007200690070006c00650053006c006100730068002f004d006f0076006500250064002e0061006e0069000000"
+    },
+    {
+      "va": "0x00d7f5c0",
+      "file_offset": 9958848,
+      "value": "Effect/Animation/TripleSlash/Slash%d.ani",
+      "bytes": "4500660066006500630074002f0041006e0069006d006100740069006f006e002f0054007200690070006c00650053006c006100730068002f0053006c00610073006800250064002e0061006e0069000000"
+    },
+    {
+      "va": "0x00d7f644",
+      "file_offset": 9958980,
+      "value": "SM_TRIPLE3",
+      "bytes": "53004d005f0054005200490050004c00450033000000"
+    },
+    {
+      "va": "0x00d7f614",
+      "file_offset": 9958932,
+      "value": "SM_TRIPLE2",
+      "bytes": "53004d005f0054005200490050004c00450032000000"
+    },
+    {
+      "va": "0x00d7f62c",
+      "file_offset": 9958956,
+      "value": "SM_TRIPLE1",
+      "bytes": "53004d005f0054005200490050004c00450031000000"
+    },
+    {
+      "va": "0x00d7be38",
+      "file_offset": 9944632,
+      "value": "R_TSLASH",
+      "bytes": "52005f00540053004c004100530048000000"
+    }
+  ],
+  "swordman_vtable": [
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0xb8",
+      "va": "0x00d8104c",
+      "file_offset": 9965644,
+      "bytes": "c0904900",
+      "target": "0x004990c0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0xc0",
+      "va": "0x00d81054",
+      "file_offset": 9965652,
+      "bytes": "00914900",
+      "target": "0x00499100"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0xf0",
+      "va": "0x00d81084",
+      "file_offset": 9965700,
+      "bytes": "a04d4b00",
+      "target": "0x004b4da0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0xf4",
+      "va": "0x00d81088",
+      "file_offset": 9965704,
+      "bytes": "f09e4900",
+      "target": "0x00499ef0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0xf8",
+      "va": "0x00d8108c",
+      "file_offset": 9965708,
+      "bytes": "80cf4a00",
+      "target": "0x004acf80"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0xfc",
+      "va": "0x00d81090",
+      "file_offset": 9965712,
+      "bytes": "a0ab4900",
+      "target": "0x0049aba0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x198",
+      "va": "0x00d8112c",
+      "file_offset": 9965868,
+      "bytes": "306c7400",
+      "target": "0x00746c30"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x19c",
+      "va": "0x00d81130",
+      "file_offset": 9965872,
+      "bytes": "50864300",
+      "target": "0x00438650"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x22c",
+      "va": "0x00d811c0",
+      "file_offset": 9966016,
+      "bytes": "b0077300",
+      "target": "0x007307b0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x28c",
+      "va": "0x00d81220",
+      "file_offset": 9966112,
+      "bytes": "d0d14e00",
+      "target": "0x004ed1d0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x38c",
+      "va": "0x00d81320",
+      "file_offset": 9966368,
+      "bytes": "e03c4d00",
+      "target": "0x004d3ce0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x488",
+      "va": "0x00d8141c",
+      "file_offset": 9966620,
+      "bytes": "809d4b00",
+      "target": "0x004b9d80"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x494",
+      "va": "0x00d81428",
+      "file_offset": 9966632,
+      "bytes": "609c4b00",
+      "target": "0x004b9c60"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x49c",
+      "va": "0x00d81430",
+      "file_offset": 9966640,
+      "bytes": "305c7400",
+      "target": "0x00745c30"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x620",
+      "va": "0x00d815b4",
+      "file_offset": 9967028,
+      "bytes": "f0d74c00",
+      "target": "0x004cd7f0"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x67c",
+      "va": "0x00d81610",
+      "file_offset": 9967120,
+      "bytes": "000d4e00",
+      "target": "0x004e0d00"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x72c",
+      "va": "0x00d816c0",
+      "file_offset": 9967296,
+      "bytes": "10cb7100",
+      "target": "0x0071cb10"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x73c",
+      "va": "0x00d816d0",
+      "file_offset": 9967312,
+      "bytes": "70c24c00",
+      "target": "0x004cc270"
+    },
+    {
+      "vtable": "0x00d80f94",
+      "slot": "0x768",
+      "va": "0x00d816fc",
+      "file_offset": 9967356,
+      "bytes": "301d4c00",
+      "target": "0x004c1d30"
+    }
+  ],
+  "continuation_frame_gate": {
+    "va": "0x00d79744",
+    "file_offset": 9934660,
+    "bytes": "03000000030000000300000003000000",
+    "signed_int32": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "coverage": "four entries needed before possible fifth segment; following bytes are not part of this table"
+  },
+  "state22_tick_switch": {
+    "state_getter": "0x402060(actor+0x155c)",
+    "dispatch": "0x7261d4..0x7261f5",
+    "state": 22,
+    "map_va": "0x00730304",
+    "map_file_offset": 3343108,
+    "map_bytes": "002020202020200102200320202020202020200405060708090a0b0c200d200e0f10111213141520161718191a1b1c1d201e20201f",
+    "mapped_index": 7,
+    "jump_va": "0x0073029c",
+    "jump_file_offset": 3343004,
+    "jump_bytes": "9e6c7200",
+    "target": "0x00726c9e"
+  },
+  "evidence_kind": "static native bytes; no original-client runtime observation",
+  "rea_support": [
+    "../rea/015-state-function.c",
+    "../rea/results/047-tripleslash-command-containing.json",
+    "../rea/049-swordman-command-pseudocode.c"
+  ],
+  "limitations": [
+    "Some excerpts intentionally begin inside a larger function.",
+    "Function-wide Ghidra switch recovery is incomplete; literal bytes take priority."
+  ]
+}

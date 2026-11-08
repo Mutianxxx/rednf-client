@@ -1,0 +1,508 @@
+{
+  "passed": true,
+  "checks": 125,
+  "results": [
+    {
+      "name": "executable hash",
+      "passed": true
+    },
+    {
+      "name": "PVF hash",
+      "passed": true
+    },
+    {
+      "name": "capture 00407BC0-00407BE3",
+      "passed": true
+    },
+    {
+      "name": "capture 0044ADDB-0044ADEF",
+      "passed": true
+    },
+    {
+      "name": "capture 0044B14E-0044B16F",
+      "passed": true
+    },
+    {
+      "name": "capture 00472B54-00472B7E",
+      "passed": true
+    },
+    {
+      "name": "capture 00490720-0049082B",
+      "passed": true
+    },
+    {
+      "name": "capture 0049B250-0049B2CC",
+      "passed": true
+    },
+    {
+      "name": "capture 0049C090-0049C0AF",
+      "passed": true
+    },
+    {
+      "name": "capture 0049D070-0049D094",
+      "passed": true
+    },
+    {
+      "name": "capture 0049E840-0049E867",
+      "passed": true
+    },
+    {
+      "name": "capture 0049F4D0-0049F575",
+      "passed": true
+    },
+    {
+      "name": "capture 0049F65A-0049F6C8",
+      "passed": true
+    },
+    {
+      "name": "capture 0049FAAC-0049FB30",
+      "passed": true
+    },
+    {
+      "name": "capture 004A0DA0-004A0E0E",
+      "passed": true
+    },
+    {
+      "name": "capture 004CAA20-004CAA41",
+      "passed": true
+    },
+    {
+      "name": "capture 004E9EA0-004EA0F9",
+      "passed": true
+    },
+    {
+      "name": "capture 004EA4D0-004EA61E",
+      "passed": true
+    },
+    {
+      "name": "capture 005C77B0-005C7824",
+      "passed": true
+    },
+    {
+      "name": "capture 005CE740-005CE796",
+      "passed": true
+    },
+    {
+      "name": "capture 005CE7A0-005CE7D0",
+      "passed": true
+    },
+    {
+      "name": "capture 005E8500-005E8546",
+      "passed": true
+    },
+    {
+      "name": "capture 005EA005-005EA03B",
+      "passed": true
+    },
+    {
+      "name": "capture 005EA482-005EA494",
+      "passed": true
+    },
+    {
+      "name": "capture 005EA79A-005EA7B0",
+      "passed": true
+    },
+    {
+      "name": "capture 005EA85E-005EA898",
+      "passed": true
+    },
+    {
+      "name": "capture 005F1F54-005F1F7C",
+      "passed": true
+    },
+    {
+      "name": "capture 0072B78F-0072B8D9",
+      "passed": true
+    },
+    {
+      "name": "capture 0073B42C-0073B47C",
+      "passed": true
+    },
+    {
+      "name": "capture 0073C13C-0073C2D9",
+      "passed": true
+    },
+    {
+      "name": "capture 00744A50-00744A61",
+      "passed": true
+    },
+    {
+      "name": "capture 0082F710-0082F784",
+      "passed": true
+    },
+    {
+      "name": "capture 00831AD0-00831C57",
+      "passed": true
+    },
+    {
+      "name": "capture 00882A50-00882ACA",
+      "passed": true
+    },
+    {
+      "name": "capture 00884720-00884791",
+      "passed": true
+    },
+    {
+      "name": "capture 00884A70-00884A96",
+      "passed": true
+    },
+    {
+      "name": "capture 00884C99-00884CBF",
+      "passed": true
+    },
+    {
+      "name": "capture 008C4248-008C460E",
+      "passed": true
+    },
+    {
+      "name": "capture 008C5EB8-008C5EBC",
+      "passed": true
+    },
+    {
+      "name": "capture 00A614D0-00A614FD",
+      "passed": true
+    },
+    {
+      "name": "capture 00A618E0-00A61910",
+      "passed": true
+    },
+    {
+      "name": "capture 00A619C2-00A61A1C",
+      "passed": true
+    },
+    {
+      "name": "capture 00A61FEC-00A62040",
+      "passed": true
+    },
+    {
+      "name": "capture 00B7CF2F-00B7CF57",
+      "passed": true
+    },
+    {
+      "name": "capture 00CCAF9C-00CCAFE8",
+      "passed": true
+    },
+    {
+      "name": "capture 00CF08A0-00CF08B8",
+      "passed": true
+    },
+    {
+      "name": "capture 00D7C708-00D7C78E",
+      "passed": true
+    },
+    {
+      "name": "capture 00E1F15C-00E1F178",
+      "passed": true
+    },
+    {
+      "name": "capture 00E23520-00E23540",
+      "passed": true
+    },
+    {
+      "name": "capture 00E4C4F4-00E4C504",
+      "passed": true
+    },
+    {
+      "name": "Swordman spawn wrapper",
+      "passed": true
+    },
+    {
+      "name": "Swordman attribute read",
+      "passed": true
+    },
+    {
+      "name": "opcode21 receive",
+      "passed": true
+    },
+    {
+      "name": "factory object20018",
+      "passed": true
+    },
+    {
+      "name": "OBJ manager load slot",
+      "passed": true
+    },
+    {
+      "name": "OBJ manager type2",
+      "passed": true
+    },
+    {
+      "name": "ReleaseWave tick",
+      "passed": true
+    },
+    {
+      "name": "ReleaseWave remove",
+      "passed": true
+    },
+    {
+      "name": "ReleaseWave set basic ANI",
+      "passed": true
+    },
+    {
+      "name": "ReleaseWave set current ANI",
+      "passed": true
+    },
+    {
+      "name": "skill32 compare",
+      "passed": true
+    },
+    {
+      "name": "phase0 guard",
+      "passed": true
+    },
+    {
+      "name": "spawn literal20018",
+      "passed": true
+    },
+    {
+      "name": "spawn virtual2B8",
+      "passed": true
+    },
+    {
+      "name": "spawn ret13args",
+      "passed": true
+    },
+    {
+      "name": "writer opcode21",
+      "passed": true
+    },
+    {
+      "name": "OBJ basic template34",
+      "passed": true
+    },
+    {
+      "name": "OBJ ATK template70",
+      "passed": true
+    },
+    {
+      "name": "write basic ANI+118",
+      "passed": true
+    },
+    {
+      "name": "write current ANI+104",
+      "passed": true
+    },
+    {
+      "name": "tick read ANI ended13A",
+      "passed": true
+    },
+    {
+      "name": "receive factory",
+      "passed": true
+    },
+    {
+      "name": "selected constructor",
+      "passed": true
+    },
+    {
+      "name": "base constructor",
+      "passed": true
+    },
+    {
+      "name": "numeric registration consumer",
+      "passed": true
+    },
+    {
+      "name": "OBJ path consumer",
+      "passed": true
+    },
+    {
+      "name": "USA list initialize",
+      "passed": true
+    },
+    {
+      "name": "list numeric parser",
+      "passed": true
+    },
+    {
+      "name": "type2 parser",
+      "passed": true
+    },
+    {
+      "name": "runtime ANI",
+      "passed": true
+    },
+    {
+      "name": "runtime ATK lookup",
+      "passed": true
+    },
+    {
+      "name": "runtime ATK copy",
+      "passed": true
+    },
+    {
+      "name": "scalar setup",
+      "passed": true
+    },
+    {
+      "name": "ANI constructor load",
+      "passed": true
+    },
+    {
+      "name": "remove base request",
+      "passed": true
+    },
+    {
+      "name": "native literal PassiveObject/",
+      "passed": true
+    },
+    {
+      "name": "native literal PassiveObject.usa.lst",
+      "passed": true
+    },
+    {
+      "name": "native literal Effect/Animation/ReleaseWave1.ani",
+      "passed": true
+    },
+    {
+      "name": "native literal Effect/Animation/ReleaseWave2.ani",
+      "passed": true
+    },
+    {
+      "name": "native literal [basic motion]",
+      "passed": true
+    },
+    {
+      "name": "native literal [attack info]",
+      "passed": true
+    },
+    {
+      "name": "native literal WAVE_CANCLE",
+      "passed": true
+    },
+    {
+      "name": "PVF export skill/swordmanskill.lst",
+      "passed": true
+    },
+    {
+      "name": "PVF export skill/swordman/releasewave.skl",
+      "passed": true
+    },
+    {
+      "name": "PVF export passiveobject/passiveobject.lst",
+      "passed": true
+    },
+    {
+      "name": "PVF export passiveobject/passiveobject.usa.lst",
+      "passed": true
+    },
+    {
+      "name": "PVF export passiveobject/passiveobject.jpn.lst",
+      "passed": true
+    },
+    {
+      "name": "PVF export passiveobject/old passiveobject.lst",
+      "passed": true
+    },
+    {
+      "name": "PVF export passiveobject/character/swordman/releasewave.obj",
+      "passed": true
+    },
+    {
+      "name": "PVF export passiveobject/character/swordman/animation/releasewave.ani",
+      "passed": true
+    },
+    {
+      "name": "PVF export passiveobject/character/swordman/attackinfo/releasewave.atk",
+      "passed": true
+    },
+    {
+      "name": "PVF export character/swordman/effect/animation/releasewave1.ani",
+      "passed": true
+    },
+    {
+      "name": "PVF export character/swordman/effect/animation/releasewave2.ani",
+      "passed": true
+    },
+    {
+      "name": "numeric row skill/swordmanskill.lst",
+      "passed": true
+    },
+    {
+      "name": "numeric row passiveobject/passiveobject.lst",
+      "passed": true
+    },
+    {
+      "name": "numeric row passiveobject/passiveobject.usa.lst",
+      "passed": true
+    },
+    {
+      "name": "numeric row passiveobject/passiveobject.jpn.lst",
+      "passed": true
+    },
+    {
+      "name": "numeric row passiveobject/old passiveobject.lst",
+      "passed": true
+    },
+    {
+      "name": "separate visual/attack timelines",
+      "passed": true
+    },
+    {
+      "name": "object images stay empty",
+      "passed": true
+    },
+    {
+      "name": "object box in every resource frame",
+      "passed": true
+    },
+    {
+      "name": "no invented ACT",
+      "passed": true
+    },
+    {
+      "name": "REA retained ev_d5a20a9df4046515d44da1f508ada209e46fd5798039b1fb62ac4f22db98f062",
+      "passed": true
+    },
+    {
+      "name": "REA retained ev_2f7867de61c875a505cc1faae80d222c5bba4e3cfe9ad8abb8bba4b3cde0fdf5",
+      "passed": true
+    },
+    {
+      "name": "REA retained ev_d558604b24668e139d4d79cc0fc2efe747cea03abf894c3a0aa92ee5d74c3ed0",
+      "passed": true
+    },
+    {
+      "name": "REA retained ev_1bc887f2b12a3439895019e1c4acecf03d27e793de6a759db6b93e6635328cb7",
+      "passed": true
+    },
+    {
+      "name": "REA retained ev_4118faea0bf1d88925b0e69eed60a6943572d4cb562ae7b801465742e69d9662",
+      "passed": true
+    },
+    {
+      "name": "REA retained ev_eebea8b3f4c7797df0830f7fc84b9791f6bc15f669918d957ee3737033592dd4",
+      "passed": true
+    },
+    {
+      "name": "REA retained ev_eb4d3736a0582b425f42d433493c70e1ca2b7cd272717881ded62b1bbfaee4c2",
+      "passed": true
+    },
+    {
+      "name": "first native resource frames",
+      "passed": true
+    },
+    {
+      "name": "attack frame1 at80",
+      "passed": true
+    },
+    {
+      "name": "attack active before400",
+      "passed": true
+    },
+    {
+      "name": "attack removed at normalized400",
+      "passed": true
+    },
+    {
+      "name": "visuals exist when spawn gate fails",
+      "passed": true
+    },
+    {
+      "name": "translated native geometry",
+      "passed": true
+    }
+  ],
+  "observed_execution": false,
+  "limitation": "Static identities, anchors, exact registrations and limited timeline only; no observed target execution, accepted-hit formula or visual equivalence."
+}

@@ -1,0 +1,253 @@
+﻿{
+    "node":  "node-05-cross-character-templates",
+    "exe":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\build\\rep_pvf_preview.exe",
+    "exe_sha256":  "a10b6fad96bb334610820dbe4895ff830c29f8d39a4889267eae618d36a8f1c4",
+    "build_manifest":  "D:\\dnf-rebuild\\rep-player-1031-pvf\\tools\\dependency-build\\preview-20261019-171245-507-43732\\build-manifest.json",
+    "build_manifest_sha256":  "29d32587c46c7a5fdf5d2d9e0402592745a99c29c623acaa8a210d17a14edf0e",
+    "source_identity_matches_build":  true,
+    "sources":  [
+                    {
+                        "path":  "src\\app.cpp",
+                        "sha256":  "1cf585ce25f6fa0aa33f17b59d2c62df0df3fb27462b81462598a2b43d106005"
+                    },
+                    {
+                        "path":  "src\\app.rc",
+                        "sha256":  "a2df995d74573309874a3a198cc4ad31cfe55585712708e3674dbc1967e3b7bf"
+                    },
+                    {
+                        "path":  "src\\audio.cpp",
+                        "sha256":  "4f500a6f4fd9eda3f6c66688f2dd9017b1300bcf5b9b8b32b9c02ca5f6b118ba"
+                    },
+                    {
+                        "path":  "src\\audio.hpp",
+                        "sha256":  "cf033482ea896c0503f3ad7d4ec7387839b1f0daf571c4bac7c9ae55d560a406"
+                    },
+                    {
+                        "path":  "src\\audio_resources.cpp",
+                        "sha256":  "765a0e7847642e9f652c3dd2823902d9aa4be288878628db5949b5fbe293ace5"
+                    },
+                    {
+                        "path":  "src\\audio_resources.hpp",
+                        "sha256":  "bf5e4e7beae29edf828c0e35f231cbcb19197c8ca047a4adcecba3fb829afba5"
+                    },
+                    {
+                        "path":  "src\\bindings.cpp",
+                        "sha256":  "b62d419b6057b08e04d6d64b5fa5a64df5862d05163a818370599776cc8f7960"
+                    },
+                    {
+                        "path":  "src\\bindings.hpp",
+                        "sha256":  "6439bb0872ccdefd1729d0147f217b66941bed1f205993616fb2898f45edbb0d"
+                    },
+                    {
+                        "path":  "src\\canvas.hpp",
+                        "sha256":  "ffa2983b29c1184b4ae9844b84d7fa1326eff82b96eada991451de77549f16ae"
+                    },
+                    {
+                        "path":  "src\\catalog.cpp",
+                        "sha256":  "fd9f5f4ab50825b7f1c35adcff71be044db36fe60f63eb4e0deb2994c7c0b589"
+                    },
+                    {
+                        "path":  "src\\catalog.hpp",
+                        "sha256":  "f1748a0b23b8dd74f3fd797f7eb23b64d4ce162f81c2d5af7ee8b5d3fad58283"
+                    },
+                    {
+                        "path":  "src\\catalog_validate.cpp",
+                        "sha256":  "ad235195c2a009d684ad3dc2fc726170f7e806b250f68c514dbd1ff6fcd35245"
+                    },
+                    {
+                        "path":  "src\\client_protocol.hpp",
+                        "sha256":  "b5edbc99c745aa2e4541cf2477b33f3c8559fb38c53489b32f7d0a085df0d040"
+                    },
+                    {
+                        "path":  "src\\engine.cpp",
+                        "sha256":  "69d70e597993f08abfb3ee5dc1409d06198c41c138363868e490c9fe8f72ba22"
+                    },
+                    {
+                        "path":  "src\\engine.hpp",
+                        "sha256":  "ae0419dcae40d70803189238f509934e16a4e52bad188b966c69b331356b96fc"
+                    },
+                    {
+                        "path":  "src\\export.cpp",
+                        "sha256":  "579b5d53fa088167782aa667d076296235cffda6cdd36f6738dbcaf864cc4496"
+                    },
+                    {
+                        "path":  "src\\export.hpp",
+                        "sha256":  "c386b2b5e8cdca383d65cfa7b6a4c5189d40d0cbd6449f675dc07538219f7782"
+                    },
+                    {
+                        "path":  "src\\export_validate.cpp",
+                        "sha256":  "ba51073a898155453fb079b671a713165f80e18a61e35cd49408608bdaad3214"
+                    },
+                    {
+                        "path":  "src\\fonts.cpp",
+                        "sha256":  "1953906bf2c2d45f761b969c81033cbf17f6b7f6b40709c08b4ebff6762a16dc"
+                    },
+                    {
+                        "path":  "src\\fonts.hpp",
+                        "sha256":  "71246c0be287b60176ffb72c0741c240d748bfa1555ea3859d144080d0ebd499"
+                    },
+                    {
+                        "path":  "src\\gpu.cpp",
+                        "sha256":  "a505b3bba2b4a3169b159fc8bfd429c22baf8fe0f4b249a4a1ef726db39c5ce6"
+                    },
+                    {
+                        "path":  "src\\gpu.hpp",
+                        "sha256":  "a212ada04bf9c32f8d56b55943f1afe1d3b565efcc0daa17241bb0d2e0d25c2d"
+                    },
+                    {
+                        "path":  "src\\gpu_validate.cpp",
+                        "sha256":  "ef4dbddbfcefd32c12d2e4792a0782bbe12e45d14a89923f252fdd19d0da73ca"
+                    },
+                    {
+                        "path":  "src\\image_categories.hpp",
+                        "sha256":  "7073f0e517704fb43cec6ee129ff77bb19e1a3b9f8e4346528040f357ff92811"
+                    },
+                    {
+                        "path":  "src\\migration_table.hpp",
+                        "sha256":  "1cb0bbd3a5ed71522dfee56f3b72fced73b2d950457f87cc2d450cc7d0789ffb"
+                    },
+                    {
+                        "path":  "src\\movies.cpp",
+                        "sha256":  "cb30d41b703d1bd04d7aec424144672e911c67508141a5c1f48d49202d7661e3"
+                    },
+                    {
+                        "path":  "src\\movies.hpp",
+                        "sha256":  "554a0f6647b60663f1cde74216ed3ae823947dc9be48e6837e893a735ed28af6"
+                    },
+                    {
+                        "path":  "src\\preset_table.hpp",
+                        "sha256":  "d725d6b9e8baafb816e401f412f91c108b27786f8445815255934f7f9bac8230"
+                    },
+                    {
+                        "path":  "src\\protocol.cpp",
+                        "sha256":  "4c02090dfb8b555e387c8fd945134b041645d9b85a4bf9359cf97e77c32a1c77"
+                    },
+                    {
+                        "path":  "src\\protocol.hpp",
+                        "sha256":  "4edb1847097bae539deb2d9d01f07b61d052c7f7bbb8d9c449428fabad008598"
+                    },
+                    {
+                        "path":  "src\\pvf.cpp",
+                        "sha256":  "2909ec875ab42b1a39e42965d1c2bf92b05263e1de32883666c512f4fef50c97"
+                    },
+                    {
+                        "path":  "src\\pvf.hpp",
+                        "sha256":  "ccff7ca5107253b86803dd50cd539417b224f3ea9e618520cf7e1ee6d55d0579"
+                    },
+                    {
+                        "path":  "src\\pvf_als.cpp",
+                        "sha256":  "d3e7c3931ae969de1a2059da97cb27276a3f24ce7f6b3dee60955f50079cb4df"
+                    },
+                    {
+                        "path":  "src\\pvf_als.hpp",
+                        "sha256":  "ccdb7e27cdafdaf68a72a7064a4aed897cc69b8d244ae1227a3a8f3a9d6eaa94"
+                    },
+                    {
+                        "path":  "src\\pvf_animation.cpp",
+                        "sha256":  "b84c5fe3cbb33ce7c1dbfed912d4fd72cab412f964058a7d239582b065f136f2"
+                    },
+                    {
+                        "path":  "src\\pvf_animation.hpp",
+                        "sha256":  "50ba144f536c14ae70845aad3c9083f6c0cbb4cfe8385a3a73ac6ecfb45deab4"
+                    },
+                    {
+                        "path":  "src\\pvf_playback.cpp",
+                        "sha256":  "d493f25ce214a21bde70a8b965aff7e88c1904eb9438f4f608de2fee7b9c99cc"
+                    },
+                    {
+                        "path":  "src\\pvf_playback.hpp",
+                        "sha256":  "b64f6c303e09b0d6909e3e4634ed7d4bd99e7c1b88a27a033ab8657e29a89be1"
+                    },
+                    {
+                        "path":  "src\\pvf_preview.cpp",
+                        "sha256":  "e94e0cc8398f2abc4a4463f9a280f618b8068934fff1012f686143a8ebce2ca5"
+                    },
+                    {
+                        "path":  "src\\pvf_preview_catalog.cpp",
+                        "sha256":  "e600b012fab977130fa762f84e8bcee63097028e2503b0e694192f0c137ede9e"
+                    },
+                    {
+                        "path":  "src\\pvf_preview_catalog.hpp",
+                        "sha256":  "2ffadb437365ef1ab6b3d5805d2f47b2a46c96409d4419bf75c401854630cbe5"
+                    },
+                    {
+                        "path":  "src\\pvf_preview_scene.cpp",
+                        "sha256":  "84c5b6f08378b14b1cca1f1e98192ac7a5aa3972b10ba7d92294621c8be0bb63"
+                    },
+                    {
+                        "path":  "src\\pvf_preview_scene.hpp",
+                        "sha256":  "a08c737e8ddfffdd50713ff815d789a162d1094a44ed15041f38b1c84157bcbf"
+                    },
+                    {
+                        "path":  "src\\pvf_preview_verify.cpp",
+                        "sha256":  "b2cbfda858070b6381f54e4ce70bd948697ddd7f691c94e6470a7def5bcb9355"
+                    },
+                    {
+                        "path":  "src\\pvf_preview_verify.hpp",
+                        "sha256":  "994ce2c0cef4902f40eba09a44f3b3ac6fb505fa8c295474b0956e5a4efa84af"
+                    },
+                    {
+                        "path":  "src\\pvf_script_preview.cpp",
+                        "sha256":  "d2611f74ffecf60bf7377de275a539de0fa68f4343aac82eb948a3c0b56d091e"
+                    },
+                    {
+                        "path":  "src\\pvf_script_preview.hpp",
+                        "sha256":  "8608642f73b398ede96c3bc0ef8d5ac3035a8c322a338b2ba37f18a713ad7bef"
+                    },
+                    {
+                        "path":  "src\\pvf_template_preview.cpp",
+                        "sha256":  "459c6cc5dcc4c6c71541fad9ab092d28f0473e98ea51d19827386157368db673"
+                    },
+                    {
+                        "path":  "src\\pvf_template_preview.hpp",
+                        "sha256":  "e3f7a946669cde8e88969f9d9f472821af01f55d147a7a4d2885ff7e01aa8709"
+                    },
+                    {
+                        "path":  "src\\pvf_validate.cpp",
+                        "sha256":  "782993309ec7988b8facc4397524d70a0c838ad930b182f6f71b9951ee4cacf4"
+                    },
+                    {
+                        "path":  "src\\resource_data.hpp",
+                        "sha256":  "0935538af0bbd08c778775f25562598686ed8ec70e50f006b629af0e7687a354"
+                    },
+                    {
+                        "path":  "src\\resource_validate.cpp",
+                        "sha256":  "9852c7a3dbd72eb76694576c0e4680790cdfba4a8c483c3ef1974487a99d8d27"
+                    },
+                    {
+                        "path":  "src\\resources.cpp",
+                        "sha256":  "5eeb6eedf08f400d3388cc380cd0f7cf47ecad04351ccfa40394dd3288aac079"
+                    },
+                    {
+                        "path":  "src\\resources.hpp",
+                        "sha256":  "67d7693e786d2da9219781004372e9bade8d6b1f58108a13d8a84f2ce4365f7f"
+                    },
+                    {
+                        "path":  "src\\runtime_paths.hpp",
+                        "sha256":  "b018cef6ac89546d5afdad696510a9859012a78dbd9373f85cf879dd2c8207f9"
+                    },
+                    {
+                        "path":  "src\\shader_registry.hpp",
+                        "sha256":  "30f4b85388c7c16b8cd8678202fd6dbbd5273a8868b968d384adf7762a3adaf6"
+                    },
+                    {
+                        "path":  "src\\ui_playback.cpp",
+                        "sha256":  "053d41507b321f7c9bd649973606d0d2a8ba19c408019fd38091a7d5b4d51897"
+                    },
+                    {
+                        "path":  "src\\ui_playback.hpp",
+                        "sha256":  "15da326fdbc2a1a439bf26c42cec1e6ddc7dbad69d49b121106093546797b5e3"
+                    },
+                    {
+                        "path":  "src\\ui_widgets.hpp",
+                        "sha256":  "cd4e8de379a4533b5344a9767e6b2d9230de590e9a7a6a7021e0cedbe86fb931"
+                    },
+                    {
+                        "path":  "src\\validate.cpp",
+                        "sha256":  "4fef1fc9153f0a5de929e739908a4078388edccec283d3e0afe5240a48537b3b"
+                    }
+                ],
+    "user_visual_acceptance":  "pending",
+    "native_dynamic_comparison":  "pending",
+    "migration_to_native_demo":  false
+}

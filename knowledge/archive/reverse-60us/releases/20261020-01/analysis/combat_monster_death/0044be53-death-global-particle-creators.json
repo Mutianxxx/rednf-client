@@ -1,0 +1,12 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "va": "0x44be53",
+  "rva": "0x4be53",
+  "file_offset": 310867,
+  "length": 307,
+  "bytes_sha256": "5ff38a42716cf5c57ee81f4477fee28573b39eb8195eed5824f90e266a87b50f",
+  "status": "native_bytes",
+  "note": "Six global PTL creator loads/stores; bounded native fragment, not whole enclosing initializer.",
+  "disassembled": true
+}

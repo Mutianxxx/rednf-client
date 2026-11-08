@@ -1,0 +1,121 @@
+{
+  "source": {
+    "path": "DFO/DFO_fixed_v3.exe",
+    "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "image_base": "0x400000",
+    "evidence_kind": "local static PE bytes and Capstone x86 disassembly",
+    "runtime_observed": false,
+    "rea_provider_evidence": false
+  },
+  "observed_static": {
+    "collision_is_not_damage": true,
+    "monster_vtable": "0xD8385C",
+    "qualification": {
+      "function": "0x4EDF70",
+      "target_history": "this+0x418",
+      "throttle_map": "this+0x470",
+      "seen_query": "0x4ECE50",
+      "register_target": "0x4EDE20",
+      "reset_target_history": "0x438990",
+      "lifecycle_contract": "../combat_hit_lifecycle/history-contract.json",
+      "lifecycle_readme": "../combat_hit_lifecycle/README.md",
+      "lifecycle_scope": "Local ATK installation, reset behavior and ownership are now closed by the separate current-binary audit; all-skill active trigger coverage remains unknown."
+    },
+    "message_0x13": {
+      "opcode_hex": "0x13",
+      "opcode_decimal": 19,
+      "send": "0x4EABF0",
+      "receiver": "0x8C1A30",
+      "dispatch_table": "0x8C5E64",
+      "table_index": 19,
+      "case": "0x8C39B0",
+      "target_slot260_call": "0x8C3CD1",
+      "callback_order": [
+        "attacker.slot250",
+        "target.slot25C",
+        "attacker.slot254",
+        "target.slot260",
+        "attacker.slot258",
+        "target.slot264"
+      ]
+    },
+    "monster_hit": {
+      "slot": "0x260",
+      "function": "0x4F8A30",
+      "base_call_site": "0x4F9AC2",
+      "base": "0x4B28D0"
+    },
+    "calculation": {
+      "slot": "0x2F8",
+      "slot_call_site": "0x4B2EC1",
+      "monster_wrapper": "0x4F5C20",
+      "common": "0x4EB780",
+      "numeric_calculator": "0x8B8650"
+    },
+    "hp": {
+      "subtract_site": "0x4B312F",
+      "update_call": "0x4B3135",
+      "argument": "new absolute HP, not damage or delta",
+      "wrapper_slot": "0x3E8",
+      "wrapper": "0x4AF140",
+      "setter_slot": "0x3EC",
+      "setter_call_site": "0x4AF300",
+      "monster_setter": "0x4F58C0",
+      "base_setter_call": "0x4F59DD",
+      "base_setter": "0x4B4E00",
+      "field": "protected(this+0x1230)",
+      "clamp": "0..maxHP",
+      "current_getter_slot": "0x234",
+      "current_getter": "0x744B90",
+      "maximum_getter_slot": "0x238",
+      "maximum_getter": "0x744BA0"
+    },
+    "death": {
+      "hp_zero_call_site": "0x4B4ECB",
+      "flag_setter_slot": "0x3D8",
+      "flag_setter": "0x4AD960",
+      "flag_getter_slot": "0x3DC",
+      "flag_getter": "0x744B70",
+      "field": "protected(this+0x1554)"
+    },
+    "reaction_request": {
+      "selector_call": "0x4B31EF",
+      "selector_slot": "0x3E0",
+      "selector": "0x4AF540",
+      "candidate_states": [
+        3,
+        4,
+        5,
+        -1
+      ],
+      "death_state_choice_slot": "0x3E4",
+      "death_state_choice": "0x4AC440",
+      "pending_request": "0x4ED1D0",
+      "pending_field": "this+0x4A0",
+      "request_does_not_apply_or_serialize": true
+    },
+    "actual_state": {
+      "monster_slot": "0x22C",
+      "monster_method": "0x4FE290",
+      "base_method": "0x4BAD60",
+      "base_call_site": "0x4FEBA0",
+      "field": "protected(this+0x155C)",
+      "write_range": [
+        "0x4BC685",
+        "0x4BC6C5"
+      ]
+    }
+  },
+  "inferences": [
+    "History and throttle structures serve repeat-hit qualification; the source-bound local ATK installation/reset/ownership chain is documented in ../combat_hit_lifecycle/history-contract.json.",
+    "State 3 denotes a damage reaction, state 4 a down/airborne reaction, state 5 death handling in these consumers; enum source names are not recovered."
+  ],
+  "unknown": [
+    "Complete 8B8650 damage formula and all ATK parameter units",
+    "All-skill active trigger coverage for the locally recovered history reset/install lifecycle",
+    "Clock units for the mode==2 signed interval >=1000 test",
+    "Runtime packet/authority behavior and visual equivalence",
+    "Not every hit is network-only: another direct target.slot260 caller exists at 0x5F36CD"
+  ],
+  "preview_rule": "Keep geometric overlap, qualified contact, accepted hit, HP change, and selected reaction distinct; do not invent numeric damage or authority."
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "policy_id": "dnf1031-accepted-effects-20261018-v1",
+  "source": {
+    "client": "DNF1031",
+    "exe_sha256": "246b838163fa7c71aa0445fa4aafde04e7ac72aa72855a4b2a7eaeed5eeae264",
+    "pvf_sha256": "ca756b7103a91628cffdf42fb745e9185fd5937deb229289a74831aa30500e1f",
+    "preferred_image_base": "0x00400000",
+    "observed_plugins": [
+      "0725.dll",
+      "stringtable.dll"
+    ],
+    "behavior_capture_session": "20261018-025801-50428",
+    "instrumentation_validation_session": "20261018-032859-17200"
+  },
+  "target": "Accepted demo damage ANI/ACT-MOTION/ALS plus independent last-action or frozen-white/common-stone death",
+  "state_bindings": {
+    "idle": [
+      "[waiting motion]",
+      "[waiting action]",
+      "[basic action]"
+    ],
+    "damage1": [
+      "[damage motion 1]",
+      "[damage action 1]"
+    ],
+    "damage2": [
+      "[damage motion 2]",
+      "[damage action 2]"
+    ],
+    "down": [
+      "[down motion]",
+      "[down action]"
+    ],
+    "death": [
+      "[last action]"
+    ]
+  },
+  "state_semantics": {
+    "idle": "loop",
+    "damage1": "once then idle",
+    "damage2": "once then idle",
+    "down": "hold completed pose; no recovered physics/recovery",
+    "death_independent": "once, preserve final base pose; dead",
+    "death_shared": "freeze immutable plan at source time, white and particles, hide body, dead"
+  },
+  "die_effect": {
+    "raw_order": [
+      "selector",
+      "palette",
+      "omit"
+    ],
+    "supported_selector": "nonnegative; rating/force semantics unresolved",
+    "image_format": "monster/common/m%04d.img",
+    "piece_frames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "omit_bits": {
+      "1": "pieces",
+      "2": "blood (not executed)",
+      "4": "smoke",
+      "8": "flash"
+    }
+  },
+  "shared_timing_ms": {
+    "white_at": 60,
+    "burst_at": 220,
+    "body_fade_duration": 90,
+    "total": "220 + PTL [life time], currently 3220",
+    "clock_step_for_seek": 50
+  },
+  "shared_particle": {
+    "ptl": "monster/common/particle/monsterdiepiece.ptl",
+    "count": 10,
+    "gravity": 1500,
+    "life_ms": 3000,
+    "speed": 400,
+    "landing": "analytic time of impact then stop",
+    "rng": "FNV-1a UTF-8 path seed, xorshift32, 8 draws per particle",
+    "size": [
+      0.5,
+      1
+    ]
+  },
+  "geometry": {
+    "rotation": "radians in ANI, degrees at SDL API",
+    "facing": "apply once in model space",
+    "alpha": "source IMG alpha * ANI alpha * lifecycle fade",
+    "frozen_bbox": "union of current transformed frame crop rectangles, including alpha-empty margins"
+  },
+  "route": {
+    "auto": "explicit death field valid -> independent; explicit death field invalid -> diagnostic; no death field -> shared if valid",
+    "forced_shared": "respect original omit flags",
+    "forced_independent": "explicit last action only"
+  },
+  "graph_limits": {
+    "als_depth": 12,
+    "track_instances": 256,
+    "resource_export_nodes": 2048
+  },
+  "upstream_event": {
+    "name": "onAcceptedHit / requestDeath",
+    "required": [
+      "instanceId",
+      "generation",
+      "accepted hit decision",
+      "reactionIndex 0 or 1",
+      "explicit death decision",
+      "ordered event time"
+    ],
+    "note": "Proposed integration API; demo has keyboard commands, not damage resolution"
+  },
+  "implemented": [
+    "direct ANI and ACT MOTION tracks",
+    "supported ALS",
+    "native image decoding",
+    "damage playback",
+    "independent visual death",
+    "frozen white mask",
+    "palette stone fragments",
+    "approximate smoke/flash",
+    "seek/facing/reset"
+  ],
+  "not_executed": [
+    "damage formula",
+    "hit pause/knockback physics",
+    "superarmor policy",
+    "ACT trigger/behavior/NUT",
+    "passiveobject creation",
+    "sounds",
+    "blood",
+    "rating branches",
+    "native HP-to-death/removal/drop timing"
+  ],
+  "evidence_classes": [
+    "native_verified",
+    "data_observed",
+    "reconstruction_policy",
+    "unresolved"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "compiler": "D:\\dnf-rebuild\\dnf-native-demo\\third_party\\llvm-mingw-20261006-ucrt-x86_64\\bin\\x86_64-w64-mingw32-clang++.exe",
+  "source_client": "DNF/DNF",
+  "sha256": {
+    "src/canvas.hpp": "fdf4f25f774fa303d05abb67be58f867cec59c305565a9dc752bab417871ea2d",
+    "src/main.cpp": "262da8123dfa8c73b536576be9afbbbcbb4f4456d2b1245e472448ad47fa553d",
+    "src/resources.cpp": "27542685be02852634f227ce2eac803f13747d57fab1db0d604d5cbd151ca243",
+    "include/dnf/entry.hpp": "343d37a889f53eba20599ae5b7448c0b51dd716bed389ed9b6999f6fdbc84b1a",
+    "include/dnf/geometry.hpp": "cd4329234a1f08903899cefe7a1fadb11e39c5fbae313ffd89f6e2b471591115",
+    "include/dnf/resources.hpp": "7f109db6e04d8add2b838d70c1a67ea685b27b938e6925d178a1de2dcafc803a",
+    "include/dnf/shared_death.hpp": "9d9466e730f5a2b3a61ab462613876729284f3f521923174686894e36981f08d",
+    "tools/build.py": "38b4f97cfddd6cfdcf09215c2526f5480693bcc5cb5d0466de488a66860f3a06",
+    "tools/prepare.py": "ce7591a6c006d09ea1e286be2e97e55ccc843175e7fe61f338847a2ac765b283",
+    "content/battle.json": "6fdbf84ebd9fe6efaccda897de63483de24f39b3936e7d1db584c8986c1f7494",
+    "content/profile.json": "3638b7f63c4b2a7ec97606cae13bfe5aaa3e9df82ec52f63d7cdb32d8b14ff6d",
+    "content/skills.json": "e81abefc9eef7cf76765e23c8a3c701fb177af0e46a426490ecc5865aafbb0bb",
+    "content/cache/index.json": "67afc4d592e9963d170b311b48e2ba4a931653d87349810f52ecc184c141d77c",
+    "content/cache/resources.bin": "435362dde10da4d912b6abb08cb360943031a3d7014817765d68370fcff522b0",
+    "battle_demo.exe": "c147c7b3cb3864f3cf43e4fa31cbb56be872b1a66cde441e2c97e7ddb0dd5e08",
+    "SDL2.dll": "53e8fa7e9ed43c30bd650c39396f0d9d2067d2fff0b926c9433b75202592e4aa",
+    "libunwind.dll": "b0636a4281610124704adb2be2edf5642e830d86c68b7f27dbc9c8154705a780"
+  },
+  "borrowed_sources": [
+    "skill_lab_v3/src/resources.cpp",
+    "skill_lab_v3/src/canvas.hpp",
+    "monster_demo/include/dnf/shared_death.hpp"
+  ]
+}

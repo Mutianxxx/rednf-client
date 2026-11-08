@@ -1,0 +1,1351 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "fixed EXE PVF and snapshot fingerprints",
+      "passed": true
+    },
+    {
+      "name": "evidence binds current implementation and catalog",
+      "passed": true
+    },
+    {
+      "name": "native range 0x10754d6 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x107590f matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x1075f03 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x1072820 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11e98e0 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11e9970 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11e99a0 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11e9bb0 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11e9c30 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11e9e20 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11ea1d0 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x13d83e0 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x11be370 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x42d800 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0x121ff50 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "native range 0xfd50a0 matches disk snapshot and hash",
+      "passed": true
+    },
+    {
+      "name": "31 direct CALL targets and exact bytes",
+      "passed": true
+    },
+    {
+      "name": "configuration virtual and board draw dispatch",
+      "passed": true
+    },
+    {
+      "name": "type 0x223 resolves through both factory switch levels",
+      "passed": true
+    },
+    {
+      "name": "both native labels decrypt and roundtrip",
+      "passed": true
+    },
+    {
+      "name": "rounding and unit constants are exact float32",
+      "passed": true
+    },
+    {
+      "name": "targeted scripts preserve original bytes and token roundtrip",
+      "passed": true
+    },
+    {
+      "name": "loop parameters are counts and logical size uses center and side slots",
+      "passed": true
+    },
+    {
+      "name": "loop submits complete rows in native order",
+      "passed": true
+    },
+    {
+      "name": "loop steps use image3 width and image1 height not corner maxima",
+      "passed": true
+    },
+    {
+      "name": "loop never scales tiles or invents remainder clipping",
+      "passed": true
+    },
+    {
+      "name": "operations retain instance frame raw source and confirmed-state scope",
+      "passed": true
+    },
+    {
+      "name": "zero or unit count boundary (0, 0)",
+      "passed": true
+    },
+    {
+      "name": "zero or unit count boundary (0, 1)",
+      "passed": true
+    },
+    {
+      "name": "zero or unit count boundary (1, 0)",
+      "passed": true
+    },
+    {
+      "name": "zero or unit count boundary (1, 1)",
+      "passed": true
+    },
+    {
+      "name": "same frame in different slots is not collapsed",
+      "passed": true
+    },
+    {
+      "name": "stretch deducts side and top-bottom sizes independently",
+      "passed": true
+    },
+    {
+      "name": "stretch inner anchors use image0 dimensions",
+      "passed": true
+    },
+    {
+      "name": "stretch submits four simple corners and five zero-pivot transforms",
+      "passed": true
+    },
+    {
+      "name": "asymmetric images can extend beyond nominal board without cell clipping",
+      "passed": true
+    },
+    {
+      "name": "nonpositive scale suppresses every tile (8, 29)",
+      "passed": true
+    },
+    {
+      "name": "nonpositive scale suppresses every tile (7, 29)",
+      "passed": true
+    },
+    {
+      "name": "nonpositive scale suppresses every tile (31, 11)",
+      "passed": true
+    },
+    {
+      "name": "nonpositive scale suppresses every tile (31, 10)",
+      "passed": true
+    },
+    {
+      "name": "scale is stored as binary32 before rounded-anchor multiplication",
+      "passed": true
+    },
+    {
+      "name": "negative absolute anchor is rounded before local composition",
+      "passed": true
+    },
+    {
+      "name": "negative crop is transformed locally and preserved in pixel bounds",
+      "passed": true
+    },
+    {
+      "name": "zero center is a native no-draw branch 2",
+      "passed": true
+    },
+    {
+      "name": "zero center is a native no-draw branch 1",
+      "passed": true
+    },
+    {
+      "name": "missing image object refuses the entire board",
+      "passed": true
+    },
+    {
+      "name": "negative counts are preview refusal not guessed native behavior",
+      "passed": true
+    },
+    {
+      "name": "negative frame IDs never become valid frames",
+      "passed": true
+    },
+    {
+      "name": "bool values cannot masquerade as native integers",
+      "passed": true
+    },
+    {
+      "name": "unknown board flags stay explicit",
+      "passed": true
+    },
+    {
+      "name": "extra parameter schema stays explicit",
+      "passed": true
+    },
+    {
+      "name": "loop operation cap is checked before enumeration",
+      "passed": true
+    },
+    {
+      "name": "logical extent is bounded independently from operation count",
+      "passed": true
+    },
+    {
+      "name": "crop extent cannot force an unbounded image allocation",
+      "passed": true
+    },
+    {
+      "name": "nonfinite or noninteger metadata cannot enter native geometry",
+      "passed": true
+    },
+    {
+      "name": "canvas keeps negative cropped pixels and fixed absolute anchor",
+      "passed": true
+    },
+    {
+      "name": "later top-right tile overlaps earlier edge and survives outside logical width",
+      "passed": true
+    },
+    {
+      "name": "canvas retains center after native row-major compositing",
+      "passed": true
+    },
+    {
+      "name": "drawing does not mutate authored parameters or instance",
+      "passed": true
+    },
+    {
+      "name": "shared resource retains independent per-instance layout and order",
+      "passed": true
+    },
+    {
+      "name": "conditional instance does not leak board state when hidden",
+      "passed": true
+    },
+    {
+      "name": "restored conditional instance keeps its own absolute origin",
+      "passed": true
+    },
+    {
+      "name": "version1 bundle exports optional board operations and frame provenance",
+      "passed": true
+    },
+    {
+      "name": "old static bundle without board metadata reconstructs from original fields",
+      "passed": true
+    },
+    {
+      "name": "ambiguous image suppresses partial board and preserves a specific missing reason",
+      "passed": true
+    },
+    {
+      "name": "actual resource board 0 retains geometry and physical sources",
+      "passed": true
+    },
+    {
+      "name": "actual resource board 1 retains geometry and physical sources",
+      "passed": true
+    },
+    {
+      "name": "actual loop bundle retains all ordered operations and physical members",
+      "passed": true
+    },
+    {
+      "name": "actual resource board 2 retains geometry and physical sources",
+      "passed": true
+    },
+    {
+      "name": "actual resource board 3 retains geometry and physical sources",
+      "passed": true
+    },
+    {
+      "name": "actual resource board 4 retains geometry and physical sources",
+      "passed": true
+    },
+    {
+      "name": "actual resource board 5 retains geometry and physical sources",
+      "passed": true
+    },
+    {
+      "name": "actual resource board 6 retains geometry and physical sources",
+      "passed": true
+    },
+    {
+      "name": "actual resource board 7 retains geometry and physical sources",
+      "passed": true
+    },
+    {
+      "name": "actual resource board 8 retains geometry and physical sources",
+      "passed": true
+    },
+    {
+      "name": "real testbutton excessive-count fixture has bounded explicit refusal",
+      "passed": true
+    },
+    {
+      "name": "all nine loop definitions and one stretch reference are covered",
+      "passed": true
+    }
+  ],
+  "check_count": 79,
+  "renders": [
+    {
+      "source": "ui/boosterselect/boosterselectpass.ui",
+      "control": "1099",
+      "key": "ui/boosterselect/boosterselectpass.ui#2",
+      "image": "0-boosterselectpass.ui.png",
+      "image_sha256": "899ae1d60d3e15201b2fc239d3ab7f5f1cb9d738312827b2c32a6869652c9eb4",
+      "logical_size": [
+        232,
+        231
+      ],
+      "operations": 9,
+      "origin": [
+        20,
+        40
+      ],
+      "diagnostics": {
+        "issues": [],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 0
+        },
+        "support": "partial captured requests",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": null,
+      "resources": {
+        "213": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "214": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "215": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "216": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "217": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "218": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "219": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "220": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "221": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/cashshop/selectavatarcolorwindow.ui",
+      "control": "0",
+      "key": "ui/cashshop/selectavatarcolorwindow.ui#87",
+      "image": "1-selectavatarcolorwindow.ui.png",
+      "image_sha256": "6dae2bc5b73977acc5a571cc4b4f766dd97f210b2d6e1c769a70b00a48555ca7",
+      "logical_size": [
+        177,
+        86
+      ],
+      "operations": 120,
+      "origin": [
+        9,
+        29
+      ],
+      "diagnostics": {
+        "issues": [],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 0
+        },
+        "support": "partial captured requests",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "removed_reason": "draw by loop dimensions require native verification",
+        "before": 1,
+        "after": 0
+      },
+      "resources": {
+        "129": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "130": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "131": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "132": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "133": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "134": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "135": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "136": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "137": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/cashshop/selectavatarcolorwindow.ui",
+      "control": "6",
+      "key": "ui/cashshop/selectavatarcolorwindow.ui#192",
+      "image": "2-selectavatarcolorwindow.ui.png",
+      "image_sha256": "ed8d0886fd7500ada118ff8c5f2a180fb5bf69367bbe43a28aea9f7ed6b1e86e",
+      "logical_size": [
+        177,
+        60
+      ],
+      "operations": 90,
+      "origin": [
+        10,
+        30
+      ],
+      "diagnostics": {
+        "issues": [],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 0
+        },
+        "support": "partial captured requests",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "removed_reason": "draw by loop dimensions require native verification",
+        "before": 1,
+        "after": 0
+      },
+      "resources": {
+        "146": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "147": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "148": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "149": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "150": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "151": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "152": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "153": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        },
+        "154": {
+          "interface2/cs_shop/cs_shop.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_cs_shop.NPK",
+            "offset": 44419,
+            "length": 1553088,
+            "member_sha256": "69fa0f20e985c26bbeda46d11e3994858f0841078be5badb7fdd6f4b9a4cd34e"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/channel/selectchannel.ui",
+      "control": "214",
+      "key": "ui/channel/selectchannel.ui#552",
+      "image": "3-selectchannel.ui.png",
+      "image_sha256": "0ecbe096ecf392688a328725202c4478522ae634962bd1b629accefdb64a8b5d",
+      "logical_size": [
+        622,
+        386
+      ],
+      "operations": 1560,
+      "origin": [
+        108,
+        154
+      ],
+      "diagnostics": {
+        "issues": [],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 0
+        },
+        "support": "partial captured requests",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "removed_reason": "draw by loop dimensions require native verification",
+        "before": 1,
+        "after": 0
+      },
+      "resources": {
+        "0": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "1": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "2": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "3": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "4": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "5": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "6": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "7": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "8": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/itemtool/compoundmonstercardresult.ui",
+      "control": "1",
+      "key": "ui/itemtool/compoundmonstercardresult.ui#177",
+      "image": "4-compoundmonstercardresult.ui.png",
+      "image_sha256": "7496b5de9281f000180a82657a15986f1432c1ab475b51306ba40005e1c4d3d8",
+      "logical_size": [
+        180,
+        12
+      ],
+      "operations": 32,
+      "origin": [
+        38,
+        40
+      ],
+      "diagnostics": {
+        "issues": [],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 0
+        },
+        "support": "partial captured requests",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "removed_reason": "draw by loop dimensions require native verification",
+        "before": 1,
+        "after": 0
+      },
+      "resources": {
+        "134": {
+          "interface2/popup/popup.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_popup.NPK",
+            "offset": 580,
+            "length": 297863,
+            "member_sha256": "1ad92f0d7d8360228598ef01232d24e8ce411c139e2640b320d76fb688079770"
+          }
+        },
+        "135": {
+          "interface2/popup/popup.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_popup.NPK",
+            "offset": 580,
+            "length": 297863,
+            "member_sha256": "1ad92f0d7d8360228598ef01232d24e8ce411c139e2640b320d76fb688079770"
+          }
+        },
+        "136": {
+          "interface2/popup/popup.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_popup.NPK",
+            "offset": 580,
+            "length": 297863,
+            "member_sha256": "1ad92f0d7d8360228598ef01232d24e8ce411c139e2640b320d76fb688079770"
+          }
+        },
+        "137": {
+          "interface2/popup/popup.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_popup.NPK",
+            "offset": 580,
+            "length": 297863,
+            "member_sha256": "1ad92f0d7d8360228598ef01232d24e8ce411c139e2640b320d76fb688079770"
+          }
+        },
+        "138": {
+          "interface2/popup/popup.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_popup.NPK",
+            "offset": 580,
+            "length": 297863,
+            "member_sha256": "1ad92f0d7d8360228598ef01232d24e8ce411c139e2640b320d76fb688079770"
+          }
+        },
+        "139": {
+          "interface2/popup/popup.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_popup.NPK",
+            "offset": 580,
+            "length": 297863,
+            "member_sha256": "1ad92f0d7d8360228598ef01232d24e8ce411c139e2640b320d76fb688079770"
+          }
+        },
+        "140": {
+          "interface2/popup/popup.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_popup.NPK",
+            "offset": 580,
+            "length": 297863,
+            "member_sha256": "1ad92f0d7d8360228598ef01232d24e8ce411c139e2640b320d76fb688079770"
+          }
+        },
+        "141": {
+          "interface2/popup/popup.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_popup.NPK",
+            "offset": 580,
+            "length": 297863,
+            "member_sha256": "1ad92f0d7d8360228598ef01232d24e8ce411c139e2640b320d76fb688079770"
+          }
+        },
+        "142": {
+          "interface2/popup/popup.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface2_popup.NPK",
+            "offset": 580,
+            "length": 297863,
+            "member_sha256": "1ad92f0d7d8360228598ef01232d24e8ce411c139e2640b320d76fb688079770"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/selectcharacter/selectcharacterunder.ui",
+      "control": "105",
+      "key": "ui/selectcharacter/selectcharacterunder.ui#187",
+      "image": "5-selectcharacterunder.ui.png",
+      "image_sha256": "d987da1f0e6505937ab0c2081b4e966ee5ac6c88b8b51cc5d6c501d5cf7e0061",
+      "logical_size": [
+        766,
+        451
+      ],
+      "operations": 2240,
+      "origin": [
+        37,
+        108
+      ],
+      "diagnostics": {
+        "issues": [],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 0
+        },
+        "support": "partial captured requests",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "removed_reason": "draw by loop dimensions require native verification",
+        "before": 1,
+        "after": 0
+      },
+      "resources": {
+        "0": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "1": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "2": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "3": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "4": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "5": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "6": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "7": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "8": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/selectcharacter/selectcharacterunder_eventserver.ui",
+      "control": "105",
+      "key": "ui/selectcharacter/selectcharacterunder_eventserver.ui#187",
+      "image": "6-selectcharacterunder_eventserver.ui.png",
+      "image_sha256": "0ecbe096ecf392688a328725202c4478522ae634962bd1b629accefdb64a8b5d",
+      "logical_size": [
+        622,
+        386
+      ],
+      "operations": 1560,
+      "origin": [
+        108,
+        154
+      ],
+      "diagnostics": {
+        "issues": [],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 0
+        },
+        "support": "partial captured requests",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "removed_reason": "draw by loop dimensions require native verification",
+        "before": 1,
+        "after": 0
+      },
+      "resources": {
+        "0": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "1": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "2": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "3": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "4": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "5": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "6": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "7": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "8": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/selectcharacter/selectcharacterunder_starterserver.ui",
+      "control": "105",
+      "key": "ui/selectcharacter/selectcharacterunder_starterserver.ui#187",
+      "image": "7-selectcharacterunder_starterserver.ui.png",
+      "image_sha256": "d987da1f0e6505937ab0c2081b4e966ee5ac6c88b8b51cc5d6c501d5cf7e0061",
+      "logical_size": [
+        766,
+        451
+      ],
+      "operations": 2240,
+      "origin": [
+        37,
+        108
+      ],
+      "diagnostics": {
+        "issues": [],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 0
+        },
+        "support": "partial captured requests",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "removed_reason": "draw by loop dimensions require native verification",
+        "before": 1,
+        "after": 0
+      },
+      "resources": {
+        "0": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "1": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "2": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "3": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "4": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "5": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "6": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "7": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "8": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        }
+      }
+    },
+    {
+      "source": "ui/soloteleport/soloteleportwindow.ui",
+      "control": "0",
+      "key": "ui/soloteleport/soloteleportwindow.ui#112",
+      "image": "8-soloteleportwindow.ui.png",
+      "image_sha256": "5b5c3df8b8497cb3774b7778a8222c90764d65ca7d63aa89a222d40b8821d5bd",
+      "logical_size": [
+        184,
+        90
+      ],
+      "operations": 2788,
+      "origin": [
+        24,
+        96
+      ],
+      "diagnostics": {
+        "issues": [],
+        "summary": {
+          "unknown_structure": 0,
+          "unknown_state": 0,
+          "missing_resource": 0,
+          "resource_ambiguity": 0,
+          "unconfirmed_geometry": 0,
+          "runtime_evidence": 0
+        },
+        "support": "partial captured requests",
+        "native_visual_acceptance": "pending",
+        "failed_resources": {},
+        "pending_resources": [],
+        "pending_animations": [],
+        "animation_playback": "external timer; one shot unless loop preview enabled",
+        "render_contract": "resource reconstruction; confirmed native geometry only when consumer_verified; native visual acceptance pending"
+      },
+      "diagnostic_delta": {
+        "removed_reason": "draw by loop dimensions require native verification",
+        "before": 1,
+        "after": 0
+      },
+      "resources": {
+        "213": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "214": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "215": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "216": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "217": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "218": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "219": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "220": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        },
+        "221": {
+          "interface/windowcommon.img": {
+            "archive": "D:\\game\\DNF1031客户端-20260708\\DNF1031客户端\\ImagePacks2\\sprite_interface.NPK",
+            "offset": 52489763,
+            "length": 188805,
+            "member_sha256": "eeed3eb1e3da6b7efb0d50c8288e986090b55ea3a22fc7f63a7dfcac66bcc8f9"
+          }
+        }
+      }
+    }
+  ],
+  "evidence_sha256": "46cc937234e0398d1f53ac28c40f74fee1d59ea8660c028411c0a81d91605a8a",
+  "preview_operation_cap": 16384,
+  "source_hashes": {
+    "tools/verify_board.py": "0bbc5c7494c2619d84e633f404655edb161041c82a6b06c0edd3b244b3a6a584",
+    "tools/board_layout.py": "5099de56ee771736561418314b428c67fc6568879a969f6dc7ff8c1206ec055d",
+    "tools/preview.py": "461deff7a71f9e211e3fd59052c7f936f9cdb30d28a2b83caca8cbf054fa77df",
+    "tools/preview_layout.py": "f5b5b14b32603b738abb8c422694edd695701d781a99d4403fdddf1a4b2e214d"
+  },
+  "limitations": [
+    "No client launched or visual comparison performed",
+    "Qt rasterization is not native GPU acceptance",
+    "One test-only loop board exceeds the explicit preview operation cap",
+    "Runtime resizing visibility text and dedicated controls remain separate gaps"
+  ]
+}

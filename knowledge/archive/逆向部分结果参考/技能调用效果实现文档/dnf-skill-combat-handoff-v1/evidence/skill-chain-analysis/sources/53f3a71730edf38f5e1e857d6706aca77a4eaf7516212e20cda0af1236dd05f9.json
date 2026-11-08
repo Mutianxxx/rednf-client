@@ -1,0 +1,425 @@
+{
+  "path": "character/swordman/effect/particle/outragebreak_stone_part.ptl",
+  "fields": [
+    {
+      "tag": "[z axis]",
+      "values": [],
+      "offset": 0
+    },
+    {
+      "tag": "[move type]",
+      "values": [
+        "[straight line]"
+      ],
+      "offset": 5
+    },
+    {
+      "tag": "[move variable 1]",
+      "values": [
+        300,
+        100
+      ],
+      "offset": 15
+    },
+    {
+      "tag": "[changing term]",
+      "values": [
+        1000
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[changing type]",
+      "values": [
+        "[keep last value]"
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[gravity]",
+      "values": [
+        1500
+      ],
+      "offset": 50
+    },
+    {
+      "tag": "[life time]",
+      "values": [
+        800
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[landing type]",
+      "values": [
+        "[stop]"
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[creation frequency]",
+      "values": [
+        70.0
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[maximum create number]",
+      "values": [
+        18
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[create area size]",
+      "values": [
+        350,
+        200,
+        10
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[rotation angle range type]",
+      "values": [
+        "[rectangle]"
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[rotation angle variable]",
+      "values": [
+        80,
+        40
+      ],
+      "offset": 130
+    },
+    {
+      "tag": "[random range]",
+      "values": [
+        13
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[object type]",
+      "values": [
+        "[animation]"
+      ],
+      "offset": 155
+    },
+    {
+      "tag": "[object]",
+      "values": [
+        "../Animation/OutRageBreak/particle/outragebreak_stone_part_1.ani",
+        -1,
+        "../Animation/OutRageBreak/particle/outragebreak_stone_part_2.ani",
+        -1,
+        "../Animation/OutRageBreak/particle/outragebreak_stone_part_3.ani",
+        -1,
+        "../Animation/OutRageBreak/particle/outragebreak_stone_part_4.ani",
+        -1
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[/object]",
+      "values": [],
+      "offset": 210
+    },
+    {
+      "tag": "[display effect rate]",
+      "values": [
+        0,
+        50,
+        100
+      ],
+      "offset": 215
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 19622382,
+      "value": "[z axis]"
+    },
+    {
+      "offset": 5,
+      "type": 3,
+      "raw": 19617062,
+      "value": "[move type]"
+    },
+    {
+      "offset": 10,
+      "type": 6,
+      "raw": 19617086,
+      "value": "[straight line]"
+    },
+    {
+      "offset": 15,
+      "type": 3,
+      "raw": 19617118,
+      "value": "[move variable 1]"
+    },
+    {
+      "offset": 20,
+      "type": 0,
+      "raw": 300,
+      "value": 300
+    },
+    {
+      "offset": 25,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 19618820,
+      "value": "[changing term]"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 1000,
+      "value": 1000
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 19618852,
+      "value": "[changing type]"
+    },
+    {
+      "offset": 45,
+      "type": 6,
+      "raw": 19630080,
+      "value": "[keep last value]"
+    },
+    {
+      "offset": 50,
+      "type": 3,
+      "raw": 19615632,
+      "value": "[gravity]"
+    },
+    {
+      "offset": 55,
+      "type": 0,
+      "raw": 1500,
+      "value": 1500
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 19615972,
+      "value": "[life time]"
+    },
+    {
+      "offset": 65,
+      "type": 0,
+      "raw": 800,
+      "value": 800
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 19617154,
+      "value": "[landing type]"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 19619584,
+      "value": "[stop]"
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 19630190,
+      "value": "[creation frequency]"
+    },
+    {
+      "offset": 85,
+      "type": 2,
+      "raw": 1116471296,
+      "value": 70.0
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 19630232,
+      "value": "[maximum create number]"
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 18,
+      "value": 18
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 19630280,
+      "value": "[create area size]"
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 350,
+      "value": 350
+    },
+    {
+      "offset": 110,
+      "type": 0,
+      "raw": 200,
+      "value": 200
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 10,
+      "value": 10
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 19630318,
+      "value": "[rotation angle range type]"
+    },
+    {
+      "offset": 125,
+      "type": 6,
+      "raw": 19630374,
+      "value": "[rectangle]"
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 19630398,
+      "value": "[rotation angle variable]"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 19631272,
+      "value": "[random range]"
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 13,
+      "value": 13
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 19606058,
+      "value": "[object type]"
+    },
+    {
+      "offset": 160,
+      "type": 6,
+      "raw": 19630450,
+      "value": "[animation]"
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 19630474,
+      "value": "[object]"
+    },
+    {
+      "offset": 170,
+      "type": 6,
+      "raw": 19900544,
+      "value": "../Animation/OutRageBreak/particle/outragebreak_stone_part_1.ani"
+    },
+    {
+      "offset": 175,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 180,
+      "type": 6,
+      "raw": 19900674,
+      "value": "../Animation/OutRageBreak/particle/outragebreak_stone_part_2.ani"
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 190,
+      "type": 6,
+      "raw": 19900804,
+      "value": "../Animation/OutRageBreak/particle/outragebreak_stone_part_3.ani"
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 200,
+      "type": 6,
+      "raw": 19900934,
+      "value": "../Animation/OutRageBreak/particle/outragebreak_stone_part_4.ani"
+    },
+    {
+      "offset": 205,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 210,
+      "type": 3,
+      "raw": 19630672,
+      "value": "[/object]"
+    },
+    {
+      "offset": 215,
+      "type": 3,
+      "raw": 19754382,
+      "value": "[display effect rate]"
+    },
+    {
+      "offset": 220,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 225,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    },
+    {
+      "offset": 230,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    }
+  ],
+  "raw_sha256": "53f3a71730edf38f5e1e857d6706aca77a4eaf7516212e20cda0af1236dd05f9"
+}

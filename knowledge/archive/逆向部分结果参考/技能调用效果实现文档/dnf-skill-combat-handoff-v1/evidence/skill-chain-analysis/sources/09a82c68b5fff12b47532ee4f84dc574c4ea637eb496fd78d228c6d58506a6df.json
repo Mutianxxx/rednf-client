@@ -1,0 +1,331 @@
+{
+  "path": "passiveobject/character/swordman/animation/blastbloodexend.ani.als",
+  "fields": [
+    {
+      "tag": "[use animation]",
+      "values": [
+        "BlastBloodEx/end_blood_floor.ani",
+        "end_blood_floor"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "BlastBloodEx/end_blood.ani",
+        "end_blood"
+      ],
+      "offset": 15
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "BlastBloodEx/small_blood_end1.ani",
+        "small_end1"
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "BlastBloodEx/small_blood_end2.ani",
+        "small_end2"
+      ],
+      "offset": 45
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "BlastBloodEx/small_blood_end3.ani",
+        "small_end3"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[create draw only object]",
+      "values": [
+        0,
+        "end_blood_floor",
+        0,
+        0,
+        -1001
+      ],
+      "offset": 75
+    },
+    {
+      "tag": "[create draw only object]",
+      "values": [
+        0,
+        "end_blood",
+        0,
+        0,
+        -1000
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10,
+        "small_end1"
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        2,
+        10,
+        "small_end2"
+      ],
+      "offset": 155
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        3,
+        10,
+        "small_end3"
+      ],
+      "offset": 175
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 2645744,
+      "value": "BlastBloodEx/end_blood_floor.ani"
+    },
+    {
+      "offset": 10,
+      "type": 6,
+      "raw": 2645810,
+      "value": "end_blood_floor"
+    },
+    {
+      "offset": 15,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 20,
+      "type": 6,
+      "raw": 2645842,
+      "value": "BlastBloodEx/end_blood.ani"
+    },
+    {
+      "offset": 25,
+      "type": 6,
+      "raw": 2645896,
+      "value": "end_blood"
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 35,
+      "type": 6,
+      "raw": 2645916,
+      "value": "BlastBloodEx/small_blood_end1.ani"
+    },
+    {
+      "offset": 40,
+      "type": 6,
+      "raw": 2645984,
+      "value": "small_end1"
+    },
+    {
+      "offset": 45,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 50,
+      "type": 6,
+      "raw": 2646006,
+      "value": "BlastBloodEx/small_blood_end2.ani"
+    },
+    {
+      "offset": 55,
+      "type": 6,
+      "raw": 2646074,
+      "value": "small_end2"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 65,
+      "type": 6,
+      "raw": 2646096,
+      "value": "BlastBloodEx/small_blood_end3.ani"
+    },
+    {
+      "offset": 70,
+      "type": 6,
+      "raw": 2646164,
+      "value": "small_end3"
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 12226,
+      "value": "[create draw only object]"
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 85,
+      "type": 6,
+      "raw": 2645810,
+      "value": "end_blood_floor"
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 4294966295,
+      "value": -1001
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 12226,
+      "value": "[create draw only object]"
+    },
+    {
+      "offset": 110,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 115,
+      "type": 6,
+      "raw": 2645896,
+      "value": "end_blood"
+    },
+    {
+      "offset": 120,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 130,
+      "type": 0,
+      "raw": 4294966296,
+      "value": -1000
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 145,
+      "type": 0,
+      "raw": 10,
+      "value": 10
+    },
+    {
+      "offset": 150,
+      "type": 6,
+      "raw": 2645984,
+      "value": "small_end1"
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 10,
+      "value": 10
+    },
+    {
+      "offset": 170,
+      "type": 6,
+      "raw": 2646074,
+      "value": "small_end2"
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 10,
+      "value": 10
+    },
+    {
+      "offset": 190,
+      "type": 6,
+      "raw": 2646164,
+      "value": "small_end3"
+    }
+  ],
+  "raw_sha256": "09a82c68b5fff12b47532ee4f84dc574c4ea637eb496fd78d228c6d58506a6df"
+}

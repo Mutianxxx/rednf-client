@@ -1,0 +1,384 @@
+#PVF_File
+
+[SHADOW]
+	0
+[FRAME MAX]
+	42
+
+[FRAME000]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		0
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		50
+
+[FRAME001]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		1
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		50
+
+[FRAME002]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		2
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		50
+
+[FRAME003]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		3
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		50
+
+[FRAME004]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		4
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		42
+
+[FRAME005]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		5
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		42
+
+[FRAME006]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		6
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		42
+
+[FRAME007]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		7
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME008]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		8
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME009]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		9
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME010]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		10
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME011]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		11
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME012]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		12
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME013]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		13
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME014]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		14
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME015]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		15
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME016]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		16
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		40
+
+[FRAME017]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		17
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		30
+
+[FRAME018]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		18
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		30
+
+[FRAME019]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		19
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		30
+
+[FRAME020]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		20
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		30
+
+[FRAME021]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		21
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		30
+
+[FRAME022]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		21
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		30
+
+[FRAME023]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		22
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		25
+
+[FRAME024]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		23
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		25
+
+[FRAME025]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		24
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		25
+
+[FRAME026]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		25
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		25
+
+[FRAME027]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		25
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		25
+
+[FRAME028]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		26
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		25
+
+[FRAME029]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		26
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		25
+
+[FRAME030]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		27
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME031]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		27
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME032]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		28
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME033]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		28
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME034]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		29
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME035]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		29
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME036]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		30
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME037]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		30
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME038]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		31
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME039]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		31
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME040]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		32
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27
+
+[FRAME041]
+	[IMAGE]
+		`Character/Swordman/Effect/Cutin/Neo_Vagabond_Cut_S.img`
+		32
+	[IMAGE POS]
+		0	0
+	[DELAY]
+		27

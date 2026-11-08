@@ -1,0 +1,215 @@
+{
+  "path": "passiveobject/character/swordman/bloodswordexplosion.obj",
+  "fields": [
+    {
+      "tag": "[floating height]",
+      "values": [
+        1
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[layer]",
+      "values": [
+        "[normal]"
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[pass type]",
+      "values": [
+        "[pass all]"
+      ],
+      "offset": 20
+    },
+    {
+      "tag": "[piercing power]",
+      "values": [
+        1000
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[basic motion]",
+      "values": [
+        "Animation/BloodSwordExplosion/exp.ani"
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[attack info]",
+      "values": [
+        "AttackInfo/BloodSwordExplosion.atk"
+      ],
+      "offset": 50
+    },
+    {
+      "tag": "[name]",
+      "values": [
+        "blood sword explosion"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[object destroy condition]",
+      "values": [
+        "[destroy condition]",
+        "[on end of animation]"
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[/object destroy condition]",
+      "values": [],
+      "offset": 85
+    },
+    {
+      "tag": "[int data]",
+      "values": [
+        3,
+        300
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[/int data]",
+      "values": [],
+      "offset": 105
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 16526498,
+      "value": "[floating height]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 16526534,
+      "value": "[layer]"
+    },
+    {
+      "offset": 15,
+      "type": 6,
+      "raw": 6653656,
+      "value": "[normal]"
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 16526550,
+      "value": "[pass type]"
+    },
+    {
+      "offset": 25,
+      "type": 6,
+      "raw": 11348366,
+      "value": "[pass all]"
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 16526574,
+      "value": "[piercing power]"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 1000,
+      "value": 1000
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 16526608,
+      "value": "[basic motion]"
+    },
+    {
+      "offset": 45,
+      "type": 6,
+      "raw": 16999524,
+      "value": "Animation/BloodSwordExplosion/exp.ani"
+    },
+    {
+      "offset": 50,
+      "type": 3,
+      "raw": 16526836,
+      "value": "[attack info]"
+    },
+    {
+      "offset": 55,
+      "type": 6,
+      "raw": 16866258,
+      "value": "AttackInfo/BloodSwordExplosion.atk"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 14059926,
+      "value": "[name]"
+    },
+    {
+      "offset": 65,
+      "type": 6,
+      "raw": 16866328,
+      "value": "blood sword explosion"
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 16526934,
+      "value": "[object destroy condition]"
+    },
+    {
+      "offset": 75,
+      "type": 6,
+      "raw": 16526988,
+      "value": "[destroy condition]"
+    },
+    {
+      "offset": 80,
+      "type": 6,
+      "raw": 16527028,
+      "value": "[on end of animation]"
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 16527072,
+      "value": "[/object destroy condition]"
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 16829420,
+      "value": "[int data]"
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 300,
+      "value": 300
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 16829442,
+      "value": "[/int data]"
+    }
+  ],
+  "raw_sha256": "77eddf7574c34e3682d5f0d3c7da5fe6148702ef6a0b403cd99288b377320574"
+}

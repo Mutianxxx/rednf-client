@@ -1,0 +1,653 @@
+{
+  "path": "common/commoneffect/animation/flashscreen.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        4
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/Etc/MonoLayer.img",
+        1
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        0,
+        0
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        22.25,
+        15.0
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 115
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 125
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/Etc/MonoLayer.img",
+        1
+      ],
+      "offset": 130
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        0,
+        0
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        22.25,
+        15.0
+      ],
+      "offset": 160
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 175
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 185
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 195
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/Etc/MonoLayer.img",
+        1
+      ],
+      "offset": 200
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        0,
+        0
+      ],
+      "offset": 215
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        22.25,
+        15.0
+      ],
+      "offset": 230
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 245
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 255
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        80
+      ],
+      "offset": 265
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 275
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Common/Etc/MonoLayer.img",
+        1
+      ],
+      "offset": 280
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        0,
+        0
+      ],
+      "offset": 295
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        22.25,
+        15.0
+      ],
+      "offset": 310
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 350
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 2296526,
+      "value": "Common/Etc/MonoLayer.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 60,
+      "type": 2,
+      "raw": 1102184448,
+      "value": 22.25
+    },
+    {
+      "offset": 65,
+      "type": 2,
+      "raw": 1097859072,
+      "value": 15.0
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 110,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 115,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 120,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 125,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 135,
+      "type": 6,
+      "raw": 2296526,
+      "value": "Common/Etc/MonoLayer.img"
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 160,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 165,
+      "type": 2,
+      "raw": 1102184448,
+      "value": 22.25
+    },
+    {
+      "offset": 170,
+      "type": 2,
+      "raw": 1097859072,
+      "value": 15.0
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 180,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 190,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 195,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 205,
+      "type": 6,
+      "raw": 2296526,
+      "value": "Common/Etc/MonoLayer.img"
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 215,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 220,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 225,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 230,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 235,
+      "type": 2,
+      "raw": 1102184448,
+      "value": 22.25
+    },
+    {
+      "offset": 240,
+      "type": 2,
+      "raw": 1097859072,
+      "value": 15.0
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 250,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 255,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 260,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 265,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 270,
+      "type": 0,
+      "raw": 80,
+      "value": 80
+    },
+    {
+      "offset": 275,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 280,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 285,
+      "type": 6,
+      "raw": 2296526,
+      "value": "Common/Etc/MonoLayer.img"
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 300,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 305,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 310,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 315,
+      "type": 2,
+      "raw": 1102184448,
+      "value": 22.25
+    },
+    {
+      "offset": 320,
+      "type": 2,
+      "raw": 1097859072,
+      "value": 15.0
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 330,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 340,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 350,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 355,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    }
+  ],
+  "raw_sha256": "57c29c501e79cdbb07257498475a392a9fad686c96f42ee141ec468fab896dc8"
+}

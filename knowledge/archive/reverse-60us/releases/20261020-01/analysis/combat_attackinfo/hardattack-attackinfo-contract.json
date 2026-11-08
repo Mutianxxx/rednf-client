@@ -1,0 +1,1027 @@
+{
+  "status": "native_static_parser_levelinfo_install_and_early_numeric_stage_verified_not_complete_damage_formula",
+  "source_exe": {
+    "path": "D:\\dnf\\60US\\DFO\\DFO_fixed_v3.exe",
+    "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+  },
+  "source_pvf": {
+    "path": "D:\\dnf\\60US\\DFO\\Script.pvf",
+    "sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "header": {
+      "guid": "13ff9a94-0204-0410-845a-ceeffe637190",
+      "version": 71295,
+      "tree_size": 7566568,
+      "tree_crc": "51647fbe",
+      "entry_count": 99501,
+      "key": "00000000",
+      "data_base": 7566624,
+      "tree_crc_verified": true,
+      "parsed_tree_bytes": 7566567,
+      "tree_padding_hex": "00"
+    }
+  },
+  "source_atk": {
+    "file_number": 4207869171,
+    "path": "character/swordman/attackinfo/hardattack.atk",
+    "size": 553,
+    "crc": "b0f20bc0",
+    "relative_offset": 130239584,
+    "absolute_offset": 137806208,
+    "sha256": "c2b18199ec9cec4eaccf3e8354fdbb91a04ff0c03b1f8fac25d3c834f306d33d",
+    "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "encoding": "cp949",
+    "crc_verified": true
+  },
+  "source_skill": {
+    "file_number": 13816316,
+    "path": "skill/swordman/hardattack.skl",
+    "size": 1305,
+    "crc": "94e7bc98",
+    "relative_offset": 340300,
+    "absolute_offset": 7906924,
+    "sha256": "1cc0c639f70efab493d8d9d38ebb438c21c6132a5f6b3ff3e7e8d38b88e7f846",
+    "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "encoding": "cp949",
+    "crc_verified": true
+  },
+  "source_skill_list": {
+    "file_number": 2999170174,
+    "path": "skill/swordmanskill.lst",
+    "size": 6071,
+    "crc": "31d93d45",
+    "relative_offset": 94640168,
+    "absolute_offset": 102206792,
+    "sha256": "36e7c46b3ea3e62b212f06ce81f8dcc21ef7dab08fa916cfaebe78ad0b8a6f0e",
+    "archive_sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "encoding": "cp949",
+    "crc_verified": true
+  },
+  "skill_registration": {
+    "id": 5,
+    "path": "Swordman/HardAttack.skl",
+    "start": 459,
+    "end": 486,
+    "line": 12,
+    "path_token": {
+      "kind": "string",
+      "text": "Swordman/HardAttack.skl",
+      "value": "Swordman/HardAttack.skl",
+      "start": 461,
+      "end": 486,
+      "line": 12,
+      "column": 3
+    }
+  },
+  "attackinfo_stride": "0x1b8",
+  "actor_current_attackinfo_offset": "0x260",
+  "parser": "0x836c20",
+  "fields": [
+    {
+      "tag": "damage",
+      "offset": "0x0",
+      "storage": "protected float32",
+      "parser": "0x836cd8",
+      "sample": "absent; reset to 0"
+    },
+    {
+      "tag": "absolute damage",
+      "offset": "0x8",
+      "storage": "protected int32",
+      "parser": "0x836d46",
+      "sample": "absent; reset to 0"
+    },
+    {
+      "tag": "damage bonus",
+      "offset": "0x10",
+      "storage": "protected int32",
+      "parser": "0x836dae",
+      "sample": "absent in ATK; HardAttack writes queried percent minus 100"
+    },
+    {
+      "tag": "attack type",
+      "offset": "0x18",
+      "storage": "plain int32",
+      "parser": "0x836dcb",
+      "enumeration": {
+        "[physic]": 0,
+        "[magic]": 1,
+        "[ignore defense]": 2
+      }
+    },
+    {
+      "tag": "weapon damage apply",
+      "offset": "0x1c",
+      "storage": "protected int32 boolean",
+      "parser": "0x836e57",
+      "normalization": "value != 0"
+    },
+    {
+      "tag": "elemental property",
+      "offset": "0x3c",
+      "storage": "native ordered tree/set header; sentinel pointer +0x40",
+      "parser": "0x836f3f",
+      "setter": "0x46d830",
+      "enumeration": {
+        "[fire element]": 0,
+        "[water element]": 1,
+        "[dark element]": 2,
+        "[light element]": 3,
+        "other/no element": 4
+      }
+    },
+    {
+      "tag": "damage reaction",
+      "offset": "0xec",
+      "storage": "plain int32",
+      "parser": "0x8376e5",
+      "enumeration": {
+        "[none]": 0,
+        "[damage]": 1,
+        "[down]": 2,
+        "[damage except human]": 3
+      }
+    },
+    {
+      "tag": "push aside",
+      "offset": "0xf0",
+      "storage": "protected int32",
+      "parser": "0x837793"
+    },
+    {
+      "tag": "lift up",
+      "offset": "0xf8",
+      "storage": "protected int32",
+      "parser": "0x8377c8"
+    }
+  ],
+  "atk_tokens": [
+    {
+      "name": "attack type",
+      "start": 0,
+      "end": 70,
+      "tag": {
+        "kind": "tag",
+        "text": "attack type",
+        "value": "attack type",
+        "start": 0,
+        "end": 13,
+        "line": 1,
+        "column": 1
+      },
+      "values": [
+        {
+          "kind": "string",
+          "text": "[magic]",
+          "value": "[magic]",
+          "start": 14,
+          "end": 23,
+          "line": 1,
+          "column": 15
+        }
+      ],
+      "children": [],
+      "closing": null,
+      "is_block": false,
+      "scope": []
+    },
+    {
+      "name": "weapon damage apply",
+      "start": 70,
+      "end": 95,
+      "tag": {
+        "kind": "tag",
+        "text": "weapon damage apply",
+        "value": "weapon damage apply",
+        "start": 70,
+        "end": 91,
+        "line": 2,
+        "column": 1
+      },
+      "values": [
+        {
+          "kind": "atom",
+          "text": "1",
+          "value": 1,
+          "start": 92,
+          "end": 93,
+          "line": 2,
+          "column": 23
+        }
+      ],
+      "children": [],
+      "closing": null,
+      "is_block": false,
+      "scope": []
+    },
+    {
+      "name": "attack enemy",
+      "start": 95,
+      "end": 174,
+      "tag": {
+        "kind": "tag",
+        "text": "attack enemy",
+        "value": "attack enemy",
+        "start": 95,
+        "end": 109,
+        "line": 3,
+        "column": 1
+      },
+      "values": [
+        {
+          "kind": "atom",
+          "text": "1",
+          "value": 1,
+          "start": 110,
+          "end": 111,
+          "line": 3,
+          "column": 16
+        }
+      ],
+      "children": [],
+      "closing": null,
+      "is_block": false,
+      "scope": []
+    },
+    {
+      "name": "elemental property",
+      "start": 174,
+      "end": 357,
+      "tag": {
+        "kind": "tag",
+        "text": "elemental property",
+        "value": "elemental property",
+        "start": 174,
+        "end": 194,
+        "line": 4,
+        "column": 1
+      },
+      "values": [
+        {
+          "kind": "string",
+          "text": "[dark element]",
+          "value": "[dark element]",
+          "start": 195,
+          "end": 211,
+          "line": 4,
+          "column": 22
+        }
+      ],
+      "children": [],
+      "closing": null,
+      "is_block": false,
+      "scope": []
+    },
+    {
+      "name": "damage reaction",
+      "start": 357,
+      "end": 449,
+      "tag": {
+        "kind": "tag",
+        "text": "damage reaction",
+        "value": "damage reaction",
+        "start": 357,
+        "end": 374,
+        "line": 5,
+        "column": 1
+      },
+      "values": [
+        {
+          "kind": "string",
+          "text": "[down]",
+          "value": "[down]",
+          "start": 375,
+          "end": 383,
+          "line": 5,
+          "column": 19
+        }
+      ],
+      "children": [],
+      "closing": null,
+      "is_block": false,
+      "scope": []
+    },
+    {
+      "name": "push aside",
+      "start": 449,
+      "end": 487,
+      "tag": {
+        "kind": "tag",
+        "text": "push aside",
+        "value": "push aside",
+        "start": 449,
+        "end": 461,
+        "line": 6,
+        "column": 1
+      },
+      "values": [
+        {
+          "kind": "atom",
+          "text": "300",
+          "value": 300,
+          "start": 462,
+          "end": 465,
+          "line": 6,
+          "column": 14
+        }
+      ],
+      "children": [],
+      "closing": null,
+      "is_block": false,
+      "scope": []
+    },
+    {
+      "name": "lift up",
+      "start": 487,
+      "end": 522,
+      "tag": {
+        "kind": "tag",
+        "text": "lift up",
+        "value": "lift up",
+        "start": 487,
+        "end": 496,
+        "line": 7,
+        "column": 1
+      },
+      "values": [
+        {
+          "kind": "atom",
+          "text": "300",
+          "value": 300,
+          "start": 497,
+          "end": 500,
+          "line": 7,
+          "column": 11
+        }
+      ],
+      "children": [],
+      "closing": null,
+      "is_block": false,
+      "scope": []
+    },
+    {
+      "name": "attack direction",
+      "start": 522,
+      "end": 553,
+      "tag": {
+        "kind": "tag",
+        "text": "attack direction",
+        "value": "attack direction",
+        "start": 522,
+        "end": 540,
+        "line": 8,
+        "column": 1
+      },
+      "values": [
+        {
+          "kind": "string",
+          "text": "[hit down]",
+          "value": "[hit down]",
+          "start": 541,
+          "end": 553,
+          "line": 8,
+          "column": 20
+        }
+      ],
+      "children": [],
+      "closing": null,
+      "is_block": false,
+      "scope": []
+    }
+  ],
+  "skill_levelinfo": {
+    "name": "level info",
+    "start": 761,
+    "end": 988,
+    "tag": {
+      "kind": "tag",
+      "text": "level info",
+      "value": "level info",
+      "start": 761,
+      "end": 773,
+      "line": 40,
+      "column": 1
+    },
+    "values": [
+      {
+        "kind": "atom",
+        "text": "1",
+        "value": 1,
+        "start": 775,
+        "end": 776,
+        "line": 41,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "250",
+        "value": 250,
+        "start": 794,
+        "end": 797,
+        "line": 43,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "263",
+        "value": 263,
+        "start": 800,
+        "end": 803,
+        "line": 44,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "276",
+        "value": 276,
+        "start": 806,
+        "end": 809,
+        "line": 45,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "289",
+        "value": 289,
+        "start": 812,
+        "end": 815,
+        "line": 46,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "303",
+        "value": 303,
+        "start": 818,
+        "end": 821,
+        "line": 47,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "316",
+        "value": 316,
+        "start": 824,
+        "end": 827,
+        "line": 48,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "329",
+        "value": 329,
+        "start": 830,
+        "end": 833,
+        "line": 49,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "342",
+        "value": 342,
+        "start": 836,
+        "end": 839,
+        "line": 50,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "355",
+        "value": 355,
+        "start": 842,
+        "end": 845,
+        "line": 51,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "368",
+        "value": 368,
+        "start": 848,
+        "end": 851,
+        "line": 52,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "382",
+        "value": 382,
+        "start": 854,
+        "end": 857,
+        "line": 53,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "395",
+        "value": 395,
+        "start": 860,
+        "end": 863,
+        "line": 54,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "408",
+        "value": 408,
+        "start": 866,
+        "end": 869,
+        "line": 55,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "421",
+        "value": 421,
+        "start": 872,
+        "end": 875,
+        "line": 56,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "434",
+        "value": 434,
+        "start": 878,
+        "end": 881,
+        "line": 57,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "447",
+        "value": 447,
+        "start": 884,
+        "end": 887,
+        "line": 58,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "461",
+        "value": 461,
+        "start": 890,
+        "end": 893,
+        "line": 59,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "474",
+        "value": 474,
+        "start": 896,
+        "end": 899,
+        "line": 60,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "487",
+        "value": 487,
+        "start": 902,
+        "end": 905,
+        "line": 61,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "500",
+        "value": 500,
+        "start": 908,
+        "end": 911,
+        "line": 62,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "513",
+        "value": 513,
+        "start": 914,
+        "end": 917,
+        "line": 63,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "526",
+        "value": 526,
+        "start": 920,
+        "end": 923,
+        "line": 64,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "539",
+        "value": 539,
+        "start": 926,
+        "end": 929,
+        "line": 65,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "553",
+        "value": 553,
+        "start": 932,
+        "end": 935,
+        "line": 66,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "566",
+        "value": 566,
+        "start": 938,
+        "end": 941,
+        "line": 67,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "579",
+        "value": 579,
+        "start": 944,
+        "end": 947,
+        "line": 68,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "592",
+        "value": 592,
+        "start": 950,
+        "end": 953,
+        "line": 69,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "605",
+        "value": 605,
+        "start": 956,
+        "end": 959,
+        "line": 70,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "618",
+        "value": 618,
+        "start": 962,
+        "end": 965,
+        "line": 71,
+        "column": 1
+      },
+      {
+        "kind": "atom",
+        "text": "632",
+        "value": 632,
+        "start": 968,
+        "end": 971,
+        "line": 72,
+        "column": 1
+      }
+    ],
+    "children": [],
+    "closing": {
+      "kind": "close_tag",
+      "text": "level info",
+      "value": "level info",
+      "start": 975,
+      "end": 988,
+      "line": 73,
+      "column": 1
+    },
+    "is_block": true,
+    "scope": [
+      "dungeon"
+    ]
+  },
+  "native_levelinfo": {
+    "parser": "0x8a0da0",
+    "parse_block": "0x8a1e5b",
+    "source_columns_header": "script+0x268",
+    "source_columns_begin": "script+0x26c",
+    "input_order": "first integer column count N; subsequent tokens appended to column token_index % N",
+    "outer_stride": 16,
+    "inner_stride": 8,
+    "inner_storage": "protected int32",
+    "loader": "0x551ad0",
+    "script_local": "ebp-0x370",
+    "script_levelinfo_local_header": "ebp-0x108",
+    "script_levelinfo_local_begin": "ebp-0x104",
+    "materializer": "0x55326c..0x55343f",
+    "runtime_columns_header": "skill+0x23c",
+    "runtime_columns_begin": "skill+0x240",
+    "runtime_columns_end": "skill+0x244",
+    "value_copy": "0x55340b -> 0x4045b0",
+    "query_bridge": "0x4caa20",
+    "query": "0x550150",
+    "direct_value_query": "0x550080",
+    "addressing": "column = skill.begin + col * 16; value = column.begin + (level - 1) * 8",
+    "out_of_range": "direct value query returns 0",
+    "modifiers": "0x54fc40 per-skill modification and 0x550150 environment scaling remain observable; raw PVF is not asserted to bypass these"
+  },
+  "ordinary_hardattack": {
+    "state": 20,
+    "skill_id": 5,
+    "motion_index": 1,
+    "attackinfo_index": 0,
+    "install_site": "0x731fbe..0x731fca",
+    "skill_query_site": "0x732041..0x732074",
+    "column0_write": {
+      "query_column": 0,
+      "code": "0x73207c..0x732089",
+      "attackinfo_offset": "0x10",
+      "actor_offset": "0x270",
+      "operation": "protectedIntSet(query_result - 100)"
+    },
+    "column1_write": {
+      "query_column": 1,
+      "code": "0x73208e..0x7320d6",
+      "attackinfo_offset": "0x0",
+      "actor_offset": "0x260",
+      "operation": "protectedFloatSet(float32(signedIntDivide(query_col1 * 100, readInt(atk+0x10) + 100)))",
+      "source_column_status": "absent in current one-column HardAttack table; direct getter returns 0"
+    },
+    "raw_level_examples": [
+      {
+        "level": 1,
+        "raw_column0": 250,
+        "installed_bonus": 150,
+        "mathematical_ratio": 2.5
+      },
+      {
+        "level": 2,
+        "raw_column0": 263,
+        "installed_bonus": 163,
+        "mathematical_ratio": 2.63
+      },
+      {
+        "level": 3,
+        "raw_column0": 276,
+        "installed_bonus": 176,
+        "mathematical_ratio": 2.76
+      },
+      {
+        "level": 4,
+        "raw_column0": 289,
+        "installed_bonus": 189,
+        "mathematical_ratio": 2.89
+      },
+      {
+        "level": 5,
+        "raw_column0": 303,
+        "installed_bonus": 203,
+        "mathematical_ratio": 3.03
+      },
+      {
+        "level": 6,
+        "raw_column0": 316,
+        "installed_bonus": 216,
+        "mathematical_ratio": 3.16
+      },
+      {
+        "level": 7,
+        "raw_column0": 329,
+        "installed_bonus": 229,
+        "mathematical_ratio": 3.29
+      },
+      {
+        "level": 8,
+        "raw_column0": 342,
+        "installed_bonus": 242,
+        "mathematical_ratio": 3.42
+      },
+      {
+        "level": 9,
+        "raw_column0": 355,
+        "installed_bonus": 255,
+        "mathematical_ratio": 3.55
+      },
+      {
+        "level": 10,
+        "raw_column0": 368,
+        "installed_bonus": 268,
+        "mathematical_ratio": 3.68
+      },
+      {
+        "level": 11,
+        "raw_column0": 382,
+        "installed_bonus": 282,
+        "mathematical_ratio": 3.82
+      },
+      {
+        "level": 12,
+        "raw_column0": 395,
+        "installed_bonus": 295,
+        "mathematical_ratio": 3.95
+      },
+      {
+        "level": 13,
+        "raw_column0": 408,
+        "installed_bonus": 308,
+        "mathematical_ratio": 4.08
+      },
+      {
+        "level": 14,
+        "raw_column0": 421,
+        "installed_bonus": 321,
+        "mathematical_ratio": 4.21
+      },
+      {
+        "level": 15,
+        "raw_column0": 434,
+        "installed_bonus": 334,
+        "mathematical_ratio": 4.34
+      },
+      {
+        "level": 16,
+        "raw_column0": 447,
+        "installed_bonus": 347,
+        "mathematical_ratio": 4.47
+      },
+      {
+        "level": 17,
+        "raw_column0": 461,
+        "installed_bonus": 361,
+        "mathematical_ratio": 4.61
+      },
+      {
+        "level": 18,
+        "raw_column0": 474,
+        "installed_bonus": 374,
+        "mathematical_ratio": 4.74
+      },
+      {
+        "level": 19,
+        "raw_column0": 487,
+        "installed_bonus": 387,
+        "mathematical_ratio": 4.87
+      },
+      {
+        "level": 20,
+        "raw_column0": 500,
+        "installed_bonus": 400,
+        "mathematical_ratio": 5.0
+      },
+      {
+        "level": 21,
+        "raw_column0": 513,
+        "installed_bonus": 413,
+        "mathematical_ratio": 5.13
+      },
+      {
+        "level": 22,
+        "raw_column0": 526,
+        "installed_bonus": 426,
+        "mathematical_ratio": 5.26
+      },
+      {
+        "level": 23,
+        "raw_column0": 539,
+        "installed_bonus": 439,
+        "mathematical_ratio": 5.39
+      },
+      {
+        "level": 24,
+        "raw_column0": 553,
+        "installed_bonus": 453,
+        "mathematical_ratio": 5.53
+      },
+      {
+        "level": 25,
+        "raw_column0": 566,
+        "installed_bonus": 466,
+        "mathematical_ratio": 5.66
+      },
+      {
+        "level": 26,
+        "raw_column0": 579,
+        "installed_bonus": 479,
+        "mathematical_ratio": 5.79
+      },
+      {
+        "level": 27,
+        "raw_column0": 592,
+        "installed_bonus": 492,
+        "mathematical_ratio": 5.92
+      },
+      {
+        "level": 28,
+        "raw_column0": 605,
+        "installed_bonus": 505,
+        "mathematical_ratio": 6.05
+      },
+      {
+        "level": 29,
+        "raw_column0": 618,
+        "installed_bonus": 518,
+        "mathematical_ratio": 6.18
+      },
+      {
+        "level": 30,
+        "raw_column0": 632,
+        "installed_bonus": 532,
+        "mathematical_ratio": 6.32
+      }
+    ],
+    "separate_branch": "this+0x2eec == 2 has an additional charge-ratio rewrite at 0x7320db..0x732176; not included in the ordinary examples"
+  },
+  "damage_pack": {
+    "function": "0x4eb780",
+    "attacker_argument": 4,
+    "receiver": "ECX; victim/context",
+    "attackinfo_get": "attacker virtual+0x19c",
+    "local_struct": "ebp-0x1d8",
+    "maps": [
+      {
+        "atk": "0x0",
+        "numeric": "0x0",
+        "type": "float32",
+        "read": "0x4eb974"
+      },
+      {
+        "atk": "0x1c",
+        "numeric": "0x4",
+        "type": "byte boolean",
+        "read": "0x4eb982"
+      },
+      {
+        "atk": "0x18",
+        "numeric": "0x5",
+        "type": "byte attack type",
+        "read": "0x4eb98d"
+      },
+      {
+        "atk": "0x10",
+        "numeric": "0x6",
+        "type": "int32 converted to float32",
+        "read": "0x4eb999"
+      },
+      {
+        "atk": "0x40 tree node+0xc",
+        "numeric": "0xa+element_enum",
+        "type": "byte flags",
+        "read": "0x4eb9aa..0x4eb9d4"
+      }
+    ],
+    "weapon_operands": [
+      {
+        "numeric": "0x2f",
+        "source": "attacker virtual+0x1d8",
+        "site": "0x4ebc3a"
+      },
+      {
+        "numeric": "0x33",
+        "source": "attacker virtual+0x1e8",
+        "site": "0x4ebc50"
+      }
+    ],
+    "swordman_operand_paths": [
+      {
+        "slot": "0x1d8",
+        "bridge": "0x744a90",
+        "consumer": "0x4b5610",
+        "stat_base_int": "statObject+0x258",
+        "stat_scale_float": "statObject+0x260"
+      },
+      {
+        "slot": "0x1e8",
+        "bridge": "0x744b10",
+        "consumer": "0x4b56f0",
+        "stat_base_int": "statObject+0x278",
+        "stat_scale_float": "statObject+0x280"
+      }
+    ],
+    "swordman_operand_operation": "virtual+0x344(3) returns statObject; convert protected-int base to float32, multiply protected-float scale, call 0xc01544; lower bound -1500; conversion helper semantics are not asserted",
+    "common_consumer_call": "0x4ec9f4 -> 0x8b8650",
+    "base_dispatch": "0x8b85f0",
+    "ordinary_base_stage": "0x8b79c0"
+  },
+  "early_numeric_stage": {
+    "code": "0x8b79c0..0x8b7a02",
+    "operation": "base = numeric[0x0]; if weapon_apply: add numeric[0x33] for type1, numeric[0x2f] for type0 or type2; base *= (1.0 + numeric[0x6] * float32_constant_0_01)",
+    "literal_float32_0_01": {
+      "va": "0xcc10ac",
+      "hex": "0ad7233c",
+      "exact_value": 0.009999999776482582
+    },
+    "literal_float32_1": {
+      "va": "0xcc1f58",
+      "hex": "0000803f",
+      "exact_value": 1.0
+    },
+    "mathematical_baseline": "with the current ATK base0, weapon_apply1, type1, and raw-query result S: attacker_virtual_1e8_value * S/100",
+    "precision": "instruction-level x87 arithmetic with explicit float32 stores; decimal S/100 is explanatory, not a bit-exact emulation claim",
+    "subsequent_processing": "0x8b79c0 continues with additional percentage/stat/context factors; 0x8b8650 continues element, defense, random and other branches; not recovered as a complete formula here"
+  },
+  "limitations": [
+    "Static code evidence; no current live-client trace or memory snapshot is claimed.",
+    "Protected values are handle/index wrappers, not inline plaintext words at the documented offsets.",
+    "The semantic source names of virtual+0x1d8/+0x1e8 are supported by type-specific consumer use; all upstream stat construction is outside this contract.",
+    "No complete damage formula, final rounding, critical/random distribution, elemental resistance formula, or HP/state transition is claimed.",
+    "Reaction/push/lift mapping ends at AttackInfo; downstream victim-state and HP evidence belongs to the collision branch.",
+    "The ordinary HardAttack proof does not generalize native controllers to all registered skills."
+  ]
+}

@@ -1,0 +1,1648 @@
+{
+  "path": "character/swordman/effect/animation/bloodboom/finish_bloodboom_finish_line4.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        9
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img",
+        0
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -369,
+        -389
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        0.699999988079071,
+        0.699999988079071
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[IMAGE ROTATE]",
+      "values": [
+        1.7453290224075317
+      ],
+      "offset": 70
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 100
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 110
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img",
+        0
+      ],
+      "offset": 115
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -369,
+        -389
+      ],
+      "offset": 130
+    },
+    {
+      "tag": "[IMAGE ROTATE]",
+      "values": [
+        1.7453290224075317
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 155
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 175
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 185
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img",
+        0
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -369,
+        -389
+      ],
+      "offset": 205
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.2000000476837158,
+        1.2000000476837158
+      ],
+      "offset": 220
+    },
+    {
+      "tag": "[IMAGE ROTATE]",
+      "values": [
+        1.7453290224075317
+      ],
+      "offset": 235
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 245
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 255
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 265
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 275
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img",
+        0
+      ],
+      "offset": 280
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -369,
+        -389
+      ],
+      "offset": 295
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.2999999523162842,
+        1.2999999523162842
+      ],
+      "offset": 310
+    },
+    {
+      "tag": "[IMAGE ROTATE]",
+      "values": [
+        1.7453290224075317
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 335
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 345
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 355
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 365
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img",
+        0
+      ],
+      "offset": 370
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -369,
+        -389
+      ],
+      "offset": 385
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.350000023841858,
+        1.350000023841858
+      ],
+      "offset": 400
+    },
+    {
+      "tag": "[IMAGE ROTATE]",
+      "values": [
+        1.7453290224075317
+      ],
+      "offset": 415
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        178
+      ],
+      "offset": 425
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 450
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 460
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 470
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 480
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img",
+        0
+      ],
+      "offset": 485
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -369,
+        -389
+      ],
+      "offset": 500
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.399999976158142,
+        1.399999976158142
+      ],
+      "offset": 515
+    },
+    {
+      "tag": "[IMAGE ROTATE]",
+      "values": [
+        1.7453290224075317
+      ],
+      "offset": 530
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        126
+      ],
+      "offset": 540
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 565
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 575
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 585
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 595
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img",
+        0
+      ],
+      "offset": 600
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -369,
+        -389
+      ],
+      "offset": 615
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.4199999570846558,
+        1.4199999570846558
+      ],
+      "offset": 630
+    },
+    {
+      "tag": "[IMAGE ROTATE]",
+      "values": [
+        1.7453290224075317
+      ],
+      "offset": 645
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        75
+      ],
+      "offset": 655
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 680
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 690
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 700
+    },
+    {
+      "tag": "[FRAME007]",
+      "values": [],
+      "offset": 710
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img",
+        0
+      ],
+      "offset": 715
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -369,
+        -389
+      ],
+      "offset": 730
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.4299999475479126,
+        1.4299999475479126
+      ],
+      "offset": 745
+    },
+    {
+      "tag": "[IMAGE ROTATE]",
+      "values": [
+        1.7453290224075317
+      ],
+      "offset": 760
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "offset": 770
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 795
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 805
+    },
+    {
+      "tag": "[DAMAGE TYPE]",
+      "values": [
+        "NORMAL"
+      ],
+      "offset": 815
+    },
+    {
+      "tag": "[FRAME008]",
+      "values": [],
+      "offset": 825
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "",
+        0
+      ],
+      "offset": 830
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -369,
+        -389
+      ],
+      "offset": 845
+    },
+    {
+      "tag": "[IMAGE RATE]",
+      "values": [
+        1.4299999475479126,
+        1.4299999475479126
+      ],
+      "offset": 860
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "offset": 875
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        70
+      ],
+      "offset": 900
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 9,
+      "value": 9
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 2464942,
+      "value": "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294966927,
+      "value": -369
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294966907,
+      "value": -389
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 60,
+      "type": 2,
+      "raw": 1060320051,
+      "value": 0.699999988079071
+    },
+    {
+      "offset": 65,
+      "type": 2,
+      "raw": 1060320051,
+      "value": 0.699999988079071
+    },
+    {
+      "offset": 70,
+      "type": 3,
+      "raw": 9350,
+      "value": "[IMAGE ROTATE]"
+    },
+    {
+      "offset": 75,
+      "type": 2,
+      "raw": 1071605489,
+      "value": 1.7453290224075317
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 105,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 110,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 115,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 120,
+      "type": 6,
+      "raw": 2464942,
+      "value": "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 4294966927,
+      "value": -369
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 4294966907,
+      "value": -389
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 9350,
+      "value": "[IMAGE ROTATE]"
+    },
+    {
+      "offset": 150,
+      "type": 2,
+      "raw": 1071605489,
+      "value": 1.7453290224075317
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 180,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 195,
+      "type": 6,
+      "raw": 2464942,
+      "value": "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img"
+    },
+    {
+      "offset": 200,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 205,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 4294966927,
+      "value": -369
+    },
+    {
+      "offset": 215,
+      "type": 0,
+      "raw": 4294966907,
+      "value": -389
+    },
+    {
+      "offset": 220,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 225,
+      "type": 2,
+      "raw": 1067030938,
+      "value": 1.2000000476837158
+    },
+    {
+      "offset": 230,
+      "type": 2,
+      "raw": 1067030938,
+      "value": 1.2000000476837158
+    },
+    {
+      "offset": 235,
+      "type": 3,
+      "raw": 9350,
+      "value": "[IMAGE ROTATE]"
+    },
+    {
+      "offset": 240,
+      "type": 2,
+      "raw": 1071605489,
+      "value": 1.7453290224075317
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 250,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 255,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 260,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 265,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 270,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 275,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 280,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 285,
+      "type": 6,
+      "raw": 2464942,
+      "value": "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img"
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 300,
+      "type": 0,
+      "raw": 4294966927,
+      "value": -369
+    },
+    {
+      "offset": 305,
+      "type": 0,
+      "raw": 4294966907,
+      "value": -389
+    },
+    {
+      "offset": 310,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 315,
+      "type": 2,
+      "raw": 1067869798,
+      "value": 1.2999999523162842
+    },
+    {
+      "offset": 320,
+      "type": 2,
+      "raw": 1067869798,
+      "value": 1.2999999523162842
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 9350,
+      "value": "[IMAGE ROTATE]"
+    },
+    {
+      "offset": 330,
+      "type": 2,
+      "raw": 1071605489,
+      "value": 1.7453290224075317
+    },
+    {
+      "offset": 335,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 340,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 345,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 350,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 355,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 360,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 365,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 370,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 375,
+      "type": 6,
+      "raw": 2464942,
+      "value": "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img"
+    },
+    {
+      "offset": 380,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 385,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 390,
+      "type": 0,
+      "raw": 4294966927,
+      "value": -369
+    },
+    {
+      "offset": 395,
+      "type": 0,
+      "raw": 4294966907,
+      "value": -389
+    },
+    {
+      "offset": 400,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 405,
+      "type": 2,
+      "raw": 1068289229,
+      "value": 1.350000023841858
+    },
+    {
+      "offset": 410,
+      "type": 2,
+      "raw": 1068289229,
+      "value": 1.350000023841858
+    },
+    {
+      "offset": 415,
+      "type": 3,
+      "raw": 9350,
+      "value": "[IMAGE ROTATE]"
+    },
+    {
+      "offset": 420,
+      "type": 2,
+      "raw": 1071605489,
+      "value": 1.7453290224075317
+    },
+    {
+      "offset": 425,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 430,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 435,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 440,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 445,
+      "type": 0,
+      "raw": 178,
+      "value": 178
+    },
+    {
+      "offset": 450,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 455,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 460,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 465,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 470,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 475,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 480,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 485,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 490,
+      "type": 6,
+      "raw": 2464942,
+      "value": "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img"
+    },
+    {
+      "offset": 495,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 500,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 505,
+      "type": 0,
+      "raw": 4294966927,
+      "value": -369
+    },
+    {
+      "offset": 510,
+      "type": 0,
+      "raw": 4294966907,
+      "value": -389
+    },
+    {
+      "offset": 515,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 520,
+      "type": 2,
+      "raw": 1068708659,
+      "value": 1.399999976158142
+    },
+    {
+      "offset": 525,
+      "type": 2,
+      "raw": 1068708659,
+      "value": 1.399999976158142
+    },
+    {
+      "offset": 530,
+      "type": 3,
+      "raw": 9350,
+      "value": "[IMAGE ROTATE]"
+    },
+    {
+      "offset": 535,
+      "type": 2,
+      "raw": 1071605489,
+      "value": 1.7453290224075317
+    },
+    {
+      "offset": 540,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 545,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 550,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 555,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 560,
+      "type": 0,
+      "raw": 126,
+      "value": 126
+    },
+    {
+      "offset": 565,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 570,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 575,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 580,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 585,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 590,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 595,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 600,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 605,
+      "type": 6,
+      "raw": 2464942,
+      "value": "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img"
+    },
+    {
+      "offset": 610,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 615,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 620,
+      "type": 0,
+      "raw": 4294966927,
+      "value": -369
+    },
+    {
+      "offset": 625,
+      "type": 0,
+      "raw": 4294966907,
+      "value": -389
+    },
+    {
+      "offset": 630,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 635,
+      "type": 2,
+      "raw": 1068876431,
+      "value": 1.4199999570846558
+    },
+    {
+      "offset": 640,
+      "type": 2,
+      "raw": 1068876431,
+      "value": 1.4199999570846558
+    },
+    {
+      "offset": 645,
+      "type": 3,
+      "raw": 9350,
+      "value": "[IMAGE ROTATE]"
+    },
+    {
+      "offset": 650,
+      "type": 2,
+      "raw": 1071605489,
+      "value": 1.7453290224075317
+    },
+    {
+      "offset": 655,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 660,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 665,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 670,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 675,
+      "type": 0,
+      "raw": 75,
+      "value": 75
+    },
+    {
+      "offset": 680,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 685,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 690,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 695,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 700,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 705,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 710,
+      "type": 3,
+      "raw": 3184,
+      "value": "[FRAME007]"
+    },
+    {
+      "offset": 715,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 720,
+      "type": 6,
+      "raw": 2464942,
+      "value": "Character/Swordman/Effect/BloodBoom/bloodboom_finish3.img"
+    },
+    {
+      "offset": 725,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 730,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 735,
+      "type": 0,
+      "raw": 4294966927,
+      "value": -369
+    },
+    {
+      "offset": 740,
+      "type": 0,
+      "raw": 4294966907,
+      "value": -389
+    },
+    {
+      "offset": 745,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 750,
+      "type": 2,
+      "raw": 1068960317,
+      "value": 1.4299999475479126
+    },
+    {
+      "offset": 755,
+      "type": 2,
+      "raw": 1068960317,
+      "value": 1.4299999475479126
+    },
+    {
+      "offset": 760,
+      "type": 3,
+      "raw": 9350,
+      "value": "[IMAGE ROTATE]"
+    },
+    {
+      "offset": 765,
+      "type": 2,
+      "raw": 1071605489,
+      "value": 1.7453290224075317
+    },
+    {
+      "offset": 770,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 775,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 780,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 785,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 790,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 795,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 800,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 805,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 810,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    },
+    {
+      "offset": 815,
+      "type": 3,
+      "raw": 4142,
+      "value": "[DAMAGE TYPE]"
+    },
+    {
+      "offset": 820,
+      "type": 6,
+      "raw": 4466,
+      "value": "NORMAL"
+    },
+    {
+      "offset": 825,
+      "type": 3,
+      "raw": 3206,
+      "value": "[FRAME008]"
+    },
+    {
+      "offset": 830,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 835,
+      "type": 6,
+      "raw": 12566,
+      "value": ""
+    },
+    {
+      "offset": 840,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 845,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 850,
+      "type": 0,
+      "raw": 4294966927,
+      "value": -369
+    },
+    {
+      "offset": 855,
+      "type": 0,
+      "raw": 4294966907,
+      "value": -389
+    },
+    {
+      "offset": 860,
+      "type": 3,
+      "raw": 4058,
+      "value": "[IMAGE RATE]"
+    },
+    {
+      "offset": 865,
+      "type": 2,
+      "raw": 1068960317,
+      "value": 1.4299999475479126
+    },
+    {
+      "offset": 870,
+      "type": 2,
+      "raw": 1068960317,
+      "value": 1.4299999475479126
+    },
+    {
+      "offset": 875,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 880,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 885,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 890,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 895,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 900,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 905,
+      "type": 0,
+      "raw": 70,
+      "value": 70
+    }
+  ],
+  "raw_sha256": "67172486f6394ca2dcf686c3cd1bc467b831d3dffa6f32813bbb697aafeea453"
+}

@@ -1,0 +1,92 @@
+"""Build source-bound ReleaseWave template/current ATK consumer contract."""
+from pathlib import Path
+import json,hashlib
+ROOT=Path(__file__).resolve().parent
+WORKSPACE=ROOT.parents[3]
+
+
+def main():
+    resources=json.loads((ROOT.parents[1]/'resources.json').read_text(encoding='utf-8'))
+    atk=next(x for x in resources['resources'] if x['path']=='passiveobject/character/swordman/attackinfo/releasewave.atk')
+    assert not any(x['tag'] in ('damage','damage bonus','weapon damage apply','absolute damage') for x in atk['fields'])
+    contract=dict(schema='60us-skill32-scalar-consumer-v1',observed_execution=False,
+        source=dict(executable='DFO/DFO_fixed_v3.exe',executable_sha256='a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b',
+            pvf='DFO/Script.pvf',pvf_sha256=resources['archive_sha256'],attackinfo=atk['path'],attackinfo_sha256=atk['sha256']),
+        findings=[
+            '5C77B0 writes dynamicScalar as protected float32 to template ATK entity+5DC+0; this is not the current-ATK getter address.',
+            'Normal registration reaches entity.slot10=49F010, which installs template ATK through slot198=4EDCD0 into current ATK entity+260. Slot19C=438650 returns current+260.',
+            'An effective action ATK at *(entity+148)+B0 can overwrite current ATK after the template install.',
+            'Current ReleaseWave ATK lacks weapon damage apply and damage bonus;435430 reset leaves both0. This skill scalar occupies base damage, not a weapon percentage coefficient.',
+            '8B79C0 consumes base with attacker factors;8B8650 and4B28D0 further process the result before ordinary HP subtraction. No final damage numbers are inferred from SKL alone.'],
+        initialization_order=[
+            dict(site='5CE768',event='490720 constructs/loads generic PassiveObject'),
+            dict(site='49075D',event='437D30 constructs template ATK+5DC, ultimately435430 resets values'),
+            dict(site='490812',event='4A0DA0→49F4D0 loads OBJ,49FB01 copies current PVF ATK into template+5DC'),
+            dict(site='5CE777',event='install ReleaseWave vtableD057D4'),
+            dict(site='5CE77D',event='5C77B0 overwrites template+5DC.damage with float32(dynamicScalar)'),
+            dict(site='8C43B2',event='slot344=49DD10 sets owner+530 and snapshots owner numeric operands'),
+            dict(site='8C43CA',event='50DD70 attempts scene registration; early return/queue paths exist'),
+            dict(site='50DFF3',event='normal registration path calls slot10=49F010'),
+            dict(site='49F023',event='slot198=4EDCD0 installs template+5DC into current+260'),
+            dict(site='49F076',event='if action ATK passes value gate, install it into current+260 instead'),
+            dict(site='49F080',event='tail49ECD0 handles further initialization, not part of the scalar arithmetic')],
+        vtable=dict(base='D057D4',slots={'10':'49F010','198':'4EDCD0','19C':'438650','18C':'439080','1BC':'439090',
+            '1D8':'4390E0','1E8':'439120','344':'49DD10','380':'49F010'}),
+        installation=dict(template='entity+5DC',current='entity+260',copy='4A27E0',install='4EDCD0',
+            history_reset='Both nonnull-copy and null-reset call entity.slot1A0; see combat_hit_lifecycle evidence.',
+            action_override=dict(pointer='entity+148',attackinfo_offset='B0',
+                gate='non-null action AND (protectedInt(ATK+1C)!=0 OR protectedFloat(ATK+0)>0 OR protectedInt(ATK+8)>0)',
+                boundary='Current OBJ declares no ACT, but this static fact alone does not prove every runtime action pointer remains null; model requires explicit override input.')),
+        current_pvf_defaults=dict(attack_type=1,damage='float32(dynamicScalar)',absolute_damage=0,damage_bonus=0,weapon_damage_apply=0,
+            elemental_properties=[],evidence='ATK reset435430, parser836C20 and current ATK tag absence; constructor437D30@437F89 calls reset'),
+        numeric_packing=dict(function='4EB780',attacker_arg='ebp+14',victim_this='ECX',
+            getter='4EB798 calls attacker.slot19C',entry_gates='ATK nonnull, positive hit percentage argument,467480(ATK) valid',
+            validity='weapon apply!=0 OR damage>0 OR absolute damage>0',
+            entries=[dict(atk_offset='0',numeric_offset='0',type='float32',site='4EB974'),
+                dict(atk_offset='1C',numeric_offset='4',type='byte',site='4EB982'),
+                dict(atk_offset='18',numeric_offset='5',type='byte',site='4EB98D'),
+                dict(atk_offset='10',numeric_offset='6',type='int32→float32',site='4EB999'),
+                dict(atk_offset='8',numeric_offset='F',type='int32→float32',site='4EBA62')],
+            weapon_operands=[dict(numeric_offset='2F',getter='attacker.slot1D8=4390E0',snapshot_field='entity+7A0',owner_copy='49DD73'),
+                dict(numeric_offset='33',getter='attacker.slot1E8=439120',snapshot_field='entity+7B0',owner_copy='49DDB3')],
+            scalar_is_not_bonus='dynamicScalar enters numeric+0, while damage bonus is independently loaded from ATK+10 to numeric+6'),
+        base_dispatch=dict(function='8B85F0',
+            alternate_gate='((flags191&21)==21 AND byte18D!=0 AND byte18E!=0) OR ((flags191&21)!=21 AND(flags191&81)==81)',
+            alternate='8B8560: if !byte18D return0; else8B83C0(byte18F,byte190,C01544(numeric+182))*numeric0*numeric2B',
+            normal='8B79C0',releasewave_type='49EE85 initializes entity+E4=21;slot30=407B60 returns it;4EB7F0 packs numeric+191',
+            owner_gate='439090 forwards slot1BC to owner; current SwordmanD80F94+1BC=8E49B0 returnsfalse, leaving numeric18E at constructor default0.',
+            boundary='No runtime object/type mutation snapshot; executable bridge requires normal_base_route_established=true.'),
+        normal_base_stages=[
+            dict(range='8B79C8..8B7A02',formula='f32((numeric0 + selected_weapon_operand_if_apply) * (1+numeric6*f32(.01)))',
+                selection='type1 adds numeric33; type0/2 adds numeric2F; no addition when weapon applyfalse',
+                releasewave_unmodified='numeric0=f32(dynamicScalar),apply0,type1,bonus0 => first-stage value f32(dynamicScalar)'),
+            dict(range='8B7A04..8B7A21',formula='type0/1: f32(previous*(1+numeric37_or_3B*f32(.01)))'),
+            dict(range='8B7A24..8B7A8C',formula='type0/1: stat=numeric3F_or43; if mode18A!=4 stat=f32(stat*448C10(attacker,3_or5)); f32(previous*(1+stat/protectedGlobal10BFED8_or10BFE78))'),
+            dict(range='8B7A8F..8B7AAD',formula='previous*448C10(attacker,0)*(1+numeric47), x87 ordered operations; outer8B866F stores f32')],
+        downstream_boundaries=[
+            dict(range='8B8672..8B871D',effect='optional type gate multiplier and element selection using raw numeric bytes, element integer operands and protected globals'),
+            dict(range='8B8720..8B8808',effect='type-dependent variation range;8AE160(seed,999) and8ADCB0 interpolate signed random offset; runtime global can zero variation'),
+            dict(range='8B8808..8B88BF',effect='conditional8B7C90 reduction outputs and type-dependent subtraction using target448C10 factors/protected globals'),
+            dict(range='8B88BF..8B893A',effect='type-dependent attacker stat-derived addition; conditional special subtype bypass'),
+            dict(range='8B893A..8B8A62',effect='absolute-damage component numericF plus additional weapon-dependent integer terms and further conditional reduction'),
+            dict(range='8B8A62..8B8B41',effect='nonnegative clamp;8B7AB0 modifies value and returns gate; percentage/context multipliers; minimum1 before later multipliers'),
+            dict(range='8B8B41..8B8BD2',effect='conditional ordered factor-array multiplication and additional numeric73 multiplier'),
+            dict(range='8B8BD2..8B8E44',effect='mode4 target-specific reductions based on protected runtime globals and HP percentage ranges'),
+            dict(range='8B8E44..8B8E9C',effect='numeric17E multiplier; optional truncated extra term and integer add;C01544 returns integer and stores numeric+1BD'),
+            dict(range='4F5C20..4F5CB6',effect='Monster wrapper returns common integer; conditional callbacks receive it'),
+            dict(range='4B2ECD..4B3048',effect='victim base-hit processing may add an ATK+128 HP-related term and may modify result through4B6C90'),
+            dict(range='4B306B..4B313B',effect='ATK+178==2/4 creates alternate effects; ordinary branch computes oldHP-damage and calls slot3E8 with absoluteHP')],
+        output_policy='Executable exposes installed ATK and bounded first numeric stages; final_victim_damage remains null. Hit/HP/reaction gating stays in referenced hit contract.',
+        unknowns=['Complete symbolic names/units and construction of all numeric operands,448C10 and protected damage globals.',
+            '8B7AB0/8B7C90/full downstream semantics and runtime random/state snapshots.',
+            'Current action pointer/late ATK mutations, scene-registration early branches, observed target x87 control word.',
+            'Final accepted hit value and HP/reaction observed in the original client.'])
+    (ROOT/'consumer-contract.json').write_text(json.dumps(contract,ensure_ascii=False,indent=2),encoding='utf-8')
+    context=dict(name='Declared successful template installation/no override/normal route; not native memory observation',
+        slot10_registration_reached=True,current_atk_snapshot_unchanged=True,action_atk_override=None,normal_base_route_established=True)
+    (ROOT/'declared-template-context.json').write_text(json.dumps(context,indent=2),encoding='utf-8')
+    from consumer_model import evaluate
+    (ROOT/'endpoints.json').write_text(json.dumps(dict(context=context,results=[evaluate(x,context) for x in (552,5158)]),indent=2),encoding='utf-8')
+    print(json.dumps(dict(contract='consumer-contract.json',final_damage_claimed=False)))
+
+if __name__=='__main__':main()

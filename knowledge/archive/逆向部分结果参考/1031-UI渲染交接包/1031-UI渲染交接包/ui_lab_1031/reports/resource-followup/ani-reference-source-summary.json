@@ -1,0 +1,186 @@
+{
+  "ok": true,
+  "scanned": 187396,
+  "matched_paths": 1380,
+  "frame_references": 673611,
+  "failed": 44,
+  "failures": [
+    {
+      "path": "aicharacter/atfighter/roychan/animation/throwwebdoublethrow.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/act8/blackscalemoussambani/animation/wind_bullet_ready2.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/act8/chiefmong/animation/effect/attack.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/act8/woodendoll_ng/animation/swordman_attack2.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/act8/woodendoll_ng/animation/weapon/swordman_attack2.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/act8/woodendoll_np/animation/ball/swordman_attack1.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/act8/woodendoll_np/animation/ball_eff/swordman_attack1.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/mj/animation/sit.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/aganzo/sinead/animation/weapon/attack1_wp.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/bloodbutterfly/bloodbutterfly/animation/lastaction.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/bloodbutterfly/bloodbutterflynamed/animation/lastaction.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/crimebuffalo/grim_crimebuffalo/animation/sit.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/cyclops/animation/die.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/cyclops/animation/sd_attack4.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/event/clown/animation/tripofire.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl/invader/animation/buster.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl/invader/animation/casteffect.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl/invader/animation/casteffectglow.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl_breeding/dendroid_elder/animation/damage1.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/gbl_breeding/flare_spawn/animation/starfisheggblast2.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/dummytank/animation/attackcylinder.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/dummytank/animation/smoke.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/buster.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/casteffect.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/goblinkingdom/goblincannon/animation/casteffectglow.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/heaven/specialforce/animation/die.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/heaven/specialforce/animation/motorcycle/die.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/leshphon/hyungteo/animation/wp/p_down.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/ranjerus/rx78/animation/bodydown.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/ranjerus/rx78/animation/bodyoverturn.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/riding/masaccio/animation/jumpchainattacknormal_upper_effect.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/riding/masaccio_quest/animation/jumpchainattacknormal_upper_effect.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_ng/animation/swordman_attack2.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_ng/animation/weapon/swordman_attack2.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_np/animation/ball/swordman_attack1.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/risk_dungeon/ghosttrain/woodendoll_np/animation/ball_eff/swordman_attack1.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/shonan/hajin/animation/weapon/stay2.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/shonan/hajin/animation/wing/wingdodge.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/towerofultimate/firezombie/animation/move2.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "monster/newmonsters/towerofultimate/firezombie/animation/stay2.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "passiveobject/actionobject/map/dimentiongate/cosmofiend/animation/cube3_ball_effect1.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "passiveobject/actionobject/monster/dimensiongate/bakal/itrenog/animation/crash.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "passiveobject/actionobject/monster/haze/enjosipho/animation/macgee_bullet.ani",
+      "error": "Binary bounds at 0"
+    },
+    {
+      "path": "passiveobject/actionobject/monster/yen/animation/dummy.ani",
+      "error": "Binary bounds at 0"
+    }
+  ],
+  "file": "ani-reference-usage-native.json"
+}

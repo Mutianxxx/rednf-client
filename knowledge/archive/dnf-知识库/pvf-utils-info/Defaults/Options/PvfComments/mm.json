@@ -1,0 +1,246 @@
+﻿{
+  "SchemaVersion": 1,
+  "FileType": "mm",
+  "Comments": [
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "image",
+      "Title": "图片",
+      "Comment": "图片",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "lostluna1"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "image number",
+      "Title": "图像编号",
+      "Comment": "图像编号",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "无名氏"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "index",
+      "Title": "对应城镇.twn的区域",
+      "Comment": "对应城镇.twn的区域：\n\n[area]\n    0-------------对应这个区域\n    `xxxxxxxx.map`\n    `[gate]`\n[/area]\n-------\n城镇索引，对应Town.lst中的城镇编号。",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[index]\t1\t\t\t\t\t\t\t\t\t// 世界索引\n```\n\n```pvf\n[index] 1\t\t\t\t\t\t\t\t\t// 城镇索引\n```\n\n```pvf\n[index]\t2\t\t\t\t\t\t\t\t// area 索引\n```\n\n```pvf\n[index] 1\t\t\t\t\t\t\t\t\t// npc 索引\n```",
+      "Closing": false,
+      "Authors": "FreyaGrace"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "project rect",
+      "Title": "小地图投影矩形",
+      "Comment": "区域小地图中的投影矩形，官方样例四列按起点 X/Y、终点 X/Y 读取。它用于小地图坐标映射线索，不是简单的宽/高二元值；坐标系、缩放和角色头像实际位置需结合 .mm 父块及客户端验证。",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[project rect]\t1\t1\t10\t10\t\t\t// 小地图坐标 开始/结束点(x,y)\n```",
+      "Closing": false,
+      "Authors": "by：夜白1229998088"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "real rect",
+      "Title": "游戏中的角色城镇活动区域范围（X",
+      "Comment": "游戏中的角色城镇活动区域范围（X,Y）\n使用城镇坐标工具填写",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[real rect]\t\t1\t1\t100\t100\t\t\t// 实际可移动范围 开始/结束点(x,y)\n```",
+      "Closing": false,
+      "Authors": "by：夜白1229998088"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "level",
+      "Title": "推荐最低/最高等级",
+      "Comment": "#### 官方示例: minimap.mm\n\n```pvf\n[level]\t40\t50\t\t\t\t\t\t\t\t// 推荐最低/最高等级\n```\n\n```pvf\n[level]\t30\t40\t\t\t\t\t\t\t// 最低等级, 最高等级\n```",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[level]\t40\t50\t\t\t\t\t\t\t\t// 推荐最低/最高等级\n```\n\n```pvf\n[level]\t30\t40\t\t\t\t\t\t\t// 最低等级, 最高等级\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "point",
+      "Title": "小地图坐标点(x",
+      "Comment": "#### 官方示例: minimap.mm\n\n```pvf\n[point]\t1\t1\t\t\t\t\t\t\t\t// 小地图坐标点(x,y)\n```",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[point]\t1\t1\t\t\t\t\t\t\t\t// 小地图坐标点(x,y)\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "type",
+      "Title": "area 类型 0 普通",
+      "Comment": "#### 官方示例: minimap.mm\n\n```pvf\n[type]\t1\t\t\t\t\t\t\t\t// area 类型   0 普通, 1 传送门, 2 钓鱼点, 3 酒馆, 4 地下城入口\n```",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[type]\t1\t\t\t\t\t\t\t\t// area 类型   0 普通, 1 传送门, 2 钓鱼点, 3 酒馆, 4 地下城入口\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "npc",
+      "Title": "npc 索引",
+      "Comment": "小地图 NPC 标记记录，参数按“NPC 索引、X 坐标、Y 坐标”读取。NPC ID 必须按对应 registry 解析；坐标单位、图标和客户端显示需目标版本验证。",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n- npc 索引, x, y\n```",
+      "Closing": true,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "name",
+      "Title": "npc 名称",
+      "Comment": "#### 官方示例: minimap.mm\n\n```pvf\n[name]\t`吉莎`\t\t\t\t\t\t\t\t// npc 名称\n```",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[name]\t`吉莎`\t\t\t\t\t\t\t\t// npc 名称\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "shop",
+      "Title": "商店类型(0 武器商店",
+      "Comment": "#### 官方示例: minimap.mm\n\n```pvf\n[shop] 2\t\t\t\t\t\t\t\t\t// 商店类型(0 武器商店, 1 防具商店, 2 饰品商店, 3 材料商店, 4 杂货商店, 5 抽奖商店, 6 神器商店\n\t\t[level]\t30\t40\t\t\t\t\t\t\t// 最低等级, 最高等级\n\t\t[job]\t0\t1\t2\t[/job]\t\t\t\t// 0剑士, 1格斗家, 2枪手, 3法师, 4 精灵骑士\n\t[/shop]\n```",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[shop] 2\t\t\t\t\t\t\t\t\t// 商店类型(0 武器商店, 1 防具商店, 2 饰品商店, 3 材料商店, 4 杂货商店, 5 抽奖商店, 6 神器商店\n\t\t[level]\t30\t40\t\t\t\t\t\t\t// 最低等级, 最高等级\n\t\t[job]\t0\t1\t2\t[/job]\t\t\t\t// 0剑士, 1格斗家, 2枪手, 3法师, 4 精灵骑士\n\t[/shop]\n```",
+      "Closing": true,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "job",
+      "Title": "0剑士",
+      "Comment": "#### 官方示例: minimap.mm\n\n```pvf\n[job]\t0\t1\t2\t[/job]\t\t\t\t// 0剑士, 1格斗家, 2枪手, 3法师, 4 精灵骑士\n```",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[job]\t0\t1\t2\t[/job]\t\t\t\t// 0剑士, 1格斗家, 2枪手, 3法师, 4 精灵骑士\n```",
+      "Closing": true,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "skill",
+      "Title": "0剑士",
+      "Comment": "#### 官方示例: minimap.mm\n\n```pvf\n[skill]\t5\t\t\t\t\t\t\t\t\t// 0剑士, 1格斗家, 2枪手, 3法师, 4 精灵骑士, 5女枪手, 6通用, 7盗贼, 8公会\n```",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[skill]\t5\t\t\t\t\t\t\t\t\t// 0剑士, 1格斗家, 2枪手, 3法师, 4 精灵骑士, 5女枪手, 6通用, 7盗贼, 8公会\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "role",
+      "Title": "吉莎添加了此项",
+      "Comment": "#### 官方示例: minimap.mm\n\n```pvf\n[role]\n\t\t`[item shop]`\n\t\t`[recover stamina]`\n\t\t`[sera shop]`\n\t\t`[guild]`\n\t\t`[upgrade item]`\n\t\t`[disjoint item]`\n\t\t`[product item]`\n\t\t`[mouse register]`\t\t// 吉莎添加了此项\n\t[/role]\n```",
+      "OfficialDescription": "#### 官方示例: minimap.mm\n\n```pvf\n[role]\n\t\t`[item shop]`\n\t\t`[recover stamina]`\n\t\t`[sera shop]`\n\t\t`[guild]`\n\t\t`[upgrade item]`\n\t\t`[disjoint item]`\n\t\t`[product item]`\n\t\t`[mouse register]`\t\t// 吉莎添加了此项\n\t[/role]\n```",
+      "Closing": true,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "area",
+      "Title": "城镇区域映射块",
+      "Comment": "小地图 [town] 内的区域闭合块，常包含 [index]、[type]、[real rect]、[project rect]、[npc] 和 [grid map]。必须读取 [/area]，区域编号和坐标都按父 town 解释。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "background",
+      "Title": "小地图背景图像",
+      "Comment": "[image] 内的小地图背景 IMG 路径与帧索引。PVF 引用不证明客户端 NPK/IMG 存在、帧号有效或渲染层级正确。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "enter",
+      "Title": "商店进入/可用标记",
+      "Comment": "[shop] 内的无值存在标记，用于商店入口或可用状态线索。它没有独立参数，具体显示、进入和服务端放行需结合父 [shop] 与客户端验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "grid map",
+      "Title": "小地图网格显示条件块",
+      "Comment": "小地图节点的网格显示闭合块，可包含 [level]、[quest] 和 [image number]。必须读取 [/grid map]；等级、任务和图像条件只说明静态展示入口，不证明 UI 实际切换。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "level img point",
+      "Title": "等级图像点参数",
+      "Comment": "小地图节点的双整数图像点参数，常与 [point]、[grid map] 相邻。两列的精确索引/偏移语义尚未闭合，必须保留原顺序并由客户端布局验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "map",
+      "Title": "小地图主图像",
+      "Comment": "[image] 内的主地图 IMG 路径与帧索引。它与 [background] 分层存在，PVF 引用不证明资源完整或最终绘制顺序。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "quest",
+      "Title": "小地图任务条件",
+      "Comment": "[grid map] 内的任务 ID 条件线索。数字必须通过任务 registry 解析；静态条件不证明任务已接、已完成或节点实际显示。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "shop name",
+      "Title": "小地图商店名称",
+      "Comment": "[shop] 内的商店显示名称文本。名称只负责静态展示线索，不证明商店入口、商品列表、购买或本地化正常。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "town",
+      "Title": "小地图城镇容器",
+      "Comment": "区域小地图中的城镇闭合块，通常以 [index] 指向 town，并包含一个或多个 [area]。必须读取 [/town]；town 数字按 town/town.lst 解析。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "mm",
+      "Section": "world",
+      "Title": "小地图世界入口容器",
+      "Comment": "区域小地图中的 worldmap 闭合块，常包含 [index]、[level]、[point] 和 [grid map]。必须读取 [/world]；[index] 按 worldmap/worldmap.lst 解释，不与 town/dungeon ID 混用。",
+      "OfficialDescription": null,
+      "Closing": true,
+      "Authors": "Codex"
+    }
+  ]
+}

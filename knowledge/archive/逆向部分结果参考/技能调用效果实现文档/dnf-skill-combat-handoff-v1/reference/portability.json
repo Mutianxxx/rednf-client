@@ -1,0 +1,11 @@
+{
+  "upstream_main_sha256": "262da8123dfa8c73b536576be9afbbbcbb4f4456d2b1245e472448ad47fa553d",
+  "portable_main_sha256": "2837e4e232a03fb12787cff32654d5da80b5e34cfaa0f87852969d990dc1a362",
+  "change": "Startup binds bundled asset hashes instead of requiring the game EXE. All battle classes, rendering, collision and verification are unchanged.",
+  "upstream_content_sha256": {
+    "battle.json": "6fdbf84ebd9fe6efaccda897de63483de24f39b3936e7d1db584c8986c1f7494",
+    "profile.json": "3638b7f63c4b2a7ec97606cae13bfe5aaa3e9df82ec52f63d7cdb32d8b14ff6d",
+    "skills.json": "e81abefc9eef7cf76765e23c8a3c701fb177af0e46a426490ecc5865aafbb0bb"
+  },
+  "note": "Eight skill evidence paths are relocated by regenerate; all other values must match. Catalog/profile are frozen derived inputs, not a recovered native controller."
+}

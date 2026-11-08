@@ -1,0 +1,1066 @@
+﻿{
+  "SchemaVersion": 1,
+  "FileType": "atk",
+  "Comments": [
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "active status",
+      "Title": "攻击附加异常/增益状态",
+      "Comment": ".atk 中的异常/增益状态入口，状态 token 后跟随数值列。官方样例表明常见前列与概率、等级、持续时间有关，后续列会随 blind、slow、burn、curse 等状态类型变化；真实解包也存在 3、4、5、7 列等不同形态。不得把某一状态的列义外推到全部状态，也不能仅凭静态字段断定概率、伤害、抗性或 PVP 结算。当前目标样本未观察到 [/active status] 闭合标签。",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [curse] 37 100    // 最前面是攻击附带的异常状态种类。\n                    // 从下面中选择一个\n                    // 第二个是触发概率（写了 `[none] 则随意填写）\n                    // 第三个是触发强度（写了 `[none] 则随意填写）\n```\n\n```pvf\n[active status] [blind] 100 20 3000 10 100        // 概率, 等级, 持续时间, 视野（%）, 硬直率增加（+）\n```\n\n```pvf\n[active status] [freeze] 100 20 3000            // 概率, 等级, 持续时间\n```\n\n```pvf\n[active status] [stun] 100 20 3000            // 概率, 等级, 持续时间\n```\n\n```pvf\n[active status] [slow] 100 20 10000 50 50        // 概率, 等级, 持续时间, 移速（%）, 攻速（%）\n```\n\n```pvf\n[active status] [haste] 100 20 3000 50 50        // 概率, 等级, 持续时间, 移速（%）, 攻速（%）\n```\n\n```pvf\n[active status] [stone] 100 20 3000 50        // 概率, 等级, 持续时间, 伤害值（+）\n```\n\n```pvf\n[active status] [sleep] 100 20 3000            // 概率, 等级, 持续时间\n```\n\n```pvf\n[active status] [confuse] 100 20 3000 1        // 概率, 等级, 持续时间, 为1时怪物陷入混乱，会攻击同伴。\n```\n\n```pvf\n[active status] [hold] 100 20 3000            // 概率, 等级, 持续时间\n```\n\n```pvf\n[active status] [weakness] 100 20 50            // 概率, 等级, 伤害减少比率（基于剩余 HP）\n```\n\n```pvf\n[active status] [armor break] 100 20 10000 15        // 概率, 等级, 持续时间, 耐久度消耗检查次数\n```\n\n```pvf\n[active status] [weapon break] 100 20 10000 15    // 概率, 等级, 持续时间, 耐久度消耗检查次数\n```\n\n```pvf\n[active status] [poison] 100 10 20000 1000         // 概率, 等级, 持续时间, 伤害\n```\n\n```pvf\n[active status] [lightning] 100 10 2000 100         // 概率, 等级, 持续时间, 伤害\n```\n\n```pvf\n[active status] [bleeding] 100 10 5000 10         // 概率, 等级, 持续时间, 伤害\n```\n\n```pvf\n[active status] [burn] 100 10 20000 1000 10 1 3000    // 概率, 等级, 持续时间, 伤害, 周围伤害, 周围伤害选项（为1时只对敌军造成周围伤害）, 周围伤害应用间隔（时间）\n```\n\n```pvf\n[active status] [bless] 100 10 5000 10 10 10 10    // 概率, 等级, 持续时间, 力量,体力,智力,精神\n```\n\n```pvf\n[active status] [curse] 100 10 5000 20 20 20 20    // 概率, 等级, 持续时间, 力量,体力,智力,精神\n```\n\n```pvf\n///// 攻击信息 (.atk) /////\n[active status] [curse] 100 10 5000 20 20 20 20\n- 使用方法与 equ 相同，但 `.atk` 文件中不包含 target 信息。\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "armor break",
+      "Title": "异常效果",
+      "Comment": "异常效果：防具损坏\n\n//减少防具的耐久度",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [armor break] 100 20 10000 15        // 概率, 等级, 持续时间, 耐久度消耗检查次数\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "attack direction",
+      "Title": "攻击方向",
+      "Comment": "[attack direction]攻击方向\n\n[hit lift up] = 浮空\n[hit horizon] = 平推\n[hit down] = 击倒",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[attack direction] [hit lift up]        // 攻击方向。在 [hit lift up] [hit horizon] [hit down] 中选择1个\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "attack enemy",
+      "Title": "敌伤判定（禁用时不会造成伤害）",
+      "Comment": "[attack enemy]敌伤判定（禁用时不会造成伤害）\n开启改1     禁用改0\n————————————————————\n若要为此攻击添加友伤判定，需添加词条：\n[attack friend]\n————————————————————\n若要调整此攻击的伤害比率，需调整词条（没有的话要添加）：\n[damage bonus]\n————————————————————\n若要为此攻击赋予异常状态，需添加词条：\n[active status]",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[attack enemy] 1            // 是否攻击敌人（除自己和友军外的所有目标）。默认值 1\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "attack friend",
+      "Title": "友伤判定（开启时可以对友方造成伤害）",
+      "Comment": "[attack friend]友伤判定（开启时可以对友方造成伤害）\n开启改1     禁用改0\n————————————————————\n若要为此攻击添加敌伤判定，需添加词条：\n[attack enemy]\n————————————————————\n若要调整此攻击的伤害比率，需调整词条（没有的话要添加）：\n[damage bonus]\n————————————————————\n若要为此攻击赋予异常状态，需添加词条：\n[active status]",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[attack friend] 0            // 是否攻击友军。默认值 0\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "attack type",
+      "Title": "伤害类型（隔一行再编辑）",
+      "Comment": "[attack type] 伤害类型（隔一行再编辑）\n\n[physic] = 物理伤害\n[magic] = 魔法伤害\n[ignore defense] = 无视防御的伤害",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[attack type] [physic]        // 攻击类型。在 [physic] [magic] [ignore defense] 中选择1个\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "back",
+      "Title": "判定方向",
+      "Comment": "判定方向：身后",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "bless",
+      "Title": "增益效果",
+      "Comment": "增益效果：祝福",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [bless] 100 10 5000 10 10 10 10    // 概率, 等级, 持续时间, 力量,体力,智力,精神\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "blood",
+      "Title": "打击类型",
+      "Comment": "打击类型：有出血视觉效果",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[hit info] [cut] [blood] 50 1.0// 第一个是打击种类。在 [cut] [blow] [burn] [etc] [mana burn] 中选择1个，跟随武器子类型请用 ``\n                //[mana burn] 时不减少 hp 而消耗 mp\n                // 第二个是是否溅血。在 [blood] [no blood] 中选择1个\n                // 第三个是命中时短暂停顿时间。跟随武器子类型请用 -1\n                // 第四个是受击延迟时间倍数。跟随武器子类型请用 -1\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "blow",
+      "Title": "打击类型",
+      "Comment": "打击类型：钝击",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "curse",
+      "Title": "异常效果",
+      "Comment": "异常效果：诅咒",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [curse] 37 100    // 最前面是攻击附带的异常状态种类。\n                    // 从下面中选择一个\n                    // 第二个是触发概率（写了 `[none] 则随意填写）\n                    // 第三个是触发强度（写了 `[none] 则随意填写）\n```\n\n```pvf\n[active status] [curse] 100 10 5000 20 20 20 20    // 概率, 等级, 持续时间, 力量,体力,智力,精神\n```\n\n```pvf\n///// 攻击信息 (.atk) /////\n[active status] [curse] 100 10 5000 20 20 20 20\n- 使用方法与 equ 相同，但 `.atk` 文件中不包含 target 信息。\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "cut",
+      "Title": "打击类型",
+      "Comment": "打击类型：切割",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[hit info] [cut] [blood] 50 1.0// 第一个是打击种类。在 [cut] [blow] [burn] [etc] [mana burn] 中选择1个，跟随武器子类型请用 ``\n                //[mana burn] 时不减少 hp 而消耗 mp\n                // 第二个是是否溅血。在 [blood] [no blood] 中选择1个\n                // 第三个是命中时短暂停顿时间。跟随武器子类型请用 -1\n                // 第四个是受击延迟时间倍数。跟随武器子类型请用 -1\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "damage bonus",
+      "Title": "伤害比率",
+      "Comment": "伤害比率\n\n0 = 100%\n\n20 = 120%\n\n-10 = 90%",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[damage bonus] 10        // 伤害加成。%值\n```\n\n```pvf\n[damage bonus] -10    // 技能固有的攻击力\n```\n\n#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n{exp}按照所写的百分比增加伤害(输入20则比当前伤害多造成20%的伤害){/exp}[damage bonus]\n    //mkjung 120601 int-->float 修改\n    {must1}{exp}要增加百分之多少的伤害？{/exp}{float(:)}\n```\n\n```pvf\n{exp}技能固有的攻击力{/exp}[damage bonus]\n        //mkjung 120601 int-->float 修改\n        {must1}{exp}{/exp}{float(:)}\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "damage reaction",
+      "Title": "伤害判定",
+      "Comment": "[damage reaction]伤害判定\n——————————————————\n[none] = 无\n[damage] = 有伤害判定\n[down] = 有伤害的同时有击倒判定",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[damage reaction] [damage]        // 受到攻击时的反应。在 [none] [damage] [down] [damage except human] 中选择1个\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "deelement",
+      "Title": "异常效果",
+      "Comment": "异常效果：属性剥离\n\n//令该目标的所有攻击均变为无属性伤害",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "down",
+      "Title": "动作值判定",
+      "Comment": "动作值判定：击倒",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "elemental property",
+      "Title": "为该攻击或装备赋予属性",
+      "Comment": "为该攻击或装备赋予属性\n[fire element] 火属性\n[water element] 冰属性\n[light element] 光属性\n[dark element] 暗属性\n[no element] 无属性\n\n要为atk信息里添加异常状态的话，需赋予标签：\n[active status]",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[elemental property] [no element]            // 攻击的元素属性。在 [no element] [fire element] [water element] [dark element] [light element] 中选择1个。不写则默认 [no element]1\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "front",
+      "Title": "判定方向",
+      "Comment": "判定方向：面前",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n//mkissue 120601 添加\n[hit direction] [front]\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "haste",
+      "Title": "增益效果",
+      "Comment": "增益效果：加速",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [haste] 100 20 3000 50 50        // 概率, 等级, 持续时间, 移速（%）, 攻速（%）\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit direction",
+      "Title": "判定方向",
+      "Comment": "判定方向\n\n[back] = 身后\n[front] = 面前",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n//mkissue 120601 添加\n[hit direction] [front]\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit down",
+      "Title": "攻击判定",
+      "Comment": "攻击判定：击倒",
+      "OfficialDescription": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n{must1}[hit down]\n    //mkjung 120531 添加\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit horizon",
+      "Title": "攻击判定",
+      "Comment": "攻击判定：平推",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit info",
+      "Title": "命中表现与受击延迟参数",
+      "Comment": ".atk 的命中表现记录。第一项为 cut、blow、burn、etc、mana burn 等打击类型；第二项为 blood/no blood；后两项分别是命中短暂停顿时间和受击延迟倍数，使用 -1 可表示跟随武器子类型。字段存在不证明血效、卡肉、硬直或客户端表现，仍需结合 ANI hitbox、动作链和实机验证。",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[hit info] [cut] [blood] 50 1.0// 第一个是打击种类。在 [cut] [blow] [burn] [etc] [mana burn] 中选择1个，跟随武器子类型请用 ``\n                //[mana burn] 时不减少 hp 而消耗 mp\n                // 第二个是是否溅血。在 [blood] [no blood] 中选择1个\n                // 第三个是命中时短暂停顿时间。跟随武器子类型请用 -1\n                // 第四个是受击延迟时间倍数。跟随武器子类型请用 -1\n```\n\n#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n//mkjung 120601 添加\n    {exp}攻击信息{/exp}[hit info]\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit lift up",
+      "Title": "攻击判定",
+      "Comment": "攻击判定：浮空",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[attack direction] [hit lift up]        // 攻击方向。在 [hit lift up] [hit horizon] [hit down] 中选择1个\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit wav",
+      "Title": "命中音效",
+      "Comment": "[hit wav]命中音效\n\n调用npk文件里的音效",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[hit wav] `HIT_SOUND`    // 命中时播放的音效标签\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "ignore defense",
+      "Title": "ignore defense",
+      "Comment": "无视防御的伤害",
+      "OfficialDescription": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n{must1}{exp}无视防御攻击{/exp}[ignore defense]\n    //mkjung 120531 添加\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "knuck back",
+      "Title": "击退",
+      "Comment": "[knuck back]击退\n\n添加此词条之后有击退效果\n1 = 开启击退        -1 = 禁用击退\n\n开启击退后，可以选择赋予更高的值来增加击退力度\n比如1改成10，敌人会被一巴掌扇到地图边缘",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[knuck back] 1            // 击退类型。0:普通 1:大幅击退 -1:不击退\n// 以下值为 1 或 0\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "lift up",
+      "Title": "浮空值",
+      "Comment": "浮空值\n10 = 10%",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[lift up] 30            // 向上击飞的力度\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "lightning",
+      "Title": "异常效果",
+      "Comment": "异常效果：感电",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [lightning] 100 10 2000 100         // 概率, 等级, 持续时间, 伤害\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "magic",
+      "Title": "魔法",
+      "Comment": "魔法",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "no blood",
+      "Title": "打击类型",
+      "Comment": "打击类型：没有出血视觉效果",
+      "OfficialDescription": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n{must2}{exp}是否溅血（不出血）{/exp}[no blood]\n    //mkjung 120601\n    {must2}{exp}{/exp}{string}\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "no element",
+      "Title": "no element",
+      "Comment": "无元素属性",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[elemental property] [no element]            // 攻击的元素属性。在 [no element] [fire element] [water element] [dark element] [light element] 中选择1个。不写则默认 [no element]1\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "physic",
+      "Title": "物理",
+      "Comment": "物理",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[attack type] [physic]        // 攻击类型。在 [physic] [magic] [ignore defense] 中选择1个\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "piercing",
+      "Title": "破甲状态 token（待目标验证）",
+      "Comment": "旧注释将 [piercing] 解释为破甲异常，但该 token 没有可核验的 OfficialDescription。其参数列、减防方式和运行支持均未确认，只能作为旧版本/外部资料线索保留。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "push aside",
+      "Title": "平推值",
+      "Comment": "平推值\n10 = 10%\n\n若要让此攻击可以击退敌人，需赋予词条：\n[knuck back]",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[push aside] 200            // 向后方击退的力度\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "slow",
+      "Title": "异常效果",
+      "Comment": "异常效果：减速",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [slow] 100 20 10000 50 50        // 概率, 等级, 持续时间, 移速（%）, 攻速（%）\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "stuck",
+      "Title": "命中率（正数减少",
+      "Comment": "命中率（正数减少，负数增加）\n -10 = 增加10%命中率\n\n此标签在ATK信息里时，需填写-1000才能必定命中",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[stuck] +2.2            // 硬直率变化值\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "weakness",
+      "Title": "异常效果",
+      "Comment": "异常效果：虚弱\n\n//以剩余生命值计算，比如被施加虚弱的目标剩余200生命值，虚弱效果是0.3（30%），则打出的伤害减少60",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n// 以下值为 1 或 0\n[weakness]    3.0 5.5        // 有 3.0% 的概率造成 HP 5.5% 的伤害。\n```\n\n```pvf\n[active status] [weakness] 100 20 50            // 概率, 等级, 伤害减少比率（基于剩余 HP）\n```\n\n#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n// 以下值为 1 或 0\n{exp}X的概率造成HP百分比值的伤害{/exp}[weakness]\n    {must1}{exp}概率{/exp}{float(:)}\n    //mkjung 120531 修改 must1--> must2\n    {must2}{exp}HP百分比值{/exp}{float(:)}\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "weapon break",
+      "Title": "异常效果",
+      "Comment": "异常效果：武器损坏\n\n//减少武器的耐久度",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [weapon break] 100 20 10000 15    // 概率, 等级, 持续时间, 耐久度消耗检查次数\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "weapon damage apply",
+      "Title": "开启改1 关闭改0",
+      "Comment": "开启改1     关闭改0\n\n开启时适用装备攻击力加成\n关闭时禁用装备攻击力加成",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[weapon damage apply] 1        // 是否应用武器伤害。默认值 0。[ignore defense] 时应用物理伤害。\n// 按攻击目标设定是否攻击。默认值可不写 //\n```",
+      "Closing": false,
+      "Authors": "Xiti Fox"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "damage",
+      "Title": "伤害",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[damage] 100            // 伤害。\n```\n\n```pvf\n[damage reaction] [damage]        // 受到攻击时的反应。在 [none] [damage] [down] [damage except human] 中选择1个\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[damage] 100            // 伤害。\n```\n\n```pvf\n[damage reaction] [damage]        // 受到攻击时的反应。在 [none] [damage] [down] [damage except human] 中选择1个\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "absolute damage",
+      "Title": "无视防御的绝对伤害",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[absolute damage] 30        // 无视防御的绝对伤害\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[absolute damage] 30        // 无视防御的绝对伤害\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "attack myself",
+      "Title": "是否攻击自己",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n// 按攻击目标设定是否攻击。默认值可不写 //\n[attack myself] 0            // 是否攻击自己。默认值 0\n```\n\n#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n// 按攻击目标设定是否攻击。默认值可不写 //\n{exp}是否攻击自己{/exp}[attack myself]\n    {must1}{exp}默认值 0{/exp}{int(:)}\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n// 按攻击目标设定是否攻击。默认值可不写 //\n[attack myself] 0            // 是否攻击自己。默认值 0\n```\n\n#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n// 按攻击目标设定是否攻击。默认值可不写 //\n{exp}是否攻击自己{/exp}[attack myself]\n    {must1}{exp}默认值 0{/exp}{int(:)}\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "bounce",
+      "Title": "是否弹起",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[bounce] 1            // 是否弹起。设为 1 则弹起时应用 [lift up] 的力度。\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[bounce] 1            // 是否弹起。设为 1 则弹起时应用 [lift up] 的力度。\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "HP drain",
+      "Title": "未实现",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[HP drain] 0        // 未实现\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[HP drain] 0        // 未实现\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "MP drain",
+      "Title": "未实现",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[MP drain] 1        // 未实现\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[MP drain] 1        // 未实现\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "human damage rate",
+      "Title": "对人形（对人类）攻击比率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[human damage rate] 100.0    // 对人形（对人类）攻击比率。可为小数，%值，默认 100\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[human damage rate] 100.0    // 对人形（对人类）攻击比率。可为小数，%值，默认 100\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "fort damage rate",
+      "Title": "对建筑（对建筑物）攻击比率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[fort damage rate] 100.0    // 对建筑（对建筑物）攻击比率。可为小数，%值，默认 100\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[fort damage rate] 100.0    // 对建筑（对建筑物）攻击比率。可为小数，%值，默认 100\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "monster damage rate",
+      "Title": "对怪兽（为护甲类别为0的目标设置）攻击比率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[monster damage rate] 100.0    // 对怪兽（为护甲类别为0的目标设置）攻击比率。可为小数，%值，默认 100\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[monster damage rate] 100.0    // 对怪兽（为护甲类别为0的目标设置）攻击比率。可为小数，%值，默认 100\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "critical hit",
+      "Title": "暴击率变化值",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[critical hit] +2.7        // 暴击率变化值\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[critical hit] +2.7        // 暴击率变化值\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "stuck prob increase",
+      "Title": "每次攻击命中时硬直率是否增加",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[stuck prob increase] 1        // 每次攻击命中时硬直率是否增加。默认值 0\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[stuck prob increase] 1        // 每次攻击命中时硬直率是否增加。默认值 0\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "human active status rate",
+      "Title": "对人形护甲施加 70",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n/// 为决斗场状态修正而添加的内容。\n[human active status rate] 70.0 // 对人形护甲施加 70.0% 的较弱状态变化效果。数值的 1/10\n```\n\n#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n/// 为决斗场状态修正而添加的内容。\n{exp}对人形护甲施加 X% 的较弱状态变化效果（数值的 1/10）{/exp}[human active status rate]\n    {must2}{exp}概率{/exp}{float(:)}\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n/// 为决斗场状态修正而添加的内容。\n[human active status rate] 70.0 // 对人形护甲施加 70.0% 的较弱状态变化效果。数值的 1/10\n```\n\n#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n/// 为决斗场状态修正而添加的内容。\n{exp}对人形护甲施加 X% 的较弱状态变化效果（数值的 1/10）{/exp}[human active status rate]\n    {must2}{exp}概率{/exp}{float(:)}\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "is hit number increasing",
+      "Title": "1 则受击数增加",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[is hit number increasing] 0    //1 则受击数增加，0 则不增加。\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[is hit number increasing] 0    //1 则受击数增加，0 则不增加。\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "ignore diehard",
+      "Title": "是否无视不死被动",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[ignore diehard] 1         //是否无视不死被动。默认值 0\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[ignore diehard] 1         //是否无视不死被动。默认值 0\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "light element",
+      "Title": "mkjung 120531 添加",
+      "Comment": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n{opt1}[light element]\n    //mkjung 120531 添加\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n{opt1}[light element]\n    //mkjung 120531 添加\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "pvp",
+      "Title": "mkjung 120601 int-->float 修改",
+      "Comment": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n{exp}pvp相关设置{/exp}[pvp]\n    {exp}技能固有的攻击力{/exp}[damage bonus]\n        //mkjung 120601 int-->float 修改\n        {must1}{exp}{/exp}{float(:)}\n    [!damage bonus]\n\n    //mkjung 120601 添加\n    {exp}攻击信息{/exp}[hit info]\n        {must1}{exp}打击特效输出{/exp}[blow]\n        {must1}{exp}斩击特效输出{/exp}[cut]\n        {must1}{exp}灼烧特效输出{/exp}[burn]\n        {must1}{exp}打击种类（不减少 hp 而消耗 mp）{/exp}[mana burn]\n        {must1}{exp}使用自定义特效（主要在代码中定义）{/exp}[etc]\n\n        {must2}{exp}是否溅血（出血）{/exp}[blood]\n        {must2}{exp}是否溅血（不出血）{/exp}[no blood]\n\n        {opt1}{exp}命中时短暂停顿时间（跟随武器子类型请用 -1）{/exp}{float(:)}\n        {opt2}{exp}受击延迟时间倍数（跟随武器子类型请用 -1）{/exp}{float(:)}\n    [!hit info]\n[/pvp]\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n{exp}pvp相关设置{/exp}[pvp]\n    {exp}技能固有的攻击力{/exp}[damage bonus]\n        //mkjung 120601 int-->float 修改\n        {must1}{exp}{/exp}{float(:)}\n    [!damage bonus]\n\n    //mkjung 120601 添加\n    {exp}攻击信息{/exp}[hit info]\n        {must1}{exp}打击特效输出{/exp}[blow]\n        {must1}{exp}斩击特效输出{/exp}[cut]\n        {must1}{exp}灼烧特效输出{/exp}[burn]\n        {must1}{exp}打击种类（不减少 hp 而消耗 mp）{/exp}[mana burn]\n        {must1}{exp}使用自定义特效（主要在代码中定义）{/exp}[etc]\n\n        {must2}{exp}是否溅血（出血）{/exp}[blood]\n        {must2}{exp}是否溅血（不出血）{/exp}[no blood]\n\n        {opt1}{exp}命中时短暂停顿时间（跟随武器子类型请用 -1）{/exp}{float(:)}\n        {opt2}{exp}受击延迟时间倍数（跟随武器子类型请用 -1）{/exp}{float(:)}\n    [!hit info]\n[/pvp]\n```",
+      "Closing": true,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "blind",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [blind] 100 20 3000 10 100        // 概率, 等级, 持续时间, 视野（%）, 硬直率增加（+）\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [blind] 100 20 3000 10 100        // 概率, 等级, 持续时间, 视野（%）, 硬直率增加（+）\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "freeze",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [freeze] 100 20 3000            // 概率, 等级, 持续时间\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [freeze] 100 20 3000            // 概率, 等级, 持续时间\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "stun",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [stun] 100 20 3000            // 概率, 等级, 持续时间\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [stun] 100 20 3000            // 概率, 等级, 持续时间\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "stone",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [stone] 100 20 3000 50        // 概率, 等级, 持续时间, 伤害值（+）\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [stone] 100 20 3000 50        // 概率, 等级, 持续时间, 伤害值（+）\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "sleep",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [sleep] 100 20 3000            // 概率, 等级, 持续时间\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [sleep] 100 20 3000            // 概率, 等级, 持续时间\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "confuse",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [confuse] 100 20 3000 1        // 概率, 等级, 持续时间, 为1时怪物陷入混乱，会攻击同伴。\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [confuse] 100 20 3000 1        // 概率, 等级, 持续时间, 为1时怪物陷入混乱，会攻击同伴。\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hold",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [hold] 100 20 3000            // 概率, 等级, 持续时间\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [hold] 100 20 3000            // 概率, 等级, 持续时间\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "poison",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [poison] 100 10 20000 1000         // 概率, 等级, 持续时间, 伤害\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [poison] 100 10 20000 1000         // 概率, 等级, 持续时间, 伤害\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "bleeding",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [bleeding] 100 10 5000 10         // 概率, 等级, 持续时间, 伤害\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [bleeding] 100 10 5000 10         // 概率, 等级, 持续时间, 伤害\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "burn",
+      "Title": "概率",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [burn] 100 10 20000 1000 10 1 3000    // 概率, 等级, 持续时间, 伤害, 周围伤害, 周围伤害选项（为1时只对敌军造成周围伤害）, 周围伤害应用间隔（时间）\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n[active status] [burn] 100 10 20000 1000 10 1 3000    // 概率, 等级, 持续时间, 伤害, 周围伤害, 周围伤害选项（为1时只对敌军造成周围伤害）, 周围伤害应用间隔（时间）\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "max target hit number",
+      "Title": "mkissue 120531 添加",
+      "Comment": "#### 官方示例: attackinfosample.atk\n\n```pvf\n//mkissue 120531 添加\n[max target hit number] 1\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosample.atk\n\n```pvf\n//mkissue 120531 添加\n[max target hit number] 1\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "weapon",
+      "Title": "mkjung 120531 添加",
+      "Comment": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n//mkjung 120531 添加\n    {must1}[weapon]\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n//mkjung 120531 添加\n    {must1}[weapon]\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "no elemental",
+      "Title": "mkjung 120531 添加",
+      "Comment": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n//mkjung 120531 添加\n    {opt1}[no elemental]\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n//mkjung 120531 添加\n    {opt1}[no elemental]\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit horizontal",
+      "Title": "mkjung 120531 添加",
+      "Comment": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n//mkjung 120531 添加\n    {must1}[hit horizontal]\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n//mkjung 120531 添加\n    {must1}[hit horizontal]\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "slash",
+      "Title": "mkjung 120531 添加",
+      "Comment": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n//mkjung 120531 添加\n    {must1}{exp}{/exp}[slash]\n```",
+      "OfficialDescription": "#### 官方示例: attackinfosamplebytool.atk\n\n```pvf\n//mkjung 120531 添加\n    {must1}{exp}{/exp}[slash]\n```",
+      "Closing": false,
+      "Authors": null
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "none",
+      "Title": "none（原始标签）",
+      "Comment": "攻击信息数据中的 [none] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "dark element",
+      "Title": "dark element（原始标签）",
+      "Comment": "攻击信息数据中的 [dark element] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit",
+      "Title": "命中",
+      "Comment": "攻击信息数据中的 [hit] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "knock",
+      "Title": "knock（原始标签）",
+      "Comment": "攻击信息数据中的 [knock] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "ignore weight",
+      "Title": "ignore weight（原始标签）",
+      "Comment": "攻击信息数据中的 [ignore weight] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "etc",
+      "Title": "etc（原始标签）",
+      "Comment": "攻击信息数据中的 [etc] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "fire element",
+      "Title": "fire element（原始标签）",
+      "Comment": "攻击信息数据中的 [fire element] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "ignore super armor",
+      "Title": "ignore super armor（原始标签）",
+      "Comment": "攻击信息数据中的 [ignore super armor] 字段。已见数据形态为单值或数值序列；列数、单位和取值刻度不能只凭字段名推断。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "force hit stun time",
+      "Title": "强制命中眩晕时间",
+      "Comment": "攻击信息数据中的 [force hit stun time] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。时间单位不能仅凭字段名假定为毫秒或秒，需结合同文件列形和消费逻辑确认。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "water element",
+      "Title": "water element（原始标签）",
+      "Comment": "攻击信息数据中的 [water element] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "damage except human",
+      "Title": "damage except human（原始标签）",
+      "Comment": "攻击信息数据中的 [damage except human] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "auto",
+      "Title": "auto（原始标签）",
+      "Comment": "攻击信息数据中的 [auto] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "inner",
+      "Title": "inner（原始标签）",
+      "Comment": "攻击信息数据中的 [inner] 存在标记。已见为无附加值的存在标记。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit vertical",
+      "Title": "命中纵向",
+      "Comment": "攻击信息数据中的 [hit vertical] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "outer",
+      "Title": "outer（原始标签）",
+      "Comment": "攻击信息数据中的 [outer] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "magical",
+      "Title": "魔法",
+      "Comment": "攻击信息数据中的 [magical] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "none element",
+      "Title": "none element（原始标签）",
+      "Comment": "攻击信息数据中的 [none element] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit up",
+      "Title": "hit up（原始标签）",
+      "Comment": "攻击信息数据中的 [hit up] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit horiozn",
+      "Title": "hit horiozn（原始标签）",
+      "Comment": "攻击信息数据中的 [hit horiozn] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit horizono",
+      "Title": "hit horizono（原始标签）",
+      "Comment": "攻击信息数据中的 [hit horizono] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "physical",
+      "Title": "物理",
+      "Comment": "攻击信息数据中的 [physical] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "DDASH_HIT",
+      "Title": "DDASH_HIT（原始标签）",
+      "Comment": "攻击信息数据中的 [DDASH_HIT] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "damage increase rate",
+      "Title": "伤害增加比率",
+      "Comment": "攻击信息数据中的 [damage increase rate] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。比率或随机刻度不能自动按百分数解释，静态权重也不等于最终实机概率。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "pyhsic",
+      "Title": "pyhsic（原始标签）",
+      "Comment": "攻击信息数据中的 [pyhsic] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "damage bouns",
+      "Title": "damage bouns（原始标签）",
+      "Comment": "攻击信息数据中的 [damage bouns] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "noblood",
+      "Title": "noblood（原始标签）",
+      "Comment": "攻击信息数据中的 [noblood] 字段。已见数据形态为单值或数值序列；列数、单位和取值刻度不能只凭字段名推断。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "mana burn",
+      "Title": "mana burn（原始标签）",
+      "Comment": "攻击信息数据中的 [mana burn] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "horizontal",
+      "Title": "横向",
+      "Comment": "攻击信息数据中的 [horizontal] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit horizoon",
+      "Title": "hit horizoon（原始标签）",
+      "Comment": "攻击信息数据中的 [hit horizoon] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "warter element",
+      "Title": "warter element（原始标签）",
+      "Comment": "攻击信息数据中的 [warter element] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "ice element",
+      "Title": "ice element（原始标签）",
+      "Comment": "攻击信息数据中的 [ice element] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "knock back",
+      "Title": "knock back（原始标签）",
+      "Comment": "攻击信息数据中的 [knock back] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "hit check by screen pos",
+      "Title": "hit check by screen pos（原始标签）",
+      "Comment": "攻击信息数据中的 [hit check by screen pos] 字段。已见数据形态为单值或数值序列；列数、单位和取值刻度不能只凭字段名推断。坐标原点、轴向、单位和相对/绝对基准需结合父块确认。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "catch object",
+      "Title": "catch object（原始标签）",
+      "Comment": "攻击信息数据中的 [catch object] 字段。已见数据形态为单值或数值序列；列数、单位和取值刻度不能只凭字段名推断。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    },
+    {
+      "PvfCommentType": "Section",
+      "FileType": "atk",
+      "Section": "damge",
+      "Title": "damge（原始标签）",
+      "Comment": "攻击信息数据中的 [damge] 字段。该字段后紧邻其他标签；它是无值标记、枚举 token 还是与相邻字段共同组成记录，需按父结构确认。该字段的运行时效果仍需结合消费逻辑或实机验证。",
+      "OfficialDescription": null,
+      "Closing": false,
+      "Authors": "Codex"
+    }
+  ]
+}

@@ -1,0 +1,928 @@
+{
+  "schema": "60us-skill32-consumer-verification-v1",
+  "passed": 146,
+  "total": 146,
+  "observed_native_execution": false,
+  "checks": [
+    {
+      "name": "source executable",
+      "passed": true,
+      "detail": {
+        "actual": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+        "expected": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b"
+      }
+    },
+    {
+      "name": "capture spawn_owner_and_register",
+      "passed": true
+    },
+    {
+      "name": "assembly spawn_owner_and_register",
+      "passed": true
+    },
+    {
+      "name": "capture register_full",
+      "passed": true
+    },
+    {
+      "name": "assembly register_full",
+      "passed": true
+    },
+    {
+      "name": "capture source_atk_install",
+      "passed": true
+    },
+    {
+      "name": "assembly source_atk_install",
+      "passed": true
+    },
+    {
+      "name": "capture owner_stat_snapshot",
+      "passed": true
+    },
+    {
+      "name": "assembly owner_stat_snapshot",
+      "passed": true
+    },
+    {
+      "name": "capture snapshot_operand_getters",
+      "passed": true
+    },
+    {
+      "name": "assembly snapshot_operand_getters",
+      "passed": true
+    },
+    {
+      "name": "capture releasewave_vtable",
+      "passed": true
+    },
+    {
+      "name": "assembly releasewave_vtable",
+      "passed": true
+    },
+    {
+      "name": "capture numeric_full",
+      "passed": true
+    },
+    {
+      "name": "assembly numeric_full",
+      "passed": true
+    },
+    {
+      "name": "capture alternate_base",
+      "passed": true
+    },
+    {
+      "name": "assembly alternate_base",
+      "passed": true
+    },
+    {
+      "name": "capture action_atk_validity",
+      "passed": true
+    },
+    {
+      "name": "assembly action_atk_validity",
+      "passed": true
+    },
+    {
+      "name": "capture atk_ctor_defaults",
+      "passed": true
+    },
+    {
+      "name": "assembly atk_ctor_defaults",
+      "passed": true
+    },
+    {
+      "name": "capture numeric_defaults",
+      "passed": true
+    },
+    {
+      "name": "assembly numeric_defaults",
+      "passed": true
+    },
+    {
+      "name": "capture passive_type_and_snapshot_defaults",
+      "passed": true
+    },
+    {
+      "name": "assembly passive_type_and_snapshot_defaults",
+      "passed": true
+    },
+    {
+      "name": "capture passive_owner_getters",
+      "passed": true
+    },
+    {
+      "name": "assembly passive_owner_getters",
+      "passed": true
+    },
+    {
+      "name": "capture swordman_false_slot",
+      "passed": true
+    },
+    {
+      "name": "assembly swordman_false_slot",
+      "passed": true
+    },
+    {
+      "name": "capture type_mask_getter",
+      "passed": true
+    },
+    {
+      "name": "assembly type_mask_getter",
+      "passed": true
+    },
+    {
+      "name": "capture swordman_owner_1bc_slot",
+      "passed": true
+    },
+    {
+      "name": "assembly swordman_owner_1bc_slot",
+      "passed": true
+    },
+    {
+      "name": "capture victim_damage_to_hp",
+      "passed": true
+    },
+    {
+      "name": "assembly victim_damage_to_hp",
+      "passed": true
+    },
+    {
+      "name": "capture monster_numeric_wrapper",
+      "passed": true
+    },
+    {
+      "name": "assembly monster_numeric_wrapper",
+      "passed": true
+    },
+    {
+      "name": "reuse atk_damage_and_bonus_parse",
+      "passed": true
+    },
+    {
+      "name": "reuse atk_weapon_apply_parse",
+      "passed": true
+    },
+    {
+      "name": "reuse atk_install_copy",
+      "passed": true
+    },
+    {
+      "name": "reuse current_atk_get",
+      "passed": true
+    },
+    {
+      "name": "reuse atk_copy",
+      "passed": true
+    },
+    {
+      "name": "reuse atk_reset_core",
+      "passed": true
+    },
+    {
+      "name": "reuse damage_pack_atk_core",
+      "passed": true
+    },
+    {
+      "name": "reuse damage_pack_stats",
+      "passed": true
+    },
+    {
+      "name": "reuse damage_pack_full",
+      "passed": true
+    },
+    {
+      "name": "reuse damage_base_dispatch",
+      "passed": true
+    },
+    {
+      "name": "reuse damage_weapon_percent",
+      "passed": true
+    },
+    {
+      "name": "reuse 005C77B0-005C7824",
+      "passed": true
+    },
+    {
+      "name": "reuse 005CE740-005CE796",
+      "passed": true
+    },
+    {
+      "name": "reuse 00490720-0049082B",
+      "passed": true
+    },
+    {
+      "name": "reuse 0049FAAC-0049FB30",
+      "passed": true
+    },
+    {
+      "name": "external analysis/combat_native_collision/hit-contract.json",
+      "passed": true,
+      "detail": {
+        "actual": "0479ceee78e0e4bddad39ad35fbab3ea8790a417a007f95172f3e3155d22167e",
+        "expected": "0479ceee78e0e4bddad39ad35fbab3ea8790a417a007f95172f3e3155d22167e"
+      }
+    },
+    {
+      "name": "external analysis/combat_hit_lifecycle/history-contract.json",
+      "passed": true,
+      "detail": {
+        "actual": "41f193fd2354ff9e8d78ee407bec6df7a2b4d3daa8702dd083debdcef5ab6bbf",
+        "expected": "41f193fd2354ff9e8d78ee407bec6df7a2b4d3daa8702dd083debdcef5ab6bbf"
+      }
+    },
+    {
+      "name": "external analysis/combat_hit_lifecycle/evidence-index.json",
+      "passed": true,
+      "detail": {
+        "actual": "5d9dec731877325dd0a8e9d8a90d2cad53c3e40363c6f8d63e1e66d4e077ff45",
+        "expected": "5d9dec731877325dd0a8e9d8a90d2cad53c3e40363c6f8d63e1e66d4e077ff45"
+      }
+    },
+    {
+      "name": "external analysis/combat_hit_lifecycle/passive_reset_and_install.bin",
+      "passed": true,
+      "detail": {
+        "actual": "1af91b57c80b5de30445823bf845e87128cfe1623cb5a99ac9800c4da7e40d66",
+        "expected": "1af91b57c80b5de30445823bf845e87128cfe1623cb5a99ac9800c4da7e40d66"
+      }
+    },
+    {
+      "name": "REA 0x49F4D0",
+      "passed": true
+    },
+    {
+      "name": "REA 0x5C77B0",
+      "passed": true
+    },
+    {
+      "name": "REA 0x4A0DA0",
+      "passed": true
+    },
+    {
+      "name": "REA 0x4EDCD0",
+      "passed": true
+    },
+    {
+      "name": "REA 0x8B8650",
+      "passed": true
+    },
+    {
+      "name": "current ATK export identity",
+      "passed": true,
+      "detail": {
+        "actual": "fe3e07bef0c29ea27016783ecf9effbb6ab64bc0b149dcaf1db231300d6ca50f",
+        "expected": "fe3e07bef0c29ea27016783ecf9effbb6ab64bc0b149dcaf1db231300d6ca50f"
+      }
+    },
+    {
+      "name": "PVF absent damage",
+      "passed": true
+    },
+    {
+      "name": "PVF absent absolute damage",
+      "passed": true
+    },
+    {
+      "name": "PVF absent damage bonus",
+      "passed": true
+    },
+    {
+      "name": "PVF absent weapon damage apply",
+      "passed": true
+    },
+    {
+      "name": "constructor signed scalar fild",
+      "passed": true,
+      "detail": {
+        "actual": "db4508",
+        "expected": "db4508"
+      }
+    },
+    {
+      "name": "constructor scalar float32 store",
+      "passed": true,
+      "detail": {
+        "actual": "d95d08",
+        "expected": "d95d08"
+      }
+    },
+    {
+      "name": "protected template damage index5E0",
+      "passed": true,
+      "detail": {
+        "actual": "8b86e0050000",
+        "expected": "8b86e0050000"
+      }
+    },
+    {
+      "name": "PVF ATK template destination",
+      "passed": true,
+      "detail": {
+        "actual": "8d8edc050000",
+        "expected": "8d8edc050000"
+      }
+    },
+    {
+      "name": "PVF ATK template copy",
+      "passed": true,
+      "detail": {
+        "actual": "e8da2c0000",
+        "expected": "e8da2c0000"
+      }
+    },
+    {
+      "name": "ATK constructor calls reset",
+      "passed": true,
+      "detail": {
+        "actual": "e8a2d4ffff",
+        "expected": "e8a2d4ffff"
+      }
+    },
+    {
+      "name": "reset attack type0",
+      "passed": true,
+      "detail": {
+        "actual": "c7461800000000",
+        "expected": "c7461800000000"
+      }
+    },
+    {
+      "name": "reset bonus protected slot write prefix",
+      "passed": true,
+      "detail": {
+        "actual": "8b0dd8012101",
+        "expected": "8b0dd8012101"
+      }
+    },
+    {
+      "name": "reset weapon apply protected slot index",
+      "passed": true,
+      "detail": {
+        "actual": "8b4620",
+        "expected": "8b4620"
+      }
+    },
+    {
+      "name": "spawn owner slot344",
+      "passed": true,
+      "detail": {
+        "actual": "ff9044030000",
+        "expected": "ff9044030000"
+      }
+    },
+    {
+      "name": "spawn scene register call",
+      "passed": true,
+      "detail": {
+        "actual": "e8a199c4ff",
+        "expected": "e8a199c4ff"
+      }
+    },
+    {
+      "name": "normal register entity slot10",
+      "passed": true,
+      "detail": {
+        "actual": "ff5210",
+        "expected": "ff5210"
+      }
+    },
+    {
+      "name": "source template ATK pointer",
+      "passed": true,
+      "detail": {
+        "actual": "8d8edc050000",
+        "expected": "8d8edc050000"
+      }
+    },
+    {
+      "name": "template ATK install slot198",
+      "passed": true,
+      "detail": {
+        "actual": "ff9098010000",
+        "expected": "ff9098010000"
+      }
+    },
+    {
+      "name": "runtime action pointer override",
+      "passed": true,
+      "detail": {
+        "actual": "8b8648010000",
+        "expected": "8b8648010000"
+      }
+    },
+    {
+      "name": "action ATK at+B0",
+      "passed": true,
+      "detail": {
+        "actual": "8db8b0000000",
+        "expected": "8db8b0000000"
+      }
+    },
+    {
+      "name": "action override installs same slot198",
+      "passed": true,
+      "detail": {
+        "actual": "ff9298010000",
+        "expected": "ff9298010000"
+      }
+    },
+    {
+      "name": "install destination current+260",
+      "passed": true,
+      "detail": {
+        "actual": "8d8e60020000",
+        "expected": "8d8e60020000"
+      }
+    },
+    {
+      "name": "nonnull ATK copy4A27E0",
+      "passed": true,
+      "detail": {
+        "actual": "e8e34afbff",
+        "expected": "e8e34afbff"
+      }
+    },
+    {
+      "name": "nonnull ATK install resets hit history",
+      "passed": true,
+      "detail": {
+        "actual": "ff90a0010000",
+        "expected": "ff90a0010000"
+      }
+    },
+    {
+      "name": "current getter returns+260",
+      "passed": true,
+      "detail": {
+        "actual": "8d8160020000c3",
+        "expected": "8d8160020000c3"
+      }
+    },
+    {
+      "name": "numeric pack attacker current ATK",
+      "passed": true,
+      "detail": {
+        "actual": "ff909c010000",
+        "expected": "ff909c010000"
+      }
+    },
+    {
+      "name": "numeric reads protected damage float",
+      "passed": true,
+      "detail": {
+        "actual": "e8377af4ff",
+        "expected": "e8377af4ff"
+      }
+    },
+    {
+      "name": "damage to numeric+0",
+      "passed": true,
+      "detail": {
+        "actual": "d99d28feffff",
+        "expected": "d99d28feffff"
+      }
+    },
+    {
+      "name": "bonus source independently ATK+10",
+      "passed": true,
+      "detail": {
+        "actual": "8d4b10",
+        "expected": "8d4b10"
+      }
+    },
+    {
+      "name": "bonus numeric+6 f32",
+      "passed": true,
+      "detail": {
+        "actual": "d99d2efeffff",
+        "expected": "d99d2efeffff"
+      }
+    },
+    {
+      "name": "snapshot owner weapon0 getter",
+      "passed": true,
+      "detail": {
+        "actual": "ff90d8010000",
+        "expected": "ff90d8010000"
+      }
+    },
+    {
+      "name": "snapshot stores+7A0",
+      "passed": true,
+      "detail": {
+        "actual": "8987a0070000",
+        "expected": "8987a0070000"
+      }
+    },
+    {
+      "name": "snapshot owner weapon1 getter",
+      "passed": true,
+      "detail": {
+        "actual": "ff90e8010000",
+        "expected": "ff90e8010000"
+      }
+    },
+    {
+      "name": "snapshot stores+7B0",
+      "passed": true,
+      "detail": {
+        "actual": "8987b0070000",
+        "expected": "8987b0070000"
+      }
+    },
+    {
+      "name": "weapon0 snapshot getter",
+      "passed": true,
+      "detail": {
+        "actual": "8b81a0070000c3",
+        "expected": "8b81a0070000c3"
+      }
+    },
+    {
+      "name": "weapon1 snapshot getter",
+      "passed": true,
+      "detail": {
+        "actual": "8b81b0070000c3",
+        "expected": "8b81b0070000c3"
+      }
+    },
+    {
+      "name": "passive type mask21",
+      "passed": true,
+      "detail": {
+        "actual": "c786e400000021000000",
+        "expected": "c786e400000021000000"
+      }
+    },
+    {
+      "name": "type mask getter",
+      "passed": true,
+      "detail": {
+        "actual": "8b81e4000000c3",
+        "expected": "8b81e4000000c3"
+      }
+    },
+    {
+      "name": "numeric alternate byte18E default0",
+      "passed": true,
+      "detail": {
+        "actual": "88888e010000",
+        "expected": "88888e010000"
+      }
+    },
+    {
+      "name": "Swordman owner slot1BC false",
+      "passed": true,
+      "detail": {
+        "actual": "32c0c3",
+        "expected": "32c0c3"
+      }
+    },
+    {
+      "name": "passive slot1BC forwards to owner",
+      "passed": true,
+      "detail": {
+        "actual": "ffa2bc010000",
+        "expected": "ffa2bc010000"
+      }
+    },
+    {
+      "name": "normal base dispatch",
+      "passed": true,
+      "detail": {
+        "actual": "e891f3ffff",
+        "expected": "e891f3ffff"
+      }
+    },
+    {
+      "name": "type1 weapon operand numeric33",
+      "passed": true,
+      "detail": {
+        "actual": "d84633",
+        "expected": "d84633"
+      }
+    },
+    {
+      "name": "type0/2 operand numeric2F",
+      "passed": true,
+      "detail": {
+        "actual": "d8462f",
+        "expected": "d8462f"
+      }
+    },
+    {
+      "name": "base multiplier reads bonus numeric6",
+      "passed": true,
+      "detail": {
+        "actual": "d94606",
+        "expected": "d94606"
+      }
+    },
+    {
+      "name": "base initial stage float32 store",
+      "passed": true,
+      "detail": {
+        "actual": "d95d08",
+        "expected": "d95d08"
+      }
+    },
+    {
+      "name": "normal base result float32 store",
+      "passed": true,
+      "detail": {
+        "actual": "d95d08",
+        "expected": "d95d08"
+      }
+    },
+    {
+      "name": "common numeric call8B8650",
+      "passed": true,
+      "detail": {
+        "actual": "e857bc3c00",
+        "expected": "e857bc3c00"
+      }
+    },
+    {
+      "name": "numeric terminal C01544",
+      "passed": true,
+      "detail": {
+        "actual": "e8b4863400",
+        "expected": "e8b4863400"
+      }
+    },
+    {
+      "name": "numeric terminal result+1BD",
+      "passed": true,
+      "detail": {
+        "actual": "8986bd010000",
+        "expected": "8986bd010000"
+      }
+    },
+    {
+      "name": "save returned numeric integer",
+      "passed": true,
+      "detail": {
+        "actual": "8945ec",
+        "expected": "8945ec"
+      }
+    },
+    {
+      "name": "possible HP-derived damage addition",
+      "passed": true,
+      "detail": {
+        "actual": "017dec",
+        "expected": "017dec"
+      }
+    },
+    {
+      "name": "ordinary HP subtraction uses downstream value",
+      "passed": true,
+      "detail": {
+        "actual": "2b45ec",
+        "expected": "2b45ec"
+      }
+    },
+    {
+      "name": "absolute HP update slot3E8",
+      "passed": true,
+      "detail": {
+        "actual": "ff97e8030000",
+        "expected": "ff97e8030000"
+      }
+    },
+    {
+      "name": "ReleaseWave vtable slot10",
+      "passed": true,
+      "detail": {
+        "actual": 4845584,
+        "expected": 4845584
+      }
+    },
+    {
+      "name": "ReleaseWave vtable slot198",
+      "passed": true,
+      "detail": {
+        "actual": 5168336,
+        "expected": 5168336
+      }
+    },
+    {
+      "name": "ReleaseWave vtable slot19C",
+      "passed": true,
+      "detail": {
+        "actual": 4425296,
+        "expected": 4425296
+      }
+    },
+    {
+      "name": "ReleaseWave vtable slot1BC",
+      "passed": true,
+      "detail": {
+        "actual": 4427920,
+        "expected": 4427920
+      }
+    },
+    {
+      "name": "ReleaseWave vtable slot344",
+      "passed": true,
+      "detail": {
+        "actual": 4840720,
+        "expected": 4840720
+      }
+    },
+    {
+      "name": "ReleaseWave vtable slot380",
+      "passed": true,
+      "detail": {
+        "actual": 4845584,
+        "expected": 4845584
+      }
+    },
+    {
+      "name": "Swordman owner vtable1BC",
+      "passed": true,
+      "detail": {
+        "actual": 9324976,
+        "expected": 9324976
+      }
+    },
+    {
+      "name": "template base scalar552",
+      "passed": true,
+      "detail": {
+        "actual": 552.0,
+        "expected": 552.0
+      }
+    },
+    {
+      "name": "first-stage scalar552",
+      "passed": true,
+      "detail": {
+        "actual": 552.0,
+        "expected": 552.0
+      }
+    },
+    {
+      "name": "no invented final damage552",
+      "passed": true,
+      "detail": {
+        "actual": null,
+        "expected": null
+      }
+    },
+    {
+      "name": "no native runtime claim552",
+      "passed": true
+    },
+    {
+      "name": "template base scalar5158",
+      "passed": true,
+      "detail": {
+        "actual": 5158.0,
+        "expected": 5158.0
+      }
+    },
+    {
+      "name": "first-stage scalar5158",
+      "passed": true,
+      "detail": {
+        "actual": 5158.0,
+        "expected": 5158.0
+      }
+    },
+    {
+      "name": "no invented final damage5158",
+      "passed": true,
+      "detail": {
+        "actual": null,
+        "expected": null
+      }
+    },
+    {
+      "name": "no native runtime claim5158",
+      "passed": true
+    },
+    {
+      "name": "missing bridge input slot10_registration_reached",
+      "passed": true,
+      "detail": {
+        "actual": "needs_explicit_runtime_input",
+        "expected": "needs_explicit_runtime_input"
+      }
+    },
+    {
+      "name": "missing bridge input current_atk_snapshot_unchanged",
+      "passed": true,
+      "detail": {
+        "actual": "needs_explicit_runtime_input",
+        "expected": "needs_explicit_runtime_input"
+      }
+    },
+    {
+      "name": "missing bridge input action_atk_override",
+      "passed": true,
+      "detail": {
+        "actual": "needs_explicit_runtime_input",
+        "expected": "needs_explicit_runtime_input"
+      }
+    },
+    {
+      "name": "missing bridge input normal_base_route_established",
+      "passed": true,
+      "detail": {
+        "actual": "needs_explicit_runtime_input",
+        "expected": "needs_explicit_runtime_input"
+      }
+    },
+    {
+      "name": "action ATK override supersedes scalar",
+      "passed": true,
+      "detail": {
+        "actual": 10.0,
+        "expected": 10.0
+      }
+    },
+    {
+      "name": "zero scalar common entry rejection",
+      "passed": true,
+      "detail": {
+        "actual": 0,
+        "expected": 0
+      }
+    },
+    {
+      "name": "weapon disabled ignores absent operand",
+      "passed": true,
+      "detail": {
+        "actual": 552.0,
+        "expected": 552.0
+      }
+    },
+    {
+      "name": "magic weapon enabled adds operand",
+      "passed": true,
+      "detail": {
+        "actual": 652.0,
+        "expected": 652.0
+      }
+    },
+    {
+      "name": "physic weapon enabled uses2F",
+      "passed": true,
+      "detail": {
+        "actual": 572.0,
+        "expected": 572.0
+      }
+    },
+    {
+      "name": "bonus150 is independent multiplier",
+      "passed": true,
+      "detail": {
+        "actual": 250.0,
+        "expected": 250.0
+      }
+    },
+    {
+      "name": "first numeric stage has no integer truncation",
+      "passed": true,
+      "detail": {
+        "actual": 607.2000122070312,
+        "expected": 607.2000122070312
+      }
+    },
+    {
+      "name": "explicit neutral full base",
+      "passed": true,
+      "detail": {
+        "actual": 552.0,
+        "expected": 552.0
+      }
+    },
+    {
+      "name": "stat ratio affects base without weapon apply",
+      "passed": true,
+      "detail": {
+        "actual": 1104.0,
+        "expected": 1104.0
+      }
+    },
+    {
+      "name": "numeric47 enters as1+term",
+      "passed": true,
+      "detail": {
+        "actual": 1104.0,
+        "expected": 1104.0
+      }
+    },
+    {
+      "name": "explicit mode factor scales stat first",
+      "passed": true,
+      "detail": {
+        "actual": 1104.0,
+        "expected": 1104.0
+      }
+    }
+  ]
+}

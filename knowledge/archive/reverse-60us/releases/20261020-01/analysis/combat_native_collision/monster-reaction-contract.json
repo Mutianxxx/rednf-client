@@ -1,0 +1,225 @@
+{
+  "source": {
+    "path": "DFO/DFO_fixed_v3.exe",
+    "sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+    "image_base": "0x400000",
+    "evidence_kind": "local static PE bytes and Capstone x86 disassembly",
+    "runtime_observed": false,
+    "rea_provider_evidence": false
+  },
+  "observed_static": {
+    "mob_consumer": {
+      "template_reader": "0x887E60",
+      "resource_instantiation": "0x500530",
+      "string_reader": "0x8304E0",
+      "ani_constructor": "0x472A60",
+      "act_constructor": "0x4A3900",
+      "runtime_base_path": "this+0x244/+0x248 from template+0x7C0"
+    },
+    "motions": [
+      {
+        "role": "waiting",
+        "tag": "[waiting motion]",
+        "literal_va": "0xe1ebc8",
+        "template_offset": "0x6c0",
+        "runtime_offset": "0x1240",
+        "slot": "0x370",
+        "getter": "0x4ac830"
+      },
+      {
+        "role": "sit",
+        "tag": "[sit motion]",
+        "literal_va": "0xe1eb90",
+        "template_offset": "0x6c8",
+        "runtime_offset": "0x1248",
+        "slot": "0x36c",
+        "getter": "0x7447b0"
+      },
+      {
+        "role": "damage1",
+        "tag": "[damage motion 1]",
+        "literal_va": "0xe1eb6c",
+        "template_offset": "0x6cc",
+        "runtime_offset": "0x124c",
+        "slot": "0x374",
+        "getter": "0x4ac7c0"
+      },
+      {
+        "role": "damage2",
+        "tag": "[damage motion 2]",
+        "literal_va": "0xe1eb48",
+        "template_offset": "0x6d0",
+        "runtime_offset": "0x1250",
+        "slot": "0x374",
+        "getter": "0x4ac7c0"
+      },
+      {
+        "role": "down",
+        "tag": "[down motion]",
+        "literal_va": "0xe1eb2c",
+        "template_offset": "0x6d4",
+        "runtime_offset": "0x1254",
+        "slot": "0x378",
+        "getter": "0x4ac7f0"
+      },
+      {
+        "role": "overturn",
+        "tag": "[overturn motion]",
+        "literal_va": "0xe1eb08",
+        "template_offset": "0x6d8",
+        "runtime_offset": "0x1258",
+        "slot": "0x37c",
+        "getter": "0x4ac810"
+      }
+    ],
+    "actions": [
+      {
+        "role": "waiting",
+        "tag": "[waiting action]",
+        "literal_va": "0xe24fe0",
+        "template_offset": "0x704",
+        "runtime_offset": "0x12e0",
+        "slot": "0x390",
+        "getter": "0x7447d0"
+      },
+      {
+        "role": "sit",
+        "tag": "[sit action]",
+        "literal_va": "0xe24fa8",
+        "template_offset": "0x70c",
+        "runtime_offset": "0x12e8",
+        "slot": "0x398",
+        "getter": "0x7447f0"
+      },
+      {
+        "role": "damage1",
+        "tag": "[damage action 1]",
+        "literal_va": "0xe24f84",
+        "template_offset": "0x710",
+        "runtime_offset": "0x12ec",
+        "slot": "0x39c",
+        "getter": "0x744800"
+      },
+      {
+        "role": "damage2",
+        "tag": "[damage action 2]",
+        "literal_va": "0xe24f60",
+        "template_offset": "0x714",
+        "runtime_offset": "0x12f0",
+        "slot": "0x39c",
+        "getter": "0x744800"
+      },
+      {
+        "role": "down",
+        "tag": "[down action]",
+        "literal_va": "0xe24f44",
+        "template_offset": "0x718",
+        "runtime_offset": "0x12f4",
+        "slot": "0x3a0",
+        "getter": "0x744820"
+      },
+      {
+        "role": "overturn",
+        "tag": "[overturn action]",
+        "literal_va": "0xe24f20",
+        "template_offset": "0x71c",
+        "runtime_offset": "0x12f8",
+        "slot": "0x3a4",
+        "getter": "0x744830"
+      },
+      {
+        "role": "last",
+        "tag": "[last action]",
+        "literal_va": "0xe234e4",
+        "template_offset": "0x748",
+        "runtime_offset": "0x150",
+        "slot": null,
+        "getter": null
+      }
+    ],
+    "getter_policy": "damage/down/overturn/waiting ANI getters return motion if nonnull, otherwise ACT.currentANI (+0x20). This does not imply motion always wins execution.",
+    "state3": {
+      "entry": "0x4BB091",
+      "payload": "int vector [direction, scale_integer, damage_variant, optional3, optional4]",
+      "variant_field": "this+0x16BC",
+      "selection": [
+        "0x4BB1E9 slot374(variant): require resolved ANI != null",
+        "0x4BB202/0x4BB20B slot39C(variant) -> slot100(ACT)",
+        "If ACT remains nonnull, no direct ANI set",
+        "Else 0x4BB235/0x4BB23E slot374(variant) -> slotF0(ANI)"
+      ],
+      "priority": "damage ACT when present and resolved current ANI exists; otherwise damage ANI"
+    },
+    "state4": {
+      "entry": "0x4BB249",
+      "payload": "int vector [direction, down_substate, mode, p3, p4]",
+      "substate_field": "protected(this+0x1720)",
+      "mode_field": "this+0x1728",
+      "selection": [
+        "slot3A0 downACT if present -> slot100(ACT) at 0x4BB53C; slotF0(0) at 0x4BB548",
+        "otherwise slot378 downANI -> slotF0(ANI) at 0x4BB581",
+        "otherwise slot36C sitANI -> slotF0(ANI) at the same call"
+      ],
+      "fallback_is_sit_not_waiting": true,
+      "physics": "Native consumer computes signed horizontal quantities and vertical displacement using 4B98F0, 4B9FA0; exact units/complete integration not established."
+    },
+    "state0": {
+      "selection": "slot390 waitingACT -> slot100; if current ACT null, slot370 waitingANI -> slotF0, else slotF0(0)"
+    },
+    "state1_and_2": {
+      "selection": "slot36C sitANI -> slotF0; slot398 sitACT -> slot100"
+    },
+    "state5": {
+      "entry": "0x4BB976",
+      "behavior": "Attribution/callbacks, sound, attack/damage gate disable, pause current ANI, stop/reset movement; no proven lastACT switch in this case",
+      "attribution_resolver": "0x4AC500 is not an animation constructor or death visual selector"
+    },
+    "last_action_preload": {
+      "template_field": "0x748",
+      "call_constructor": "0x501C99",
+      "runtime_store": "0x501CAB -> this+0x150",
+      "act_type_store": "0x501CB3 -> ACT+0x2CC = 11",
+      "owner_attach": "0x501CCE -> A2D020",
+      "execution_established": false
+    },
+    "act_base_ani": {
+      "tags": [
+        "[MOTION]",
+        "[BASE ANI]"
+      ],
+      "tag_literal": "0xE49288",
+      "tag_case": "0xA3F23B..0xA3F2EE",
+      "read_string": "0xA3F267 -> 0x8304E0",
+      "base_directory": "0xA3F151 -> 0x830590 with format %s%s, base and ACT path; truncate after last slash/backslash",
+      "append": "0xA3F286 -> 0x778880; append raw BASE ANI path to ACT directory prefix",
+      "parsed_path": "parsed+0x4 wstring object (inline/pointer at +0x8)",
+      "consumer": "0xA321B0",
+      "constructor_calls": [
+        "0xA32229 -> 0x4936D0",
+        "0xA32238 -> 0x4936D0"
+      ],
+      "ani_loader": "0x4937D7 -> 0xA29AD0",
+      "runtime_store": "0xA3224A -> ACT+0x20",
+      "owner_link": "0xA3224F -> ANI+0x19C = ACT",
+      "path_normalization_in_helpers": false
+    },
+    "tick": {
+      "function": "0x4BC7D0",
+      "end_exclusive": "0x4BDACE",
+      "jump_table": "0x4BDAD0",
+      "state3_case": "0x4BD06A",
+      "state4_case": "0x4BD0B7",
+      "state5_case": "0x4BD649",
+      "state3_timer": "this+0x1564 elapsed >= protected(this+0x16C0) then queues another state",
+      "state4_timing": "uses animation frame indices and ACT indices alongside state timers and grounded/velocity predicates; no simple fixed hit duration inferred"
+    }
+  },
+  "unknown": [
+    "Full state4 integration and native units",
+    "Overturn transition execution (resource load/getters confirmed, execution not closed)",
+    "State5/removal to preloaded last action, including special death styles",
+    "Generic death animation resource: not invented; MOB does not have a required death ANI in the confirmed tags",
+    "Runtime monster hit/down/death equivalence"
+  ],
+  "preview_rule": "Manual inspection may choose native-confirmed state3/state4 resources. Preserve missing resources and unknown transitions; no invented death animation or automatic accepted hit from overlap."
+}

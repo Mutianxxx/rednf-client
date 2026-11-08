@@ -1,0 +1,15 @@
+[MOTION]
+	[BASE ANI] `../Animation/Move.ani`
+	[SUB ANI]
+		`../Animation/wp/Move.ani` 0 0
+	[/SUB ANI]
+[/MOTION]
+
+[TRIGGER]
+[ON MOVE COLLISION]
+[DO BEHAVIOR] [ME] 0
+[/TRIGGER]
+
+[BEHAVIOR] 
+	[SET ACTION] [ATTACK] 3 [NOW]	
+[/BEHAVIOR] 

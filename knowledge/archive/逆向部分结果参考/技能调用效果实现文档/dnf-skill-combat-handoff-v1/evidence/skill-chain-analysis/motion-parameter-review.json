@@ -1,0 +1,59 @@
+{
+  "skill": "hopsmash",
+  "source": "skill/swordman/hopsmash.skl",
+  "raw_sha256": "6e532a6aba2d80015b7d66800dc4b31686fed595c3eb9cd7f567e3be3ab717ba",
+  "static_data": {
+    "tag": "[static data]",
+    "values": [
+      30,
+      200,
+      50,
+      200,
+      50,
+      120,
+      150,
+      100,
+      2,
+      3,
+      500
+    ],
+    "offset": 350
+  },
+  "comparisons": [
+    {
+      "sample": "60780-hopsmash",
+      "input_channel_A_hold_ms": 89.2055,
+      "controller_field_values": {
+        "body_animation": 1157260288,
+        "horizontal_distance": 102,
+        "input_interval_ms": 35,
+        "motion_state": 1,
+        "vertical_endpoint": 104
+      },
+      "external_hold_equals_internal_parameter": false,
+      "horizontal_from_snapshot_static_data": 102,
+      "horizontal_matches": true,
+      "height_from_snapshot_static_data": 74,
+      "height_matches": false,
+      "effective_runtime_skill_data_getter_returns_observed": false
+    },
+    {
+      "sample": "60780-hopsmash-repeat",
+      "input_channel_A_hold_ms": 75.5058,
+      "controller_field_values": {
+        "body_animation": 1157260288,
+        "horizontal_distance": 90,
+        "input_interval_ms": 27,
+        "motion_state": 1,
+        "vertical_endpoint": 98
+      },
+      "external_hold_equals_internal_parameter": false,
+      "horizontal_from_snapshot_static_data": 90,
+      "horizontal_matches": true,
+      "height_from_snapshot_static_data": 68,
+      "height_matches": false,
+      "effective_runtime_skill_data_getter_returns_observed": false
+    }
+  ],
+  "conclusion": "External hold duration is not the observed controller scalar. Horizontal interpolation agrees; effective height endpoints/upstream modifications remain unresolved. No constant compensation is inferred."
+}

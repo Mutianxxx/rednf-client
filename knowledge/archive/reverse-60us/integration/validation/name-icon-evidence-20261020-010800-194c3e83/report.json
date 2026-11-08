@@ -1,0 +1,492 @@
+{
+  "schema": "dnf-60us-name-icon-evidence-audit-v1",
+  "passed": true,
+  "registered_skills": 688,
+  "resolved_names": 688,
+  "source": {
+    "path": "D:\\dnf\\60US\\DFO\\Script.pvf",
+    "size": 140179584,
+    "sha256": "23538ef1967baec4947c89ea0363cdce66230a3949b662faf54f7558673d7a98",
+    "header": {
+      "guid": "13ff9a94-0204-0410-845a-ceeffe637190",
+      "version": 71295,
+      "tree_size": 7566568,
+      "tree_crc": "51647fbe",
+      "entry_count": 99501,
+      "key": "00000000",
+      "data_base": 7566624,
+      "tree_crc_verified": true,
+      "parsed_tree_bytes": 7566567,
+      "tree_padding_hex": "00"
+    }
+  },
+  "name_status": {
+    "resolved": 688
+  },
+  "name_encoding": {
+    "cp936": 688
+  },
+  "secondary_status": {
+    "resolved": 688
+  },
+  "icon_field_shapes": {
+    "(4,)": 688
+  },
+  "samples": [
+    {
+      "class_id": 0,
+      "skill_id": 5,
+      "path": "skill/swordman/hardattack.skl",
+      "display_name": "鬼斩",
+      "secondary_name": "Devil Slash",
+      "icon": {
+        "tag": "icon",
+        "values": [
+          "Character/Swordman/Effect/SkillIcon.img",
+          10,
+          "Character/Swordman/Effect/SkillIcon.img",
+          11
+        ],
+        "start": 380,
+        "end": 483,
+        "line": 22,
+        "scope": [],
+        "value_tokens": [
+          {
+            "kind": "string",
+            "text": "Character/Swordman/Effect/SkillIcon.img",
+            "value": "Character/Swordman/Effect/SkillIcon.img",
+            "start": 389,
+            "end": 430,
+            "line": 23,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "10",
+            "value": 10,
+            "start": 431,
+            "end": 433,
+            "line": 23,
+            "column": 43
+          },
+          {
+            "kind": "string",
+            "text": "Character/Swordman/Effect/SkillIcon.img",
+            "value": "Character/Swordman/Effect/SkillIcon.img",
+            "start": 435,
+            "end": 476,
+            "line": 24,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "11",
+            "value": 11,
+            "start": 477,
+            "end": 479,
+            "line": 24,
+            "column": 43
+          }
+        ]
+      }
+    },
+    {
+      "class_id": 0,
+      "skill_id": 32,
+      "path": "skill/swordman/releasewave.skl",
+      "display_name": "波动爆发",
+      "secondary_name": "Release Wave",
+      "icon": {
+        "tag": "icon",
+        "values": [
+          "Character/Swordman/Effect/SkillIcon.img",
+          100,
+          "Character/Swordman/Effect/SkillIcon.img",
+          101
+        ],
+        "start": 425,
+        "end": 530,
+        "line": 26,
+        "scope": [],
+        "value_tokens": [
+          {
+            "kind": "string",
+            "text": "Character/Swordman/Effect/SkillIcon.img",
+            "value": "Character/Swordman/Effect/SkillIcon.img",
+            "start": 434,
+            "end": 475,
+            "line": 27,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "100",
+            "value": 100,
+            "start": 476,
+            "end": 479,
+            "line": 27,
+            "column": 43
+          },
+          {
+            "kind": "string",
+            "text": "Character/Swordman/Effect/SkillIcon.img",
+            "value": "Character/Swordman/Effect/SkillIcon.img",
+            "start": 481,
+            "end": 522,
+            "line": 28,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "101",
+            "value": 101,
+            "start": 523,
+            "end": 526,
+            "line": 28,
+            "column": 43
+          }
+        ]
+      }
+    },
+    {
+      "class_id": 1,
+      "skill_id": 1,
+      "path": "skill/fighter/shouldercharge.skl",
+      "display_name": "铁山靠",
+      "secondary_name": "Mountain lean",
+      "icon": {
+        "tag": "icon",
+        "values": [
+          "Character/Fighter/Effect/SkillIcon.img",
+          16,
+          "Character/Fighter/Effect/SkillIcon.img",
+          17
+        ],
+        "start": 389,
+        "end": 490,
+        "line": 23,
+        "scope": [],
+        "value_tokens": [
+          {
+            "kind": "string",
+            "text": "Character/Fighter/Effect/SkillIcon.img",
+            "value": "Character/Fighter/Effect/SkillIcon.img",
+            "start": 398,
+            "end": 438,
+            "line": 24,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "16",
+            "value": 16,
+            "start": 439,
+            "end": 441,
+            "line": 24,
+            "column": 42
+          },
+          {
+            "kind": "string",
+            "text": "Character/Fighter/Effect/SkillIcon.img",
+            "value": "Character/Fighter/Effect/SkillIcon.img",
+            "start": 443,
+            "end": 483,
+            "line": 25,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "17",
+            "value": 17,
+            "start": 484,
+            "end": 486,
+            "line": 25,
+            "column": 42
+          }
+        ]
+      }
+    },
+    {
+      "class_id": 2,
+      "skill_id": 1,
+      "path": "skill/gunner/flamebullet.skl",
+      "display_name": "爆炎弹",
+      "secondary_name": "Explosive Bullet",
+      "icon": {
+        "tag": "icon",
+        "values": [
+          "Character/Gunner/Effect/SkillIcon.img",
+          0,
+          "Character/Gunner/Effect/SkillIcon.img",
+          1
+        ],
+        "start": 652,
+        "end": 749,
+        "line": 30,
+        "scope": [],
+        "value_tokens": [
+          {
+            "kind": "string",
+            "text": "Character/Gunner/Effect/SkillIcon.img",
+            "value": "Character/Gunner/Effect/SkillIcon.img",
+            "start": 661,
+            "end": 700,
+            "line": 31,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "0",
+            "value": 0,
+            "start": 701,
+            "end": 702,
+            "line": 31,
+            "column": 41
+          },
+          {
+            "kind": "string",
+            "text": "Character/Gunner/Effect/SkillIcon.img",
+            "value": "Character/Gunner/Effect/SkillIcon.img",
+            "start": 704,
+            "end": 743,
+            "line": 32,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "1",
+            "value": 1,
+            "start": 744,
+            "end": 745,
+            "line": 32,
+            "column": 41
+          }
+        ]
+      }
+    },
+    {
+      "class_id": 3,
+      "skill_id": 1,
+      "path": "skill/mage/enablefinishattack.skl",
+      "display_name": "龙花霸",
+      "secondary_name": "Dragon flower master",
+      "icon": {
+        "tag": "icon",
+        "values": [
+          "Character/Mage/Effect/SkillIcon.img",
+          102,
+          "Character/Mage/Effect/SkillIcon.img",
+          103
+        ],
+        "start": 402,
+        "end": 499,
+        "line": 17,
+        "scope": [],
+        "value_tokens": [
+          {
+            "kind": "string",
+            "text": "Character/Mage/Effect/SkillIcon.img",
+            "value": "Character/Mage/Effect/SkillIcon.img",
+            "start": 411,
+            "end": 448,
+            "line": 18,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "102",
+            "value": 102,
+            "start": 449,
+            "end": 452,
+            "line": 18,
+            "column": 39
+          },
+          {
+            "kind": "string",
+            "text": "Character/Mage/Effect/SkillIcon.img",
+            "value": "Character/Mage/Effect/SkillIcon.img",
+            "start": 454,
+            "end": 491,
+            "line": 19,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "103",
+            "value": 103,
+            "start": 492,
+            "end": 495,
+            "line": 19,
+            "column": 39
+          }
+        ]
+      }
+    },
+    {
+      "class_id": 4,
+      "skill_id": 1,
+      "path": "skill/priest/antiairupper.skl",
+      "display_name": "空斩打",
+      "secondary_name": "Air breaks",
+      "icon": {
+        "tag": "icon",
+        "values": [
+          "Character/Priest/Effect/SkillIcon.img",
+          18,
+          "Character/Priest/Effect/SkillIcon.img",
+          19
+        ],
+        "start": 534,
+        "end": 633,
+        "line": 29,
+        "scope": [],
+        "value_tokens": [
+          {
+            "kind": "string",
+            "text": "Character/Priest/Effect/SkillIcon.img",
+            "value": "Character/Priest/Effect/SkillIcon.img",
+            "start": 543,
+            "end": 582,
+            "line": 30,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "18",
+            "value": 18,
+            "start": 583,
+            "end": 585,
+            "line": 30,
+            "column": 41
+          },
+          {
+            "kind": "string",
+            "text": "Character/Priest/Effect/SkillIcon.img",
+            "value": "Character/Priest/Effect/SkillIcon.img",
+            "start": 587,
+            "end": 626,
+            "line": 31,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "19",
+            "value": 19,
+            "start": 627,
+            "end": 629,
+            "line": 31,
+            "column": 41
+          }
+        ]
+      }
+    },
+    {
+      "class_id": 5,
+      "skill_id": 1,
+      "path": "skill/atgunner/flamebullet.skl",
+      "display_name": "爆炎弹",
+      "secondary_name": "Explosive Bullet",
+      "icon": {
+        "tag": "icon",
+        "values": [
+          "Character/Gunner/Effect/SkillIcon.img",
+          0,
+          "Character/Gunner/Effect/SkillIcon.img",
+          1
+        ],
+        "start": 652,
+        "end": 749,
+        "line": 30,
+        "scope": [],
+        "value_tokens": [
+          {
+            "kind": "string",
+            "text": "Character/Gunner/Effect/SkillIcon.img",
+            "value": "Character/Gunner/Effect/SkillIcon.img",
+            "start": 661,
+            "end": 700,
+            "line": 31,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "0",
+            "value": 0,
+            "start": 701,
+            "end": 702,
+            "line": 31,
+            "column": 41
+          },
+          {
+            "kind": "string",
+            "text": "Character/Gunner/Effect/SkillIcon.img",
+            "value": "Character/Gunner/Effect/SkillIcon.img",
+            "start": 704,
+            "end": 743,
+            "line": 32,
+            "column": 1
+          },
+          {
+            "kind": "atom",
+            "text": "1",
+            "value": 1,
+            "start": 744,
+            "end": 745,
+            "line": 32,
+            "column": 41
+          }
+        ]
+      }
+    }
+  ],
+  "evidence": [
+    {
+      "path": "analysis/combat_catalog/skills.json",
+      "sha256": "baf6d5d895b13621b12662fc69f9ab2690a495e347d8a06015594f042ebd6abc",
+      "bytes": 80579868
+    },
+    {
+      "path": "analysis/combat_catalog/skill-name-resolution.json",
+      "sha256": "616aca5364c71444e07bf3bc3909d6c2967e6a3a48ce78d59fd3fc7928236af0",
+      "bytes": 3510489
+    },
+    {
+      "path": "analysis/combat_catalog/SKILL_NAMES.md",
+      "sha256": "4185096118feca671ac5c4ec470415e08366e1eff5fe3c03a8289ebf3e379aa4",
+      "bytes": 2554
+    },
+    {
+      "path": "analysis/combat_catalog/summary.json",
+      "sha256": "3f6552b23b66e7cb84c008aa3036e0b4581a8a32f5dc36bc0406dd8baa01071a",
+      "bytes": 2992
+    },
+    {
+      "path": "analysis/preview-validation/skill-ui-browser.json",
+      "sha256": "8afd13bc1e9f65fe7a7a70834ca8cbaef208d6056a644082f32ab4dcd2274432",
+      "bytes": 406
+    },
+    {
+      "path": "combat-preview/catalog.py",
+      "sha256": "b9b2430c0d4bb187c0ee09a2b53bd7d1bb5a51244966632ea5b7f65a61a76bc2",
+      "bytes": 13113
+    },
+    {
+      "path": "combat-preview/string_names.py",
+      "sha256": "a5bf1f8a7610170d58e082d62709be4da2b075528f7029365771bbaf1b3359cd",
+      "bytes": 4293
+    },
+    {
+      "path": "combat-preview/tests/test_string_names.py",
+      "sha256": "e5fc1528a719a03851c3b1fdddf0d65151f9c62919de04cee92b93e27644220f",
+      "bytes": 1889
+    },
+    {
+      "path": "combat-preview/web/app.js",
+      "sha256": "11912bc49108a6862a583da0e60164b9aefbc53e3e69d26792dfca949a6dee75",
+      "bytes": 33108
+    }
+  ],
+  "scope": "Frozen data closure and source schema only; all 688 icon pixels not decoded or compared",
+  "source_manifest_unchanged": true
+}

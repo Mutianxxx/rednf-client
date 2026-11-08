@@ -1,0 +1,14 @@
+{
+  "toolchain": "D:\\dnf-rebuild\\dnf-native-demo\\third_party\\llvm-mingw-20261006-ucrt-x86_64\\bin\\x86_64-w64-mingw32-clang++.exe",
+  "files": {
+    "monster_demo.exe": "0bd9e2ea2a90fef861b19a50ad98c3351e31e47506054fb23bc3e3853c54906f",
+    "SDL2.dll": "53e8fa7e9ed43c30bd650c39396f0d9d2067d2fff0b926c9433b75202592e4aa",
+    "libunwind.dll": "b0636a4281610124704adb2be2edf5642e830d86c68b7f27dbc9c8154705a780",
+    "src/main.cpp": "692581db531d59fd6e5feb13baf4d9eca7f5f6ac7aef147f94c80d906708e1fd",
+    "src/resources.cpp": "31b1c6417964e4480e18d9f83257a92cba185f9bca2794d97af8f8b8d91ae5b3",
+    "include/dnf/resources.hpp": "8b5dea96c44b89c43bf506d5262f85390276c3bdb59afc1f965f8b75aec1dd48",
+    "include/dnf/geometry.hpp": "cd4329234a1f08903899cefe7a1fadb11e39c5fbae313ffd89f6e2b471591115",
+    "include/dnf/shared_death.hpp": "9d9466e730f5a2b3a61ab462613876729284f3f521923174686894e36981f08d",
+    "content/monsters.json": "aec8783c003c970d1d89318d9b20697f7bfc5505a0b23ae460f0d0819c1b9cd0"
+  }
+}

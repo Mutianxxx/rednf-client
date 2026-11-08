@@ -1,0 +1,1247 @@
+{
+  "path": "character/swordman/effect/animation/bloodboom/finish_bloodboom_finish3.ani.als",
+  "fields": [
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_shockwave2.ani",
+        "bloodboom_shockwave2"
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_shockwave.ani",
+        "bloodboom_shockwave"
+      ],
+      "offset": 15
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_circle2.ani",
+        "bloodboom_circle2"
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_circle1.ani",
+        "bloodboom_circle1"
+      ],
+      "offset": 45
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_gas1.ani",
+        "bloodboom_finish_gas1"
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_gas2.ani",
+        "bloodboom_finish_gas2"
+      ],
+      "offset": 75
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_gas3.ani",
+        "bloodboom_finish_gas3"
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_gas4.ani",
+        "bloodboom_finish_gas4"
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_gas5.ani",
+        "bloodboom_finish_gas5"
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_line1.ani",
+        "bloodboom_finish_line1"
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_line2.ani",
+        "bloodboom_finish_line2"
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_line3.ani",
+        "bloodboom_finish_line3"
+      ],
+      "offset": 165
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_line4.ani",
+        "bloodboom_finish_line4"
+      ],
+      "offset": 180
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_line5.ani",
+        "bloodboom_finish_line5"
+      ],
+      "offset": 195
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish2.ani",
+        "bloodboom_finish2"
+      ],
+      "offset": 210
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish1.ani",
+        "bloodboom_finish1"
+      ],
+      "offset": 225
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish4_back.ani",
+        "bloodboom_finish4_back"
+      ],
+      "offset": 240
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish5_back.ani",
+        "bloodboom_finish5_back"
+      ],
+      "offset": 255
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_line6_back.ani",
+        "bloodboom_finish_line6_back"
+      ],
+      "offset": 270
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_line7_back.ani",
+        "bloodboom_finish_line7_back"
+      ],
+      "offset": 285
+    },
+    {
+      "tag": "[use animation]",
+      "values": [
+        "finish_bloodboom_finish_line8_back.ani",
+        "bloodboom_finish_line8_back"
+      ],
+      "offset": 300
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        -5,
+        "bloodboom_finish_line8_back"
+      ],
+      "offset": 315
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        -4,
+        "bloodboom_finish_line7_back"
+      ],
+      "offset": 335
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        -3,
+        "bloodboom_finish_line6_back"
+      ],
+      "offset": 355
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        -2,
+        "bloodboom_finish5_back"
+      ],
+      "offset": 375
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        -1,
+        "bloodboom_finish4_back"
+      ],
+      "offset": 395
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10001,
+        "bloodboom_finish1"
+      ],
+      "offset": 415
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10002,
+        "bloodboom_finish2"
+      ],
+      "offset": 435
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10003,
+        "bloodboom_finish_line5"
+      ],
+      "offset": 455
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10004,
+        "bloodboom_finish_line4"
+      ],
+      "offset": 475
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10005,
+        "bloodboom_finish_line3"
+      ],
+      "offset": 495
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10006,
+        "bloodboom_finish_line2"
+      ],
+      "offset": 515
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10007,
+        "bloodboom_finish_line1"
+      ],
+      "offset": 535
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10008,
+        "bloodboom_finish_gas5"
+      ],
+      "offset": 555
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10009,
+        "bloodboom_finish_gas4"
+      ],
+      "offset": 575
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10010,
+        "bloodboom_finish_gas3"
+      ],
+      "offset": 595
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10011,
+        "bloodboom_finish_gas2"
+      ],
+      "offset": 615
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10012,
+        "bloodboom_finish_gas1"
+      ],
+      "offset": 635
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10013,
+        "bloodboom_circle1"
+      ],
+      "offset": 655
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10014,
+        "bloodboom_circle2"
+      ],
+      "offset": 675
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10015,
+        "bloodboom_shockwave"
+      ],
+      "offset": 695
+    },
+    {
+      "tag": "[add]",
+      "values": [
+        0,
+        10016,
+        "bloodboom_shockwave2"
+      ],
+      "offset": 715
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 5,
+      "type": 6,
+      "raw": 2470396,
+      "value": "finish_bloodboom_shockwave2.ani"
+    },
+    {
+      "offset": 10,
+      "type": 6,
+      "raw": 16215596,
+      "value": "bloodboom_shockwave2"
+    },
+    {
+      "offset": 15,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 20,
+      "type": 6,
+      "raw": 2469994,
+      "value": "finish_bloodboom_shockwave.ani"
+    },
+    {
+      "offset": 25,
+      "type": 6,
+      "raw": 16215638,
+      "value": "bloodboom_shockwave"
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 35,
+      "type": 6,
+      "raw": 2456860,
+      "value": "finish_bloodboom_circle2.ani"
+    },
+    {
+      "offset": 40,
+      "type": 6,
+      "raw": 16214274,
+      "value": "bloodboom_circle2"
+    },
+    {
+      "offset": 45,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 50,
+      "type": 6,
+      "raw": 2456638,
+      "value": "finish_bloodboom_circle1.ani"
+    },
+    {
+      "offset": 55,
+      "type": 6,
+      "raw": 16214310,
+      "value": "bloodboom_circle1"
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 65,
+      "type": 6,
+      "raw": 2460910,
+      "value": "finish_bloodboom_finish_gas1.ani"
+    },
+    {
+      "offset": 70,
+      "type": 6,
+      "raw": 16215678,
+      "value": "bloodboom_finish_gas1"
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 80,
+      "type": 6,
+      "raw": 2463122,
+      "value": "finish_bloodboom_finish_gas2.ani"
+    },
+    {
+      "offset": 85,
+      "type": 6,
+      "raw": 16215722,
+      "value": "bloodboom_finish_gas2"
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 95,
+      "type": 6,
+      "raw": 2463660,
+      "value": "finish_bloodboom_finish_gas3.ani"
+    },
+    {
+      "offset": 100,
+      "type": 6,
+      "raw": 16215766,
+      "value": "bloodboom_finish_gas3"
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 110,
+      "type": 6,
+      "raw": 2463992,
+      "value": "finish_bloodboom_finish_gas4.ani"
+    },
+    {
+      "offset": 115,
+      "type": 6,
+      "raw": 16215810,
+      "value": "bloodboom_finish_gas4"
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 125,
+      "type": 6,
+      "raw": 2464326,
+      "value": "finish_bloodboom_finish_gas5.ani"
+    },
+    {
+      "offset": 130,
+      "type": 6,
+      "raw": 16215854,
+      "value": "bloodboom_finish_gas5"
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 140,
+      "type": 6,
+      "raw": 2465058,
+      "value": "finish_bloodboom_finish_line1.ani"
+    },
+    {
+      "offset": 145,
+      "type": 6,
+      "raw": 16215898,
+      "value": "bloodboom_finish_line1"
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 155,
+      "type": 6,
+      "raw": 2465234,
+      "value": "finish_bloodboom_finish_line2.ani"
+    },
+    {
+      "offset": 160,
+      "type": 6,
+      "raw": 16215944,
+      "value": "bloodboom_finish_line2"
+    },
+    {
+      "offset": 165,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 170,
+      "type": 6,
+      "raw": 2466250,
+      "value": "finish_bloodboom_finish_line3.ani"
+    },
+    {
+      "offset": 175,
+      "type": 6,
+      "raw": 16215990,
+      "value": "bloodboom_finish_line3"
+    },
+    {
+      "offset": 180,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 185,
+      "type": 6,
+      "raw": 2467348,
+      "value": "finish_bloodboom_finish_line4.ani"
+    },
+    {
+      "offset": 190,
+      "type": 6,
+      "raw": 16216036,
+      "value": "bloodboom_finish_line4"
+    },
+    {
+      "offset": 195,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 200,
+      "type": 6,
+      "raw": 2467678,
+      "value": "finish_bloodboom_finish_line5.ani"
+    },
+    {
+      "offset": 205,
+      "type": 6,
+      "raw": 16216082,
+      "value": "bloodboom_finish_line5"
+    },
+    {
+      "offset": 210,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 215,
+      "type": 6,
+      "raw": 2457938,
+      "value": "finish_bloodboom_finish2.ani"
+    },
+    {
+      "offset": 220,
+      "type": 6,
+      "raw": 16216128,
+      "value": "bloodboom_finish2"
+    },
+    {
+      "offset": 225,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 230,
+      "type": 6,
+      "raw": 2457564,
+      "value": "finish_bloodboom_finish1.ani"
+    },
+    {
+      "offset": 235,
+      "type": 6,
+      "raw": 16216164,
+      "value": "bloodboom_finish1"
+    },
+    {
+      "offset": 240,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 245,
+      "type": 6,
+      "raw": 2458950,
+      "value": "finish_bloodboom_finish4_back.ani"
+    },
+    {
+      "offset": 250,
+      "type": 6,
+      "raw": 16216200,
+      "value": "bloodboom_finish4_back"
+    },
+    {
+      "offset": 255,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 260,
+      "type": 6,
+      "raw": 2459432,
+      "value": "finish_bloodboom_finish5_back.ani"
+    },
+    {
+      "offset": 265,
+      "type": 6,
+      "raw": 16216246,
+      "value": "bloodboom_finish5_back"
+    },
+    {
+      "offset": 270,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 275,
+      "type": 6,
+      "raw": 2468922,
+      "value": "finish_bloodboom_finish_line6_back.ani"
+    },
+    {
+      "offset": 280,
+      "type": 6,
+      "raw": 16216292,
+      "value": "bloodboom_finish_line6_back"
+    },
+    {
+      "offset": 285,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 290,
+      "type": 6,
+      "raw": 2469224,
+      "value": "finish_bloodboom_finish_line7_back.ani"
+    },
+    {
+      "offset": 295,
+      "type": 6,
+      "raw": 16216348,
+      "value": "bloodboom_finish_line7_back"
+    },
+    {
+      "offset": 300,
+      "type": 3,
+      "raw": 1574,
+      "value": "[use animation]"
+    },
+    {
+      "offset": 305,
+      "type": 6,
+      "raw": 2469824,
+      "value": "finish_bloodboom_finish_line8_back.ani"
+    },
+    {
+      "offset": 310,
+      "type": 6,
+      "raw": 16216404,
+      "value": "bloodboom_finish_line8_back"
+    },
+    {
+      "offset": 315,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 325,
+      "type": 0,
+      "raw": 4294967291,
+      "value": -5
+    },
+    {
+      "offset": 330,
+      "type": 6,
+      "raw": 16216404,
+      "value": "bloodboom_finish_line8_back"
+    },
+    {
+      "offset": 335,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 340,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 4294967292,
+      "value": -4
+    },
+    {
+      "offset": 350,
+      "type": 6,
+      "raw": 16216348,
+      "value": "bloodboom_finish_line7_back"
+    },
+    {
+      "offset": 355,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 360,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 365,
+      "type": 0,
+      "raw": 4294967293,
+      "value": -3
+    },
+    {
+      "offset": 370,
+      "type": 6,
+      "raw": 16216292,
+      "value": "bloodboom_finish_line6_back"
+    },
+    {
+      "offset": 375,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 380,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 385,
+      "type": 0,
+      "raw": 4294967294,
+      "value": -2
+    },
+    {
+      "offset": 390,
+      "type": 6,
+      "raw": 16216246,
+      "value": "bloodboom_finish5_back"
+    },
+    {
+      "offset": 395,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 400,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 405,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 410,
+      "type": 6,
+      "raw": 16216200,
+      "value": "bloodboom_finish4_back"
+    },
+    {
+      "offset": 415,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 420,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 425,
+      "type": 0,
+      "raw": 10001,
+      "value": 10001
+    },
+    {
+      "offset": 430,
+      "type": 6,
+      "raw": 16216164,
+      "value": "bloodboom_finish1"
+    },
+    {
+      "offset": 435,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 440,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 445,
+      "type": 0,
+      "raw": 10002,
+      "value": 10002
+    },
+    {
+      "offset": 450,
+      "type": 6,
+      "raw": 16216128,
+      "value": "bloodboom_finish2"
+    },
+    {
+      "offset": 455,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 460,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 465,
+      "type": 0,
+      "raw": 10003,
+      "value": 10003
+    },
+    {
+      "offset": 470,
+      "type": 6,
+      "raw": 16216082,
+      "value": "bloodboom_finish_line5"
+    },
+    {
+      "offset": 475,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 480,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 485,
+      "type": 0,
+      "raw": 10004,
+      "value": 10004
+    },
+    {
+      "offset": 490,
+      "type": 6,
+      "raw": 16216036,
+      "value": "bloodboom_finish_line4"
+    },
+    {
+      "offset": 495,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 500,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 505,
+      "type": 0,
+      "raw": 10005,
+      "value": 10005
+    },
+    {
+      "offset": 510,
+      "type": 6,
+      "raw": 16215990,
+      "value": "bloodboom_finish_line3"
+    },
+    {
+      "offset": 515,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 520,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 525,
+      "type": 0,
+      "raw": 10006,
+      "value": 10006
+    },
+    {
+      "offset": 530,
+      "type": 6,
+      "raw": 16215944,
+      "value": "bloodboom_finish_line2"
+    },
+    {
+      "offset": 535,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 540,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 545,
+      "type": 0,
+      "raw": 10007,
+      "value": 10007
+    },
+    {
+      "offset": 550,
+      "type": 6,
+      "raw": 16215898,
+      "value": "bloodboom_finish_line1"
+    },
+    {
+      "offset": 555,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 560,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 565,
+      "type": 0,
+      "raw": 10008,
+      "value": 10008
+    },
+    {
+      "offset": 570,
+      "type": 6,
+      "raw": 16215854,
+      "value": "bloodboom_finish_gas5"
+    },
+    {
+      "offset": 575,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 580,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 585,
+      "type": 0,
+      "raw": 10009,
+      "value": 10009
+    },
+    {
+      "offset": 590,
+      "type": 6,
+      "raw": 16215810,
+      "value": "bloodboom_finish_gas4"
+    },
+    {
+      "offset": 595,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 600,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 605,
+      "type": 0,
+      "raw": 10010,
+      "value": 10010
+    },
+    {
+      "offset": 610,
+      "type": 6,
+      "raw": 16215766,
+      "value": "bloodboom_finish_gas3"
+    },
+    {
+      "offset": 615,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 620,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 625,
+      "type": 0,
+      "raw": 10011,
+      "value": 10011
+    },
+    {
+      "offset": 630,
+      "type": 6,
+      "raw": 16215722,
+      "value": "bloodboom_finish_gas2"
+    },
+    {
+      "offset": 635,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 640,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 645,
+      "type": 0,
+      "raw": 10012,
+      "value": 10012
+    },
+    {
+      "offset": 650,
+      "type": 6,
+      "raw": 16215678,
+      "value": "bloodboom_finish_gas1"
+    },
+    {
+      "offset": 655,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 660,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 665,
+      "type": 0,
+      "raw": 10013,
+      "value": 10013
+    },
+    {
+      "offset": 670,
+      "type": 6,
+      "raw": 16214310,
+      "value": "bloodboom_circle1"
+    },
+    {
+      "offset": 675,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 680,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 685,
+      "type": 0,
+      "raw": 10014,
+      "value": 10014
+    },
+    {
+      "offset": 690,
+      "type": 6,
+      "raw": 16214274,
+      "value": "bloodboom_circle2"
+    },
+    {
+      "offset": 695,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 700,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 705,
+      "type": 0,
+      "raw": 10015,
+      "value": 10015
+    },
+    {
+      "offset": 710,
+      "type": 6,
+      "raw": 16215638,
+      "value": "bloodboom_shockwave"
+    },
+    {
+      "offset": 715,
+      "type": 3,
+      "raw": 11710,
+      "value": "[add]"
+    },
+    {
+      "offset": 720,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 725,
+      "type": 0,
+      "raw": 10016,
+      "value": 10016
+    },
+    {
+      "offset": 730,
+      "type": 6,
+      "raw": 16215596,
+      "value": "bloodboom_shockwave2"
+    }
+  ],
+  "raw_sha256": "6332ca4f393d2c1276963e3d001545c8936580bac58fadb8c16f48b4d261e4ce"
+}

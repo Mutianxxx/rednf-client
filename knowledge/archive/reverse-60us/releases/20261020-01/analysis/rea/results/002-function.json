@@ -1,0 +1,4 @@
+{
+  "local_error": "SdkError: Request timed out",
+  "stack": "SdkError: Request timed out\n    at Timeout.timeoutHandler (file:///C:/Users/16908/AppData/Local/npm-cache/_npx/a1722018f28f9df2/node_modules/@modelcontextprotocol/client/dist/src-WCy6ifGf.mjs:6243:40)\n    at listOnTimeout (node:internal/timers:585:17)\n    at process.processTimers (node:internal/timers:521:7)"
+}

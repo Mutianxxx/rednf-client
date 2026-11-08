@@ -1,0 +1,485 @@
+{
+  "kind": "extracted ANI arithmetic slice and native truncation helper in synthetic PE32; delay/rate inputs synthetic",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "arithmetic_va": "0x00a2792f",
+  "arithmetic_size": 28,
+  "arithmetic_sha256": "ad6a2c285ef223bd7d99698779d2f0dea1a4db64a71278399dfb5737ac3a27bb",
+  "helper_va": "0x00c01544",
+  "helper_size": 117,
+  "helper_sha256": "5333b186c02836974c6f792303aeb2c00d856316b93ccbbe65f51def6ae661b4",
+  "harness_sha256": "bf80f430f9a25e419731e23ecaebffcc0d964f5f82c72d79fb9950f97f57ca97",
+  "output_sha256": "2b002833650e00b68e9e027ab77dd783a680586b335c1a75870406b1baf3fa68",
+  "precisions": [
+    64,
+    53
+  ],
+  "matches": 46,
+  "mismatches": 0,
+  "vectors": [
+    {
+      "name": "rate_100_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 100.0,
+      "delay_input": 70,
+      "native_negative_delta": -70,
+      "native_deadline": 70,
+      "model_duration": 70,
+      "matches": true
+    },
+    {
+      "name": "rate_85_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 85.0,
+      "delay_input": 70,
+      "native_negative_delta": -82,
+      "native_deadline": 82,
+      "model_duration": 82,
+      "matches": true
+    },
+    {
+      "name": "rate_85_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 85.0,
+      "delay_input": 300,
+      "native_negative_delta": -352,
+      "native_deadline": 352,
+      "model_duration": 352,
+      "matches": true
+    },
+    {
+      "name": "scale_850_refresh_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 85.0,
+      "delay_input": 70,
+      "native_negative_delta": -82,
+      "native_deadline": 82,
+      "model_duration": 82,
+      "matches": true
+    },
+    {
+      "name": "scale_850_refresh_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 85.0,
+      "delay_input": 300,
+      "native_negative_delta": -352,
+      "native_deadline": 352,
+      "model_duration": 352,
+      "matches": true
+    },
+    {
+      "name": "scale_850_install_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 85.00000762939453,
+      "delay_input": 70,
+      "native_negative_delta": -82,
+      "native_deadline": 82,
+      "model_duration": 82,
+      "matches": true
+    },
+    {
+      "name": "scale_850_install_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 85.00000762939453,
+      "delay_input": 300,
+      "native_negative_delta": -352,
+      "native_deadline": 352,
+      "model_duration": 352,
+      "matches": true
+    },
+    {
+      "name": "scale_999_refresh_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 99.9000015258789,
+      "delay_input": 70,
+      "native_negative_delta": -70,
+      "native_deadline": 70,
+      "model_duration": 70,
+      "matches": true
+    },
+    {
+      "name": "scale_999_refresh_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 99.9000015258789,
+      "delay_input": 300,
+      "native_negative_delta": -300,
+      "native_deadline": 300,
+      "model_duration": 300,
+      "matches": true
+    },
+    {
+      "name": "scale_999_install_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 99.9000015258789,
+      "delay_input": 70,
+      "native_negative_delta": -70,
+      "native_deadline": 70,
+      "model_duration": 70,
+      "matches": true
+    },
+    {
+      "name": "scale_999_install_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 99.9000015258789,
+      "delay_input": 300,
+      "native_negative_delta": -300,
+      "native_deadline": 300,
+      "model_duration": 300,
+      "matches": true
+    },
+    {
+      "name": "scale_1000_refresh_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 100.0,
+      "delay_input": 70,
+      "native_negative_delta": -70,
+      "native_deadline": 70,
+      "model_duration": 70,
+      "matches": true
+    },
+    {
+      "name": "scale_1000_refresh_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 100.0,
+      "delay_input": 300,
+      "native_negative_delta": -300,
+      "native_deadline": 300,
+      "model_duration": 300,
+      "matches": true
+    },
+    {
+      "name": "scale_1000_install_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 100.00000762939453,
+      "delay_input": 70,
+      "native_negative_delta": -69,
+      "native_deadline": 69,
+      "model_duration": 69,
+      "matches": true
+    },
+    {
+      "name": "scale_1000_install_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 100.00000762939453,
+      "delay_input": 300,
+      "native_negative_delta": -299,
+      "native_deadline": 299,
+      "model_duration": 299,
+      "matches": true
+    },
+    {
+      "name": "scale_1001_refresh_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 100.0999984741211,
+      "delay_input": 70,
+      "native_negative_delta": -69,
+      "native_deadline": 69,
+      "model_duration": 69,
+      "matches": true
+    },
+    {
+      "name": "scale_1001_refresh_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 100.0999984741211,
+      "delay_input": 300,
+      "native_negative_delta": -299,
+      "native_deadline": 299,
+      "model_duration": 299,
+      "matches": true
+    },
+    {
+      "name": "scale_1001_install_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 100.10000610351562,
+      "delay_input": 70,
+      "native_negative_delta": -69,
+      "native_deadline": 69,
+      "model_duration": 69,
+      "matches": true
+    },
+    {
+      "name": "scale_1001_install_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 100.10000610351562,
+      "delay_input": 300,
+      "native_negative_delta": -299,
+      "native_deadline": 299,
+      "model_duration": 299,
+      "matches": true
+    },
+    {
+      "name": "scale_1500_refresh_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 150.0,
+      "delay_input": 70,
+      "native_negative_delta": -46,
+      "native_deadline": 46,
+      "model_duration": 46,
+      "matches": true
+    },
+    {
+      "name": "scale_1500_refresh_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 150.0,
+      "delay_input": 300,
+      "native_negative_delta": -200,
+      "native_deadline": 200,
+      "model_duration": 200,
+      "matches": true
+    },
+    {
+      "name": "scale_1500_install_delay_70",
+      "x87_precision": 64,
+      "rate_percent": 150.0,
+      "delay_input": 70,
+      "native_negative_delta": -46,
+      "native_deadline": 46,
+      "model_duration": 46,
+      "matches": true
+    },
+    {
+      "name": "scale_1500_install_delay_300",
+      "x87_precision": 64,
+      "rate_percent": 150.0,
+      "delay_input": 300,
+      "native_negative_delta": -200,
+      "native_deadline": 200,
+      "model_duration": 200,
+      "matches": true
+    },
+    {
+      "name": "rate_100_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 100.0,
+      "delay_input": 70,
+      "native_negative_delta": -70,
+      "native_deadline": 70,
+      "model_duration": 70,
+      "matches": true
+    },
+    {
+      "name": "rate_85_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 85.0,
+      "delay_input": 70,
+      "native_negative_delta": -82,
+      "native_deadline": 82,
+      "model_duration": 82,
+      "matches": true
+    },
+    {
+      "name": "rate_85_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 85.0,
+      "delay_input": 300,
+      "native_negative_delta": -352,
+      "native_deadline": 352,
+      "model_duration": 352,
+      "matches": true
+    },
+    {
+      "name": "scale_850_refresh_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 85.0,
+      "delay_input": 70,
+      "native_negative_delta": -82,
+      "native_deadline": 82,
+      "model_duration": 82,
+      "matches": true
+    },
+    {
+      "name": "scale_850_refresh_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 85.0,
+      "delay_input": 300,
+      "native_negative_delta": -352,
+      "native_deadline": 352,
+      "model_duration": 352,
+      "matches": true
+    },
+    {
+      "name": "scale_850_install_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 85.00000762939453,
+      "delay_input": 70,
+      "native_negative_delta": -82,
+      "native_deadline": 82,
+      "model_duration": 82,
+      "matches": true
+    },
+    {
+      "name": "scale_850_install_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 85.00000762939453,
+      "delay_input": 300,
+      "native_negative_delta": -352,
+      "native_deadline": 352,
+      "model_duration": 352,
+      "matches": true
+    },
+    {
+      "name": "scale_999_refresh_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 99.9000015258789,
+      "delay_input": 70,
+      "native_negative_delta": -70,
+      "native_deadline": 70,
+      "model_duration": 70,
+      "matches": true
+    },
+    {
+      "name": "scale_999_refresh_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 99.9000015258789,
+      "delay_input": 300,
+      "native_negative_delta": -300,
+      "native_deadline": 300,
+      "model_duration": 300,
+      "matches": true
+    },
+    {
+      "name": "scale_999_install_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 99.9000015258789,
+      "delay_input": 70,
+      "native_negative_delta": -70,
+      "native_deadline": 70,
+      "model_duration": 70,
+      "matches": true
+    },
+    {
+      "name": "scale_999_install_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 99.9000015258789,
+      "delay_input": 300,
+      "native_negative_delta": -300,
+      "native_deadline": 300,
+      "model_duration": 300,
+      "matches": true
+    },
+    {
+      "name": "scale_1000_refresh_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 100.0,
+      "delay_input": 70,
+      "native_negative_delta": -70,
+      "native_deadline": 70,
+      "model_duration": 70,
+      "matches": true
+    },
+    {
+      "name": "scale_1000_refresh_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 100.0,
+      "delay_input": 300,
+      "native_negative_delta": -300,
+      "native_deadline": 300,
+      "model_duration": 300,
+      "matches": true
+    },
+    {
+      "name": "scale_1000_install_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 100.00000762939453,
+      "delay_input": 70,
+      "native_negative_delta": -69,
+      "native_deadline": 69,
+      "model_duration": 69,
+      "matches": true
+    },
+    {
+      "name": "scale_1000_install_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 100.00000762939453,
+      "delay_input": 300,
+      "native_negative_delta": -299,
+      "native_deadline": 299,
+      "model_duration": 299,
+      "matches": true
+    },
+    {
+      "name": "scale_1001_refresh_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 100.0999984741211,
+      "delay_input": 70,
+      "native_negative_delta": -69,
+      "native_deadline": 69,
+      "model_duration": 69,
+      "matches": true
+    },
+    {
+      "name": "scale_1001_refresh_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 100.0999984741211,
+      "delay_input": 300,
+      "native_negative_delta": -299,
+      "native_deadline": 299,
+      "model_duration": 299,
+      "matches": true
+    },
+    {
+      "name": "scale_1001_install_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 100.10000610351562,
+      "delay_input": 70,
+      "native_negative_delta": -69,
+      "native_deadline": 69,
+      "model_duration": 69,
+      "matches": true
+    },
+    {
+      "name": "scale_1001_install_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 100.10000610351562,
+      "delay_input": 300,
+      "native_negative_delta": -299,
+      "native_deadline": 299,
+      "model_duration": 299,
+      "matches": true
+    },
+    {
+      "name": "scale_1500_refresh_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 150.0,
+      "delay_input": 70,
+      "native_negative_delta": -46,
+      "native_deadline": 46,
+      "model_duration": 46,
+      "matches": true
+    },
+    {
+      "name": "scale_1500_refresh_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 150.0,
+      "delay_input": 300,
+      "native_negative_delta": -200,
+      "native_deadline": 200,
+      "model_duration": 200,
+      "matches": true
+    },
+    {
+      "name": "scale_1500_install_delay_70",
+      "x87_precision": 53,
+      "rate_percent": 150.0,
+      "delay_input": 70,
+      "native_negative_delta": -46,
+      "native_deadline": 46,
+      "model_duration": 46,
+      "matches": true
+    },
+    {
+      "name": "scale_1500_install_delay_300",
+      "x87_precision": 53,
+      "rate_percent": 150.0,
+      "delay_input": 300,
+      "native_negative_delta": -200,
+      "native_deadline": 200,
+      "model_duration": 200,
+      "matches": true
+    }
+  ],
+  "limitations": [
+    "This validates arithmetic given decoded signed delay; the parser's delay write is not exercised.",
+    "Rate inputs use formulas recovered from install/refresh sites; those functions are not executed here.",
+    "The original client's runtime x87 control word and actual effective attack-speed stat are not captured."
+  ]
+}

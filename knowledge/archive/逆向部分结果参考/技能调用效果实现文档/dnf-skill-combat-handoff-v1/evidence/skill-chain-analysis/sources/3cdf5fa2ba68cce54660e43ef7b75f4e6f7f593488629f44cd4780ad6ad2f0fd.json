@@ -1,0 +1,873 @@
+{
+  "path": "character/swordman/effect/animation/frenzy/buff.ani",
+  "fields": [
+    {
+      "tag": "[LOOP]",
+      "values": [
+        1
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        8
+      ],
+      "offset": 20
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 30
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Frenzy/blood-spirits.img",
+        0
+      ],
+      "offset": 35
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -22,
+        -119
+      ],
+      "offset": 50
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 65
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 75
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 85
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Frenzy/blood-spirits.img",
+        1
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -22,
+        -119
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 130
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 140
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Frenzy/blood-spirits.img",
+        2
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -22,
+        -119
+      ],
+      "offset": 160
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 175
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 185
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 195
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Frenzy/blood-spirits.img",
+        3
+      ],
+      "offset": 200
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -22,
+        -119
+      ],
+      "offset": 215
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 230
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 240
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 250
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Frenzy/blood-spirits.img",
+        4
+      ],
+      "offset": 255
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -22,
+        -119
+      ],
+      "offset": 270
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 285
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 295
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 305
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Frenzy/blood-spirits.img",
+        5
+      ],
+      "offset": 310
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -22,
+        -119
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 350
+    },
+    {
+      "tag": "[FRAME006]",
+      "values": [],
+      "offset": 360
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Frenzy/blood-spirits.img",
+        6
+      ],
+      "offset": 365
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -22,
+        -119
+      ],
+      "offset": 380
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 395
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 405
+    },
+    {
+      "tag": "[FRAME007]",
+      "values": [],
+      "offset": 415
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/Frenzy/blood-spirits.img",
+        7
+      ],
+      "offset": 420
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -22,
+        -119
+      ],
+      "offset": 435
+    },
+    {
+      "tag": "[GRAPHIC EFFECT]",
+      "values": [
+        "LINEARDODGE"
+      ],
+      "offset": 450
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 460
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 5190,
+      "value": "[LOOP]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 25,
+      "type": 0,
+      "raw": 8,
+      "value": 8
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 35,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 40,
+      "type": 6,
+      "raw": 1017754,
+      "value": "Character/Swordman/Effect/Frenzy/blood-spirits.img"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 50,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 55,
+      "type": 0,
+      "raw": 4294967274,
+      "value": -22
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 4294967177,
+      "value": -119
+    },
+    {
+      "offset": 65,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 70,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 80,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 95,
+      "type": 6,
+      "raw": 1017754,
+      "value": "Character/Swordman/Effect/Frenzy/blood-spirits.img"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 110,
+      "type": 0,
+      "raw": 4294967274,
+      "value": -22
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 4294967177,
+      "value": -119
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 125,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 130,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 140,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 150,
+      "type": 6,
+      "raw": 1017754,
+      "value": "Character/Swordman/Effect/Frenzy/blood-spirits.img"
+    },
+    {
+      "offset": 155,
+      "type": 0,
+      "raw": 2,
+      "value": 2
+    },
+    {
+      "offset": 160,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 165,
+      "type": 0,
+      "raw": 4294967274,
+      "value": -22
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 4294967177,
+      "value": -119
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 180,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 190,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 195,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 205,
+      "type": 6,
+      "raw": 1017754,
+      "value": "Character/Swordman/Effect/Frenzy/blood-spirits.img"
+    },
+    {
+      "offset": 210,
+      "type": 0,
+      "raw": 3,
+      "value": 3
+    },
+    {
+      "offset": 215,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 220,
+      "type": 0,
+      "raw": 4294967274,
+      "value": -22
+    },
+    {
+      "offset": 225,
+      "type": 0,
+      "raw": 4294967177,
+      "value": -119
+    },
+    {
+      "offset": 230,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 235,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 240,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 245,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 250,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 255,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 260,
+      "type": 6,
+      "raw": 1017754,
+      "value": "Character/Swordman/Effect/Frenzy/blood-spirits.img"
+    },
+    {
+      "offset": 265,
+      "type": 0,
+      "raw": 4,
+      "value": 4
+    },
+    {
+      "offset": 270,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 275,
+      "type": 0,
+      "raw": 4294967274,
+      "value": -22
+    },
+    {
+      "offset": 280,
+      "type": 0,
+      "raw": 4294967177,
+      "value": -119
+    },
+    {
+      "offset": 285,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 290,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 295,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 300,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 305,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 310,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 315,
+      "type": 6,
+      "raw": 1017754,
+      "value": "Character/Swordman/Effect/Frenzy/blood-spirits.img"
+    },
+    {
+      "offset": 320,
+      "type": 0,
+      "raw": 5,
+      "value": 5
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 330,
+      "type": 0,
+      "raw": 4294967274,
+      "value": -22
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 4294967177,
+      "value": -119
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 345,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 350,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 355,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 360,
+      "type": 3,
+      "raw": 3162,
+      "value": "[FRAME006]"
+    },
+    {
+      "offset": 365,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 370,
+      "type": 6,
+      "raw": 1017754,
+      "value": "Character/Swordman/Effect/Frenzy/blood-spirits.img"
+    },
+    {
+      "offset": 375,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 380,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 385,
+      "type": 0,
+      "raw": 4294967274,
+      "value": -22
+    },
+    {
+      "offset": 390,
+      "type": 0,
+      "raw": 4294967177,
+      "value": -119
+    },
+    {
+      "offset": 395,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 400,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 405,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 410,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 415,
+      "type": 3,
+      "raw": 3184,
+      "value": "[FRAME007]"
+    },
+    {
+      "offset": 420,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 425,
+      "type": 6,
+      "raw": 1017754,
+      "value": "Character/Swordman/Effect/Frenzy/blood-spirits.img"
+    },
+    {
+      "offset": 430,
+      "type": 0,
+      "raw": 7,
+      "value": 7
+    },
+    {
+      "offset": 435,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 440,
+      "type": 0,
+      "raw": 4294967274,
+      "value": -22
+    },
+    {
+      "offset": 445,
+      "type": 0,
+      "raw": 4294967177,
+      "value": -119
+    },
+    {
+      "offset": 450,
+      "type": 3,
+      "raw": 4084,
+      "value": "[GRAPHIC EFFECT]"
+    },
+    {
+      "offset": 455,
+      "type": 6,
+      "raw": 4118,
+      "value": "LINEARDODGE"
+    },
+    {
+      "offset": 460,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 465,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    }
+  ],
+  "raw_sha256": "3cdf5fa2ba68cce54660e43ef7b75f4e6f7f593488629f44cd4780ad6ad2f0fd"
+}

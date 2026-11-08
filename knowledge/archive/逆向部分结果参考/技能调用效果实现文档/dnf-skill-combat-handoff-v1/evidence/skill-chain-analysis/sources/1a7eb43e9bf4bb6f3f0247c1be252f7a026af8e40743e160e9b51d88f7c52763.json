@@ -1,0 +1,347 @@
+{
+  "path": "passiveobject/character/swordman/particle/outragebreak_light_part.ptl",
+  "fields": [
+    {
+      "tag": "[z axis]",
+      "values": [],
+      "offset": 0
+    },
+    {
+      "tag": "[move type]",
+      "values": [
+        "[straight line]"
+      ],
+      "offset": 5
+    },
+    {
+      "tag": "[move variable 1]",
+      "values": [
+        500,
+        50
+      ],
+      "offset": 15
+    },
+    {
+      "tag": "[changing term]",
+      "values": [
+        500
+      ],
+      "offset": 30
+    },
+    {
+      "tag": "[changing type]",
+      "values": [
+        "[keep last value]"
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[life time]",
+      "values": [
+        600
+      ],
+      "offset": 50
+    },
+    {
+      "tag": "[transparent value]",
+      "values": [
+        100,
+        44
+      ],
+      "offset": 60
+    },
+    {
+      "tag": "[creation frequency]",
+      "values": [
+        100.0
+      ],
+      "offset": 75
+    },
+    {
+      "tag": "[maximum create number]",
+      "values": [
+        30
+      ],
+      "offset": 85
+    },
+    {
+      "tag": "[create area size]",
+      "values": [
+        250,
+        250,
+        40
+      ],
+      "offset": 95
+    },
+    {
+      "tag": "[rotation angle range type]",
+      "values": [
+        "[rectangle]"
+      ],
+      "offset": 115
+    },
+    {
+      "tag": "[rotation angle variable]",
+      "values": [
+        20,
+        20
+      ],
+      "offset": 125
+    },
+    {
+      "tag": "[object type]",
+      "values": [
+        "[animation]"
+      ],
+      "offset": 140
+    },
+    {
+      "tag": "[object]",
+      "values": [
+        "../Animation/OutRageBreak/particle/outragebreak_light_part_1.ani",
+        -1,
+        "../Animation/OutRageBreak/particle/outragebreak_light_part_2.ani",
+        -1,
+        "../Animation/OutRageBreak/particle/outragebreak_light_part_1.ani",
+        -1
+      ],
+      "offset": 150
+    },
+    {
+      "tag": "[/object]",
+      "values": [],
+      "offset": 185
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 19622382,
+      "value": "[z axis]"
+    },
+    {
+      "offset": 5,
+      "type": 3,
+      "raw": 19617062,
+      "value": "[move type]"
+    },
+    {
+      "offset": 10,
+      "type": 6,
+      "raw": 19617086,
+      "value": "[straight line]"
+    },
+    {
+      "offset": 15,
+      "type": 3,
+      "raw": 19617118,
+      "value": "[move variable 1]"
+    },
+    {
+      "offset": 20,
+      "type": 0,
+      "raw": 500,
+      "value": 500
+    },
+    {
+      "offset": 25,
+      "type": 0,
+      "raw": 50,
+      "value": 50
+    },
+    {
+      "offset": 30,
+      "type": 3,
+      "raw": 19618820,
+      "value": "[changing term]"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 500,
+      "value": 500
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 19618852,
+      "value": "[changing type]"
+    },
+    {
+      "offset": 45,
+      "type": 6,
+      "raw": 19630080,
+      "value": "[keep last value]"
+    },
+    {
+      "offset": 50,
+      "type": 3,
+      "raw": 19615972,
+      "value": "[life time]"
+    },
+    {
+      "offset": 55,
+      "type": 0,
+      "raw": 600,
+      "value": 600
+    },
+    {
+      "offset": 60,
+      "type": 3,
+      "raw": 19630150,
+      "value": "[transparent value]"
+    },
+    {
+      "offset": 65,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 44,
+      "value": 44
+    },
+    {
+      "offset": 75,
+      "type": 3,
+      "raw": 19630190,
+      "value": "[creation frequency]"
+    },
+    {
+      "offset": 80,
+      "type": 2,
+      "raw": 1120403456,
+      "value": 100.0
+    },
+    {
+      "offset": 85,
+      "type": 3,
+      "raw": 19630232,
+      "value": "[maximum create number]"
+    },
+    {
+      "offset": 90,
+      "type": 0,
+      "raw": 30,
+      "value": 30
+    },
+    {
+      "offset": 95,
+      "type": 3,
+      "raw": 19630280,
+      "value": "[create area size]"
+    },
+    {
+      "offset": 100,
+      "type": 0,
+      "raw": 250,
+      "value": 250
+    },
+    {
+      "offset": 105,
+      "type": 0,
+      "raw": 250,
+      "value": 250
+    },
+    {
+      "offset": 110,
+      "type": 0,
+      "raw": 40,
+      "value": 40
+    },
+    {
+      "offset": 115,
+      "type": 3,
+      "raw": 19630318,
+      "value": "[rotation angle range type]"
+    },
+    {
+      "offset": 120,
+      "type": 6,
+      "raw": 19630374,
+      "value": "[rectangle]"
+    },
+    {
+      "offset": 125,
+      "type": 3,
+      "raw": 19630398,
+      "value": "[rotation angle variable]"
+    },
+    {
+      "offset": 130,
+      "type": 0,
+      "raw": 20,
+      "value": 20
+    },
+    {
+      "offset": 135,
+      "type": 0,
+      "raw": 20,
+      "value": 20
+    },
+    {
+      "offset": 140,
+      "type": 3,
+      "raw": 19606058,
+      "value": "[object type]"
+    },
+    {
+      "offset": 145,
+      "type": 6,
+      "raw": 19630450,
+      "value": "[animation]"
+    },
+    {
+      "offset": 150,
+      "type": 3,
+      "raw": 19630474,
+      "value": "[object]"
+    },
+    {
+      "offset": 155,
+      "type": 6,
+      "raw": 43338896,
+      "value": "../Animation/OutRageBreak/particle/outragebreak_light_part_1.ani"
+    },
+    {
+      "offset": 160,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 165,
+      "type": 6,
+      "raw": 43339026,
+      "value": "../Animation/OutRageBreak/particle/outragebreak_light_part_2.ani"
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 175,
+      "type": 6,
+      "raw": 43338896,
+      "value": "../Animation/OutRageBreak/particle/outragebreak_light_part_1.ani"
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 4294967295,
+      "value": -1
+    },
+    {
+      "offset": 185,
+      "type": 3,
+      "raw": 19630672,
+      "value": "[/object]"
+    }
+  ],
+  "raw_sha256": "1a7eb43e9bf4bb6f3f0247c1be252f7a026af8e40743e160e9b51d88f7c52763"
+}

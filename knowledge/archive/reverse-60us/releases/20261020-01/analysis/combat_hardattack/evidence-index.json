@@ -1,0 +1,77 @@
+{
+  "source": "DFO/DFO_fixed_v3.exe",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "evidence_kind": "read-only raw PE and Capstone; not REA provider Evidence or runtime observation",
+  "slices": [
+    {
+      "name": "state20_body_atk",
+      "va": "0x731f0c",
+      "file_offset": 3350284,
+      "size": 196,
+      "sha256": "de383952191877c7e8caa98fc8dc8c578e47c066470f55bfc0d44b7cbbf7edb6"
+    },
+    {
+      "name": "normal_effects",
+      "va": "0x7326f0",
+      "file_offset": 3352304,
+      "size": 251,
+      "sha256": "fae3c91f2e55f6852c259196d2e0580a7c1a2e4ab75952842d379819d465bf8e"
+    },
+    {
+      "name": "layer_wrapper",
+      "va": "0x4acf80",
+      "file_offset": 708480,
+      "size": 120,
+      "sha256": "142824d281e6ab59513c3e41f0915408d8ad1cec1c7ea24ef8899ade2d000b36"
+    },
+    {
+      "name": "layer_record_reset",
+      "va": "0x49b7b0",
+      "file_offset": 636848,
+      "size": 304,
+      "sha256": "35b980fcc62f45453babcb53358a3854568ae2fea15f5f0e577b5effbaffad67"
+    },
+    {
+      "name": "negative_layers_before_body",
+      "va": "0x49a359",
+      "file_offset": 631641,
+      "size": 130,
+      "sha256": "cf9abf95b68464bd3244c3b27fbde3a3e56879743cacd9df86f4d1c094b88a6d"
+    },
+    {
+      "name": "nonnegative_layers_after_body",
+      "va": "0x49a5b7",
+      "file_offset": 632247,
+      "size": 120,
+      "sha256": "e05eb14c6f709b6f4ec1d45780fc22c9776c78b3da7fe1754f1fd995445fd37b"
+    },
+    {
+      "name": "effect_image_rate_override",
+      "va": "0xa25900",
+      "file_offset": 6445312,
+      "size": 216,
+      "sha256": "b5869bac31ca86601dda0c92a23c9532fc5d75e2461d668d01ac94999fd51382"
+    }
+  ],
+  "strings": [
+    {
+      "va": "0xd7f6c0",
+      "offset": 9959104,
+      "encoding": "utf-16le",
+      "text": "Effect/Animation/HardAttack1.ani",
+      "raw_hex": "4500660066006500630074002f0041006e0069006d006100740069006f006e002f004800610072006400410074007400610063006b0031002e0061006e0069000000"
+    },
+    {
+      "va": "0xd7f678",
+      "offset": 9959032,
+      "encoding": "utf-16le",
+      "text": "Effect/Animation/HardAttack2.ani",
+      "raw_hex": "4500660066006500630074002f0041006e0069006d006100740069006f006e002f004800610072006400410074007400610063006b0032002e0061006e0069000000"
+    }
+  ],
+  "scale_constant": {
+    "va": "0xcc10ac",
+    "raw_hex": "0ad7233c",
+    "float32": 0.009999999776482582
+  }
+}

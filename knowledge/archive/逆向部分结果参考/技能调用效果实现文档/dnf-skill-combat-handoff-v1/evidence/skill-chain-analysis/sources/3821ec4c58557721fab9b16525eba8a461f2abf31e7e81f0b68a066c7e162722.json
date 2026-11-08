@@ -1,0 +1,732 @@
+{
+  "path": "character/swordman/effect/animation/outragebreak/sword_slash_stone.ani",
+  "fields": [
+    {
+      "tag": "[SHADOW]",
+      "values": [
+        0
+      ],
+      "offset": 0
+    },
+    {
+      "tag": "[FRAME MAX]",
+      "values": [
+        6
+      ],
+      "offset": 10
+    },
+    {
+      "tag": "[FRAME000]",
+      "values": [],
+      "offset": 20
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img",
+        6
+      ],
+      "offset": 25
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -390,
+        -280
+      ],
+      "offset": 40
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        128
+      ],
+      "offset": 55
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 80
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 90
+    },
+    {
+      "tag": "[FRAME001]",
+      "values": [],
+      "offset": 100
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img",
+        6
+      ],
+      "offset": 105
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -390,
+        -280
+      ],
+      "offset": 120
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 135
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 145
+    },
+    {
+      "tag": "[FRAME002]",
+      "values": [],
+      "offset": 155
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img",
+        6
+      ],
+      "offset": 160
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -390,
+        -280
+      ],
+      "offset": 175
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 190
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 200
+    },
+    {
+      "tag": "[FRAME003]",
+      "values": [],
+      "offset": 210
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img",
+        6
+      ],
+      "offset": 215
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -390,
+        -280
+      ],
+      "offset": 230
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 245
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 255
+    },
+    {
+      "tag": "[FRAME004]",
+      "values": [],
+      "offset": 265
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img",
+        6
+      ],
+      "offset": 270
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -390,
+        -280
+      ],
+      "offset": 285
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 300
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 310
+    },
+    {
+      "tag": "[FRAME005]",
+      "values": [],
+      "offset": 320
+    },
+    {
+      "tag": "[IMAGE]",
+      "values": [
+        "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img",
+        6
+      ],
+      "offset": 325
+    },
+    {
+      "tag": "[IMAGE POS]",
+      "values": [
+        -390,
+        -280
+      ],
+      "offset": 340
+    },
+    {
+      "tag": "[RGBA]",
+      "values": [
+        255,
+        255,
+        255,
+        128
+      ],
+      "offset": 355
+    },
+    {
+      "tag": "[INTERPOLATION]",
+      "values": [
+        1
+      ],
+      "offset": 380
+    },
+    {
+      "tag": "[DELAY]",
+      "values": [
+        100
+      ],
+      "offset": 390
+    }
+  ],
+  "tokens": [
+    {
+      "offset": 0,
+      "type": 3,
+      "raw": 4900,
+      "value": "[SHADOW]"
+    },
+    {
+      "offset": 5,
+      "type": 0,
+      "raw": 0,
+      "value": 0
+    },
+    {
+      "offset": 10,
+      "type": 3,
+      "raw": 2836,
+      "value": "[FRAME MAX]"
+    },
+    {
+      "offset": 15,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 20,
+      "type": 3,
+      "raw": 2860,
+      "value": "[FRAME000]"
+    },
+    {
+      "offset": 25,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 30,
+      "type": 6,
+      "raw": 3062890,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img"
+    },
+    {
+      "offset": 35,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 40,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 45,
+      "type": 0,
+      "raw": 4294966906,
+      "value": -390
+    },
+    {
+      "offset": 50,
+      "type": 0,
+      "raw": 4294967016,
+      "value": -280
+    },
+    {
+      "offset": 55,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 60,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 65,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 70,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 75,
+      "type": 0,
+      "raw": 128,
+      "value": 128
+    },
+    {
+      "offset": 80,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 85,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 90,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 95,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 100,
+      "type": 3,
+      "raw": 3052,
+      "value": "[FRAME001]"
+    },
+    {
+      "offset": 105,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 110,
+      "type": 6,
+      "raw": 3062890,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img"
+    },
+    {
+      "offset": 115,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 120,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 125,
+      "type": 0,
+      "raw": 4294966906,
+      "value": -390
+    },
+    {
+      "offset": 130,
+      "type": 0,
+      "raw": 4294967016,
+      "value": -280
+    },
+    {
+      "offset": 135,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 140,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 145,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 150,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 155,
+      "type": 3,
+      "raw": 3074,
+      "value": "[FRAME002]"
+    },
+    {
+      "offset": 160,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 165,
+      "type": 6,
+      "raw": 3062890,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img"
+    },
+    {
+      "offset": 170,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 175,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 180,
+      "type": 0,
+      "raw": 4294966906,
+      "value": -390
+    },
+    {
+      "offset": 185,
+      "type": 0,
+      "raw": 4294967016,
+      "value": -280
+    },
+    {
+      "offset": 190,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 195,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 200,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 205,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 210,
+      "type": 3,
+      "raw": 3096,
+      "value": "[FRAME003]"
+    },
+    {
+      "offset": 215,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 220,
+      "type": 6,
+      "raw": 3062890,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img"
+    },
+    {
+      "offset": 225,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 230,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 235,
+      "type": 0,
+      "raw": 4294966906,
+      "value": -390
+    },
+    {
+      "offset": 240,
+      "type": 0,
+      "raw": 4294967016,
+      "value": -280
+    },
+    {
+      "offset": 245,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 250,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 255,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 260,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 265,
+      "type": 3,
+      "raw": 3118,
+      "value": "[FRAME004]"
+    },
+    {
+      "offset": 270,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 275,
+      "type": 6,
+      "raw": 3062890,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img"
+    },
+    {
+      "offset": 280,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 285,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 290,
+      "type": 0,
+      "raw": 4294966906,
+      "value": -390
+    },
+    {
+      "offset": 295,
+      "type": 0,
+      "raw": 4294967016,
+      "value": -280
+    },
+    {
+      "offset": 300,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 305,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 310,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 315,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    },
+    {
+      "offset": 320,
+      "type": 3,
+      "raw": 3140,
+      "value": "[FRAME005]"
+    },
+    {
+      "offset": 325,
+      "type": 3,
+      "raw": 2882,
+      "value": "[IMAGE]"
+    },
+    {
+      "offset": 330,
+      "type": 6,
+      "raw": 3062890,
+      "value": "Character/Swordman/Effect/OutRageBreak/outragebreak_floor.img"
+    },
+    {
+      "offset": 335,
+      "type": 0,
+      "raw": 6,
+      "value": 6
+    },
+    {
+      "offset": 340,
+      "type": 3,
+      "raw": 3012,
+      "value": "[IMAGE POS]"
+    },
+    {
+      "offset": 345,
+      "type": 0,
+      "raw": 4294966906,
+      "value": -390
+    },
+    {
+      "offset": 350,
+      "type": 0,
+      "raw": 4294967016,
+      "value": -280
+    },
+    {
+      "offset": 355,
+      "type": 3,
+      "raw": 6716,
+      "value": "[RGBA]"
+    },
+    {
+      "offset": 360,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 365,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 370,
+      "type": 0,
+      "raw": 255,
+      "value": 255
+    },
+    {
+      "offset": 375,
+      "type": 0,
+      "raw": 128,
+      "value": 128
+    },
+    {
+      "offset": 380,
+      "type": 3,
+      "raw": 45414,
+      "value": "[INTERPOLATION]"
+    },
+    {
+      "offset": 385,
+      "type": 0,
+      "raw": 1,
+      "value": 1
+    },
+    {
+      "offset": 390,
+      "type": 3,
+      "raw": 3036,
+      "value": "[DELAY]"
+    },
+    {
+      "offset": 395,
+      "type": 0,
+      "raw": 100,
+      "value": 100
+    }
+  ],
+  "raw_sha256": "3821ec4c58557721fab9b16525eba8a461f2abf31e7e81f0b68a066c7e162722"
+}

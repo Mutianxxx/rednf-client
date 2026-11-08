@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!--文本编辑器 => 代码智能提示
+    此功能由：@半斤橙子 构思并协助编写配置文件！
+                            by:@美国的华莱士 2022.8.6 
+    独立掉落的：[independent drop] 副本接口的：副本接口解析 不用编写 由程序自动完成
+    参数说明：
+    File="要处理的文件名" *.xxx=此类扩展名的所有文件 XXX/XXX.XXX表示仅处理该文件
+    SectionName="要处理的代码所属标签" 
+    ParentSectionName="当前代码所属标签的父标签" 例如：↓↓↓↓
+    LstFileName="当前代码所属.lst名称 非文件名 打开lst管理器 左侧列表的名称就是 多个lst使用,隔开" 
+    Description="描述 说明"
+    IgnoreItemCode="要忽略的代码 例：0,1 则忽略代码0和1" 
+    Index="当前代码的列索引位置" 行： 5888 6888 7888 //Index="1" 则表示只处理 6888  //Index="0,2"则表示只处理5888 7888 
+    StartIndex="从开始位置起到结束" StartIndex 必须使用：<SectionRange />-->
+<root>
+		<File FileName="*.act">
+				<Section SectionName="[Test]" LstFileName="monster" Description="怪物" ParentSectionName="[SUMMON MONSTER]" />
+				<Section SectionName="[Index]" LstFileName="monster" Description="怪物" ParentSectionName="[SUMMON MONSTER]" />
+				<Section SectionName="[Index]" LstFileName="aicharacter" Description="APC" ParentSectionName="[SUMMON APC]" />
+		</File>
+		<File FileName="*.equ">
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/swordman" Description="鬼剑士技能">
+						<ValidationSection Name="[skill data up]" Value="`[swordman]`" Index="0" CurrentLine="True" />
+				</Section>
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/fighter" Description="格斗家(女)技能">
+						<ValidationSection Name="[skill data up]" Value="`[fighter]`" Index="0" CurrentLine="True" />
+				</Section>
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/gunner" Description="神枪手(男)技能">
+						<ValidationSection Name="[skill data up]" Value="`[gunner]`" Index="0" CurrentLine="True" />
+				</Section>
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/mage" Description="魔法师(女)技能">
+						<ValidationSection Name="[skill data up]" Value="`[mage]`" Index="0" CurrentLine="True" />
+				</Section>
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/priest" Description="圣职者技能">
+						<ValidationSection Name="[skill data up]" Value="`[priest]`" Index="0" CurrentLine="True" />
+				</Section>
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/atgunner" Description="神枪手(女)技能">
+						<ValidationSection Name="[skill data up]" Value="`[at gunner]`" Index="0" CurrentLine="True" />
+				</Section>
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/atfighter" Description="格斗家(男)技能">
+						<ValidationSection Name="[skill data up]" Value="`[at fighter]`" Index="0" CurrentLine="True" />
+				</Section>
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/atmage" Description="魔法师(男)技能">
+						<ValidationSection Name="[skill data up]" Value="`[at mage]`" Index="0" CurrentLine="True" />
+				</Section>
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/thief" Description="暗夜使者技能">
+						<ValidationSection Name="[skill data up]" Value="`[thief]`" Index="0" CurrentLine="True" />
+				</Section>
+				<Section SectionName="[skill data up]" Index="1" LstFileName="skill/thief" Description="暗夜使者技能（兼容原始拼写）">
+						<ValidationSection Name="[skill data up]" Value="`[theif]`" Index="0" CurrentLine="True" />
+				</Section>
+		</File>
+		<File FileName="etc/newcashshop.etc">
+				<Section SectionName="[avatar]" Index="1,7" LstFileName="equipment" Description="时装" />
+		</File>
+		<File FileName="*.dgn">
+				<Section SectionName="[quest connection]" Index="1" LstFileName="n_quest" Description="任务" />
+				<Section SectionName="[common monster item drop list]" LstFileName="stackable,equipment" Description="道具/装备" />
+				<Section SectionName="[common champion item drop list]" LstFileName="stackable,equipment" Description="道具/装备" />
+				<Section SectionName="[super champion item drop list]" LstFileName="stackable,equipment" Description="道具/装备" />
+				<Section SectionName="[boss item drop list]" LstFileName="stackable,equipment" Description="道具/装备" />
+				<Section SectionName="[spawn common monster index]" LstFileName="monster" Description="怪物" />
+				<Section SectionName="[spawn common champion index]" LstFileName="monster" Description="怪物" />
+				<Section SectionName="[spawn super champion index]" LstFileName="monster" Description="怪物" />
+				<Section SectionName="[spawn boss index]" LstFileName="monster" Description="怪物" />
+				<Section SectionName="[required item]" Index="0" LstFileName="stackable,equipment" Description="进图门票" IgnoreItemCode="65535" />
+				<Section SectionName="[pathgate object]" LstFileName="passiveobject" Description="对象" />
+				<Section SectionName="[item]" Index="0" LstFileName="stackable,equipment" Description="通关掉落物品" />
+				<SectionGroup SectionName="[clear reward item]">
+						<Index Value="0" LstFileName="dungeon" Description="副本" />
+						<Index Value="2" LstFileName="stackable,equipment" Description="物品/装备" />
+				</SectionGroup>
+				<SectionRange SectionName="[map specification]" StartIndex="2" LstFileName="map" Description="map" />
+		</File>
+		<File FileName="*.map">
+				<Section SectionName="[npc]" Index="0" LstFileName="npc" Description="NPC" />
+				<Section SectionName="[dungeon]" LstFileName="dungeon" Description="副本" />
+				<Section SectionName="[monster]" Index="0" LstFileName="monster" Description="怪物" />
+				<Section SectionName="[ai character]" Index="0" LstFileName="aicharacter" Description="APC" />
+				<Section SectionName="[passive object]" Index="0" LstFileName="passiveobject" Description="对象" />
+		</File>
+		<File FileName="*.mm">
+				<Section SectionName="[index]" LstFileName="worldmap" Description="副本接口" ParentSectionName="[world]" />
+				<Section SectionName="[index]" LstFileName="npc" Description="NPC" ParentSectionName="[npc]" />
+				<Section SectionName="[index]" LstFileName="wown" Description="城镇" ParentSectionName="[town]" />
+		</File>
+		<File FileName="*.mob">
+				<Section SectionName="[item]" LstFileName="stackable,equipment" Description="道具/装备" />
+		</File>
+		<File FileName="*.qst">
+				<Section SectionName="[npc index]" LstFileName="npc" Description="NPC" />
+				<Section SectionName="[complete npc index]" LstFileName="npc" Description="NPC" />
+				<Section SectionName="[pre required quest]" LstFileName="n_quest" Description="任务" />
+				<Section SectionName="[relation quest]" LstFileName="n_quest" Description="任务" />
+				<Section SectionName="[collision quest]" LstFileName="n_quest" Description="任务" />
+				<Section SectionName="[delete npc index]" LstFileName="npc" Description="NPC" />
+				<Section SectionName="[limit dungeon index]" LstFileName="dungeon" Description="副本" />
+				<SectionGroup SectionName="[appear map]">
+						<Index Value="0" LstFileName="dungeon" Description="副本" />
+						<Index Value="2" LstFileName="map" Description="地图" />
+				</SectionGroup>
+				<Section SectionName="[depend give item]" Index="0" LstFileName="stackable,equipment" Description="物品/装备" />
+				<Section SectionName="[dungeon info]" Index="0" LstFileName="dungeon" Description="副本" />
+				<Section SectionName="[reward int data]" Index="0" LstFileName="stackable,equipment" Description="物品/装备" />
+				<Section SectionName="[reward selection int data]" Index="0" LstFileName="stackable,equipment" Description="物品/装备" />
+				<Section SectionName="[mail enclose]" Index="0" LstFileName="stackable,equipment" Description="邮件附件物品/装备" />
+				<Section SectionName="[int data]" Index="0" LstFileName="stackable,equipment" Description="物品/装备">
+						<ValidationSection Name="[type]" Value="`[seeking]`" />
+				</Section>
+				<Section SectionName="[int data]" Index="0" LstFileName="dungeon" Description="副本">
+						<ValidationSection Name="[type]" Value="`[condition under clear]`" />
+				</Section>
+				<SectionGroup SectionName="[int data]">
+						<Index Value="0" LstFileName="dungeon" Description="副本" />
+						<Index Value="2" LstFileName="monster" Description="怪物" />
+						<ValidationSection Name="[type]" Value="`[hunt monster]`" />
+				</SectionGroup>
+				<SectionGroup SectionName="[int data]">
+						<Index Value="0" LstFileName="dungeon" Description="副本" />
+						<Index Value="2" LstFileName="monster,aicharacter,passiveobject" Description="怪物/APC/对象" />
+						<ValidationSection Name="[sub type]" Value="0" />
+						<ValidationSection Name="[type]" Value="`[clear map]`" />
+				</SectionGroup>
+				<SectionGroup SectionName="[int data]">
+						<Index Value="0" LstFileName="dungeon" Description="副本" />
+						<Index Value="2" LstFileName="monster,aicharacter,passiveobject" Description="怪物/APC/对象" />
+						<ValidationSection Name="[type]" Value="`[hunt enemy]`" />
+				</SectionGroup>
+				<SectionGroup SectionName="[monster reward item]">
+						<Index Value="0" LstFileName="monster" Description="怪物" />
+						<Index Value="1" LstFileName="dungeon" Description="副本" />
+						<Index Value="3" LstFileName="stackable,equipment" Description="物品/装备" />
+				</SectionGroup>
+				<SectionGroup SectionName="[clear reward item]">
+						<Index Value="0" LstFileName="dungeon" Description="副本" />
+						<Index Value="2" LstFileName="stackable,equipment" Description="物品/装备" />
+				</SectionGroup>
+				<SectionGroup SectionName="[enemy reward item]">
+						<Index Value="0" LstFileName="monster,aicharacter,passiveobject" Description="怪物/APC/对象" />
+						<Index Value="2" LstFileName="dungeon" Description="副本" />
+						<Index Value="4" LstFileName="stackable,equipment" Description="物品/装备" />
+				</SectionGroup>
+				<SectionGroup SectionName="[dialog]">
+						<Index Value="2" LstFileName="dungeon,map" Description="副本/地图" />
+						<Index Value="5" LstFileName="monster,aicharacter" Description="怪物/APC" />
+				</SectionGroup>
+		</File>
+		<File FileName="clientonly/skilltree/atfighter_*.co">
+				<Section SectionName="[index]" LstFileName="skill/atfighter" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/atfighter" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/atfighter" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/atgunner_*.co">
+				<Section SectionName="[index]" LstFileName="skill/atgunner" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/atgunner" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/atgunner" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/atmage_*.co">
+				<Section SectionName="[index]" LstFileName="skill/atmage" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/atmage" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/atmage" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/creator_*.co">
+				<Section SectionName="[index]" LstFileName="skill/creatormage" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/creatormage" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/creatormage" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/demonicswordman_*.co">
+				<Section SectionName="[index]" LstFileName="skill/demonicswordman" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/demonicswordman" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/demonicswordman" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/fighter_*.co">
+				<Section SectionName="[index]" LstFileName="skill/fighter" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/fighter" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/fighter" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/gunner_*.co">
+				<Section SectionName="[index]" LstFileName="skill/gunner" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/gunner" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/gunner" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/mage_*.co">
+				<Section SectionName="[index]" LstFileName="skill/mage" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/mage" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/mage" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/priest_*.co">
+				<Section SectionName="[index]" LstFileName="skill/priest" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/priest" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/priest" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/swordman_*.co">
+				<Section SectionName="[index]" LstFileName="skill/swordman" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/swordman" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/swordman" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="clientonly/skilltree/thief_*.co">
+				<Section SectionName="[index]" LstFileName="skill/thief" Description="技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[next skill]" LstFileName="skill/thief" Description="后续技能" ParentSectionName="[skill info]" />
+				<Section SectionName="[index]" LstFileName="skill/thief" Description="公共技能" ParentSectionName="[common skill]" />
+		</File>
+		<File FileName="*.shp">
+				<Section SectionName="[NPC]" LstFileName="npc" Description="NPC" />
+				<Section SectionName="[sell item]" LstFileName="stackable,equipment" Description="物品/装备" />
+		</File>
+		<File FileName="*.skl">
+				<Section SectionName="[consume item]" Index="0" LstFileName="stackable,equipment" Description="消耗物品/装备" />
+		</File>
+		<File FileName="*.stk">
+				<Section SectionName="[etc]" Index="0" LstFileName="stackable,equipment" Description="物品/装备" ParentSectionName="[booster select category]" />
+				<Section SectionName="[etc]" Index="0" LstFileName="stackable,equipment" Description="物品/装备2" ParentSectionName="[booster info]" />
+				<Section SectionName="[equipment]" Index="0" LstFileName="equipment" Description="装备" ParentSectionName="[booster select category]" />
+				<Section SectionName="[stackable]" Index="0" LstFileName="stackable" Description="道具" ParentSectionName="[booster select category]" />
+				<Section SectionName="[avatar]" Index="0" LstFileName="equipment" Description="时装" ParentSectionName="[booster select category]" />
+				<Section SectionName="[A condition item]" Index="0,2,4,6,8,10,12,14,16,18" LstFileName="stackable,equipment" Description="条件物品/装备" />
+				<Section SectionName="[B condition item]" Index="0" LstFileName="stackable,equipment" Description="条件物品/装备" />
+				<Section SectionName="[result item]" Index="0" LstFileName="stackable,equipment" Description="结果物品/装备" />
+				<Section SectionName="[package data]" Index="0,2,4,6,8,10,12,14,16,18" LstFileName="stackable,equipment" Description="包含物品/装备" />
+				<Section SectionName="[need material]" Index="0" LstFileName="stackable,equipment" Description="购买所需物品/装备" />
+				<Section SectionName="[sealing removal item]" Index="0" LstFileName="stackable,equipment" Description="开启所需物品/装备" />
+		</File>
+		<File FileName="*.wdm">
+				<SectionGroup SectionName="[dungeon]">
+						<Index Value="0" LstFileName="dungeon" Description="副本" />
+						<Index Value="1" LstFileName="n_quest" Description="任务" />
+						<Index Value="2" LstFileName="n_quest" Description="任务" />
+				</SectionGroup>
+				<Section SectionName="[item condition]" Index="0" LstFileName="stackable,equipment" Description="进入所需物品/装备" />
+				<Section SectionName="[hell freepass item]" Index="0" LstFileName="stackable,equipment" Description="深渊门票物品/装备" />
+				<Section SectionName="[hell quest]" LstFileName="n_quest" Description="任务" />
+		</File>
+		<File FileName="etc/worlddrop.etc">
+				<Section SectionName="[world drop]" Index="0" LstFileName="stackable,equipment" Description="物品/装备 妈咪妈咪哄" />
+		</File>
+</root>

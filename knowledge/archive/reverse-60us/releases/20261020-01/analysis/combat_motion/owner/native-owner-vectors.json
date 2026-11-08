@@ -1,0 +1,2231 @@
+{
+  "kind": "relocated original owner decision instructions in synthetic PE32; not DFO runtime capture",
+  "source_sha256": "a3177551b8f7373e042865b0e99022e24e6ffd47298299a50dc97fec5254745b",
+  "harness_sha256": "11ec0e284f658a8697fb61b8ace21186fb129461b8c2650fa7c9f738316277ef",
+  "output_sha256": "41c1032c650ec6e756a8b4a1636a3db64366deb9208b0e2c8ff11ac03db24fe0",
+  "matches": 74,
+  "mismatches": 0,
+  "vectors": [
+    {
+      "name": "z_-2147483648",
+      "expected": false,
+      "kind": "z",
+      "inputs": {
+        "z": -2147483648
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "z_-1",
+      "expected": false,
+      "kind": "z",
+      "inputs": {
+        "z": -1
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "z_0",
+      "expected": true,
+      "kind": "z",
+      "inputs": {
+        "z": 0
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "z_1",
+      "expected": true,
+      "kind": "z",
+      "inputs": {
+        "z": 1
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "z_2147483647",
+      "expected": true,
+      "kind": "z",
+      "inputs": {
+        "z": 2147483647
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile0_layer0_scalar0",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile0_layer1_scalar0",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile0_layer2_scalar0",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 2,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile1_layer0_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 1,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile1_layer0_scalar1",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 1,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 1,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile1_layer1_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 1,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile1_layer1_scalar1",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 1,
+          "scalar21c": 1,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 1,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile1_layer2_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 2,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 1,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile1_layer2_scalar1",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 2,
+          "scalar21c": 1,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 1,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile2_layer0_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 2,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile2_layer1_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 2,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile2_layer2_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 2,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 2,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile3_layer0_scalar0",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 3,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile3_layer1_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 3,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile3_layer2_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 2,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 3,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile4_layer0_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 4,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile4_layer1_scalar0",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 4,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile4_layer2_scalar0",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 2,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 4,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "tile5_layer0_scalar0",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 5,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile5_layer1_scalar0",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 5,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "tile5_layer2_scalar0",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 2,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 5,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "negative_x",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": -1,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "negative_y",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": -1,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "upper_x_equal",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 224,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "upper_y_equal",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 120,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "last_center_inside",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 223,
+          "y": 119,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "no_bounds_class_outside",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": -1,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 0,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "mask21_bounds_off",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": -1,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "mask21_bounds_on",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": -1,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 0,
+          "data_bounds1d": true,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 0,
+        "rectangle": null
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "zero_footprint_blocked_tile",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 0,
+          "height": 0,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 2,
+        "rectangle": null
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "rect_center_inside_overrides_tile2",
+      "expected": true,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 2,
+        "rectangle": [
+          60,
+          50,
+          10,
+          20
+        ]
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "rect_upper_x_exclusive",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 2,
+        "rectangle": [
+          54,
+          50,
+          10,
+          20
+        ]
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "rect_center_outside",
+      "expected": false,
+      "kind": "terrain",
+      "inputs": {
+        "owner": {
+          "x": 64,
+          "y": 60,
+          "z": 0,
+          "width": 8,
+          "height": 8,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false,
+          "appendages": [],
+          "ignore4d4": []
+        },
+        "tile": 2,
+        "rectangle": [
+          0,
+          0,
+          10,
+          10
+        ]
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_neither_mask21",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_no_xy_overlap",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 100,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_touching_bounds",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 60,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_zero_width",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 0,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_ignores_z",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 1000,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": -1000,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type0_layer0",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type0_layer1",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type1_layer0",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 1,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type1_layer1",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 1,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type2_layer0",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type2_layer1",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type3_layer0",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 3,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type3_layer1",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 3,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type4_layer0",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 4,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type4_layer1",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 4,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type5_layer0",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 5,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type5_layer1",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 1,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 5,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type1_actor_scalar0",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 1,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_other_type1_actor_scalar1",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 1,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 1,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_other_ignore_contains_actor",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 0,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": true
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "pair_self_type2",
+      "expected": true,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": false,
+        "b_ignores_a": false
+      },
+      "native": true,
+      "matches": true
+    },
+    {
+      "name": "pair_self_type2_ignore",
+      "expected": false,
+      "kind": "pair",
+      "inputs": {
+        "a": {
+          "x": 50,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 33,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "b": {
+          "x": 55,
+          "y": 50,
+          "z": 0,
+          "width": 10,
+          "height": 10,
+          "layer498": 0,
+          "scalar21c": 0,
+          "class_mask_e4": 17,
+          "data_type8": 2,
+          "data_bounds1d": false,
+          "native_state": 22,
+          "status16_active": false,
+          "appendage_scan_flag184": false
+        },
+        "a_ignores_b": true,
+        "b_ignores_a": false
+      },
+      "native": false,
+      "matches": true
+    },
+    {
+      "name": "status16_state22_empty",
+      "expected": {
+        "allowed": false,
+        "delegated": false
+      },
+      "kind": "wrapper",
+      "inputs": {
+        "native_state": 22,
+        "status16_active": true,
+        "scan_flag184": false,
+        "entries": []
+      },
+      "native": {
+        "allowed": false,
+        "delegated": false
+      },
+      "matches": true
+    },
+    {
+      "name": "status16_state5_empty",
+      "expected": {
+        "allowed": true,
+        "delegated": false
+      },
+      "kind": "wrapper",
+      "inputs": {
+        "native_state": 5,
+        "status16_active": true,
+        "scan_flag184": false,
+        "entries": []
+      },
+      "native": {
+        "allowed": true,
+        "delegated": false
+      },
+      "matches": true
+    },
+    {
+      "name": "status16_off_delegates",
+      "expected": {
+        "allowed": true,
+        "delegated": true
+      },
+      "kind": "wrapper",
+      "inputs": {
+        "native_state": 22,
+        "status16_active": false,
+        "scan_flag184": false,
+        "entries": []
+      },
+      "native": {
+        "allowed": true,
+        "delegated": true
+      },
+      "matches": true
+    },
+    {
+      "name": "webpull_active_delegates",
+      "expected": {
+        "allowed": true,
+        "delegated": true
+      },
+      "kind": "wrapper",
+      "inputs": {
+        "native_state": 22,
+        "status16_active": true,
+        "scan_flag184": true,
+        "entries": [
+          [
+            true,
+            true,
+            true
+          ]
+        ]
+      },
+      "native": {
+        "allowed": true,
+        "delegated": true
+      },
+      "matches": true
+    },
+    {
+      "name": "webpull_inactive_final_pointer_delegates",
+      "expected": {
+        "allowed": true,
+        "delegated": true
+      },
+      "kind": "wrapper",
+      "inputs": {
+        "native_state": 22,
+        "status16_active": true,
+        "scan_flag184": true,
+        "entries": [
+          [
+            true,
+            true,
+            false
+          ]
+        ]
+      },
+      "native": {
+        "allowed": true,
+        "delegated": true
+      },
+      "matches": true
+    },
+    {
+      "name": "later_failed_cast_clears_pointer",
+      "expected": {
+        "allowed": false,
+        "delegated": false
+      },
+      "kind": "wrapper",
+      "inputs": {
+        "native_state": 22,
+        "status16_active": true,
+        "scan_flag184": true,
+        "entries": [
+          [
+            true,
+            true,
+            false
+          ],
+          [
+            true,
+            false,
+            false
+          ]
+        ]
+      },
+      "native": {
+        "allowed": false,
+        "delegated": false
+      },
+      "matches": true
+    },
+    {
+      "name": "foreign_owner_does_not_clear_pointer",
+      "expected": {
+        "allowed": true,
+        "delegated": true
+      },
+      "kind": "wrapper",
+      "inputs": {
+        "native_state": 22,
+        "status16_active": true,
+        "scan_flag184": true,
+        "entries": [
+          [
+            true,
+            true,
+            false
+          ],
+          [
+            false,
+            false,
+            false
+          ]
+        ]
+      },
+      "native": {
+        "allowed": true,
+        "delegated": true
+      },
+      "matches": true
+    },
+    {
+      "name": "active_break_ignores_later_failed_cast",
+      "expected": {
+        "allowed": true,
+        "delegated": true
+      },
+      "kind": "wrapper",
+      "inputs": {
+        "native_state": 22,
+        "status16_active": true,
+        "scan_flag184": true,
+        "entries": [
+          [
+            true,
+            true,
+            true
+          ],
+          [
+            true,
+            false,
+            false
+          ]
+        ]
+      },
+      "native": {
+        "allowed": true,
+        "delegated": true
+      },
+      "matches": true
+    },
+    {
+      "name": "response_axis0_live0_detour-1_attachments2",
+      "expected": {
+        "attachments": 2,
+        "detours": 0
+      },
+      "kind": "response",
+      "inputs": {
+        "axis": 0,
+        "live_x": false,
+        "live_y": false,
+        "detour": -1,
+        "attachments": 2
+      },
+      "native": {
+        "attachments": 2,
+        "detours": 0
+      },
+      "matches": true
+    },
+    {
+      "name": "response_axis0_live1_detour-1_attachments2",
+      "expected": {
+        "attachments": 2,
+        "detours": 1
+      },
+      "kind": "response",
+      "inputs": {
+        "axis": 0,
+        "live_x": true,
+        "live_y": true,
+        "detour": -1,
+        "attachments": 2
+      },
+      "native": {
+        "attachments": 2,
+        "detours": 1
+      },
+      "matches": true
+    },
+    {
+      "name": "response_axis1_live1_detour-1_attachments1",
+      "expected": {
+        "attachments": 1,
+        "detours": 1
+      },
+      "kind": "response",
+      "inputs": {
+        "axis": 1,
+        "live_x": true,
+        "live_y": true,
+        "detour": -1,
+        "attachments": 1
+      },
+      "native": {
+        "attachments": 1,
+        "detours": 1
+      },
+      "matches": true
+    },
+    {
+      "name": "response_axis2_live1_detour-1_attachments2",
+      "expected": {
+        "attachments": 2,
+        "detours": 0
+      },
+      "kind": "response",
+      "inputs": {
+        "axis": 2,
+        "live_x": true,
+        "live_y": true,
+        "detour": -1,
+        "attachments": 2
+      },
+      "native": {
+        "attachments": 2,
+        "detours": 0
+      },
+      "matches": true
+    },
+    {
+      "name": "response_axis-1_live1_detour-1_attachments0",
+      "expected": {
+        "attachments": 0,
+        "detours": 0
+      },
+      "kind": "response",
+      "inputs": {
+        "axis": -1,
+        "live_x": true,
+        "live_y": true,
+        "detour": -1,
+        "attachments": 0
+      },
+      "native": {
+        "attachments": 0,
+        "detours": 0
+      },
+      "matches": true
+    },
+    {
+      "name": "response_axis0_live1_detour1_attachments2",
+      "expected": {
+        "attachments": 2,
+        "detours": 0
+      },
+      "kind": "response",
+      "inputs": {
+        "axis": 0,
+        "live_x": true,
+        "live_y": true,
+        "detour": 1,
+        "attachments": 2
+      },
+      "native": {
+        "attachments": 2,
+        "detours": 0
+      },
+      "matches": true
+    }
+  ],
+  "scope": [
+    "4AC100 signed z predicate",
+    "485950 complete bounds/rect/grid decision function + original8ADAB0",
+    "4EB600 original pair predicate,4E81D0 bounds,4EB1D0 list membership,484670 scalar check",
+    "4B00F0 original wrapper decision function with fixture status/cast/delegate callbacks",
+    "4B97B0 and4E8A30 original response wrapper call gates"
+  ],
+  "fixtures": [
+    "virtual getters return supplied synthetic x/y/footprint/layer/scalar/data values",
+    "terrain lookup is a uniform tile fixture, not original485580 storage",
+    "map shape helpers return fixture dimensions; two objects share a synthetic vtable",
+    "attachments record calls; detour+57C records calls without its implementation"
+  ]
+}

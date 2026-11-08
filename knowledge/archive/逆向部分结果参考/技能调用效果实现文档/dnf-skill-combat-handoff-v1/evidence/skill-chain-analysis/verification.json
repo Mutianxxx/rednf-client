@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "raw_sample_ranges_rehashed": 15,
+  "original_raw_hashes_match": true,
+  "version_bound_module_hash_matches": true,
+  "verified_spawn_chains": 13,
+  "descriptor_50_matches_labelled_skill_list_id": 13,
+  "excluded_skill_contributes_no_behavior_edges": true,
+  "source_members_archived_and_hashed": 157,
+  "source_images_with_archive_candidates": 62,
+  "source_images_total": 62,
+  "npk_directory_errors": 0,
+  "normal_skill_lifecycle_fully_recovered": false,
+  "scope": "Evidence consistency and reproducibility; not original-client visual acceptance or full controller recovery"
+}
