@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--build-dir',type=Path,default=ROOT/'cache/refactor-build')
+    parser.add_argument('--build-dir',type=Path,default=ROOT.parent/'checkpoints/build')
     args=parser.parse_args()
     ownership=json.loads((ROOT/'cmake/source-ownership.json').read_text(encoding='utf-8'))
     values=list(ownership.values());actual={p.relative_to(ROOT).as_posix() for p in (ROOT/'src').rglob('*.cpp')}

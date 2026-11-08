@@ -10,7 +10,7 @@ def digest(path):
     with path.open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
 
 def main():
-    build=PROJECT/'cache/refactor-build'
+    build=ROOT/'checkpoints/build'
     verification=json.loads((build/'build-verification.json').read_text(encoding='utf-8'))
     if verification['status']!='pass':raise RuntimeError('Full automated verification must pass before checkpoint')
     for name,expected in verification['sources'].items():
@@ -31,7 +31,7 @@ def main():
     if audit.get('identity')!=verification['test_content_identity']:
         raise RuntimeError('Application audit used a different content identity')
     stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
-    out=PROJECT/'checkpoints'/(stamp+'-architecture-A0-A2a')
+    out=ROOT/'checkpoints'/(stamp+'-architecture-A0-A2a')
     out.mkdir(parents=True,exist_ok=False)
     (out/'INCOMPLETE').write_text('Checkpoint not yet verified\n',encoding='utf-8')
     rows=[]

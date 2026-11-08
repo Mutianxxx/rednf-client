@@ -1,49 +1,66 @@
 """Launch the skill previewer, locating its executable across build directories.
 
-The previewer is a CMake target, so its binary can live in any ``cache/*-build``
-directory depending on which ``--build-dir`` was last used. Resolving that here
-keeps ``Play-Skill-Preview.cmd`` a three-line shell instead of a batch file full
-of ``if exist`` branches, which cmd.exe mis-parses once the file contains
+The previewer is a CMake target, so its binary can live in any build directory
+depending on which ``--build-dir`` was last used. Resolving that here keeps
+``Play-Skill-Preview.cmd`` a three-line shell instead of a batch file full of
+``if exist`` branches, which cmd.exe mis-parses once the file contains
 non-ASCII text under a non-UTF-8 code page.
+
+Search order: the repository-level ``checkpoints/build`` release directory first,
+then the legacy ``project/cache/*-build`` directories.
 """
 from __future__ import annotations
 
 import argparse
+import os
 import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+REPO = ROOT.parent
 EXE_NAME = "dnf_skill_previewer.exe"
-# Preferred order: the documented build directory first, then the directory the
-# previewer was originally developed against.
-PREFERRED = ("cache/refactor-build", "cache/skill-previewer-build")
 REQUIRED_DLLS = ("SDL2.dll",)
+
+
+def display(path: Path) -> str:
+    """Path relative to project/ when possible, otherwise repository-relative."""
+    try:
+        return path.relative_to(ROOT).as_posix()
+    except ValueError:
+        return os.path.relpath(path, ROOT)
+
+
+def candidate_directories() -> list[Path]:
+    return [REPO / "checkpoints" / "build", ROOT / "cache" / "refactor-build", ROOT / "cache" / "skill-previewer-build"]
 
 
 def locate_executable() -> tuple[Path | None, list[str]]:
     """Return the newest usable executable and a log of what was inspected."""
     notes: list[str] = []
     candidates: list[Path] = []
-    for relative in PREFERRED:
-        candidate = ROOT / relative / EXE_NAME
+    for directory in candidate_directories():
+        candidate = directory / EXE_NAME
         if candidate.is_file():
             candidates.append(candidate)
         else:
-            notes.append(f"missing: {candidate.relative_to(ROOT)}")
+            notes.append(f"missing: {display(candidate)}")
     if not candidates:
-        for candidate in sorted((ROOT / "cache").rglob(EXE_NAME)):
-            if candidate.is_file():
-                candidates.append(candidate)
+        for search_root in (REPO / "checkpoints", ROOT / "cache"):
+            if not search_root.is_dir():
+                continue
+            for candidate in sorted(search_root.rglob(EXE_NAME)):
+                if candidate.is_file():
+                    candidates.append(candidate)
         if candidates:
-            notes.append(f"found {len(candidates)} candidate(s) by scanning cache/")
+            notes.append(f"found {len(candidates)} candidate(s) by scanning checkpoints/ and cache/")
         else:
-            notes.append("no executable found under cache/")
+            notes.append("no executable found under checkpoints/ or cache/")
     if not candidates:
         return None, notes
     # Newest wins so a fresh incremental build is never shadowed by an old one.
     chosen = max(candidates, key=lambda item: item.stat().st_mtime)
-    notes.append(f"selected {chosen.relative_to(ROOT)}")
+    notes.append(f"selected {display(chosen)}")
     return chosen, notes
 
 
@@ -57,15 +74,15 @@ def main(argv: list[str]) -> int:
         if known.dry_run:
             print(f"[skill-previewer] {note}")
     if executable is None:
-        print("[skill-previewer] dnf_skill_previewer.exe was not found under cache/.", file=sys.stderr)
+        print("[skill-previewer] dnf_skill_previewer.exe was not found.", file=sys.stderr)
         print("[skill-previewer] Build it first:", file=sys.stderr)
-        print("    python tools\\build.py --build-dir cache\\refactor-build", file=sys.stderr)
+        print("    python tools\\build.py --build-dir ..\\checkpoints\\build", file=sys.stderr)
         return 1
 
     missing = [name for name in REQUIRED_DLLS if not (executable.parent / name).is_file()]
     if missing:
         print(
-            f"[skill-previewer] {executable.relative_to(ROOT)} is missing runtime DLLs: "
+            f"[skill-previewer] {display(executable)} is missing runtime DLLs: "
             + ", ".join(missing)
             + ". Rebuild so the POST_BUILD copy runs.",
             file=sys.stderr,
@@ -85,7 +102,7 @@ def main(argv: list[str]) -> int:
         str(ROOT / "reports" / "skill-previewer"),
         *forwarded,
     ]
-    print(f"[skill-previewer] {executable.relative_to(ROOT)}")
+    print(f"[skill-previewer] {display(executable)}")
     if known.dry_run:
         print("[skill-previewer] " + " ".join(f'"{part}"' for part in command))
         return 0

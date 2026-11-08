@@ -20,7 +20,8 @@ goto :done
 
 :fallback
 set "EXE="
-if exist "cache\refactor-build\dnf_skill_previewer.exe" set "EXE=%CD%\cache\refactor-build\dnf_skill_previewer.exe"
+if exist "..\checkpoints\build\dnf_skill_previewer.exe" set "EXE=%CD%\..\checkpoints\build\dnf_skill_previewer.exe"
+if not defined EXE if exist "cache\refactor-build\dnf_skill_previewer.exe" set "EXE=%CD%\cache\refactor-build\dnf_skill_previewer.exe"
 if not defined EXE if exist "cache\skill-previewer-build\dnf_skill_previewer.exe" set "EXE=%CD%\cache\skill-previewer-build\dnf_skill_previewer.exe"
 if not defined EXE goto :nobuild
 "%EXE%" --content-profile "%CD%\content-profile.json" --report-dir "%CD%\reports\skill-previewer" %*
@@ -28,9 +29,9 @@ set "EXITCODE=%errorlevel%"
 goto :done
 
 :nobuild
-echo [skill-previewer] No usable python and no built previewer under cache\.
+echo [skill-previewer] No usable python and no built previewer.
 echo [skill-previewer] Build it first:
-echo     python tools\build.py --build-dir cache\refactor-build
+echo     python tools\build.py --build-dir ..\checkpoints\build
 set "EXITCODE=1"
 
 :done

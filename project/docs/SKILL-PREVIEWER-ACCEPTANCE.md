@@ -16,11 +16,11 @@ Play-Skill-Preview.cmd
 或直接：
 
 ```
-cache\refactor-build\dnf_skill_previewer.exe --content-profile content-profile.json
+..\checkpoints\build\dnf_skill_previewer.exe --content-profile content-profile.json
 ```
 
 `Play-Skill-Preview.cmd` 是纯 ASCII + CRLF 外壳，调用 `tools\play_skill_preview.py`
-在 `cache\**` 里找最新的 `dnf_skill_previewer.exe`。中文提示只出现在 python / C++，
+优先找 `..\checkpoints\build\`，其次 `cache\**` 里最新的 `dnf_skill_previewer.exe`。中文提示只出现在 python / C++，
 `.cmd` 里出现 UTF-8 中文会让 cmd.exe 解析错位（`'not' 不是内部或外部命令`）。
 
 参数：

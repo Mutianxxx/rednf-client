@@ -1,7 +1,7 @@
 # A0–A2a：独立迁入与首批对象提取
 
 本节点实施于 2026-11-02。实际构建/检查状态以
-`cache/refactor-build/build-verification.json` 为准；本文不替代该收据。
+`../checkpoints/build/build-verification.json` 为准；本文不替代该收据。
 
 ## 已落地的代码变化
 

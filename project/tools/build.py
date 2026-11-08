@@ -6,6 +6,7 @@ import argparse, hashlib, json, os, subprocess, sys, time, shutil
 from legacy.package_playable import require_game_closed
 
 ROOT = Path(__file__).resolve().parents[1]
+REPO = ROOT.parent
 
 def digest(path):
     with path.open('rb') as stream: return hashlib.file_digest(stream, 'sha256').hexdigest()
@@ -21,9 +22,20 @@ def input_hashes():
     return {p.relative_to(ROOT).as_posix():digest(p) for p in sorted(set(paths)) if p.suffix!='.pyc'}
 
 def local(path):
+    """Resolve a build/test output directory inside the repository.
+
+    Outputs normally live under ``project/`` (``cache/...``), but the repository
+    keeps a single ignored ``checkpoints/`` directory at its root for release
+    builds, so both ``project/`` and the repository root are accepted.
+    """
     result=(ROOT/path).resolve()
-    if not result.is_relative_to(ROOT): raise ValueError('Build/test output must stay in project/')
+    if not result.is_relative_to(REPO): raise ValueError('Build/test output must stay inside the repository')
     return result
+
+def display(path):
+    """Path relative to project/ when possible, otherwise repository-relative."""
+    try: return str(path.relative_to(ROOT))
+    except ValueError: return os.path.relpath(path, ROOT)
 
 def run_parallel_tests(build, client, test_run, env, worker_count):
     """Run independent headless suites in isolated processes and directories."""
@@ -145,8 +157,8 @@ def run_parallel_tests(build, client, test_run, env, worker_count):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--build-dir',type=Path,default=Path('cache/refactor-build'))
-    parser.add_argument('--test-dir',type=Path,default=Path('cache/refactor-tests'))
+    parser.add_argument('--build-dir',type=Path,default=Path('../checkpoints/build'))
+    parser.add_argument('--test-dir',type=Path,default=Path('../checkpoints/tests'))
     parser.add_argument('--test',action='store_true')
     parser.add_argument('--test-workers',type=int,default=min(2, max(1, os.cpu_count() or 1)),
                         help='Maximum number of isolated headless test processes (default: up to 2; PVF parsing is memory-heavy)')
@@ -176,8 +188,8 @@ def main():
     test_run=tests/'runs'/run_id
     verification={'schema':3,'node':args.node,'status':'running',
         'started_utc':datetime.now(timezone.utc).isoformat(),'source_baseline':args.source_baseline,
-        'build_directory':str(build.relative_to(ROOT)),'test_directory':str(tests.relative_to(ROOT)),
-        'test_run_directory':str(test_run.relative_to(ROOT)),'test_workers':args.test_workers,
+        'build_directory':display(build),'test_directory':display(tests),
+        'test_run_directory':display(test_run),'test_workers':args.test_workers,
         'sources':input_hashes(),'tests_requested':args.test,'frontend_validation':'pending-user',
         'toolchain':{'root':str(toolchain),'clang_sha256':digest(llvm/'clang++.exe'),
                      'cmake_sha256':digest(cmake),'ninja_sha256':digest(ninja)}}

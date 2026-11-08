@@ -9,15 +9,15 @@
 - `Play.cmd`：启动本目录最近一次编译产物，不编译。
 - `Run-From-Source.cmd`：从本目录源码增量构建后启动。
 - `Build-And-Test.cmd`：构建并运行核心、音频、隐藏 UI 及新对象检查；不启动前台游戏。
-- `build.cmd`：仅构建，可传 `--test`、`--client`、`--build-dir`、`--test-dir`。
+- `build.cmd`：仅构建，可传 `--test`、`--client`、`--build-dir`、`--test-dir`；默认输出到 `../checkpoints/build`。
 
 默认内容由 `content-profile.json` 指向原始 1031 客户端，只读使用。工具链由
 `toolchain.local.json` / `DNF_TOOLCHAIN_ROOT` 指定，当前复用原工程第三方编译工具；
 游戏源码、SDL、zlib、patched Squirrel、ANI 原生合同均在本工程内，不编译旧项目源码。
 
-`Play.cmd` 使用独立 `saves/refactor/`，不导入或覆盖旧用户存档。构建、临时文件、测试和
-运行日志留在本目录（`cache/`、`reports/`，均不入库）；节点检查点在需要时用
-`../checkpoint_refactor.py` 重新生成。切换资源可编辑独立 `content-profile.json`，或向启动脚本
+`Play.cmd` 使用独立 `saves/refactor/`，不导入或覆盖旧用户存档。编译产物统一输出到仓库根
+`../checkpoints/`（`build/` 为构建目录、`tests/` 为回归测试输出，均不入库，可随时重建）；
+运行日志与临时文件仍留在本目录的 `cache/`、`reports/`。切换资源可编辑独立 `content-profile.json`，或向启动脚本
 追加 `--pvf`/`--resource-root` 覆盖配置；来源兼容程度以实际诊断为准。
 
 ## 当前实际拆分

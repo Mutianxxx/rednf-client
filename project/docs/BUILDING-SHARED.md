@@ -33,7 +33,7 @@ build.cmd --test --client "C:\DNF1031客户端" --build-dir cache\dev-build --te
 
 - 找不到 `Script.pvf`：检查 `--client` 与 `toolchain.local.json` 的 `client_root`。
 - 找不到 clang/cmake/ninja：确认 `toolchain_root` 指向上述目录树根目录，而不是 `bin` 子目录。
-- `dnf_native.exe` 找不到：先运行 `build.cmd`，或确认 `Play.cmd` 与 `cache/refactor-build/dnf_native.exe` 相对路径。
+- `dnf_native.exe` 找不到：先运行 `build.cmd`，或确认 `../checkpoints/build/dnf_native.exe` 已生成（`Play.cmd` 同时兼容旧的 `cache/refactor-build/`）。
 - SDL/字体/内容差异：查看 build/test 的 `reports` 与内容 profile；提交问题时不要附原始 PVF/NPK 或客户端文件。
 
 工程只验证受支持范围；构建通过不代表所有技能、地图、AI、UI 或副本均已完成。

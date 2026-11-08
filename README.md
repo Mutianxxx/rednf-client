@@ -4,16 +4,17 @@
 
 创建日期：2026-11-02。按用户授权，在独立目录实施面向对象架构重构。
 
-本目录只有两个业务子目录：
+本目录只有两个业务子目录，外加一个编译产物目录：
 
 - `knowledge/`：客户端/PVF、逆向、安卓与历次运行验证成果；保留来源身份、版本、证据级别、已知冲突和未完成项。
-- `project/`：独立 C++ 工程、测试、构建缓存、产物和逐节点备份。
+- `project/`：独立 C++ 工程、测试与源码。
+- `checkpoints/`：**全部编译产物**（`build/` 构建目录、`tests/` 回归输出）。已被 `.gitignore` 排除，可随时重建。
 
 当前阶段和恢复入口见 [PROGRESS.md](PROGRESS.md)。原始 `dnf-native-demo`、客户端、知识库、用户存档和历史候选保持原位。
 
-资料入口：[knowledge/INDEX.md](knowledge/INDEX.md)。体验入口：`project/Play-Skill-Preview.cmd`（技能预览器）；
-源码增量构建入口：`project/Run-From-Source.cmd`。构建缓存、测试报告与节点检查点均为可重建产物，
-2026-11-08 入库整理时已清理且不再入库。
+资料入口：[knowledge/INDEX.md](knowledge/INDEX.md)。体验入口：根目录 `Play-Skill-Preview.cmd`
+（或 `project/Play-Skill-Preview.cmd`，技能预览器）；源码增量构建入口：`project/Run-From-Source.cmd`。
+构建命令：`cd project && python -X utf8 -B tools/build.py --build-dir ..\checkpoints\build --test-dir ..\checkpoints\tests`。
 
 技能行为族和 40JP 复用实现思路见 [交接说明](project/docs/SKILL-BEHAVIOR-FAMILIES-40JP.md)。
 

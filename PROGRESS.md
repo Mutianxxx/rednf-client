@@ -1,3 +1,26 @@
+# 编译产物集中到 checkpoints/（2026-11-09）
+
+节点 `checkpoints-20261109`。所有编译产物统一输出到仓库根 `checkpoints/`，并排除入库。
+
+- **目录**：`checkpoints/build`（CMake/Ninja 构建目录，含全部 exe/dll/静态库/`build-verification.json`）、
+  `checkpoints/tests`（回归测试输出）。仓库根新增 `.gitignore` 条目 `checkpoints/`，产物不入库。
+- **工具默认值**：`project/tools/build.py` 的 `--build-dir/--test-dir` 默认改为 `../checkpoints/build`
+  与 `../checkpoints/tests`；`verify_architecture.py` 与 `checkpoint_refactor.py` 同步指向新位置。
+  输出目录约束从「必须在 `project/` 内」放宽为「必须在仓库内」，因此 `project/build.cmd`、
+  `Build-And-Test.cmd` 不带参数即按新路径构建。
+- **启动入口**：新增仓库根 `Play-Skill-Preview.cmd`（转发到 `project/Play-Skill-Preview.cmd`）；
+  `tools/play_skill_preview.py` 与 `Play.cmd` 优先查 `checkpoints/build`，找不到再回退旧的
+  `project/cache/*-build`。
+- **本次构建**：全量构建 + 12 项任务回归。编译成功（12 个二进制，`verify_architecture` pass，139 单元）；
+  技能预览器测试 **37/37 通过**，截图确认鬼斩播放正常（横幅 `hardattack -> hardattackchargeafter`、分级 A）。
+  12 个 core 组中 9 组失败，属既有缺口：2 组因 Windows 260 字符路径限制写不出暂存文件
+  （旧路径 294 字符、新路径 283 字符，均超限），其余为未完成功能的内容断言
+  （Event.ai、Fighter 源动作、空中反应 RVO 等）。明细见
+  `checkpoints/tests/runs/20261108T165710083780Z/FAILURES.md`。测试临时数据已清理，
+  `checkpoints/` 合计 222 MB。
+
+---
+
 # 入库整理：技能绑定归档 + 缓存清理（2026-11-08）
 
 节点 `repo-cleanup-20261108`。为提交 git，把上一轮 1031 exe 技能绑定成果从工作区

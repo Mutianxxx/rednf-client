@@ -1,7 +1,7 @@
 # 实现与恢复入口
 
 当前节点见 `../../PROGRESS.md`；实际构建/测试身份见
-`../cache/refactor-build/build-verification.json`。节点备份不随源码入库，
+`../checkpoints/build/build-verification.json`。节点备份不随源码入库，
 需要时用 `../../checkpoint_refactor.py` 封存后再核对 manifest。
 完整设计见 `../../knowledge/architecture/ARCHITECTURE-REFACTOR-OUTLINE.md`。
 

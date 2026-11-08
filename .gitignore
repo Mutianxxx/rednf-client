@@ -1,4 +1,5 @@
 # 构建与运行产物：可重建，不入库
+checkpoints/
 project/cache/
 project/build/
 project/saves/

@@ -31,7 +31,7 @@
 
 ## 验证与评审
 
-- 先执行源所有权检查：`python tools/verify_architecture.py --build-dir cache/refactor-build`。它需要该 build 目录已有 `compile_commands.json`；首次配置由 `build.cmd` 完成。
+- 先执行源所有权检查：`python tools/verify_architecture.py --build-dir ../checkpoints/build`。它需要该 build 目录已有 `compile_commands.json`；首次配置由 `build.cmd` 完成。
 - 运行对应变更路径的测试，再按集成范围运行 `Build-And-Test.cmd`。性能/资源变更需记录同场景、同输入的基线和结果。
 - UI/音频/游戏手感的隐藏自动测试不替代真人前台体验。把自动检查、前台测试和原版对照分别标记。
 - PR 说明写明：问题与触发方式、改动模块、来源/推断类别、测试命令与结果、剩余风险。保留实际失败日志，不伪报通过。
