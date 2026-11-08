@@ -1,0 +1,144 @@
+{
+  "status": "preserved-not-applied",
+  "known_failure": "equipment458/459 unresolved 0xc0000374 heap failure",
+  "files": [
+    {
+      "path": "src/act_world_host.cpp",
+      "baseline_sha256": "bbd598b77b4064def6bb8e9cd7b6ec1196841c11433084bea150d64533bd1d40",
+      "unvalidated_sha256": "682c606f9d6efcc0ce667a430b9876920a9d77d0a5c0efecc9e7dd53b6789be5",
+      "applied_to_project": false
+    },
+    {
+      "path": "src/attack_status.cpp",
+      "baseline_sha256": "787f8f2a24e85b2461be1bd9d7b6009316c8e57acd12cc503c534b3d0da298ce",
+      "unvalidated_sha256": "1bdd217f8a056fec3b243c98f273c45f4f664c5e4bf03ede1da987da790613b1",
+      "applied_to_project": false
+    },
+    {
+      "path": "src/character_advancement_world.cpp",
+      "baseline_sha256": "c41176a5b1905326c57f0f6d148c44a9daec810fff6ac1471c82532cb431a20c",
+      "unvalidated_sha256": "eb6d75200cceab0be89e06d0695ed4ebb8ed9abec28f6f1628e3c57f8208bc17",
+      "applied_to_project": false
+    },
+    {
+      "path": "src/combat.cpp",
+      "baseline_sha256": "7671bec892470091b2e8aa1f853161ad64d0c06c3a7c3c6c460b811e46b7b5b3",
+      "unvalidated_sha256": "3938ae2c9d0330bc5997f7d416001df8298a3cd7e1e6a98a4db6cf1fef99af04",
+      "applied_to_project": false
+    },
+    {
+      "path": "src/combat_attributes.cpp",
+      "baseline_sha256": "3a127b94f3c07b70a2dedfd2c0ce8ec8127a7b35a8c48b60949d938baed8f2d9",
+      "unvalidated_sha256": "571b573b90cf9f6297b0fee6f9aafd08f9b70b9d460f2d88eefffea75b36e986",
+      "applied_to_project": false
+    },
+    {
+      "path": "src/equipment_attributes.cpp",
+      "baseline_sha256": "d6b3bc4519056443cc0b98728e32957d0feebdc9ac85ee7e27da1893dca37c9c",
+      "unvalidated_sha256": "9627186e9c09577bb71596285a89515388dc86ff44f43152f826856833c78d4d",
+      "applied_to_project": false
+    },
+    {
+      "path": "src/progression.cpp",
+      "baseline_sha256": "efba1091729f2a964a3104e006fa9a3fb10fc3b615e4ab33ada978d9b3b31da4",
+      "unvalidated_sha256": "624d2d9b9eac7873e321e544291620020c9636ce4ba212692235282b818574fd",
+      "applied_to_project": false
+    },
+    {
+      "path": "src/skill_learning.cpp",
+      "baseline_sha256": "191f837da7938fc46ad6e8be1e9d54adff52aae7184479ee50ef2dff70833543",
+      "unvalidated_sha256": "7df5fe3c0a2c4fb3a843371470f596505ea206f510ecc9a0bd4ce01a87628174",
+      "applied_to_project": false
+    },
+    {
+      "path": "src/speed_attributes.cpp",
+      "baseline_sha256": "ef7205ae8838ce426fc8afb970661363f704b6b486b16666f01db56b82942dc1",
+      "unvalidated_sha256": "850aff630bcf72a20283e5c12a7c6a031b6a221a456802876e439f80e3955a4d",
+      "applied_to_project": false
+    },
+    {
+      "path": "src/storage.cpp",
+      "baseline_sha256": "3ac893f234d0cbdebf70ed8549055755c2492f7a9243d53a186ff122bf475903",
+      "unvalidated_sha256": "0bb0aa8d68bbbcbfb32e0549764b1be3eea52f4e625510691359a6e754214d5c",
+      "applied_to_project": false
+    },
+    {
+      "path": "include/dnf/attack_status.hpp",
+      "baseline_sha256": "3d36980f5ec049a2172ed4f9c15b06f1bca2f054857cb0724cd72f7ba82f0b58",
+      "unvalidated_sha256": "e7a9410f04d948569d5af3c33d245ccee56e0a5de0fd198b6076e02c79d7f76d",
+      "applied_to_project": false
+    },
+    {
+      "path": "include/dnf/combat.hpp",
+      "baseline_sha256": "caeae37f6919da67b448051358eef85b7fa6002bbe7b16f8c7885369084f14c8",
+      "unvalidated_sha256": "a59ba6ca8835729f07114a13951207d8af9a1110da35f29219a5209cb5754749",
+      "applied_to_project": false
+    },
+    {
+      "path": "include/dnf/combat_attributes.hpp",
+      "baseline_sha256": "d905b47ed4859d72bfe3fdd5d4cac2b329a6e7327258f01f6db7cf3a54d0acb3",
+      "unvalidated_sha256": "165cb4f84ed2e0c74120a41faf6a11758170d046a706a341541ffe8ed31ee447",
+      "applied_to_project": false
+    },
+    {
+      "path": "include/dnf/equipment_attributes.hpp",
+      "baseline_sha256": "dc8cee8ccf45eda95022857f171175eb94e3d0af10c810f05a9a08aaf20d4ef5",
+      "unvalidated_sha256": "f6c8b152ae3e4ace0a791ac4522e21b31936d4071212ba0843b48a620b85b9cc",
+      "applied_to_project": false
+    },
+    {
+      "path": "include/dnf/equipment_skill_requirement.hpp",
+      "baseline_sha256": null,
+      "unvalidated_sha256": "568522de2165648c77a5c67698d4e2cc5fe0fd6a7aaf81e586683d020510cd8e",
+      "applied_to_project": false
+    },
+    {
+      "path": "include/dnf/progression.hpp",
+      "baseline_sha256": "e387609f772ad63ec8034af34a26debefdd402b95e0de97ed8295696b2050692",
+      "unvalidated_sha256": "62b1e0cb5a840caa5c194088455c04fca9279434abfdd696fde935066e90ddde",
+      "applied_to_project": false
+    },
+    {
+      "path": "include/dnf/skill_learning.hpp",
+      "baseline_sha256": "fc8a6cda1e6deb5f8da632a3a62ed076b7e8ff7d22a0f4d2bcc26a6b7c9709dc",
+      "unvalidated_sha256": "fc152c1024a11f6fe50cfd527a5cb7681e4116a2adfdb00700b26c1c2271b6a4",
+      "applied_to_project": false
+    },
+    {
+      "path": "include/dnf/speed_attributes.hpp",
+      "baseline_sha256": "f04fa9fb925c4736de2a61310741449ed5a67c2b374cbd7cb4d8e840ceae215a",
+      "unvalidated_sha256": "eacaf16b007e182ca7e18f437df93c2c66c61b247ea10e364729ff80fccac663",
+      "applied_to_project": false
+    },
+    {
+      "path": "include/dnf/storage.hpp",
+      "baseline_sha256": "8ff8e51a8fd5f0b2f6438626984e12d15ca6b8c320fb73296ff27271c8705cf4",
+      "unvalidated_sha256": "1ea3d34d7e5e83f387103a60ec9e7cf471d324279b84244cae3e4d8896c7c9cc",
+      "applied_to_project": false
+    },
+    {
+      "path": "tests/test_core.cpp",
+      "baseline_sha256": "a10c271cb16b14cf504538adce2b2bf31e07cf54cf2279f17fcc416f3bc9a545",
+      "unvalidated_sha256": "36207f85a16c898f41431689c99c4d356b715843e96de4ba63dd17fec1e85d11",
+      "applied_to_project": false
+    },
+    {
+      "path": "tests/test_equipment_required_skill.cpp",
+      "baseline_sha256": null,
+      "unvalidated_sha256": "c58bb9cd5aa70f21d43247eebc0ca8f4f34c8ad6087889c232185980cc589e89",
+      "applied_to_project": false
+    },
+    {
+      "path": "tests/test_fighter_upper_runtime.cpp",
+      "baseline_sha256": "e60d5788b08cad981b0faaa56edd6c8c957c36be5c5be2d5c2d4654e7d78c2e5",
+      "unvalidated_sha256": "3aad29fe9635177e8da475d346c61c8435e6ae65afcc65aedf6f7318f502afa3",
+      "applied_to_project": false
+    },
+    {
+      "path": "CMakeLists.txt",
+      "baseline_sha256": "430896b00012ab340857015b54f6399a1ed0c60983347980f527112f7159619e",
+      "unvalidated_sha256": "94818aa6c160f7b6184cda71977ff2fd7d750288a2c7fe184c6087ff9fa14fc2",
+      "applied_to_project": false
+    }
+  ]
+}

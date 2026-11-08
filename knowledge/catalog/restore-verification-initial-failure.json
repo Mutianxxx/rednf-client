@@ -1,0 +1,11 @@
+{
+  "status": "failed-before-repair",
+  "scope": "New knowledge archive restoration; original workspace unchanged",
+  "failed_source": "dnf-godot-skill-demo/reports/catalog-v2/decoded/character/swordman/dsanimation/attack1.ani.json",
+  "exception": "FileNotFoundError",
+  "missing_canonical": "archive/dnf-godot-skill-demo/reports/catalog-v2/decoded/character/swordman/animation/attack1.ani.json",
+  "cause": "Excluded old-GBA aliases shared allowed-source canonical storage; cleanup removed canonical files instead of only physically forbidden archive paths.",
+  "correction": "Retain allowed-source canonical paths; restore missing payloads from permitted current source bytes with source/stored SHA256 validation.",
+  "repair_receipt": "canonical-storage-repair.json",
+  "subsequent_validation": "restore-verification.json"
+}

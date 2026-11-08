@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "started_utc": "2026-11-01T23:03:31.713580+00:00",
+  "finished_utc": "2026-11-01T23:04:38.538055+00:00",
+  "source_aliases": 92141,
+  "verified_unique_files": 59613,
+  "hash_mismatches": 0,
+  "missing_payloads": 0,
+  "manifest_sha256": "276aba5489be6cb90c9e6d0210a77fd6a54874c769772c75dd55d5e5a254afc7",
+  "scope": "Every final-manifest canonical path read; stored SHA256, codec restoration, raw byte length and source SHA256 checked."
+}

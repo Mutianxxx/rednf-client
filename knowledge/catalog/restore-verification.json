@@ -1,0 +1,107 @@
+{
+  "status": "pass",
+  "examples_verified": 11,
+  "hash_mismatches": 0,
+  "results": [
+    {
+      "domain": "pvf-audit",
+      "source": "dnf-native-demo/reports/knowledge-base-audit/skill-audit.md",
+      "restored": "reading-room\\dnf-native-demo\\reports\\knowledge-base-audit\\skill-audit.md",
+      "sha256": "40328a3cd5d83f8f23814e320b458a080a3c45e64969a9c1cd367a31aa68d926",
+      "status": "pass",
+      "archive_encoding": "identity",
+      "deduplicated": false
+    },
+    {
+      "domain": "native-reverse-60us",
+      "source": "reverse-60us/releases/20261020-01/analysis/combat_progress/README.md",
+      "restored": "reading-room\\reverse-60us\\releases\\20261020-01\\analysis\\combat_progress\\README.md",
+      "sha256": "98aa5017c86bbc704bcd20f331647a57332187a2abd62b9e599f3c8049ea5c6a",
+      "status": "pass",
+      "archive_encoding": "identity",
+      "deduplicated": false
+    },
+    {
+      "domain": "android",
+      "source": "dnf-result/research/android-native-recovered.json",
+      "restored": "reading-room\\dnf-result\\research\\android-native-recovered.json",
+      "sha256": "1c5004d0d9d730f73fcceab12c93428212d6921746add6c4f1d4a084ee215316",
+      "status": "pass",
+      "archive_encoding": "gzip",
+      "deduplicated": false
+    },
+    {
+      "domain": "rep-player",
+      "source": "rep-player-1031-pvf/docs/REP_PLAYER_CALL_CHAIN.md",
+      "restored": "reading-room\\rep-player-1031-pvf\\docs\\REP_PLAYER_CALL_CHAIN.md",
+      "sha256": "e8471582e21363e1497d6fc73285763445bf99e0fd8db8db26d41d1f60d0b0f5",
+      "status": "pass",
+      "archive_encoding": "identity",
+      "deduplicated": false
+    },
+    {
+      "domain": "pvf-utils-info",
+      "source": "dnf-部分知识库/pvf-utils-info/Resources/AgentKnowledge/README.zh-CN.md",
+      "restored": "reading-room\\dnf-部分知识库\\pvf-utils-info\\Resources\\AgentKnowledge\\README.zh-CN.md",
+      "sha256": "276ee5ef8de989bc613c9e032800bc8d71994d574415fb59c271b70d505fc0bd",
+      "status": "pass",
+      "archive_encoding": "identity",
+      "deduplicated": false
+    },
+    {
+      "domain": "workbench-311",
+      "source": "dnf-部分知识库/PVF-Ai-Agent-Workbench-3.1.1/knowledge-pack/README.zh-CN.md",
+      "restored": "reading-room\\dnf-部分知识库\\PVF-Ai-Agent-Workbench-3.1.1\\knowledge-pack\\README.zh-CN.md",
+      "sha256": "7186cc11dc2caff505bde145523f3e95cb51bdaa4ee7a8a8a3dddf00fdceea53",
+      "status": "pass",
+      "archive_encoding": "identity",
+      "deduplicated": false
+    },
+    {
+      "domain": "native-completed-node",
+      "source": "dnf-native-demo/reports/seven-job-world-20261020/mage-upper457-node/COMPLETE.json",
+      "restored": "reading-room\\dnf-native-demo\\reports\\seven-job-world-20261020\\mage-upper457-node\\COMPLETE.json",
+      "sha256": "f71d594244b59df7dfa6ecafeee1593173365b53b9e486cdf2ac97abcb3cee22",
+      "status": "pass",
+      "archive_encoding": "identity",
+      "deduplicated": false
+    },
+    {
+      "domain": "native-unresolved-failure",
+      "source": "dnf-native-demo/reports/seven-job-world-20261020/equipment458-integration/PAUSE-RECEIPT.json",
+      "restored": "reading-room\\dnf-native-demo\\reports\\seven-job-world-20261020\\equipment458-integration\\PAUSE-RECEIPT.json",
+      "sha256": "20d03230fb0153aa7a4cafd0cec955853ec87b0125df80d501f296a4821a1c32",
+      "status": "pass",
+      "archive_encoding": "identity",
+      "deduplicated": false
+    },
+    {
+      "domain": "local-policy",
+      "source": "skills/KNOWLEDGE_POLICY.md",
+      "restored": "reading-room\\skills\\KNOWLEDGE_POLICY.md",
+      "sha256": "bcc8f04fdc4a0e103c830196308972a1b8a07713c4859ded27b021d51788f748",
+      "status": "pass",
+      "archive_encoding": "identity",
+      "deduplicated": false
+    },
+    {
+      "domain": "compressed-payload",
+      "source": "agent.md",
+      "restored": "reading-room\\agent.md",
+      "sha256": "3056f8071dd79125ef898390708ca68d10253383bd11a5596d832dbb09de3d98",
+      "status": "pass",
+      "archive_encoding": "gzip",
+      "deduplicated": false
+    },
+    {
+      "domain": "duplicate-alias",
+      "source": "dnf-godot-skill-demo/reports/catalog-v2/decoded/character/swordman/dsanimation/attack1.ani.json",
+      "restored": "reading-room\\dnf-godot-skill-demo\\reports\\catalog-v2\\decoded\\character\\swordman\\dsanimation\\attack1.ani.json",
+      "sha256": "0fdee387c72222256dbbbfdc94387b3df552ea8d1f9e33af133d7a0d84cc7ee6",
+      "status": "pass",
+      "archive_encoding": "identity",
+      "deduplicated": true
+    }
+  ],
+  "scope": "Archive restoration and source-byte equivalence only; no original-client dynamic or gameplay claim."
+}

@@ -1,0 +1,21 @@
+{
+  "records": 95338,
+  "reason_counts": {
+    "binary-or-unselected-extension": 87739,
+    "excluded-directory-no-recursion": 281,
+    "large-file-reference-only": 64,
+    "dfq-content-excluded": 2,
+    "large-raw-source-or-historical-artifacts-reference-only-no-recursion": 6,
+    "old-gba-implementation-or-derived-data-not-imported": 7246
+  },
+  "reference_only_roots": [
+    "DNF1031客户端",
+    "dnf-android",
+    "dnf-result/canonical",
+    "dnf-result/sources",
+    "dnf-result/supplements",
+    "dnf-native-demo/checkpoints",
+    "dnf-native-demo/cache"
+  ],
+  "scope": "Excluded directory roots are boundary references; their children were not claimed as copied or revalidated."
+}

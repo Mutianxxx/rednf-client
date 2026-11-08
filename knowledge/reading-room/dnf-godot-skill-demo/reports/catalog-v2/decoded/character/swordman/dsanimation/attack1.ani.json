@@ -1,0 +1,672 @@
+{
+  "resources": [
+    "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img"
+  ],
+  "globals": [],
+  "frames": [
+    {
+      "index": 0,
+      "offset": 66,
+      "end": 166,
+      "image_id": 0,
+      "image_parameter": 0,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            -30,
+            -5,
+            -6,
+            30,
+            10,
+            107
+          ],
+          "offset": 68,
+          "end": 94
+        },
+        {
+          "type": 14,
+          "values": [
+            -40,
+            -4,
+            68,
+            20,
+            9,
+            25
+          ],
+          "offset": 94,
+          "end": 120
+        },
+        {
+          "type": 14,
+          "values": [
+            1,
+            -5,
+            1,
+            20,
+            10,
+            55
+          ],
+          "offset": 120,
+          "end": 146
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 50,
+          "offset": 160,
+          "end": 166
+        }
+      ],
+      "effective_delay_ms": 50,
+      "delay_explicit": true,
+      "start_ms": 0
+    },
+    {
+      "index": 1,
+      "offset": 166,
+      "end": 292,
+      "image_id": 0,
+      "image_parameter": 1,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            -23,
+            -5,
+            50,
+            22,
+            10,
+            51
+          ],
+          "offset": 168,
+          "end": 194
+        },
+        {
+          "type": 14,
+          "values": [
+            -39,
+            -5,
+            65,
+            20,
+            10,
+            29
+          ],
+          "offset": 194,
+          "end": 220
+        },
+        {
+          "type": 14,
+          "values": [
+            -32,
+            -5,
+            -3,
+            20,
+            9,
+            56
+          ],
+          "offset": 220,
+          "end": 246
+        },
+        {
+          "type": 14,
+          "values": [
+            1,
+            -5,
+            -4,
+            20,
+            9,
+            61
+          ],
+          "offset": 246,
+          "end": 272
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 50,
+          "offset": 286,
+          "end": 292
+        }
+      ],
+      "effective_delay_ms": 50,
+      "delay_explicit": true,
+      "start_ms": 50
+    },
+    {
+      "index": 2,
+      "offset": 292,
+      "end": 392,
+      "image_id": 0,
+      "image_parameter": 2,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            -28,
+            -5,
+            -5,
+            25,
+            10,
+            107
+          ],
+          "offset": 294,
+          "end": 320
+        },
+        {
+          "type": 14,
+          "values": [
+            -38,
+            -5,
+            65,
+            19,
+            10,
+            28
+          ],
+          "offset": 320,
+          "end": 346
+        },
+        {
+          "type": 14,
+          "values": [
+            -1,
+            -5,
+            -4,
+            22,
+            10,
+            67
+          ],
+          "offset": 346,
+          "end": 372
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 50,
+          "offset": 386,
+          "end": 392
+        }
+      ],
+      "effective_delay_ms": 50,
+      "delay_explicit": true,
+      "start_ms": 100
+    },
+    {
+      "index": 3,
+      "offset": 392,
+      "end": 518,
+      "image_id": 0,
+      "image_parameter": 3,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            4,
+            -5,
+            -2,
+            30,
+            10,
+            86
+          ],
+          "offset": 394,
+          "end": 420
+        },
+        {
+          "type": 14,
+          "values": [
+            -10,
+            -5,
+            24,
+            20,
+            10,
+            33
+          ],
+          "offset": 420,
+          "end": 446
+        },
+        {
+          "type": 14,
+          "values": [
+            -29,
+            -4,
+            -3,
+            18,
+            9,
+            33
+          ],
+          "offset": 446,
+          "end": 472
+        },
+        {
+          "type": 14,
+          "values": [
+            34,
+            -5,
+            43,
+            26,
+            10,
+            17
+          ],
+          "offset": 472,
+          "end": 498
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 50,
+          "offset": 512,
+          "end": 518
+        }
+      ],
+      "effective_delay_ms": 50,
+      "delay_explicit": true,
+      "start_ms": 150
+    },
+    {
+      "index": 4,
+      "offset": 518,
+      "end": 644,
+      "image_id": 0,
+      "image_parameter": 4,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            15,
+            -5,
+            -2,
+            30,
+            10,
+            84
+          ],
+          "offset": 520,
+          "end": 546
+        },
+        {
+          "type": 14,
+          "values": [
+            -5,
+            -5,
+            24,
+            22,
+            9,
+            55
+          ],
+          "offset": 546,
+          "end": 572
+        },
+        {
+          "type": 14,
+          "values": [
+            -12,
+            -6,
+            14,
+            20,
+            10,
+            22
+          ],
+          "offset": 572,
+          "end": 598
+        },
+        {
+          "type": 14,
+          "values": [
+            -31,
+            -6,
+            -5,
+            20,
+            9,
+            28
+          ],
+          "offset": 598,
+          "end": 624
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 50,
+          "offset": 638,
+          "end": 644
+        }
+      ],
+      "effective_delay_ms": 50,
+      "delay_explicit": true,
+      "start_ms": 200
+    },
+    {
+      "index": 5,
+      "offset": 644,
+      "end": 744,
+      "image_id": 0,
+      "image_parameter": 5,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            15,
+            -5,
+            2,
+            30,
+            10,
+            82
+          ],
+          "offset": 646,
+          "end": 672
+        },
+        {
+          "type": 14,
+          "values": [
+            -8,
+            -4,
+            17,
+            27,
+            9,
+            61
+          ],
+          "offset": 672,
+          "end": 698
+        },
+        {
+          "type": 14,
+          "values": [
+            -28,
+            -2,
+            -6,
+            20,
+            7,
+            32
+          ],
+          "offset": 698,
+          "end": 724
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 50,
+          "offset": 738,
+          "end": 744
+        }
+      ],
+      "effective_delay_ms": 50,
+      "delay_explicit": true,
+      "start_ms": 250
+    },
+    {
+      "index": 6,
+      "offset": 744,
+      "end": 844,
+      "image_id": 0,
+      "image_parameter": 6,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            14,
+            -5,
+            0,
+            30,
+            10,
+            83
+          ],
+          "offset": 746,
+          "end": 772
+        },
+        {
+          "type": 14,
+          "values": [
+            -7,
+            -4,
+            16,
+            23,
+            9,
+            62
+          ],
+          "offset": 772,
+          "end": 798
+        },
+        {
+          "type": 14,
+          "values": [
+            -31,
+            -3,
+            -4,
+            23,
+            8,
+            27
+          ],
+          "offset": 798,
+          "end": 824
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 50,
+          "offset": 838,
+          "end": 844
+        }
+      ],
+      "effective_delay_ms": 50,
+      "delay_explicit": true,
+      "start_ms": 300
+    },
+    {
+      "index": 7,
+      "offset": 844,
+      "end": 944,
+      "image_id": 0,
+      "image_parameter": 7,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            14,
+            -5,
+            0,
+            30,
+            10,
+            83
+          ],
+          "offset": 846,
+          "end": 872
+        },
+        {
+          "type": 14,
+          "values": [
+            -10,
+            -4,
+            17,
+            25,
+            8,
+            60
+          ],
+          "offset": 872,
+          "end": 898
+        },
+        {
+          "type": 14,
+          "values": [
+            -30,
+            -3,
+            -6,
+            22,
+            8,
+            33
+          ],
+          "offset": 898,
+          "end": 924
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 50,
+          "offset": 938,
+          "end": 944
+        }
+      ],
+      "effective_delay_ms": 50,
+      "delay_explicit": true,
+      "start_ms": 350
+    },
+    {
+      "index": 8,
+      "offset": 944,
+      "end": 1044,
+      "image_id": 0,
+      "image_parameter": 8,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            13,
+            -5,
+            1,
+            30,
+            10,
+            83
+          ],
+          "offset": 946,
+          "end": 972
+        },
+        {
+          "type": 14,
+          "values": [
+            -6,
+            -4,
+            18,
+            20,
+            10,
+            62
+          ],
+          "offset": 972,
+          "end": 998
+        },
+        {
+          "type": 14,
+          "values": [
+            -27,
+            -5,
+            -5,
+            20,
+            10,
+            33
+          ],
+          "offset": 998,
+          "end": 1024
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 50,
+          "offset": 1038,
+          "end": 1044
+        }
+      ],
+      "effective_delay_ms": 50,
+      "delay_explicit": true,
+      "start_ms": 400
+    },
+    {
+      "index": 9,
+      "offset": 1044,
+      "end": 1144,
+      "image_id": 0,
+      "image_parameter": 9,
+      "image": "Character/Swordman/Equipment/Avatar/skin/sm_body%04d.img",
+      "x": -232,
+      "y": -333,
+      "boxes": [
+        {
+          "type": 14,
+          "values": [
+            15,
+            -5,
+            -1,
+            30,
+            10,
+            88
+          ],
+          "offset": 1046,
+          "end": 1072
+        },
+        {
+          "type": 14,
+          "values": [
+            -6,
+            -4,
+            19,
+            20,
+            9,
+            63
+          ],
+          "offset": 1072,
+          "end": 1098
+        },
+        {
+          "type": 14,
+          "values": [
+            -31,
+            -4,
+            -6,
+            27,
+            8,
+            34
+          ],
+          "offset": 1098,
+          "end": 1124
+        }
+      ],
+      "properties": [
+        {
+          "type": 12,
+          "value": 150,
+          "offset": 1138,
+          "end": 1144
+        }
+      ],
+      "effective_delay_ms": 150,
+      "delay_explicit": true,
+      "start_ms": 450
+    }
+  ],
+  "frame_count": 10,
+  "duration_ms": 600,
+  "consumed": 1144,
+  "structural_issues": [],
+  "defaults_authority": "supplied decoder; omitted delay defaults not independently PC-verified"
+}

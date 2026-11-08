@@ -1,0 +1,1847 @@
+{
+  "elf_sha256": "eafdd17bbc62ff6341bd8e6827738ded62b46c1af1b6c008fe1a29c6451bd5b2",
+  "capstone_version": "5.0.7",
+  "records": [
+    {
+      "symbol": "__gtdf2",
+      "address": "0x00122380",
+      "size": 148,
+      "sha256": "96968eae988f1ef979dbd652d1e645f060af44eaabf2e6677831551db624383f",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122380.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__aeabi_fadd",
+      "address": "0x00122604",
+      "size": 400,
+      "sha256": "b5d4b238d01ed4c4aab78e2e6240b42e3be01b0a76b69162efabb0cc8b6aab22",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122604.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__muldf3",
+      "address": "0x00121f10",
+      "size": 620,
+      "sha256": "de78b95f58a2e1131c6073af17bfa31e1bed812b03b90245b4f956a9609b0668",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121f10.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__ltdf2",
+      "address": "0x00122388",
+      "size": 140,
+      "sha256": "b985bc75c873afc5f5ac8dfe3c3320931ce3b19e694684df0333dd857f4ab1d9",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122388.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__aeabi_cdcmple",
+      "address": "0x00122430",
+      "size": 20,
+      "sha256": "c58ed78c59e699a145898a0cc6a63844b5fe214723d377499e1c8e7f4b521134",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122430.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__div0",
+      "address": "0x00121b54",
+      "size": 4,
+      "sha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121b54.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "___Unwind_Resume_or_Rethrow",
+      "address": "0x00123bc8",
+      "size": 36,
+      "sha256": "12c2badf08fae3f528a3a5f060b500ace5aa202394fc61d0551266cf1ba51b18",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00123bc8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__floatundidf",
+      "address": "0x00121e9c",
+      "size": 116,
+      "sha256": "6735b573fee4cb38ca5d464132288e2afee3d3a4a59b5bf64abac5ceb87c1335",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121e9c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__floatsidf",
+      "address": "0x00121e34",
+      "size": 40,
+      "sha256": "dbcb3b2fa3d9489f4344e3585a68f259e063efb94838971a3bc072433ff24a99",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121e34.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__aeabi_cfcmple",
+      "address": "0x00122bc0",
+      "size": 20,
+      "sha256": "c0bd02ea2ace7ccc4e3f71a83322e252c6f24f275ba45d2d8a6d478c29383c46",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122bc0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "___Unwind_Backtrace",
+      "address": "0x00123c10",
+      "size": 36,
+      "sha256": "104135d83c8aec59ff79267ba72ced75033310ce1aa57aa55c28e3679b2d5db5",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00123c10.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__ltsf2",
+      "address": "0x00122b48",
+      "size": 104,
+      "sha256": "099988a2ee975b88638e88dfefaf0d26a1c0c617b45e4aca81555a0e0fd180b1",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122b48.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "restore_core_regs",
+      "address": "0x00123a8c",
+      "size": 20,
+      "sha256": "26348f34e3b0671233466939a0a1d33af0daa7531c8f55735f4b9c4ad3041f08",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00123a8c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__gtsf2",
+      "address": "0x00122b40",
+      "size": 112,
+      "sha256": "29d6d8b841a6ffaf30f413009e98e93753085cb9bf5e4b1507e759f0d095699f",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122b40.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__divsf3",
+      "address": "0x001229e0",
+      "size": 352,
+      "sha256": "9d99b39bddeca74215dbaacca2db8374c3420529acc8ae46b79e9ad05e810e0f",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/001229e0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__subsf3",
+      "address": "0x00122600",
+      "size": 404,
+      "sha256": "524ce22437f6ffd5ec69c1b3dbdd5115218470df0e895434a9b784e16e4c948a",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122600.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__aeabi_uidiv",
+      "address": "0x0012199c",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/0012199c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__fixunsdfsi",
+      "address": "0x00122504",
+      "size": 84,
+      "sha256": "ea88ee603a88b5fa2df3d09c7f876e7912d00bac3e65084b1c8cb6201f579b69",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122504.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__floatunsidf",
+      "address": "0x00121e10",
+      "size": 36,
+      "sha256": "fbe997a38141d58bba3a341d5356465d31b0552ab1bc50afa136758a92a25d39",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121e10.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__subdf3",
+      "address": "0x00121b60",
+      "size": 688,
+      "sha256": "7695428a8253dfbc7b11e7b6617a5b59b418e2530b6df2fa058ada027a7a21f3",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121b60.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__floatsisf",
+      "address": "0x0012279c",
+      "size": 32,
+      "sha256": "1d27ef1da5f9e5144962c325b777f91eca1b549837b1712349e2b941b9922efe",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/0012279c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__aeabi_ldiv0",
+      "address": "0x00121b54",
+      "size": 4,
+      "sha256": "379bec29dccd0a93c94826144d7ef6e42fab64ef195a3b8313a16926f66f388f",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121b54.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__fixdfsi",
+      "address": "0x001224a8",
+      "size": 92,
+      "sha256": "713181c8bb52538736e7583eacd3a9aca8d8b3e604daa81763e172c6cb26b5db",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/001224a8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__eqsf2",
+      "address": "0x00122b50",
+      "size": 96,
+      "sha256": "ad50471eb6af99f71804f5fd9d24b268d856575d7684e056e7b233790b511636",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122b50.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "___Unwind_Resume",
+      "address": "0x00123ba4",
+      "size": 36,
+      "sha256": "713f9c4004f59b04643f77d3d9d50ab0f0558d32982ccaec82452935e4cee2ff",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00123ba4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__nesf2",
+      "address": "0x00122b50",
+      "size": 96,
+      "sha256": "ad50471eb6af99f71804f5fd9d24b268d856575d7684e056e7b233790b511636",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122b50.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__floatdidf",
+      "address": "0x00121eb0",
+      "size": 96,
+      "sha256": "c467fdaa437884edfb381554958f5971a3f86d4e1086bc68b3a174f7d5e10116",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121eb0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__divdf3",
+      "address": "0x0012217c",
+      "size": 516,
+      "sha256": "d52ffc3aa67cbeacafe6d5c9493cfcc843b9db839f2aa8e321ef37e195c37bc2",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/0012217c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "___Unwind_RaiseException",
+      "address": "0x00123b80",
+      "size": 36,
+      "sha256": "1f4e383532b2ef6ae45cb82735243c703d6a7adb104e75fe4eedc6cd6f21a8d0",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00123b80.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__floatdisf",
+      "address": "0x001227cc",
+      "size": 124,
+      "sha256": "a33f0417c6d6f0cdeb54cb30c050264598fb995d78291e4b7e62a29adb3a0812",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/001227cc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__fixsfsi",
+      "address": "0x00122c38",
+      "size": 92,
+      "sha256": "73908d204e4625c30fc21dff9a2f817e26c53d161164a032bd229a9dcdd6edee",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122c38.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__nedf2",
+      "address": "0x00122390",
+      "size": 132,
+      "sha256": "0a34ea13dea16597c0fc510cfe3894ded7d9cd7d1cb7ff489596e5c91c21bab6",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122390.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__truncdfsf2",
+      "address": "0x00122558",
+      "size": 160,
+      "sha256": "95078aa74dcc4eb0405e1eafe1c488be18dba6526f38b4b99724336f83ed93e3",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122558.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "___Unwind_ForcedUnwind",
+      "address": "0x00123bec",
+      "size": 36,
+      "sha256": "a132f126a5fbe0674d2ece69b8ca9133d64bb026c33afb4704c9d0d0bd4fe192",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00123bec.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__mulsf3",
+      "address": "0x00122848",
+      "size": 408,
+      "sha256": "bd20816ba638f2916184ac60d1e1f556f0242ea00ce980edf3ef13bfa10aefde",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122848.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__aeabi_idiv",
+      "address": "0x00121a60",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121a60.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__extendsfdf2",
+      "address": "0x00121e5c",
+      "size": 64,
+      "sha256": "86bd08c84ef0a44ac233b7096f245bfae46a64311327dded8966186033e69f01",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121e5c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__floatunsisf",
+      "address": "0x00122794",
+      "size": 40,
+      "sha256": "93f463afd830653eb7d37a10fcbe35559ec7738b2e582c30e0a0f35aa8db6e5a",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122794.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__eqdf2",
+      "address": "0x00122390",
+      "size": 132,
+      "sha256": "0a34ea13dea16597c0fc510cfe3894ded7d9cd7d1cb7ff489596e5c91c21bab6",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00122390.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__aeabi_dadd",
+      "address": "0x00121b64",
+      "size": 684,
+      "sha256": "b76043d737e511824cc2f72a564cb6b019fc2020a2ab8360470cb73e9beb7fa3",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/00121b64.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "__floatundisf",
+      "address": "0x001227bc",
+      "size": 140,
+      "sha256": "de2e1774d5f598f62d78e7e37c5fae4cbd980e56e61550984077c8968f935d1d",
+      "thumb": false,
+      "assembly": "research/android-native-recovered/001227bc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0012x",
+      "address": "0x0004bbbc",
+      "size": 192,
+      "sha256": "6aed145a4ee2b8b2cd8b941e30fae85fa71192bb8dffbac6390f6cccabf64ca2",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/0004bbbc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��N\u0010>)",
+      "address": "0x0004d4e8",
+      "size": 1216,
+      "sha256": "5af964012513f738fe101d03c977aced3294c0cedec6b31a6bf2bd2d638684e8",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/0004d4e8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0002\u000f",
+      "address": "0x0004e1a8",
+      "size": 960,
+      "sha256": "ddf75f1e38d3be2967eace4cedb913889f7d93d4e7409a8316855b52fbd340bb",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/0004e1a8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000ef328",
+      "size": 22,
+      "sha256": "ac9e5c56ba8e70ee614bb82cb1358f134eb0dcce23489075bdb7db88dd151414",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef328.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000ef340",
+      "size": 154,
+      "sha256": "67e44d0fd871ba89ece231ef7f746af12f010bffe09545de614c4240461d7303",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef340.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u001f@\f�bF\u0012\u0014R�\u0010�\u0002",
+      "address": "0x000ef3dc",
+      "size": 48,
+      "sha256": "581cd94ff5413be02316a8e83e1c4061bd33341490d51a307f171dd779784198",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef3dc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0002",
+      "address": "0x000ef40c",
+      "size": 8,
+      "sha256": "064ef230f1eb2925247bf0f6793efe099b0b4cb6fdff4a0125ce742eb53307e5",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef40c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u001f�����������\u001f@\f�O���\u0010�\u0002",
+      "address": "0x000ef414",
+      "size": 12,
+      "sha256": "943c31e46f93fad54e91bde4abcbab23994bad99c2ebd0323c03a816c6e74254",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef414.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "O���\u0010�\u0002",
+      "address": "0x000ef420",
+      "size": 36,
+      "sha256": "ee704ae5fdf20fdf0b6b9daf04a990233c7e3582eadee2c8ea42a998e8842bea",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef420.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "���\u001f�����������\u001f@\f�O���\u0010�\u0002",
+      "address": "0x000ef444",
+      "size": 36,
+      "sha256": "be96cce3b7e1ad952c6a22cd2f1f6a09b83b4941314d56b18b77525bfad0656c",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef444.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "O���\u0010�\u0002",
+      "address": "0x000ef468",
+      "size": 32,
+      "sha256": "b09625ff3c5c52aed2dfdb14d2defb314dcc13216f3003cf6eda19b2414c8327",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef468.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\f�����\u001f�����������\u001f@\f�O���\u0010�\u0002",
+      "address": "0x000ef488",
+      "size": 10,
+      "sha256": "f054313bc8e50bc60d28bdca3889f103d303abbb02fc532e57506d4eaa3d9fcb",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef488.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\f�O���\u0010�\u0002",
+      "address": "0x000ef494",
+      "size": 26,
+      "sha256": "2e4240b6d7b7d65f27ad92a57e6ad0670f3b11344aa3f800b467ad1282ad5a5e",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef494.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "@�\u001f�����������\u001f@\f�bF\u0012\u0014R�\u0010�\u0002",
+      "address": "0x000ef4b0",
+      "size": 70,
+      "sha256": "e314296faa7aa743e37cf5c3294673be8da28e480f167b3254faebf269720636",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef4b0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0002",
+      "address": "0x000ef4f8",
+      "size": 12,
+      "sha256": "c3922ae0365a023e93f66ad719509a9b674f9f1ec0d7ebae25e148dbb424b75c",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef4f8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�����������\u001f@\f�O���\u0010�\u0002",
+      "address": "0x000ef504",
+      "size": 44,
+      "sha256": "88140ae680a7ba81f4f161385f5ba78c1c094978c901a9fd9cac9d7c79986c5f",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef504.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0002",
+      "address": "0x000ef530",
+      "size": 16,
+      "sha256": "a22d45777df42919a800a4d11592e5d18b8b0cff2be4dc2f565696f0c6b63da4",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef530.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�K�\u0010!��\u0015\u0001\u0001D\bh",
+      "address": "0x000ef540",
+      "size": 16,
+      "sha256": "9f144f393bc7813fee9864b791596042cabadeef628639550c17dfefdd1bbcd0",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef540.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0003\u000f",
+      "address": "0x000ef550",
+      "size": 78,
+      "sha256": "2bb37072104db3faadb0237d40da66cbdfd30550db9aaf418a68693ee52c3927",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef550.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\nД��\u0011",
+      "address": "0x000ef5a0",
+      "size": 82,
+      "sha256": "bcb972b5ea5574d6e596fc850cdad72f7fa9f3fd7cd69782eb4686023d59889d",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef5a0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��\u0010�",
+      "address": "0x000ef5f4",
+      "size": 60,
+      "sha256": "c10691ee4d3d23bb2bf4118f22e81ef3e7f0d0c8735c0d3826d80cbe2d9e5563",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef5f4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\n,\u0004�\f!LC D�i\u0019�\f,\u0006�\u000b<\f!LC D�0",
+      "address": "0x000ef630",
+      "size": 30,
+      "sha256": "2999bd893aad9b4b9f55c75300b27fd4a11125c95b983824d2d9f0ac1ec0e33a",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef630.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "<\f!LC D�0",
+      "address": "0x000ef720",
+      "size": 46,
+      "sha256": "405b3d707e23ac1cc65dfb4ffbc9eece66a236f74358580113e669354969528a",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef720.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": ",\u0002��0",
+      "address": "0x000ef750",
+      "size": 20,
+      "sha256": "a4b71f40f1a9655d7ccf69ed0bb6b774cb7b88f8e4282695fc981f6910b9c831",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef750.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0002�\u0001 ��\u0010�",
+      "address": "0x000ef764",
+      "size": 248,
+      "sha256": "ac4f296e3f0c9bede9233eb0547f176dbbdef8c82e409349719452715703c6b4",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef764.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "F\u001dF,\r���\u0019�\u0006F7o",
+      "address": "0x000ef85c",
+      "size": 22,
+      "sha256": "76d947ace48c38b9e8b670e782e3a89d330c077ef4caf0a94c4cf7408cf06c25",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef85c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�g\u0001'��[�7g\u0001 \f���\u000b��o",
+      "address": "0x000ef874",
+      "size": 18,
+      "sha256": "d656a26b6471f5759ff20c8fcf03f74f3e0a3737ceeb56c121df7c7c405d1358",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef874.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u000b��o",
+      "address": "0x000ef888",
+      "size": 56,
+      "sha256": "b81dcfd47506cc3efa26b5a6a50129161d4af2eb40045e49f78d0fcfdc835ad7",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef888.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000ef908",
+      "size": 52,
+      "sha256": "6255e53c34a8b16765ccf1e9b1f971cd4dd34c12f6a4ebebc4ceeca816587f16",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef908.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "-��_����\u0004F%o\u0001-@�X�\u0002%%gfo�o\u0014.0�\u0001.4�\u0002.",
+      "address": "0x000ef93c",
+      "size": 92,
+      "sha256": "ad71e3a1f726c141021d38028ad6e4322542f012acc82f1a97707bd501836d02",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef93c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": ".4�\u0002.",
+      "address": "0x000ef998",
+      "size": 92,
+      "sha256": "01d1247386d69219a9043ae201e183c546798560c7f3c1209afa6b99f350bb44",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef998.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "@�\u0004.",
+      "address": "0x000ef9f4",
+      "size": 456,
+      "sha256": "6229cd020953c261dc1cc3334f5ea353b1f0fb12cd563c9bad153ab0313ecbbc",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000ef9f4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000efbbc",
+      "size": 256,
+      "sha256": "28edd12d83f4c58ac2d17704c11948e144c1e92ff1f5c30b176b8e9a4f0e6d1f",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000efbbc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\n.",
+      "address": "0x000efcbc",
+      "size": 36,
+      "sha256": "4272e3ba7c8cf31b07e66c4679a1369b80a2f1f3c85749ccf32d80341c86ebdb",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000efcbc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": ".\u0012�\r.\u0005�\u0012.-� .\u0001�0.)�O�",
+      "address": "0x000efce0",
+      "size": 200,
+      "sha256": "2e75be2c80901fffdcdf79a2f7aaf976ddea9bc5dad258c98aee35b0a3095c27",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000efce0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0005\u0005��u_�",
+      "address": "0x000efea8",
+      "size": 24,
+      "sha256": "e28de011837cf664bbe64890c5a55be68ad72d5673b37fb49a8eb40441e0e5d8",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000efea8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "|����{@�\u0001(�zH�\u0001He���\u001f�",
+      "address": "0x000efec0",
+      "size": 136,
+      "sha256": "3ce2bb174a4178839366e9f3bdfe319873c49bdd03c38cc22fd1473772c52524",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000efec0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0001He���\u001f�",
+      "address": "0x000eff48",
+      "size": 52,
+      "sha256": "835885ae3c83740928441aa2e771b96208f23937dd2e03f2a080dbb04b0e7c34",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000eff48.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "F��\u0010���",
+      "address": "0x000eff7c",
+      "size": 250,
+      "sha256": "ab16bb86967299c1950a7712fed782fe21e24f3b0d03c9e17421d513ab65c47b",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000eff7c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0011.",
+      "address": "0x000f0078",
+      "size": 90,
+      "sha256": "a08c58a7dbfe1753754abb31b79810aa527c09bb8151d9c1b54830a5bbe221db",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f0078.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "7�\r.-����\u0001PE@����\u0001\u0001(@�\u0010.@� .��Ʉ�� \u0005",
+      "address": "0x000f00d4",
+      "size": 80,
+      "sha256": "26ffeec838d8ab5ae8a160711fd07281a8b5052c32e474f6eec8ee5c1fc9ab0c",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f00d4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "(@�\u0010.@� .��Ʉ�� \u0005",
+      "address": "0x000f0124",
+      "size": 556,
+      "sha256": "099b0904ea31270367644d8f8f55a8db34f4f1630a112ce6e744793ec6b1ee40",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f0124.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��\u0012� \u000f",
+      "address": "0x000f0350",
+      "size": 206,
+      "sha256": "5814d3011bbba138896629ee0050dde590c16f0fdc258bb7c243850005cd0e6a",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f0350.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "-\u0001�\u0010-\u0002�\u0001/��\u0004�`\u0010@�%pO�\u0001\b",
+      "address": "0x000f0420",
+      "size": 96,
+      "sha256": "024814482f8ab7af575898b3ab38f5f1c901ca6043382db39a76c4b6aa5b7d6f",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f0420.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0001\b",
+      "address": "0x000f0480",
+      "size": 38,
+      "sha256": "f819e5963079ed9850bd0db67baca68be68c334a1c90ef3bbc04b091e55d1ad7",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f0480.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��\u0001 ���\u0001",
+      "address": "0x000f04a8",
+      "size": 34,
+      "sha256": "c605812272f65f355d92f0dc20adabe603a44202b6b0c57107eab3d3ecdf28d8",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f04a8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0004�`\u0011A�%",
+      "address": "0x000f04cc",
+      "size": 44,
+      "sha256": "72a28df386faa3c51015d443e94d459d270764b9a83695a214a039b1f881246c",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f04cc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0011�B��x���\u0014\u0001��d\u0011�B\f�O�",
+      "address": "0x000f123c",
+      "size": 132,
+      "sha256": "6ed69c62d84c3fdbc5553c05daf2ecc62c04c710b2338cccb0003f5cacd13c61",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f123c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�B\f�O�",
+      "address": "0x000f12c0",
+      "size": 172,
+      "sha256": "fe391537beb976e67e170b0f7aa94dc2788c8436b71d84c912005cbc40053138",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f12c0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "V�\u0012� \u000f\u0005�\u0004�`\u0011Q�%p",
+      "address": "0x000f136c",
+      "size": 64,
+      "sha256": "eeec35c2f7045ab478596a7032b0b35b3399a9e48b0468ac5933e4063da996bd",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f136c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f13ac",
+      "size": 990,
+      "sha256": "bd31d0fa2916a583b64351ea98f76db5d501b15599887fba3ce08ce8f6783ae0",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f13ac.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0015\u0001@X\u0007D",
+      "address": "0x000f178c",
+      "size": 34,
+      "sha256": "87eecd4307c23ed63f63eb00e3e8e78d8d70784f82b2b36bdc1998b81cc23604",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f178c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�|���\n�(A!�\u0015",
+      "address": "0x000f17b0",
+      "size": 10,
+      "sha256": "4dfa4c3a918a944b02dbeb7ecd06af5c419489ecf7cffc70d400973ca7be6a56",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f17b0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "5\u0004-��",
+      "address": "0x000f17bc",
+      "size": 10,
+      "sha256": "96946845b93de2475ba4d5f56a57fc25efc5324b8b25ac1fcdc11892488a581a",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f17bc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0006\b",
+      "address": "0x000f18f8",
+      "size": 360,
+      "sha256": "c1167a0a5ff9aa2efad84e319fea94da02738b4b47fb337d6dcb2090ea8c9da6",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f18f8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�@\u000f\u0014�HDPDpG@�����\u0012��\u000f\u000f�\u0002�\u0007\u0001\u0001)\u0001�",
+      "address": "0x000f1a60",
+      "size": 96,
+      "sha256": "0da284787619c83e0ce2a8e2614b520e2b2d4012fd2eee8fd532466c5bcd4be7",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f1a60.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0002�\u0007\u0001\u0001)\u0001�",
+      "address": "0x000f1ac0",
+      "size": 226,
+      "sha256": "38cee3ce6f53114449df55e3a2567a7e0b191790a972b5cc5e65636abdc3f79d",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f1ac0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��@�����@�-�@I�����F�F8F\u0018�\u0010\u000f\u0001�|���\b�\u0007\u0001\u0001)\u0002ы�",
+      "address": "0x000f1ba4",
+      "size": 578,
+      "sha256": "e97150b1a8fbec367a26c26bbca4607de7c4a70d252e14a89353457218970d6f",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f1ba4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\b�\u0007\u0001\u0001)\u0002ы�",
+      "address": "0x000f1de8",
+      "size": 4,
+      "sha256": "b721363585b96f9aeec989abe70d990f5a24474263fc7457713446c4883fddaf",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f1de8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�@���d�J��q��\u0015\u0001@X%!\u0003\"O�",
+      "address": "0x000f1dec",
+      "size": 4,
+      "sha256": "30c5d2675ee7144a8e3a5871ef1b65527211da9fca984f0c32690a145dd30a91",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f1dec.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "9��\u0012.",
+      "address": "0x000f1df4",
+      "size": 68,
+      "sha256": "e83e2919c50269958ebefbaa2bc08707fa776d15dcbfc0024487b6064adafbac",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f1df4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0005\f��",
+      "address": "0x000f1e88",
+      "size": 48,
+      "sha256": "92ce80b2e34a4ca14ba27a99755a0ced6fb13bec29982e9d592e8958d28b3985",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f1e88.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u000f�Ts�\\�B",
+      "address": "0x000f1eb8",
+      "size": 50,
+      "sha256": "4fda2b718a9669fbdd7229a5365f56e61395b43ebc5e22b87d3f23183fbfa9cb",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f1eb8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\n.@����/F\u0015F",
+      "address": "0x000f304c",
+      "size": 74,
+      "sha256": "dd2ccfa5d2dafd368b5cf88efc16b47f01e7c40ffc61cf02a1db3328ffa2fda5",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f304c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "B\t�\f�\u0010z|�\u0014�\f�Qz\t\u001a\u0001�\u001a\u0004�<2\u0001=�����𼤰  \u0001�",
+      "address": "0x000f2c8c",
+      "size": 346,
+      "sha256": "8c9a79ba677589c3ff23ecdc682976027aaa9970af5da13f2545806db3b48c75",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2c8c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0001�\u001a\u0004�<2\u0001=�����𼤰  \u0001�",
+      "address": "0x000f2758",
+      "size": 98,
+      "sha256": "0b642d8e6c95ace345785a378f34159b037deca3d18e1bc5cde534a56cffd973",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2758.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "���  \u0001�",
+      "address": "0x000f2e18",
+      "size": 144,
+      "sha256": "570af8217a8dd9e52cadc0bf725cd9bf3de2870ecd1ab22febe3e6876b357535",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2e18.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\nFO���\n.\fظ�\u0003\u000f\tН�\u0017",
+      "address": "0x000f2af4",
+      "size": 102,
+      "sha256": "35b75a9abd58d8a9f30ee696d828c1d3a20e1f038a2f59d499a67c0b82f586ab",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2af4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��\u0017",
+      "address": "0x000f2a8c",
+      "size": 102,
+      "sha256": "7c8de502ec9d0e1b87523a49bf52ea95d8edabd4a0d8c1038a7c6cbf2f92d9de",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2a8c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0013�\u0002�<\" F��<�(F{��� r FN�:�$�����O�\u0001\b.���]�",
+      "address": "0x000f1fac",
+      "size": 110,
+      "sha256": "a1ae3d4ee5fa2bafd37a46c35acd71c1941f912e9d650e5969080d0217f5a71b",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f1fac.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": ":�$�����O�\u0001\b.���]�",
+      "address": "0x000f2200",
+      "size": 1016,
+      "sha256": "6db0e2ffbee981ba056ca0b13af52ab3d469ab0dde0c8159756b9a5a3ccec168",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2200.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "!\u0007�\u0001�",
+      "address": "0x000f27bc",
+      "size": 70,
+      "sha256": "cda7ee5edc8e1cefeb0203652b374cb5157730c9ec4974da1d2cb965fc5f8c39",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f27bc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�B\u0007�8Fk�\u001f�O�",
+      "address": "0x000f2804",
+      "size": 62,
+      "sha256": "603820a8f39e594ddc97baa2120dd3ad59899ab19ab3eaa3eed98111411e8a36",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2804.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f2844",
+      "size": 300,
+      "sha256": "8ea387ebef0e5930fe8779c31c35489e5f93eecfd6bfbb5ba974714daee0e30c",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2844.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "@X\u0010�\u0011�\u0001;",
+      "address": "0x000f2970",
+      "size": 92,
+      "sha256": "d969dc964e84b7a295ac63547884213781de93912004cfcc1fb216b2e135e806",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2970.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��B\u0003�`5\u00019����@�\u0011 �B",
+      "address": "0x000f2b5c",
+      "size": 304,
+      "sha256": "8d21636ab744edf824db8c5747d4f4ae5064ababbd98051339f3603296719efa",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f2b5c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0015\u0001P�\u0001�A�\u001dPhDYF@�\u0012\"��������\u0019���S�J��q��\u0015\u0001@X�h@�\f\u0011\u0007�\u0001\u0006\u0006��\u0006",
+      "address": "0x000f3e74",
+      "size": 324,
+      "sha256": "36d12148f32b356200d2f52133650ed98db6f17ab1aa7c647dce38a66b5e1d03",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f3e74.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0019���S�J��q��\u0015\u0001@X�h@�\f\u0011\u0007�\u0001\u0006\u0006��\u0006",
+      "address": "0x000f3fb8",
+      "size": 198,
+      "sha256": "2924241c39abee438c5d759a7bcee52cbcec11c3dda20bbbd3a638466f89914c",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f3fb8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�h@�\f\u0011\u0007�\u0001\u0006\u0006��\u0006",
+      "address": "0x000f4080",
+      "size": 46,
+      "sha256": "a7b4325c61ea6b18514a4a9ba1ae3d43fcf5ce572e055ee7018c61a8123e97cd",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4080.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "xq����y\u0001(=�\u0002(\b�+s\u0003(\u0002�\u0005�\u0004\u0003Zs\u0004(\b���X\u0010\u0005(%�\u0006(\u0002�\u00011��Z\u0010\u0007(\u0002�\u0001#��\\0\b(\b���^\u0010\t(\b���_\u0010\f(\u000b�@�\u0011#�B",
+      "address": "0x000f40b0",
+      "size": 100,
+      "sha256": "911b987d54e955a37db76f81f3e94d0b5127d9d7403d85f08a77329eb7b93379",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f40b0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0004\u0003Zs\u0004(\b���X\u0010\u0005(%�\u0006(\u0002�\u00011��Z\u0010\u0007(\u0002�\u0001#��\\0\b(\b���^\u0010\t(\b���_\u0010\f(\u000b�@�\u0011#�B",
+      "address": "0x000f4114",
+      "size": 130,
+      "sha256": "2361123a7e2f4d2597c869b6e711af228737ec62c55149d78f96829eb9f30196",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4114.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��Z\u0010\u0007(\u0002�\u0001#��\\0\b(\b���^\u0010\t(\b���_\u0010\f(\u000b�@�\u0011#�B",
+      "address": "0x000f4198",
+      "size": 48,
+      "sha256": "657cf24513243a2a2decc4b4a3ccd6ca5cfec623b754785974801d9361e48879",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4198.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\t(\b���_\u0010\f(\u000b�@�\u0011#�B",
+      "address": "0x000f41c8",
+      "size": 44,
+      "sha256": "f9801d0e882fbf27478131480679dc80fbeb7472e6e6388bba0fe6d4474c9119",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f41c8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0002�\u0001)@�\u000b�\u0002\u0010\u000f(y�\u0001#��`0u�\u001a���z�\u001a��Bo�\bF����k�ȲѲN�\u0019��y��",
+      "address": "0x000f41f4",
+      "size": 444,
+      "sha256": "7ae62c90569e34c5f904f9fc8047ec42d8e6e19ecce2bae7ab6e245ffd68595a",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f41f4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "#��`0u�\u001a���z�\u001a��Bo�\bF����k�ȲѲN�\u0019��y��",
+      "address": "0x000f43b0",
+      "size": 16,
+      "sha256": "caf7ca016817a6691573c558de2c9be9049b492ea32d97ba6679753202181151",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f43b0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�K�8Fk�\u0007�",
+      "address": "0x000f4460",
+      "size": 118,
+      "sha256": "f67da7fd8eb9dc03e3578142f55adffbc45c755d048d666f49dd731b84519df5",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4460.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0001 \u000b�\u0007",
+      "address": "0x000f44d8",
+      "size": 120,
+      "sha256": "84461ce877810a54e49efa8949c2973933fbe01b259d9c868732fa093ca76657",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f44d8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�N�\u001a�O�\u0001\b\u0015�\t��\u0010 �A�\u0019R����PF@�r����XF@�\u0012\"����\u0019���\u0007�o�\u0005\b �\r�",
+      "address": "0x000f4550",
+      "size": 88,
+      "sha256": "0cd7ac7fd1298f19bceb86c68e132c0e447127471f08a15f0482e7448a886f51",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4550.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��\u0010 �A�\u0019R����PF@�r����XF@�\u0012\"����\u0019���\u0007�o�\u0005\b �\r�",
+      "address": "0x000f45a8",
+      "size": 130,
+      "sha256": "6a53baa7f9ff4f77dafdfc37e841f23567090d59452ecae13df6378e08c62d65",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f45a8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�PF@�r����XF@�\u0012\"����\u0019���\u0007�o�\u0005\b �\r�",
+      "address": "0x000f462c",
+      "size": 362,
+      "sha256": "662dc73b5915e6964882a96c8758a709b178d720c03ee782f32d39f4f81ae21b",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f462c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�XF@�\u0012\"����\u0019���\u0007�o�\u0005\b �\r�",
+      "address": "0x000f4798",
+      "size": 96,
+      "sha256": "04c5c46c56ca9320b9ab925f1ce5d0e06efb64cb13801a5148e17fae32f9bcc9",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4798.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "���\u0007�o�\u0005\b �\r�",
+      "address": "0x000f47f8",
+      "size": 312,
+      "sha256": "e6b01cd4a6fa93c8dc74b5330d00bd284d848887c63d8a608d211fb259579d2b",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f47f8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": " �\r�",
+      "address": "0x000f4930",
+      "size": 340,
+      "sha256": "00c2bc1a4ae6fa9352e308e24cfd52a002640b5c64fb8f066e3bb15fe8d347ae",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4930.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0006�",
+      "address": "0x000f4a84",
+      "size": 102,
+      "sha256": "932fa652dc5ee2713df1d5290fd7d2007648a06cf2e512c60fff84ae56af9c6c",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4a84.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f4aec",
+      "size": 52,
+      "sha256": "e6886bf42bb233e28bb05a80d1091ab2893a1553004859d677a81e3200b50692",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4aec.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "��Ɓ\u0013��s\u0018F\u000bF<!KC\u0018D;\f\u0004��B@�\u0004x\n,\u0002�\u0001*@�",
+      "address": "0x000f4b20",
+      "size": 192,
+      "sha256": "43fc4a5ab735dbf45a3c49d51e66d9e8a9df26dfc381f24035937730d1c4d95c",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4b20.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0004��B@�\u0004x\n,\u0002�\u0001*@�",
+      "address": "0x000f4be0",
+      "size": 358,
+      "sha256": "6c501b40c43e2795204c91b0b3a96114a49f6dc6b8ee7dba361448165b3d77a8",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4be0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f4d48",
+      "size": 16,
+      "sha256": "a810580a5e8c199bf7e841d5fc6107749b8feed33a0acada5538159281077667",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4d48.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": " r��\u000b�O�\u0001\b������",
+      "address": "0x000f4d58",
+      "size": 2,
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4d58.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�����!�)\u0010БB��<\"QC\bD",
+      "address": "0x000f4d5c",
+      "size": 84,
+      "sha256": "b08ffca0f91cb15cb021a0cb99d5dbaf5239239508e801f13fca7b9f2fc7a702",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4d5c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f4db0",
+      "size": 382,
+      "sha256": "b7b55c094695aefe28c3aae8f3dea9a6fad77d4a125ff7563646c21394cd92b3",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4db0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�FH��H��o�\u0002\b������",
+      "address": "0x000f4f30",
+      "size": 2,
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4f30.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "z�\u0005F�����!�B��v�<\"QC\bD",
+      "address": "0x000f4f34",
+      "size": 48,
+      "sha256": "59e5a812cb510887ce38411f40e93c533487c7fc1161da3e20e2c29c1dc8e672",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4f34.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�<\"QC\bD",
+      "address": "0x000f4f64",
+      "size": 2,
+      "sha256": "c7dfbb7d02759eacb64dbc916c1bb6f21eabaff1c1032ea5c9176abf7fd28df8",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4f64.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0004��",
+      "address": "0x000f4f94",
+      "size": 38,
+      "sha256": "95caccf1fe867f6827593403369974f8fdf14ccdd662206934a0f8c6ed282db7",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4f94.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "���\u0004F��",
+      "address": "0x000f4fbc",
+      "size": 54,
+      "sha256": "c0722755228ff98279da47cb5bbb8412a9198cab807c1a9f68da830b08f1b25d",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f4fbc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f5000",
+      "size": 420,
+      "sha256": "c1ec3ffb2b6864ece337dd1c970a3a4366c4a60adcc86d09d1a486372207e552",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f5000.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0001/��4����",
+      "address": "0x000f51a4",
+      "size": 336,
+      "sha256": "59c70a256f4b94565e184916dd1f705b0a28be65ba3be4efc12d0aa1835bb580",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f51a4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\t.\f�@�\u0013",
+      "address": "0x000f5ef4",
+      "size": 38,
+      "sha256": "5b8e92614d5e55c424b8d6be5776e85f5f1aa0d2a5e1af7e16c3f4bf27a19a73",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f5ef4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0016�8F{������",
+      "address": "0x000f5f1c",
+      "size": 40,
+      "sha256": "380db6dccea127d9f0bf411d657accc17fa5bfdaa1ccf9f582137b3973b6ddd4",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f5f1c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f5f44",
+      "size": 90,
+      "sha256": "0205827a2fa74800161d3c337c6f5d31a05ca976ea088e8377abe6a7b0a3d43e",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f5f44.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f5fa0",
+      "size": 6,
+      "sha256": "c5e328d89f53179b3ebce06235ac0e47f1d4fbfc23027d806822d57cd3f4e290",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f5fa0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "O�\u0001\b�����",
+      "address": "0x000f5fa8",
+      "size": 14,
+      "sha256": "a2825d95067a3cf57fd0274aadf42ba6cb08eed05938ee4128ce46554531532e",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f5fa8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\n�@��",
+      "address": "0x000f5fb8",
+      "size": 30,
+      "sha256": "b0ad476f9962ed42f8f57c648139e39672a4a2f406dd0926f5edb65029a58a1d",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f5fb8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0001\b�����",
+      "address": "0x000f5fd8",
+      "size": 26,
+      "sha256": "8f4f27037ff6d6db6d7e38974c31d75525f24b2237d368b49741e7123f3145c9",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f5fd8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": ".\f�O��p�B",
+      "address": "0x000f5ff4",
+      "size": 84,
+      "sha256": "a68b0cf826ddb1abdb62c6160002c24586648935cd228facf0f5433648cd5bbc",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f5ff4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "O�\u0001\b����",
+      "address": "0x000f6048",
+      "size": 112,
+      "sha256": "19ed4888869556a20c474de23e8473e482ae3eb2d1361dcb61c628092cb42b7f",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6048.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0010�\t.\n�O��p�B",
+      "address": "0x000f60b8",
+      "size": 224,
+      "sha256": "4285d65b3b37f9033b7ddce74cdf98c9f4100423c739214aa9fb73defbd32ca5",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f60b8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "-\u0010�\t.\n�O��p�B",
+      "address": "0x000f61b4",
+      "size": 28,
+      "sha256": "8cdefb12cc1932703433d5974f91b6caafef3186324091935a0a4efaabf0ddaf",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f61b4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�F\u001c�\u0007-\u0010�\t.\n�@��",
+      "address": "0x000f62c8",
+      "size": 148,
+      "sha256": "956c3a1bfc3c50f3539c229f6a027698366baca2b90c04709bd02bca169115f8",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f62c8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "F\t�\b-\u0010�\t.\n�O��p�B",
+      "address": "0x000f64f0",
+      "size": 1024,
+      "sha256": "fe8a9c5977ef112f8620b3a44a508936a3d60f9264817fab6587bb8ac4135cf9",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f64f0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\t.\t�O��p�Bv�8F���",
+      "address": "0x000f6928",
+      "size": 76,
+      "sha256": "ccf20e10324d2c6c993142fa5239d1615a0b18c20ca54e6bd1891cf898dbcbf6",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6928.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0001\bs���",
+      "address": "0x000f6974",
+      "size": 26,
+      "sha256": "8ca44ad2c6e3eacaceed57fc56c5ad4343b99595b269e228e349603c91f6c16f",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6974.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": ".\t�O��p�Bd�8F���",
+      "address": "0x000f6990",
+      "size": 48,
+      "sha256": "1fc1dfd269f42a17620861030047a77644592cd5926e98ed552e260d2d975156",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6990.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\ba���",
+      "address": "0x000f69c0",
+      "size": 116,
+      "sha256": "352b299690534a2dea2b5c1fa5a503f363934dd668651269d0f784812af7abb3",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f69c0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f6a34",
+      "size": 26,
+      "sha256": "c69d59597e7105057747a06ef8d43b96dd746615ab243e1a12f44a6095822112",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6a34.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�B;�\u00012<*�Ѹ�\n\u000f\u001aи�\u000b\u000f!Д��",
+      "address": "0x000f6b20",
+      "size": 184,
+      "sha256": "d5b5a04017a76504afad5d77948f1d8268aaba23082963dc6965fc3a75108122",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6b20.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u000f!Д��",
+      "address": "0x000f6bd8",
+      "size": 40,
+      "sha256": "26ea5211289f0835e05c4e8e71cd2700195f1dbb124e17fb9f27826912586f0f",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6bd8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\"����0F\u0004�\u0001<\"��,�",
+      "address": "0x000f6c00",
+      "size": 72,
+      "sha256": "7a668989dfff456913242bdebdc8c8d61751829d6177683215c895661a166008",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6c00.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f6c48",
+      "size": 114,
+      "sha256": "7abb9e71324cb3722d724b888f6d114718087095ccd637a76a44433bfa85b728",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6c48.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\f�(F9FM�@�����\u0004\u0001���\u0011���!�B��\u0004��",
+      "address": "0x000f6cbc",
+      "size": 40,
+      "sha256": "399b31d460302c55fc3f7cc7aeccf3bee0e4192a7025a461319e87da7c1aa684",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6cbc.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0011���!�B��\u0004��",
+      "address": "0x000f6ce4",
+      "size": 38,
+      "sha256": "f3a2425235897b2b713772b885ee2e40e5fd4d55c5e0b467517edabac29ffca1",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6ce4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "N�\u0012���o�\u0003\b\b�o�\u0004\b\u0005�O��8\u0002�_�",
+      "address": "0x000f6d0c",
+      "size": 180,
+      "sha256": "85d74789dd66b48d88009f73bcaf4dd635684ce7cee9a1442fc0b81dfbafe449",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6d0c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\b\u0005�O��8\u0002�_�",
+      "address": "0x000f6dc0",
+      "size": 292,
+      "sha256": "bf47cf5ef29790f99a550857a59411e8b1606edc57e8736cf18433721fddbb7d",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6dc0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "g\u0002�o�\u0001\b����",
+      "address": "0x000f6ee4",
+      "size": 18,
+      "sha256": "909df4c87ce4dedfaccb01af301fe0dc65806b45b93d20e058cd2b1f64255012",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6ee4.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�JM\f\u0007�j\"\u0017\u0002\u0019\u0015F�2",
+      "address": "0x000f6ef8",
+      "size": 64,
+      "sha256": "640c177d106c4238c176c2083077365f3dad74aae78a6d7fc96f8395721334f5",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6ef8.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f6f38",
+      "size": 40,
+      "sha256": "9d0ca7e682628f947ef594001678bca10d23b0f6a358e0a0241e8a4f50fbbb7a",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6f38.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f6f60",
+      "size": 38,
+      "sha256": "f3a2425235897b2b713772b885ee2e40e5fd4d55c5e0b467517edabac29ffca1",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6f60.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0018",
+      "address": "0x000f6f88",
+      "size": 152,
+      "sha256": "fe0339a7711756f9fc7df57816c543893675e54c11ee5cdffd1c23925ce1459c",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f6f88.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "\u0004\u0012",
+      "address": "0x000f7148",
+      "size": 18,
+      "sha256": "4fc24c5dc87651df170f6f099276eb4a0fc6e6c80d9d371816cb7ad22599b421",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f7148.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "",
+      "address": "0x000f715c",
+      "size": 64,
+      "sha256": "5c9043e3bb3f9386947a7ebd18d8e16627c263c5478ddf7d3e2f4d1505c5392a",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f715c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "$",
+      "address": "0x000f719c",
+      "size": 40,
+      "sha256": "0d875f5e0424746a46538b021bee91ed3a0c2b6f2219f994b25b9ad5710f8b56",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/000f719c.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    },
+    {
+      "symbol": "�\u0002",
+      "address": "0x001080a0",
+      "size": 24,
+      "sha256": "ac2fd89a46797cce541f3b197b438008d7c8113420d8db96503945fc28cddf44",
+      "thumb": true,
+      "assembly": "research/android-native-recovered/001080a0.asm",
+      "status": "disassembled-with-skipdata",
+      "behavior_verified": false
+    }
+  ],
+  "limitation": "Disassembly only; skipdata may preserve inline data and is not a high-level decompilation."
+}
