@@ -1,0 +1,2883 @@
+{
+ "class": "atmage",
+ "exe_region": [
+  "0xca511c",
+  "0xce1ae8"
+ ],
+ "etc_motion": {
+  "0": "ATAnimation/WindStrike.ani",
+  "1": "ATAnimation/CrystalAttack.ani",
+  "2": "ATAnimation/DarkChangeReady.ani",
+  "3": "ATAnimation/DarkChangeStart.ani",
+  "4": "ATAnimation/ElementalChange.ani",
+  "5": "ATAnimation/FireRoadCast1.ani",
+  "6": "ATAnimation/FireRoadCast2.ani",
+  "7": "ATAnimation/ChainLightningCast.ani",
+  "8": "ATAnimation/ChainLightning.ani",
+  "9": "ATAnimation/ChainLightningEnd.ani",
+  "10": "ATAnimation/IceSword.ani",
+  "11": "ATAnimation/HolongLight.ani",
+  "12": "ATAnimation/PieceOfIce.ani",
+  "13": "ATAnimation/IceRoad.ani",
+  "14": "ATAnimation/FlameCircle1.ani",
+  "15": "ATAnimation/FlameCircle2.ani",
+  "16": "ATAnimation/FlameCircle3.ani",
+  "17": "ATAnimation/BlueDragonWill1.ani",
+  "18": "ATAnimation/BlueDragonWill2.ani",
+  "19": "ATAnimation/BlueDragonWill3.ani",
+  "20": "ATAnimation/FrozenLand1.ani",
+  "21": "ATAnimation/FrozenLand2.ani",
+  "22": "ATAnimation/IceArea.ani",
+  "23": "ATAnimation/IceCrashStart.ani",
+  "24": "ATAnimation/IceCrashLoop.ani",
+  "25": "ATAnimation/IceCrashLoopAttack.ani",
+  "26": "ATAnimation/IceCrashEnd.ani",
+  "27": "ATAnimation/FrozenLand3.ani",
+  "28": "ATAnimation/BrokenArrow1.ani",
+  "29": "ATAnimation/BrokenArrowLoop1.ani",
+  "30": "ATAnimation/PushGrab.ani",
+  "31": "ATAnimation/Push.ani",
+  "32": "ATAnimation/BrokenArrowDash1.ani",
+  "33": "ATAnimation/BrokenArrowDash2.ani",
+  "34": "ATAnimation/MagicCannon1.ani",
+  "35": "ATAnimation/MagicShield.ani",
+  "36": "ATAnimation/Teleport1.ani",
+  "37": "ATAnimation/Teleport2.ani",
+  "38": "ATAnimation/FallenBlossoms1.ani",
+  "39": "ATAnimation/FallenBlossoms2.ani",
+  "40": "ATAnimation/FallenBlossoms3.ani",
+  "41": "ATAnimation/MagicCannon2.ani",
+  "42": "ATAnimation/MagicCannon3.ani",
+  "43": "ATAnimation/TurnWindmill1.ani",
+  "44": "ATAnimation/TurnWindmill2.ani",
+  "45": "ATAnimation/DarknessMantle1.ani",
+  "46": "ATAnimation/MagicCannonReady.ani",
+  "47": "ATAnimation/WaterCannon.ani",
+  "48": "ATAnimation/IceElementalAttack1.ani",
+  "49": "ATAnimation/IceElementalAttack2.ani",
+  "50": "ATAnimation/IceElementalAttack3.ani",
+  "51": "ATAnimation/IceElementalDashAttack.ani",
+  "52": "ATAnimation/IceElementalJumpAttack.ani",
+  "53": "ATAnimation/LightningWall.ani",
+  "54": "ATAnimation/Resonance.ani",
+  "55": "ATAnimation/FirePillar1.ani",
+  "56": "ATAnimation/FirePillar2.ani",
+  "57": "ATAnimation/FirePillar3.ani",
+  "58": "ATAnimation/IceMan1.ani",
+  "59": "ATAnimation/IceMan2.ani",
+  "60": "ATAnimation/IceMan3.ani",
+  "61": "ATAnimation/IceMan4.ani",
+  "62": "ATAnimation/IceMan5.ani",
+  "63": "ATAnimation/ElementalRainCast.ani",
+  "64": "ATAnimation/ElementalRainJump.ani",
+  "65": "ATAnimation/ElementalRainJumpStay.ani",
+  "66": "ATAnimation/ElementalRainShoot.ani",
+  "67": "ATAnimation/ElementalRainChargeShoot.ani",
+  "68": "ATAnimation/MultiShot.ani",
+  "69": "ATAnimation/IceMan6.ani",
+  "70": "ATAnimation/DieHard1.ani",
+  "71": "ATAnimation/DieHard2.ani",
+  "72": "ATAnimation/DieHard3.ani",
+  "73": "ATAnimation/FrozenLandCasting.ani",
+  "74": "ATAnimation/FlameCircleCasting.ani",
+  "75": "ATAnimation/DarknessMantleCasting.ani",
+  "76": "ATAnimation/IceRoadCasting.ani",
+  "77": "ATAnimation/PushAttack.ani",
+  "78": "ATAnimation/MagicCannon4.ani",
+  "79": "ATAnimation/IceChakram1.ani",
+  "80": "ATAnimation/IceChakram2.ani",
+  "81": "ATAnimation/IceChakram3.ani",
+  "82": "ATAnimation/IceChakram4.ani",
+  "83": "ATAnimation/IceChakram5.ani",
+  "84": "ATAnimation/IceChakram6.ani",
+  "85": "ATAnimation/ElementalBusterFireCast.ani",
+  "86": "ATAnimation/ElementalBusterFire.ani",
+  "87": "ATAnimation/ElementalBusterWaterCast.ani",
+  "88": "ATAnimation/ElementalBusterWater.ani",
+  "89": "ATAnimation/ElementalBusterLightCast.ani",
+  "90": "ATAnimation/ElementalBusterLight.ani",
+  "91": "ATAnimation/ElementalBusterDarkCast.ani",
+  "92": "ATAnimation/ElementalBusterDark.ani",
+  "93": "ATAnimation/IceOrbEx.ani",
+  "94": "ATAnimation/Concentrate.ani",
+  "95": "ATAnimation/ElementalStrikeEx.ani",
+  "96": "ATAnimation/IceFieldEx.ani"
+ },
+ "skills": {
+  "1": {
+   "skl": "ATMage/WindStrike.skl",
+   "states": [
+    {
+     "state": 8,
+     "handler": "0x00cceb55",
+     "entry_motions": [
+      {
+       "index": 93,
+       "ani": "ATAnimation/IceOrbEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 17,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 24,
+     "handler": "0x00cd19ec",
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "ATAnimation/ChainLightningEnd.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "2": {
+   "skl": "ATMage/ChainLightning.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 38,
+     "handler": "0x00cda8d9",
+     "entry_motions": [
+      {
+       "index": 46,
+       "ani": "ATAnimation/MagicCannonReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "3": {
+   "skl": "ATMage/CrystalAttack.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 59,
+     "handler": "0x00cd05f5",
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "ATAnimation/DarkChangeReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "4": {
+   "skl": "ATMage/DarkChange.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "ATAnimation/HolongLight.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "ATAnimation/WaterCannon.ani"
+      },
+      {
+       "index": 49,
+       "ani": "ATAnimation/IceElementalAttack2.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      },
+      {
+       "index": 50,
+       "ani": "ATAnimation/IceElementalAttack3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "ATAnimation/IceElementalDashAttack.ani"
+      },
+      {
+       "index": 55,
+       "ani": "ATAnimation/FirePillar1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "5": {
+   "skl": "ATMage/ElementalChange.skl",
+   "states": [
+    {
+     "state": 20,
+     "handler": "0x00ccf3b2",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrystalAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrystalAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrystalAttack.ani"
+      },
+      {
+       "index": 17,
+       "ani": "ATAnimation/BlueDragonWill1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "6": {
+   "skl": "ATMage/FireRoad.skl",
+   "states": [
+    {
+     "state": 20,
+     "handler": "0x00ccf3b2",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrystalAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrystalAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrystalAttack.ani"
+      },
+      {
+       "index": 17,
+       "ani": "ATAnimation/BlueDragonWill1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "7": {
+   "skl": "ATMage/IceRoad.skl",
+   "states": [
+    {
+     "state": 21,
+     "handler": "0x00cd03c0",
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "ATAnimation/DarkChangeReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "8": {
+   "skl": "ATMage/IceSword.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "9": {
+   "skl": "ATMage/HolongLight.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "ATAnimation/HolongLight.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "10": {
+   "skl": "ATMage/PieceOfIce.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "ATAnimation/PieceOfIce.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "11": {
+   "skl": "ATMage/FlameCircle.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "ATAnimation/HolongLight.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "12": {
+   "skl": "ATMage/BlueDragonWill.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 30,
+     "handler": "0x00cda585",
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "ATAnimation/FlameCircle3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "ATAnimation/WaterCannon.ani"
+      },
+      {
+       "index": 49,
+       "ani": "ATAnimation/IceElementalAttack2.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      },
+      {
+       "index": 50,
+       "ani": "ATAnimation/IceElementalAttack3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "ATAnimation/IceElementalDashAttack.ani"
+      },
+      {
+       "index": 55,
+       "ani": "ATAnimation/FirePillar1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "13": {
+   "skl": "ATMage/FrozenLand.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "ATAnimation/IceElementalDashAttack.ani"
+      },
+      {
+       "index": 55,
+       "ani": "ATAnimation/FirePillar1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "ATAnimation/IceCrashStart.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "14": {
+   "skl": "ATMage/IceArea.skl",
+   "states": [
+    {
+     "state": 8,
+     "handler": "0x00cceb55",
+     "entry_motions": [
+      {
+       "index": 93,
+       "ani": "ATAnimation/IceOrbEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 25,
+     "handler": "0x00cd212d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 37,
+     "handler": "0x00cd9192",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "ATAnimation/TurnWindmill1.ani"
+      },
+      {
+       "index": 44,
+       "ani": "ATAnimation/TurnWindmill2.ani"
+      },
+      {
+       "index": 45,
+       "ani": "ATAnimation/DarknessMantle1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "15": {
+   "skl": "ATMage/IceCrash.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00cd9192",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "ATAnimation/TurnWindmill1.ani"
+      },
+      {
+       "index": 44,
+       "ani": "ATAnimation/TurnWindmill2.ani"
+      },
+      {
+       "index": 45,
+       "ani": "ATAnimation/DarknessMantle1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "ATAnimation/IceCrashStart.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "16": {
+   "skl": "ATMage/BrokenArrow.skl",
+   "states": [
+    {
+     "state": 25,
+     "handler": "0x00cd212d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "17": {
+   "skl": "ATMage/PushOut.skl",
+   "states": [
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "ATAnimation/IceCrashStart.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "18": {
+   "skl": "ATMage/MagicCannon.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 77,
+     "handler": "0x00cde6a2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "19": {
+   "skl": "ATMage/MagicShield.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 35,
+       "ani": "ATAnimation/MagicShield.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "20": {
+   "skl": "ATMage/Teleport.skl",
+   "states": [
+    {
+     "state": 24,
+     "handler": "0x00cd19ec",
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "ATAnimation/ChainLightningEnd.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "21": {
+   "skl": "ATMage/FallenBlossoms.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 38,
+       "ani": "ATAnimation/FallenBlossoms1.ani"
+      },
+      {
+       "index": 39,
+       "ani": "ATAnimation/FallenBlossoms2.ani"
+      },
+      {
+       "index": 40,
+       "ani": "ATAnimation/FallenBlossoms3.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "22": {
+   "skl": "ATMage/Expression.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "23": {
+   "skl": "ATMage/TurnWindmill.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00cd7d34",
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "ATAnimation/ElementalRainCast.ani"
+      },
+      {
+       "index": 64,
+       "ani": "ATAnimation/ElementalRainJump.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "24": {
+   "skl": "ATMage/DarknessMantle.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 45,
+       "ani": "ATAnimation/DarknessMantle1.ani"
+      },
+      {
+       "index": 75,
+       "ani": "ATAnimation/DarknessMantleCasting.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "25": {
+   "skl": "ATMage/MultiShot.skl",
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "26": {
+   "skl": "ATMage/WaterCannon.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "ATAnimation/WaterCannon.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "27": {
+   "skl": "ATMage/FirePillar.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 25,
+     "handler": "0x00cd212d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "ATAnimation/HolongLight.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "ATAnimation/WaterCannon.ani"
+      },
+      {
+       "index": 49,
+       "ani": "ATAnimation/IceElementalAttack2.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      },
+      {
+       "index": 50,
+       "ani": "ATAnimation/IceElementalAttack3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "ATAnimation/IceCrashStart.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "28": {
+   "skl": "ATMage/ManaBurst.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "29": {
+   "skl": "ATMage/LightningWall.skl",
+   "states": [
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "30": {
+   "skl": "ATMage/ElementalRain.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "31": {
+   "skl": "ATMage/Resonance.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "ATAnimation/Resonance.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "32": {
+   "skl": "ATMage/IceMan.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "33": {
+   "skl": "ATMage/DieHard.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 70,
+       "ani": "ATAnimation/DieHard1.ani"
+      },
+      {
+       "index": 71,
+       "ani": "ATAnimation/DieHard2.ani"
+      },
+      {
+       "index": 72,
+       "ani": "ATAnimation/DieHard3.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "34": {
+   "skl": "ATMage/ElementalShield.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "35": {
+   "skl": "ATMage/IceElementalAttack.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 48,
+       "ani": "ATAnimation/IceElementalAttack1.ani"
+      },
+      {
+       "index": 49,
+       "ani": "ATAnimation/IceElementalAttack2.ani"
+      },
+      {
+       "index": 50,
+       "ani": "ATAnimation/IceElementalAttack3.ani"
+      },
+      {
+       "index": 51,
+       "ani": "ATAnimation/IceElementalDashAttack.ani"
+      },
+      {
+       "index": 52,
+       "ani": "ATAnimation/IceElementalJumpAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "36": {
+   "skl": "ATMage/ArmorMasteryClothEB.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "37": {
+   "skl": "ATMage/ArmorMasteryLeatherGM.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "40": {
+   "skl": null,
+   "states": [
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "41": {
+   "skl": null,
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "43": {
+   "skl": null,
+   "states": [
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "ATAnimation/IceCrashStart.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "44": {
+   "skl": null,
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "46": {
+   "skl": null,
+   "states": [
+    {
+     "state": 30,
+     "handler": "0x00cda585",
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "ATAnimation/FlameCircle3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "47": {
+   "skl": null,
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "48": {
+   "skl": "ATMage/IceChakram.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 79,
+       "ani": "ATAnimation/IceChakram1.ani"
+      },
+      {
+       "index": 80,
+       "ani": "ATAnimation/IceChakram2.ani"
+      },
+      {
+       "index": 81,
+       "ani": "ATAnimation/IceChakram3.ani"
+      },
+      {
+       "index": 82,
+       "ani": "ATAnimation/IceChakram4.ani"
+      },
+      {
+       "index": 83,
+       "ani": "ATAnimation/IceChakram5.ani"
+      },
+      {
+       "index": 84,
+       "ani": "ATAnimation/IceChakram6.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "49": {
+   "skl": "ATMage/ElementalBuster.skl",
+   "states": [
+    {
+     "state": 7,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "ATAnimation/IceCrashStart.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "50": {
+   "skl": "ATMage/TundraSoul.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00cd8c62",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrystalAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "51": {
+   "skl": "ATMage/ElementalChain.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00cd8c62",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrystalAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "52": {
+   "skl": null,
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "57": {
+   "skl": null,
+   "states": [
+    {
+     "state": 31,
+     "handler": "0x00cd2d6b",
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "ATAnimation/PieceOfIce.ani"
+      },
+      {
+       "index": 13,
+       "ani": "ATAnimation/IceRoad.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "58": {
+   "skl": null,
+   "states": [
+    {
+     "state": 32,
+     "handler": "0x00cd413d",
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "ATAnimation/FlameCircle1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "60": {
+   "skl": "ATMage/IceOrbEx.skl",
+   "states": [
+    {
+     "state": 33,
+     "handler": "0x00cd3326",
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "ATAnimation/BlueDragonWill2.ani"
+      },
+      {
+       "index": 19,
+       "ani": "ATAnimation/BlueDragonWill3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "61": {
+   "skl": "ATMage/Concentrate.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 94,
+       "ani": "ATAnimation/Concentrate.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "62": {
+   "skl": "ATMage/ElementalStrikeEx.skl",
+   "states": [
+    {
+     "state": 34,
+     "handler": "0x00cd3842",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "ATAnimation/FrozenLand1.ani"
+      },
+      {
+       "index": 21,
+       "ani": "ATAnimation/FrozenLand2.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "63": {
+   "skl": "ATMage/IceFieldEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 96,
+       "ani": "ATAnimation/IceFieldEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "64": {
+   "skl": null,
+   "states": [
+    {
+     "state": 35,
+     "handler": "0x00cd476e",
+     "entry_motions": [
+      {
+       "index": 25,
+       "ani": "ATAnimation/IceCrashLoopAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "65": {
+   "skl": null,
+   "states": [
+    {
+     "state": 36,
+     "handler": "0x00cd4e97",
+     "entry_motions": [
+      {
+       "index": 26,
+       "ani": "ATAnimation/IceCrashEnd.ani"
+      },
+      {
+       "index": 27,
+       "ani": "ATAnimation/FrozenLand3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "67": {
+   "skl": null,
+   "states": [
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "68": {
+   "skl": null,
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00cd9192",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "ATAnimation/TurnWindmill1.ani"
+      },
+      {
+       "index": 44,
+       "ani": "ATAnimation/TurnWindmill2.ani"
+      },
+      {
+       "index": 45,
+       "ani": "ATAnimation/DarknessMantle1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "72": {
+   "skl": null,
+   "states": [
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "ATAnimation/WaterCannon.ani"
+      },
+      {
+       "index": 49,
+       "ani": "ATAnimation/IceElementalAttack2.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      },
+      {
+       "index": 50,
+       "ani": "ATAnimation/IceElementalAttack3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "73": {
+   "skl": null,
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "ATAnimation/IceElementalDashAttack.ani"
+      },
+      {
+       "index": 55,
+       "ani": "ATAnimation/FirePillar1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "75": {
+   "skl": null,
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "76": {
+   "skl": null,
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "77": {
+   "skl": null,
+   "states": [
+    {
+     "state": 42,
+     "handler": "0x00cd9a28",
+     "entry_motions": [
+      {
+       "index": 61,
+       "ani": "ATAnimation/IceMan4.ani"
+      },
+      {
+       "index": 62,
+       "ani": "ATAnimation/IceMan5.ani"
+      },
+      {
+       "index": 65,
+       "ani": "ATAnimation/ElementalRainJumpStay.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "79": {
+   "skl": null,
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00cd7d34",
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "ATAnimation/ElementalRainCast.ani"
+      },
+      {
+       "index": 64,
+       "ani": "ATAnimation/ElementalRainJump.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "81": {
+   "skl": null,
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00cd4bb6",
+     "entry_motions": [
+      {
+       "index": 66,
+       "ani": "ATAnimation/ElementalRainShoot.ani"
+      },
+      {
+       "index": 67,
+       "ani": "ATAnimation/ElementalRainChargeShoot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "82": {
+   "skl": null,
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 44,
+     "handler": "0x00cd8493",
+     "entry_motions": [
+      {
+       "index": 68,
+       "ani": "ATAnimation/MultiShot.ani"
+      },
+      {
+       "index": 69,
+       "ani": "ATAnimation/IceMan6.ani"
+      },
+      {
+       "index": 70,
+       "ani": "ATAnimation/DieHard1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 77,
+     "handler": "0x00cde6a2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "84": {
+   "skl": null,
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "85": {
+   "skl": null,
+   "states": [
+    {
+     "state": 46,
+     "handler": "0x00cdaabf",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "ATAnimation/FlameCircleCasting.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "86": {
+   "skl": null,
+   "states": [
+    {
+     "state": 47,
+     "handler": "0x00cdadba",
+     "entry_motions": [
+      {
+       "index": 75,
+       "ani": "ATAnimation/DarknessMantleCasting.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 48,
+     "handler": "0x00cdb130",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 49,
+     "handler": "0x00cdb798",
+     "entry_motions": [
+      {
+       "index": 86,
+       "ani": "ATAnimation/ElementalBusterFire.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "87": {
+   "skl": null,
+   "states": [
+    {
+     "state": 50,
+     "handler": "0x00cdbd6f",
+     "entry_motions": [
+      {
+       "index": 87,
+       "ani": "ATAnimation/ElementalBusterWaterCast.ani"
+      },
+      {
+       "index": 88,
+       "ani": "ATAnimation/ElementalBusterWater.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "88": {
+   "skl": null,
+   "states": [
+    {
+     "state": 51,
+     "handler": "0x00cdc22c",
+     "entry_motions": [
+      {
+       "index": 89,
+       "ani": "ATAnimation/ElementalBusterLightCast.ani"
+      },
+      {
+       "index": 90,
+       "ani": "ATAnimation/ElementalBusterLight.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 53,
+     "handler": "0x00cdc579",
+     "entry_motions": [
+      {
+       "index": 95,
+       "ani": "ATAnimation/ElementalStrikeEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "91": {
+   "skl": "ATMage/EquipBroom.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "92": {
+   "skl": "ATMage/BasicAttackUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "95": {
+   "skl": null,
+   "states": [
+    {
+     "state": 55,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "97": {
+   "skl": null,
+   "states": [
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "98": {
+   "skl": null,
+   "states": [
+    {
+     "state": 58,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "101": {
+   "skl": null,
+   "states": [
+    {
+     "state": 57,
+     "handler": "0x00cd0f08",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "102": {
+   "skl": null,
+   "states": [
+    {
+     "state": 26,
+     "handler": "0x00cd2438",
+     "entry_motions": [
+      {
+       "index": 10,
+       "ani": "ATAnimation/IceSword.ani"
+      },
+      {
+       "index": 10,
+       "ani": "ATAnimation/IceSword.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "103": {
+   "skl": null,
+   "states": [
+    {
+     "state": 60,
+     "handler": "0x00cd662e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "105": {
+   "skl": null,
+   "states": [
+    {
+     "state": 61,
+     "handler": "0x00cd68bc",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "107": {
+   "skl": null,
+   "states": [
+    {
+     "state": 62,
+     "handler": "0x00cd6b05",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "108": {
+   "skl": null,
+   "states": [
+    {
+     "state": 63,
+     "handler": "0x00cd6f7c",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "109": {
+   "skl": null,
+   "states": [
+    {
+     "state": 64,
+     "handler": "0x00cd7588",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "111": {
+   "skl": null,
+   "states": [
+    {
+     "state": 65,
+     "handler": "0x00cd7837",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "112": {
+   "skl": null,
+   "states": [
+    {
+     "state": 66,
+     "handler": "0x00cd7ab6",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "117": {
+   "skl": null,
+   "states": [
+    {
+     "state": 67,
+     "handler": "0x00cce9ff",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "139": {
+   "skl": null,
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00cd7d34",
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "ATAnimation/ElementalRainCast.ani"
+      },
+      {
+       "index": 64,
+       "ani": "ATAnimation/ElementalRainJump.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "162": {
+   "skl": null,
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "ATAnimation/HolongLight.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "169": {
+   "skl": "ATMage/BackStep.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "172": {
+   "skl": "ATMage/ArmorMasteryLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "173": {
+   "skl": "ATMage/ArmorMasteryHeavy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "174": {
+   "skl": "ATMage/BasicAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "175": {
+   "skl": "ATMage/JumpPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "176": {
+   "skl": "ATMage/MagicalAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "177": {
+   "skl": "ATMage/ThrowMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "178": {
+   "skl": "ATMage/PhysicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "179": {
+   "skl": "ATMage/DisjointItem.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "180": {
+   "skl": "ATMage/SuperArmorOnCast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "181": {
+   "skl": "ATMage/CompoundCraft.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "182": {
+   "skl": "ATMage/CompoundWeaving.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "183": {
+   "skl": "ATMage/CompoundMachine.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "184": {
+   "skl": "ATMage/CompoundChemistry.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "185": {
+   "skl": "ATMage/ArmorMasteryLeather.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "186": {
+   "skl": "ATMage/PhysicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "187": {
+   "skl": "ATMage/ArmorMasteryCloth.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "188": {
+   "skl": "ATMage/MagicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "189": {
+   "skl": "ATMage/MagicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "190": {
+   "skl": "ATMage/QuickStanding.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "191": {
+   "skl": "ATMage/Enchant.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "192": {
+   "skl": "ATMage/DollMaking.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "193": {
+   "skl": "ATMage/Alchemy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "194": {
+   "skl": "ATMage/OpenDisjointShop.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "195": {
+   "skl": "ATMage/BasicHpMaxUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "196": {
+   "skl": "ATMage/ArmorMasteryPlate.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "197": {
+   "skl": "ATMage/Conversion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "200": {
+   "skl": "ATMage/StatusUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "201": {
+   "skl": "ATMage/ExperienceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "211": {
+   "skl": "ATMage/WindStrikeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "ATAnimation/WindStrike.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "212": {
+   "skl": "ATMage/ChainLightningEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 7,
+       "ani": "ATAnimation/ChainLightningCast.ani"
+      },
+      {
+       "index": 8,
+       "ani": "ATAnimation/ChainLightning.ani"
+      },
+      {
+       "index": 9,
+       "ani": "ATAnimation/ChainLightningEnd.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "213": {
+   "skl": "ATMage/CrystalAttackEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrystalAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "214": {
+   "skl": "ATMage/DarkChangeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "ATAnimation/DarkChangeReady.ani"
+      },
+      {
+       "index": 3,
+       "ani": "ATAnimation/DarkChangeStart.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "216": {
+   "skl": "ATMage/FireRoadEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 5,
+       "ani": "ATAnimation/FireRoadCast1.ani"
+      },
+      {
+       "index": 6,
+       "ani": "ATAnimation/FireRoadCast2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "217": {
+   "skl": "ATMage/IceRoadEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "218": {
+   "skl": "ATMage/IceSwordEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 10,
+       "ani": "ATAnimation/IceSword.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "219": {
+   "skl": "ATMage/HolongLightEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "ATAnimation/HolongLight.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "220": {
+   "skl": "ATMage/PieceOfIceEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "ATAnimation/PieceOfIce.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "221": {
+   "skl": "ATMage/FlameCircleEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "ATAnimation/FlameCircle1.ani"
+      },
+      {
+       "index": 15,
+       "ani": "ATAnimation/FlameCircle2.ani"
+      },
+      {
+       "index": 16,
+       "ani": "ATAnimation/FlameCircle3.ani"
+      },
+      {
+       "index": 74,
+       "ani": "ATAnimation/FlameCircleCasting.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "222": {
+   "skl": "ATMage/BlueDragonWillEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "ATAnimation/BlueDragonWill1.ani"
+      },
+      {
+       "index": 18,
+       "ani": "ATAnimation/BlueDragonWill2.ani"
+      },
+      {
+       "index": 19,
+       "ani": "ATAnimation/BlueDragonWill3.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "223": {
+   "skl": "ATMage/FrozenLandEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "ATAnimation/FrozenLand1.ani"
+      },
+      {
+       "index": 21,
+       "ani": "ATAnimation/FrozenLand2.ani"
+      },
+      {
+       "index": 27,
+       "ani": "ATAnimation/FrozenLand3.ani"
+      },
+      {
+       "index": 73,
+       "ani": "ATAnimation/FrozenLandCasting.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "224": {
+   "skl": "ATMage/IceAreaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "225": {
+   "skl": "ATMage/IceCrashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "ATAnimation/IceCrashStart.ani"
+      },
+      {
+       "index": 24,
+       "ani": "ATAnimation/IceCrashLoop.ani"
+      },
+      {
+       "index": 25,
+       "ani": "ATAnimation/IceCrashLoopAttack.ani"
+      },
+      {
+       "index": 26,
+       "ani": "ATAnimation/IceCrashEnd.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "226": {
+   "skl": "ATMage/BrokenArrowEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 28,
+       "ani": "ATAnimation/BrokenArrow1.ani"
+      },
+      {
+       "index": 29,
+       "ani": "ATAnimation/BrokenArrowLoop1.ani"
+      },
+      {
+       "index": 32,
+       "ani": "ATAnimation/BrokenArrowDash1.ani"
+      },
+      {
+       "index": 33,
+       "ani": "ATAnimation/BrokenArrowDash2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "227": {
+   "skl": "ATMage/PushOutEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "228": {
+   "skl": "ATMage/MagicCannonEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "ATAnimation/MagicCannon1.ani"
+      },
+      {
+       "index": 41,
+       "ani": "ATAnimation/MagicCannon2.ani"
+      },
+      {
+       "index": 42,
+       "ani": "ATAnimation/MagicCannon3.ani"
+      },
+      {
+       "index": 46,
+       "ani": "ATAnimation/MagicCannonReady.ani"
+      },
+      {
+       "index": 78,
+       "ani": "ATAnimation/MagicCannon4.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "229": {
+   "skl": "ATMage/MagicShieldEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 35,
+       "ani": "ATAnimation/MagicShield.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "231": {
+   "skl": "ATMage/FallenBlossomsEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 38,
+       "ani": "ATAnimation/FallenBlossoms1.ani"
+      },
+      {
+       "index": 39,
+       "ani": "ATAnimation/FallenBlossoms2.ani"
+      },
+      {
+       "index": 40,
+       "ani": "ATAnimation/FallenBlossoms3.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "233": {
+   "skl": "ATMage/TurnWindmillEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "ATAnimation/TurnWindmill1.ani"
+      },
+      {
+       "index": 44,
+       "ani": "ATAnimation/TurnWindmill2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "234": {
+   "skl": "ATMage/DarknessMantleEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 45,
+       "ani": "ATAnimation/DarknessMantle1.ani"
+      },
+      {
+       "index": 75,
+       "ani": "ATAnimation/DarknessMantleCasting.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "235": {
+   "skl": "ATMage/MultiShotEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 68,
+       "ani": "ATAnimation/MultiShot.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "236": {
+   "skl": "ATMage/WaterCannonEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "ATAnimation/WaterCannon.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "237": {
+   "skl": "ATMage/FirePillarEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 55,
+       "ani": "ATAnimation/FirePillar1.ani"
+      },
+      {
+       "index": 56,
+       "ani": "ATAnimation/FirePillar2.ani"
+      },
+      {
+       "index": 57,
+       "ani": "ATAnimation/FirePillar3.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "239": {
+   "skl": "ATMage/LightningWallEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 53,
+       "ani": "ATAnimation/LightningWall.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "240": {
+   "skl": "ATMage/ElementalRainEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 4,
+       "ani": "ATAnimation/ElementalChange.ani"
+      },
+      {
+       "index": 63,
+       "ani": "ATAnimation/ElementalRainCast.ani"
+      },
+      {
+       "index": 64,
+       "ani": "ATAnimation/ElementalRainJump.ani"
+      },
+      {
+       "index": 65,
+       "ani": "ATAnimation/ElementalRainJumpStay.ani"
+      },
+      {
+       "index": 66,
+       "ani": "ATAnimation/ElementalRainShoot.ani"
+      },
+      {
+       "index": 67,
+       "ani": "ATAnimation/ElementalRainChargeShoot.ani"
+      },
+      {
+       "index": 85,
+       "ani": "ATAnimation/ElementalBusterFireCast.ani"
+      },
+      {
+       "index": 86,
+       "ani": "ATAnimation/ElementalBusterFire.ani"
+      },
+      {
+       "index": 87,
+       "ani": "ATAnimation/ElementalBusterWaterCast.ani"
+      },
+      {
+       "index": 88,
+       "ani": "ATAnimation/ElementalBusterWater.ani"
+      },
+      {
+       "index": 89,
+       "ani": "ATAnimation/ElementalBusterLightCast.ani"
+      },
+      {
+       "index": 90,
+       "ani": "ATAnimation/ElementalBusterLight.ani"
+      },
+      {
+       "index": 91,
+       "ani": "ATAnimation/ElementalBusterDarkCast.ani"
+      },
+      {
+       "index": 92,
+       "ani": "ATAnimation/ElementalBusterDark.ani"
+      },
+      {
+       "index": 95,
+       "ani": "ATAnimation/ElementalStrikeEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "241": {
+   "skl": "ATMage/ResonanceEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "ATAnimation/Resonance.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "242": {
+   "skl": "ATMage/IceManEx.skl",
+   "states": [],
+   "effect_anis": null
+  }
+ }
+}

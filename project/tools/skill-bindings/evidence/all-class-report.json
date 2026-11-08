@@ -1,0 +1,113 @@
+[
+ {
+  "tag": "A",
+  "region": [
+   "0xb00000",
+   "0xbf31ec"
+  ],
+  "pairs": 143,
+  "states": 52,
+  "skill_ids": 84,
+  "covered_classes": {
+   "fighter": {
+    "aligned": 35,
+    "named": 10,
+    "exclusive": 0
+   },
+   "atfighter": {
+    "aligned": 12,
+    "named": 43,
+    "exclusive": 0
+   }
+  }
+ },
+ {
+  "tag": "B",
+  "region": [
+   "0xbf31ec",
+   "0xc2f344"
+  ],
+  "pairs": 69,
+  "states": 54,
+  "skill_ids": 46,
+  "covered_classes": {
+   "gunner": {
+    "aligned": 18,
+    "named": 3,
+    "exclusive": 0
+   },
+   "atgunner": {
+    "aligned": 18,
+    "named": 3,
+    "exclusive": 0
+   }
+  }
+ },
+ {
+  "tag": "C",
+  "region": [
+   "0xc2f344",
+   "0xc6d960"
+  ],
+  "pairs": 43,
+  "states": 42,
+  "skill_ids": 35,
+  "covered_classes": {
+   "mage": {
+    "aligned": 19,
+    "named": 7,
+    "exclusive": 0
+   }
+  }
+ },
+ {
+  "tag": "D",
+  "region": [
+   "0xc6d960",
+   "0xc90580"
+  ],
+  "pairs": 56,
+  "states": 40,
+  "skill_ids": 48,
+  "covered_classes": {}
+ },
+ {
+  "tag": "E",
+  "region": [
+   "0xc90580",
+   "0xca511c"
+  ],
+  "pairs": 0,
+  "states": 53,
+  "skill_ids": 38,
+  "covered_classes": {
+   "priest": {
+    "aligned": 25,
+    "named": 8,
+    "exclusive": 0
+   }
+  }
+ },
+ {
+  "tag": "F",
+  "region": [
+   "0xca511c",
+   "0xce1ae8"
+  ],
+  "pairs": 52,
+  "states": 77,
+  "skill_ids": 70,
+  "covered_classes": {
+   "swordman": {
+    "aligned": 31,
+    "named": 11,
+    "exclusive": 0
+   },
+   "demonicswordman": {
+    "aligned": 22,
+    "named": 8,
+    "exclusive": 0
+   }
+  }
+ }
+]

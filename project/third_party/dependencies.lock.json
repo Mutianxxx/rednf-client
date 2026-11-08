@@ -1,0 +1,65 @@
+[
+  {
+    "file": "squirrel-3.1-dnf",
+    "url": "https://github.com/albertodemichelis/squirrel/tree/c52b25d864400197fa4d64c46254d8b1de06c2fa",
+    "archive_sha256": "bee210b5c26e035931f5adecc48237dd3baedf693fbe9bc5e44d4e2ee74961d4",
+    "license": "MIT; exact COPYRIGHT retained",
+    "license_sha256": "5cca31920e50fe471864b2b92b1eec5304c9508b1dcdb973db39e92b06e7e189",
+    "policy": "official3.1-int32-UTF16-float32-stringhash32-inferred-v1",
+    "patches": "Per-instance bounded execution and memory; original2.1.1 ABI not established. Source files hashed by build.py."
+  },
+  {
+    "file": "llvm.zip",
+    "url": "https://github.com/mstorsjo/llvm-mingw/releases/download/20261006/llvm-mingw-20261006-ucrt-x86_64.zip",
+    "sha256": "317492c456aa27ee607a5919f1d2d38dcdc1112516a24d0bf4b00d078f52d17a",
+    "size": 190836485
+  },
+  {
+    "file": "cmake.zip",
+    "url": "https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-windows-x86_64.zip",
+    "sha256": "bace36e94b31c68ab6fa295f26dfa11219e0701cf7c94b0284a7d1cb13dac536",
+    "size": 54400562
+  },
+  {
+    "file": "ninja.zip",
+    "url": "https://github.com/ninja-build/ninja/releases/download/v1.13.1/ninja-win.zip",
+    "sha256": "26a40fa8595694dec2fad4911e62d29e10525d2133c9a4230b66397774ae25bf",
+    "size": 289808
+  },
+  {
+    "file": "sdl.tar.gz",
+    "url": "https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-devel-2.32.10-mingw.tar.gz",
+    "sha256": "83a5d74012311edc3c0d40ea6faecbe57ad692aa033fa5dc273cc937e3938ff2",
+    "size": 13892870
+  },
+  {
+    "file": "zlib.tar.gz",
+    "url": "https://zlib.net/fossils/zlib-1.3.1.tar.gz",
+    "sha256": "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23",
+    "size": 1512791
+  },
+  {
+    "file": "json.hpp",
+    "url": "https://raw.githubusercontent.com/nlohmann/json/v3.12.0/single_include/nlohmann/json.hpp",
+    "sha256": "aaf127c04cb31c406e5b04a63f1ae89369fccde6d8fa7cdda1ed4f32dfc5de63",
+    "size": 953436
+  },
+  {
+    "file": "stb_truetype.h",
+    "url": "https://raw.githubusercontent.com/nothings/stb/f0569113c93ad095470c54bf34a17b36646bbbb5/stb_truetype.h",
+    "sha256": "ecd30b05e0dd4fea3a13c26810dd9e1992dc379049482c393d5a19e6b5090aab",
+    "size": 199192
+  },
+  {
+    "file": "stb_vorbis.c",
+    "url": "https://raw.githubusercontent.com/nothings/stb/f0569113c93ad095470c54bf34a17b36646bbbb5/stb_vorbis.c",
+    "sha256": "4c7cb2ff1f7011e9d67950446b7eb9ca044f2e464d76bfbb0b84dd2e23e65636",
+    "size": 192790
+  },
+  {
+    "file": "stb_image_write.h",
+    "url": "https://raw.githubusercontent.com/nothings/stb/f0569113c93ad095470c54bf34a17b36646bbbb5/stb_image_write.h",
+    "sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05",
+    "size": 71221
+  }
+]

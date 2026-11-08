@@ -1,0 +1,3166 @@
+{
+ "class": "atfighter",
+ "exe_region": [
+  "0xb00000",
+  "0xbf31ec"
+ ],
+ "etc_motion": {
+  "0": "ATAnimation/Crouch.ani",
+  "1": "ATAnimation/CrashLowKick.ani",
+  "2": "ATAnimation/LiftUpper.ani",
+  "3": "ATAnimation/DamageLowKick.ani",
+  "4": "ATAnimation/TrySuplex.ani",
+  "5": "ATAnimation/Suplex.ani",
+  "6": "ATAnimation/BackSuplex.ani",
+  "7": "ATAnimation/MountTry.ani",
+  "8": "ATAnimation/Mount.ani",
+  "9": "ATAnimation/MountPunch.ani",
+  "10": "",
+  "11": "ATAnimation/Stomp.ani",
+  "12": "ATAnimation/TryJumpSuplex.ani",
+  "13": "ATAnimation/JumpSuplex.ani",
+  "14": "ATAnimation/JumpSuplexImpressKick.ani",
+  "15": "ATAnimation/ClosePunch.ani",
+  "16": "ATAnimation/GrabExplosion.ani",
+  "17": "ATAnimation/ShoulderTackle.ani",
+  "18": "ATAnimation/WhirlWindKick.ani",
+  "19": "ATAnimation/BlockBusterReady.ani",
+  "20": "ATAnimation/BlockBusterJump.ani",
+  "21": "ATAnimation/BlockBusterShoot.ani",
+  "22": "ATAnimation/BlockBusterNormal.ani",
+  "23": "ATAnimation/TryLegSuplex.ani",
+  "24": "ATAnimation/LegSuplexThrow.ani",
+  "25": "ATAnimation/ImpressKick.ani",
+  "26": "ATAnimation/TyphoonGrab.ani",
+  "27": "ATAnimation/TyphoonAttack1.ani",
+  "28": "ATAnimation/TyphoonAttack2.ani",
+  "29": "ATAnimation/TyphoonAttack3.ani",
+  "30": "ATAnimation/TyphoonAttackKickUp.ani",
+  "31": "ATAnimation/TyphoonJump.ani",
+  "32": "ATAnimation/TyphoonAttackLast.ani",
+  "33": "ATAnimation/TyphoonAttackAfterStay.ani",
+  "34": "ATAnimation/CrazyMountStart.ani",
+  "35": "ATAnimation/CrazyMountPunch.ani",
+  "36": "",
+  "37": "ATAnimation/CrazyMountEnd.ani",
+  "38": "ATAnimation/ThrowWeb.ani",
+  "39": "ATAnimation/HiddenSting.ani",
+  "40": "ATAnimation/VenomMine.ani",
+  "41": "ATAnimation/FlameLegsCast.ani",
+  "42": "ATAnimation/JunkSpinWait.ani",
+  "43": "ATAnimation/JunkSpinLoop.ani",
+  "44": "ATAnimation/JunkSpinFinish.ani",
+  "45": "ATAnimation/MountEnd.ani",
+  "46": "ATAnimation/ShoulderCharge.ani",
+  "47": "ATAnimation/SingleKick.ani",
+  "48": "ATAnimation/NenFlower.ani",
+  "49": "ATAnimation/TryThrowEnemy.ani",
+  "50": "ATAnimation/ThrowEnemyHold.ani",
+  "51": "ATAnimation/ThrowEnemyThrow.ani",
+  "52": "ATAnimation/WhiteTigerAttack1.ani",
+  "53": "ATAnimation/WhiteTigerAttack2.ani",
+  "54": "ATAnimation/WhiteTigerAttack3.ani",
+  "55": "ATAnimation/WhiteTigerAttack4.ani",
+  "56": "ATAnimation/WhiteTigerAttack5.ani",
+  "57": "ATAnimation/WhiteTigerDashAttack.ani",
+  "58": "ATAnimation/WhiteTigerJumpAttack.ani",
+  "59": "ATAnimation/DashPunch.ani",
+  "60": "ATAnimation/PunchAfterReturn.ani",
+  "61": "ATAnimation/RandomKick1.ani",
+  "62": "ATAnimation/RandomKick2.ani",
+  "63": "ATAnimation/RandomKick3.ani",
+  "64": "ATAnimation/RandomKickFinish.ani",
+  "65": "ATAnimation/RisingUpperDash.ani",
+  "66": "ATAnimation/RisingUpper.ani",
+  "67": "ATAnimation/DashAfterDashCombo1.ani",
+  "68": "ATAnimation/DashAfterDashCombo2.ani",
+  "69": "",
+  "70": "",
+  "71": "ATAnimation/EarthBreak.ani",
+  "72": "ATAnimation/HoldUpTry.ani",
+  "73": "ATAnimation/HoldUpHold.ani",
+  "74": "ATAnimation/HoldUpHit.ani",
+  "75": "ATAnimation/WildCannonSpikeCharge.ani",
+  "76": "ATAnimation/WildCannonSpikeFall.ani",
+  "77": "ATAnimation/ThrowSand.ani",
+  "78": "ATAnimation/ThrowSandDouble.ani",
+  "79": "ATAnimation/SuplexCycloneTry.ani",
+  "80": "ATAnimation/SuplexCycloneFinish.ani",
+  "81": "ATAnimation/WildCannonSpikeExp.ani",
+  "82": "",
+  "83": "ATAnimation/LightningDragon.ani",
+  "84": "ATAnimation/DestroyEarthSkyDropStart.ani",
+  "85": "ATAnimation/DestroyEarthSkyDropOnSky.ani",
+  "86": "ATAnimation/DestroyEarthSkyDropFinish.ani",
+  "87": "",
+  "88": "",
+  "89": "",
+  "90": "",
+  "91": "",
+  "92": "",
+  "93": "",
+  "94": "",
+  "95": "",
+  "96": "",
+  "97": "",
+  "98": "ATAnimation/StompFinish.ani",
+  "99": "ATAnimation/GroundKickJump.ani",
+  "100": "ATAnimation/GroundKickAttack.ani",
+  "101": "ATAnimation/GroundKickFinish.ani",
+  "102": "ATAnimation/FastDash.ani",
+  "103": "ATAnimation/CrashLowKickSecond.ani",
+  "104": "ATAnimation/ThrowEnemyThrowSideKick.ani",
+  "105": "ATAnimation/ThrowEnemyThrowDownKick.ani",
+  "106": "ATAnimation/ThrowEnemyThrowGrabCannonSideKick.ani",
+  "107": "ATAnimation/SuplexFinalattack.ani",
+  "108": "ATAnimation/SuplexThrowFinalattack.ani",
+  "109": "ATAnimation/ThrowWebDoubleThrow.ani",
+  "110": "ATAnimation/LegSuplexHoldKick.ani",
+  "111": "ATAnimation/JumpSuplexImpressHoldKick.ani",
+  "112": "ATAnimation/LightningDanceKick.ani",
+  "113": "ATAnimation/LightningDanceLastLowKick.ani",
+  "114": "ATAnimation/GrabExplosionKick.ani",
+  "115": "ATAnimation/NenFlowerReady.ani",
+  "116": "ATAnimation/NenFlowerAttack.ani",
+  "117": "ATAnimation/NenFlowerFinal.ani",
+  "118": "ATAnimation/EnchantPoison.ani",
+  "119": "ATAnimation/SpiralNenShootPrepare.ani",
+  "120": "ATAnimation/SpiralNenShoot.ani",
+  "121": "ATAnimation/BlockBusterDouble.ani",
+  "122": "ATAnimation/EnchantPoisonDouble.ani",
+  "123": "ATAnimation/HiddenStingDouble.ani",
+  "124": "ATAnimation/DefiniteGrab.ani",
+  "125": "ATAnimation/NenSpear.ani",
+  "126": "ATAnimation/NenSpearSuccess.ani",
+  "127": "ATAnimation/HurricaneSpear.ani",
+  "128": "ATAnimation/ChargeSpearRecharge.ani",
+  "129": "ATAnimation/ChargeSpearRush.ani",
+  "130": "ATAnimation/ChargeSpearEnd.ani",
+  "131": "ATAnimation/SpiralColumnEx.ani",
+  "132": "ATAnimation/CrashRope.ani",
+  "133": "ATAnimation/GlueyFruitThrow.ani",
+  "134": "ATAnimation/ChainKick.ani",
+  "135": "ATAnimation/108StairsExTry.ani",
+  "136": "ATAnimation/108StairsExKick.ani",
+  "137": "ATAnimation/108StairsExPunch.ani",
+  "138": "ATAnimation/108StairsExBlow.ani",
+  "139": "ATAnimation/108StairsExThrow.ani",
+  "140": "ATAnimation/108StairsExFinal.ani",
+  "141": "ATAnimation/LightningDanceReady.ani"
+ },
+ "skills": {
+  "1": {
+   "skl": "ATFighter/ShoulderCharge.skl",
+   "states": [
+    {
+     "state": 21,
+     "handler": "0x00be3801",
+     "entry_motions": [
+      {
+       "index": 3,
+       "ani": "ATAnimation/DamageLowKick.ani"
+      },
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrashLowKick.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 22,
+     "handler": "0x00be3d10",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      },
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 43,
+     "handler": "0x00befaae",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 47,
+     "handler": "0x00be94ec",
+     "entry_motions": [
+      {
+       "index": 41,
+       "ani": "ATAnimation/FlameLegsCast.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "2": {
+   "skl": "ATFighter/Crouch.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00be34f2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 20,
+     "handler": "0x00be36a0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "3": {
+   "skl": "ATFighter/GrabExplosion.skl",
+   "states": [
+    {
+     "state": 31,
+     "handler": "0x00be6cf9",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "4": {
+   "skl": "ATFighter/CrashLowKick.skl",
+   "states": [
+    {
+     "state": 21,
+     "handler": "0x00be3801",
+     "entry_motions": [
+      {
+       "index": 3,
+       "ani": "ATAnimation/DamageLowKick.ani"
+      },
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrashLowKick.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "5": {
+   "skl": "ATFighter/LiftUpper.skl",
+   "states": [
+    {
+     "state": 30,
+     "handler": "0x00be6a32",
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "ATAnimation/LiftUpper.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "6": {
+   "skl": "ATFighter/DamageLowKick.skl",
+   "states": [
+    {
+     "state": 21,
+     "handler": "0x00be3801",
+     "entry_motions": [
+      {
+       "index": 3,
+       "ani": "ATAnimation/DamageLowKick.ani"
+      },
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrashLowKick.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "7": {
+   "skl": "ATFighter/PhysicalDefenseUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "8": {
+   "skl": "ATFighter/Kensin.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "9": {
+   "skl": "ATFighter/Suplex.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00be3d10",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      },
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00be4410",
+     "entry_motions": [
+      {
+       "index": 6,
+       "ani": "ATAnimation/BackSuplex.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 5,
+       "ani": "ATAnimation/Suplex.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "10": {
+   "skl": "ATFighter/BackSuplex.skl",
+   "states": [
+    {
+     "state": 23,
+     "handler": "0x00be4410",
+     "entry_motions": [
+      {
+       "index": 6,
+       "ani": "ATAnimation/BackSuplex.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 5,
+       "ani": "ATAnimation/Suplex.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "11": {
+   "skl": "ATFighter/ThunderSuplex.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "12": {
+   "skl": "ATFighter/EnergyBall.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "13": {
+   "skl": "ATFighter/ThrowSand.skl",
+   "states": [
+    {
+     "state": 63,
+     "handler": "0x00be7d06",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "ATAnimation/BlockBusterJump.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "14": {
+   "skl": "ATFighter/Mount.skl",
+   "states": [
+    {
+     "state": 26,
+     "handler": "0x00be5702",
+     "entry_motions": [
+      {
+       "index": 7,
+       "ani": "ATAnimation/MountTry.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 27,
+     "handler": "0x00be5b54",
+     "entry_motions": [
+      {
+       "index": 31,
+       "ani": "ATAnimation/TyphoonJump.ani"
+      },
+      {
+       "index": 8,
+       "ani": "ATAnimation/Mount.ani"
+      },
+      {
+       "index": 9,
+       "ani": "ATAnimation/MountPunch.ani"
+      },
+      {
+       "index": 10,
+       "ani": ""
+      },
+      {
+       "index": 40,
+       "ani": "ATAnimation/VenomMine.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "15": {
+   "skl": "ATFighter/Sajahu.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "16": {
+   "skl": "ATFighter/Kikouken.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "17": {
+   "skl": "ATFighter/Stomp.skl",
+   "states": [
+    {
+     "state": 28,
+     "handler": "0x00be63ce",
+     "entry_motions": [
+      {
+       "index": 93,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "18": {
+   "skl": "ATFighter/Spire.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00be3d10",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      },
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 24,
+     "handler": "0x00be47cd",
+     "entry_motions": [
+      {
+       "index": 13,
+       "ani": "ATAnimation/JumpSuplex.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 25,
+     "handler": "0x00be4f3a",
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "ATAnimation/JumpSuplexImpressKick.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "19": {
+   "skl": "ATFighter/ClosePunch.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00be6719",
+     "entry_motions": [
+      {
+       "index": 15,
+       "ani": "ATAnimation/ClosePunch.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "20": {
+   "skl": "ATFighter/SuperArmor.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "21": {
+   "skl": "ATFighter/CancelEnergyBall.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "22": {
+   "skl": "ATFighter/SuplexSubPowerUp.skl",
+   "states": [
+    {
+     "state": 23,
+     "handler": "0x00be4410",
+     "entry_motions": [
+      {
+       "index": 6,
+       "ani": "ATAnimation/BackSuplex.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 5,
+       "ani": "ATAnimation/Suplex.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "29": {
+   "skl": "ATFighter/LightFriendship.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "30": {
+   "skl": "ATFighter/LightEnchantWeapon.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "31": {
+   "skl": "ATFighter/AttackSpeedUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "32": {
+   "skl": "ATFighter/PoisonToleranceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "33": {
+   "skl": "ATFighter/StunOnUseSkill.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "34": {
+   "skl": "ATFighter/EquipBoxingGlove.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "35": {
+   "skl": "ATFighter/BlindToleranceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "36": {
+   "skl": "ATFighter/LightToleranceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "37": {
+   "skl": "ATFighter/SlowDownPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "38": {
+   "skl": "ATFighter/EnchantPoison.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 118,
+       "ani": "ATAnimation/EnchantPoison.ani"
+      },
+      {
+       "index": 122,
+       "ani": "ATAnimation/EnchantPoisonDouble.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "39": {
+   "skl": "ATFighter/AimVitalPoint.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "40": {
+   "skl": "ATFighter/SpiralNen.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 119,
+       "ani": "ATAnimation/SpiralNenShootPrepare.ani"
+      },
+      {
+       "index": 120,
+       "ani": "ATAnimation/SpiralNenShoot.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "41": {
+   "skl": "ATFighter/FlameLegs.skl",
+   "states": [
+    {
+     "state": 49,
+     "handler": "0x00be5149",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "ATAnimation/JunkSpinLoop.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 62,
+     "handler": "0x00be6cf9",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "42": {
+   "skl": "ATFighter/NenGuard.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "43": {
+   "skl": "ATFighter/DoubleThrow.skl",
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00befaae",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "44": {
+   "skl": "ATFighter/Provocation.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "45": {
+   "skl": "ATFighter/ClawMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "46": {
+   "skl": "ATFighter/SingleKick.skl",
+   "states": [
+    {
+     "state": 44,
+     "handler": "0x00befaae",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 48,
+     "handler": "0x00be984a",
+     "entry_motions": [
+      {
+       "index": 42,
+       "ani": "ATAnimation/JunkSpinWait.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "49": {
+   "skl": "ATFighter/ThrowEnemy.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00be3d10",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      },
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 50,
+     "handler": "0x00be5429",
+     "entry_motions": [
+      {
+       "index": 45,
+       "ani": "ATAnimation/MountEnd.ani"
+      },
+      {
+       "index": 46,
+       "ani": "ATAnimation/ShoulderCharge.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "50": {
+   "skl": "ATFighter/DefiniteGrab.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00be3d10",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      },
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 36,
+     "handler": "0x00be7d06",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "ATAnimation/BlockBusterJump.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 57,
+     "handler": "0x00bec99f",
+     "entry_motions": [
+      {
+       "index": 67,
+       "ani": "ATAnimation/DashAfterDashCombo1.ani"
+      },
+      {
+       "index": 68,
+       "ani": "ATAnimation/DashAfterDashCombo2.ani"
+      },
+      {
+       "index": 69,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 58,
+     "handler": "0x00becea5",
+     "entry_motions": [
+      {
+       "index": 70,
+       "ani": ""
+      },
+      {
+       "index": 71,
+       "ani": "ATAnimation/EarthBreak.ani"
+      },
+      {
+       "index": 72,
+       "ani": "ATAnimation/HoldUpTry.ani"
+      },
+      {
+       "index": 73,
+       "ani": "ATAnimation/HoldUpHold.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 63,
+     "handler": "0x00be7d06",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "ATAnimation/BlockBusterJump.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "51": {
+   "skl": "ATFighter/SlideGrab.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00be3d10",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      },
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "52": {
+   "skl": "ATFighter/ThrowWeb.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00befaae",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "54": {
+   "skl": "ATFighter/ShoulderTackle.skl",
+   "states": [
+    {
+     "state": 33,
+     "handler": "0x00be7096",
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "ATAnimation/ShoulderTackle.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "55": {
+   "skl": "ATFighter/GrabCannon.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00be7e87",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "56": {
+   "skl": "ATFighter/ArmorMasteryLightSK.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "57": {
+   "skl": "ATFighter/ArmorMasteryLightGP.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "58": {
+   "skl": "ATFighter/WhirlWindKick.skl",
+   "states": [
+    {
+     "state": 34,
+     "handler": "0x00be7413",
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "ATAnimation/WhirlWindKick.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "60": {
+   "skl": "ATFighter/BlockBuster.skl",
+   "states": [
+    {
+     "state": 35,
+     "handler": "0x00be7789",
+     "entry_motions": [
+      {
+       "index": 19,
+       "ani": "ATAnimation/BlockBusterReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "61": {
+   "skl": "ATFighter/CancelThrow.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "62": {
+   "skl": "ATFighter/LegSuplex.skl",
+   "states": [
+    {
+     "state": 36,
+     "handler": "0x00be7d06",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "ATAnimation/BlockBusterJump.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 37,
+     "handler": "0x00be7e87",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "63": {
+   "skl": "ATFighter/Typhoon.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00be3d10",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      },
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 38,
+     "handler": "0x00be850b",
+     "entry_motions": [
+      {
+       "index": 24,
+       "ani": "ATAnimation/LegSuplexThrow.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 61,
+     "handler": "0x00bef4f4",
+     "entry_motions": [
+      {
+       "index": 28,
+       "ani": "ATAnimation/TyphoonAttack2.ani"
+      },
+      {
+       "index": 29,
+       "ani": "ATAnimation/TyphoonAttack3.ani"
+      },
+      {
+       "index": 30,
+       "ani": "ATAnimation/TyphoonAttackKickUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "64": {
+   "skl": null,
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00be8bf7",
+     "entry_motions": [
+      {
+       "index": 26,
+       "ani": "ATAnimation/TyphoonGrab.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 41,
+     "handler": "0x00be8d5d",
+     "entry_motions": [
+      {
+       "index": 27,
+       "ani": "ATAnimation/TyphoonAttack1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "65": {
+   "skl": "ATFighter/EfficientBurn.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "67": {
+   "skl": "ATFighter/NenFlower.skl",
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00befaae",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 49,
+     "handler": "0x00be5149",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "ATAnimation/JunkSpinLoop.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "68": {
+   "skl": "ATFighter/LightningDance.skl",
+   "states": [
+    {
+     "state": 38,
+     "handler": "0x00be850b",
+     "entry_motions": [
+      {
+       "index": 24,
+       "ani": "ATAnimation/LegSuplexThrow.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 42,
+     "handler": "0x00be8eae",
+     "entry_motions": [
+      {
+       "index": 94,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "69": {
+   "skl": "ATFighter/IllusionBomb.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "71": {
+   "skl": null,
+   "states": [
+    {
+     "state": 61,
+     "handler": "0x00bef4f4",
+     "entry_motions": [
+      {
+       "index": 28,
+       "ani": "ATAnimation/TyphoonAttack2.ani"
+      },
+      {
+       "index": 29,
+       "ani": "ATAnimation/TyphoonAttack3.ani"
+      },
+      {
+       "index": 30,
+       "ani": "ATAnimation/TyphoonAttackKickUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "73": {
+   "skl": "ATFighter/ArmorMasteryHeavySP.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "74": {
+   "skl": "ATFighter/CrazyMount.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00be5b54",
+     "entry_motions": [
+      {
+       "index": 31,
+       "ani": "ATAnimation/TyphoonJump.ani"
+      },
+      {
+       "index": 8,
+       "ani": "ATAnimation/Mount.ani"
+      },
+      {
+       "index": 9,
+       "ani": "ATAnimation/MountPunch.ani"
+      },
+      {
+       "index": 10,
+       "ani": ""
+      },
+      {
+       "index": 40,
+       "ani": "ATAnimation/VenomMine.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "75": {
+   "skl": "ATFighter/HiddenSting.skl",
+   "states": [
+    {
+     "state": 44,
+     "handler": "0x00befaae",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 65,
+     "handler": "0x00be9eb4",
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "ATAnimation/WhiteTigerAttack3.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 92,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "76": {
+   "skl": "ATFighter/VenomMine.skl",
+   "states": [
+    {
+     "state": 41,
+     "handler": "0x00be8d5d",
+     "entry_motions": [
+      {
+       "index": 27,
+       "ani": "ATAnimation/TyphoonAttack1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "77": {
+   "skl": "ATFighter/JunkSpin.skl",
+   "states": [
+    {
+     "state": 42,
+     "handler": "0x00be8eae",
+     "entry_motions": [
+      {
+       "index": 94,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 46,
+     "handler": "0x00befaae",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "78": {
+   "skl": "ATFighter/EnergyBallCharge.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "79": {
+   "skl": "ATFighter/NenMonsterWhiteTiger.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "80": {
+   "skl": "ATFighter/DashPunch.skl",
+   "states": [
+    {
+     "state": 47,
+     "handler": "0x00be94ec",
+     "entry_motions": [
+      {
+       "index": 41,
+       "ani": "ATAnimation/FlameLegsCast.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 51,
+     "handler": "0x00be9eb4",
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "ATAnimation/WhiteTigerAttack3.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 92,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 65,
+     "handler": "0x00be9eb4",
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "ATAnimation/WhiteTigerAttack3.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 92,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "81": {
+   "skl": "ATFighter/PunchAfterReturn.skl",
+   "states": [
+    {
+     "state": 48,
+     "handler": "0x00be984a",
+     "entry_motions": [
+      {
+       "index": 42,
+       "ani": "ATAnimation/JunkSpinWait.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 52,
+     "handler": "0x00bea4f9",
+     "entry_motions": [
+      {
+       "index": 55,
+       "ani": "ATAnimation/WhiteTigerAttack4.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "82": {
+   "skl": "ATFighter/RandomKick.skl",
+   "states": [
+    {
+     "state": 53,
+     "handler": "0x00bea6ab",
+     "entry_motions": [
+      {
+       "index": 56,
+       "ani": "ATAnimation/WhiteTigerAttack5.ani"
+      },
+      {
+       "index": 57,
+       "ani": "ATAnimation/WhiteTigerDashAttack.ani"
+      },
+      {
+       "index": 58,
+       "ani": "ATAnimation/WhiteTigerJumpAttack.ani"
+      },
+      {
+       "index": 59,
+       "ani": "ATAnimation/DashPunch.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "83": {
+   "skl": "ATFighter/RisingUpper.skl",
+   "states": [
+    {
+     "state": 50,
+     "handler": "0x00be5429",
+     "entry_motions": [
+      {
+       "index": 45,
+       "ani": "ATAnimation/MountEnd.ani"
+      },
+      {
+       "index": 46,
+       "ani": "ATAnimation/ShoulderCharge.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 54,
+     "handler": "0x00beb0cc",
+     "entry_motions": [
+      {
+       "index": 60,
+       "ani": "ATAnimation/PunchAfterReturn.ani"
+      },
+      {
+       "index": 61,
+       "ani": "ATAnimation/RandomKick1.ani"
+      },
+      {
+       "index": 85,
+       "ani": "ATAnimation/DestroyEarthSkyDropOnSky.ani"
+      },
+      {
+       "index": 86,
+       "ani": "ATAnimation/DestroyEarthSkyDropFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "84": {
+   "skl": "ATFighter/DashAfterDash.skl",
+   "states": [
+    {
+     "state": 51,
+     "handler": "0x00be9eb4",
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "ATAnimation/WhiteTigerAttack3.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 92,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 55,
+     "handler": "0x00bec1bf",
+     "entry_motions": [
+      {
+       "index": 62,
+       "ani": "ATAnimation/RandomKick2.ani"
+      },
+      {
+       "index": 63,
+       "ani": "ATAnimation/RandomKick3.ani"
+      },
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrashLowKick.ani"
+      },
+      {
+       "index": 64,
+       "ani": "ATAnimation/RandomKickFinish.ani"
+      },
+      {
+       "index": 65,
+       "ani": "ATAnimation/RisingUpperDash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "85": {
+   "skl": "ATFighter/DashAfterDashExtension.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 67,
+       "ani": "ATAnimation/DashAfterDashCombo1.ani"
+      },
+      {
+       "index": 68,
+       "ani": "ATAnimation/DashAfterDashCombo2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "86": {
+   "skl": "ATFighter/EarthBreak.skl",
+   "states": [
+    {
+     "state": 52,
+     "handler": "0x00bea4f9",
+     "entry_motions": [
+      {
+       "index": 55,
+       "ani": "ATAnimation/WhiteTigerAttack4.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00bec7d1",
+     "entry_motions": [
+      {
+       "index": 66,
+       "ani": "ATAnimation/RisingUpper.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "87": {
+   "skl": "ATFighter/HoldUp.skl",
+   "states": [
+    {
+     "state": 53,
+     "handler": "0x00bea6ab",
+     "entry_motions": [
+      {
+       "index": 56,
+       "ani": "ATAnimation/WhiteTigerAttack5.ani"
+      },
+      {
+       "index": 57,
+       "ani": "ATAnimation/WhiteTigerDashAttack.ani"
+      },
+      {
+       "index": 58,
+       "ani": "ATAnimation/WhiteTigerJumpAttack.ani"
+      },
+      {
+       "index": 59,
+       "ani": "ATAnimation/DashPunch.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 57,
+     "handler": "0x00bec99f",
+     "entry_motions": [
+      {
+       "index": 67,
+       "ani": "ATAnimation/DashAfterDashCombo1.ani"
+      },
+      {
+       "index": 68,
+       "ani": "ATAnimation/DashAfterDashCombo2.ani"
+      },
+      {
+       "index": 69,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "88": {
+   "skl": "ATFighter/WildCannonSpike.skl",
+   "states": [
+    {
+     "state": 54,
+     "handler": "0x00beb0cc",
+     "entry_motions": [
+      {
+       "index": 60,
+       "ani": "ATAnimation/PunchAfterReturn.ani"
+      },
+      {
+       "index": 61,
+       "ani": "ATAnimation/RandomKick1.ani"
+      },
+      {
+       "index": 85,
+       "ani": "ATAnimation/DestroyEarthSkyDropOnSky.ani"
+      },
+      {
+       "index": 86,
+       "ani": "ATAnimation/DestroyEarthSkyDropFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 58,
+     "handler": "0x00becea5",
+     "entry_motions": [
+      {
+       "index": 70,
+       "ani": ""
+      },
+      {
+       "index": 71,
+       "ani": "ATAnimation/EarthBreak.ani"
+      },
+      {
+       "index": 72,
+       "ani": "ATAnimation/HoldUpTry.ani"
+      },
+      {
+       "index": 73,
+       "ani": "ATAnimation/HoldUpHold.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "89": {
+   "skl": "ATFighter/SuplexCyclone.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00be3d10",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      },
+      {
+       "index": 74,
+       "ani": "ATAnimation/HoldUpHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 59,
+     "handler": "0x00beda78",
+     "entry_motions": [
+      {
+       "index": 75,
+       "ani": "ATAnimation/WildCannonSpikeCharge.ani"
+      },
+      {
+       "index": 76,
+       "ani": "ATAnimation/WildCannonSpikeFall.ani"
+      },
+      {
+       "index": 77,
+       "ani": "ATAnimation/ThrowSand.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "90": {
+   "skl": "ATFighter/LightningDragon.skl",
+   "states": [
+    {
+     "state": 56,
+     "handler": "0x00bec7d1",
+     "entry_motions": [
+      {
+       "index": 66,
+       "ani": "ATAnimation/RisingUpper.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 60,
+     "handler": "0x00bef288",
+     "entry_motions": [
+      {
+       "index": 78,
+       "ani": "ATAnimation/ThrowSandDouble.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "91": {
+   "skl": "ATFighter/MuscleShift.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "97": {
+   "skl": "ATFighter/ArmorMasteryClothNM.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "99": {
+   "skl": null,
+   "states": [
+    {
+     "state": 62,
+     "handler": "0x00be6cf9",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "101": {
+   "skl": null,
+   "states": [
+    {
+     "state": 63,
+     "handler": "0x00be7d06",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "ATAnimation/BlockBusterJump.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "102": {
+   "skl": null,
+   "states": [
+    {
+     "state": 51,
+     "handler": "0x00be9eb4",
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "ATAnimation/WhiteTigerAttack3.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 92,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 65,
+     "handler": "0x00be9eb4",
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "ATAnimation/WhiteTigerAttack3.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 92,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "103": {
+   "skl": null,
+   "states": [
+    {
+     "state": 66,
+     "handler": "0x00bebc73",
+     "entry_motions": [
+      {
+       "index": 84,
+       "ani": "ATAnimation/DestroyEarthSkyDropStart.ani"
+      },
+      {
+       "index": 61,
+       "ani": "ATAnimation/RandomKick1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "104": {
+   "skl": null,
+   "states": [
+    {
+     "state": 67,
+     "handler": "0x00be7b09",
+     "entry_motions": [
+      {
+       "index": 87,
+       "ani": ""
+      },
+      {
+       "index": 88,
+       "ani": ""
+      },
+      {
+       "index": 89,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "105": {
+   "skl": "ATFighter/DestroyEarthSkyDrop.skl",
+   "states": [
+    {
+     "state": 60,
+     "handler": "0x00bef288",
+     "entry_motions": [
+      {
+       "index": 78,
+       "ani": "ATAnimation/ThrowSandDouble.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 68,
+     "handler": "0x00bee4d5",
+     "entry_motions": [
+      {
+       "index": 75,
+       "ani": "ATAnimation/WildCannonSpikeCharge.ani"
+      },
+      {
+       "index": 90,
+       "ani": ""
+      },
+      {
+       "index": 91,
+       "ani": ""
+      },
+      {
+       "index": 77,
+       "ani": "ATAnimation/ThrowSand.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "106": {
+   "skl": "ATFighter/GroundKick.skl",
+   "states": [
+    {
+     "state": 58,
+     "handler": "0x00becea5",
+     "entry_motions": [
+      {
+       "index": 70,
+       "ani": ""
+      },
+      {
+       "index": 71,
+       "ani": "ATAnimation/EarthBreak.ani"
+      },
+      {
+       "index": 72,
+       "ani": "ATAnimation/HoldUpTry.ani"
+      },
+      {
+       "index": 73,
+       "ani": "ATAnimation/HoldUpHold.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00be9b54",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "108": {
+   "skl": "ATFighter/FastDash.skl",
+   "states": [
+    {
+     "state": 59,
+     "handler": "0x00beda78",
+     "entry_motions": [
+      {
+       "index": 75,
+       "ani": "ATAnimation/WildCannonSpikeCharge.ani"
+      },
+      {
+       "index": 76,
+       "ani": "ATAnimation/WildCannonSpikeFall.ani"
+      },
+      {
+       "index": 77,
+       "ani": "ATAnimation/ThrowSand.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "109": {
+   "skl": "ATFighter/SmartThrow.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "110": {
+   "skl": "ATFighter/AutoLoad.skl",
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00befaae",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "111": {
+   "skl": "ATFighter/SpiralNenShoot.skl",
+   "states": [
+    {
+     "state": 65,
+     "handler": "0x00be9eb4",
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "ATAnimation/WhiteTigerAttack3.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "ATAnimation/Crouch.ani"
+      },
+      {
+       "index": 92,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "112": {
+   "skl": "ATFighter/SpiralNenSpin.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 119,
+       "ani": "ATAnimation/SpiralNenShootPrepare.ani"
+      },
+      {
+       "index": 120,
+       "ani": "ATAnimation/SpiralNenShoot.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "114": {
+   "skl": "ATFighter/NenPole.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "115": {
+   "skl": "ATFighter/TyphoonCounterStrike.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "116": {
+   "skl": "ATFighter/1000Hands1000Eyes.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "117": {
+   "skl": "ATFighter/NenSpearEx.skl",
+   "states": [
+    {
+     "state": 66,
+     "handler": "0x00bebc73",
+     "entry_motions": [
+      {
+       "index": 84,
+       "ani": "ATAnimation/DestroyEarthSkyDropStart.ani"
+      },
+      {
+       "index": 61,
+       "ani": "ATAnimation/RandomKick1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "118": {
+   "skl": "ATFighter/ChargeSpearEx.skl",
+   "states": [
+    {
+     "state": 69,
+     "handler": "0x00be9b54",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "119": {
+   "skl": "ATFighter/GlueyFruitEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 133,
+       "ani": "ATAnimation/GlueyFruitThrow.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "120": {
+   "skl": "ATFighter/SpiralColumnEx.skl",
+   "states": [
+    {
+     "state": 70,
+     "handler": "0x00be59d4",
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "ATAnimation/CrazyMountStart.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "121": {
+   "skl": "ATFighter/108StairsEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 135,
+       "ani": "ATAnimation/108StairsExTry.ani"
+      },
+      {
+       "index": 136,
+       "ani": "ATAnimation/108StairsExKick.ani"
+      },
+      {
+       "index": 137,
+       "ani": "ATAnimation/108StairsExPunch.ani"
+      },
+      {
+       "index": 138,
+       "ani": "ATAnimation/108StairsExBlow.ani"
+      },
+      {
+       "index": 139,
+       "ani": "ATAnimation/108StairsExThrow.ani"
+      },
+      {
+       "index": 140,
+       "ani": "ATAnimation/108StairsExFinal.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "122": {
+   "skl": "ATFighter/HurricaneSpear.skl",
+   "states": [
+    {
+     "state": 67,
+     "handler": "0x00be7b09",
+     "entry_motions": [
+      {
+       "index": 87,
+       "ani": ""
+      },
+      {
+       "index": 88,
+       "ani": ""
+      },
+      {
+       "index": 89,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "123": {
+   "skl": "ATFighter/CrashRope.skl",
+   "states": [
+    {
+     "state": 68,
+     "handler": "0x00bee4d5",
+     "entry_motions": [
+      {
+       "index": 75,
+       "ani": "ATAnimation/WildCannonSpikeCharge.ani"
+      },
+      {
+       "index": 90,
+       "ani": ""
+      },
+      {
+       "index": 91,
+       "ani": ""
+      },
+      {
+       "index": 77,
+       "ani": "ATAnimation/ThrowSand.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "124": {
+   "skl": "ATFighter/ChainKickEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 134,
+       "ani": "ATAnimation/ChainKick.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "125": {
+   "skl": "ATFighter/EarthBreakEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 71,
+       "ani": "ATAnimation/EarthBreak.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "126": {
+   "skl": "ATFighter/SuplexEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "127": {
+   "skl": "ATFighter/EnergyBallEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "128": {
+   "skl": "ATFighter/PhysicalDefenseUpEx2.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "129": {
+   "skl": "ATFighter/WhirlWindKickEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "ATAnimation/WhirlWindKick.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "130": {
+   "skl": "ATFighter/DamageLowKickEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 3,
+       "ani": "ATAnimation/DamageLowKick.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "131": {
+   "skl": "ATFighter/CrouchEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "132": {
+   "skl": "ATFighter/ThrowSandEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 77,
+       "ani": "ATAnimation/ThrowSand.ani"
+      },
+      {
+       "index": 78,
+       "ani": "ATAnimation/ThrowSandDouble.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "133": {
+   "skl": "ATFighter/KikoukenEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "134": {
+   "skl": "ATFighter/ThunderSuplexEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "135": {
+   "skl": "ATFighter/RandomKickEx.skl",
+   "states": [
+    {
+     "state": 49,
+     "handler": "0x00be5149",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "ATAnimation/JunkSpinLoop.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "136": {
+   "skl": "ATFighter/NenMonsterWhiteTigerEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "137": {
+   "skl": "ATFighter/CrashLowKickEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "ATAnimation/CrashLowKick.ani"
+      },
+      {
+       "index": 103,
+       "ani": "ATAnimation/CrashLowKickSecond.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "138": {
+   "skl": "ATFighter/GroundKickEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 99,
+       "ani": "ATAnimation/GroundKickJump.ani"
+      },
+      {
+       "index": 100,
+       "ani": "ATAnimation/GroundKickAttack.ani"
+      },
+      {
+       "index": 101,
+       "ani": "ATAnimation/GroundKickFinish.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "139": {
+   "skl": "ATFighter/LightningDanceEx.skl",
+   "states": [
+    {
+     "state": 54,
+     "handler": "0x00beb0cc",
+     "entry_motions": [
+      {
+       "index": 60,
+       "ani": "ATAnimation/PunchAfterReturn.ani"
+      },
+      {
+       "index": 61,
+       "ani": "ATAnimation/RandomKick1.ani"
+      },
+      {
+       "index": 85,
+       "ani": "ATAnimation/DestroyEarthSkyDropOnSky.ani"
+      },
+      {
+       "index": 86,
+       "ani": "ATAnimation/DestroyEarthSkyDropFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "140": {
+   "skl": "ATFighter/RisingUpperEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 65,
+       "ani": "ATAnimation/RisingUpperDash.ani"
+      },
+      {
+       "index": 66,
+       "ani": "ATAnimation/RisingUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "141": {
+   "skl": "ATFighter/ThrowWebEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 38,
+       "ani": "ATAnimation/ThrowWeb.ani"
+      },
+      {
+       "index": 109,
+       "ani": "ATAnimation/ThrowWebDoubleThrow.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "142": {
+   "skl": "ATFighter/ProvocationEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "143": {
+   "skl": "ATFighter/VenomMineEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "ATAnimation/VenomMine.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "144": {
+   "skl": "ATFighter/JunkSpinEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 42,
+       "ani": "ATAnimation/JunkSpinWait.ani"
+      },
+      {
+       "index": 43,
+       "ani": "ATAnimation/JunkSpinLoop.ani"
+      },
+      {
+       "index": 44,
+       "ani": "ATAnimation/JunkSpinFinish.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "145": {
+   "skl": "ATFighter/PunchAfterReturnEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 60,
+       "ani": "ATAnimation/PunchAfterReturn.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "146": {
+   "skl": "ATFighter/ShoulderTackleEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "ATAnimation/ShoulderTackle.ani"
+      },
+      {
+       "index": 46,
+       "ani": "ATAnimation/ShoulderCharge.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "147": {
+   "skl": "ATFighter/SuplexCycloneEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 79,
+       "ani": "ATAnimation/SuplexCycloneTry.ani"
+      },
+      {
+       "index": 80,
+       "ani": "ATAnimation/SuplexCycloneFinish.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "148": {
+   "skl": "ATFighter/SpireEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "149": {
+   "skl": "ATFighter/BasicAttackUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "150": {
+   "skl": "ATFighter/LiftUpperEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "ATAnimation/LiftUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "151": {
+   "skl": "ATFighter/SingleKickEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "ATAnimation/SingleKick.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "152": {
+   "skl": "ATFighter/KensinEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "153": {
+   "skl": "ATFighter/StompEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "154": {
+   "skl": "ATFighter/NenGuardEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "155": {
+   "skl": "ATFighter/IllusionBombEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "156": {
+   "skl": "ATFighter/SajahuEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "157": {
+   "skl": "ATFighter/LightningDragonEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 83,
+       "ani": "ATAnimation/LightningDragon.ani"
+      },
+      {
+       "index": 112,
+       "ani": "ATAnimation/LightningDanceKick.ani"
+      },
+      {
+       "index": 113,
+       "ani": "ATAnimation/LightningDanceLastLowKick.ani"
+      },
+      {
+       "index": 141,
+       "ani": "ATAnimation/LightningDanceReady.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "158": {
+   "skl": "ATFighter/SpiralNenShootEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 119,
+       "ani": "ATAnimation/SpiralNenShootPrepare.ani"
+      },
+      {
+       "index": 120,
+       "ani": "ATAnimation/SpiralNenShoot.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "159": {
+   "skl": "ATFighter/SpiralNenSpinEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 119,
+       "ani": "ATAnimation/SpiralNenShootPrepare.ani"
+      },
+      {
+       "index": 120,
+       "ani": "ATAnimation/SpiralNenShoot.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "160": {
+   "skl": "ATFighter/DashPunchEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 59,
+       "ani": "ATAnimation/DashPunch.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "161": {
+   "skl": "ATFighter/ClosePunchEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 15,
+       "ani": "ATAnimation/ClosePunch.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "162": {
+   "skl": "ATFighter/ShoulderChargeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "ATAnimation/ShoulderTackle.ani"
+      },
+      {
+       "index": 46,
+       "ani": "ATAnimation/ShoulderCharge.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "163": {
+   "skl": "ATFighter/GrabExplosionEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "ATAnimation/GrabExplosion.ani"
+      },
+      {
+       "index": 114,
+       "ani": "ATAnimation/GrabExplosionKick.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "164": {
+   "skl": "ATFighter/HiddenStingEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 39,
+       "ani": "ATAnimation/HiddenSting.ani"
+      },
+      {
+       "index": 123,
+       "ani": "ATAnimation/HiddenStingDouble.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "165": {
+   "skl": "ATFighter/EnchantPoisonEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 118,
+       "ani": "ATAnimation/EnchantPoison.ani"
+      },
+      {
+       "index": 122,
+       "ani": "ATAnimation/EnchantPoisonDouble.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "166": {
+   "skl": "ATFighter/ThrowEnemyEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 50,
+       "ani": "ATAnimation/ThrowEnemyHold.ani"
+      },
+      {
+       "index": 51,
+       "ani": "ATAnimation/ThrowEnemyThrow.ani"
+      },
+      {
+       "index": 104,
+       "ani": "ATAnimation/ThrowEnemyThrowSideKick.ani"
+      },
+      {
+       "index": 105,
+       "ani": "ATAnimation/ThrowEnemyThrowDownKick.ani"
+      },
+      {
+       "index": 106,
+       "ani": "ATAnimation/ThrowEnemyThrowGrabCannonSideKick.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "167": {
+   "skl": "ATFighter/LegSuplexEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 24,
+       "ani": "ATAnimation/LegSuplexThrow.ani"
+      },
+      {
+       "index": 110,
+       "ani": "ATAnimation/LegSuplexHoldKick.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "168": {
+   "skl": "ATFighter/HoldUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "169": {
+   "skl": "ATFighter/BackStep.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "172": {
+   "skl": "ATFighter/ArmorMasteryLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "173": {
+   "skl": "ATFighter/ArmorMasteryHeavy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "174": {
+   "skl": "ATFighter/BasicAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "175": {
+   "skl": "ATFighter/JumpPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "176": {
+   "skl": "ATFighter/MagicalAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "177": {
+   "skl": "ATFighter/ThrowMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "178": {
+   "skl": "ATFighter/PhysicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "179": {
+   "skl": "ATFighter/DisjointItem.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "180": {
+   "skl": "ATFighter/SuperArmorOnCast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "181": {
+   "skl": "ATFighter/CompoundCraft.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "182": {
+   "skl": "ATFighter/CompoundWeaving.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "183": {
+   "skl": "ATFighter/CompoundMachine.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "184": {
+   "skl": "ATFighter/CompoundChemistry.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "185": {
+   "skl": "ATFighter/ArmorMasteryLeather.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "186": {
+   "skl": "ATFighter/PhysicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "187": {
+   "skl": "ATFighter/ArmorMasteryCloth.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "188": {
+   "skl": "ATFighter/MagicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "189": {
+   "skl": "ATFighter/MagicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "190": {
+   "skl": "ATFighter/QuickStanding.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "191": {
+   "skl": "ATFighter/Enchant.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 118,
+       "ani": "ATAnimation/EnchantPoison.ani"
+      },
+      {
+       "index": 122,
+       "ani": "ATAnimation/EnchantPoisonDouble.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "192": {
+   "skl": "ATFighter/DollMaking.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "193": {
+   "skl": "ATFighter/Alchemy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "194": {
+   "skl": "ATFighter/OpenDisjointShop.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "195": {
+   "skl": "ATFighter/BasicHpMaxUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "196": {
+   "skl": "ATFighter/ArmorMasteryPlate.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "197": {
+   "skl": "ATFighter/Conversion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "200": {
+   "skl": "ATFighter/StatusUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "201": {
+   "skl": "ATFighter/ExperienceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "210": {
+   "skl": "ATFighter/DefiniteGrabEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 124,
+       "ani": "ATAnimation/DefiniteGrab.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "211": {
+   "skl": "ATFighter/WildCannonSpikeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 75,
+       "ani": "ATAnimation/WildCannonSpikeCharge.ani"
+      },
+      {
+       "index": 76,
+       "ani": "ATAnimation/WildCannonSpikeFall.ani"
+      },
+      {
+       "index": 81,
+       "ani": "ATAnimation/WildCannonSpikeExp.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "212": {
+   "skl": "ATFighter/MagicalAttackUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "213": {
+   "skl": "ATFighter/MagicalDefenceUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "214": {
+   "skl": "ATFighter/StuckUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "215": {
+   "skl": "ATFighter/ActivepropertyStuckUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "216": {
+   "skl": "ATFighter/HPRegenRateUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "217": {
+   "skl": "ATFighter/MPRegenRateUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "218": {
+   "skl": "ATFighter/ElementAttackAllUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "219": {
+   "skl": "ATFighter/ElementToleranceAllUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  }
+ }
+}

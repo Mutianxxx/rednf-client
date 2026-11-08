@@ -1,0 +1,1963 @@
+{
+ "class": "thief",
+ "exe_region": [
+  "0xc6d960",
+  "0xc90580"
+ ],
+ "etc_motion": {
+  "0": "Animation/UpperCut.ani",
+  "1": "Animation/UpperCutReady.ani",
+  "2": "Animation/DashSwingCut.ani",
+  "3": "Animation/FlashCut.ani",
+  "4": "Animation/FlyingKickTry.ani",
+  "5": "Animation/FlyingKickLoop1.ani",
+  "6": "Animation/FlyingKickLoop2.ani",
+  "7": "Animation/FlyingKickFinish.ani",
+  "8": "Animation/BackJump.ani",
+  "9": "Animation/FlameCut.ani",
+  "10": "Animation/FlyingSquirrelTry.ani",
+  "11": "Animation/FlyingSquirrelHit.ani",
+  "12": "Animation/CutAndGrabBackHit.ani",
+  "13": "Animation/CutAndGrabBackMove.ani",
+  "14": "Animation/CutNeckTry.ani",
+  "15": "Animation/CutNeckMove.ani",
+  "16": "Animation/CutNeckPoke1.ani",
+  "17": "Animation/CutNeckPoke2.ani",
+  "18": "Animation/CutNeckCut.ani",
+  "19": "Animation/FlyingSquirrelTryLand.ani",
+  "20": "Animation/CutNeckMoveIllusion.ani",
+  "21": "Animation/UpperCutLB.ani",
+  "22": "Animation/SlantCut.ani",
+  "23": "Animation/SlantCutLBKick.ani",
+  "24": "Animation/SlantCutLBSwing.ani",
+  "25": "Animation/SkillDash.ani",
+  "26": "Animation/RorentoCut1.ani",
+  "27": "Animation/RorentoCut2.ani",
+  "28": "Animation/RorentoCut3.ani",
+  "29": "Animation/FlashCutUp.ani",
+  "30": "Animation/FlashCutDown.ani",
+  "31": "Animation/SideStep.ani",
+  "32": "Animation/InazmaKickTry.ani",
+  "33": "Animation/InazmaKickKick.ani",
+  "34": "Animation/InazmaKickGrab.ani",
+  "35": "Animation/InazmaKickMove.ani",
+  "36": "Animation/InazmaKickSlash1.ani",
+  "37": "Animation/InazmaKickSlash2.ani",
+  "38": "Animation/InazmaKickLand.ani",
+  "39": "Animation/InazmaKickBack.ani",
+  "40": "Animation/ExcelStrikeStart.ani",
+  "41": "Animation/DarkSoul.ani",
+  "42": "Animation/Shuriken.ani",
+  "43": "Animation/ShurikenJump.ani",
+  "44": "Animation/SkinTakeOff.ani",
+  "45": "Animation/AnkleCut.ani",
+  "46": "Animation/DoublePierce1.ani",
+  "47": "Animation/DoublePierce2.ani",
+  "48": "Animation/DoublePierce3.ani",
+  "49": "Animation/CurseSpear1.ani",
+  "50": "Animation/CurseSpear2.ani",
+  "51": "Animation/HurricaneStart.ani",
+  "52": "Animation/HurricaneLoop.ani",
+  "53": "Animation/HurricaneEnd.ani",
+  "54": "Animation/VerticalSpiralSit.ani",
+  "55": "Animation/VerticalSpiralSpin.ani",
+  "56": "Animation/VerticalSpiralCrash1.ani",
+  "57": "Animation/VerticalSpiralCrash2.ani",
+  "58": "Animation/SonicAssaultTry.ani",
+  "59": "Animation/SonicAssaultRapid1.ani",
+  "60": "Animation/SonicAssaultRapid2.ani",
+  "61": "Animation/SonicAssaultRapid3.ani",
+  "62": "Animation/SonicAssaultRapid4.ani",
+  "63": "Animation/SonicAssaultRapid5.ani",
+  "64": "Animation/SonicAssaultRapid6.ani",
+  "65": "Animation/SonicAssaultLastRapid.ani",
+  "66": "Animation/SonicAssaultFinish.ani",
+  "67": "Animation/SonicAssaultIllusion.ani",
+  "68": "Animation/DarkLureApply.ani",
+  "69": "Animation/DarkNail.ani",
+  "70": "Animation/DarkSoulChargeCast.ani",
+  "71": "Animation/DarkSoulChargeLaunch.ani",
+  "72": "Animation/ballacrecast.ani",
+  "73": "Animation/ballacre_pierce.ani",
+  "74": "Animation/ballacre_swingRL.ani",
+  "75": "Animation/ballacre_swingLR.ani",
+  "76": "Animation/ballacre_swing_down.ani",
+  "77": "Animation/ballacre_swing_hand.ani",
+  "78": "Animation/ballacre_hand_pierce.ani",
+  "79": "Animation/ballacre_dash_upper.ani",
+  "80": "Animation/ballacre_hand_appear.ani",
+  "81": "Animation/ExcelStrikeDash.ani",
+  "82": "Animation/ExcelStrikeHit1.ani",
+  "83": "Animation/ExcelStrikeHit2.ani",
+  "84": "Animation/ExcelStrikeHit3.ani",
+  "85": "Animation/ExcelStrikeHitLB.ani",
+  "86": "Animation/ExcelStrikeHitNoDownOnly.ani",
+  "87": "Animation/ExcelStrikeEnd.ani",
+  "88": "Animation/BlameOfDead.ani",
+  "89": "Animation/DarkRitual.ani",
+  "90": "Animation/SummonNicolas.ani",
+  "91": "Animation/SilverStreamStart.ani",
+  "92": "Animation/SilverStreamAttack1.ani",
+  "93": "Animation/SilverStreamAttack2.ani",
+  "94": "Animation/SilverStreamAttack3.ani",
+  "95": "Animation/SilverStreamAttack4.ani",
+  "96": "Animation/SilverStreamFinishSlash.ani",
+  "97": "Animation/SilverStreamFinishJump.ani",
+  "98": "Animation/ballacre_hand_grab.ani",
+  "99": "Animation/ballacre_guillotine_start.ani",
+  "100": "Animation/ballacre_guillotine_charge.ani",
+  "101": "Animation/ballacre_guillotine_finish.ani",
+  "102": "Animation/ballacre_phantom_strom.ani",
+  "103": "",
+  "104": "Animation/DarkSoulNonChargeLaunch.ani",
+  "105": "Animation/SilverStreamNormalAttack1.ani",
+  "106": "Animation/SilverStreamNormalAttack2.ani",
+  "107": "Animation/SilverStreamNormalAttack3.ani",
+  "108": "Animation/SilverStreamNormalAttack4.ani",
+  "109": "Animation/SilverStreamNormalJumpAttack.ani",
+  "110": "Animation/SilverStreamNormalDashAttack.ani",
+  "111": "Animation/BlameOfDeadEx.ani",
+  "112": "Animation/VerticalSpiralExTry.ani",
+  "113": "Animation/VerticalSpiralExJump.ani",
+  "114": "Animation/VerticalSpiralExSpin.ani",
+  "115": "Animation/VerticalSpiralExFinishStay.ani",
+  "116": "Animation/ChainSawEx1.ani",
+  "117": "Animation/ChainSawEx2.ani",
+  "118": "Animation/ChainSawEx3.ani",
+  "119": "Animation/ChainSawEx4.ani"
+ },
+ "skills": {
+  "1": {
+   "skl": "Thief/RisingCut.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00c8227f",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 20,
+     "handler": "0x00c892b9",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 22,
+     "handler": "0x00c82868",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "2": {
+   "skl": "Thief/Slicer.skl",
+   "states": [
+    {
+     "state": 21,
+     "handler": "0x00c827a9",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "3": {
+   "skl": "Thief/ShiningCut.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00c82868",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "4": {
+   "skl": "Thief/DivingArrow.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00c84ba1",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "5": {
+   "skl": "Thief/FlameCut.skl",
+   "states": [
+    {
+     "state": 23,
+     "handler": "0x00c833e6",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/UpperCutReady.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/DashSwingCut.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "6": {
+   "skl": "Thief/FlyingSquirrel.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 10,
+       "ani": "Animation/FlyingSquirrelTry.ani"
+      },
+      {
+       "index": 11,
+       "ani": "Animation/FlyingSquirrelHit.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/FlyingSquirrelTryLand.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "7": {
+   "skl": "Thief/ShadowCut.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "8": {
+   "skl": "Thief/Eraser.skl",
+   "states": [
+    {
+     "state": 25,
+     "handler": "0x00c84ca4",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "9": {
+   "skl": "Thief/HitEnd.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "10": {
+   "skl": null,
+   "states": [
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "11": {
+   "skl": null,
+   "states": [
+    {
+     "state": 26,
+     "handler": "0x00c82c52",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 27,
+     "handler": "0x00c82d2b",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "13": {
+   "skl": null,
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00c82d2b",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "16": {
+   "skl": "Thief/VanditCut.skl",
+   "states": [
+    {
+     "state": 42,
+     "handler": "0x00c86529",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 53,
+     "handler": "0x00c86747",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "18": {
+   "skl": "Thief/AerialJump.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "19": {
+   "skl": "Thief/BreakingRush.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "21": {
+   "skl": "Thief/DarkSoul.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 41,
+       "ani": "Animation/DarkSoul.ani"
+      },
+      {
+       "index": 70,
+       "ani": "Animation/DarkSoulChargeCast.ani"
+      },
+      {
+       "index": 71,
+       "ani": "Animation/DarkSoulChargeLaunch.ani"
+      },
+      {
+       "index": 104,
+       "ani": "Animation/DarkSoulNonChargeLaunch.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "22": {
+   "skl": "Thief/BoneShield.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "23": {
+   "skl": "Thief/CurseSpear.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 49,
+       "ani": "Animation/CurseSpear1.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/CurseSpear2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "24": {
+   "skl": "Thief/Shuriken.skl",
+   "states": [
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "25": {
+   "skl": "Thief/SkinTakeOff.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 44,
+       "ani": "Animation/SkinTakeOff.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "26": {
+   "skl": "Thief/AnkleCut.skl",
+   "states": [
+    {
+     "state": 50,
+     "handler": "0x00c86f36",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 52,
+     "handler": "0x00c86b0f",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "27": {
+   "skl": "Thief/DoublePierce.skl",
+   "states": [
+    {
+     "state": 39,
+     "handler": "0x00c8581c",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "29": {
+   "skl": "Thief/DaggerMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "30": {
+   "skl": "Thief/TwinSwordMastery.skl",
+   "states": [
+    {
+     "state": 31,
+     "handler": "0x00c83be6",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 32,
+     "handler": "0x00c83ccd",
+     "entry_motions": [
+      {
+       "index": 19,
+       "ani": "Animation/FlyingSquirrelTryLand.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/FlyingSquirrelTryLand.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "31": {
+   "skl": "Thief/Hurricane.skl",
+   "states": [
+    {
+     "state": 32,
+     "handler": "0x00c83ccd",
+     "entry_motions": [
+      {
+       "index": 19,
+       "ani": "Animation/FlyingSquirrelTryLand.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/FlyingSquirrelTryLand.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 33,
+     "handler": "0x00c83f0f",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "33": {
+   "skl": "Thief/VerticalSpiral.skl",
+   "states": [
+    {
+     "state": 33,
+     "handler": "0x00c83f0f",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "34": {
+   "skl": "Thief/SonicAssault.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 58,
+       "ani": "Animation/SonicAssaultTry.ani"
+      },
+      {
+       "index": 59,
+       "ani": "Animation/SonicAssaultRapid1.ani"
+      },
+      {
+       "index": 60,
+       "ani": "Animation/SonicAssaultRapid2.ani"
+      },
+      {
+       "index": 61,
+       "ani": "Animation/SonicAssaultRapid3.ani"
+      },
+      {
+       "index": 62,
+       "ani": "Animation/SonicAssaultRapid4.ani"
+      },
+      {
+       "index": 63,
+       "ani": "Animation/SonicAssaultRapid5.ani"
+      },
+      {
+       "index": 64,
+       "ani": "Animation/SonicAssaultRapid6.ani"
+      },
+      {
+       "index": 65,
+       "ani": "Animation/SonicAssaultLastRapid.ani"
+      },
+      {
+       "index": 66,
+       "ani": "Animation/SonicAssaultFinish.ani"
+      },
+      {
+       "index": 67,
+       "ani": "Animation/SonicAssaultIllusion.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "35": {
+   "skl": "Thief/DarkNail.skl",
+   "states": [
+    {
+     "state": 48,
+     "handler": "0x00c873c6",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "36": {
+   "skl": "Thief/DarkLure.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 68,
+       "ani": "Animation/DarkLureApply.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "37": {
+   "skl": "Thief/ApportBallacre.skl",
+   "states": [
+    {
+     "state": 34,
+     "handler": "0x00c84073",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "38": {
+   "skl": "Thief/Dummy.skl",
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00c887bd",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 46,
+     "handler": "0x00c883f8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "39": {
+   "skl": "Thief/AmbitionOfBallacre.skl",
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00c887bd",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 46,
+     "handler": "0x00c883f8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "40": {
+   "skl": "Thief/Guillotine.skl",
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00c887bd",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 46,
+     "handler": "0x00c883f8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "41": {
+   "skl": "Thief/ChainSaw.skl",
+   "states": [
+    {
+     "state": 35,
+     "handler": "0x00c8437f",
+     "entry_motions": [
+      {
+       "index": 24,
+       "ani": "Animation/SlantCutLBSwing.ani"
+      },
+      {
+       "index": 25,
+       "ani": "Animation/SkillDash.ani"
+      },
+      {
+       "index": 26,
+       "ani": "Animation/RorentoCut1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "43": {
+   "skl": "Thief/ShiningCutAerial.skl",
+   "states": [
+    {
+     "state": 36,
+     "handler": "0x00c84b53",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "44": {
+   "skl": "Thief/SideStep.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 31,
+       "ani": "Animation/SideStep.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "45": {
+   "skl": "Thief/LightningArrow.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "47": {
+   "skl": "Thief/ExcelStrike.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/ExcelStrikeStart.ani"
+      },
+      {
+       "index": 81,
+       "ani": "Animation/ExcelStrikeDash.ani"
+      },
+      {
+       "index": 82,
+       "ani": "Animation/ExcelStrikeHit1.ani"
+      },
+      {
+       "index": 83,
+       "ani": "Animation/ExcelStrikeHit2.ani"
+      },
+      {
+       "index": 84,
+       "ani": "Animation/ExcelStrikeHit3.ani"
+      },
+      {
+       "index": 85,
+       "ani": "Animation/ExcelStrikeHitLB.ani"
+      },
+      {
+       "index": 86,
+       "ani": "Animation/ExcelStrikeHitNoDownOnly.ani"
+      },
+      {
+       "index": 87,
+       "ani": "Animation/ExcelStrikeEnd.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "49": {
+   "skl": "Thief/BlameOfDead.skl",
+   "states": [
+    {
+     "state": 24,
+     "handler": "0x00c836ec",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "50": {
+   "skl": "Thief/DarkRitual.skl",
+   "states": [
+    {
+     "state": 38,
+     "handler": "0x00c852fb",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "51": {
+   "skl": "Thief/SummonNicolas.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 90,
+       "ani": "Animation/SummonNicolas.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "52": {
+   "skl": "Thief/NicolasSummonZombie.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "53": {
+   "skl": "Thief/NicolasBlackArea.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "54": {
+   "skl": "Thief/NicolasBehavior.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "55": {
+   "skl": "Thief/NicolasBlackWave.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "56": {
+   "skl": "Thief/MoonArc.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "57": {
+   "skl": "Thief/SilverStream.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 91,
+       "ani": "Animation/SilverStreamStart.ani"
+      },
+      {
+       "index": 92,
+       "ani": "Animation/SilverStreamAttack1.ani"
+      },
+      {
+       "index": 93,
+       "ani": "Animation/SilverStreamAttack2.ani"
+      },
+      {
+       "index": 94,
+       "ani": "Animation/SilverStreamAttack3.ani"
+      },
+      {
+       "index": 95,
+       "ani": "Animation/SilverStreamAttack4.ani"
+      },
+      {
+       "index": 96,
+       "ani": "Animation/SilverStreamFinishSlash.ani"
+      },
+      {
+       "index": 97,
+       "ani": "Animation/SilverStreamFinishJump.ani"
+      },
+      {
+       "index": 105,
+       "ani": "Animation/SilverStreamNormalAttack1.ani"
+      },
+      {
+       "index": 106,
+       "ani": "Animation/SilverStreamNormalAttack2.ani"
+      },
+      {
+       "index": 107,
+       "ani": "Animation/SilverStreamNormalAttack3.ani"
+      },
+      {
+       "index": 108,
+       "ani": "Animation/SilverStreamNormalAttack4.ani"
+      },
+      {
+       "index": 109,
+       "ani": "Animation/SilverStreamNormalJumpAttack.ani"
+      },
+      {
+       "index": 110,
+       "ani": "Animation/SilverStreamNormalDashAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "58": {
+   "skl": "Thief/FearOfBallacre.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "59": {
+   "skl": "Thief/Phantomstrom.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "60": {
+   "skl": "Thief/ArmorMasteryLeatherThief.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "61": {
+   "skl": "Thief/ArmorMasteryLeatherRogue.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00c836e0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 30,
+     "handler": "0x00c839ba",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "62": {
+   "skl": "Thief/ArmorMasteryLightNecro.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "63": {
+   "skl": "Thief/ArmorMasteryClothKuno.skl",
+   "states": [
+    {
+     "state": 30,
+     "handler": "0x00c839ba",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "64": {
+   "skl": "Thief/ArmorMasteryLeatherShadow.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "66": {
+   "skl": null,
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00c8239f",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 22,
+     "handler": "0x00c82868",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 38,
+     "handler": "0x00c852fb",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "70": {
+   "skl": null,
+   "states": [
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "73": {
+   "skl": null,
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00c85e3c",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "74": {
+   "skl": "Thief/BlameOfDeadEx.skl",
+   "states": [
+    {
+     "state": 41,
+     "handler": "0x00c861c0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "75": {
+   "skl": "Thief/VerticalSpiralEx.skl",
+   "states": [
+    {
+     "state": 42,
+     "handler": "0x00c86529",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "76": {
+   "skl": "Thief/ChainSawEx.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00c86a40",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "77": {
+   "skl": "Thief/NicolasBlackWaveEx.skl",
+   "states": [
+    {
+     "state": 44,
+     "handler": "0x00c86ddc",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "78": {
+   "skl": null,
+   "states": [
+    {
+     "state": 44,
+     "handler": "0x00c86ddc",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 45,
+     "handler": "0x00c887bd",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "84": {
+   "skl": null,
+   "states": [
+    {
+     "state": 47,
+     "handler": "0x00c884e3",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "85": {
+   "skl": null,
+   "states": [
+    {
+     "state": 48,
+     "handler": "0x00c873c6",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "87": {
+   "skl": null,
+   "states": [
+    {
+     "state": 34,
+     "handler": "0x00c84073",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 43,
+     "handler": "0x00c86a40",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "88": {
+   "skl": null,
+   "states": [
+    {
+     "state": 47,
+     "handler": "0x00c884e3",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 49,
+     "handler": "0x00c89375",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "90": {
+   "skl": null,
+   "states": [
+    {
+     "state": 48,
+     "handler": "0x00c873c6",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 50,
+     "handler": "0x00c86f36",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "93": {
+   "skl": null,
+   "states": [
+    {
+     "state": 51,
+     "handler": "0x00c89ca6",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "100": {
+   "skl": null,
+   "states": [
+    {
+     "state": 53,
+     "handler": "0x00c86747",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "103": {
+   "skl": null,
+   "states": [
+    {
+     "state": 52,
+     "handler": "0x00c86b0f",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 54,
+     "handler": "0x00c85a79",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "104": {
+   "skl": null,
+   "states": [
+    {
+     "state": 53,
+     "handler": "0x00c86747",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 55,
+     "handler": "0x00c83148",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "105": {
+   "skl": null,
+   "states": [
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "109": {
+   "skl": null,
+   "states": [
+    {
+     "state": 54,
+     "handler": "0x00c85a79",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "111": {
+   "skl": null,
+   "states": [
+    {
+     "state": 55,
+     "handler": "0x00c83148",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "121": {
+   "skl": null,
+   "states": [
+    {
+     "state": 56,
+     "handler": "0x00c89e2d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "140": {
+   "skl": "Thief/ShurikenEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 42,
+       "ani": "Animation/Shuriken.ani"
+      },
+      {
+       "index": 43,
+       "ani": "Animation/ShurikenJump.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "141": {
+   "skl": "Thief/CurseSpearEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 49,
+       "ani": "Animation/CurseSpear1.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/CurseSpear2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "142": {
+   "skl": "Thief/EraserEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "143": {
+   "skl": "Thief/DivingArrowEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "144": {
+   "skl": "Thief/HurricaneEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "Animation/HurricaneStart.ani"
+      },
+      {
+       "index": 52,
+       "ani": "Animation/HurricaneLoop.ani"
+      },
+      {
+       "index": 53,
+       "ani": "Animation/HurricaneEnd.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "145": {
+   "skl": "Thief/HitEndEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "146": {
+   "skl": "Thief/DarkLureEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 68,
+       "ani": "Animation/DarkLureApply.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "147": {
+   "skl": "Thief/NicolasBlackAreaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "148": {
+   "skl": "Thief/ShiningCutEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "149": {
+   "skl": "Thief/SonicAssaultEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 58,
+       "ani": "Animation/SonicAssaultTry.ani"
+      },
+      {
+       "index": 59,
+       "ani": "Animation/SonicAssaultRapid1.ani"
+      },
+      {
+       "index": 60,
+       "ani": "Animation/SonicAssaultRapid2.ani"
+      },
+      {
+       "index": 61,
+       "ani": "Animation/SonicAssaultRapid3.ani"
+      },
+      {
+       "index": 62,
+       "ani": "Animation/SonicAssaultRapid4.ani"
+      },
+      {
+       "index": 63,
+       "ani": "Animation/SonicAssaultRapid5.ani"
+      },
+      {
+       "index": 64,
+       "ani": "Animation/SonicAssaultRapid6.ani"
+      },
+      {
+       "index": 65,
+       "ani": "Animation/SonicAssaultLastRapid.ani"
+      },
+      {
+       "index": 66,
+       "ani": "Animation/SonicAssaultFinish.ani"
+      },
+      {
+       "index": 67,
+       "ani": "Animation/SonicAssaultIllusion.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "150": {
+   "skl": "Thief/DarkSoulEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 41,
+       "ani": "Animation/DarkSoul.ani"
+      },
+      {
+       "index": 70,
+       "ani": "Animation/DarkSoulChargeCast.ani"
+      },
+      {
+       "index": 71,
+       "ani": "Animation/DarkSoulChargeLaunch.ani"
+      },
+      {
+       "index": 104,
+       "ani": "Animation/DarkSoulNonChargeLaunch.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "151": {
+   "skl": "Thief/ApportBallacreEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "152": {
+   "skl": "Thief/BasicAttackUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "153": {
+   "skl": "Thief/RisingCutEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "154": {
+   "skl": "Thief/SlicerEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "155": {
+   "skl": "Thief/FlameCutEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "Animation/FlameCut.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "156": {
+   "skl": "Thief/ShadowCutEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "157": {
+   "skl": "Thief/BoneShieldEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "158": {
+   "skl": "Thief/AnkleCutEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 45,
+       "ani": "Animation/AnkleCut.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "159": {
+   "skl": "Thief/FlyingSquirrelEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 10,
+       "ani": "Animation/FlyingSquirrelTry.ani"
+      },
+      {
+       "index": 11,
+       "ani": "Animation/FlyingSquirrelHit.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/FlyingSquirrelTryLand.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "160": {
+   "skl": "Thief/ExcelStrikeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/ExcelStrikeStart.ani"
+      },
+      {
+       "index": 81,
+       "ani": "Animation/ExcelStrikeDash.ani"
+      },
+      {
+       "index": 82,
+       "ani": "Animation/ExcelStrikeHit1.ani"
+      },
+      {
+       "index": 83,
+       "ani": "Animation/ExcelStrikeHit2.ani"
+      },
+      {
+       "index": 84,
+       "ani": "Animation/ExcelStrikeHit3.ani"
+      },
+      {
+       "index": 85,
+       "ani": "Animation/ExcelStrikeHitLB.ani"
+      },
+      {
+       "index": 86,
+       "ani": "Animation/ExcelStrikeHitNoDownOnly.ani"
+      },
+      {
+       "index": 87,
+       "ani": "Animation/ExcelStrikeEnd.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "161": {
+   "skl": "Thief/VerticalSpiralExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "Animation/VerticalSpiralSit.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/VerticalSpiralSpin.ani"
+      },
+      {
+       "index": 56,
+       "ani": "Animation/VerticalSpiralCrash1.ani"
+      },
+      {
+       "index": 57,
+       "ani": "Animation/VerticalSpiralCrash2.ani"
+      },
+      {
+       "index": 112,
+       "ani": "Animation/VerticalSpiralExTry.ani"
+      },
+      {
+       "index": 113,
+       "ani": "Animation/VerticalSpiralExJump.ani"
+      },
+      {
+       "index": 114,
+       "ani": "Animation/VerticalSpiralExSpin.ani"
+      },
+      {
+       "index": 115,
+       "ani": "Animation/VerticalSpiralExFinishStay.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "162": {
+   "skl": "Thief/LightningArrowEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "163": {
+   "skl": "Thief/ChainSawExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 116,
+       "ani": "Animation/ChainSawEx1.ani"
+      },
+      {
+       "index": 117,
+       "ani": "Animation/ChainSawEx2.ani"
+      },
+      {
+       "index": 118,
+       "ani": "Animation/ChainSawEx3.ani"
+      },
+      {
+       "index": 119,
+       "ani": "Animation/ChainSawEx4.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "164": {
+   "skl": "Thief/DoublePierceEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 46,
+       "ani": "Animation/DoublePierce1.ani"
+      },
+      {
+       "index": 47,
+       "ani": "Animation/DoublePierce2.ani"
+      },
+      {
+       "index": 48,
+       "ani": "Animation/DoublePierce3.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "165": {
+   "skl": "Thief/VanditCutEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "169": {
+   "skl": "Thief/BackStep.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "172": {
+   "skl": "Thief/ArmorMasteryLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "173": {
+   "skl": "Thief/ArmorMasteryHeavy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "174": {
+   "skl": "Thief/BasicAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "175": {
+   "skl": "Thief/JumpPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "176": {
+   "skl": "Thief/MagicalAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "177": {
+   "skl": "Thief/ThrowMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "178": {
+   "skl": "Thief/PhysicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "179": {
+   "skl": "Thief/DisjointItem.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "180": {
+   "skl": "Thief/SuperArmorOnCast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "181": {
+   "skl": "Thief/CompoundCraft.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "182": {
+   "skl": "Thief/CompoundWeaving.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "183": {
+   "skl": "Thief/CompoundMachine.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "184": {
+   "skl": "Thief/CompoundChemistry.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "185": {
+   "skl": "Thief/ArmorMasteryLeather.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "186": {
+   "skl": "Thief/PhysicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "187": {
+   "skl": "Thief/ArmorMasteryCloth.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "188": {
+   "skl": "Thief/MagicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "189": {
+   "skl": "Thief/MagicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "190": {
+   "skl": "Thief/QuickStanding.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "191": {
+   "skl": "Thief/Enchant.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "192": {
+   "skl": "Thief/DollMaking.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "193": {
+   "skl": "Thief/Alchemy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "194": {
+   "skl": "Thief/OpenDisjointShop.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "195": {
+   "skl": "Thief/BasicHpMaxUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "196": {
+   "skl": "Thief/ArmorMasteryPlate.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "197": {
+   "skl": "Thief/Conversion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "200": {
+   "skl": "Thief/StatusUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "201": {
+   "skl": "Thief/ExperienceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "210": {
+   "skl": "Thief/SummonNicolasEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 90,
+       "ani": "Animation/SummonNicolas.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "211": {
+   "skl": "Thief/DarkNailEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 69,
+       "ani": "Animation/DarkNail.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "212": {
+   "skl": "Thief/BlameOfDeadExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 88,
+       "ani": "Animation/BlameOfDead.ani"
+      },
+      {
+       "index": 111,
+       "ani": "Animation/BlameOfDeadEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "213": {
+   "skl": "Thief/AmbitionOfBallacreEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "214": {
+   "skl": "Thief/NicolasBlackWaveExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "215": {
+   "skl": "Thief/GuillotineEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "216": {
+   "skl": "Thief/NicolasSummonZombieEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "217": {
+   "skl": "Thief/SkinTakeOffEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 44,
+       "ani": "Animation/SkinTakeOff.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "218": {
+   "skl": "Thief/ElementAttackAllUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "219": {
+   "skl": "Thief/ElementToleranceAllUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  }
+ }
+}

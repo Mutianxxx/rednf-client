@@ -1,0 +1,5924 @@
+{
+ "atfighter": {
+  "1": {
+   "skl": "ATFighter/ShoulderCharge.skl",
+   "name": "屆옜"
+  },
+  "2": {
+   "skl": "ATFighter/Crouch.skl",
+   "name": "뚱률"
+  },
+  "3": {
+   "skl": "ATFighter/GrabExplosion.skl",
+   "name": "햄墩懦"
+  },
+  "4": {
+   "skl": "ATFighter/CrashLowKick.skl",
+   "name": "鉅므"
+  },
+  "5": {
+   "skl": "ATFighter/LiftUpper.skl",
+   "name": "빈璟"
+  },
+  "6": {
+   "skl": "ATFighter/DamageLowKick.skl",
+   "name": "苟뙈璟"
+  },
+  "7": {
+   "skl": "ATFighter/PhysicalDefenseUp.skl",
+   "name": "멀쏘屆므"
+  },
+  "8": {
+   "skl": "ATFighter/Kensin.skl",
+   "name": "롸"
+  },
+  "9": {
+   "skl": "ATFighter/Suplex.skl",
+   "name": "嘔샌"
+  },
+  "10": {
+   "skl": "ATFighter/BackSuplex.skl",
+   "name": "嘔샌퓻뺏"
+  },
+  "11": {
+   "skl": "ATFighter/ThunderSuplex.skl",
+   "name": "잉脆嘔샌"
+  },
+  "12": {
+   "skl": "ATFighter/EnergyBall.skl",
+   "name": "쿡폭꺼"
+  },
+  "13": {
+   "skl": "ATFighter/ThrowSand.skl",
+   "name": "테"
+  },
+  "14": {
+   "skl": "ATFighter/Mount.skl",
+   "name": "률빪게珙화"
+  },
+  "15": {
+   "skl": "ATFighter/Sajahu.skl",
+   "name": "哥綾븟"
+  },
+  "16": {
+   "skl": "ATFighter/Kikouken.skl",
+   "name": "쭁旗쿡폭끝"
+  },
+  "17": {
+   "skl": "ATFighter/Stomp.skl",
+   "name": "團劫"
+  },
+  "18": {
+   "skl": "ATFighter/Spire.skl",
+   "name": "륫왕쥡暾璟"
+  },
+  "19": {
+   "skl": "ATFighter/ClosePunch.skl",
+   "name": "녑嘔"
+  },
+  "20": {
+   "skl": "ATFighter/SuperArmor.skl",
+   "name": "게竟빱솖"
+  },
+  "21": {
+   "skl": "ATFighter/CancelEnergyBall.skl",
+   "name": "퓻齡 - 쿡폭꺼"
+  },
+  "22": {
+   "skl": "ATFighter/SuplexSubPowerUp.skl",
+   "name": "胛세퓻뺏"
+  },
+  "29": {
+   "skl": "ATFighter/LightFriendship.skl",
+   "name": "밟裂항뵨"
+  },
+  "30": {
+   "skl": "ATFighter/LightEnchantWeapon.skl",
+   "name": "밟裂깡훵"
+  },
+  "31": {
+   "skl": "ATFighter/AttackSpeedUp.skl",
+   "name": "루裂폭口"
+  },
+  "32": {
+   "skl": "ATFighter/PoisonToleranceUp.skl",
+   "name": "양뗀둬예"
+  },
+  "33": {
+   "skl": "ATFighter/StunOnUseSkill.skl",
+   "name": "浬삽흙침"
+  },
+  "34": {
+   "skl": "ATFighter/EquipBoxingGlove.skl",
+   "name": "화敬廊壞"
+  },
+  "35": {
+   "skl": "ATFighter/BlindToleranceUp.skl",
+   "name": "쿡폭먁列"
+  },
+  "36": {
+   "skl": "ATFighter/LightToleranceUp.skl",
+   "name": "죠휑밟뿔"
+  },
+  "37": {
+   "skl": "ATFighter/SlowDownPowerUp.skl",
+   "name": "퓻화"
+  },
+  "38": {
+   "skl": "ATFighter/EnchantPoison.skl",
+   "name": "뗀틸尻聆"
+  },
+  "39": {
+   "skl": "ATFighter/AimVitalPoint.skl",
+   "name": "흽듐먁列"
+  },
+  "40": {
+   "skl": "ATFighter/SpiralNen.skl",
+   "name": "쿡폭뻔훈"
+  },
+  "41": {
+   "skl": "ATFighter/FlameLegs.skl",
+   "name": "죠落뢨꼍"
+  },
+  "42": {
+   "skl": "ATFighter/NenGuard.skl",
+   "name": "쿡폭倆"
+  },
+  "43": {
+   "skl": "ATFighter/DoubleThrow.skl",
+   "name": "崗路尻聆"
+  },
+  "44": {
+   "skl": "ATFighter/Provocation.skl",
+   "name": "鯨根"
+  },
+  "45": {
+   "skl": "ATFighter/ClawMastery.skl",
+   "name": "屢쑹繫"
+  },
+  "46": {
+   "skl": "ATFighter/SingleKick.skl",
+   "name": "품璟"
+  },
+  "49": {
+   "skl": "ATFighter/ThrowEnemy.skl",
+   "name": "테尻"
+  },
+  "50": {
+   "skl": "ATFighter/DefiniteGrab.skl",
+   "name": "괬제婁혤"
+  },
+  "51": {
+   "skl": "ATFighter/SlideGrab.skl",
+   "name": "뺄契婁혤"
+  },
+  "52": {
+   "skl": "ATFighter/ThrowWeb.skl",
+   "name": "쭈貢尻聆"
+  },
+  "54": {
+   "skl": "ATFighter/ShoulderTackle.skl",
+   "name": "柰찬녑旒"
+  },
+  "55": {
+   "skl": "ATFighter/GrabCannon.skl",
+   "name": "婁뷰텔"
+  },
+  "56": {
+   "skl": "ATFighter/ArmorMasteryLightSK.skl",
+   "name": "댔햐솖淚쑹"
+  },
+  "57": {
+   "skl": "ATFighter/ArmorMasteryLightGP.skl",
+   "name": "휼돛소햐솖淚쑹"
+  },
+  "58": {
+   "skl": "ATFighter/WhirlWindKick.skl",
+   "name": "旗루苦"
+  },
+  "60": {
+   "skl": "ATFighter/BlockBuster.skl",
+   "name": "漏욥尻聆"
+  },
+  "61": {
+   "skl": "ATFighter/CancelThrow.skl",
+   "name": "퓻齡 - 尻聆"
+  },
+  "62": {
+   "skl": "ATFighter/LegSuplex.skl",
+   "name": "왕십뉨"
+  },
+  "63": {
+   "skl": "ATFighter/Typhoon.skl",
+   "name": "价空旗쪼"
+  },
+  "65": {
+   "skl": "ATFighter/EfficientBurn.skl",
+   "name": "죠落횝"
+  },
+  "67": {
+   "skl": "ATFighter/NenFlower.skl",
+   "name": "쿡艱 : 털裂쏜잉빪"
+  },
+  "68": {
+   "skl": "ATFighter/LightningDance.skl",
+   "name": "든裂校"
+  },
+  "69": {
+   "skl": "ATFighter/IllusionBomb.skl",
+   "name": "뼙緞괵鉅"
+  },
+  "73": {
+   "skl": "ATFighter/ArmorMasteryHeavySP.skl",
+   "name": "쌍게路솖淚쑹"
+  },
+  "74": {
+   "skl": "ATFighter/CrazyMount.skl",
+   "name": "욺 · 게珙화"
+  },
+  "75": {
+   "skl": "ATFighter/HiddenSting.skl",
+   "name": "뗀濾尻聆"
+  },
+  "76": {
+   "skl": "ATFighter/VenomMine.skl",
+   "name": "뗀잉多괵"
+  },
+  "77": {
+   "skl": "ATFighter/JunkSpin.skl",
+   "name": "沂루괬"
+  },
+  "78": {
+   "skl": "ATFighter/EnergyBallCharge.skl",
+   "name": "嗜쿡텔"
+  },
+  "79": {
+   "skl": "ATFighter/NenMonsterWhiteTiger.skl",
+   "name": "쿡艱 : 질빪奎"
+  },
+  "80": {
+   "skl": "ATFighter/DashPunch.skl",
+   "name": "錄샌"
+  },
+  "81": {
+   "skl": "ATFighter/PunchAfterReturn.skl",
+   "name": "粮쓩"
+  },
+  "82": {
+   "skl": "ATFighter/RandomKick.skl",
+   "name": "疆緞젯뻔璟"
+  },
+  "83": {
+   "skl": "ATFighter/RisingUpper.skl",
+   "name": "녈落旗루苦"
+  },
+  "84": {
+   "skl": "ATFighter/DashAfterDash.skl",
+   "name": "섣루瀏샌"
+  },
+  "85": {
+   "skl": "ATFighter/DashAfterDashExtension.skl",
+   "name": "섣루젯샌"
+  },
+  "86": {
+   "skl": "ATFighter/EarthBreak.skl",
+   "name": "쏜먼鉅"
+  },
+  "87": {
+   "skl": "ATFighter/HoldUp.skl",
+   "name": "툼翠旗璟"
+  },
+  "88": {
+   "skl": "ATFighter/WildCannonSpike.skl",
+   "name": "죙柯팎莖"
+  },
+  "89": {
+   "skl": "ATFighter/SuplexCyclone.skl",
+   "name": "뒈掉루삽쫴"
+  },
+  "90": {
+   "skl": "ATFighter/LightningDragon.skl",
+   "name": "쿡艱 : 촐빪驢뒈"
+  },
+  "91": {
+   "skl": "ATFighter/MuscleShift.skl",
+   "name": "휼뺏샥흄"
+  },
+  "97": {
+   "skl": "ATFighter/ArmorMasteryClothNM.skl",
+   "name": "폭묘可꼈솖淚쑹"
+  },
+  "105": {
+   "skl": "ATFighter/DestroyEarthSkyDrop.skl",
+   "name": "莖굼뒈죙"
+  },
+  "106": {
+   "skl": "ATFighter/GroundKick.skl",
+   "name": "쭁旗뺄끎"
+  },
+  "108": {
+   "skl": "ATFighter/FastDash.skl",
+   "name": "疆꼍"
+  },
+  "109": {
+   "skl": "ATFighter/SmartThrow.skl",
+   "name": "尻聆퓻뺏"
+  },
+  "110": {
+   "skl": "ATFighter/AutoLoad.skl",
+   "name": "菱땡輕념"
+  },
+  "111": {
+   "skl": "ATFighter/SpiralNenShoot.skl",
+   "name": "쿡폭뻔훈 : 枸"
+  },
+  "112": {
+   "skl": "ATFighter/SpiralNenSpin.skl",
+   "name": "쿡폭뻔훈 : 徒"
+  },
+  "114": {
+   "skl": "ATFighter/NenPole.skl",
+   "name": "쿡裂걔屢"
+  },
+  "115": {
+   "skl": "ATFighter/TyphoonCounterStrike.skl",
+   "name": "제裂걔屢"
+  },
+  "116": {
+   "skl": "ATFighter/1000Hands1000Eyes.skl",
+   "name": "푤癎걔屢"
+  },
+  "117": {
+   "skl": "ATFighter/NenSpearEx.skl",
+   "name": "쿡裂濫챙"
+  },
+  "118": {
+   "skl": "ATFighter/ChargeSpearEx.skl",
+   "name": "偃槿녑샌"
+  },
+  "119": {
+   "skl": "ATFighter/GlueyFruitEx.skl",
+   "name": "괵팎制헷"
+  },
+  "120": {
+   "skl": "ATFighter/SpiralColumnEx.skl",
+   "name": "녑暾쿡폭끝"
+  },
+  "121": {
+   "skl": "ATFighter/108StairsEx.skl",
+   "name": "嶠젭빽"
+  },
+  "122": {
+   "skl": "ATFighter/HurricaneSpear.skl",
+   "name": "旗루鉅懃璟"
+  },
+  "123": {
+   "skl": "ATFighter/CrashRope.skl",
+   "name": "푤介쫘校"
+  },
+  "124": {
+   "skl": "ATFighter/ChainKickEx.skl",
+   "name": "툼翠힛路璟"
+  },
+  "125": {
+   "skl": "ATFighter/EarthBreakEx.skl",
+   "name": "퓻뺏 - 쏜먼鉅"
+  },
+  "126": {
+   "skl": "ATFighter/SuplexEx.skl",
+   "name": "퓻뺏 - 嘔샌"
+  },
+  "127": {
+   "skl": "ATFighter/EnergyBallEx.skl",
+   "name": "퓻뺏 - 쿡폭꺼"
+  },
+  "128": {
+   "skl": "ATFighter/PhysicalDefenseUpEx2.skl",
+   "name": "퓻뺏 - 멀쏘屆므"
+  },
+  "129": {
+   "skl": "ATFighter/WhirlWindKickEx.skl",
+   "name": "퓻뺏 - 旗루苦"
+  },
+  "130": {
+   "skl": "ATFighter/DamageLowKickEx.skl",
+   "name": "퓻뺏 - 苟뙈璟"
+  },
+  "131": {
+   "skl": "ATFighter/CrouchEx.skl",
+   "name": "퓻뺏 - 뚱률"
+  },
+  "132": {
+   "skl": "ATFighter/ThrowSandEx.skl",
+   "name": "퓻뺏 - 테"
+  },
+  "133": {
+   "skl": "ATFighter/KikoukenEx.skl",
+   "name": "퓻뺏 - 쭁旗쿡폭끝"
+  },
+  "134": {
+   "skl": "ATFighter/ThunderSuplexEx.skl",
+   "name": "퓻뺏 - 잉脆嘔샌"
+  },
+  "135": {
+   "skl": "ATFighter/RandomKickEx.skl",
+   "name": "퓻뺏 - 疆緞젯뻔璟"
+  },
+  "136": {
+   "skl": "ATFighter/NenMonsterWhiteTigerEx.skl",
+   "name": "퓻뺏 - 쿡艱 : 질빪奎"
+  },
+  "137": {
+   "skl": "ATFighter/CrashLowKickEx.skl",
+   "name": "퓻뺏 - 鉅므"
+  },
+  "138": {
+   "skl": "ATFighter/GroundKickEx.skl",
+   "name": "퓻뺏 - 쭁旗뺄끎"
+  },
+  "139": {
+   "skl": "ATFighter/LightningDanceEx.skl",
+   "name": "퓻뺏 - 든裂校"
+  },
+  "140": {
+   "skl": "ATFighter/RisingUpperEx.skl",
+   "name": "퓻뺏 - 녈落旗루苦"
+  },
+  "141": {
+   "skl": "ATFighter/ThrowWebEx.skl",
+   "name": "퓻뺏 - 쭈貢尻聆"
+  },
+  "142": {
+   "skl": "ATFighter/ProvocationEx.skl",
+   "name": "퓻뺏 - 鯨根"
+  },
+  "143": {
+   "skl": "ATFighter/VenomMineEx.skl",
+   "name": "퓻뺏 - 뗀잉多괵"
+  },
+  "144": {
+   "skl": "ATFighter/JunkSpinEx.skl",
+   "name": "퓻뺏 - 沂루괬"
+  },
+  "145": {
+   "skl": "ATFighter/PunchAfterReturnEx.skl",
+   "name": "퓻뺏 - 粮쓩"
+  },
+  "146": {
+   "skl": "ATFighter/ShoulderTackleEx.skl",
+   "name": "퓻뺏 - 柰찬녑旒"
+  },
+  "147": {
+   "skl": "ATFighter/SuplexCycloneEx.skl",
+   "name": "퓻뺏 - 뒈掉루삽쫴"
+  },
+  "148": {
+   "skl": "ATFighter/SpireEx.skl",
+   "name": "퓻뺏 - 륫왕쥡暾璟"
+  },
+  "149": {
+   "skl": "ATFighter/BasicAttackUpEx.skl",
+   "name": "퓻뺏 - 샘뇟쑹繫"
+  },
+  "150": {
+   "skl": "ATFighter/LiftUpperEx.skl",
+   "name": "퓻뺏 - 빈璟"
+  },
+  "151": {
+   "skl": "ATFighter/SingleKickEx.skl",
+   "name": "퓻뺏 - 품璟"
+  },
+  "152": {
+   "skl": "ATFighter/KensinEx.skl",
+   "name": "퓻뺏 - 롸"
+  },
+  "153": {
+   "skl": "ATFighter/StompEx.skl",
+   "name": "퓻뺏 - 團劫"
+  },
+  "154": {
+   "skl": "ATFighter/NenGuardEx.skl",
+   "name": "퓻뺏 - 쿡폭倆"
+  },
+  "155": {
+   "skl": "ATFighter/IllusionBombEx.skl",
+   "name": "퓻뺏 - 뼙緞괵鉅"
+  },
+  "156": {
+   "skl": "ATFighter/SajahuEx.skl",
+   "name": "퓻뺏 - 哥綾븟"
+  },
+  "157": {
+   "skl": "ATFighter/LightningDragonEx.skl",
+   "name": "퓻뺏 - 쿡艱 : 촐빪驢뒈"
+  },
+  "158": {
+   "skl": "ATFighter/SpiralNenShootEx.skl",
+   "name": "퓻뺏 - 쿡폭뻔훈 : 枸 "
+  },
+  "159": {
+   "skl": "ATFighter/SpiralNenSpinEx.skl",
+   "name": "퓻뺏 - 쿡폭뻔훈 : 徒"
+  },
+  "160": {
+   "skl": "ATFighter/DashPunchEx.skl",
+   "name": "퓻뺏 - 錄샌"
+  },
+  "161": {
+   "skl": "ATFighter/ClosePunchEx.skl",
+   "name": "퓻뺏 - 녑嘔"
+  },
+  "162": {
+   "skl": "ATFighter/ShoulderChargeEx.skl",
+   "name": "퓻뺏 - 屆옜"
+  },
+  "163": {
+   "skl": "ATFighter/GrabExplosionEx.skl",
+   "name": "퓻뺏 - 햄墩懦"
+  },
+  "164": {
+   "skl": "ATFighter/HiddenStingEx.skl",
+   "name": "퓻뺏 - 뗀濾尻聆"
+  },
+  "165": {
+   "skl": "ATFighter/EnchantPoisonEx.skl",
+   "name": "퓻뺏 - 뗀틸尻聆"
+  },
+  "166": {
+   "skl": "ATFighter/ThrowEnemyEx.skl",
+   "name": "퓻뺏 - 테尻"
+  },
+  "167": {
+   "skl": "ATFighter/LegSuplexEx.skl",
+   "name": "퓻뺏 - 왕십뉨"
+  },
+  "168": {
+   "skl": "ATFighter/HoldUpEx.skl",
+   "name": "퓻뺏 - 툼翠旗璟"
+  },
+  "169": {
+   "skl": "ATFighter/BackStep.skl",
+   "name": "빈契"
+  },
+  "172": {
+   "skl": "ATFighter/ArmorMasteryLight.skl",
+   "name": "햐솖쑹繫"
+  },
+  "173": {
+   "skl": "ATFighter/ArmorMasteryHeavy.skl",
+   "name": "路솖쑹繫"
+  },
+  "174": {
+   "skl": "ATFighter/BasicAttackUp.skl",
+   "name": "샘뇟쑹繫"
+  },
+  "175": {
+   "skl": "ATFighter/JumpPowerUp.skl",
+   "name": "禿勸"
+  },
+  "176": {
+   "skl": "ATFighter/MagicalAttackUp.skl",
+   "name": "陶뮴션壘"
+  },
+  "177": {
+   "skl": "ATFighter/ThrowMastery.skl",
+   "name": "尻聆쑹繫"
+  },
+  "178": {
+   "skl": "ATFighter/PhysicalBackAttackCritical.skl",
+   "name": "膠잿교샌"
+  },
+  "179": {
+   "skl": "ATFighter/DisjointItem.skl",
+   "name": "膠틔롸썩"
+  },
+  "180": {
+   "skl": "ATFighter/SuperArmorOnCast.skl",
+   "name": "꼇형雷羚"
+  },
+  "181": {
+   "skl": "ATFighter/CompoundCraft.skl",
+   "name": "쑹묏"
+  },
+  "182": {
+   "skl": "ATFighter/CompoundWeaving.skl",
+   "name": "렬廉"
+  },
+  "183": {
+   "skl": "ATFighter/CompoundMachine.skl",
+   "name": "샙筠"
+  },
+  "184": {
+   "skl": "ATFighter/CompoundChemistry.skl",
+   "name": "조쏜"
+  },
+  "185": {
+   "skl": "ATFighter/ArmorMasteryLeather.skl",
+   "name": "튄솖쑹繫"
+  },
+  "186": {
+   "skl": "ATFighter/PhysicalCriticalHitUp.skl",
+   "name": "膠잿괬샌"
+  },
+  "187": {
+   "skl": "ATFighter/ArmorMasteryCloth.skl",
+   "name": "꼈솖쑹繫"
+  },
+  "188": {
+   "skl": "ATFighter/MagicalCriticalHitUp.skl",
+   "name": "침랬괬샌"
+  },
+  "189": {
+   "skl": "ATFighter/MagicalBackAttackCritical.skl",
+   "name": "침랬교샌"
+  },
+  "190": {
+   "skl": "ATFighter/QuickStanding.skl",
+   "name": "肝뚱률"
+  },
+  "191": {
+   "skl": "ATFighter/Enchant.skl",
+   "name": "맒침"
+  },
+  "192": {
+   "skl": "ATFighter/DollMaking.skl",
+   "name": "齡鱗梁뻥훙탉"
+  },
+  "193": {
+   "skl": "ATFighter/Alchemy.skl",
+   "name": "조쏜減"
+  },
+  "194": {
+   "skl": "ATFighter/OpenDisjointShop.skl",
+   "name": "역폘롸썩듦"
+  },
+  "195": {
+   "skl": "ATFighter/BasicHpMaxUp.skl",
+   "name": "츱裂都"
+  },
+  "196": {
+   "skl": "ATFighter/ArmorMasteryPlate.skl",
+   "name": "겼솖쑹繫"
+  },
+  "197": {
+   "skl": "ATFighter/Conversion.skl",
+   "name": "묑샌잚謹瘻뻣"
+  },
+  "200": {
+   "skl": "ATFighter/StatusUp.skl",
+   "name": "무삔 : 藤속실橄昑"
+  },
+  "201": {
+   "skl": "ATFighter/ExperienceUp.skl",
+   "name": "섐醵냥낀"
+  },
+  "210": {
+   "skl": "ATFighter/DefiniteGrabEx.skl",
+   "name": "퓻뺏 - 괬제婁혤"
+  },
+  "211": {
+   "skl": "ATFighter/WildCannonSpikeEx.skl",
+   "name": "퓻뺏 - 죙柯팎莖"
+  },
+  "212": {
+   "skl": "ATFighter/MagicalAttackUpEx.skl",
+   "name": "例제裂都"
+  },
+  "213": {
+   "skl": "ATFighter/MagicalDefenceUpEx.skl",
+   "name": "쑹裂都"
+  },
+  "214": {
+   "skl": "ATFighter/StuckUpEx.skl",
+   "name": "츱櫓쑹繫"
+  },
+  "215": {
+   "skl": "ATFighter/ActivepropertyStuckUpEx.skl",
+   "name": "쀼긁쑹繫"
+  },
+  "216": {
+   "skl": "ATFighter/HPRegenRateUpEx.skl",
+   "name": "HP뿟릿쑹繫"
+  },
+  "217": {
+   "skl": "ATFighter/MPRegenRateUpEx.skl",
+   "name": "MP뿟릿쑹繫"
+  },
+  "218": {
+   "skl": "ATFighter/ElementAttackAllUpEx.skl",
+   "name": "橄昑묑샌쑹繫"
+  },
+  "219": {
+   "skl": "ATFighter/ElementToleranceAllUpEx.skl",
+   "name": "橄昑예昑쑹繫"
+  }
+ },
+ "atgunner": {
+  "1": {
+   "skl": "ATGunner/FlameBullet.skl",
+   "name": "괵懦뎐"
+  },
+  "2": {
+   "skl": "ATGunner/FreezeBullet.skl",
+   "name": "깥떨뎐"
+  },
+  "3": {
+   "skl": "ATGunner/Windmill.skl",
+   "name": "旗璟"
+  },
+  "4": {
+   "skl": "ATGunner/AerialKnee.skl",
+   "name": "빈좍璟"
+  },
+  "5": {
+   "skl": "ATGunner/HeadShot.skl",
+   "name": "괵庫寧샌"
+  },
+  "6": {
+   "skl": "ATGunner/Punisher.skl",
+   "name": "땄늬"
+  },
+  "7": {
+   "skl": "ATGunner/FastKnee.skl",
+   "name": "늬璟"
+  },
+  "8": {
+   "skl": "ATGunner/RisingWindmill.skl",
+   "name": "폅旗璟"
+  },
+  "9": {
+   "skl": "ATGunner/RandomShoot.skl",
+   "name": "퓜校"
+  },
+  "10": {
+   "skl": "ATGunner/BulletGuard.skl",
+   "name": "陶넋목뎡"
+  },
+  "11": {
+   "skl": "ATGunner/FastShoot.skl",
+   "name": "우醵겄퓜"
+  },
+  "12": {
+   "skl": "ATGunner/Gatling.skl",
+   "name": "M-137목주샙퓜"
+  },
+  "13": {
+   "skl": "ATGunner/FlameThrower.skl",
+   "name": "M-3톨삽포"
+  },
+  "14": {
+   "skl": "ATGunner/AerialGatling.skl",
+   "name": "BBQ"
+  },
+  "15": {
+   "skl": "ATGunner/WalkShoot.skl",
+   "name": "盧땡샌"
+  },
+  "20": {
+   "skl": "ATGunner/TurningShoot.skl",
+   "name": "쀼庫寧샌"
+  },
+  "21": {
+   "skl": "ATGunner/SubWeaponMastery.skl",
+   "name": "路삽포쑹繫"
+  },
+  "22": {
+   "skl": "ATGunner/ReduceRevolverDelay.skl",
+   "name": "璘쫴쑹繫"
+  },
+  "23": {
+   "skl": "ATGunner/ReduceRevolverReload.skl",
+   "name": "우醵輕陋"
+  },
+  "26": {
+   "skl": "ATGunner/CounterShoot.skl",
+   "name": "릿놈럽샌"
+  },
+  "27": {
+   "skl": "ATGunner/RobotRX78.skl",
+   "name": "RX-78瀏샌諒"
+  },
+  "28": {
+   "skl": "ATGunner/RobotEz8.skl",
+   "name": "Ez-8菱괵諒"
+  },
+  "29": {
+   "skl": "ATGunner/RobotExs.skl",
+   "name": "Ex-S뗀텔"
+  },
+  "30": {
+   "skl": "ATGunner/SilverBullet.skl",
+   "name": "陵뎐"
+  },
+  "31": {
+   "skl": "ATGunner/BulletReinforce.skl",
+   "name": "뎐浪맣좁"
+  },
+  "32": {
+   "skl": "ATGunner/TripleClutch.skl",
+   "name": "힛路왠齡"
+  },
+  "33": {
+   "skl": "ATGunner/StayOnJumpShoot.skl",
+   "name": "왕櫓샌"
+  },
+  "34": {
+   "skl": "ATGunner/HitOnSubWeapon.skl",
+   "name": "路삽포겄샌"
+  },
+  "35": {
+   "skl": "ATGunner/AirRaid.skl",
+   "name": "稜醵쌕샌"
+  },
+  "36": {
+   "skl": "ATGunner/FlameThrowerBoost.skl",
+   "name": "앱슝톨삽포"
+  },
+  "37": {
+   "skl": "ATGunner/HighAngleSliding.skl",
+   "name": "륫왕끎"
+  },
+  "38": {
+   "skl": "ATGunner/FM31.skl",
+   "name": "FM-31즐뎐랙포"
+  },
+  "39": {
+   "skl": "ATGunner/LaserRifle.skl",
+   "name": "샴밟텔"
+  },
+  "40": {
+   "skl": "ATGunner/SteyrHeavyRifle.skl",
+   "name": "럽譴옹텔"
+  },
+  "41": {
+   "skl": "ATGunner/LaserRifleCharge.skl",
+   "name": "嗜든샴밟텔"
+  },
+  "42": {
+   "skl": "ATGunner/RX78ofCrisis.skl",
+   "name": "誇샙瀏샌諒"
+  },
+  "43": {
+   "skl": "ATGunner/Camouflage.skl",
+   "name": "慣陋"
+  },
+  "44": {
+   "skl": "ATGunner/SubWeaponPowerUp.skl",
+   "name": "路삽포걔屢"
+  },
+  "45": {
+   "skl": "ATGunner/UraniumBomb.skl",
+   "name": "좆綾괵뎐"
+  },
+  "46": {
+   "skl": "ATGunner/Robotics.skl",
+   "name": "샙筠맣좁"
+  },
+  "47": {
+   "skl": "ATGunner/LiftShot.skl",
+   "name": "륫왕뎐"
+  },
+  "48": {
+   "skl": "ATGunner/CrossShoot.skl",
+   "name": "뎐퓜"
+  },
+  "49": {
+   "skl": "ATGunner/IncreaseBulletBuffCount.skl",
+   "name": "뎐矩윈념"
+  },
+  "50": {
+   "skl": "ATGunner/RobotsExplosion.skl",
+   "name": "샙筠多괵"
+  },
+  "51": {
+   "skl": "ATGunner/DoubleGunhawk.skl",
+   "name": "崗團쀼旗"
+  },
+  "52": {
+   "skl": "ATGunner/ArmorBullet.skl",
+   "name": "팎솖뎐"
+  },
+  "53": {
+   "skl": "ATGunner/NapalmBomb.skl",
+   "name": "밟綾괵뎐"
+  },
+  "55": {
+   "skl": "ATGunner/ArmorMasteryLeatherRG.skl",
+   "name": "찻踏퓜癎튄솖淚쑹"
+  },
+  "56": {
+   "skl": "ATGunner/GrenadeNone.skl",
+   "name": "G-14癎잉"
+  },
+  "57": {
+   "skl": "ATGunner/GrenadeLight.skl",
+   "name": "G-35L먁든癎잉"
+  },
+  "58": {
+   "skl": "ATGunner/GrenadeWater.skl",
+   "name": "G-18C깥떨癎잉"
+  },
+  "59": {
+   "skl": "ATGunner/MechaDrop.skl",
+   "name": "왕尻連賭"
+  },
+  "60": {
+   "skl": "ATGunner/RevolverCriticalDamageUp.skl",
+   "name": "价空璘쫴"
+  },
+  "61": {
+   "skl": "ATGunner/ArmorMasteryLeatherSP.skl",
+   "name": "뎐浪淚소튄솖淚쑹"
+  },
+  "62": {
+   "skl": "ATGunner/SubWeaponStuckDown.skl",
+   "name": "풉콘괵랙"
+  },
+  "63": {
+   "skl": "ATGunner/RobotTempester.skl",
+   "name": "왕濫샙筠 : 욺루"
+  },
+  "71": {
+   "skl": "ATGunner/Extruder.skl",
+   "name": "X-1箕鍵좆綾텔"
+  },
+  "72": {
+   "skl": "ATGunner/MultiHeadShot.skl",
+   "name": "뜩路괵庫"
+  },
+  "73": {
+   "skl": "ATGunner/CannonBall.skl",
+   "name": "속크텔"
+  },
+  "74": {
+   "skl": "ATGunner/CancelCannonBall.skl",
+   "name": "퓻齡 - 속크텔"
+  },
+  "75": {
+   "skl": "ATGunner/Stinger.skl",
+   "name": "FM-92 mk2즐뎐"
+  },
+  "76": {
+   "skl": "ATGunner/FlashMine.skl",
+   "name": "샌뒈잉"
+  },
+  "77": {
+   "skl": "ATGunner/C4Remote.skl",
+   "name": "C4陶넋珞뎐"
+  },
+  "78": {
+   "skl": "ATGunner/NielSniping.skl",
+   "name": "콩랑앗샌"
+  },
+  "79": {
+   "skl": "ATGunner/G1.skl",
+   "name": "G-1옰쭈케"
+  },
+  "80": {
+   "skl": "ATGunner/G2.skl",
+   "name": "맣陋 : G-2旗잉諒"
+  },
+  "81": {
+   "skl": "ATGunner/G3.skl",
+   "name": "맣陋 : G-3껫稼諒"
+  },
+  "82": {
+   "skl": "ATGunner/ChargingSupply.skl",
+   "name": "뎐浪連賭"
+  },
+  "83": {
+   "skl": "ATGunner/SparrowFactory.skl",
+   "name": "윽쌔샙묏낍"
+  },
+  "91": {
+   "skl": "ATGunner/ArmorMasteryClothMN.skl",
+   "name": "샙筠可꼈솖淚쑹"
+  },
+  "92": {
+   "skl": "ATGunner/ArmorMasteryHeavyRU.skl",
+   "name": "퓜텔可路솖淚쑹"
+  },
+  "93": {
+   "skl": "ATGunner/Overheat.skl",
+   "name": "낚侊路삽포"
+  },
+  "94": {
+   "skl": "ATGunner/VeiledCut.skl",
+   "name": "茶콴학몇"
+  },
+  "95": {
+   "skl": "ATGunner/GExtension.skl",
+   "name": "G溝윈蠟"
+  },
+  "96": {
+   "skl": "ATGunner/G0.skl",
+   "name": "맣陋 : G-0濫轢쥴寮"
+  },
+  "97": {
+   "skl": "ATGunner/AncientTrigger.skl",
+   "name": "陶뮴젓綾텔"
+  },
+  "98": {
+   "skl": "ATGunner/EMPStorm.skl",
+   "name": "EMP늚괬"
+  },
+  "99": {
+   "skl": "ATGunner/WeaponReinforce.skl",
+   "name": "뎐浪퓻뺏"
+  },
+  "100": {
+   "skl": "ATGunner/TwinGunblade.skl",
+   "name": "崗퓜섐校훵"
+  },
+  "101": {
+   "skl": "ATGunner/AirRaidEx.skl",
+   "name": "녈落쌕샌"
+  },
+  "102": {
+   "skl": "ATGunner/C4RemoteEx.skl",
+   "name": "C4령醵珞뎐"
+  },
+  "103": {
+   "skl": "ATGunner/FlashMineEx.skl",
+   "name": "M-61뒈잉"
+  },
+  "104": {
+   "skl": "ATGunner/MultiHeadShotEx.skl",
+   "name": "섐掘뜩路괵庫"
+  },
+  "105": {
+   "skl": "ATGunner/RobotEz8Ex.skl",
+   "name": "Ez-10럽샌諒"
+  },
+  "106": {
+   "skl": "ATGunner/RobotExsEx.skl",
+   "name": "Ex-S Zero뗀텔"
+  },
+  "107": {
+   "skl": "ATGunner/BlizzardThrowerBoost.skl",
+   "name": "벽깥톨포"
+  },
+  "108": {
+   "skl": "ATGunner/StingerEx.skl",
+   "name": "FM-92 mk2 SW즐뎐"
+  },
+  "109": {
+   "skl": "ATGunner/ChargeBuster.skl",
+   "name": "앱북뎐"
+  },
+  "110": {
+   "skl": "ATGunner/MusketMastery.skl",
+   "name": "꼍퓜쑹繫"
+  },
+  "140": {
+   "skl": "ATGunner/HeadShotEx.skl",
+   "name": "퓻뺏 - 괵庫寧샌"
+  },
+  "141": {
+   "skl": "ATGunner/AerialGatlingEx.skl",
+   "name": "퓻뺏 - BBQ"
+  },
+  "142": {
+   "skl": "ATGunner/RobotRX78Ex.skl",
+   "name": "퓻뺏 - RX-78瀏샌諒"
+  },
+  "143": {
+   "skl": "ATGunner/SilverBulletEx.skl",
+   "name": "퓻뺏 - 陵뎐"
+  },
+  "144": {
+   "skl": "ATGunner/BulletGuardEx.skl",
+   "name": "퓻뺏 - 陶넋목뎡"
+  },
+  "145": {
+   "skl": "ATGunner/PunisherEx.skl",
+   "name": "퓻뺏 - 땄늬"
+  },
+  "146": {
+   "skl": "ATGunner/FlameThrowerEx.skl",
+   "name": "퓻뺏 - M-3톨삽포"
+  },
+  "147": {
+   "skl": "ATGunner/SteyrHeavyRifleEx.skl",
+   "name": "퓻뺏 - 럽譴옹텔"
+  },
+  "148": {
+   "skl": "ATGunner/RobotsExplosionEx.skl",
+   "name": "퓻뺏 - 샙筠多괵"
+  },
+  "149": {
+   "skl": "ATGunner/G1Ex.skl",
+   "name": "퓻뺏 - G-1옰쭈케"
+  },
+  "150": {
+   "skl": "ATGunner/CrossShootEx.skl",
+   "name": "퓻뺏 - 뎐퓜"
+  },
+  "151": {
+   "skl": "ATGunner/IncreaseBulletBuffCountEx.skl",
+   "name": "퓻뺏 - 뎐矩윈념"
+  },
+  "152": {
+   "skl": "ATGunner/MagicalChangeEx.skl",
+   "name": "침묑瘻뻣"
+  },
+  "153": {
+   "skl": "ATGunner/FastKneeEx.skl",
+   "name": "퓻뺏 - 늬璟"
+  },
+  "154": {
+   "skl": "ATGunner/RandomShootEx.skl",
+   "name": "퓻뺏 - 퓜校"
+  },
+  "155": {
+   "skl": "ATGunner/GrenadeNoneEx.skl",
+   "name": "퓻뺏 - G-14癎잉"
+  },
+  "156": {
+   "skl": "ATGunner/NapalmBombEx.skl",
+   "name": "퓻뺏 - 밟綾괵뎐"
+  },
+  "157": {
+   "skl": "ATGunner/RobotEz8Exp.skl",
+   "name": "퓻뺏 - Ez-8菱괵諒"
+  },
+  "158": {
+   "skl": "ATGunner/SparrowFactoryEx.skl",
+   "name": "퓻뺏 - 윽쌔샙묏낍"
+  },
+  "159": {
+   "skl": "ATGunner/GatlingEx.skl",
+   "name": "퓻뺏 - M-137목주샙퓜"
+  },
+  "160": {
+   "skl": "ATGunner/StingerExp.skl",
+   "name": "퓻뺏 - FM-92 mk2즐뎐"
+  },
+  "161": {
+   "skl": "ATGunner/BasicAttackUpEx.skl",
+   "name": "퓻뺏 - 샘뇟쑹繫"
+  },
+  "162": {
+   "skl": "ATGunner/FlameBulletEx.skl",
+   "name": "퓻뺏 - 괵懦뎐"
+  },
+  "163": {
+   "skl": "ATGunner/FreezeBulletEx.skl",
+   "name": "퓻뺏 - 깥떨뎐"
+  },
+  "164": {
+   "skl": "ATGunner/CounterShootEx.skl",
+   "name": "퓻뺏 - 릿놈럽샌"
+  },
+  "166": {
+   "skl": "ATGunner/WindmillEx.skl",
+   "name": "퓻뺏 - 旗璟"
+  },
+  "167": {
+   "skl": "ATGunner/LiftShotEx.skl",
+   "name": "퓻뺏 - 륫왕뎐"
+  },
+  "168": {
+   "skl": "ATGunner/AerialKneeEx.skl",
+   "name": "퓻뺏 - 빈좍璟"
+  },
+  "169": {
+   "skl": "ATGunner/BackStep.skl",
+   "name": "빈契"
+  },
+  "172": {
+   "skl": "ATGunner/ArmorMasteryLight.skl",
+   "name": "햐솖쑹繫"
+  },
+  "173": {
+   "skl": "ATGunner/ArmorMasteryHeavy.skl",
+   "name": "路솖쑹繫"
+  },
+  "174": {
+   "skl": "ATGunner/BasicAttackUp.skl",
+   "name": "샘뇟쑹繫"
+  },
+  "175": {
+   "skl": "ATGunner/JumpPowerUp.skl",
+   "name": "禿勸"
+  },
+  "176": {
+   "skl": "ATGunner/MagicalAttackUp.skl",
+   "name": "陶뮴션壘"
+  },
+  "177": {
+   "skl": "ATGunner/ThrowMastery.skl",
+   "name": "尻聆쑹繫"
+  },
+  "178": {
+   "skl": "ATGunner/PhysicalBackAttackCritical.skl",
+   "name": "膠잿교샌"
+  },
+  "179": {
+   "skl": "ATGunner/DisjointItem.skl",
+   "name": "膠틔롸썩"
+  },
+  "180": {
+   "skl": "ATGunner/SuperArmorOnCast.skl",
+   "name": "꼇형雷羚"
+  },
+  "181": {
+   "skl": "ATGunner/CompoundCraft.skl",
+   "name": "쑹묏"
+  },
+  "182": {
+   "skl": "ATGunner/CompoundWeaving.skl",
+   "name": "렬廉"
+  },
+  "183": {
+   "skl": "ATGunner/CompoundMachine.skl",
+   "name": "샙筠"
+  },
+  "184": {
+   "skl": "ATGunner/CompoundChemistry.skl",
+   "name": "조쏜"
+  },
+  "185": {
+   "skl": "ATGunner/ArmorMasteryLeather.skl",
+   "name": "튄솖쑹繫"
+  },
+  "186": {
+   "skl": "ATGunner/PhysicalCriticalHitUp.skl",
+   "name": "膠잿괬샌"
+  },
+  "187": {
+   "skl": "ATGunner/ArmorMasteryCloth.skl",
+   "name": "꼈솖쑹繫"
+  },
+  "188": {
+   "skl": "ATGunner/MagicalCriticalHitUp.skl",
+   "name": "침랬괬샌"
+  },
+  "189": {
+   "skl": "ATGunner/MagicalBackAttackCritical.skl",
+   "name": "침랬교샌"
+  },
+  "190": {
+   "skl": "ATGunner/QuickStanding.skl",
+   "name": "肝뚱률"
+  },
+  "191": {
+   "skl": "ATGunner/Enchant.skl",
+   "name": "맒침"
+  },
+  "192": {
+   "skl": "ATGunner/DollMaking.skl",
+   "name": "齡鱗梁뻥훙탉"
+  },
+  "193": {
+   "skl": "ATGunner/Alchemy.skl",
+   "name": "조쏜減"
+  },
+  "194": {
+   "skl": "ATGunner/OpenDisjointShop.skl",
+   "name": "역폘롸썩듦"
+  },
+  "195": {
+   "skl": "ATGunner/BasicHpMaxUp.skl",
+   "name": "츱裂都"
+  },
+  "196": {
+   "skl": "ATGunner/ArmorMasteryPlate.skl",
+   "name": "겼솖쑹繫"
+  },
+  "197": {
+   "skl": "ATGunner/Conversion.skl",
+   "name": "묑샌잚謹瘻뻣"
+  },
+  "200": {
+   "skl": "ATGunner/StatusUp.skl",
+   "name": "무삔 : 藤속실橄昑"
+  },
+  "201": {
+   "skl": "ATGunner/ExperienceUp.skl",
+   "name": "섐醵냥낀"
+  },
+  "211": {
+   "skl": "ATGunner/AirRaidExp.skl",
+   "name": "퓻뺏 - 稜醵쌕샌"
+  },
+  "212": {
+   "skl": "ATGunner/WalkShootEx.skl",
+   "name": "퓻뺏 - 盧땡샌"
+  },
+  "213": {
+   "skl": "ATGunner/DoubleGunhawkEx.skl",
+   "name": "퓻뺏 - 崗團쀼旗"
+  },
+  "214": {
+   "skl": "ATGunner/MultiHeadShotExp.skl",
+   "name": "퓻뺏 - 뜩路괵庫"
+  },
+  "215": {
+   "skl": "ATGunner/LaserRifleEx.skl",
+   "name": "퓻뺏 - 샴밟텔"
+  },
+  "216": {
+   "skl": "ATGunner/ExtruderEx.skl",
+   "name": "퓻뺏 - X-1箕鍵좆綾텔"
+  },
+  "217": {
+   "skl": "ATGunner/CannonBallEx.skl",
+   "name": "퓻뺏 - 속크텔"
+  },
+  "218": {
+   "skl": "ATGunner/FlameThrowerBoostEx.skl",
+   "name": "퓻뺏 - 앱슝톨삽포"
+  },
+  "219": {
+   "skl": "ATGunner/G2Ex.skl",
+   "name": "퓻뺏 - 맣陋 : G-2旗잉諒"
+  },
+  "220": {
+   "skl": "ATGunner/G3Ex.skl",
+   "name": "퓻뺏 - 맣陋 : G-3껫稼諒"
+  },
+  "221": {
+   "skl": "ATGunner/UraniumBombExp.skl",
+   "name": "퓻뺏 - 좆綾괵뎐"
+  },
+  "222": {
+   "skl": "ATGunner/RobotTempesterEx.skl",
+   "name": "퓻뺏 - 왕濫샙筠 : 욺루"
+  },
+  "223": {
+   "skl": "ATGunner/GrenadeLightEx.skl",
+   "name": "퓻뺏 - G-35L먁든癎잉"
+  },
+  "224": {
+   "skl": "ATGunner/GrenadeWaterEx.skl",
+   "name": "퓻뺏 - G-18C깥떨癎잉"
+  },
+  "225": {
+   "skl": "ATGunner/ArmorBulletEx.skl",
+   "name": "퓻뺏 - 팎솖뎐"
+  },
+  "226": {
+   "skl": "ATGunner/ChargeBusterEx.skl",
+   "name": "퓻뺏 - 앱북뎐"
+  },
+  "227": {
+   "skl": "ATGunner/FlashMineExp.skl",
+   "name": "퓻뺏 - 샌뒈잉"
+  },
+  "228": {
+   "skl": "ATGunner/C4RemoteExp.skl",
+   "name": "퓻뺏 - C4陶넋珞뎐"
+  },
+  "229": {
+   "skl": "ATGunner/NielSnipingEx.skl",
+   "name": "퓻뺏 - 콩랑앗샌"
+  },
+  "230": {
+   "skl": "ATGunner/RobotExsExp.skl",
+   "name": "퓻뺏 - Ex-S뗀텔"
+  },
+  "231": {
+   "skl": "ATGunner/MechaDropEx.skl",
+   "name": "퓻뺏 - 왕尻連賭"
+  }
+ },
+ "atmage": {
+  "1": {
+   "skl": "ATMage/WindStrike.skl",
+   "name": "침랬旗루"
+  },
+  "2": {
+   "skl": "ATMage/ChainLightning.skl",
+   "name": "잉밟졍"
+  },
+  "3": {
+   "skl": "ATMage/CrystalAttack.skl",
+   "name": "깥쑨瑠"
+  },
+  "4": {
+   "skl": "ATMage/DarkChange.skl",
+   "name": "갠堵윈蠟"
+  },
+  "5": {
+   "skl": "ATMage/ElementalChange.skl",
+   "name": "橄昑긴뻣"
+  },
+  "6": {
+   "skl": "ATMage/FireRoad.skl",
+   "name": "뒈懦"
+  },
+  "7": {
+   "skl": "ATMage/IceRoad.skl",
+   "name": "깥岡裂쓺"
+  },
+  "8": {
+   "skl": "ATMage/IceSword.skl",
+   "name": "깥판숲"
+  },
+  "9": {
+   "skl": "ATMage/HolongLight.skl",
+   "name": "聃聞삽"
+  },
+  "10": {
+   "skl": "ATMage/PieceOfIce.skl",
+   "name": "팎깥령훵"
+  },
+  "11": {
+   "skl": "ATMage/FlameCircle.skl",
+   "name": "旗懦팎"
+  },
+  "12": {
+   "skl": "ATMage/BlueDragonWill.skl",
+   "name": "깥판뉨샌"
+  },
+  "13": {
+   "skl": "ATMage/FrozenLand.skl",
+   "name": "깥질旗校"
+  },
+  "14": {
+   "skl": "ATMage/IceArea.skl",
+   "name": "깥쑨裂棹"
+  },
+  "15": {
+   "skl": "ATMage/IceCrash.skl",
+   "name": "旗깥누늬"
+  },
+  "16": {
+   "skl": "ATMage/BrokenArrow.skl",
+   "name": "깥판裂묶"
+  },
+  "17": {
+   "skl": "ATMage/PushOut.skl",
+   "name": "햄컬廊"
+  },
+  "18": {
+   "skl": "ATMage/MagicCannon.skl",
+   "name": "침랬텔"
+  },
+  "19": {
+   "skl": "ATMage/MagicShield.skl",
+   "name": "禱羹뻔훈"
+  },
+  "20": {
+   "skl": "ATMage/Teleport.skl",
+   "name": "疆盧"
+  },
+  "21": {
+   "skl": "ATMage/FallenBlossoms.skl",
+   "name": "벽깥젯퓜"
+  },
+  "22": {
+   "skl": "ATMage/Expression.skl",
+   "name": "깥裂쥴較"
+  },
+  "23": {
+   "skl": "ATMage/TurnWindmill.skl",
+   "name": "깥판旗퓜"
+  },
+  "24": {
+   "skl": "ATMage/DarknessMantle.skl",
+   "name": "붚갠쐐堵"
+  },
+  "25": {
+   "skl": "ATMage/MultiShot.skl",
+   "name": "침헷젯"
+  },
+  "26": {
+   "skl": "ATMage/WaterCannon.skl",
+   "name": "침랬깥헷"
+  },
+  "27": {
+   "skl": "ATMage/FirePillar.skl",
+   "name": "旗삽뜀"
+  },
+  "28": {
+   "skl": "ATMage/ManaBurst.skl",
+   "name": "침제횝"
+  },
+  "29": {
+   "skl": "ATMage/LightningWall.skl",
+   "name": "잉밟팁崍"
+  },
+  "30": {
+   "skl": "ATMage/ElementalRain.skl",
+   "name": "禱羹뷰珞"
+  },
+  "31": {
+   "skl": "ATMage/Resonance.skl",
+   "name": "벽깥裂쓱"
+  },
+  "32": {
+   "skl": "ATMage/IceMan.skl",
+   "name": "섐깥藍렴"
+  },
+  "33": {
+   "skl": "ATMage/DieHard.skl",
+   "name": "꼇价裂"
+  },
+  "34": {
+   "skl": "ATMage/ElementalShield.skl",
+   "name": "橄昑괏빱"
+  },
+  "35": {
+   "skl": "ATMage/IceElementalAttack.skl",
+   "name": "깥裂丹"
+  },
+  "36": {
+   "skl": "ATMage/ArmorMasteryClothEB.skl",
+   "name": "禱羹괵팎可꼈솖淚쑹"
+  },
+  "37": {
+   "skl": "ATMage/ArmorMasteryLeatherGM.skl",
+   "name": "깥써可튄솖淚쑹"
+  },
+  "48": {
+   "skl": "ATMage/IceChakram.skl",
+   "name": "푤旗깥쫴팎"
+  },
+  "49": {
+   "skl": "ATMage/ElementalBuster.skl",
+   "name": "뼙침愷路犁"
+  },
+  "50": {
+   "skl": "ATMage/TundraSoul.skl",
+   "name": "깥룐걔屢"
+  },
+  "51": {
+   "skl": "ATMage/ElementalChain.skl",
+   "name": "禱羹뻥今"
+  },
+  "60": {
+   "skl": "ATMage/IceOrbEx.skl",
+   "name": "깥쥡팎"
+  },
+  "61": {
+   "skl": "ATMage/Concentrate.skl",
+   "name": "禱羹큠鍵헷"
+  },
+  "62": {
+   "skl": "ATMage/ElementalStrikeEx.skl",
+   "name": "禱羹뼙췻"
+  },
+  "63": {
+   "skl": "ATMage/IceFieldEx.skl",
+   "name": "푤쟁깥룐"
+  },
+  "91": {
+   "skl": "ATMage/EquipBroom.skl",
+   "name": "겉廊壞"
+  },
+  "92": {
+   "skl": "ATMage/BasicAttackUpEx.skl",
+   "name": "퓻뺏 - 샘뇟쑹繫"
+  },
+  "169": {
+   "skl": "ATMage/BackStep.skl",
+   "name": "빈契"
+  },
+  "172": {
+   "skl": "ATMage/ArmorMasteryLight.skl",
+   "name": "햐솖쑹繫"
+  },
+  "173": {
+   "skl": "ATMage/ArmorMasteryHeavy.skl",
+   "name": "路솖쑹繫"
+  },
+  "174": {
+   "skl": "ATMage/BasicAttackUp.skl",
+   "name": "샘뇟쑹繫"
+  },
+  "175": {
+   "skl": "ATMage/JumpPowerUp.skl",
+   "name": "禿勸"
+  },
+  "176": {
+   "skl": "ATMage/MagicalAttackUp.skl",
+   "name": "陶뮴션壘"
+  },
+  "177": {
+   "skl": "ATMage/ThrowMastery.skl",
+   "name": "尻聆쑹繫"
+  },
+  "178": {
+   "skl": "ATMage/PhysicalBackAttackCritical.skl",
+   "name": "膠잿교샌"
+  },
+  "179": {
+   "skl": "ATMage/DisjointItem.skl",
+   "name": "膠틔롸썩"
+  },
+  "180": {
+   "skl": "ATMage/SuperArmorOnCast.skl",
+   "name": "꼇형雷羚"
+  },
+  "181": {
+   "skl": "ATMage/CompoundCraft.skl",
+   "name": "쑹묏"
+  },
+  "182": {
+   "skl": "ATMage/CompoundWeaving.skl",
+   "name": "렬廉"
+  },
+  "183": {
+   "skl": "ATMage/CompoundMachine.skl",
+   "name": "샙筠"
+  },
+  "184": {
+   "skl": "ATMage/CompoundChemistry.skl",
+   "name": "조쏜"
+  },
+  "185": {
+   "skl": "ATMage/ArmorMasteryLeather.skl",
+   "name": "튄솖쑹繫"
+  },
+  "186": {
+   "skl": "ATMage/PhysicalCriticalHitUp.skl",
+   "name": "膠잿괬샌"
+  },
+  "187": {
+   "skl": "ATMage/ArmorMasteryCloth.skl",
+   "name": "꼈솖쑹繫"
+  },
+  "188": {
+   "skl": "ATMage/MagicalCriticalHitUp.skl",
+   "name": "침랬괬샌"
+  },
+  "189": {
+   "skl": "ATMage/MagicalBackAttackCritical.skl",
+   "name": "침랬교샌"
+  },
+  "190": {
+   "skl": "ATMage/QuickStanding.skl",
+   "name": "肝뚱률"
+  },
+  "191": {
+   "skl": "ATMage/Enchant.skl",
+   "name": "맒침"
+  },
+  "192": {
+   "skl": "ATMage/DollMaking.skl",
+   "name": "齡鱗梁뻥훙탉"
+  },
+  "193": {
+   "skl": "ATMage/Alchemy.skl",
+   "name": "조쏜減"
+  },
+  "194": {
+   "skl": "ATMage/OpenDisjointShop.skl",
+   "name": "역폘롸썩듦"
+  },
+  "195": {
+   "skl": "ATMage/BasicHpMaxUp.skl",
+   "name": "츱裂都"
+  },
+  "196": {
+   "skl": "ATMage/ArmorMasteryPlate.skl",
+   "name": "겼솖쑹繫"
+  },
+  "197": {
+   "skl": "ATMage/Conversion.skl",
+   "name": "묑샌잚謹瘻뻣"
+  },
+  "200": {
+   "skl": "ATMage/StatusUp.skl",
+   "name": "무삔 : 藤속실橄昑"
+  },
+  "201": {
+   "skl": "ATMage/ExperienceUp.skl",
+   "name": "섐醵냥낀"
+  },
+  "211": {
+   "skl": "ATMage/WindStrikeEx.skl",
+   "name": "퓻뺏 - 침랬旗루"
+  },
+  "212": {
+   "skl": "ATMage/ChainLightningEx.skl",
+   "name": "퓻뺏 - 잉밟졍"
+  },
+  "213": {
+   "skl": "ATMage/CrystalAttackEx.skl",
+   "name": "퓻뺏 - 깥쑨瑠"
+  },
+  "214": {
+   "skl": "ATMage/DarkChangeEx.skl",
+   "name": "퓻뺏 - 갠堵윈蠟"
+  },
+  "216": {
+   "skl": "ATMage/FireRoadEx.skl",
+   "name": "퓻뺏 - 뒈懦"
+  },
+  "217": {
+   "skl": "ATMage/IceRoadEx.skl",
+   "name": "퓻뺏 - 깥岡裂쓺"
+  },
+  "218": {
+   "skl": "ATMage/IceSwordEx.skl",
+   "name": "퓻뺏 - 깥판숲"
+  },
+  "219": {
+   "skl": "ATMage/HolongLightEx.skl",
+   "name": "퓻뺏 - 聃聞삽"
+  },
+  "220": {
+   "skl": "ATMage/PieceOfIceEx.skl",
+   "name": "퓻뺏 - 팎깥령훵"
+  },
+  "221": {
+   "skl": "ATMage/FlameCircleEx.skl",
+   "name": "퓻뺏 - 旗懦팎"
+  },
+  "222": {
+   "skl": "ATMage/BlueDragonWillEx.skl",
+   "name": "퓻뺏 - 깥판뉨샌"
+  },
+  "223": {
+   "skl": "ATMage/FrozenLandEx.skl",
+   "name": "퓻뺏 - 깥질旗校"
+  },
+  "224": {
+   "skl": "ATMage/IceAreaEx.skl",
+   "name": "퓻뺏 - 깥쑨裂棹"
+  },
+  "225": {
+   "skl": "ATMage/IceCrashEx.skl",
+   "name": "퓻뺏 - 旗깥누늬"
+  },
+  "226": {
+   "skl": "ATMage/BrokenArrowEx.skl",
+   "name": "퓻뺏 - 깥판裂묶"
+  },
+  "227": {
+   "skl": "ATMage/PushOutEx.skl",
+   "name": "퓻뺏 - 햄컬廊"
+  },
+  "228": {
+   "skl": "ATMage/MagicCannonEx.skl",
+   "name": "퓻뺏 - 침랬텔"
+  },
+  "229": {
+   "skl": "ATMage/MagicShieldEx.skl",
+   "name": "퓻뺏 - 禱羹뻔훈"
+  },
+  "231": {
+   "skl": "ATMage/FallenBlossomsEx.skl",
+   "name": "퓻뺏 - 벽깥젯퓜"
+  },
+  "233": {
+   "skl": "ATMage/TurnWindmillEx.skl",
+   "name": "퓻뺏 - 깥판旗퓜"
+  },
+  "234": {
+   "skl": "ATMage/DarknessMantleEx.skl",
+   "name": "퓻뺏 - 붚갠쐐堵"
+  },
+  "235": {
+   "skl": "ATMage/MultiShotEx.skl",
+   "name": "퓻뺏 - 침헷젯"
+  },
+  "236": {
+   "skl": "ATMage/WaterCannonEx.skl",
+   "name": "퓻뺏 - 침랬깥헷"
+  },
+  "237": {
+   "skl": "ATMage/FirePillarEx.skl",
+   "name": "퓻뺏 - 旗삽뜀"
+  },
+  "239": {
+   "skl": "ATMage/LightningWallEx.skl",
+   "name": "퓻뺏 - 잉밟팁崍"
+  },
+  "240": {
+   "skl": "ATMage/ElementalRainEx.skl",
+   "name": "퓻뺏 - 禱羹뷰珞"
+  },
+  "241": {
+   "skl": "ATMage/ResonanceEx.skl",
+   "name": "퓻뺏 - 벽깥裂쓱"
+  },
+  "242": {
+   "skl": "ATMage/IceManEx.skl",
+   "name": "퓻뺏 - 섐깥藍렴"
+  }
+ },
+ "fighter": {
+  "1": {
+   "skl": "Fighter/ShoulderCharge.skl",
+   "name": "屆옜"
+  },
+  "2": {
+   "skl": "Fighter/Crouch.skl",
+   "name": "뚱률"
+  },
+  "3": {
+   "skl": "Fighter/GrabExplosion.skl",
+   "name": "햄墩懦"
+  },
+  "4": {
+   "skl": "Fighter/CrashLowKick.skl",
+   "name": "鉅므"
+  },
+  "5": {
+   "skl": "Fighter/LiftUpper.skl",
+   "name": "뭅화"
+  },
+  "6": {
+   "skl": "Fighter/DamageLowKick.skl",
+   "name": "苟뙈璟"
+  },
+  "7": {
+   "skl": "Fighter/IronSkin.skl",
+   "name": "멀쏘屆므"
+  },
+  "8": {
+   "skl": "Fighter/Kensin.skl",
+   "name": "롸"
+  },
+  "9": {
+   "skl": "Fighter/Suplex.skl",
+   "name": "교胛"
+  },
+  "10": {
+   "skl": "Fighter/BackSuplex.skl",
+   "name": "교胛퓻뺏"
+  },
+  "11": {
+   "skl": "Fighter/ThunderSuplex.skl",
+   "name": "잉脆교胛"
+  },
+  "12": {
+   "skl": "Fighter/EnergyBall.skl",
+   "name": "쿡폭꺼"
+  },
+  "13": {
+   "skl": "Fighter/ThrowSand.skl",
+   "name": "테"
+  },
+  "14": {
+   "skl": "Fighter/Mount.skl",
+   "name": "률빪게珙화"
+  },
+  "15": {
+   "skl": "Fighter/Sajahu.skl",
+   "name": "哥綾븟"
+  },
+  "16": {
+   "skl": "Fighter/Kikouken.skl",
+   "name": "쭁旗쿡폭끝"
+  },
+  "17": {
+   "skl": "Fighter/Stomp.skl",
+   "name": "團劫"
+  },
+  "18": {
+   "skl": "Fighter/Spire.skl",
+   "name": "쭁旗偃槿쭝"
+  },
+  "19": {
+   "skl": "Fighter/ClosePunch.skl",
+   "name": "당화"
+  },
+  "20": {
+   "skl": "Fighter/SuperArmor.skl",
+   "name": "게竟빱솖"
+  },
+  "21": {
+   "skl": "Fighter/CancelEnergyBall.skl",
+   "name": "퓻齡 - 쿡폭꺼"
+  },
+  "22": {
+   "skl": "Fighter/SuplexSubPowerUp.skl",
+   "name": "胛세퓻뺏"
+  },
+  "29": {
+   "skl": "Fighter/LightFriendship.skl",
+   "name": "밟裂항뵨"
+  },
+  "30": {
+   "skl": "Fighter/LightEnchantWeapon.skl",
+   "name": "밟裂깡훵"
+  },
+  "31": {
+   "skl": "Fighter/AttackSpeedUp.skl",
+   "name": "루裂폭口"
+  },
+  "32": {
+   "skl": "Fighter/PoisonToleranceUp.skl",
+   "name": "양뗀둬예"
+  },
+  "33": {
+   "skl": "Fighter/StunOnUseSkill.skl",
+   "name": "浬삽흙침"
+  },
+  "34": {
+   "skl": "Fighter/EquipBoxingGlove.skl",
+   "name": "화敬廊壞"
+  },
+  "35": {
+   "skl": "Fighter/BlindToleranceUp.skl",
+   "name": "쿡폭먁列"
+  },
+  "36": {
+   "skl": "Fighter/LightToleranceUp.skl",
+   "name": "죠휑밟뿔"
+  },
+  "37": {
+   "skl": "Fighter/SlowDownPowerUp.skl",
+   "name": "퓻화"
+  },
+  "38": {
+   "skl": "Fighter/EnchantPoison.skl",
+   "name": "沽뗀"
+  },
+  "39": {
+   "skl": "Fighter/AimVitalPoint.skl",
+   "name": "흽듐먁列"
+  },
+  "40": {
+   "skl": "Fighter/SpiralNen.skl",
+   "name": "쿡폭뻔훈"
+  },
+  "41": {
+   "skl": "Fighter/DisjointItemLight.skl",
+   "name": "쿡폭롸썩"
+  },
+  "42": {
+   "skl": "Fighter/NenGuard.skl",
+   "name": "쿡폭倆"
+  },
+  "43": {
+   "skl": "Fighter/DoubleThrow.skl",
+   "name": "崗路尻聆"
+  },
+  "44": {
+   "skl": "Fighter/Provocation.skl",
+   "name": "鯨根"
+  },
+  "45": {
+   "skl": "Fighter/ClawMastery.skl",
+   "name": "屢쑹繫"
+  },
+  "46": {
+   "skl": "Fighter/SingleKick.skl",
+   "name": "품璟"
+  },
+  "49": {
+   "skl": "Fighter/ThrowEnemy.skl",
+   "name": "테尻"
+  },
+  "50": {
+   "skl": "Fighter/DefiniteGrab.skl",
+   "name": "괬제婁혤"
+  },
+  "51": {
+   "skl": "Fighter/SlideGrab.skl",
+   "name": "뺄契婁혤"
+  },
+  "52": {
+   "skl": "Fighter/ThrowWeb.skl",
+   "name": "莖쭈뒈貢"
+  },
+  "54": {
+   "skl": "Fighter/ShoulderTackle.skl",
+   "name": "柰찬녑旒"
+  },
+  "55": {
+   "skl": "Fighter/GrabCannon.skl",
+   "name": "婁뷰텔"
+  },
+  "56": {
+   "skl": "Fighter/ArmorMasteryLightSK.skl",
+   "name": "댔햐솖淚쑹"
+  },
+  "57": {
+   "skl": "Fighter/ArmorMasteryLightGP.skl",
+   "name": "휼돛소햐솖淚쑹"
+  },
+  "58": {
+   "skl": "Fighter/WhirlWindKick.skl",
+   "name": "旗루苦"
+  },
+  "60": {
+   "skl": "Fighter/BlockBuster.skl",
+   "name": "漏枸"
+  },
+  "62": {
+   "skl": "Fighter/LegSuplex.skl",
+   "name": "왕십뉨"
+  },
+  "63": {
+   "skl": "Fighter/Typhoon.skl",
+   "name": "칫휑루괬"
+  },
+  "64": {
+   "skl": "Fighter/PoisonMist.skl",
+   "name": "价空뗀絞"
+  },
+  "65": {
+   "skl": "Fighter/PoisonMastery.skl",
+   "name": "촐뗀裂沂"
+  },
+  "66": {
+   "skl": "Fighter/GrabMastery.skl",
+   "name": "婁혤걔屢"
+  },
+  "67": {
+   "skl": "Fighter/NenFlower.skl",
+   "name": "푤젭큼렴"
+  },
+  "68": {
+   "skl": "Fighter/LightningDance.skl",
+   "name": "든裂校"
+  },
+  "69": {
+   "skl": "Fighter/IllusionBomb.skl",
+   "name": "뼙緞괵鉅"
+  },
+  "70": {
+   "skl": "Fighter/PowerUpOnDash.skl",
+   "name": "嶠꼍"
+  },
+  "71": {
+   "skl": "Fighter/StrongestLowKick.skl",
+   "name": "嶠퓻璟"
+  },
+  "72": {
+   "skl": "Fighter/NenShield.skl",
+   "name": "쫘校 · 푤秊빻"
+  },
+  "73": {
+   "skl": "Fighter/ArmorMasteryHeavySP.skl",
+   "name": "쌍게路솖淚쑹"
+  },
+  "74": {
+   "skl": "Fighter/CrazyMount.skl",
+   "name": "욺 · 게珙화"
+  },
+  "75": {
+   "skl": "Fighter/HiddenSting.skl",
+   "name": "뗀緞濾"
+  },
+  "76": {
+   "skl": "Fighter/VenomMine.skl",
+   "name": "뗀잉多괵"
+  },
+  "77": {
+   "skl": "Fighter/JunkSpin.skl",
+   "name": "쌍庫루괬"
+  },
+  "78": {
+   "skl": "Fighter/EnergyBallCharge.skl",
+   "name": "嗜쿡텔"
+  },
+  "79": {
+   "skl": "Fighter/NenMonsterWhiteTiger.skl",
+   "name": "쿡艱 : 질빪奎"
+  },
+  "80": {
+   "skl": "Fighter/DashPunch.skl",
+   "name": "굼화"
+  },
+  "81": {
+   "skl": "Fighter/PunchAfterReturn.skl",
+   "name": "粮쓩"
+  },
+  "82": {
+   "skl": "Fighter/RandomKick.skl",
+   "name": "롼緞젯뻔璟"
+  },
+  "83": {
+   "skl": "Fighter/RisingUpper.skl",
+   "name": "질화"
+  },
+  "84": {
+   "skl": "Fighter/DashAfterDash.skl",
+   "name": "섣루瀏샌"
+  },
+  "85": {
+   "skl": "Fighter/DashAfterDashExtension.skl",
+   "name": " 섣루젯샌"
+  },
+  "86": {
+   "skl": "Fighter/EarthBreak.skl",
+   "name": "쏜먼鉅"
+  },
+  "87": {
+   "skl": "Fighter/HoldUp.skl",
+   "name": "툼翠錄샌"
+  },
+  "88": {
+   "skl": "Fighter/WildCannonSpike.skl",
+   "name": "죙柯팎莖"
+  },
+  "89": {
+   "skl": "Fighter/SuplexCyclone.skl",
+   "name": "뒈掉納은"
+  },
+  "90": {
+   "skl": "Fighter/LightningDragon.skl",
+   "name": "쿡艱 : 잉질놔베"
+  },
+  "91": {
+   "skl": "Fighter/MuscleShift.skl",
+   "name": "휼뺏샥흄"
+  },
+  "97": {
+   "skl": "Fighter/ArmorMasteryClothNM.skl",
+   "name": "폭묘可꼈솖淚쑹"
+  },
+  "98": {
+   "skl": "Fighter/NenGuardEx.skl",
+   "name": "씩섐쿡폭倆"
+  },
+  "99": {
+   "skl": "Fighter/GrabExplosionEx.skl",
+   "name": "촐뗀햄墩懦"
+  },
+  "100": {
+   "skl": "Fighter/SajahuEx.skl",
+   "name": "욺哥큼븟"
+  },
+  "101": {
+   "skl": "Fighter/LegSuplexEx.skl",
+   "name": "왕십젯뉨"
+  },
+  "102": {
+   "skl": "Fighter/DashPunchEx.skl",
+   "name": "팎鉅화"
+  },
+  "103": {
+   "skl": "Fighter/RisingUpperEx.skl",
+   "name": "질게"
+  },
+  "104": {
+   "skl": "Fighter/BlockBusterEx.skl",
+   "name": "괵鉅漏枸"
+  },
+  "105": {
+   "skl": "Fighter/SuplexCycloneEx.skl",
+   "name": "价空納은"
+  },
+  "106": {
+   "skl": "Fighter/GroundKick.skl",
+   "name": "죙뒈령"
+  },
+  "139": {
+   "skl": "Fighter/RisingUpperExp.skl",
+   "name": "퓻뺏 - 질화"
+  },
+  "140": {
+   "skl": "Fighter/EnergyBallEx.skl",
+   "name": "퓻뺏 - 쿡폭꺼"
+  },
+  "141": {
+   "skl": "Fighter/DamageLowKickEx.skl",
+   "name": "퓻뺏 - 苟뙈璟"
+  },
+  "142": {
+   "skl": "Fighter/SuplexEx.skl",
+   "name": "퓻뺏 - 교胛"
+  },
+  "143": {
+   "skl": "Fighter/CrouchEx.skl",
+   "name": "퓻뺏 - 뚱률"
+  },
+  "144": {
+   "skl": "Fighter/KikoukenEx.skl",
+   "name": "퓻뺏 - 쭁旗쿡폭끝"
+  },
+  "145": {
+   "skl": "Fighter/SpiralNenEx.skl",
+   "name": "퓻뺏 - 쿡폭뻔훈"
+  },
+  "146": {
+   "skl": "Fighter/ShoulderChargeEx.skl",
+   "name": "퓻뺏 - 屆옜"
+  },
+  "147": {
+   "skl": "Fighter/ClosePunchEx.skl",
+   "name": "퓻뺏 - 당화"
+  },
+  "148": {
+   "skl": "Fighter/MountEx.skl",
+   "name": "퓻뺏 - 욺 · 게珙화"
+  },
+  "149": {
+   "skl": "Fighter/ThrowWebEx.skl",
+   "name": "퓻뺏 - 莖쭈뒈貢"
+  },
+  "150": {
+   "skl": "Fighter/LegSuplexExPassive.skl",
+   "name": "퓻뺏 - 왕십뉨"
+  },
+  "151": {
+   "skl": "Fighter/SpireEx.skl",
+   "name": "퓻뺏 - 쭁旗偃槿쭝"
+  },
+  "152": {
+   "skl": "Fighter/ShoulderTackleEx.skl",
+   "name": "퓻뺏 - 柰찬녑旒"
+  },
+  "153": {
+   "skl": "Fighter/IronSkinEx.skl",
+   "name": "퓻뺏 - 멀쏘屆므"
+  },
+  "154": {
+   "skl": "Fighter/NenMonsterWhiteTigerEx.skl",
+   "name": "퓻뺏 - 쿡艱 : 질빪奎"
+  },
+  "155": {
+   "skl": "Fighter/DashAfterDashEx.skl",
+   "name": "퓻뺏 - 섣루瀏샌"
+  },
+  "156": {
+   "skl": "Fighter/LightningDanceEx.skl",
+   "name": "퓻뺏 - 든裂校"
+  },
+  "157": {
+   "skl": "Fighter/ThrowSandEx.skl",
+   "name": "퓻뺏 - 테"
+  },
+  "158": {
+   "skl": "Fighter/JunkSpinEx.skl",
+   "name": "퓻뺏 - 쌍庫루괬"
+  },
+  "159": {
+   "skl": "Fighter/EarthBreakEx.skl",
+   "name": "퓻뺏 - 쏜먼鉅"
+  },
+  "160": {
+   "skl": "Fighter/SuplexCycloneExp.skl",
+   "name": "퓻뺏 - 뒈掉納은"
+  },
+  "161": {
+   "skl": "Fighter/ThunderSuplexEx.skl",
+   "name": "퓻뺏 - 잉脆교胛"
+  },
+  "162": {
+   "skl": "Fighter/BasicAttackUpEx.skl",
+   "name": "퓻뺏 - 샘뇟쑹繫"
+  },
+  "163": {
+   "skl": "Fighter/LiftUpperEx.skl",
+   "name": "퓻뺏 - 뭅화"
+  },
+  "164": {
+   "skl": "Fighter/SingleKickEx.skl",
+   "name": "퓻뺏 - 품璟"
+  },
+  "165": {
+   "skl": "Fighter/KensinEx.skl",
+   "name": "퓻뺏 - 롸"
+  },
+  "166": {
+   "skl": "Fighter/StompEx.skl",
+   "name": "퓻뺏 - 團劫"
+  },
+  "167": {
+   "skl": "Fighter/NenGuardExp.skl",
+   "name": "퓻뺏 - 쿡폭倆"
+  },
+  "168": {
+   "skl": "Fighter/IllusionBombEx.skl",
+   "name": "퓻뺏 - 뼙緞괵鉅"
+  },
+  "169": {
+   "skl": "Fighter/BackStep.skl",
+   "name": "빈契"
+  },
+  "172": {
+   "skl": "Fighter/ArmorMasteryLight.skl",
+   "name": "햐솖쑹繫"
+  },
+  "173": {
+   "skl": "Fighter/ArmorMasteryHeavy.skl",
+   "name": "路솖쑹繫"
+  },
+  "174": {
+   "skl": "Fighter/BasicAttackUp.skl",
+   "name": "샘뇟쑹繫"
+  },
+  "175": {
+   "skl": "Fighter/JumpPowerUp.skl",
+   "name": "禿勸"
+  },
+  "176": {
+   "skl": "Fighter/MagicalAttackUp.skl",
+   "name": "陶뮴션壘"
+  },
+  "177": {
+   "skl": "Fighter/ThrowMastery.skl",
+   "name": "尻聆쑹繫"
+  },
+  "178": {
+   "skl": "Fighter/PhysicalBackAttackCritical.skl",
+   "name": "膠잿교샌"
+  },
+  "179": {
+   "skl": "Fighter/DisjointItem.skl",
+   "name": "膠틔롸썩"
+  },
+  "180": {
+   "skl": "Fighter/SuperArmorOnCast.skl",
+   "name": "꼇형雷羚"
+  },
+  "181": {
+   "skl": "Fighter/CompoundCraft.skl",
+   "name": "쑹묏"
+  },
+  "182": {
+   "skl": "Fighter/CompoundWeaving.skl",
+   "name": "렬廉"
+  },
+  "183": {
+   "skl": "Fighter/CompoundMachine.skl",
+   "name": "샙筠"
+  },
+  "184": {
+   "skl": "Fighter/CompoundChemistry.skl",
+   "name": "조쏜"
+  },
+  "185": {
+   "skl": "Fighter/ArmorMasteryLeather.skl",
+   "name": "튄솖쑹繫"
+  },
+  "186": {
+   "skl": "Fighter/PhysicalCriticalHitUp.skl",
+   "name": "膠잿괬샌"
+  },
+  "187": {
+   "skl": "Fighter/ArmorMasteryCloth.skl",
+   "name": "꼈솖쑹繫"
+  },
+  "188": {
+   "skl": "Fighter/MagicalCriticalHitUp.skl",
+   "name": "침랬괬샌"
+  },
+  "189": {
+   "skl": "Fighter/MagicalBackAttackCritical.skl",
+   "name": "침랬교샌"
+  },
+  "190": {
+   "skl": "Fighter/QuickStanding.skl",
+   "name": "肝뚱률"
+  },
+  "191": {
+   "skl": "Fighter/Enchant.skl",
+   "name": "맒침"
+  },
+  "192": {
+   "skl": "Fighter/DollMaking.skl",
+   "name": "齡鱗梁뻥훙탉"
+  },
+  "193": {
+   "skl": "Fighter/Alchemy.skl",
+   "name": "조쏜減"
+  },
+  "194": {
+   "skl": "Fighter/OpenDisjointShop.skl",
+   "name": "역폘롸썩듦"
+  },
+  "195": {
+   "skl": "Fighter/BasicHpMaxUp.skl",
+   "name": "츱裂都"
+  },
+  "196": {
+   "skl": "Fighter/ArmorMasteryPlate.skl",
+   "name": "겼솖쑹繫"
+  },
+  "197": {
+   "skl": "Fighter/Conversion.skl",
+   "name": "묑샌잚謹瘻뻣"
+  },
+  "200": {
+   "skl": "Fighter/StatusUp.skl",
+   "name": "무삔 : 藤속실橄昑"
+  },
+  "201": {
+   "skl": "Fighter/ExperienceUp.skl",
+   "name": "섐醵냥낀"
+  },
+  "210": {
+   "skl": "Fighter/SajahuExp.skl",
+   "name": "퓻뺏 - 哥綾븟"
+  },
+  "211": {
+   "skl": "Fighter/LightningDragonEx.skl",
+   "name": "퓻뺏 - 쿡艱 : 잉질놔베"
+  },
+  "212": {
+   "skl": "Fighter/DashPunchExp.skl",
+   "name": "퓻뺏 - 굼화"
+  },
+  "214": {
+   "skl": "Fighter/CrashLowKickEx.skl",
+   "name": "퓻뺏 - 鉅므"
+  },
+  "215": {
+   "skl": "Fighter/RandomKickEx.skl",
+   "name": "퓻뺏 - 롼緞젯뻔璟"
+  },
+  "216": {
+   "skl": "Fighter/GrabExplosionExp.skl",
+   "name": "퓻뺏 - 햄墩懦"
+  },
+  "217": {
+   "skl": "Fighter/HiddenStingEx.skl",
+   "name": "퓻뺏 - 뗀緞濾"
+  },
+  "218": {
+   "skl": "Fighter/VenomMineEx.skl",
+   "name": "퓻뺏 - 뗀잉多괵"
+  },
+  "219": {
+   "skl": "Fighter/GroundKickEx.skl",
+   "name": "퓻뺏 - 죙뒈령"
+  },
+  "220": {
+   "skl": "Fighter/ThrowEnemyEx.skl",
+   "name": "퓻뺏 - 테尻"
+  },
+  "221": {
+   "skl": "Fighter/PunchAfterReturnEx.skl",
+   "name": "퓻뺏 - 粮쓩"
+  },
+  "222": {
+   "skl": "Fighter/WhirlWindKickEx.skl",
+   "name": "퓻뺏 - 旗루苦"
+  },
+  "223": {
+   "skl": "Fighter/HoldUpEx.skl",
+   "name": "퓻뺏 - 툼翠錄샌 "
+  },
+  "224": {
+   "skl": "Fighter/WildCannonSpikeEx.skl",
+   "name": "퓻뺏 - 죙柯팎莖"
+  }
+ },
+ "gunner": {
+  "1": {
+   "skl": "Gunner/FlameBullet.skl",
+   "name": "괵懦뎐"
+  },
+  "2": {
+   "skl": "Gunner/FreezeBullet.skl",
+   "name": "깥떨뎐"
+  },
+  "3": {
+   "skl": "Gunner/Windmill.skl",
+   "name": "쀼旗璟"
+  },
+  "4": {
+   "skl": "Gunner/AerialKnee.skl",
+   "name": "嘔旒"
+  },
+  "5": {
+   "skl": "Gunner/HeadShot.skl",
+   "name": "괵庫寧샌"
+  },
+  "6": {
+   "skl": "Gunner/Punisher.skl",
+   "name": "劫"
+  },
+  "7": {
+   "skl": "Gunner/FastKnee.skl",
+   "name": "疆璟"
+  },
+  "8": {
+   "skl": "Gunner/RisingWindmill.skl",
+   "name": "폅쀼旗璟"
+  },
+  "9": {
+   "skl": "Gunner/RandomShoot.skl",
+   "name": "쫘"
+  },
+  "10": {
+   "skl": "Gunner/BulletGuard.skl",
+   "name": "陶넋목뎡"
+  },
+  "11": {
+   "skl": "Gunner/FastShoot.skl",
+   "name": "우醵겄퓜"
+  },
+  "12": {
+   "skl": "Gunner/Gatling.skl",
+   "name": "M-137목주샙퓜"
+  },
+  "13": {
+   "skl": "Gunner/FlameThrower.skl",
+   "name": "M-3톨삽포"
+  },
+  "14": {
+   "skl": "Gunner/AerialGatling.skl",
+   "name": "BBQ"
+  },
+  "15": {
+   "skl": "Gunner/WalkShoot.skl",
+   "name": "盧땡샌"
+  },
+  "20": {
+   "skl": "Gunner/TurningShoot.skl",
+   "name": "쀼庫寧샌"
+  },
+  "21": {
+   "skl": "Gunner/SubWeaponMastery.skl",
+   "name": "路삽포쑹繫"
+  },
+  "22": {
+   "skl": "Gunner/ReduceRevolverDelay.skl",
+   "name": "璘쫴쑹繫"
+  },
+  "23": {
+   "skl": "Gunner/ReduceRevolverReload.skl",
+   "name": "우醵輕陋"
+  },
+  "26": {
+   "skl": "Gunner/CounterShoot.skl",
+   "name": "릿놈럽샌"
+  },
+  "27": {
+   "skl": "Gunner/RobotRX78.skl",
+   "name": "RX-78瀏샌諒"
+  },
+  "28": {
+   "skl": "Gunner/RobotEz8.skl",
+   "name": "Ez-8菱괵諒"
+  },
+  "29": {
+   "skl": "Gunner/RobotExs.skl",
+   "name": "Ex-S뗀텔"
+  },
+  "30": {
+   "skl": "Gunner/SilverBullet.skl",
+   "name": "陵뎐"
+  },
+  "31": {
+   "skl": "Gunner/BulletReinforce.skl",
+   "name": "뎐浪맣좁"
+  },
+  "32": {
+   "skl": "Gunner/TripleClutch.skl",
+   "name": "힛路왠齡"
+  },
+  "33": {
+   "skl": "Gunner/StayOnJumpShoot.skl",
+   "name": "왕櫓샌"
+  },
+  "34": {
+   "skl": "Gunner/HitOnSubWeapon.skl",
+   "name": "路삽포겄샌"
+  },
+  "35": {
+   "skl": "Gunner/AirRaid.skl",
+   "name": "륫왕쌕샌"
+  },
+  "36": {
+   "skl": "Gunner/FlameThrowerBoost.skl",
+   "name": "앱슝톨삽포"
+  },
+  "37": {
+   "skl": "Gunner/HighAngleSliding.skl",
+   "name": "륫왕끎"
+  },
+  "38": {
+   "skl": "Gunner/FM31.skl",
+   "name": "FM-31즐뎐랙포"
+  },
+  "39": {
+   "skl": "Gunner/LaserRifle.skl",
+   "name": "샴밟텔"
+  },
+  "40": {
+   "skl": "Gunner/SteyrHeavyRifle.skl",
+   "name": "럽譴옹텔"
+  },
+  "41": {
+   "skl": "Gunner/LaserRifleCharge.skl",
+   "name": "嗜든샴밟텔"
+  },
+  "42": {
+   "skl": "Gunner/RX78ofCrisis.skl",
+   "name": "閣濫瀏샌諒"
+  },
+  "43": {
+   "skl": "Gunner/Camouflage.skl",
+   "name": "慣陋"
+  },
+  "44": {
+   "skl": "Gunner/SubWeaponPowerUp.skl",
+   "name": "路삽포걔屢"
+  },
+  "45": {
+   "skl": "Gunner/UraniumBomb.skl",
+   "name": "좆綾괵뎐"
+  },
+  "46": {
+   "skl": "Gunner/Robotics.skl",
+   "name": "샙筠맣좁"
+  },
+  "47": {
+   "skl": "Gunner/LiftShot.skl",
+   "name": "륫왕뎐"
+  },
+  "48": {
+   "skl": "Gunner/CrossShoot.skl",
+   "name": "뎐퓜"
+  },
+  "49": {
+   "skl": "Gunner/IncreaseBulletBuffCount.skl",
+   "name": "뎐矩윈념"
+  },
+  "50": {
+   "skl": "Gunner/RobotsExplosion.skl",
+   "name": "샙筠多괵"
+  },
+  "51": {
+   "skl": "Gunner/DoubleGunhawk.skl",
+   "name": "崗團쀼旗"
+  },
+  "52": {
+   "skl": "Gunner/ArmorBullet.skl",
+   "name": "팎솖뎐"
+  },
+  "53": {
+   "skl": "Gunner/NapalmBomb.skl",
+   "name": "뒈掉죠懦"
+  },
+  "54": {
+   "skl": "Gunner/SatelliteLaser.skl",
+   "name": "括槿窟"
+  },
+  "55": {
+   "skl": "Gunner/ArmorMasteryLeatherRG.skl",
+   "name": "찻踏퓜癎튄솖淚쑹"
+  },
+  "56": {
+   "skl": "Gunner/GrenadeNone.skl",
+   "name": "G-14癎잉"
+  },
+  "57": {
+   "skl": "Gunner/GrenadeLight.skl",
+   "name": "G-35L먁든癎잉"
+  },
+  "58": {
+   "skl": "Gunner/GrenadeWater.skl",
+   "name": "G-18C깥떨癎잉"
+  },
+  "59": {
+   "skl": "Gunner/MechaDrop.skl",
+   "name": "왕尻連賭"
+  },
+  "60": {
+   "skl": "Gunner/RevolverCriticalDamageUp.skl",
+   "name": "价空璘쫴"
+  },
+  "61": {
+   "skl": "Gunner/ArmorMasteryLeatherSP.skl",
+   "name": "뎐浪淚소튄솖淚쑹"
+  },
+  "62": {
+   "skl": "Gunner/SubWeaponStuckDown.skl",
+   "name": "풉콘괵랙"
+  },
+  "63": {
+   "skl": "Gunner/RobotTempester.skl",
+   "name": "왕濫샙筠 : 루괬"
+  },
+  "64": {
+   "skl": "Gunner/Desperado.skl",
+   "name": "룩욺痼쩐"
+  },
+  "65": {
+   "skl": "Gunner/RadarStuckDown.skl",
+   "name": "括槿땍貫"
+  },
+  "66": {
+   "skl": "Gunner/MarkOfDeath.skl",
+   "name": "价空丹션"
+  },
+  "67": {
+   "skl": "Gunner/GaebolgPunch.skl",
+   "name": "맨꺼속裂화"
+  },
+  "68": {
+   "skl": "Gunner/LastFightingSpirit.skl",
+   "name": "떱羚裂멱"
+  },
+  "69": {
+   "skl": "Gunner/AdvancedBullet.skl",
+   "name": "뎐浪寮洞"
+  },
+  "70": {
+   "skl": "Gunner/BlackRose.skl",
+   "name": "붚천밧景蘆濫뚠"
+  },
+  "71": {
+   "skl": "Gunner/Extruder.skl",
+   "name": "X-1箕鍵좆綾텔"
+  },
+  "72": {
+   "skl": "Gunner/MultiHeadShot.skl",
+   "name": "뜩路괵庫"
+  },
+  "73": {
+   "skl": "Gunner/CannonBall.skl",
+   "name": "속크텔"
+  },
+  "74": {
+   "skl": "Gunner/CancelCannonBall.skl",
+   "name": "퓻齡 - 속크텔"
+  },
+  "75": {
+   "skl": "Gunner/Stinger.skl",
+   "name": "FM-92늬뎐텔"
+  },
+  "76": {
+   "skl": "Gunner/FlashMine.skl",
+   "name": "샌뒈잉"
+  },
+  "77": {
+   "skl": "Gunner/C4Remote.skl",
+   "name": "C4陶넋珞뎐"
+  },
+  "78": {
+   "skl": "Gunner/NielSniping.skl",
+   "name": "콩랑앗샌"
+  },
+  "79": {
+   "skl": "Gunner/G1.skl",
+   "name": "G-1옰쭈케"
+  },
+  "80": {
+   "skl": "Gunner/G2.skl",
+   "name": "맣陋 : G-2旗잉諒"
+  },
+  "81": {
+   "skl": "Gunner/G3.skl",
+   "name": "맣陋 : G-3껫稼諒"
+  },
+  "82": {
+   "skl": "Gunner/ChargingSupply.skl",
+   "name": "뎐浪連賭"
+  },
+  "83": {
+   "skl": "Gunner/SparrowFactory.skl",
+   "name": "윽쌔샙묏낍"
+  },
+  "91": {
+   "skl": "Gunner/ArmorMasteryClothMN.skl",
+   "name": "샙筠可꼈솖淚쑹"
+  },
+  "92": {
+   "skl": "Gunner/ArmorMasteryHeavyRU.skl",
+   "name": "퓜텔可路솖淚쑹"
+  },
+  "101": {
+   "skl": "Gunner/AirRaidEx.skl",
+   "name": "쀼旗쌕샌"
+  },
+  "102": {
+   "skl": "Gunner/C4RemoteEx.skl",
+   "name": "C4령醵珞뎐"
+  },
+  "103": {
+   "skl": "Gunner/FlashMineEx.skl",
+   "name": "M-61뒈잉"
+  },
+  "104": {
+   "skl": "Gunner/MultiHeadShotEx.skl",
+   "name": "섐掘뜩路괵庫"
+  },
+  "105": {
+   "skl": "Gunner/RobotEz8Ex.skl",
+   "name": "Ez-10럽샌諒"
+  },
+  "106": {
+   "skl": "Gunner/RobotExsEx.skl",
+   "name": "Ex-S Zero뗀텔"
+  },
+  "107": {
+   "skl": "Gunner/BlizzardThrowerBoost.skl",
+   "name": "벽깥톨포"
+  },
+  "108": {
+   "skl": "Gunner/StingerEx.skl",
+   "name": "FM-92 SW늬뎐텔"
+  },
+  "109": {
+   "skl": "Gunner/ChargeBuster.skl",
+   "name": "앱북뎐"
+  },
+  "110": {
+   "skl": "Gunner/MusketMastery.skl",
+   "name": "꼍퓜쑹繫"
+  },
+  "140": {
+   "skl": "Gunner/HeadShotEx.skl",
+   "name": "퓻뺏 - 괵庫寧샌"
+  },
+  "141": {
+   "skl": "Gunner/AerialGatlingEx.skl",
+   "name": "퓻뺏 - BBQ"
+  },
+  "142": {
+   "skl": "Gunner/RobotRX78Ex.skl",
+   "name": "퓻뺏 - RX-78瀏샌諒"
+  },
+  "143": {
+   "skl": "Gunner/SilverBulletEx.skl",
+   "name": "퓻뺏 - 陵뎐"
+  },
+  "144": {
+   "skl": "Gunner/BulletGuardEx.skl",
+   "name": "퓻뺏 - 陶넋목뎡"
+  },
+  "145": {
+   "skl": "Gunner/PunisherEx.skl",
+   "name": "퓻뺏 - 劫"
+  },
+  "146": {
+   "skl": "Gunner/FlameThrowerEx.skl",
+   "name": "퓻뺏 - M-3톨삽포"
+  },
+  "147": {
+   "skl": "Gunner/SteyrHeavyRifleEx.skl",
+   "name": "퓻뺏 - 럽譴옹텔"
+  },
+  "148": {
+   "skl": "Gunner/RobotsExplosionEx.skl",
+   "name": "퓻뺏 - 샙筠多괵"
+  },
+  "149": {
+   "skl": "Gunner/G1Ex.skl",
+   "name": "퓻뺏 - G-1옰쭈케"
+  },
+  "150": {
+   "skl": "Gunner/CrossShootEx.skl",
+   "name": "퓻뺏 - 뎐퓜"
+  },
+  "151": {
+   "skl": "Gunner/IncreaseBulletBuffCountEx.skl",
+   "name": "퓻뺏 - 뎐矩윈념"
+  },
+  "152": {
+   "skl": "Gunner/MagicalChangeEx.skl",
+   "name": "침묑瘻뻣"
+  },
+  "153": {
+   "skl": "Gunner/FastKneeEx.skl",
+   "name": "퓻뺏 - 疆璟"
+  },
+  "154": {
+   "skl": "Gunner/RandomShootEx.skl",
+   "name": "퓻뺏 - 쫘"
+  },
+  "155": {
+   "skl": "Gunner/GrenadeNoneEx.skl",
+   "name": "퓻뺏 - G-14癎잉"
+  },
+  "156": {
+   "skl": "Gunner/NapalmBombEx.skl",
+   "name": "퓻뺏 - 뒈掉죠懦"
+  },
+  "157": {
+   "skl": "Gunner/RobotEz8Exp.skl",
+   "name": "퓻뺏 - Ez-8菱괵諒"
+  },
+  "158": {
+   "skl": "Gunner/SparrowFactoryEx.skl",
+   "name": "퓻뺏 - 윽쌔샙묏낍"
+  },
+  "159": {
+   "skl": "Gunner/GatlingEx.skl",
+   "name": "퓻뺏 - M-137목주샙퓜"
+  },
+  "160": {
+   "skl": "Gunner/StingerExp.skl",
+   "name": "퓻뺏 - FM-92늬뎐텔"
+  },
+  "161": {
+   "skl": "Gunner/BasicAttackUpEx.skl",
+   "name": "퓻뺏 - 샘뇟쑹繫"
+  },
+  "162": {
+   "skl": "Gunner/FlameBulletEx.skl",
+   "name": "퓻뺏 - 괵懦뎐"
+  },
+  "163": {
+   "skl": "Gunner/FreezeBulletEx.skl",
+   "name": "퓻뺏 - 깥떨뎐"
+  },
+  "164": {
+   "skl": "Gunner/CounterShootEx.skl",
+   "name": "퓻뺏 - 릿놈럽샌"
+  },
+  "166": {
+   "skl": "Gunner/WindmillEx.skl",
+   "name": "퓻뺏 - 쀼旗璟"
+  },
+  "167": {
+   "skl": "Gunner/LiftShotEx.skl",
+   "name": "퓻뺏 - 륫왕뎐"
+  },
+  "168": {
+   "skl": "Gunner/AerialKneeEx.skl",
+   "name": "퓻뺏 - 嘔旒"
+  },
+  "169": {
+   "skl": "Gunner/BackStep.skl",
+   "name": "빈契"
+  },
+  "172": {
+   "skl": "Gunner/ArmorMasteryLight.skl",
+   "name": "햐솖쑹繫"
+  },
+  "173": {
+   "skl": "Gunner/ArmorMasteryHeavy.skl",
+   "name": "路솖쑹繫"
+  },
+  "174": {
+   "skl": "Gunner/BasicAttackUp.skl",
+   "name": "샘뇟쑹繫"
+  },
+  "175": {
+   "skl": "Gunner/JumpPowerUp.skl",
+   "name": "禿勸"
+  },
+  "176": {
+   "skl": "Gunner/MagicalAttackUp.skl",
+   "name": "陶뮴션壘"
+  },
+  "177": {
+   "skl": "Gunner/ThrowMastery.skl",
+   "name": "尻聆쑹繫"
+  },
+  "178": {
+   "skl": "Gunner/PhysicalBackAttackCritical.skl",
+   "name": "膠잿교샌"
+  },
+  "179": {
+   "skl": "Gunner/DisjointItem.skl",
+   "name": "膠틔롸썩"
+  },
+  "180": {
+   "skl": "Gunner/SuperArmorOnCast.skl",
+   "name": "꼇형雷羚"
+  },
+  "181": {
+   "skl": "Gunner/CompoundCraft.skl",
+   "name": "쑹묏"
+  },
+  "182": {
+   "skl": "Gunner/CompoundWeaving.skl",
+   "name": "렬廉"
+  },
+  "183": {
+   "skl": "Gunner/CompoundMachine.skl",
+   "name": "샙筠"
+  },
+  "184": {
+   "skl": "Gunner/CompoundChemistry.skl",
+   "name": "조쏜"
+  },
+  "185": {
+   "skl": "Gunner/ArmorMasteryLeather.skl",
+   "name": "튄솖쑹繫"
+  },
+  "186": {
+   "skl": "Gunner/PhysicalCriticalHitUp.skl",
+   "name": "膠잿괬샌"
+  },
+  "187": {
+   "skl": "Gunner/ArmorMasteryCloth.skl",
+   "name": "꼈솖쑹繫"
+  },
+  "188": {
+   "skl": "Gunner/MagicalCriticalHitUp.skl",
+   "name": "침랬괬샌"
+  },
+  "189": {
+   "skl": "Gunner/MagicalBackAttackCritical.skl",
+   "name": "침랬교샌"
+  },
+  "190": {
+   "skl": "Gunner/QuickStanding.skl",
+   "name": "肝뚱률"
+  },
+  "191": {
+   "skl": "Gunner/Enchant.skl",
+   "name": "맒침"
+  },
+  "192": {
+   "skl": "Gunner/DollMaking.skl",
+   "name": "齡鱗梁뻥훙탉"
+  },
+  "193": {
+   "skl": "Gunner/Alchemy.skl",
+   "name": "조쏜減"
+  },
+  "194": {
+   "skl": "Gunner/OpenDisjointShop.skl",
+   "name": "역폘롸썩듦"
+  },
+  "195": {
+   "skl": "Gunner/BasicHpMaxUp.skl",
+   "name": "츱裂都"
+  },
+  "196": {
+   "skl": "Gunner/ArmorMasteryPlate.skl",
+   "name": "겼솖쑹繫"
+  },
+  "197": {
+   "skl": "Gunner/Conversion.skl",
+   "name": "묑샌잚謹瘻뻣"
+  },
+  "200": {
+   "skl": "Gunner/StatusUp.skl",
+   "name": "무삔 : 藤속실橄昑"
+  },
+  "201": {
+   "skl": "Gunner/ExperienceUp.skl",
+   "name": "섐醵냥낀"
+  },
+  "211": {
+   "skl": "Gunner/AirRaidExp.skl",
+   "name": "퓻뺏 - 륫왕쌕샌"
+  },
+  "212": {
+   "skl": "Gunner/WalkShootEx.skl",
+   "name": "퓻뺏 - 盧땡샌"
+  },
+  "213": {
+   "skl": "Gunner/DoubleGunhawkEx.skl",
+   "name": "퓻뺏 - 崗團쀼旗"
+  },
+  "214": {
+   "skl": "Gunner/MultiHeadShotExp.skl",
+   "name": "퓻뺏 - 뜩路괵庫"
+  },
+  "215": {
+   "skl": "Gunner/LaserRifleEx.skl",
+   "name": "퓻뺏 - 샴밟텔"
+  },
+  "216": {
+   "skl": "Gunner/ExtruderEx.skl",
+   "name": "퓻뺏 - X-1箕鍵좆綾텔"
+  },
+  "217": {
+   "skl": "Gunner/CannonBallEx.skl",
+   "name": "퓻뺏 - 속크텔"
+  },
+  "218": {
+   "skl": "Gunner/FlameThrowerBoostEx.skl",
+   "name": "퓻뺏 - 앱슝톨삽포"
+  },
+  "219": {
+   "skl": "Gunner/G2Ex.skl",
+   "name": "퓻뺏 - 맣陋 : G-2旗잉諒"
+  },
+  "220": {
+   "skl": "Gunner/G3Ex.skl",
+   "name": "퓻뺏 - 맣陋 : G-3껫稼諒"
+  },
+  "221": {
+   "skl": "Gunner/UraniumBombExp.skl",
+   "name": "퓻뺏 - 좆綾괵뎐"
+  },
+  "222": {
+   "skl": "Gunner/RobotTempesterEx.skl",
+   "name": "퓻뺏 - 왕濫샙筠 : 루괬"
+  },
+  "223": {
+   "skl": "Gunner/GrenadeLightEx.skl",
+   "name": "퓻뺏 - G-35L먁든癎잉"
+  },
+  "224": {
+   "skl": "Gunner/GrenadeWaterEx.skl",
+   "name": "퓻뺏 - G-18C깥떨癎잉"
+  },
+  "225": {
+   "skl": "Gunner/ArmorBulletEx.skl",
+   "name": "퓻뺏 - 팎솖뎐"
+  },
+  "226": {
+   "skl": "Gunner/ChargeBusterEx.skl",
+   "name": "퓻뺏 - 앱북뎐"
+  },
+  "227": {
+   "skl": "Gunner/FlashMineExp.skl",
+   "name": "퓻뺏 - 샌뒈잉"
+  },
+  "228": {
+   "skl": "Gunner/C4RemoteExp.skl",
+   "name": "퓻뺏 - C4陶넋珞뎐"
+  },
+  "229": {
+   "skl": "Gunner/NielSnipingEx.skl",
+   "name": "퓻뺏 - 콩랑앗샌"
+  },
+  "230": {
+   "skl": "Gunner/RobotExsExp.skl",
+   "name": "퓻뺏 - Ex-S뗀텔"
+  },
+  "231": {
+   "skl": "Gunner/MechaDropEx.skl",
+   "name": "퓻뺏 - 왕尻連賭"
+  }
+ },
+ "mage": {
+  "1": {
+   "skl": "Mage/EnableFinishAttack.skl",
+   "name": "질빻게"
+  },
+  "2": {
+   "skl": "Mage/MagicalTempoUp.skl",
+   "name": "침랬汲"
+  },
+  "3": {
+   "skl": "Mage/WarpOnDamage.skl",
+   "name": "競꿇훙"
+  },
+  "4": {
+   "skl": "Mage/Thrust.skl",
+   "name": "질記"
+  },
+  "5": {
+   "skl": "Mage/ChaserDefault.skl",
+   "name": "里廣 : 轟橄昑"
+  },
+  "6": {
+   "skl": "Mage/ChaserFire.skl",
+   "name": "里廣 : 삽橄昑"
+  },
+  "7": {
+   "skl": "Mage/ChaserWater.skl",
+   "name": "里廣 : 깥橄昑"
+  },
+  "8": {
+   "skl": "Mage/ChaserDark.skl",
+   "name": "里廣 : 갠橄昑"
+  },
+  "9": {
+   "skl": "Mage/ChaserLight.skl",
+   "name": "里廣 : 밟橄昑"
+  },
+  "10": {
+   "skl": "Mage/ChasersExplosion.skl",
+   "name": "里廣퓻箕"
+  },
+  "11": {
+   "skl": "Mage/MagicMissile.skl",
+   "name": "침랬槿뎐"
+  },
+  "12": {
+   "skl": "Mage/UpperSwing.skl",
+   "name": "莖샌"
+  },
+  "13": {
+   "skl": "Mage/Swing.skl",
+   "name": "鉅게"
+  },
+  "14": {
+   "skl": "Mage/HandStrike.skl",
+   "name": "쭝빻廊"
+  },
+  "15": {
+   "skl": "Mage/LaunchJOL.skl",
+   "name": "쌤옹괵뎐"
+  },
+  "16": {
+   "skl": "Mage/LaunchFrostHead.skl",
+   "name": "깥岡汽훙"
+  },
+  "17": {
+   "skl": "Mage/LaunchFluorescent.skl",
+   "name": "밟든炭"
+  },
+  "18": {
+   "skl": "Mage/LaunchBlackCat.skl",
+   "name": "갠緞拈챔"
+  },
+  "19": {
+   "skl": "Mage/CastSpeedUp.skl",
+   "name": "침랬션壘"
+  },
+  "20": {
+   "skl": "Mage/Whip.skl",
+   "name": "급鈐"
+  },
+  "21": {
+   "skl": "Mage/SummonSpiritFire.skl",
+   "name": "쑹쥣梁뻥 : 饑돠懦"
+  },
+  "22": {
+   "skl": "Mage/SummonSpiritWater.skl",
+   "name": "쑹쥣梁뻥 : 깥켑薑"
+  },
+  "23": {
+   "skl": "Mage/SummonSpiritDark.skl",
+   "name": "쑹쥣梁뻥 : 聞景옹"
+  },
+  "24": {
+   "skl": "Mage/SummonSpiritLight.skl",
+   "name": "쑹쥣梁뻥 : 잉怪薑"
+  },
+  "25": {
+   "skl": "Mage/SummonHodor.skl",
+   "name": "폡獨梁뻥 : 붐돠랑"
+  },
+  "26": {
+   "skl": "Mage/Void.skl",
+   "name": "肯轟裂헷"
+  },
+  "27": {
+   "skl": "Mage/HalloweenBuster.skl",
+   "name": "쌤옹슉줄"
+  },
+  "28": {
+   "skl": "Mage/Disenchant.skl",
+   "name": "혜침랬"
+  },
+  "29": {
+   "skl": "Mage/ElementalChain.skl",
+   "name": "禱羹듐횝"
+  },
+  "30": {
+   "skl": "Mage/FollowMe.skl",
+   "name": "梁뻥艱뫄踞"
+  },
+  "31": {
+   "skl": "Mage/SunBurst.skl",
+   "name": "잉旗"
+  },
+  "35": {
+   "skl": "Mage/SpearMastery.skl",
+   "name": "챙쑹繫"
+  },
+  "36": {
+   "skl": "Mage/PoleMastery.skl",
+   "name": "벅곯쑹繫"
+  },
+  "37": {
+   "skl": "Mage/AuraShield.skl",
+   "name": "침랬빱뜀"
+  },
+  "38": {
+   "skl": "Mage/MoveOnCast.skl",
+   "name": "盧땡嘉랬"
+  },
+  "39": {
+   "skl": "Mage/ChaserLaunch.skl",
+   "name": "里廣랙"
+  },
+  "40": {
+   "skl": "Mage/ChaserAutoCreate.skl",
+   "name": "菱땡里廣"
+  },
+  "41": {
+   "skl": "Mage/MpRegenRateUp.skl",
+   "name": "陶뮴침랬蝎"
+  },
+  "42": {
+   "skl": "Mage/LaunchJOLOnJump.skl",
+   "name": "왕櫓嘉렴 : 쌤옹괵뎐"
+  },
+  "43": {
+   "skl": "Mage/ProvocationDoll.skl",
+   "name": "鯨根훙탉 : 竭쨋쨋"
+  },
+  "44": {
+   "skl": "Mage/SummonSandor.skl",
+   "name": "폡獨梁뻥 : 돠랑"
+  },
+  "45": {
+   "skl": "Mage/SummonAuxo.skl",
+   "name": "폡獨梁뻥 : 걋乞"
+  },
+  "46": {
+   "skl": "Mage/SummonLuis.skl",
+   "name": "폡獨梁뻥 : 쨌弄介"
+  },
+  "47": {
+   "skl": "Mage/SummonEcheverra.skl",
+   "name": "쑹쥣梁뻥 : 怒命굔윗"
+  },
+  "48": {
+   "skl": "Mage/SummonMonsterAura.skl",
+   "name": "梁뻥艱퓻뺏"
+  },
+  "49": {
+   "skl": "Mage/SacrificeSpirit.skl",
+   "name": "쑹쥣窘셈"
+  },
+  "50": {
+   "skl": "Mage/TargetIt.skl",
+   "name": "침제丹션"
+  },
+  "51": {
+   "skl": "Mage/SacrificeSpiritAttackFire.skl",
+   "name": "窘셈묑샌 : 饑돠懦"
+  },
+  "52": {
+   "skl": "Mage/SacrificeSpiritAttackWater.skl",
+   "name": "窘셈묑샌 : 깥켑薑"
+  },
+  "53": {
+   "skl": "Mage/SacrificeSpiritAttackDark.skl",
+   "name": "窘셈묑샌 : 聞景옹"
+  },
+  "54": {
+   "skl": "Mage/SacrificeSpiritAttackLight.skl",
+   "name": "窘셈묑샌 : 잉怪薑"
+  },
+  "55": {
+   "skl": "Mage/ThunderStrike.skl",
+   "name": "莖잉"
+  },
+  "56": {
+   "skl": "Mage/WallOfIce.skl",
+   "name": "깥퓰"
+  },
+  "57": {
+   "skl": "Mage/FlameStrike.skl",
+   "name": "죠落녑샌"
+  },
+  "58": {
+   "skl": "Mage/BlackHole.skl",
+   "name": "按췻붚떪"
+  },
+  "59": {
+   "skl": "Mage/IceField.skl",
+   "name": "섐깥佳諾"
+  },
+  "60": {
+   "skl": "Mage/AuraShieldMastery.skl",
+   "name": "침랬빱뜀퓻뺏"
+  },
+  "61": {
+   "skl": "Mage/FireElementMastery.skl",
+   "name": "삽溝쑹繫"
+  },
+  "62": {
+   "skl": "Mage/WaterElementMastery.skl",
+   "name": "깥溝쑹繫"
+  },
+  "63": {
+   "skl": "Mage/DarkElementMastery.skl",
+   "name": "갠溝쑹繫"
+  },
+  "64": {
+   "skl": "Mage/LightElementMastery.skl",
+   "name": "밟溝쑹繫"
+  },
+  "65": {
+   "skl": "Mage/PokeThrow.skl",
+   "name": "途校벅"
+  },
+  "66": {
+   "skl": "Mage/RandomPierceStrike.skl",
+   "name": "직槿緞샌"
+  },
+  "67": {
+   "skl": "Mage/FightLeatherMastery.skl",
+   "name": "濫떱랬可튄솖淚쑹"
+  },
+  "68": {
+   "skl": "Mage/StrengthHandStrike.skl",
+   "name": "퓻枸직槿댔"
+  },
+  "69": {
+   "skl": "Mage/DragonSpear.skl",
+   "name": "뽕질謨墩"
+  },
+  "73": {
+   "skl": "Mage/ElementalWeak.skl",
+   "name": "禱羹섞櫓"
+  },
+  "74": {
+   "skl": "Mage/ElementalShower.skl",
+   "name": "燉槿뼙췻"
+  },
+  "75": {
+   "skl": "Mage/UpgradeSummonSkill.skl",
+   "name": "쥣산連토"
+  },
+  "76": {
+   "skl": "Mage/SummonSpiritDarkHigher.skl",
+   "name": "쑹쥣梁뻥 : 空산칵옹랑"
+  },
+  "77": {
+   "skl": "Mage/SummonSpiritLightHigher.skl",
+   "name": "쑹쥣梁뻥 : 섐밟목잉주"
+  },
+  "78": {
+   "skl": "Mage/SummonSpiritWaterHigher.skl",
+   "name": "쑹쥣梁뻥 : 깥緞각웠적薑"
+  },
+  "79": {
+   "skl": "Mage/SummonSpiritFireHigher.skl",
+   "name": "쑹쥣梁뻥 : 삽落붐흩옹"
+  },
+  "80": {
+   "skl": "Mage/SummonBabyDragon.skl",
+   "name": "폡獨梁뻥 : 른적景"
+  },
+  "81": {
+   "skl": "Mage/SummonMonsterReckless.skl",
+   "name": "梁뻥艱욺뺏"
+  },
+  "82": {
+   "skl": "Mage/SummonCasillas.skl",
+   "name": "폡獨梁뻥 : 瀝륩諒엥鮫적饑薑"
+  },
+  "83": {
+   "skl": "Mage/Bellatrix.skl",
+   "name": "긴굔饑컹"
+  },
+  "84": {
+   "skl": "Mage/ComboMastery.skl",
+   "name": "떱雷羚"
+  },
+  "85": {
+   "skl": "Mage/FriendlyBlackCat.skl",
+   "name": "항뵨갠緞拈챔"
+  },
+  "86": {
+   "skl": "Mage/FriendlyFluorescent.skl",
+   "name": "항뵨밟든炭"
+  },
+  "87": {
+   "skl": "Mage/FriendlyJackFrost.skl",
+   "name": "항뵨깥岡汽훙"
+  },
+  "88": {
+   "skl": "Mage/FriendlyJOL.skl",
+   "name": "항뵨쌤옹괵뎐"
+  },
+  "89": {
+   "skl": "Mage/ChillingPowder.skl",
+   "name": "벽깥뢴"
+  },
+  "90": {
+   "skl": "Mage/DeathPowder.skl",
+   "name": "촐뗀뢴"
+  },
+  "91": {
+   "skl": "Mage/EquipBroom.skl",
+   "name": "겉廊壞"
+  },
+  "92": {
+   "skl": "Mage/BlackMantle.skl",
+   "name": "갠緞떱퇸"
+  },
+  "93": {
+   "skl": "Mage/ImprovedShururu.skl",
+   "name": "맣좁竭쨋쨋"
+  },
+  "95": {
+   "skl": "Mage/TransformFlapper.skl",
+   "name": "긴嫩꾈湍탠"
+  },
+  "97": {
+   "skl": "Mage/SweetCandyBar.skl",
+   "name": "妗頓곯곯鎌"
+  },
+  "98": {
+   "skl": "Mage/BroomSpin.skl",
+   "name": "旗瘻겉"
+  },
+  "99": {
+   "skl": "Mage/AcidCloud.skl",
+   "name": "침돛擧黛暾"
+  },
+  "100": {
+   "skl": "Mage/EnhancedMagicMissile.skl",
+   "name": "맣좁침랬槿뎐"
+  },
+  "101": {
+   "skl": "Mage/LavaPotion.skl",
+   "name": "휩喫浪틸"
+  },
+  "102": {
+   "skl": "Mage/ArmorMasteryLeatherWC.skl",
+   "name": "침돛欺諒튄솖淚쑹"
+  },
+  "103": {
+   "skl": "Mage/AntiGravityStarter.skl",
+   "name": "럽路제陋零"
+  },
+  "104": {
+   "skl": "Mage/MegaDrill.skl",
+   "name": "깥岡裏왝났"
+  },
+  "105": {
+   "skl": "Mage/FluoreCollider.skl",
+   "name": "든炭툭旒샙"
+  },
+  "106": {
+   "skl": "Mage/HeatingFurnace.skl",
+   "name": "괬懦속훑짱"
+  },
+  "107": {
+   "skl": "Mage/ArmorMasteryClothEM.skl",
+   "name": "禱羹可꼈솖淚쑹"
+  },
+  "108": {
+   "skl": "Mage/ArmorMasteryClothSM.skl",
+   "name": "梁뻥可꼈솖淚쑹"
+  },
+  "109": {
+   "skl": "Mage/FusionCraft.skl",
+   "name": "세論휨북"
+  },
+  "110": {
+   "skl": "Mage/SuccessPremonition.skl",
+   "name": "냥묘渡먁"
+  },
+  "111": {
+   "skl": "Mage/WallOfIceEx.skl",
+   "name": "밟든깥퓰"
+  },
+  "112": {
+   "skl": "Mage/RandomPierceStrikeEx.skl",
+   "name": "직槿잉젯샌"
+  },
+  "113": {
+   "skl": "Mage/FlameVolcanoVoid.skl",
+   "name": "肯轟삽"
+  },
+  "114": {
+   "skl": "Mage/BroomSpinEx.skl",
+   "name": "뎐契旗瘻겉"
+  },
+  "115": {
+   "skl": "Mage/TransformFlapperEx.skl",
+   "name": "낚섬꾈湍탠"
+  },
+  "116": {
+   "skl": "Mage/DisActiveStatus.skl",
+   "name": "梁뻥艱씐뺏"
+  },
+  "117": {
+   "skl": "Mage/SwingEx.skl",
+   "name": "里廣鉅게"
+  },
+  "118": {
+   "skl": "Mage/SummonSandorEx.skl",
+   "name": "폡獨梁뻥 : 룃큼돨돠랑"
+  },
+  "119": {
+   "skl": "Mage/SummonSpiritWaterEx.skl",
+   "name": "쑹쥣梁뻥 : 윗景적饑"
+  },
+  "120": {
+   "skl": "Mage/SummonSpiritFireEx.skl",
+   "name": "쑹쥣梁뻥 : 적薑景"
+  },
+  "121": {
+   "skl": "Mage/SummonSpiritDarkEx.skl",
+   "name": "쑹쥣梁뻥 : 句돠"
+  },
+  "122": {
+   "skl": "Mage/SummonSpiritLightEx.skl",
+   "name": "쑹쥣梁뻥 : 갔쟝鮫輿"
+  },
+  "123": {
+   "skl": "Mage/FusionChaser.skl",
+   "name": "里廣휨북"
+  },
+  "124": {
+   "skl": "Mage/CancelFusionChaser.skl",
+   "name": "퓻齡 - 里廣휨북"
+  },
+  "125": {
+   "skl": "Mage/DoubleSwing.skl",
+   "name": "崗路뉨샌"
+  },
+  "127": {
+   "skl": "Mage/TimerBomb.skl",
+   "name": "里廣괵뎐"
+  },
+  "129": {
+   "skl": "Mage/UnSummon.skl",
+   "name": "梁뻥썩뇜"
+  },
+  "130": {
+   "skl": "Mage/ComboInstinct.skl",
+   "name": "젯샌쑹繫"
+  },
+  "140": {
+   "skl": "Mage/AuraShieldEx.skl",
+   "name": "퓻뺏 - 침랬빱뜀"
+  },
+  "141": {
+   "skl": "Mage/LaunchFluorescentEx.skl",
+   "name": "퓻뺏 - 밟든炭"
+  },
+  "142": {
+   "skl": "Mage/WhipEx.skl",
+   "name": "퓻뺏 - 급鈐"
+  },
+  "143": {
+   "skl": "Mage/AncientLibraryEx.skl",
+   "name": "퓻뺏 - 陶뮴침랬蝎"
+  },
+  "144": {
+   "skl": "Mage/LaunchFrostHeadEx.skl",
+   "name": "퓻뺏 - 깥岡汽훙"
+  },
+  "145": {
+   "skl": "Mage/MagicalTempoUpEx.skl",
+   "name": "퓻뺏 - 침랬汲"
+  },
+  "146": {
+   "skl": "Mage/HandStrikeEx.skl",
+   "name": "퓻뺏 - 쭝빻廊"
+  },
+  "147": {
+   "skl": "Mage/WarpOnDamageEx.skl",
+   "name": "퓻뺏 - 競꿇훙"
+  },
+  "148": {
+   "skl": "Mage/SweetCandyBarEx.skl",
+   "name": "퓻뺏 - 妗頓곯곯鎌"
+  },
+  "149": {
+   "skl": "Mage/EnhancedMagicMissileEx.skl",
+   "name": "퓻뺏 - 맣좁침랬槿뎐"
+  },
+  "150": {
+   "skl": "Mage/TargetItEx.skl",
+   "name": "퓻뺏 - 침제丹션"
+  },
+  "151": {
+   "skl": "Mage/SummonSpiritEx.skl",
+   "name": "퓻뺏 - 苟섬쑹쥣"
+  },
+  "152": {
+   "skl": "Mage/HalloweenBusterEx.skl",
+   "name": "퓻뺏 - 쌤옹슉줄"
+  },
+  "153": {
+   "skl": "Mage/ChaserAutoCreateEx.skl",
+   "name": "퓻뺏 - 菱땡里廣"
+  },
+  "154": {
+   "skl": "Mage/VoidEx.skl",
+   "name": "퓻뺏 - 肯轟裂헷"
+  },
+  "155": {
+   "skl": "Mage/PokeThrowEx.skl",
+   "name": "퓻뺏 - 途校벅"
+  },
+  "156": {
+   "skl": "Mage/ChaserEx.skl",
+   "name": "퓻뺏 - 里廣"
+  },
+  "157": {
+   "skl": "Mage/ElementalChainEx.skl",
+   "name": "퓻뺏 - 禱羹듐횝"
+  },
+  "158": {
+   "skl": "Mage/IceFieldEx.skl",
+   "name": "퓻뺏 - 섐깥佳諾"
+  },
+  "159": {
+   "skl": "Mage/SummonHodorEx.skl",
+   "name": "퓻뺏 - 폡獨梁뻥 : 붐돠랑"
+  },
+  "160": {
+   "skl": "Mage/SummonLuisEx.skl",
+   "name": "퓻뺏 - 폡獨梁뻥 : 쨌弄介"
+  },
+  "161": {
+   "skl": "Mage/SummonEcheverraEx.skl",
+   "name": "퓻뺏 - 쑹쥣梁뻥 : 怒命굔윗"
+  },
+  "162": {
+   "skl": "Mage/StrengthHandStrikeEx.skl",
+   "name": "퓻뺏 - 퓻枸직槿댔"
+  },
+  "163": {
+   "skl": "Mage/ProvocationDollEx.skl",
+   "name": "퓻뺏 - 鯨根훙탉 : 竭쨋쨋"
+  },
+  "164": {
+   "skl": "Mage/AntiGravityStarterEx.skl",
+   "name": "퓻뺏 - 럽路제陋零"
+  },
+  "165": {
+   "skl": "Mage/BasicAttackUpEx.skl",
+   "name": "퓻뺏 - 샘뇟쑹繫"
+  },
+  "166": {
+   "skl": "Mage/SummonAuxoUpEx.skl",
+   "name": "퓻뺏 - 폡獨梁뻥 : 걋乞"
+  },
+  "169": {
+   "skl": "Mage/BackStep.skl",
+   "name": "빈契"
+  },
+  "172": {
+   "skl": "Mage/ArmorMasteryLight.skl",
+   "name": "햐솖쑹繫"
+  },
+  "173": {
+   "skl": "Mage/ArmorMasteryHeavy.skl",
+   "name": "路솖쑹繫"
+  },
+  "174": {
+   "skl": "Mage/BasicAttackUp.skl",
+   "name": "샘뇟쑹繫"
+  },
+  "175": {
+   "skl": "Mage/JumpPowerUp.skl",
+   "name": "禿勸"
+  },
+  "176": {
+   "skl": "Mage/MagicalAttackUp.skl",
+   "name": "陶뮴션壘"
+  },
+  "177": {
+   "skl": "Mage/ThrowMastery.skl",
+   "name": "尻聆쑹繫"
+  },
+  "178": {
+   "skl": "Mage/PhysicalBackAttackCritical.skl",
+   "name": "膠잿교샌"
+  },
+  "179": {
+   "skl": "Mage/DisjointItem.skl",
+   "name": "膠틔롸썩"
+  },
+  "180": {
+   "skl": "Mage/SuperArmorOnCast.skl",
+   "name": "꼇형雷羚"
+  },
+  "181": {
+   "skl": "Mage/CompoundCraft.skl",
+   "name": "쑹묏"
+  },
+  "182": {
+   "skl": "Mage/CompoundWeaving.skl",
+   "name": "렬廉"
+  },
+  "183": {
+   "skl": "Mage/CompoundMachine.skl",
+   "name": "샙筠"
+  },
+  "184": {
+   "skl": "Mage/CompoundChemistry.skl",
+   "name": "조쏜"
+  },
+  "185": {
+   "skl": "Mage/ArmorMasteryLeather.skl",
+   "name": "튄솖쑹繫"
+  },
+  "186": {
+   "skl": "Mage/PhysicalCriticalHitUp.skl",
+   "name": "膠잿괬샌"
+  },
+  "187": {
+   "skl": "Mage/ArmorMasteryCloth.skl",
+   "name": "꼈솖쑹繫"
+  },
+  "188": {
+   "skl": "Mage/MagicalCriticalHitUp.skl",
+   "name": "침랬괬샌"
+  },
+  "189": {
+   "skl": "Mage/MagicalBackAttackCritical.skl",
+   "name": "침랬교샌"
+  },
+  "190": {
+   "skl": "Mage/QuickStanding.skl",
+   "name": "肝뚱률"
+  },
+  "191": {
+   "skl": "Mage/Enchant.skl",
+   "name": "맒침"
+  },
+  "192": {
+   "skl": "Mage/DollMaking.skl",
+   "name": "齡鱗梁뻥훙탉"
+  },
+  "193": {
+   "skl": "Mage/Alchemy.skl",
+   "name": "조쏜減"
+  },
+  "194": {
+   "skl": "Mage/OpenDisjointShop.skl",
+   "name": "역폘롸썩듦"
+  },
+  "195": {
+   "skl": "Mage/BasicHpMaxUp.skl",
+   "name": "츱裂都"
+  },
+  "196": {
+   "skl": "Mage/ArmorMasteryPlate.skl",
+   "name": "겼솖쑹繫"
+  },
+  "197": {
+   "skl": "Mage/Conversion.skl",
+   "name": "묑샌잚謹瘻뻣"
+  },
+  "200": {
+   "skl": "Mage/StatusUp.skl",
+   "name": "무삔 : 藤속실橄昑"
+  },
+  "201": {
+   "skl": "Mage/ExperienceUp.skl",
+   "name": "섐醵냥낀"
+  },
+  "210": {
+   "skl": "Mage/UpperSwingEx.skl",
+   "name": "퓻뺏 - 莖샌"
+  },
+  "211": {
+   "skl": "Mage/LaunchBlackCatEx.skl",
+   "name": "퓻뺏 - 갠緞拈챔"
+  },
+  "212": {
+   "skl": "Mage/ThrustEx.skl",
+   "name": "퓻뺏 - 질記"
+  },
+  "213": {
+   "skl": "Mage/MagicMissileEx.skl",
+   "name": "퓻뺏 - 침랬槿뎐"
+  },
+  "214": {
+   "skl": "Mage/FlameStrikeEx.skl",
+   "name": "퓻뺏 - 죠落녑샌"
+  },
+  "215": {
+   "skl": "Mage/SunBurstEx.skl",
+   "name": "퓻뺏 - 잉旗"
+  },
+  "216": {
+   "skl": "Mage/WallOfIceExp.skl",
+   "name": "퓻뺏 - 깥퓰"
+  },
+  "217": {
+   "skl": "Mage/ThunderStrikeEx.skl",
+   "name": "퓻뺏 - 莖잉"
+  },
+  "218": {
+   "skl": "Mage/BlackHoleEx.skl",
+   "name": "퓻뺏 - 按췻붚떪"
+  },
+  "219": {
+   "skl": "Mage/ChaserLaunchEx.skl",
+   "name": "퓻뺏 - 里廣랙"
+  },
+  "221": {
+   "skl": "Mage/ChasersExplosionEx.skl",
+   "name": "퓻뺏 - 里廣퓻箕"
+  },
+  "222": {
+   "skl": "Mage/DoubleSwingEx.skl",
+   "name": "퓻뺏 - 崗路뉨샌"
+  },
+  "223": {
+   "skl": "Mage/FusionChaserEx.skl",
+   "name": "퓻뺏 - 里廣휨북"
+  },
+  "224": {
+   "skl": "Mage/RandomPierceStrikeExp.skl",
+   "name": "퓻뺏 - 직槿緞샌"
+  },
+  "225": {
+   "skl": "Mage/SwingExp.skl",
+   "name": "퓻뺏 - 鉅게"
+  },
+  "226": {
+   "skl": "Mage/DragonSpearEx.skl",
+   "name": "퓻뺏 - 뽕질謨墩"
+  },
+  "227": {
+   "skl": "Mage/TimerBombEx.skl",
+   "name": "퓻뺏 - 里廣괵뎐"
+  },
+  "228": {
+   "skl": "Mage/BlackMantleEx.skl",
+   "name": "퓻뺏 - 갠緞떱퇸"
+  },
+  "229": {
+   "skl": "Mage/BroomSpinExp.skl",
+   "name": "퓻뺏 - 旗瘻겉"
+  },
+  "230": {
+   "skl": "Mage/AcidCloudEx.skl",
+   "name": "퓻뺏 - 침돛擧黛暾"
+  },
+  "231": {
+   "skl": "Mage/TransformFlapperExp.skl",
+   "name": "퓻뺏 - 긴嫩꾈湍탠"
+  },
+  "232": {
+   "skl": "Mage/LavaPotionEx.skl",
+   "name": "퓻뺏 - 휩喫浪틸"
+  },
+  "233": {
+   "skl": "Mage/MegaDrillEx.skl",
+   "name": "퓻뺏 - 깥岡裏왝났"
+  },
+  "234": {
+   "skl": "Mage/FluoreColliderEx.skl",
+   "name": "퓻뺏 - 든炭툭旒샙"
+  },
+  "235": {
+   "skl": "Mage/HeatingFurnaceEx.skl",
+   "name": "퓻뺏 - 괬懦속훑짱"
+  },
+  "236": {
+   "skl": "Mage/SummonSpiritDarkHigherEx.skl",
+   "name": "퓻뺏 - 쑹쥣梁뻥 : 空산칵옹랑"
+  },
+  "237": {
+   "skl": "Mage/SummonSpiritLightHigherEx.skl",
+   "name": "퓻뺏 - 쑹쥣梁뻥 : 섐밟목잉주"
+  },
+  "238": {
+   "skl": "Mage/SummonSpiritWaterHigherEx.skl",
+   "name": "퓻뺏 - 쑹쥣梁뻥 : 깥緞각웠적薑"
+  },
+  "239": {
+   "skl": "Mage/SummonSpiritFireHigherEx.skl",
+   "name": "퓻뺏 - 쑹쥣梁뻥 : 삽落붐흩옹"
+  },
+  "240": {
+   "skl": "Mage/SummonBabyDragonEx.skl",
+   "name": "퓻뺏 - 폡獨梁뻥 : 른적景"
+  },
+  "241": {
+   "skl": "Mage/SummonSandorExp.skl",
+   "name": "퓻뺏 - 폡獨梁뻥 : 돠랑"
+  }
+ },
+ "priest": {
+  "1": {
+   "skl": "Priest/AntiairUpper.skl",
+   "name": "왕鸞댔"
+  },
+  "2": {
+   "skl": "Priest/Ducking.skl",
+   "name": "릇녑"
+  },
+  "3": {
+   "skl": "Priest/Sway.skl",
+   "name": "겠땡"
+  },
+  "4": {
+   "skl": "Priest/HurricaneRoll.skl",
+   "name": "섐醵已루화"
+  },
+  "5": {
+   "skl": "Priest/GiantSwing.skl",
+   "name": "섣왕旗루팎"
+  },
+  "7": {
+   "skl": "Priest/Striking.skl",
+   "name": "嶠포龍르"
+  },
+  "8": {
+   "skl": "Priest/Smasher.skl",
+   "name": "빪枸"
+  },
+  "10": {
+   "skl": "Priest/ChangeHpToMp.skl",
+   "name": "뺏침"
+  },
+  "11": {
+   "skl": "Priest/QuakeArea.skl",
+   "name": "쭝뤄뉨"
+  },
+  "13": {
+   "skl": "Priest/WillDriver.skl",
+   "name": "雷쿡혜땡"
+  },
+  "14": {
+   "skl": "Priest/TechnicalMastery.skl",
+   "name": "세핀쑹繫"
+  },
+  "15": {
+   "skl": "Priest/BattleAuraMastery.skl",
+   "name": "濫뻔쑹繫"
+  },
+  "16": {
+   "skl": "Priest/CorkscrewMastery.skl",
+   "name": "화세쑹繫"
+  },
+  "17": {
+   "skl": "Priest/CombinationMastery.skl",
+   "name": "莉북쑹繫"
+  },
+  "18": {
+   "skl": "Priest/HardPunchMastery.skl",
+   "name": "袒화쑹繫"
+  },
+  "19": {
+   "skl": "Priest/HpMaxUpPersonal.skl",
+   "name": "莖處裂稜"
+  },
+  "20": {
+   "skl": "Priest/EmblemOfSafeguard.skl",
+   "name": "磵빱뿜覽"
+  },
+  "21": {
+   "skl": "Priest/FountainOfLife.skl",
+   "name": "츱都홋"
+  },
+  "22": {
+   "skl": "Priest/DivineLight.skl",
+   "name": "加밟磵빱"
+  },
+  "23": {
+   "skl": "Priest/RevengeOfLight.skl",
+   "name": "밟裂릿놈"
+  },
+  "24": {
+   "skl": "Priest/HpMaxUpParty.skl",
+   "name": "莖慊均稜"
+  },
+  "25": {
+   "skl": "Priest/SacrificeOfSoul.skl",
+   "name": "쥣산勾"
+  },
+  "26": {
+   "skl": "Priest/HealWind.skl",
+   "name": "加悼裂루"
+  },
+  "27": {
+   "skl": "Priest/DeflectWall.skl",
+   "name": "加밟했뜀"
+  },
+  "28": {
+   "skl": "Priest/FlashGlobe.skl",
+   "name": "加밟헷"
+  },
+  "29": {
+   "skl": "Priest/ExtendedPunch.skl",
+   "name": "화폭"
+  },
+  "30": {
+   "skl": "Priest/HolyCounter.skl",
+   "name": "加럽샌"
+  },
+  "31": {
+   "skl": "Priest/GorgeousCombination.skl",
+   "name": "加화젯샌"
+  },
+  "33": {
+   "skl": "Priest/ChoppingHammer.skl",
+   "name": "팎鉅裂뉨"
+  },
+  "34": {
+   "skl": "Priest/ArmorMasteryPlateCS.skl",
+   "name": "加폄却겼솖淚쑹"
+  },
+  "35": {
+   "skl": "Priest/ShadowBoxer.skl",
+   "name": "뼙緞뺏"
+  },
+  "36": {
+   "skl": "Priest/DoubleShadowBoxer.skl",
+   "name": "崗路뼙緞"
+  },
+  "37": {
+   "skl": "Priest/HurricaneOfJudgement.skl",
+   "name": "莖풔已루"
+  },
+  "38": {
+   "skl": "Priest/EnteringNirvana.skl",
+   "name": "팎침륜"
+  },
+  "39": {
+   "skl": "Priest/OppressionTalisman.skl",
+   "name": "箕齡륜"
+  },
+  "40": {
+   "skl": "Priest/ThunderboltTalisman.skl",
+   "name": "쭝잉륜"
+  },
+  "41": {
+   "skl": "Priest/HomeRun.skl",
+   "name": "槿쭝댔"
+  },
+  "42": {
+   "skl": "Priest/QuickParry.skl",
+   "name": "선醵긁"
+  },
+  "43": {
+   "skl": "Priest/BladeOfPureWhite.skl",
+   "name": "늉겜裂훵"
+  },
+  "45": {
+   "skl": "Priest/GloriousBless.skl",
+   "name": "휠桃龍르"
+  },
+  "47": {
+   "skl": "Priest/ChakraOfPassion.skl",
+   "name": "찧쫴 : 죠落"
+  },
+  "48": {
+   "skl": "Priest/ChakraOfCalmness.skl",
+   "name": "찧쫴 : 加밟"
+  },
+  "49": {
+   "skl": "Priest/RepeatedSmash.skl",
+   "name": "욺쫘뉨샌"
+  },
+  "50": {
+   "skl": "Priest/ThrowWeapon.skl",
+   "name": "앵旗루"
+  },
+  "51": {
+   "skl": "Priest/SlowHeal.skl",
+   "name": "뻠찹悼북"
+  },
+  "52": {
+   "skl": "Priest/Cure.skl",
+   "name": "씐뺏"
+  },
+  "53": {
+   "skl": "Priest/Bless.skl",
+   "name": "莖賈龍르"
+  },
+  "54": {
+   "skl": "Priest/GraceOfGod.skl",
+   "name": "돨람늰"
+  },
+  "55": {
+   "skl": "Priest/FastHeal.skl",
+   "name": "우醵悼북"
+  },
+  "56": {
+   "skl": "Priest/DuckingStraight.skl",
+   "name": "릇녑殮화"
+  },
+  "57": {
+   "skl": "Priest/DuckingBodyBlow.skl",
+   "name": "릇녑많화"
+  },
+  "58": {
+   "skl": "Priest/DuckingUpper.skl",
+   "name": "릇녑勸화"
+  },
+  "61": {
+   "skl": "Priest/LuckyStraight.skl",
+   "name": "殮화녑샌"
+  },
+  "63": {
+   "skl": "Priest/SecondUpper.skl",
+   "name": "뭅화瀏샌"
+  },
+  "64": {
+   "skl": "Priest/GraspHandOfAnger.skl",
+   "name": "띳침裂癎"
+  },
+  "65": {
+   "skl": "Priest/CancelGraspHandOfAnger.skl",
+   "name": "퓻齡 - 띳침裂癎"
+  },
+  "66": {
+   "skl": "Priest/ChargeWeapon.skl",
+   "name": "풉질"
+  },
+  "67": {
+   "skl": "Priest/ForceOfExorcism.skl",
+   "name": "혜침驢"
+  },
+  "68": {
+   "skl": "Priest/ArmorMasteryClothEC.skl",
+   "name": "혜침可꼈솖淚쑹"
+  },
+  "69": {
+   "skl": "Priest/HyunMoo.skl",
+   "name": "駕 : 旣嶠"
+  },
+  "70": {
+   "skl": "Priest/BaekHo.skl",
+   "name": "駕 : 겜빪"
+  },
+  "73": {
+   "skl": "Priest/SpearOfVictory.skl",
+   "name": "價적裂챙"
+  },
+  "74": {
+   "skl": "Priest/HammerOfContrition.skl",
+   "name": "栒쁘裂뉨"
+  },
+  "75": {
+   "skl": "Priest/HeavenlyCombination.skl",
+   "name": "加莉북화"
+  },
+  "76": {
+   "skl": "Priest/DivineCrush.skl",
+   "name": "加화뉨샌"
+  },
+  "77": {
+   "skl": "Priest/Sidewind.skl",
+   "name": "疆화"
+  },
+  "78": {
+   "skl": "Priest/MachineGunJab.skl",
+   "name": "늬화촐샌"
+  },
+  "81": {
+   "skl": "Priest/Judgement.skl",
+   "name": "攣屢털"
+  },
+  "82": {
+   "skl": "Priest/BigWeaponMastery.skl",
+   "name": "앵깡쑹繫"
+  },
+  "83": {
+   "skl": "Priest/BattleAxeMastery.skl",
+   "name": "濫릊쑹繫"
+  },
+  "84": {
+   "skl": "Priest/Apocalypse.skl",
+   "name": "莖폘裂瀧"
+  },
+  "85": {
+   "skl": "Priest/GaleSmash.skl",
+   "name": "섣루댔"
+  },
+  "86": {
+   "skl": "Priest/AuraOfFaith.skl",
+   "name": "斤쿡밟뻔"
+  },
+  "87": {
+   "skl": "Priest/Dryout.skl",
+   "name": "맴붊裂홋"
+  },
+  "88": {
+   "skl": "Priest/AtomicSmash.skl",
+   "name": "轟崗샌"
+  },
+  "89": {
+   "skl": "Priest/RadiateFightingAura.skl",
+   "name": "떱羚랙"
+  },
+  "90": {
+   "skl": "Priest/BigBangPunch.skl",
+   "name": "心췻샌"
+  },
+  "91": {
+   "skl": "Priest/ArmorMasteryLightIF.skl",
+   "name": "융화加賈햐솖淚쑹"
+  },
+  "92": {
+   "skl": "Priest/ArmorMasteryPlateEC.skl",
+   "name": "혜침可겼솖淚쑹"
+  },
+  "93": {
+   "skl": "Priest/BlueDragon.skl",
+   "name": "꾈질磊휑"
+  },
+  "96": {
+   "skl": "Priest/ArmorMasteryHeavyEC.skl",
+   "name": "혜침可路솖淚쑹"
+  },
+  "97": {
+   "skl": "Priest/GraceOfCourage.skl",
+   "name": "澹폭람늰"
+  },
+  "98": {
+   "skl": "Priest/GraceOfProtection.skl",
+   "name": "磵빱람늰"
+  },
+  "99": {
+   "skl": "Priest/RisingArea.skl",
+   "name": "莖黎"
+  },
+  "100": {
+   "skl": "Priest/CuttingDarkness.skl",
+   "name": "붚갠학몇"
+  },
+  "101": {
+   "skl": "Priest/Shikigami.skl",
+   "name": "駕·藕"
+  },
+  "103": {
+   "skl": "Priest/MachineGunJabEx.skl",
+   "name": "늬화욺샌"
+  },
+  "104": {
+   "skl": "Priest/HeavenlyCombinationEx.skl",
+   "name": "팎산莉북화"
+  },
+  "105": {
+   "skl": "Priest/RepeatedSmashEx.skl",
+   "name": "욺괬뉨샌"
+  },
+  "106": {
+   "skl": "Priest/VermilionBirdTalisman.skl",
+   "name": "聾회륜"
+  },
+  "107": {
+   "skl": "Priest/CrossCrash.skl",
+   "name": "加밟枷俚"
+  },
+  "108": {
+   "skl": "Priest/FlashGlobeEx.skl",
+   "name": "加밟즌젝鉅"
+  },
+  "109": {
+   "skl": "Priest/DeflectWallEx.skl",
+   "name": "崗綾했뜀"
+  },
+  "110": {
+   "skl": "Priest/HyunMooEx.skl",
+   "name": "駕 : 廬旣嶠"
+  },
+  "111": {
+   "skl": "Priest/GroundCrash.skl",
+   "name": "뙤왕뉠샌"
+  },
+  "113": {
+   "skl": "Priest/Spincutter.skl",
+   "name": "쀼旗령젱"
+  },
+  "114": {
+   "skl": "Priest/ScytheMastery.skl",
+   "name": "젱독쑹繫"
+  },
+  "115": {
+   "skl": "Priest/Fastmove.skl",
+   "name": "띵頓裂쫴"
+  },
+  "116": {
+   "skl": "Priest/Hedgehog.skl",
+   "name": "릿놈裂늬"
+  },
+  "117": {
+   "skl": "Priest/Ripper.skl",
+   "name": "붚갠裂뇰"
+  },
+  "118": {
+   "skl": "Priest/EarthQuake.skl",
+   "name": "죙뒈뉨"
+  },
+  "119": {
+   "skl": "Priest/Awakening.skl",
+   "name": "침뺏 : 칫휑털諒"
+  },
+  "120": {
+   "skl": "Priest/Execution.skl",
+   "name": "털"
+  },
+  "121": {
+   "skl": "Priest/HearThings.skl",
+   "name": "띳침罹麓"
+  },
+  "122": {
+   "skl": "Priest/Nightmare.skl",
+   "name": "띳침뻥今"
+  },
+  "123": {
+   "skl": "Priest/DevilStrike.skl",
+   "name": "띳침裂제"
+  },
+  "124": {
+   "skl": "Priest/HighSpeedSlash.skl",
+   "name": "价空학몇"
+  },
+  "125": {
+   "skl": "Priest/PowerOfDarkness.skl",
+   "name": "붚갠홈콘"
+  },
+  "126": {
+   "skl": "Priest/ArmorMasteryHeavyAV.skl",
+   "name": "릿놈諒路솖淚쑹"
+  },
+  "131": {
+   "skl": "Priest/FallingSoul.skl",
+   "name": "띌쭝裂산"
+  },
+  "133": {
+   "skl": "Priest/PandemoniumEx.skl",
+   "name": "뒈掉裂쳔"
+  },
+  "134": {
+   "skl": "Priest/DisasterEx.skl",
+   "name": "칫휑뵈쌕"
+  },
+  "140": {
+   "skl": "Priest/SlowHealEx.skl",
+   "name": "퓻뺏 - 뻠찹悼북"
+  },
+  "141": {
+   "skl": "Priest/LuckyStraightEx.skl",
+   "name": "퓻뺏 - 殮화녑샌"
+  },
+  "142": {
+   "skl": "Priest/QuakeAreaEx.skl",
+   "name": "퓻뺏 - 쭝뤄뉨"
+  },
+  "143": {
+   "skl": "Priest/GraspHandOfAngerEx.skl",
+   "name": "퓻뺏 - 띳침裂癎"
+  },
+  "144": {
+   "skl": "Priest/SpearOfVictoryEx.skl",
+   "name": "퓻뺏 - 價적裂챙"
+  },
+  "145": {
+   "skl": "Priest/RevengeOfLightEx.skl",
+   "name": "퓻뺏 - 밟裂릿놈"
+  },
+  "146": {
+   "skl": "Priest/DuckingStraightEx.skl",
+   "name": "퓻뺏 - 릇녑殮화"
+  },
+  "147": {
+   "skl": "Priest/WillDriverEx.skl",
+   "name": "퓻뺏 - 雷쿡혜땡"
+  },
+  "148": {
+   "skl": "Priest/OppressionTalismanEx.skl",
+   "name": "퓻뺏 - 箕齡륜"
+  },
+  "149": {
+   "skl": "Priest/ThrowWeaponEx.skl",
+   "name": "퓻뺏 - 앵旗루"
+  },
+  "150": {
+   "skl": "Priest/GorgeousCombinationEx.skl",
+   "name": "퓻뺏 - 加화젯샌"
+  },
+  "151": {
+   "skl": "Priest/CureEx.skl",
+   "name": "퓻뺏 - 씐뺏"
+  },
+  "152": {
+   "skl": "Priest/HammerOfContritionEx.skl",
+   "name": "퓻뺏 - 栒쁘裂뉨"
+  },
+  "153": {
+   "skl": "Priest/DuckingBodyBlowEx.skl",
+   "name": "퓻뺏 - 릇녑많화"
+  },
+  "154": {
+   "skl": "Priest/HurricaneOfJudgementEx.skl",
+   "name": "퓻뺏 - 莖풔已루"
+  },
+  "155": {
+   "skl": "Priest/RisingAreaEx.skl",
+   "name": "퓻뺏 - 莖黎"
+  },
+  "156": {
+   "skl": "Priest/GiantSwingEx.skl",
+   "name": "퓻뺏 - 섣왕旗루팎"
+  },
+  "157": {
+   "skl": "Priest/GaleSmashEx.skl",
+   "name": "퓻뺏 - 섣루댔"
+  },
+  "158": {
+   "skl": "Priest/BaekHoEx.skl",
+   "name": "퓻뺏 - 駕 : 겜빪"
+  },
+  "159": {
+   "skl": "Priest/BasicAttackUpEx.skl",
+   "name": "퓻뺏 - 샘뇟쑹繫"
+  },
+  "160": {
+   "skl": "Priest/EnteringNirvanaEx.skl",
+   "name": "퓻뺏 - 팎침륜"
+  },
+  "161": {
+   "skl": "Priest/HighSpeedSlashEx.skl",
+   "name": "퓻뺏 - 价空학몇"
+  },
+  "162": {
+   "skl": "Priest/DevilStrikeEx.skl",
+   "name": "퓻뺏 - 띳침裂제"
+  },
+  "163": {
+   "skl": "Priest/EarthQuakeEx.skl",
+   "name": "퓻뺏 - 죙뒈뉨"
+  },
+  "164": {
+   "skl": "Priest/FastmoveEx.skl",
+   "name": "퓻뺏 - 띵頓裂쫴"
+  },
+  "165": {
+   "skl": "Priest/RipperEx.skl",
+   "name": "퓻뺏 - 붚갠裂뇰"
+  },
+  "166": {
+   "skl": "Priest/FlashGlobeExp.skl",
+   "name": "퓻뺏 - 加밟헷"
+  },
+  "167": {
+   "skl": "Priest/CrossCrashEx.skl",
+   "name": "퓻뺏 - 加밟枷俚"
+  },
+  "168": {
+   "skl": "Priest/SidewindEx.skl",
+   "name": "퓻뺏 - 疆화"
+  },
+  "169": {
+   "skl": "Priest/BackStep.skl",
+   "name": "빈契"
+  },
+  "172": {
+   "skl": "Priest/ArmorMasteryLight.skl",
+   "name": "햐솖쑹繫"
+  },
+  "173": {
+   "skl": "Priest/ArmorMasteryHeavy.skl",
+   "name": "路솖쑹繫"
+  },
+  "174": {
+   "skl": "Priest/BasicAttackUp.skl",
+   "name": "샘뇟쑹繫"
+  },
+  "175": {
+   "skl": "Priest/JumpPowerUp.skl",
+   "name": "禿勸"
+  },
+  "176": {
+   "skl": "Priest/MagicalAttackUp.skl",
+   "name": "陶뮴션壘"
+  },
+  "177": {
+   "skl": "Priest/ThrowMastery.skl",
+   "name": "尻聆쑹繫"
+  },
+  "178": {
+   "skl": "Priest/PhysicalBackAttackCritical.skl",
+   "name": "膠잿교샌"
+  },
+  "179": {
+   "skl": "Priest/DisjointItem.skl",
+   "name": "膠틔롸썩"
+  },
+  "180": {
+   "skl": "Priest/SuperArmorOnCast.skl",
+   "name": "꼇형雷羚"
+  },
+  "181": {
+   "skl": "Priest/CompoundCraft.skl",
+   "name": "쑹묏"
+  },
+  "182": {
+   "skl": "Priest/CompoundWeaving.skl",
+   "name": "렬廉"
+  },
+  "183": {
+   "skl": "Priest/CompoundMachine.skl",
+   "name": "샙筠"
+  },
+  "184": {
+   "skl": "Priest/CompoundChemistry.skl",
+   "name": "조쏜"
+  },
+  "185": {
+   "skl": "Priest/ArmorMasteryLeather.skl",
+   "name": "튄솖쑹繫"
+  },
+  "186": {
+   "skl": "Priest/PhysicalCriticalHitUp.skl",
+   "name": "膠잿괬샌"
+  },
+  "187": {
+   "skl": "Priest/ArmorMasteryCloth.skl",
+   "name": "꼈솖쑹繫"
+  },
+  "188": {
+   "skl": "Priest/MagicalCriticalHitUp.skl",
+   "name": "침랬괬샌"
+  },
+  "189": {
+   "skl": "Priest/MagicalBackAttackCritical.skl",
+   "name": "침랬교샌"
+  },
+  "190": {
+   "skl": "Priest/QuickStanding.skl",
+   "name": "肝뚱률"
+  },
+  "191": {
+   "skl": "Priest/Enchant.skl",
+   "name": "맒침"
+  },
+  "192": {
+   "skl": "Priest/DollMaking.skl",
+   "name": "齡鱗梁뻥훙탉"
+  },
+  "193": {
+   "skl": "Priest/Alchemy.skl",
+   "name": "조쏜減"
+  },
+  "194": {
+   "skl": "Priest/OpenDisjointShop.skl",
+   "name": "역폘롸썩듦"
+  },
+  "195": {
+   "skl": "Priest/BasicHpMaxUp.skl",
+   "name": "츱裂都"
+  },
+  "196": {
+   "skl": "Priest/ArmorMasteryPlate.skl",
+   "name": "겼솖쑹繫"
+  },
+  "197": {
+   "skl": "Priest/Conversion.skl",
+   "name": "묑샌잚謹瘻뻣"
+  },
+  "200": {
+   "skl": "Priest/StatusUp.skl",
+   "name": "무삔 : 藤속실橄昑"
+  },
+  "201": {
+   "skl": "Priest/ExperienceUp.skl",
+   "name": "섐醵냥낀"
+  },
+  "210": {
+   "skl": "Priest/AntiairUpperEx.skl",
+   "name": "퓻뺏 - 왕鸞댔"
+  },
+  "211": {
+   "skl": "Priest/SmasherEx.skl",
+   "name": "퓻뺏 - 빪枸"
+  },
+  "212": {
+   "skl": "Priest/SecondUpperEx.skl",
+   "name": "퓻뺏 - 뭅화瀏샌"
+  },
+  "213": {
+   "skl": "Priest/BladeOfPureWhiteEx.skl",
+   "name": "퓻뺏 - 늉겜裂훵"
+  },
+  "214": {
+   "skl": "Priest/DeflectWallExp.skl",
+   "name": "퓻뺏 - 加밟했뜀"
+  },
+  "215": {
+   "skl": "Priest/JudgementEx.skl",
+   "name": "퓻뺏 - 攣屢털"
+  },
+  "216": {
+   "skl": "Priest/GroundCrashEx.skl",
+   "name": "퓻뺏 - 뙤왕뉠샌"
+  },
+  "217": {
+   "skl": "Priest/CuttingDarknessEx.skl",
+   "name": "퓻뺏 - 붚갠학몇"
+  },
+  "218": {
+   "skl": "Priest/ShikigamiEx.skl",
+   "name": "퓻뺏 - 駕·藕"
+  },
+  "219": {
+   "skl": "Priest/HomeRunEx.skl",
+   "name": "퓻뺏 - 槿쭝댔"
+  },
+  "220": {
+   "skl": "Priest/VermilionBirdTalismanEx.skl",
+   "name": "퓻뺏 - 聾회륜"
+  },
+  "221": {
+   "skl": "Priest/RepeatedSmashExp.skl",
+   "name": "퓻뺏 - 욺쫘뉨샌"
+  },
+  "223": {
+   "skl": "Priest/AtomicSmashEx.skl",
+   "name": "퓻뺏 - 轟崗샌"
+  },
+  "224": {
+   "skl": "Priest/DivineCrushEx.skl",
+   "name": "퓻뺏 - 加화뉨샌"
+  },
+  "225": {
+   "skl": "Priest/DuckingUpperEx.skl",
+   "name": "퓻뺏 - 릇녑勸화"
+  },
+  "227": {
+   "skl": "Priest/HolyCounterEx.skl",
+   "name": "퓻뺏 - 加럽샌"
+  },
+  "228": {
+   "skl": "Priest/ChoppingHammerEx.skl",
+   "name": "퓻뺏 - 팎鉅裂뉨"
+  },
+  "229": {
+   "skl": "Priest/MachineGunJabExp.skl",
+   "name": "퓻뺏 - 늬화촐샌"
+  },
+  "230": {
+   "skl": "Priest/HeavenlyCombinationExp.skl",
+   "name": "퓻뺏 - 加莉북화"
+  },
+  "231": {
+   "skl": "Priest/HurricaneRollEx.skl",
+   "name": "퓻뺏 - 섐醵已루화"
+  },
+  "232": {
+   "skl": "Priest/SpincutterEx.skl",
+   "name": "퓻뺏 - 쀼旗령젱"
+  },
+  "233": {
+   "skl": "Priest/HedgehogEx.skl",
+   "name": "퓻뺏 - 릿놈裂늬"
+  },
+  "234": {
+   "skl": "Priest/PowerOfDarknessEx.skl",
+   "name": "퓻뺏 - 붚갠홈콘"
+  },
+  "235": {
+   "skl": "Priest/HyunMooExp.skl",
+   "name": "퓻뺏 - 駕 : 旣嶠"
+  },
+  "236": {
+   "skl": "Priest/ThunderboltTalismanEx.skl",
+   "name": "퓻뺏 - 쭝잉륜"
+  }
+ },
+ "swordman": {
+  "1": {
+   "skl": "Swordman/Guard.skl",
+   "name": "목뎡"
+  },
+  "2": {
+   "skl": "Swordman/ReflectGuard.skl",
+   "name": "뱁丹瀧"
+  },
+  "3": {
+   "skl": "Swordman/AutoGuard.skl",
+   "name": "菱땡목뎡"
+  },
+  "4": {
+   "skl": "Swordman/LightSwordMastery.skl",
+   "name": "밟숲쑹繫"
+  },
+  "5": {
+   "skl": "Swordman/HardAttack.skl",
+   "name": "뱁鸞"
+  },
+  "6": {
+   "skl": "Swordman/HardAttackCharge.skl",
+   "name": "侃쥣뱁鸞"
+  },
+  "7": {
+   "skl": "Swordman/HitBack.skl",
+   "name": "쾀瘻럽샌"
+  },
+  "8": {
+   "skl": "Swordman/TripleSlash.skl",
+   "name": "힛뙈鸞"
+  },
+  "9": {
+   "skl": "Swordman/MomentarySlash.skl",
+   "name": "겄독鸞"
+  },
+  "11": {
+   "skl": "Swordman/DashAttackMultiHit.skl",
+   "name": "젯敲늬"
+  },
+  "12": {
+   "skl": "Swordman/ShortSwordMastery.skl",
+   "name": "똬숲쑹繫"
+  },
+  "13": {
+   "skl": "Swordman/BladeMastery.skl",
+   "name": "格독쑹繫"
+  },
+  "14": {
+   "skl": "Swordman/HeavySwordMastery.skl",
+   "name": "앵숲쑹繫"
+  },
+  "15": {
+   "skl": "Swordman/BluntMastery.skl",
+   "name": "뛸포쑹繫"
+  },
+  "16": {
+   "skl": "Swordman/AshenFork.skl",
+   "name": "陵밟쭝훵"
+  },
+  "17": {
+   "skl": "Swordman/JumpAttackMulti.skl",
+   "name": "왕櫓젯鸞"
+  },
+  "18": {
+   "skl": "Swordman/GhostStep.skl",
+   "name": "뱁緞꼍"
+  },
+  "19": {
+   "skl": "Swordman/PinchPowerUp.skl",
+   "name": "沂폭뻥今"
+  },
+  "20": {
+   "skl": "Swordman/NormalWave.skl",
+   "name": "뒈죙 · 꺼땡숲"
+  },
+  "21": {
+   "skl": "Swordman/IceWave.skl",
+   "name": "깥훵 · 꺼땡숲"
+  },
+  "22": {
+   "skl": "Swordman/FireWave.skl",
+   "name": "괵懦 · 꺼땡숲"
+  },
+  "23": {
+   "skl": "Swordman/Sacrifice.skl",
+   "name": "閣沂"
+  },
+  "24": {
+   "skl": "Swordman/BloodBlast.skl",
+   "name": "큼폭괵랙"
+  },
+  "25": {
+   "skl": "Swordman/Khazan.skl",
+   "name": "독산裂엥銅"
+  },
+  "27": {
+   "skl": "Swordman/WeaponMasteryUp.skl",
+   "name": "嶠포걔屢"
+  },
+  "29": {
+   "skl": "Swordman/DarkFriendship.skl",
+   "name": "갠裂항뵨"
+  },
+  "30": {
+   "skl": "Swordman/DarkToleranceUp.skl",
+   "name": "갠墩슉줄"
+  },
+  "31": {
+   "skl": "Swordman/GrabBlastBlood.skl",
+   "name": "閣산裂癎"
+  },
+  "32": {
+   "skl": "Swordman/ReleaseWave.skl",
+   "name": "꺼땡괵랙"
+  },
+  "33": {
+   "skl": "Swordman/EquipLightSword.skl",
+   "name": "밟숲廊壞"
+  },
+  "34": {
+   "skl": "Swordman/DieHard.skl",
+   "name": "价空예앳"
+  },
+  "35": {
+   "skl": "Swordman/GhostPowerUp.skl",
+   "name": "룐丹썩뇜"
+  },
+  "36": {
+   "skl": "Swordman/Saya.skl",
+   "name": "깥岡裂힉饑"
+  },
+  "37": {
+   "skl": "Swordman/FastEquip.skl",
+   "name": "섣緞癎"
+  },
+  "38": {
+   "skl": "Swordman/OverDrive.skl",
+   "name": "팎섐깡훵"
+  },
+  "39": {
+   "skl": "Swordman/DurabilityUp.skl",
+   "name": "嶠포쌘齡"
+  },
+  "40": {
+   "skl": "Swordman/Reckless.skl",
+   "name": "괬浬"
+  },
+  "41": {
+   "skl": "Swordman/Bremen.skl",
+   "name": "핫苛裂팹靭촁"
+  },
+  "42": {
+   "skl": "Swordman/DisjointItemDark.skl",
+   "name": "뱁稼"
+  },
+  "43": {
+   "skl": "Swordman/JumpAttackHighFast.skl",
+   "name": "꿇령"
+  },
+  "44": {
+   "skl": "Swordman/TombStoneRain.skl",
+   "name": "价空캣괼"
+  },
+  "46": {
+   "skl": "Swordman/UpperSlash.skl",
+   "name": "鯨"
+  },
+  "47": {
+   "skl": "Swordman/WaveMark.skl",
+   "name": "꺼땡옻丹"
+  },
+  "49": {
+   "skl": "Swordman/BackStepCutter.skl",
+   "name": "빈契鸞"
+  },
+  "50": {
+   "skl": "Swordman/GrandWave.skl",
+   "name": "逵밟鸞"
+  },
+  "51": {
+   "skl": "Swordman/GrandWaveCharge.skl",
+   "name": "錦쭈逵밟鸞"
+  },
+  "52": {
+   "skl": "Swordman/DOTArea.skl",
+   "name": "雷꺼땡"
+  },
+  "53": {
+   "skl": "Swordman/MindFlash.skl",
+   "name": "댁粮雷羚"
+  },
+  "55": {
+   "skl": "Swordman/SenseViolentTemper.skl",
+   "name": "폭먁列"
+  },
+  "56": {
+   "skl": "Swordman/ArmorMasteryHeavyBK.skl",
+   "name": "욺濫却路솖淚쑹"
+  },
+  "57": {
+   "skl": "Swordman/ShockWaveArea.skl",
+   "name": "逵밟꺼땡黎"
+  },
+  "58": {
+   "skl": "Swordman/VaneSlash.skl",
+   "name": "죙꺼鸞"
+  },
+  "60": {
+   "skl": "Swordman/GhostStepSlash.skl",
+   "name": "뱁緞"
+  },
+  "61": {
+   "skl": "Swordman/ArmorMasteryPlateWave.skl",
+   "name": "각錦쭈겼솖淚쑹"
+  },
+  "62": {
+   "skl": "Swordman/StandAloneWave.skl",
+   "name": "轟崗꺼"
+  },
+  "63": {
+   "skl": "Swordman/BloodyVigorous.skl",
+   "name": "沂폭串佳"
+  },
+  "64": {
+   "skl": "Swordman/GoreCross.skl",
+   "name": "枷俚鸞"
+  },
+  "65": {
+   "skl": "Swordman/HopSmash.skl",
+   "name": "굼샌"
+  },
+  "67": {
+   "skl": "Swordman/WeaponCombo.skl",
+   "name": "쟁 · 뱁숲減"
+  },
+  "68": {
+   "skl": "Swordman/ChargeCrash.skl",
+   "name": "팎엊질샌"
+  },
+  "72": {
+   "skl": "Swordman/RapidMoveSlash.skl",
+   "name": "촐질뙤왕鸞"
+  },
+  "73": {
+   "skl": "Swordman/IllusionSlash.skl",
+   "name": "뼙緞숲校"
+  },
+  "74": {
+   "skl": "Swordman/WaveSpinArea.skl",
+   "name": "꼇땡츠珙黎"
+  },
+  "75": {
+   "skl": "Swordman/EpidemicRasa.skl",
+   "name": "适磊裂쭈"
+  },
+  "76": {
+   "skl": "Swordman/Frenzy.skl",
+   "name": "沂裂욺괬"
+  },
+  "77": {
+   "skl": "Swordman/MoonlightSlash.skl",
+   "name": "墩밟鸞"
+  },
+  "79": {
+   "skl": "Swordman/BloodyRave.skl",
+   "name": "閣산룐침鸞"
+  },
+  "80": {
+   "skl": "Swordman/MoonlightSlashFull.skl",
+   "name": "찮墩鸞"
+  },
+  "81": {
+   "skl": "Swordman/OutRageBreak.skl",
+   "name": "굼죙뒈鸞"
+  },
+  "82": {
+   "skl": "Swordman/Kalla.skl",
+   "name": "聞懦裂엥쭤"
+  },
+  "84": {
+   "skl": "Swordman/Keiga.skl",
+   "name": "꽥緞裂열솔"
+  },
+  "85": {
+   "skl": "Swordman/Hellbenter.skl",
+   "name": "침掉沂"
+  },
+  "86": {
+   "skl": "Swordman/HundredSword.skl",
+   "name": "섐 · 뱁숲減 (괬루駕)"
+  },
+  "87": {
+   "skl": "Swordman/Blache.skl",
+   "name": "뒤7뱁 : 逵裂꼭윗錦"
+  },
+  "88": {
+   "skl": "Swordman/WaveEye.skl",
+   "name": "갠莖꺼땡癩"
+  },
+  "89": {
+   "skl": "Swordman/DarkAura.skl",
+   "name": "왜얍밟뻔"
+  },
+  "90": {
+   "skl": "Swordman/BleedingMastery.skl",
+   "name": "銶沂裂壘"
+  },
+  "91": {
+   "skl": "Swordman/DefenseDownOnCritical.skl",
+   "name": "섐 · 뱁숲減 (鸞屆駕)"
+  },
+  "92": {
+   "skl": "Swordman/StuckUpOnCounter.skl",
+   "name": "懃癩"
+  },
+  "93": {
+   "skl": "Swordman/ArmorMasteryClothSB.skl",
+   "name": "뱁폽꼈솖淚쑹"
+  },
+  "94": {
+   "skl": "Swordman/ArmorMasteryLightWM.skl",
+   "name": "숲산햐솖淚쑹"
+  },
+  "95": {
+   "skl": "Swordman/TombStoneRainEx.skl",
+   "name": "캣괼힛없黎"
+  },
+  "96": {
+   "skl": "Swordman/SayaEx.skl",
+   "name": "깥쑨裂힉饑"
+  },
+  "97": {
+   "skl": "Swordman/MomentarySlashEx.skl",
+   "name": "팎왕겄독鸞"
+  },
+  "98": {
+   "skl": "Swordman/ChargeCrashEx.skl",
+   "name": "팎엊鸞질샌"
+  },
+  "99": {
+   "skl": "Swordman/FireWaveEx.skl",
+   "name": "섐懦 · 죙꺼숲"
+  },
+  "100": {
+   "skl": "Swordman/IceWaveEx.skl",
+   "name": "섐깥 · 죙꺼숲"
+  },
+  "101": {
+   "skl": "Swordman/BloodBlastEx.skl",
+   "name": "沂폭괵랙"
+  },
+  "102": {
+   "skl": "Swordman/GrabBlastBloodEx.skl",
+   "name": "췻산裂癎"
+  },
+  "103": {
+   "skl": "Swordman/BloodSword.skl",
+   "name": "沂폭裂훵"
+  },
+  "105": {
+   "skl": "Swordman/FlowMind.skl",
+   "name": "직懃"
+  },
+  "107": {
+   "skl": "Swordman/FlowMindOne.skl",
+   "name": "직懃 : 늬"
+  },
+  "108": {
+   "skl": "Swordman/FlowMindTwo.skl",
+   "name": "직懃 : 禿"
+  },
+  "109": {
+   "skl": "Swordman/FlowMindThree.skl",
+   "name": "직懃 : "
+  },
+  "110": {
+   "skl": "Swordman/FlowMindPowerUp.skl",
+   "name": "직懃 : 욺"
+  },
+  "111": {
+   "skl": "Swordman/GhostSideWind.skl",
+   "name": "뱁緞급"
+  },
+  "112": {
+   "skl": "Swordman/TripleStab.skl",
+   "name": "뱁緞힛샌숲"
+  },
+  "115": {
+   "skl": "Swordman/GhostSideWindEx.skl",
+   "name": "퓻뺏 - 뱁숲급"
+  },
+  "116": {
+   "skl": "Swordman/TripleStabEx.skl",
+   "name": "퓻뺏 - 뱁緞힛샌숲"
+  },
+  "139": {
+   "skl": "Swordman/PinchPowerUpEx.skl",
+   "name": "퓻뺏 - 沂폭뻥今"
+  },
+  "140": {
+   "skl": "Swordman/NormalWaveEx.skl",
+   "name": "퓻뺏 - 뒈죙 · 꺼땡숲"
+  },
+  "141": {
+   "skl": "Swordman/GoreCrossEx.skl",
+   "name": "퓻뺏 - 枷俚鸞"
+  },
+  "142": {
+   "skl": "Swordman/HardAttackEx.skl",
+   "name": "퓻뺏 - 뱁鸞"
+  },
+  "143": {
+   "skl": "Swordman/TripleSlashEx.skl",
+   "name": "퓻뺏 - 힛뙈鸞"
+  },
+  "144": {
+   "skl": "Swordman/HitBackEx.skl",
+   "name": "퓻뺏 - 쾀瘻럽샌"
+  },
+  "145": {
+   "skl": "Swordman/AutoGuardEx.skl",
+   "name": "퓻뺏 - 菱땡목뎡"
+  },
+  "146": {
+   "skl": "Swordman/BremenEx.skl",
+   "name": "퓻뺏 - 핫苛裂팹靭촁"
+  },
+  "147": {
+   "skl": "Swordman/GhostStepEx.skl",
+   "name": "퓻뺏 - 뱁緞꼍"
+  },
+  "148": {
+   "skl": "Swordman/DieHardEx.skl",
+   "name": "퓻뺏 - 价空예앳"
+  },
+  "149": {
+   "skl": "Swordman/RecklessEx.skl",
+   "name": "퓻뺏 - 괬浬"
+  },
+  "150": {
+   "skl": "Swordman/DOTAreaEx.skl",
+   "name": "퓻뺏 - 雷꺼땡"
+  },
+  "151": {
+   "skl": "Swordman/WaveMarkEx.skl",
+   "name": "퓻뺏 - 꺼땡옻丹"
+  },
+  "152": {
+   "skl": "Swordman/RapidMoveSlashEx.skl",
+   "name": "퓻뺏 - 촐질뙤왕鸞"
+  },
+  "153": {
+   "skl": "Swordman/AshenForkEx.skl",
+   "name": "퓻뺏 - 陵밟쭝훵"
+  },
+  "154": {
+   "skl": "Swordman/MomentarySlashExp.skl",
+   "name": "퓻뺏 - 겄독鸞"
+  },
+  "155": {
+   "skl": "Swordman/MoonlightSlashEx.skl",
+   "name": "퓻뺏 - 墩밟鸞"
+  },
+  "156": {
+   "skl": "Swordman/EpidemicRasaEx.skl",
+   "name": "퓻뺏 - 适磊裂쭈"
+  },
+  "157": {
+   "skl": "Swordman/HopSmashEx.skl",
+   "name": "퓻뺏 - 굼샌"
+  },
+  "158": {
+   "skl": "Swordman/BloodyRaveEx.skl",
+   "name": "퓻뺏 - 閣산룐침鸞"
+  },
+  "159": {
+   "skl": "Swordman/VaneSlashEx.skl",
+   "name": "퓻뺏 - 죙꺼鸞"
+  },
+  "160": {
+   "skl": "Swordman/ReflectGuardEx.skl",
+   "name": "퓻뺏 - 뱁丹瀧"
+  },
+  "161": {
+   "skl": "Swordman/BasicAttackUpEx.skl",
+   "name": "퓻뺏 - 샘뇟쑹繫"
+  },
+  "162": {
+   "skl": "Swordman/DashAttackMultiHitEx.skl",
+   "name": "퓻뺏 - 젯敲늬"
+  },
+  "163": {
+   "skl": "Swordman/GuardEx.skl",
+   "name": "퓻뺏 - 목뎡"
+  },
+  "164": {
+   "skl": "Swordman/KhazanEx.skl",
+   "name": "퓻뺏 - 독산裂엥銅"
+  },
+  "165": {
+   "skl": "Swordman/GrabBlastBloodExp.skl",
+   "name": "퓻뺏 - 閣산裂癎"
+  },
+  "166": {
+   "skl": "Swordman/BloodBlastExp.skl",
+   "name": "퓻뺏 - 큼폭괵랙"
+  },
+  "167": {
+   "skl": "Swordman/OutRageBreakEx.skl",
+   "name": "퓻뺏 - 굼죙뒈鸞"
+  },
+  "168": {
+   "skl": "Swordman/BloodSwordEx.skl",
+   "name": "퓻뺏 - 沂폭裂훵"
+  },
+  "169": {
+   "skl": "Swordman/BackStep.skl",
+   "name": "빈契"
+  },
+  "172": {
+   "skl": "Swordman/ArmorMasteryLight.skl",
+   "name": "햐솖쑹繫"
+  },
+  "173": {
+   "skl": "Swordman/ArmorMasteryHeavy.skl",
+   "name": "路솖쑹繫"
+  },
+  "174": {
+   "skl": "Swordman/BasicAttackUp.skl",
+   "name": "샘뇟쑹繫"
+  },
+  "175": {
+   "skl": "Swordman/JumpPowerUp.skl",
+   "name": "禿勸"
+  },
+  "176": {
+   "skl": "Swordman/MagicalAttackUp.skl",
+   "name": "陶뮴션壘"
+  },
+  "177": {
+   "skl": "Swordman/ThrowMastery.skl",
+   "name": "尻聆쑹繫"
+  },
+  "178": {
+   "skl": "Swordman/PhysicalBackAttackCritical.skl",
+   "name": "膠잿교샌"
+  },
+  "179": {
+   "skl": "Swordman/DisjointItem.skl",
+   "name": "膠틔롸썩"
+  },
+  "180": {
+   "skl": "Swordman/SuperArmorOnCast.skl",
+   "name": "꼇형雷羚"
+  },
+  "181": {
+   "skl": "Swordman/CompoundCraft.skl",
+   "name": "쑹묏"
+  },
+  "182": {
+   "skl": "Swordman/CompoundWeaving.skl",
+   "name": "렬廉"
+  },
+  "183": {
+   "skl": "Swordman/CompoundMachine.skl",
+   "name": "샙筠"
+  },
+  "184": {
+   "skl": "Swordman/CompoundChemistry.skl",
+   "name": "조쏜"
+  },
+  "185": {
+   "skl": "Swordman/ArmorMasteryLeather.skl",
+   "name": "튄솖쑹繫"
+  },
+  "186": {
+   "skl": "Swordman/PhysicalCriticalHitUp.skl",
+   "name": "膠잿괬샌"
+  },
+  "187": {
+   "skl": "Swordman/ArmorMasteryCloth.skl",
+   "name": "꼈솖쑹繫"
+  },
+  "188": {
+   "skl": "Swordman/MagicalCriticalHitUp.skl",
+   "name": "침랬괬샌"
+  },
+  "189": {
+   "skl": "Swordman/MagicalBackAttackCritical.skl",
+   "name": "침랬교샌"
+  },
+  "190": {
+   "skl": "Swordman/QuickStanding.skl",
+   "name": "肝뚱률"
+  },
+  "191": {
+   "skl": "Swordman/Enchant.skl",
+   "name": "맒침"
+  },
+  "192": {
+   "skl": "Swordman/DollMaking.skl",
+   "name": "齡鱗梁뻥훙탉"
+  },
+  "193": {
+   "skl": "Swordman/Alchemy.skl",
+   "name": "조쏜減"
+  },
+  "194": {
+   "skl": "Swordman/OpenDisjointShop.skl",
+   "name": "역폘롸썩듦"
+  },
+  "195": {
+   "skl": "Swordman/BasicHpMaxUp.skl",
+   "name": "츱裂都"
+  },
+  "196": {
+   "skl": "Swordman/ArmorMasteryPlate.skl",
+   "name": "겼솖쑹繫"
+  },
+  "197": {
+   "skl": "Swordman/Conversion.skl",
+   "name": "묑샌잚謹瘻뻣"
+  },
+  "200": {
+   "skl": "Swordman/StatusUp.skl",
+   "name": "무삔 : 藤속실橄昑"
+  },
+  "201": {
+   "skl": "Swordman/ExperienceUp.skl",
+   "name": "섐醵냥낀"
+  },
+  "210": {
+   "skl": "Swordman/ReleaseWaveEx.skl",
+   "name": "퓻뺏 - 꺼땡괵랙"
+  },
+  "211": {
+   "skl": "Swordman/GrandWaveEx.skl",
+   "name": "퓻뺏 - 逵밟鸞"
+  },
+  "212": {
+   "skl": "Swordman/FireWaveExp.skl",
+   "name": "퓻뺏 - 괵懦 · 꺼땡숲"
+  },
+  "213": {
+   "skl": "Swordman/StandAloneWaveEx.skl",
+   "name": "퓻뺏 - 轟崗꺼"
+  },
+  "214": {
+   "skl": "Swordman/WaveSpinAreaEx.skl",
+   "name": "퓻뺏 - 꼇땡츠珙黎"
+  },
+  "215": {
+   "skl": "Swordman/UpperSlashEx.skl",
+   "name": "퓻뺏 - 鯨"
+  },
+  "216": {
+   "skl": "Swordman/IceWaveExp.skl",
+   "name": "퓻뺏 - 깥훵 · 꺼땡숲"
+  },
+  "217": {
+   "skl": "Swordman/IllusionSlashExp.skl",
+   "name": "퓻뺏 - 뼙緞숲校"
+  },
+  "218": {
+   "skl": "Swordman/ChargeCrashExp.skl",
+   "name": "퓻뺏 - 팎엊질샌"
+  },
+  "219": {
+   "skl": "Swordman/FlowMindOneEx.skl",
+   "name": "퓻뺏 - 직懃 : 늬"
+  },
+  "220": {
+   "skl": "Swordman/FlowMindTwoEx.skl",
+   "name": "퓻뺏 - 직懃 : 禿"
+  },
+  "221": {
+   "skl": "Swordman/FlowMindThreeEx.skl",
+   "name": "퓻뺏 - 직懃 : "
+  },
+  "224": {
+   "skl": "Swordman/SayaExp.skl",
+   "name": "퓻뺏 - 깥岡裂힉饑"
+  },
+  "225": {
+   "skl": "Swordman/TombStoneRainExp.skl",
+   "name": "퓻뺏 - 价空캣괼"
+  },
+  "226": {
+   "skl": "Swordman/GhostStepSlashEx.skl",
+   "name": "퓻뺏 - 뱁緞"
+  },
+  "227": {
+   "skl": "Swordman/KallaEx.skl",
+   "name": "퓻뺏 - 聞懦裂엥쭤"
+  },
+  "228": {
+   "skl": "Swordman/ReflectGuardExp.skl",
+   "name": "퓻뺏 - 뱁丹瀧"
+  }
+ },
+ "thief": {
+  "1": {
+   "skl": "Thief/RisingCut.skl",
+   "name": "勸샌"
+  },
+  "2": {
+   "skl": "Thief/Slicer.skl",
+   "name": "학몇"
+  },
+  "3": {
+   "skl": "Thief/ShiningCut.skl",
+   "name": "빨밟"
+  },
+  "4": {
+   "skl": "Thief/DivingArrow.skl",
+   "name": "섣왕劫"
+  },
+  "5": {
+   "skl": "Thief/FlameCut.skl",
+   "name": "落훵"
+  },
+  "6": {
+   "skl": "Thief/FlyingSquirrel.skl",
+   "name": "훠랬 : 령柑"
+  },
+  "7": {
+   "skl": "Thief/ShadowCut.skl",
+   "name": "緞枸"
+  },
+  "8": {
+   "skl": "Thief/Eraser.skl",
+   "name": "莖牢"
+  },
+  "9": {
+   "skl": "Thief/HitEnd.skl",
+   "name": "老써瀏샌"
+  },
+  "16": {
+   "skl": "Thief/VanditCut.skl",
+   "name": "없鸞"
+  },
+  "18": {
+   "skl": "Thief/AerialJump.skl",
+   "name": "왕禿"
+  },
+  "19": {
+   "skl": "Thief/BreakingRush.skl",
+   "name": "섣넴"
+  },
+  "21": {
+   "skl": "Thief/DarkSoul.skl",
+   "name": "갠산꺼"
+  },
+  "22": {
+   "skl": "Thief/BoneShield.skl",
+   "name": "므뜀"
+  },
+  "23": {
+   "skl": "Thief/CurseSpear.skl",
+   "name": "罹麓裂숫"
+  },
+  "24": {
+   "skl": "Thief/Shuriken.skl",
+   "name": "癎쟁숲"
+  },
+  "25": {
+   "skl": "Thief/SkinTakeOff.skl",
+   "name": "훠랬 : 緞롸"
+  },
+  "26": {
+   "skl": "Thief/AnkleCut.skl",
+   "name": "鉅萩"
+  },
+  "27": {
+   "skl": "Thief/DoublePierce.skl",
+   "name": "崗훵누늬"
+  },
+  "29": {
+   "skl": "Thief/DaggerMastery.skl",
+   "name": "莫看쑹繫"
+  },
+  "30": {
+   "skl": "Thief/TwinSwordMastery.skl",
+   "name": "崗숲쑹繫"
+  },
+  "31": {
+   "skl": "Thief/Hurricane.skl",
+   "name": "숲훵루괬"
+  },
+  "33": {
+   "skl": "Thief/VerticalSpiral.skl",
+   "name": "쭁旗누늬"
+  },
+  "34": {
+   "skl": "Thief/SonicAssault.skl",
+   "name": "섣루쫘校"
+  },
+  "35": {
+   "skl": "Thief/DarkNail.skl",
+   "name": "价空裂屢"
+  },
+  "36": {
+   "skl": "Thief/DarkLure.skl",
+   "name": "겟뱁拈契"
+  },
+  "37": {
+   "skl": "Thief/ApportBallacre.skl",
+   "name": "슉줄 : 괬엌것윗옹"
+  },
+  "38": {
+   "skl": "Thief/Dummy.skl",
+   "name": "갠산꺼"
+  },
+  "39": {
+   "skl": "Thief/AmbitionOfBallacre.skl",
+   "name": "것윗옹돨柰懃"
+  },
+  "40": {
+   "skl": "Thief/Guillotine.skl",
+   "name": "것윗옹돨룃큼"
+  },
+  "41": {
+   "skl": "Thief/ChainSaw.skl",
+   "name": "旗훵"
+  },
+  "43": {
+   "skl": "Thief/ShiningCutAerial.skl",
+   "name": "빨밟젯"
+  },
+  "44": {
+   "skl": "Thief/SideStep.skl",
+   "name": "꿋꼍"
+  },
+  "45": {
+   "skl": "Thief/LightningArrow.skl",
+   "name": "잉밟훵緞"
+  },
+  "47": {
+   "skl": "Thief/ExcelStrike.skl",
+   "name": "없츱疆掉"
+  },
+  "49": {
+   "skl": "Thief/BlameOfDead.skl",
+   "name": "价쥣裂瀆"
+  },
+  "50": {
+   "skl": "Thief/DarkRitual.skl",
+   "name": "갠붚老駕"
+  },
+  "51": {
+   "skl": "Thief/SummonNicolas.skl",
+   "name": "슉줄 : 콩뮴윗薑"
+  },
+  "52": {
+   "skl": "Thief/NicolasSummonZombie.skl",
+   "name": "혜賈쉘暇"
+  },
+  "53": {
+   "skl": "Thief/NicolasBlackArea.skl",
+   "name": "갠緞籠介黎"
+  },
+  "54": {
+   "skl": "Thief/NicolasBehavior.skl",
+   "name": "륩닒"
+  },
+  "55": {
+   "skl": "Thief/NicolasBlackWave.skl",
+   "name": "俱산갠쐼꺼"
+  },
+  "56": {
+   "skl": "Thief/MoonArc.skl",
+   "name": "墩빨"
+  },
+  "57": {
+   "skl": "Thief/SilverStream.skl",
+   "name": "墩쫴校"
+  },
+  "58": {
+   "skl": "Thief/FearOfBallacre.skl",
+   "name": "痼쩐裂얍"
+  },
+  "59": {
+   "skl": "Thief/Phantomstrom.skl",
+   "name": "푤산셈"
+  },
+  "60": {
+   "skl": "Thief/ArmorMasteryLeatherThief.skl",
+   "name": "갠拈賈諒튄솖淚쑹"
+  },
+  "61": {
+   "skl": "Thief/ArmorMasteryLeatherRogue.skl",
+   "name": "늬와튄솖淚쑹"
+  },
+  "62": {
+   "skl": "Thief/ArmorMasteryLightNecro.skl",
+   "name": "价쥣減却햐솖淚쑹"
+  },
+  "63": {
+   "skl": "Thief/ArmorMasteryClothKuno.skl",
+   "name": "훠諒꼈솖淚쑹"
+  },
+  "64": {
+   "skl": "Thief/ArmorMasteryLeatherShadow.skl",
+   "name": "緞嶠諒튄솖淚쑹"
+  },
+  "74": {
+   "skl": "Thief/BlameOfDeadEx.skl",
+   "name": "价쥣裂맙"
+  },
+  "75": {
+   "skl": "Thief/VerticalSpiralEx.skl",
+   "name": "燉쭝쭁旗늬"
+  },
+  "76": {
+   "skl": "Thief/ChainSawEx.skl",
+   "name": "旗훵녑샌"
+  },
+  "77": {
+   "skl": "Thief/NicolasBlackWaveEx.skl",
+   "name": "姦산갠쐼꺼"
+  },
+  "140": {
+   "skl": "Thief/ShurikenEx.skl",
+   "name": "퓻뺏 - 癎쟁숲"
+  },
+  "141": {
+   "skl": "Thief/CurseSpearEx.skl",
+   "name": "퓻뺏 - 罹麓裂숫"
+  },
+  "142": {
+   "skl": "Thief/EraserEx.skl",
+   "name": "퓻뺏 - 莖牢"
+  },
+  "143": {
+   "skl": "Thief/DivingArrowEx.skl",
+   "name": "퓻뺏 - 섣왕劫"
+  },
+  "144": {
+   "skl": "Thief/HurricaneEx.skl",
+   "name": "퓻뺏 - 숲훵루괬"
+  },
+  "145": {
+   "skl": "Thief/HitEndEx.skl",
+   "name": "퓻뺏 - 老써瀏샌"
+  },
+  "146": {
+   "skl": "Thief/DarkLureEx.skl",
+   "name": "퓻뺏 - 겟뱁拈契"
+  },
+  "147": {
+   "skl": "Thief/NicolasBlackAreaEx.skl",
+   "name": "퓻뺏 - 갠緞籠介黎"
+  },
+  "148": {
+   "skl": "Thief/ShiningCutEx.skl",
+   "name": "퓻뺏 - 빨밟"
+  },
+  "149": {
+   "skl": "Thief/SonicAssaultEx.skl",
+   "name": "퓻뺏 - 섣루쫘校"
+  },
+  "150": {
+   "skl": "Thief/DarkSoulEx.skl",
+   "name": "퓻뺏 - 갠산꺼"
+  },
+  "151": {
+   "skl": "Thief/ApportBallacreEx.skl",
+   "name": "퓻뺏 - 슉줄 : 괬엌것윗옹"
+  },
+  "152": {
+   "skl": "Thief/BasicAttackUpEx.skl",
+   "name": "퓻뺏 - 샘뇟쑹繫"
+  },
+  "153": {
+   "skl": "Thief/RisingCutEx.skl",
+   "name": "퓻뺏 - 勸샌"
+  },
+  "154": {
+   "skl": "Thief/SlicerEx.skl",
+   "name": "퓻뺏 - 학몇"
+  },
+  "155": {
+   "skl": "Thief/FlameCutEx.skl",
+   "name": "퓻뺏 - 落훵"
+  },
+  "156": {
+   "skl": "Thief/ShadowCutEx.skl",
+   "name": "퓻뺏 - 緞枸"
+  },
+  "157": {
+   "skl": "Thief/BoneShieldEx.skl",
+   "name": "퓻뺏 - 므뜀"
+  },
+  "158": {
+   "skl": "Thief/AnkleCutEx.skl",
+   "name": "퓻뺏 - 鉅萩"
+  },
+  "159": {
+   "skl": "Thief/FlyingSquirrelEx.skl",
+   "name": "퓻뺏 - 훠랬 : 령柑"
+  },
+  "160": {
+   "skl": "Thief/ExcelStrikeEx.skl",
+   "name": "퓻뺏 - 없츱疆掉"
+  },
+  "161": {
+   "skl": "Thief/VerticalSpiralExp.skl",
+   "name": "퓻뺏 - 쭁旗누늬"
+  },
+  "162": {
+   "skl": "Thief/LightningArrowEx.skl",
+   "name": "퓻뺏 - 잉밟훵緞"
+  },
+  "163": {
+   "skl": "Thief/ChainSawExp.skl",
+   "name": "퓻뺏 - 旗훵"
+  },
+  "164": {
+   "skl": "Thief/DoublePierceEx.skl",
+   "name": "퓻뺏 - 崗훵누늬"
+  },
+  "165": {
+   "skl": "Thief/VanditCutEx.skl",
+   "name": "퓻뺏 - 없鸞"
+  },
+  "169": {
+   "skl": "Thief/BackStep.skl",
+   "name": "빈契"
+  },
+  "172": {
+   "skl": "Thief/ArmorMasteryLight.skl",
+   "name": "햐솖쑹繫"
+  },
+  "173": {
+   "skl": "Thief/ArmorMasteryHeavy.skl",
+   "name": "路솖쑹繫"
+  },
+  "174": {
+   "skl": "Thief/BasicAttackUp.skl",
+   "name": "샘뇟쑹繫"
+  },
+  "175": {
+   "skl": "Thief/JumpPowerUp.skl",
+   "name": "禿勸"
+  },
+  "176": {
+   "skl": "Thief/MagicalAttackUp.skl",
+   "name": "陶뮴션壘"
+  },
+  "177": {
+   "skl": "Thief/ThrowMastery.skl",
+   "name": "尻聆쑹繫"
+  },
+  "178": {
+   "skl": "Thief/PhysicalBackAttackCritical.skl",
+   "name": "膠잿교샌"
+  },
+  "179": {
+   "skl": "Thief/DisjointItem.skl",
+   "name": "膠틔롸썩"
+  },
+  "180": {
+   "skl": "Thief/SuperArmorOnCast.skl",
+   "name": "꼇형雷羚"
+  },
+  "181": {
+   "skl": "Thief/CompoundCraft.skl",
+   "name": "쑹묏"
+  },
+  "182": {
+   "skl": "Thief/CompoundWeaving.skl",
+   "name": "렬廉"
+  },
+  "183": {
+   "skl": "Thief/CompoundMachine.skl",
+   "name": "샙筠"
+  },
+  "184": {
+   "skl": "Thief/CompoundChemistry.skl",
+   "name": "조쏜"
+  },
+  "185": {
+   "skl": "Thief/ArmorMasteryLeather.skl",
+   "name": "튄솖쑹繫"
+  },
+  "186": {
+   "skl": "Thief/PhysicalCriticalHitUp.skl",
+   "name": "膠잿괬샌"
+  },
+  "187": {
+   "skl": "Thief/ArmorMasteryCloth.skl",
+   "name": "꼈솖쑹繫"
+  },
+  "188": {
+   "skl": "Thief/MagicalCriticalHitUp.skl",
+   "name": "침랬괬샌"
+  },
+  "189": {
+   "skl": "Thief/MagicalBackAttackCritical.skl",
+   "name": "침랬교샌"
+  },
+  "190": {
+   "skl": "Thief/QuickStanding.skl",
+   "name": "肝뚱률"
+  },
+  "191": {
+   "skl": "Thief/Enchant.skl",
+   "name": "맒침"
+  },
+  "192": {
+   "skl": "Thief/DollMaking.skl",
+   "name": "齡鱗梁뻥훙탉"
+  },
+  "193": {
+   "skl": "Thief/Alchemy.skl",
+   "name": "조쏜減"
+  },
+  "194": {
+   "skl": "Thief/OpenDisjointShop.skl",
+   "name": "역폘롸썩듦"
+  },
+  "195": {
+   "skl": "Thief/BasicHpMaxUp.skl",
+   "name": "츱裂都"
+  },
+  "196": {
+   "skl": "Thief/ArmorMasteryPlate.skl",
+   "name": "겼솖쑹繫"
+  },
+  "197": {
+   "skl": "Thief/Conversion.skl",
+   "name": "묑샌잚謹瘻뻣"
+  },
+  "200": {
+   "skl": "Thief/StatusUp.skl",
+   "name": "무삔 : 藤속실橄昑"
+  },
+  "201": {
+   "skl": "Thief/ExperienceUp.skl",
+   "name": "섐醵냥낀"
+  },
+  "210": {
+   "skl": "Thief/SummonNicolasEx.skl",
+   "name": "퓻뺏 - 슉줄 : 콩뮴윗薑"
+  },
+  "211": {
+   "skl": "Thief/DarkNailEx.skl",
+   "name": "퓻뺏 - 价空裂屢"
+  },
+  "212": {
+   "skl": "Thief/BlameOfDeadExp.skl",
+   "name": "퓻뺏 - 价쥣裂瀆"
+  },
+  "213": {
+   "skl": "Thief/AmbitionOfBallacreEx.skl",
+   "name": "퓻뺏 - 것윗옹돨柰懃"
+  },
+  "214": {
+   "skl": "Thief/NicolasBlackWaveExp.skl",
+   "name": "퓻뺏 - 俱산갠쐼꺼"
+  },
+  "215": {
+   "skl": "Thief/GuillotineEx.skl",
+   "name": "퓻뺏 - 것윗옹돨룃큼"
+  },
+  "216": {
+   "skl": "Thief/NicolasSummonZombieEx.skl",
+   "name": "퓻뺏 - 혜賈쉘暇"
+  },
+  "217": {
+   "skl": "Thief/SkinTakeOffEx.skl",
+   "name": "퓻뺏 - 훠랬 : 緞롸"
+  },
+  "218": {
+   "skl": "Thief/ElementAttackAllUpEx.skl",
+   "name": "橄昑묑샌쑹繫"
+  },
+  "219": {
+   "skl": "Thief/ElementToleranceAllUpEx.skl",
+   "name": "橄昑예昑쑹繫"
+  }
+ }
+}

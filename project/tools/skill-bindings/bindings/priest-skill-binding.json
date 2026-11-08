@@ -1,0 +1,2583 @@
+{
+ "class": "priest",
+ "exe_region": [
+  "0xc90580",
+  "0xca511c"
+ ],
+ "etc_motion": {
+  "0": "Animation/JumpPunch.ani",
+  "1": "Animation/AntiairUpper.ani",
+  "2": "Animation/Ducking.ani",
+  "3": "Animation/Sway.ani",
+  "4": "Animation/GiantSwingReady.ani",
+  "5": "Animation/GiantSwing.ani",
+  "6": "Animation/GiantSwingFinal.ani",
+  "7": "Animation/SmasherTryGrab.ani",
+  "8": "Animation/SmasherSuccessGrab.ani",
+  "9": "Animation/SmasherDash.ani",
+  "10": "Animation/DuckingBodyBlow.ani",
+  "11": "Animation/QuakeArea.ani",
+  "12": "Animation/WillDriver.ani",
+  "13": "Animation/WillDriverSecond.ani",
+  "14": "Animation/LuckyStraight.ani",
+  "15": "Animation/DuckingStraight.ani",
+  "16": "Animation/SecondUpper.ani",
+  "17": "Animation/DuckingUpper.ani",
+  "18": "Animation/HolyCounterPray.ani",
+  "19": "Animation/HolyCounterBodyblow.ani",
+  "20": "Animation/GorgeousCombination.ani",
+  "21": "Animation/ChoppingHammer.ani",
+  "22": "Animation/HurricaneOfJudgement.ani",
+  "23": "Animation/HurricaneOfJudgement2.ani",
+  "24": "Animation/HomeRunGrab.ani",
+  "25": "Animation/HomeRunCharge.ani",
+  "26": "Animation/HomeRunSmash.ani",
+  "27": "Animation/BladeOfPureWhite.ani",
+  "28": "Animation/HurricaneRollHook.ani",
+  "29": "Animation/HurricaneRollUpper.ani",
+  "30": "Animation/RepeatedSmashStart.ani",
+  "31": "Animation/RepeatedSmash.ani",
+  "32": "Animation/RepeatedSmashFinal.ani",
+  "33": "Animation/ThrowWeaponReady.ani",
+  "34": "Animation/ThrowWeaponSwing.ani",
+  "35": "Animation/ThrowWeaponThrow.ani",
+  "36": "Animation/DeflectWall.ani",
+  "37": "Animation/SpearOfVictoryReady.ani",
+  "38": "Animation/SpearOfVictoryThrow.ani",
+  "39": "Animation/HammerOfContrition.ani",
+  "40": "Animation/HeavenlyCombination.ani",
+  "41": "Animation/DivineCrush.ani",
+  "42": "Animation/InfighterAttack12.ani",
+  "43": "Animation/InfighterAttack3.ani",
+  "44": "Animation/InfighterAttack4.ani",
+  "45": "Animation/InfighterAttack5.ani",
+  "46": "Animation/ExorcistAttack1.ani",
+  "47": "Animation/ExorcistAttack2.ani",
+  "48": "Animation/ExorcistAttack3.ani",
+  "49": "Animation/Sidewind.ani",
+  "50": "Animation/SidewindSecond.ani",
+  "51": "Animation/MachineGunJab.ani",
+  "52": "Animation/MachineGunJabFinish.ani",
+  "53": "Animation/MachineGunJabAppend.ani",
+  "54": "Animation/ThrowTalisman1.ani",
+  "55": "Animation/ThrowTalisman2.ani",
+  "56": "Animation/Apocalypse.ani",
+  "57": "Animation/GaleSmash1.ani",
+  "58": "Animation/GaleSmash2.ani",
+  "59": "Animation/AtomicSmash.ani",
+  "60": "Animation/BigBangPunchReady.ani",
+  "61": "Animation/BigBangPunch1.ani",
+  "62": "Animation/BigBangPunch2.ani",
+  "63": "Animation/BigBangPunch3.ani",
+  "64": "Animation/BigBangPunch4.ani",
+  "65": "Animation/HealWindCast.ani",
+  "66": "Animation/HealWindBlast.ani",
+  "67": "Animation/BlueDragon1.ani",
+  "68": "Animation/BlueDragon2.ani",
+  "69": "Animation/BlueDragon3.ani",
+  "70": "Animation/CuttingDarknessCharge.ani",
+  "71": "Animation/CuttingDarknessSmash.ani",
+  "72": "Animation/CuttingDarknessFullSmash.ani",
+  "73": "Animation/MachineGunJabExLeft.ani",
+  "74": "Animation/MachineGunJabExRight.ani",
+  "75": "Animation/MachineGunJabExFinish.ani",
+  "76": "Animation/HeavenlyCombinationEx.ani",
+  "77": "Animation/RepeatedSmashExFinish.ani",
+  "78": "Animation/GroundCrash.ani",
+  "79": "Animation/Spincutter1.ani",
+  "80": "Animation/Spincutter2.ani",
+  "81": "Animation/Spincutter3.ani",
+  "82": "Animation/Fastmove1.ani",
+  "83": "Animation/Fastmove2.ani",
+  "84": "Animation/Fastmove3.ani",
+  "85": "Animation/Fastmove4.ani",
+  "86": "Animation/Awakening1.ani",
+  "87": "Animation/Awakening2.ani",
+  "88": "Animation/Awakening3.ani",
+  "89": "",
+  "90": "Animation/Hedgehog.ani",
+  "91": "Animation/Ripper.ani",
+  "92": "Animation/EarthQuake.ani",
+  "93": "",
+  "94": "",
+  "95": "",
+  "96": "",
+  "97": "",
+  "98": "",
+  "99": "",
+  "100": "Animation/HighSpeedSlashReady.ani",
+  "101": "Animation/HighSpeedSlashAttack1.ani",
+  "102": "Animation/HighSpeedSlashAttack2.ani",
+  "103": "Animation/HighSpeedSlashAttack3.ani",
+  "104": "Animation/HighSpeedSlashAttack4.ani",
+  "105": "Animation/HighSpeedSlashLast.ani",
+  "106": "Animation/AvengerAttack1.ani",
+  "107": "Animation/AvengerAttack2.ani",
+  "108": "Animation/AvengerAttack3.ani",
+  "109": "Animation/AvengerAttack4_Scythe.ani",
+  "110": "Animation/AvengerAttack4_Rosary.ani",
+  "111": "Animation/PowerOfDarknessStart.ani",
+  "112": "Animation/PowerOfDarknessStay.ani",
+  "113": "Animation/PowerOfDarknessEnd.ani",
+  "114": "Animation/AwakeningTurnoff2.ani",
+  "115": "Animation/PandemoniumStart.ani",
+  "116": "Animation/PandemoniumEnd.ani",
+  "117": "Animation/Disaster1.ani",
+  "118": "Animation/Disaster2.ani",
+  "119": "Animation/Disaster3.ani",
+  "120": "Animation/Disaster4.ani",
+  "121": "Animation/Disaster5.ani"
+ },
+ "skills": {
+  "1": {
+   "skl": "Priest/AntiairUpper.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00c92d3b",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/AntiairUpper.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "2": {
+   "skl": "Priest/Ducking.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "Animation/Ducking.ani"
+      },
+      {
+       "index": 10,
+       "ani": "Animation/DuckingBodyBlow.ani"
+      },
+      {
+       "index": 15,
+       "ani": "Animation/DuckingStraight.ani"
+      },
+      {
+       "index": 17,
+       "ani": "Animation/DuckingUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "3": {
+   "skl": "Priest/Sway.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00c933cb",
+     "entry_motions": [
+      {
+       "index": 3,
+       "ani": "Animation/Sway.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "4": {
+   "skl": "Priest/HurricaneRoll.skl",
+   "states": [
+    {
+     "state": 34,
+     "handler": "0x00c96dc2",
+     "entry_motions": [
+      {
+       "index": 28,
+       "ani": "Animation/HurricaneRollHook.ani"
+      },
+      {
+       "index": 29,
+       "ani": "Animation/HurricaneRollUpper.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "5": {
+   "skl": "Priest/GiantSwing.skl",
+   "states": [
+    {
+     "state": 20,
+     "handler": "0x00c9357e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "7": {
+   "skl": "Priest/Striking.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "8": {
+   "skl": "Priest/Smasher.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00c94706",
+     "entry_motions": [
+      {
+       "index": 7,
+       "ani": "Animation/SmasherTryGrab.ani"
+      },
+      {
+       "index": 8,
+       "ani": "Animation/SmasherSuccessGrab.ani"
+      },
+      {
+       "index": 9,
+       "ani": "Animation/SmasherDash.ani"
+      },
+      {
+       "index": 9,
+       "ani": "Animation/SmasherDash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "10": {
+   "skl": "Priest/ChangeHpToMp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "11": {
+   "skl": "Priest/QuakeArea.skl",
+   "states": [
+    {
+     "state": 23,
+     "handler": "0x00c9511f",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "Animation/QuakeArea.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "13": {
+   "skl": "Priest/WillDriver.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "Animation/WillDriver.ani"
+      },
+      {
+       "index": 13,
+       "ani": "Animation/WillDriverSecond.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "14": {
+   "skl": "Priest/TechnicalMastery.skl",
+   "states": [
+    {
+     "state": 28,
+     "handler": "0x00c957fb",
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "Animation/HolyCounterPray.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 42,
+     "handler": "0x00c9aaca",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "15": {
+   "skl": "Priest/BattleAuraMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "16": {
+   "skl": "Priest/CorkscrewMastery.skl",
+   "states": [
+    {
+     "state": 26,
+     "handler": "0x00c93062",
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "Animation/LuckyStraight.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 30,
+     "handler": "0x00c95d87",
+     "entry_motions": [
+      {
+       "index": 21,
+       "ani": "Animation/ChoppingHammer.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00c988ad",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/HeavenlyCombination.ani"
+      },
+      {
+       "index": 76,
+       "ani": "Animation/HeavenlyCombinationEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 52,
+     "handler": "0x00c988ad",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/HeavenlyCombination.ani"
+      },
+      {
+       "index": 76,
+       "ani": "Animation/HeavenlyCombinationEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "17": {
+   "skl": "Priest/CombinationMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "18": {
+   "skl": "Priest/HardPunchMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "19": {
+   "skl": "Priest/HpMaxUpPersonal.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "20": {
+   "skl": "Priest/EmblemOfSafeguard.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "21": {
+   "skl": "Priest/FountainOfLife.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "22": {
+   "skl": "Priest/DivineLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "23": {
+   "skl": "Priest/RevengeOfLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "24": {
+   "skl": "Priest/HpMaxUpParty.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "25": {
+   "skl": "Priest/SacrificeOfSoul.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "26": {
+   "skl": "Priest/HealWind.skl",
+   "states": [
+    {
+     "state": 49,
+     "handler": "0x00c995ff",
+     "entry_motions": [
+      {
+       "index": 65,
+       "ani": "Animation/HealWindCast.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/JumpPunch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/JumpPunch.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/JumpPunch.ani"
+      },
+      {
+       "index": 66,
+       "ani": "Animation/HealWindBlast.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "27": {
+   "skl": "Priest/DeflectWall.skl",
+   "states": [
+    {
+     "state": 36,
+     "handler": "0x00c97b2e",
+     "entry_motions": [
+      {
+       "index": 36,
+       "ani": "Animation/DeflectWall.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "28": {
+   "skl": "Priest/FlashGlobe.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "29": {
+   "skl": "Priest/ExtendedPunch.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "30": {
+   "skl": "Priest/HolyCounter.skl",
+   "states": [
+    {
+     "state": 28,
+     "handler": "0x00c957fb",
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "Animation/HolyCounterPray.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "31": {
+   "skl": "Priest/GorgeousCombination.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00c95a17",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "Animation/GorgeousCombination.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "33": {
+   "skl": "Priest/ChoppingHammer.skl",
+   "states": [
+    {
+     "state": 30,
+     "handler": "0x00c95d87",
+     "entry_motions": [
+      {
+       "index": 21,
+       "ani": "Animation/ChoppingHammer.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "34": {
+   "skl": "Priest/ArmorMasteryPlateCS.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "35": {
+   "skl": "Priest/ShadowBoxer.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "36": {
+   "skl": "Priest/DoubleShadowBoxer.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "37": {
+   "skl": "Priest/HurricaneOfJudgement.skl",
+   "states": [
+    {
+     "state": 31,
+     "handler": "0x00c96079",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "Animation/HurricaneOfJudgement2.ani"
+      },
+      {
+       "index": 22,
+       "ani": "Animation/HurricaneOfJudgement.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "38": {
+   "skl": "Priest/EnteringNirvana.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "39": {
+   "skl": "Priest/OppressionTalisman.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "40": {
+   "skl": "Priest/ThunderboltTalisman.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "41": {
+   "skl": "Priest/HomeRun.skl",
+   "states": [
+    {
+     "state": 32,
+     "handler": "0x00c9624f",
+     "entry_motions": [
+      {
+       "index": 24,
+       "ani": "Animation/HomeRunGrab.ani"
+      },
+      {
+       "index": 24,
+       "ani": "Animation/HomeRunGrab.ani"
+      },
+      {
+       "index": 26,
+       "ani": "Animation/HomeRunSmash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "42": {
+   "skl": "Priest/QuickParry.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "43": {
+   "skl": "Priest/BladeOfPureWhite.skl",
+   "states": [
+    {
+     "state": 33,
+     "handler": "0x00c96b21",
+     "entry_motions": [
+      {
+       "index": 27,
+       "ani": "Animation/BladeOfPureWhite.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "45": {
+   "skl": "Priest/GloriousBless.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "47": {
+   "skl": "Priest/ChakraOfPassion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "48": {
+   "skl": "Priest/ChakraOfCalmness.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "49": {
+   "skl": "Priest/RepeatedSmash.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 30,
+       "ani": "Animation/RepeatedSmashStart.ani"
+      },
+      {
+       "index": 31,
+       "ani": "Animation/RepeatedSmash.ani"
+      },
+      {
+       "index": 32,
+       "ani": "Animation/RepeatedSmashFinal.ani"
+      },
+      {
+       "index": 77,
+       "ani": "Animation/RepeatedSmashExFinish.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "50": {
+   "skl": "Priest/ThrowWeapon.skl",
+   "states": [
+    {
+     "state": 35,
+     "handler": "0x00c9759e",
+     "entry_motions": [
+      {
+       "index": 33,
+       "ani": "Animation/ThrowWeaponReady.ani"
+      },
+      {
+       "index": 33,
+       "ani": "Animation/ThrowWeaponReady.ani"
+      },
+      {
+       "index": 34,
+       "ani": "Animation/ThrowWeaponSwing.ani"
+      },
+      {
+       "index": 35,
+       "ani": "Animation/ThrowWeaponThrow.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "51": {
+   "skl": "Priest/SlowHeal.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "52": {
+   "skl": "Priest/Cure.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "53": {
+   "skl": "Priest/Bless.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "54": {
+   "skl": "Priest/GraceOfGod.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "55": {
+   "skl": "Priest/FastHeal.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "56": {
+   "skl": "Priest/DuckingStraight.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 15,
+       "ani": "Animation/DuckingStraight.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "57": {
+   "skl": "Priest/DuckingBodyBlow.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 10,
+       "ani": "Animation/DuckingBodyBlow.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "58": {
+   "skl": "Priest/DuckingUpper.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "Animation/DuckingUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "61": {
+   "skl": "Priest/LuckyStraight.skl",
+   "states": [
+    {
+     "state": 26,
+     "handler": "0x00c93062",
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "Animation/LuckyStraight.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "63": {
+   "skl": "Priest/SecondUpper.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00c9553c",
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "Animation/SecondUpper.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "64": {
+   "skl": "Priest/GraspHandOfAnger.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "65": {
+   "skl": "Priest/CancelGraspHandOfAnger.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "66": {
+   "skl": "Priest/ChargeWeapon.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00c92d3b",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/AntiairUpper.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 35,
+     "handler": "0x00c9759e",
+     "entry_motions": [
+      {
+       "index": 33,
+       "ani": "Animation/ThrowWeaponReady.ani"
+      },
+      {
+       "index": 33,
+       "ani": "Animation/ThrowWeaponReady.ani"
+      },
+      {
+       "index": 34,
+       "ani": "Animation/ThrowWeaponSwing.ani"
+      },
+      {
+       "index": 35,
+       "ani": "Animation/ThrowWeaponThrow.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "67": {
+   "skl": "Priest/ForceOfExorcism.skl",
+   "states": [
+    {
+     "state": 5,
+     "handler": "0x00c92c3f",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "68": {
+   "skl": "Priest/ArmorMasteryClothEC.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "69": {
+   "skl": "Priest/HyunMoo.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "70": {
+   "skl": "Priest/BaekHo.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "73": {
+   "skl": "Priest/SpearOfVictory.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00c97db4",
+     "entry_motions": [
+      {
+       "index": 37,
+       "ani": "Animation/SpearOfVictoryReady.ani"
+      },
+      {
+       "index": 37,
+       "ani": "Animation/SpearOfVictoryReady.ani"
+      },
+      {
+       "index": 38,
+       "ani": "Animation/SpearOfVictoryThrow.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "74": {
+   "skl": "Priest/HammerOfContrition.skl",
+   "states": [
+    {
+     "state": 38,
+     "handler": "0x00c983b0",
+     "entry_motions": [
+      {
+       "index": 39,
+       "ani": "Animation/HammerOfContrition.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "75": {
+   "skl": "Priest/HeavenlyCombination.skl",
+   "states": [
+    {
+     "state": 39,
+     "handler": "0x00c988ad",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/HeavenlyCombination.ani"
+      },
+      {
+       "index": 76,
+       "ani": "Animation/HeavenlyCombinationEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 52,
+     "handler": "0x00c988ad",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/HeavenlyCombination.ani"
+      },
+      {
+       "index": 76,
+       "ani": "Animation/HeavenlyCombinationEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "76": {
+   "skl": "Priest/DivineCrush.skl",
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00c98ebf",
+     "entry_motions": [
+      {
+       "index": 41,
+       "ani": "Animation/DivineCrush.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "77": {
+   "skl": "Priest/Sidewind.skl",
+   "states": [
+    {
+     "state": 41,
+     "handler": "0x00c990dc",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "78": {
+   "skl": "Priest/MachineGunJab.skl",
+   "states": [
+    {
+     "state": 42,
+     "handler": "0x00c9aaca",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "81": {
+   "skl": "Priest/Judgement.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "82": {
+   "skl": "Priest/BigWeaponMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "83": {
+   "skl": "Priest/BattleAxeMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "84": {
+   "skl": "Priest/Apocalypse.skl",
+   "states": [
+    {
+     "state": 44,
+     "handler": "0x00c9d4dc",
+     "entry_motions": [
+      {
+       "index": 56,
+       "ani": "Animation/Apocalypse.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "85": {
+   "skl": "Priest/GaleSmash.skl",
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00c9bbe8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "86": {
+   "skl": "Priest/AuraOfFaith.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "87": {
+   "skl": "Priest/Dryout.skl",
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00c98ebf",
+     "entry_motions": [
+      {
+       "index": 41,
+       "ani": "Animation/DivineCrush.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "88": {
+   "skl": "Priest/AtomicSmash.skl",
+   "states": [
+    {
+     "state": 46,
+     "handler": "0x00c9c19c",
+     "entry_motions": [
+      {
+       "index": 59,
+       "ani": "Animation/AtomicSmash.ani"
+      },
+      {
+       "index": 59,
+       "ani": "Animation/AtomicSmash.ani"
+      },
+      {
+       "index": 59,
+       "ani": "Animation/AtomicSmash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "89": {
+   "skl": "Priest/RadiateFightingAura.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "90": {
+   "skl": "Priest/BigBangPunch.skl",
+   "states": [
+    {
+     "state": 47,
+     "handler": "0x00c9b0e3",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "91": {
+   "skl": "Priest/ArmorMasteryLightIF.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "92": {
+   "skl": "Priest/ArmorMasteryPlateEC.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "93": {
+   "skl": "Priest/BlueDragon.skl",
+   "states": [
+    {
+     "state": 48,
+     "handler": "0x00c9ca97",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "96": {
+   "skl": "Priest/ArmorMasteryHeavyEC.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "97": {
+   "skl": "Priest/GraceOfCourage.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "98": {
+   "skl": "Priest/GraceOfProtection.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "99": {
+   "skl": "Priest/RisingArea.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "100": {
+   "skl": "Priest/CuttingDarkness.skl",
+   "states": [
+    {
+     "state": 50,
+     "handler": "0x00c9dda8",
+     "entry_motions": [
+      {
+       "index": 70,
+       "ani": "Animation/CuttingDarknessCharge.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "101": {
+   "skl": "Priest/Shikigami.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "103": {
+   "skl": "Priest/MachineGunJabEx.skl",
+   "states": [
+    {
+     "state": 51,
+     "handler": "0x00c9a975",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "104": {
+   "skl": "Priest/HeavenlyCombinationEx.skl",
+   "states": [
+    {
+     "state": 39,
+     "handler": "0x00c988ad",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/HeavenlyCombination.ani"
+      },
+      {
+       "index": 76,
+       "ani": "Animation/HeavenlyCombinationEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 52,
+     "handler": "0x00c988ad",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/HeavenlyCombination.ani"
+      },
+      {
+       "index": 76,
+       "ani": "Animation/HeavenlyCombinationEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "105": {
+   "skl": "Priest/RepeatedSmashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 30,
+       "ani": "Animation/RepeatedSmashStart.ani"
+      },
+      {
+       "index": 31,
+       "ani": "Animation/RepeatedSmash.ani"
+      },
+      {
+       "index": 32,
+       "ani": "Animation/RepeatedSmashFinal.ani"
+      },
+      {
+       "index": 77,
+       "ani": "Animation/RepeatedSmashExFinish.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "106": {
+   "skl": "Priest/VermilionBirdTalisman.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "107": {
+   "skl": "Priest/CrossCrash.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "108": {
+   "skl": "Priest/FlashGlobeEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "109": {
+   "skl": "Priest/DeflectWallEx.skl",
+   "states": [
+    {
+     "state": 54,
+     "handler": "0x00c97c4f",
+     "entry_motions": [
+      {
+       "index": 36,
+       "ani": "Animation/DeflectWall.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "110": {
+   "skl": "Priest/HyunMooEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "111": {
+   "skl": "Priest/GroundCrash.skl",
+   "states": [
+    {
+     "state": 55,
+     "handler": "0x00c93e81",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "113": {
+   "skl": "Priest/Spincutter.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 79,
+       "ani": "Animation/Spincutter1.ani"
+      },
+      {
+       "index": 80,
+       "ani": "Animation/Spincutter2.ani"
+      },
+      {
+       "index": 81,
+       "ani": "Animation/Spincutter3.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "114": {
+   "skl": "Priest/ScytheMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "115": {
+   "skl": "Priest/Fastmove.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 82,
+       "ani": "Animation/Fastmove1.ani"
+      },
+      {
+       "index": 83,
+       "ani": "Animation/Fastmove2.ani"
+      },
+      {
+       "index": 84,
+       "ani": "Animation/Fastmove3.ani"
+      },
+      {
+       "index": 85,
+       "ani": "Animation/Fastmove4.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "116": {
+   "skl": "Priest/Hedgehog.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 90,
+       "ani": "Animation/Hedgehog.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "117": {
+   "skl": "Priest/Ripper.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 91,
+       "ani": "Animation/Ripper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "118": {
+   "skl": "Priest/EarthQuake.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 92,
+       "ani": "Animation/EarthQuake.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "119": {
+   "skl": "Priest/Awakening.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 86,
+       "ani": "Animation/Awakening1.ani"
+      },
+      {
+       "index": 87,
+       "ani": "Animation/Awakening2.ani"
+      },
+      {
+       "index": 88,
+       "ani": "Animation/Awakening3.ani"
+      },
+      {
+       "index": 114,
+       "ani": "Animation/AwakeningTurnoff2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "120": {
+   "skl": "Priest/Execution.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "121": {
+   "skl": "Priest/HearThings.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "122": {
+   "skl": "Priest/Nightmare.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "123": {
+   "skl": "Priest/DevilStrike.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "124": {
+   "skl": "Priest/HighSpeedSlash.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 100,
+       "ani": "Animation/HighSpeedSlashReady.ani"
+      },
+      {
+       "index": 101,
+       "ani": "Animation/HighSpeedSlashAttack1.ani"
+      },
+      {
+       "index": 102,
+       "ani": "Animation/HighSpeedSlashAttack2.ani"
+      },
+      {
+       "index": 103,
+       "ani": "Animation/HighSpeedSlashAttack3.ani"
+      },
+      {
+       "index": 104,
+       "ani": "Animation/HighSpeedSlashAttack4.ani"
+      },
+      {
+       "index": 105,
+       "ani": "Animation/HighSpeedSlashLast.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "125": {
+   "skl": "Priest/PowerOfDarkness.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 111,
+       "ani": "Animation/PowerOfDarknessStart.ani"
+      },
+      {
+       "index": 112,
+       "ani": "Animation/PowerOfDarknessStay.ani"
+      },
+      {
+       "index": 113,
+       "ani": "Animation/PowerOfDarknessEnd.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "126": {
+   "skl": "Priest/ArmorMasteryHeavyAV.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "131": {
+   "skl": "Priest/FallingSoul.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "133": {
+   "skl": "Priest/PandemoniumEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 115,
+       "ani": "Animation/PandemoniumStart.ani"
+      },
+      {
+       "index": 116,
+       "ani": "Animation/PandemoniumEnd.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "134": {
+   "skl": "Priest/DisasterEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 117,
+       "ani": "Animation/Disaster1.ani"
+      },
+      {
+       "index": 118,
+       "ani": "Animation/Disaster2.ani"
+      },
+      {
+       "index": 119,
+       "ani": "Animation/Disaster3.ani"
+      },
+      {
+       "index": 120,
+       "ani": "Animation/Disaster4.ani"
+      },
+      {
+       "index": 121,
+       "ani": "Animation/Disaster5.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "140": {
+   "skl": "Priest/SlowHealEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "141": {
+   "skl": "Priest/LuckyStraightEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "Animation/LuckyStraight.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "142": {
+   "skl": "Priest/QuakeAreaEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "Animation/QuakeArea.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "143": {
+   "skl": "Priest/GraspHandOfAngerEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "144": {
+   "skl": "Priest/SpearOfVictoryEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 37,
+       "ani": "Animation/SpearOfVictoryReady.ani"
+      },
+      {
+       "index": 38,
+       "ani": "Animation/SpearOfVictoryThrow.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "145": {
+   "skl": "Priest/RevengeOfLightEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "146": {
+   "skl": "Priest/DuckingStraightEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 15,
+       "ani": "Animation/DuckingStraight.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "147": {
+   "skl": "Priest/WillDriverEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "Animation/WillDriver.ani"
+      },
+      {
+       "index": 13,
+       "ani": "Animation/WillDriverSecond.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "148": {
+   "skl": "Priest/OppressionTalismanEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "149": {
+   "skl": "Priest/ThrowWeaponEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 33,
+       "ani": "Animation/ThrowWeaponReady.ani"
+      },
+      {
+       "index": 34,
+       "ani": "Animation/ThrowWeaponSwing.ani"
+      },
+      {
+       "index": 35,
+       "ani": "Animation/ThrowWeaponThrow.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "150": {
+   "skl": "Priest/GorgeousCombinationEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "Animation/GorgeousCombination.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "151": {
+   "skl": "Priest/CureEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "152": {
+   "skl": "Priest/HammerOfContritionEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 39,
+       "ani": "Animation/HammerOfContrition.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "153": {
+   "skl": "Priest/DuckingBodyBlowEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 10,
+       "ani": "Animation/DuckingBodyBlow.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "154": {
+   "skl": "Priest/HurricaneOfJudgementEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 22,
+       "ani": "Animation/HurricaneOfJudgement.ani"
+      },
+      {
+       "index": 23,
+       "ani": "Animation/HurricaneOfJudgement2.ani"
+      },
+      {
+       "index": 28,
+       "ani": "Animation/HurricaneRollHook.ani"
+      },
+      {
+       "index": 29,
+       "ani": "Animation/HurricaneRollUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "155": {
+   "skl": "Priest/RisingAreaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "156": {
+   "skl": "Priest/GiantSwingEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 4,
+       "ani": "Animation/GiantSwingReady.ani"
+      },
+      {
+       "index": 5,
+       "ani": "Animation/GiantSwing.ani"
+      },
+      {
+       "index": 6,
+       "ani": "Animation/GiantSwingFinal.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "157": {
+   "skl": "Priest/GaleSmashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 57,
+       "ani": "Animation/GaleSmash1.ani"
+      },
+      {
+       "index": 58,
+       "ani": "Animation/GaleSmash2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "158": {
+   "skl": "Priest/BaekHoEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "159": {
+   "skl": "Priest/BasicAttackUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "160": {
+   "skl": "Priest/EnteringNirvanaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "161": {
+   "skl": "Priest/HighSpeedSlashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 100,
+       "ani": "Animation/HighSpeedSlashReady.ani"
+      },
+      {
+       "index": 101,
+       "ani": "Animation/HighSpeedSlashAttack1.ani"
+      },
+      {
+       "index": 102,
+       "ani": "Animation/HighSpeedSlashAttack2.ani"
+      },
+      {
+       "index": 103,
+       "ani": "Animation/HighSpeedSlashAttack3.ani"
+      },
+      {
+       "index": 104,
+       "ani": "Animation/HighSpeedSlashAttack4.ani"
+      },
+      {
+       "index": 105,
+       "ani": "Animation/HighSpeedSlashLast.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "162": {
+   "skl": "Priest/DevilStrikeEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "163": {
+   "skl": "Priest/EarthQuakeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 92,
+       "ani": "Animation/EarthQuake.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "164": {
+   "skl": "Priest/FastmoveEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 82,
+       "ani": "Animation/Fastmove1.ani"
+      },
+      {
+       "index": 83,
+       "ani": "Animation/Fastmove2.ani"
+      },
+      {
+       "index": 84,
+       "ani": "Animation/Fastmove3.ani"
+      },
+      {
+       "index": 85,
+       "ani": "Animation/Fastmove4.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "165": {
+   "skl": "Priest/RipperEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "166": {
+   "skl": "Priest/FlashGlobeExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "167": {
+   "skl": "Priest/CrossCrashEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "168": {
+   "skl": "Priest/SidewindEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 49,
+       "ani": "Animation/Sidewind.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/SidewindSecond.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "169": {
+   "skl": "Priest/BackStep.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "172": {
+   "skl": "Priest/ArmorMasteryLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "173": {
+   "skl": "Priest/ArmorMasteryHeavy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "174": {
+   "skl": "Priest/BasicAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "175": {
+   "skl": "Priest/JumpPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "176": {
+   "skl": "Priest/MagicalAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "177": {
+   "skl": "Priest/ThrowMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "178": {
+   "skl": "Priest/PhysicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "179": {
+   "skl": "Priest/DisjointItem.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "180": {
+   "skl": "Priest/SuperArmorOnCast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "181": {
+   "skl": "Priest/CompoundCraft.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "182": {
+   "skl": "Priest/CompoundWeaving.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "183": {
+   "skl": "Priest/CompoundMachine.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "184": {
+   "skl": "Priest/CompoundChemistry.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "185": {
+   "skl": "Priest/ArmorMasteryLeather.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "186": {
+   "skl": "Priest/PhysicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "187": {
+   "skl": "Priest/ArmorMasteryCloth.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "188": {
+   "skl": "Priest/MagicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "189": {
+   "skl": "Priest/MagicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "190": {
+   "skl": "Priest/QuickStanding.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "191": {
+   "skl": "Priest/Enchant.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "192": {
+   "skl": "Priest/DollMaking.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "193": {
+   "skl": "Priest/Alchemy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "194": {
+   "skl": "Priest/OpenDisjointShop.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "195": {
+   "skl": "Priest/BasicHpMaxUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "196": {
+   "skl": "Priest/ArmorMasteryPlate.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "197": {
+   "skl": "Priest/Conversion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "200": {
+   "skl": "Priest/StatusUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "201": {
+   "skl": "Priest/ExperienceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "210": {
+   "skl": "Priest/AntiairUpperEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/AntiairUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "211": {
+   "skl": "Priest/SmasherEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "212": {
+   "skl": "Priest/SecondUpperEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "Animation/SecondUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "213": {
+   "skl": "Priest/BladeOfPureWhiteEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 27,
+       "ani": "Animation/BladeOfPureWhite.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "214": {
+   "skl": "Priest/DeflectWallExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 36,
+       "ani": "Animation/DeflectWall.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "215": {
+   "skl": "Priest/JudgementEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "216": {
+   "skl": "Priest/GroundCrashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 78,
+       "ani": "Animation/GroundCrash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "217": {
+   "skl": "Priest/CuttingDarknessEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 70,
+       "ani": "Animation/CuttingDarknessCharge.ani"
+      },
+      {
+       "index": 71,
+       "ani": "Animation/CuttingDarknessSmash.ani"
+      },
+      {
+       "index": 72,
+       "ani": "Animation/CuttingDarknessFullSmash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "218": {
+   "skl": "Priest/ShikigamiEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "219": {
+   "skl": "Priest/HomeRunEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "220": {
+   "skl": "Priest/VermilionBirdTalismanEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "221": {
+   "skl": "Priest/RepeatedSmashExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 30,
+       "ani": "Animation/RepeatedSmashStart.ani"
+      },
+      {
+       "index": 31,
+       "ani": "Animation/RepeatedSmash.ani"
+      },
+      {
+       "index": 32,
+       "ani": "Animation/RepeatedSmashFinal.ani"
+      },
+      {
+       "index": 77,
+       "ani": "Animation/RepeatedSmashExFinish.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "223": {
+   "skl": "Priest/AtomicSmashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 59,
+       "ani": "Animation/AtomicSmash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "224": {
+   "skl": "Priest/DivineCrushEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 41,
+       "ani": "Animation/DivineCrush.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "225": {
+   "skl": "Priest/DuckingUpperEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "Animation/DuckingUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "227": {
+   "skl": "Priest/HolyCounterEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "Animation/HolyCounterPray.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/HolyCounterBodyblow.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "228": {
+   "skl": "Priest/ChoppingHammerEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 21,
+       "ani": "Animation/ChoppingHammer.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "229": {
+   "skl": "Priest/MachineGunJabExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "Animation/MachineGunJab.ani"
+      },
+      {
+       "index": 52,
+       "ani": "Animation/MachineGunJabFinish.ani"
+      },
+      {
+       "index": 53,
+       "ani": "Animation/MachineGunJabAppend.ani"
+      },
+      {
+       "index": 73,
+       "ani": "Animation/MachineGunJabExLeft.ani"
+      },
+      {
+       "index": 74,
+       "ani": "Animation/MachineGunJabExRight.ani"
+      },
+      {
+       "index": 75,
+       "ani": "Animation/MachineGunJabExFinish.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "230": {
+   "skl": "Priest/HeavenlyCombinationExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/HeavenlyCombination.ani"
+      },
+      {
+       "index": 76,
+       "ani": "Animation/HeavenlyCombinationEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "231": {
+   "skl": "Priest/HurricaneRollEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 22,
+       "ani": "Animation/HurricaneOfJudgement.ani"
+      },
+      {
+       "index": 23,
+       "ani": "Animation/HurricaneOfJudgement2.ani"
+      },
+      {
+       "index": 28,
+       "ani": "Animation/HurricaneRollHook.ani"
+      },
+      {
+       "index": 29,
+       "ani": "Animation/HurricaneRollUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "232": {
+   "skl": "Priest/SpincutterEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 79,
+       "ani": "Animation/Spincutter1.ani"
+      },
+      {
+       "index": 80,
+       "ani": "Animation/Spincutter2.ani"
+      },
+      {
+       "index": 81,
+       "ani": "Animation/Spincutter3.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "233": {
+   "skl": "Priest/HedgehogEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 90,
+       "ani": "Animation/Hedgehog.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "234": {
+   "skl": "Priest/PowerOfDarknessEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 111,
+       "ani": "Animation/PowerOfDarknessStart.ani"
+      },
+      {
+       "index": 112,
+       "ani": "Animation/PowerOfDarknessStay.ani"
+      },
+      {
+       "index": 113,
+       "ani": "Animation/PowerOfDarknessEnd.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "235": {
+   "skl": "Priest/HyunMooExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "236": {
+   "skl": "Priest/ThunderboltTalismanEx.skl",
+   "states": [],
+   "effect_anis": null
+  }
+ }
+}

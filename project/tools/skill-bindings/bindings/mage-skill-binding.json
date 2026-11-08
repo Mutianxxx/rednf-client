@@ -1,0 +1,2107 @@
+{
+ "class": "mage",
+ "exe_region": [
+  "0xc2f344",
+  "0xc6d960"
+ ],
+ "etc_motion": {
+  "0": "Animation/Tumble.ani",
+  "1": "Animation/Thrust.ani",
+  "2": "Animation/UpperSwing.ani",
+  "3": "Animation/Swing.ani",
+  "4": "Animation/HandStrike.ani",
+  "5": "Animation/Whip.ani",
+  "6": "Animation/PokeThrowTry.ani",
+  "7": "Animation/PokeThrowSmash.ani",
+  "8": "Animation/ChasersExplosion.ani",
+  "9": "Animation/BattleMageAttack1.ani",
+  "10": "Animation/BattleMageAttack2.ani",
+  "11": "Animation/BattleMageAttack3.ani",
+  "12": "Animation/RandomPierceStrikeTry.ani",
+  "13": "Animation/RandomPierceStrikeLoop.ani",
+  "14": "Animation/RandomPierceStrikeFinish.ani",
+  "15": "Animation/StrengthHandStrike.ani",
+  "16": "Animation/StrengthHandStrikeReturn.ani",
+  "17": "Animation/DragonSpear.ani",
+  "18": "Animation/ChangeBellatrixCast.ani",
+  "19": "Animation/ChangeBellatrixUp.ani",
+  "20": "Animation/ReturnBellatrix.ani",
+  "21": "Animation/JumpAttackSecond.ani",
+  "22": "Animation/PowderAttack1.ani",
+  "23": "Animation/PowderAttack2.ani",
+  "24": "Animation/PowderAttack3.ani",
+  "25": "Animation/PowderDashAttack.ani",
+  "26": "Animation/PowderJumpAttack.ani",
+  "27": "Animation/PowderJumpAttackSecond.ani",
+  "28": "Animation/PowderUpperSwing.ani",
+  "29": "Animation/PowderThrust.ani",
+  "30": "Animation/AirDashSide.ani",
+  "31": "Animation/AirDashUp.ani",
+  "32": "Animation/AirFloating.ani",
+  "33": "Animation/BlackMantle.ani",
+  "34": "Animation/BroomSpinReady.ani",
+  "35": "Animation/BroomSpinAttack.ani",
+  "36": "Animation/BroomSpinDelay.ani",
+  "37": "Animation/BroomSpinTumble.ani",
+  "38": "Animation/TransformFlapper.ani",
+  "39": "Animation/TransformFlapperJump.ani",
+  "40": "Animation/AntiGravityStarter.ani",
+  "41": "Animation/MegaDrillSuccess.ani",
+  "42": "Animation/MegaDrillGreat.ani",
+  "43": "Animation/FluoreColliderCast.ani",
+  "44": "Animation/FluoreColliderAppear.ani",
+  "45": "Animation/FluoreColliderRun.ani",
+  "46": "Animation/FluoreColliderShock.ani",
+  "47": "Animation/HeatingFurnaceCast.ani",
+  "48": "Animation/HeatingFurnaceJump.ani",
+  "49": "Animation/FusionCraftCast.ani",
+  "50": "Animation/FusionCraftMake1.ani",
+  "51": "Animation/FusionCraftMake2.ani",
+  "52": "Animation/FusionCraftMake3.ani",
+  "53": "Animation/FusionCraftMake4.ani",
+  "54": "Animation/WallOfIceEx.ani",
+  "55": "Animation/WallOfIceExFinish.ani",
+  "56": "Animation/RandomPierceStrikeLoopEx.ani",
+  "57": "Animation/RandomPierceStrikeChargeEx.ani",
+  "58": "Animation/RandomPierceStrikeFinishEx.ani",
+  "59": "Animation/BroomSpinExFinishReady.ani",
+  "60": "Animation/FlameVolcanoVoidThrow1.ani",
+  "61": "Animation/TransformFlapperEx.ani",
+  "62": "Animation/TransformFlapperJumpEx.ani",
+  "63": "Animation/SwingEx.ani",
+  "64": "Animation/FusionChaser.ani",
+  "65": "Animation/DoubleSwing1.ani",
+  "66": "Animation/DoubleSwing2.ani",
+  "67": "Animation/TimerBomb.ani",
+  "68": "Animation/UnSummonMonster.ani"
+ },
+ "skills": {
+  "1": {
+   "skl": "Mage/EnableFinishAttack.skl",
+   "states": [
+    {
+     "state": 8,
+     "handler": "0x00c5edc0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "2": {
+   "skl": "Mage/MagicalTempoUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "3": {
+   "skl": "Mage/WarpOnDamage.skl",
+   "states": [
+    {
+     "state": 21,
+     "handler": "0x00c576ce",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "4": {
+   "skl": "Mage/Thrust.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00c57a70",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/Thrust.ani"
+      },
+      {
+       "index": 29,
+       "ani": "Animation/PowderThrust.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "5": {
+   "skl": "Mage/ChaserDefault.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "6": {
+   "skl": "Mage/ChaserFire.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "7": {
+   "skl": "Mage/ChaserWater.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "8": {
+   "skl": "Mage/ChaserDark.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "9": {
+   "skl": "Mage/ChaserLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "10": {
+   "skl": "Mage/ChasersExplosion.skl",
+   "states": [
+    {
+     "state": 28,
+     "handler": "0x00c5e9a3",
+     "entry_motions": [
+      {
+       "index": 8,
+       "ani": "Animation/ChasersExplosion.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 47,
+     "handler": "0x00c5d68e",
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "Animation/RandomPierceStrikeTry.ani"
+      },
+      {
+       "index": 56,
+       "ani": "Animation/RandomPierceStrikeLoopEx.ani"
+      },
+      {
+       "index": 57,
+       "ani": "Animation/RandomPierceStrikeChargeEx.ani"
+      },
+      {
+       "index": 58,
+       "ani": "Animation/RandomPierceStrikeFinishEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "11": {
+   "skl": "Mage/MagicMissile.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "12": {
+   "skl": "Mage/UpperSwing.skl",
+   "states": [
+    {
+     "state": 23,
+     "handler": "0x00c5b115",
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "Animation/UpperSwing.ani"
+      },
+      {
+       "index": 28,
+       "ani": "Animation/PowderUpperSwing.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "13": {
+   "skl": "Mage/Swing.skl",
+   "states": [
+    {
+     "state": 24,
+     "handler": "0x00c5b637",
+     "entry_motions": [
+      {
+       "index": 3,
+       "ani": "Animation/Swing.ani"
+      },
+      {
+       "index": 63,
+       "ani": "Animation/SwingEx.ani"
+      },
+      {
+       "index": 5,
+       "ani": "Animation/Whip.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "14": {
+   "skl": "Mage/HandStrike.skl",
+   "states": [
+    {
+     "state": 25,
+     "handler": "0x00c5bdf9",
+     "entry_motions": [
+      {
+       "index": 4,
+       "ani": "Animation/HandStrike.ani"
+      },
+      {
+       "index": 15,
+       "ani": "Animation/StrengthHandStrike.ani"
+      },
+      {
+       "index": 16,
+       "ani": "Animation/StrengthHandStrikeReturn.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "15": {
+   "skl": "Mage/LaunchJOL.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "16": {
+   "skl": "Mage/LaunchFrostHead.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "17": {
+   "skl": "Mage/LaunchFluorescent.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "18": {
+   "skl": "Mage/LaunchBlackCat.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "19": {
+   "skl": "Mage/CastSpeedUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "20": {
+   "skl": "Mage/Whip.skl",
+   "states": [
+    {
+     "state": 24,
+     "handler": "0x00c5b637",
+     "entry_motions": [
+      {
+       "index": 3,
+       "ani": "Animation/Swing.ani"
+      },
+      {
+       "index": 63,
+       "ani": "Animation/SwingEx.ani"
+      },
+      {
+       "index": 5,
+       "ani": "Animation/Whip.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "21": {
+   "skl": "Mage/SummonSpiritFire.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "22": {
+   "skl": "Mage/SummonSpiritWater.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "23": {
+   "skl": "Mage/SummonSpiritDark.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "24": {
+   "skl": "Mage/SummonSpiritLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "25": {
+   "skl": "Mage/SummonHodor.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "26": {
+   "skl": "Mage/Void.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "27": {
+   "skl": "Mage/HalloweenBuster.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "28": {
+   "skl": "Mage/Disenchant.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "29": {
+   "skl": "Mage/ElementalChain.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "30": {
+   "skl": "Mage/FollowMe.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "31": {
+   "skl": "Mage/SunBurst.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "35": {
+   "skl": "Mage/SpearMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "36": {
+   "skl": "Mage/PoleMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "37": {
+   "skl": "Mage/AuraShield.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00c64c49",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "38": {
+   "skl": "Mage/MoveOnCast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "39": {
+   "skl": "Mage/ChaserLaunch.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "40": {
+   "skl": "Mage/ChaserAutoCreate.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "41": {
+   "skl": "Mage/MpRegenRateUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "42": {
+   "skl": "Mage/LaunchJOLOnJump.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "43": {
+   "skl": "Mage/ProvocationDoll.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "44": {
+   "skl": "Mage/SummonSandor.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "45": {
+   "skl": "Mage/SummonAuxo.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "46": {
+   "skl": "Mage/SummonLuis.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "47": {
+   "skl": "Mage/SummonEcheverra.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "48": {
+   "skl": "Mage/SummonMonsterAura.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "49": {
+   "skl": "Mage/SacrificeSpirit.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "50": {
+   "skl": "Mage/TargetIt.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "51": {
+   "skl": "Mage/SacrificeSpiritAttackFire.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "52": {
+   "skl": "Mage/SacrificeSpiritAttackWater.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "53": {
+   "skl": "Mage/SacrificeSpiritAttackDark.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "54": {
+   "skl": "Mage/SacrificeSpiritAttackLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "55": {
+   "skl": "Mage/ThunderStrike.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c64c49",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "56": {
+   "skl": "Mage/WallOfIce.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "Animation/WallOfIceEx.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/WallOfIceExFinish.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "57": {
+   "skl": "Mage/FlameStrike.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "58": {
+   "skl": "Mage/BlackHole.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "59": {
+   "skl": "Mage/IceField.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "60": {
+   "skl": "Mage/AuraShieldMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "61": {
+   "skl": "Mage/FireElementMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "62": {
+   "skl": "Mage/WaterElementMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "63": {
+   "skl": "Mage/DarkElementMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "64": {
+   "skl": "Mage/LightElementMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "65": {
+   "skl": "Mage/PokeThrow.skl",
+   "states": [
+    {
+     "state": 26,
+     "handler": "0x00c5cda0",
+     "entry_motions": [
+      {
+       "index": 6,
+       "ani": "Animation/PokeThrowTry.ani"
+      },
+      {
+       "index": 7,
+       "ani": "Animation/PokeThrowSmash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "66": {
+   "skl": "Mage/RandomPierceStrike.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00c5e1aa",
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "Animation/RandomPierceStrikeTry.ani"
+      },
+      {
+       "index": 13,
+       "ani": "Animation/RandomPierceStrikeLoop.ani"
+      },
+      {
+       "index": 14,
+       "ani": "Animation/RandomPierceStrikeFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "67": {
+   "skl": "Mage/FightLeatherMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "68": {
+   "skl": "Mage/StrengthHandStrike.skl",
+   "states": [
+    {
+     "state": 25,
+     "handler": "0x00c5bdf9",
+     "entry_motions": [
+      {
+       "index": 4,
+       "ani": "Animation/HandStrike.ani"
+      },
+      {
+       "index": 15,
+       "ani": "Animation/StrengthHandStrike.ani"
+      },
+      {
+       "index": 16,
+       "ani": "Animation/StrengthHandStrikeReturn.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "69": {
+   "skl": "Mage/DragonSpear.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00c581b7",
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "Animation/DragonSpear.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "73": {
+   "skl": "Mage/ElementalWeak.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "74": {
+   "skl": "Mage/ElementalShower.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "75": {
+   "skl": "Mage/UpgradeSummonSkill.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "76": {
+   "skl": "Mage/SummonSpiritDarkHigher.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "77": {
+   "skl": "Mage/SummonSpiritLightHigher.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "78": {
+   "skl": "Mage/SummonSpiritWaterHigher.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "79": {
+   "skl": "Mage/SummonSpiritFireHigher.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "80": {
+   "skl": "Mage/SummonBabyDragon.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "81": {
+   "skl": "Mage/SummonMonsterReckless.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "82": {
+   "skl": "Mage/SummonCasillas.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "83": {
+   "skl": "Mage/Bellatrix.skl",
+   "states": [
+    {
+     "state": 31,
+     "handler": "0x00c58e55",
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "Animation/ChangeBellatrixCast.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/ChangeBellatrixUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 32,
+     "handler": "0x00c5a7cf",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "Animation/ReturnBellatrix.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 33,
+     "handler": "0x00c5ac49",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 34,
+     "handler": "0x00c5aeb6",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "84": {
+   "skl": "Mage/ComboMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "85": {
+   "skl": "Mage/FriendlyBlackCat.skl",
+   "states": [
+    {
+     "state": 35,
+     "handler": "0x00c5efd2",
+     "entry_motions": [
+      {
+       "index": 33,
+       "ani": "Animation/BlackMantle.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 36,
+     "handler": "0x00c6171c",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00c62649",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/AntiGravityStarter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 49,
+     "handler": "0x00c6171c",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "86": {
+   "skl": "Mage/FriendlyFluorescent.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00c5fee0",
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "Animation/BroomSpinReady.ani"
+      },
+      {
+       "index": 35,
+       "ani": "Animation/BroomSpinAttack.ani"
+      },
+      {
+       "index": 37,
+       "ani": "Animation/BroomSpinTumble.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 41,
+     "handler": "0x00c62dc6",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "Animation/FluoreColliderCast.ani"
+      },
+      {
+       "index": 44,
+       "ani": "Animation/FluoreColliderAppear.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 48,
+     "handler": "0x00c5f40e",
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "Animation/BroomSpinReady.ani"
+      },
+      {
+       "index": 35,
+       "ani": "Animation/BroomSpinAttack.ani"
+      },
+      {
+       "index": 59,
+       "ani": "Animation/BroomSpinExFinishReady.ani"
+      },
+      {
+       "index": 37,
+       "ani": "Animation/BroomSpinTumble.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "87": {
+   "skl": "Mage/FriendlyJackFrost.skl",
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00c607b8",
+     "entry_motions": [
+      {
+       "index": 42,
+       "ani": "Animation/MegaDrillGreat.ani"
+      },
+      {
+       "index": 41,
+       "ani": "Animation/MegaDrillSuccess.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "88": {
+   "skl": "Mage/FriendlyJOL.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00c63980",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/HeatingFurnaceCast.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "89": {
+   "skl": "Mage/ChillingPowder.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "90": {
+   "skl": "Mage/DeathPowder.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "91": {
+   "skl": "Mage/EquipBroom.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "92": {
+   "skl": "Mage/BlackMantle.skl",
+   "states": [
+    {
+     "state": 35,
+     "handler": "0x00c5efd2",
+     "entry_motions": [
+      {
+       "index": 33,
+       "ani": "Animation/BlackMantle.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "93": {
+   "skl": "Mage/ImprovedShururu.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "95": {
+   "skl": "Mage/TransformFlapper.skl",
+   "states": [
+    {
+     "state": 36,
+     "handler": "0x00c6171c",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "97": {
+   "skl": "Mage/SweetCandyBar.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "98": {
+   "skl": "Mage/BroomSpin.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00c5fee0",
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "Animation/BroomSpinReady.ani"
+      },
+      {
+       "index": 35,
+       "ani": "Animation/BroomSpinAttack.ani"
+      },
+      {
+       "index": 37,
+       "ani": "Animation/BroomSpinTumble.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "99": {
+   "skl": "Mage/AcidCloud.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "100": {
+   "skl": "Mage/EnhancedMagicMissile.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "101": {
+   "skl": "Mage/LavaPotion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "102": {
+   "skl": "Mage/ArmorMasteryLeatherWC.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "103": {
+   "skl": "Mage/AntiGravityStarter.skl",
+   "states": [
+    {
+     "state": 39,
+     "handler": "0x00c62649",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/AntiGravityStarter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "104": {
+   "skl": "Mage/MegaDrill.skl",
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00c607b8",
+     "entry_motions": [
+      {
+       "index": 42,
+       "ani": "Animation/MegaDrillGreat.ani"
+      },
+      {
+       "index": 41,
+       "ani": "Animation/MegaDrillSuccess.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "105": {
+   "skl": "Mage/FluoreCollider.skl",
+   "states": [
+    {
+     "state": 41,
+     "handler": "0x00c62dc6",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "Animation/FluoreColliderCast.ani"
+      },
+      {
+       "index": 44,
+       "ani": "Animation/FluoreColliderAppear.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "106": {
+   "skl": "Mage/HeatingFurnace.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00c63980",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/HeatingFurnaceCast.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "107": {
+   "skl": "Mage/ArmorMasteryClothEM.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "108": {
+   "skl": "Mage/ArmorMasteryClothSM.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "109": {
+   "skl": "Mage/FusionCraft.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00c64c49",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 45,
+     "handler": "0x00c64748",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "110": {
+   "skl": "Mage/SuccessPremonition.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "111": {
+   "skl": "Mage/WallOfIceEx.skl",
+   "states": [
+    {
+     "state": 46,
+     "handler": "0x00c645b6",
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "Animation/WallOfIceEx.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/WallOfIceExFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "112": {
+   "skl": "Mage/RandomPierceStrikeEx.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00c5e1aa",
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "Animation/RandomPierceStrikeTry.ani"
+      },
+      {
+       "index": 13,
+       "ani": "Animation/RandomPierceStrikeLoop.ani"
+      },
+      {
+       "index": 14,
+       "ani": "Animation/RandomPierceStrikeFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 47,
+     "handler": "0x00c5d68e",
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "Animation/RandomPierceStrikeTry.ani"
+      },
+      {
+       "index": 56,
+       "ani": "Animation/RandomPierceStrikeLoopEx.ani"
+      },
+      {
+       "index": 57,
+       "ani": "Animation/RandomPierceStrikeChargeEx.ani"
+      },
+      {
+       "index": 58,
+       "ani": "Animation/RandomPierceStrikeFinishEx.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "113": {
+   "skl": "Mage/FlameVolcanoVoid.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 60,
+       "ani": "Animation/FlameVolcanoVoidThrow1.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "114": {
+   "skl": "Mage/BroomSpinEx.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00c5fee0",
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "Animation/BroomSpinReady.ani"
+      },
+      {
+       "index": 35,
+       "ani": "Animation/BroomSpinAttack.ani"
+      },
+      {
+       "index": 37,
+       "ani": "Animation/BroomSpinTumble.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 48,
+     "handler": "0x00c5f40e",
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "Animation/BroomSpinReady.ani"
+      },
+      {
+       "index": 35,
+       "ani": "Animation/BroomSpinAttack.ani"
+      },
+      {
+       "index": 59,
+       "ani": "Animation/BroomSpinExFinishReady.ani"
+      },
+      {
+       "index": 37,
+       "ani": "Animation/BroomSpinTumble.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "115": {
+   "skl": "Mage/TransformFlapperEx.skl",
+   "states": [
+    {
+     "state": 49,
+     "handler": "0x00c6171c",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "116": {
+   "skl": "Mage/DisActiveStatus.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "117": {
+   "skl": "Mage/SwingEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "Animation/SwingEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "118": {
+   "skl": "Mage/SummonSandorEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "119": {
+   "skl": "Mage/SummonSpiritWaterEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "120": {
+   "skl": "Mage/SummonSpiritFireEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "121": {
+   "skl": "Mage/SummonSpiritDarkEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "122": {
+   "skl": "Mage/SummonSpiritLightEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "123": {
+   "skl": "Mage/FusionChaser.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 64,
+       "ani": "Animation/FusionChaser.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "124": {
+   "skl": "Mage/CancelFusionChaser.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "125": {
+   "skl": "Mage/DoubleSwing.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 65,
+       "ani": "Animation/DoubleSwing1.ani"
+      },
+      {
+       "index": 66,
+       "ani": "Animation/DoubleSwing2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "127": {
+   "skl": "Mage/TimerBomb.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 67,
+       "ani": "Animation/TimerBomb.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "129": {
+   "skl": "Mage/UnSummon.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 68,
+       "ani": "Animation/UnSummonMonster.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "130": {
+   "skl": "Mage/ComboInstinct.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "140": {
+   "skl": "Mage/AuraShieldEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "141": {
+   "skl": "Mage/LaunchFluorescentEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "142": {
+   "skl": "Mage/WhipEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "143": {
+   "skl": "Mage/AncientLibraryEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "144": {
+   "skl": "Mage/LaunchFrostHeadEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "145": {
+   "skl": "Mage/MagicalTempoUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "146": {
+   "skl": "Mage/HandStrikeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 4,
+       "ani": "Animation/HandStrike.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "147": {
+   "skl": "Mage/WarpOnDamageEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "148": {
+   "skl": "Mage/SweetCandyBarEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "149": {
+   "skl": "Mage/EnhancedMagicMissileEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "150": {
+   "skl": "Mage/TargetItEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "151": {
+   "skl": "Mage/SummonSpiritEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "152": {
+   "skl": "Mage/HalloweenBusterEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "153": {
+   "skl": "Mage/ChaserAutoCreateEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "154": {
+   "skl": "Mage/VoidEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "155": {
+   "skl": "Mage/PokeThrowEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 6,
+       "ani": "Animation/PokeThrowTry.ani"
+      },
+      {
+       "index": 7,
+       "ani": "Animation/PokeThrowSmash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "156": {
+   "skl": "Mage/ChaserEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "157": {
+   "skl": "Mage/ElementalChainEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "158": {
+   "skl": "Mage/IceFieldEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "159": {
+   "skl": "Mage/SummonHodorEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "160": {
+   "skl": "Mage/SummonLuisEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "161": {
+   "skl": "Mage/SummonEcheverraEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "162": {
+   "skl": "Mage/StrengthHandStrikeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 15,
+       "ani": "Animation/StrengthHandStrike.ani"
+      },
+      {
+       "index": 16,
+       "ani": "Animation/StrengthHandStrikeReturn.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "163": {
+   "skl": "Mage/ProvocationDollEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "164": {
+   "skl": "Mage/AntiGravityStarterEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/AntiGravityStarter.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "165": {
+   "skl": "Mage/BasicAttackUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "166": {
+   "skl": "Mage/SummonAuxoUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "169": {
+   "skl": "Mage/BackStep.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "172": {
+   "skl": "Mage/ArmorMasteryLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "173": {
+   "skl": "Mage/ArmorMasteryHeavy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "174": {
+   "skl": "Mage/BasicAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "175": {
+   "skl": "Mage/JumpPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "176": {
+   "skl": "Mage/MagicalAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "177": {
+   "skl": "Mage/ThrowMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "178": {
+   "skl": "Mage/PhysicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "179": {
+   "skl": "Mage/DisjointItem.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "180": {
+   "skl": "Mage/SuperArmorOnCast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "181": {
+   "skl": "Mage/CompoundCraft.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "182": {
+   "skl": "Mage/CompoundWeaving.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "183": {
+   "skl": "Mage/CompoundMachine.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "184": {
+   "skl": "Mage/CompoundChemistry.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "185": {
+   "skl": "Mage/ArmorMasteryLeather.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "186": {
+   "skl": "Mage/PhysicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "187": {
+   "skl": "Mage/ArmorMasteryCloth.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "188": {
+   "skl": "Mage/MagicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "189": {
+   "skl": "Mage/MagicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "190": {
+   "skl": "Mage/QuickStanding.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "191": {
+   "skl": "Mage/Enchant.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "192": {
+   "skl": "Mage/DollMaking.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "193": {
+   "skl": "Mage/Alchemy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "194": {
+   "skl": "Mage/OpenDisjointShop.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "195": {
+   "skl": "Mage/BasicHpMaxUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "196": {
+   "skl": "Mage/ArmorMasteryPlate.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "197": {
+   "skl": "Mage/Conversion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "200": {
+   "skl": "Mage/StatusUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "201": {
+   "skl": "Mage/ExperienceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "210": {
+   "skl": "Mage/UpperSwingEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "Animation/UpperSwing.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "211": {
+   "skl": "Mage/LaunchBlackCatEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "212": {
+   "skl": "Mage/ThrustEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "213": {
+   "skl": "Mage/MagicMissileEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "214": {
+   "skl": "Mage/FlameStrikeEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "215": {
+   "skl": "Mage/SunBurstEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "216": {
+   "skl": "Mage/WallOfIceExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 54,
+       "ani": "Animation/WallOfIceEx.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/WallOfIceExFinish.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "217": {
+   "skl": "Mage/ThunderStrikeEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "218": {
+   "skl": "Mage/BlackHoleEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "219": {
+   "skl": "Mage/ChaserLaunchEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "221": {
+   "skl": "Mage/ChasersExplosionEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 8,
+       "ani": "Animation/ChasersExplosion.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "222": {
+   "skl": "Mage/DoubleSwingEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 65,
+       "ani": "Animation/DoubleSwing1.ani"
+      },
+      {
+       "index": 66,
+       "ani": "Animation/DoubleSwing2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "223": {
+   "skl": "Mage/FusionChaserEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 64,
+       "ani": "Animation/FusionChaser.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "224": {
+   "skl": "Mage/RandomPierceStrikeExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "Animation/RandomPierceStrikeTry.ani"
+      },
+      {
+       "index": 13,
+       "ani": "Animation/RandomPierceStrikeLoop.ani"
+      },
+      {
+       "index": 14,
+       "ani": "Animation/RandomPierceStrikeFinish.ani"
+      },
+      {
+       "index": 56,
+       "ani": "Animation/RandomPierceStrikeLoopEx.ani"
+      },
+      {
+       "index": 57,
+       "ani": "Animation/RandomPierceStrikeChargeEx.ani"
+      },
+      {
+       "index": 58,
+       "ani": "Animation/RandomPierceStrikeFinishEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "225": {
+   "skl": "Mage/SwingExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "226": {
+   "skl": "Mage/DragonSpearEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "Animation/DragonSpear.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "227": {
+   "skl": "Mage/TimerBombEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 67,
+       "ani": "Animation/TimerBomb.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "228": {
+   "skl": "Mage/BlackMantleEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 33,
+       "ani": "Animation/BlackMantle.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "229": {
+   "skl": "Mage/BroomSpinExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "Animation/BroomSpinReady.ani"
+      },
+      {
+       "index": 35,
+       "ani": "Animation/BroomSpinAttack.ani"
+      },
+      {
+       "index": 36,
+       "ani": "Animation/BroomSpinDelay.ani"
+      },
+      {
+       "index": 37,
+       "ani": "Animation/BroomSpinTumble.ani"
+      },
+      {
+       "index": 59,
+       "ani": "Animation/BroomSpinExFinishReady.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "230": {
+   "skl": "Mage/AcidCloudEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "231": {
+   "skl": "Mage/TransformFlapperExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 38,
+       "ani": "Animation/TransformFlapper.ani"
+      },
+      {
+       "index": 39,
+       "ani": "Animation/TransformFlapperJump.ani"
+      },
+      {
+       "index": 61,
+       "ani": "Animation/TransformFlapperEx.ani"
+      },
+      {
+       "index": 62,
+       "ani": "Animation/TransformFlapperJumpEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "232": {
+   "skl": "Mage/LavaPotionEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "233": {
+   "skl": "Mage/MegaDrillEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 41,
+       "ani": "Animation/MegaDrillSuccess.ani"
+      },
+      {
+       "index": 42,
+       "ani": "Animation/MegaDrillGreat.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "234": {
+   "skl": "Mage/FluoreColliderEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "Animation/FluoreColliderCast.ani"
+      },
+      {
+       "index": 44,
+       "ani": "Animation/FluoreColliderAppear.ani"
+      },
+      {
+       "index": 45,
+       "ani": "Animation/FluoreColliderRun.ani"
+      },
+      {
+       "index": 46,
+       "ani": "Animation/FluoreColliderShock.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "235": {
+   "skl": "Mage/HeatingFurnaceEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/HeatingFurnaceCast.ani"
+      },
+      {
+       "index": 48,
+       "ani": "Animation/HeatingFurnaceJump.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "236": {
+   "skl": "Mage/SummonSpiritDarkHigherEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "237": {
+   "skl": "Mage/SummonSpiritLightHigherEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "238": {
+   "skl": "Mage/SummonSpiritWaterHigherEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "239": {
+   "skl": "Mage/SummonSpiritFireHigherEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "240": {
+   "skl": "Mage/SummonBabyDragonEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "241": {
+   "skl": "Mage/SummonSandorExp.skl",
+   "states": [],
+   "effect_anis": null
+  }
+ }
+}

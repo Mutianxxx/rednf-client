@@ -1,0 +1,3195 @@
+{
+ "class": "swordman",
+ "exe_region": [
+  "0xca511c",
+  "0xce1ae8"
+ ],
+ "etc_motion": {
+  "0": "Animation/Guard.ani",
+  "1": "Animation/HardAttack.ani",
+  "2": "Animation/HitBack.ani",
+  "3": "Animation/TripleSlash1.ani",
+  "4": "Animation/TripleSlash2.ani",
+  "5": "Animation/TripleSlash3.ani",
+  "6": "Animation/TripleSlash4.ani",
+  "7": "Animation/TripleSlash5.ani",
+  "8": "Animation/MomentarySlash.ani",
+  "9": "Animation/Wave.ani",
+  "10": "Animation/Grab.ani",
+  "11": "Animation/DashAttackMultiHit.ani",
+  "12": "Animation/ShockWaveAreaCast.ani",
+  "13": "Animation/ShockWaveAreaSmash.ani",
+  "14": "Animation/VaneSlashTry.ani",
+  "15": "Animation/VaneSlash.ani",
+  "16": "Animation/UpperSlashAfter.ani",
+  "17": "Animation/HardAttackChargeAfter.ani",
+  "18": "Animation/GhostStepSlashReady.ani",
+  "19": "Animation/GhostStepSlashMove.ani",
+  "20": "Animation/StandAloneWaveReady.ani",
+  "21": "Animation/StandAloneWaveBasic.ani",
+  "22": "Animation/StandAloneWaveStrong.ani",
+  "23": "Animation/JumpAttackMultiSlash1.ani",
+  "24": "Animation/JumpAttackMultiSlash2.ani",
+  "25": "Animation/GoreCross.ani",
+  "26": "Animation/HopSmashReady.ani",
+  "27": "Animation/HopSmash.ani",
+  "28": "Animation/WeaponComboShort1.ani",
+  "29": "Animation/WeaponComboShort2.ani",
+  "30": "Animation/WeaponComboShort3.ani",
+  "31": "Animation/WeaponComboBlade1.ani",
+  "32": "Animation/WeaponComboBlade2.ani",
+  "33": "Animation/WeaponComboBlade3.ani",
+  "34": "Animation/WeaponComboBlade4.ani",
+  "35": "Animation/WeaponComboBlunt1.ani",
+  "36": "Animation/WeaponComboBlunt2.ani",
+  "37": "Animation/WeaponComboBlunt3.ani",
+  "38": "Animation/WeaponComboHeavy1.ani",
+  "39": "Animation/WeaponComboHeavy2.ani",
+  "40": "Animation/WeaponComboLight1.ani",
+  "41": "Animation/WeaponComboLight2.ani",
+  "42": "Animation/WeaponComboLight3.ani",
+  "43": "Animation/ChargeCrashDash.ani",
+  "44": "Animation/ChargeCrashUpper.ani",
+  "45": "Animation/ChargeCrashFinish.ani",
+  "46": "Animation/ReflectGuard.ani",
+  "47": "Animation/RapidMoveSlashReady1.ani",
+  "48": "Animation/RapidMoveSlashReady2.ani",
+  "49": "Animation/RapidMoveSlashMove1.ani",
+  "50": "Animation/RapidMoveSlashMove2.ani",
+  "51": "Animation/IllusionSlash1.ani",
+  "52": "Animation/IllusionSlash2.ani",
+  "53": "Animation/IllusionSlash3.ani",
+  "54": "Animation/IllusionSlash4.ani",
+  "55": "Animation/IllusionSlashFinal.ani",
+  "56": "Animation/WaveSpinAreaBomb.ani",
+  "57": "Animation/Frenzy1.ani",
+  "58": "Animation/Frenzy2.ani",
+  "59": "Animation/Frenzy3.ani",
+  "60": "Animation/Frenzy4.ani",
+  "61": "Animation/MoonlightSlash1.ani",
+  "62": "Animation/MoonlightSlash2.ani",
+  "63": "Animation/BloodyRaveInhale.ani",
+  "64": "Animation/BloodyRaveSlash.ani",
+  "65": "Animation/MoonlightSlashFull.ani",
+  "66": "Animation/OutRageBreakReady.ani",
+  "67": "Animation/OutRageBreakSlash.ani",
+  "68": "Animation/KallaLand.ani",
+  "69": "Animation/KallaAir.ani",
+  "70": "Animation/KallaFinishReady.ani",
+  "71": "Animation/KallaFinish1.ani",
+  "72": "Animation/KallaFinish2.ani",
+  "73": "Animation/KallaFinish3.ani",
+  "74": "Animation/HellbenterFinish.ani",
+  "75": "Animation/HundredSwordReady.ani",
+  "76": "Animation/HundredSwordMoveReady1.ani",
+  "77": "Animation/HundredSwordMoveReady2.ani",
+  "78": "Animation/HundredSwordMoveReady3.ani",
+  "79": "Animation/HundredSwordMoveReady4.ani",
+  "80": "Animation/HundredSwordMoveReady5.ani",
+  "81": "Animation/HundredSwordMoveSlash1.ani",
+  "82": "Animation/HundredSwordMoveSlash2.ani",
+  "83": "Animation/HundredSwordMoveSlash3.ani",
+  "84": "Animation/HundredSwordMoveSlash4.ani",
+  "85": "Animation/HundredSwordMoveSlash5.ani",
+  "86": "Animation/HundredSwordFinish.ani",
+  "87": "Animation/BlacheCast.ani",
+  "88": "Animation/BlacheSmash.ani",
+  "89": "Animation/WaveEyeCast.ani",
+  "90": "Animation/WaveEyeStart.ani",
+  "91": "Animation/WaveEyeAttack1.ani",
+  "92": "Animation/WaveEyeAttack2.ani",
+  "93": "Animation/WaveEyeAttack3.ani",
+  "94": "Animation/WaveEyeClaw.ani",
+  "95": "Animation/WaveEyeWing.ani",
+  "96": "Animation/WaveEyeSpear.ani",
+  "97": "Animation/TombStoneEx.ani",
+  "98": "Animation/MomentarySlashEx.ani",
+  "99": "Animation/ChargeCrashExShoulder.ani",
+  "100": "Animation/ChargeCrashExPick.ani",
+  "101": "Animation/ChargeCrashExUpper.ani",
+  "102": "Animation/BloodSwordMake.ani",
+  "103": "Animation/BloodSwordCharge.ani",
+  "104": "Animation/FlowMindStart.ani",
+  "105": "Animation/FlowMindStay.ani",
+  "106": "Animation/FlowMindOne.ani",
+  "107": "Animation/FlowMindOneAdd.ani",
+  "108": "Animation/FlowMindTwoJump.ani",
+  "109": "Animation/FlowMindTwoLanding.ani",
+  "110": "Animation/FlowMindTwoAttack1.ani",
+  "111": "Animation/FlowMindTwoAttack2.ani",
+  "112": "Animation/FlowMindThreeReady.ani",
+  "113": "Animation/FlowMindThreeAttack.ani",
+  "114": "Animation/StaySacrifice.ani",
+  "115": "Animation/SpiritAttack1.ani",
+  "116": "Animation/SpiritAttack2.ani",
+  "117": "Animation/SpiritAttack3.ani",
+  "118": "Animation/SpiritAttack4.ani",
+  "119": "Animation/SpiritDashAttack.ani",
+  "120": "Animation/GhostSideWind.ani",
+  "121": "Animation/TripleStab.ani"
+ },
+ "skills": {
+  "1": {
+   "skl": "Swordman/Guard.skl",
+   "states": [
+    {
+     "state": 8,
+     "handler": "0x00cceb55",
+     "entry_motions": [
+      {
+       "index": 93,
+       "ani": "Animation/WaveEyeAttack3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 17,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 24,
+     "handler": "0x00cd19ec",
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "Animation/Wave.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "2": {
+   "skl": "Swordman/ReflectGuard.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 38,
+     "handler": "0x00cda8d9",
+     "entry_motions": [
+      {
+       "index": 46,
+       "ani": "Animation/ReflectGuard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/ReflectGuard/charge.ani",
+    "Effect/Animation/ReflectGuard/slash.ani"
+   ]
+  },
+  "3": {
+   "skl": "Swordman/AutoGuard.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 59,
+     "handler": "0x00cd05f5",
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "Animation/HitBack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "4": {
+   "skl": "Swordman/LightSwordMastery.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "Animation/DashAttackMultiHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 49,
+       "ani": "Animation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "Animation/IllusionSlash1.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/IllusionSlashFinal.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "5": {
+   "skl": "Swordman/HardAttack.skl",
+   "states": [
+    {
+     "state": 20,
+     "handler": "0x00ccf3b2",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/HardAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "Animation/HardAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "Animation/HardAttack.ani"
+      },
+      {
+       "index": 17,
+       "ani": "Animation/HardAttackChargeAfter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/HardAttack1.ani",
+    "Effect/Animation/HardAttack2.ani"
+   ]
+  },
+  "6": {
+   "skl": "Swordman/HardAttackCharge.skl",
+   "states": [
+    {
+     "state": 20,
+     "handler": "0x00ccf3b2",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/HardAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "Animation/HardAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "Animation/HardAttack.ani"
+      },
+      {
+       "index": 17,
+       "ani": "Animation/HardAttackChargeAfter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "7": {
+   "skl": "Swordman/HitBack.skl",
+   "states": [
+    {
+     "state": 21,
+     "handler": "0x00cd03c0",
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "Animation/HitBack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "8": {
+   "skl": "Swordman/TripleSlash.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/TripleSlash/Slash1.ani",
+    "Effect/Animation/TripleSlash/Slash2.ani",
+    "Effect/Animation/TripleSlash/Slash3.ani",
+    "Effect/Animation/TripleSlash/Slash4.ani",
+    "Effect/Animation/TripleSlash/Slash5.ani",
+    "Effect/Animation/TripleSlash/Move1.ani",
+    "Effect/Animation/TripleSlash/Move2.ani"
+   ]
+  },
+  "9": {
+   "skl": "Swordman/MomentarySlash.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 8,
+       "ani": "Animation/MomentarySlash.ani"
+      },
+      {
+       "index": 98,
+       "ani": "Animation/MomentarySlashEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/MomentarySlash/momentaryslash_none_under.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_blue_ldodge_under.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_none_upper.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_blue_ldodge_upper.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_white_ldodge_under.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_white_ldodge_upper.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_red_ldodge_under.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_red_ldodge_upper.ani",
+    "Effect/Animation/MomentarySlash/Charge1.ani",
+    "Effect/Animation/MomentarySlash/Charge2.ani"
+   ]
+  },
+  "11": {
+   "skl": "Swordman/DashAttackMultiHit.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "Animation/DashAttackMultiHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "12": {
+   "skl": "Swordman/ShortSwordMastery.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 30,
+     "handler": "0x00cda585",
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "Animation/UpperSlashAfter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 49,
+       "ani": "Animation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "Animation/IllusionSlash1.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/IllusionSlashFinal.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "13": {
+   "skl": "Swordman/BladeMastery.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "Animation/IllusionSlash1.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/IllusionSlashFinal.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "Animation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "14": {
+   "skl": "Swordman/HeavySwordMastery.skl",
+   "states": [
+    {
+     "state": 8,
+     "handler": "0x00cceb55",
+     "entry_motions": [
+      {
+       "index": 93,
+       "ani": "Animation/WaveEyeAttack3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 25,
+     "handler": "0x00cd212d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 37,
+     "handler": "0x00cd9192",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "Animation/ChargeCrashDash.ani"
+      },
+      {
+       "index": 44,
+       "ani": "Animation/ChargeCrashUpper.ani"
+      },
+      {
+       "index": 45,
+       "ani": "Animation/ChargeCrashFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "15": {
+   "skl": "Swordman/BluntMastery.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00cd9192",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "Animation/ChargeCrashDash.ani"
+      },
+      {
+       "index": 44,
+       "ani": "Animation/ChargeCrashUpper.ani"
+      },
+      {
+       "index": 45,
+       "ani": "Animation/ChargeCrashFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "Animation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "16": {
+   "skl": "Swordman/AshenFork.skl",
+   "states": [
+    {
+     "state": 25,
+     "handler": "0x00cd212d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/JumpAttackHold.ani"
+   ]
+  },
+  "17": {
+   "skl": "Swordman/JumpAttackMulti.skl",
+   "states": [
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "Animation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/JumpAttackMulti/jumpchainattackslash1_katana_under.ani",
+    "Effect/Animation/JumpAttackMulti/jumpchainattackslash1_katana_upper.ani",
+    "Effect/Animation/JumpAttackMulti/jumpchainattackslash2_katana_under.ani",
+    "Effect/Animation/JumpAttackMulti/jumpchainattackslash2_katana_upper.ani",
+    "Effect/Animation/JumpAttackMulti/jumpchainattackslash1_under_effect.ani",
+    "Effect/Animation/JumpAttackMulti/jumpchainattackslash2_under_effect.ani",
+    "Effect/Animation/JumpAttackMulti/jumpchainattackslash1_upper_effect.ani",
+    "Effect/Animation/JumpAttackMulti/jumpchainattackslash2_upper_effect.ani",
+    "Effect/Animation/JumpAttackMulti/jumpchainattacknormal_upper_effect.ani"
+   ]
+  },
+  "18": {
+   "skl": "Swordman/GhostStep.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 77,
+     "handler": "0x00cde6a2",
+     "entry_motions": [
+      {
+       "index": 119,
+       "ani": "Animation/SpiritDashAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "19": {
+   "skl": "Swordman/PinchPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "20": {
+   "skl": "Swordman/NormalWave.skl",
+   "states": [
+    {
+     "state": 24,
+     "handler": "0x00cd19ec",
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "Animation/Wave.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/NormalWaveSlash.ani"
+   ]
+  },
+  "21": {
+   "skl": "Swordman/IceWave.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "22": {
+   "skl": "Swordman/FireWave.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "23": {
+   "skl": "Swordman/Sacrifice.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00cd7d34",
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "Animation/BloodyRaveInhale.ani"
+      },
+      {
+       "index": 64,
+       "ani": "Animation/BloodyRaveSlash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "24": {
+   "skl": "Swordman/BloodBlast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "25": {
+   "skl": "Swordman/Khazan.skl",
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "27": {
+   "skl": "Swordman/WeaponMasteryUp.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 25,
+     "handler": "0x00cd212d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "Animation/DashAttackMultiHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 49,
+       "ani": "Animation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "Animation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "29": {
+   "skl": "Swordman/DarkFriendship.skl",
+   "states": [
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "30": {
+   "skl": "Swordman/DarkToleranceUp.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "31": {
+   "skl": "Swordman/GrabBlastBlood.skl",
+   "states": [],
+   "effect_anis": [
+    "Effect/Animation/GrabBlastBlood.ani"
+   ]
+  },
+  "32": {
+   "skl": "Swordman/ReleaseWave.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "33": {
+   "skl": "Swordman/EquipLightSword.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "34": {
+   "skl": "Swordman/DieHard.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "35": {
+   "skl": "Swordman/GhostPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "36": {
+   "skl": "Swordman/Saya.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "37": {
+   "skl": "Swordman/FastEquip.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "38": {
+   "skl": "Swordman/OverDrive.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "39": {
+   "skl": "Swordman/DurabilityUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "40": {
+   "skl": "Swordman/Reckless.skl",
+   "states": [
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "41": {
+   "skl": "Swordman/Bremen.skl",
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "42": {
+   "skl": "Swordman/DisjointItemDark.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "43": {
+   "skl": "Swordman/JumpAttackHighFast.skl",
+   "states": [
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "Animation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "44": {
+   "skl": "Swordman/TombStoneRain.skl",
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "46": {
+   "skl": "Swordman/UpperSlash.skl",
+   "states": [
+    {
+     "state": 30,
+     "handler": "0x00cda585",
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "Animation/UpperSlashAfter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/UpperSlash1.ani",
+    "Effect/Animation/UpperSlash2.ani"
+   ]
+  },
+  "47": {
+   "skl": "Swordman/WaveMark.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "49": {
+   "skl": "Swordman/BackStepCutter.skl",
+   "states": [
+    {
+     "state": 7,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "Animation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "50": {
+   "skl": "Swordman/GrandWave.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00cd8c62",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/HardAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/grandWaveOnCharge1.ani",
+    "Effect/Animation/grandWaveOnCharge2.ani",
+    "Effect/Animation/grandWave.ani"
+   ]
+  },
+  "51": {
+   "skl": "Swordman/GrandWaveCharge.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00cd8c62",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/HardAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "52": {
+   "skl": "Swordman/DOTArea.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "53": {
+   "skl": "Swordman/MindFlash.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "55": {
+   "skl": "Swordman/SenseViolentTemper.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "56": {
+   "skl": "Swordman/ArmorMasteryHeavyBK.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "57": {
+   "skl": "Swordman/ShockWaveArea.skl",
+   "states": [
+    {
+     "state": 31,
+     "handler": "0x00cd2d6b",
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "Animation/ShockWaveAreaCast.ani"
+      },
+      {
+       "index": 13,
+       "ani": "Animation/ShockWaveAreaSmash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/ShockWaveArea/Cast.ani",
+    "Effect/Animation/ShockWaveArea/Smash.ani",
+    "Effect/Animation/ShockWaveArea/Area.ani"
+   ]
+  },
+  "58": {
+   "skl": "Swordman/VaneSlash.skl",
+   "states": [
+    {
+     "state": 32,
+     "handler": "0x00cd413d",
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "Animation/VaneSlashTry.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/VaneSlash/Upper.ani",
+    "Effect/Animation/VaneSlash/Dust.ani",
+    "Effect/Animation/VaneSlash/Smash.ani"
+   ]
+  },
+  "60": {
+   "skl": "Swordman/GhostStepSlash.skl",
+   "states": [
+    {
+     "state": 33,
+     "handler": "0x00cd3326",
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "Animation/GhostStepSlashReady.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/GhostStepSlashMove.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/GhostStepSlash/Move.ani",
+    "Effect/Animation/GhostStepSlash/Slash1.ani",
+    "Effect/Animation/GhostStepSlash/Slash2.ani",
+    "Effect/Animation/GhostStepSlash/Skull.ani"
+   ]
+  },
+  "61": {
+   "skl": "Swordman/ArmorMasteryPlateWave.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "62": {
+   "skl": "Swordman/StandAloneWave.skl",
+   "states": [
+    {
+     "state": 34,
+     "handler": "0x00cd3842",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "Animation/StandAloneWaveReady.ani"
+      },
+      {
+       "index": 21,
+       "ani": "Animation/StandAloneWaveBasic.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "63": {
+   "skl": "Swordman/BloodyVigorous.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "64": {
+   "skl": "Swordman/GoreCross.skl",
+   "states": [
+    {
+     "state": 35,
+     "handler": "0x00cd476e",
+     "entry_motions": [
+      {
+       "index": 25,
+       "ani": "Animation/GoreCross.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/GoreCross/Slash1.ani",
+    "Effect/Animation/GoreCross/Slash2.ani",
+    "Effect/Animation/GoreCross/Slash3.ani",
+    "Effect/Animation/GoreCross/Slash4.ani"
+   ]
+  },
+  "65": {
+   "skl": "Swordman/HopSmash.skl",
+   "states": [
+    {
+     "state": 36,
+     "handler": "0x00cd4e97",
+     "entry_motions": [
+      {
+       "index": 26,
+       "ani": "Animation/HopSmashReady.ani"
+      },
+      {
+       "index": 27,
+       "ani": "Animation/HopSmash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/HopSmash/Sword.ani",
+    "Effect/Animation/HopSmash/Smash.ani"
+   ]
+  },
+  "67": {
+   "skl": "Swordman/WeaponCombo.skl",
+   "states": [
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "68": {
+   "skl": "Swordman/ChargeCrash.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00cd9192",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "Animation/ChargeCrashDash.ani"
+      },
+      {
+       "index": 44,
+       "ani": "Animation/ChargeCrashUpper.ani"
+      },
+      {
+       "index": 45,
+       "ani": "Animation/ChargeCrashFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/ChargeCrash/dash.ani",
+    "Effect/Animation/ChargeCrash/up-slash.ani",
+    "Effect/Animation/ChargeCrash/charge.ani",
+    "Effect/Animation/ChargeCrash/down-slash.ani",
+    "Effect/Animation/ChargeCrash/dustdash.ani",
+    "Effect/Animation/ChargeCrash/dustdashlast.ani"
+   ]
+  },
+  "72": {
+   "skl": "Swordman/RapidMoveSlash.skl",
+   "states": [
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 49,
+       "ani": "Animation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/RapidMoveSlash/Move1.ani",
+    "Effect/Animation/RapidMoveSlash/Move2.ani",
+    "Effect/Animation/RapidMoveSlash/Slash1.ani",
+    "Effect/Animation/RapidMoveSlash/Slash2.ani"
+   ]
+  },
+  "73": {
+   "skl": "Swordman/IllusionSlash.skl",
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "Animation/IllusionSlash1.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/IllusionSlashFinal.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/IllusionSlash/Upper.ani",
+    "Effect/Animation/IllusionSlash/Smash.ani"
+   ]
+  },
+  "74": {
+   "skl": "Swordman/WaveSpinArea.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 56,
+       "ani": "Animation/WaveSpinAreaBomb.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/WaveSpinArea/Circle.ani",
+    "Effect/Animation/WaveSpinArea/CircleFront.ani",
+    "Effect/Animation/WaveSpinArea/CircleBack.ani"
+   ]
+  },
+  "75": {
+   "skl": "Swordman/EpidemicRasa.skl",
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "76": {
+   "skl": "Swordman/Frenzy.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "77": {
+   "skl": "Swordman/MoonlightSlash.skl",
+   "states": [
+    {
+     "state": 42,
+     "handler": "0x00cd9a28",
+     "entry_motions": [
+      {
+       "index": 61,
+       "ani": "Animation/MoonlightSlash1.ani"
+      },
+      {
+       "index": 62,
+       "ani": "Animation/MoonlightSlash2.ani"
+      },
+      {
+       "index": 65,
+       "ani": "Animation/MoonlightSlashFull.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/MoonlightSlash1.ani",
+    "Effect/Animation/MoonlightSlash2.ani",
+    "Effect/Animation/MoonlightSlashFull.ani"
+   ]
+  },
+  "79": {
+   "skl": "Swordman/BloodyRave.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00cd7d34",
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "Animation/BloodyRaveInhale.ani"
+      },
+      {
+       "index": 64,
+       "ani": "Animation/BloodyRaveSlash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/BloodyRave/Start1.ani",
+    "Effect/Animation/BloodyRave/Start2.ani",
+    "Effect/Animation/BloodyRave/Loop1.ani",
+    "Effect/Animation/BloodyRave/Loop2.ani",
+    "Effect/Animation/BloodyRave/Line1.ani",
+    "Effect/Animation/BloodyRave/Line2.ani",
+    "Effect/Animation/BloodyRave/Typhoon.ani",
+    "Effect/Animation/BloodyRave/End.ani",
+    "Effect/Animation/BloodyRave/Sword1.ani",
+    "Effect/Animation/BloodyRave/Sword2.ani",
+    "Effect/Animation/BloodyRave/Sword3.ani",
+    "Effect/Animation/BloodyRave/Sword4.ani",
+    "Effect/Animation/BloodyRave/(TN)Sword2.ani",
+    "Effect/Animation/BloodyRave/(TN)Sword4.ani",
+    "Effect/Animation/BloodyRave/Hit.ani"
+   ]
+  },
+  "80": {
+   "skl": "Swordman/MoonlightSlashFull.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 61,
+       "ani": "Animation/MoonlightSlash1.ani"
+      },
+      {
+       "index": 62,
+       "ani": "Animation/MoonlightSlash2.ani"
+      },
+      {
+       "index": 65,
+       "ani": "Animation/MoonlightSlashFull.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "81": {
+   "skl": "Swordman/OutRageBreak.skl",
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00cd4bb6",
+     "entry_motions": [
+      {
+       "index": 66,
+       "ani": "Animation/OutRageBreakReady.ani"
+      },
+      {
+       "index": 67,
+       "ani": "Animation/OutRageBreakSlash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/OutRageBreak/sword_ready_ldodge.ani",
+    "Effect/Animation/OutRageBreak/sword_ready_none.ani",
+    "Effect/Animation/OutRageBreak/sword_slash_ldodge.ani",
+    "Effect/Animation/OutRageBreak/sword_slash_none.ani",
+    "Effect/Animation/OutRageBreak/sword_slash_impact_ldodge.ani",
+    "Effect/Animation/OutRageBreak/sword_slash_impact_none.ani",
+    "Effect/Animation/OutRageBreak/sword_slash_stone.ani"
+   ]
+  },
+  "82": {
+   "skl": "Swordman/Kalla.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 44,
+     "handler": "0x00cd8493",
+     "entry_motions": [
+      {
+       "index": 68,
+       "ani": "Animation/KallaLand.ani"
+      },
+      {
+       "index": 69,
+       "ani": "Animation/KallaAir.ani"
+      },
+      {
+       "index": 70,
+       "ani": "Animation/KallaFinishReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 77,
+     "handler": "0x00cde6a2",
+     "entry_motions": [
+      {
+       "index": 119,
+       "ani": "Animation/SpiritDashAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/Kalla/FinishReady",
+    "Effect/Animation/Kalla/Finish"
+   ]
+  },
+  "84": {
+   "skl": "Swordman/Keiga.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "85": {
+   "skl": "Swordman/Hellbenter.skl",
+   "states": [
+    {
+     "state": 46,
+     "handler": "0x00cdaabf",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "Animation/HellbenterFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "86": {
+   "skl": "Swordman/HundredSword.skl",
+   "states": [
+    {
+     "state": 47,
+     "handler": "0x00cdadba",
+     "entry_motions": [
+      {
+       "index": 75,
+       "ani": "Animation/HundredSwordReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 48,
+     "handler": "0x00cdb130",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      },
+      {
+       "index": 0,
+       "ani": "Animation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 49,
+     "handler": "0x00cdb798",
+     "entry_motions": [
+      {
+       "index": 86,
+       "ani": "Animation/HundredSwordFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "87": {
+   "skl": "Swordman/Blache.skl",
+   "states": [
+    {
+     "state": 50,
+     "handler": "0x00cdbd6f",
+     "entry_motions": [
+      {
+       "index": 87,
+       "ani": "Animation/BlacheCast.ani"
+      },
+      {
+       "index": 88,
+       "ani": "Animation/BlacheSmash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "88": {
+   "skl": "Swordman/WaveEye.skl",
+   "states": [
+    {
+     "state": 51,
+     "handler": "0x00cdc22c",
+     "entry_motions": [
+      {
+       "index": 89,
+       "ani": "Animation/WaveEyeCast.ani"
+      },
+      {
+       "index": 90,
+       "ani": "Animation/WaveEyeStart.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 53,
+     "handler": "0x00cdc579",
+     "entry_motions": [
+      {
+       "index": 95,
+       "ani": "Animation/WaveEyeWing.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "89": {
+   "skl": "Swordman/DarkAura.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "90": {
+   "skl": "Swordman/BleedingMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "91": {
+   "skl": "Swordman/DefenseDownOnCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "92": {
+   "skl": "Swordman/StuckUpOnCounter.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "93": {
+   "skl": "Swordman/ArmorMasteryClothSB.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "94": {
+   "skl": "Swordman/ArmorMasteryLightWM.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "95": {
+   "skl": "Swordman/TombStoneRainEx.skl",
+   "states": [
+    {
+     "state": 55,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "96": {
+   "skl": "Swordman/SayaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "97": {
+   "skl": "Swordman/MomentarySlashEx.skl",
+   "states": [
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "98": {
+   "skl": "Swordman/ChargeCrashEx.skl",
+   "states": [
+    {
+     "state": 58,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "99": {
+   "skl": "Swordman/FireWaveEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "100": {
+   "skl": "Swordman/IceWaveEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "101": {
+   "skl": "Swordman/BloodBlastEx.skl",
+   "states": [
+    {
+     "state": 57,
+     "handler": "0x00cd0f08",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "102": {
+   "skl": "Swordman/GrabBlastBloodEx.skl",
+   "states": [
+    {
+     "state": 26,
+     "handler": "0x00cd2438",
+     "entry_motions": [
+      {
+       "index": 10,
+       "ani": "Animation/Grab.ani"
+      },
+      {
+       "index": 10,
+       "ani": "Animation/Grab.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "103": {
+   "skl": "Swordman/BloodSword.skl",
+   "states": [
+    {
+     "state": 60,
+     "handler": "0x00cd662e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "105": {
+   "skl": "Swordman/FlowMind.skl",
+   "states": [
+    {
+     "state": 61,
+     "handler": "0x00cd68bc",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "107": {
+   "skl": "Swordman/FlowMindOne.skl",
+   "states": [
+    {
+     "state": 62,
+     "handler": "0x00cd6b05",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "108": {
+   "skl": "Swordman/FlowMindTwo.skl",
+   "states": [
+    {
+     "state": 63,
+     "handler": "0x00cd6f7c",
+     "entry_motions": [
+      {
+       "index": 108,
+       "ani": "Animation/FlowMindTwoJump.ani"
+      },
+      {
+       "index": 109,
+       "ani": "Animation/FlowMindTwoLanding.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "109": {
+   "skl": "Swordman/FlowMindThree.skl",
+   "states": [
+    {
+     "state": 64,
+     "handler": "0x00cd7588",
+     "entry_motions": [
+      {
+       "index": 112,
+       "ani": "Animation/FlowMindThreeReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "110": {
+   "skl": "Swordman/FlowMindPowerUp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 104,
+       "ani": "Animation/FlowMindStart.ani"
+      },
+      {
+       "index": 105,
+       "ani": "Animation/FlowMindStay.ani"
+      },
+      {
+       "index": 106,
+       "ani": "Animation/FlowMindOne.ani"
+      },
+      {
+       "index": 107,
+       "ani": "Animation/FlowMindOneAdd.ani"
+      },
+      {
+       "index": 108,
+       "ani": "Animation/FlowMindTwoJump.ani"
+      },
+      {
+       "index": 109,
+       "ani": "Animation/FlowMindTwoLanding.ani"
+      },
+      {
+       "index": 110,
+       "ani": "Animation/FlowMindTwoAttack1.ani"
+      },
+      {
+       "index": 111,
+       "ani": "Animation/FlowMindTwoAttack2.ani"
+      },
+      {
+       "index": 112,
+       "ani": "Animation/FlowMindThreeReady.ani"
+      },
+      {
+       "index": 113,
+       "ani": "Animation/FlowMindThreeAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "111": {
+   "skl": "Swordman/GhostSideWind.skl",
+   "states": [
+    {
+     "state": 65,
+     "handler": "0x00cd7837",
+     "entry_motions": [
+      {
+       "index": 120,
+       "ani": "Animation/GhostSideWind.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/GhostSideWind/00_sword_normal.ani",
+    "Effect/Animation/GhostSideWind/01_sword_dodge.ani"
+   ]
+  },
+  "112": {
+   "skl": "Swordman/TripleStab.skl",
+   "states": [
+    {
+     "state": 66,
+     "handler": "0x00cd7ab6",
+     "entry_motions": [
+      {
+       "index": 121,
+       "ani": "Animation/TripleStab.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "115": {
+   "skl": "Swordman/GhostSideWindEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 120,
+       "ani": "Animation/GhostSideWind.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "116": {
+   "skl": "Swordman/TripleStabEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 121,
+       "ani": "Animation/TripleStab.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "117": {
+   "skl": null,
+   "states": [
+    {
+     "state": 67,
+     "handler": "0x00cce9ff",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "139": {
+   "skl": "Swordman/PinchPowerUpEx.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00cd7d34",
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "Animation/BloodyRaveInhale.ani"
+      },
+      {
+       "index": 64,
+       "ani": "Animation/BloodyRaveSlash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "140": {
+   "skl": "Swordman/NormalWaveEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "141": {
+   "skl": "Swordman/GoreCrossEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 25,
+       "ani": "Animation/GoreCross.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "142": {
+   "skl": "Swordman/HardAttackEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "Animation/HardAttack.ani"
+      },
+      {
+       "index": 17,
+       "ani": "Animation/HardAttackChargeAfter.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "143": {
+   "skl": "Swordman/TripleSlashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 3,
+       "ani": "Animation/TripleSlash1.ani"
+      },
+      {
+       "index": 4,
+       "ani": "Animation/TripleSlash2.ani"
+      },
+      {
+       "index": 5,
+       "ani": "Animation/TripleSlash3.ani"
+      },
+      {
+       "index": 6,
+       "ani": "Animation/TripleSlash4.ani"
+      },
+      {
+       "index": 7,
+       "ani": "Animation/TripleSlash5.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "144": {
+   "skl": "Swordman/HitBackEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "145": {
+   "skl": "Swordman/AutoGuardEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "146": {
+   "skl": "Swordman/BremenEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "147": {
+   "skl": "Swordman/GhostStepEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "Animation/GhostStepSlashReady.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/GhostStepSlashMove.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "148": {
+   "skl": "Swordman/DieHardEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "149": {
+   "skl": "Swordman/RecklessEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "150": {
+   "skl": "Swordman/DOTAreaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "151": {
+   "skl": "Swordman/WaveMarkEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "152": {
+   "skl": "Swordman/RapidMoveSlashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 48,
+       "ani": "Animation/RapidMoveSlashReady2.ani"
+      },
+      {
+       "index": 49,
+       "ani": "Animation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "153": {
+   "skl": "Swordman/AshenForkEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "154": {
+   "skl": "Swordman/MomentarySlashExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 8,
+       "ani": "Animation/MomentarySlash.ani"
+      },
+      {
+       "index": 98,
+       "ani": "Animation/MomentarySlashEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "155": {
+   "skl": "Swordman/MoonlightSlashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 61,
+       "ani": "Animation/MoonlightSlash1.ani"
+      },
+      {
+       "index": 62,
+       "ani": "Animation/MoonlightSlash2.ani"
+      },
+      {
+       "index": 65,
+       "ani": "Animation/MoonlightSlashFull.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "156": {
+   "skl": "Swordman/EpidemicRasaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "157": {
+   "skl": "Swordman/HopSmashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 26,
+       "ani": "Animation/HopSmashReady.ani"
+      },
+      {
+       "index": 27,
+       "ani": "Animation/HopSmash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "158": {
+   "skl": "Swordman/BloodyRaveEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "Animation/BloodyRaveInhale.ani"
+      },
+      {
+       "index": 64,
+       "ani": "Animation/BloodyRaveSlash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "159": {
+   "skl": "Swordman/VaneSlashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "Animation/VaneSlashTry.ani"
+      },
+      {
+       "index": 15,
+       "ani": "Animation/VaneSlash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "160": {
+   "skl": "Swordman/ReflectGuardEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 46,
+       "ani": "Animation/ReflectGuard.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "161": {
+   "skl": "Swordman/BasicAttackUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "162": {
+   "skl": "Swordman/DashAttackMultiHitEx.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "Animation/DashAttackMultiHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "163": {
+   "skl": "Swordman/GuardEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "164": {
+   "skl": "Swordman/KhazanEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "165": {
+   "skl": "Swordman/GrabBlastBloodExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "166": {
+   "skl": "Swordman/BloodBlastExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "167": {
+   "skl": "Swordman/OutRageBreakEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 66,
+       "ani": "Animation/OutRageBreakReady.ani"
+      },
+      {
+       "index": 67,
+       "ani": "Animation/OutRageBreakSlash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "168": {
+   "skl": "Swordman/BloodSwordEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 102,
+       "ani": "Animation/BloodSwordMake.ani"
+      },
+      {
+       "index": 103,
+       "ani": "Animation/BloodSwordCharge.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "169": {
+   "skl": "Swordman/BackStep.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "172": {
+   "skl": "Swordman/ArmorMasteryLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "173": {
+   "skl": "Swordman/ArmorMasteryHeavy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "174": {
+   "skl": "Swordman/BasicAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "175": {
+   "skl": "Swordman/JumpPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "176": {
+   "skl": "Swordman/MagicalAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "177": {
+   "skl": "Swordman/ThrowMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "178": {
+   "skl": "Swordman/PhysicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "179": {
+   "skl": "Swordman/DisjointItem.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "180": {
+   "skl": "Swordman/SuperArmorOnCast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "181": {
+   "skl": "Swordman/CompoundCraft.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "182": {
+   "skl": "Swordman/CompoundWeaving.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "183": {
+   "skl": "Swordman/CompoundMachine.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "184": {
+   "skl": "Swordman/CompoundChemistry.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "185": {
+   "skl": "Swordman/ArmorMasteryLeather.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "186": {
+   "skl": "Swordman/PhysicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "187": {
+   "skl": "Swordman/ArmorMasteryCloth.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "188": {
+   "skl": "Swordman/MagicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "189": {
+   "skl": "Swordman/MagicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "190": {
+   "skl": "Swordman/QuickStanding.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "191": {
+   "skl": "Swordman/Enchant.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "192": {
+   "skl": "Swordman/DollMaking.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "193": {
+   "skl": "Swordman/Alchemy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "194": {
+   "skl": "Swordman/OpenDisjointShop.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "195": {
+   "skl": "Swordman/BasicHpMaxUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "196": {
+   "skl": "Swordman/ArmorMasteryPlate.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "197": {
+   "skl": "Swordman/Conversion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "200": {
+   "skl": "Swordman/StatusUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "201": {
+   "skl": "Swordman/ExperienceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "210": {
+   "skl": "Swordman/ReleaseWaveEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "211": {
+   "skl": "Swordman/GrandWaveEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "212": {
+   "skl": "Swordman/FireWaveExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "213": {
+   "skl": "Swordman/StandAloneWaveEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "Animation/StandAloneWaveReady.ani"
+      },
+      {
+       "index": 21,
+       "ani": "Animation/StandAloneWaveBasic.ani"
+      },
+      {
+       "index": 22,
+       "ani": "Animation/StandAloneWaveStrong.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "214": {
+   "skl": "Swordman/WaveSpinAreaEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 56,
+       "ani": "Animation/WaveSpinAreaBomb.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "215": {
+   "skl": "Swordman/UpperSlashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "Animation/UpperSlashAfter.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "216": {
+   "skl": "Swordman/IceWaveExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "217": {
+   "skl": "Swordman/IllusionSlashExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "Animation/IllusionSlash1.ani"
+      },
+      {
+       "index": 52,
+       "ani": "Animation/IllusionSlash2.ani"
+      },
+      {
+       "index": 53,
+       "ani": "Animation/IllusionSlash3.ani"
+      },
+      {
+       "index": 54,
+       "ani": "Animation/IllusionSlash4.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/IllusionSlashFinal.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "218": {
+   "skl": "Swordman/ChargeCrashExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "Animation/ChargeCrashDash.ani"
+      },
+      {
+       "index": 44,
+       "ani": "Animation/ChargeCrashUpper.ani"
+      },
+      {
+       "index": 45,
+       "ani": "Animation/ChargeCrashFinish.ani"
+      },
+      {
+       "index": 99,
+       "ani": "Animation/ChargeCrashExShoulder.ani"
+      },
+      {
+       "index": 100,
+       "ani": "Animation/ChargeCrashExPick.ani"
+      },
+      {
+       "index": 101,
+       "ani": "Animation/ChargeCrashExUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "219": {
+   "skl": "Swordman/FlowMindOneEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 104,
+       "ani": "Animation/FlowMindStart.ani"
+      },
+      {
+       "index": 105,
+       "ani": "Animation/FlowMindStay.ani"
+      },
+      {
+       "index": 106,
+       "ani": "Animation/FlowMindOne.ani"
+      },
+      {
+       "index": 107,
+       "ani": "Animation/FlowMindOneAdd.ani"
+      },
+      {
+       "index": 108,
+       "ani": "Animation/FlowMindTwoJump.ani"
+      },
+      {
+       "index": 109,
+       "ani": "Animation/FlowMindTwoLanding.ani"
+      },
+      {
+       "index": 110,
+       "ani": "Animation/FlowMindTwoAttack1.ani"
+      },
+      {
+       "index": 111,
+       "ani": "Animation/FlowMindTwoAttack2.ani"
+      },
+      {
+       "index": 112,
+       "ani": "Animation/FlowMindThreeReady.ani"
+      },
+      {
+       "index": 113,
+       "ani": "Animation/FlowMindThreeAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "220": {
+   "skl": "Swordman/FlowMindTwoEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 104,
+       "ani": "Animation/FlowMindStart.ani"
+      },
+      {
+       "index": 105,
+       "ani": "Animation/FlowMindStay.ani"
+      },
+      {
+       "index": 106,
+       "ani": "Animation/FlowMindOne.ani"
+      },
+      {
+       "index": 107,
+       "ani": "Animation/FlowMindOneAdd.ani"
+      },
+      {
+       "index": 108,
+       "ani": "Animation/FlowMindTwoJump.ani"
+      },
+      {
+       "index": 109,
+       "ani": "Animation/FlowMindTwoLanding.ani"
+      },
+      {
+       "index": 110,
+       "ani": "Animation/FlowMindTwoAttack1.ani"
+      },
+      {
+       "index": 111,
+       "ani": "Animation/FlowMindTwoAttack2.ani"
+      },
+      {
+       "index": 112,
+       "ani": "Animation/FlowMindThreeReady.ani"
+      },
+      {
+       "index": 113,
+       "ani": "Animation/FlowMindThreeAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "221": {
+   "skl": "Swordman/FlowMindThreeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 104,
+       "ani": "Animation/FlowMindStart.ani"
+      },
+      {
+       "index": 105,
+       "ani": "Animation/FlowMindStay.ani"
+      },
+      {
+       "index": 106,
+       "ani": "Animation/FlowMindOne.ani"
+      },
+      {
+       "index": 107,
+       "ani": "Animation/FlowMindOneAdd.ani"
+      },
+      {
+       "index": 108,
+       "ani": "Animation/FlowMindTwoJump.ani"
+      },
+      {
+       "index": 109,
+       "ani": "Animation/FlowMindTwoLanding.ani"
+      },
+      {
+       "index": 110,
+       "ani": "Animation/FlowMindTwoAttack1.ani"
+      },
+      {
+       "index": 111,
+       "ani": "Animation/FlowMindTwoAttack2.ani"
+      },
+      {
+       "index": 112,
+       "ani": "Animation/FlowMindThreeReady.ani"
+      },
+      {
+       "index": 113,
+       "ani": "Animation/FlowMindThreeAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "224": {
+   "skl": "Swordman/SayaExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "225": {
+   "skl": "Swordman/TombStoneRainExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 97,
+       "ani": "Animation/TombStoneEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "226": {
+   "skl": "Swordman/GhostStepSlashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "Animation/GhostStepSlashReady.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/GhostStepSlashMove.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "227": {
+   "skl": "Swordman/KallaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "228": {
+   "skl": "Swordman/ReflectGuardExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 46,
+       "ani": "Animation/ReflectGuard.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  }
+ }
+}

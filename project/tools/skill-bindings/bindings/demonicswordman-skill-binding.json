@@ -1,0 +1,3104 @@
+{
+ "class": "demonicswordman",
+ "exe_region": [
+  "0xca511c",
+  "0xce1ae8"
+ ],
+ "etc_motion": {
+  "0": "DSAnimation/Guard.ani",
+  "1": "DSAnimation/HardAttack.ani",
+  "2": "DSAnimation/HitBack.ani",
+  "3": "DSAnimation/TripleSlash1.ani",
+  "4": "DSAnimation/TripleSlash2.ani",
+  "5": "DSAnimation/TripleSlash3.ani",
+  "6": "DSAnimation/TripleSlash4.ani",
+  "7": "DSAnimation/TripleSlash5.ani",
+  "8": "DSAnimation/MomentarySlash.ani",
+  "9": "DSAnimation/Wave.ani",
+  "10": "DSAnimation/Grab.ani",
+  "11": "DSAnimation/DashAttackMultiHit.ani",
+  "12": "DSAnimation/ShockWaveAreaCast.ani",
+  "13": "DSAnimation/ShockWaveAreaSmash.ani",
+  "14": "DSAnimation/VaneSlashTry.ani",
+  "15": "DSAnimation/VaneSlash.ani",
+  "16": "DSAnimation/UpperSlashAfter.ani",
+  "17": "DSAnimation/HardAttackChargeAfter.ani",
+  "18": "DSAnimation/GhostStepSlashReady.ani",
+  "19": "DSAnimation/GhostStepSlashMove.ani",
+  "20": "DSAnimation/StandAloneWaveReady.ani",
+  "21": "DSAnimation/StandAloneWaveBasic.ani",
+  "22": "DSAnimation/StandAloneWaveStrong.ani",
+  "23": "DSAnimation/JumpAttackMultiSlash1.ani",
+  "24": "DSAnimation/JumpAttackMultiSlash2.ani",
+  "25": "DSAnimation/GoreCross.ani",
+  "26": "DSAnimation/HopSmashReady.ani",
+  "27": "DSAnimation/HopSmash.ani",
+  "28": "DSAnimation/WeaponComboShort1.ani",
+  "29": "DSAnimation/WeaponComboShort2.ani",
+  "30": "DSAnimation/WeaponComboShort3.ani",
+  "31": "DSAnimation/WeaponComboBlade1.ani",
+  "32": "DSAnimation/WeaponComboBlade2.ani",
+  "33": "DSAnimation/WeaponComboBlade3.ani",
+  "34": "DSAnimation/WeaponComboBlade4.ani",
+  "35": "DSAnimation/WeaponComboBlunt1.ani",
+  "36": "DSAnimation/WeaponComboBlunt2.ani",
+  "37": "DSAnimation/WeaponComboBlunt3.ani",
+  "38": "DSAnimation/WeaponComboHeavy1.ani",
+  "39": "DSAnimation/WeaponComboHeavy2.ani",
+  "40": "DSAnimation/WeaponComboLight1.ani",
+  "41": "DSAnimation/WeaponComboLight2.ani",
+  "42": "DSAnimation/WeaponComboLight3.ani",
+  "43": "DSAnimation/ChargeCrashDash.ani",
+  "44": "DSAnimation/ChargeCrashUpper.ani",
+  "45": "DSAnimation/ChargeCrashFinish.ani",
+  "46": "DSAnimation/ReflectGuard.ani",
+  "47": "DSAnimation/RapidMoveSlashReady1.ani",
+  "48": "DSAnimation/RapidMoveSlashReady2.ani",
+  "49": "DSAnimation/RapidMoveSlashMove1.ani",
+  "50": "DSAnimation/RapidMoveSlashMove2.ani",
+  "51": "DSAnimation/IllusionSlash1.ani",
+  "52": "DSAnimation/IllusionSlash2.ani",
+  "53": "DSAnimation/IllusionSlash3.ani",
+  "54": "DSAnimation/IllusionSlash4.ani",
+  "55": "DSAnimation/IllusionSlashFinal.ani",
+  "56": "DSAnimation/WaveSpinAreaBomb.ani",
+  "57": "DSAnimation/Frenzy1.ani",
+  "58": "DSAnimation/Frenzy2.ani",
+  "59": "DSAnimation/Frenzy3.ani",
+  "60": "DSAnimation/Frenzy4.ani",
+  "61": "DSAnimation/MoonlightSlash1.ani",
+  "62": "DSAnimation/MoonlightSlash2.ani",
+  "63": "DSAnimation/BloodyRaveInhale.ani",
+  "64": "DSAnimation/BloodyRaveSlash.ani",
+  "65": "DSAnimation/MoonlightSlashFull.ani",
+  "66": "DSAnimation/OutRageBreakReady.ani",
+  "67": "DSAnimation/OutRageBreakSlash.ani",
+  "68": "DSAnimation/KallaLand.ani",
+  "69": "DSAnimation/KallaAir.ani",
+  "70": "DSAnimation/KallaFinishReady.ani",
+  "71": "DSAnimation/KallaFinish1.ani",
+  "72": "DSAnimation/KallaFinish2.ani",
+  "73": "DSAnimation/KallaFinish3.ani",
+  "74": "DSAnimation/HellbenterFinish.ani",
+  "75": "DSAnimation/HundredSwordReady.ani",
+  "76": "DSAnimation/HundredSwordMoveReady1.ani",
+  "77": "DSAnimation/HundredSwordMoveReady2.ani",
+  "78": "DSAnimation/HundredSwordMoveReady3.ani",
+  "79": "DSAnimation/HundredSwordMoveReady4.ani",
+  "80": "DSAnimation/HundredSwordMoveReady5.ani",
+  "81": "DSAnimation/HundredSwordMoveSlash1.ani",
+  "82": "DSAnimation/HundredSwordMoveSlash2.ani",
+  "83": "DSAnimation/HundredSwordMoveSlash3.ani",
+  "84": "DSAnimation/HundredSwordMoveSlash4.ani",
+  "85": "DSAnimation/HundredSwordMoveSlash5.ani",
+  "86": "DSAnimation/HundredSwordFinish.ani",
+  "87": "DSAnimation/BlacheCast.ani",
+  "88": "DSAnimation/BlacheSmash.ani",
+  "89": "DSAnimation/WaveEyeCast.ani",
+  "90": "DSAnimation/WaveEyeStart.ani",
+  "91": "DSAnimation/WaveEyeAttack1.ani",
+  "92": "DSAnimation/WaveEyeAttack2.ani",
+  "93": "DSAnimation/WaveEyeAttack3.ani",
+  "94": "DSAnimation/WaveEyeClaw.ani",
+  "95": "DSAnimation/WaveEyeWing.ani",
+  "96": "DSAnimation/WaveEyeSpear.ani",
+  "97": "DSAnimation/TombStoneEx.ani",
+  "98": "DSAnimation/MomentarySlashEx.ani",
+  "99": "DSAnimation/ChargeCrashExShoulder.ani",
+  "100": "DSAnimation/ChargeCrashExPick.ani",
+  "101": "DSAnimation/ChargeCrashExUpper.ani",
+  "102": "DSAnimation/BloodSwordMake.ani",
+  "103": "DSAnimation/BloodSwordCharge.ani",
+  "104": "DSAnimation/FlowMindStart.ani",
+  "105": "DSAnimation/FlowMindStay.ani",
+  "106": "DSAnimation/FlowMindOne.ani",
+  "107": "DSAnimation/FlowMindOneAdd.ani",
+  "108": "DSAnimation/FlowMindTwoJump.ani",
+  "109": "DSAnimation/FlowMindTwoLanding.ani",
+  "110": "DSAnimation/FlowMindTwoAttack1.ani",
+  "111": "DSAnimation/FlowMindTwoAttack2.ani",
+  "112": "DSAnimation/FlowMindThreeReady.ani",
+  "113": "DSAnimation/FlowMindThreeAttack.ani",
+  "114": "DSAnimation/StaySacrifice.ani",
+  "115": "DSAnimation/SpiritAttack1.ani",
+  "116": "DSAnimation/SpiritAttack2.ani",
+  "117": "DSAnimation/SpiritAttack3.ani",
+  "118": "DSAnimation/SpiritAttack4.ani",
+  "119": "DSAnimation/SpiritDashAttack.ani",
+  "120": "DSAnimation/GhostSideWind.ani",
+  "121": "DSAnimation/TripleStab.ani",
+  "122": "DSAnimation/DarkWave.ani",
+  "123": "DSAnimation/Throw1.ani",
+  "124": "DSAnimation/Summon1.ani"
+ },
+ "skills": {
+  "1": {
+   "skl": "DemonicSwordman/NotApplicable/Guard.skl",
+   "states": [
+    {
+     "state": 8,
+     "handler": "0x00cceb55",
+     "entry_motions": [
+      {
+       "index": 93,
+       "ani": "DSAnimation/WaveEyeAttack3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 17,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 24,
+     "handler": "0x00cd19ec",
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "DSAnimation/Wave.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "2": {
+   "skl": "DemonicSwordman/DarkBall.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 38,
+     "handler": "0x00cda8d9",
+     "entry_motions": [
+      {
+       "index": 46,
+       "ani": "DSAnimation/ReflectGuard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/ReflectGuard_DS/charge.ani",
+    "Effect/Animation/ReflectGuard_DS/slash.ani"
+   ]
+  },
+  "3": {
+   "skl": "DemonicSwordman/NotApplicable/AutoGuard.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 59,
+     "handler": "0x00cd05f5",
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "DSAnimation/HitBack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "4": {
+   "skl": "DemonicSwordman/LightSwordMastery.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "DSAnimation/DashAttackMultiHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "DSAnimation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 49,
+       "ani": "DSAnimation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      },
+      {
+       "index": 50,
+       "ani": "DSAnimation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "DSAnimation/IllusionSlash1.ani"
+      },
+      {
+       "index": 55,
+       "ani": "DSAnimation/IllusionSlashFinal.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "5": {
+   "skl": "DemonicSwordman/DarkSlash.skl",
+   "states": [
+    {
+     "state": 20,
+     "handler": "0x00ccf3b2",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "DSAnimation/HardAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "DSAnimation/HardAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "DSAnimation/HardAttack.ani"
+      },
+      {
+       "index": 17,
+       "ani": "DSAnimation/HardAttackChargeAfter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/HardAttack1_DS.ani"
+   ]
+  },
+  "6": {
+   "skl": "DemonicSwordman/NotApplicable/HardAttackCharge.skl",
+   "states": [
+    {
+     "state": 20,
+     "handler": "0x00ccf3b2",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "DSAnimation/HardAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "DSAnimation/HardAttack.ani"
+      },
+      {
+       "index": 1,
+       "ani": "DSAnimation/HardAttack.ani"
+      },
+      {
+       "index": 17,
+       "ani": "DSAnimation/HardAttackChargeAfter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "7": {
+   "skl": "DemonicSwordman/NotApplicable/HitBack.skl",
+   "states": [
+    {
+     "state": 21,
+     "handler": "0x00cd03c0",
+     "entry_motions": [
+      {
+       "index": 2,
+       "ani": "DSAnimation/HitBack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "8": {
+   "skl": "DemonicSwordman/BriefCut.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/TripleSlash_DS/Slash1.ani",
+    "Effect/Animation/TripleSlash_DS/Slash2.ani",
+    "Effect/Animation/TripleSlash_DS/Slash3.ani",
+    "Effect/Animation/TripleSlash_DS/Slash4.ani",
+    "Effect/Animation/TripleSlash_DS/Slash5.ani",
+    "Effect/Animation/TripleSlash_DS/Move1.ani",
+    "Effect/Animation/TripleSlash_DS/Move2.ani"
+   ]
+  },
+  "9": {
+   "skl": "DemonicSwordman/DrawSword.skl",
+   "states": [],
+   "effect_anis": [
+    "Effect/Animation/MomentarySlash/momentaryslash_none_under.ani",
+    "Effect/Animation/MomentarySlash_DS/momentaryslash_blue_ldodge_under.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_none_upper.ani",
+    "Effect/Animation/MomentarySlash_DS/momentaryslash_blue_ldodge_upper.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_white_ldodge_under.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_white_ldodge_upper.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_red_ldodge_under.ani",
+    "Effect/Animation/MomentarySlash/momentaryslash_red_ldodge_upper.ani",
+    "Effect/Animation/MomentarySlash/Charge1.ani",
+    "Effect/Animation/MomentarySlash/Charge2.ani"
+   ]
+  },
+  "10": {
+   "skl": "DemonicSwordman/NotApplicable/CancelWave.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "11": {
+   "skl": "DemonicSwordman/NotApplicable/DashAttackMultiHit.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "DSAnimation/DashAttackMultiHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "12": {
+   "skl": "DemonicSwordman/ShortSwordMastery.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 30,
+     "handler": "0x00cda585",
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "DSAnimation/UpperSlashAfter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "DSAnimation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 49,
+       "ani": "DSAnimation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      },
+      {
+       "index": 50,
+       "ani": "DSAnimation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "DSAnimation/IllusionSlash1.ani"
+      },
+      {
+       "index": 55,
+       "ani": "DSAnimation/IllusionSlashFinal.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "13": {
+   "skl": "DemonicSwordman/BladeMastery.skl",
+   "states": [
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "DSAnimation/IllusionSlash1.ani"
+      },
+      {
+       "index": 55,
+       "ani": "DSAnimation/IllusionSlashFinal.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "DSAnimation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "14": {
+   "skl": "DemonicSwordman/HeavySwordMastery.skl",
+   "states": [
+    {
+     "state": 8,
+     "handler": "0x00cceb55",
+     "entry_motions": [
+      {
+       "index": 93,
+       "ani": "DSAnimation/WaveEyeAttack3.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 23,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 25,
+     "handler": "0x00cd212d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 37,
+     "handler": "0x00cd9192",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "DSAnimation/ChargeCrashDash.ani"
+      },
+      {
+       "index": 44,
+       "ani": "DSAnimation/ChargeCrashUpper.ani"
+      },
+      {
+       "index": 45,
+       "ani": "DSAnimation/ChargeCrashFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "15": {
+   "skl": "DemonicSwordman/BluntMastery.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00cd9192",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "DSAnimation/ChargeCrashDash.ani"
+      },
+      {
+       "index": 44,
+       "ani": "DSAnimation/ChargeCrashUpper.ani"
+      },
+      {
+       "index": 45,
+       "ani": "DSAnimation/ChargeCrashFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "DSAnimation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "16": {
+   "skl": "DemonicSwordman/NotApplicable/AshenFork.skl",
+   "states": [
+    {
+     "state": 25,
+     "handler": "0x00cd212d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/JumpAttackHold_DS.ani"
+   ]
+  },
+  "17": {
+   "skl": "DemonicSwordman/NotApplicable/JumpAttackMulti.skl",
+   "states": [
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "DSAnimation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/JumpAttackMulti_DS/jumpchainattackslash1_katana_under.ani",
+    "Effect/Animation/JumpAttackMulti_DS/jumpchainattackslash1_katana_upper.ani",
+    "Effect/Animation/JumpAttackMulti_DS/jumpchainattackslash2_katana_under.ani",
+    "Effect/Animation/JumpAttackMulti_DS/jumpchainattackslash2_katana_upper.ani",
+    "Effect/Animation/JumpAttackMulti_DS/jumpchainattackslash1_under_effect.ani",
+    "Effect/Animation/JumpAttackMulti_DS/jumpchainattackslash2_under_effect.ani",
+    "Effect/Animation/JumpAttackMulti_DS/jumpchainattackslash1_upper_effect.ani",
+    "Effect/Animation/JumpAttackMulti_DS/jumpchainattackslash2_upper_effect.ani",
+    "Effect/Animation/JumpAttackMulti_DS/jumpchainattacknormal_upper_effect.ani"
+   ]
+  },
+  "18": {
+   "skl": "DemonicSwordman/NotApplicable/GhostStep.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 77,
+     "handler": "0x00cde6a2",
+     "entry_motions": [
+      {
+       "index": 119,
+       "ani": "DSAnimation/SpiritDashAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "19": {
+   "skl": "DemonicSwordman/NotApplicable/PinchPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "20": {
+   "skl": "DemonicSwordman/Wave.skl",
+   "states": [
+    {
+     "state": 24,
+     "handler": "0x00cd19ec",
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "DSAnimation/Wave.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/NormalWaveSlash_DS.ani"
+   ]
+  },
+  "21": {
+   "skl": "DemonicSwordman/NotApplicable/IceWave.skl",
+   "states": [],
+   "effect_anis": [
+    "Effect/Animation/RapidMoveSlash_DS/Move1.ani"
+   ]
+  },
+  "22": {
+   "skl": "DemonicSwordman/NotApplicable/FireWave.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "23": {
+   "skl": "DemonicSwordman/NotApplicable/Sacrifice.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00cd7d34",
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "DSAnimation/BloodyRaveInhale.ani"
+      },
+      {
+       "index": 64,
+       "ani": "DSAnimation/BloodyRaveSlash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "24": {
+   "skl": "DemonicSwordman/DarkExplosion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "25": {
+   "skl": "DemonicSwordman/NotApplicable/Khazan.skl",
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "26": {
+   "skl": "DemonicSwordman/NotApplicable/CancelTripleSlash.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "27": {
+   "skl": "DemonicSwordman/NotApplicable/WeaponMasteryUp.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00ccec76",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 22,
+     "handler": "0x00cd082e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 25,
+     "handler": "0x00cd212d",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "DSAnimation/DashAttackMultiHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "DSAnimation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 49,
+       "ani": "DSAnimation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      },
+      {
+       "index": 50,
+       "ani": "DSAnimation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "DSAnimation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "28": {
+   "skl": "DemonicSwordman/NotApplicable/CancelHardAttack.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "29": {
+   "skl": "DemonicSwordman/NotApplicable/DarkFriendship.skl",
+   "states": [
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "30": {
+   "skl": "DemonicSwordman/NotApplicable/DarkToleranceUp.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "31": {
+   "skl": "DemonicSwordman/DarkRust.skl",
+   "states": [],
+   "effect_anis": [
+    "Effect/Animation/GrabBlastBlood_DS.ani"
+   ]
+  },
+  "32": {
+   "skl": "DemonicSwordman/NotApplicable/ReleaseWave.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "33": {
+   "skl": "DemonicSwordman/NotApplicable/EquipLightSword.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "34": {
+   "skl": "DemonicSwordman/NotApplicable/DieHard.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "35": {
+   "skl": "DemonicSwordman/NotApplicable/GhostPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "36": {
+   "skl": "DemonicSwordman/NotApplicable/Saya.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "37": {
+   "skl": "DemonicSwordman/NotApplicable/FastEquip.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "38": {
+   "skl": "DemonicSwordman/NotApplicable/OverDrive.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "39": {
+   "skl": "DemonicSwordman/NotApplicable/DurabilityUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "40": {
+   "skl": "DemonicSwordman/NotApplicable/Reckless.skl",
+   "states": [
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "41": {
+   "skl": "DemonicSwordman/NotApplicable/Bremen.skl",
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "42": {
+   "skl": "DemonicSwordman/NotApplicable/DisjointItemDark.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "43": {
+   "skl": "DemonicSwordman/NotApplicable/JumpAttackHighFast.skl",
+   "states": [
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "DSAnimation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 71,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 72,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 73,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 74,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 76,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 78,
+     "handler": "0x00ce1864",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "44": {
+   "skl": "DemonicSwordman/DarkFall.skl",
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "45": {
+   "skl": "DemonicSwordman/NotApplicable/CancelGuard.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "46": {
+   "skl": "DemonicSwordman/Upper.skl",
+   "states": [
+    {
+     "state": 30,
+     "handler": "0x00cda585",
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "DSAnimation/UpperSlashAfter.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/UpperSlash1_DS.ani",
+    "Effect/Animation/UpperSlash2_DS.ani"
+   ]
+  },
+  "47": {
+   "skl": "DemonicSwordman/NotApplicable/WaveMark.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "48": {
+   "skl": "DemonicSwordman/NotApplicable/CancelUpperSlash.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "49": {
+   "skl": "DemonicSwordman/NotApplicable/BackStepCutter.skl",
+   "states": [
+    {
+     "state": 7,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 69,
+     "handler": "0x00cdc9c9",
+     "entry_motions": [
+      {
+       "index": 23,
+       "ani": "DSAnimation/JumpAttackMultiSlash1.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "50": {
+   "skl": "DemonicSwordman/GrandWave.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00cd8c62",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "DSAnimation/HardAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/grandWaveOnCharge1.ani",
+    "Effect/Animation/grandWaveOnCharge2.ani",
+    "Effect/Animation/grandWave_DS.ani"
+   ]
+  },
+  "51": {
+   "skl": "DemonicSwordman/NotApplicable/GrandWaveCharge.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00cd8c62",
+     "entry_motions": [
+      {
+       "index": 1,
+       "ani": "DSAnimation/HardAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "52": {
+   "skl": "DemonicSwordman/NotApplicable/DOTArea.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "53": {
+   "skl": "DemonicSwordman/NotApplicable/MindFlash.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "54": {
+   "skl": "DemonicSwordman/NotApplicable/CancelGrabBlastBlood.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "55": {
+   "skl": "DemonicSwordman/NotApplicable/SenseViolentTemper.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "56": {
+   "skl": "DemonicSwordman/NotApplicable/ArmorMasteryHeavyBK.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "57": {
+   "skl": "DemonicSwordman/ShockWave.skl",
+   "states": [
+    {
+     "state": 31,
+     "handler": "0x00cd2d6b",
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "DSAnimation/ShockWaveAreaCast.ani"
+      },
+      {
+       "index": 13,
+       "ani": "DSAnimation/ShockWaveAreaSmash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/ShockWaveArea_DS/Cast.ani",
+    "Effect/Animation/ShockWaveArea_DS/Smash.ani",
+    "Effect/Animation/ShockWaveArea_DS/Area.ani"
+   ]
+  },
+  "58": {
+   "skl": "DemonicSwordman/VaneSlash.skl",
+   "states": [
+    {
+     "state": 32,
+     "handler": "0x00cd413d",
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "DSAnimation/VaneSlashTry.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/VaneSlash_DS/Upper.ani",
+    "Effect/Animation/VaneSlash_DS/Dust.ani",
+    "Effect/Animation/VaneSlash_DS/Smash.ani"
+   ]
+  },
+  "59": {
+   "skl": "DemonicSwordman/NotApplicable/CancelVaneSlash.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "60": {
+   "skl": "DemonicSwordman/MomentarySlash.skl",
+   "states": [
+    {
+     "state": 33,
+     "handler": "0x00cd3326",
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "DSAnimation/GhostStepSlashReady.ani"
+      },
+      {
+       "index": 19,
+       "ani": "DSAnimation/GhostStepSlashMove.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/GhostStepSlash_DS/Move.ani",
+    "Effect/Animation/GhostStepSlash_DS/Slash1.ani",
+    "Effect/Animation/GhostStepSlash_DS/Slash2.ani",
+    "Effect/Animation/GhostStepSlash_DS/Skull.ani"
+   ]
+  },
+  "61": {
+   "skl": "DemonicSwordman/NotApplicable/ArmorMasteryPlateWave.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "62": {
+   "skl": "DemonicSwordman/NotApplicable/StandAloneWave.skl",
+   "states": [
+    {
+     "state": 34,
+     "handler": "0x00cd3842",
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "DSAnimation/StandAloneWaveReady.ani"
+      },
+      {
+       "index": 21,
+       "ani": "DSAnimation/StandAloneWaveBasic.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "63": {
+   "skl": "DemonicSwordman/NotApplicable/BloodyVigorous.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "64": {
+   "skl": "DemonicSwordman/DarkCross.skl",
+   "states": [
+    {
+     "state": 35,
+     "handler": "0x00cd476e",
+     "entry_motions": [
+      {
+       "index": 25,
+       "ani": "DSAnimation/GoreCross.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/GoreCross_DS/Slash1.ani",
+    "Effect/Animation/GoreCross_DS/Slash2.ani",
+    "Effect/Animation/GoreCross_DS/Slash3.ani",
+    "Effect/Animation/GoreCross_DS/Slash4.ani"
+   ]
+  },
+  "65": {
+   "skl": "DemonicSwordman/HopSmash.skl",
+   "states": [
+    {
+     "state": 36,
+     "handler": "0x00cd4e97",
+     "entry_motions": [
+      {
+       "index": 26,
+       "ani": "DSAnimation/HopSmashReady.ani"
+      },
+      {
+       "index": 27,
+       "ani": "DSAnimation/HopSmash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/HopSmash_DS/Sword.ani",
+    "Effect/Animation/HopSmash_DS/Smash.ani"
+   ]
+  },
+  "66": {
+   "skl": "DemonicSwordman/NotApplicable/CancelHopSmash.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "67": {
+   "skl": "DemonicSwordman/NotApplicable/WeaponCombo.skl",
+   "states": [
+    {
+     "state": 70,
+     "handler": "0x00cdd008",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "68": {
+   "skl": "DemonicSwordman/DarkCrasher.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00cd9192",
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "DSAnimation/ChargeCrashDash.ani"
+      },
+      {
+       "index": 44,
+       "ani": "DSAnimation/ChargeCrashUpper.ani"
+      },
+      {
+       "index": 45,
+       "ani": "DSAnimation/ChargeCrashFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/ChargeCrash_DS/dash.ani",
+    "Effect/Animation/ChargeCrash_DS/up-slash.ani",
+    "Effect/Animation/ChargeCrash_DS/charge.ani",
+    "Effect/Animation/ChargeCrash_DS/down-slash.ani",
+    "Effect/Animation/ChargeCrash_DS/dustdash.ani",
+    "Effect/Animation/ChargeCrash_DS/dustdashlast.ani"
+   ]
+  },
+  "69": {
+   "skl": "DemonicSwordman/NotApplicable/CancelChargeCrash.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "70": {
+   "skl": "DemonicSwordman/NotApplicable/CancelBloodBlast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "71": {
+   "skl": "DemonicSwordman/NotApplicable/CancelReflectGuard.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "72": {
+   "skl": "DemonicSwordman/RapidMove.skl",
+   "states": [
+    {
+     "state": 39,
+     "handler": "0x00cd5323",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "DSAnimation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 49,
+       "ani": "DSAnimation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      },
+      {
+       "index": 50,
+       "ani": "DSAnimation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/RapidMoveSlash_DS/Move1.ani",
+    "Effect/Animation/RapidMoveSlash_DS/Move2.ani",
+    "Effect/Animation/RapidMoveSlash_DS/Slash1.ani",
+    "Effect/Animation/RapidMoveSlash_DS/Slash2.ani"
+   ]
+  },
+  "73": {
+   "skl": "DemonicSwordman/IllusionSlash.skl",
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00cd607b",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "DSAnimation/IllusionSlash1.ani"
+      },
+      {
+       "index": 55,
+       "ani": "DSAnimation/IllusionSlashFinal.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/IllusionSlash_DS/Upper.ani",
+    "Effect/Animation/IllusionSlash_DS/Smash.ani"
+   ]
+  },
+  "74": {
+   "skl": "DemonicSwordman/WaveSpin.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 56,
+       "ani": "DSAnimation/WaveSpinAreaBomb.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/WaveSpinArea_DS/Circle.ani",
+    "Effect/Animation/WaveSpinArea_DS/CircleFront.ani",
+    "Effect/Animation/WaveSpinArea_DS/CircleBack.ani"
+   ]
+  },
+  "75": {
+   "skl": "DemonicSwordman/NotApplicable/EpidemicRasa.skl",
+   "states": [
+    {
+     "state": 75,
+     "handler": "0x00cde8b2",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "76": {
+   "skl": "DemonicSwordman/NotApplicable/Frenzy.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "77": {
+   "skl": "DemonicSwordman/SpinAttack.skl",
+   "states": [
+    {
+     "state": 42,
+     "handler": "0x00cd9a28",
+     "entry_motions": [
+      {
+       "index": 61,
+       "ani": "DSAnimation/MoonlightSlash1.ani"
+      },
+      {
+       "index": 62,
+       "ani": "DSAnimation/MoonlightSlash2.ani"
+      },
+      {
+       "index": 65,
+       "ani": "DSAnimation/MoonlightSlashFull.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/MoonlightSlash1_DS.ani",
+    "Effect/Animation/MoonlightSlash2_DS.ani",
+    "Effect/Animation/MoonlightSlashFull.ani"
+   ]
+  },
+  "78": {
+   "skl": "DemonicSwordman/NotApplicable/CancelGoreCross.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "79": {
+   "skl": "DemonicSwordman/DarkRave.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00cd7d34",
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "DSAnimation/BloodyRaveInhale.ani"
+      },
+      {
+       "index": 64,
+       "ani": "DSAnimation/BloodyRaveSlash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/BloodyRave_DS/Start1.ani",
+    "Effect/Animation/BloodyRave_DS/Start2.ani",
+    "Effect/Animation/BloodyRave_DS/Loop1.ani",
+    "Effect/Animation/BloodyRave_DS/Loop2.ani",
+    "Effect/Animation/BloodyRave_DS/Line1.ani",
+    "Effect/Animation/BloodyRave_DS/Line2.ani",
+    "Effect/Animation/BloodyRave_DS/Typhoon.ani",
+    "Effect/Animation/BloodyRave_DS/End.ani",
+    "Effect/Animation/BloodyRave_DS/Sword1.ani",
+    "Effect/Animation/BloodyRave_DS/Sword2.ani",
+    "Effect/Animation/BloodyRave_DS/Sword3.ani",
+    "Effect/Animation/BloodyRave_DS/Sword4.ani",
+    "Effect/Animation/BloodyRave/(TN)Sword2.ani",
+    "Effect/Animation/BloodyRave/(TN)Sword4.ani",
+    "Effect/Animation/BloodyRave_DS/Hit.ani"
+   ]
+  },
+  "80": {
+   "skl": "DemonicSwordman/NotApplicable/MoonlightSlashFull.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 61,
+       "ani": "DSAnimation/MoonlightSlash1.ani"
+      },
+      {
+       "index": 62,
+       "ani": "DSAnimation/MoonlightSlash2.ani"
+      },
+      {
+       "index": 65,
+       "ani": "DSAnimation/MoonlightSlashFull.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "81": {
+   "skl": "DemonicSwordman/DarkBreak.skl",
+   "states": [
+    {
+     "state": 45,
+     "handler": "0x00cd4bb6",
+     "entry_motions": [
+      {
+       "index": 66,
+       "ani": "DSAnimation/OutRageBreakReady.ani"
+      },
+      {
+       "index": 67,
+       "ani": "DSAnimation/OutRageBreakSlash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/OutRageBreak_DS/sword_ready_ldodge.ani",
+    "Effect/Animation/OutRageBreak_DS/sword_ready_none.ani",
+    "Effect/Animation/OutRageBreak_DS/sword_slash_ldodge.ani",
+    "Effect/Animation/OutRageBreak_DS/sword_slash_none.ani",
+    "Effect/Animation/OutRageBreak_DS/sword_slash_impact_ldodge.ani",
+    "Effect/Animation/OutRageBreak_DS/sword_slash_impact_none.ani",
+    "Effect/Animation/OutRageBreak_DS/sword_slash_stone.ani"
+   ]
+  },
+  "82": {
+   "skl": "DemonicSwordman/DarkFlameSword.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 44,
+     "handler": "0x00cd8493",
+     "entry_motions": [
+      {
+       "index": 68,
+       "ani": "DSAnimation/KallaLand.ani"
+      },
+      {
+       "index": 69,
+       "ani": "DSAnimation/KallaAir.ani"
+      },
+      {
+       "index": 70,
+       "ani": "DSAnimation/KallaFinishReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 77,
+     "handler": "0x00cde6a2",
+     "entry_motions": [
+      {
+       "index": 119,
+       "ani": "DSAnimation/SpiritDashAttack.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/Kalla_DS/FinishReady",
+    "Effect/Animation/Kalla_DS/Finish"
+   ]
+  },
+  "83": {
+   "skl": "DemonicSwordman/NotApplicable/CancelMoonlightSlash.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "84": {
+   "skl": "DemonicSwordman/NotApplicable/Keiga.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "85": {
+   "skl": "DemonicSwordman/NotApplicable/Hellbenter.skl",
+   "states": [
+    {
+     "state": 46,
+     "handler": "0x00cdaabf",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": "DSAnimation/HellbenterFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "86": {
+   "skl": "DemonicSwordman/NotApplicable/HundredSword.skl",
+   "states": [
+    {
+     "state": 47,
+     "handler": "0x00cdadba",
+     "entry_motions": [
+      {
+       "index": 75,
+       "ani": "DSAnimation/HundredSwordReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 48,
+     "handler": "0x00cdb130",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      },
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      },
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      },
+      {
+       "index": 0,
+       "ani": "DSAnimation/Guard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 49,
+     "handler": "0x00cdb798",
+     "entry_motions": [
+      {
+       "index": 86,
+       "ani": "DSAnimation/HundredSwordFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "87": {
+   "skl": "DemonicSwordman/NotApplicable/Blache.skl",
+   "states": [
+    {
+     "state": 50,
+     "handler": "0x00cdbd6f",
+     "entry_motions": [
+      {
+       "index": 87,
+       "ani": "DSAnimation/BlacheCast.ani"
+      },
+      {
+       "index": 88,
+       "ani": "DSAnimation/BlacheSmash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "88": {
+   "skl": "DemonicSwordman/NotApplicable/WaveEye.skl",
+   "states": [
+    {
+     "state": 51,
+     "handler": "0x00cdc22c",
+     "entry_motions": [
+      {
+       "index": 89,
+       "ani": "DSAnimation/WaveEyeCast.ani"
+      },
+      {
+       "index": 90,
+       "ani": "DSAnimation/WaveEyeStart.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 53,
+     "handler": "0x00cdc579",
+     "entry_motions": [
+      {
+       "index": 95,
+       "ani": "DSAnimation/WaveEyeWing.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "89": {
+   "skl": "DemonicSwordman/NotApplicable/DarkAura.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "90": {
+   "skl": "DemonicSwordman/NotApplicable/BleedingMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "91": {
+   "skl": "DemonicSwordman/NotApplicable/DefenseDownOnCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "92": {
+   "skl": "DemonicSwordman/NotApplicable/StuckUpOnCounter.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "93": {
+   "skl": "DemonicSwordman/NotApplicable/ArmorMasteryClothSB.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "94": {
+   "skl": "DemonicSwordman/NotApplicable/ArmorMasteryLightWM.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "95": {
+   "skl": "DemonicSwordman/NotApplicable/TombStoneRainEx.skl",
+   "states": [
+    {
+     "state": 55,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "96": {
+   "skl": "DemonicSwordman/NotApplicable/SayaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "97": {
+   "skl": "DemonicSwordman/NotApplicable/MomentarySlashEx.skl",
+   "states": [
+    {
+     "state": 56,
+     "handler": "0x00cd0fa0",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "98": {
+   "skl": "DemonicSwordman/NotApplicable/ChargeCrashEx.skl",
+   "states": [
+    {
+     "state": 58,
+     "handler": "0x00cdc8a8",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "99": {
+   "skl": "DemonicSwordman/NotApplicable/FireWaveEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "100": {
+   "skl": "DemonicSwordman/NotApplicable/IceWaveEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "101": {
+   "skl": "DemonicSwordman/NotApplicable/BloodBlastEx.skl",
+   "states": [
+    {
+     "state": 57,
+     "handler": "0x00cd0f08",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "102": {
+   "skl": "DemonicSwordman/NotApplicable/GrabBlastBloodEx.skl",
+   "states": [
+    {
+     "state": 26,
+     "handler": "0x00cd2438",
+     "entry_motions": [
+      {
+       "index": 10,
+       "ani": "DSAnimation/Grab.ani"
+      },
+      {
+       "index": 10,
+       "ani": "DSAnimation/Grab.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "103": {
+   "skl": "DemonicSwordman/DarkSword.skl",
+   "states": [
+    {
+     "state": 60,
+     "handler": "0x00cd662e",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "104": {
+   "skl": "DemonicSwordman/NotApplicable/CancelBloodSword.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "105": {
+   "skl": "DemonicSwordman/NotApplicable/FlowMind.skl",
+   "states": [
+    {
+     "state": 61,
+     "handler": "0x00cd68bc",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "106": {
+   "skl": "DemonicSwordman/NotApplicable/CancelFlowMind.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "107": {
+   "skl": "DemonicSwordman/PierceStrike.skl",
+   "states": [
+    {
+     "state": 62,
+     "handler": "0x00cd6b05",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "108": {
+   "skl": "DemonicSwordman/BounceBlow.skl",
+   "states": [
+    {
+     "state": 63,
+     "handler": "0x00cd6f7c",
+     "entry_motions": [
+      {
+       "index": 108,
+       "ani": "DSAnimation/FlowMindTwoJump.ani"
+      },
+      {
+       "index": 109,
+       "ani": "DSAnimation/FlowMindTwoLanding.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "109": {
+   "skl": "DemonicSwordman/NotApplicable/FlowMindThree.skl",
+   "states": [
+    {
+     "state": 64,
+     "handler": "0x00cd7588",
+     "entry_motions": [
+      {
+       "index": 112,
+       "ani": "DSAnimation/FlowMindThreeReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "110": {
+   "skl": "DemonicSwordman/NotApplicable/FlowMindPowerUp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 104,
+       "ani": "DSAnimation/FlowMindStart.ani"
+      },
+      {
+       "index": 105,
+       "ani": "DSAnimation/FlowMindStay.ani"
+      },
+      {
+       "index": 106,
+       "ani": "DSAnimation/FlowMindOne.ani"
+      },
+      {
+       "index": 107,
+       "ani": "DSAnimation/FlowMindOneAdd.ani"
+      },
+      {
+       "index": 108,
+       "ani": "DSAnimation/FlowMindTwoJump.ani"
+      },
+      {
+       "index": 109,
+       "ani": "DSAnimation/FlowMindTwoLanding.ani"
+      },
+      {
+       "index": 110,
+       "ani": "DSAnimation/FlowMindTwoAttack1.ani"
+      },
+      {
+       "index": 111,
+       "ani": "DSAnimation/FlowMindTwoAttack2.ani"
+      },
+      {
+       "index": 112,
+       "ani": "DSAnimation/FlowMindThreeReady.ani"
+      },
+      {
+       "index": 113,
+       "ani": "DSAnimation/FlowMindThreeAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "111": {
+   "skl": "DemonicSwordman/WhipAttack.skl",
+   "states": [
+    {
+     "state": 65,
+     "handler": "0x00cd7837",
+     "entry_motions": [
+      {
+       "index": 120,
+       "ani": "DSAnimation/GhostSideWind.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": [
+    "Effect/Animation/GhostSideWind_DS/00_sword_normal.ani"
+   ]
+  },
+  "112": {
+   "skl": "DemonicSwordman/TripleStab.skl",
+   "states": [
+    {
+     "state": 66,
+     "handler": "0x00cd7ab6",
+     "entry_motions": [
+      {
+       "index": 121,
+       "ani": "DSAnimation/TripleStab.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "113": {
+   "skl": "DemonicSwordman/NotApplicable/CancelGhostSideWind.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "114": {
+   "skl": "DemonicSwordman/NotApplicable/CancelTripleStab.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "115": {
+   "skl": "DemonicSwordman/WhipAttackExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "116": {
+   "skl": "DemonicSwordman/NotApplicable/TripleStabEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 121,
+       "ani": "DSAnimation/TripleStab.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "117": {
+   "skl": "DemonicSwordman/DarkWave.skl",
+   "states": [
+    {
+     "state": 67,
+     "handler": "0x00cce9ff",
+     "entry_motions": [
+      {
+       "index": 122,
+       "ani": "DSAnimation/DarkWave.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "118": {
+   "skl": "DemonicSwordman/comboset0.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "119": {
+   "skl": "DemonicSwordman/comboset1.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "120": {
+   "skl": "DemonicSwordman/comboset2.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "121": {
+   "skl": "DemonicSwordman/comboset3.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "122": {
+   "skl": "DemonicSwordman/comboset4.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "123": {
+   "skl": "DemonicSwordman/comboset5.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "139": {
+   "skl": "DemonicSwordman/NotApplicable/PinchPowerUpEx.skl",
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00cd7d34",
+     "entry_motions": [
+      {
+       "index": 63,
+       "ani": "DSAnimation/BloodyRaveInhale.ani"
+      },
+      {
+       "index": 64,
+       "ani": "DSAnimation/BloodyRaveSlash.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "140": {
+   "skl": "DemonicSwordman/WaveExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "141": {
+   "skl": "DemonicSwordman/DarkCrossExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "142": {
+   "skl": "DemonicSwordman/DarkSlashExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "143": {
+   "skl": "DemonicSwordman/NotApplicable/TripleSlashEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 3,
+       "ani": "DSAnimation/TripleSlash1.ani"
+      },
+      {
+       "index": 4,
+       "ani": "DSAnimation/TripleSlash2.ani"
+      },
+      {
+       "index": 5,
+       "ani": "DSAnimation/TripleSlash3.ani"
+      },
+      {
+       "index": 6,
+       "ani": "DSAnimation/TripleSlash4.ani"
+      },
+      {
+       "index": 7,
+       "ani": "DSAnimation/TripleSlash5.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "144": {
+   "skl": "DemonicSwordman/NotApplicable/HitBackEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "145": {
+   "skl": "DemonicSwordman/NotApplicable/AutoGuardEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "146": {
+   "skl": "DemonicSwordman/NotApplicable/BremenEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "147": {
+   "skl": "DemonicSwordman/NotApplicable/GhostStepEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 18,
+       "ani": "DSAnimation/GhostStepSlashReady.ani"
+      },
+      {
+       "index": 19,
+       "ani": "DSAnimation/GhostStepSlashMove.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "148": {
+   "skl": "DemonicSwordman/NotApplicable/DieHardEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "149": {
+   "skl": "DemonicSwordman/NotApplicable/RecklessEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "150": {
+   "skl": "DemonicSwordman/NotApplicable/DOTAreaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "151": {
+   "skl": "DemonicSwordman/NotApplicable/WaveMarkEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "152": {
+   "skl": "DemonicSwordman/RapidMoveExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "DSAnimation/RapidMoveSlashReady1.ani"
+      },
+      {
+       "index": 48,
+       "ani": "DSAnimation/RapidMoveSlashReady2.ani"
+      },
+      {
+       "index": 49,
+       "ani": "DSAnimation/RapidMoveSlashMove1.ani"
+      },
+      {
+       "index": 50,
+       "ani": "DSAnimation/RapidMoveSlashMove2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "153": {
+   "skl": "DemonicSwordman/NotApplicable/AshenForkEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "154": {
+   "skl": "DemonicSwordman/DrawSwordExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "155": {
+   "skl": "DemonicSwordman/SpinAttackExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "156": {
+   "skl": "DemonicSwordman/NotApplicable/EpidemicRasaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "157": {
+   "skl": "DemonicSwordman/HopSmashExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 26,
+       "ani": "DSAnimation/HopSmashReady.ani"
+      },
+      {
+       "index": 27,
+       "ani": "DSAnimation/HopSmash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "158": {
+   "skl": "DemonicSwordman/DarkRaveExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "159": {
+   "skl": "DemonicSwordman/VaneSlashExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "DSAnimation/VaneSlashTry.ani"
+      },
+      {
+       "index": 15,
+       "ani": "DSAnimation/VaneSlash.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "160": {
+   "skl": "DemonicSwordman/NotApplicable/ReflectGuardEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 46,
+       "ani": "DSAnimation/ReflectGuard.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "161": {
+   "skl": "DemonicSwordman/BasicAttackUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "162": {
+   "skl": "DemonicSwordman/NotApplicable/DashAttackMultiHitEx.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00cd9fe7",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "DSAnimation/DashAttackMultiHit.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "163": {
+   "skl": "DemonicSwordman/NotApplicable/GuardEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "164": {
+   "skl": "DemonicSwordman/NotApplicable/KhazanEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "165": {
+   "skl": "DemonicSwordman/DarkRustExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "166": {
+   "skl": "DemonicSwordman/DarkExplosionExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "167": {
+   "skl": "DemonicSwordman/DarkBreakExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "168": {
+   "skl": "DemonicSwordman/DarkSwordExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "169": {
+   "skl": "DemonicSwordman/BackStep.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "170": {
+   "skl": "DemonicSwordman/NotApplicable/CancelBackStep.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "171": {
+   "skl": "DemonicSwordman/NotApplicable/CancelThrowItem.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "172": {
+   "skl": "DemonicSwordman/ArmorMasteryLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "173": {
+   "skl": "DemonicSwordman/ArmorMasteryHeavy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "174": {
+   "skl": "DemonicSwordman/BasicAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "175": {
+   "skl": "DemonicSwordman/JumpPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "176": {
+   "skl": "DemonicSwordman/MagicalAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "177": {
+   "skl": "DemonicSwordman/NotApplicable/ThrowMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "178": {
+   "skl": "DemonicSwordman/PhysicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "179": {
+   "skl": "DemonicSwordman/NotApplicable/DisjointItem.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "180": {
+   "skl": "DemonicSwordman/SuperArmorOnCast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "181": {
+   "skl": "DemonicSwordman/NotApplicable/CompoundCraft.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "182": {
+   "skl": "DemonicSwordman/NotApplicable/CompoundWeaving.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "183": {
+   "skl": "DemonicSwordman/NotApplicable/CompoundMachine.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "184": {
+   "skl": "DemonicSwordman/NotApplicable/CompoundChemistry.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "185": {
+   "skl": "DemonicSwordman/NotApplicable/ArmorMasteryLeather.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "186": {
+   "skl": "DemonicSwordman/PhysicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "187": {
+   "skl": "DemonicSwordman/ArmorMasteryCloth.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "188": {
+   "skl": "DemonicSwordman/MagicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "189": {
+   "skl": "DemonicSwordman/NotApplicable/MagicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "190": {
+   "skl": "DemonicSwordman/QuickStanding.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "191": {
+   "skl": "DemonicSwordman/NotApplicable/Enchant.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "192": {
+   "skl": "DemonicSwordman/NotApplicable/DollMaking.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "193": {
+   "skl": "DemonicSwordman/NotApplicable/Alchemy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "194": {
+   "skl": "DemonicSwordman/NotApplicable/OpenDisjointShop.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "195": {
+   "skl": "DemonicSwordman/NotApplicable/BasicHpMaxUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "196": {
+   "skl": "DemonicSwordman/ArmorMasteryPlate.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "197": {
+   "skl": "DemonicSwordman/NotApplicable/Conversion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "200": {
+   "skl": "DemonicSwordman/NotApplicable/StatusUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "201": {
+   "skl": "DemonicSwordman/NotApplicable/ExperienceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "210": {
+   "skl": "DemonicSwordman/NotApplicable/ReleaseWaveEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "211": {
+   "skl": "DemonicSwordman/GrandWaveExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "212": {
+   "skl": "DemonicSwordman/NotApplicable/FireWaveExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "213": {
+   "skl": "DemonicSwordman/NotApplicable/StandAloneWaveEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 20,
+       "ani": "DSAnimation/StandAloneWaveReady.ani"
+      },
+      {
+       "index": 21,
+       "ani": "DSAnimation/StandAloneWaveBasic.ani"
+      },
+      {
+       "index": 22,
+       "ani": "DSAnimation/StandAloneWaveStrong.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "214": {
+   "skl": "DemonicSwordman/WaveSpinExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 56,
+       "ani": "DSAnimation/WaveSpinAreaBomb.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "215": {
+   "skl": "DemonicSwordman/UpperExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "216": {
+   "skl": "DemonicSwordman/NotApplicable/IceWaveExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "217": {
+   "skl": "DemonicSwordman/IllusionSlashExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "DSAnimation/IllusionSlash1.ani"
+      },
+      {
+       "index": 52,
+       "ani": "DSAnimation/IllusionSlash2.ani"
+      },
+      {
+       "index": 53,
+       "ani": "DSAnimation/IllusionSlash3.ani"
+      },
+      {
+       "index": 54,
+       "ani": "DSAnimation/IllusionSlash4.ani"
+      },
+      {
+       "index": 55,
+       "ani": "DSAnimation/IllusionSlashFinal.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "218": {
+   "skl": "DemonicSwordman/NotApplicable/ChargeCrashExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 43,
+       "ani": "DSAnimation/ChargeCrashDash.ani"
+      },
+      {
+       "index": 44,
+       "ani": "DSAnimation/ChargeCrashUpper.ani"
+      },
+      {
+       "index": 45,
+       "ani": "DSAnimation/ChargeCrashFinish.ani"
+      },
+      {
+       "index": 99,
+       "ani": "DSAnimation/ChargeCrashExShoulder.ani"
+      },
+      {
+       "index": 100,
+       "ani": "DSAnimation/ChargeCrashExPick.ani"
+      },
+      {
+       "index": 101,
+       "ani": "DSAnimation/ChargeCrashExUpper.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "219": {
+   "skl": "DemonicSwordman/PierceStrikeExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "220": {
+   "skl": "DemonicSwordman/NotApplicable/FlowMindTwoEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 104,
+       "ani": "DSAnimation/FlowMindStart.ani"
+      },
+      {
+       "index": 105,
+       "ani": "DSAnimation/FlowMindStay.ani"
+      },
+      {
+       "index": 106,
+       "ani": "DSAnimation/FlowMindOne.ani"
+      },
+      {
+       "index": 107,
+       "ani": "DSAnimation/FlowMindOneAdd.ani"
+      },
+      {
+       "index": 108,
+       "ani": "DSAnimation/FlowMindTwoJump.ani"
+      },
+      {
+       "index": 109,
+       "ani": "DSAnimation/FlowMindTwoLanding.ani"
+      },
+      {
+       "index": 110,
+       "ani": "DSAnimation/FlowMindTwoAttack1.ani"
+      },
+      {
+       "index": 111,
+       "ani": "DSAnimation/FlowMindTwoAttack2.ani"
+      },
+      {
+       "index": 112,
+       "ani": "DSAnimation/FlowMindThreeReady.ani"
+      },
+      {
+       "index": 113,
+       "ani": "DSAnimation/FlowMindThreeAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "221": {
+   "skl": "DemonicSwordman/NotApplicable/FlowMindThreeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 104,
+       "ani": "DSAnimation/FlowMindStart.ani"
+      },
+      {
+       "index": 105,
+       "ani": "DSAnimation/FlowMindStay.ani"
+      },
+      {
+       "index": 106,
+       "ani": "DSAnimation/FlowMindOne.ani"
+      },
+      {
+       "index": 107,
+       "ani": "DSAnimation/FlowMindOneAdd.ani"
+      },
+      {
+       "index": 108,
+       "ani": "DSAnimation/FlowMindTwoJump.ani"
+      },
+      {
+       "index": 109,
+       "ani": "DSAnimation/FlowMindTwoLanding.ani"
+      },
+      {
+       "index": 110,
+       "ani": "DSAnimation/FlowMindTwoAttack1.ani"
+      },
+      {
+       "index": 111,
+       "ani": "DSAnimation/FlowMindTwoAttack2.ani"
+      },
+      {
+       "index": 112,
+       "ani": "DSAnimation/FlowMindThreeReady.ani"
+      },
+      {
+       "index": 113,
+       "ani": "DSAnimation/FlowMindThreeAttack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "224": {
+   "skl": "DemonicSwordman/NotApplicable/SayaExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "225": {
+   "skl": "DemonicSwordman/DarkFallExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "226": {
+   "skl": "DemonicSwordman/MomentarySlashExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 8,
+       "ani": "DSAnimation/MomentarySlash.ani"
+      },
+      {
+       "index": 98,
+       "ani": "DSAnimation/MomentarySlashEx.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "227": {
+   "skl": "DemonicSwordman/NotApplicable/KallaEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "228": {
+   "skl": "DemonicSwordman/DarkBallExp.skl",
+   "states": [],
+   "effect_anis": null
+  }
+ }
+}

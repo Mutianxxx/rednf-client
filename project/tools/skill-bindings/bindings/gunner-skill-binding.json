@@ -1,0 +1,3277 @@
+{
+ "class": "gunner",
+ "exe_region": [
+  "0xbf31ec",
+  "0xc2f344"
+ ],
+ "etc_motion": {
+  "0": "Animation/Attack1ShootUp.ani",
+  "1": "Animation/Attack1ShootDown.ani",
+  "2": "Animation/Attack2ShootUp.ani",
+  "3": "Animation/Attack2ShootDown.ani",
+  "4": "Animation/Reload.ani",
+  "5": "Animation/JumpAttackReady.ani",
+  "6": "Animation/JumpAttackRight.ani",
+  "7": "Animation/JumpAttackLeft.ani",
+  "8": "Animation/JumpAttackEnd.ani",
+  "9": "Animation/WindmillRoll.ani",
+  "10": "Animation/WindmillStand.ani",
+  "11": "Animation/AerialKnee.ani",
+  "12": "Animation/TryTread.ani",
+  "13": "Animation/TreadShoot.ani",
+  "14": "Animation/FastKnee.ani",
+  "15": "Animation/RandomShoot.ani",
+  "16": "Animation/BulletGuard.ani",
+  "17": "Animation/SubWeaponFrontOnce1.ani",
+  "18": "Animation/SubWeaponFrontOnce2.ani",
+  "19": "Animation/SubWeaponFrontRapid1.ani",
+  "20": "Animation/SubWeaponFrontRapid2.ani",
+  "21": "Animation/SubWeaponUpOnce1.ani",
+  "22": "Animation/SubWeaponUpOnce2.ani",
+  "23": "Animation/SubWeaponUpRapid1.ani",
+  "24": "Animation/SubWeaponUpRapid2.ani",
+  "25": "Animation/WalkShootReadyStay.ani",
+  "26": "Animation/WalkShootReadyFront.ani",
+  "27": "Animation/WalkShootReadyBack.ani",
+  "28": "Animation/WalkShootLeftStay.ani",
+  "29": "Animation/WalkShootLeftFront.ani",
+  "30": "Animation/WalkShootLeftBack.ani",
+  "31": "Animation/WalkShootRightStay.ani",
+  "32": "Animation/WalkShootRightFront.ani",
+  "33": "Animation/WalkShootRightBack.ani",
+  "34": "Animation/SetRobot.ani",
+  "35": "Animation/CrossShoot.ani",
+  "36": "Animation/ReloadInHand.ani",
+  "37": "Animation/ExtruderReady.ani",
+  "38": "Animation/ExtruderCharge.ani",
+  "39": "Animation/ExtruderShoot.ani",
+  "40": "Animation/MultiHeadShotReady.ani",
+  "41": "Animation/MultiHeadShotShoot1.ani",
+  "42": "Animation/MultiHeadShotShoot2.ani",
+  "43": "Animation/MultiHeadShotShoot3.ani",
+  "44": "Animation/MultiHeadShotShoot4.ani",
+  "45": "Animation/MultiHeadShotFinish.ani",
+  "46": "Animation/AirRaid.ani",
+  "47": "Animation/C4RemoteReady.ani",
+  "48": "Animation/C4RemoteThrow.ani",
+  "49": "Animation/CounterShootReady.ani",
+  "50": "Animation/CounterShootShoot.ani",
+  "51": "Animation/DoubleGunhawkThrow.ani",
+  "52": "Animation/DoubleGunhawkCatch.ani",
+  "53": "Animation/DesperadoReady1.ani",
+  "54": "Animation/DesperadoReady2.ani",
+  "55": "Animation/DesperadoReady3.ani",
+  "56": "Animation/DesperadoAerial.ani",
+  "57": "Animation/DesperadoFinish.ani",
+  "58": "Animation/DesperadoLand.ani",
+  "59": "Animation/GaebolgPunch.ani",
+  "60": "Animation/BlackRose.ani",
+  "61": "",
+  "62": "",
+  "63": "",
+  "64": "",
+  "65": "",
+  "66": "",
+  "67": "",
+  "68": "",
+  "69": "",
+  "70": "",
+  "71": "",
+  "72": "",
+  "73": "",
+  "74": "",
+  "75": "",
+  "76": "",
+  "77": "",
+  "78": "",
+  "79": "",
+  "80": "",
+  "81": "",
+  "82": "",
+  "83": "",
+  "84": "",
+  "85": "",
+  "86": "",
+  "87": "",
+  "88": "",
+  "89": "",
+  "90": "",
+  "91": "",
+  "92": "",
+  "93": "",
+  "94": "Animation/AirRaidEx.ani",
+  "95": "Animation/AirRaidExWindmill.ani",
+  "96": "Animation/C4RemoteExThrow.ani",
+  "97": "Animation/MultiHeadShotExTract.ani",
+  "98": "Animation/MultiHeadShotExKick.ani",
+  "99": "Animation/RandomShootWait.ani",
+  "100": "Animation/ChargeBusterCharge.ani",
+  "101": "Animation/ChargeBusterShoot.ani",
+  "102": "Animation/ChargeBusterShootDown.ani"
+ },
+ "skills": {
+  "1": {
+   "skl": "Gunner/FlameBullet.skl",
+   "states": [
+    {
+     "state": 17,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 20,
+     "handler": "0x00c1e366",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "Animation/AerialKnee.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 26,
+     "handler": "0x00c203a1",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 29,
+     "handler": "0x00c23171",
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "Animation/SetRobot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 32,
+     "handler": "0x00c238eb",
+     "entry_motions": [
+      {
+       "index": 36,
+       "ani": "Animation/ReloadInHand.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "2": {
+   "skl": "Gunner/FreezeBullet.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00c23171",
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "Animation/SetRobot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "3": {
+   "skl": "Gunner/Windmill.skl",
+   "states": [
+    {
+     "state": 19,
+     "handler": "0x00c1dd47",
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "Animation/WindmillRoll.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 22,
+     "handler": "0x00c1eac6",
+     "entry_motions": [
+      {
+       "index": 13,
+       "ani": "Animation/TreadShoot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 52,
+     "handler": "0x00c27f51",
+     "entry_motions": [
+      {
+       "index": 86,
+       "ani": ""
+      },
+      {
+       "index": 87,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "4": {
+   "skl": "Gunner/AerialKnee.skl",
+   "states": [
+    {
+     "state": 20,
+     "handler": "0x00c1e366",
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "Animation/AerialKnee.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "5": {
+   "skl": "Gunner/HeadShot.skl",
+   "states": [
+    {
+     "state": 7,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 8,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 9,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 10,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 11,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 12,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 14,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 16,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 17,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 18,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 28,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 57,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "6": {
+   "skl": "Gunner/Punisher.skl",
+   "states": [
+    {
+     "state": 21,
+     "handler": "0x00c1e826",
+     "entry_motions": [
+      {
+       "index": 12,
+       "ani": "Animation/TryTread.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 22,
+     "handler": "0x00c1eac6",
+     "entry_motions": [
+      {
+       "index": 13,
+       "ani": "Animation/TreadShoot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 53,
+     "handler": "0x00c282b6",
+     "entry_motions": [
+      {
+       "index": 88,
+       "ani": ""
+      },
+      {
+       "index": 89,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "7": {
+   "skl": "Gunner/FastKnee.skl",
+   "states": [
+    {
+     "state": 23,
+     "handler": "0x00c1f4b0",
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "Animation/FastKnee.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 42,
+     "handler": "0x00c26315",
+     "entry_motions": [
+      {
+       "index": 61,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "8": {
+   "skl": "Gunner/RisingWindmill.skl",
+   "states": [
+    {
+     "state": 6,
+     "handler": "0x00c255ff",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "9": {
+   "skl": "Gunner/RandomShoot.skl",
+   "states": [
+    {
+     "state": 24,
+     "handler": "0x00c1f91b",
+     "entry_motions": [
+      {
+       "index": 15,
+       "ani": "Animation/RandomShoot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "10": {
+   "skl": "Gunner/BulletGuard.skl",
+   "states": [
+    {
+     "state": 25,
+     "handler": "0x00c2026f",
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "Animation/BulletGuard.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "11": {
+   "skl": "Gunner/FastShoot.skl",
+   "states": [
+    {
+     "state": 28,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "12": {
+   "skl": "Gunner/Gatling.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "13": {
+   "skl": "Gunner/FlameThrower.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "14": {
+   "skl": "Gunner/AerialGatling.skl",
+   "states": [
+    {
+     "state": 29,
+     "handler": "0x00c23171",
+     "entry_motions": [
+      {
+       "index": 34,
+       "ani": "Animation/SetRobot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "15": {
+   "skl": "Gunner/WalkShoot.skl",
+   "states": [
+    {
+     "state": 27,
+     "handler": "0x00c22382",
+     "entry_motions": [
+      {
+       "index": 25,
+       "ani": "Animation/WalkShootReadyStay.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "20": {
+   "skl": "Gunner/TurningShoot.skl",
+   "states": [
+    {
+     "state": 28,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "21": {
+   "skl": "Gunner/SubWeaponMastery.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "Animation/SubWeaponFrontOnce1.ani"
+      },
+      {
+       "index": 18,
+       "ani": "Animation/SubWeaponFrontOnce2.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/SubWeaponFrontRapid1.ani"
+      },
+      {
+       "index": 20,
+       "ani": "Animation/SubWeaponFrontRapid2.ani"
+      },
+      {
+       "index": 21,
+       "ani": "Animation/SubWeaponUpOnce1.ani"
+      },
+      {
+       "index": 22,
+       "ani": "Animation/SubWeaponUpOnce2.ani"
+      },
+      {
+       "index": 23,
+       "ani": "Animation/SubWeaponUpRapid1.ani"
+      },
+      {
+       "index": 24,
+       "ani": "Animation/SubWeaponUpRapid2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "22": {
+   "skl": "Gunner/ReduceRevolverDelay.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "23": {
+   "skl": "Gunner/ReduceRevolverReload.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "26": {
+   "skl": "Gunner/CounterShoot.skl",
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00c25907",
+     "entry_motions": [
+      {
+       "index": 49,
+       "ani": "Animation/CounterShootReady.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/CounterShootShoot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "27": {
+   "skl": "Gunner/RobotRX78.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "28": {
+   "skl": "Gunner/RobotEz8.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "29": {
+   "skl": "Gunner/RobotExs.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "30": {
+   "skl": "Gunner/SilverBullet.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "31": {
+   "skl": "Gunner/BulletReinforce.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "32": {
+   "skl": "Gunner/TripleClutch.skl",
+   "states": [
+    {
+     "state": 23,
+     "handler": "0x00c1f4b0",
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "Animation/FastKnee.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "33": {
+   "skl": "Gunner/StayOnJumpShoot.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "34": {
+   "skl": "Gunner/HitOnSubWeapon.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "35": {
+   "skl": "Gunner/AirRaid.skl",
+   "states": [
+    {
+     "state": 6,
+     "handler": "0x00c255ff",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 19,
+     "handler": "0x00c1dd47",
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "Animation/WindmillRoll.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 38,
+     "handler": "0x00c24db1",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "36": {
+   "skl": "Gunner/FlameThrowerBoost.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "37": {
+   "skl": "Gunner/HighAngleSliding.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "38": {
+   "skl": "Gunner/FM31.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "39": {
+   "skl": "Gunner/LaserRifle.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "40": {
+   "skl": "Gunner/SteyrHeavyRifle.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "41": {
+   "skl": "Gunner/LaserRifleCharge.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "42": {
+   "skl": "Gunner/RX78ofCrisis.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "43": {
+   "skl": "Gunner/Camouflage.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "44": {
+   "skl": "Gunner/SubWeaponPowerUp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "Animation/SubWeaponFrontOnce1.ani"
+      },
+      {
+       "index": 18,
+       "ani": "Animation/SubWeaponFrontOnce2.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/SubWeaponFrontRapid1.ani"
+      },
+      {
+       "index": 20,
+       "ani": "Animation/SubWeaponFrontRapid2.ani"
+      },
+      {
+       "index": 21,
+       "ani": "Animation/SubWeaponUpOnce1.ani"
+      },
+      {
+       "index": 22,
+       "ani": "Animation/SubWeaponUpOnce2.ani"
+      },
+      {
+       "index": 23,
+       "ani": "Animation/SubWeaponUpRapid1.ani"
+      },
+      {
+       "index": 24,
+       "ani": "Animation/SubWeaponUpRapid2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "45": {
+   "skl": "Gunner/UraniumBomb.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "46": {
+   "skl": "Gunner/Robotics.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "47": {
+   "skl": "Gunner/LiftShot.skl",
+   "states": [
+    {
+     "state": 7,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 8,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 9,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 10,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 11,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 12,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 14,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 16,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 17,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 18,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 28,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 57,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "48": {
+   "skl": "Gunner/CrossShoot.skl",
+   "states": [
+    {
+     "state": 31,
+     "handler": "0x00c23540",
+     "entry_motions": [
+      {
+       "index": 35,
+       "ani": "Animation/CrossShoot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "49": {
+   "skl": "Gunner/IncreaseBulletBuffCount.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "50": {
+   "skl": "Gunner/RobotsExplosion.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "51": {
+   "skl": "Gunner/DoubleGunhawk.skl",
+   "states": [
+    {
+     "state": 41,
+     "handler": "0x00c25c39",
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "Animation/DoubleGunhawkThrow.ani"
+      },
+      {
+       "index": 52,
+       "ani": "Animation/DoubleGunhawkCatch.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "52": {
+   "skl": "Gunner/ArmorBullet.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "53": {
+   "skl": "Gunner/NapalmBomb.skl",
+   "states": [
+    {
+     "state": 7,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 8,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 9,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 10,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 11,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 12,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 14,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 16,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 17,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 18,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 28,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 57,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "54": {
+   "skl": "Gunner/SatelliteLaser.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "55": {
+   "skl": "Gunner/ArmorMasteryLeatherRG.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "56": {
+   "skl": "Gunner/GrenadeNone.skl",
+   "states": [
+    {
+     "state": 6,
+     "handler": "0x00c255ff",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "57": {
+   "skl": "Gunner/GrenadeLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "58": {
+   "skl": "Gunner/GrenadeWater.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "59": {
+   "skl": "Gunner/MechaDrop.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "60": {
+   "skl": "Gunner/RevolverCriticalDamageUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "61": {
+   "skl": "Gunner/ArmorMasteryLeatherSP.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "62": {
+   "skl": "Gunner/SubWeaponStuckDown.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 17,
+       "ani": "Animation/SubWeaponFrontOnce1.ani"
+      },
+      {
+       "index": 18,
+       "ani": "Animation/SubWeaponFrontOnce2.ani"
+      },
+      {
+       "index": 19,
+       "ani": "Animation/SubWeaponFrontRapid1.ani"
+      },
+      {
+       "index": 20,
+       "ani": "Animation/SubWeaponFrontRapid2.ani"
+      },
+      {
+       "index": 21,
+       "ani": "Animation/SubWeaponUpOnce1.ani"
+      },
+      {
+       "index": 22,
+       "ani": "Animation/SubWeaponUpOnce2.ani"
+      },
+      {
+       "index": 23,
+       "ani": "Animation/SubWeaponUpRapid1.ani"
+      },
+      {
+       "index": 24,
+       "ani": "Animation/SubWeaponUpRapid2.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "63": {
+   "skl": "Gunner/RobotTempester.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "64": {
+   "skl": "Gunner/Desperado.skl",
+   "states": [
+    {
+     "state": 33,
+     "handler": "0x00c22735",
+     "entry_motions": [
+      {
+       "index": 53,
+       "ani": "Animation/DesperadoReady1.ani"
+      },
+      {
+       "index": 54,
+       "ani": "Animation/DesperadoReady2.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/DesperadoReady3.ani"
+      },
+      {
+       "index": 56,
+       "ani": "Animation/DesperadoAerial.ani"
+      },
+      {
+       "index": 58,
+       "ani": "Animation/DesperadoLand.ani"
+      },
+      {
+       "index": 57,
+       "ani": "Animation/DesperadoFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "65": {
+   "skl": "Gunner/RadarStuckDown.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "66": {
+   "skl": "Gunner/MarkOfDeath.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "67": {
+   "skl": "Gunner/GaebolgPunch.skl",
+   "states": [
+    {
+     "state": 34,
+     "handler": "0x00c23037",
+     "entry_motions": [
+      {
+       "index": 59,
+       "ani": "Animation/GaebolgPunch.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "68": {
+   "skl": "Gunner/LastFightingSpirit.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "69": {
+   "skl": "Gunner/AdvancedBullet.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "70": {
+   "skl": "Gunner/BlackRose.skl",
+   "states": [
+    {
+     "state": 33,
+     "handler": "0x00c22735",
+     "entry_motions": [
+      {
+       "index": 53,
+       "ani": "Animation/DesperadoReady1.ani"
+      },
+      {
+       "index": 54,
+       "ani": "Animation/DesperadoReady2.ani"
+      },
+      {
+       "index": 55,
+       "ani": "Animation/DesperadoReady3.ani"
+      },
+      {
+       "index": 56,
+       "ani": "Animation/DesperadoAerial.ani"
+      },
+      {
+       "index": 58,
+       "ani": "Animation/DesperadoLand.ani"
+      },
+      {
+       "index": 57,
+       "ani": "Animation/DesperadoFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 35,
+     "handler": "0x00c23a72",
+     "entry_motions": [
+      {
+       "index": 60,
+       "ani": "Animation/BlackRose.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "71": {
+   "skl": "Gunner/Extruder.skl",
+   "states": [
+    {
+     "state": 36,
+     "handler": "0x00c23cd9",
+     "entry_motions": [
+      {
+       "index": 37,
+       "ani": "Animation/ExtruderReady.ani"
+      },
+      {
+       "index": 38,
+       "ani": "Animation/ExtruderCharge.ani"
+      },
+      {
+       "index": 39,
+       "ani": "Animation/ExtruderShoot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "72": {
+   "skl": "Gunner/MultiHeadShot.skl",
+   "states": [
+    {
+     "state": 37,
+     "handler": "0x00c24a23",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/MultiHeadShotReady.ani"
+      },
+      {
+       "index": 45,
+       "ani": "Animation/MultiHeadShotFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "73": {
+   "skl": "Gunner/CannonBall.skl",
+   "states": [
+    {
+     "state": 7,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 8,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 9,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 10,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 11,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 12,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 14,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 16,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 17,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 18,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 28,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 57,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "74": {
+   "skl": "Gunner/CancelCannonBall.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "75": {
+   "skl": "Gunner/Stinger.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "76": {
+   "skl": "Gunner/FlashMine.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "77": {
+   "skl": "Gunner/C4Remote.skl",
+   "states": [
+    {
+     "state": 39,
+     "handler": "0x00c256f9",
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/C4RemoteReady.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "78": {
+   "skl": "Gunner/NielSniping.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "79": {
+   "skl": "Gunner/G1.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 43,
+     "handler": "0x00c264c0",
+     "entry_motions": [
+      {
+       "index": 62,
+       "ani": ""
+      },
+      {
+       "index": 63,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "80": {
+   "skl": "Gunner/G2.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "81": {
+   "skl": "Gunner/G3.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "82": {
+   "skl": "Gunner/ChargingSupply.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "83": {
+   "skl": "Gunner/SparrowFactory.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "91": {
+   "skl": "Gunner/ArmorMasteryClothMN.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "92": {
+   "skl": "Gunner/ArmorMasteryHeavyRU.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "96": {
+   "skl": null,
+   "states": [
+    {
+     "state": 43,
+     "handler": "0x00c264c0",
+     "entry_motions": [
+      {
+       "index": 62,
+       "ani": ""
+      },
+      {
+       "index": 63,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "97": {
+   "skl": null,
+   "states": [
+    {
+     "state": 6,
+     "handler": "0x00c255ff",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 44,
+     "handler": "0x00c294e0",
+     "entry_motions": [
+      {
+       "index": 64,
+       "ani": ""
+      },
+      {
+       "index": 65,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "98": {
+   "skl": null,
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "100": {
+   "skl": null,
+   "states": [
+    {
+     "state": 6,
+     "handler": "0x00c255ff",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 45,
+     "handler": "0x00c267dd",
+     "entry_motions": [
+      {
+       "index": 66,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 46,
+     "handler": "0x00c26ba6",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 47,
+     "handler": "0x00c26f00",
+     "entry_motions": [
+      {
+       "index": 72,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 48,
+     "handler": "0x00c271b9",
+     "entry_motions": [
+      {
+       "index": 73,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 49,
+     "handler": "0x00c27461",
+     "entry_motions": [
+      {
+       "index": 74,
+       "ani": ""
+      },
+      {
+       "index": 83,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 51,
+     "handler": "0x00c27ad5",
+     "entry_motions": [
+      {
+       "index": 85,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 52,
+     "handler": "0x00c27f51",
+     "entry_motions": [
+      {
+       "index": 86,
+       "ani": ""
+      },
+      {
+       "index": 87,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 53,
+     "handler": "0x00c282b6",
+     "entry_motions": [
+      {
+       "index": 88,
+       "ani": ""
+      },
+      {
+       "index": 89,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    },
+    {
+     "state": 55,
+     "handler": "0x00c28a3c",
+     "entry_motions": [
+      {
+       "index": 91,
+       "ani": ""
+      },
+      {
+       "index": 92,
+       "ani": ""
+      },
+      {
+       "index": 92,
+       "ani": ""
+      },
+      {
+       "index": 93,
+       "ani": ""
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "101": {
+   "skl": "Gunner/AirRaidEx.skl",
+   "states": [
+    {
+     "state": 6,
+     "handler": "0x00c255ff",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 38,
+     "handler": "0x00c24db1",
+     "entry_motions": [],
+     "atk_selector_args": []
+    },
+    {
+     "state": 56,
+     "handler": "0x00c24d96",
+     "entry_motions": [],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "102": {
+   "skl": "Gunner/C4RemoteEx.skl",
+   "states": [
+    {
+     "state": 13,
+     "handler": "0x00c29bf2",
+     "entry_motions": [
+      {
+       "index": 0,
+       "ani": "Animation/Attack1ShootUp.ani"
+      },
+      {
+       "index": 3,
+       "ani": "Animation/Attack2ShootDown.ani"
+      },
+      {
+       "index": 2,
+       "ani": "Animation/Attack2ShootUp.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "103": {
+   "skl": "Gunner/FlashMineEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "104": {
+   "skl": "Gunner/MultiHeadShotEx.skl",
+   "states": [
+    {
+     "state": 58,
+     "handler": "0x00c24a23",
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/MultiHeadShotReady.ani"
+      },
+      {
+       "index": 45,
+       "ani": "Animation/MultiHeadShotFinish.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "105": {
+   "skl": "Gunner/RobotEz8Ex.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "106": {
+   "skl": "Gunner/RobotExsEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "107": {
+   "skl": "Gunner/BlizzardThrowerBoost.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "108": {
+   "skl": "Gunner/StingerEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "109": {
+   "skl": "Gunner/ChargeBuster.skl",
+   "states": [
+    {
+     "state": 59,
+     "handler": "0x00c299f0",
+     "entry_motions": [
+      {
+       "index": 100,
+       "ani": "Animation/ChargeBusterCharge.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "110": {
+   "skl": "Gunner/MusketMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "140": {
+   "skl": "Gunner/HeadShotEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "141": {
+   "skl": "Gunner/AerialGatlingEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "142": {
+   "skl": "Gunner/RobotRX78Ex.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "143": {
+   "skl": "Gunner/SilverBulletEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "144": {
+   "skl": "Gunner/BulletGuardEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 16,
+       "ani": "Animation/BulletGuard.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "145": {
+   "skl": "Gunner/PunisherEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "146": {
+   "skl": "Gunner/FlameThrowerEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "147": {
+   "skl": "Gunner/SteyrHeavyRifleEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "148": {
+   "skl": "Gunner/RobotsExplosionEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "149": {
+   "skl": "Gunner/G1Ex.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "150": {
+   "skl": "Gunner/CrossShootEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 35,
+       "ani": "Animation/CrossShoot.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "151": {
+   "skl": "Gunner/IncreaseBulletBuffCountEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "152": {
+   "skl": "Gunner/MagicalChangeEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "153": {
+   "skl": "Gunner/FastKneeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 14,
+       "ani": "Animation/FastKnee.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "154": {
+   "skl": "Gunner/RandomShootEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 15,
+       "ani": "Animation/RandomShoot.ani"
+      },
+      {
+       "index": 99,
+       "ani": "Animation/RandomShootWait.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "155": {
+   "skl": "Gunner/GrenadeNoneEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "156": {
+   "skl": "Gunner/NapalmBombEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "157": {
+   "skl": "Gunner/RobotEz8Exp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "158": {
+   "skl": "Gunner/SparrowFactoryEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "159": {
+   "skl": "Gunner/GatlingEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "160": {
+   "skl": "Gunner/StingerExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "161": {
+   "skl": "Gunner/BasicAttackUpEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "162": {
+   "skl": "Gunner/FlameBulletEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "163": {
+   "skl": "Gunner/FreezeBulletEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "164": {
+   "skl": "Gunner/CounterShootEx.skl",
+   "states": [
+    {
+     "state": 40,
+     "handler": "0x00c25907",
+     "entry_motions": [
+      {
+       "index": 49,
+       "ani": "Animation/CounterShootReady.ani"
+      },
+      {
+       "index": 50,
+       "ani": "Animation/CounterShootShoot.ani"
+      }
+     ],
+     "atk_selector_args": []
+    }
+   ],
+   "effect_anis": null
+  },
+  "166": {
+   "skl": "Gunner/WindmillEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 9,
+       "ani": "Animation/WindmillRoll.ani"
+      },
+      {
+       "index": 10,
+       "ani": "Animation/WindmillStand.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "167": {
+   "skl": "Gunner/LiftShotEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "168": {
+   "skl": "Gunner/AerialKneeEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 11,
+       "ani": "Animation/AerialKnee.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "169": {
+   "skl": "Gunner/BackStep.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "172": {
+   "skl": "Gunner/ArmorMasteryLight.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "173": {
+   "skl": "Gunner/ArmorMasteryHeavy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "174": {
+   "skl": "Gunner/BasicAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "175": {
+   "skl": "Gunner/JumpPowerUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "176": {
+   "skl": "Gunner/MagicalAttackUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "177": {
+   "skl": "Gunner/ThrowMastery.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "178": {
+   "skl": "Gunner/PhysicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "179": {
+   "skl": "Gunner/DisjointItem.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "180": {
+   "skl": "Gunner/SuperArmorOnCast.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "181": {
+   "skl": "Gunner/CompoundCraft.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "182": {
+   "skl": "Gunner/CompoundWeaving.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "183": {
+   "skl": "Gunner/CompoundMachine.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "184": {
+   "skl": "Gunner/CompoundChemistry.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "185": {
+   "skl": "Gunner/ArmorMasteryLeather.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "186": {
+   "skl": "Gunner/PhysicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "187": {
+   "skl": "Gunner/ArmorMasteryCloth.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "188": {
+   "skl": "Gunner/MagicalCriticalHitUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "189": {
+   "skl": "Gunner/MagicalBackAttackCritical.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "190": {
+   "skl": "Gunner/QuickStanding.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "191": {
+   "skl": "Gunner/Enchant.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "192": {
+   "skl": "Gunner/DollMaking.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "193": {
+   "skl": "Gunner/Alchemy.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "194": {
+   "skl": "Gunner/OpenDisjointShop.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "195": {
+   "skl": "Gunner/BasicHpMaxUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "196": {
+   "skl": "Gunner/ArmorMasteryPlate.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "197": {
+   "skl": "Gunner/Conversion.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "200": {
+   "skl": "Gunner/StatusUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "201": {
+   "skl": "Gunner/ExperienceUp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "211": {
+   "skl": "Gunner/AirRaidExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 94,
+       "ani": "Animation/AirRaidEx.ani"
+      },
+      {
+       "index": 95,
+       "ani": "Animation/AirRaidExWindmill.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "212": {
+   "skl": "Gunner/WalkShootEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 25,
+       "ani": "Animation/WalkShootReadyStay.ani"
+      },
+      {
+       "index": 26,
+       "ani": "Animation/WalkShootReadyFront.ani"
+      },
+      {
+       "index": 27,
+       "ani": "Animation/WalkShootReadyBack.ani"
+      },
+      {
+       "index": 28,
+       "ani": "Animation/WalkShootLeftStay.ani"
+      },
+      {
+       "index": 29,
+       "ani": "Animation/WalkShootLeftFront.ani"
+      },
+      {
+       "index": 30,
+       "ani": "Animation/WalkShootLeftBack.ani"
+      },
+      {
+       "index": 31,
+       "ani": "Animation/WalkShootRightStay.ani"
+      },
+      {
+       "index": 32,
+       "ani": "Animation/WalkShootRightFront.ani"
+      },
+      {
+       "index": 33,
+       "ani": "Animation/WalkShootRightBack.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "213": {
+   "skl": "Gunner/DoubleGunhawkEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 51,
+       "ani": "Animation/DoubleGunhawkThrow.ani"
+      },
+      {
+       "index": 52,
+       "ani": "Animation/DoubleGunhawkCatch.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "214": {
+   "skl": "Gunner/MultiHeadShotExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 40,
+       "ani": "Animation/MultiHeadShotReady.ani"
+      },
+      {
+       "index": 41,
+       "ani": "Animation/MultiHeadShotShoot1.ani"
+      },
+      {
+       "index": 42,
+       "ani": "Animation/MultiHeadShotShoot2.ani"
+      },
+      {
+       "index": 43,
+       "ani": "Animation/MultiHeadShotShoot3.ani"
+      },
+      {
+       "index": 44,
+       "ani": "Animation/MultiHeadShotShoot4.ani"
+      },
+      {
+       "index": 45,
+       "ani": "Animation/MultiHeadShotFinish.ani"
+      },
+      {
+       "index": 97,
+       "ani": "Animation/MultiHeadShotExTract.ani"
+      },
+      {
+       "index": 98,
+       "ani": "Animation/MultiHeadShotExKick.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "215": {
+   "skl": "Gunner/LaserRifleEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "216": {
+   "skl": "Gunner/ExtruderEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 37,
+       "ani": "Animation/ExtruderReady.ani"
+      },
+      {
+       "index": 38,
+       "ani": "Animation/ExtruderCharge.ani"
+      },
+      {
+       "index": 39,
+       "ani": "Animation/ExtruderShoot.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "217": {
+   "skl": "Gunner/CannonBallEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "218": {
+   "skl": "Gunner/FlameThrowerBoostEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "219": {
+   "skl": "Gunner/G2Ex.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "220": {
+   "skl": "Gunner/G3Ex.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "221": {
+   "skl": "Gunner/UraniumBombExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "222": {
+   "skl": "Gunner/RobotTempesterEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "223": {
+   "skl": "Gunner/GrenadeLightEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "224": {
+   "skl": "Gunner/GrenadeWaterEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "225": {
+   "skl": "Gunner/ArmorBulletEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "226": {
+   "skl": "Gunner/ChargeBusterEx.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 100,
+       "ani": "Animation/ChargeBusterCharge.ani"
+      },
+      {
+       "index": 101,
+       "ani": "Animation/ChargeBusterShoot.ani"
+      },
+      {
+       "index": 102,
+       "ani": "Animation/ChargeBusterShootDown.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "227": {
+   "skl": "Gunner/FlashMineExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "228": {
+   "skl": "Gunner/C4RemoteExp.skl",
+   "states": [
+    {
+     "state": null,
+     "handler": null,
+     "entry_motions": [
+      {
+       "index": 47,
+       "ani": "Animation/C4RemoteReady.ani"
+      },
+      {
+       "index": 48,
+       "ani": "Animation/C4RemoteThrow.ani"
+      },
+      {
+       "index": 96,
+       "ani": "Animation/C4RemoteExThrow.ani"
+      }
+     ],
+     "note": "name-inferred"
+    }
+   ],
+   "effect_anis": null
+  },
+  "229": {
+   "skl": "Gunner/NielSnipingEx.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "230": {
+   "skl": "Gunner/RobotExsExp.skl",
+   "states": [],
+   "effect_anis": null
+  },
+  "231": {
+   "skl": "Gunner/MechaDropEx.skl",
+   "states": [],
+   "effect_anis": null
+  }
+ }
+}

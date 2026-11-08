@@ -1,0 +1,472 @@
+{
+  "schema": 5,
+  "characters": [
+    {
+      "name": "WindowGeneration",
+      "class": "swordman",
+      "identity": {
+        "job_id": 0,
+        "growtype": 0,
+        "awakening": 0
+      },
+      "simulation": {
+        "schema": 1,
+        "clock": {
+          "schema": 1,
+          "frequency": 60,
+          "tick": 9,
+          "accumulated_units": 0
+        },
+        "ids": {
+          "schema": 1,
+          "actions": {
+            "schema": 1,
+            "next": 2
+          },
+          "attacks": {
+            "schema": 1,
+            "next": 2
+          },
+          "requests": {
+            "schema": 1,
+            "next": 1
+          },
+          "events": {
+            "schema": 1,
+            "next": 2
+          }
+        },
+        "effects": {
+          "schema": 1,
+          "next": 2
+        },
+        "status_instance_ids": {
+          "schema": 1,
+          "next": 1
+        },
+        "inputs": {
+          "schema": 1,
+          "sequences": {
+            "schema": 1,
+            "next": 1
+          },
+          "pending": []
+        },
+        "entities": {
+          "schema": 1,
+          "ids": {
+            "schema": 1,
+            "next": 3
+          },
+          "entries": [
+            {
+              "id": 1,
+              "generation": 1,
+              "live": true
+            },
+            {
+              "id": 2,
+              "generation": 1,
+              "live": true
+            }
+          ]
+        },
+        "random": {
+          "schema": 1,
+          "algorithm": "pcg32-xsh-rr-64-32-v1",
+          "derivation": "fnv1a64-le-domain-instance-v1",
+          "run_seed": 0,
+          "streams": [
+            {
+              "domain": "monster_hurt",
+              "instance": 0,
+              "rng": {
+                "schema": 1,
+                "algorithm": "pcg32-xsh-rr-64-32-v1",
+                "state": 4409450774145189345,
+                "increment": 12557909356131271399,
+                "draws": 1
+              }
+            },
+            {
+              "domain": "hit_presentation",
+              "instance": 0,
+              "rng": {
+                "schema": 1,
+                "algorithm": "pcg32-xsh-rr-64-32-v1",
+                "state": 6950809066205051125,
+                "increment": 17266148099042548495,
+                "draws": 1
+              }
+            }
+          ]
+        },
+        "restore_policy": "cancel-transient-actions-input-and-effect-instances-v1",
+        "source_monster_think": {
+          "schema": 1,
+          "policy": "inferred-source-monster-think-sequence-v1",
+          "enabled": false,
+          "difficulty": "",
+          "instance_ids": {
+            "schema": 1,
+            "next": 1
+          }
+        }
+      },
+      "level": 1,
+      "weapon": 0,
+      "skills": {
+        "46": 1,
+        "5": 1,
+        "8": 1,
+        "11": 1,
+        "16": 1,
+        "17": 1,
+        "20": 1,
+        "25": 1,
+        "58": 1,
+        "64": 1,
+        "65": 1,
+        "77": 1,
+        "1": 1
+      },
+      "skill_state": {
+        "schema": 1,
+        "identity": {
+          "job_id": 0,
+          "growtype": 0,
+          "awakening": 0
+        },
+        "skills": []
+      },
+      "bindings": [
+        46,
+        5,
+        8,
+        11,
+        16,
+        17,
+        20,
+        25,
+        58,
+        64,
+        65,
+        77,
+        1
+      ],
+      "passives": {
+        "basicattackup": 1,
+        "shortswordmastery": 1,
+        "blademastery": 1,
+        "heavyswordmastery": 1,
+        "bluntmastery": 1,
+        "armormasterylight": 1
+      },
+      "region_session": {
+        "room_states": [
+          [
+            {
+              "id": 17,
+              "source_id": 56503,
+              "path": "monster/act8/botticelli/botticelli.mob",
+              "source_stats": {},
+              "x": 640.0,
+              "y": 344.0,
+              "z": 0.0,
+              "vz": 0.0,
+              "vx": 400.0,
+              "vy": 0.0,
+              "dir": -1,
+              "hp": 999981,
+              "max_hp": 1000000,
+              "mp": 140,
+              "max_mp": 140,
+              "boss": false,
+              "dead": false,
+              "animation": "damage2",
+              "animation_path": "monster/act8/botticelli/animation/damage2.ani",
+              "anim_age": 0,
+              "stun_remaining": 175,
+              "hit_stop_ticks": 6,
+              "recovery": 0,
+              "life": 0,
+              "death_age": 150,
+              "life_age": 150,
+              "death_pose_time": 0,
+              "next_attack": 0,
+              "attack_variant": 0,
+              "attack_serial": 0,
+              "attack_hit": false,
+              "hit_reaction": {
+                "version": 1,
+                "state": 3,
+                "substate": 0,
+                "direction": 1,
+                "acceleration_x": -2666,
+                "acceleration_remaining_ms": 150,
+                "gravity": -1500,
+                "remaining_ms": 175,
+                "peak_height": 0.0,
+                "launch_height": 0.0,
+                "push_speed": 400.0,
+                "weight": 225000.0
+              },
+              "death_visual_version": 1,
+              "entity_handle": {
+                "id": 2,
+                "generation": 1
+              },
+              "death_route": "",
+              "independent_death": false,
+              "death_duration": 500,
+              "death_loop": false,
+              "death_anchor": [
+                0.0,
+                0.0,
+                0.0
+              ],
+              "death_bounds": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "death_motion": null,
+              "death_profile": {
+                "configured": false,
+                "valid": false,
+                "pieces": false,
+                "smoke": false,
+                "flash": false,
+                "selector": 0,
+                "palette": 0,
+                "omit": 0,
+                "count": 0,
+                "life_ms": 0,
+                "gravity": 0.0,
+                "speed": 0.0,
+                "image": "",
+                "piece_animation": "",
+                "flash_animation": "",
+                "smoke_animation": "",
+                "raw": [],
+                "issues": []
+              },
+              "last_impact": {
+                "x": 1.0,
+                "y": 0.0,
+                "speed_scale": 0.7007048944444445,
+                "attack_speed": 113.33333333333333,
+                "damage_fraction": 1.9e-05,
+                "push": 30.0,
+                "lift": 75.0
+              },
+              "death_fragments": [],
+              "monster_event_ai_state": {
+                "schema": 1,
+                "policy": "inferred-source-damage-window-rolling-v1",
+                "commit_generation": 1,
+                "owner": {
+                  "id": 2,
+                  "generation": 1
+                },
+                "player_owner": {
+                  "id": 1,
+                  "generation": 1
+                },
+                "source_id": 56503,
+                "actor_id": 17,
+                "monster_source": {
+                  "package_identity": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+                  "member_path": "monster/act8/botticelli/botticelli.mob",
+                  "member_sha256": "85bed444257b3873a3084cffb5ca8d60101ea89322ca8ec679c5d9abc9f3e146",
+                  "encoding": "CP936",
+                  "byte_offset": 0,
+                  "byte_length": 1512,
+                  "ordinal": 0,
+                  "scope": "",
+                  "literal_path": "monster/act8/botticelli/botticelli.mob"
+                },
+                "saved_tick": 9,
+                "saved_ms": 150,
+                "binding": true,
+                "window": {
+                  "policy": "inferred-source-damage-window-rolling-v1",
+                  "enabled": true,
+                  "interval_ms": 5000,
+                  "configured_ms": 0,
+                  "monster_source": {
+                    "package_identity": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+                    "member_path": "monster/act8/botticelli/botticelli.mob",
+                    "member_sha256": "85bed444257b3873a3084cffb5ca8d60101ea89322ca8ec679c5d9abc9f3e146",
+                    "encoding": "CP936",
+                    "byte_offset": 0,
+                    "byte_length": 1512,
+                    "ordinal": 0,
+                    "scope": "",
+                    "literal_path": "monster/act8/botticelli/botticelli.mob"
+                  },
+                  "configuration_source": {
+                    "package_identity": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+                    "member_path": "monster/act8/botticelli/botticelli.mob",
+                    "member_sha256": "85bed444257b3873a3084cffb5ca8d60101ea89322ca8ec679c5d9abc9f3e146",
+                    "encoding": "CP936",
+                    "byte_offset": 672,
+                    "byte_length": 10,
+                    "ordinal": 43,
+                    "scope": "",
+                    "literal_path": "monster/act8/botticelli/botticelli.mob"
+                  },
+                  "samples": [
+                    {
+                      "event_id": 1,
+                      "accepted_ms": 150,
+                      "actual_hp_loss": 19
+                    }
+                  ],
+                  "receipt": {
+                    "policy": "inferred-source-damage-window-rolling-v1",
+                    "classification": "inferred_beta",
+                    "quantity": "accepted actual HP decrease; overkill clipped; zero accepted contacts retained; DOT excluded until separate consumer",
+                    "window": "rolling accepted_ms >= max(configured_ms,now_ms-interval_ms), inclusive endpoint; no reset on query",
+                    "comparison": "window_amount>=authored_threshold",
+                    "reconfigure": "every explicit ACT start/stop resets samples at command publication; pending accepted queries retain their immutable prior window sum",
+                    "origin": "source MOB consumer install",
+                    "native_window_reset_comparison_and_timer": "unconfirmed",
+                    "ordered_operands": [
+                      5000
+                    ],
+                    "initial_configured": true
+                  }
+                },
+                "entity_ids": {
+                  "schema": 1,
+                  "next": 3
+                },
+                "pending": [
+                  {
+                    "event_id": 1,
+                    "accepted_tick": 9,
+                    "attacker_role": "player",
+                    "attacker": {
+                      "id": 1,
+                      "generation": 1
+                    },
+                    "actual_hp_loss": 19,
+                    "window_amount": 19,
+                    "damage_check_enabled": true,
+                    "window_configuration": {
+                      "policy": "inferred-source-damage-window-rolling-v1",
+                      "enabled": true,
+                      "interval_ms": 5000,
+                      "configured_ms": 0,
+                      "monster_source": {
+                        "package_identity": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+                        "member_path": "monster/act8/botticelli/botticelli.mob",
+                        "member_sha256": "85bed444257b3873a3084cffb5ca8d60101ea89322ca8ec679c5d9abc9f3e146",
+                        "encoding": "CP936",
+                        "byte_offset": 0,
+                        "byte_length": 1512,
+                        "ordinal": 0,
+                        "scope": "",
+                        "literal_path": "monster/act8/botticelli/botticelli.mob"
+                      },
+                      "configuration_source": {
+                        "package_identity": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+                        "member_path": "monster/act8/botticelli/botticelli.mob",
+                        "member_sha256": "85bed444257b3873a3084cffb5ca8d60101ea89322ca8ec679c5d9abc9f3e146",
+                        "encoding": "CP936",
+                        "byte_offset": 672,
+                        "byte_length": 10,
+                        "ordinal": 43,
+                        "scope": "",
+                        "literal_path": "monster/act8/botticelli/botticelli.mob"
+                      },
+                      "samples": [],
+                      "receipt": {
+                        "policy": "inferred-source-damage-window-rolling-v1",
+                        "classification": "inferred_beta",
+                        "quantity": "accepted actual HP decrease; overkill clipped; zero accepted contacts retained; DOT excluded until separate consumer",
+                        "window": "rolling accepted_ms >= max(configured_ms,now_ms-interval_ms), inclusive endpoint; no reset on query",
+                        "comparison": "window_amount>=authored_threshold",
+                        "reconfigure": "every explicit ACT start/stop resets samples at command publication; pending accepted queries retain their immutable prior window sum",
+                        "origin": "source MOB consumer install",
+                        "native_window_reset_comparison_and_timer": "unconfirmed",
+                        "ordered_operands": [
+                          5000
+                        ],
+                        "initial_configured": true
+                      }
+                    }
+                  }
+                ],
+                "restoration": "typed owner/player remap; restore pending only; never replay HP damage or rewards",
+                "difficulty": "easy",
+                "ai_source": {
+                  "package_identity": "d13ce454567197bb4617cad4d0e472f609a1ec5cf2256462d780547be878607d",
+                  "member_path": "monster/act8/botticelli/ai/event.ai",
+                  "member_sha256": "befe75961efca909731e3735fd5006bc1e558328c10a341aacb859897b5854f3",
+                  "encoding": "CP936",
+                  "byte_offset": 0,
+                  "byte_length": 152,
+                  "ordinal": 0,
+                  "scope": "monster_event_ai/document",
+                  "literal_path": "monster/act8/botticelli/ai/event.ai"
+                },
+                "ai_policy": {
+                  "id": "inferred-mob-event-ai-integral-chance-v1",
+                  "classification": "inferred_beta",
+                  "random": "bounded PCG32 integral ratio, threshold rejection with a draw budget; draw even for reached zero/full chance",
+                  "hit": "presence of typed accepted-hit record, compared to authored0/1",
+                  "cooldown": "readonly validated authored action-index query at the same preparation boundary",
+                  "native_pc_rng_and_phase": "unconfirmed",
+                  "whole_ai_capability": false
+                },
+                "random_stream_key": 2
+              }
+            }
+          ]
+        ]
+      },
+      "uuid": "efb86e15-c7ba-4daa-8fc9-33ba2bf3ad6c"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "_storage": {
+    "format": 2,
+    "generation": 1,
+    "commit_id": "ad3bdef7-b0b5-4e02-b06f-9ff5c716f3ba",
+    "parent_commit": "",
+    "kind": "checkpoint",
+    "request_id": null,
+    "content_identity": "",
+    "checksum_kind": "crc32-json-utf8-v1",
+    "receipts": {},
+    "result": {
+      "kind": "checkpoint",
+      "request_id": null,
+      "commit_id": "ad3bdef7-b0b5-4e02-b06f-9ff5c716f3ba",
+      "generation": 1,
+      "content_identity": ""
+    },
+    "checksum": "971320ce"
+  }
+}
