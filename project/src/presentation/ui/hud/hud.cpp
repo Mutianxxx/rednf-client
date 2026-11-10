@@ -222,6 +222,18 @@ bool Hud::draw(Renderer &render, const World &world, int mx, int my, bool click)
         render.text(keys[slot], keyX + 1, keyY + 1, keySize, {0, 0, 0, 255});
         render.text(keys[slot], keyX, keyY, keySize, {232, 92, 70, 255});
     }
+    if (!world.experimentalRuntime() && world.skillLabUnlocked()) {
+        const int running = world.activeSkill();
+        if (running >= 0 && running < int(world.skills.size()))
+            render.text(world.skills[running].name, 336, 486, 13, {246, 196, 96, 255});
+    }
+    if (!world.experimentalRuntime() && world.skillPageCount() > 1) {
+        // Skill lab paging hint. Twelve anchors are all the source bar has, so
+        // the rest of the job's active skills live on later pages.
+        const std::string label = "技能页 " + std::to_string(world.skillPage() + 1) + "/" +
+            std::to_string(world.skillPageCount()) + "  F1/F2 切换";
+        render.text(label, 336, 500, 12, {232, 210, 160, 255});
+    }
     const auto &bounds = disabledBounds_;
     if (inside(mx, my, bounds[0], hudY + bounds[1], bounds[2] - bounds[0], bounds[3] - bounds[1]) ||
         inside(mx, my, shop.x, hudY + shop.y, shopWidth_, shopHeight_)) {

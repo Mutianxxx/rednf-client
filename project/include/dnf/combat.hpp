@@ -493,6 +493,8 @@ class World {
     // Shared with the previewer: keeps the live game from hand-registering the
     // same skill visuals a second time. Built lazily on the first cast.
     std::shared_ptr<SkillMappingTable> skillVisuals_;
+    bool skillLabUnlocked_ = false;
+    int skillPage_ = 0;
     int bufferedSkill_ = -1;
     bool bufferedSkillCommand_ = false;
     int activeCooldownMs_ = 0;
@@ -573,6 +575,12 @@ class World {
     // Builds the skill's effect layers and persistent entities from the shared
     // skill->visual mapping table (the same one the standalone previewer audits).
     void spawnSkillVisuals(const struct Skill &skill);
+    // Registers every ACTIVE skill the job's own SKL list declares, driving body
+    // stages from the shared mapping table instead of a hand written chain. The
+    // hand-registered controller skills stay first and untouched.
+    void registerMappedSkills();
+    // Re-points the thirteen hotbar slots at the current page of `skills`.
+    void rebindSkillPage();
     void updateGoreCross(int bodyFrame);
     void expandEffectLayers(size_t first);
     bool matchCommand(int key);
@@ -596,6 +604,15 @@ class World {
     int characterLevel = 1;
     int normalCharacterLevel() const { return usesSourceGrowth()?normalCharacterLevel_:characterLevel; }
     std::array<int, 13> bindings{};
+    // Skill lab: unlock every source ACTIVE skill of the current job, drop the
+    // learning gate, and keep MP/cooldown out of the way so each skill can be
+    // played back to back. Never on by default; a save keeps its normal state.
+    void unlockAllSkills(bool enabled = true);
+    bool skillLabUnlocked() const { return skillLabUnlocked_; }
+    int skillPage() const { return skillPage_; }
+    int skillPageCount() const;
+    // Clamped; rebinding happens immediately so the HUD and input agree.
+    void setSkillPage(int page);
     std::vector<Event> events;
     std::vector<AttackVolume> attackVolumes;
     int64_t tick = 0;

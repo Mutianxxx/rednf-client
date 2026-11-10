@@ -14,9 +14,14 @@
 #include "dnf/female_gunner_world.hpp"
 #include <cmath>
 #include <limits>
+#include <set>
 namespace dnf {
 namespace {
 double rampIntegral(double t) { return t * t * t - 0.5 * t * t * t * t; }
+// Marks the rows registerMappedSkills() added, so a job switch can drop them
+// without touching the hand-registered controller skills.
+constexpr const char *kMappedSkillEvidence =
+    "mapping-driven registration: shared skill->visual table";
 }
 double MotionProfile::velocity(double elapsedMs, double durationMs, double peakSpeed) const {
     if (elapsedMs <= 0 || elapsedMs >= durationMs || durationMs <= 0) return 0;
@@ -148,8 +153,32 @@ void World::createController() {
     controller_ = controllers_.create(identity_,controllerServices());
 }
 void World::resetBindings() {
-    for (int i = 0; i < int(bindings.size()); i++) bindings[i] =
-        !experimentalRuntime_ && i<int(skills.size()) ? i : -1;
+    rebindSkillPage();
+}
+void World::rebindSkillPage() {
+    const int slots = int(bindings.size());
+    const int count = int(skills.size());
+    const int pages = count > 0 ? (count + slots - 1) / slots : 1;
+    skillPage_ = std::clamp(skillPage_, 0, pages - 1);
+    const int first = skillPage_ * slots;
+    for (int i = 0; i < slots; i++) {
+        const int index = first + i;
+        bindings[i] = (!experimentalRuntime_ && index < count) ? index : -1;
+    }
+}
+int World::skillPageCount() const {
+    const int slots = int(bindings.size());
+    if (slots <= 0) return 1;
+    const int count = int(skills.size());
+    return count > 0 ? (count + slots - 1) / slots : 1;
+}
+void World::setSkillPage(int page) {
+    const int pages = skillPageCount();
+    const int next = std::clamp(page, 0, pages - 1);
+    if (next == skillPage_) return;
+    skillPage_ = next;
+    rebindSkillPage();
+    events.push_back({tick, "skill_page", std::to_string(skillPage_ + 1) + "/" + std::to_string(pages)});
 }
 void World::releaseInputs() {
     clearSkillInputTransients();
@@ -201,6 +230,14 @@ void World::selectCharacter(CharacterIdentity identity,std::unique_ptr<Experimen
             if(skill.sourceData)skill.maxLevel=skill.sourceData->purchaseMaximum(identity.growtype).value_or(0);
     }
     resetBindings();
+    // A character switch restores the traced table above, which would silently
+    // undo the lab. Re-apply it here so the unlock survives save/load and a
+    // job change instead of only the first construction.
+    if (skillLabUnlocked_) {
+        for (auto &skill : skills) skill.level = std::max(1, skill.maxLevel);
+        registerMappedSkills();
+        rebindSkillPage();
+    }
     speedAttributes_.reset();
     equipmentResources_.reset();
     combatAttributes_.reset();
@@ -447,7 +484,14 @@ std::string World::actorAni() const {
     if (active_ >= 0 && skills[active_].id == 11) return character.motion("[etc motion]", 11);
     // Existing Swordman skill stages still have explicit authored ANI stems.
     // Their native etc-motion slot consumers are restored per controller.
-    return character.motionByStem(player.animation);
+    try {
+        return character.motionByStem(player.animation);
+    } catch (const std::exception &) {
+        // A stage named a motion this CHR never registers (the mapped rows can
+        // name an ANI that exists but is not bound). Keep the action running on
+        // the waiting pose instead of aborting the whole run.
+        return character.motion("[waiting motion]");
+    }
 }
 void World::reset() {
     changeScene();
@@ -1047,7 +1091,7 @@ void World::requestSkill(int i,bool command,bool afterCurrentAction) {
     // is an existing-stage request rather than another useSkill transaction.
     // Check before admitting any contact-pause input buffer as well.
     if(s.level==0){fail("unlearned_skill");return;}
-    if (usesSourceGrowth() && hasLearningLedger()) {
+    if (!skillLabUnlocked_ && usesSourceGrowth() && hasLearningLedger()) {
         const auto eligibility=skillUseEligibility(s.identity());
         if (!eligibility.allowed()) {
             lastSkillLearningTrace_=eligibility.json();
@@ -1080,7 +1124,7 @@ void World::requestSkill(int i,bool command,bool afterCurrentAction) {
             {fail("source_dash_frame_required");return;}
     }
     if(s.id!=17&&s.id!=16&&player.z>0){fail("ground_state_required");return;}
-    if(!(freeCd||(debugOverrides_.enabled&&debugOverrides_.noCooldown))&&remainingCd(i)>0){fail("skill_cooldown");return;}
+    if(!(freeCd||skillLabUnlocked_||(debugOverrides_.enabled&&debugOverrides_.noCooldown))&&remainingCd(i)>0){fail("skill_cooldown");return;}
     const auto costs = skillCosts(i, command);
     lastSkillCostTrace_ = costs.json();
     lastSkillCostTrace_["request"] = {{"tick", tick}, {"command", command}, {"classification", "inferred_beta"}};
@@ -1096,8 +1140,8 @@ void World::requestSkill(int i,bool command,bool afterCurrentAction) {
         return;
     }
     const int cooldownMs = int(std::ceil(*costs.cooldownMs()));
-    if(debugOverrides_.enabled&&debugOverrides_.mpLock&&consumeMp>player.maxMp){fail("skill_cost_exceeds_locked_mp");return;}
-    if(player.mp<consumeMp&&!god&&!(debugOverrides_.enabled&&debugOverrides_.mpLock)){fail("insufficient_mp");return;}
+    if(!skillLabUnlocked_&&debugOverrides_.enabled&&debugOverrides_.mpLock&&consumeMp>player.maxMp){fail("skill_cost_exceeds_locked_mp");return;}
+    if(player.mp<consumeMp&&!god&&!skillLabUnlocked_&&!(debugOverrides_.enabled&&debugOverrides_.mpLock)){fail("insufficient_mp");return;}
     if(afterCurrentAction&&(active_>=0||basicAttacking())) {
         bufferedDefaultSkill_=BufferedDefaultSkill{s.identity(),active_>=0?actionInstance_:objectAttackSerial_,active_<0};
         events.push_back({tick,"skill_buffered",UserRequestedSkillFeedbackV1::bufferPolicy,0,0,s.id});
@@ -1111,7 +1155,8 @@ void World::requestSkill(int i,bool command,bool afterCurrentAction) {
         return;
     }
     bufferedDefaultSkill_.reset();player.skillFailureFeedback={};
-    player.mp = debugOverrides_.enabled && debugOverrides_.mpLock ? player.maxMp : std::max(0, player.mp - consumeMp);
+    player.mp = skillLabUnlocked_ || (debugOverrides_.enabled && debugOverrides_.mpLock)
+        ? player.maxMp : std::max(0, player.mp - consumeMp);
     activeCooldownMs_ = cooldownMs;
     lastSkillCostTrace_["commit"] = {{"tick", tick}, {"consume_mp", consumeMp}, {"cooldown_ms", cooldownMs},
         {"cooldown_conversion", "ceil source milliseconds for integral runtime deadline"},
@@ -1359,6 +1404,12 @@ void World::applyInput(const Input &in) {
         if ((in.key == 32 || in.key == 6 || in.key == 4 || in.key == 7) && active_ >= 0 &&
             skills[active_].id == 1)
             idle();
+        return;
+    }
+    if (in.key == 40 || in.key == 41) {
+        // Skill lab paging. It is a view change, not an action: it must work
+        // while stunned and must not enter the command history.
+        setSkillPage(skillPage_ + (in.key == 41 ? 1 : -1));
         return;
     }
     if(statusStunned(player.handle)) {
@@ -2070,6 +2121,7 @@ void World::spawnSkillVisuals(const Skill &skill) {
     }
     const auto *mapping = skillVisuals_->mapping(skill.identity());
     if (!mapping) return;
+    const size_t firstLayer = effects.size();
     double duration = 0;
     for (const auto &stage : skill.stages) {
         try {
@@ -2145,6 +2197,119 @@ void World::spawnSkillVisuals(const Skill &skill) {
             effects.push_back(std::move(e));
         }
     }
+    // Diagnostic: how many layers this skill actually put on screen. A zero here
+    // means the mapping row resolved no drawable ANI, not that the code skipped.
+    events.push_back({tick, "skill_visuals", skill.key,
+                      int(effects.size() - firstLayer), 0, skill.id});
+}
+
+// The hand-written table above only describes nine skills, because those are
+// the ones whose controller chain was traced end to end. Everything else the
+// job's SKL declares is registered here, with the body animation and the
+// effect layers coming from the same mapping table the standalone previewer
+// audits. A skill whose row is grade D (no body motion, no effect) is not
+// registered at all: an unplayable button is worse than an absent one.
+void World::registerMappedSkills() {
+    if (experimentalRuntime_) return; // The source runtime owns its own activation.
+    try {
+        if (!skillVisuals_)
+            skillVisuals_ = std::make_shared<SkillMappingTable>(pvf_, assets_, characters_);
+        skillVisuals_->ensureJob(identity_.jobId);
+    } catch (const std::exception &) {
+        return;
+    }
+    const auto playable = [this](const std::string &path) {
+        if (path.empty() || !pvf_.has(path)) return false;
+        try { (void)assets_.animation(path); return true; }
+        catch (const std::exception &) { return false; }
+    };
+    // A mapping row can name an ANI that exists but is not registered on this
+    // job's CHR. Playback of an unbound motion throws mid-action, so every body
+    // stage is resolved back through the CHR table first.
+    const auto boundBody = [this, &playable](const std::string &path) {
+        if (!playable(path)) return std::string();
+        try {
+            const auto stem = std::filesystem::u8path(path).stem().u8string();
+            const auto bound = characterSource().motionByStem(stem);
+            return playable(bound) ? bound : std::string();
+        } catch (const std::exception &) { return std::string(); }
+    };
+    std::set<int> known;
+    for (const auto &skill : skills) known.insert(skill.id);
+    // Re-run on a job switch: drop everything this function added before.
+    skills.erase(std::remove_if(skills.begin(), skills.end(),
+                     [](const Skill &skill) { return skill.evidence == kMappedSkillEvidence; }),
+                 skills.end());
+    for (const auto &entry : characterSource().skills.entries) {
+        if (entry.id < 0 || known.count(entry.id)) continue;
+        const SkillKey key{identity_.jobId, entry.id};
+        Skill skill;
+        try {
+            const auto &definition = characters_.skillDefinition(key);
+            if (definition.kind != SkillSourceKind::Active) continue;
+            auto data = std::make_shared<SkillSourceData>(readSkillSourceData(definition, "dungeon"));
+            skill.jobId = key.jobId;
+            skill.id = key.skillId;
+            skill.source = definition.source.script.path;
+            skill.key = std::filesystem::u8path(skill.source).stem().u8string();
+            skill.name = data->name();
+            if (skill.name.empty()) skill.name = skill.key;
+            const auto endpoint = [&](const char *tag) {
+                const auto number = data->firstNumber(tag);
+                if (!number || *number < 0 || *number > std::numeric_limits<int>::max()) return 0;
+                return int(*number);
+            };
+            skill.cooldown = endpoint("[cool time]");
+            skill.casting = endpoint("[casting time]");
+            skill.mp = endpoint("[consume MP]");
+            skill.levelInfo = data->values("[level info]");
+            skill.command = data->values("[command]");
+            const auto maximum = data->purchaseMaximum(identity_.growtype);
+            skill.maxLevel = maximum && *maximum > 0 ? *maximum : 1;
+            skill.sourceData = std::move(data);
+        } catch (const std::exception &) {
+            continue;
+        }
+        const auto *mapping = skillVisuals_->mapping(key);
+        if (!mapping) continue;
+        std::vector<std::string> chain = mapping->bodyChain;
+        if (chain.empty() && !mapping->bodyAni.empty()) chain.push_back(mapping->bodyAni);
+        for (const auto &path : chain) {
+            auto bound = boundBody(path);
+            if (bound.empty()) continue;
+            Stage stage;
+            stage.animation = std::move(bound);
+            skill.stages.push_back(std::move(stage));
+        }
+        if (skill.stages.empty()) {
+            auto pose = boundBody(mapping->fallbackPose);
+            if (pose.empty()) continue;
+            Stage stage;
+            stage.animation = std::move(pose);
+            skill.stages.push_back(std::move(stage));
+        }
+        // Unlocked by side effect of this path: the lab is the only caller.
+        skill.level = skill.maxLevel;
+        skill.manualVisuals = false;
+        skill.evidence = kMappedSkillEvidence;
+        skills.push_back(std::move(skill));
+        known.insert(key.skillId);
+    }
+    rebindSkillPage();
+}
+
+void World::unlockAllSkills(bool enabled) {
+    skillLabUnlocked_ = enabled;
+    if (!enabled) return;
+    if (experimentalRuntime_) {
+        // The source runtime carries its own explicit preview mode; asking for
+        // every skill there is the same switch the F9 test path uses.
+        setExperimentalSkillPreviewEnabled(true);
+        return;
+    }
+    registerMappedSkills();
+    for (auto &skill : skills) skill.level = std::max(1, skill.maxLevel);
+    rebindSkillPage();
 }
 
 void World::expandEffectLayers(size_t first) {
@@ -3106,8 +3271,14 @@ bool World::overlaps(const Actor &source, const Box &b, const Actor &target, Com
     double elapsed = nowMs() - target.animStart;
     const bool loop = target.animation == "stay" || target.animation == "move";
     if (target.monsterPath.empty()) {
-        animation = assets_.animation(target.animationPath.empty() ?
-            characterSource().motionByStem(target.animation) : target.animationPath);
+        // Same fallback as actorAni(): a mapped stage can name an unbound ANI,
+        // and collision must not be the place that aborts the run.
+        std::string body = target.animationPath;
+        if (body.empty()) {
+            try { body = characterSource().motionByStem(target.animation); }
+            catch (const std::exception &) { body = characterSource().motion("[waiting motion]"); }
+        }
+        animation = assets_.animation(body);
         if(&target==&player && usesSourceGrowth() && basicAttacking()) elapsed=basicLocalAge_;
     } else {
         const auto motion = monsterMotion(target, target.animation);

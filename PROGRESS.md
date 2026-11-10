@@ -1,3 +1,106 @@
+# 技能实验室：全技能注册 / 映射接管主线（2026-11-11 第五轮）
+
+节点 `skill-lab-unlock-20261111`。用户要求把 skill-preview 的成果**真正套到主线游戏**，并把
+**所有技能解锁**以便逐个体验。
+
+## 1. 先承认上一轮接了个空
+
+上一轮写了 `World::spawnSkillVisuals()`，看起来"已接入主线"，实际没有一行代码会执行：
+`combat.cpp` 的 `add()` 给每个手工技能设了 `s.manualVisuals = true`，而 `spawnSkillVisuals()`
+第一行就是 `if (skill.manualVisuals) return;`。主游戏一共只手工注册了 9 个剑士技能，全部命中
+这个 early return。更要紧的是主游戏**根本没有**念气环绕、千莲怒放、极鬼剑术——它们不在那 9 条
+硬编码里，非剑士职业走的 `experimental_character.cpp` 那套运行时又完全没有引用映射表。
+
+结论：映射层是死代码。这一轮把它接活。
+
+## 2. 按 SKL 全量注册（`registerMappedSkills`）
+
+遍历 `characterSource().skills.entries`，对每个 `SkillSourceKind::Active` 且尚未手工注册的技能：
+
+- 技能数据（名字、MP、CD、cast、`[level info]`、`[command]`、`purchaseMaximum`）走 `readSkillSourceData`，
+  和手工分支同一套读取，不臆造缺省值；
+- 动作阶段取映射的 `bodyChain`（多段释放链），退 `bodyAni`，再退 `fallbackPose`；
+- `manualVisuals = false`，于是 `spawnSkillVisuals()` 真的会跑，特效层与驻留实体由映射产出；
+- 映射拿不到任何可播放动作的行**不注册**——一个按了没反应的按钮比没有更糟。
+
+剑士 SKL 共 74 个主动技能，其中 9 个是手工链，剩 65 个由映射注册，合计 74 条。
+
+## 3. 解锁与分页
+
+`unlockAllSkills()`：
+
+- 每行 `level = maxLevel`（越过 `skill+59C` 的 `unlearned_skill` 闸门）；
+- `requestSkill` 里跳过 `skillUseEligibility`（学习账本的前置/等级/SP 校验）；
+- MP 与冷却不再拦截：`skillLabUnlocked_` 让扣蓝后立即回满、CD 检查短路。
+
+十二个源版快捷栏放不下 74 条，所以热键栏分页：`bindings[i] = page * 13 + i`，
+**F1/F2 翻页**（新键位 40/41，走 `applyInput` 的视图分支，不受眩晕/动作阻塞），
+HUD 画 `技能页 n/N` 与当前技能名。`selectCharacter` 末尾会重新应用一次，否则切角色/读档时
+`skills = swordmanSkills_` 会把解锁悄悄冲掉。
+
+## 4. 撞出一个真实崩溃
+
+扫射第 13 步就挂：`Unbound CHR motion: character/swordman/swordman.chr: guard.ani`。
+这不是映射引入的——手工分支的 `add(1, {{"guard"}})` 一直引用一个 CHR 上**没有绑定**的动作，
+只是以前没人把 13 个槽全按一遍。修法放在解析处而不是绕开：
+
+- `actorAni()` 的 `motionByStem` 包 try，失败退回 `[waiting motion]`；
+- `overlaps()` 里同一处解析同样兜底（碰撞采样也是解析点，不然换个位置照样崩）；
+- 注册时用 `CharacterDefinition::motionByStem` 把映射给的动作回查成 CHR 真实绑定的路径，
+  查不到的行不注册。
+
+## 5. 验证
+
+- `--skill-lab-sweep`（配 `--smoke 115`）自动把 6 页 74 个槽逐个释放，事件流里
+  `stage` 覆盖 **74 个不同技能 id**，`skill_page` 走过 `2/6…6/6→1/6`，无 `fatal.json`；
+- `skill_visuals` 诊断事件给出每行实际生成的层数：`ghoststep` 30、`icewave` 20、`firewave` 17、
+  `momentaryslash` 14、`saya` 14、`grabblastblood` 13、`wavemark` 13、`reflectguard` 9、
+  `bremen` 6、`tombstonerain` 4；**8 个技能为 0 层**（`hitback`、`sacrifice`、`bloodblast`、
+  `darktoleranceup`、`diehard`、`overdrive`、`reckless`、`backstepcutter`），映射本身没有可画资源，
+  如实留空；
+- 截图 `checkpoints/tests/skill-sweep3/last-frame.png`、`captures/detail-*-phase-*.png` 画面正常，
+  HUD 技能名与页码可见。
+
+## 6. 角色进入失败（`Prepared compatibility shape differs`）
+
+体验版第一次点「进入角色」就失败，运行日志
+`project/reports/runs/<id>/character-entry-error.json`：
+
+```json
+{"slot":0,"error":"Prepared compatibility shape differs"}
+```
+
+抛出点在 `skill_runtime.cpp` 的 `publishPreparedSkillRuntime`：`skills.size() != activeLevels.size()`。
+形状来自 `compatibilitySkillView()`，它**写死返回** `swordmanSkills_`（9 条手工链）；而实验室解锁
+之后 `skills` 是 74 条。投影按 9 条算、世界表是 74 条，任何一次发布（读档、切角色、学技能）
+都会拒绝。扫射测试没抓到，是因为 `--smoke`/`--skill-lab-sweep` 的自动路径根本不经过
+`resumeCharacter()`，只有人手按 Enter 才走。
+
+两处修：
+
+- `compatibilitySkillView()`：实验室开启且身份就是当前角色时返回活的 `skills`。它是技能投影、
+  存档白名单、形状闸门三处共用的唯一视图，留着旧前缀就必然和 `skills` 打架；
+- `publishPreparedSkillRuntime()`：映射行没有持久账本记录，序列化状态合法地把它们投影成 0。
+  实验室模式下 `projected == 0` 不再回写，否则每经过一次存档，74 条里 65 条会被重新打成"未学"。
+
+顺带补了回归入口 `--enter-first-character`：在选人界面自动按一次 Enter 走真实的
+`prepare → store.apply → publish` 全链，不再依赖键盘。
+
+验证（存档副本 `saves/entrytest`，不动用户存档）：`character-entry.json` 落地
+`status=entered`、`checkpoint_saved=true`、`town.ok=true`，无 error 文件；随后
+`--skill-lab-sweep --smoke 70` 覆盖 49 个技能、无崩溃、8 个 0 层技能仍是那 8 个。
+
+## 已知边界（技能实验室）
+
+- 技能**伤害**仍走 `legacySkillDamage(id, phase)` 的旧表，映射新增的 65 条不在表里，多半是 0 伤害；
+  这一轮只解决"动作 + 特效能不能出来"。
+- `[level info]` 的连招/多段参数没有接进阶段推进，除手工 9 条外都是单一动作链按 ANI 时长播放。
+- 被动技能（D 级 1302 行）不注册，`passives` 仍是手工那 6 条剑士被动。
+- 主线仍是剑士；切非剑士走实验运行时，那里只调了它自己的 `setExperimentalSkillPreviewEnabled`，
+  没有接映射表（`registerMappedSkills` 见到 `experimentalRuntime_` 直接返回）。
+
+---
+
 # 技能时间轴 / 脱手实体 / 坐标原点 / 主线接入（2026-11-10 第四轮）
 
 节点 `skill-timeline-persistent-20261110`。用户反馈四件事：**特效没有源时间轴**（所有层同时播）、

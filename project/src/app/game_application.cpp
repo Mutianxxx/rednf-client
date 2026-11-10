@@ -239,6 +239,7 @@ int GameApplication::run(int argc, char **argv) {
         int autoSeconds = 0;
         int flowSceneSeconds = 30;
         bool autoRun = false, audit = false, flowSmoke = false, trace = false, effectsFixture = false;
+        bool unlockAllSkills = false, skillSweep = false, enterFirstCharacter = false;
         auto aniRenderProfile = ani_render::RenderProfile::Legacy1031;
         std::optional<ani_clock::ClockPolicy> aniClockPolicy;
         bool basicAttackMovement=true;
@@ -282,6 +283,20 @@ int GameApplication::run(int argc, char **argv) {
                 importLegacySave = true;
             else if (a == "--profile-audit")
                 profileAudit = true;
+            else if (a == "--unlock-all-skills")
+                unlockAllSkills = true;
+            else if (a == "--enter-first-character") {
+                // Regression hook for the real Enter path on the selection
+                // screen: prepared runtime, durable restore and skill projection.
+                enterFirstCharacter = true;
+                unlockAllSkills = true;
+            }
+            else if (a == "--skill-lab-sweep") {
+                // Walks every slot of every page instead of the first page only.
+                skillSweep = true;
+                unlockAllSkills = true;
+                autoRun = true;
+            }
             else if (a == "--content-audit")
                 contentAudit = true;
             else if (a == "--combat-effects-fixture") {
@@ -423,6 +438,7 @@ int GameApplication::run(int argc, char **argv) {
         world.configureSourceActions(contentIdentity.archiveManifestHash,true);
         world.configureMonsterActionAi("easy");
         world.configureSquirrelActions(contentIdentity.archiveManifestHash);
+        if (unlockAllSkills) world.unlockAllSkills(true);
         RegionCatalog catalog(pvf,assets,RegionPreparation::OnDemand);
         auto dungeonSelectionModel = captureDungeonSelectionModel(pvf, catalog);
         WorldMapUi worldMapUi;bool worldMapBound=false;
@@ -1363,6 +1379,25 @@ int GameApplication::run(int argc, char **argv) {
         auto lastTitle = start;
         int uiMouseX=-100,uiMouseY=-100;
         while (!quit) {
+            // Diagnostic automation for the character-entry path. Pressing Enter
+            // on slot 0 by hand is the only way to run prepare/restore/publish,
+            // so mirror it once instead of requiring a keyboard.
+            if (enterFirstCharacter) {
+                // Bounded probe so an automated run explains why entry did not
+                // happen instead of silently idling on the selection screen.
+                static int autoEntryProbes = 0;
+                if (autoEntryProbes < 3) {
+                    ++autoEntryProbes;
+                    writeJson(reportPath("entry-auto-probe.json"),
+                        {{"screen", static_cast<int>(screen)}, {"blocked", businessBlocked()},
+                         {"slot_null", saves["characters"][selected].is_null()}, {"slot", selected}});
+                }
+            }
+            if (enterFirstCharacter && screen == Select && !businessBlocked() &&
+                !saves["characters"][selected].is_null()) {
+                enterFirstCharacter = false;
+                resumeCharacter();
+            }
             auto now = std::chrono::steady_clock::now();
             int64_t dt = std::chrono::duration_cast<std::chrono::nanoseconds>(now - last).count();
             last = now;
@@ -1699,7 +1734,9 @@ int GameApplication::run(int argc, char **argv) {
                     }
                 }
                 if (autoRun && !effectsFixture && world.combat && wall < autoSeconds) {
-                    int step = int(wall / 4.0);
+                    // The lab sweep needs a shorter beat: 74 skills at the four
+                    // second smoke cadence would never finish.
+                    int step = int(wall / (skillSweep ? 1.4 : 4.0));
                     if (step != lastAuto) {
                         lastAuto = step;
                         world.changeScene(); // Clear controller/input/protection state between trials.
@@ -1736,15 +1773,23 @@ int GameApplication::run(int argc, char **argv) {
                             if (!world.canWalk(m.x, m.y))
                                 throw std::runtime_error("Skill smoke target placement outside source walk grid");
                         }
-                        int idx = step % 13;
+                        int slot = step % 13;
+                        if (skillSweep) world.setSkillPage((step / 13) % world.skillPageCount());
+                        // Take the skill the hotbar actually points at, so the
+                        // sweep and a human pressing the same key agree.
+                        int idx = slot;
+                        if (world.bindings[slot] >= 0 && world.bindings[slot] < int(world.skills.size()))
+                            idx = world.bindings[slot];
+                        if (idx < 0) idx = 0;
+                        if (idx >= int(world.skills.size())) idx = int(world.skills.size()) - 1;
                         if (world.skills[idx].airOnly) {
                             world.player.z = world.player.pz = 100;
                             world.player.vz = 50;
                         }
                         world.player.mp = world.player.maxMp;
-                        if (idx == 3)
+                        if (world.skills[idx].id == 11)
                             world.player.animation = "dashattack";
-                        if (idx == 12)
+                        if (slot == 12)
                             world.enqueue({submittedNs, 32, true}); // Hold the default Guard slot.
                         world.activate(idx);
                         if (world.skills[idx].continuation)

@@ -17,6 +17,7 @@ bool dispatchSdlGameInput(World &world,const SDL_Event &event,const SdlGameInput
     case SDLK_UP:key=2;break;case SDLK_DOWN:key=3;break;
     case SDLK_x:key=4;break;case SDLK_c:key=5;break;
     case SDLK_z:key=6;break;case SDLK_SPACE:key=7;break;
+    case SDLK_F1:key=40;break;case SDLK_F2:key=41;break;
     default:break;
     }
     const SDL_Keycode hot[]={SDLK_a,SDLK_s,SDLK_d,SDLK_f,SDLK_g,SDLK_h,

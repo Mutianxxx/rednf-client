@@ -55,6 +55,12 @@ Json World::experimentalDiagnostics() const {
 const std::vector<Skill> &World::compatibilitySkillView(CharacterIdentity identity,bool passive) const {
     static const std::vector<Skill> empty;
     if(identity.jobId!=0)return empty;
+    // The Skill Lab appends mapping-driven rows after the traced prefix, so the
+    // live table is the only truthful view of what this character owns while
+    // the lab is on. Skill projection, save whitelisting and the prepared-runtime
+    // shape gate all read this view; leaving it on the traced prefix would make
+    // every publication disagree with `skills` and abort character entry.
+    if(!passive&&skillLabUnlocked_&&identity==identity_&&!skills.empty())return skills;
     return passive?swordmanPassives_:swordmanSkills_;
 }
 std::unique_ptr<ExperimentalCharacterRuntime> World::prepareExperimentalRuntime(CharacterIdentity identity,const Json &saved) const {

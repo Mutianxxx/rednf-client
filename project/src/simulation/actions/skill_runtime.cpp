@@ -506,7 +506,15 @@ void World::publishPreparedSkillRuntime(PreparedSkillRuntime &prepared) {
     normalSkillConfiguration_=std::move(p.normalConfiguration);testSkillConfiguration_=std::move(p.testConfiguration);
     previewSkillConfiguration_=std::move(p.previewConfiguration);experimentalSkillPreviewEnabled_=p.previewEnabled;
     if(p.currentConfiguration)experimentalRuntime_->configuration()=std::move(*p.currentConfiguration);
-    for(size_t i=0;i<skills.size();++i)skills[i].level=p.activeLevels[i];
+    for(size_t i=0;i<skills.size();++i) {
+        const int projected=p.activeLevels[i];
+        // Skill Lab rows are appended by the mapping table and have no durable
+        // ledger record, so a serialized state legitimately projects them as
+        // zero. Keep the lab's unlocked level rather than turning every mapped
+        // skill back into "unlearned" on the next publication.
+        if(skillLabUnlocked_&&projected==0)continue;
+        skills[i].level=projected;
+    }
     for(size_t i=0;i<passives.size();++i)passives[i].level=p.passiveLevels[i];
     normalCharacterLevel_=p.normalLevel;++skillProjectionRevision_;skillCostCache_.clear();prepared.data_.reset();
 }

@@ -9,7 +9,10 @@ if not defined EXE (
     pause
     exit /b 1
 )
-"%EXE%" --content-profile "%~dp0content-profile.json" --save-dir "%~dp0saves\refactor" %*
+rem Skill lab: every source ACTIVE skill of the job is unlocked, MP and
+rem cooldown are ignored, and F1/F2 page through the hotbar. Drop the flag to
+rem play the normal traced chain only.
+"%EXE%" --content-profile "%~dp0content-profile.json" --save-dir "%~dp0saves\refactor" --unlock-all-skills %*
 set "dnf_exit=%errorlevel%"
 if not "%dnf_exit%"=="0" pause
 exit /b %dnf_exit%
