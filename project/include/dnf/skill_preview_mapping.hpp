@@ -109,8 +109,20 @@ class SkillMappingTable {
     // Per-job index: built once, reused by every skill of that job.
     struct JobIndex {
         std::string directory;                                         // character/swordman
+        std::string chrStem;                                           // swordman / atmage
+        std::string baseJob;                                           // character/<baseJob>/ is the
+                                                                       // root of effect literals
         std::map<std::string, std::vector<CharacterResource>> motions;  // stem -> slots
         std::map<std::string, std::string> animation;                   // stem -> animation/<stem>.ani
+        // skill stem -> every per-skill script under sqr/character/<chrStem>/.
+        // Those scripts (checkExecutableSkill / onSetState) create the visuals
+        // that common.nut does not declare for non-swordman jobs.
+        std::map<std::string, std::vector<std::string>> skillScripts;
+        // sq_SetCurrentAnimation(CUSTOM_ANI_X) is how the scripts pick a body
+        // motion: the header defines the constant, the CHR [etc motion] list
+        // resolves the index. Both tables are per job.
+        std::map<std::string, int> customAnimations;                    // CUSTOM_ANI_X -> index
+        std::vector<std::string> etcMotions;                            // index -> .ani
         std::vector<std::string> effectPaths;                           // effect/animation/*.ani
         std::vector<std::string> particlePaths;                         // particle/*.ptl
     };

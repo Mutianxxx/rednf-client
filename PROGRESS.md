@@ -1,3 +1,41 @@
+# 技能链解析核对与修复（2026-11-10）
+
+节点 `skill-chain-audit-20261110`。核对预览器的技能/特效链文件解析，确认并修掉三类漏解析。
+
+**核对结论（1734 行技能映射）**
+
+- 本体动作缺失是主因：只有 406 行（23%）定位到 `bodyAni`，1320 行（77%）连动作都没有，
+  自然没有特效；本体+特效+攻击框齐全仅 52 行。
+- 特效声明有三层来源，原实现只用了最弱的一层：
+  1. `sqr/common.nut` 的 `sq_LoadSkillEffect_<Job>`——**只有 Swordman / DemonicSwordman 两个函数**，
+     其余职业根本没有（不是解析漏，是文件里不存在）。
+  2. `sqr/character/<chr>/<skill>/<skill>.nut` 的 per-skill 脚本（160 个文件）：
+     `sq_CreateCNRDAnimation` 62 处、`sq_AddStateLayerAnimation` 62 处、
+     `sq_SendCreatePassiveObjectPacket` 81 处、`sq_SetCurrentAnimation` 106 处。原实现完全没读。
+  3. `character/<job>/effect/animation/` 的文件名前缀匹配（原实现主路径，且上限 6）。
+- `.ani` 内部没有 effect 段（实测 HardAttack1.ani 只有 img/坐标/damageBox），
+  特效时间轴来自同名 `.als` 侧车：PVF 共 1179 个，1173 个与 ani 配对，但只有 81 个技能本体 ani 带 als。
+
+**修复（`skill_preview_mapping.cpp` / `.hpp`）**
+
+- 新增 per-skill 脚本索引：`sqr/character/<chrStem>/<skill>/`（嵌套）与 `<skill>.nut`（扁平），
+  含 `po_*.nut`；脚本里的 `sq_CreateCNRDAnimation` / `sq_LoadSkillEffectAni` 字面量按
+  `character/<baseJob>/` 解析成 effect ani。
+- 新增 `CUSTOM_ANI_*` → CHR `[etc motion]` 索引 → `.ani` 链路：job `*_header.nut` 常量表 +
+  CHR 资源按 `(fieldOffset, valueIndex)` 排序。已用 97 个常量/97 条 etc_motion 逐一验证
+  （`CUSTOM_ANI_FIREPILLAR1=55 → ATAnimation/FirePillar1.ani`）。
+- 特效来源改为**权威优先**：common.nut 声明 > per-skill 脚本 > 前缀兜底；上限 6 → 24。
+  前缀兜底收紧为「直接位于 effect/animation 下」或「父目录名等于技能名」，排除
+  `chillingpowder/upperswing1.ani` 这类别的技能分支。
+- 结果：鬼斩从 6 个（混入 4 个 `*_ds`/`*_fullcharge`）修正为 common.nut 声明的 2 个；
+  总特效条目 673 → 706（更准，不是更多）；本体 406 → 414（缔造者 6 → 13）；
+  5 个技能（复仇者/元素师）首次拿到脚本声明的特效链。回归 37/37 通过，架构检查 pass。
+
+**仍未闭合**：`sq_SendCreatePassiveObjectPacket(id)` 的 id → `.obj` 需要数据流与 `.lst` 反查；
+`.als` 覆盖仅 81 个技能；1320 行技能仍无本体动作（state→motion 未恢复的职业）。
+
+---
+
 # 编译产物集中到 checkpoints/（2026-11-09）
 
 节点 `checkpoints-20261109`。所有编译产物统一输出到仓库根 `checkpoints/`，并排除入库。

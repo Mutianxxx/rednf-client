@@ -3,6 +3,7 @@
 #include "dnf/skill_preview_motion_pool.hpp"
 #include "dnf/skill_exe_bindings.hpp"
 #include <algorithm>
+#include <cctype>
 #include <cstdlib>
 #include <filesystem>
 
@@ -15,6 +16,56 @@ std::string stemOf(const std::string &path) {
 }
 std::string parentOf(const std::string &path) {
     return normalize(fs::u8path(path).parent_path().generic_u8string());
+}
+// A skill can legitimately declare many effect animations (TripleSlash lists
+// seven in common.nut); the old cap of six silently dropped the tail.
+constexpr size_t kEffectLimit = 24;
+
+// Per-skill Squirrel scripts create their own visuals:
+//   obj.sq_CreateCNRDAnimation("Effect/Animation/.../x.ani")
+//   sq_AddStateLayerAnimation(1, obj.sq_CreateCNRDAnimation("..."), 0, 0)
+//   obj.sq_LoadSkillEffectAni(skillIndex, "...")
+// Only string literals ending in .ani are taken. Computed names and passive
+// object ids need runtime data flow and stay unrecovered.
+std::vector<std::string> scriptAnimationLiterals(const std::string &source) {
+    std::vector<std::string> output;
+    size_t quote = 0;
+    while ((quote = source.find('"', quote)) != std::string::npos) {
+        const auto close = source.find('"', quote + 1);
+        if (close == std::string::npos) break;
+        const auto literal = source.substr(quote + 1, close - quote - 1);
+        const size_t headStart = quote > 240 ? quote - 240 : 0;
+        const auto head = source.substr(headStart, quote - headStart);
+        const bool isAnimation = literal.size() > 4 &&
+            normalize(literal.substr(literal.size() - 4)) == ".ani";
+        const bool created = head.find("sq_CreateCNRDAnimation") != std::string::npos ||
+                             head.find("sq_createCNRDAnimation") != std::string::npos ||
+                             head.find("sq_LoadSkillEffectAni") != std::string::npos;
+        if (isAnimation && created) output.push_back(literal);
+        quote = close + 1;
+    }
+    return output;
+}
+
+// Effect literals in the scripts are written against the job root:
+// "Effect/Animation/ATAttack/fire/x.ani" resolves to
+// character/mage/effect/animation/atattack/fire/x.ani for the atmage CHR.
+std::string resolveScriptAnimationPath(Pvf &pvf, const std::string &literal,
+                                       const std::string &baseJob) {
+    std::string candidate = normalize(literal);
+    if (candidate.rfind("./", 0) == 0) candidate = candidate.substr(2);
+    if (pvf.has(candidate)) return candidate;
+    if (baseJob.empty()) return candidate;
+    const auto jobRoot = "character/" + baseJob + "/" + candidate;
+    if (pvf.has(jobRoot)) return jobRoot;
+    if (candidate.rfind("effect/", 0) == 0) {
+        const auto passive = "passiveobject/character/" + baseJob + "/" + candidate;
+        if (pvf.has(passive)) return passive;
+        const auto passiveAnimation =
+            "passiveobject/character/" + baseJob + "/animation/" + candidate.substr(7);
+        if (pvf.has(passiveAnimation)) return passiveAnimation;
+    }
+    return jobRoot;
 }
 // A slot stem that is the skill stem plus a numeric tail, e.g. tripleslash1 for
 // skill tripleslash. Non-numeric tails are a different animation, not a stage.
@@ -183,6 +234,9 @@ const SkillMappingTable::JobIndex &SkillMappingTable::index(int jobId) {
     // by all its skills, so resolving 175 rows costs one index build, not 175.
     built.directory = jobDirectory(jobId);
     try {
+        const auto chrPath = normalize(catalog_.at(jobId).registration.path);
+        built.chrStem = stemOf(chrPath);
+        built.baseJob = normalize(fs::u8path(parentOf(chrPath)).filename().u8string());
         for (const auto &resource : catalog_.at(jobId).resources) {
             const auto tag = normalize(resource.tag);
             if (tag.find("motion") == std::string::npos) continue;
@@ -200,6 +254,73 @@ const SkillMappingTable::JobIndex &SkillMappingTable::index(int jobId) {
                 if (parentOf(path) == animationDirectory)
                     built.animation.emplace(stemOf(path), path);
         }
+        // Per-skill scripts live beside the CHR's own script directory:
+        //   sqr/character/atmage/firepillar/firepillar.nut  (nested)
+        //   sqr/character/priest/avengerattack.nut          (flat)
+        // A nested folder belongs to the skill of the same name, and every nut
+        // inside it (including po_* passive-object scripts) is part of that
+        // skill's visual chain. Flat *_header.nut files carry the CUSTOM_ANI
+        // constants that index the CHR [etc motion] table.
+        if (!built.chrStem.empty()) {
+            const auto scriptRoot = "sqr/character/" + built.chrStem + "/";
+            for (const auto &path : pvf_.paths(scriptRoot, ".nut")) {
+                if (path.rfind(scriptRoot, 0) != 0) continue;
+                const auto relative = path.substr(scriptRoot.size());
+                const auto slash = relative.find('/');
+                const auto stem = stemOf(path);
+                if (slash == std::string::npos) {
+                    if (stem.size() > 7 && stem.compare(stem.size() - 7, 7, "_header") == 0) {
+                        try {
+                            const auto raw = pvf_.read(path);
+                            const std::string text(raw.begin(), raw.end());
+                            size_t at = 0;
+                            while ((at = text.find("CUSTOM_ANI_", at)) != std::string::npos) {
+                                size_t cursor = at;
+                                while (cursor < text.size() &&
+                                       (std::isalnum(static_cast<unsigned char>(text[cursor])) || text[cursor] == '_'))
+                                    ++cursor;
+                                const auto name = text.substr(at, cursor - at);
+                                while (cursor < text.size() && std::isspace(static_cast<unsigned char>(text[cursor])))
+                                    ++cursor;
+                                if (text.compare(cursor, 2, "<-") == 0) {
+                                    cursor += 2;
+                                    while (cursor < text.size() &&
+                                           std::isspace(static_cast<unsigned char>(text[cursor])))
+                                        ++cursor;
+                                    const size_t start = cursor;
+                                    while (cursor < text.size() &&
+                                           std::isdigit(static_cast<unsigned char>(text[cursor])))
+                                        ++cursor;
+                                    if (cursor > start)
+                                        built.customAnimations[name] =
+                                            std::stoi(text.substr(start, cursor - start));
+                                }
+                                at = cursor > at ? cursor : at + 1;
+                            }
+                        } catch (const std::exception &) {
+                        }
+                        continue;
+                    }
+                    if (stem == built.chrStem) continue;
+                    built.skillScripts[stem].push_back(path);
+                } else {
+                    const auto skill = normalize(relative.substr(0, slash));
+                    if (!skill.empty() && skill != built.chrStem)
+                        built.skillScripts[skill].push_back(path);
+                }
+            }
+        }
+        // [etc motion] is the table CUSTOM_ANI_<X> indexes into. Sort by the
+        // field offset and value index so table positions survive.
+        std::vector<CharacterResource> etcMotions;
+        for (const auto &resource : catalog_.at(jobId).resources)
+            if (normalize(resource.tag) == "[etc motion]" && resource.exists && !resource.path.empty())
+                etcMotions.push_back(resource);
+        std::sort(etcMotions.begin(), etcMotions.end(), [](const auto &a, const auto &b) {
+            return a.fieldOffset != b.fieldOffset ? a.fieldOffset < b.fieldOffset
+                                                  : a.valueIndex < b.valueIndex;
+        });
+        for (const auto &resource : etcMotions) built.etcMotions.push_back(resource.path);
     } catch (const std::exception &) {
         // An unreadable CHR leaves the job with no automatic mapping; every row
         // then reports its own missing reason instead of borrowing a name.
@@ -330,15 +451,82 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
         }
     }
 
-    // --- effect animations: same directory, stem prefix --------------------
-    if (!jobIndex.effectPaths.empty()) {
-        for (const auto &path : jobIndex.effectPaths) {
-            const auto effectStem = stemOf(path);
-            if (effectStem.size() < 5) continue;
-            if (effectStem.rfind(skillStem, 0) != 0) continue;
-            if (mapping.effects.size() >= 6) break;
-            mapping.effects.push_back(path);
+    // --- body motion declared by the skill script ---------------------------
+    // sq_SetCurrentAnimation(CUSTOM_ANI_X) is how atmage/priest scripts select
+    // a motion: the job header maps the constant to an index and the CHR
+    // [etc motion] table maps that index to the .ani. This is the authoritative
+    // body chain for those jobs; name matching stays the fallback.
+    std::vector<std::string> scriptBody;
+    if (const auto scripts = jobIndex.skillScripts.find(skillStem);
+        scripts != jobIndex.skillScripts.end() && !jobIndex.etcMotions.empty()) {
+        for (const auto &path : scripts->second) {
+            try {
+                const auto raw = pvf_.read(path);
+                const std::string source(raw.begin(), raw.end());
+                size_t at = 0;
+                while ((at = source.find("sq_SetCurrentAnimation", at)) != std::string::npos) {
+                    const auto open = source.find('(', at);
+                    if (open == std::string::npos) break;
+                    const auto close = source.find(')', open);
+                    if (close == std::string::npos) break;
+                    std::string argument = source.substr(open + 1, close - open - 1);
+                    while (!argument.empty() && std::isspace(static_cast<unsigned char>(argument.front())))
+                        argument.erase(argument.begin());
+                    while (!argument.empty() && std::isspace(static_cast<unsigned char>(argument.back())))
+                        argument.pop_back();
+                    if (const auto constant = jobIndex.customAnimations.find(argument);
+                        constant != jobIndex.customAnimations.end()) {
+                        const int index = constant->second;
+                        if (index >= 0 && static_cast<size_t>(index) < jobIndex.etcMotions.size()) {
+                            const auto &animation = jobIndex.etcMotions[static_cast<size_t>(index)];
+                            if (std::find(scriptBody.begin(), scriptBody.end(), animation) == scriptBody.end())
+                                scriptBody.push_back(animation);
+                        }
+                    }
+                    at = close + 1;
+                }
+            } catch (const std::exception &) {
+            }
         }
+    }
+    if (!scriptBody.empty() && mapping.confidence != MappingConfidence::Manual) {
+        mapping.bodyChain = scriptBody;
+        mapping.chainStages.clear();
+        for (size_t i = 0; i < scriptBody.size(); ++i)
+            mapping.chainStages.push_back(100 + static_cast<int>(i));
+        mapping.bodyAni = scriptBody.front();
+        mapping.bodySlotTag = "sqr-custom-ani";
+        if (mapping.confidence == MappingConfidence::None) mapping.confidence = MappingConfidence::AutoChain;
+        std::string joined;
+        for (const auto &animation : scriptBody) {
+            if (!joined.empty()) joined += " -> ";
+            joined += stemOf(animation);
+        }
+        mapping.chainEvidence = joined;
+        mapping.evidence += "; body: sqr CUSTOM_ANI declaration";
+    }
+
+    // --- effect animations --------------------------------------------------
+    // Three sources, strongest first:
+    //   1. sqr/common.nut through the exe binding (swordman / demonicswordman)
+    //   2. per-skill scripts under sqr/character/<chrStem>/ (atmage, priest, ...)
+    //   3. file-name prefix under character/<job>/effect/animation (fallback)
+    // Mixing them produced wrong chains: HardAttack declares two effects in
+    // common.nut while the prefix scan added four unrelated *_ds/_fullcharge
+    // animations to the same skill.
+    std::vector<std::string> prefixEffects;
+    for (const auto &path : jobIndex.effectPaths) {
+        const auto effectStem = stemOf(path);
+        if (effectStem.size() < 5) continue;
+        if (effectStem.rfind(skillStem, 0) != 0) continue;
+        // Only the skill's own family counts: either the file sits directly in
+        // effect/animation (upperswing.ani) or in a folder named after the
+        // skill (rapidmoveslash/slash1.ani). A same-named file under another
+        // skill's folder is a different branch (chillingpowder/upperswing1).
+        const auto parentStem = stemOf(parentOf(path));
+        if (parentStem != skillStem && parentStem != "animation") continue;
+        if (prefixEffects.size() >= kEffectLimit) break;
+        prefixEffects.push_back(path);
     }
     if (!jobIndex.particlePaths.empty()) {
         for (const auto &path : jobIndex.particlePaths) {
@@ -353,6 +541,7 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     // handler selects body motions through vtable+0x49C immediates, and the
     // effect chains come from sqr/common.nut sq_LoadSkillEffect branches.
     // Authoritative where present, so it replaces the name-inferred chain.
+    std::vector<std::string> exeEffects;
     {
         std::string chrPath;
         try {
@@ -381,14 +570,53 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                     joined += stemOf(path);
                 }
                 mapping.chainEvidence = joined;
-                for (size_t i = 0; i < exe->effectCount && mapping.effects.size() < 6; ++i) {
+                for (size_t i = 0; i < exe->effectCount && exeEffects.size() < kEffectLimit; ++i) {
                     const std::string effect(exe->effects[i]);
-                    if (std::find(mapping.effects.begin(), mapping.effects.end(), effect)
-                        == mapping.effects.end())
-                        mapping.effects.push_back(effect);
+                    if (std::find(exeEffects.begin(), exeEffects.end(), effect) == exeEffects.end())
+                        exeEffects.push_back(effect);
                 }
             }
         }
+    }
+
+    // --- per-skill script declarations -------------------------------------
+    // checkExecutableSkill / onSetState call sq_CreateCNRDAnimation and
+    // sq_AddStateLayerAnimation with animation literals; these create the
+    // visuals that common.nut never lists for non-swordman jobs.
+    std::vector<std::string> scriptEffects;
+    if (const auto found = jobIndex.skillScripts.find(skillStem); found != jobIndex.skillScripts.end()) {
+        for (const auto &path : found->second) {
+            try {
+                const auto raw = pvf_.read(path);
+                const std::string source(raw.begin(), raw.end());
+                for (const auto &literal : scriptAnimationLiterals(source)) {
+                    const auto resolved = resolveScriptAnimationPath(pvf_, literal, jobIndex.baseJob);
+                    if (!pvf_.has(resolved)) continue;
+                    if (std::find(scriptEffects.begin(), scriptEffects.end(), resolved) != scriptEffects.end())
+                        continue;
+                    if (scriptEffects.size() >= kEffectLimit) break;
+                    scriptEffects.push_back(resolved);
+                }
+            } catch (const std::exception &) {
+                // An unreadable script contributes no effects; the row keeps its
+                // own missing reason instead of borrowing another skill's files.
+            }
+        }
+    }
+
+    if (!exeEffects.empty()) {
+        mapping.effects = exeEffects;
+        mapping.evidence += "; effects: sqr/common.nut declaration";
+        for (const auto &effect : scriptEffects) {
+            if (mapping.effects.size() >= kEffectLimit) break;
+            if (std::find(mapping.effects.begin(), mapping.effects.end(), effect) == mapping.effects.end())
+                mapping.effects.push_back(effect);
+        }
+    } else if (!scriptEffects.empty()) {
+        mapping.effects = scriptEffects;
+        mapping.evidence += "; effects: per-skill sqr script";
+    } else {
+        mapping.effects = prefixEffects;
     }
 
     // --- attack volume: source ANI only ------------------------------------
