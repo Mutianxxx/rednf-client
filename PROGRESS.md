@@ -1,3 +1,65 @@
+# 高等级技能链补全（2026-11-10 第二轮）
+
+节点 `skill-high-tier-20261110`。用户反馈：低等级普攻类技能正常，**高等级技能基本无法使用**，
+表现是「特效不全」或「人物动作不全」。逐条核对后确认四个独立缺口，全部已修。
+
+**缺口与证据**
+
+1. **被动对象视觉从未接入**。高等级技能的主视觉不是 `effect/animation`，而是
+   `passiveobject/character/<job>/<skill>.obj` 的 `[etc motion]`：
+   `khazan.obj` → Khazan1/2 + KhazanAreaAppear1/2/Stay/Disappear，`saya.obj`、`bremen.obj`、
+   `tombstone.obj`、`blache.obj`、`epidemicrasa.obj`、`icewave1..6.obj`、`firewavebig.obj` 同理。
+   这些路径既不在 CHR 的 etc_motion 里，也不在 effect 目录下，原实现完全看不到。
+2. **CHR 基础动作槽没被当作技能动作**。`[buff motion]`（= `Summon2.ani`）、`[back motion]`、
+   `[jump motion]` 是具名槽，`BackStep` 本身就是 `[back motion]`，buff 技能则直接播通用施法姿势。
+3. **生成器门槛过严**。`gen_exe_bindings_header.py` 原先只收「资格代码对」或「动作名以 SKL 前 8
+   字符开头」的 state，把同一职业内**独占 state**（资格代码已唯一绑定该技能）的 30 条证据全部丢弃。
+   另把 SKL 名截成 8 字符，`ashenfork`→`ashenfor` 这类边界直接失配。
+4. **exe 覆盖会丢掉同名后续阶段**。exe 绑定只给释放入口动作，`KallaFinish1..3`、
+   `HundredSwordMoveReady1..5`、`HundredSwordMoveSlash1..5` 靠 CHR 名字匹配才拿到，
+   覆盖时被整体替换掉。
+
+**修复**
+
+- `skill_preview_mapping.cpp/.hpp`
+  - `JobIndex` 新增 `passiveObjects`（`_ds` 孪生按 CHR 归属过滤）与 `passiveAnimations`；
+    实体候选按「精确 stem → 逐级前缀（tombstonerainex→tombstonerain→tombstone）」依次尝试，
+    没有 `[etc motion]` 的对象不算视觉本体，继续下一个候选。
+  - 新增 `baseMotions`（具名槽 → `.ani`）与两张显式表：基础动作别名（backstep/jump/dashattack…）、
+    动作别名（`reckless → frenzy1..4`，暴走；Frenzy 槽无其它技能认领）。
+  - `chainOrder` 重写：阶段词支持多词组合（`hundredswordmoveready2`、`weaponcomboshort1`），
+    武器/形态词（short/light/heavy/blunt/blade/spear/claw/pick/shoulder）入表；新增
+    「阶段词在前」（`staysacrifice`）与「升级词在后」（`flowmindpowerup → FlowMindStart`）两支。
+  - exe 绑定改为**入口动作 + 同名后续阶段合并**（上限 12 段），不再整体替换。
+  - `[pvp]` 变体与 `_ds` 孪生双向过滤，swordman / demonicswordman 不再互借动作。
+- `gen_exe_bindings_header.py`：采信条件扩为「资格对 / 动作名吻合（完整 stem 双向）/ 本职业独占
+  state」，产物记 `basis`；未采信的共享 state 单独计数（本轮 185 条）。
+
+**结果（1734 行技能映射，`--audit-map`）**
+
+| | A | B | C | D |
+| --- | --- | --- | --- | --- |
+| 修复前 | 47 | 322 | 62 | 1303 |
+| 修复后 | 116 | 492 | 113 | 1013 |
+
+- 剑士（job 0）：A 9→18、B 29→40、C 6→16、D 131→101，**剩余 101 条全部是被动技能**
+  （`[type] [passive]`，本来没有释放动作）；74 个主动技能全部为 A/B/C。
+- 里·鬼剑术拿到 15 段武器区分动作，极·鬼剑术 13 段，暗天波动眼 8 段，冥炎之卡洛 6 段（含 Finish1..3），
+  暴走 4 段 Frenzy；卡赞/萨亚/普戾蒙/罗刹/银光落刃从「无资源」到有实体特效。
+- 回归 `dnf_skill_preview_tests` 37/37 通过，`verify_architecture` pass（139 单元）。
+
+**仍未闭合（已确认边界，不是解析遗漏）**
+
+- 剩 16 个剑士主动技能只有特效没有身体动作（卡赞/萨亚/萨亚EX/普戾蒙/罗刹/银光落刃/嗜魂之手/
+  冰刃·波动剑/爆炎·波动剑/邪光斩/波动爆发/杀意波动/不动明王阵/极冰·裂波剑/死亡墓碑/墓碑三绝阵）。
+  根因：这些技能走**共享施法 state**（state 75/13 等），handler 内按 skill id 分支后不是用
+  `vtable+0x49C` 立即数，而是 `Sprintf` 拼动画名后 `vtable+0x154`——模板串在 1031 exe 的加密数据段
+  （段 2 的 raw 只有 460 KB / 虚拟 4 MB，文件与旧内存 dump 里都读不到明文），静态拿不到。
+- `sq_SendCreatePassiveObjectPacket(id)` 的 id → `.obj` 反查仍未做；实体目前靠技能名匹配。
+- 其余职业（格斗/枪手/法师/圣职/盗贼）同样受益，但未逐技能人工复核。
+
+---
+
 # 技能链解析核对与修复（2026-11-10）
 
 节点 `skill-chain-audit-20261110`。核对预览器的技能/特效链文件解析，确认并修掉三类漏解析。

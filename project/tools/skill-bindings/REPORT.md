@@ -75,7 +75,8 @@
 ### 产物
 
 - `bindings/<class>-skill-binding.json` ×10（8 职业有 exe 对齐证据；thief/atmage 仅名字推断并已标注）
-- `include/dnf/skill_exe_bindings.hpp`（生成，8 职业 298 技能，仅收录"资格对/名对齐"双验证 state）
+- `include/dnf/skill_exe_bindings.hpp`（生成，8 职业 299 技能，收录"资格对 / 名对齐 / 独占 state"
+  三类 state，每条带 `basis` 标注）
 - `src/extract_all_classes.py`、`src/gen_exe_bindings_header.py` 可重跑（换 PVF/exe 后全量再生）
 
 ### 预览器接入（dnf-c++-project/project）

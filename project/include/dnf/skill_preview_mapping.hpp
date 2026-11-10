@@ -113,6 +113,12 @@ class SkillMappingTable {
         std::string baseJob;                                           // character/<baseJob>/ is the
                                                                        // root of effect literals
         std::map<std::string, std::vector<CharacterResource>> motions;  // stem -> slots
+        // Named CHR motion slots that are not part of the release animation
+        // library: [buff motion], [back motion], [jump motion], ... Skills such
+        // as BackStep or JumpPowerUp *are* one of these slots under a skill name,
+        // and buff skills borrow the generic cast pose because the client never
+        // gives them a dedicated motion.
+        std::map<std::string, std::string> baseMotions;                 // "[buff motion]" -> path
         std::map<std::string, std::string> animation;                   // stem -> animation/<stem>.ani
         // skill stem -> every per-skill script under sqr/character/<chrStem>/.
         // Those scripts (checkExecutableSkill / onSetState) create the visuals
@@ -125,6 +131,13 @@ class SkillMappingTable {
         std::vector<std::string> etcMotions;                            // index -> .ani
         std::vector<std::string> effectPaths;                           // effect/animation/*.ani
         std::vector<std::string> particlePaths;                         // particle/*.ptl
+        // Skill entities: passiveobject/character/<chrStem>/<skill>.obj. The
+        // object's [etc motion] list is the on-screen body of the skill — the
+        // summoned ghost, the ice field, the falling tombstones. Those motions
+        // live under passiveobject/, not under the CHR's own animation folder,
+        // so name matching against character/<job>/animation never found them.
+        std::map<std::string, std::string> passiveObjects;              // stem -> .obj path
+        std::vector<std::string> passiveAnimations;                     // passiveobject/.../animation/*.ani
     };
     const SkillVisualMapping &resolve(int jobId, const CharacterRegistration &);
     const JobIndex &index(int jobId);

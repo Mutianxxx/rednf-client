@@ -43,34 +43,71 @@ def main():
     def stem_of(path):
         return path.rsplit("/", 1)[-1].rsplit(".", 1)[0].lower()
 
+    # How many skills of one class queue a given state. A state claimed by a
+    # single skill is that skill's own release state: the eligibility code in
+    # the client paired the two, so the handler's motion immediates belong to
+    # it. States claimed by many skills (13/19/69/71..78/75) are shared cast or
+    # movement states; their motions are only trusted when the name agrees.
+    def state_owners(data):
+        owners = {}
+        for sid, rec in data["skills"].items():
+            for st in rec["states"]:
+                if st.get("state") is None:
+                    continue
+                owners.setdefault(st["state"], []).append(int(sid))
+        return owners
+
+    def name_agrees(skl_stem, ani_list):
+        if not skl_stem:
+            return False
+        for ani in ani_list:
+            motion = stem_of(ani)
+            # tripleslash3 for tripleslash, evileye for evileyeforce
+            if motion.startswith(skl_stem):
+                return True
+            if len(motion) >= 5 and skl_stem.startswith(motion):
+                return True
+        return False
+
     jobs = []
     total_skills = 0
+    stats = {"verified": 0, "name": 0, "sole_state": 0, "dropped_shared": 0}
     for cls in CLASSES:
         path = os.path.join(BASE, "bindings", f"{cls}-skill-binding.json")
         data = json.load(open(path, encoding="utf-8"))
+        owners = state_owners(data)
         rows = []
         for sid, rec in data["skills"].items():
-            skl_stem = stem_of(rec["skl"])[:8] if rec.get("skl") else None
+            skl_stem = stem_of(rec["skl"]) if rec.get("skl") else None
             states = [st for st in rec["states"] if st.get("state") is not None]
             if not states:
                 continue
             motions, seen = [], set()
             used_states = []
+            kept_by = ""
             for st in states:
                 sid_i = int(sid)
                 st_no = st["state"]
                 ani_list = [m["ani"] for m in st["entry_motions"]]
                 # keep a state only when independently justified:
                 #  - queued by skill eligibility code, or
-                #  - handler references this skill id alone, or
-                #  - a motion stem matches the skl stem
-                sole_ref = False
-                # sole-ref info is not in the JSON; approximate with name match or verified pair
-                name_match = bool(skl_stem) and any(
-                    stem_of(a).startswith(skl_stem) for a in ani_list)
-                keep = (sid_i, st_no) in verified or name_match
-                if not keep:
+                #  - a motion stem matches the skl stem, or
+                #  - no other skill of this class queues the state
+                if (sid_i, st_no) in verified:
+                    kind = "verified"
+                elif name_agrees(skl_stem, ani_list):
+                    kind = "name"
+                elif len(owners.get(st_no, [])) == 1:
+                    kind = "sole_state"
+                else:
+                    kind = ""
+                if not kind:
+                    if ani_list:
+                        stats["dropped_shared"] += 1
                     continue
+                stats[kind] += 1
+                if not kept_by:
+                    kept_by = kind
                 used_states.append(st_no)
                 for ani in ani_list:
                     if ani in seen:
@@ -84,9 +121,12 @@ def main():
                 effects.append(f"character/{cls}/{e.lower()}")
             handlers = sorted({st["handler"] for st in states
                                if st.get("handler") and st["state"] in used_states})
+            basis = {"verified": "eligibility pair", "name": "motion name",
+                     "sole_state": "sole state owner"}[kept_by]
             evidence = ("1031 DNF.exe setState: states " +
                         ",".join(map(str, sorted(set(used_states))[:6])) +
                         (f" (+{len(used_states)-6} more)" if len(used_states) > 6 else "") +
+                        (f"; basis {basis}" if basis else "") +
                         ("; handlers " + ",".join(handlers[:3]) if handlers else ""))
             rows.append((int(sid), motions, effects, evidence))
         rows.sort()
@@ -194,6 +234,7 @@ def main():
 
     open(OUT, "w", encoding="ascii", newline="\n").write("\n".join(out) + "\n")
     print(f"written {OUT}: {len(job_tables)} jobs, {total_skills} skills")
+    print("kept states by basis: " + ", ".join(f"{k}={v}" for k, v in stats.items()))
 
 
 if __name__ == "__main__":

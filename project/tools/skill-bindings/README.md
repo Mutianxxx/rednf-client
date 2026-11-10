@@ -28,9 +28,11 @@
 python -X utf8 -B tools/skill-bindings/src/gen_exe_bindings_header.py
 ```
 
-脚本按自身路径解析输入输出，可在任意工作目录运行；输出 8 职业 298 技能。
-产物只收「资格代码对齐验证 / handler 独占技能引用 / 动作名与 .skl 主干吻合」的 state，
-未经独立佐证的 state 不入表。
+脚本按自身路径解析输入输出，可在任意工作目录运行；输出 8 职业 299 技能。
+产物只收「资格代码对齐验证 / 动作名与 .skl 完整 stem 吻合 / 本职业独占 state」三类 state，
+每条记录在 `evidence` 里写明 `basis`（`eligibility pair` / `motion name` / `sole state owner`）。
+被多个技能共享的 state（13/19/69/71..78/75）若名字也不吻合则不入表，运行时会打印丢弃条数
+（当前 185 条）。这三个条件都能单独成立：独占 state 意味着资格代码已把它唯一绑定到该技能。
 
 ## 重新提取需要的东西
 

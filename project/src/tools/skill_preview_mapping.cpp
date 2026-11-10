@@ -17,6 +17,23 @@ std::string stemOf(const std::string &path) {
 std::string parentOf(const std::string &path) {
     return normalize(fs::u8path(path).parent_path().generic_u8string());
 }
+// PVP variants are a separate branch of the same motion; the preview plays the
+// PVE release, so those files are never part of a chain.
+bool isPvpVariant(const std::string &path) {
+    return path.find("[pvp]") != std::string::npos;
+}
+// The swordman and demonicswordman CHRs share one folder: the demonic flavour of
+// each motion is the *_ds twin (ashenforksub_ds.ani, animation/ashenfork_ds/...).
+// Claim only this CHR's flavour, otherwise a demonic skill borrows the plain
+// motion and vice versa.
+bool belongsToChr(const std::string &path, const std::string &chrStem) {
+    const bool demonic = chrStem == "demonicswordman";
+    bool dsTwin = false;
+    const auto stem = stemOf(path);
+    if (stem.size() > 3 && stem.compare(stem.size() - 3, 3, "_ds") == 0) dsTwin = true;
+    if (path.find("_ds/") != std::string::npos) dsTwin = true;
+    return dsTwin == demonic;
+}
 // A skill can legitimately declare many effect animations (TripleSlash lists
 // seven in common.nut); the old cap of six silently dropped the tail.
 constexpr size_t kEffectLimit = 24;
@@ -98,6 +115,10 @@ constexpr StageWord kStageWords[] = {
     {"stand", 100},  {"attack", 100}, {"shoot", 100},  {"shot", 100}, {"slash", 100},
     {"strike", 100}, {"swing", 100},  {"hit", 100},    {"stab", 100}, {"kick", 100},
     {"throw", 100},  {"roll", 105},   {"move", 110},   {"stay", 115}, {"loop", 120},
+    // Weapon and form variants: weaponcomboshort1 .. weaponcombolight3 are all
+    // stages of the same skill, picked by the equipped weapon type.
+    {"short", 60},   {"light", 62},   {"heavy", 64},   {"blunt", 66}, {"blade", 68},
+    {"spear", 70},   {"claw", 72},    {"pick", 74},    {"shoulder", 76},
     {"up", 130},     {"down", 130},   {"front", 130},  {"back", 130}, {"left", 130},
     {"right", 130},  {"ex", 140},     {"extract", 145},{"finish", 150},{"end", 155},
     {"after", 160},  {"success", 165},{"fail", 165},   {"cancel", 165},{"disappear", 170},
@@ -110,51 +131,102 @@ constexpr const char *kVariantPrefixes[] = {"multi", "ex", "power", "super", "ul
 } // namespace
 
 // Order of the stage a stem carries, or -1 when the tail is not a stage word.
-// The tail may also carry a serial number (multiheadshotshoot4).
+// The tail may be several stage words plus a serial (multiheadshotshoot4,
+// hundredswordmoveready2, weaponcomboshort1). Every token has to be a known
+// stage word, so an unrelated suffix still fails the match.
 int stageOrder(const std::string &tail) {
     if (tail.empty()) return 0; // exact stem
-    for (const auto &entry : kStageWords) {
-        const std::string word(entry.word);
-        if (tail.size() < word.size()) continue;
-        if (tail.compare(0, word.size(), word) != 0) continue;
-        const std::string rest = tail.substr(word.size());
-        if (!std::all_of(rest.begin(), rest.end(),
-                         [](char c) { return c >= '0' && c <= '9'; }))
+    size_t pos = 0;
+    int order = 0;
+    bool matchedAny = false;
+    while (pos < tail.size()) {
+        bool matched = false;
+        // Longest word first: "standby" must win over "stand".
+        const StageWord *best = nullptr;
+        for (const auto &entry : kStageWords) {
+            const std::string word(entry.word);
+            if (tail.compare(pos, word.size(), word) != 0) continue;
+            if (best && std::string(best->word).size() >= word.size()) continue;
+            best = &entry;
+        }
+        if (best) {
+            pos += std::string(best->word).size();
+            order = std::max(order, best->order);
+            matchedAny = true;
             continue;
-        return entry.order + (rest.empty() ? 0 : std::min<int>(9, std::atoi(rest.c_str())));
+        }
+        const size_t start = pos;
+        while (pos < tail.size() && tail[pos] >= '0' && tail[pos] <= '9') ++pos;
+        if (pos > start) {
+            order += std::min<int>(9, std::atoi(tail.substr(start, pos - start).c_str()));
+            matchedAny = true;
+            continue;
+        }
+        return -1;
     }
-    return -1;
+    return matchedAny ? order : -1;
+}
+
+// Upgrade words a skill can append to a motion base name: flowmind + powerup.
+bool isVariantTail(const std::string &tail) {
+    static const char *const kWords[] = {"powerup", "poweron", "power", "up",   "ex",
+                                         "exp",     "full",    "charge"};
+    for (const char *word : kWords)
+        if (tail == word) return true;
+    return false;
 }
 
 // Does this animation stem name a stage of the given skill? Returns its order.
 int chainOrder(const std::string &slotStem, const std::string &skillStem) {
-    if (slotStem.size() < skillStem.size()) return -1;
-    std::string tail;
-    if (slotStem.compare(0, skillStem.size(), skillStem) == 0) {
-        tail = slotStem.substr(skillStem.size());
-    } else {
-        // Variant prefix in front of the skill stem (multi + headshot + shoot1).
-        std::string head = slotStem;
-        bool stripped = false;
-        for (const char *prefix : kVariantPrefixes) {
-            const std::string p(prefix);
-            if (head.size() > p.size() && head.compare(0, p.size(), p) == 0) {
-                head = head.substr(p.size());
-                stripped = true;
-                break;
+    if (slotStem.size() >= skillStem.size()) {
+        std::string tail;
+        if (slotStem.compare(0, skillStem.size(), skillStem) == 0) {
+            tail = slotStem.substr(skillStem.size());
+        } else if (slotStem.compare(slotStem.size() - skillStem.size(), skillStem.size(),
+                                   skillStem) == 0) {
+            // Stage word in front of the skill stem: stay + sacrifice = StaySacrifice.
+            const auto head = slotStem.substr(0, slotStem.size() - skillStem.size());
+            const int headOrder = stageOrder(head);
+            if (headOrder >= 0) return headOrder;
+        } else {
+            // Variant prefix in front of the skill stem (multi + headshot + shoot1).
+            std::string head = slotStem;
+            bool stripped = false;
+            for (const char *prefix : kVariantPrefixes) {
+                const std::string p(prefix);
+                if (head.size() > p.size() && head.compare(0, p.size(), p) == 0) {
+                    head = head.substr(p.size());
+                    stripped = true;
+                    break;
+                }
             }
+            if (stripped && head.size() >= skillStem.size() &&
+                head.compare(0, skillStem.size(), skillStem) == 0)
+                tail = head.substr(skillStem.size());
         }
-        if (!stripped) return -1;
-        if (head.size() < skillStem.size()) return -1;
-        if (head.compare(0, skillStem.size(), skillStem) != 0) return -1;
-        tail = head.substr(skillStem.size());
+        if (!tail.empty()) {
+            if (std::all_of(tail.begin(), tail.end(), [](char c) { return c >= '0' && c <= '9'; }))
+                // A bare serial (tripleslash1) carries no stage meaning; treat it
+                // as the strike so it stays playable rather than being dropped.
+                return 100 + std::min<int>(9, std::atoi(tail.c_str()));
+            const int order = stageOrder(tail);
+            if (order >= 0) return order;
+        }
     }
-    if (tail.empty()) return 0;
-    if (std::all_of(tail.begin(), tail.end(), [](char c) { return c >= '0' && c <= '9'; }))
-        // A bare serial (tripleslash1) carries no stage meaning; treat it as the
-        // strike so it stays playable rather than being dropped.
-        return 100 + std::min<int>(9, std::atoi(tail.c_str()));
-    return stageOrder(tail);
+    // The motion carries the base name and the skill appends an upgrade word, or
+    // the two differ by a stage on either side: flowmindstart vs flowmindpowerup.
+    // Both tails have to parse, so a chance substring overlap still fails.
+    for (int cut = int(std::min(slotStem.size(), skillStem.size())); cut >= 5; --cut) {
+        if (slotStem.compare(0, size_t(cut), skillStem, 0, size_t(cut)) != 0) continue;
+        const auto slotTail = slotStem.substr(size_t(cut));
+        const auto skillTail = skillStem.substr(size_t(cut));
+        if (slotTail.empty()) continue;
+        const int slotOrder = stageOrder(slotTail);
+        if (slotOrder < 0) continue;
+        if (!skillTail.empty() && !isVariantTail(skillTail)) continue;
+        return slotOrder;
+    }
+    return -1;
 }
 const char *gradeName(SkillGrade grade) {
     switch (grade) {
@@ -242,6 +314,11 @@ const SkillMappingTable::JobIndex &SkillMappingTable::index(int jobId) {
             if (tag.find("motion") == std::string::npos) continue;
             if (!resource.exists || resource.path.empty()) continue;
             built.motions[stemOf(resource.path)].push_back(resource);
+            // Keep the named single-slot motions reachable by tag: [buff motion]
+            // is the generic cast pose, [back motion]/[jump motion] are the
+            // skills of the same name.
+            if (built.baseMotions.find(tag) == built.baseMotions.end())
+                built.baseMotions.emplace(tag, normalize(resource.path));
         }
         if (!built.directory.empty()) {
             built.effectPaths = pvf_.paths(built.directory + "/effect/animation/", ".ani");
@@ -253,6 +330,23 @@ const SkillMappingTable::JobIndex &SkillMappingTable::index(int jobId) {
             for (const auto &path : pvf_.paths(animationDirectory + "/", ".ani"))
                 if (parentOf(path) == animationDirectory)
                     built.animation.emplace(stemOf(path), path);
+        }
+        // Skill entities share the base job folder: character/swordman owns both
+        // the swordman and the demonicswordman CHR, and the demonic flavour is
+        // the *_ds twin of each object. Claim only this CHR's flavour so the
+        // two classes do not borrow each other's visuals.
+        if (!built.baseJob.empty()) {
+            const auto entityRoot = "passiveobject/character/" + built.baseJob;
+            const bool demonic = built.chrStem == "demonicswordman";
+            for (const auto &path : pvf_.paths(entityRoot + "/", ".obj")) {
+                if (parentOf(path) != entityRoot) continue;
+                auto stem = stemOf(path);
+                const bool ds = stem.size() > 3 && stem.compare(stem.size() - 3, 3, "_ds") == 0;
+                if (ds != demonic) continue;
+                if (ds) stem = stem.substr(0, stem.size() - 3);
+                built.passiveObjects.emplace(stem, path);
+            }
+            built.passiveAnimations = pvf_.paths(entityRoot + "/animation/", ".ani");
         }
         // Per-skill scripts live beside the CHR's own script directory:
         //   sqr/character/atmage/firepillar/firepillar.nut  (nested)
@@ -390,6 +484,7 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     std::vector<std::pair<int, std::pair<std::string, std::string>>> staged;
     const auto consider = [&](const std::string &stem, const std::string &path,
                               const std::string &tag) {
+        if (isPvpVariant(path) || !belongsToChr(path, jobIndex.chrStem)) return;
         const int order = chainOrder(stem, skillStem);
         if (order >= 0) staged.push_back({order, {path, tag}});
     };
@@ -516,6 +611,7 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     // animations to the same skill.
     std::vector<std::string> prefixEffects;
     for (const auto &path : jobIndex.effectPaths) {
+        if (isPvpVariant(path) || !belongsToChr(path, jobIndex.chrStem)) continue;
         const auto effectStem = stemOf(path);
         if (effectStem.size() < 5) continue;
         if (effectStem.rfind(skillStem, 0) != 0) continue;
@@ -533,6 +629,69 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             const auto particleStem = stemOf(path);
             if (particleStem.empty() || particleStem.rfind(skillStem, 0) != 0) continue;
             mapping.particles.push_back(path);
+        }
+    }
+
+    // --- skill entity visuals (passive objects) -----------------------------
+    // A large share of the high-level skills are rendered by a passive object
+    // rather than by effect animations: Khazan's summoned ghost, Saya's ice
+    // field, TombStoneRain's stones, Blache's swamp. The object lives at
+    // passiveobject/character/<job>/<skill>.obj and carries its own [etc motion]
+    // list, so the skill's real visuals were never reachable through
+    // character/<job>/effect/animation.
+    std::vector<std::string> entityEffects;
+    {
+        // Candidates in order of confidence: the exact object first, then every
+        // object whose stem prefixes the skill (tombstonerainex -> tombstonerain
+        // -> tombstone). An object that carries no [etc motion] is not the
+        // skill's visual body, so the next candidate still gets a turn.
+        std::vector<std::string> candidates;
+        if (const auto exact = jobIndex.passiveObjects.find(skillStem);
+            exact != jobIndex.passiveObjects.end())
+            candidates.push_back(exact->second);
+        std::vector<std::pair<size_t, std::string>> prefixes;
+        for (const auto &[stem, path] : jobIndex.passiveObjects) {
+            if (stem.size() < 4 || skillStem.size() <= stem.size()) continue;
+            if (skillStem.rfind(stem, 0) != 0) continue;
+            prefixes.emplace_back(stem.size(), path);
+        }
+        std::sort(prefixes.begin(), prefixes.end(),
+                  [](const auto &a, const auto &b) { return a.first > b.first; });
+        for (const auto &entry : prefixes) candidates.push_back(entry.second);
+
+        for (const auto &entityObject : candidates) {
+            try {
+                const auto view = pvf_.fieldView(entityObject, {"[etc motion]"});
+                for (const auto &value : view.values("[etc motion]")) {
+                    if (!value.is_string()) continue;
+                    auto name = normalize(value.get<std::string>());
+                    if (name.size() < 5 || name.compare(name.size() - 4, 4, ".ani") != 0) continue;
+                    const auto full = "passiveobject/character/" + jobIndex.baseJob + "/" + name;
+                    if (!pvf_.has(full)) continue;
+                    if (std::find(entityEffects.begin(), entityEffects.end(), full) !=
+                        entityEffects.end())
+                        continue;
+                    if (entityEffects.size() >= kEffectLimit) break;
+                    entityEffects.push_back(full);
+                }
+            } catch (const std::exception &) {
+                // An unreadable object adds nothing; the row keeps its own gap.
+            }
+        }
+        // Some objects keep their animations beside the object tree instead.
+        if (entityEffects.empty()) {
+            for (const auto &path : jobIndex.passiveAnimations) {
+                if (isPvpVariant(path) || !belongsToChr(path, jobIndex.chrStem)) continue;
+                const auto stem = stemOf(path);
+                if (stem.size() < 5 || stem.rfind(skillStem, 0) != 0) continue;
+                if (stemOf(parentOf(path)) == "animation" && stem.size() <= skillStem.size())
+                    continue;
+                if (std::find(entityEffects.begin(), entityEffects.end(), path) !=
+                    entityEffects.end())
+                    continue;
+                if (entityEffects.size() >= kEffectLimit) break;
+                entityEffects.push_back(path);
+            }
         }
     }
 
@@ -560,6 +719,21 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                     mapping.bodyChain.push_back(exe->motions[i]);
                     mapping.chainStages.push_back(100 + static_cast<int>(i));
                 }
+                // The exe entry lists the entry motion of the release state; the
+                // later stages are named after the skill in the CHR and only the
+                // name scan reaches them (HundredSwordMoveSlash2..5, KallaFinish1..3).
+                // Those are the same skill by name, so they extend the chain
+                // instead of being dropped by the override.
+                for (const auto &entry : staged) {
+                    if (std::find(mapping.bodyChain.begin(), mapping.bodyChain.end(),
+                                  entry.second.first) != mapping.bodyChain.end())
+                        continue;
+                    if (mapping.bodyChain.size() > 12) break;
+                    mapping.bodyChain.push_back(entry.second.first);
+                }
+                mapping.chainStages.clear();
+                for (size_t i = 0; i < mapping.bodyChain.size(); ++i)
+                    mapping.chainStages.push_back(100 + static_cast<int>(i));
                 mapping.bodyAni = exe->motions[0];
                 mapping.bodySlotTag = "exe-setstate";
                 mapping.confidence = MappingConfidence::Manual;
@@ -617,6 +791,87 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
         mapping.evidence += "; effects: per-skill sqr script";
     } else {
         mapping.effects = prefixEffects;
+    }
+    // The entity supplement comes last: it is the skill's own on-screen body and
+    // stays whatever the declared effect chain already covers.
+    if (!entityEffects.empty()) {
+        for (const auto &effect : entityEffects) {
+            if (mapping.effects.size() >= kEffectLimit) break;
+            if (std::find(mapping.effects.begin(), mapping.effects.end(), effect) !=
+                mapping.effects.end())
+                continue;
+            mapping.effects.push_back(effect);
+        }
+        mapping.evidence += "; effects: passive object [etc motion]";
+    }
+
+    // --- CHR base motion fallback ------------------------------------------
+    // A handful of skills ship under a different motion name than the SKL file.
+    // Reckless is the Berserker "Frenzy": the CHR reserves Frenzy1..4 for it and
+    // no other skill claims them, so the alias is the only owner of those slots.
+    if (mapping.bodyChain.empty() && mapping.bodyAni.empty() && !mapping.passive) {
+        static const struct {
+            const char *skill;
+            const char *motion;
+        } kMotionAliases[] = {
+            {"reckless", "frenzy"},
+        };
+        for (const auto &alias : kMotionAliases) {
+            if (skillStem != alias.skill) continue;
+            std::vector<std::string> chain;
+            for (const auto &[stem, resources] : jobIndex.motions) {
+                if (stem.rfind(alias.motion, 0) != 0 || resources.empty()) continue;
+                chain.push_back(resources.front().path);
+            }
+            if (chain.empty()) continue;
+            mapping.bodyChain = chain;
+            mapping.chainStages.clear();
+            for (size_t i = 0; i < chain.size(); ++i)
+                mapping.chainStages.push_back(100 + static_cast<int>(i));
+            mapping.bodyAni = chain.front();
+            mapping.bodySlotTag = "chr-motion-alias";
+            mapping.confidence = MappingConfidence::Reconstructed;
+            mapping.chainEvidence = stemOf(chain.front());
+            mapping.evidence += "; body: named CHR motion alias (inferred)";
+            break;
+        }
+    }
+    // BackStep *is* the CHR's [back motion], JumpPowerUp its [jump motion]; a
+    // buff skill has no dedicated motion at all and the client plays the generic
+    // cast pose. The slot semantics are the only evidence here, so the row is
+    // reported as reconstructed rather than as an exe-derived chain.
+    if (mapping.bodyChain.empty() && mapping.bodyAni.empty() && !mapping.passive) {
+        static const struct {
+            const char *needle;
+            const char *tag;
+        } kBaseAliases[] = {
+            {"backstep", "[back motion]"}, {"stepback", "[back motion]"},
+            {"jump", "[jump motion]"},     {"leap", "[jump motion]"},
+            {"dashattack", "[dashattack motion]"}, {"sit", "[sit motion]"},
+        };
+        std::string baseMotion;
+        for (const auto &alias : kBaseAliases) {
+            if (skillStem.find(alias.needle) == std::string::npos) continue;
+            const auto found = jobIndex.baseMotions.find(alias.tag);
+            if (found == jobIndex.baseMotions.end()) continue;
+            baseMotion = found->second;
+            break;
+        }
+        // Buff skills: nothing else resolved for them, so the generic cast pose
+        // is what the characters actually show.
+        if (baseMotion.empty() && mapping.effects.empty()) {
+            const auto found = jobIndex.baseMotions.find("[buff motion]");
+            if (found != jobIndex.baseMotions.end()) baseMotion = found->second;
+        }
+        if (!baseMotion.empty()) {
+            mapping.bodyAni = baseMotion;
+            mapping.bodyChain = {baseMotion};
+            mapping.chainStages = {100};
+            mapping.bodySlotTag = "chr-base-motion";
+            mapping.confidence = MappingConfidence::Reconstructed;
+            mapping.chainEvidence = stemOf(baseMotion);
+            mapping.evidence += "; body: CHR base motion slot (slot semantics, inferred)";
+        }
     }
 
     // --- attack volume: source ANI only ------------------------------------
