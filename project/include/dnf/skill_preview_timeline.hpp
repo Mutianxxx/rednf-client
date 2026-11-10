@@ -50,12 +50,39 @@ struct PreviewLayer {
     // Exact ALS uniqueName for add/remove pairing; empty for one-shot layers.
     std::string instance;
     std::string evidence;
-    bool visible() const { return lifeMs <= 0 || clock.ageMs < lifeMs; }
+    // Nothing before its birth, nothing after its own duration has run out. A
+    // layer whose clock kept at zero because it had not been born yet used to
+    // draw from the first frame, which made a 48-layer family look like one
+    // white flash.
+    bool visible(double actionMs) const {
+        if (actionMs < birthMs) return false;
+        return lifeMs <= 0 || actionMs - birthMs < lifeMs;
+    }
 };
 
 struct FrameSpan {
     size_t index = 0;
     double startMs = 0, endMs = 0;
+};
+
+// A skill entity that outlives the cast. The animation comes from the PVF; the
+// placement rule (orbit radius, ground anchor, air height) is reconstructed and
+// the mapping row carries the matching evidence string.
+enum class PreviewPersistentKind { Orbit, GroundField, AirSword };
+
+struct PreviewPersistent {
+    std::string path;
+    PreviewPersistentKind kind = PreviewPersistentKind::GroundField;
+    int count = 1;
+    double radius = 0;           // orbit radius, source pixels
+    double angularDegPerSec = 0; // orbit spin
+    double phaseDeg = 0;         // first instance's angle
+    std::array<double, 2> offset{};
+    double birthMs = 0;
+    std::string evidence;
+    PreviewClock clock;
+    // Looping entities stop with the action, so the clock is the only state.
+    bool visible(double ageMs) const { return ageMs >= birthMs; }
 };
 
 // Frame windows of one ANI. 40JP's frame deadline is the running sum of each
@@ -92,6 +119,9 @@ struct PreviewTimeline {
     std::vector<PreviewBodyStage> stages;
     PreviewClock body;
     std::vector<PreviewLayer> layers;
+    // Entities that stay on the field for the whole action (orbs, lotus field,
+    // hanging swords). They are not layers: their position depends on time.
+    std::vector<PreviewPersistent> persistents;
     bool paused = false, ended = false;
 
     // The stage that owns this instant, or nullptr when there is no body.

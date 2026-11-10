@@ -1,3 +1,83 @@
+# 技能时间轴 / 脱手实体 / 坐标原点 / 主线接入（2026-11-10 第四轮）
+
+节点 `skill-timeline-persistent-20261110`。用户反馈四件事：**特效没有源时间轴**（所有层同时播）、
+**脱手技能缺失**（念气环绕的球、千莲怒放的花、极·鬼剑术悬空的剑）、**特效位置/原点不对**、
+以及**成果没有落到可游玩主游戏**。
+
+## 1. 源时间轴：`.als` 旁挂脚本
+
+父动画的 `.als` 才是客户端真正的层时间轴，语法在 `effect_plan.cpp` 里早已实现，只是预览器没用：
+
+```
+[use animation]  "Animation/xxx.ani"   instanceName
+[add]      <帧号> <层号> instanceName
+[remove]   <帧号> <层号> instanceName
+[create draw only object] <帧号> instanceName <x> <y> <z>    // 唯一带源偏移的写法
+```
+
+`SkillVisualMapping::effectLayers` 现在为每一层记录 `timed / alsFrame / alsLayer / instance /
+offsetX/Y/Z`：有旁挂脚本的层由源帧出生（`evidence = "ALS [add] frame N"`），没有旁挂脚本的层按
+文件名词里的释放阶段序（`effectStageOrder`）排序，再按动作链段数分摊，`evidence` 写
+「no ALS sidecar」。**旁观事实**：1031 只给男法、男格斗、圣职等职业配了 `.als`，女格斗与剑士
+的 `character/fighter/animation/nenflower.ani`、`character/swordman/animation/hundredswordready.ani`
+都没有旁挂脚本，所以那一半只能是重建。
+
+同时修掉一个真 bug：`PreviewLayer::visible()` 原先只看自身时钟，层在出生前就被绘制（时钟停在 0），
+48 层的剑术家族因此变成一整片白光。现在 `visible(actionMs)` 同时判断出生与存活。
+
+## 2. 脱手技能：`persistents`
+
+`passiveobject/character/<job>/<skill>.obj` 的动作表里，**长循环**（60 秒）与**单帧地面贴花**就是
+「施放后留在场上」的实体信号：
+
+| 技能 | 实体来源 | 判定 |
+| --- | --- | --- |
+| 念气环绕 `spiralnen` | `SpiralNen.ani`（200ms 循环） | 名字含 spiralnen；球数按职业 2（女）/4（男） |
+| 千莲怒放 `nenflower` | `NenFlower/Ground.ani`（1 帧） | 单帧 + 名字含 ground，地面放置物 |
+| 极·鬼剑术 `hundredsword` | `HundredSword/swordair1.ani`（60050ms 循环） | 循环长度 > 动作时长，悬空剑 |
+
+球心半径 62px、转速 72°/s、垂直压扁 0.32、悬剑间距 56px、高度 -160px 全部**不在任何 PVF 文件里**，
+属于重建参数，`PersistentPlan::evidence` 逐条写明；数量来自资源结构（`SpiralNenTail1..4` 的尾巴数、
+`HundredSwordMoveReady1..5` 的 move 段数）。`_ds`/`at` 变体按职业去重（`spiralnen` 与 `atspiralnen`
+只取一个），避免同一把剑画两遍。
+
+千莲怒放的动作只有 700ms，放置物需要更长时间才成立：存在驻留实体时动作窗口扩到 2600ms，
+层出生时刻按比例缩放，身体播完后停在末帧。
+
+## 3. 坐标原点
+
+- 帧级偏移本来就由 `Renderer::animation(pose.x, pose.y)` 应用，问题不在这里。
+- 真正错的是**层锚点**：特效层全部画在角色脚底原点，而 `passiveobject` 的动画锚点是对象生成点
+  （`.obj` 的 `[floating height]` 表示悬浮格数）。驻留实体改为按类型给锚点（球 -78px、悬剑 -160px、
+  地面 0），并且**不再重复当作普通层播放**（此前 `spiralnen.ani` 既当层又当实体，闪一下）。
+- ALS 的 `[create draw only object]` 带 XYZ，已作为 `offsetX/Y/Z` 原样传递；普通 `[add]` 没有偏移，
+  保持 0，不做假。
+
+## 4. 主线接入（native）
+
+`src/tools/skill_preview_mapping.cpp` 编入 `dnf_core`，`World` 新增 `spawnSkillVisuals()`：
+技能起手时用同一张表生成 `Effect` 层（`born` 按 `birthRatio` 偏移动作时长），驻留实体生成
+`Effect` 并新增 `orbitRadius / orbitSpeedDeg / orbitPhaseDeg / orbitCenterY` 四个字段，由 `update()`
+每帧按角度重算位置。手工登记视觉的技能（`Skill::manualVisuals`）跳过，避免重叠。
+
+## 结果
+
+- 映射评级不变：A 264 / B 287 / C 170 / D 1013（1734 行），预览器回归 37/37。
+- 点名技能：念气环绕 2 球（女）/ 4 球（男）绕身旋转；千莲怒放地面花 + 15 层阶段特效；
+  极·鬼剑术 5 把悬剑 + 48 层（ready → swordair → slash → light → tail → finish）按阶段出生。
+- 截图核验：`checkpoints/analysis/fx-nen-orbit3.png`、`fx-nenflower.png`、`fx-hundredsword*.png`。
+
+## 已知边界
+
+- 女格斗 / 剑士没有 `.als` 与 `sqr` 脚本（PVF 里只有 atmage/creatormage/priest 三个职业有），
+  阶段时序与球体运动全是重建；exe 里那段共享施法 state 的 `Sprintf(加密段模板)` 仍未恢复。
+- 千莲怒放「再次点击引爆、念气技能催熟」是游戏内交互，预览器只呈现「放置 → 引爆」两段；
+  主游戏需要技能状态机，本轮没有做。
+- 主游戏端到端截图核验未完成（`dnf_native --smoke` 可启动但本环境未产出逐技能画面），
+  接入正确性目前由编译 + `dnf_tests` + 映射表一致性支撑。
+- `dnf_tests` 的 `Airborne reaction preserves current recovery route without hurt RNG` 为**既有失败**：
+  用 `git stash` 回到本轮改动前重编仍失败，与本轮无关。
+
 # 全职业技能特效补全（2026-11-10 第三轮）
 
 节点 `skill-effect-families-20261110`。用户反馈：格斗家「念气罩 / 雷龙出海 / 千莲怒放」仍丢特效，

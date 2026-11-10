@@ -352,7 +352,46 @@ int entry(int argc, char **argv) {
             }
         }
 
-        // 9h) The preview overlap keeps d=0 boxes testable on the single stage
+        // 9h) Detached skills keep an entity on the field, and a large effect
+        //     family keeps every file with a staged birth instead of a cap.
+        {
+            table.ensureJob(0);
+            const auto *hundred = table.mapping({0, 86});
+            check(hundred && hundred->effectLayers.size() > 16,
+                  "a 48-file effect family survives the cap", 
+                  {{"layers", hundred ? int(hundred->effectLayers.size()) : 0}});
+            bool airSword = false;
+            int untimed = 0;
+            if (hundred) {
+                for (const auto &entity : hundred->persistents)
+                    if (entity.kind == PersistentKind::AirSword && entity.count >= 5)
+                        airSword = true;
+                for (const auto &layer : hundred->effectLayers)
+                    if (!layer.timed) ++untimed;
+            }
+            check(airSword, "one hanging sword per move stage",
+                  {{"persistents", hundred ? int(hundred->persistents.size()) : 0}});
+            check(untimed > 16, "no-ALS layers still get a staged birth",
+                  {{"untimed", untimed}});
+            table.ensureJob(1);
+            const auto *orb = table.mapping({1, 40});
+            bool twoOrbs = false;
+            if (orb)
+                for (const auto &entity : orb->persistents)
+                    if (entity.kind == PersistentKind::Orbit && entity.count == 2) twoOrbs = true;
+            check(twoOrbs, "Spiral Nen gives the base job two orbs",
+                  {{"persistents", orb ? int(orb->persistents.size()) : 0}});
+            table.ensureJob(7);
+            const auto *maleOrb = table.mapping({7, 40});
+            bool fourOrbs = false;
+            if (maleOrb)
+                for (const auto &entity : maleOrb->persistents)
+                    if (entity.kind == PersistentKind::Orbit && entity.count == 4) fourOrbs = true;
+            check(fourOrbs, "Spiral Nen gives the male subclass four orbs",
+                  {{"persistents", maleOrb ? int(maleOrb->persistents.size()) : 0}});
+        }
+
+        // 9i) The preview overlap keeps d=0 boxes testable on the single stage
         //     plane, which the strict native test would always reject.
         check(previewOverlap(CombatBox{0, 0, 0, 50, 40, 0}, CombatBox{10, -10, 0, 50, 40, 0}),
               "zero-depth boxes still overlap on the stage plane");

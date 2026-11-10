@@ -138,25 +138,80 @@ void SkillPreviewSession::dropLayerVolumes(const std::string &instance, double a
 
 void SkillPreviewSession::seedLayers(const SkillVisualMapping &mapping) {
     if (!timeline_) return;
+    timeline_->persistents.clear();
     const auto *plan = effectPlan(timeline_->bodyPath);
-    // With an ALS sub-chain the layers arrive at their own frames; seeding them
-    // here as well would draw every effect twice from time zero.
-    if (plan && !plan->events.empty()) return;
-    int index = 0;
-    for (const auto &path : mapping.effects) {
+    // Entities that stay on the field own their animation for the whole
+    // action, so the matching effect file must not also play as a plain layer
+    // (the sword array would flicker at the caster's feet).
+    const auto persistentPath = [&](const std::string &path) {
+        for (const auto &entity : mapping.persistents)
+            if (entity.path == path) return true;
+        return false;
+    };
+    for (const auto &entity : mapping.persistents) {
+        PreviewPersistent persistent;
+        persistent.path = entity.path;
+        persistent.kind = entity.kind == PersistentKind::Orbit ? PreviewPersistentKind::Orbit
+                          : entity.kind == PersistentKind::AirSword ? PreviewPersistentKind::AirSword
+                                                                   : PreviewPersistentKind::GroundField;
+        persistent.count = std::max(1, entity.count);
+        persistent.radius = entity.radius;
+        persistent.angularDegPerSec = entity.angularDegPerSec;
+        persistent.phaseDeg = entity.phaseDeg;
+        persistent.offset = {entity.offsetX, entity.offsetY};
+        persistent.evidence = entity.evidence;
+        persistent.clock.reset();
+        timeline_->persistents.push_back(std::move(persistent));
+    }
+    // A layer the ALS sidecar schedules is created by dispatchFrame when the
+    // body reaches its frame. Only untimed layers are seeded here, and they
+    // start at the release stage the file stem names instead of all at once.
+    const bool hasAls = plan && !plan->events.empty();
+    if (hasAls) return;
+    if (mapping.effectLayers.empty()) {
+        // Fallback for a row built before the layer plan existed: keep the old
+        // stem-prefix behaviour rather than dropping the effect entirely.
+        int index = 0;
+        for (const auto &path : mapping.effects) {
+            if (persistentPath(path)) continue;
+            PreviewLayer layer;
+            layer.path = path;
+            layer.kind = PreviewLayerKind::EffectFront;
+            layer.order = 0;
+            layer.instance = "stem:" + std::to_string(index++);
+            layer.evidence = "stem-prefix; order inferred";
+            try {
+                layer.lifeMs = animationDurationMs(*assets_.animation(path));
+            } catch (const std::exception &) {
+                continue;
+            }
+            timeline_->layers.push_back(layer);
+        }
+        for (const auto &layer : timeline_->layers) appendLayerVolumes(layer);
+        return;
+    }
+    const double actionMs = timeline_->durationMs > 0 ? timeline_->durationMs : 0;
+    for (const auto &planned : mapping.effectLayers) {
+        if (planned.timed) continue; // created on its own frame by dispatchFrame
+        if (persistentPath(planned.path)) continue;
         PreviewLayer layer;
-        layer.path = path;
+        layer.path = planned.path;
         layer.kind = PreviewLayerKind::EffectFront;
-        // The sidecar that would say "behind the body" is absent, so the order
-        // is a stated inference rather than a silent default.
-        layer.order = 0;
-        layer.instance = "stem:" + std::to_string(index++);
-        layer.evidence = "stem-prefix; order inferred";
+        layer.order = planned.alsLayer;
+        layer.offset = {planned.offsetX, planned.offsetY, planned.offsetZ};
+        layer.birthMs = actionMs > 0 ? planned.birthRatio * actionMs : 0;
+        layer.instance = planned.instance;
+        layer.loop = planned.loop;
+        layer.evidence = planned.evidence;
         try {
-            layer.lifeMs = animationDurationMs(*assets_.animation(path));
+            layer.lifeMs = animationDurationMs(*assets_.animation(planned.path));
         } catch (const std::exception &) {
             continue;
         }
+        // A layer that starts later still has to be reachable: clamp the birth
+        // inside the action so it cannot appear only after the loop restarts.
+        if (actionMs > 0 && layer.birthMs >= actionMs) layer.birthMs = actionMs * 0.9;
+        layer.clock.ageMs = 0;
         timeline_->layers.push_back(layer);
     }
     for (const auto &layer : timeline_->layers) appendLayerVolumes(layer);
@@ -282,6 +337,21 @@ bool SkillPreviewSession::play(const SkillVisualMapping &mapping, std::string &e
     if (timeline_->durationMs <= 0)
         for (const auto &layer : timeline_->layers)
             timeline_->durationMs = std::max(timeline_->durationMs, layer.lifeMs);
+    // A pure field skill (Spiral Nen) has no body motion at all: the entity is
+    // the whole action, so give the clock a window long enough to show it.
+    if (timeline_->durationMs <= 0 && !timeline_->persistents.empty())
+        timeline_->durationMs = 2000;
+    // A skill that leaves something on the field runs longer than its cast
+    // animation: the lotus flowers sit on the ground and are detonated later.
+    // NenFlower.ani is 700ms, so every placed layer would otherwise fire inside
+    // the cast and the detonation would never be seen. Widening the action moves
+    // the stage-spread births with it, and the body holds its final pose.
+    if (!timeline_->persistents.empty() && timeline_->durationMs > 0 &&
+        timeline_->durationMs < 2600) {
+        const double scale = 2600.0 / timeline_->durationMs;
+        timeline_->durationMs = 2600;
+        for (auto &layer : timeline_->layers) layer.birthMs *= scale;
+    }
 
     if (timeline_->durationMs <= 0 && timeline_->layers.empty()) {
         error = "no_playable_resource";
@@ -540,7 +610,11 @@ void SkillPreviewSession::draw(Renderer &render, double cameraX, double cameraY)
     // A chained release plays whichever stage owns the current instant, so the
     // pose follows the client's own stage order instead of one fragment of it.
     const auto *stage = timeline_->stageAt(timeline_->body.ageMs);
-    const std::string bodyPath = stage ? stage->path : timeline_->bodyPath;
+    std::string bodyPath = stage ? stage->path : timeline_->bodyPath;
+    // A body-less row still shows the caster in the CHR's generic buff pose. It
+    // is a stand-in for the picture, never part of the action clock.
+    if (bodyPath.empty() && current_ && !current_->fallbackPose.empty())
+        bodyPath = current_->fallbackPose;
     const double bodyMs = stage ? timeline_->body.ageMs - stage->startMs : timeline_->body.ageMs;
     actor.animation = bodyPath.empty() ? "stay" : stemOf(bodyPath);
     actor.animStart = 0;
@@ -560,22 +634,69 @@ void SkillPreviewSession::draw(Renderer &render, double cameraX, double cameraY)
 
     std::vector<size_t> order;
     sortLayerIndices(timeline_->layers, order);
+    const double actionNow = timeline_->ageMs;
     const auto drawLayers = [&](bool front) {
         for (size_t index : order) {
             const auto &layer = timeline_->layers[index];
             if ((layer.order >= 0) != front) continue;
-            if (!layer.visible()) continue;
+            if (!layer.visible(actionNow)) continue;
             render.animation(layer.path, layer.clock.ageMs,
                              stageX_ + facing_ * layer.offset[0] - cameraX,
                              stageY_ + layer.offset[1] - layer.offset[2] - cameraY,
                              facing_, layer.loop);
         }
     };
+    // Persistent entities sit with the effect layers: the orbs orbit the body,
+    // the lotus field lies on the ground, the sword array hangs overhead. The
+    // anchor is the caster's feet because that is where the state handler
+    // spawns the object.
+    const auto drawPersistents = [&](bool behind) {
+        const double now = timeline_->ageMs;
+        for (const auto &entity : timeline_->persistents) {
+            if (!entity.visible(now)) continue;
+            const bool isBehind = entity.kind == PreviewPersistentKind::GroundField;
+            if (isBehind != behind) continue;
+            const double localMs = now - entity.birthMs;
+            if (entity.kind == PreviewPersistentKind::Orbit) {
+                for (int index = 0; index < entity.count; ++index) {
+                    const double phase = entity.phaseDeg +
+                        (360.0 * index) / double(entity.count) +
+                        entity.angularDegPerSec * localMs / 1000.0;
+                    const double radians = phase * 3.14159265358979323846 / 180.0;
+                    const double x = entity.offset[0] + entity.radius * std::sin(radians);
+                    const double y = entity.offset[1] - entity.radius * 0.32 * std::cos(radians);
+                    render.animation(entity.path, localMs, stageX_ + facing_ * x - cameraX,
+                                     stageY_ + y - cameraY, facing_, true);
+                }
+                continue;
+            }
+            if (entity.kind == PreviewPersistentKind::AirSword) {
+                // Several swords hang in an arc over the caster. The spacing is
+                // reconstructed: the source only says how many move stages the
+                // release has, not where the swords stand.
+                const int count = std::max(1, entity.count);
+                for (int index = 0; index < count; ++index) {
+                    const double centred = double(index) - double(count - 1) / 2.0;
+                    const double x = entity.offset[0] + centred * 56.0;
+                    const double y = entity.offset[1] + std::abs(centred) * 18.0;
+                    render.animation(entity.path, localMs + index * 90.0,
+                                     stageX_ + facing_ * x - cameraX,
+                                     stageY_ + y - cameraY, facing_, true);
+                }
+                continue;
+            }
+            render.animation(entity.path, localMs,
+                             stageX_ + facing_ * entity.offset[0] - cameraX,
+                             stageY_ + entity.offset[1] - cameraY, facing_, true);
+        }
+    };
+    drawPersistents(true);
     drawLayers(false);
-    if (!timeline_->bodyPath.empty())
+    if (!bodyPath.empty())
         render.player(actor, int64_t(bodyMs), 1.0, *appearance_,
                       cameraX, cameraY, bodyPath);
     drawLayers(true);
+    drawPersistents(false);
 
     // Targets: a flat silhouette over the source hurt volume, plus the flash of
     // a contact that happened within the last few frames.

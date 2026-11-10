@@ -43,6 +43,10 @@ target_sources(dnf_core PRIVATE
 target_sources(dnf_core PRIVATE
     src/presentation/effects/effect_plan.cpp
     src/presentation/effects/drop_presentation.cpp
+    # Skill -> body chain / effect family / persistent entity resolution. The
+    # live game needs the same table the standalone previewer audits, otherwise
+    # a skill's layers would be hand-registered twice and drift.
+    src/tools/skill_preview_mapping.cpp
 )
 
 # presentation/maps

@@ -60,6 +60,7 @@ void PreviewTimeline::reset() {
     looped = false;
     body.reset();
     for (auto &layer : layers) layer.clock.reset();
+    for (auto &entity : persistents) entity.clock.reset();
 }
 
 void PreviewTimeline::advance(double realMs, double speed) {

@@ -24,8 +24,24 @@
 **攻击框**（ANI 内盒 + 少量手工重建）。1734 行技能里 A 264 / B 287 / C 170 / D 1013；D 全部是
 被动技能，主动技能没有「无资源」项，仍有 187 个主动技能只有动作、没有特效（召唤物、平砍、Buff 为主）。
 
-已知限制：特效层没有源时间轴，预览器把所有层从第 0 帧同时播放；部分技能的特效名与技能名不同，
-靠显式别名表（如 念气罩 `nenguard→nenshield`）兜底。逐项状态见 [PROGRESS.md](PROGRESS.md)。
+**特效时间轴。** 父动画带 `.als` 旁挂脚本时，层由 `[add] <帧> <层号> <实例名>` 在源帧出生、
+`[remove]` 收回，`[create draw only object]` 还带显式 XYZ 偏移——这是源数据而不是推断。旁挂脚本
+只覆盖男法、男格斗等一部分职业；女格斗、剑士的技能没有旁挂脚本，此时层按文件名词里的释放阶段
+（ready / throw / blast / ground / light / tail / finish / disappear）排序，并按动作链的段数分摊到
+时间轴上，行内 `evidence` 写明「no ALS sidecar」。
+
+**脱手技能。** 施放后留在场上的实体（念气环绕的球、千莲怒放的花、极·鬼剑术悬空的剑）单独成层：
+念气环绕按职业给 2 球（女）/ 4 球（男）绕角色旋转，千莲怒放把 `NenFlower/Ground.ani` 作为地面
+放置物留在场上，极·鬼剑术按 `HundredSwordMoveReady1..5` 的段数给出 5 把悬剑。球心半径、转速、
+剑的间距在任何 PVF 文件里都没有，属于重建参数，`evidence` 逐条标注；实体数量则来自资源结构
+（尾巴动画数、move 段数）。
+
+已知限制：ALS 只覆盖带旁挂脚本的职业，其余职业的阶段时序是基于文件名的重建；层没有源绘制层号
+（`layer` 为 0），只能整体放在角色前或后。逐项状态见 [PROGRESS.md](PROGRESS.md)。
+
+**主线接入。** `src/tools/skill_preview_mapping.cpp` 已编入 `dnf_core`，`World` 在技能起手时用同一张
+表补出特效层与驻留实体（`manualVisuals` 标记的手工分支除外），因此预览器与可游玩主游戏不再各自
+维护一份技能特效清单。逐项状态见 [PROGRESS.md](PROGRESS.md)。
 
 技能行为族和 40JP 复用实现思路见 [交接说明](project/docs/SKILL-BEHAVIOR-FAMILIES-40JP.md)。
 

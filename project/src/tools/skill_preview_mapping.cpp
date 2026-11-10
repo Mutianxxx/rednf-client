@@ -1,9 +1,11 @@
 #include "dnf/skill_preview_mapping.hpp"
+#include "dnf/effect_plan.hpp"
 #include "dnf/resources.hpp"
 #include "dnf/skill_preview_motion_pool.hpp"
 #include "dnf/skill_exe_bindings.hpp"
 #include <algorithm>
 #include <cctype>
+#include <climits>
 #include <cstdlib>
 #include <filesystem>
 
@@ -35,8 +37,11 @@ bool belongsToChr(const std::string &path, const std::string &chrStem) {
     return dsTwin == demonic;
 }
 // A skill can legitimately declare many effect animations (TripleSlash lists
-// seven in common.nut); the old cap of six silently dropped the tail.
-constexpr size_t kEffectLimit = 24;
+// seven in common.nut); the old cap of six silently dropped the tail. The cap
+// now only exists to bound memory: a family such as HundredSword owns 36 files
+// (ready, slash, swordair1/2, light1-3, tail1-4, ...) and dropping any of them
+// also dropped the one animation that carried the attack volume.
+constexpr size_t kEffectLimit = 48;
 
 // Per-skill Squirrel scripts create their own visuals:
 //   obj.sq_CreateCNRDAnimation("Effect/Animation/.../x.ani")
@@ -178,9 +183,44 @@ int stageOrder(const std::string &tail) {
     return matchedAny ? order : -1;
 }
 
+// Release order of an effect file stem. Unlike stageOrder() this does not
+// require the whole tail to be stage words: effect files are descriptive
+// (bloom1, exp_0_dodge, swordair2, finishtail1, end_cir_01_dodge), so the word
+// is searched for anywhere in the stem. A trailing serial is kept as a tie
+// break so bloom1 < bloom2 and _00_ < _01_.
+int effectStageOrder(const std::string &stem) {
+    static const StageWord kEffectWords[] = {
+        {"ready", 10},  {"prepare", 12}, {"start", 20},  {"appear", 22},
+        {"cast", 24},   {"charge", 26},  {"create", 28}, {"throw", 30},
+        {"move", 40},   {"air", 45},     {"stay", 48},   {"loop", 50},
+        {"attack", 60}, {"slash", 62},   {"swing", 62},  {"shoot", 64},
+        {"hit", 66},    {"strike", 66},  {"blast", 70},  {"exp", 72},
+        {"explosion", 72}, {"ground", 74}, {"field", 74}, {"line", 76},
+        {"tile", 78},   {"flash", 80},   {"light", 82},  {"glow", 84},
+        {"particle", 86}, {"dust", 88},  {"tail", 92},   {"finish", 95},
+        {"end", 96},    {"disappear", 98},
+    };
+    int best = -1;
+    for (const auto &entry : kEffectWords) {
+        const std::string word(entry.word);
+        if (stem.find(word) == std::string::npos) continue;
+        best = std::max(best, entry.order);
+    }
+    if (best < 0) best = 55; // unlabelled effect: treat it as the strike body
+    // A serial only orders files inside the same stage word.
+    int serial = 0;
+    for (size_t i = stem.size(); i > 0; --i) {
+        if (stem[i - 1] < '0' || stem[i - 1] > '9') {
+            if (i < stem.size()) serial = std::atoi(stem.c_str() + i);
+            break;
+        }
+        if (i == 1) serial = std::atoi(stem.c_str());
+    }
+    return best * 100 + std::min(99, serial);
+}
+
 // Upgrade words a skill can append to a motion base name: flowmind + powerup.
-bool isVariantTail(const std::string &tail) {
-    static const char *const kWords[] = {"powerup", "poweron", "power", "up",   "ex",
+bool isVariantTail(const std::string &tail) {    static const char *const kWords[] = {"powerup", "poweron", "power", "up",   "ex",
                                          "exp",     "full",    "charge"};
     for (const char *word : kWords)
         if (tail == word) return true;
@@ -295,7 +335,31 @@ Json SkillVisualMapping::audit() const {
                {"passive", passive}, {"grade", gradeName(grade)},
                {"confidence", confidenceName(confidence)},
                {"icon", iconPath}, {"iconFrame", iconFrame},
+               {"genericBody", !fallbackPose.empty()}, {"standInPose", fallbackPose},
                {"evidence", evidence}, {"missing", missing}};
+    Json layers = Json::array();
+    for (const auto &layer : effectLayers) {
+        layers.push_back({{"path", layer.path}, {"stage", layer.stage},
+                          {"timed", layer.timed}, {"alsFrame", layer.alsFrame},
+                          {"alsLayer", layer.alsLayer}, {"instance", layer.instance},
+                          {"birthRatio", layer.birthRatio}, {"lifeMs", layer.lifeMs},
+                          {"loop", layer.loop}, {"source", layer.source},
+                          {"offsetX", layer.offsetX}, {"offsetY", layer.offsetY},
+                          {"offsetZ", layer.offsetZ}, {"evidence", layer.evidence}});
+    }
+    value["effectLayers"] = layers;
+    Json persistentJson = Json::array();
+    for (const auto &entity : persistents) {
+        const char *kind = entity.kind == PersistentKind::Orbit ? "orbit"
+                           : entity.kind == PersistentKind::AirSword ? "air_sword" : "ground_field";
+        persistentJson.push_back({{"path", entity.path}, {"object", entity.object}, {"kind", kind},
+                                  {"count", entity.count}, {"radius", entity.radius},
+                                  {"angularDegPerSec", entity.angularDegPerSec},
+                                  {"phaseDeg", entity.phaseDeg}, {"offsetX", entity.offsetX},
+                                  {"offsetY", entity.offsetY}, {"loop", entity.loop},
+                                  {"evidence", entity.evidence}});
+    }
+    value["persistents"] = persistentJson;
     return value;
 }
 
@@ -729,7 +793,7 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     // is the only rule that reaches them. Male subclasses (atmage, atfighter)
     // prefix the family with "at"; the prefix is kept in the score so a plain
     // CHR prefers its own family over the male variant.
-    constexpr size_t kFamilyEffectLimit = 12;
+    constexpr size_t kFamilyEffectLimit = 48;
     std::vector<std::string> familyEffects;
     {
         const bool atClass = jobIndex.chrStem.rfind("at", 0) == 0;
@@ -790,8 +854,20 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             }
             for (size_t round = 0; familyEffects.size() < kFamilyEffectLimit; ++round) {
                 bool added = false;
-                for (const auto &[group, files] : groups) {
+                for (auto &[group, files] : groups) {
                     (void)group;
+                    // Inside one phase folder the release order is the stage word
+                    // in the file stem: ready before slash before disappear. The
+                    // client never lists them in order, so this sort is the only
+                    // thing that keeps a round from replaying the folder in
+                    // alphabetical (01_, 02_) order.
+                    std::stable_sort(files.begin(), files.end(),
+                                     [](const std::string &a, const std::string &b) {
+                                         const int left = effectStageOrder(stemOf(a));
+                                         const int right = effectStageOrder(stemOf(b));
+                                         if (left != right) return left < right;
+                                         return a < b;
+                                     });
                     if (round >= files.size()) continue;
                     if (familyEffects.size() >= kFamilyEffectLimit) break;
                     familyEffects.push_back(files[round]);
@@ -1082,7 +1158,8 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             break;
         }
         // Buff skills: nothing else resolved for them, so the generic cast pose
-        // is what the characters actually show.
+        // is what the characters actually show. It is a stand-in pose, not the
+        // skill motion, so it never becomes bodyAni and never changes the grade.
         if (baseMotion.empty() && mapping.effects.empty()) {
             const auto found = jobIndex.baseMotions.find("[buff motion]");
             if (found != jobIndex.baseMotions.end()) baseMotion = found->second;
@@ -1095,6 +1172,320 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             mapping.confidence = MappingConfidence::Reconstructed;
             mapping.chainEvidence = stemOf(baseMotion);
             mapping.evidence += "; body: CHR base motion slot (slot semantics, inferred)";
+        }
+    }
+
+    // --- effect layer timing ------------------------------------------------
+    // When a layer appears is source data only while the body ANI carries an
+    // .als sidecar: [add] <frame> <layer> <uniqueName> names a parent frame and
+    // the frame table turns that frame into milliseconds. 1031 ships sidecars
+    // for the male subclasses and for most passive objects, but not for the
+    // female fighter or the plain swordman, so those rows fall back to the
+    // release-stage word in each file stem and say so.
+    {
+        const auto durationOf = [&](const std::string &path) {
+            try {
+                const auto animation = assets_.animation(path);
+                double total = 0;
+                for (const auto &frame : animation->frames) total += std::max(1, frame.duration);
+                return total;
+            } catch (const std::exception &) {
+                return 0.0;
+            }
+        };
+        const auto loops = [&](const std::string &path) {
+            try {
+                return assets_.animation(path)->globals.value("0", false);
+            } catch (const std::exception &) {
+                return false;
+            }
+        };
+        std::vector<EffectLayerPlan> layers;
+        if (!mapping.bodyAni.empty()) {
+            try {
+                const auto plan = animationEffectEvents(pvf_, assets_, mapping.bodyAni);
+                for (const auto &event : plan.events) {
+                    if (event.kind == EffectEventKind::Remove) continue;
+                    EffectLayerPlan layer;
+                    layer.path = event.animation;
+                    layer.stage = effectStageOrder(stemOf(event.animation));
+                    layer.lifeMs = durationOf(event.animation);
+                    layer.loop = loops(event.animation);
+                    layer.timed = true;
+                    layer.alsFrame = event.frame;
+                    layer.alsLayer = event.layer;
+                    layer.instance = event.instance;
+                    layer.offsetX = event.offsetX;
+                    layer.offsetY = event.offsetY;
+                    layer.offsetZ = event.offsetZ;
+                    layer.source = "als";
+                    layer.evidence = "ALS [add] frame " + std::to_string(event.frame) +
+                                     " layer " + std::to_string(event.layer);
+                    layers.push_back(std::move(layer));
+                }
+            } catch (const std::exception &) {
+                // A malformed sidecar leaves every layer untimed rather than
+                // fabricating an instant for it.
+            }
+        }
+        std::vector<std::string> untimed;
+        for (const auto &effect : mapping.effects) {
+            const bool covered = std::any_of(layers.begin(), layers.end(),
+                                             [&](const EffectLayerPlan &layer) {
+                                                 return layer.path == effect;
+                                             });
+            if (!covered) untimed.push_back(effect);
+        }
+        std::stable_sort(untimed.begin(), untimed.end(),
+                         [](const std::string &a, const std::string &b) {
+                             const int left = effectStageOrder(stemOf(a));
+                             const int right = effectStageOrder(stemOf(b));
+                             if (left != right) return left < right;
+                             return a < b;
+                         });
+        // The release chain already publishes the beats: ready -> slash1..5 ->
+        // finish. Untimed layers spread over those beats in stem order, which
+        // is the closest the files themselves get to a schedule. The spread is
+        // normalised on the stage value, not on the list index, so a family with
+        // 48 files still puts "ready" at the start and "finish" at the end.
+        const size_t beats = std::max<size_t>(1, mapping.bodyChain.size());
+        int minStage = INT_MAX, maxStage = INT_MIN;
+        for (const auto &path : untimed) {
+            const int stage = effectStageOrder(stemOf(path));
+            minStage = std::min(minStage, stage);
+            maxStage = std::max(maxStage, stage);
+        }
+        if (minStage == INT_MAX) minStage = maxStage = 0;
+        for (size_t index = 0; index < untimed.size(); ++index) {
+            EffectLayerPlan layer;
+            layer.path = untimed[index];
+            layer.stage = effectStageOrder(stemOf(untimed[index]));
+            layer.lifeMs = durationOf(untimed[index]);
+            layer.loop = loops(untimed[index]);
+            if (maxStage > minStage && beats > 1) {
+                // Chain beats win when they exist: they are the client's own
+                // stage list, and the stage value only orders files inside a beat.
+                const double beat = beats > 1
+                    ? double(std::min(index, beats - 1)) / double(beats) : 0.0;
+                const double within = double(layer.stage - minStage) / double(maxStage - minStage);
+                layer.birthRatio = 0.85 * (beat + within / double(beats));
+            } else if (maxStage > minStage) {
+                layer.birthRatio = 0.85 * double(layer.stage - minStage) /
+                                   double(maxStage - minStage);
+            } else {
+                layer.birthRatio = untimed.size() > 1
+                    ? 0.75 * double(index) / double(untimed.size() - 1) : 0.0;
+            }
+            layer.source = untimed[index].rfind("passiveobject/", 0) == 0 ? "object" : "family";
+            layer.evidence = "no ALS sidecar; release-stage order in file stem";
+            layers.push_back(std::move(layer));
+        }
+        mapping.effectLayers = std::move(layers);
+    }
+
+    // --- persistent skill entities ------------------------------------------
+    // A skill that keeps something on screen after the cast -- the nen orbs
+    // orbiting the fighter, the lotus field, the swords hanging over the stage
+    // -- is a passive object that loops a long animation, or an effect family
+    // member with a 60-second loop (HundredSword/swordair1). The object names
+    // the loop and its own folder names the attachments (SpiralNenTail1..4 are
+    // the four orbs of the male fighter). Radius and spin exist in no file, so
+    // they are reconstructed and labelled.
+    {
+        const bool atClass = jobIndex.chrStem.rfind("at", 0) == 0;
+        const auto durationOf = [&](const std::string &path) {
+            try {
+                double total = 0;
+                for (const auto &frame : assets_.animation(path)->frames)
+                    total += std::max(1, frame.duration);
+                return total;
+            } catch (const std::exception &) {
+                return 0.0;
+            }
+        };
+        std::vector<std::string> candidates;
+        const auto pushCandidate = [&](const std::string &stem) {
+            const auto found = jobIndex.passiveObjects.find(stem);
+            if (found == jobIndex.passiveObjects.end()) return;
+            // The male subclasses share the base job folder and prefix their
+            // objects with "at" (atspiralnen.obj). A female-fighter skill must
+            // not borrow the male object just because the stems overlap.
+            if (!atClass && stem.rfind("at", 0) == 0) return;
+            if (std::find(candidates.begin(), candidates.end(), found->second) != candidates.end())
+                return;
+            candidates.push_back(found->second);
+        };
+        pushCandidate(skillStem);
+        pushCandidate("at" + skillStem);
+        for (const auto &[stem, path] : jobIndex.passiveObjects) {
+            auto normalized = stem;
+            if (normalized.size() > 3 && normalized.compare(0, 2, "at") == 0)
+                normalized = normalized.substr(2);
+            if (normalized.size() < 5) continue;
+            if (skillStem == normalized || skillStem.rfind(normalized, 0) == 0 ||
+                normalized.rfind(skillStem, 0) == 0)
+                pushCandidate(stem);
+        }
+        const auto alreadyHas = [&](const std::string &path) {
+            return std::any_of(mapping.persistents.begin(), mapping.persistents.end(),
+                               [&](const PersistentPlan &plan) { return plan.path == path; });
+        };
+        // Variant names that differ only by the male "at" prefix or a trailing
+        // serial are the same visual: spiralnen / atspiralnen, swordair1 /
+        // swordair2. Playing both would double the orb or the sword array.
+        const auto visualKey = [](std::string stem) {
+            if (stem.size() > 2 && stem.compare(0, 2, "at") == 0) stem = stem.substr(2);
+            while (!stem.empty() && std::isdigit(static_cast<unsigned char>(stem.back())))
+                stem.pop_back();
+            return stem;
+        };
+        const auto sameVisual = [&](const std::string &path) {
+            const auto key = visualKey(stemOf(path));
+            return std::any_of(mapping.persistents.begin(), mapping.persistents.end(),
+                               [&](const PersistentPlan &plan) {
+                                   return visualKey(stemOf(plan.path)) == key;
+                               });
+        };
+        const auto consider = [&](const std::string &object, const std::string &motion) {
+            if (motion.empty() || !pvf_.has(motion) || alreadyHas(motion)) return;
+            double life = 0;
+            bool loop = false;
+            int topY = 0;
+            size_t frameCount = 0;
+            try {
+                const auto animation = assets_.animation(motion);
+                frameCount = animation->frames.size();
+                for (const auto &frame : animation->frames) life += std::max(1, frame.duration);
+                for (const auto &frame : animation->frames) topY = std::min(topY, frame.y);
+                loop = animation->globals.value("0", false);
+            } catch (const std::exception &) {
+                return;
+            }
+            const auto stem = stemOf(motion);
+            const bool namesOrb = stem.find("spiralnen") != std::string::npos ||
+                                  object.find("spiralnen") != std::string::npos;
+            const bool namesAir = stem.find("air") != std::string::npos ||
+                                  stem.find("sword") != std::string::npos;
+            const bool namesGround = stem.find("ground") != std::string::npos ||
+                                     stem.find("field") != std::string::npos ||
+                                     stem.find("area") != std::string::npos ||
+                                     stem.find("stay") != std::string::npos;
+            // A 60-second loop is how the client writes "keep this here".
+            const bool longLoop = loop && (life >= 5000 || stem.find("loop") != std::string::npos);
+            // A one-frame ground decal (NenFlower/Ground.ani) is a placed object,
+            // not an impact: it has no loop bit because it never animates at all.
+            const bool staticDecal = frameCount <= 1 && namesGround;
+            PersistentPlan plan;
+            plan.path = motion;
+            plan.object = object;
+            plan.loop = true;
+            plan.lifeMs = 0; // stays until the skill action ends
+            if (namesOrb) {
+                plan.kind = PersistentKind::Orbit;
+                // The male fighter keeps four orbs, the base job two. The tail
+                // animations exist for both jobs, so the count is the job rule,
+                // not the file count.
+                plan.count = atClass ? 4 : 2;
+                plan.radius = 62;
+                plan.angularDegPerSec = 72;
+                plan.phaseDeg = 180.0 / std::max(1, plan.count);
+                plan.offsetY = -78;
+                plan.evidence = "looping orb animation on a passive object; count from job "
+                                "(male four, base two); radius/spin reconstructed";
+            } else if (namesAir && longLoop) {
+                plan.kind = PersistentKind::AirSword;
+                // The release chain reserves one "move" stage per hanging
+                // sword: HundredSwordMoveReady1..5 means five swords in the air,
+                // and the caster then swings them one at a time.
+                int stages = 0;
+                for (const auto &[motionStem, resources] : jobIndex.motions) {
+                    (void)resources;
+                    if (motionStem.rfind(skillStem + "moveready", 0) == 0) ++stages;
+                }
+                plan.count = std::max(1, stages);
+                plan.offsetY = std::min(-120.0, double(topY));
+                plan.evidence = "looping air animation (" + std::to_string(int(life)) +
+                                "ms); count from move stages; height from frame offset";
+            } else if (longLoop || staticDecal) {
+                plan.kind = PersistentKind::GroundField;
+                plan.count = 1;
+                plan.offsetY = 0;
+                plan.evidence = staticDecal ? "single-frame ground decal placed for the skill duration"
+                                            : "looping ground object motion kept for the skill duration";
+            } else {
+                return; // one-shot impact: already an effect layer
+            }
+            // Keep the flavour that belongs to this CHR: a male subclass wants
+            // the at* twin, the base job wants the plain one.
+            if (sameVisual(motion)) {
+                if (plan.kind != PersistentKind::Orbit) return;
+                const bool existingAt = [&]() {
+                    for (const auto &other : mapping.persistents)
+                        if (visualKey(stemOf(other.path)) == visualKey(stem))
+                            return stemOf(other.path).rfind("at", 0) == 0;
+                    return false;
+                }();
+                if (atClass == existingAt) return;
+                mapping.persistents.erase(
+                    std::remove_if(mapping.persistents.begin(), mapping.persistents.end(),
+                                   [&](const PersistentPlan &other) {
+                                       return visualKey(stemOf(other.path)) == visualKey(stem);
+                                   }),
+                    mapping.persistents.end());
+            }
+            mapping.persistents.push_back(std::move(plan));
+        };
+        for (const auto &object : candidates) {
+            try {
+                const auto view = pvf_.fieldView(object, {"[basic motion]", "[etc motion]"});
+                for (const auto &value : view.values("[basic motion]")) {
+                    if (!value.is_string()) continue;
+                    const auto name = normalize(value.get<std::string>());
+                    if (name.size() < 5 || name.compare(name.size() - 4, 4, ".ani") != 0) continue;
+                    consider(object, resolveObjectRelative(jobIndex.baseJob, name));
+                }
+                // [etc motion] holds the placed parts of the same object: the
+                // lotus field lies in NenFlowerBlast.obj's ground/line entries.
+                for (const auto &value : view.values("[etc motion]")) {
+                    if (!value.is_string()) continue;
+                    const auto name = normalize(value.get<std::string>());
+                    if (name.size() < 5 || name.compare(name.size() - 4, 4, ".ani") != 0) continue;
+                    consider(object, resolveObjectRelative(jobIndex.baseJob, name));
+                }
+            } catch (const std::exception &) {
+                continue;
+            }
+        }
+        // The sword array of HundredSword is not an object motion: the caster's
+        // state handler plays effect-family members directly and keeps the two
+        // 60-second loops alive for the whole action.
+        for (const auto &layer : mapping.effectLayers) {
+            if (!layer.loop || layer.lifeMs < 5000 || alreadyHas(layer.path)) continue;
+            if (sameVisual(layer.path)) continue;
+            PersistentPlan plan;
+            plan.path = layer.path;
+            plan.kind = PersistentKind::AirSword;
+            // One move stage per hanging sword (HundredSwordMoveReady1..5).
+            int stages = 0;
+            for (const auto &[motionStem, resources] : jobIndex.motions) {
+                (void)resources;
+                if (motionStem.rfind(skillStem + "moveready", 0) == 0) ++stages;
+            }
+            plan.count = std::max(1, stages);
+            plan.loop = true;
+            plan.offsetY = -160;
+            plan.evidence = "effect-family loop longer than the action (" +
+                            std::to_string(int(layer.lifeMs)) + "ms); held as a persistent layer";
+            mapping.persistents.push_back(std::move(plan));
+        }
+    }
+
+    // --- stand-in pose for a body-less row ----------------------------------
+    if (mapping.bodyAni.empty() && !mapping.passive) {
+        const auto found = jobIndex.baseMotions.find("[buff motion]");
+        if (found != jobIndex.baseMotions.end()) {
+            mapping.fallbackPose = found->second;
+            mapping.evidence += "; pose: generic CHR buff pose (stand-in only, not graded)";
         }
     }
 
@@ -1128,6 +1519,8 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     }
 
     // --- grade --------------------------------------------------------------
+    // A row whose only motion is the generic buff pose still shows a character,
+    // so it keeps its B grade, but the audit marks it as a stand-in pose.
     const bool hasBody = !mapping.bodyAni.empty();
     const bool hasEffect = !mapping.effects.empty();
     if (mapping.passive) {

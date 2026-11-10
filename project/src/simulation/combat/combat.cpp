@@ -5,6 +5,7 @@
 #include "dnf/character_attack.hpp"
 #include "dnf/progression.hpp"
 #include "dnf/effect_plan.hpp"
+#include "dnf/skill_preview_mapping.hpp"
 #include "dnf/collision.hpp"
 #include "dnf/axis_motion.hpp"
 #include "dnf/skill_cost.hpp"
@@ -87,6 +88,7 @@ World::World(Pvf &p, Assets &a, WorldRules rules) : pvf_(p), assets_(a), charact
         s.effect = fx;
         s.continuation = continuation;
         s.airOnly = air;
+        s.manualVisuals = true;
         skills.push_back(s);
     };
     add(46, {{"attack3", 0, true}});
@@ -1123,6 +1125,9 @@ void World::requestSkill(int i,bool command,bool afterCurrentAction) {
     stage_ = 0;
     queued_ = false;
     startStage(0);
+    // Layered visuals come from the shared mapping table so a skill the legacy
+    // branch list never covered still shows its own effects.
+    spawnSkillVisuals(skills[i]);
 }
 void World::startStage(int n) {
     clearBasicPlayback();
@@ -2052,6 +2057,96 @@ void World::updateGoreCross(int bodyFrame) {
     events.push_back({tick, "sound", "SM_GORECROSS"});
     expandEffectLayers(first);
 }
+void World::spawnSkillVisuals(const Skill &skill) {
+    // Hand-registered branches already place their own effects; adding the
+    // mapping layers on top would draw every file twice.
+    if (skill.manualVisuals) return;
+    try {
+        if (!skillVisuals_)
+            skillVisuals_ = std::make_shared<SkillMappingTable>(pvf_, assets_, characters_);
+        skillVisuals_->ensureJob(skill.jobId);
+    } catch (const std::exception &) {
+        return;
+    }
+    const auto *mapping = skillVisuals_->mapping(skill.identity());
+    if (!mapping) return;
+    double duration = 0;
+    for (const auto &stage : skill.stages) {
+        try {
+            duration += assets_.animation(stage.animation)->duration;
+        } catch (const std::exception &) {
+        }
+    }
+    if (duration <= 0) duration = 1000;
+    const int64_t start = nowMs();
+    for (const auto &layer : mapping->effectLayers) {
+        if (layer.path.empty() || !pvf_.has(layer.path)) continue;
+        double life = layer.lifeMs;
+        if (life <= 0) {
+            try {
+                life = assets_.animation(layer.path)->duration;
+            } catch (const std::exception &) {
+                continue;
+            }
+        }
+        Effect e;
+        e.id = nextEffectId();
+        e.skill = skill.id;
+        e.animation = layer.path;
+        e.dir = player.dir;
+        e.x = e.px = player.x + player.dir * layer.offsetX;
+        e.y = e.py = player.y + layer.offsetY;
+        e.z = player.z;
+        // The stage-spread birth is reconstructed, but it keeps a 48-file family
+        // from flashing all at once.
+        e.born = start + int64_t(layer.birthRatio * duration);
+        e.expires = e.born + int64_t(std::max(1.0, life));
+        e.interval = 100000;
+        e.loop = layer.loop;
+        e.layer = layer.alsLayer;
+        e.damageEnabled = false;
+        e.phase = "mapping:" + layer.source;
+        e.parentId = 0;
+        effects.push_back(std::move(e));
+    }
+    for (const auto &entity : mapping->persistents) {
+        if (entity.path.empty() || !pvf_.has(entity.path)) continue;
+        const int count = std::max(1, entity.count);
+        for (int index = 0; index < count; ++index) {
+            Effect e;
+            e.id = nextEffectId();
+            e.skill = skill.id;
+            e.animation = entity.path;
+            e.dir = player.dir;
+            e.x = e.px = player.x;
+            e.y = e.py = player.y + entity.offsetY;
+            e.z = player.z;
+            e.born = start + int64_t(entity.lifeMs);
+            // It outlives the cast: the field is what the skill leaves behind.
+            e.expires = start + int64_t(duration) + 2000;
+            e.interval = 240000;
+            e.loop = true;
+            e.damageEnabled = false;
+            e.phase = "mapping:persistent";
+            e.parentId = 0;
+            const bool ground = entity.kind == PersistentKind::GroundField;
+            e.layer = ground ? -100 : 1;
+            e.groundRender = ground;
+            if (entity.kind == PersistentKind::Orbit) {
+                e.orbitRadius = entity.radius;
+                e.orbitSpeedDeg = entity.angularDegPerSec;
+                e.orbitPhaseDeg = entity.phaseDeg + (360.0 * index) / double(count);
+                e.orbitCenterY = entity.offsetY;
+            } else if (entity.kind == PersistentKind::AirSword && count > 1) {
+                const double centred = double(index) - double(count - 1) / 2.0;
+                e.x += player.dir * centred * 56.0;
+                e.y += std::abs(centred) * 18.0;
+            }
+            effects.push_back(std::move(e));
+        }
+    }
+}
+
 void World::expandEffectLayers(size_t first) {
     if (animationClockPolicy_) {
         // ALS is now consumed by parent frame visits. Object-declared parallel
@@ -2418,6 +2513,15 @@ void World::simulateTick() {
         if (e.attached) {
             e.x = player.x + player.dir * e.offsetX;
             e.y = player.y + e.offsetY;
+            e.z = player.z;
+        } else if (e.orbitRadius > 0 && ms >= e.born) {
+            // A persistent entity keeps its own slot on the ring around the
+            // caster: the source says nothing about the radius or the spin, so
+            // both come from the mapping plan and are marked reconstructed.
+            const double phase = (e.orbitPhaseDeg + e.orbitSpeedDeg * double(ms - e.born) / 1000.0) *
+                                 3.14159265358979323846 / 180.0;
+            e.x = player.x + e.orbitRadius * std::sin(phase);
+            e.y = player.y + e.orbitCenterY - e.orbitRadius * 0.32 * std::cos(phase);
             e.z = player.z;
         } else if (ms >= e.born) {
             if (e.trajectoryMs > 0)

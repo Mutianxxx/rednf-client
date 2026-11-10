@@ -68,6 +68,7 @@ struct SkillRuntimeProjectionContext {
 struct ObjectDefinition;
 struct ObjectInstance;
 struct EffectEventPlan;
+class SkillMappingTable;
 enum class MovementPolicy { Locked, AirControl };
 enum class WorldRules { LegacyDemoV1, BetaFoundationV1 };
 enum class AttributeRebuildReason { EquipmentChange, NormalLevelUp, CharacterRestore, DebugLevelOverride };
@@ -98,6 +99,9 @@ struct Skill {
     double parameter(int col) const;
     std::string effect;
     bool continuation = false, airOnly = false;
+    // This branch of the constructor registers the skill's visuals by hand, so
+    // the shared mapping layer must not add the same effect a second time.
+    bool manualVisuals = false;
     std::string evidence = "controller reconstruction; PC parity pending";
     SkillKey identity() const { return {jobId, id}; }
 };
@@ -221,6 +225,11 @@ struct Effect {
     // A source layer is local draw order, never a world-Y/ground sentinel.
     int layer = 1, parentId = -1;
     bool groundRender = false;
+    // Persistent skill entity (Spiral Nen orb, lotus field, hanging sword).
+    // The position is recomputed from the owner every tick, so the entity orbits
+    // the caster instead of sitting at its spawn point.
+    double orbitRadius = 0, orbitSpeedDeg = 0, orbitPhaseDeg = 0;
+    double orbitCenterY = 0;
     std::string phase;
     int64_t animationOffset = 0;
     double trajectoryStartX = 0;
@@ -481,6 +490,9 @@ class World {
     DebugOverrides debugOverrides_;
     int normalCharacterLevel_ = 1;
     int active_ = -1, stage_ = 0;
+    // Shared with the previewer: keeps the live game from hand-registering the
+    // same skill visuals a second time. Built lazily on the first cast.
+    std::shared_ptr<SkillMappingTable> skillVisuals_;
     int bufferedSkill_ = -1;
     bool bufferedSkillCommand_ = false;
     int activeCooldownMs_ = 0;
@@ -558,6 +570,9 @@ class World {
     std::string monsterAnimation(const Actor &actor, const std::string &tag) const;
     void addEffect(const std::string &path, int skill, double x, double y, int duration, double speed = 0);
     void stageEffects(int frame);
+    // Builds the skill's effect layers and persistent entities from the shared
+    // skill->visual mapping table (the same one the standalone previewer audits).
+    void spawnSkillVisuals(const struct Skill &skill);
     void updateGoreCross(int bodyFrame);
     void expandEffectLayers(size_t first);
     bool matchCommand(int key);

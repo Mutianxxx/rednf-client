@@ -42,11 +42,59 @@ enum class AttackBoxSource { None, AniBody, AniWeapon, Reconstructed40Jp };
 // C = effects only. D = nothing playable.
 enum class SkillGrade { A = 0, B = 1, C = 2, D = 3 };
 
+// One animated effect layer with the instant it appears on the action clock.
+// The instant is real source data when the parent ANI carries an .als sidecar
+// ([add] frame -> same index in the parent's frame table); otherwise it is
+// derived from the release-stage word in the file stem and the row says so.
+struct EffectLayerPlan {
+    std::string path;
+    int stage = 0;             // stageOrder() of the file stem; higher = later
+    // Where the layer starts, as a fraction of the action duration. Only set
+    // for reconstructed timing; an ALS layer is scheduled by its own frame.
+    double birthRatio = 0.0;
+    double lifeMs = 0.0;
+    bool loop = false;
+    bool timed = false;        // true = the ALS sidecar supplies the instant
+    int alsFrame = -1;
+    int alsLayer = 0;
+    // ALS draw-only objects carry an explicit source XYZ; plain [add] commands
+    // attach at the parent origin, so both stay zero there.
+    double offsetX = 0, offsetY = 0, offsetZ = 0;
+    std::string instance;      // ALS uniqueName, empty for a stem-matched layer
+    std::string source;        // "als" / "family" / "object" / "prefix" / "script"
+    std::string evidence;
+};
+
+// A skill entity that outlives the cast: the nen orbs orbiting the fighter, the
+// lotus flowers planted on the ground, the swords hanging in the air. The client
+// creates these from a passive object the caster's state handler spawns, so the
+// animation lives in passiveobject/ but the position/rotation does not exist in
+// any file. Kind and count come from the object's motion table; the motion
+// itself (orbit radius, spin) is reconstructed and labelled as such.
+enum class PersistentKind { Orbit, GroundField, AirSword };
+struct PersistentPlan {
+    std::string path;        // animation played by the entity
+    std::string object;      // passiveobject .obj it belongs to
+    PersistentKind kind = PersistentKind::GroundField;
+    int count = 1;
+    double radius = 0;             // orbit radius in source pixels
+    double angularDegPerSec = 0;   // orbit spin, positive = clockwise on screen
+    double phaseDeg = 0;           // first instance's start angle
+    double offsetX = 0, offsetY = 0; // anchor relative to the caster's feet
+    double lifeMs = 0;             // 0 = stays until the skill ends
+    bool loop = true;
+    std::string evidence;
+};
+
 struct SkillVisualMapping {
     SkillKey key{};
     std::string skillPath, name;
     std::string bodyAni;      // full PVF path, empty when unresolved
     std::string bodySlotTag;  // CHR slot that supplied bodyAni
+    // Stand-in pose drawn when the skill has no motion of its own (the CHR's
+    // generic buff pose). It is never bodyAni: the grade still reports the row
+    // as body-less, the viewport just is not empty.
+    std::string fallbackPose;
     // Every stage of the release, in order, when the client names more than one
     // (multiheadshotready -> multiheadshotshoot1..4 -> multiheadshotfinish).
     // Empty when only a single motion exists; bodyAni then is that motion.
@@ -55,6 +103,11 @@ struct SkillVisualMapping {
     std::string chainEvidence;      // human-readable "a -> b -> c"
     std::vector<std::string> effects;
     std::vector<std::string> particles;
+    // effects, with the attach instant and the order they should be drawn in.
+    // Same paths as `effects`, so a consumer can use either.
+    std::vector<EffectLayerPlan> effectLayers;
+    // Entities that persist after the cast (nen orb, lotus field, air swords).
+    std::vector<PersistentPlan> persistents;
     AttackBoxSource attackSource = AttackBoxSource::None;
     bool hasAttackBox = false;
     // Volumes rebuilt from a cited constant rather than read out of the .ani.

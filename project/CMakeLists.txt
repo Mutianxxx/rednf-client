@@ -91,7 +91,6 @@ add_custom_command(TARGET dnf_skill_preview POST_BUILD COMMAND ${CMAKE_COMMAND} 
 # Standalone skill-release viewer. Shares the resource scanner with the audit
 # tool, but owns its own World-driven execution path.
 set(DNF_SKILL_PREVIEWER_SOURCES
-    src/tools/skill_preview_mapping.cpp
     src/tools/skill_preview_timeline.cpp
     src/tools/skill_preview_combat.cpp
     src/tools/skill_preview_particles.cpp
