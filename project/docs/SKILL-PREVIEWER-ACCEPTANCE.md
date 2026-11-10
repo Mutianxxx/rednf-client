@@ -41,7 +41,7 @@ Play-Skill-Preview.cmd
 |---|---|---|
 | A | 动作 + 判定 + 特效 | CHR 槽（或 animation 目录同名文件）命中身体 ANI，且 ANI 内有 `[ATTACK BOX]`（或映射表登记的重建盒） |
 | B | 仅动作 | 身体 ANI 命中，无特效 ANI 或该 ANI 无攻击盒 |
-| C | 仅特效 | 只有同前缀特效 ANI / 粒子 PTL 命中 |
+| C | 仅特效 | 只有特效 ANI（同前缀 / 技能目录族 / 被动对象动作表）或粒子 PTL 命中 |
 | D | 无资源 | 被动技能或 CHR 槽、目录、特效目录全部未命中 |
 
 每条映射都带 `confidence`（`auto_exact` / `auto_prefix` / `auto_directory` /
@@ -75,6 +75,9 @@ D 级点开视口会显示「无可用资源（不是绘制失败）」和缺失
 2. **`order < 0` 的特效层**：来自身体 ANI 的 `.als` 子链（`animationEffectEvents`），
    层号、偏移 XYZ、出现帧全部是源数据；无 `.als` 时回退到同目录同前缀特效 ANI，
    `order=0` 且 evidence 标注 `stem-prefix; order inferred`。
+   技能目录（`effect/animation/<skill>/`、`passiveobject/<job>/animation/<skill>/`）是独立来源：
+   目录内的文件名不含技能名，按族目录整体取样；被动对象另外读 `[etc motion]`、`[basic motion]`
+   与 `[string data]` 粒子。来源优先级：`sqr` 脚本/exe 声明 > 技能目录族 > 文件名前缀 > 实体对象。
 3. **人物本体**：`CharacterPresentation`，只依赖毫秒值。
 4. **`order ≥ 0` 的特效层**。
 5. **木桩与命中反馈**、判定框叠加层。

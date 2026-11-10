@@ -131,6 +131,12 @@ class SkillMappingTable {
         std::vector<std::string> etcMotions;                            // index -> .ani
         std::vector<std::string> effectPaths;                           // effect/animation/*.ani
         std::vector<std::string> particlePaths;                         // particle/*.ptl
+        // Effect families: a directory under effect/animation (or under the
+        // passive-object animation tree) named after the skill. 1031 puts the
+        // whole visual in there — aticesword/01_light_dodge.ani, nenshield/
+        // bloom1.ani, atlightningdragon/exp_0_dodge.ani — and the file stems
+        // never repeat the skill name, so a stem-prefix scan found nothing.
+        std::map<std::string, std::vector<std::string>> effectFamilies;  // family -> .ani list
         // Skill entities: passiveobject/character/<chrStem>/<skill>.obj. The
         // object's [etc motion] list is the on-screen body of the skill — the
         // summoned ghost, the ice field, the falling tombstones. Those motions

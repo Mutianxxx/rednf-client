@@ -6,6 +6,8 @@
 ## 入口
 
 - `Play-Skill-Preview.cmd`：启动技能预览器（1031 exe 技能绑定 + PVF 动作/特效链回放），可加 `--job N --skill ID`；需先有一次构建。
+  特效按「技能目录」解析（`effect/animation/<skill>/`、`passiveobject/<job>/animation/<skill>/`），
+  被动对象还会读 `[etc motion]`/`[basic motion]`/`[string data]` 粒子；覆盖率见根目录 `README.md`。
 - `Play.cmd`：启动本目录最近一次编译产物，不编译。
 - `Run-From-Source.cmd`：从本目录源码增量构建后启动。
 - `Build-And-Test.cmd`：构建并运行核心、音频、隐藏 UI 及新对象检查；不启动前台游戏。

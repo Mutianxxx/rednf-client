@@ -84,6 +84,17 @@ std::string resolveScriptAnimationPath(Pvf &pvf, const std::string &literal,
     }
     return jobRoot;
 }
+// A passive object addresses its visuals relative to its own folder:
+//   passiveobject/character/gunner/flamebulletfireexplosion.obj
+//   [basic motion] "../../Common/Animation/FireExplosion.ani"
+//   [string data]  "../../Common/Particle/FireExplosionParticle1.ptl"
+// The job folder is the base every relative path is written against.
+std::string resolveObjectRelative(const std::string &baseJob, const std::string &reference) {
+    if (baseJob.empty() || reference.empty()) return {};
+    const auto base = "passiveobject/character/" + baseJob + "/";
+    const auto joined = fs::u8path(base) / fs::u8path(normalize(reference));
+    return normalize(joined.lexically_normal().generic_u8string());
+}
 // A slot stem that is the skill stem plus a numeric tail, e.g. tripleslash1 for
 // skill tripleslash. Non-numeric tails are a different animation, not a stage.
 
@@ -348,6 +359,71 @@ const SkillMappingTable::JobIndex &SkillMappingTable::index(int jobId) {
             }
             built.passiveAnimations = pvf_.paths(entityRoot + "/animation/", ".ani");
         }
+        // The swordman and demonicswordman CHRs share character/swordman. The
+        // demonic flavour of a file is its *_ds twin, but a demonic-only skill
+        // (杀意波动 dotarea) has no twin at all and ships only under the plain
+        // name. Prefer the twin when it exists, fall back to the plain file
+        // otherwise, and never let a demonic file reach the plain CHR.
+        if (built.chrStem == "swordman" || built.chrStem == "demonicswordman") {
+            const bool demonic = built.chrStem == "demonicswordman";
+            const auto isTwin = [](const std::string &path) {
+                const auto stem = stemOf(path);
+                return (stem.size() > 3 && stem.compare(stem.size() - 3, 3, "_ds") == 0) ||
+                       path.find("_ds/") != std::string::npos;
+            };
+            const auto baseStem = [](const std::string &path) {
+                auto stem = stemOf(path);
+                if (stem.size() > 3 && stem.compare(stem.size() - 3, 3, "_ds") == 0)
+                    stem = stem.substr(0, stem.size() - 3);
+                return stem;
+            };
+            const auto filterFlavour = [&](std::vector<std::string> &list) {
+                std::set<std::string> twinBases;
+                if (demonic)
+                    for (const auto &path : list)
+                        if (isTwin(path)) twinBases.insert(baseStem(path));
+                std::vector<std::string> kept;
+                kept.reserve(list.size());
+                for (const auto &path : list) {
+                    if (!demonic) {
+                        if (!isTwin(path)) kept.push_back(path);
+                    } else if (isTwin(path) || twinBases.find(baseStem(path)) == twinBases.end()) {
+                        kept.push_back(path);
+                    }
+                }
+                list = std::move(kept);
+            };
+            filterFlavour(built.effectPaths);
+            filterFlavour(built.passiveAnimations);
+        }
+        // Group every effect ANI into the family directory it belongs to. A
+        // family is the first path segment below the animation root
+        // (aticesword/01_light_dodge.ani -> aticesword); a file sitting directly
+        // in the root is its own family (tripleslash.ani -> tripleslash).
+        {
+            const auto addFamily = [&built](const std::string &root, const std::string &path) {
+                if (path.rfind(root, 0) != 0) return;
+                const auto relative = path.substr(root.size());
+                const auto slash = relative.find('/');
+                const auto family =
+                    slash == std::string::npos ? stemOf(path) : relative.substr(0, slash);
+                if (family.empty()) return;
+                built.effectFamilies[family].push_back(path);
+            };
+            if (!built.directory.empty())
+                for (const auto &path : built.effectPaths)
+                    addFamily(built.directory + "/effect/animation/", path);
+            if (!built.baseJob.empty()) {
+                const auto entityRoot = "passiveobject/character/" + built.baseJob;
+                for (const auto &path : built.passiveAnimations)
+                    addFamily(entityRoot + "/animation/", path);
+            }
+            for (auto &[family, files] : built.effectFamilies) {
+                (void)family;
+                std::sort(files.begin(), files.end());
+                files.erase(std::unique(files.begin(), files.end()), files.end());
+            }
+        }
         // Per-skill scripts live beside the CHR's own script directory:
         //   sqr/character/atmage/firepillar/firepillar.nut  (nested)
         //   sqr/character/priest/avengerattack.nut          (flat)
@@ -448,6 +524,13 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     mapping.key = key;
     mapping.skillPath = registration.path;
     const std::string skillStem = stemOf(registration.path);
+    // An EX upgrade is the same skill with stronger numbers, and 1031 authors
+    // its visuals under the base name: grabexplosionex.skl -> grabexplosion1.ani,
+    // suplexcycloneex.skl -> suplexcyclone/. The base stem is a weaker key, never
+    // stronger, so an exact family still wins.
+    std::string baseStem;
+    if (skillStem.size() > 4 && skillStem.compare(skillStem.size() - 2, 2, "ex") == 0)
+        baseStem = skillStem.substr(0, skillStem.size() - 2);
 
     // --- SKL: name, passive flag, icon -------------------------------------
     try {
@@ -610,25 +693,112 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     // common.nut while the prefix scan added four unrelated *_ds/_fullcharge
     // animations to the same skill.
     std::vector<std::string> prefixEffects;
-    for (const auto &path : jobIndex.effectPaths) {
-        if (isPvpVariant(path) || !belongsToChr(path, jobIndex.chrStem)) continue;
-        const auto effectStem = stemOf(path);
-        if (effectStem.size() < 5) continue;
-        if (effectStem.rfind(skillStem, 0) != 0) continue;
-        // Only the skill's own family counts: either the file sits directly in
-        // effect/animation (upperswing.ani) or in a folder named after the
-        // skill (rapidmoveslash/slash1.ani). A same-named file under another
-        // skill's folder is a different branch (chillingpowder/upperswing1).
-        const auto parentStem = stemOf(parentOf(path));
-        if (parentStem != skillStem && parentStem != "animation") continue;
-        if (prefixEffects.size() >= kEffectLimit) break;
-        prefixEffects.push_back(path);
+    for (const auto &candidate : {skillStem, baseStem}) {
+        if (candidate.empty()) continue;
+        for (const auto &path : jobIndex.effectPaths) {
+            if (isPvpVariant(path)) continue;
+            const auto effectStem = stemOf(path);
+            if (effectStem.size() < 5) continue;
+            if (effectStem.rfind(candidate, 0) != 0) continue;
+            // Only the skill's own family counts: either the file sits directly
+            // in effect/animation (upperswing.ani) or in a folder named after
+            // the skill (rapidmoveslash/slash1.ani). A same-named file under
+            // another skill's folder is a different branch
+            // (chillingpowder/upperswing1).
+            const auto parentStem = stemOf(parentOf(path));
+            if (parentStem != candidate && parentStem != "animation") continue;
+            if (std::find(prefixEffects.begin(), prefixEffects.end(), path) !=
+                prefixEffects.end())
+                continue;
+            if (prefixEffects.size() >= kEffectLimit) break;
+            prefixEffects.push_back(path);
+        }
     }
     if (!jobIndex.particlePaths.empty()) {
         for (const auto &path : jobIndex.particlePaths) {
             const auto particleStem = stemOf(path);
             if (particleStem.empty() || particleStem.rfind(skillStem, 0) != 0) continue;
             mapping.particles.push_back(path);
+        }
+    }
+
+    // --- effect family directory -------------------------------------------
+    // 1031 groups a skill's visuals in a directory named after it and the file
+    // stems inside are descriptive, not prefixed: aticesword/01_light_dodge,
+    // nenshield/bloom1, atlightningdragon/exp_0_dodge. Matching the directory
+    // is the only rule that reaches them. Male subclasses (atmage, atfighter)
+    // prefix the family with "at"; the prefix is kept in the score so a plain
+    // CHR prefers its own family over the male variant.
+    constexpr size_t kFamilyEffectLimit = 12;
+    std::vector<std::string> familyEffects;
+    {
+        const bool atClass = jobIndex.chrStem.rfind("at", 0) == 0;
+        const auto familyScore = [&](const std::string &family, const std::string &stem,
+                                     int penalty) {
+            std::string normalized = family;
+            bool at = false;
+            if (normalized.size() > 2 && normalized.compare(0, 2, "at") == 0) {
+                normalized = normalized.substr(2);
+                at = true;
+            }
+            if (normalized == stem) return penalty + (at ? (atClass ? 0 : 3) : 0);
+            if (normalized.size() > stem.size() &&
+                normalized.compare(0, stem.size(), stem) == 0) {
+                const auto tail = normalized.substr(stem.size());
+                if (stageOrder(tail) >= 0) return penalty + (at ? 2 : 1);
+            }
+            return -1;
+        };
+        // A family whose name never repeats the skill stem: Nen Guard's shield
+        // is authored as nenshield while the skill file is nenguard.skl, and
+        // Spiral Nen as atspiralnen while the skill file is kikouken.skl.
+        static const struct {
+            const char *skill;
+            const char *family;
+        } kFamilyAliases[] = {
+            {"nenguard", "nenshield"},   {"sajahu", "roarstun"},
+            {"sajahuex", "roarstunex"},  {"kikouken", "atspiralnen"},
+            {"nenmonsterwhitetiger", "nenmonster"}, {"pushout", "atpush"},
+        };
+        int bestScore = -1;
+        std::string bestFamily;
+        for (const auto &[family, files] : jobIndex.effectFamilies) {
+            (void)files;
+            int score = familyScore(family, skillStem, 0);
+            if (score < 0 && !baseStem.empty()) score = familyScore(family, baseStem, 4);
+            for (const auto &alias : kFamilyAliases)
+                if (skillStem == alias.skill && family == alias.family) score = 0;
+            if (score < 0) continue;
+            if (bestScore < 0 || score < bestScore) {
+                bestScore = score;
+                bestFamily = family;
+            }
+        }
+        if (!bestFamily.empty()) {
+            // A phase directory (atnenflower/start_line_dodge, end_dodge, tiger)
+            // holds many files; taking one round per subdirectory keeps every
+            // phase represented instead of playing the first folder 12 times.
+            std::map<std::string, std::vector<std::string>> groups;
+            const auto marker = "/" + bestFamily + "/";
+            for (const auto &path : jobIndex.effectFamilies.at(bestFamily)) {
+                std::string relative;
+                const auto at = path.find(marker);
+                if (at != std::string::npos) relative = path.substr(at + marker.size());
+                const auto slash = relative.find('/');
+                groups[slash == std::string::npos ? std::string() : relative.substr(0, slash)]
+                    .push_back(path);
+            }
+            for (size_t round = 0; familyEffects.size() < kFamilyEffectLimit; ++round) {
+                bool added = false;
+                for (const auto &[group, files] : groups) {
+                    (void)group;
+                    if (round >= files.size()) continue;
+                    if (familyEffects.size() >= kFamilyEffectLimit) break;
+                    familyEffects.push_back(files[round]);
+                    added = true;
+                }
+                if (!added) break;
+            }
         }
     }
 
@@ -649,30 +819,74 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
         if (const auto exact = jobIndex.passiveObjects.find(skillStem);
             exact != jobIndex.passiveObjects.end())
             candidates.push_back(exact->second);
+        // Male subclasses name their objects with the same "at" prefix as their
+        // effect families: atwatercannon.obj renders the watercannon skill.
+        if (jobIndex.chrStem.rfind("at", 0) == 0) {
+            if (const auto exact = jobIndex.passiveObjects.find("at" + skillStem);
+                exact != jobIndex.passiveObjects.end())
+                candidates.push_back(exact->second);
+        }
         std::vector<std::pair<size_t, std::string>> prefixes;
+        std::vector<std::pair<size_t, std::string>> reversePrefixes;
         for (const auto &[stem, path] : jobIndex.passiveObjects) {
-            if (stem.size() < 4 || skillStem.size() <= stem.size()) continue;
-            if (skillStem.rfind(stem, 0) != 0) continue;
-            prefixes.emplace_back(stem.size(), path);
+            auto normalized = stem;
+            if (normalized.size() > 3 && normalized.compare(0, 2, "at") == 0)
+                normalized = normalized.substr(2);
+            if (normalized.size() < 4) continue;
+            // Two directions: an upgraded skill reuses the base object
+            // (tombstonerainex -> tombstonerain), while a base skill's object
+            // carries a role suffix (flamebullet -> flamebulletfireexplosion).
+            if (skillStem.size() > normalized.size() && skillStem.rfind(normalized, 0) == 0)
+                prefixes.emplace_back(normalized.size(), path);
+            else if (normalized.size() > skillStem.size() &&
+                     normalized.rfind(skillStem, 0) == 0)
+                reversePrefixes.emplace_back(normalized.size() - skillStem.size(), path);
         }
         std::sort(prefixes.begin(), prefixes.end(),
                   [](const auto &a, const auto &b) { return a.first > b.first; });
+        std::sort(reversePrefixes.begin(), reversePrefixes.end(),
+                  [](const auto &a, const auto &b) { return a.first < b.first; });
         for (const auto &entry : prefixes) candidates.push_back(entry.second);
+        for (const auto &entry : reversePrefixes) candidates.push_back(entry.second);
 
         for (const auto &entityObject : candidates) {
             try {
-                const auto view = pvf_.fieldView(entityObject, {"[etc motion]"});
+                const auto view =
+                    pvf_.fieldView(entityObject, {"[etc motion]", "[basic motion]", "[string data]"});
+                const auto pushEntity = [&](const std::string &path) {
+                    if (path.empty() || !pvf_.has(path)) return;
+                    if (std::find(entityEffects.begin(), entityEffects.end(), path) !=
+                        entityEffects.end())
+                        return;
+                    if (entityEffects.size() >= kEffectLimit) return;
+                    entityEffects.push_back(path);
+                };
                 for (const auto &value : view.values("[etc motion]")) {
                     if (!value.is_string()) continue;
                     auto name = normalize(value.get<std::string>());
                     if (name.size() < 5 || name.compare(name.size() - 4, 4, ".ani") != 0) continue;
-                    const auto full = "passiveobject/character/" + jobIndex.baseJob + "/" + name;
-                    if (!pvf_.has(full)) continue;
-                    if (std::find(entityEffects.begin(), entityEffects.end(), full) !=
-                        entityEffects.end())
+                    pushEntity("passiveobject/character/" + jobIndex.baseJob + "/" + name);
+                }
+                // Objects that are a projectile/explosion rather than a caster
+                // keep one [basic motion] instead of an [etc motion] table.
+                for (const auto &value : view.values("[basic motion]")) {
+                    if (!value.is_string()) continue;
+                    const auto name = normalize(value.get<std::string>());
+                    if (name.size() < 5 || name.compare(name.size() - 4, 4, ".ani") != 0) continue;
+                    pushEntity(resolveObjectRelative(jobIndex.baseJob, name));
+                }
+                // [string data] lists the particle programs the object emits;
+                // gunner bullets carry their entire visible burst this way.
+                for (const auto &value : view.values("[string data]")) {
+                    if (!value.is_string()) continue;
+                    const auto name = normalize(value.get<std::string>());
+                    if (name.size() < 4 || name.compare(name.size() - 4, 4, ".ptl") != 0) continue;
+                    const auto path = resolveObjectRelative(jobIndex.baseJob, name);
+                    if (path.empty() || !pvf_.has(path)) continue;
+                    if (std::find(mapping.particles.begin(), mapping.particles.end(), path) !=
+                        mapping.particles.end())
                         continue;
-                    if (entityEffects.size() >= kEffectLimit) break;
-                    entityEffects.push_back(full);
+                    mapping.particles.push_back(path);
                 }
             } catch (const std::exception &) {
                 // An unreadable object adds nothing; the row keeps its own gap.
@@ -681,7 +895,7 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
         // Some objects keep their animations beside the object tree instead.
         if (entityEffects.empty()) {
             for (const auto &path : jobIndex.passiveAnimations) {
-                if (isPvpVariant(path) || !belongsToChr(path, jobIndex.chrStem)) continue;
+                if (isPvpVariant(path)) continue;
                 const auto stem = stemOf(path);
                 if (stem.size() < 5 || stem.rfind(skillStem, 0) != 0) continue;
                 if (stemOf(parentOf(path)) == "animation" && stem.size() <= skillStem.size())
@@ -781,14 +995,24 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     if (!exeEffects.empty()) {
         mapping.effects = exeEffects;
         mapping.evidence += "; effects: sqr/common.nut declaration";
-        for (const auto &effect : scriptEffects) {
+        for (const auto *supplement : {&scriptEffects, &familyEffects}) {
+            for (const auto &effect : *supplement) {
+                if (mapping.effects.size() >= kEffectLimit) break;
+                if (std::find(mapping.effects.begin(), mapping.effects.end(), effect) ==
+                    mapping.effects.end())
+                    mapping.effects.push_back(effect);
+            }
+        }
+    } else if (!scriptEffects.empty() || !familyEffects.empty()) {
+        mapping.effects = scriptEffects;
+        for (const auto &effect : familyEffects) {
             if (mapping.effects.size() >= kEffectLimit) break;
-            if (std::find(mapping.effects.begin(), mapping.effects.end(), effect) == mapping.effects.end())
+            if (std::find(mapping.effects.begin(), mapping.effects.end(), effect) ==
+                mapping.effects.end())
                 mapping.effects.push_back(effect);
         }
-    } else if (!scriptEffects.empty()) {
-        mapping.effects = scriptEffects;
-        mapping.evidence += "; effects: per-skill sqr script";
+        mapping.evidence += scriptEffects.empty() ? "; effects: skill effect family directory"
+                                                  : "; effects: per-skill sqr script + family directory";
     } else {
         mapping.effects = prefixEffects;
     }
@@ -802,7 +1026,7 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                 continue;
             mapping.effects.push_back(effect);
         }
-        mapping.evidence += "; effects: passive object [etc motion]";
+        mapping.evidence += "; effects: passive object motion table";
     }
 
     // --- CHR base motion fallback ------------------------------------------

@@ -16,6 +16,17 @@
 （或 `project/Play-Skill-Preview.cmd`，技能预览器）；源码增量构建入口：`project/Run-From-Source.cmd`。
 构建命令：`cd project && python -X utf8 -B tools/build.py --build-dir ..\checkpoints\build --test-dir ..\checkpoints\tests`。
 
+## 技能预览覆盖
+
+预览器按 1031 客户端的三类来源还原每个技能：**本体动作**（CHR `[etc motion]` / `[buff|back|jump motion]`
+/ `animation/*.ani` 按阶段拼链）、**特效**（`sqr` 脚本声明、`effect/animation/<skill>/` 技能目录、
+`passiveobject/character/<job>/<skill>.obj` 的 `[etc motion]`/`[basic motion]`/`[string data]` 粒子）、
+**攻击框**（ANI 内盒 + 少量手工重建）。1734 行技能里 A 264 / B 287 / C 170 / D 1013；D 全部是
+被动技能，主动技能没有「无资源」项，仍有 187 个主动技能只有动作、没有特效（召唤物、平砍、Buff 为主）。
+
+已知限制：特效层没有源时间轴，预览器把所有层从第 0 帧同时播放；部分技能的特效名与技能名不同，
+靠显式别名表（如 念气罩 `nenguard→nenshield`）兜底。逐项状态见 [PROGRESS.md](PROGRESS.md)。
+
 技能行为族和 40JP 复用实现思路见 [交接说明](project/docs/SKILL-BEHAVIOR-FAMILIES-40JP.md)。
 
 资料归档不等于原生语义或游戏功能已经验收；代码迁入不等于架构重构已经完成。以实际编译、自动检查与用户体验记录分别说明状态。

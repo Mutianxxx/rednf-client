@@ -1,3 +1,62 @@
+# 全职业技能特效补全（2026-11-10 第三轮）
+
+节点 `skill-effect-families-20261110`。用户反馈：格斗家「念气罩 / 雷龙出海 / 千莲怒放」仍丢特效，
+男魔法师动作很全但**特效几乎全缺**（冰魄剑、魔法炮、破冰飞刃等），要求全职业复查并补全。
+
+**根因：特效按「技能目录」组织，原实现只按「文件名前缀」找**
+
+1031 把技能特效放在以技能命名的目录里，目录内的文件名是描述性的、**不含技能名**：
+
+```
+character/fighter/effect/animation/atnenflower/start_line_dodge/start_line_06_dodge.ani
+character/mage/effect/animation/aticesword/01_light_dodge.ani
+passiveobject/character/mage/animation/atmagiccannon/00_magiccannon_fire_dodge.ani
+```
+
+原实现要求「文件名以技能 stem 开头」，因此这些目录一个都进不来——男法师 38 个主动技能只有 2 个
+有特效，格斗家高等级技能也大面积空白。目录匹配同时解决了男法、格斗、剑士和枪手的一批缺口。
+
+**修复（`skill_preview_mapping.cpp/.hpp`）**
+
+1. `JobIndex.effectFamilies`：把 `character/<job>/effect/animation/` 与
+   `passiveobject/<job>/animation/` 下的 `.ani` 按**第一级目录**分组（根目录下的文件自成一族）。
+2. 技能 → 族匹配：`stem` / `at+stem`（男法、男格斗）/ `stem+阶段词`；EX 技能回退到去掉 `ex` 的
+   基础 stem（权重更低）；`at*` 族对非 `at` 职业降权，只有没有本职业族时才借用。
+3. 命名对不上的显式别名：`nenguard→nenshield`（念气罩）、`sajahu→roarstun`、`sajahuex→roarstunex`、
+   `kikouken→atspiralnen`、`nenmonsterwhitetiger→nenmonster`、`pushout→atpush`。
+4. 一个族里的文件按子目录轮转取样（上限 12 层），避免 `atnenflower` 的 142 个文件只播第一段。
+5. 被动对象补两处：`[basic motion]`（弹道/爆炸类对象用单条基本动作，而不是 `[etc motion]` 表）与
+   `[string data]`（对象声明的 `.ptl` 粒子，枪手子弹的可见爆炸全在这里）；相对路径按对象所在
+   职业目录解析（`../../Common/...`）。
+6. 剑士/暗黑武士共用 `character/swordman`：`_ds` 孪生优先，没有孪生时才用普通文件。
+   原实现把普通文件对暗黑武士一律过滤，导致「杀意波动」这类**暗黑武士专属技能**反而拿不到
+   `dotarea*.ani`。
+
+**结果（1734 行，`--audit-map`）**
+
+| | A | B | C | D |
+| --- | --- | --- | --- | --- |
+| 本轮前 | 116 | 492 | 113 | 1013 |
+| 本轮后 | 264 | 287 | 170 | 1013 |
+
+- 主动技能里「有动作但零特效」从 **409 → 187**；D 级 1013 条**全部是被动技能**，无主动技能无资源。
+- 各职业零特效主动技能：剑士 31→14、格斗 37→14、枪手 31→20、法师 47→29、圣职 45→7、
+  男枪 30→19、盗贼 35→22、男格 44→15、**男法 38→5**、暗黑武士 61→34、缔造者 10→8。
+- 用户点名：念气罩 3 层、千莲怒放 12 层、雷龙出海 12 层、冰魄剑 6 层、魔法炮 14 层、破冰飞刃 16 层。
+- 截图复核：`checkpoints/analysis/fx-{icesword,magiccannon,nenflower,lightningdragon,nenguard,poi2,ld2}.png`。
+- 回归 37/37 通过；`verify_architecture` pass（139 单元）。
+
+**已知边界**
+
+- 特效层没有源时间轴（`.als` 只覆盖 81 个技能），预览器把所有层从第 0 帧同时播放；
+  千莲怒放这类含全屏闪白的技能在起始帧会盖住角色。这是回放策略限制，不是缺文件。
+- 剩余零特效主动技能集中在：女法全部是召唤类（召唤物是 `monster/*` 实体，不是特效 ANI）、
+  盗贼/枪手多为平砍与 Buff、暗黑武士多为无特效的普通斩击；5 个通用技能（后跳/跃翔/远古记忆/
+  不屈意志/受身蹲伏）本来就没有特效。
+- `sq_SendCreatePassiveObjectPacket(id)` 的 id→`.obj` 反查仍未做，实体仍靠技能名匹配。
+
+---
+
 # 高等级技能链补全（2026-11-10 第二轮）
 
 节点 `skill-high-tier-20261110`。用户反馈：低等级普攻类技能正常，**高等级技能基本无法使用**，
