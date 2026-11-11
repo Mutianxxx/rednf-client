@@ -6,6 +6,7 @@
 #include "dnf/skill_preview_mapping.hpp"
 #include "dnf/skill_preview_timeline.hpp"
 #include <SDL.h>
+#include <algorithm>
 #include <cmath>
 #include <filesystem>
 #include <iostream>
@@ -389,6 +390,69 @@ int entry(int argc, char **argv) {
                     if (entity.kind == PersistentKind::Orbit && entity.count == 4) fourOrbs = true;
             check(fourOrbs, "Spiral Nen gives the male subclass four orbs",
                   {{"persistents", maleOrb ? int(maleOrb->persistents.size()) : 0}});
+        }
+
+        // 9j) The 清风 1031 .als names a parent FRAME INDEX, not a time. The
+        //     mapping must compile it into absolute action-clock ms from the
+        //     parent ANI's [DELAY] table, so the native world (which cannot
+        //     visit frames) still honours the source timeline. Layers with no
+        //     sidecar must stay on the reconstructed birthRatio path.
+        {
+            size_t timed = 0, untimed = 0, withRemove = 0, positiveBirth = 0;
+            bool allTimedBound = true, allUntimedUnbound = true;
+            bool boundaryChecked = false, boundaryMatches = true;
+            double maxBirthMs = 0;
+            for (int jobId : jobIds) {
+                for (const auto &row : table.rows(jobId)) {
+                    const auto *m = table.mapping(row.key);
+                    if (!m) continue;
+                    std::vector<std::string> stages = m->bodyChain;
+                    if (stages.empty() && !m->bodyAni.empty()) stages.push_back(m->bodyAni);
+                    for (const auto &layer : m->effectLayers) {
+                        if (layer.timed) {
+                            ++timed;
+                            if (layer.birthMs < 0) allTimedBound = false;
+                            if (layer.birthMs > 0) ++positiveBirth;
+                            maxBirthMs = std::max(maxBirthMs, layer.birthMs);
+                            if (layer.endMs >= 0) {
+                                ++withRemove;
+                                if (layer.endMs < layer.birthMs) allTimedBound = false;
+                            }
+                            if (!boundaryChecked && layer.alsFrame > 0 &&
+                                size_t(layer.bodyStage) < stages.size()) {
+                                boundaryChecked = true;
+                                try {
+                                    double expected = 0;
+                                    for (size_t s = 0; s < size_t(layer.bodyStage); ++s) {
+                                        const auto stage = assets.animation(stages[s]);
+                                        for (const auto &f : stage->frames)
+                                            expected += std::max(1, f.duration);
+                                    }
+                                    const auto parent = assets.animation(stages[layer.bodyStage]);
+                                    for (int i = 0; i < layer.alsFrame && i < int(parent->frames.size()); ++i)
+                                        expected += std::max(1, parent->frames[i].duration);
+                                    boundaryMatches = std::abs(expected - layer.birthMs) < 0.01;
+                                } catch (const std::exception &) {
+                                    boundaryMatches = false;
+                                }
+                            }
+                        } else {
+                            ++untimed;
+                            if (layer.birthMs >= 0) allUntimedUnbound = false;
+                        }
+                    }
+                }
+            }
+            check(timed > 0 && allTimedBound && positiveBirth > 0,
+                  "1031 ALS frames compile to action-clock ms",
+                  {{"timed", int(timed)}, {"positiveBirth", int(positiveBirth)},
+                   {"maxBirthMs", maxBirthMs}, {"withRemove", int(withRemove)}});
+            check(boundaryChecked && boundaryMatches,
+                  "ALS birth equals the parent ANI DELAY sum",
+                  {{"checked", boundaryChecked}});
+            check(untimed > 0 && allUntimedUnbound,
+                  "stem-order layers keep the reconstructed birthRatio path",
+                  {{"untimed", int(untimed)}});
         }
 
         // 9i) The preview overlap keeps d=0 boxes testable on the single stage

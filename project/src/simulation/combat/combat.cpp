@@ -2131,6 +2131,12 @@ void World::spawnSkillVisuals(const Skill &skill) {
     }
     if (duration <= 0) duration = 1000;
     const int64_t start = nowMs();
+    // 1031 freezes the cast origin at release: effect XYZ is cast-local, not
+    // re-anchored to the player on every tick. Keep it in one place so a later
+    // edit cannot silently turn a layer into a follow attachment. Orbiting
+    // entities below are the documented exception -- they follow the caster.
+    const double castX = player.x, castY = player.y, castZ = player.z;
+    const int castDir = player.dir;
     for (const auto &layer : mapping->effectLayers) {
         if (layer.path.empty() || !pvf_.has(layer.path)) continue;
         double life = layer.lifeMs;
@@ -2145,18 +2151,28 @@ void World::spawnSkillVisuals(const Skill &skill) {
         e.id = nextEffectId();
         e.skill = skill.id;
         e.animation = layer.path;
-        e.dir = player.dir;
-        e.x = e.px = player.x + player.dir * layer.offsetX;
-        e.y = e.py = player.y + layer.offsetY;
-        e.z = player.z;
-        // The stage-spread birth is reconstructed, but it keeps a 48-file family
-        // from flashing all at once.
-        e.born = start + int64_t(layer.birthRatio * duration);
-        e.expires = e.born + int64_t(std::max(1.0, life));
+        e.dir = castDir;
+        e.x = e.px = castX + castDir * layer.offsetX;
+        e.y = e.py = castY + layer.offsetY;
+        // The renderer projects screenY = y - z, exactly the source formula
+        // castY + localY - localZ - motionZ. offsetZ used to be dropped, so
+        // every ALS draw-only object's authored height was lost. motionZ is
+        // still unrecovered and stays zero.
+        e.z = castZ + layer.offsetZ;
+        // ALS layers carry an instant compiled from the parent ANI's [DELAY]
+        // table; stem-order layers keep the reconstructed stage spread.
+        const double birth = layer.birthMs >= 0 ? layer.birthMs : layer.birthRatio * duration;
+        e.born = start + int64_t(birth);
+        const int64_t naturalEnd = e.born + int64_t(std::max(1.0, life));
+        const int64_t actionEnd = start + int64_t(std::max(duration, birth + std::max(1.0, life)));
+        e.expires = std::max(e.born + 1, layer.endMs > birth
+            ? std::min(start + int64_t(layer.endMs), actionEnd)
+            : (layer.loop ? actionEnd : std::min(naturalEnd, actionEnd)));
         e.interval = 100000;
         e.loop = layer.loop;
         e.layer = layer.alsLayer;
         e.damageEnabled = false;
+        e.attached = false;
         e.phase = "mapping:" + layer.source;
         e.parentId = 0;
         effects.push_back(std::move(e));
@@ -2169,10 +2185,10 @@ void World::spawnSkillVisuals(const Skill &skill) {
             e.id = nextEffectId();
             e.skill = skill.id;
             e.animation = entity.path;
-            e.dir = player.dir;
-            e.x = e.px = player.x;
-            e.y = e.py = player.y + entity.offsetY;
-            e.z = player.z;
+            e.dir = castDir;
+            e.x = e.px = castX;
+            e.y = e.py = castY + entity.offsetY;
+            e.z = castZ;
             e.born = start + int64_t(entity.lifeMs);
             // It outlives the cast: the field is what the skill leaves behind.
             e.expires = start + int64_t(duration) + 2000;
@@ -2191,7 +2207,7 @@ void World::spawnSkillVisuals(const Skill &skill) {
                 e.orbitCenterY = entity.offsetY;
             } else if (entity.kind == PersistentKind::AirSword && count > 1) {
                 const double centred = double(index) - double(count - 1) / 2.0;
-                e.x += player.dir * centred * 56.0;
+                e.x += castDir * centred * 56.0;
                 e.y += std::abs(centred) * 18.0;
             }
             effects.push_back(std::move(e));

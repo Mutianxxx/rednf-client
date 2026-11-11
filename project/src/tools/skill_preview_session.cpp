@@ -163,11 +163,12 @@ void SkillPreviewSession::seedLayers(const SkillVisualMapping &mapping) {
         persistent.clock.reset();
         timeline_->persistents.push_back(std::move(persistent));
     }
-    // A layer the ALS sidecar schedules is created by dispatchFrame when the
-    // body reaches its frame. Only untimed layers are seeded here, and they
-    // start at the release stage the file stem names instead of all at once.
+    // A layer the ALS sidecar schedules is created by dispatchFrame when its
+    // own body stage reaches its frame. Untimed layers are still seeded here:
+    // a sidecar only covers its declarations, so dropping the rest made every
+    // directory-family / passive-object effect disappear from ALS-backed jobs.
     const bool hasAls = plan && !plan->events.empty();
-    if (hasAls) return;
+    if (mapping.effectLayers.empty() && hasAls) return;
     if (mapping.effectLayers.empty()) {
         // Fallback for a row built before the layer plan existed: keep the old
         // stem-prefix behaviour rather than dropping the effect entirely.
@@ -218,15 +219,30 @@ void SkillPreviewSession::seedLayers(const SkillVisualMapping &mapping) {
 }
 
 void SkillPreviewSession::dispatchFrame(const Animation &body, const FrameSpan &span) {
-    (void)body;
-    const auto *plan = effectPlan(timeline_->bodyPath);
+    // Every stage of a chained release owns its own .als. Reading
+    // timeline_->bodyPath here made stages 2..N dispatch stage 1's events.
+    const std::string bodyPath = body.path.empty()
+        ? (timeline_ ? timeline_->bodyPath : std::string()) : body.path;
+    const auto *plan = effectPlan(bodyPath);
     if (!plan) return;
+    // span.startMs is relative to this body; layer clocks run on the shared
+    // action clock, so a stage's events must carry its start offset.
+    double stageStartMs = 0;
+    if (timeline_) {
+        const std::string current = normalize(bodyPath);
+        for (const auto &stage : timeline_->stages) {
+            if (normalize(stage.path) != current) continue;
+            stageStartMs = stage.startMs;
+            break;
+        }
+    }
+    const double actionMs = stageStartMs + span.startMs;
     for (const auto &event : plan->events) {
         if (event.frame != int(span.index)) continue;
         if (event.kind == EffectEventKind::Remove) {
             for (auto it = timeline_->layers.begin(); it != timeline_->layers.end(); ++it) {
                 if (it->instance != event.instance) continue;
-                dropLayerVolumes(it->instance, span.startMs);
+                dropLayerVolumes(it->instance, actionMs);
                 timeline_->layers.erase(it);
                 break;
             }
@@ -246,7 +262,7 @@ void SkillPreviewSession::dispatchFrame(const Animation &body, const FrameSpan &
         layer.kind = PreviewLayerKind::EffectFront;
         layer.order = event.layer;
         layer.offset = {double(event.offsetX), double(event.offsetY), double(event.offsetZ)};
-        layer.birthMs = span.startMs;
+        layer.birthMs = actionMs;
         layer.instance = oneShot ? std::string() : event.instance;
         layer.evidence = oneShot ? "als:draw-only@" + std::to_string(event.frame)
                                  : "als:add@" + std::to_string(event.frame);

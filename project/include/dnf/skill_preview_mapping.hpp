@@ -43,15 +43,26 @@ enum class AttackBoxSource { None, AniBody, AniWeapon, Reconstructed40Jp };
 enum class SkillGrade { A = 0, B = 1, C = 2, D = 3 };
 
 // One animated effect layer with the instant it appears on the action clock.
-// The instant is real source data when the parent ANI carries an .als sidecar
-// ([add] frame -> same index in the parent's frame table); otherwise it is
-// derived from the release-stage word in the file stem and the row says so.
+// The instant is real source data when the parent ANI carries an .als sidecar:
+// [add] names a PARENT FRAME INDEX, which the client turns into a clock by
+// accumulating that ANI's [DELAY] values (40JP anim_parser.cpp:1707; the 1031
+// handoff reference's boundary()). The mapping compiles both the birth and the
+// matching [remove] into absolute action-clock milliseconds so consumers that
+// cannot visit frames (the native world) still honour the source timeline.
+// Otherwise it is derived from the release-stage word in the file stem and the
+// row says so.
 struct EffectLayerPlan {
     std::string path;
     int stage = 0;             // stageOrder() of the file stem; higher = later
-    // Where the layer starts, as a fraction of the action duration. Only set
-    // for reconstructed timing; an ALS layer is scheduled by its own frame.
+    // Where the layer starts, as a fraction of the action duration. Only used
+    // for reconstructed (stem-order) timing; ALS layers use birthMs instead.
     double birthRatio = 0.0;
+    // Absolute ms on the action clock. birthMs >= 0 means source ALS timing;
+    // -1 means the consumer should fall back to birthRatio * actionDuration.
+    // endMs is the matching [remove]; -1 means no source end, so the layer
+    // lives for its own animation duration (or until the action ends if LOOP).
+    double birthMs = -1.0, endMs = -1.0;
+    int bodyStage = 0;         // index into bodyChain whose .als declared it
     double lifeMs = 0.0;
     bool loop = false;
     bool timed = false;        // true = the ALS sidecar supplies the instant

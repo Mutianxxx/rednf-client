@@ -1,3 +1,70 @@
+# 清风 1031 基座核对：ALS 源时间轴与坐标投影（2026-11-11 第六轮）
+
+节点 `baseline-1031-als-20261111`。
+
+## 0. 先纠正一个术语偏差
+
+用户澄清：**「70端」就是清风 1031，是基座版本**，不是另一个客户端源码工程。所有内容
+的核对与实现都要对比这个端的效果。此前按「70端源码」去检索 40JP / 60US 之外的
+第三个客户端工程，方向是错的。
+
+- 基座：`D:\dnf-rebuild\DNF1031客户端\Script.pvf`，177,617,021 B，
+  md5 `7df482690cd4e6cc95aee9ec5b46703b`；`DNF.exe` 41,978,368 B。
+  `project/content-profile.json` 与 `project/toolchain.local.json` 绑定的正是这一份。
+- 易混淆：`/d/game/DNF1031客户端-20260708/...` 是**另一份** PVF（md5 `e2f36595…`），
+  `70不悔PVF完美精修2.0客户端（Final）` 只有登录器/GM 工具，两者都不是基座。
+- **证据等级**：清风 1031 的 PVF 字节 + 该端实机效果 > 1031 exe/dump 直证 >
+  40JP / 60US 机制解释 > 社区格式文档。跨版本推断必须显式标注，不得当作 1031 事实。
+
+## 1. 本轮修的四个偏差（全部是 1031 源数据可直证）
+
+1. **ALS 帧号没有编译成时间**：`.als` 的 `[add] <frame>` 是父动画的**帧下标**，客户端
+   靠累加该 ANI 前序帧的 `[DELAY]` 转成时钟（40JP `anim_parser.cpp:1707`、
+   handoff `main.cpp:86` 的 `boundary()`）。映射层过去只存 `alsFrame`，`birthRatio` 留 0，
+   于是 native 的 `born = start + 0` 让所有 ALS 层第 0 帧齐发。现在按每个
+   `bodyChain` stage 各自解析 sidecar，用 stage 起点 + DELAY 累加算出
+   `birthMs`，并接上同名 `[remove]` 的 `endMs`（68 处声明中 17 处有终点）。
+2. **offsetZ 被丢弃**：`spawnSkillVisuals()` 里 `e.z = player.z`，而
+   `Renderer::effect` 投影 `screenY = y - z`。源端是
+   `castY + localY - localZ - motionZ`，draw-only 对象的高度全丢。现在
+   `e.z = castZ + layer.offsetZ`，并把 cast 位置/朝向冻结在局部变量里
+   （`motionZ` 仍未恢复，保持 0，代码中注明）。
+3. **预览器有 ALS 就丢掉全部非 ALS 层**：`seedLayers()` 的 `if (hasAls) return;`
+   让目录族 / 被动对象层在有 sidecar 的职业上整个消失。改成只在
+   `effectLayers` 为空且确实有 ALS 时早退，其余照常 seed。
+4. **多段链永远派发第一段的 ALS**：`dispatchFrame()` 读的是
+   `timeline_->bodyPath`，且 `span.startMs` 是 stage 局部时间。现在按传入的
+   `body.path` 取 sidecar，并从 `timeline_->stages` 查出 stage 起点，把层时钟
+   统一到共享 action clock（含 `[remove]` 的 volume 截止时刻）。
+
+## 2. 两项核对后**不改**代码
+
+- **旋转符号**（原清单第 1 项）：`R(-angle)` 只有 60US 的跨版本推断，按新证据等级
+  不能覆盖基座表现。已另派直证核对（清风 1031 的 `[IMAGE ROTATE]` 值域、
+  该端实机素材、`[add]` 负层语义）；在拿到该端依据前不动
+  `third_party/native-contracts/include/dnf_ani_render.hpp`。
+- **depth + layer 排序**（原清单第 5 项）：预览器 `sortLayerIndices()` 本来就是
+  按 attachment key 稳定排序（负值自然在前），主游戏 `game_application.cpp`
+  的 `depth` 再 `layer` 稳定排序与 handoff `main.cpp:194` 一致。上一轮把这一行
+  列为偏差是误判，本轮确认无需改动。
+
+## 3. 验证
+
+- 增量编译 `dnf_native` / `dnf_skill_preview` / `dnf_skill_preview_tests`：10 秒，
+  只重编 6 个 `.cpp`（没有重启此前被取消的全量测试编译）。
+- 预览器回归 **45/45 通过**（原 42 条 + 本轮 3 条）。新增断言直接核对清风 1031：
+  `timed=688`、`positiveBirth=535`、`withRemove=17`，抽样重算父 ANI 的
+  `[DELAY]` 累加与 `birthMs` 完全一致；10370 个无 sidecar 层仍走 `birthRatio`。
+- 主游戏 `--skill-lab-sweep` 回归：见本轮运行目录 `checkpoints/tests/sweep-20261111/`。
+
+## 4. 仍未做（不冒充已修）
+
+`motionOffset` / `motionZ` 的身体帧位移、千莲怒放「催熟花色 + 再点逐个引爆」
+状态机、非剑士 experimental runtime 接映射表、65 条新注册技能的伤害表、
+8 个 0 层特效技能、以及旋转方向——都需要以该端实机逐技能对照后再动。
+
+---
+
 # 技能实验室：全技能注册 / 映射接管主线（2026-11-11 第五轮）
 
 节点 `skill-lab-unlock-20261111`。用户要求把 skill-preview 的成果**真正套到主线游戏**，并把

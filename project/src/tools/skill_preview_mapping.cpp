@@ -343,6 +343,8 @@ Json SkillVisualMapping::audit() const {
                           {"timed", layer.timed}, {"alsFrame", layer.alsFrame},
                           {"alsLayer", layer.alsLayer}, {"instance", layer.instance},
                           {"birthRatio", layer.birthRatio}, {"lifeMs", layer.lifeMs},
+                          {"birthMs", layer.birthMs}, {"endMs", layer.endMs},
+                          {"bodyStage", layer.bodyStage},
                           {"loop", layer.loop}, {"source", layer.source},
                           {"offsetX", layer.offsetX}, {"offsetY", layer.offsetY},
                           {"offsetZ", layer.offsetZ}, {"evidence", layer.evidence}});
@@ -1201,31 +1203,78 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             }
         };
         std::vector<EffectLayerPlan> layers;
-        if (!mapping.bodyAni.empty()) {
+        // The 1031 .als names a parent FRAME INDEX, not a millisecond. The
+        // client turns it into a clock by summing the parent's [DELAY] values
+        // up to that frame (40JP anim_parser.cpp:1707; handoff main.cpp:86).
+        // A chained release lays its stages end to end, so every stage owns
+        // its own sidecar and its events carry that stage's start offset.
+        std::vector<std::string> stages = mapping.bodyChain;
+        if (stages.empty() && !mapping.bodyAni.empty()) stages.push_back(mapping.bodyAni);
+        std::vector<double> stageStart;
+        double chainCursor = 0;
+        for (const auto &path : stages) {
+            stageStart.push_back(chainCursor);
+            chainCursor += durationOf(path);
+        }
+        for (size_t stageIndex = 0; stageIndex < stages.size(); ++stageIndex) {
+            std::shared_ptr<Animation> parent;
             try {
-                const auto plan = animationEffectEvents(pvf_, assets_, mapping.bodyAni);
-                for (const auto &event : plan.events) {
-                    if (event.kind == EffectEventKind::Remove) continue;
-                    EffectLayerPlan layer;
-                    layer.path = event.animation;
-                    layer.stage = effectStageOrder(stemOf(event.animation));
-                    layer.lifeMs = durationOf(event.animation);
-                    layer.loop = loops(event.animation);
-                    layer.timed = true;
-                    layer.alsFrame = event.frame;
-                    layer.alsLayer = event.layer;
-                    layer.instance = event.instance;
-                    layer.offsetX = event.offsetX;
-                    layer.offsetY = event.offsetY;
-                    layer.offsetZ = event.offsetZ;
-                    layer.source = "als";
-                    layer.evidence = "ALS [add] frame " + std::to_string(event.frame) +
-                                     " layer " + std::to_string(event.layer);
-                    layers.push_back(std::move(layer));
-                }
+                parent = assets_.animation(stages[stageIndex]);
+            } catch (const std::exception &) {
+                continue;
+            }
+            // frameSpans()/visitFrames() treat a zero-length frame as one unit;
+            // keep the same clock here or the two hosts would disagree on
+            // which frame an [add] belongs to.
+            const auto boundary = [&](int frame) {
+                double at = 0;
+                const int limit = std::min<int>(frame, int(parent->frames.size()));
+                for (int i = 0; i < limit; ++i) at += std::max(1, parent->frames[i].duration);
+                return at;
+            };
+            EffectEventPlan plan;
+            try {
+                plan = animationEffectEvents(pvf_, assets_, stages[stageIndex]);
             } catch (const std::exception &) {
                 // A malformed sidecar leaves every layer untimed rather than
                 // fabricating an instant for it.
+                continue;
+            }
+            for (const auto &event : plan.events) {
+                if (event.kind == EffectEventKind::Remove) continue;
+                const double begin = stageStart[stageIndex] + boundary(event.frame);
+                double end = -1;
+                if (!event.instance.empty()) {
+                    for (const auto &other : plan.events) {
+                        if (other.kind != EffectEventKind::Remove ||
+                            other.instance != event.instance || other.frame < event.frame) continue;
+                        const double candidate = stageStart[stageIndex] + boundary(other.frame);
+                        if (end < 0 || candidate < end) end = candidate;
+                    }
+                }
+                EffectLayerPlan layer;
+                layer.path = event.animation;
+                layer.stage = effectStageOrder(stemOf(event.animation));
+                layer.lifeMs = durationOf(event.animation);
+                if (end > begin) layer.lifeMs = std::min(layer.lifeMs, end - begin);
+                layer.loop = loops(event.animation);
+                layer.timed = true;
+                layer.alsFrame = event.frame;
+                layer.alsLayer = event.layer;
+                layer.bodyStage = int(stageIndex);
+                layer.birthMs = begin;
+                layer.endMs = end;
+                layer.instance = event.instance;
+                layer.offsetX = event.offsetX;
+                layer.offsetY = event.offsetY;
+                layer.offsetZ = event.offsetZ;
+                layer.source = "als";
+                layer.evidence = "ALS [add] frame " + std::to_string(event.frame) +
+                                 " layer " + std::to_string(event.layer) +
+                                 " @ " + std::to_string(int(begin)) + "ms" +
+                                 (end > begin ? std::string(" remove @") + std::to_string(int(end)) + "ms"
+                                              : std::string());
+                layers.push_back(std::move(layer));
             }
         }
         std::vector<std::string> untimed;
