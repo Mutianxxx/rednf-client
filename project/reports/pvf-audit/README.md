@@ -60,9 +60,11 @@
 - `character/<job>`、`effect/animation`、`passiveobject`、`sqr` 的同 stem 资源族；
 - NUT 源文本中的字面资源路径。
 
-当前一次扫描结果：1762 个 exe 绑定技能，其中 1752 个至少关联到一个资源；821 个 exe entry motion 因跨职业公共动作目录或名字计算规则无法直接落到 PVF 路径，必须保留为“未闭合证据”，不能当作资源不存在；55365 个候选族文件尚未被当前 stem 规则消费，这个数字包含公共动作、共享特效和非技能资源，后续需要按 CHR/ACT/OBJ 引用进一步过滤。
+修订扫描覆盖全部 2008 个 SKL：1132 个目前仅有 SKL，876 个具其他静态资源关联，853 个关联 ANI。只有 20 个具 SKL 字面引用闭包证据（19 个具 ANI）；860 个具绑定或目录族候选。1762 条 bindings 中 1677 条匹配到本包 SKL；绑定关系仍作为独立候选，不代表已核验 state 执行顺序。
 
-该结果的意义是定位下一步补全范围，不是宣称 55365 个文件都应接入每个技能。
+图中有 10740 个节点、16747 条边，其中 4671 条字面/sidecar 引用解析成功、121 条未解析、11955 条 IMG 引用标记 external-image（尚未证明 NPK 成员存在）。641 条 ANI→ANI.als sidecar 已递归；13692 个限定职业资源候选中 5027 个未归属。没有把全包怪物 ANI 算作技能缺失。
+
+报告为 `checkpoints/tests/pvf-audit/skill-closure-v2.json`；内容保留全部未知/未归属清单，不截断。该结果仍是静态候选闭包，未解析数、资源关联率都不等于运行时消费覆盖率。整数对象 ID、动态名称、回调分派及 exe VM 的派发关系仍需继续取证。旧版的 1752/55365 统计口径已撤回。
 
 ## 3.2 标签审计结果
 
@@ -127,7 +129,21 @@
 
 **P2：**`.equ/.stk/.key/.ai/.aic/.evt/.gdata` 等跨系统表族的完整消费者。
 
-## 6. 结论
+## 6. 现有消费者校正与真实准入导出
+
+之前“没有 ACT 执行器”“PTL 仅保留原字节”的描述不准确：
+
+- `act_runtime.cpp` 已有结构编译、触发/行为调度与源偏移诊断；`act_service.cpp` 已有固定步进，`act_world_host.cpp` 已消费速度、传送、方向、销毁、声音、攻击开关、ATK 切换和伤害检查子集。
+- `skill_preview_particles.cpp` 已有 PTL 字段读取、粒子生成与预览；`particle_motion.cpp` 已实现受限直线运动。未接通的是 ACT 对象/粒子工厂与其他未支持语义。
+- 全包出现某个 ACT 标签不能证明狂战觉醒等 PC 技能必然依赖 ACT，必须先找到该技能的真实引用或 exe 派发证据。
+
+新增 `dnf_inspect CLIENT --act-coverage PATH _ OUTPUT`，直接调用现有 World host 编译准入，保留 syntax/source/runtime 三种状态、依赖和 blocking diagnostics。退出 0 仅表示报告生成成功；不执行绑定、派发或模拟推进。
+
+已用基座验证：`assault_missile0.act` 的 syntax/source/runtime 均 true；`kaizen/action/teleport.act` 的 syntax/source 为 true、runtime 为 false。报告位于 `checkpoints/tests/pvf-audit/act-coverage-{success,rejected}.json`。
+
+`act_audit.py` 仅为平面标签清单，已把子串匹配改为精确标签匹配；其分类数量不等于结构或运行支持数量。
+
+## 7. 历史结论（以下链为待验证模型）
 
 你的判断是对的：之前的技能链审计主要覆盖了 `SKL → CHR ANI → ALS → 部分 OBJ/ATK`，但没有把 **ACT、OBJ action、NUT、PTL、ATK 变体标签**作为完整闭包处理。当前缺陷不是单纯“某个坐标错了”，而是调用链缺失：
 

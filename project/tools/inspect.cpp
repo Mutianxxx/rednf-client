@@ -1,6 +1,7 @@
 #include "dnf/entry.hpp"
 #include "dnf/resources.hpp"
 #include "dnf/character.hpp"
+#include "dnf/act_world_host.hpp"
 #include "dnf/effect_plan.hpp"
 #include "dnf/skill_preview_mapping.hpp"
 #define STBIW_WINDOWS_UTF8
@@ -12,11 +13,13 @@ using namespace dnf;
 int run(int argc, char **argv) {
     try {
         if (argc < 4) {
-            std::cout << "dnf_inspect CLIENT --script|--ani|--image|--paths|--npk-paths|--export-image|--export-frames|--characters|--skill-sources|--skill-chain PATH [FRAME_OR_SUFFIX] [OUTPUT]\n"
+            std::cout << "dnf_inspect CLIENT --script|--ani|--image|--paths|--npk-paths|--export-image|--export-frames|--characters|--skill-sources|--skill-chain|--act-coverage PATH [FRAME_OR_SUFFIX] [OUTPUT]\n"
                          "--skill-chain JOBID SKILLID [OUTPUT] dumps the resolved body-chain timeline, ALS events and diagnostics for AVI cross-validation.\n"
                          "--npk-paths lists archive image paths containing PATH; --paths lists PVF paths.\n"
                          "--export-image writes a cropped RGBA PNG and sidecar JSON; --export-frames writes every frame plus manifest.json to OUTPUT directory.\n"
-                         "Use a placeholder FRAME_OR_SUFFIX when writing --script output.\n"
+                         "Use a placeholder FRAME_OR_SUFFIX when writing --script or --act-coverage output.\n"
+                         "--act-coverage PATH [placeholder] [OUTPUT] exports static ACT compilation and real World-host admission, not execution evidence.\n"
+                         "ACT coverage uses default host options (speech presentation disabled); exit 0 means report generated, inspect JSON ok/runtime_ready for admission.\n"
                          "--characters summary|source exports all registered CHR/skill lists; source includes original bytes/tokens.\n"
                          "--skill-sources summary|source exports every registered skill with ordered mode-scoped fields; this is source evidence, not runtime coverage.\n";
             return 2;
@@ -25,7 +28,16 @@ int run(int argc, char **argv) {
         Pvf p(root / "Script.pvf");
         std::string mode = argv[2], name = argv[3];
         Json j;
-        if (mode == "--skill-sources") {
+        if (mode == "--act-coverage") {
+            if (argc > 6) throw std::runtime_error("--act-coverage PATH [placeholder] [OUTPUT]");
+            Assets a(root, p);
+            World world(p, a);
+            ActWorldHost host(world, p, a, "act-coverage-audio-xml:" + sha256(a.staticBytes("audio.xml")));
+            j = host.compile(name).json();
+            j["purpose"] = "Static ACT compilation and real World-host admission; no bind, dispatch or simulation advance, not execution evidence.";
+            j["host_options"] = {{"enable_speech_presentation", false}, {"speech_duration_ms", 1200}};
+            j["static_identity_scope"] = "audio.xml SHA256 only, not a full static-content package fingerprint; dependencies retain their own hashes";
+        } else if (mode == "--skill-sources") {
             if (name != "summary" && name != "source") throw std::runtime_error("Use --skill-sources summary|source");
             CharacterCatalog characters(p);
             j = characters.skillSourceSnapshot(name == "source");

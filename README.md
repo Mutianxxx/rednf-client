@@ -147,6 +147,13 @@ python -X utf8 -B tools/skill-bindings/src/extract_commands.py          # 指令
 需要：清风 1031 `DNF.exe`（只读）、1031 `Script.pvf`、Python 3 + capstone 5.0.7、Node 22。
 详见 [`project/tools/skill-bindings/README.md`](project/tools/skill-bindings/README.md) 与 `REPORT.md`。
 
+## 技能调用链补全计划
+
+执行顺序与修改范围见 [SKILL-RUNTIME-PLAN.md](SKILL-RUNTIME-PLAN.md)：
+P0 引用闭包与现有 ACT 消费者 → OBJ/NUT 生命周期；P1 ALS、ATK、PTL；P2 SKL 与跨系统表族。
+每步区分静态候选、编译准入、实际 World 执行与基座实机核对，分别记录测试和 git 同步状态。
+现有工程已包含 ACT 编译/调度/部分 World 消费者及 PTL 解析/预览子集；本阶段重点补未接通的对象工厂、粒子派发和技能调用链。
+
 ## 已知边界（不要当成已完成）
 
 - 攻击判定选择器 `0x70213F` 位于 Themida VM 区，**立即数 → `.atk` 文件名的翻译未恢复**；

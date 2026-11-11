@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Audit and classify 1031 .act token scripts for the P0 runtime executor.
 
-This is deliberately a structural pass: it preserves raw fields and classifies
-commands/conditions without pretending to execute ACT behavior.
+This is a flat tag inventory with exact lexical families. It neither parses
+nested ACT structure nor measures compiler or World runtime support.
 """
 from __future__ import annotations
 import argparse, collections, hashlib, json, os, sys
@@ -25,9 +25,9 @@ FAMILIES={
 }
 
 def family(tag):
- t=tag.upper().strip()
+ t=tag.upper().strip().strip("[]").lstrip("/").strip()
  for k,keys in FAMILIES.items():
-  if any(x in t for x in keys): return k
+  if t in keys: return k
  return "other"
 
 def main():
@@ -47,7 +47,7 @@ def main():
    if len(errors)<100: errors.append({"path":p,"error":str(ex)})
  with open(args.pvf,"rb") as f: sha=hashlib.sha256(f.read()).hexdigest()
  command_tags={t:n for t,n in tags.items() if family(t)!="other"}
- report={"pvf":{"path":args.pvf,"sha256":sha,"entryCount":len(pvf.entries)},"summary":{"actFiles":files,"nonEmptyFiles":nonempty,"distinctTags":len(tags),"classifiedTags":len(command_tags),"unknownTags":len(tags)-len(command_tags),"parseErrors":len(errors)},"families":dict(fam),"tags":dict(tags),"classifiedTags":{t:{"family":family(t),"count":n,"samples":samples[t]} for t,n in sorted(tags.items())},"parseErrors":errors,"runtimeContract":{"create_object":["CREATE PASSIVEOBJECT","CREATE DRAW ONLY OBJECT","SUMMON MONSTER","SUMMON APC"],"animation":["SUB ANI","SUB ANI WITH XY","SUB ANI WITH XYZ","PARTICLE FILENAME"],"movement":["MOVE UNIFORM","STRAIGHT MOVE","SET SPEED","SET POS FORCE","FOLLOWING TARGET","HOMING","GRAVITY"],"judgment":["ATTACK","ATTACKRECT","SET DAMAGE BOX","SET DAMAGE CHECK","CHANGE ATTACKINFO","DAMAGE"],"trigger":["TRIGGER","CHECK TIME","ON ATTACKSUCCESS","CHECKUP"],"lifecycle":["DESTROY","REMOVE","VANISH"]}}
+ report={"pvf":{"path":args.pvf,"sha256":sha,"entryCount":len(pvf.entries)},"summary":{"actFiles":files,"nonEmptyFiles":nonempty,"distinctTags":len(tags),"classifiedTags":len(command_tags),"unknownTags":len(tags)-len(command_tags),"parseErrors":len(errors)},"families":dict(fam),"tags":dict(tags),"classifiedTags":{t:{"family":family(t),"count":n,"samples":samples[t]} for t,n in sorted(tags.items())},"parseErrors":errors,"plannedCommandFamilies":{"create_object":["CREATE PASSIVEOBJECT","CREATE DRAW ONLY OBJECT","SUMMON MONSTER","SUMMON APC"],"animation":["SUB ANI","SUB ANI WITH XY","SUB ANI WITH XYZ","PARTICLE FILENAME"],"movement":["MOVE UNIFORM","STRAIGHT MOVE","SET SPEED","SET POS FORCE","FOLLOWING TARGET","HOMING","GRAVITY"],"judgment":["ATTACK","ATTACKRECT","SET DAMAGE BOX","SET DAMAGE CHECK","CHANGE ATTACKINFO","DAMAGE"],"trigger":["TRIGGER","CHECK TIME","ON ATTACKSUCCESS","CHECKUP"],"lifecycle":["DESTROY","REMOVE","VANISH"]}}
  os.makedirs(os.path.dirname(args.out),exist_ok=True); json.dump(report,open(args.out,"w",encoding="utf8"),ensure_ascii=False,indent=2)
  print(json.dumps(report["summary"],ensure_ascii=False))
 if __name__=="__main__": main()
