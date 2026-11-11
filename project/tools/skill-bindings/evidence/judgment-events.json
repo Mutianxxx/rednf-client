@@ -1,0 +1,3594 @@
+{
+ "summary": {
+  "source": "evidence/state-handler-events.json (capstone static scan of 1031 DNF.exe on-disk text segment)",
+  "atk_selector": "0x0070213f",
+  "effect_attach_targets": [
+   "0x00690210",
+   "0x00690420"
+  ],
+  "note": "ATK selector first immediate arg = attack index into the skill's .atk resource; proves which attack volume a state launches. Geometry is read from PVF .atk; this is the exe->PVF dispatch link. The selector sits in a Themida VM region, so the immediate is recorded as-is (not yet translated to a .atk file name).",
+  "attribution_caveat": "On-disk handlers are many-to-one for shared states; those groups carry shared_handler=true because only the runtime skill_id selector picks the concrete .atk.",
+  "skills_with_judgment": 68,
+  "states_total_with_atk": 42,
+  "shared_handler_skills": 67
+ },
+ "judgments": {
+  "state3": {
+   "state": 3,
+   "skill": null,
+   "atk_calls": [
+    {
+     "atk_index": 87,
+     "n_args": 1,
+     "at": "0x00ccea90",
+     "state": 3
+    }
+   ],
+   "states": []
+  },
+  "state4": {
+   "state": 4,
+   "skill": null,
+   "atk_calls": [
+    {
+     "atk_index": 87,
+     "n_args": 1,
+     "at": "0x00ccea90",
+     "state": 4
+    }
+   ],
+   "states": []
+  },
+  "darkslash": {
+   "class": "demonicswordman",
+   "skill_id": 5,
+   "skl": "DemonicSwordman/DarkSlash.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 0,
+     "n_args": 1,
+     "at": "0x00ccf619",
+     "state": 20
+    },
+    {
+     "atk_index": 20,
+     "n_args": 1,
+     "at": "0x00ccf8d7",
+     "state": 20
+    }
+   ],
+   "states": [
+    20
+   ],
+   "shared_handler": true
+  },
+  "hardattackcharge": {
+   "class": "demonicswordman",
+   "skill_id": 6,
+   "skl": "DemonicSwordman/NotApplicable/HardAttackCharge.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 0,
+     "n_args": 1,
+     "at": "0x00ccf619",
+     "state": 20
+    },
+    {
+     "atk_index": 20,
+     "n_args": 1,
+     "at": "0x00ccf8d7",
+     "state": 20
+    },
+    {
+     "atk_index": 0,
+     "n_args": 1,
+     "at": "0x00ccf619",
+     "state": 20
+    },
+    {
+     "atk_index": 20,
+     "n_args": 1,
+     "at": "0x00ccf8d7",
+     "state": 20
+    }
+   ],
+   "states": [
+    20
+   ],
+   "shared_handler": true
+  },
+  "hardattack": {
+   "class": "swordman",
+   "skill_id": 5,
+   "skl": "Swordman/HardAttack.skl",
+   "name": "鬼斩",
+   "atk_calls": [
+    {
+     "atk_index": 0,
+     "n_args": 1,
+     "at": "0x00ccf619",
+     "state": 20
+    },
+    {
+     "atk_index": 20,
+     "n_args": 1,
+     "at": "0x00ccf8d7",
+     "state": 20
+    }
+   ],
+   "states": [
+    20
+   ],
+   "shared_handler": true
+  },
+  "hitback": {
+   "class": "demonicswordman",
+   "skill_id": 7,
+   "skl": "DemonicSwordman/NotApplicable/HitBack.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 1,
+     "n_args": 1,
+     "at": "0x00cd0464",
+     "state": 21
+    },
+    {
+     "atk_index": 1,
+     "n_args": 1,
+     "at": "0x00cd0699",
+     "state": 21
+    },
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 21
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 21
+    },
+    {
+     "atk_index": 1,
+     "n_args": 1,
+     "at": "0x00cd0464",
+     "state": 21
+    },
+    {
+     "atk_index": 1,
+     "n_args": 1,
+     "at": "0x00cd0699",
+     "state": 21
+    },
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 21
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 21
+    }
+   ],
+   "states": [
+    21
+   ],
+   "shared_handler": true
+  },
+  "lightswordmastery": {
+   "class": "demonicswordman",
+   "skill_id": 4,
+   "skl": "DemonicSwordman/LightSwordMastery.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 22
+    },
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 23
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 23
+    },
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 29
+    },
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 29
+    },
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 29
+    },
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 29
+    },
+    {
+     "atk_index": 45,
+     "n_args": 1,
+     "at": "0x00cd58be",
+     "state": 39
+    },
+    {
+     "atk_index": 46,
+     "n_args": 1,
+     "at": "0x00cd58fb",
+     "state": 39
+    },
+    {
+     "atk_index": 45,
+     "n_args": 1,
+     "at": "0x00cd58be",
+     "state": 39
+    },
+    {
+     "atk_index": 46,
+     "n_args": 1,
+     "at": "0x00cd58fb",
+     "state": 39
+    },
+    {
+     "atk_index": 47,
+     "n_args": 1,
+     "at": "0x00cd63a0",
+     "state": 40
+    },
+    {
+     "atk_index": 47,
+     "n_args": 1,
+     "at": "0x00cd63a0",
+     "state": 40
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 56
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 56
+    }
+   ],
+   "states": [
+    22,
+    23,
+    29,
+    39,
+    40,
+    56
+   ],
+   "shared_handler": true
+  },
+  "briefcut": {
+   "class": "demonicswordman",
+   "skill_id": 8,
+   "skl": "DemonicSwordman/BriefCut.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 22
+    }
+   ],
+   "states": [
+    22
+   ],
+   "shared_handler": true
+  },
+  "blademastery": {
+   "class": "demonicswordman",
+   "skill_id": 13,
+   "skl": "DemonicSwordman/BladeMastery.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 22
+    },
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 23
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 23
+    },
+    {
+     "atk_index": 47,
+     "n_args": 1,
+     "at": "0x00cd63a0",
+     "state": 40
+    },
+    {
+     "atk_index": 47,
+     "n_args": 1,
+     "at": "0x00cd63a0",
+     "state": 40
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 56
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 56
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    }
+   ],
+   "states": [
+    22,
+    23,
+    40,
+    56,
+    69
+   ],
+   "shared_handler": true
+  },
+  "weaponmasteryup": {
+   "class": "demonicswordman",
+   "skill_id": 27,
+   "skl": "DemonicSwordman/NotApplicable/WeaponMasteryUp.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 22
+    },
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 22
+    },
+    {
+     "atk_index": 10,
+     "n_args": 1,
+     "at": "0x00cd2222",
+     "state": 25
+    },
+    {
+     "atk_index": 12,
+     "n_args": 1,
+     "at": "0x00cd2504",
+     "state": 25
+    },
+    {
+     "atk_index": 13,
+     "n_args": 1,
+     "at": "0x00cd2913",
+     "state": 25
+    },
+    {
+     "atk_index": 10,
+     "n_args": 1,
+     "at": "0x00cd2222",
+     "state": 25
+    },
+    {
+     "atk_index": 12,
+     "n_args": 1,
+     "at": "0x00cd2504",
+     "state": 25
+    },
+    {
+     "atk_index": 13,
+     "n_args": 1,
+     "at": "0x00cd2913",
+     "state": 25
+    },
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 29
+    },
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 29
+    },
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 29
+    },
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 29
+    },
+    {
+     "atk_index": 45,
+     "n_args": 1,
+     "at": "0x00cd58be",
+     "state": 39
+    },
+    {
+     "atk_index": 46,
+     "n_args": 1,
+     "at": "0x00cd58fb",
+     "state": 39
+    },
+    {
+     "atk_index": 45,
+     "n_args": 1,
+     "at": "0x00cd58be",
+     "state": 39
+    },
+    {
+     "atk_index": 46,
+     "n_args": 1,
+     "at": "0x00cd58fb",
+     "state": 39
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    }
+   ],
+   "states": [
+    22,
+    25,
+    29,
+    39,
+    69
+   ],
+   "shared_handler": true
+  },
+  "tripleslash": {
+   "class": "swordman",
+   "skill_id": 8,
+   "skl": "Swordman/TripleSlash.skl",
+   "name": "三段斩",
+   "atk_calls": [
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 22
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 22
+    }
+   ],
+   "states": [
+    22
+   ],
+   "shared_handler": true
+  },
+  "heavyswordmastery": {
+   "class": "demonicswordman",
+   "skill_id": 14,
+   "skl": "DemonicSwordman/HeavySwordMastery.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 23
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 23
+    },
+    {
+     "atk_index": 10,
+     "n_args": 1,
+     "at": "0x00cd2222",
+     "state": 25
+    },
+    {
+     "atk_index": 12,
+     "n_args": 1,
+     "at": "0x00cd2504",
+     "state": 25
+    },
+    {
+     "atk_index": 13,
+     "n_args": 1,
+     "at": "0x00cd2913",
+     "state": 25
+    },
+    {
+     "atk_index": 10,
+     "n_args": 1,
+     "at": "0x00cd2222",
+     "state": 25
+    },
+    {
+     "atk_index": 12,
+     "n_args": 1,
+     "at": "0x00cd2504",
+     "state": 25
+    },
+    {
+     "atk_index": 13,
+     "n_args": 1,
+     "at": "0x00cd2913",
+     "state": 25
+    },
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 37
+    },
+    {
+     "atk_index": 43,
+     "n_args": 1,
+     "at": "0x00cd95b3",
+     "state": 37
+    },
+    {
+     "atk_index": 44,
+     "n_args": 1,
+     "at": "0x00cd983a",
+     "state": 37
+    },
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 37
+    },
+    {
+     "atk_index": 43,
+     "n_args": 1,
+     "at": "0x00cd95b3",
+     "state": 37
+    },
+    {
+     "atk_index": 44,
+     "n_args": 1,
+     "at": "0x00cd983a",
+     "state": 37
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 56
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 56
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 70
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 70
+    }
+   ],
+   "states": [
+    23,
+    25,
+    37,
+    56,
+    70
+   ],
+   "shared_handler": true
+  },
+  "ashenfork": {
+   "class": "demonicswordman",
+   "skill_id": 16,
+   "skl": "DemonicSwordman/NotApplicable/AshenFork.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 10,
+     "n_args": 1,
+     "at": "0x00cd2222",
+     "state": 25
+    },
+    {
+     "atk_index": 12,
+     "n_args": 1,
+     "at": "0x00cd2504",
+     "state": 25
+    },
+    {
+     "atk_index": 13,
+     "n_args": 1,
+     "at": "0x00cd2913",
+     "state": 25
+    },
+    {
+     "atk_index": 10,
+     "n_args": 1,
+     "at": "0x00cd2222",
+     "state": 25
+    },
+    {
+     "atk_index": 12,
+     "n_args": 1,
+     "at": "0x00cd2504",
+     "state": 25
+    },
+    {
+     "atk_index": 13,
+     "n_args": 1,
+     "at": "0x00cd2913",
+     "state": 25
+    }
+   ],
+   "states": [
+    25
+   ],
+   "shared_handler": true
+  },
+  "grabblastbloodex": {
+   "class": "demonicswordman",
+   "skill_id": 102,
+   "skl": "DemonicSwordman/NotApplicable/GrabBlastBloodEx.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 12,
+     "n_args": 1,
+     "at": "0x00cd2504",
+     "state": 26
+    },
+    {
+     "atk_index": 13,
+     "n_args": 1,
+     "at": "0x00cd2913",
+     "state": 26
+    },
+    {
+     "atk_index": 71,
+     "n_args": 1,
+     "at": "0x00cd2a79",
+     "state": 26
+    },
+    {
+     "atk_index": 12,
+     "n_args": 1,
+     "at": "0x00cd2504",
+     "state": 26
+    },
+    {
+     "atk_index": 13,
+     "n_args": 1,
+     "at": "0x00cd2913",
+     "state": 26
+    },
+    {
+     "atk_index": 71,
+     "n_args": 1,
+     "at": "0x00cd2a79",
+     "state": 26
+    }
+   ],
+   "states": [
+    26
+   ],
+   "shared_handler": true
+  },
+  "grandwave": {
+   "class": "demonicswordman",
+   "skill_id": 50,
+   "skl": "DemonicSwordman/GrandWave.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 27
+    },
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 27
+    }
+   ],
+   "states": [
+    27
+   ],
+   "shared_handler": true
+  },
+  "grandwavecharge": {
+   "class": "demonicswordman",
+   "skill_id": 51,
+   "skl": "DemonicSwordman/NotApplicable/GrandWaveCharge.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 27
+    },
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 27
+    }
+   ],
+   "states": [
+    27
+   ],
+   "shared_handler": true
+  },
+  "dashattackmultihit": {
+   "class": "demonicswordman",
+   "skill_id": 11,
+   "skl": "DemonicSwordman/NotApplicable/DashAttackMultiHit.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 29
+    },
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 29
+    },
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 29
+    },
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 29
+    }
+   ],
+   "states": [
+    29
+   ],
+   "shared_handler": true
+  },
+  "dashattackmultihitex": {
+   "class": "demonicswordman",
+   "skill_id": 162,
+   "skl": "DemonicSwordman/NotApplicable/DashAttackMultiHitEx.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 29
+    },
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 29
+    },
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 29
+    },
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 29
+    }
+   ],
+   "states": [
+    29
+   ],
+   "shared_handler": true
+  },
+  "shortswordmastery": {
+   "class": "demonicswordman",
+   "skill_id": 12,
+   "skl": "DemonicSwordman/ShortSwordMastery.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 30
+    },
+    {
+     "atk_index": 61,
+     "n_args": 1,
+     "at": "0x00cdab6e",
+     "state": 30
+    },
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 30
+    },
+    {
+     "atk_index": 61,
+     "n_args": 1,
+     "at": "0x00cdab6e",
+     "state": 30
+    },
+    {
+     "atk_index": 45,
+     "n_args": 1,
+     "at": "0x00cd58be",
+     "state": 39
+    },
+    {
+     "atk_index": 46,
+     "n_args": 1,
+     "at": "0x00cd58fb",
+     "state": 39
+    },
+    {
+     "atk_index": 45,
+     "n_args": 1,
+     "at": "0x00cd58be",
+     "state": 39
+    },
+    {
+     "atk_index": 46,
+     "n_args": 1,
+     "at": "0x00cd58fb",
+     "state": 39
+    },
+    {
+     "atk_index": 47,
+     "n_args": 1,
+     "at": "0x00cd63a0",
+     "state": 40
+    },
+    {
+     "atk_index": 47,
+     "n_args": 1,
+     "at": "0x00cd63a0",
+     "state": 40
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 70
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 70
+    }
+   ],
+   "states": [
+    30,
+    39,
+    40,
+    70
+   ],
+   "shared_handler": true
+  },
+  "upper": {
+   "class": "demonicswordman",
+   "skill_id": 46,
+   "skl": "DemonicSwordman/Upper.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 30
+    },
+    {
+     "atk_index": 61,
+     "n_args": 1,
+     "at": "0x00cdab6e",
+     "state": 30
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 70
+    }
+   ],
+   "states": [
+    30,
+    70
+   ],
+   "shared_handler": true
+  },
+  "upperslash": {
+   "class": "swordman",
+   "skill_id": 46,
+   "skl": "Swordman/UpperSlash.skl",
+   "name": "鯨",
+   "atk_calls": [
+    {
+     "atk_index": 19,
+     "n_args": 1,
+     "at": "0x00cda768",
+     "state": 30
+    },
+    {
+     "atk_index": 61,
+     "n_args": 1,
+     "at": "0x00cdab6e",
+     "state": 30
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 70
+    }
+   ],
+   "states": [
+    30,
+    70
+   ],
+   "shared_handler": true
+  },
+  "shockwave": {
+   "class": "demonicswordman",
+   "skill_id": 57,
+   "skl": "DemonicSwordman/ShockWave.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 15,
+     "n_args": 1,
+     "at": "0x00cd30b7",
+     "state": 31
+    }
+   ],
+   "states": [
+    31
+   ],
+   "shared_handler": true
+  },
+  "shockwavearea": {
+   "class": "swordman",
+   "skill_id": 57,
+   "skl": "Swordman/ShockWaveArea.skl",
+   "name": "邪光波动阵",
+   "atk_calls": [
+    {
+     "atk_index": 15,
+     "n_args": 1,
+     "at": "0x00cd30b7",
+     "state": 31
+    }
+   ],
+   "states": [
+    31
+   ],
+   "shared_handler": true
+  },
+  "vaneslash": {
+   "class": "demonicswordman",
+   "skill_id": 58,
+   "skl": "DemonicSwordman/VaneSlash.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 16,
+     "n_args": 1,
+     "at": "0x00cd4228",
+     "state": 32
+    },
+    {
+     "atk_index": 17,
+     "n_args": 1,
+     "at": "0x00cd4699",
+     "state": 32
+    },
+    {
+     "atk_index": 24,
+     "n_args": 1,
+     "at": "0x00cd480a",
+     "state": 32
+    },
+    {
+     "atk_index": 16,
+     "n_args": 1,
+     "at": "0x00cd4228",
+     "state": 32
+    },
+    {
+     "atk_index": 17,
+     "n_args": 1,
+     "at": "0x00cd4699",
+     "state": 32
+    },
+    {
+     "atk_index": 24,
+     "n_args": 1,
+     "at": "0x00cd480a",
+     "state": 32
+    }
+   ],
+   "states": [
+    32
+   ],
+   "shared_handler": true
+  },
+  "momentaryslash": {
+   "class": "demonicswordman",
+   "skill_id": 60,
+   "skl": "DemonicSwordman/MomentarySlash.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 21,
+     "n_args": 1,
+     "at": "0x00cd3789",
+     "state": 33
+    }
+   ],
+   "states": [
+    33
+   ],
+   "shared_handler": true
+  },
+  "ghoststepslash": {
+   "class": "swordman",
+   "skill_id": 60,
+   "skl": "Swordman/GhostStepSlash.skl",
+   "name": "뱁緞",
+   "atk_calls": [
+    {
+     "atk_index": 21,
+     "n_args": 1,
+     "at": "0x00cd3789",
+     "state": 33
+    }
+   ],
+   "states": [
+    33
+   ],
+   "shared_handler": true
+  },
+  "darkcross": {
+   "class": "demonicswordman",
+   "skill_id": 64,
+   "skl": "DemonicSwordman/DarkCross.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 24,
+     "n_args": 1,
+     "at": "0x00cd480a",
+     "state": 35
+    },
+    {
+     "atk_index": 57,
+     "n_args": 1,
+     "at": "0x00cd4dcd",
+     "state": 35
+    }
+   ],
+   "states": [
+    35
+   ],
+   "shared_handler": true
+  },
+  "gorecross": {
+   "class": "swordman",
+   "skill_id": 64,
+   "skl": "Swordman/GoreCross.skl",
+   "name": "十字斩",
+   "atk_calls": [
+    {
+     "atk_index": 24,
+     "n_args": 1,
+     "at": "0x00cd480a",
+     "state": 35
+    },
+    {
+     "atk_index": 57,
+     "n_args": 1,
+     "at": "0x00cd4dcd",
+     "state": 35
+    }
+   ],
+   "states": [
+    35
+   ],
+   "shared_handler": true
+  },
+  "hopsmash": {
+   "class": "demonicswordman",
+   "skill_id": 65,
+   "skl": "DemonicSwordman/HopSmash.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd51eb",
+     "state": 36
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd51eb",
+     "state": 36
+    }
+   ],
+   "states": [
+    36
+   ],
+   "shared_handler": true
+  },
+  "bluntmastery": {
+   "class": "demonicswordman",
+   "skill_id": 15,
+   "skl": "DemonicSwordman/BluntMastery.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 37
+    },
+    {
+     "atk_index": 43,
+     "n_args": 1,
+     "at": "0x00cd95b3",
+     "state": 37
+    },
+    {
+     "atk_index": 44,
+     "n_args": 1,
+     "at": "0x00cd983a",
+     "state": 37
+    },
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 37
+    },
+    {
+     "atk_index": 43,
+     "n_args": 1,
+     "at": "0x00cd95b3",
+     "state": 37
+    },
+    {
+     "atk_index": 44,
+     "n_args": 1,
+     "at": "0x00cd983a",
+     "state": 37
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    }
+   ],
+   "states": [
+    37,
+    69
+   ],
+   "shared_handler": true
+  },
+  "darkcrasher": {
+   "class": "demonicswordman",
+   "skill_id": 68,
+   "skl": "DemonicSwordman/DarkCrasher.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 37
+    },
+    {
+     "atk_index": 43,
+     "n_args": 1,
+     "at": "0x00cd95b3",
+     "state": 37
+    },
+    {
+     "atk_index": 44,
+     "n_args": 1,
+     "at": "0x00cd983a",
+     "state": 37
+    }
+   ],
+   "states": [
+    37
+   ],
+   "shared_handler": true
+  },
+  "chargecrash": {
+   "class": "swordman",
+   "skill_id": 68,
+   "skl": "Swordman/ChargeCrash.skl",
+   "name": "팎엊질샌",
+   "atk_calls": [
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 37
+    },
+    {
+     "atk_index": 43,
+     "n_args": 1,
+     "at": "0x00cd95b3",
+     "state": 37
+    },
+    {
+     "atk_index": 44,
+     "n_args": 1,
+     "at": "0x00cd983a",
+     "state": 37
+    }
+   ],
+   "states": [
+    37
+   ],
+   "shared_handler": true
+  },
+  "darkball": {
+   "class": "demonicswordman",
+   "skill_id": 2,
+   "skl": "DemonicSwordman/DarkBall.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 61,
+     "n_args": 1,
+     "at": "0x00cdab6e",
+     "state": 38
+    }
+   ],
+   "states": [
+    38
+   ],
+   "shared_handler": true
+  },
+  "reflectguard": {
+   "class": "swordman",
+   "skill_id": 2,
+   "skl": "Swordman/ReflectGuard.skl",
+   "name": "鬼印珠",
+   "atk_calls": [
+    {
+     "atk_index": 61,
+     "n_args": 1,
+     "at": "0x00cdab6e",
+     "state": 38
+    }
+   ],
+   "states": [
+    38
+   ],
+   "shared_handler": true
+  },
+  "rapidmove": {
+   "class": "demonicswordman",
+   "skill_id": 72,
+   "skl": "DemonicSwordman/RapidMove.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 45,
+     "n_args": 1,
+     "at": "0x00cd58be",
+     "state": 39
+    },
+    {
+     "atk_index": 46,
+     "n_args": 1,
+     "at": "0x00cd58fb",
+     "state": 39
+    }
+   ],
+   "states": [
+    39
+   ],
+   "shared_handler": true
+  },
+  "rapidmoveslash": {
+   "class": "swordman",
+   "skill_id": 72,
+   "skl": "Swordman/RapidMoveSlash.skl",
+   "name": "猛龙断空斩",
+   "atk_calls": [
+    {
+     "atk_index": 45,
+     "n_args": 1,
+     "at": "0x00cd58be",
+     "state": 39
+    },
+    {
+     "atk_index": 46,
+     "n_args": 1,
+     "at": "0x00cd58fb",
+     "state": 39
+    }
+   ],
+   "states": [
+    39
+   ],
+   "shared_handler": true
+  },
+  "illusionslash": {
+   "class": "demonicswordman",
+   "skill_id": 73,
+   "skl": "DemonicSwordman/IllusionSlash.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 47,
+     "n_args": 1,
+     "at": "0x00cd63a0",
+     "state": 40
+    },
+    {
+     "atk_index": 47,
+     "n_args": 1,
+     "at": "0x00cd63a0",
+     "state": 40
+    }
+   ],
+   "states": [
+    40
+   ],
+   "shared_handler": true
+  },
+  "state41": {
+   "state": 41,
+   "skill": null,
+   "atk_calls": [
+    {
+     "atk_index": 42,
+     "n_args": 1,
+     "at": "0x00cd92cb",
+     "state": 41
+    }
+   ],
+   "states": []
+  },
+  "spinattack": {
+   "class": "demonicswordman",
+   "skill_id": 77,
+   "skl": "DemonicSwordman/SpinAttack.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 54,
+     "n_args": 1,
+     "at": "0x00cd9c2b",
+     "state": 42
+    },
+    {
+     "atk_index": 55,
+     "n_args": 1,
+     "at": "0x00cd9da4",
+     "state": 42
+    },
+    {
+     "atk_index": 56,
+     "n_args": 1,
+     "at": "0x00cd9f0f",
+     "state": 42
+    },
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 42
+    }
+   ],
+   "states": [
+    42
+   ],
+   "shared_handler": true
+  },
+  "moonlightslash": {
+   "class": "swordman",
+   "skill_id": 77,
+   "skl": "Swordman/MoonlightSlash.skl",
+   "name": "月光斩",
+   "atk_calls": [
+    {
+     "atk_index": 54,
+     "n_args": 1,
+     "at": "0x00cd9c2b",
+     "state": 42
+    },
+    {
+     "atk_index": 55,
+     "n_args": 1,
+     "at": "0x00cd9da4",
+     "state": 42
+    },
+    {
+     "atk_index": 56,
+     "n_args": 1,
+     "at": "0x00cd9f0f",
+     "state": 42
+    },
+    {
+     "atk_index": 14,
+     "n_args": 1,
+     "at": "0x00cda02a",
+     "state": 42
+    }
+   ],
+   "states": [
+    42
+   ],
+   "shared_handler": true
+  },
+  "sacrifice": {
+   "class": "demonicswordman",
+   "skill_id": 23,
+   "skl": "DemonicSwordman/NotApplicable/Sacrifice.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 43
+    },
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 43
+    }
+   ],
+   "states": [
+    43
+   ],
+   "shared_handler": true
+  },
+  "darkrave": {
+   "class": "demonicswordman",
+   "skill_id": 79,
+   "skl": "DemonicSwordman/DarkRave.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 43
+    }
+   ],
+   "states": [
+    43
+   ],
+   "shared_handler": true
+  },
+  "pinchpowerupex": {
+   "class": "demonicswordman",
+   "skill_id": 139,
+   "skl": "DemonicSwordman/NotApplicable/PinchPowerUpEx.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 43
+    },
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 43
+    }
+   ],
+   "states": [
+    43
+   ],
+   "shared_handler": true
+  },
+  "bloodyrave": {
+   "class": "swordman",
+   "skill_id": 79,
+   "skl": "Swordman/BloodyRave.skl",
+   "name": "嗜魂封魔斩",
+   "atk_calls": [
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 43
+    }
+   ],
+   "states": [
+    43
+   ],
+   "shared_handler": true
+  },
+  "darkbreak": {
+   "class": "demonicswordman",
+   "skill_id": 81,
+   "skl": "DemonicSwordman/DarkBreak.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 57,
+     "n_args": 1,
+     "at": "0x00cd4dcd",
+     "state": 45
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd51eb",
+     "state": 45
+    }
+   ],
+   "states": [
+    45
+   ],
+   "shared_handler": true
+  },
+  "outragebreak": {
+   "class": "swordman",
+   "skill_id": 81,
+   "skl": "Swordman/OutRageBreak.skl",
+   "name": "굼죙뒈鸞",
+   "atk_calls": [
+    {
+     "atk_index": 57,
+     "n_args": 1,
+     "at": "0x00cd4dcd",
+     "state": 45
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd51eb",
+     "state": 45
+    }
+   ],
+   "states": [
+    45
+   ],
+   "shared_handler": true
+  },
+  "hellbenter": {
+   "class": "demonicswordman",
+   "skill_id": 85,
+   "skl": "DemonicSwordman/NotApplicable/Hellbenter.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 61,
+     "n_args": 1,
+     "at": "0x00cdab6e",
+     "state": 46
+    },
+    {
+     "atk_index": 61,
+     "n_args": 1,
+     "at": "0x00cdab6e",
+     "state": 46
+    }
+   ],
+   "states": [
+    46
+   ],
+   "shared_handler": true
+  },
+  "hundredsword": {
+   "class": "demonicswordman",
+   "skill_id": 86,
+   "skl": "DemonicSwordman/NotApplicable/HundredSword.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 62,
+     "n_args": 1,
+     "at": "0x00cdb827",
+     "state": 48
+    },
+    {
+     "atk_index": 62,
+     "n_args": 1,
+     "at": "0x00cdb827",
+     "state": 48
+    },
+    {
+     "atk_index": 62,
+     "n_args": 1,
+     "at": "0x00cdb827",
+     "state": 49
+    },
+    {
+     "atk_index": 62,
+     "n_args": 1,
+     "at": "0x00cdb827",
+     "state": 49
+    }
+   ],
+   "states": [
+    48,
+    49
+   ],
+   "shared_handler": true
+  },
+  "waveeye": {
+   "class": "demonicswordman",
+   "skill_id": 88,
+   "skl": "DemonicSwordman/NotApplicable/WaveEye.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 66,
+     "n_args": 1,
+     "at": "0x00cdc60a",
+     "state": 51
+    },
+    {
+     "atk_index": 66,
+     "n_args": 1,
+     "at": "0x00cdc60a",
+     "state": 51
+    },
+    {
+     "atk_index": 66,
+     "n_args": 1,
+     "at": "0x00cdc60a",
+     "state": 53
+    },
+    {
+     "atk_index": 66,
+     "n_args": 1,
+     "at": "0x00cdc60a",
+     "state": 53
+    }
+   ],
+   "states": [
+    51,
+    53
+   ],
+   "shared_handler": true
+  },
+  "state52": {
+   "state": 52,
+   "skill": null,
+   "atk_calls": [
+    {
+     "atk_index": 66,
+     "n_args": 1,
+     "at": "0x00cdc60a",
+     "state": 52
+    }
+   ],
+   "states": []
+  },
+  "momentaryslashex": {
+   "class": "demonicswordman",
+   "skill_id": 97,
+   "skl": "DemonicSwordman/NotApplicable/MomentarySlashEx.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 56
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 56
+    }
+   ],
+   "states": [
+    56
+   ],
+   "shared_handler": true
+  },
+  "bloodblastex": {
+   "class": "demonicswordman",
+   "skill_id": 101,
+   "skl": "DemonicSwordman/NotApplicable/BloodBlastEx.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 57
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd11b8",
+     "state": 57
+    }
+   ],
+   "states": [
+    57
+   ],
+   "shared_handler": true
+  },
+  "autoguard": {
+   "class": "demonicswordman",
+   "skill_id": 3,
+   "skl": "DemonicSwordman/NotApplicable/AutoGuard.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 1,
+     "n_args": 1,
+     "at": "0x00cd0699",
+     "state": 59
+    },
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 59
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 59
+    },
+    {
+     "atk_index": 1,
+     "n_args": 1,
+     "at": "0x00cd0699",
+     "state": 59
+    },
+    {
+     "atk_index": 7,
+     "n_args": 1,
+     "at": "0x00cd0ac9",
+     "state": 59
+    },
+    {
+     "atk_index": null,
+     "n_args": 0,
+     "at": "0x00cd0aea",
+     "state": 59
+    }
+   ],
+   "states": [
+    59
+   ],
+   "shared_handler": true
+  },
+  "flowmindthree": {
+   "class": "demonicswordman",
+   "skill_id": 109,
+   "skl": "DemonicSwordman/NotApplicable/FlowMindThree.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 84,
+     "n_args": 1,
+     "at": "0x00cd78d8",
+     "state": 64
+    },
+    {
+     "atk_index": 85,
+     "n_args": 1,
+     "at": "0x00cd7b47",
+     "state": 64
+    },
+    {
+     "atk_index": 84,
+     "n_args": 1,
+     "at": "0x00cd78d8",
+     "state": 64
+    },
+    {
+     "atk_index": 85,
+     "n_args": 1,
+     "at": "0x00cd7b47",
+     "state": 64
+    }
+   ],
+   "states": [
+    64
+   ],
+   "shared_handler": true
+  },
+  "whipattack": {
+   "class": "demonicswordman",
+   "skill_id": 111,
+   "skl": "DemonicSwordman/WhipAttack.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 84,
+     "n_args": 1,
+     "at": "0x00cd78d8",
+     "state": 65
+    },
+    {
+     "atk_index": 85,
+     "n_args": 1,
+     "at": "0x00cd7b47",
+     "state": 65
+    },
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 65
+    }
+   ],
+   "states": [
+    65
+   ],
+   "shared_handler": true
+  },
+  "ghostsidewind": {
+   "class": "swordman",
+   "skill_id": 111,
+   "skl": "Swordman/GhostSideWind.skl",
+   "name": "鬼影鞭",
+   "atk_calls": [
+    {
+     "atk_index": 84,
+     "n_args": 1,
+     "at": "0x00cd78d8",
+     "state": 65
+    },
+    {
+     "atk_index": 85,
+     "n_args": 1,
+     "at": "0x00cd7b47",
+     "state": 65
+    },
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 65
+    }
+   ],
+   "states": [
+    65
+   ],
+   "shared_handler": true
+  },
+  "triplestab": {
+   "class": "demonicswordman",
+   "skill_id": 112,
+   "skl": "DemonicSwordman/TripleStab.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 85,
+     "n_args": 1,
+     "at": "0x00cd7b47",
+     "state": 66
+    },
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 66
+    },
+    {
+     "atk_index": 85,
+     "n_args": 1,
+     "at": "0x00cd7b47",
+     "state": 66
+    },
+    {
+     "atk_index": 53,
+     "n_args": 1,
+     "at": "0x00cd7ede",
+     "state": 66
+    }
+   ],
+   "states": [
+    66
+   ],
+   "shared_handler": true
+  },
+  "darkwave": {
+   "class": "demonicswordman",
+   "skill_id": 117,
+   "skl": "DemonicSwordman/DarkWave.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 87,
+     "n_args": 1,
+     "at": "0x00ccea90",
+     "state": 67
+    }
+   ],
+   "states": [
+    67
+   ],
+   "shared_handler": false
+  },
+  "state68": {
+   "state": 68,
+   "skill": null,
+   "atk_calls": [
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 68
+    }
+   ],
+   "states": []
+  },
+  "jumpattackmulti": {
+   "class": "demonicswordman",
+   "skill_id": 17,
+   "skl": "DemonicSwordman/NotApplicable/JumpAttackMulti.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    }
+   ],
+   "states": [
+    69
+   ],
+   "shared_handler": true
+  },
+  "jumpattackhighfast": {
+   "class": "demonicswordman",
+   "skill_id": 43,
+   "skl": "DemonicSwordman/NotApplicable/JumpAttackHighFast.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    }
+   ],
+   "states": [
+    69
+   ],
+   "shared_handler": true
+  },
+  "backstepcutter": {
+   "class": "demonicswordman",
+   "skill_id": 49,
+   "skl": "DemonicSwordman/NotApplicable/BackStepCutter.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 69
+    }
+   ],
+   "states": [
+    69
+   ],
+   "shared_handler": true
+  },
+  "weaponcombo": {
+   "class": "demonicswordman",
+   "skill_id": 67,
+   "skl": "DemonicSwordman/NotApplicable/WeaponCombo.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 70
+    },
+    {
+     "atk_index": 11,
+     "n_args": 1,
+     "at": "0x00cdd10c",
+     "state": 70
+    }
+   ],
+   "states": [
+    70
+   ],
+   "shared_handler": true
+  },
+  "khazan": {
+   "class": "demonicswordman",
+   "skill_id": 25,
+   "skl": "DemonicSwordman/NotApplicable/Khazan.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    },
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    }
+   ],
+   "states": [
+    75
+   ],
+   "shared_handler": true
+  },
+  "releasewave": {
+   "class": "demonicswordman",
+   "skill_id": 32,
+   "skl": "DemonicSwordman/NotApplicable/ReleaseWave.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    },
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    }
+   ],
+   "states": [
+    75
+   ],
+   "shared_handler": true
+  },
+  "diehard": {
+   "class": "demonicswordman",
+   "skill_id": 34,
+   "skl": "DemonicSwordman/NotApplicable/DieHard.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    },
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    }
+   ],
+   "states": [
+    75
+   ],
+   "shared_handler": true
+  },
+  "bremen": {
+   "class": "demonicswordman",
+   "skill_id": 41,
+   "skl": "DemonicSwordman/NotApplicable/Bremen.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    },
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    }
+   ],
+   "states": [
+    75
+   ],
+   "shared_handler": true
+  },
+  "darkfall": {
+   "class": "demonicswordman",
+   "skill_id": 44,
+   "skl": "DemonicSwordman/DarkFall.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    }
+   ],
+   "states": [
+    75
+   ],
+   "shared_handler": true
+  },
+  "epidemicrasa": {
+   "class": "demonicswordman",
+   "skill_id": 75,
+   "skl": "DemonicSwordman/NotApplicable/EpidemicRasa.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    },
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    }
+   ],
+   "states": [
+    75
+   ],
+   "shared_handler": true
+  },
+  "tombstonerain": {
+   "class": "swordman",
+   "skill_id": 44,
+   "skl": "Swordman/TombStoneRain.skl",
+   "name": "死亡墓碑",
+   "atk_calls": [
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 75
+    }
+   ],
+   "states": [
+    75
+   ],
+   "shared_handler": true
+  },
+  "ghoststep": {
+   "class": "demonicswordman",
+   "skill_id": 18,
+   "skl": "DemonicSwordman/NotApplicable/GhostStep.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 83,
+     "n_args": 1,
+     "at": "0x00cde733",
+     "state": 77
+    },
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 77
+    },
+    {
+     "atk_index": 83,
+     "n_args": 1,
+     "at": "0x00cde733",
+     "state": 77
+    },
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 77
+    }
+   ],
+   "states": [
+    77
+   ],
+   "shared_handler": true
+  },
+  "darkflamesword": {
+   "class": "demonicswordman",
+   "skill_id": 82,
+   "skl": "DemonicSwordman/DarkFlameSword.skl",
+   "name": "",
+   "atk_calls": [
+    {
+     "atk_index": 83,
+     "n_args": 1,
+     "at": "0x00cde733",
+     "state": 77
+    },
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 77
+    }
+   ],
+   "states": [
+    77
+   ],
+   "shared_handler": true
+  },
+  "kalla": {
+   "class": "swordman",
+   "skill_id": 82,
+   "skl": "Swordman/Kalla.skl",
+   "name": "冥炎之卡洛",
+   "atk_calls": [
+    {
+     "atk_index": 83,
+     "n_args": 1,
+     "at": "0x00cde733",
+     "state": 77
+    },
+    {
+     "atk_index": 9,
+     "n_args": 1,
+     "at": "0x00cdea85",
+     "state": 77
+    }
+   ],
+   "states": [
+    77
+   ],
+   "shared_handler": true
+  }
+ },
+ "effect_attach": {
+  "5": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "6": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "7": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "9": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "10": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "11": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "12": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "13": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "14": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "15": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "16": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "17": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "18": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "22": [
+   {
+    "target": "0x00690210",
+    "args": [
+     1,
+     8,
+     2
+    ],
+    "at": "0x00cd0ebd"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     1,
+     8,
+     1
+    ],
+    "at": "0x00cd0eef"
+   }
+  ],
+  "24": [
+   {
+    "target": "0x00690420",
+    "args": [
+     20
+    ],
+    "at": "0x00cd1bcb"
+   }
+  ],
+  "27": [
+   {
+    "target": "0x00690420",
+    "args": [
+     3,
+     68
+    ],
+    "at": "0x00cd9457"
+   }
+  ],
+  "28": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "31": [
+   {
+    "target": "0x00690420",
+    "args": [
+     2,
+     57
+    ],
+    "at": "0x00cd3162"
+   }
+  ],
+  "32": [
+   {
+    "target": "0x00690210",
+    "args": [
+     1,
+     0,
+     58,
+     1
+    ],
+    "at": "0x00cd4242"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     1,
+     1,
+     58,
+     2
+    ],
+    "at": "0x00cd4251"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     0,
+     58
+    ],
+    "at": "0x00cd42f7"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     2,
+     58
+    ],
+    "at": "0x00cd430b"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     2,
+     58
+    ],
+    "at": "0x00cd4346"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     2,
+     58
+    ],
+    "at": "0x00cd43b7"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     2,
+     58
+    ],
+    "at": "0x00cd4401"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     0,
+     58
+    ],
+    "at": "0x00cd4669"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     1,
+     58
+    ],
+    "at": "0x00cd4687"
+   }
+  ],
+  "35": [
+   {
+    "target": "0x00690420",
+    "args": [
+     64
+    ],
+    "at": "0x00cd495b"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     64
+    ],
+    "at": "0x00cd49b3"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     64
+    ],
+    "at": "0x00cd49eb"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     1,
+     64
+    ],
+    "at": "0x00cd4a0c"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     1,
+     64
+    ],
+    "at": "0x00cd4a28"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     81,
+     2
+    ],
+    "at": "0x00cd4cfc"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     1,
+     81,
+     1
+    ],
+    "at": "0x00cd4d0b"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     81,
+     2
+    ],
+    "at": "0x00cd4e28"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     81,
+     1
+    ],
+    "at": "0x00cd4e37"
+   }
+  ],
+  "36": [
+   {
+    "target": "0x00690420",
+    "args": [
+     65
+    ],
+    "at": "0x00cd529e"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     1,
+     1,
+     65
+    ],
+    "at": "0x00cd52ed"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     1,
+     65
+    ],
+    "at": "0x00cd530c"
+   }
+  ],
+  "37": [
+   {
+    "target": "0x00690420",
+    "args": [
+     3,
+     68
+    ],
+    "at": "0x00cd9457"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     3,
+     68
+    ],
+    "at": "0x00cd947c"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     68,
+     1
+    ],
+    "at": "0x00cd94a0"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     4,
+     68,
+     2
+    ],
+    "at": "0x00cd94af"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     2,
+     68
+    ],
+    "at": "0x00cd967d"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     2,
+     68
+    ],
+    "at": "0x00cd969e"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     2,
+     68
+    ],
+    "at": "0x00cd96b8"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     2,
+     68
+    ],
+    "at": "0x00cd96d3"
+   }
+  ],
+  "40": [
+   {
+    "target": "0x00690420",
+    "args": [
+     0,
+     73
+    ],
+    "at": "0x00cd6334"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     0,
+     73
+    ],
+    "at": "0x00cd638e"
+   }
+  ],
+  "42": [
+   {
+    "target": "0x00690210",
+    "args": [
+     1,
+     1,
+     77,
+     1
+    ],
+    "at": "0x00cd9de7"
+   }
+  ],
+  "44": [
+   {
+    "target": "0x00690210",
+    "args": [
+     82
+    ],
+    "at": "0x00cd899d"
+   }
+  ],
+  "45": [
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     81,
+     2
+    ],
+    "at": "0x00cd4cfc"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     1,
+     81,
+     1
+    ],
+    "at": "0x00cd4d0b"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     81,
+     2
+    ],
+    "at": "0x00cd4e28"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     81,
+     1
+    ],
+    "at": "0x00cd4e37"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     65
+    ],
+    "at": "0x00cd529e"
+   },
+   {
+    "target": "0x00690420",
+    "args": [
+     1,
+     1,
+     65
+    ],
+    "at": "0x00cd52ed"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     1,
+     65
+    ],
+    "at": "0x00cd530c"
+   }
+  ],
+  "54": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "55": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "58": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "64": [
+   {
+    "target": "0x00690420",
+    "args": [
+     111
+    ],
+    "at": "0x00cd7a35"
+   }
+  ],
+  "65": [
+   {
+    "target": "0x00690420",
+    "args": [
+     111
+    ],
+    "at": "0x00cd7a35"
+   }
+  ],
+  "68": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "69": [
+   {
+    "target": "0x00690420",
+    "args": [
+     17
+    ],
+    "at": "0x00cdcf39"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     0,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf55"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     2,
+     17,
+     -1
+    ],
+    "at": "0x00cdcf79"
+   },
+   {
+    "target": "0x00690210",
+    "args": [
+     0,
+     3,
+     17,
+     1
+    ],
+    "at": "0x00cdcf88"
+   }
+  ],
+  "70": [
+   {
+    "target": "0x00690420",
+    "args": [
+     46
+    ],
+    "at": "0x00cdd2bb"
+   }
+  ]
+ }
+}

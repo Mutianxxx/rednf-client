@@ -120,6 +120,33 @@ struct PersistentPlan {
     std::string evidence;
 };
 
+// Exe-sourced judgment (attack launch) evidence. A skill's setState handler in
+// the 1031 exe calls the ATK selector thunk 0x70213F; its first immediate is the
+// attack index into the skill's .atk resource. This is the exe -> PVF dispatch
+// link: it proves *which* attack volume a state launches and *when* (call-site
+// address). The .atk geometry is still read from PVF. Provenance is the static
+// scan in tools/skill-bindings/evidence/judgment-events.json; the selector sits
+// in a Themida VM region so the immediate is recorded but not yet name-mapped.
+struct ExeJudgment {
+    int state = 0;
+    int atkIndex = -1;            // -1 = selector called with no immediate
+    std::string at;               // call-site address, e.g. 0x00ccf619
+    bool sharedHandler = false;   // handler also serves other skills; runtime
+                                  // skill_id (vtable +0x804) picks the concrete .atk
+    std::string evidence;
+};
+
+// The skill's input command (操作指令), e.g. "↑↑↓↓ + Z". Source is the .skl
+// [command] / [command key explain] block in 1031 Script.pvf. That is PVF data
+// the exe input dispatcher parses to register the key listener; the exe-side
+// parser is not yet decoded, so this is labelled source data, not exe runtime.
+struct SkillCommand {
+    std::string tokens;    // rendered token list, e.g. "↑↑↓↓ + Z"
+    std::string explain;   // [command key explain] verbatim (Chinese)
+    std::string evidence;
+};
+
+
 struct SkillVisualMapping {
     SkillKey key{};
     std::string skillPath, name;
@@ -157,6 +184,11 @@ struct SkillVisualMapping {
     std::vector<Box> reconstructedBoxes;
     std::vector<std::pair<size_t, size_t>> reconstructedFrames;
     int hitStopMs = 0; // 0 = not recovered from source; never invented
+    // Exe-sourced attack-launch evidence per state (judgment-events.json), joined
+    // by skill stem. Empty when the skill's handler made no ATK-selector call.
+    std::vector<ExeJudgment> exeJudgments;
+    // Input command from the .skl [command] block; empty when the skill has none.
+    SkillCommand command;
     bool passive = false;
     SkillGrade grade = SkillGrade::D;
     MappingConfidence confidence = MappingConfidence::None;
@@ -242,6 +274,11 @@ class SkillMappingTable {
     const SkillVisualMapping &resolve(int jobId, const CharacterRegistration &);
     const JobIndex &index(int jobId);
     std::string jobDirectory(int jobId) const;
+    // Lazily loads tools/skill-bindings/evidence/{judgment-events,skill-commands}.json
+    // and folds them into a resolved mapping by skill stem. Guarded: a missing
+    // file simply leaves the fields empty; it never fails resolution.
+    void loadEvidence();
+    void applyEvidence(SkillVisualMapping &) const;
 
     Pvf &pvf_;
     Assets &assets_;
@@ -251,5 +288,8 @@ class SkillMappingTable {
     std::map<int, std::vector<SkillRow>> rows_;
     mutable std::vector<SkillJobInfo> jobs_;
     std::map<std::string, bool> attackBoxCache_;
+    bool evidenceLoaded_ = false;
+    std::map<std::string, SkillCommand> commandByStem_;
+    std::map<std::string, std::vector<ExeJudgment>> judgmentByStem_;
 };
 } // namespace dnf

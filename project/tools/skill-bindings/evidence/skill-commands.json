@@ -1,0 +1,7977 @@
+{
+ "summary": {
+  "source": "1031 Script.pvf skill/*.skl [command] / [command key explain]",
+  "exe_consumer": "exe parses [command] to register the key listener that activates the skill (state-handler correlation in judgment-events.json); exe-side parser not yet decoded",
+  "evidence_grade": "PVF source, exe-validated by state-handler correlation",
+  "skl_total": 2008,
+  "skl_with_command": 781
+ },
+ "commands": {
+  "shiningcut": {
+   "skl": "skill/thief/shiningcut.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓ → + Z"
+  },
+  "hardattack": {
+   "skl": "skill/swordman/hardattack.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑(按住状态下) + Z"
+  },
+  "dashafterdash": {
+   "skl": "skill/atfighter/dashafterdash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : (前冲攻击中) X"
+  },
+  "flashmineex": {
+   "skl": "skill/atgunner/flashmineex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "nielsniping": {
+   "skl": "skill/atgunner/nielsniping.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓ + Z"
+  },
+  "punisher": {
+   "skl": "skill/gunner/punisher.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "magiccannon": {
+   "skl": "skill/atmage/magiccannon.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "sunburst": {
+   "skl": "skill/mage/sunburst.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "hiddensting": {
+   "skl": "skill/atfighter/hiddensting.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "armorbullet": {
+   "skl": "skill/atgunner/armorbullet.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Space"
+  },
+  "airraidex": {
+   "skl": "skill/atgunner/airraidex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ([上旋踢]动作中) 方向键， X"
+  },
+  "backstep": {
+   "skl": "skill/priest/backstep.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    "&",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : ↓(按住状态下) + C"
+  },
+  "energyball": {
+   "skl": "skill/atfighter/energyball.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Z"
+  },
+  "ghostsidewind": {
+   "skl": "skill/swordman/ghostsidewind.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←→ + Z"
+  },
+  "shiningcutex": {
+   "skl": "skill/thief/shiningcutex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "darktoleranceup": {
+   "skl": "skill/swordman/darktoleranceup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "stinger": {
+   "skl": "skill/atgunner/stinger.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "chaserautocreate": {
+   "skl": "skill/mage/chaserautocreate.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→ + Space"
+  },
+  "launchfluorescent": {
+   "skl": "skill/mage/launchfluorescent.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Z"
+  },
+  "randomkick": {
+   "skl": "skill/fighter/randomkick.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "superarmor": {
+   "skl": "skill/fighter/superarmor.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "lightningwall": {
+   "skl": "skill/atmage/lightningwall.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑→ + Z"
+  },
+  "flamestrike": {
+   "skl": "skill/mage/flamestrike.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Z"
+  },
+  "flamethrowerboost": {
+   "skl": "skill/atgunner/flamethrowerboost.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↑→ + Z"
+  },
+  "airraid": {
+   "skl": "skill/gunner/airraid.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ([回旋踢]动作中) 方向键， Z"
+  },
+  "khazanex": {
+   "skl": "skill/swordman/khazanex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "grabblastbloodex": {
+   "skl": "skill/swordman/grabblastbloodex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "skintakeoff": {
+   "skl": "skill/thief/skintakeoff.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Z"
+  },
+  "autoguard": {
+   "skl": "skill/swordman/autoguard.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Space"
+  },
+  "fountainoflife": {
+   "skl": "skill/priest/fountainoflife.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑→ + Space"
+  },
+  "disactivestatus": {
+   "skl": "skill/mage/disactivestatus.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "hitend": {
+   "skl": "skill/thief/hitend.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : (技能使用中) Z"
+  },
+  "halloweenbuster": {
+   "skl": "skill/mage/halloweenbuster.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "dashattackmultihit": {
+   "skl": "skill/swordman/dashattackmultihit.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : (前冲攻击中) X"
+  },
+  "empstorm": {
+   "skl": "skill/atgunner/empstorm.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "warpondamage": {
+   "skl": "skill/mage/warpondamage.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 :(被攻击或倒地时) Z"
+  },
+  "windmill": {
+   "skl": "skill/gunner/windmill.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + X"
+  },
+  "jumppowerup": {
+   "skl": "skill/fighter/jumppowerup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑ + Space"
+  },
+  "legsuplex": {
+   "skl": "skill/fighter/legsuplex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : (跳跃状态下) C"
+  },
+  "satellitelaser": {
+   "skl": "skill/gunner/satellitelaser.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "mechadrop": {
+   "skl": "skill/atgunner/mechadrop.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "dotarea": {
+   "skl": "skill/demonicswordman/notapplicable/dotarea.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "bloodblastex": {
+   "skl": "skill/swordman/bloodblastex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "ambitionofballacre": {
+   "skl": "skill/thief/ambitionofballacre.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑↑+ Z"
+  },
+  "dashpunch": {
+   "skl": "skill/atfighter/dashpunch.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "guard": {
+   "skl": "skill/swordman/guard.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + X"
+  },
+  "risingarea": {
+   "skl": "skill/priest/risingarea.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Z"
+  },
+  "napalmbomb": {
+   "skl": "skill/gunner/napalmbomb.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "liftshot": {
+   "skl": "skill/atgunner/liftshot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →(按住状态下) + Z"
+  },
+  "iceroad": {
+   "skl": "skill/atmage/iceroad.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "robotsexplosion": {
+   "skl": "skill/gunner/robotsexplosion.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→ + Space"
+  },
+  "crazymount": {
+   "skl": "skill/fighter/crazymount.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "bulletguard": {
+   "skl": "skill/gunner/bulletguard.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "robotrx78": {
+   "skl": "skill/gunner/robotrx78.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓(按住状态下) + Z"
+  },
+  "aerialgatling": {
+   "skl": "skill/gunner/aerialgatling.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Z"
+  },
+  "canceltreadshoot": {
+   "skl": "skill/atgunner/canceltreadshoot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "apocalypse": {
+   "skl": "skill/priest/apocalypse.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "wavespinareaex": {
+   "skl": "skill/swordman/wavespinareaex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "standalonewaveex": {
+   "skl": "skill/demonicswordman/notapplicable/standalonewaveex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "darkritual": {
+   "skl": "skill/thief/darkritual.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "stayonjumpshoot": {
+   "skl": "skill/gunner/stayonjumpshoot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "hitback": {
+   "skl": "skill/swordman/hitback.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : (被背击时) Z"
+  },
+  "skintakeoffex": {
+   "skl": "skill/thief/skintakeoffex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "risingcutex": {
+   "skl": "skill/thief/risingcutex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "wavespinarea": {
+   "skl": "skill/swordman/wavespinarea.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↑ + Z"
+  },
+  "flyingsquirrelex": {
+   "skl": "skill/thief/flyingsquirrelex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "blackmantle": {
+   "skl": "skill/mage/blackmantle.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "blache": {
+   "skl": "skill/swordman/blache.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "whip": {
+   "skl": "skill/mage/whip.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "destroyearthskydrop": {
+   "skl": "skill/atfighter/destroyearthskydrop.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "glueyfruitex": {
+   "skl": "skill/atfighter/glueyfruitex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "suplexcycloneex": {
+   "skl": "skill/atfighter/suplexcycloneex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "summonnicolas": {
+   "skl": "skill/thief/summonnicolas.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Space"
+  },
+  "magicalattackup": {
+   "skl": "skill/atgunner/magicalattackup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : Space"
+  },
+  "willdriver": {
+   "skl": "skill/priest/willdriver.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Space"
+  },
+  "summonspiritlight": {
+   "skl": "skill/mage/summonspiritlight.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↑ + Z"
+  },
+  "robotics": {
+   "skl": "skill/gunner/robotics.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "earthbreak": {
+   "skl": "skill/fighter/earthbreak.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑ + Z"
+  },
+  "crosscrash": {
+   "skl": "skill/priest/crosscrash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓→ + Z"
+  },
+  "summonspiritdarkex": {
+   "skl": "skill/mage/summonspiritdarkex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓→ + Z"
+  },
+  "lightningdance": {
+   "skl": "skill/atfighter/lightningdance.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "elementalrain": {
+   "skl": "skill/atmage/elementalrain.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "quickstanding": {
+   "skl": "skill/fighter/quickstanding.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : (倒地状态下) C"
+  },
+  "hurricaneroll": {
+   "skl": "skill/priest/hurricaneroll.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "sacrifice": {
+   "skl": "skill/demonicswordman/notapplicable/sacrifice.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Space"
+  },
+  "superarmoroncast": {
+   "skl": "skill/swordman/superarmoroncast.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓ + Space"
+  },
+  "throwenemy": {
+   "skl": "skill/fighter/throwenemy.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "watercannon": {
+   "skl": "skill/atmage/watercannon.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "epidemicrasa": {
+   "skl": "skill/demonicswordman/notapplicable/epidemicrasa.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Space"
+  },
+  "sayaex": {
+   "skl": "skill/swordman/sayaex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "diehard": {
+   "skl": "skill/demonicswordman/notapplicable/diehard.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "sajahu": {
+   "skl": "skill/atfighter/sajahu.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Z"
+  },
+  "icewave": {
+   "skl": "skill/swordman/icewave.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "stomp": {
+   "skl": "skill/fighter/stomp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : (在空中) Z"
+  },
+  "suplex": {
+   "skl": "skill/fighter/suplex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →(按住状态下) + Z"
+  },
+  "grandwave": {
+   "skl": "skill/swordman/grandwave.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "bladeofpurewhite": {
+   "skl": "skill/priest/bladeofpurewhite.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "icefield": {
+   "skl": "skill/mage/icefield.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓ + Z"
+  },
+  "venommine": {
+   "skl": "skill/atfighter/venommine.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "aerialknee": {
+   "skl": "skill/atgunner/aerialknee.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : Z"
+  },
+  "nenspearex": {
+   "skl": "skill/atfighter/nenspearex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "darksoul": {
+   "skl": "skill/thief/darksoul.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : → + Z"
+  },
+  "duckingbodyblow": {
+   "skl": "skill/priest/duckingbodyblow.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    "&",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 :([俯冲]动作中) ↓ + X"
+  },
+  "randompiercestrike": {
+   "skl": "skill/mage/randompiercestrike.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "standalonewave": {
+   "skl": "skill/demonicswordman/notapplicable/standalonewave.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Z"
+  },
+  "machinegunjab": {
+   "skl": "skill/priest/machinegunjab.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "firewave": {
+   "skl": "skill/swordman/firewave.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "ripper": {
+   "skl": "skill/priest/ripper.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "chakraofpassion": {
+   "skl": "skill/priest/chakraofpassion.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Space"
+  },
+  "grandwaveex": {
+   "skl": "skill/swordman/grandwaveex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "darksoulex": {
+   "skl": "skill/thief/darksoulex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "holdup": {
+   "skl": "skill/atfighter/holdup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "kikouken": {
+   "skl": "skill/atfighter/kikouken.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "darkchange": {
+   "skl": "skill/atmage/darkchange.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "galesmash": {
+   "skl": "skill/priest/galesmash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑ + Z"
+  },
+  "closepunch": {
+   "skl": "skill/fighter/closepunch.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "crouch": {
+   "skl": "skill/atfighter/crouch.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + C"
+  },
+  "lightningdragon": {
+   "skl": "skill/fighter/lightningdragon.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "bremen": {
+   "skl": "skill/demonicswordman/notapplicable/bremen.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Space"
+  },
+  "spire": {
+   "skl": "skill/fighter/spire.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "bloodsword": {
+   "skl": "skill/swordman/bloodsword.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←←→ + Z"
+  },
+  "anklecutex": {
+   "skl": "skill/thief/anklecutex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "silverbullet": {
+   "skl": "skill/gunner/silverbullet.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : → + Space"
+  },
+  "breakingrush": {
+   "skl": "skill/thief/breakingrush.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : ↓→ + C"
+  },
+  "overdrive": {
+   "skl": "skill/demonicswordman/notapplicable/overdrive.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "cancelflamethrower": {
+   "skl": "skill/atgunner/cancelflamethrower.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "ashenfork": {
+   "skl": "skill/swordman/ashenfork.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : (跳跃状态下) Z"
+  },
+  "flowmindthree": {
+   "skl": "skill/swordman/flowmindthree.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ([流心]动作中) Z"
+  },
+  "cancelaerialgatling": {
+   "skl": "skill/atgunner/cancelaerialgatling.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "108stairsex": {
+   "skl": "skill/atfighter/108stairsex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "enchantpoison": {
+   "skl": "skill/fighter/enchantpoison.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "robotez8ex": {
+   "skl": "skill/gunner/robotez8ex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "ducking": {
+   "skl": "skill/priest/ducking.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ([意念驱动]状态下) Z"
+  },
+  "gloriousbless": {
+   "skl": "skill/priest/gloriousbless.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Space"
+  },
+  "broomspin": {
+   "skl": "skill/mage/broomspin.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : (在空中) Z"
+  },
+  "momentaryslashex": {
+   "skl": "skill/demonicswordman/notapplicable/momentaryslashex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "definitegrab": {
+   "skl": "skill/fighter/definitegrab.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "heavenlycombinationex": {
+   "skl": "skill/priest/heavenlycombinationex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "risingupperex": {
+   "skl": "skill/fighter/risingupperex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "fastknee": {
+   "skl": "skill/atgunner/fastknee.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Z"
+  },
+  "summonhodorex": {
+   "skl": "skill/mage/summonhodorex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "giantswing": {
+   "skl": "skill/priest/giantswing.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "headshot": {
+   "skl": "skill/atgunner/headshot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "dashafterdashex": {
+   "skl": "skill/fighter/dashafterdashex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": ""
+  },
+  "nenguardex": {
+   "skl": "skill/fighter/nenguardex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "elementalbuster": {
+   "skl": "skill/atmage/elementalbuster.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "hurricanespear": {
+   "skl": "skill/atfighter/hurricanespear.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "chasersexplosion": {
+   "skl": "skill/mage/chasersexplosion.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Z"
+  },
+  "twingunblade": {
+   "skl": "skill/atgunner/twingunblade.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "shouldercharge": {
+   "skl": "skill/atfighter/shouldercharge.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "hopsmash": {
+   "skl": "skill/swordman/hopsmash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "whirlwindkick": {
+   "skl": "skill/fighter/whirlwindkick.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + C"
+  },
+  "targetit": {
+   "skl": "skill/mage/targetit.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "dummy": {
+   "skl": "skill/thief/dummy.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "extruder": {
+   "skl": "skill/atgunner/extruder.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "doublepierceex": {
+   "skl": "skill/thief/doublepierceex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "backstepcutter": {
+   "skl": "skill/swordman/backstepcutter.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ([后跳]动作中) X"
+  },
+  "thrust": {
+   "skl": "skill/mage/thrust.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →(按住状态下) + Z"
+  },
+  "camouflage": {
+   "skl": "skill/gunner/camouflage.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Space"
+  },
+  "gatling": {
+   "skl": "skill/gunner/gatling.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ↓→ + X(X连按)"
+  },
+  "bellatrix": {
+   "skl": "skill/mage/bellatrix.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "walkshoot": {
+   "skl": "skill/gunner/walkshoot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : ↓→ + C"
+  },
+  "fluorecollider": {
+   "skl": "skill/mage/fluorecollider.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↑ + Z"
+  },
+  "energyballex": {
+   "skl": "skill/atfighter/energyballex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "spireex": {
+   "skl": "skill/atfighter/spireex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "darknessmantle": {
+   "skl": "skill/atmage/darknessmantle.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓ + Z"
+  },
+  "outragebreak": {
+   "skl": "skill/swordman/outragebreak.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "subweaponstuckdown": {
+   "skl": "skill/atgunner/subweaponstuckdown.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "c4remote": {
+   "skl": "skill/atgunner/c4remote.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "releasewave": {
+   "skl": "skill/demonicswordman/notapplicable/releasewave.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Z"
+  },
+  "firewaveex": {
+   "skl": "skill/demonicswordman/notapplicable/firewaveex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "guillotineex": {
+   "skl": "skill/thief/guillotineex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "icefieldex": {
+   "skl": "skill/mage/icefieldex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "liftupper": {
+   "skl": "skill/fighter/liftupper.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : Z"
+  },
+  "poisonmist": {
+   "skl": "skill/fighter/poisonmist.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : (跳跃状态下) ←→ + C"
+  },
+  "lightenchantweapon": {
+   "skl": "skill/atfighter/lightenchantweapon.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "icechakram": {
+   "skl": "skill/atmage/icechakram.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "vermilionbirdtalisman": {
+   "skl": "skill/priest/vermilionbirdtalisman.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "energyballcharge": {
+   "skl": "skill/atfighter/energyballcharge.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "shadowboxer": {
+   "skl": "skill/priest/shadowboxer.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→ + Space"
+  },
+  "doublegunhawk": {
+   "skl": "skill/atgunner/doublegunhawk.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "grabexplosion": {
+   "skl": "skill/atfighter/grabexplosion.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "flowmindpowerup": {
+   "skl": "skill/swordman/flowmindpowerup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ([流心]动作中) space"
+  },
+  "sparrowfactory": {
+   "skl": "skill/gunner/sparrowfactory.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓ + Z"
+  },
+  "steyrheavyrifle": {
+   "skl": "skill/gunner/steyrheavyrifle.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "blackhole": {
+   "skl": "skill/mage/blackhole.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "magicmissile": {
+   "skl": "skill/mage/magicmissile.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "ghoststep": {
+   "skl": "skill/demonicswordman/notapplicable/ghoststep.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Space"
+  },
+  "uraniumbomb": {
+   "skl": "skill/gunner/uraniumbomb.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Z"
+  },
+  "aimvitalpoint": {
+   "skl": "skill/fighter/aimvitalpoint.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Space"
+  },
+  "icearea": {
+   "skl": "skill/atmage/icearea.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→↑ + Z"
+  },
+  "launchblackcat": {
+   "skl": "skill/mage/launchblackcat.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "magicaltempoup": {
+   "skl": "skill/mage/magicaltempoup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Space"
+  },
+  "laserriflecharge": {
+   "skl": "skill/gunner/laserriflecharge.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": "操作指令 : Z(按住稍停后松开)"
+  },
+  "sweetcandybar": {
+   "skl": "skill/mage/sweetcandybar.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Space"
+  },
+  "elementalchange": {
+   "skl": "skill/atmage/elementalchange.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "wavemark": {
+   "skl": "skill/swordman/wavemark.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "throwweb": {
+   "skl": "skill/atfighter/throwweb.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↑→ + Z"
+  },
+  "vanditcutex": {
+   "skl": "skill/thief/vanditcutex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "bloodyrave": {
+   "skl": "skill/swordman/bloodyrave.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "kikoukenex": {
+   "skl": "skill/atfighter/kikoukenex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "cancelgatling": {
+   "skl": "skill/atgunner/cancelgatling.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "ghoststepslash": {
+   "skl": "skill/swordman/ghoststepslash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "holonglight": {
+   "skl": "skill/atmage/holonglight.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓ + Z"
+  },
+  "summonluis": {
+   "skl": "skill/mage/summonluis.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Space"
+  },
+  "laserrifle": {
+   "skl": "skill/gunner/laserrifle.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "robotexs": {
+   "skl": "skill/atgunner/robotexs.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "doubleswing": {
+   "skl": "skill/mage/doubleswing.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "thunderstrike": {
+   "skl": "skill/mage/thunderstrike.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↑ + Z"
+  },
+  "robottempester": {
+   "skl": "skill/gunner/robottempester.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↑ + Z"
+  },
+  "waveeye": {
+   "skl": "skill/demonicswordman/notapplicable/waveeye.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "reckless": {
+   "skl": "skill/swordman/reckless.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "turnwindmill": {
+   "skl": "skill/atmage/turnwindmill.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "turningshoot": {
+   "skl": "skill/gunner/turningshoot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "suplexcyclone": {
+   "skl": "skill/atfighter/suplexcyclone.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "heatingfurnace": {
+   "skl": "skill/mage/heatingfurnace.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "shadowcutex": {
+   "skl": "skill/thief/shadowcutex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "manaburst": {
+   "skl": "skill/atmage/manaburst.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Z"
+  },
+  "slowdownpowerup": {
+   "skl": "skill/fighter/slowdownpowerup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "machinegunjabex": {
+   "skl": "skill/priest/machinegunjabex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "spincutter": {
+   "skl": "skill/priest/spincutter.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑←↓→ + Space"
+  },
+  "eraser": {
+   "skl": "skill/thief/eraser.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Z"
+  },
+  "icecrash": {
+   "skl": "skill/atmage/icecrash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "upperslash": {
+   "skl": "skill/swordman/upperslash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : Z"
+  },
+  "fastshoot": {
+   "skl": "skill/gunner/fastshoot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ↑ + X"
+  },
+  "c4remoteex": {
+   "skl": "skill/gunner/c4remoteex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "cancelfastknee": {
+   "skl": "skill/gunner/cancelfastknee.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "cancelheadshot": {
+   "skl": "skill/gunner/cancelheadshot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "summonspiritlighthigher": {
+   "skl": "skill/mage/summonspiritlighthigher.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑←→ + Z"
+  },
+  "ashenforkex": {
+   "skl": "skill/demonicswordman/notapplicable/ashenforkex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "lighttoleranceup": {
+   "skl": "skill/fighter/lighttoleranceup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "heavenlycombination": {
+   "skl": "skill/priest/heavenlycombination.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓→→ + Z"
+  },
+  "darknail": {
+   "skl": "skill/thief/darknail.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑→ + Z"
+  },
+  "excelstrike": {
+   "skl": "skill/thief/excelstrike.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "hundredsword": {
+   "skl": "skill/demonicswordman/notapplicable/hundredsword.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "summonecheverraex": {
+   "skl": "skill/mage/summonecheverraex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "bluedragon": {
+   "skl": "skill/priest/bluedragon.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "jumpattackmulti": {
+   "skl": "skill/swordman/jumpattackmulti.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": ""
+  },
+  "crossshoot": {
+   "skl": "skill/gunner/crossshoot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "nenguard": {
+   "skl": "skill/atfighter/nenguard.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→ + Space"
+  },
+  "hellbenter": {
+   "skl": "skill/demonicswordman/notapplicable/hellbenter.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "grabexplosionex": {
+   "skl": "skill/fighter/grabexplosionex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "summonspiritdark": {
+   "skl": "skill/mage/summonspiritdark.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓ + Z"
+  },
+  "robotez8": {
+   "skl": "skill/atgunner/robotez8.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "vanditcut": {
+   "skl": "skill/thief/vanditcut.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "cannonball": {
+   "skl": "skill/gunner/cannonball.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "enhancedmagicmissile": {
+   "skl": "skill/mage/enhancedmagicmissile.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "silverstream": {
+   "skl": "skill/thief/silverstream.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "iceorbex": {
+   "skl": "skill/atmage/iceorbex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "luckystraight": {
+   "skl": "skill/priest/luckystraight.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →(按住状态下) + Z"
+  },
+  "pokethrow": {
+   "skl": "skill/mage/pokethrow.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "kensin": {
+   "skl": "skill/fighter/kensin.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : → + Space"
+  },
+  "fallenblossoms": {
+   "skl": "skill/atmage/fallenblossoms.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "elementalchainex": {
+   "skl": "skill/mage/elementalchainex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "magicmissileex": {
+   "skl": "skill/mage/magicmissileex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "multiheadshotex": {
+   "skl": "skill/gunner/multiheadshotex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "tombstonerainex": {
+   "skl": "skill/demonicswordman/notapplicable/tombstonerainex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "fastmove": {
+   "skl": "skill/priest/fastmove.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "typhoon": {
+   "skl": "skill/atfighter/typhoon.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "nicolassummonzombie": {
+   "skl": "skill/thief/nicolassummonzombie.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑→ + Z"
+  },
+  "summonsandor": {
+   "skl": "skill/mage/summonsandor.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→ + Space"
+  },
+  "slicer": {
+   "skl": "skill/thief/slicer.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : (前冲攻击后) X"
+  },
+  "illusionbomb": {
+   "skl": "skill/atfighter/illusionbomb.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Space"
+  },
+  "windstrike": {
+   "skl": "skill/atmage/windstrike.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : Z"
+  },
+  "flowmind": {
+   "skl": "skill/demonicswordman/notapplicable/flowmind.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "firepillar": {
+   "skl": "skill/atmage/firepillar.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "pandemoniumex": {
+   "skl": "skill/priest/pandemoniumex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "singlekick": {
+   "skl": "skill/fighter/singlekick.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑(按住状态下) + Z"
+  },
+  "resonance": {
+   "skl": "skill/atmage/resonance.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Space"
+  },
+  "transformflapper": {
+   "skl": "skill/mage/transformflapper.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Z"
+  },
+  "robotexsexold": {
+   "skl": "skill/gunner/robotexsexold.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "wallofice": {
+   "skl": "skill/mage/wallofice.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "summonmonsterreckless": {
+   "skl": "skill/mage/summonmonsterreckless.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑→↑ + Space"
+  },
+  "flamebullet": {
+   "skl": "skill/gunner/flamebullet.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "highspeedslash": {
+   "skl": "skill/priest/highspeedslash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓→↑← + Space"
+  },
+  "kalla": {
+   "skl": "skill/swordman/kalla.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓ + Z"
+  },
+  "bloodblast": {
+   "skl": "skill/swordman/bloodblast.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Z"
+  },
+  "icesword": {
+   "skl": "skill/atmage/icesword.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "stingerex": {
+   "skl": "skill/gunner/stingerex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "bloodblastexp": {
+   "skl": "skill/swordman/bloodblastexp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "quakearea": {
+   "skl": "skill/priest/quakearea.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Z"
+  },
+  "sonicassault": {
+   "skl": "skill/thief/sonicassault.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "lightningdanceex": {
+   "skl": "skill/atfighter/lightningdanceex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "blizzardthrowerboost": {
+   "skl": "skill/atgunner/blizzardthrowerboost.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "throwsandex": {
+   "skl": "skill/fighter/throwsandex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "nicolasblackwave": {
+   "skl": "skill/thief/nicolasblackwave.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓→→ + Z"
+  },
+  "disasterex": {
+   "skl": "skill/priest/disasterex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "grenadewater": {
+   "skl": "skill/gunner/grenadewater.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "throwweapon": {
+   "skl": "skill/priest/throwweapon.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "summonspiritwaterhigher": {
+   "skl": "skill/mage/summonspiritwaterhigher.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "flashmine": {
+   "skl": "skill/atgunner/flashmine.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "changehptomp": {
+   "skl": "skill/priest/changehptomp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : ↓→ + C"
+  },
+  "junkspinex": {
+   "skl": "skill/fighter/junkspinex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": ""
+  },
+  "releasewaveex": {
+   "skl": "skill/swordman/releasewaveex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "highanglesliding": {
+   "skl": "skill/gunner/highanglesliding.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Space"
+  },
+  "chargecrashex": {
+   "skl": "skill/swordman/chargecrashex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : Z"
+  },
+  "crashrope": {
+   "skl": "skill/atfighter/crashrope.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "legsuplexex": {
+   "skl": "skill/fighter/legsuplexex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : (在空中) ←→ + X"
+  },
+  "elementalchain": {
+   "skl": "skill/mage/elementalchain.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Space"
+  },
+  "antigravitystarterex": {
+   "skl": "skill/mage/antigravitystarterex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "dashattackmultihitex": {
+   "skl": "skill/swordman/dashattackmultihitex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": ""
+  },
+  "cursespear": {
+   "skl": "skill/thief/cursespear.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "antiairupper": {
+   "skl": "skill/priest/antiairupper.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : Z"
+  },
+  "smartthrow": {
+   "skl": "skill/atfighter/smartthrow.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : (跳跃状态下) ←→ + C"
+  },
+  "guardex": {
+   "skl": "skill/demonicswordman/notapplicable/guardex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": ""
+  },
+  "randompiercestrikeex": {
+   "skl": "skill/mage/randompiercestrikeex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "verticalspiralex": {
+   "skl": "skill/thief/verticalspiralex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "spiralnenspin": {
+   "skl": "skill/atfighter/spiralnenspin.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Space"
+  },
+  "nenmonsterwhitetiger": {
+   "skl": "skill/fighter/nenmonsterwhitetiger.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Space"
+  },
+  "vaneslash": {
+   "skl": "skill/swordman/vaneslash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑ + Z"
+  },
+  "sidewind": {
+   "skl": "skill/priest/sidewind.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "earthbreakex": {
+   "skl": "skill/atfighter/earthbreakex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "timerbomb": {
+   "skl": "skill/mage/timerbomb.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Z"
+  },
+  "wildcannonspike": {
+   "skl": "skill/fighter/wildcannonspike.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : (跳跃状态下) ←→ + C"
+  },
+  "chainsawexp": {
+   "skl": "skill/thief/chainsawexp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "provocation": {
+   "skl": "skill/fighter/provocation.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Space"
+  },
+  "cuttingdarkness": {
+   "skl": "skill/priest/cuttingdarkness.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "secondupper": {
+   "skl": "skill/priest/secondupper.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : (前冲攻击中) X"
+  },
+  "brokenarrow": {
+   "skl": "skill/atmage/brokenarrow.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Z"
+  },
+  "tripleslash": {
+   "skl": "skill/swordman/tripleslash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →(按住状态下) + Z"
+  },
+  "chakraofcalmness": {
+   "skl": "skill/priest/chakraofcalmness.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Space"
+  },
+  "spearofvictory": {
+   "skl": "skill/priest/spearofvictory.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑ + Z"
+  },
+  "cure": {
+   "skl": "skill/priest/cure.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Space"
+  },
+  "strengthhandstrikeex": {
+   "skl": "skill/mage/strengthhandstrikeex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "striking": {
+   "skl": "skill/priest/striking.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "grabblastbloodexp": {
+   "skl": "skill/swordman/grabblastbloodexp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "flowmindone": {
+   "skl": "skill/swordman/flowmindone.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ([流心] 动作中) X"
+  },
+  "punchafterreturn": {
+   "skl": "skill/atfighter/punchafterreturn.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "fusionchaser": {
+   "skl": "skill/mage/fusionchaser.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Space"
+  },
+  "revolvercriticaldamageup": {
+   "skl": "skill/atgunner/revolvercriticaldamageup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "flashglobeex": {
+   "skl": "skill/priest/flashglobeex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "chainkickex": {
+   "skl": "skill/atfighter/chainkickex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "bluedragonwill": {
+   "skl": "skill/atmage/bluedragonwill.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Z"
+  },
+  "darklure": {
+   "skl": "skill/thief/darklure.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "damagelowkick": {
+   "skl": "skill/fighter/damagelowkick.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓(按住状态下) + Z"
+  },
+  "saya": {
+   "skl": "skill/swordman/saya.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "nicolasblackwaveexp": {
+   "skl": "skill/thief/nicolasblackwaveexp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "shockwavearea": {
+   "skl": "skill/swordman/shockwavearea.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓ + Z"
+  },
+  "multiheadshot": {
+   "skl": "skill/atgunner/multiheadshot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↑→ + Z"
+  },
+  "flyingsquirrel": {
+   "skl": "skill/thief/flyingsquirrel.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "handstrike": {
+   "skl": "skill/mage/handstrike.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "elementalshower": {
+   "skl": "skill/mage/elementalshower.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "summoncasillas": {
+   "skl": "skill/mage/summoncasillas.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "verticalspiralexp": {
+   "skl": "skill/thief/verticalspiralexp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "deathpowder": {
+   "skl": "skill/mage/deathpowder.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "frozenland": {
+   "skl": "skill/atmage/frozenland.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↑ + Z"
+  },
+  "gaebolgpunch": {
+   "skl": "skill/gunner/gaebolgpunch.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "tombstonerain": {
+   "skl": "skill/swordman/tombstonerain.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Z"
+  },
+  "junkspin": {
+   "skl": "skill/atfighter/junkspin.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : →←→ + X(X连按)"
+  },
+  "blackrose": {
+   "skl": "skill/gunner/blackrose.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "lavapotion": {
+   "skl": "skill/mage/lavapotion.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "hurricane": {
+   "skl": "skill/thief/hurricane.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←→ + Z"
+  },
+  "spiralnen": {
+   "skl": "skill/fighter/spiralnen.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Space"
+  },
+  "hedgehog": {
+   "skl": "skill/priest/hedgehog.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Z"
+  },
+  "summonspiritex": {
+   "skl": "skill/mage/summonspiritex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "nenflower": {
+   "skl": "skill/fighter/nenflower.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "apportballacreex": {
+   "skl": "skill/thief/apportballacreex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "flamelegs": {
+   "skl": "skill/atfighter/flamelegs.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "summonspiritwaterex": {
+   "skl": "skill/mage/summonspiritwaterex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑→→ + Z"
+  },
+  "outragebreakex": {
+   "skl": "skill/swordman/outragebreakex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "ancienttrigger": {
+   "skl": "skill/atgunner/ancienttrigger.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "crystalattack": {
+   "skl": "skill/atmage/crystalattack.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑ + Z"
+  },
+  "frenzy": {
+   "skl": "skill/demonicswordman/notapplicable/frenzy.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Space"
+  },
+  "summonspiritfire": {
+   "skl": "skill/mage/summonspiritfire.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓→ + Z"
+  },
+  "ambitionofballacreex": {
+   "skl": "skill/thief/ambitionofballacreex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "grasphandofanger": {
+   "skl": "skill/priest/grasphandofanger.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Z"
+  },
+  "chainlightning": {
+   "skl": "skill/atmage/chainlightning.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→↓ + Z"
+  },
+  "countershoot": {
+   "skl": "skill/gunner/countershoot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : (被攻击中) + Z"
+  },
+  "attackspeedup": {
+   "skl": "skill/fighter/attackspeedup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Space"
+  },
+  "provocationex": {
+   "skl": "skill/atfighter/provocationex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "teleport": {
+   "skl": "skill/atmage/teleport.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : → + Space"
+  },
+  "chargecrash": {
+   "skl": "skill/swordman/chargecrash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : Z"
+  },
+  "pushout": {
+   "skl": "skill/atmage/pushout.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →(按住状态下) + Z"
+  },
+  "crashlowkickex": {
+   "skl": "skill/atfighter/crashlowkickex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "throwsand": {
+   "skl": "skill/fighter/throwsand.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "gorecross": {
+   "skl": "skill/swordman/gorecross.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "revengeoflight": {
+   "skl": "skill/priest/revengeoflight.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →↓ + Space"
+  },
+  "thunderbolttalisman": {
+   "skl": "skill/priest/thunderbolttalisman.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →↑ + Space"
+  },
+  "desperado": {
+   "skl": "skill/gunner/desperado.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "fastheal": {
+   "skl": "skill/priest/fastheal.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→ + Space"
+  },
+  "emblemofsafeguard": {
+   "skl": "skill/priest/emblemofsafeguard.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Space"
+  },
+  "boneshield": {
+   "skl": "skill/thief/boneshield.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Space"
+  },
+  "repeatedsmashex": {
+   "skl": "skill/priest/repeatedsmashex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "risingupper": {
+   "skl": "skill/fighter/risingupper.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↑→ + Z"
+  },
+  "summonhodor": {
+   "skl": "skill/mage/summonhodor.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑ + Z"
+  },
+  "shouldertackle": {
+   "skl": "skill/fighter/shouldertackle.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "mount": {
+   "skl": "skill/fighter/mount.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "enteringnirvana": {
+   "skl": "skill/priest/enteringnirvana.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "risingcut": {
+   "skl": "skill/thief/risingcut.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : Z"
+  },
+  "bless": {
+   "skl": "skill/priest/bless.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "judgement": {
+   "skl": "skill/priest/judgement.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "icewaveex": {
+   "skl": "skill/demonicswordman/notapplicable/icewaveex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "nicolassummonzombieex": {
+   "skl": "skill/thief/nicolassummonzombieex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "summonspiritlightex": {
+   "skl": "skill/mage/summonspiritlightex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↑→ + Z"
+  },
+  "deflectwallex": {
+   "skl": "skill/priest/deflectwallex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "spiralcolumnex": {
+   "skl": "skill/atfighter/spiralcolumnex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "nicolasblackwaveex": {
+   "skl": "skill/thief/nicolasblackwaveex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "summonluisex": {
+   "skl": "skill/mage/summonluisex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "flamecut": {
+   "skl": "skill/thief/flamecut.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "bloodswordex": {
+   "skl": "skill/swordman/bloodswordex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "strengthhandstrike": {
+   "skl": "skill/mage/strengthhandstrike.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "khazan": {
+   "skl": "skill/demonicswordman/notapplicable/khazan.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : → + Space"
+  },
+  "flashglobe": {
+   "skl": "skill/priest/flashglobe.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "hurricaneofjudgement": {
+   "skl": "skill/priest/hurricaneofjudgement.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "unsummon": {
+   "skl": "skill/mage/unsummon.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→→ + Space"
+  },
+  "divinelight": {
+   "skl": "skill/priest/divinelight.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →↑ + Space"
+  },
+  "acidcloud": {
+   "skl": "skill/mage/acidcloud.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Z"
+  },
+  "deflectwall": {
+   "skl": "skill/priest/deflectwall.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "normalwave": {
+   "skl": "skill/swordman/normalwave.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Z"
+  },
+  "aurashield": {
+   "skl": "skill/mage/aurashield.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Space"
+  },
+  "chargebuster": {
+   "skl": "skill/gunner/chargebuster.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "crashlowkick": {
+   "skl": "skill/atfighter/crashlowkick.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "flamevolcanovoid": {
+   "skl": "skill/mage/flamevolcanovoid.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "anklecut": {
+   "skl": "skill/thief/anklecut.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "sacrificeofsoul": {
+   "skl": "skill/priest/sacrificeofsoul.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "illusionslash": {
+   "skl": "skill/swordman/illusionslash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "dragonspear": {
+   "skl": "skill/mage/dragonspear.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "hammerofcontrition": {
+   "skl": "skill/priest/hammerofcontrition.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "sway": {
+   "skl": "skill/priest/sway.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + C"
+  },
+  "venommineex": {
+   "skl": "skill/atfighter/venommineex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "megadrill": {
+   "skl": "skill/mage/megadrill.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "verticalspiral": {
+   "skl": "skill/thief/verticalspiral.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑→ + Z"
+  },
+  "summonspiritwater": {
+   "skl": "skill/mage/summonspiritwater.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑→ + Z"
+  },
+  "fallingsoul": {
+   "skl": "skill/priest/fallingsoul.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →↓ + Space"
+  },
+  "pieceofice": {
+   "skl": "skill/atmage/pieceofice.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "doublepierce": {
+   "skl": "skill/thief/doublepierce.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "blameofdeadexp": {
+   "skl": "skill/thief/blameofdeadexp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "awakening": {
+   "skl": "skill/priest/awakening.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "damagelowkickex": {
+   "skl": "skill/atfighter/damagelowkickex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "slowheal": {
+   "skl": "skill/priest/slowheal.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : → + Space"
+  },
+  "flamethrower": {
+   "skl": "skill/gunner/flamethrower.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + X"
+  },
+  "elementalstrikeex": {
+   "skl": "skill/atmage/elementalstrikeex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "duckingstraight": {
+   "skl": "skill/priest/duckingstraight.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    "&",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ([俯冲]动作中) → + X"
+  },
+  "launchfrosthead": {
+   "skl": "skill/mage/launchfrosthead.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓ + Z"
+  },
+  "robotexsex": {
+   "skl": "skill/gunner/robotexsex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "flamecircle": {
+   "skl": "skill/atmage/flamecircle.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↑ + Z"
+  },
+  "homerun": {
+   "skl": "skill/priest/homerun.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Z"
+  },
+  "g1": {
+   "skl": "skill/atgunner/g1.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "summonspiritfireex": {
+   "skl": "skill/mage/summonspiritfireex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓→→ + Z"
+  },
+  "g2": {
+   "skl": "skill/atgunner/g2.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "blockbusterex": {
+   "skl": "skill/fighter/blockbusterex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "summonecheverra": {
+   "skl": "skill/mage/summonecheverra.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Space"
+  },
+  "powerofdarkness": {
+   "skl": "skill/priest/powerofdarkness.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←→ + Z"
+  },
+  "suplexex": {
+   "skl": "skill/atfighter/suplexex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    "&",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "g3": {
+   "skl": "skill/atgunner/g3.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓→ + Z"
+  },
+  "oppressiontalisman": {
+   "skl": "skill/priest/oppressiontalisman.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →↓ + Space"
+  },
+  "hyunmoo": {
+   "skl": "skill/priest/hyunmoo.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→ + Space"
+  },
+  "divinecrush": {
+   "skl": "skill/priest/divinecrush.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑ + Z"
+  },
+  "nenmonsterwhitetigerex": {
+   "skl": "skill/fighter/nenmonsterwhitetigerex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "summonauxo": {
+   "skl": "skill/mage/summonauxo.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →→ + Space"
+  },
+  "groundcrash": {
+   "skl": "skill/priest/groundcrash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓↓ + Z"
+  },
+  "randomshoot": {
+   "skl": "skill/gunner/randomshoot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : →←→ + X(X连按)"
+  },
+  "guillotine": {
+   "skl": "skill/thief/guillotine.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "bigbangpunch": {
+   "skl": "skill/priest/bigbangpunch.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "iceman": {
+   "skl": "skill/atmage/iceman.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "lightningarrowex": {
+   "skl": "skill/thief/lightningarrowex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "atomicsmash": {
+   "skl": "skill/priest/atomicsmash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←→ + Z"
+  },
+  "swingex": {
+   "skl": "skill/mage/swingex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "shuriken": {
+   "skl": "skill/thief/shuriken.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑ + Z"
+  },
+  "sajahuex": {
+   "skl": "skill/fighter/sajahuex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↑→ + Z"
+  },
+  "freezebullet": {
+   "skl": "skill/gunner/freezebullet.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Space"
+  },
+  "g0": {
+   "skl": "skill/atgunner/g0.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "transformflapperex": {
+   "skl": "skill/mage/transformflapperex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "sidestep": {
+   "skl": "skill/thief/sidestep.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : ↑→ + C"
+  },
+  "upperswing": {
+   "skl": "skill/mage/upperswing.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : Z"
+  },
+  "slicerex": {
+   "skl": "skill/thief/slicerex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": ""
+  },
+  "phantomstrom": {
+   "skl": "skill/thief/phantomstrom.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "shouldertackleex": {
+   "skl": "skill/atfighter/shouldertackleex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "hpmaxuppersonal": {
+   "skl": "skill/priest/hpmaxuppersonal.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Space"
+  },
+  "apportballacre": {
+   "skl": "skill/thief/apportballacre.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →←→ + Space"
+  },
+  "chainsaw": {
+   "skl": "skill/thief/chainsaw.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓→→ + Z"
+  },
+  "spiralnenshoot": {
+   "skl": "skill/atfighter/spiralnenshoot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Space"
+  },
+  "fm31": {
+   "skl": "skill/atgunner/fm31.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "multishot": {
+   "skl": "skill/atmage/multishot.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Z"
+  },
+  "grenadenone": {
+   "skl": "skill/gunner/grenadenone.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑ + Z"
+  },
+  "nicolasbehavior": {
+   "skl": "skill/thief/nicolasbehavior.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ← + Space"
+  },
+  "fireroad": {
+   "skl": "skill/atmage/fireroad.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "shadowcut": {
+   "skl": "skill/thief/shadowcut.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑ + Z"
+  },
+  "summonspiritfirehigher": {
+   "skl": "skill/mage/summonspiritfirehigher.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→↓ + Z"
+  },
+  "disenchant": {
+   "skl": "skill/mage/disenchant.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Space"
+  },
+  "momentaryslash": {
+   "skl": "skill/swordman/momentaryslash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "whirlwindkickex": {
+   "skl": "skill/atfighter/whirlwindkickex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": ""
+  },
+  "grenadelight": {
+   "skl": "skill/gunner/grenadelight.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "summonspiritdarkhigher": {
+   "skl": "skill/mage/summonspiritdarkhigher.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→↑ + Z"
+  },
+  "gorgeouscombination": {
+   "skl": "skill/priest/gorgeouscombination.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "duckingupper": {
+   "skl": "skill/priest/duckingupper.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    "&",
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 :([俯冲]动作中) ↑ + X"
+  },
+  "blameofdead": {
+   "skl": "skill/thief/blameofdead.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "summonnicolasex": {
+   "skl": "skill/thief/summonnicolasex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "groundkick": {
+   "skl": "skill/fighter/groundkick.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "rapidmoveslash": {
+   "skl": "skill/swordman/rapidmoveslash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→→ + Z"
+  },
+  "provocationdollex": {
+   "skl": "skill/mage/provocationdollex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "healwind": {
+   "skl": "skill/priest/healwind.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : →←→ + Space"
+  },
+  "choppinghammer": {
+   "skl": "skill/priest/choppinghammer.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": "操作指令 : ([摆动]动作中) X"
+  },
+  "divingarrow": {
+   "skl": "skill/thief/divingarrow.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : (在空中)↓ + Z"
+  },
+  "summonbabydragon": {
+   "skl": "skill/mage/summonbabydragon.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Z"
+  },
+  "blockbuster": {
+   "skl": "skill/fighter/blockbuster.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "darknailex": {
+   "skl": "skill/thief/darknailex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "boneshieldex": {
+   "skl": "skill/thief/boneshieldex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": ""
+  },
+  "concentrate": {
+   "skl": "skill/atmage/concentrate.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "magicshield": {
+   "skl": "skill/atmage/magicshield.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "walloficeex": {
+   "skl": "skill/mage/walloficeex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "suplexcycloneexp": {
+   "skl": "skill/fighter/suplexcycloneexp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "broomspinex": {
+   "skl": "skill/mage/broomspinex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : (跳跃状态下) ←→ + C"
+  },
+  "swing": {
+   "skl": "skill/mage/swing.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "followme": {
+   "skl": "skill/mage/followme.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Space"
+  },
+  "keiga": {
+   "skl": "skill/swordman/keiga.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Space"
+  },
+  "dashpunchex": {
+   "skl": "skill/fighter/dashpunchex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "chillingpowder": {
+   "skl": "skill/mage/chillingpowder.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→ + Space"
+  },
+  "antigravitystarter": {
+   "skl": "skill/mage/antigravitystarter.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓ + Z"
+  },
+  "doublethrow": {
+   "skl": "skill/fighter/doublethrow.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "execution": {
+   "skl": "skill/priest/execution.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→ + Z"
+  },
+  "whipex": {
+   "skl": "skill/mage/whipex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "secondupperex": {
+   "skl": "skill/priest/secondupperex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(ATTACK)"
+   ],
+   "command_explain": ""
+  },
+  "weaponcombo": {
+   "skl": "skill/demonicswordman/notapplicable/weaponcombo.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [],
+   "command_explain": ""
+  },
+  "hyunmooex": {
+   "skl": "skill/priest/hyunmooex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "moonlightslash": {
+   "skl": "skill/swordman/moonlightslash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Z"
+  },
+  "firewaveexp": {
+   "skl": "skill/demonicswordman/notapplicable/firewaveexp.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "repeatedsmash": {
+   "skl": "skill/priest/repeatedsmash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "mpregenrateup": {
+   "skl": "skill/mage/mpregenrateup.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↑ + Space"
+  },
+  "flowmindtwo": {
+   "skl": "skill/swordman/flowmindtwo.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : ([流心]动作中)  C\\n追加操作指令 : ([流心]动作中) X"
+  },
+  "grabblastblood": {
+   "skl": "skill/swordman/grabblastblood.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →→ + Z"
+  },
+  "chargespearex": {
+   "skl": "skill/atfighter/chargespearex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "blameofdeadex": {
+   "skl": "skill/thief/blameofdeadex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "sacrificespirit": {
+   "skl": "skill/mage/sacrificespirit.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←↓→ + Z"
+  },
+  "muscleshift": {
+   "skl": "skill/fighter/muscleshift.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑↓ + Space"
+  },
+  "baekho": {
+   "skl": "skill/priest/baekho.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Space"
+  },
+  "holycounter": {
+   "skl": "skill/priest/holycounter.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↓ + Z"
+  },
+  "launchjol": {
+   "skl": "skill/mage/launchjol.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓→ + Z"
+  },
+  "fastdash": {
+   "skl": "skill/atfighter/fastdash.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : ↑→ + Space"
+  },
+  "reflectguard": {
+   "skl": "skill/swordman/reflectguard.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ←→→ + Z"
+  },
+  "strongestlowkick": {
+   "skl": "skill/fighter/strongestlowkick.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "nicolasblackarea": {
+   "skl": "skill/thief/nicolasblackarea.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓↓ + Z"
+  },
+  "smasher": {
+   "skl": "skill/priest/smasher.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓ + Z"
+  },
+  "summonsandorex": {
+   "skl": "skill/mage/summonsandorex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "excelstrikeex": {
+   "skl": "skill/thief/excelstrikeex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "sonicassaultex": {
+   "skl": "skill/thief/sonicassaultex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "provocationdoll": {
+   "skl": "skill/mage/provocationdoll.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(BUFF)"
+   ],
+   "command_explain": "操作指令 : → + Space"
+  },
+  "shikigami": {
+   "skl": "skill/priest/shikigami.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↓→ + Z"
+  },
+  "lightningarrow": {
+   "skl": "skill/thief/lightningarrow.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : (在空中) →→ + Z"
+  },
+  "triplestab": {
+   "skl": "skill/swordman/triplestab.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(DOWN)",
+    ",",
+    "(UP)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↓↑→ + Z"
+  },
+  "fusioncraft": {
+   "skl": "skill/mage/fusioncraft.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(UP)",
+    ",",
+    "(UP)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : ↑↑↓↓ + Z"
+  },
+  "flamecutex": {
+   "skl": "skill/thief/flamecutex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(LEFT)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": ""
+  },
+  "void": {
+   "skl": "skill/mage/void.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↓→ + Z"
+  },
+  "earthquake": {
+   "skl": "skill/priest/earthquake.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(UP)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →↑ + Z"
+  },
+  "chainsawex": {
+   "skl": "skill/thief/chainsawex.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(RIGHT)",
+    ",",
+    "(LEFT)",
+    ",",
+    "(DOWN)",
+    ",",
+    "(RIGHT)",
+    ",",
+    "(SKILL)"
+   ],
+   "command_explain": "操作指令 : →←↓→ + Z"
+  },
+  "aerialjump": {
+   "skl": "skill/thief/aerialjump.skl",
+   "class": null,
+   "skill_id": null,
+   "name": null,
+   "command_tokens": [
+    "(JUMP)"
+   ],
+   "command_explain": "操作指令 : (跳跃中) C"
+  }
+ }
+}

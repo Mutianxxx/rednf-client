@@ -1,3 +1,54 @@
+# 技能判定与指令的 exe/PVF 证据补全 + 开源 README（2026-11-11 第八轮）
+
+节点 `skill-evidence-judgment-command-20261111`。
+
+用户要求：继续补全缺口，并且**技能的判定、指令逐渐去 exe 找证据**，同时把 `README.md`
+维护成能让外部贡献者看懂的开源说明。本轮聚焦「证据入库 + 接入映射层」，不伪造运行时等价。
+
+## 1. 判定（攻击）—— exe ATK 选择器直证
+
+- 技能 setState handler 内调用攻击判定选择器 `0x70213F`，首参即 `.atk` 里的攻击序号。
+- 新增 `project/tools/skill-bindings/src/extract_judgment.py`：按 `(handler, state)` **双键**
+  把 `state-handler-events.json` 的调用精确关联到技能（仅剑士族；handler 是跨职业共享的通用
+  代码地址，单键会过度扇出到其它职业）。
+- 产物 `evidence/judgment-events.json`：73 个技能，42 个 state 带 ATK 调用，34 个 state 带
+  效果附加调用（`0x690210/0x690420`）。共享 handler 标 `shared_handler=true`（运行时靠
+  skill_id 选 `.atk`）。
+- 实测：鬼斩 state20 → atk 0/20（`0xccf619/0xccf8d7`）；三段斩 atk 7；裂波斩 atk 16/17/24；
+  极·鬼剑术（暴风式）atk 62。
+- 边界：立即数 → `.atk` 文件名仍在 Themida VM 区，未翻译；判定框几何仍取 PVF/ANI。
+
+## 2. 指令（操作指令）—— PVF 源数据 + exe 消费链
+
+- `.skl` 的 `[command]` / `[command key explain]` 是按键序列权威来源。
+- 新增 `extract_commands.py`：从 1031 `Script.pvf` 抽取 2008 个 `.skl` 中 **781 个带指令**，
+  产出 `evidence/skill-commands.json`（token + 中文说明）。
+- 实测：鬼斩 `↑(按住)+Z`；极·鬼剑术 `↑↑↓↓+Z`；裂波斩 `→↑+Z`；三段斩 `→(按住)+Z`。
+- 边界：exe 侧消费该字段的输入解析器**尚未解码**，故指令证据标注「PVF 源数据，exe 由
+  state-handler 关联校验」，不冒充 exe 运行时直证。
+
+## 3. 接入映射层（数据模型 + 审计）
+
+- `skill_preview_mapping.hpp` 新增 `ExeJudgment` / `SkillCommand`，`SkillVisualMapping` 增
+  `exeJudgments` / `command`。
+- `skill_preview_mapping.cpp` 新增 `loadEvidence()`（按 cwd 候选定位证据目录，缺失即空、不
+  影响解析）与 `applyEvidence()`（按技能 stem 注入），`audit()` 输出二者。
+- 验证：`dnf_inspect --skill-chain 0 5/8/86/58` 的 `mapping.command` / `exeJudgments` 均正确；
+  编译 23 目标全过，`verify_architecture pass`；回归 **48/48 通过**。
+
+## 4. README 开源化
+
+- `README.md` 重写：项目定位（clean-room 复刻、不提供资源）、证据等级、目录结构、构建/运行
+  快速开始、技能预览与主游戏、判定与指令的 exe 证据链、重新提取命令、已知边界、贡献约定。
+
+## 5. 仍未完成（下一轮）
+
+- 17/21 无源时间轴层仍按 `birthRatio` 挤在 nominal 时钟尾部；需 exe 特效派发证据才能正确定位。
+- `ratePercent`/delayed-add 未恢复，绝对 ms 不等价。
+- exe 输入指令解析器未解码（当前只能给到 PVF 源数据）。
+
+---
+
 # 技能链状态机补全与 AVI 交叉验证（2026-11-11 第七轮）
 
 节点 `skill-chain-state-machine-20261111`。

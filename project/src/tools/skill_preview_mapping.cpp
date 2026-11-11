@@ -8,6 +8,7 @@
 #include <climits>
 #include <cstdlib>
 #include <filesystem>
+#include <fstream>
 
 namespace dnf {
 namespace {
@@ -413,11 +414,121 @@ Json SkillVisualMapping::audit() const {
                                   {"evidence", entity.evidence}});
     }
     value["persistents"] = persistentJson;
+    value["command"] = Json{{"tokens", command.tokens}, {"explain", command.explain},
+                            {"evidence", command.evidence}};
+    Json judgments = Json::array();
+    for (const auto &e : exeJudgments) {
+        judgments.push_back({{"state", e.state}, {"atkIndex", e.atkIndex},
+                             {"at", e.at}, {"sharedHandler", e.sharedHandler},
+                             {"evidence", e.evidence}});
+    }
+    value["exeJudgments"] = judgments;
     return value;
 }
 
 SkillMappingTable::SkillMappingTable(Pvf &pvf, Assets &assets, CharacterCatalog &catalog)
     : pvf_(pvf), assets_(assets), catalog_(catalog) {}
+
+namespace {
+// Render an .skl [command] token list the way the client shows it, e.g.
+// [(UP), &, (SKILL)] -> "↑+Z", [(UP), ',', (UP), ',', (DOWN), ',', (DOWN), ',',
+// (SKILL)] -> "↑↑↓↓Z". Tokens come from 1031 Script.pvf; the spelling is the
+// client's, not ours.
+std::string renderCommandTokens(const Json &tokens) {
+    std::string out;
+    for (const auto &t : tokens) {
+        if (!t.is_string()) continue;
+        const std::string tok = t.get<std::string>();
+        if (tok == "(UP)") out += "\u2191";
+        else if (tok == "(DOWN)") out += "\u2193";
+        else if (tok == "(LEFT)") out += "\u2190";
+        else if (tok == "(RIGHT)") out += "\u2192";
+        else if (tok == "(SKILL)") out += "Z";
+        else if (tok == "(ATTACK)") out += "X";
+        else if (tok == "&") out += "+";
+        else if (tok == ",") continue;  // sequence separator
+    }
+    return out;
+}
+} // namespace
+
+void SkillMappingTable::loadEvidence() {
+    if (evidenceLoaded_) return;
+    evidenceLoaded_ = true;
+    // The previewer/native build reads the extracted evidence if it is reachable
+    // from the process cwd. A deployed build without it simply gets empty fields;
+    // this never fails skill resolution.
+    fs::path dir;
+    for (const auto &root : {fs::current_path(), fs::current_path() / "..",
+                             fs::current_path() / "project"}) {
+        const auto cand = root / "tools" / "skill-bindings" / "evidence";
+        if (fs::exists(cand / "judgment-events.json")) {
+            dir = cand;
+            break;
+        }
+    }
+    if (dir.empty()) return;
+
+    try {
+        std::ifstream jf(dir / "judgment-events.json");
+        if (jf) {
+            const auto doc = Json::parse(jf);
+            if (doc.contains("judgments") && doc["judgments"].is_object()) {
+                for (auto it = doc["judgments"].begin(); it != doc["judgments"].end(); ++it) {
+                    const auto &grp = it.value();
+                    if (!grp.contains("atk_calls") || !grp["atk_calls"].is_array()) continue;
+                    const bool shared = grp.value("shared_handler", false);
+                    std::vector<ExeJudgment> list;
+                    for (const auto &c : grp["atk_calls"]) {
+                        ExeJudgment e;
+                        e.state = c.value("state", 0);
+                        if (c.contains("atk_index") && c["atk_index"].is_number_integer())
+                            e.atkIndex = c["atk_index"].get<int>();
+                        e.at = c.value("at", std::string());
+                        e.sharedHandler = shared;
+                        e.evidence = shared
+                            ? "exe ATK selector 0x70213F (shared handler: runtime skill_id picks .atk)"
+                            : "exe ATK selector 0x70213F";
+                        list.push_back(std::move(e));
+                    }
+                    if (!list.empty()) judgmentByStem_[it.key()] = std::move(list);
+                }
+            }
+        }
+    } catch (const std::exception &) {
+        // Malformed/absent evidence is non-fatal; fields stay empty.
+    }
+
+    try {
+        std::ifstream cf(dir / "skill-commands.json");
+        if (cf) {
+            const auto doc = Json::parse(cf);
+            if (doc.contains("commands") && doc["commands"].is_object()) {
+                for (auto it = doc["commands"].begin(); it != doc["commands"].end(); ++it) {
+                    const auto &v = it.value();
+                    SkillCommand sc;
+                    if (v.contains("command_tokens") && v["command_tokens"].is_array())
+                        sc.tokens = renderCommandTokens(v["command_tokens"]);
+                    sc.explain = v.value("command_explain", std::string());
+                    sc.evidence = "PVF .skl [command]; exe input dispatcher consumes it (parser not yet decoded)";
+                    if (!sc.explain.empty() || !sc.tokens.empty())
+                        commandByStem_[it.key()] = std::move(sc);
+                }
+            }
+        }
+    } catch (const std::exception &) {
+        // Non-fatal.
+    }
+}
+
+void SkillMappingTable::applyEvidence(SkillVisualMapping &mapping) const {
+    if (mapping.skillPath.empty()) return;
+    const std::string stem = stemOf(mapping.skillPath);
+    if (const auto it = commandByStem_.find(stem); it != commandByStem_.end())
+        mapping.command = it->second;
+    if (const auto it = judgmentByStem_.find(stem); it != judgmentByStem_.end())
+        mapping.exeJudgments = it->second;
+}
 
 std::string SkillMappingTable::jobDirectory(int jobId) const {
     try {
@@ -1775,6 +1886,10 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     }
     if (mapping.confidence == MappingConfidence::None && hasEffect)
         mapping.confidence = MappingConfidence::AutoEffect;
+
+    // Exe judgment (attack launch) + PVF input command, joined by skill stem.
+    loadEvidence();
+    applyEvidence(mapping);
 
     return mappings_.emplace(key, std::move(mapping)).first->second;
 }
