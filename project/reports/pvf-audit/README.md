@@ -6,6 +6,9 @@
 - 条目数：`334,927`
 - 机器报告：`checkpoints/tests/pvf-audit/1031-pvf-audit.json`
 - 审计脚本：`project/tools/pvf_audit.py`
+- 技能闭包脚本：`project/tools/skill_closure.py`
+- 技能闭包产物（本地可重建，不入库）：`checkpoints/tests/pvf-audit/skill-closure.json`
+- 重建命令：`python project/tools/skill_closure.py --out checkpoints/tests/pvf-audit/skill-closure.json`
 - 本文只描述静态字节/标签事实；“已解析”不等于“运行时语义已实现”。
 
 ## 1. PVF 实际文件类别
@@ -48,7 +51,20 @@
 8. **粒子与图像资源**：`.ptl` 和 NPK/IMG。PTL 当前没有通用解释器，属于明确漏项。
 9. **声音/文本/公共表**：`.etc`、`.str`、`.tbl`、`n_string.lst`、`stringtable.bin`，影响名称、音效、说明、公共枚举和脚本参数解释。
 
-## 3. 标签审计结果
+## 3.1 技能闭包扫描结果
+
+闭包脚本不把 SKL 中不存在的 ANI/OBJ/ACT 路径伪装成直接引用，而是按以下证据合并：
+
+- `skill/<job>/*.skl`：技能入口、命令与等级字段；
+- `skill-bindings/bindings/*.json`：1031 DNF.exe setState handler 与 entry motion；
+- `character/<job>`、`effect/animation`、`passiveobject`、`sqr` 的同 stem 资源族；
+- NUT 源文本中的字面资源路径。
+
+当前一次扫描结果：1762 个 exe 绑定技能，其中 1752 个至少关联到一个资源；821 个 exe entry motion 因跨职业公共动作目录或名字计算规则无法直接落到 PVF 路径，必须保留为“未闭合证据”，不能当作资源不存在；55365 个候选族文件尚未被当前 stem 规则消费，这个数字包含公共动作、共享特效和非技能资源，后续需要按 CHR/ACT/OBJ 引用进一步过滤。
+
+该结果的意义是定位下一步补全范围，不是宣称 55365 个文件都应接入每个技能。
+
+## 3.2 标签审计结果
 
 ### 已能读取但只代表 token 语法
 
