@@ -200,7 +200,12 @@ void SkillPreviewSession::seedLayers(const SkillVisualMapping &mapping) {
         layer.kind = PreviewLayerKind::EffectFront;
         layer.order = planned.alsLayer;
         layer.offset = {planned.offsetX, planned.offsetY, planned.offsetZ};
-        layer.birthMs = actionMs > 0 ? planned.birthRatio * actionMs : 0;
+        // A same-stem body-stage binding is an absolute nominal-clock instant,
+        // exactly like the native world's birthMs. Only unbound layers fall
+        // back to the reconstructed stem-order spread.
+        layer.birthMs = planned.stageBound && planned.birthMs >= 0
+            ? planned.birthMs
+            : (actionMs > 0 ? planned.birthRatio * actionMs : 0);
         layer.instance = planned.instance;
         layer.loop = planned.loop;
         layer.evidence = planned.evidence;

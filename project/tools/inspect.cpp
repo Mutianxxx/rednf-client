@@ -1,15 +1,19 @@
 #include "dnf/entry.hpp"
 #include "dnf/resources.hpp"
 #include "dnf/character.hpp"
+#include "dnf/effect_plan.hpp"
+#include "dnf/skill_preview_mapping.hpp"
 #define STBIW_WINDOWS_UTF8
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
+#include <algorithm>
 #include <iostream>
 using namespace dnf;
 int run(int argc, char **argv) {
     try {
         if (argc < 4) {
-            std::cout << "dnf_inspect CLIENT --script|--ani|--image|--paths|--npk-paths|--export-image|--export-frames|--characters|--skill-sources PATH [FRAME_OR_SUFFIX] [OUTPUT]\n"
+            std::cout << "dnf_inspect CLIENT --script|--ani|--image|--paths|--npk-paths|--export-image|--export-frames|--characters|--skill-sources|--skill-chain PATH [FRAME_OR_SUFFIX] [OUTPUT]\n"
+                         "--skill-chain JOBID SKILLID [OUTPUT] dumps the resolved body-chain timeline, ALS events and diagnostics for AVI cross-validation.\n"
                          "--npk-paths lists archive image paths containing PATH; --paths lists PVF paths.\n"
                          "--export-image writes a cropped RGBA PNG and sidecar JSON; --export-frames writes every frame plus manifest.json to OUTPUT directory.\n"
                          "Use a placeholder FRAME_OR_SUFFIX when writing --script output.\n"
@@ -29,6 +33,130 @@ int run(int argc, char **argv) {
             if (name != "summary" && name != "source") throw std::runtime_error("Use --characters summary|source");
             CharacterCatalog characters(p);
             j = characters.snapshot(name == "source");
+        } else if (mode == "--skill-chain") {
+            if (argc < 5) throw std::runtime_error("--skill-chain JOBID SKILLID [OUTPUT]");
+            const int jobId = std::stoi(name);
+            const int skillId = std::stoi(argv[4]);
+            Assets a(root, p);
+            CharacterCatalog characters(p);
+            SkillMappingTable table(p, a, characters);
+            table.ensureJob(jobId);
+            const auto *m = table.mapping(SkillKey{jobId, skillId});
+            if (!m) throw std::runtime_error("no mapping for the requested skill key");
+            // Body stages are laid end to end on one action clock. Keeping the
+            // raw [DELAY] table next to each stage lets a consumer recompute
+            // any frame boundary instead of trusting a single derived number.
+            Json stages = Json::array();
+            std::vector<double> stageStart;
+            double cursor = 0;
+            for (const auto &path : m->bodyChain) {
+                stageStart.push_back(cursor);
+                Json delays = Json::array();
+                double duration = 0;
+                try {
+                    const auto an = a.animation(path);
+                    for (const auto &f : an->frames) {
+                        const int d = std::max(1, f.duration);
+                        delays.push_back(d);
+                        duration += d;
+                    }
+                } catch (const std::exception &) {
+                }
+                stages.push_back({{"index", int(stageStart.size() - 1)}, {"path", path},
+                                  {"startMs", cursor}, {"durationMs", duration},
+                                  {"frameDelays", delays}});
+                cursor += duration;
+            }
+            // Every ALS command is retained, including the ones the renderer
+            // cannot consume yet. A diagnostic is an observed source command,
+            // not a claim that it is invisible in the original client: the AVI
+            // cross-check is what decides that.
+            Json als = Json::array();
+            for (size_t s = 0; s < m->bodyChain.size(); ++s) {
+                const auto plan = animationEffectEvents(p, a, m->bodyChain[s]);
+                for (const auto &ev : plan.events) {
+                    double boundary = 0;
+                    try {
+                        const auto an = a.animation(m->bodyChain[s]);
+                        for (int i = 0; i < ev.frame && i < int(an->frames.size()); ++i)
+                            boundary += std::max(1, an->frames[i].duration);
+                    } catch (const std::exception &) {
+                    }
+                    const char *kind = ev.kind == EffectEventKind::Remove ? "remove"
+                        : ev.kind == EffectEventKind::DrawOnly ? "draw_only"
+                        : ev.kind == EffectEventKind::DrawOnlyFollowParent ? "draw_only_follow_parent"
+                                                                          : "add";
+                    als.push_back({{"stage", int(s)}, {"parent", m->bodyChain[s]},
+                                   {"kind", kind}, {"frame", ev.frame}, {"layer", ev.layer},
+                                   {"instance", ev.instance}, {"animation", ev.animation},
+                                   {"sourceOrder", ev.sourceOrder},
+                                   {"offset", {ev.offsetX, ev.offsetY, ev.offsetZ}},
+                                   {"boundaryMs", boundary},
+                                   {"actionMs", stageStart[s] + boundary}});
+                }
+                for (const auto &d : plan.diagnostics)
+                    als.push_back({{"stage", int(s)}, {"parent", m->bodyChain[s]},
+                                   {"kind", "diagnostic"}, {"diagnostic", d}});
+            }
+            // Predicted timeline for AVI cross-validation. The source gives
+            // fixed [DELAY] spans; input-wait states and the gaps between
+            // triggered pairs are NOT timed by any file, so they are exported
+            // as external slots. Only an independent observation can quantify
+            // them. Nothing here is fitted to the video.
+            Json fixed = Json::array();
+            for (size_t i = 0; i < m->chainSlots.size(); ++i) {
+                const auto &s = m->chainSlots[i];
+                const char *role = s.role == ChainSlotRole::Entry ? "entry"
+                                   : s.role == ChainSlotRole::Triggered ? "triggered"
+                                   : s.role == ChainSlotRole::Finish ? "finish"
+                                   : s.role == ChainSlotRole::Plain ? "plain" : "external_hold";
+                fixed.push_back({{"index", int(i)}, {"path", s.path}, {"role", role},
+                                 {"startMs", s.startMs},
+                                 {"endMs", s.startMs + s.durationMs},
+                                 {"durationMs", s.durationMs},
+                                 {"frameCount", s.frameCount},
+                                 {"evidence", s.evidence}});
+            }
+            Json external = Json::array();
+            for (const auto &s : m->externalSlots)
+                external.push_back({{"path", s.path}, {"startMs", nullptr},
+                                    {"sourceDurationMs", s.durationMs},
+                                    {"frameCount", s.frameCount},
+                                    {"evidence", s.evidence},
+                                    {"quantifiedBy", "independent observation only"}});
+            const double nominal = m->nominalActionMs > 0 ? m->nominalActionMs : cursor;
+            Json births = Json::array();
+            for (const auto &l : m->effectLayers) {
+                const char *clock = l.timed ? "als"
+                                    : l.stageBound ? "stage_bound" : "stem_order";
+                const double at = l.birthMs >= 0 ? l.birthMs : l.birthRatio * nominal;
+                births.push_back({{"path", l.path}, {"birthMs", at}, {"endMs", l.endMs},
+                                  {"clock", clock}, {"timed", l.timed},
+                                  {"stageBound", l.stageBound},
+                                  {"bodyStage", l.bodyStage}, {"source", l.source},
+                                  {"evidence", l.evidence}});
+            }
+            Json windows = Json::array();
+            for (size_t i = 0; i < fixed.size();) {
+                size_t j = i + 1;
+                const std::string role = fixed[i]["role"].get<std::string>();
+                while (j < fixed.size() && fixed[j]["role"].get<std::string>() == role) ++j;
+                const double from = m->chainSlots[i].startMs;
+                const double to = m->chainSlots[j - 1].startMs + m->chainSlots[j - 1].durationMs;
+                windows.push_back({{"role", role}, {"fromMs", from}, {"toMs", to},
+                                   {"slotCount", int(j - i)}});
+                i = j;
+            }
+            j = {{"purpose", "Base-client skill-chain parse for AVI cross-validation; diagnostics are unresolved source commands, not runtime proof."},
+                 {"pvf_identity", p.identity()}, {"jobId", jobId}, {"skillId", skillId},
+                 {"mapping", m->audit()}, {"bodyStages", stages},
+                 {"actionDurationMs", cursor}, {"nominalActionMs", nominal},
+                 {"alsEvents", als},
+                 {"predictedTimeline", {
+                     {"clock", "nominal ANI [DELAY] sum; input-wait states excluded"},
+                     {"fixedSlots", fixed}, {"externalSlots", external},
+                     {"phaseWindows", windows}, {"layerBirths", births},
+                     {"note", "Fixed spans come from the base PVF. External slots and inter-trigger gaps are unquantified here; the AVI observation supplies them."}}}};
         } else if (mode == "--script") {
             auto s = p.script(name);
             j = {{"path", name}, {"fields", Json::array()}, {"tokens", s.tokens}};

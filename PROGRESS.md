@@ -1,3 +1,92 @@
+# 技能链状态机补全与 AVI 交叉验证（2026-11-11 第七轮）
+
+节点 `skill-chain-state-machine-20261111`。
+
+用户纠正了 AVI 对照的方法：**不是照着视频画面盲猜复刻参数**，而是先补全技能链
+解析中逆向未完成的部分，再从视频提取独立观测，与补全后的链解析预测做交叉验证，
+用差额反推链解析哪里仍不准确。本轮严格按此执行；视频没有写回任何映射参数。
+
+## 0. 证据边界不变
+
+基座仍是清风 1031：`Script.pvf` identity `d13ce454567197bb4617...`，
+`DNF.exe` sha256 `246b838163fa7c71aa...`。`rep-player-1031-pvf/docs/native-evidence/
+animation-render.json` 仍是唯一一级运行时直证；40JP / 60US / handoff 参考实现
+只作机制蓝本。跨版本推断一律标注。
+
+## 1. 源侧核对发现的三个链解析缺陷（都由 PVF / exe 字节直接支持）
+
+1. **exe setState 的 state 入口被当成播放阶段。** `skill_exe_bindings.hpp:327-334`
+   给出技能 86 的 3 个 state（47/48/49）入口 `hundredswordready / guard /
+   hundredswordfinish`，原映射把它们作为链的第 0/1/2 段前置，再用名称扫描补
+   10 段，导致 `finish` 排在 5 次斩击之前。`skill_preview_motion_pool.hpp:122-133`
+   给出的 CHR 运动池顺序是 `ready -> moveready1..5 -> moveslash1..5 -> finish`。
+2. **输入等待态被摊进动作时钟。** `guard.ani` 是 2 帧、每帧 `[DELAY]=10000`、
+   通用人体贴图（`sm_body%04d.img` 帧 123/124），是驻留哨兵而不是 20 秒动画。
+   原 `actionDurationMs = 25810`，其中 20000ms 来自这一状态。
+3. **效果家族文件名自带的阶段编号未被消费。** `weaponready3normal.ani`、
+   `weaponslash2normal.ani`、`finishcircle1.ani` 与 body 阶段同源，但
+   `effectStageOrder()` 把它们都归到同一个 stage 值，48 层按列表下标均匀摊到
+   25.8 秒上，且 ALS sidecar 数为 0。
+
+## 2. 本轮补全（均为源侧规则，可跨职业复用）
+
+- `SkillVisualMapping` 新增 `ChainSlot / ChainSlotRole / chainSlots /
+  externalSlots / nominalActionMs`；`EffectLayerPlan` 新增 `stageBound`。
+- exe override 改为以 CHR 运动池顺序为骨架，pool 未登记的 state 入口按其
+  exe 前驱锚定插入；`finish` 回到链尾。
+- 新增通用 hold 识别：帧数 <= 3 且最大 `[DELAY] >= 5000` 的 body 段分离为
+  `ExternalHold`，不推进动作时钟，其真实时长保持**未定量**（由输入驱动）。
+- 新增 `matchEffectBodyStage()`：按「阶段词 + 编号」同源字符串把 untimed 层
+  绑定到 body slot 的 `startMs`。全职业命中 786 层，技能 86 命中 27/48 层。
+- 预览器 `seedLayers()` 与 native `spawnSkillVisuals()` 统一消费同一 nominal
+  时钟；native 补齐预览器已有的 persistent 层过滤，修复悬剑重复绘制。
+- `dnf_inspect --skill-chain` 扩展 `predictedTimeline`：`fixedSlots /
+  externalSlots / phaseWindows / layerBirths`，并标注每条 birth 的时钟来源
+  （`als / stage_bound / stem_order`）。
+
+技能 86 结果：`bodyChain` 13 -> 12 段，`actionDurationMs` 25810 -> **5810ms**，
+窗口为 `entry 0-3000`、`triggered 3000-4540`、`finish 4540-5810`。
+
+## 3. AVI 独立观测与交叉验证
+
+工具 `project/tools/legacy/avi_chain_crosscheck.py` 可复现：ffmpeg 解码清风 1031
+自带 `Video/Swordman/HundredSword.avi`（Neople wrapper 解出的标准 AVI，160x90、
+29.97fps、363 帧、12.1121s），逐帧灰度差按 0.1s 分桶，阈值只由视频自身中位数
+导出，全程不读 PVF / 链数据。
+
+观测：16 个活动窗口、17 个局部峰；全局最大在 **10.01s**（avg 61.97）；
+中段 5.4-9.4s 为连续离散峰，10.2s 之后静止。预测：固定段共 5.810s，顺序为
+`entry -> 5 组触发 -> finish`，终结为最后一个 slot。6 项顺序 / 数量 / 比例
+验证全部通过；差额 **6302.1ms** 正是链解析明确留白、任何 PVF 文件都不计时的
+「输入等待 + 触发间隙」，报告标注为 observed，未写回映射。
+
+## 4. 差额反推出的待补项（本轮明确**不**用文件名启发式硬猜）
+
+- 21/48 层仍无源时间轴；其中 **17 层被 birthRatio 挤在 nominal 时钟最后 20%**
+  （4865-4924ms），而观测的中段峰分布在 5.4-9.4s。`flash / light / dust /
+  lighttail` 应随触发节拍出现，当前链解析仍不准确。
+- 真正补完需要恢复 1031 exe state handler 的特效派发（或家族 ANI 自身
+  sidecar），不是再叠一层字符串规则；后者会降低证据等级。
+- `triggeredSlots=10` 对 `midBandPeaks=14`：一次触发可能产生多个可见事件
+  （武器、地面剑阵、闪光、伤害数字），视频无元素级标注，不能强行 1:1。
+- nominal 时钟仍是裸 `[DELAY]` 累加；`effectiveDelay = trunc(rawFrameDelay *
+  100/ratePercent)` 与 delayed-add net birth-offset 未恢复，绝对 ms 比较仍带
+  未知比例因子。
+- 本 AVI 仍无法判定 `[IMAGE ROTATE]` 正负、逐层 XYZ / 层序、cast 局部偏移。
+
+## 5. 验证与产物
+
+- 回归 45 -> **48 项全部通过**（9j 拆为三类时钟断言，新增 9k hold 分离 /
+  slot 对齐断言），`checkpoints/tests/chain-v2/skill-preview-tests.json`。
+- 链解析：`checkpoints/tests/avi-probe/chain_hundredsword_v2.json`；
+  交叉验证：`checkpoints/tests/avi-probe/avi_cross_validation.json`。
+- 增量编译 `dnf_inspect / dnf_skill_preview_tests / dnf_native.exe /
+  dnf_skill_preview.exe` 到 `checkpoints/build`；未重启此前被取消的全量测试编译。
+- 行为提示：`guard` 输入等待态已从自动播放链分离，主游戏不再出现 20 秒静止
+  驻留；悬剑由 persistent 实体表现。逐技能体验时请以这一版为准。
+
+---
+
 # 清风 1031 基座核对：ALS 源时间轴与坐标投影（2026-11-11 第六轮）
 
 节点 `baseline-1031-als-20261111`。

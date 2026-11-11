@@ -399,7 +399,9 @@ int entry(int argc, char **argv) {
         //     sidecar must stay on the reconstructed birthRatio path.
         {
             size_t timed = 0, untimed = 0, withRemove = 0, positiveBirth = 0;
-            bool allTimedBound = true, allUntimedUnbound = true;
+            size_t stageBound = 0, pureStem = 0;
+            bool allTimedBound = true, allPureStemUnbound = true;
+            bool allStageBoundInClock = true;
             bool boundaryChecked = false, boundaryMatches = true;
             double maxBirthMs = 0;
             for (int jobId : jobIds) {
@@ -438,7 +440,16 @@ int entry(int argc, char **argv) {
                             }
                         } else {
                             ++untimed;
-                            if (layer.birthMs >= 0) allUntimedUnbound = false;
+                            if (layer.stageBound) {
+                                ++stageBound;
+                                if (layer.birthMs < 0 ||
+                                    layer.birthMs > m->nominalActionMs + 0.01)
+                                    allStageBoundInClock = false;
+                            } else {
+                                ++pureStem;
+                                if (layer.birthMs >= 0 || layer.birthRatio < 0)
+                                    allPureStemUnbound = false;
+                            }
                         }
                     }
                 }
@@ -450,9 +461,51 @@ int entry(int argc, char **argv) {
             check(boundaryChecked && boundaryMatches,
                   "ALS birth equals the parent ANI DELAY sum",
                   {{"checked", boundaryChecked}});
-            check(untimed > 0 && allUntimedUnbound,
-                  "stem-order layers keep the reconstructed birthRatio path",
-                  {{"untimed", int(untimed)}});
+            check(pureStem > 0 && allPureStemUnbound,
+                  "unbound stem-order layers keep the reconstructed birthRatio path",
+                  {{"untimed", int(untimed)}, {"pureStem", int(pureStem)}});
+            check(stageBound > 0 && allStageBoundInClock,
+                  "same-stem stage bindings stay inside the nominal action clock",
+                  {{"stageBound", int(stageBound)}});
+        }
+
+        // 9k) The exe setState table names state ENTRY motions, not a linear
+        //     playback order. guard.ani (2 frames x 10000ms) is an input-wait
+        //     hold sentinel: it must not stretch the action clock, and the CHR
+        //     motion-pool order must put finish AFTER the five triggered pairs.
+        {
+            table.ensureJob(0);
+            const auto *m = table.mapping(SkillKey{0, 86});
+            bool hasMapping = m != nullptr, finishLast = false, guardExternal = false;
+            bool noGuardInChain = true, slotsAligned = true, nominalSane = false;
+            size_t boundLayers = 0;
+            if (m) {
+                finishLast = !m->bodyChain.empty() &&
+                    m->bodyChain.back().find("hundredswordfinish") != std::string::npos;
+                for (const auto &s : m->externalSlots)
+                    if (s.path.find("guard.ani") != std::string::npos &&
+                        s.role == ChainSlotRole::ExternalHold) guardExternal = true;
+                for (const auto &path : m->bodyChain)
+                    if (path.find("guard.ani") != std::string::npos) noGuardInChain = false;
+                nominalSane = m->nominalActionMs > 1000 && m->nominalActionMs < 10000;
+                slotsAligned = m->chainSlots.size() == m->bodyChain.size();
+                double at = 0;
+                for (const auto &s : m->chainSlots) {
+                    if (std::abs(s.startMs - at) > 0.01) slotsAligned = false;
+                    at += s.durationMs;
+                }
+                if (std::abs(at - m->nominalActionMs) > 0.01) slotsAligned = false;
+                for (const auto &layer : m->effectLayers)
+                    if (layer.stageBound && layer.birthMs >= 0 &&
+                        layer.birthMs <= m->nominalActionMs) ++boundLayers;
+            }
+            check(hasMapping && finishLast && guardExternal && noGuardInChain && nominalSane,
+                  "input-wait hold sentinel is separated from the playback clock",
+                  {{"finishLast", finishLast}, {"guardExternal", guardExternal},
+                   {"nominalActionMs", m ? m->nominalActionMs : -1}});
+            check(hasMapping && slotsAligned && boundLayers > 0,
+                  "same-stem effect layers bind to normalised chain slots",
+                  {{"slotsAligned", slotsAligned}, {"boundLayers", int(boundLayers)}});
         }
 
         // 9i) The preview overlap keeps d=0 boxes testable on the single stage

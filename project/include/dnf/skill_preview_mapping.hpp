@@ -65,6 +65,10 @@ struct EffectLayerPlan {
     // lives for its own animation duration (or until the action ends if LOOP).
     double birthMs = -1.0, endMs = -1.0;
     int bodyStage = 0;         // index into bodyChain whose .als declared it
+    // True when birthMs came from a same-stem body-stage binding rather than
+    // an ALS [add]. Both are reconstructions of the nominal action clock; only
+    // `timed` claims a recovered source command.
+    bool stageBound = false;
     double lifeMs = 0.0;
     bool loop = false;
     bool timed = false;        // true = the ALS sidecar supplies the instant
@@ -75,6 +79,23 @@ struct EffectLayerPlan {
     double offsetX = 0, offsetY = 0, offsetZ = 0;
     std::string instance;      // ALS uniqueName, empty for a stem-matched layer
     std::string source;        // "als" / "family" / "object" / "prefix" / "script"
+    std::string evidence;
+};
+
+// One slot of a release chain. A chain is a STATE MACHINE, not one tape:
+// 1031's exe setState tables name the entry motion of each state, while the
+// CHR motion pool holds the sub-motions a state plays on player input. Some
+// states are input waits -- guard.ani is two frames at 10000ms each, so its
+// duration is a hold sentinel, not 20 seconds of animation. Such stages are
+// kept as external slots and do not advance the automatic action clock; their
+// real length is driven by input and is deliberately left unquantified here.
+enum class ChainSlotRole { Entry, Triggered, Finish, Plain, ExternalHold };
+struct ChainSlot {
+    std::string path;
+    ChainSlotRole role = ChainSlotRole::Plain;
+    double startMs = 0;       // action-clock start; -1 for an external slot
+    double durationMs = 0;    // sum of the source ANI [DELAY] table
+    int frameCount = 0;
     std::string evidence;
 };
 
@@ -114,6 +135,13 @@ struct SkillVisualMapping {
     std::vector<std::string> bodyChain;
     std::vector<int> chainStages;   // parallel to bodyChain: the stage order
     std::string chainEvidence;      // human-readable "a -> b -> c"
+    // Playback slots of the normalised chain (input-wait stages removed), and
+    // the state-machine waits the automatic clock cannot time. Both the
+    // previewer and the native world read these, so they cannot disagree on
+    // which action clock a layer's birthMs belongs to.
+    std::vector<ChainSlot> chainSlots;
+    std::vector<ChainSlot> externalSlots;
+    double nominalActionMs = 0;   // sum of playback slot [DELAY]s; no input waits
     std::vector<std::string> effects;
     std::vector<std::string> particles;
     // effects, with the attach instant and the order they should be drawn in.

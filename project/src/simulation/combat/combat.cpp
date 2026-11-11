@@ -2139,6 +2139,13 @@ void World::spawnSkillVisuals(const Skill &skill) {
     const int castDir = player.dir;
     for (const auto &layer : mapping->effectLayers) {
         if (layer.path.empty() || !pvf_.has(layer.path)) continue;
+        // A persistent entity owns this animation for the whole cast. The
+        // previewer skips it here too; drawing it as an ordinary layer as
+        // well used to duplicate the hanging swords in the native game.
+        bool persistent = false;
+        for (const auto &entity : mapping->persistents)
+            if (entity.path == layer.path) { persistent = true; break; }
+        if (persistent) continue;
         double life = layer.lifeMs;
         if (life <= 0) {
             try {
@@ -2161,7 +2168,9 @@ void World::spawnSkillVisuals(const Skill &skill) {
         // authored height was lost. motionZ is still unrecovered and stays 0.
         e.z = castZ + layer.offsetZ;
         // ALS layers carry an instant compiled from the parent ANI's [DELAY]
-        // table; stem-order layers keep the reconstructed stage spread.
+        // table; same-stem layers carry the nominal-clock start of their body
+        // stage. Only unbound layers fall back to the stem-order spread, and
+        // `duration` is now free of input-wait hold sentinels.
         const double birth = layer.birthMs >= 0 ? layer.birthMs : layer.birthRatio * duration;
         e.born = start + int64_t(birth);
         const int64_t naturalEnd = e.born + int64_t(std::max(1.0, life));

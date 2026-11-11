@@ -219,6 +219,42 @@ int effectStageOrder(const std::string &stem) {
     return best * 100 + std::min(99, serial);
 }
 
+// Effect files inside a skill family are named after the body stage they
+// belong to: weaponready3normal <-> hundredswordmoveready3,
+// weaponslash2normal <-> hundredswordmoveslash2, finishflash <-> finish.
+// Return the index of the body stage whose stem repeats the effect's stage
+// word (and serial, when it has one); -1 when no stage says the same thing.
+// This is a same-source string rule, NOT an observed runtime attachment.
+int matchEffectBodyStage(const std::string &effectStem,
+                         const std::vector<std::string> &stages) {
+    static const char *const kWords[] = {
+        "finish", "ready", "slash", "shoot", "smash", "land", "spread",
+        "charge", "cast", "start", "hit", "attack",
+    };
+    std::string signature, bare;
+    bool hasSerial = false;
+    for (const char *word : kWords) {
+        const size_t at = effectStem.find(word);
+        if (at == std::string::npos) continue;
+        bare = word;
+        signature = word;
+        const size_t after = at + bare.size();
+        if (after < effectStem.size() && effectStem[after] >= '0' &&
+            effectStem[after] <= '9') {
+            signature += effectStem[after];
+            hasSerial = true;
+        }
+        break;
+    }
+    if (signature.empty()) return -1;
+    for (size_t i = 0; i < stages.size(); ++i)
+        if (stemOf(stages[i]).find(signature) != std::string::npos) return int(i);
+    if (hasSerial)
+        for (size_t i = 0; i < stages.size(); ++i)
+            if (stemOf(stages[i]).find(bare) != std::string::npos) return int(i);
+    return -1;
+}
+
 // Upgrade words a skill can append to a motion base name: flowmind + powerup.
 bool isVariantTail(const std::string &tail) {    static const char *const kWords[] = {"powerup", "poweron", "power", "up",   "ex",
                                          "exp",     "full",    "charge"};
@@ -331,7 +367,7 @@ Json SkillVisualMapping::audit() const {
                {"attackSource", attackName(attackSource)}, {"hasAttackBox", hasAttackBox},
                {"reconstructedBoxes", reconstructedBoxes.size()},
                {"bodyChain", bodyChain}, {"chainStages", chainStages},
-               {"chainEvidence", chainEvidence},
+               {"chainEvidence", chainEvidence}, {"nominalActionMs", nominalActionMs},
                {"passive", passive}, {"grade", gradeName(grade)},
                {"confidence", confidenceName(confidence)},
                {"icon", iconPath}, {"iconFrame", iconFrame},
@@ -344,12 +380,27 @@ Json SkillVisualMapping::audit() const {
                           {"alsLayer", layer.alsLayer}, {"instance", layer.instance},
                           {"birthRatio", layer.birthRatio}, {"lifeMs", layer.lifeMs},
                           {"birthMs", layer.birthMs}, {"endMs", layer.endMs},
-                          {"bodyStage", layer.bodyStage},
+                          {"bodyStage", layer.bodyStage}, {"stageBound", layer.stageBound},
                           {"loop", layer.loop}, {"source", layer.source},
                           {"offsetX", layer.offsetX}, {"offsetY", layer.offsetY},
                           {"offsetZ", layer.offsetZ}, {"evidence", layer.evidence}});
     }
     value["effectLayers"] = layers;
+    const auto slotJson = [](const ChainSlot &s) {
+        const char *role = s.role == ChainSlotRole::Entry ? "entry"
+                           : s.role == ChainSlotRole::Triggered ? "triggered"
+                           : s.role == ChainSlotRole::Finish ? "finish"
+                           : s.role == ChainSlotRole::ExternalHold ? "external_hold"
+                           : "plain";
+        return Json{{"path", s.path}, {"role", role}, {"startMs", s.startMs},
+                    {"durationMs", s.durationMs}, {"frameCount", s.frameCount},
+                    {"evidence", s.evidence}};
+    };
+    Json slots = Json::array(), external = Json::array();
+    for (const auto &s : chainSlots) slots.push_back(slotJson(s));
+    for (const auto &s : externalSlots) external.push_back(slotJson(s));
+    value["chainSlots"] = slots;
+    value["externalSlots"] = external;
     Json persistentJson = Json::array();
     for (const auto &entity : persistents) {
         const char *kind = entity.kind == PersistentKind::Orbit ? "orbit"
@@ -1005,24 +1056,44 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             auto dot = file.rfind('.');
             std::string chrStem = dot == std::string::npos ? file : file.substr(0, dot);
             if (const auto *exe = exe_bindings::find(chrStem.c_str(), registration.id)) {
-                mapping.bodyChain.clear();
-                mapping.chainStages.clear();
-                for (size_t i = 0; i < exe->motionCount; ++i) {
-                    mapping.bodyChain.push_back(exe->motions[i]);
-                    mapping.chainStages.push_back(100 + static_cast<int>(i));
-                }
-                // The exe entry lists the entry motion of the release state; the
-                // later stages are named after the skill in the CHR and only the
-                // name scan reaches them (HundredSwordMoveSlash2..5, KallaFinish1..3).
-                // Those are the same skill by name, so they extend the chain
-                // instead of being dropped by the override.
+                // The exe table names the ENTRY motion of each STATE, not the
+                // order the release plays. `staged` is the CHR motion-pool
+                // order recovered from the PVF, so it is the playback skeleton.
+                // A state entry the pool does not register (guard.ani) is
+                // anchored right after its exe predecessor instead of being
+                // prepended as if states 47/48/49 were stages 0/1/2. Prepending
+                // used to put hundredswordfinish BEFORE the five
+                // moveready/moveslash pairs and made the chain unwatchable.
+                std::vector<std::string> chain;
                 for (const auto &entry : staged) {
-                    if (std::find(mapping.bodyChain.begin(), mapping.bodyChain.end(),
-                                  entry.second.first) != mapping.bodyChain.end())
-                        continue;
-                    if (mapping.bodyChain.size() > 12) break;
-                    mapping.bodyChain.push_back(entry.second.first);
+                    if (chain.size() >= 24) break;
+                    if (std::find(chain.begin(), chain.end(), entry.second.first) == chain.end())
+                        chain.push_back(entry.second.first);
                 }
+                if (chain.empty()) {
+                    for (size_t i = 0; i < exe->motionCount; ++i)
+                        chain.emplace_back(exe->motions[i]);
+                } else {
+                    for (size_t i = 0; i < exe->motionCount; ++i) {
+                        const std::string path(exe->motions[i]);
+                        if (std::find(chain.begin(), chain.end(), path) != chain.end()) continue;
+                        auto at = chain.begin();
+                        for (size_t j = i; j > 0; --j) {
+                            const auto found = std::find(chain.begin(), chain.end(),
+                                                         std::string(exe->motions[j - 1]));
+                            if (found != chain.end()) { at = found + 1; break; }
+                        }
+                        chain.insert(at, path);
+                    }
+                    // A state entry still absent from the pool belongs to the
+                    // chain too; keep it in exe table order.
+                    for (size_t i = 0; i < exe->motionCount; ++i) {
+                        const std::string path(exe->motions[i]);
+                        if (std::find(chain.begin(), chain.end(), path) == chain.end())
+                            chain.push_back(path);
+                    }
+                }
+                mapping.bodyChain = std::move(chain);
                 mapping.chainStages.clear();
                 for (size_t i = 0; i < mapping.bodyChain.size(); ++i)
                     mapping.chainStages.push_back(100 + static_cast<int>(i));
@@ -1177,6 +1248,92 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
         }
     }
 
+    // --- release-chain state machine ---------------------------------------
+    // 1031's exe setState tables name the ENTRY motion of each state; the CHR
+    // motion pool holds the sub-motions a state plays on player input. An
+    // input-wait state is a HOLD SENTINEL, not a playback segment: guard.ani
+    // (state 48 of HundredSword) is two frames at 10000ms each. Laying it on
+    // the action clock used to stretch a 5.8s release into 25.8s. Those stages
+    // are separated as external slots; their real length is input-driven and
+    // stays UNQUANTIFIED here so an independent observation can supply it.
+    {
+        const auto aniInfo = [&](const std::string &path, int &frames, int &maxDelay) {
+            frames = 0;
+            maxDelay = 0;
+            double total = 0;
+            try {
+                for (const auto &frame : assets_.animation(path)->frames) {
+                    const int delay = std::max(1, frame.duration);
+                    ++frames;
+                    maxDelay = std::max(maxDelay, delay);
+                    total += delay;
+                }
+            } catch (const std::exception &) {
+            }
+            return total;
+        };
+        std::vector<std::string> playback;
+        for (const auto &path : mapping.bodyChain) {
+            int frames = 0, maxDelay = 0;
+            const double total = aniInfo(path, frames, maxDelay);
+            // Conservative: a small frame table whose every frame is a long
+            // dwell is a hold, not an animation. Ordinary body ANIs have many
+            // short frames; a two-frame 10s guard cannot be one of them.
+            if (frames > 0 && frames <= 3 && maxDelay >= 5000) {
+                ChainSlot slot;
+                slot.path = path;
+                slot.role = ChainSlotRole::ExternalHold;
+                slot.startMs = -1;
+                slot.durationMs = total;
+                slot.frameCount = frames;
+                slot.evidence = "ANI hold sentinel: " + std::to_string(frames) +
+                                " frames, max [DELAY] " + std::to_string(maxDelay) +
+                                "ms; input-driven, not a playback span";
+                mapping.externalSlots.push_back(std::move(slot));
+                continue;
+            }
+            playback.push_back(path);
+        }
+        if (playback.empty() && !mapping.bodyAni.empty())
+            playback.push_back(mapping.bodyAni);
+        if (!mapping.externalSlots.empty() && !playback.empty()) {
+            mapping.bodyChain = playback;
+            mapping.chainStages.clear();
+            for (size_t i = 0; i < playback.size(); ++i)
+                mapping.chainStages.push_back(100 + static_cast<int>(i));
+            std::string joined;
+            for (const auto &path : playback) {
+                if (!joined.empty()) joined += " -> ";
+                joined += stemOf(path);
+            }
+            mapping.chainEvidence = joined;
+            mapping.evidence += "; chain: " + std::to_string(mapping.externalSlots.size()) +
+                                " input-wait state(s) separated from the playback clock";
+        }
+        double at = 0;
+        for (size_t i = 0; i < playback.size(); ++i) {
+            const auto &path = playback[i];
+            int frames = 0, maxDelay = 0;
+            const double total = aniInfo(path, frames, maxDelay);
+            const std::string stem = stemOf(path);
+            ChainSlot slot;
+            slot.path = path;
+            slot.startMs = at;
+            slot.durationMs = total;
+            slot.frameCount = frames;
+            if (i == 0) slot.role = ChainSlotRole::Entry;
+            else if (stem.find("finish") != std::string::npos) slot.role = ChainSlotRole::Finish;
+            else if (stem.find("move") != std::string::npos ||
+                     stem.find("slash") != std::string::npos ||
+                     stem.find("shoot") != std::string::npos) slot.role = ChainSlotRole::Triggered;
+            else slot.role = ChainSlotRole::Plain;
+            slot.evidence = "source ANI [DELAY] sum; role from the CHR motion-pool stem";
+            at += total;
+            mapping.chainSlots.push_back(std::move(slot));
+        }
+        mapping.nominalActionMs = at;
+    }
+
     // --- effect layer timing ------------------------------------------------
     // When a layer appears is source data only while the body ANI carries an
     // .als sidecar: [add] <frame> <layer> <uniqueName> names a parent frame and
@@ -1218,11 +1375,15 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
         // its own sidecar and its events carry that stage's start offset.
         std::vector<std::string> stages = mapping.bodyChain;
         if (stages.empty() && !mapping.bodyAni.empty()) stages.push_back(mapping.bodyAni);
+        // chainSlots is the normalised playback clock (input-wait states
+        // removed). A raw [DELAY] sum remains only for a row that never went
+        // through normalisation.
         std::vector<double> stageStart;
         double chainCursor = 0;
-        for (const auto &path : stages) {
-            stageStart.push_back(chainCursor);
-            chainCursor += durationOf(path);
+        for (size_t i = 0; i < stages.size(); ++i) {
+            stageStart.push_back(i < mapping.chainSlots.size()
+                                 ? mapping.chainSlots[i].startMs : chainCursor);
+            chainCursor += durationOf(stages[i]);
         }
         for (size_t stageIndex = 0; stageIndex < stages.size(); ++stageIndex) {
             std::shared_ptr<Animation> parent;
@@ -1334,7 +1495,20 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                     ? 0.75 * double(index) / double(untimed.size() - 1) : 0.0;
             }
             layer.source = untimed[index].rfind("passiveobject/", 0) == 0 ? "object" : "family";
-            layer.evidence = "no ALS sidecar; release-stage order in file stem";
+            const int bound = matchEffectBodyStage(stemOf(untimed[index]), stages);
+            if (bound >= 0 && bound < int(mapping.chainSlots.size())) {
+                layer.bodyStage = bound;
+                layer.stageBound = true;
+                layer.birthMs = mapping.chainSlots[bound].startMs;
+                layer.evidence = "no ALS sidecar; same-stem body stage " +
+                                 stemOf(stages[bound]) + " @ " +
+                                 std::to_string(int(layer.birthMs)) +
+                                 "ms (reconstructed stage binding)";
+            } else {
+                layer.evidence = "no ALS sidecar; release-stage order in file stem";
+            }
+            // birthRatio stays as a consumer fallback. It now applies to the
+            // nominal clock, which no longer contains input-wait spans.
             layers.push_back(std::move(layer));
         }
         mapping.effectLayers = std::move(layers);
