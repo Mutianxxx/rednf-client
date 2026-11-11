@@ -105,6 +105,37 @@ CHR motion pool 给出玩家输入驱动的子动作；输入等待态（如 `gu
 两者在解析时按**技能 stem** 并入 `SkillVisualMapping`（`exeJudgments` / `command`），
 并写入 `audit()` 输出，供核对与后续渲染消费。
 
+### 盒子类型：14 是受击，15 才是攻击
+
+对 1031 的 ANI 逐帧解码后可以确认一件容易搞反的事：**角色 body 动作只写 type-14（受击）盒**，
+`attack1.ani`、`hardattack.ani` 全都没有 type-15。type-15（攻击）只出现在
+**passiveobject 的动画**里——剑气 `hundredswordhit.ani`（3 个 532×62 大盒）、
+冰箭 `00_arrow_normal.ani`（81×20×32）。
+
+所以「这个技能打哪儿」在 1031 里由**被动对象**承担，而不是角色身体。这也是为什么
+早先只让 body 动画做判定的实现，会表现为「技能放完了、怪一点血都没掉」。
+
+映射层因此把被动对象的一次性 motion（`[basic motion]` + `[attack info]`）也收进
+`effectLayers`，并标 `attack` / `attackInfo`：这些层按 body 的挥砍阶段展开（每次挥砍一个对象实例，
+这是对未恢复的「生成对象」命令的**重建**），其 type-15 盒就是判定体积。
+
+### 投掷物：在 nut 里，不在 exe 里
+
+男法冰魄之弓这类「脱手」技能由 passiveobject 脚本完整描述，无需逆向 exe：
+
+```squirrel
+// sqr/character/atmage/brokenarrow/po_atbrokenarrow.nut
+local v  = sq_GetUniformVelocity(0, dis_x_len, currentT, fireT);  // 匀速直线
+local dstX = sq_GetDistancePos(srcX, obj.getDirection(), v);      // 按朝向推进
+sq_setCurrentAxisPos(obj, 0, dstX); ...
+if (currentT >= fireT) sq_SendDestroyPacketPassiveObject(obj);    // 到点销毁
+// sqr/character/atmage/brokenarrow/brokenarrow.nut
+// 炮口偏移 (65, 0, 73)，无锁定目标时 xLen = 400，fireT = [static data][0]
+```
+
+映射层把「单帧循环 + 有 `[attack info]`」的对象识别为投掷物，按 `fireT` 匀速推进
+`xLen` 距离并用子弹自己的 type-15 盒判定。参数来自该技能脚本；**其他职业的投掷参数尚未逐个核对**。
+
 ## 重新提取 exe 绑定
 
 ```bash
@@ -119,7 +150,11 @@ python -X utf8 -B tools/skill-bindings/src/extract_commands.py          # 指令
 ## 已知边界（不要当成已完成）
 
 - 攻击判定选择器 `0x70213F` 位于 Themida VM 区，**立即数 → `.atk` 文件名的翻译未恢复**；
-  判定框几何仍取自 PVF/ANI，exe 只提供「哪个 state 打、打第几个攻击」。
+  exe 目前只提供「哪个 state 打、打第几个攻击」。角色 body 技能的攻击盒几何在 1031 里
+  **不在 PVF**（body ANI 只有 type-14 受击盒），需要继续从 exe 的攻击盒构造点取证；
+  依赖被动对象的技能（剑气、冰箭、投掷物）已能靠对象自身的 type-15 盒判定。
+- 投掷物的射程/时间取自**该技能自己的 nut 脚本**；其他职业（枪手子弹、男法其他投掷）尚未逐个核对，
+  未核对的一律按「单帧循环对象 + `[static data][0]`」的通用规则处理，属重建。
 - `ratePercent` 帧延时缩放、`delayed-add` 出生偏移策略未恢复，预览器时间轴是**名义时钟**（裸 `[DELAY]` 累加），
   只在相对顺序上等价，绝对毫秒不保证与原游戏一致。
 - 盗贼区动作索引映射未闭合；创造者（creatormage）无原生 setState 控制器。

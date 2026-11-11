@@ -80,6 +80,12 @@ struct EffectLayerPlan {
     std::string instance;      // ALS uniqueName, empty for a stem-matched layer
     std::string source;        // "als" / "family" / "object" / "prefix" / "script"
     std::string evidence;
+    // Passive-object layers carry their own type-15 attack boxes. The source
+    // body ANI holds only type-14 hurt boxes, so an effect that is skipped as
+    // "visual only" also loses the hit. attackInfo is the object's
+    // [attack info] .atk path (damage reaction, not the box).
+    bool attack = false;
+    std::string attackInfo;
 };
 
 // One slot of a release chain. A chain is a STATE MACHINE, not one tape:

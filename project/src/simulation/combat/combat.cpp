@@ -2159,8 +2159,12 @@ void World::spawnSkillVisuals(const Skill &skill) {
         e.skill = skill.id;
         e.animation = layer.path;
         e.dir = castDir;
-        e.x = e.px = castX + castDir * layer.offsetX;
-        e.y = e.py = castY + layer.offsetY;
+        // A passive-object layer is drawn by its own ANI frame pivot, so its
+        // offsetX/Y is already inside the animation. Applying it here as well
+        // put the falling sword and the arrow a second time off-anchor.
+        const bool objectDrawn = layer.source == "object";
+        e.x = e.px = castX + castDir * (objectDrawn ? 0.0 : layer.offsetX);
+        e.y = e.py = castY + (objectDrawn ? 0.0 : layer.offsetY);
         // The renderer projects screenY = y - z. The generic handoff formula
         // is castY + localY - localZ - motionZ (main.cpp:82, built from a
         // different PVF - mechanism blueprint, not base-client proof).
@@ -2173,15 +2177,54 @@ void World::spawnSkillVisuals(const Skill &skill) {
         // `duration` is now free of input-wait hold sentinels.
         const double birth = layer.birthMs >= 0 ? layer.birthMs : layer.birthRatio * duration;
         e.born = start + int64_t(birth);
+        // A passive object whose motion is a single looping frame is the
+        // moving projectile (ATBrokenArrow/00_arrow_normal.ani). Its nut
+        // script owns the motion: uniform velocity from the muzzle to xLen
+        // over fireT (po_atbrokenarrow.nut sq_GetUniformVelocity), muzzle
+        // offset (65,0,73) and xLen 400 with no locked target
+        // (brokenarrow.nut). fireT is the skill's [static data][0].
+        bool projectile = false;
+        if (layer.attack && layer.loop) {
+            try {
+                projectile = assets_.animation(layer.path)->frames.size() <= 1;
+            } catch (const std::exception &) {
+            }
+        }
+        int64_t flightMs = 0;
+        if (projectile) {
+            int frames = 4; // brokenarrow.skl [static data][0]
+            if (skill.sourceData) {
+                try {
+                    const auto data = skill.sourceData->values("[static data]");
+                    if (!data.empty() && data[0].is_number()) frames = data[0].get<int>();
+                } catch (const std::exception &) {
+                }
+            }
+            flightMs = std::clamp<int64_t>(int64_t(frames) * 100, 100, 3000);
+            e.x = e.px = castX + castDir * 65;
+            e.y = e.py = castY + 1;
+            e.z = castZ + 73;
+        }
         const int64_t naturalEnd = e.born + int64_t(std::max(1.0, life));
         const int64_t actionEnd = start + int64_t(std::max(duration, birth + std::max(1.0, life)));
-        e.expires = std::max(e.born + 1, layer.endMs > birth
-            ? std::min(start + int64_t(layer.endMs), actionEnd)
-            : (layer.loop ? actionEnd : std::min(naturalEnd, actionEnd)));
+        e.expires = projectile ? e.born + flightMs
+            : std::max(e.born + 1, layer.endMs > birth
+                ? std::min(start + int64_t(layer.endMs), actionEnd)
+                : (layer.loop ? actionEnd : std::min(naturalEnd, actionEnd)));
         e.interval = 100000;
         e.loop = layer.loop;
         e.layer = layer.alsLayer;
-        e.damageEnabled = false;
+        // A passive-object layer owns type-15 attack boxes in its own ANI.
+        // Withholding damage here is why the falling swords and the ice arrow
+        // never hit anything: the hit volume existed in the data, unused.
+        e.damageEnabled = layer.attack;
+        if (projectile) {
+            e.trajectoryMs = int(flightMs);
+            e.trajectoryStartX = e.x;
+            e.speed = 400.0 * 1000.0 / double(std::max<int64_t>(1, flightMs));
+            e.loop = true;
+            e.phase = "mapping:projectile";
+        }
         e.attached = false;
         e.phase = "mapping:" + layer.source;
         e.parentId = 0;
@@ -3189,7 +3232,10 @@ void World::simulateTick() {
             }
             continue;
         }
-        if (e.attached || (e.skill != 20 && e.skill != 64 && e.skill != 58 && e.skill != 65))
+        // damageEnabled is the gate. A mapping layer now carries the passive
+        // object's own type-15 volume, so an effect must not need a hard-coded
+        // skill id to be allowed to damage anything.
+        if (e.attached)
             continue;
         auto objectAni=assets_.animation(e.animation);
         bool pulse = e.skill == 58;

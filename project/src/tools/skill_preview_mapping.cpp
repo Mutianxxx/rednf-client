@@ -384,7 +384,9 @@ Json SkillVisualMapping::audit() const {
                           {"bodyStage", layer.bodyStage}, {"stageBound", layer.stageBound},
                           {"loop", layer.loop}, {"source", layer.source},
                           {"offsetX", layer.offsetX}, {"offsetY", layer.offsetY},
-                          {"offsetZ", layer.offsetZ}, {"evidence", layer.evidence}});
+                          {"offsetZ", layer.offsetZ}, {"attack", layer.attack},
+                          {"attackInfo", layer.attackInfo},
+                          {"evidence", layer.evidence}});
     }
     value["effectLayers"] = layers;
     const auto slotJson = [](const ChainSlot &s) {
@@ -1688,17 +1690,23 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                                    return visualKey(stemOf(plan.path)) == key;
                                });
         };
-        const auto consider = [&](const std::string &object, const std::string &motion) {
+        const auto consider = [&](const std::string &object, const std::string &motion,
+                                  const std::string &attackInfo, bool basicMotion) {
             if (motion.empty() || !pvf_.has(motion) || alreadyHas(motion)) return;
             double life = 0;
             bool loop = false;
             int topY = 0;
+            int firstX = 0, firstY = 0;
             size_t frameCount = 0;
             try {
                 const auto animation = assets_.animation(motion);
                 frameCount = animation->frames.size();
                 for (const auto &frame : animation->frames) life += std::max(1, frame.duration);
                 for (const auto &frame : animation->frames) topY = std::min(topY, frame.y);
+                if (!animation->frames.empty()) {
+                    firstX = animation->frames.front().x;
+                    firstY = animation->frames.front().y;
+                }
                 loop = animation->globals.value("0", false);
             } catch (const std::exception &) {
                 return;
@@ -1745,7 +1753,9 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                     if (motionStem.rfind(skillStem + "moveready", 0) == 0) ++stages;
                 }
                 plan.count = std::max(1, stages);
-                plan.offsetY = std::min(-120.0, double(topY));
+                // Frame y already authors the hanging height (swordair1 -102);
+                // a second world offset doubled it, so the array floated.
+                plan.offsetY = 0;
                 plan.evidence = "looping air animation (" + std::to_string(int(life)) +
                                 "ms); count from move stages; height from frame offset";
             } else if (longLoop || staticDecal) {
@@ -1754,6 +1764,57 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                 plan.offsetY = 0;
                 plan.evidence = staticDecal ? "single-frame ground decal placed for the skill duration"
                                             : "looping ground object motion kept for the skill duration";
+            } else if (!attackInfo.empty()) {
+                // A one-shot passive-object motion is what lands the hit. The
+                // caster's body ANI holds only type-14 hurt boxes, so the
+                // falling-sword object (HundredSwordHit) is the only attack
+                // volume this skill owns; skipping it as "already an effect
+                // layer" dropped both the visual and every hit it carries.
+                // The spawn command itself is unrecovered, so the object is
+                // repeated once per swinging body stage: a reconstruction.
+                int emitted = 0;
+                for (size_t slotIndex = 0; slotIndex < mapping.chainSlots.size(); ++slotIndex) {
+                    const auto &slot = mapping.chainSlots[slotIndex];
+                    if (slot.role != ChainSlotRole::Triggered) continue;
+                    const auto slotStem = stemOf(slot.path);
+                    if (slotStem.find("slash") == std::string::npos &&
+                        slotStem.find("attack") == std::string::npos) continue;
+                    EffectLayerPlan layer;
+                    layer.path = motion;
+                    layer.source = "object";
+                    // Only the object's [basic motion] owns the hit volume.
+                    // Its [etc motion] parts (layer glow, disappear burst) are
+                    // the same event's visuals: skipping them halved the
+                    // effect, which is what "the awakening only draws half"
+                    // looked like.
+                    layer.attack = basicMotion;
+                    layer.attackInfo = attackInfo;
+                    layer.lifeMs = life;
+                    layer.loop = loop;
+                    layer.bodyStage = int(slotIndex);
+                    layer.birthMs = slot.startMs;
+                    layer.stageBound = true;
+                    layer.offsetX = firstX;
+                    layer.offsetY = firstY;
+                    layer.evidence = "passive object with [attack info]; type-15 boxes are its hit volume";
+                    mapping.effectLayers.push_back(std::move(layer));
+                    ++emitted;
+                }
+                if (!emitted) {
+                    EffectLayerPlan layer;
+                    layer.path = motion;
+                    layer.source = "object";
+                    layer.attack = basicMotion;
+                    layer.attackInfo = attackInfo;
+                    layer.lifeMs = life;
+                    layer.loop = loop;
+                    layer.birthRatio = 0.0;
+                    layer.offsetX = firstX;
+                    layer.offsetY = firstY;
+                    layer.evidence = "passive object with [attack info]; no swinging stage to anchor, starts with the action";
+                    mapping.effectLayers.push_back(std::move(layer));
+                }
+                return;
             } else {
                 return; // one-shot impact: already an effect layer
             }
@@ -1780,11 +1841,19 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
         for (const auto &object : candidates) {
             try {
                 const auto view = pvf_.fieldView(object, {"[basic motion]", "[etc motion]"});
+                std::string attackInfo;
+                try {
+                    const auto attackFields = pvf_.fieldView(object, {"[attack info]"}).values("[attack info]");
+                    if (!attackFields.empty() && attackFields[0].is_string())
+                        attackInfo = resolveObjectRelative(jobIndex.baseJob,
+                                                           normalize(attackFields[0].get<std::string>()));
+                } catch (const std::exception &) {
+                }
                 for (const auto &value : view.values("[basic motion]")) {
                     if (!value.is_string()) continue;
                     const auto name = normalize(value.get<std::string>());
                     if (name.size() < 5 || name.compare(name.size() - 4, 4, ".ani") != 0) continue;
-                    consider(object, resolveObjectRelative(jobIndex.baseJob, name));
+                    consider(object, resolveObjectRelative(jobIndex.baseJob, name), attackInfo, true);
                 }
                 // [etc motion] holds the placed parts of the same object: the
                 // lotus field lies in NenFlowerBlast.obj's ground/line entries.
@@ -1792,7 +1861,7 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                     if (!value.is_string()) continue;
                     const auto name = normalize(value.get<std::string>());
                     if (name.size() < 5 || name.compare(name.size() - 4, 4, ".ani") != 0) continue;
-                    consider(object, resolveObjectRelative(jobIndex.baseJob, name));
+                    consider(object, resolveObjectRelative(jobIndex.baseJob, name), attackInfo, false);
                 }
             } catch (const std::exception &) {
                 continue;
@@ -1815,7 +1884,9 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             }
             plan.count = std::max(1, stages);
             plan.loop = true;
-            plan.offsetY = -160;
+            // Frame y already authors the hanging height (swordair1 -102), so a
+            // world offset here floated the array above the caster's swords.
+            plan.offsetY = 0;
             plan.evidence = "effect-family loop longer than the action (" +
                             std::to_string(int(layer.lifeMs)) + "ms); held as a persistent layer";
             mapping.persistents.push_back(std::move(plan));

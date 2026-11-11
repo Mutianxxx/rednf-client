@@ -1,3 +1,68 @@
+# 技能判定/投掷物/剑阵的根因修复（2026-11-11 第九轮）
+
+用户报的现象：极·鬼剑术「渲染的剑和实际对不上」「角色移动时剑跟着动」「经过处没有攻击判定」；
+狂战士觉醒「特效只有一半」；男法/枪手「脱手投掷物没有射出」；并要求继续从 exe/PVF 找证据、
+判断调用链是否还缺文件。
+
+## 1. 根因：盒子类型搞反（最关键）
+
+逐帧解码 1031 的 ANI 后确认：
+
+| 文件 | 盒子 | 判定含义 |
+| --- | --- | --- |
+| `character/swordman/animation/attack1.ani` | 3–4 个 type **14** | 受击盒 |
+| `character/swordman/animation/hardattack.ani` | 2–3 个 type **14** | 受击盒 |
+| `passiveobject/.../hundredswordhit.ani` f1 | 3 个 type **15**，最大 532×62×200 | **攻击盒** |
+| `passiveobject/.../atbrokenarrow/00_arrow_normal.ani` | 1 个 type **15**，81×20×32 | **攻击盒** |
+
+即：**角色 body 动作在 1031 里不写攻击盒，攻击盒只存在于被动对象动画**。此前映射层把被动对象
+当成「纯视觉」，`damageEnabled=false` 一路传下去，判定循环又只放行 4 个硬编码技能
+（`skill != 20/58/64/65` 直接 `continue`），所以剑气落到怪身上也不掉血。
+
+## 2. 修复：被动对象层带判定入场
+
+- `EffectLayerPlan` 新增 `attack` / `attackInfo`；映射层把对象的 `[basic motion]`（有 `[attack info]` 时）
+  收进 `effectLayers`，并沿 body 的**挥砍阶段**展开（每次挥砍一个实例，`birthMs` = 该 stage 的
+  `startMs`）——「谁生成对象」这条命令仍未恢复，这一层是重建，已在 `evidence` 写明。
+- 对象的 `[etc motion]`（`hundredswordhitlayer`、`hundredswordhitdisappear1/2`）作为**纯视觉**同批展开，
+  这修掉了「觉醒只画一半」：此前一次性 motion 被 `else return; // one-shot impact` 整段丢掉。
+- `combat.cpp`：`damageEnabled = layer.attack`；判定循环去掉技能白名单，改由 `damageEnabled` 单独把关。
+- 实测极·鬼剑术：68 层（48 原有 + 20 对象），其中 **5 个 `hundredswordhit` 判定层**分别落在
+  4250/4310/4370/4430/4480ms（对应 moveslash1..5），15 个视觉层同源。
+
+## 3. 修复：剑阵双重偏移
+
+`swordair1.ani` 首帧自带 `y = -102`（悬空高度已写在帧里），映射层又给 persistent 加了
+`offsetY = -160`，两者叠加导致剑阵浮在角色头顶之外。改为 `offsetY = 0`，高度交回 ANI 帧。
+对象层同理：`source == "object"` 时不再把帧的 XY 二次加到世界坐标上。
+
+## 4. 投掷物：证据在 nut 脚本，不在 exe
+
+`sqr/character/atmage/brokenarrow/po_atbrokenarrow.nut` 完整给出运动模型：
+
+```squirrel
+local v  = sq_GetUniformVelocity(0, dis_x_len, currentT, fireT);
+local dstX = sq_GetDistancePos(srcX, obj.getDirection(), v);
+sq_setCurrentAxisPos(obj, 0, dstX); ...
+if (currentT >= fireT) sq_SendDestroyPacketPassiveObject(obj);
+```
+
+`brokenarrow.nut` 给出炮口偏移 `(65, 0, 73)`、无锁定目标时 `xLen = 400`、
+`fireT = sq_GetIntData(SKILL_BROKENARROW, 0)`（= `brokenarrow.skl` 的 `[static data][0] = 4`）。
+
+实现：映射层把「循环 + 单帧 + 有 `[attack info]`」的对象识别为投掷物，`spawnSkillVisuals` 用
+`trajectoryMs` 直线推进 `400px / fireT`，到期销毁，子弹自身的 type-15 盒负责命中。
+`job 8 / skill 16`（冰魄之弓）已验证解析出 `00_arrow_normal.ani`、`loop=true`、`attack=true`。
+
+## 5. 仍未完成
+
+- **角色 body 技能的攻击盒几何**：1031 的 body ANI 没有 type-15，攻击盒尺寸只可能来自 exe 的攻击盒
+  构造点（`.atk` 只有伤害反应，无几何）。ATK 选择器 `0x70213F` 的立即数翻译仍未恢复。
+- 剑阵的**横向间距**（当前 `56px`）与「哪一把先落」仍无源数据，需要 AVI 或 exe 逐帧证据。
+- 投掷物的射程/时间只对 atmage 逐个核对过；其它职业（枪手子弹等）按通用规则处理，属重建。
+
+---
+
 # 技能判定与指令的 exe/PVF 证据补全 + 开源 README（2026-11-11 第八轮）
 
 节点 `skill-evidence-judgment-command-20261111`。
