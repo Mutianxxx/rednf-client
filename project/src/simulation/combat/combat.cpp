@@ -2154,10 +2154,11 @@ void World::spawnSkillVisuals(const Skill &skill) {
         e.dir = castDir;
         e.x = e.px = castX + castDir * layer.offsetX;
         e.y = e.py = castY + layer.offsetY;
-        // The renderer projects screenY = y - z, exactly the source formula
-        // castY + localY - localZ - motionZ. offsetZ used to be dropped, so
-        // every ALS draw-only object's authored height was lost. motionZ is
-        // still unrecovered and stays zero.
+        // The renderer projects screenY = y - z. The generic handoff formula
+        // is castY + localY - localZ - motionZ (main.cpp:82, built from a
+        // different PVF - mechanism blueprint, not base-client proof).
+        // offsetZ used to be dropped, so every ALS draw-only object's
+        // authored height was lost. motionZ is still unrecovered and stays 0.
         e.z = castZ + layer.offsetZ;
         // ALS layers carry an instant compiled from the parent ANI's [DELAY]
         // table; stem-order layers keep the reconstructed stage spread.

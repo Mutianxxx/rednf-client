@@ -43,14 +43,16 @@ enum class AttackBoxSource { None, AniBody, AniWeapon, Reconstructed40Jp };
 enum class SkillGrade { A = 0, B = 1, C = 2, D = 3 };
 
 // One animated effect layer with the instant it appears on the action clock.
-// The instant is real source data when the parent ANI carries an .als sidecar:
-// [add] names a PARENT FRAME INDEX, which the client turns into a clock by
-// accumulating that ANI's [DELAY] values (40JP anim_parser.cpp:1707; the 1031
-// handoff reference's boundary()). The mapping compiles both the birth and the
-// matching [remove] into absolute action-clock milliseconds so consumers that
-// cannot visit frames (the native world) still honour the source timeline.
-// Otherwise it is derived from the release-stage word in the file stem and the
-// row says so.
+// The instant is source data when the parent ANI carries an .als sidecar:
+// the base-client native evidence (rep-player-1031-pvf/docs/native-evidence/
+// animation-render.json:176-178,328-337) confirms [add] is a parent FRAME
+// INDEX. The mapping compiles it, plus the matching [remove], into absolute
+// action-clock ms from the nominal sum of preceding [DELAY]s, so consumers
+// that cannot visit frames (the native world) still honour the source order.
+// This is a NOMINAL boundary: the 1031 ratePercent scaling and the
+// delayed-add net birth-offset policy are unrecovered (:36, :130, :518), so
+// no runtime-clock equivalence is claimed. Layers without a sidecar use the
+// release-stage word in the file stem and the row says so.
 struct EffectLayerPlan {
     std::string path;
     int stage = 0;             // stageOrder() of the file stem; higher = later

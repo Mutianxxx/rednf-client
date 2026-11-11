@@ -16,11 +16,44 @@
 - **证据等级**：清风 1031 的 PVF 字节 + 该端实机效果 > 1031 exe/dump 直证 >
   40JP / 60US 机制解释 > 社区格式文档。跨版本推断必须显式标注，不得当作 1031 事实。
 
+### 0.1 直证核对后的四处更正
+
+1. **handoff 参考实现不是基座 PVF**。`逆向部分结果参考/…/dnf-skill-combat-handoff-v1/
+   derivation/raw/index.json:5-6` 的 `source_pvf_sha256=1cd52a54…`、
+   `source_exe_sha256=1f8244d3…`，都不等于 1031 的 `d13ce454…` / `246b8381…`；其 sources
+   里的 `character/swordman/effect/animation/bloodboom/finish_bloodboom_finish1.ani`
+   在基座 PVF 实测 Missing。因此 `reference/upstream/src/main.cpp:82/86/194` 的
+   `point()` / `boundary()` / 排序只是**机制蓝本**，不是 1031 直证；代码注释已更正。
+2. **真正的 1031 一级证据**是 `rep-player-1031-pvf/docs/native-evidence/animation-render.json`
+   （`exe_sha256=246b8381…`、`pvf_sha256=d13ce454…`，与实测基座一致）。它确认 `[add]`
+   首参是父动画帧下标（`:176-178,328-337`）、层按 layer 升序插入且负值排前（`:66`）、
+   `[remove]` 按 uniqueName detach（`:340-349`）。基座 ALS 实测样本：
+   `[add] 1 -9999 "b"`、`[add] 0 10000 "charge"` → `[remove] 1 10000 "charge"`、
+   `flowmindone.ani` 9 帧 × 80ms。当前实现保留负 layer 并按升序排序，符合该直证。
+3. **三处仍不闭合，不冒充已还原**：`effectiveDelay=trunc(rawDelay*100/ratePercent)`（`:36`）、
+   `delayed-add net birth-offset policy` 在 `unrecovered` 里（`:130,:518`）、
+   `none-effect flag renderer consumer` 同样未恢复。所以 `birthMs` 是**名义 boundary**；
+   `triplestab.ani.als` 的 `[none effect add] 0 10000/10001 "normal"/"dodge"` 目前报
+   `unsupported_als_command` 是诚实边界，不应臆造它的混合模式去画。
+4. **旋转确认不改**：从基座 PVF 直取槽 8（`[IMAGE ROTATE]`）得到 -2.443461 / -1.745329 /
+   -0.523599 / +6.28 等，量纲为弧度、正负都有；1031 唯一一级运行时证据全文无
+   rotate/angle/fchs/变换矩阵，`CURRENT_TASK.md:31` 说明 1031 EXE 加壳。60US 的
+   `rotate(-angle)` 来自其 EXE 的 `fchs`，`dnf_ani_render.hpp:10-12` 自己已标为跨版本推断，
+   且 60US `transform/README.md:72` 自承未做原游戏逐帧对照。社区 `标签参考.md:159`
+   的「正值顺时针」与 y 向下坐标系的 `R(+angle)` 自洽，但不是运行时直证。
+   **结论：`makeQuad()` 保持不动。**
+
+附带排除：`pvfUtility_BackUpPvf/script_2026_11_05_04_40_02.pvf` 与基座同哈希；
+`/d/game/DNF1031客户端-20260708/…` 对应 `PVP_UI_AND_FONT_SCOPE.md:13` 的 **86JP**
+客户端根，不是「另一份 1031」。
+
 ## 1. 本轮修的四个偏差（全部是 1031 源数据可直证）
 
-1. **ALS 帧号没有编译成时间**：`.als` 的 `[add] <frame>` 是父动画的**帧下标**，客户端
-   靠累加该 ANI 前序帧的 `[DELAY]` 转成时钟（40JP `anim_parser.cpp:1707`、
-   handoff `main.cpp:86` 的 `boundary()`）。映射层过去只存 `alsFrame`，`birthRatio` 留 0，
+1. **ALS 帧号没有编译成时间**：`.als` 的 `[add] <frame>` 是父动画的**帧下标**
+   （1031 原生证据 `animation-render.json:176-178,328-337`）。映射层按父 ANI 前序
+   `[DELAY]` 累加出**名义 boundary**（机制蓝本见 handoff `main.cpp:86`，跨版本，见 0.1）；
+   `ratePercent` 缩放与 delayed-add birth-offset 仍未恢复。映射层过去只存 `alsFrame`，
+   `birthRatio` 留 0，
    于是 native 的 `born = start + 0` 让所有 ALS 层第 0 帧齐发。现在按每个
    `bodyChain` stage 各自解析 sidecar，用 stage 起点 + DELAY 累加算出
    `birthMs`，并接上同名 `[remove]` 的 `endMs`（68 处声明中 17 处有终点）。
@@ -39,10 +72,9 @@
 
 ## 2. 两项核对后**不改**代码
 
-- **旋转符号**（原清单第 1 项）：`R(-angle)` 只有 60US 的跨版本推断，按新证据等级
-  不能覆盖基座表现。已另派直证核对（清风 1031 的 `[IMAGE ROTATE]` 值域、
-  该端实机素材、`[add]` 负层语义）；在拿到该端依据前不动
-  `third_party/native-contracts/include/dnf_ani_render.hpp`。
+- **旋转符号**（原清单第 1 项）：直证核对完成，结论是**保持不动**，理由见 0.1 第 4 条。
+  该端没有能判定旋转方向的一级证据，60US 的 `rotate(-angle)` 不能覆盖基座表现，
+  `third_party/native-contracts/include/dnf_ani_render.hpp` 不改。
 - **depth + layer 排序**（原清单第 5 项）：预览器 `sortLayerIndices()` 本来就是
   按 attachment key 稳定排序（负值自然在前），主游戏 `game_application.cpp`
   的 `depth` 再 `layer` 稳定排序与 handoff `main.cpp:194` 一致。上一轮把这一行
@@ -54,14 +86,16 @@
   只重编 6 个 `.cpp`（没有重启此前被取消的全量测试编译）。
 - 预览器回归 **45/45 通过**（原 42 条 + 本轮 3 条）。新增断言直接核对清风 1031：
   `timed=688`、`positiveBirth=535`、`withRemove=17`，抽样重算父 ANI 的
-  `[DELAY]` 累加与 `birthMs` 完全一致；10370 个无 sidecar 层仍走 `birthRatio`。
+  `[DELAY]` 名义累加与 `birthMs` 完全一致；10370 个无 sidecar 层仍走 `birthRatio`。
 - 主游戏 `--skill-lab-sweep` 回归：见本轮运行目录 `checkpoints/tests/sweep-20261111/`。
 
 ## 4. 仍未做（不冒充已修）
 
 `motionOffset` / `motionZ` 的身体帧位移、千莲怒放「催熟花色 + 再点逐个引爆」
 状态机、非剑士 experimental runtime 接映射表、65 条新注册技能的伤害表、
-8 个 0 层特效技能、以及旋转方向——都需要以该端实机逐技能对照后再动。
+8 个 0 层特效技能，以及 `[none effect add]` 的渲染语义。这些都要按该端
+实机逐技能对照后再动，不能靠 40JP/60US 猜。旋转方向若日后要改，须先补
+「1031 自带 AVI 逐帧解码 + 同一 ANI 槽 8 对齐」或 1031 渲染变换链反汇编直证。
 
 ---
 

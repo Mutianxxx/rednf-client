@@ -1203,9 +1203,17 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             }
         };
         std::vector<EffectLayerPlan> layers;
-        // The 1031 .als names a parent FRAME INDEX, not a millisecond. The
-        // client turns it into a clock by summing the parent's [DELAY] values
-        // up to that frame (40JP anim_parser.cpp:1707; handoff main.cpp:86).
+        // 清风 1031 直证 (rep-player-1031-pvf/docs/native-evidence/
+        // animation-render.json:176-178,328-337): [add] names a PARENT FRAME
+        // INDEX, not a millisecond, and entries insert by layer ascending
+        // (:66 - negative attachment keys therefore draw first).
+        // The nominal boundary is the sum of the parent's preceding [DELAY]
+        // values. It is a reconstruction, NOT a recovered runtime clock: 1031
+        // scales DELAY by ratePercent (:36) and its delayed-add net
+        // birth-offset policy is still unrecovered (:130, :518). The handoff
+        // reference main.cpp:86 uses the same boundary but was built from a
+        // DIFFERENT PVF (source_pvf_sha256 1cd52a54..., not 1031's
+        // d13ce454...), so it is a mechanism blueprint, not base evidence.
         // A chained release lays its stages end to end, so every stage owns
         // its own sidecar and its events carry that stage's start offset.
         std::vector<std::string> stages = mapping.bodyChain;
