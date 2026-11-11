@@ -68,6 +68,29 @@ class ResourceGraph:
         self.by = {norm(e["path"]): e["path"] for e in pvf.entries}
         self.nodes = {}
         self.resolve_cache = {}
+        self.passive_registry = {}
+        self.passive_registry_duplicates = {}
+        self.passive_registry_path = "passiveobject/passiveobject.lst"
+        if self.passive_registry_path in self.by:
+            try:
+                for row in decoder.list_records(self.passive_registry_path):
+                    oid = row["id"]
+                    if oid in self.passive_registry:
+                        self.passive_registry_duplicates.setdefault(oid, [self.passive_registry[oid]]).append(row)
+                    else:
+                        value = norm(row["value"])
+                        if value not in self.by:
+                            value = norm(posixpath.join("passiveobject", value))
+                        self.passive_registry[oid] = {"value": row["value"], "target": value,
+                                                      "tokenIndex": row.get("token_index")}
+            except (ValueError, KeyError) as error:
+                self.passive_registry_error = str(error)
+                self.passive_registry.clear()
+                self.passive_registry_duplicates.clear()
+            else:
+                self.passive_registry_error = None
+        else:
+            self.passive_registry_error = "registry-missing"
 
     def roots(self, source):
         parts = norm(source).split("/")
@@ -115,6 +138,7 @@ class ResourceGraph:
         self.nodes[path] = node
         suffix = ext(path)
         references = []
+        passive_references = []
         try:
             raw = self.pvf.read(self.by[path])
             node["sha256"] = hashlib.sha256(raw).hexdigest()
@@ -151,7 +175,32 @@ class ResourceGraph:
                     at += length
             elif suffix in TOKEN_EXTS:
                 tag = None
-                for token in self.decoder.tokens(raw):
+                tokens = self.decoder.tokens(raw)
+                # ACT 的被动对象 ID 只接受 CREATE PASSIVEOBJECT block 内显式 [INDEX]。
+                if suffix == ".act":
+                    depth = 0
+                    pending = []
+                    for token_index, token in enumerate(tokens):
+                        if token["type"] == 5:
+                            tag_name = str(token.get("value") or "").upper().strip()
+                            if tag_name == "[CREATE PASSIVEOBJECT]":
+                                depth += 1
+                            elif tag_name == "[/CREATE PASSIVEOBJECT]" and depth:
+                                depth -= 1
+                                if not depth:
+                                    passive_references.extend(pending)
+                                    pending = []
+                            elif tag_name == "[INDEX]" and depth:
+                                # INDEX 的值必须是 decoder 给出的整数 literal。
+                                continue
+                        elif depth and token["type"] == 2 and isinstance(token.get("value"), int):
+                            # 由紧随 INDEX 标签后的第一个整数 token 消费。
+                            prev = tokens[token_index - 1] if token_index else None
+                            if prev and prev.get("type") == 5 and str(prev.get("value") or "").upper().strip() == "[INDEX]":
+                                pending.append((token["value"], {"type": "act-passiveobject-index", "offset": token["offset"], "registry": self.passive_registry_path}))
+                    if depth:
+                        node["errors"].append({"error": "unclosed-create-passiveobject", "discardedReferences": len(pending)})
+                for token in tokens:
                     if token["type"] == 5:
                         tag = token["value"]
                         continue
@@ -169,6 +218,30 @@ class ResourceGraph:
             edge = self.resolve(path, value)
             edge.update(relation="literal-reference", evidence=evidence, classification="evidence")
             node["edges"].append(edge)
+        for object_id, evidence in passive_references:
+            reg = self.passive_registry.get(object_id)
+            if reg is None:
+                node["edges"].append({"value": object_id, "objectId": object_id, "status": "unresolved",
+                                      "relation": "act-passiveobject-index", "classification": "evidence",
+                                      "evidence": evidence, "registry": self.passive_registry_path,
+                                      "diagnostic": ("registry-missing" if self.passive_registry_error == "registry-missing" else
+                                                     "registry-read-error" if self.passive_registry_error else "unknown-passiveobject-id"),
+                                      **({"registryError": self.passive_registry_error} if self.passive_registry_error else {})})
+            elif object_id in self.passive_registry_duplicates:
+                node["edges"].append({"value": object_id, "objectId": object_id, "status": "ambiguous",
+                                      "relation": "act-passiveobject-index", "classification": "evidence",
+                                      "evidence": evidence, "registry": self.passive_registry_path,
+                                      "matches": self.passive_registry_duplicates[object_id],
+                                      "diagnostic": "duplicate-passiveobject-id"})
+            else:
+                target = reg["target"]
+                status = "resolved" if target in self.by else "unresolved"
+                node["edges"].append({"value": object_id, "objectId": object_id, "target": target,
+                                      "status": status, "relation": "act-passiveobject-index",
+                                      "classification": "evidence", "evidence": evidence,
+                                      "registry": self.passive_registry_path,
+                                      "registryValue": reg["value"],
+                                      **({"diagnostic": "registry-target-missing"} if status != "resolved" else {})})
         if suffix == ".ani":
             for sidecar in (path + ".als", posixpath.splitext(path)[0] + ".als"):
                 if sidecar in self.by:
@@ -313,7 +386,7 @@ def build_report(pvf, decoder, pvf_path):
     for node in graph.nodes.values():
         for edge in node["edges"]:
             statuses[edge["status"]] += 1
-            by_kind[edge["status"]][ext(edge["value"])] += 1
+            by_kind[edge["status"]][ext(edge["value"]) if isinstance(edge["value"], str) else "passiveobject-id"] += 1
             relations[edge["relation"]] += 1
     summary = skill_stats(records)
     summary.update(bindingCount=len(bindings), matchedBindingCount=sum(map(len, by_skl.values())),
@@ -325,18 +398,26 @@ def build_report(pvf, decoder, pvf_path):
                    graphNodesWithErrors=sum(bool(node["errors"]) for node in graph.nodes.values()),
                    scopedCandidateFiles=len(scope), unassignedScopedCandidates=len(scope - joined),
                    bindingCandidateStatuses=dict(sorted(collections.Counter(
-                       edge["status"] for r in records for edge in r["bindingCandidates"]).items())))
-    return {"schemaVersion": 2,
+                       edge["status"] for r in records for edge in r["bindingCandidates"]).items())),
+                   passiveObjectRegistryPath=graph.passive_registry_path,
+                   passiveObjectRegistryCount=len(graph.passive_registry),
+                   passiveObjectRegistryDuplicates=len(graph.passive_registry_duplicates),
+                   passiveObjectRegistryError=graph.passive_registry_error,
+                   actPassiveObjectEdges=sum(1 for node in graph.nodes.values() for edge in node["edges"] if edge["relation"] == "act-passiveobject-index"),
+                   actPassiveObjectResolved=sum(1 for node in graph.nodes.values() for edge in node["edges"] if edge["relation"] == "act-passiveobject-index" and edge["status"] == "resolved"),
+                   actPassiveObjectDiagnostics=sum(1 for node in graph.nodes.values() for edge in node["edges"] if edge["relation"] == "act-passiveobject-index" and edge.get("diagnostic")))
+    return {"schemaVersion": 3,
             "pvf": {"path": os.path.abspath(pvf_path), "sha256": file_hash(pvf_path), "entryCount": len(pvf.entries)},
             "inputs": {"scriptSha256": file_hash(__file__), "bindings": binding_sources},
-            "method": {"important": "静态候选闭包，不证明运行消费；evidence 仅表示源文件内的字面路径引用。",
+            "method": {"important": "静态候选闭包，不证明运行消费；evidence 表示字面路径或 ACT 显式被动对象 ID 注册引用。",
                        "roots": "PVF 全部 .skl，包含非玩家职业；SKL 本身不计 resources。",
                        "basejob": BASEJOB, "family": "职业范围内精确目录段/文件 stem；at 职业可额外匹配 at+stem，全部为 candidate。",
                        "resolution": "direct、同目录、职业根收集全部命中；多命中为 ambiguous，不任选、不递归。",
                        "sidecars": "存在的 .ani.als 与同 stem .als 作为 candidate 递归。",
                        "diagnostics": "完整共享 graph 保存每条引用的字段/偏移、ambiguous、unresolved、external-image；技能 graphNodes 可连接查询，无截断。",
                        "unassigned": "仅玩家/技能职业 character、passiveobject/character、sqr/character 范围的未关联候选，不叫未消费。",
-                       "limitations": ["未恢复 native caller、数字索引到资源的桥、对象创建条件、时序或运行时消费。",
+                       "passiveObjects": "仅 ACT [CREATE PASSIVEOBJECT] 内紧随 [INDEX] 的 type-2 整数经 passiveobject/passiveobject.lst 解析；重复 ID 和未知 ID 不递归。",
+                       "limitations": ["未恢复 native caller、通用数字索引到资源的桥、对象创建条件、时序或运行时消费。",
                                        "不执行 NUT；动态拼接、变量、格式化路径、数字对象 ID 不求值。",
                                        "IMG/格式化 IMG 模板仅记录外部引用，未打开 NPK 验证。",
                                        "精确 stem 与 sidecar 均为候选约定；共享 basejob 目录可能含另一职业资源。",

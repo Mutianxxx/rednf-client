@@ -9,17 +9,19 @@
 #include "stb_image_write.h"
 #include <algorithm>
 #include <iostream>
+#include <map>
 using namespace dnf;
 int run(int argc, char **argv) {
     try {
         if (argc < 4) {
-            std::cout << "dnf_inspect CLIENT --script|--ani|--image|--paths|--npk-paths|--export-image|--export-frames|--characters|--skill-sources|--skill-chain|--act-coverage PATH [FRAME_OR_SUFFIX] [OUTPUT]\n"
+            std::cout << "dnf_inspect CLIENT --script|--ani|--image|--paths|--npk-paths|--export-image|--export-frames|--characters|--skill-sources|--skill-chain|--act-coverage|--act-coverage-prefix PATH [FRAME_OR_SUFFIX] [OUTPUT]\n"
                          "--skill-chain JOBID SKILLID [OUTPUT] dumps the resolved body-chain timeline, ALS events and diagnostics for AVI cross-validation.\n"
                          "--npk-paths lists archive image paths containing PATH; --paths lists PVF paths.\n"
                          "--export-image writes a cropped RGBA PNG and sidecar JSON; --export-frames writes every frame plus manifest.json to OUTPUT directory.\n"
                          "Use a placeholder FRAME_OR_SUFFIX when writing --script or --act-coverage output.\n"
                          "--act-coverage PATH [placeholder] [OUTPUT] exports static ACT compilation and real World-host admission, not execution evidence.\n"
-                         "ACT coverage uses default host options (speech presentation disabled); exit 0 means report generated, inspect JSON ok/runtime_ready for admission.\n"
+                         "--act-coverage-prefix PREFIX _ OUTPUT compiles sorted PVF .act paths with one World host and exports per-file diagnostics plus counts.\n"
+                         "ACT coverage uses default host options (speech presentation disabled); exit 0 means report generated, inspect JSON ok for overall admission; stage readiness flags are independent.\n"
                          "--characters summary|source exports all registered CHR/skill lists; source includes original bytes/tokens.\n"
                          "--skill-sources summary|source exports every registered skill with ordered mode-scoped fields; this is source evidence, not runtime coverage.\n";
             return 2;
@@ -28,15 +30,60 @@ int run(int argc, char **argv) {
         Pvf p(root / "Script.pvf");
         std::string mode = argv[2], name = argv[3];
         Json j;
-        if (mode == "--act-coverage") {
-            if (argc > 6) throw std::runtime_error("--act-coverage PATH [placeholder] [OUTPUT]");
+        if (mode == "--act-coverage" || mode == "--act-coverage-prefix") {
+            if (mode == "--act-coverage" && argc > 6) throw std::runtime_error("--act-coverage PATH [placeholder] [OUTPUT]");
+            if (mode == "--act-coverage-prefix" && (argc != 6 || std::string(argv[4]) != "_"))
+                throw std::runtime_error("--act-coverage-prefix PREFIX _ OUTPUT");
             Assets a(root, p);
             World world(p, a);
             ActWorldHost host(world, p, a, "act-coverage-audio-xml:" + sha256(a.staticBytes("audio.xml")));
-            j = host.compile(name).json();
-            j["purpose"] = "Static ACT compilation and real World-host admission; no bind, dispatch or simulation advance, not execution evidence.";
-            j["host_options"] = {{"enable_speech_presentation", false}, {"speech_duration_ms", 1200}};
-            j["static_identity_scope"] = "audio.xml SHA256 only, not a full static-content package fingerprint; dependencies retain their own hashes";
+            if (mode == "--act-coverage") {
+                j = host.compile(name).json();
+                j["purpose"] = "Static ACT compilation and real World-host admission; no bind, dispatch or simulation advance, not execution evidence.";
+                j["host_options"] = {{"enable_speech_presentation", false}, {"speech_duration_ms", 1200}};
+                j["static_identity_scope"] = "audio.xml SHA256 only, not a full static-content package fingerprint; dependencies retain their own hashes";
+            } else {
+                std::vector<std::string> paths = p.paths(name, ".act");
+                std::sort(paths.begin(), paths.end());
+                Json files = Json::array(), statusCounts = {{"syntax", {{"pass", 0}, {"fail", 0}, {"error", 0}}},
+                    {"source", {{"pass", 0}, {"fail", 0}, {"error", 0}}}, {"runtime", {{"pass", 0}, {"fail", 0}, {"error", 0}}}};
+                std::map<std::string, size_t> blockingCodes;
+                size_t admittedCount = 0, exceptionCount = 0;
+                for (const auto &path : paths) {
+                    Json item = {{"path", path}};
+                    try {
+                        item["coverage"] = host.compile(path).json();
+                        const auto &coverage = item["coverage"];
+                        if (coverage.value("ok", false)) ++admittedCount;
+                        for (const char *stage : {"syntax_complete", "source_ready", "runtime_ready"}) {
+                            const char *label = stage == std::string("syntax_complete") ? "syntax" :
+                                stage == std::string("source_ready") ? "source" : "runtime";
+                            const char *result = coverage.value(stage, false) ? "pass" : "fail";
+                            statusCounts[label][result] = statusCounts[label][result].get<size_t>() + 1;
+                        }
+                        for (const auto &diagnostic : coverage.value("diagnostics", Json::array()))
+                            if (diagnostic.value("blocking", true))
+                                ++blockingCodes[diagnostic.value("code", "UNKNOWN")];
+                    } catch (const std::exception &e) {
+                        ++exceptionCount;
+                        item["error"] = e.what();
+                        for (const char *label : {"syntax", "source", "runtime"})
+                            statusCounts[label]["error"] = statusCounts[label]["error"].get<size_t>() + 1;
+                    } catch (...) {
+                        ++exceptionCount;
+                        item["error"] = "unknown exception";
+                        for (const char *label : {"syntax", "source", "runtime"})
+                            statusCounts[label]["error"] = statusCounts[label]["error"].get<size_t>() + 1;
+                    }
+                    files.push_back(item);
+                }
+                Json codes = Json::object();
+                for (const auto &[code, count] : blockingCodes) codes[code] = count;
+                j = {{"purpose", "Static ACT prefix compilation and real World-host admission; no bind, dispatch or simulation advance, not execution evidence."},
+                     {"prefix", name}, {"suffix", ".act"}, {"host_options", {{"enable_speech_presentation", false}, {"speech_duration_ms", 1200}}},
+                     {"static_identity_scope", "audio.xml SHA256 only, not a full static-content package fingerprint; dependencies retain their own hashes"},
+                     {"files", files}, {"file_count", files.size()}, {"exception_count", exceptionCount}, {"admitted_count", admittedCount}, {"status_counts", statusCounts}, {"blocking_diagnostic_codes", codes}};
+            }
         } else if (mode == "--skill-sources") {
             if (name != "summary" && name != "source") throw std::runtime_error("Use --skill-sources summary|source");
             CharacterCatalog characters(p);

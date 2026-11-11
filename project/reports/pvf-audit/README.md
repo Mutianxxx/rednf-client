@@ -143,6 +143,14 @@
 
 `act_audit.py` 仅为平面标签清单，已把子串匹配改为精确标签匹配；其分类数量不等于结构或运行支持数量。
 
+批量入口 `dnf_inspect CLIENT --act-coverage-prefix PREFIX _ OUTPUT` 复用同一 World host，稳定排序并保留每个文件的完整准入与异常。三阶段状态独立，整体准入须三项同时通过（`coverage.ok`）；命令退出成功只表示报告已生成。
+
+基座 `passiveobject/` 首次批量报告含 5,638 个 ACT：syntax 通过 2,420、source 通过 3,378、runtime 通过 2,969，三项同时通过 1,596；5 个文件抛出 `Not token5`，路径与异常保留在报告。阻塞诊断按出现次数计，不能当作受影响文件数。报告保存在 `checkpoints/tests/pvf-audit/act-prefix-coverage.json`，属于可重建产物，不入库。
+
+`skill_closure.py` V3 新增 ACT 明确 `[CREATE PASSIVEOBJECT]` 块内 `[INDEX]` 整数经对象注册表的引用边；保留偏移、ID、注册表路径，未知/重复 ID 不递归，缺失或损坏注册表、未闭合块留诊断。基座注册表为 6,477 个唯一 ID。
+
+全 ACT 独立验证得到 13,150 条 resolved ID 引用和 109 条 unresolved 引用（按引用次数计）。但全 2,008 SKL 的 V3 图仍是 10,740 节点、16,747 边，ACT ID 边为 0：当前技能种子未到达这些 ACT，不能把全包对象引用误算为技能链已补全。动态名称、NUT 派发与 exe 入口仍待恢复。
+
 ## 7. 历史结论（以下链为待验证模型）
 
 你的判断是对的：之前的技能链审计主要覆盖了 `SKL → CHR ANI → ALS → 部分 OBJ/ATK`，但没有把 **ACT、OBJ action、NUT、PTL、ATK 变体标签**作为完整闭包处理。当前缺陷不是单纯“某个坐标错了”，而是调用链缺失：
