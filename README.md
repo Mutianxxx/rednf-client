@@ -107,21 +107,21 @@ CHR motion pool 给出玩家输入驱动的子动作；输入等待态（如 `gu
 
 ### 盒子类型：14 是受击，15 才是攻击
 
-对 1031 的 ANI 逐帧解码后可以确认一件容易搞反的事：**角色 body 动作只写 type-14（受击）盒**，
-`attack1.ani`、`hardattack.ani` 全都没有 type-15。type-15（攻击）只出现在
-**passiveobject 的动画**里——剑气 `hundredswordhit.ani`（3 个 532×62 大盒）、
-冰箭 `00_arrow_normal.ani`（81×20×32）。
+当前解码样本中，角色 `attack1.ani`、`hardattack.ani` 含 type-14（受击）盒，未见 type-15；
+被动对象剑气 `hundredswordhit.ani` 含 type-15（攻击）盒（3 个 532×62 大盒），
+冰箭 `00_arrow_normal.ani` 也含 type-15（81×20×32）。这些样本尚不能证明全包角色动画都没有攻击盒。
 
-所以「这个技能打哪儿」在 1031 里由**被动对象**承担，而不是角色身体。这也是为什么
-早先只让 body 动画做判定的实现，会表现为「技能放完了、怪一点血都没掉」。
+这些对象的攻击体积需要通过对象动画与 ATK 接入判定；只检查 body 动画会遗漏相应攻击。
+具体技能的对象生成时机、攻击身份与生命周期仍需沿 PVF 引用和 exe 派发逐项核对。
 
 映射层因此把被动对象的一次性 motion（`[basic motion]` + `[attack info]`）也收进
 `effectLayers`，并标 `attack` / `attackInfo`：这些层按 body 的挥砍阶段展开（每次挥砍一个对象实例，
 这是对未恢复的「生成对象」命令的**重建**），其 type-15 盒就是判定体积。
 
-### 投掷物：在 nut 里，不在 exe 里
+### 投掷物：先核对 NUT 明示的运动，再补宿主派发
 
-男法冰魄之弓这类「脱手」技能由 passiveobject 脚本完整描述，无需逆向 exe：
+男法冰魄之弓的 NUT 脚本提供了运动与销毁参数。以下是该技能的局部证据；
+对象创建、宿主 API 和状态派发仍需要运行时及 exe 证据核对，不能推广为全部投掷技能的完整实现：
 
 ```squirrel
 // sqr/character/atmage/brokenarrow/po_atbrokenarrow.nut

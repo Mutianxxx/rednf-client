@@ -100,7 +100,7 @@
 
 这是当前最大缺口。已经观察到大量与技能直接相关的命令：`[CREATE PASSIVEOBJECT]`、`[PARTICLE FILENAME]`、`[SUB ANI]`、`[SUB ANI WITH XY/XYZ]`、`[ATTACK]`、`[ATTACKRECT]`、`[SET DAMAGE BOX]`、`[SET DAMAGE CHECK]`、`[CHANGE ATTACKINFO]`、`[MOVE UNIFORM]`、`[STRAIGHT MOVE]`、`[GRAVITY]`、`[SET SPEED]`、`[SET POS FORCE]`、`[FOLLOWING TARGET]`、`[HOMING]`、`[TRIGGER]`、`[CHECK TIME]`、`[ON ATTACKSUCCESS]`、`[DAMAGE]`、`[SUMMON MONSTER]`、`[SUMMON APC]`。
 
-当前只消费其中很小一部分。即使 token 已读，也不能说 ACT 调用链已恢复；这很可能是“狂战觉醒只有一半”和“特效顺序/出生时刻错误”的实际来源。
+已有消费者覆盖子集，具体准入情况由下述真实 World host 报告核验。token 可读不能证明 ACT 调用链已恢复；狂战觉醒等技能是否依赖这些 ACT 命令，仍需技能引用或 exe 派发证据。
 
 ## 4. 解析失败与异常文件
 
@@ -115,7 +115,7 @@
 
 ## 5. 明确的遗漏优先级
 
-**P0：**通用 `.act` 技能行为执行器（对象创建、SUB ANI、位移、攻击开关、触发条件）。
+**P0：**复用现有 `.act` 编译/调度与 World host，按真实依赖补对象创建、SUB ANI、位移及事件消费者。
 
 **P0：**通用 `.obj` + `.nut` 被动对象运行时（投掷、追踪、重力、目标选择、销毁、攻击信息修改）。
 
@@ -123,7 +123,7 @@
 
 **P1：**ATK 标签别名与完整 reaction/status/target 语义。
 
-**P1：**PTL 粒子读取与播放；当前只能知道对象引用了粒子，不能重建粒子效果。
+**P1：**复用已有 PTL 解析/预览和直线运动子集，补 ACT/对象发射接线、未支持字段及生命周期。
 
 **P2：**SKL 的追加动作、executable states、command customizing、buff/status、传送和持续消耗字段。
 
