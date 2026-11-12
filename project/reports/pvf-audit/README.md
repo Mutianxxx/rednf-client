@@ -9,6 +9,9 @@
 - 技能闭包脚本：`project/tools/skill_closure.py`
 - 技能闭包产物（本地可重建，不入库）：`checkpoints/tests/pvf-audit/skill-closure.json`
 - 重建命令：`python project/tools/skill_closure.py --out checkpoints/tests/pvf-audit/skill-closure.json`
+- 技能入口与消费者账本脚本：`project/tools/skill_entry_ledger.py`
+- 账本产物（本地可重建，不入库）：`checkpoints/tests/pvf-audit/skill-entry-ledger.json`
+- 账本重建命令：`python project/tools/skill_entry_ledger.py --out checkpoints/tests/pvf-audit/skill-entry-ledger.json`（依赖同目录的 `act-prefix-coverage.json`、`act-audit.json`、`skill-closure-v3.json`）
 - 本文只描述静态字节/标签事实；“已解析”不等于“运行时语义已实现”。
 
 ## 1. PVF 实际文件类别
@@ -149,7 +152,37 @@
 
 `skill_closure.py` V3 新增 ACT 明确 `[CREATE PASSIVEOBJECT]` 块内 `[INDEX]` 整数经对象注册表的引用边；保留偏移、ID、注册表路径，未知/重复 ID 不递归，缺失或损坏注册表、未闭合块留诊断。基座注册表为 6,477 个唯一 ID。
 
-全 ACT 独立验证得到 13,150 条 resolved ID 引用和 109 条 unresolved 引用（按引用次数计）。但全 2,008 SKL 的 V3 图仍是 10,740 节点、16,747 边，ACT ID 边为 0：当前技能种子未到达这些 ACT，不能把全包对象引用误算为技能链已补全。动态名称、NUT 派发与 exe 入口仍待恢复。
+全 ACT 独立验证得到 13,150 条 resolved ID 引用和 109 条 unresolved 引用（按引用次数计）。但全 2,008 SKL 的 V3 图仍是 10,740 节点、16,747 边，ACT ID 边为 0。这个 0 不是解析失败，原因已由下节技能入口账本查明；全包对象引用不能误算为技能链已补全。
+
+## 6.1 技能入口与消费者账本（P0-1）
+
+`project/tools/skill_entry_ledger.py` 补 V3 字面闭包到不了的整数注册链。技能身份来自 `skill/*.lst`，**不是**全部 `.skl`；账本因此是注册表作用域，不是全 SKL 账本。
+
+**实际入口链**（每层都留下来源路径、行号或偏移）：
+
+```
+skill/*.lst 整数 id → .skl
+sqr/character/*_load_state.nut 的 SKILL_/STATE_ 常量 → IRDSQRCharacter/CNAvenger.pushState
+                                 → pushPassiveObj(path, 整数 id)
+exe setState 绑定 → 技能状态入口候选
+NUT 明确对象创建 API（sq_SendCreatePassiveObjectPacket 等）
+passiveobject/passiveobject.lst 整数 id → .obj → [basic motion]/[etc motion]/[attack info] → .ani/.atk
+```
+
+`SKILL_` / `STATE_` 常量按 `*_load_state.nut` 的职业 header 作用域解析；状态号是职业局部编号，不跨职业 join；冲突定义（如 `STATE_VIRTUAL_ATTACK` 的 32/19）保留而不任选。整数只在明确语境中解释为对象 ID：ACT `[CREATE PASSIVEOBJECT]` 块内 `[INDEX]`、NUT 创建 API、`pushPassiveObj`。普通整数、变量、表达式不猜。NUT 只解析字面字符串与简单的先前局部字符串赋值，不执行 Squirrel。
+
+**基座实测**：13 个技能注册表 / 1,743 个注册技能身份（另有 288 个未被任何 lst 引用的 SKL）、3 个 `*_load_state.nut`（atmage / creatormage / priest-avenger）、617 个常量、1 处冲突；1,762 条 exe binding 中 1,700 个技能命中 setState 入口；账本共 3,726 条入口边（`skill-registry` 1743、`exe-state-binding` 1700、`nut-push-passive-object` 104、`nut-create-object-api` 95、`nut-push-state` 66、`nut-push-script-file` 18），其中 3,685 resolved、8 条 `-1` 通用动作、33 条动态对象 ID。58 个技能有 NUT 状态入口，30 个闭合到被动对象，共 124 条 ANI/ATK 资源引用。消费者账本登记 `act_world_host.cpp` 现有 10 个已注册 World kind、ACT 标签族与计划族、逐 ACT 静态准入及阻塞码，以及 4 类缺口（对象/粒子工厂、exe 原生派发、NUT 动态路径、SKL 字段消费者）。
+
+**V3 的 ACT ID 边为 0 由两层原因造成**：
+
+1. V3 以全部 `.skl` 为种子，只沿字面路径递归；SKL 里的路径主要是图标 `.img`（4,642）、传送/追加动画 `.ani`（53）和一个 `.ptl`，没有通往 ACT/OBJ 的字面链。真实入口是整数注册表 + NUT 常量 + exe 派发。
+2. 补上注册链后，已闭合的 NUT 脚本技能对象仍不使用 `[basic action]` / `[etc action]` / `[last action]`，而是用 `[basic motion]` / `[etc motion]` 的 ANI、`[attack info]` 的 ATK 和 NUT 宿主 API。全包 6,378 条 OBJ→ACT 引用集中在 `passiveobject/actionobject/monster`(3,509)、`map`(1,571)、`spc`(336) 等；玩家职业目录仅 `passiveobject/character/common` 有 1 条。
+
+所以结论是**有作用域的**：对账本已闭合的 NUT 脚本技能对象，ACT 不是入口；exe 派发职业的对象链尚未恢复，不能证明 1031 每个 PC 技能都不用 ACT，也不能把全包 ACT 标签频率当作某个技能（剑阵／觉醒／冰弓）的修复依据。P0-2 的通用对象消费者仍服务于怪物/地图对象，但本账本不把它们确立为这些技能缺陷的成因。
+
+**有证据的未恢复边**：1,642 个只有 exe 绑定、无 NUT 注册表的技能（`0x70213F` ATK 选择器位于未恢复 exe VM 区）；33 条动态对象 ID；288 个未注册 SKL；状态触发条件与时序（账本只记录入口身份，不证明哪个 state 实际触发、按什么顺序播放）。
+
+产物 `checkpoints/tests/pvf-audit/skill-entry-ledger.json` 可重建、不入库。已通过纯函数自测、作用域隔离、诊断完整性、全量计数一致性和重跑哈希一致检查。**静态准入不等于 World 执行，也不等于 1031 实机等价**；用户反馈的剑阵错位、觉醒缺半、冰弓无箭等缺陷仍未据此修复或验收。
 
 ## 7. 历史结论（以下链为待验证模型）
 

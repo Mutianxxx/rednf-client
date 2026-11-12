@@ -1,8 +1,29 @@
+# P0-1 技能入口定位与消费者账本验收（2026-11-12）
+
+按计划推进 P0-1。新增 `project/tools/skill_entry_ledger.py`，产出 `checkpoints/tests/pvf-audit/skill-entry-ledger.json`（产物不入库）；纯函数自测、作用域隔离、诊断完整性、全量计数一致性与重跑哈希一致（复现）均通过。
+
+**为什么 V3 技能图 ACT ID 边为 0，已查明两个独立原因：**
+
+1. V3 的种子是全部 `.skl`，只沿字面路径递归。全 2008 个 SKL 的字面路径只有图标 `.img`、`[pre/post teleport]` 的 `.ani`、少量 `[start/end/loop addtional animation]` 的 `.ani` 和一个 `.ptl`；技能执行入口根本不在 SKL 字面引用里，而是「`skill/*.lst` 整数 id → SKL → NUT `SKILL_`/`STATE_` 常量 → `*_load_state.nut` 注册表 → `passiveobject.lst` 整数 id → OBJ」，以及 exe `setState` 表派发。
+2. 补上整数注册链后，**已闭合的 NUT 脚本技能对象也没有 `[basic action]` → ACT**：它们用 `[basic motion]` / `[etc motion]` / `[attack info]` 的 ANI/ATK 加 NUT 宿主 API。全包 6,378 条 OBJ→ACT 引用集中在 `passiveobject/actionobject/monster`（3,509）、`.../map`（1,571）、`.../spc`（336）等怪物/地图对象；玩家职业目录只有 `character/common` 1 条。因此全包 ACT 标签频率不能推断某 PC 技能必经 ACT。此结论限定在已闭合链，不覆盖未恢复的 exe 派发职业。
+
+账本实测：13 个技能注册表、1743 个注册技能身份（全包 2008 SKL，288 未注册）；3 个 `*_load_state.nut`（atmage / creatormage / priest-avenger，作用域按职业隔离，冲突常量 `STATE_VIRTUAL_ATTACK=32/19` 不任选）；58 个 NUT 技能入口、8 个 `-1` 通用动作单独归类；104 条 `pushPassiveObj` 经注册表解析；95 条 NUT 对象创建 API（62 解析、33 为变量/表达式动态 ID）；1700 个 exe setState 绑定；共 3726 条入口边，每条带源文件/行号/offset 与状态诊断。30 个技能闭合到对象，124 条 ANI/ATK 资源引用；ACT 准入结果为 0 是实测结构而非解析失败。
+
+**有证据的未恢复边**：1642 个只有 exe 绑定、无 NUT 注册表的技能（ATK selector `0x70213F` 在未恢复 exe VM 区）；33 条动态对象 ID；288 个未注册 SKL；状态触发条件与时序（未定量，需实机对照）。均写入账本 `explanation.v3ActEdgeZero.unrecovered`，不冒充已闭合。
+
+消费者账本：记录 `ActWorldHost::hasCommandConsumer` 的 10 个已注册 kind、ACT 标签族/计划族、逐 ACT 静态准入与阻塞码、4 类缺口。静态准入不是 World 执行，更不是原版等价。
+
+已完成前置 git 同步并独立核验：远端 `refs/heads/main` 更新到 `016847cc5f0dcf5784ff5e6c38f85127454725b9`（含此前积压 `099bdb9c4`）。
+
+P0-1 按计划门槛 2 验收：技能级边与消费者账本已交付、ACT 边为 0 已解释、动态 NUT/exe 入口已定位并有证据的未恢复边清单。**下一步才进入 P0-2 新增运行时接线**；用户反馈的剑阵、觉醒、投射物缺陷仍未做实机验收。
+
+---
+
 # 技能计划逐功能验收核查（2026-11-12）
 
 已核查源码、测试代码与既有报告，将前置、P0/P1/P2及持续节点细化为“功能—任务—验收标准—状态”，见 `SKILL-RUNTIME-PLAN.md`。已有通用能力、实际技能接线、历史专项和原版等价分开记录；本轮仅更新文档，未构建、重跑专项或联网核验远端。
 
-当前阶段仍为P0-1：技能图尚未到达ACT ID边，动态NUT/exe入口及技能级消费者账本未闭合。ACT准入工具作为P0-1覆盖基线；新增P0-2运行时接线须在P0-1验收后推进。P0-2以后均仅有既有能力子集，未整体完成；用户反馈的剑阵、觉醒、投射物缺陷仍未最终验收。
+（本节为核查当时的历史状态，最新状态以本文顶部 P0-1 验收章节为准。）核查时阶段为 P0-1：技能图尚未到达 ACT ID 边，动态 NUT/exe 入口及技能级消费者账本未闭合；ACT 准入工具作为 P0-1 覆盖基线。该阶段现已按门槛 2 验收。P0-2 以后仍均仅有既有能力子集，未整体完成；用户反馈的剑阵、觉醒、投射物缺陷仍未最终验收。
 
 ---
 
