@@ -208,7 +208,7 @@ python project/tools/act_spawn_admission.py \
 
 **修正后的准入增量**：`passiveobject/` 5,638 个 ACT 的整体 `ok` 从 1,596 增至 1,597，syntax +8、source +12、runtime +9；唯一新增整体准入的 spawn ACT 是 `passiveobject/actionobject/common/action/flamestrike_item.act`。合并 `monster/` 13,118 个 ACT 后，账本共 4,244 个含被动对象的 ACT、2,365 个唯一对象 ID；C++ 侧整体 `ok=true` 的只有 4 个（3 个 monster 动作 + flamestrike），214 个文件带预警贴花缺口诊断。剩余阻塞按 OBJ 字面依赖分桶：OBJ→ACT 通用递归 2,385、PTL 解释器 1,657、ACT opcode 115、注册表 38、未知依赖 3。
 
-**真实 World fixture 证据**：`monster/newmonsters/queen_rosi/action/attack2.act` 的 BASE ANI 无 type15 攻击盒、整体静态准入通过，4 条 `CREATE PASSIVEOBJECT`（对象 30059）经 `bind` + 固定步进生成 `ObjectInstance`，验证定义源路径、`act-runtime` 身份、owner/instance 归属、坐标与 World 事件，`cancelAll` 后实体全部回收。`flamestrike_item.act` 的 BASE ANI 有 4 个未配对 type15，`bind` 被精确阻塞；PTL 与全透明占位 ANI 样本继续显式阻塞。`runActWorldHostTests` 专项 81 项通过。
+**真实 World fixture 证据**：`monster/newmonsters/queen_rosi/action/attack2.act` 的 BASE ANI 无 type15 攻击盒、整体静态准入通过，4 条 `CREATE PASSIVEOBJECT`（对象 30059）经 `bind` + 固定步进生成 `ObjectInstance`，验证定义源路径、`act-runtime` 身份、owner/instance 归属、坐标与 World 事件，`cancelAll` 后实体全部回收。`flamestrike_item.act` 的 BASE ANI 有 4 个未配对 type15，`bind` 被精确阻塞；PTL 与全透明占位 ANI 样本继续显式阻塞。`runActWorldHostTests` 专项 82 项通过。
 
 **边界**：预警贴花、PTL 粒子工厂、OBJ→ACT 通用递归、type15 攻击身份/配对 ATK、对象运动/命中/伤害闭环均未恢复。静态 `ok` / `runtime_ready` 不代表 World 执行或 1031 原版等价；group 3 整体仍因既存 Event.ai 基线问题失败（见 `project/reports/core-group-3-result.json`），不是本项回归。用户反馈的剑阵、觉醒、冰弓、枪手投射物缺陷未据此修复或验收。
 

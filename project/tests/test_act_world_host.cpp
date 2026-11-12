@@ -15,6 +15,7 @@ constexpr const char *spawnObjectSource="passiveobject/monster/soceress/iceniddl
 constexpr int spawnObjectId=30059;
 constexpr const char *warningMarkSource="passiveobject/actionobject/common/action/flamestrike_item.act";
 constexpr const char *transparentMotionSource="passiveobject/actionobject/monster/haze/action/bomb1.act";
+constexpr const char *unknownObjectSource="passiveobject/actionobject/j_event/riceobj/action/rice1.act";
 constexpr uint64_t generation=19;
 
 struct WorldFixture {
@@ -448,6 +449,9 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
         const auto transparent=f.host.compile(transparentMotionSource);
         check(!transparent.ok && diagnostic(transparent.json().at("diagnostics"),"missing_resource_consumer"),
             "A motion ANI with only transparent placeholder frames stays blocked instead of being counted as an admitted closure");
+        const auto unknown=f.host.compile(unknownObjectSource);
+        check(!unknown.ok && diagnostic(unknown.json().at("diagnostics"),"missing_resource"),
+            "An unregistered passive-object index is reported as a missing source instead of fabricating an entity");
         f.bind(spawnSource,41);f.ticks(60);
         const auto &objects=f.host.spawnedObjects().instances();
         check(!objects.empty() && objects.front().definition && objects.front().definition->id==spawnObjectId &&

@@ -8,11 +8,11 @@
 
 **准入增量**（`dnf_inspect --act-coverage-prefix`，仅静态准入）：`passiveobject/` 5,638 个 ACT 的整体 `ok` 由 1,596 → 1,597，syntax +8、source +12、runtime +9；新增的唯一整体准入 spawn ACT 是 `passiveobject/actionobject/common/action/flamestrike_item.act`。首次纳入 `monster/` 13,118 个 ACT 后，账本覆盖 4,244 个含被动对象的 ACT、2,365 个唯一对象 ID；其中 C++ 侧 `ok=true` 的只有 4 个（3 个 monster 动作 + flamestrike），`warning_mark_consumer_unregistered` 出现在 214 个文件。OBJ 字面依赖分桶 `admissible` 46 个 ≠ C++ 整体准入 4 个，两者不可混用。剩余阻塞：OBJ→ACT 通用递归 2,385、PTL 解释器 1,657、ACT opcode 115、注册表 38。
 
-**真实 World fixture 验收**：`runActWorldHostTests` 共 81 项全通过。样本 `monster/newmonsters/queen_rosi/action/attack2.act` 的 BASE ANI 无 type15 攻击盒、整体静态准入通过，其 4 条 `CREATE PASSIVEOBJECT`（对象 30059 → `passiveobject/monster/soceress/iceniddlegroup.obj`）经 `bind` + 固定步进生成实体，断言定义源路径、`act-runtime` 身份、`instanceId:actionId` 归属、z 坐标、World 事件，并在 `cancelAll` 后断言实体全部 `Removed` 且有 `act_spawn_retired`。另外断言：WARNING MARK 操作数保留且缺口诊断存在、`flamestrike_item.act` 因 BASE ANI 有 4 个未配对 type15 被 `bind` 精确阻塞（不静默丢失攻击身份）、PTL 与全透明占位 ANI 样本继续显式阻塞。
+**真实 World fixture 验收**：`runActWorldHostTests` 共 82 项全通过。样本 `monster/newmonsters/queen_rosi/action/attack2.act` 的 BASE ANI 无 type15 攻击盒、整体静态准入通过，其 4 条 `CREATE PASSIVEOBJECT`（对象 30059 → `passiveobject/monster/soceress/iceniddlegroup.obj`）经 `bind` + 固定步进生成实体，断言定义源路径、`act-runtime` 身份、`instanceId:actionId` 归属、z 坐标、World 事件，并在 `cancelAll` 后断言实体全部 `Removed` 且有 `act_spawn_retired`。另外断言：WARNING MARK 操作数保留且缺口诊断存在、`flamestrike_item.act` 因 BASE ANI 有 4 个未配对 type15 被 `bind` 精确阻塞（不静默丢失攻击身份）、PTL 与全透明占位 ANI 样本继续显式阻塞、未注册对象 ID（`rice1.act` 的 12044）报 `missing_resource` 而不伪造实体。
 
 **证据边界**：预警贴花消费者、PTL 粒子工厂、OBJ→ACT 通用递归、type15 攻击身份/配对 ATK 均**未**恢复；ACT-owned 对象已按固定仿真步进推进其动画时钟，但接触判定、命中与伤害结算尚未接到 World（属 P0-3）。`ok` / `runtime_ready` 只是静态准入，不等于 World 执行或 1031 原版等价。group 3 整体仍为 `failed`，但失败点是仓库中**已入库的既存基线问题**（`project/reports/core-group-3-result.json` 同错误："Event.ai World: Diagnostic damage draws only its hurt-presentation stream…"），不是本轮改动引入；本轮 World host 专项报告为 `pass`。用户反馈的剑阵错位/跟随、移动路径攻击判定、狂战觉醒缺半、冰弓无箭、枪手投射物仍未实机修复或验收。
 
-新增工具 `project/tools/act_spawn_admission.py`（纯函数自测通过），产物 `checkpoints/tests/pvf-audit/act-spawn-admission.json` 不入库；批量准入报告位于 `checkpoints/tests/p0-2-spawn/`，同样可重建、不入库。上一提交 `2584ad1d1` 因本地代理 `502 CONNECT tunnel failed` 与直连不通尚未推送成功，本轮改动一并待推。
+新增工具 `project/tools/act_spawn_admission.py`（纯函数自测通过），产物 `checkpoints/tests/pvf-audit/act-spawn-admission.json` 不入库；批量准入报告位于 `checkpoints/tests/p0-2-spawn/`，同样可重建、不入库。本轮连同上一提交 `2584ad1d1` 已推送成功，`git ls-remote origin refs/heads/main` 独立核验远端为 `5146ed49dc04ff6aa41435bf567304266a9d8018`。
 
 ---
 
