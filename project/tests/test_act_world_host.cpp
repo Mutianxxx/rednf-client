@@ -16,6 +16,14 @@ constexpr int spawnObjectId=30059;
 constexpr const char *warningMarkSource="passiveobject/actionobject/common/action/flamestrike_item.act";
 constexpr const char *transparentMotionSource="passiveobject/actionobject/monster/haze/action/bomb1.act";
 constexpr const char *unknownObjectSource="passiveobject/actionobject/j_event/riceobj/action/rice1.act";
+// Frame-0 [PARTICLE] source: BASE ANI is 80 ms with no type15 box, the PTL is
+// a 5-particle / 500 ms one-shot burst, and there is no DESTROY command. That
+// makes "the action completes naturally but its particles keep their own
+// [life time] clock" observable without a paired ATK or a retired owner.
+constexpr const char *particleSource="passiveobject/actionobject/monster/bloodbutterfly/action/destroy.act";
+constexpr const char *particleProgram="passiveobject/actionobject/monster/bloodbutterfly/particle/destroy.ptl";
+constexpr const char *particleOffsetSource="passiveobject/actionobject/monster/action/snowrockblast.act";
+constexpr const char *unsupportedParticleSource="monster/newmonsters/lizardman/dragon_man/action/change_breath.act";
 constexpr uint64_t generation=19;
 
 struct WorldFixture {
@@ -134,10 +142,10 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
         WorldFixture f(pvf,assets,false);const auto compiled=f.host.compile(teleportSource);
         check(!compiled.ok && diagnostic(compiled.json().at("diagnostics"),"missing_command_consumer"),
               "Localized SPEECH blocks execution until its real presentation endpoint is explicitly attached");
-        check(f.host.hasCommandConsumer("spawn_passive_object") && !f.host.hasCommandConsumer("particle") &&
+        check(f.host.hasCommandConsumer("spawn_passive_object") && f.host.hasCommandConsumer("particle") &&
               f.host.hasCommandConsumer("attack_rect") && f.host.hasCommandConsumer("change_attack_info") &&
               !f.host.hasCommandConsumer("trigger_control") && !f.host.hasCommandConsumer("deferred_call"),
-              "The scoped ACT-owned object factory is registered while PTL emission and cross-action consumers remain blocked");
+              "Both scoped ACT-owned object and PTL burst factories are registered while cross-action consumers remain blocked");
         const auto attack=f.host.compile("passiveobject/actionobject/monster/new_event/action/assault_missile0.act");
         check(attack.ok && attack.program->runtimeReady,
               "Root ANI type15 is admitted only through the real registered collision and source damage host");
@@ -445,7 +453,7 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
             "An admitted ACT whose BASE ANI has unpaired type15 boxes is still blocked at bind instead of silently losing attack identity");
         const auto ptl=f.host.compile("passiveobject/actionobject/common/action/exsviperbullet.act");
         check(!ptl.ok && diagnostic(ptl.json().at("diagnostics"),"missing_resource_consumer"),
-            "An OBJ with [string data] PTL references stays blocked until a particle interpreter is registered");
+            "OBJ-internal [string data] PTL references are not ACT-level [PARTICLE] commands and stay precisely blocked");
         const auto transparent=f.host.compile(transparentMotionSource);
         check(!transparent.ok && diagnostic(transparent.json().at("diagnostics"),"missing_resource_consumer"),
             "A motion ANI with only transparent placeholder frames stays blocked instead of being counted as an admitted closure");
@@ -463,6 +471,8 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
             "Spawned entities carry their owning ACT instance/action identity for scoped cleanup");
         check(std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_spawn_passive_object";}),
             "World event log records the ACT-owned object creation");
+        check(f.host.particles().instances().empty(),
+            "Four empty CREATE PASSIVEOBJECT [PARTICLE FILENAME] operands emit no fabricated particle burst");
         const auto retired=f.host.cancelAll("p0-2 ownership cleanup");
         const auto &after=f.host.spawnedObjects().instances();
         check(retired.ok && !after.empty() &&
@@ -470,7 +480,128 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
               std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_spawn_retired";}),
             "Cancelling the owning ACT instance retires its spawned entities and records the retirement event");
     }
+    {
+        // P0-2 PARTICLE factory: the same 1031 PTL bytes the previewer reads
+        // now reach a real World-owned entity with a validated texture and an
+        // independent [life time] clock. Anything unrecovered stays visible.
+        WorldFixture f(pvf,assets,false);
+        const auto program=f.host.compile(particleSource);
+        check(program.ok && program.program && program.program->runtimeReady,
+            "A 1031 frame-0 [PARTICLE] ACT is fully admitted through the shared PTL decoder and ANI/IMG texture closure");
+        const auto &deps=program.program->dependencies;
+        const auto ptl=std::find_if(deps.begin(),deps.end(),[](const ActDependency &d){return d.request.kind==ActResourceKind::Particle;});
+        check(ptl!=deps.end() && ptl->found && ptl->runtimeSupported &&
+              ptl->diagnostic.find("one-shot burst")!=std::string::npos &&
+              ptl->diagnostic.find("5 particles")!=std::string::npos &&
+              ptl->diagnostic.find("3 [object]")!=std::string::npos &&
+              ptl->diagnostic.find("unrecovered")!=std::string::npos,
+            "PTL admission reports its byte-derived count/textures/lifetime and explicitly lists unrecovered source fields");
+        const auto unsupported=f.host.compile(unsupportedParticleSource);
+        check(!unsupported.ok && diagnostic(unsupported.json().at("diagnostics"),"missing_resource_consumer"),
+            "A PTL with an unrecovered [changing type] is rejected precisely instead of having its motion guessed");
+        const auto decoded=readPtl(pvf,particleProgram);
+        check(decoded.valid() && decoded.count==5 && decoded.lifeMs==500 && decoded.objects.size()==3 &&
+              decoded.gravity==1500 && decoded.velocity[0][0]==400 && decoded.velocity[0][1]==400 &&
+              decoded.velocity[2][0]==80 && decoded.velocity[2][1]==80,
+            "The World factory and standalone previewer decode identical 1031 PTL source bytes (5/500ms/3 ANI/gravity/velocity)");
+        check(std::any_of(decoded.diagnostics.begin(),decoded.diagnostics.end(),[](const Json &j){
+                return j.value("field",std::string()).find("rotation")!=std::string::npos;}),
+            "Rotation source fields are reported as unrecovered diagnostics rather than silently dropped");
+        f.bind(particleSource,41);f.ticks(1);
+        const auto &particles=f.host.particles().instances();
+        check(particles.size()==5,
+            "A frame-0 [PARTICLE] command emits exactly the source [maximum create number] of real World entities");
+        check(std::all_of(particles.begin(),particles.end(),[](const auto &p){
+                return p.program==particleProgram && !p.animation.empty() && !p.image.empty() && p.frame==-1 &&
+                       p.actInstanceId==41 && p.actionId==141 && p.lifeUs==500000 && p.alive() &&
+                       p.alpha()>0 && p.alpha()<=1 && p.json().contains("offset");}),
+            "Each World particle retains its source PTL, validated ANI/IMG texture, ACT/action ownership and byte-derived lifetime");
+        check(std::all_of(particles.begin(),particles.end(),[](const auto &p){
+                return p.x==1000 && p.y==260 && p.z==0 && p.offsetX==0 && p.offsetY==0 && p.offsetZ==0;}),
+            "Particle XYZ is the emitting owner's immutable coordinate receipt plus the signed source [PARTICLE] offset");
+        check(std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_particle_spawn";}),
+            "The World event log records the ACT-owned particle burst");
+        std::set<uint64_t> serials;for(const auto &p:particles)serials.insert(p.serial);
+        check(serials.size()==particles.size() && *serials.begin()>0,
+            "Every emitted particle receives its own distinct World serial");
+        // The action's BASE ANI is only 80 ms; its PTL lifetime is 500 ms.
+        // Natural completion runs cleanup but must not truncate the burst.
+        f.ticks(12);
+        check(f.host.particles().instances().size()==5 && f.host.particles().instances().front().ageUs>0,
+            "Natural completion of the emitting action does not retire particles that still have their own [life time] clock");
+        f.ticks(40);
+        check(f.host.particles().instances().empty() &&
+              std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_particle_expired";}),
+            "Particles expire on their own 500 ms source clock with a real World retirement event");
+    }
+    {
+        WorldFixture f(pvf,assets,false);
+        const auto compiled=f.host.compile(particleOffsetSource);
+        check(compiled.ok && compiled.program->runtimeReady,"A source [PARTICLE] with a non-zero Z offset is admitted");
+        f.bind(particleOffsetSource,42);f.ticks(1);
+        const auto &particles=f.host.particles().instances();
+        check(!particles.empty() && std::all_of(particles.begin(),particles.end(),[](const auto &p){
+                return p.offsetZ==60 && p.z==60 && p.x==1000 && p.y==260;}),
+            "The signed source [PARTICLE] Z=60 offset is retained and added to the owner's World coordinate receipt");
+        const auto retired=f.host.cancel(42,"p0-2 particle ownership cleanup");
+        check(retired.ok && f.host.particles().instances().empty() &&
+              std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_particle_retired";}),
+            "Explicit cancellation of the owning ACT instance retires its particles and records the retirement event");
+    }
+    {
+        WorldFixture f(pvf,assets,false);
+        f.bind(particleSource,43);f.ticks(12);
+        check(f.host.particles().instances().size()==5,"Transient particle burst is live before the World clock reset");
+        f.host.resetCancelledClock();
+        check(f.host.particles().instances().empty(),
+            "Transient ACT-emitted PTL bursts never survive a cancelled-clock reset");
+        WorldFixture completed(pvf,assets,false);
+        completed.bind(particleSource,45);completed.ticks(12);
+        check(completed.host.cancel(45,"cancel completed particle owner").ok &&
+              completed.host.particles().instances().empty(),
+            "Explicit per-instance cancellation retires particles after their source action completed");
+        WorldFixture interrupted(pvf,assets,false);
+        interrupted.bind(particleSource,46);interrupted.ticks(1);
+        interrupted.world.monsters.front().dead=true;
+        interrupted.ticks(1);
+        check(interrupted.host.particles().instances().empty(),
+            "Owner lifecycle exit retires its particles through the ACT cancellation path");
+        WorldFixture g(pvf,assets,false);
+        g.bind(particleSource,44);g.ticks(1);
+        check(g.host.cancelAll("p0-2 particle factory teardown").ok && g.host.particles().instances().empty() &&
+              std::any_of(g.world.events.begin(),g.world.events.end(),[](const auto &e){return e.kind=="act_particle_retired";}),
+            "cancelAll reclaims bursts whose emitting action already completed naturally");
+    }
+    {
+        // Bounded, ownership-scoped particle container independent of World.
+        auto admission=std::make_shared<ActParticleAdmission>();
+        admission->program=particleProgram;admission->count=7;admission->lifeUs=1000;
+        admission->alphaStart=100;admission->alphaEnd=0;
+        admission->objects.push_back({"a.ani","a.img",-1});
+        ActParticleEmit emit;emit.admission=admission;emit.program=particleProgram;
+        emit.actInstanceId=9;emit.actionId=10;emit.sequence=11;
+        emit.x=1;emit.y=2;emit.z=3;emit.offsetX=4;emit.offsetY=5;emit.offsetZ=6;
+        ActParticleSystem system;
+        check(system.emit(emit)==7 && system.instances().size()==7 &&
+              std::abs(system.instances().front().alpha()-1.0)<1e-9 && system.aliveCount()==7,
+            "Particle emission is a bounded one-shot burst with a source alpha endpoint");
+        check(system.advance(500).empty() && std::abs(system.instances().front().alpha()-0.5)<1e-9,
+            "Each particle advances its own clock and its alpha follows the two source [transparent value] endpoints");
+        check(system.advance(500).size()==7 && system.instances().empty(),
+            "Lifetime expiry removes expired entities and returns their retired serials");
+        admission->count=1000;
+        check(system.emit(emit)==int(ActParticleSystem::maximumInstances) &&
+              system.instances().size()==ActParticleSystem::maximumInstances,
+            "A source count beyond the World budget is clamped, not silently truncated to zero");
+        check(system.retireActInstance(9)==ActParticleSystem::maximumInstances && system.instances().empty(),
+            "Explicit ACT instance ownership retirement reclaims every one of its particles");
+        const auto sample=system.emit(emit);
+        check(sample>0 && system.instances().front().json().contains("program") &&
+              system.instances().front().json().contains("alpha") &&
+              system.instances().front().json().contains("alive"),
+            "World particle receipts expose source, alpha and liveness without a renderer");
+    }
     return {{"status","pass"},{"count",checks.size()},{"checks",checks},{"evidence","inferred World host; current-PVF source fixtures"},
-        {"scope","Real World actors, status lifecycle/contact ledgers, hit-stop/external clock, entity generations/events and same-tick prepared-World ACT import; diagnostic status setup is not a normal skill chain, renderer/audio-device/controller activation/CharacterStore disk restore remain separate"}};
+        {"scope","Real World actors, status lifecycle/contact ledgers, hit-stop/external clock, entity generations/events and same-tick prepared-World ACT import; ACT-owned object/PTL particle factories are real World entities but renderer/contact settlement remain P0-3; diagnostic status setup is not a normal skill chain, renderer/audio-device/controller activation/CharacterStore disk restore remain separate"}};
 }
 } // namespace dnf

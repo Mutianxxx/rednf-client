@@ -152,14 +152,14 @@ python -X utf8 -B tools/skill-bindings/src/extract_commands.py          # 指令
 执行顺序与修改范围见 [SKILL-RUNTIME-PLAN.md](SKILL-RUNTIME-PLAN.md)：
 P0 引用闭包与现有 ACT 消费者 → OBJ/NUT 生命周期；P1 ALS、ATK、PTL；P2 SKL 与跨系统表族。
 每步区分静态候选、编译准入、实际 World 执行与基座实机核对，分别记录测试和 git 同步状态。
-现有工程已包含 ACT 编译/调度/部分 World 消费者及 PTL 解析/预览子集；P0-2 已接通 `CREATE PASSIVEOBJECT` 的受控 World 对象工厂（仅在 OBJ 依赖闭包含已消费的 ANI/ATK 叶子时），粒子派发、预警贴花与技能调用链仍缺。
+现有工程已包含 ACT 编译/调度/部分 World 消费者及 PTL 解析/预览子集；P0-2 已接通 `CREATE PASSIVEOBJECT` 的受控 World 对象工厂，以及 ACT 级 PTL 单次发射实例、独立寿命和回收子集。PTL 纹理依赖已校验，主场景粒子绘制和运动积分仍缺，PARTICLE 完整验收与 P0-2 整体验收均未通过。
 
 ## 已知边界（不要当成已完成）
 
 - **ACT 对象工厂是受控子集**：`CREATE PASSIVEOBJECT` 已能在真实 World 生成/回收实体，
   但只有当 OBJ 的字面依赖闭包含已消费的 ANI/ATK/IMG 叶子时才准入。含 `.ptl`、
   `[basic action]` ACT 递归、注册表缺失的对象继续显式阻塞；预警贴花
-  （`[WARNING MARK]`）、PTL 粒子工厂、type15 攻击身份/配对 ATK 与对象的
+  （`[WARNING MARK]`）、PTL 主场景绘制/运动、type15 攻击身份/配对 ATK 与对象的
   运动/命中/伤害闭环**未**恢复。静态 `ok` / `runtime_ready` 只是准入旗标，
   不等于 World 执行或 1031 原版表现一致。详见
   [`project/reports/pvf-audit/README.md`](project/reports/pvf-audit/README.md) 第 6.2 节。

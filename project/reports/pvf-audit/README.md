@@ -212,6 +212,14 @@ python project/tools/act_spawn_admission.py \
 
 **边界**：预警贴花、PTL 粒子工厂、OBJ→ACT 通用递归、type15 攻击身份/配对 ATK、对象运动/命中/伤害闭环均未恢复。静态 `ok` / `runtime_ready` 不代表 World 执行或 1031 原版等价；group 3 整体仍因既存 Event.ai 基线问题失败（见 `project/reports/core-group-3-result.json`），不是本项回归。用户反馈的剑阵、觉醒、冰弓、枪手投射物缺陷未据此修复或验收。
 
+## 6.3 ACT 粒子运行时子集（P0-2，2026-11-12）
+
+`ptl_program.hpp/.cpp` 把既有 PTL 解码器提升到核心共享；预览器和 ACT host 使用同一份源字段解析。`ActParticleSystem` 接收 ACT `[PARTICLE]` 及 spawn 附带的 `[PARTICLE FILENAME]`，保存源路径、动作归属、XYZ、偏移、透明度与独立寿命，纳入 host 的事务发布及取消/恢复清理。纹理依赖已通过 ANI/ALS/IMG 闭包验证。
+
+**完整验收未通过**：主场景尚无读取粒子实例的绘制消费者；速度、重力、区域、旋转和连续发射未消费，其中部分源字段仅保留诊断而非阻塞。多 `[object]` 当前轮流选择和透明度线性插值属于重建策略。OBJ 内部 `[string data]` PTL 与通用 OBJ→ACT 递归仍阻塞。运行时实例和纹理校验不能当作实际绘制或基座等价。
+
+本轮全量静态扫描 `checkpoints/tests/p0-2-particles/passiveobject-coverage-particles.json`：5,638 文件、1,629 整体准入（前次 1,597，+32）、5 异常；syntax 2,428、source 3,475、runtime 3,051。该扫描没有 bind/dispatch/advance，不证明模拟或视觉消费；原 73 个纯粒子阻塞样本中 32 个准入、41 个继续阻塞。P0-2 仍未整体验收，PARTICLE 节点保持未完成。
+
 ## 7. 历史结论（以下链为待验证模型）
 
 你的判断是对的：之前的技能链审计主要覆盖了 `SKL → CHR ANI → ALS → 部分 OBJ/ATK`，但没有把 **ACT、OBJ action、NUT、PTL、ATK 变体标签**作为完整闭包处理。当前缺陷不是单纯“某个坐标错了”，而是调用链缺失：

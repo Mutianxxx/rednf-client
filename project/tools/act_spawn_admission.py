@@ -8,14 +8,21 @@
 - 不执行 ACT、不创建实体、不模拟 World、不证明 1031 原版表现等价；
 - 对象 ID 只来自 ACT 依赖表里的显式 passive_object 索引，并经
   passiveobject/passiveobject.lst 解析到 .obj；
-- OBJ 依赖按字面路径分类；PTL 解释器、通用 OBJ→ACT 递归未注册的对象
-  保持 blocked，不靠文件名猜测或忽略未知依赖来制造覆盖率。
+- OBJ 依赖按字面路径分类；通用 OBJ→ACT 递归、OBJ 内部 `[string data]` PTL
+  引用尚未注册的对象保持 blocked，不靠文件名猜测或忽略未知依赖来制造覆盖率。
 
 P0-2 修订：1031 PVF 的 CREATE PASSIVEOBJECT [WARNING MARK] 实测有 2 或 4
 个整数操作数（303 个 ACT、1580 处），旧编译器按 0 操作数误判为语法错误。
 工具把 C++ 侧真实准入旗标并列记录，但不把 `ok`/`runtime_ready` 当成
 World 已执行；`warning_mark_consumer_unregistered` 是非阻塞诊断，代表
 预警贴花消费者仍未注册，不能计为已实现。
+
+P0-2 第二次修订：ACT 级 `[PARTICLE]` / `[PARTICLE FILENAME]` 的 World
+PTL 工厂已接通（`ActWorldHost::particles()`），因此 `act_has_ptl` 不再
+自动等于阻塞——只有 C++ 诊断中真正出现 `particle:` 拒绝消息的 ACT 才
+计入 `act-particle-dependency`。本账本仍只描述 OBJ 字面依赖闭包，
+`blocked-ptl` 桶包含两类不同边界：OBJ 内部 PTL 引用未接线，以及 ACT 级
+PTL 程序含未恢复字段被精确拒绝；二者都不是「ACT PTL 工厂未注册」。
 """
 from __future__ import annotations
 
@@ -265,8 +272,10 @@ def main():
             "method": {
                 "objectIds": "ACT dependencies 中显式 passive_object index，经 passiveobject.lst 解析",
                 "supportedObjLeaves": sorted(SUPPORTED_EXTS),
-                "blocked": ["PTL 解释器未注册", "OBJ→ACT 通用递归未注册",
-                            "ACT 自身 opcode/particle 未支持", "注册表缺失/重复/解析失败"],
+                "blocked": ["OBJ 内部 [string data] PTL 引用未接线", "OBJ→ACT 通用递归未注册",
+                            "ACT 自身 opcode/未恢复 PTL 字段被精确拒绝", "注册表缺失/重复/解析失败"],
+                "actPtlFactory": "ACT 级 [PARTICLE]/[PARTICLE FILENAME] 已接通 World 粒子工厂；"
+                                 "account 仅按 C++ 诊断中的 particle: 拒绝消息计入 ACT 自身粒子阻塞",
                 "warningMark": "1031 PVF 实测 303 个 ACT / 1580 处，操作数为 2 或 4；"
                                "warning_mark_consumer_unregistered 是显式非阻塞缺口，不是已实现",
                 "cppAdmission": "并列记录 dnf_inspect --act-coverage-prefix 的三阶段与整体静态准入；"

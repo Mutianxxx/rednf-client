@@ -1,5 +1,6 @@
 #pragma once
 #include "dnf/act_runtime.hpp"
+#include "dnf/act_particles.hpp"
 #include "dnf/act_collision.hpp"
 #include "dnf/audio_catalog.hpp"
 #include "dnf/combat.hpp"
@@ -12,7 +13,9 @@ namespace dnf {
 // admitted only when its complete OBJ dependency closure is ANI/ATK leaves
 // that the existing World consumers can validate; OBJ files with ACT or PTL
 // references are rejected with a precise diagnostic instead of being guessed.
-// PTL factory and generic ACT-object recursion are still not claimed.
+// ACT-level [PARTICLE]/[PARTICLE FILENAME] PTL programs ARE admitted and
+// consumed by the real World particle factory; OBJ-internal PTL references
+// (generic OBJ->PTL/ACT recursion) are still not claimed.
 class ActWorldResources final : public ActResourceResolver {
     Pvf &pvf_;
     Assets &assets_;
@@ -21,6 +24,7 @@ class ActWorldResources final : public ActResourceResolver {
     SourceRef audioSource_;
     std::map<int, std::string> objects_;
     mutable std::map<std::string, ActResolvedResource> cache_;
+    mutable std::map<std::string, std::shared_ptr<const ActParticleAdmission>> particles_;
     std::string path(const std::string &parent, const std::string &literal) const;
     SourceRef staticSource(const std::string &, const Bytes &) const;
     void sound(const std::string &, std::set<std::string> &, std::vector<ActDependency> &) const;
@@ -28,6 +32,9 @@ class ActWorldResources final : public ActResourceResolver {
   public:
     ActWorldResources(Pvf &, Assets &, std::string staticIdentity);
     const std::string &staticIdentity() const { return staticIdentity_; }
+    // Admitted PTL program or throw with a precise source-byte diagnostic.
+    // The same record is used by static admission and by the World emitter.
+    std::shared_ptr<const ActParticleAdmission> particleAdmission(const ActResourceRequest &) const;
     ActResolvedResource resolve(const ActResourceRequest &) const override;
 };
 
@@ -120,6 +127,10 @@ class ActWorldHost {
     // requires cancelAll() first; publish/restore clears this container.
     // Batches copy it, so creation and retirement stay atomic with commit().
     ObjectSystem spawned_;
+    // ACT-emitted PTL particles. Also transient: they are not part of the host
+    // checkpoint, but unlike spawned objects they keep their own lifetime clock
+    // after the emitting action completes naturally.
+    ActParticleSystem particles_;
     // Process-local publication identity. Never serialized or restored; saved
     // logical IDs/revisions may repeat, this epoch cannot repeat.
     uint64_t publicationEpoch_ = 0;
@@ -131,7 +142,9 @@ class ActWorldHost {
     void apply(Batch &, uint64_t, const ActPreparedStep &);
     void applyCommands(Batch &, uint64_t, const ActPreparedStep &, SourceRef *failureLocation);
     void spawnPassiveObject(Batch &, uint64_t, const ActEmittedCommand &, const ActSpawn &);
+    void emitParticle(Batch &, uint64_t, const ActEmittedCommand &, const ActParticle &);
     void retireSpawns(Batch &, uint64_t);
+    void retireParticles(Batch &, uint64_t);
     void cleanup(Batch &, uint64_t);
     void bindCollision(Batch &,uint64_t,const MonsterActionRoute *);
     void collide(Batch &,uint64_t,uint64_t,bool);
@@ -182,6 +195,9 @@ class ActWorldHost {
     // records with a resolved OBJ definition, not a static admission flag;
     // main-Scene rendering and ObjectSystem contact settlement are still P0-3.
     const ObjectSystem &spawnedObjects() const { return spawned_; }
+    // Real ACT-emitted PTL particles with source texture, independent clock
+    // and lifetime retirement. A renderer/presentation consumer is P0-3.
+    const ActParticleSystem &particles() const { return particles_; }
     const std::vector<ActSpeechBubble> &speechBubbles() const { return state_.speech; }
     Json diagnostics() const { return state_.diagnostics; }
     const std::map<uint64_t,ActCollisionState> &collisions() const { return state_.collisions; }

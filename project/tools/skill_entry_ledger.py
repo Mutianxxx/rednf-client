@@ -734,8 +734,8 @@ def build(pvf, decoder, args):
             ],
             "gaps": [
                 {"code": "spawn-passive-object-consumer",
-                 "evidence": "act_world_host.cpp resource resolve keeps ACT/PTL/object factory unregistered; missing_resource_consumer appears in the admission report.",
-                 "blocker": "No World factory for CREATE PASSIVEOBJECT / particle commands."},
+                 "evidence": "act_world_host.cpp has scoped CREATE PASSIVEOBJECT and ACT-level PTL burst factories; OBJ-internal PTL and generic OBJ-to-ACT recursion still produce missing_resource_consumer.",
+                 "blocker": "Generic OBJ lifecycle/contact, OBJ-internal PTL, and ACT particle rendering/motion remain incomplete; static admission is not execution or equivalence proof."},
                 {"code": "exe-native-dispatch",
                  "evidence": "Only 3 *_load_state.nut registries exist; 10 job binding files provide setState entries but no object creation dispatch.",
                  "blocker": "exe VM region containing the ATK selector 0x70213F is unrestored."},

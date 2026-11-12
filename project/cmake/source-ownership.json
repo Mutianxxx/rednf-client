@@ -1,5 +1,7 @@
 {
   "src/act_collision.cpp": "src/simulation/scripting/act_collision.cpp",
+  "src/act_particles.cpp": "src/simulation/scripting/act_particles.cpp",
+  "src/ptl_program.cpp": "src/simulation/animation/ptl_program.cpp",
   "src/act_runtime.cpp": "src/simulation/scripting/act_runtime.cpp",
   "src/act_service.cpp": "src/simulation/scripting/act_service.cpp",
   "src/act_world_host.cpp": "src/simulation/scripting/act_world_host.cpp",

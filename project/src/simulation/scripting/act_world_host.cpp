@@ -232,6 +232,50 @@ void ActWorldResources::animation(const std::string &name,std::set<std::string> 
     }
     if(!presentation->issues.empty()) throw std::invalid_argument("ALS composition diagnostic: "+presentation->issues.dump());
 }
+std::shared_ptr<const ActParticleAdmission> ActWorldResources::particleAdmission(const ActResourceRequest &r) const {
+    const auto key=std::to_string(int(r.kind))+":"+r.origin.memberPath+":"+r.literal+":"+std::to_string(r.index);
+    const auto cached=particles_.find(key);if(cached!=particles_.end())return cached->second;
+    const auto member=path(r.origin.memberPath,r.literal);
+    // The very same 1031 PTL decoder used by the standalone previewer. No
+    // separate "ACT-specific" interpretation of [object]/[life time] exists.
+    const auto program=readPtl(pvf_,member);
+    if(!program.valid())throw std::invalid_argument("Unsupported ACT PTL program "+member+": "+program.error);
+    if(!std::isfinite(program.lifeMs) || program.lifeMs>double(std::numeric_limits<int64_t>::max())/1000.0)
+        throw std::invalid_argument("ACT PTL [life time] is outside the World clock: "+member);
+    auto admission=std::make_shared<ActParticleAdmission>();
+    admission->program=normalize(member);
+    admission->count=program.count;
+    admission->lifeUs=int64_t(program.lifeMs*1000.0);
+    admission->alphaStart=program.alphaStart;admission->alphaEnd=program.alphaEnd;
+    if(admission->lifeUs<=0)throw std::invalid_argument("ACT PTL has no positive lifetime: "+member);
+    std::set<std::string> visited;
+    for(const auto &object:program.objects) {
+        // Reuse the exact ANI/ALS/IMG texture closure the World motion renderer
+        // already validates. An unresolvable or transparent-only texture is a
+        // precise rejection, never an invisible placeholder particle.
+        animation(object.animation,visited,admission->dependencies,0);
+        const auto frames=assets_.animation(object.animation);
+        if(object.frame>=0 && size_t(object.frame)>=frames->frames.size())
+            throw std::invalid_argument("ACT PTL [object] frame is outside its ANI: "+object.animation);
+        const size_t index=object.frame>=0?size_t(object.frame):0;
+        const auto &frame=frames->frames.at(index);
+        if(frame.image.empty())throw std::invalid_argument("ACT PTL [object] has no IMG texture: "+object.animation);
+        admission->objects.push_back({normalize(object.animation),normalize(frame.image),object.frame});
+        ActDependency d;d.request={ActResourceKind::Animation,makeSourceRef(pvf_,member),object.animation,object.frame};
+        d.resolved=makeSourceRef(pvf_,object.animation);d.found=d.runtimeSupported=true;
+        d.diagnostic="PTL [object] ANI/ALS/IMG texture closure validated for the ACT World particle factory";
+        admission->dependencies.push_back(std::move(d));
+    }
+    // Explicit source gaps: a one-shot burst only. Velocity, gravity, create
+    // area, rotation and continuous emission are not integrated by this host.
+    admission->unrecovered={"[creation frequency] continuous emission",
+                            "velocity/gravity/area/rotation integration"};
+    for(const auto &d:program.diagnostics)if(d.is_object() && d.contains("field"))
+        admission->unrecovered.push_back(d.at("field").get<std::string>());
+    std::sort(admission->unrecovered.begin(),admission->unrecovered.end());
+    admission->unrecovered.erase(std::unique(admission->unrecovered.begin(),admission->unrecovered.end()),admission->unrecovered.end());
+    particles_[key]=admission;return admission;
+}
 ActResolvedResource ActWorldResources::resolve(const ActResourceRequest &r) const {
     const auto key=std::to_string(int(r.kind))+":"+r.origin.memberPath+":"+r.literal+":"+std::to_string(r.index);
     const auto cached=cache_.find(key);if(cached!=cache_.end())return cached->second;
@@ -259,9 +303,10 @@ ActResolvedResource ActWorldResources::resolve(const ActResourceRequest &r) cons
             } else if(r.kind==ActResourceKind::PassiveObject) {
                 // Scoped P0-2 admission: enumerate the OBJ's complete literal
                 // dependency closure, but only where every leaf already has a
-                // real World consumer. PTL interpreter and generic ACT-object
-                // recursion are not registered, so such objects stay blocked
-                // with a precise reason instead of a fabricated closure.
+                // real World consumer. OBJ-internal PTL references and generic
+                // ACT-object recursion are still not registered, so such OBJs
+                // stay blocked with a precise reason instead of a fabricated
+                // closure. (ACT-level PTL programs are admitted separately.)
                 const auto object=pvf_.script(member);
                 std::set<std::string> visited;
                 size_t leaves=0;
@@ -312,7 +357,22 @@ ActResolvedResource ActWorldResources::resolve(const ActResourceRequest &r) cons
                 if(!attack.sound.empty()) {std::set<std::string> stack;sound(attack.sound,stack,result.transitive);}
                 result.diagnostic=attack.reactionReady?"ATK consumed by private ACT damage/status/RNG/HP transaction":
                     "ATK damage source retained; authored reaction has a precise contact-time consumer gate";
-            } else result.diagnostic="Resource retained, but ACT/PTL/object factory consumer is not registered";
+            } else if(r.kind==ActResourceKind::Particle) {
+                // ACT-level [PARTICLE] and CREATE PASSIVEOBJECT [PARTICLE
+                // FILENAME] both reach the real World particle factory. The
+                // PTL's [object] textures are validated above; unrecovered
+                // source fields stay visible in the diagnostic.
+                const auto admission=particleAdmission(r);
+                result.source=makeSourceRef(pvf_,admission->program);
+                result.found=result.runtimeSupported=result.transitiveClosureKnown=true;
+                result.transitive=admission->dependencies;
+                std::string gaps;
+                for(const auto &u:admission->unrecovered){if(!gaps.empty())gaps+=", ";gaps+=u;}
+                result.diagnostic="ACT PTL one-shot burst admitted: "+std::to_string(admission->objects.size())+
+                    " [object] ANI/ALS/IMG textures, "+std::to_string(admission->count)+
+                    " particles, [life time] "+std::to_string(admission->lifeUs/1000)+
+                    " ms; World emits real entities with independent clocks; unrecovered: "+gaps;
+            } else result.diagnostic="Resource retained, but ACT/object factory consumer is not registered";
         }
     } catch(const std::exception &e) {result.runtimeSupported=false;result.diagnostic=e.what();}
     cache_[key]=result;return result;
@@ -355,9 +415,10 @@ struct ActWorldHost::Batch {
     std::optional<World::PreparedPlayerReaction> playerReaction;
     std::set<uint64_t> collisionChanged;
     ObjectSystem spawned;
+    ActParticleSystem particles;
     explicit Batch(const ActWorldHost &h):player(h.world_.player),monsters(h.world_.monsters),events(h.world_.events),
         entities(h.world_.entities_),ids(h.world_.ids_),statuses(h.world_.statuses_),damageWindows(h.world_.monsterDamageWindows_),host(h.state_),
-        random(h.world_.random_),lastDamage(h.world_.lastDamageTrace_),playerGuardUntil(h.world_.guardUntil_),spawned(h.spawned_){
+        random(h.world_.random_),lastDamage(h.world_.lastDamageTrace_),playerGuardUntil(h.world_.guardUntil_),spawned(h.spawned_),particles(h.particles_){
         if(h.publicationEpoch_==UINT64_MAX)throw std::overflow_error("ACT host publication epoch exhausted");
     }
     Actor *actor(EntityHandle h) {
@@ -663,7 +724,7 @@ ActWorldHost::ActWorldHost(World &w,Pvf &p,Assets &a,std::string staticIdentity,
 bool ActWorldHost::hasCommandConsumer(const std::string &kind) const {
     return kind=="set_speed" || kind=="teleport" || kind=="set_direction" || kind=="destroy" || kind=="sound" ||
            kind=="cleanup_owned" || kind=="set_damage_check" || kind=="attack_rect" || kind=="change_attack_info" ||
-           kind=="spawn_passive_object" || (kind=="speech" && options_.enableSpeechPresentation);
+           kind=="spawn_passive_object" || kind=="particle" || (kind=="speech" && options_.enableSpeechPresentation);
 }
 ActCompileResult ActWorldHost::compile(const std::string &path,ActSemanticPolicy policy) const {
     auto result=compileActProgram(pvf_.script(path),context(pvf_,resources_,std::move(policy),[this](const std::string &s){return hasCommandConsumer(s);}));
@@ -686,8 +747,9 @@ void ActWorldHost::commit(Batch &b) noexcept {
     static_assert(std::is_nothrow_swappable<EntityRegistry>::value,"Registry publication must not throw");
     static_assert(std::is_nothrow_swappable<StatusHost>::value,"Status publication must not throw");
     static_assert(std::is_nothrow_swappable<ObjectSystem>::value,"ACT spawned-object publication must not throw");
+    static_assert(std::is_nothrow_swappable<ActParticleSystem>::value,"ACT particle publication must not throw");
     using std::swap;swap(world_.player,b.player);world_.monsters.swap(b.monsters);world_.events.swap(b.events);
-    swap(world_.entities_,b.entities);swap(world_.ids_,b.ids);swap(world_.statuses_,b.statuses);world_.monsterDamageWindows_.swap(b.damageWindows);swap(state_,b.host);swap(spawned_,b.spawned);
+    swap(world_.entities_,b.entities);swap(world_.ids_,b.ids);swap(world_.statuses_,b.statuses);world_.monsterDamageWindows_.swap(b.damageWindows);swap(state_,b.host);swap(spawned_,b.spawned);swap(particles_,b.particles);
     static_assert(std::is_nothrow_swappable<RandomStreams>::value,"ACT combat random publication must not throw");
     swap(world_.random_,b.random);world_.lastDamageTrace_.swap(b.lastDamage);world_.guardUntil_=b.playerGuardUntil;
     if(b.playerInterrupted) {
@@ -729,6 +791,43 @@ void ActWorldHost::spawnPassiveObject(Batch &b,uint64_t id,const ActEmittedComma
     auto *owner=b.actor(command.owner);
     b.events.push_back({world_.tick,"act_spawn_passive_object",definition->source,owner?owner->id:0,
                         spawn.objectIndex,spawn.level});
+    // CREATE PASSIVEOBJECT [PARTICLE FILENAME] is the object-birth PTL burst.
+    // It is a separate ACT-level dependency and now has a real World emitter;
+    // an empty source filename emits nothing. This is NOT the unregistered
+    // [WARNING MARK] visual decal nor an OBJ-internal [string data] PTL.
+    if(!spawn.particle.empty()) {
+        const auto admission=resources_.particleAdmission({ActResourceKind::Particle,command.source,spawn.particle,-1});
+        ActParticleEmit emit;
+        emit.actInstanceId=id;emit.actionId=command.actionId;emit.sequence=command.sequence;
+        emit.program=admission->program;emit.x=x;emit.y=y;emit.z=z;
+        emit.admission=admission;
+        const auto created=b.particles.emit(emit);
+        b.events.push_back({world_.tick,"act_particle_spawn",admission->program,owner?owner->id:0,
+                            int(created),0});
+    }
+}
+void ActWorldHost::emitParticle(Batch &b,uint64_t id,const ActEmittedCommand &command,const ActParticle &particle) {
+    const auto admission=resources_.particleAdmission({ActResourceKind::Particle,command.source,particle.path,-1});
+    // The source [PARTICLE] XYZ is a signed offset from the emitting owner's
+    // immutable coordinate receipt. Direction/mirroring of that offset is not
+    // recovered from 1031 bytes and is deliberately not invented here.
+    const auto &os=*command.ownerSnapshot;
+    const double x=os.position.x+particle.offset.x,y=os.position.y+particle.offset.y,z=os.position.z+particle.offset.z;
+    if(!std::isfinite(x) || !std::isfinite(y) || !std::isfinite(z) || !std::isfinite(particle.offset.x) ||
+       !std::isfinite(particle.offset.y) || !std::isfinite(particle.offset.z))
+        throw std::invalid_argument("Invalid ACT particle coordinates");
+    ActParticleEmit emit;
+    emit.actInstanceId=id;emit.actionId=command.actionId;emit.sequence=command.sequence;
+    emit.program=admission->program;emit.x=x;emit.y=y;emit.z=z;
+    emit.offsetX=particle.offset.x;emit.offsetY=particle.offset.y;emit.offsetZ=particle.offset.z;
+    emit.admission=admission;
+    const auto created=b.particles.emit(emit);
+    auto *owner=b.actor(command.owner);
+    b.events.push_back({world_.tick,"act_particle_spawn",admission->program,owner?owner->id:0,int(created),0});
+}
+void ActWorldHost::retireParticles(Batch &b,uint64_t id) {
+    const auto retired=b.particles.retireActInstance(id);
+    if(retired)b.events.push_back({world_.tick,"act_particle_retired",std::to_string(id),int(retired)});
 }
 void ActWorldHost::retireSpawns(Batch &b,uint64_t id) {
     const std::string prefix=std::to_string(id)+":";
@@ -742,6 +841,10 @@ void ActWorldHost::retireSpawns(Batch &b,uint64_t id) {
 }
 void ActWorldHost::cleanup(Batch &b,uint64_t id) {
     retireSpawns(b,id);
+    // ACT-owned particles deliberately are NOT retired here: 1031/40JP gives
+    // each particle its own clock, so a naturally completed action must not
+    // truncate its emitted burst. Explicit cancel()/cancelAll() below reclaim
+    // ownership; advance() retires expired particles by their source lifetime.
     for(auto i=b.host.velocities.begin();i!=b.host.velocities.end();)if(i->second.instanceId==id)i=b.host.velocities.erase(i);else ++i;
     auto &speech=b.host.speech;speech.erase(std::remove_if(speech.begin(),speech.end(),[&](const auto &s){return s.instanceId==id;}),speech.end());
     const auto instance=b.host.instances.find(id);
@@ -789,6 +892,7 @@ void ActWorldHost::applyCommands(Batch &b,uint64_t id,const ActPreparedStep &ste
         if(!command.ownerSnapshot || !command.recipientSnapshot)throw std::invalid_argument("ACT command has no immutable coordinate receipt");
         const auto &os=*command.ownerSnapshot,&rs=*command.recipientSnapshot;
         if(const auto *spawn=std::get_if<ActSpawn>(&command.payload)) {spawnPassiveObject(b,id,command,*spawn);continue;}
+        if(const auto *particle=std::get_if<ActParticle>(&command.payload)) {emitParticle(b,id,command,*particle);continue;}
         if(const auto *speed=std::get_if<ActSetSpeed>(&command.payload)) {
             auto found=b.host.velocities.find(command.recipient);
             if(found!=b.host.velocities.end() && found->second.instanceId!=id)throw std::invalid_argument("ACT velocity ownership conflict");
@@ -868,6 +972,15 @@ void ActWorldHost::applyCommands(Batch &b,uint64_t id,const ActPreparedStep &ste
     }
     for(const auto &d:step.diagnostics)b.host.diagnostics.push_back(d.json());
     if(b.host.diagnostics.size()>256)b.host.diagnostics.erase(b.host.diagnostics.begin(),b.host.diagnostics.begin()+std::ptrdiff_t(b.host.diagnostics.size()-256));
+    // Natural motion completion alone lets an emitted burst finish its own clock.
+    // Every other cancellation/fault must release particle ownership as well.
+    if(step.candidate.status!=ActInstanceStatus::Running) {
+        bool naturalCompletion=false;
+        for(const auto &command:step.commands)
+            if(const auto *cleanup=std::get_if<ActCleanup>(&command.payload))
+                naturalCompletion=cleanup->reason=="source_motion_complete";
+        if(!naturalCompletion)retireParticles(b,id);
+    }
     if(!publishActStep(it->second,step))throw std::invalid_argument("ACT candidate publication rejected");
 }
 ActWorldHostResult ActWorldHost::bind(std::shared_ptr<const ActProgram> program,const ActBindRequest &r,ActEntityRelations relations,bool replaceOwner,const MonsterActionRoute *attackRoute) {
@@ -923,7 +1036,8 @@ ActWorldHostResult ActWorldHost::advance(const SimulationStep &step,const std::m
         // immutable source/stat traces on every world tick. Once any instance
         // or owned state exists the normal atomic Batch remains authoritative.
         if (state_.instances.empty() && state_.velocities.empty() && state_.relations.empty() &&
-            state_.presentation.empty() && state_.speech.empty() && state_.collisions.empty()) {
+            state_.presentation.empty() && state_.speech.empty() && state_.collisions.empty() &&
+            spawned_.instances().empty() && particles_.instances().empty()) {
             if (!deltas.empty()) throw std::invalid_argument("Unexpected external ACT animation delta");
             if (publicationEpoch_==UINT64_MAX) throw std::overflow_error("ACT host publication epoch exhausted");
             state_.lastTick=step.tick; ++publicationEpoch_;
@@ -1003,6 +1117,11 @@ ActWorldHostResult ActWorldHost::advance(const SimulationStep &step,const std::m
         // ACT-owned objects use the same fixed simulation tick. Hit-stop and
         // external animation-delta coupling for these entities is not recovered.
         b.spawned.advance(int64_t(step.deltaMilliseconds)*1000);
+        // Every ACT-emitted particle keeps its own 1031 [life time] clock,
+        // independent of the emitting action's motion. Expiry is a real World
+        // retirement, not a renderer-side "invisible but still present" flag.
+        const auto expired=b.particles.advance(int64_t(step.deltaMilliseconds)*1000);
+        if(!expired.empty())b.events.push_back({world_.tick,"act_particle_expired","",int(expired.size())});
         b.host.lastTick=step.tick;commit(b);return {true,{},{}};
     }catch(const std::exception &e){return failure(e);}
 }
@@ -1023,13 +1142,19 @@ ActWorldHostResult ActWorldHost::dispatch(uint64_t id,const ActEventContext &eve
 }
 ActWorldHostResult ActWorldHost::cancel(uint64_t id,const std::string &reason) {
     try {Batch b(*this);auto found=b.host.instances.find(id);if(found==b.host.instances.end())throw std::invalid_argument("Unknown ACT cancellation instance");
-        if(found->second.status!=ActInstanceStatus::Running)return {true,{},{}};
-        apply(b,id,prepareActCancel(found->second,reason));commit(b);return {true,{},{}};
+        if(found->second.status==ActInstanceStatus::Running)
+            apply(b,id,prepareActCancel(found->second,reason));
+        retireParticles(b,id);commit(b);return {true,{},{}};
     }catch(const std::exception &e){return failure(e);}
 }
 ActWorldHostResult ActWorldHost::cancelAll(const std::string &reason) {
     try {Batch b(*this);std::vector<uint64_t> ids;for(const auto &entry:b.host.instances)ids.push_back(entry.first);
         for(auto id:ids)if(b.host.instances.at(id).status==ActInstanceStatus::Running)apply(b,id,prepareActCancel(b.host.instances.at(id),reason));
+        // Explicit ownership cleanup also reclaims bursts whose emitting action
+        // already completed naturally. Natural completion alone never retires
+        // them; their own [life time] clock does.
+        const auto owned=b.particles.instances().size();
+        if(owned){b.particles.clear();b.events.push_back({world_.tick,"act_particle_retired","all",int(owned)});}
         commit(b);return {true,{},{}};
     }catch(const std::exception &e){return failure(e);}
 }
@@ -1043,6 +1168,7 @@ void ActWorldHost::resetCancelledClock() {
     if(publicationEpoch_==UINT64_MAX)throw std::overflow_error("ACT host publication epoch exhausted");
     state_.instances.clear();state_.relations.clear();state_.presentation.clear();
     spawned_.clear(); // Transient ACT-owned entities never survive a clock reset.
+    particles_.clear(); // Transient ACT-emitted PTL bursts never survive it either.
     state_.lastTick=uint64_t(world_.tick);++publicationEpoch_;
 }
 
@@ -1312,7 +1438,8 @@ void ActWorldHost::publishAfterOuterCommit(PreparedRestore &&prepared) noexcept 
     // ACT-owned entities are transient: a published restore discards them
     // instead of pretending the checkpoint carried their ObjectInstances.
     static_assert(std::is_nothrow_move_assignable<ObjectSystem>::value,"ACT spawned-object discard must not throw");
-    spawned_=ObjectSystem{};
+    static_assert(std::is_nothrow_move_assignable<ActParticleSystem>::value,"ACT particle discard must not throw");
+    spawned_=ObjectSystem{};particles_=ActParticleSystem{};
     using std::swap;swap(state_,*prepared.state_);++publicationEpoch_;prepared.state_.reset();prepared.origin_=nullptr;
 }
 ActWorldHostResult ActWorldHost::publish(PreparedRestore &&prepared) {

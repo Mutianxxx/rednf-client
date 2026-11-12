@@ -87,6 +87,9 @@ target_sources(dnf_core PRIVATE
 target_sources(dnf_core PRIVATE
     src/simulation/animation/animation_events.cpp
     src/simulation/animation/particle_motion.cpp
+    # Shared 1031 PTL decoder: the previewer and the ACT World particle
+    # factory must not diverge into two independent parsers.
+    src/simulation/animation/ptl_program.cpp
     src/simulation/animation/static_motion.cpp
     src/simulation/animation/equipment_motion.cpp
 )
@@ -162,6 +165,7 @@ target_sources(dnf_core PRIVATE
 # simulation/scripting
 target_sources(dnf_core PRIVATE
     src/simulation/scripting/act_runtime.cpp
+    src/simulation/scripting/act_particles.cpp
     src/simulation/scripting/act_world_host.cpp
     src/simulation/scripting/act_service.cpp
     src/simulation/scripting/act_collision.cpp

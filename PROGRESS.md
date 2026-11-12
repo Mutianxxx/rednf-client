@@ -1,3 +1,15 @@
+# P0-2 ACT 粒子运行时接线与验收纠正（2026-11-12）
+
+共享 `ptl_program` 解析器已加入 dnf_core，预览器复用；新增 `ActParticleSystem`，ACT `[PARTICLE]` 与 spawn 附带 PTL 接入事务化实例生成、独立寿命、源坐标/归属及回收事件。新单元已登记 `cmake/source-ownership.json`。补修自然结束后 `cancel(id)` 提前返回导致粒子残留，以及非自然取消/故障的归属回收；新增对应检查。
+
+**PARTICLE 完整验收未通过，P0-2 整体仍未验收。** 当前没有主场景粒子绘制消费者，运动/重力/区域/旋转/连续发射未消费；部分 PTL 字段仅诊断而非阻塞。多 object 轮流选择、透明度线性插值为重建策略。纹理闭包校验和运行时实例存在不能代替实际绘制。已将计划中此前“粒子工厂已完成”的表述纠正为运行时子集，后续先完成本项再继续其他 P0-2 缺口。
+
+全量静态报告 `checkpoints/tests/p0-2-particles/passiveobject-coverage-particles.json`：5,638 ACT、1,629 整体准入（前次 1,597，+32）、5 异常；syntax/source/runtime 通过数分别 2,428 / 3,475 / 3,051。扫描不执行 bind/dispatch/advance。原 73 个纯粒子阻塞样本中 32 个准入，41 个仍阻塞；OBJ 内部 PTL 与 ACT 递归尚未解决。此扫描在生命周期窄修之前生成；窄修未改变编译准入。
+
+本轮增量构建通过；架构归属校验通过（141 单元，139 编译、2 历史保留），spawn 账本自测通过；ACT World host 最新专项 109 项通过（报告 `checkpoints/tests/p0-2-particles/reports/beta-act/act-world-host-tests.json`）。group 3 重跑真实退出 1，失败仍为已入库的 Event.ai 断言（Diagnostic damage draws only its hurt-presentation stream…），与既存基线错误一致；整组未通过。技能入口账本的过期“工厂未注册”说明已纠正；该脚本没有 `--self-test` CLI，本轮未声称其自测通过。用户反馈技能表现与1031实机等价仍未验收。
+
+---
+
 # P0-2 首个消费者接线：ACT CREATE PASSIVEOBJECT 真实 World 工厂（2026-11-12）
 
 按任务计划进入 P0-2，完成第一项「CREATE PASSIVEOBJECT 工厂」，**未**宣称 P0-2 整体完成。
