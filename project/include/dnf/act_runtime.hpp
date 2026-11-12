@@ -127,6 +127,10 @@ struct ActSpawn {
     std::string particle;
     ActCoordinates position;
     bool followingTarget = false, movablePositionOnly = false, noEffect = false;
+    // 1031 PVF [WARNING MARK] carries 2 or 4 integer operands. The operands are
+    // retained as source facts; the visual warning decal has no World consumer
+    // yet, so the compiler emits an explicit non-blocking diagnostic.
+    std::vector<int64_t> warningMark;
 };
 struct ActParticle { std::string path; ActVec3 offset; };
 struct ActTeleport { ActCoordinates position; bool moveOwner = false; };

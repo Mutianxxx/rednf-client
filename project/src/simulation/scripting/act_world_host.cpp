@@ -256,6 +256,55 @@ ActResolvedResource ActWorldResources::resolve(const ActResourceRequest &r) cons
                 std::set<std::string> visited;animation(member,visited,result.transitive,0);
                 result.transitiveClosureKnown=result.runtimeSupported=true;
                 result.diagnostic="ANI/ALS/IMG closure validated for existing MonsterMotion composition";
+            } else if(r.kind==ActResourceKind::PassiveObject) {
+                // Scoped P0-2 admission: enumerate the OBJ's complete literal
+                // dependency closure, but only where every leaf already has a
+                // real World consumer. PTL interpreter and generic ACT-object
+                // recursion are not registered, so such objects stay blocked
+                // with a precise reason instead of a fabricated closure.
+                const auto object=pvf_.script(member);
+                std::set<std::string> visited;
+                size_t leaves=0;
+                for(const auto &field:object.fields) {
+                    const auto tag=normalize(field.tag);
+                    if(tag.find("action")!=std::string::npos)
+                        throw std::invalid_argument("ACT passive object needs generic ACT-object recursion: "+member+" "+field.tag);
+                    for(const auto &value:field.values) {
+                        if(!value.is_string())continue;
+                        const auto literal=value.get<std::string>();
+                        const auto dot=literal.find_last_of('.');
+                        if(dot==std::string::npos)continue;
+                        const auto suffix=normalize(literal.substr(dot));
+                        const auto origin=makeSourceRef(pvf_,member,field.offset);
+                        if(suffix==".ani") {
+                            const auto ani=path(member,literal);
+                            animation(ani,visited,result.transitive,0);
+                            ActDependency d;d.request={ActResourceKind::Animation,origin,literal,-1};
+                            d.resolved=makeSourceRef(pvf_,ani);d.found=d.runtimeSupported=true;
+                            d.diagnostic="OBJ motion ANI/ALS/IMG closure validated for existing MonsterMotion composition";
+                            result.transitive.push_back(d);++leaves;
+                        } else if(suffix==".atk") {
+                            const auto atk=path(member,literal);
+                            const auto attack=readActCollisionAttack(pvf_.script(atk));
+                            if(!attack.sourceReady)throw std::invalid_argument("ACT passive-object ATK source inputs are unsupported: "+atk);
+                            if(!attack.sound.empty()){std::set<std::string> stack;sound(attack.sound,stack,result.transitive);}
+                            ActDependency d;d.request={ActResourceKind::AttackInfo,origin,literal,-1};
+                            d.resolved=makeSourceRef(pvf_,atk);d.found=d.runtimeSupported=true;
+                            d.diagnostic=attack.reactionReady?"OBJ ATK consumed by private ACT damage/status/RNG/HP transaction":
+                                "OBJ ATK damage source retained; authored reaction has a precise contact-time consumer gate";
+                            result.transitive.push_back(d);++leaves;
+                        } else if(suffix==".img") {
+                            const auto img=path(member,literal);
+                            ActDependency d;d.request={ActResourceKind::Animation,origin,literal,-1};
+                            d.resolved=staticSource(img,assets_.blob(img));d.found=d.runtimeSupported=true;
+                            d.diagnostic="OBJ IMG frame decoded by existing MonsterMotion renderer";
+                            result.transitive.push_back(d);++leaves;
+                        } else throw std::invalid_argument("Unsupported ACT passive-object dependency "+suffix+": "+member+" "+field.tag);
+                    }
+                }
+                if(!leaves)throw std::invalid_argument("ACT passive object has no executable ANI/ATK leaf: "+member);
+                result.transitiveClosureKnown=result.runtimeSupported=true;
+                result.diagnostic="OBJ ANI/ATK closure validated for ACT-owned World object factory";
             } else if(r.kind==ActResourceKind::AttackInfo) {
                 const auto attack=readActCollisionAttack(pvf_.script(member));
                 result.runtimeSupported=attack.sourceReady;result.transitiveClosureKnown=true;
@@ -305,9 +354,10 @@ struct ActWorldHost::Batch {
     bool playerInterrupted = false, controlInterrupted = false;
     std::optional<World::PreparedPlayerReaction> playerReaction;
     std::set<uint64_t> collisionChanged;
+    ObjectSystem spawned;
     explicit Batch(const ActWorldHost &h):player(h.world_.player),monsters(h.world_.monsters),events(h.world_.events),
         entities(h.world_.entities_),ids(h.world_.ids_),statuses(h.world_.statuses_),damageWindows(h.world_.monsterDamageWindows_),host(h.state_),
-        random(h.world_.random_),lastDamage(h.world_.lastDamageTrace_),playerGuardUntil(h.world_.guardUntil_){
+        random(h.world_.random_),lastDamage(h.world_.lastDamageTrace_),playerGuardUntil(h.world_.guardUntil_),spawned(h.spawned_){
         if(h.publicationEpoch_==UINT64_MAX)throw std::overflow_error("ACT host publication epoch exhausted");
     }
     Actor *actor(EntityHandle h) {
@@ -606,13 +656,14 @@ void ActWorldHost::restoreCollisions(State &candidate,const Json &value,const Ac
 }
 
 ActWorldHost::ActWorldHost(World &w,Pvf &p,Assets &a,std::string staticIdentity,ActWorldHostOptions options)
-    :world_(w),pvf_(p),assets_(a),resources_(p,a,std::move(staticIdentity)),options_(options) {
+    :world_(w),pvf_(p),assets_(a),resources_(p,a,std::move(staticIdentity)),catalog_(p,a),options_(options) {
     if(!options.speechDurationMs || options.speechDurationMs>60000)throw std::invalid_argument("Invalid ACT speech lifetime policy");
     if(w.tick<0)throw std::invalid_argument("Negative World tick");state_.lastTick=uint64_t(w.tick);
 }
 bool ActWorldHost::hasCommandConsumer(const std::string &kind) const {
     return kind=="set_speed" || kind=="teleport" || kind=="set_direction" || kind=="destroy" || kind=="sound" ||
-           kind=="cleanup_owned" || kind=="set_damage_check" || kind=="attack_rect" || kind=="change_attack_info" || (kind=="speech" && options_.enableSpeechPresentation);
+           kind=="cleanup_owned" || kind=="set_damage_check" || kind=="attack_rect" || kind=="change_attack_info" ||
+           kind=="spawn_passive_object" || (kind=="speech" && options_.enableSpeechPresentation);
 }
 ActCompileResult ActWorldHost::compile(const std::string &path,ActSemanticPolicy policy) const {
     auto result=compileActProgram(pvf_.script(path),context(pvf_,resources_,std::move(policy),[this](const std::string &s){return hasCommandConsumer(s);}));
@@ -634,8 +685,9 @@ void ActWorldHost::commit(Batch &b) noexcept {
     static_assert(std::is_nothrow_swappable<State>::value,"ACT state publication must not throw");
     static_assert(std::is_nothrow_swappable<EntityRegistry>::value,"Registry publication must not throw");
     static_assert(std::is_nothrow_swappable<StatusHost>::value,"Status publication must not throw");
+    static_assert(std::is_nothrow_swappable<ObjectSystem>::value,"ACT spawned-object publication must not throw");
     using std::swap;swap(world_.player,b.player);world_.monsters.swap(b.monsters);world_.events.swap(b.events);
-    swap(world_.entities_,b.entities);swap(world_.ids_,b.ids);swap(world_.statuses_,b.statuses);world_.monsterDamageWindows_.swap(b.damageWindows);swap(state_,b.host);
+    swap(world_.entities_,b.entities);swap(world_.ids_,b.ids);swap(world_.statuses_,b.statuses);world_.monsterDamageWindows_.swap(b.damageWindows);swap(state_,b.host);swap(spawned_,b.spawned);
     static_assert(std::is_nothrow_swappable<RandomStreams>::value,"ACT combat random publication must not throw");
     swap(world_.random_,b.random);world_.lastDamageTrace_.swap(b.lastDamage);world_.guardUntil_=b.playerGuardUntil;
     if(b.playerInterrupted) {
@@ -643,7 +695,53 @@ void ActWorldHost::commit(Batch &b) noexcept {
     }
     assert(publicationEpoch_!=UINT64_MAX);++publicationEpoch_;
 }
+void ActWorldHost::spawnPassiveObject(Batch &b,uint64_t id,const ActEmittedCommand &command,const ActSpawn &spawn) {
+    if(spawn.objectIndex<0)throw std::invalid_argument("ACT spawn has no passive-object index");
+    // The compile-time admission must already have enumerated this OBJ's whole
+    // literal closure. Never create an entity from an unvalidated definition.
+    const auto resource=resources_.resolve({ActResourceKind::PassiveObject,command.source,"",spawn.objectIndex});
+    if(!resource.found || !resource.runtimeSupported || !resource.transitiveClosureKnown)
+        throw std::invalid_argument("ACT spawn object has no admitted dependency closure: "+resource.diagnostic);
+    auto definition=catalog_.definition(spawn.objectIndex);
+    if(!definition)throw std::invalid_argument("ACT spawn object definition is unavailable");
+    const auto &os=*command.ownerSnapshot,&rs=*command.recipientSnapshot;
+    const auto &base=spawn.position.useOwnerBase?os:rs;
+    const int direction=spawn.position.useOwnerDirection?os.direction:rs.direction;
+    const double x=(spawn.position.useMapPosition?0:base.position.x)+spawn.position.value.x*(spawn.position.useMapPosition?1:direction);
+    const double y=(spawn.position.useMapPosition?0:base.position.y)+spawn.position.value.y;
+    const double z=(spawn.position.useMapPosition?0:base.position.z)+spawn.position.value.z;
+    if(!std::isfinite(x) || !std::isfinite(y) || !std::isfinite(z) || z<0)
+        throw std::invalid_argument("Invalid ACT spawn coordinates");
+    if(b.spawned.instances().size()>=512)throw std::overflow_error("ACT owned passive-object budget exceeded");
+    // Host-generated identity: this is a runtime entity, not a MAP placement.
+    // The ACT instance/action and command sequence make the key reproducible.
+    ObjectIdentity identity;
+    identity.run="act-runtime";
+    identity.room=std::to_string(id)+":"+std::to_string(command.actionId);
+    identity.map=definition->source;
+    identity.fieldOffset=command.sequence;
+    identity.recordOrdinal=uint64_t(spawn.objectIndex);
+    ObjectPlacement placement;
+    placement.identity=identity;placement.id=spawn.objectIndex;
+    placement.x=x;placement.y=y;placement.z=z;placement.sourceBytes=definition->raw;
+    auto &instance=b.spawned.add(std::move(placement),definition,currentObjectBehavior(*definition));
+    instance.direction=direction;
+    auto *owner=b.actor(command.owner);
+    b.events.push_back({world_.tick,"act_spawn_passive_object",definition->source,owner?owner->id:0,
+                        spawn.objectIndex,spawn.level});
+}
+void ActWorldHost::retireSpawns(Batch &b,uint64_t id) {
+    const std::string prefix=std::to_string(id)+":";
+    for(const auto &instance:b.spawned.instances()) {
+        const auto &identity=instance.placement.identity;
+        if(identity.run!="act-runtime" || identity.room.rfind(prefix,0)!=0 ||
+           instance.state==ObjectState::Removed)continue;
+        b.spawned.remove(identity);
+        b.events.push_back({world_.tick,"act_spawn_retired",identity.key(),instance.placement.id});
+    }
+}
 void ActWorldHost::cleanup(Batch &b,uint64_t id) {
+    retireSpawns(b,id);
     for(auto i=b.host.velocities.begin();i!=b.host.velocities.end();)if(i->second.instanceId==id)i=b.host.velocities.erase(i);else ++i;
     auto &speech=b.host.speech;speech.erase(std::remove_if(speech.begin(),speech.end(),[&](const auto &s){return s.instanceId==id;}),speech.end());
     const auto instance=b.host.instances.find(id);
@@ -690,6 +788,7 @@ void ActWorldHost::applyCommands(Batch &b,uint64_t id,const ActPreparedStep &ste
         if(!owner || !recipient)continue; // Retired generation is never retargeted.
         if(!command.ownerSnapshot || !command.recipientSnapshot)throw std::invalid_argument("ACT command has no immutable coordinate receipt");
         const auto &os=*command.ownerSnapshot,&rs=*command.recipientSnapshot;
+        if(const auto *spawn=std::get_if<ActSpawn>(&command.payload)) {spawnPassiveObject(b,id,command,*spawn);continue;}
         if(const auto *speed=std::get_if<ActSetSpeed>(&command.payload)) {
             auto found=b.host.velocities.find(command.recipient);
             if(found!=b.host.velocities.end() && found->second.instanceId!=id)throw std::invalid_argument("ACT velocity ownership conflict");
@@ -901,6 +1000,9 @@ ActWorldHostResult ActWorldHost::advance(const SimulationStep &step,const std::m
         }
         auto &speech=b.host.speech;speech.erase(std::remove_if(speech.begin(),speech.end(),[&](const auto &s){return s.expiresMs<=step.milliseconds || !b.actor(s.speaker);}),speech.end());
         for(auto i=b.host.relations.begin();i!=b.host.relations.end();)if(!b.actor(i->first))i=b.host.relations.erase(i);else ++i;
+        // ACT-owned objects use the same fixed simulation tick. Hit-stop and
+        // external animation-delta coupling for these entities is not recovered.
+        b.spawned.advance(int64_t(step.deltaMilliseconds)*1000);
         b.host.lastTick=step.tick;commit(b);return {true,{},{}};
     }catch(const std::exception &e){return failure(e);}
 }
@@ -940,6 +1042,7 @@ void ActWorldHost::resetCancelledClock() {
         throw std::logic_error("Cancelled ACT host retains owned effects");
     if(publicationEpoch_==UINT64_MAX)throw std::overflow_error("ACT host publication epoch exhausted");
     state_.instances.clear();state_.relations.clear();state_.presentation.clear();
+    spawned_.clear(); // Transient ACT-owned entities never survive a clock reset.
     state_.lastTick=uint64_t(world_.tick);++publicationEpoch_;
 }
 
@@ -1206,6 +1309,10 @@ void ActWorldHost::publishAfterOuterCommit(PreparedRestore &&prepared) noexcept 
     // first authoritative swap and no other writer may interleave that section.
     assert(prepared.ready() && prepared.origin_==this && prepared.expectedEpoch_==publicationEpoch_ && publicationEpoch_!=UINT64_MAX);
     static_assert(std::is_nothrow_swappable<State>::value,"ACT continuation publication must not throw");
+    // ACT-owned entities are transient: a published restore discards them
+    // instead of pretending the checkpoint carried their ObjectInstances.
+    static_assert(std::is_nothrow_move_assignable<ObjectSystem>::value,"ACT spawned-object discard must not throw");
+    spawned_=ObjectSystem{};
     using std::swap;swap(state_,*prepared.state_);++publicationEpoch_;prepared.state_.reset();prepared.origin_=nullptr;
 }
 ActWorldHostResult ActWorldHost::publish(PreparedRestore &&prepared) {

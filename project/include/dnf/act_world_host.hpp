@@ -3,12 +3,16 @@
 #include "dnf/act_collision.hpp"
 #include "dnf/audio_catalog.hpp"
 #include "dnf/combat.hpp"
+#include "dnf/objects.hpp"
 #include <memory>
 
 namespace dnf {
-// Production source resolver. PVF references retain PVF identity; IMG/audio
-// leaves retain their own byte hash and the caller's static-content identity.
-// No passive-object/PTL/ATK factory is claimed by this first World adapter.
+// PVF references retain PVF identity; IMG/audio leaves retain their own byte
+// hash and the caller's static-content identity. A passive-object request is
+// admitted only when its complete OBJ dependency closure is ANI/ATK leaves
+// that the existing World consumers can validate; OBJ files with ACT or PTL
+// references are rejected with a precise diagnostic instead of being guessed.
+// PTL factory and generic ACT-object recursion are still not claimed.
 class ActWorldResources final : public ActResourceResolver {
     Pvf &pvf_;
     Assets &assets_;
@@ -108,8 +112,14 @@ class ActWorldHost {
     Pvf &pvf_;
     Assets &assets_;
     ActWorldResources resources_;
+    ObjectCatalog catalog_;
     ActWorldHostOptions options_;
     State state_;
+    // ACT-owned runtime passive objects. Kept outside State: these entities are
+    // transient by policy and are NOT part of the host checkpoint. A restore
+    // requires cancelAll() first; publish/restore clears this container.
+    // Batches copy it, so creation and retirement stay atomic with commit().
+    ObjectSystem spawned_;
     // Process-local publication identity. Never serialized or restored; saved
     // logical IDs/revisions may repeat, this epoch cannot repeat.
     uint64_t publicationEpoch_ = 0;
@@ -120,6 +130,8 @@ class ActWorldHost {
     static size_t eventReceiptBytes(const State &);
     void apply(Batch &, uint64_t, const ActPreparedStep &);
     void applyCommands(Batch &, uint64_t, const ActPreparedStep &, SourceRef *failureLocation);
+    void spawnPassiveObject(Batch &, uint64_t, const ActEmittedCommand &, const ActSpawn &);
+    void retireSpawns(Batch &, uint64_t);
     void cleanup(Batch &, uint64_t);
     void bindCollision(Batch &,uint64_t,const MonsterActionRoute *);
     void collide(Batch &,uint64_t,uint64_t,bool);
@@ -166,6 +178,10 @@ class ActWorldHost {
     bool ownsActor(EntityHandle) const;
     bool controlsMovement(EntityHandle) const;
     const std::map<uint64_t, ActInstanceState> &instances() const { return state_.instances; }
+    // Read-only ACT-owned runtime entities. These are real ObjectInstance
+    // records with a resolved OBJ definition, not a static admission flag;
+    // main-Scene rendering and ObjectSystem contact settlement are still P0-3.
+    const ObjectSystem &spawnedObjects() const { return spawned_; }
     const std::vector<ActSpeechBubble> &speechBubbles() const { return state_.speech; }
     Json diagnostics() const { return state_.diagnostics; }
     const std::map<uint64_t,ActCollisionState> &collisions() const { return state_.collisions; }

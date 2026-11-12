@@ -12,6 +12,8 @@
 - 技能入口与消费者账本脚本：`project/tools/skill_entry_ledger.py`
 - 账本产物（本地可重建，不入库）：`checkpoints/tests/pvf-audit/skill-entry-ledger.json`
 - 账本重建命令：`python project/tools/skill_entry_ledger.py --out checkpoints/tests/pvf-audit/skill-entry-ledger.json`（依赖同目录的 `act-prefix-coverage.json`、`act-audit.json`、`skill-closure-v3.json`）
+- P0-2 被动对象工厂准入账本脚本：`project/tools/act_spawn_admission.py`
+- P0-2 账本产物（本地可重建，不入库）：`checkpoints/tests/pvf-audit/act-spawn-admission.json`
 - 本文只描述静态字节/标签事实；“已解析”不等于“运行时语义已实现”。
 
 ## 1. PVF 实际文件类别
@@ -183,6 +185,32 @@ passiveobject/passiveobject.lst 整数 id → .obj → [basic motion]/[etc motio
 **有证据的未恢复边**：1,642 个只有 exe 绑定、无 NUT 注册表的技能（`0x70213F` ATK 选择器位于未恢复 exe VM 区）；33 条动态对象 ID；288 个未注册 SKL；状态触发条件与时序（账本只记录入口身份，不证明哪个 state 实际触发、按什么顺序播放）。
 
 产物 `checkpoints/tests/pvf-audit/skill-entry-ledger.json` 可重建、不入库。已通过纯函数自测、作用域隔离、诊断完整性、全量计数一致性和重跑哈希一致检查。**静态准入不等于 World 执行，也不等于 1031 实机等价**；用户反馈的剑阵错位、觉醒缺半、冰弓无箭等缺陷仍未据此修复或验收。
+
+## 6.2 ACT 被动对象工厂准入基线（P0-2，2026-11-12）
+
+P0-2 首项把 `CREATE PASSIVEOBJECT` 接到真实 `ActWorldHost` / `ObjectSystem`。准入账本 `project/tools/act_spawn_admission.py` 只做静态证据：对象 ID 取自 ACT 依赖表里显式 `passive_object` 索引，经 `passiveobject/passiveobject.lst` 解析到 `.obj`；OBJ 字面依赖按扩展名分桶，`bucket=admissible` 只表示叶子全是 `.ani` / `.atk` / `.img`，**不等于** C++ 侧整体准入 `ok=true`。账本同时并列记录 `dnf_inspect --act-coverage-prefix` 的三阶段与整体旗标。
+
+重建顺序（报告均可重建、不入库）：
+
+```bash
+# 1) 用同一 World host 生成两份修正后的批量准入报告
+dnf_inspect CLIENT --act-coverage-prefix passiveobject/ _ checkpoints/tests/p0-2-spawn/act-coverage-final.json
+dnf_inspect CLIENT --act-coverage-prefix monster/       _ checkpoints/tests/p0-2-spawn/monster-act-coverage.json
+# 2) 生成账本；--before 传入修正前的旧报告以计算准入增量
+python project/tools/act_spawn_admission.py \
+  --coverage checkpoints/tests/p0-2-spawn/act-coverage-final.json \
+  --coverage checkpoints/tests/p0-2-spawn/monster-act-coverage.json \
+  --before checkpoints/tests/pvf-audit/act-prefix-coverage.json \
+  --out checkpoints/tests/pvf-audit/act-spawn-admission.json
+```
+
+**1031 字节事实**：全包 19,087 个 ACT 中，303 个文件的 1,580 处 `[CREATE PASSIVEOBJECT] [WARNING MARK]` 带 2 或 4 个整数操作数（4：1,418；2：162）。旧编译器兜底按 0 操作数处理，把它们误判为 `operand_count` 语法错误。修正后操作数保留在 `ActSpawn::warningMark`，并发**非阻塞**诊断 `warning_mark_consumer_unregistered`：预警贴花的 World 消费者仍未注册，标签读取不等于语义实现。
+
+**修正后的准入增量**：`passiveobject/` 5,638 个 ACT 的整体 `ok` 从 1,596 增至 1,597，syntax +8、source +12、runtime +9；唯一新增整体准入的 spawn ACT 是 `passiveobject/actionobject/common/action/flamestrike_item.act`。合并 `monster/` 13,118 个 ACT 后，账本共 4,244 个含被动对象的 ACT、2,365 个唯一对象 ID；C++ 侧整体 `ok=true` 的只有 4 个（3 个 monster 动作 + flamestrike），214 个文件带预警贴花缺口诊断。剩余阻塞按 OBJ 字面依赖分桶：OBJ→ACT 通用递归 2,385、PTL 解释器 1,657、ACT opcode 115、注册表 38、未知依赖 3。
+
+**真实 World fixture 证据**：`monster/newmonsters/queen_rosi/action/attack2.act` 的 BASE ANI 无 type15 攻击盒、整体静态准入通过，4 条 `CREATE PASSIVEOBJECT`（对象 30059）经 `bind` + 固定步进生成 `ObjectInstance`，验证定义源路径、`act-runtime` 身份、owner/instance 归属、坐标与 World 事件，`cancelAll` 后实体全部回收。`flamestrike_item.act` 的 BASE ANI 有 4 个未配对 type15，`bind` 被精确阻塞；PTL 与全透明占位 ANI 样本继续显式阻塞。`runActWorldHostTests` 专项 81 项通过。
+
+**边界**：预警贴花、PTL 粒子工厂、OBJ→ACT 通用递归、type15 攻击身份/配对 ATK、对象运动/命中/伤害闭环均未恢复。静态 `ok` / `runtime_ready` 不代表 World 执行或 1031 原版等价；group 3 整体仍因既存 Event.ai 基线问题失败（见 `project/reports/core-group-3-result.json`），不是本项回归。用户反馈的剑阵、觉醒、冰弓、枪手投射物缺陷未据此修复或验收。
 
 ## 7. 历史结论（以下链为待验证模型）
 

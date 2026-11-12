@@ -166,10 +166,14 @@ Json payloadJson(const ActCommandPayload &payload) {
             return result;
         },
         [](const ActSpawn &v) -> Json {
-            return {{"kind", "spawn_passive_object"}, {"index", v.objectIndex}, {"level", v.level},
+            Json result = {{"kind", "spawn_passive_object"}, {"index", v.objectIndex}, {"level", v.level},
                     {"particle", v.particle}, {"coordinates", coordinatesJson(v.position)},
                     {"following_target", v.followingTarget}, {"movable_position_only", v.movablePositionOnly},
                     {"no_effect", v.noEffect}};
+            // Only ACTs that actually carry a 1031 WARNING MARK gain the field;
+            // commands without one keep their historical payload shape.
+            if (!v.warningMark.empty()) result["warning_mark"] = v.warningMark;
+            return result;
         },
         [](const ActParticle &v) -> Json { return {{"kind", "particle"}, {"path", v.path}, {"offset", vectorJson(v.offset)}}; },
         [](const ActTeleport &v) -> Json { return {{"kind", "teleport"}, {"coordinates", coordinatesJson(v.position)}, {"move_owner", v.moveOwner}}; },
@@ -590,6 +594,20 @@ class Compiler {
                     spawn.position.useMapPosition = previous.useMapPosition;
                     spawn.position.useOwnerDirection = previous.useOwnerDirection;
                 }
+            } else if (name == "[warning mark]") {
+                // 1031 PVF byte evidence: 303 ACT files contain 1580 WARNING MARK
+                // fields, with exactly 2 (162) or 4 (1418) integer operands.
+                // The old catch-all count(i, 0) mislabeled them as syntax errors.
+                const auto &values = script_.fields[i].values;
+                require(values.size() == 2 || values.size() == 4, i, "warning_mark_operands",
+                        "WARNING MARK requires 2 or 4 integer operands in 1031 PVF");
+                for (const auto &value : values)
+                    spawn.warningMark.push_back(integerNumber(value, "Invalid WARNING MARK operand"));
+                // Retaining operands is not the same as implementing the decal.
+                // Keep the missing consumer visible without claiming syntax failure.
+                program_->diagnostics.push_back({"warning_mark_consumer_unregistered",
+                    "CREATE PASSIVEOBJECT WARNING MARK operands validated against 1031 PVF; visual warning-decal World consumer is not registered",
+                    source(i, scope), false});
             } else {
                 count(i, 0);
                 if (name == "[use my basepos]") spawn.position.useOwnerBase = true;

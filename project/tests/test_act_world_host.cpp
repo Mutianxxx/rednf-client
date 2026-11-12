@@ -10,6 +10,11 @@ constexpr const char *teleportSource="monster/newmonsters/shonan/kaizen/action/t
 constexpr const char *speedSource="monster/newmonsters/heaven/jena/action/dash.act";
 constexpr const char *soundSource="monster/newmonsters/bloodbutterfly/bloodbutterflynamed/action/butterfly_attack6.act";
 constexpr const char *destroySource="passiveobject/actionobject/monster/timegate/topsecretarea/rudol/action/iceball_break.act";
+constexpr const char *spawnSource="monster/newmonsters/queen_rosi/action/attack2.act";
+constexpr const char *spawnObjectSource="passiveobject/monster/soceress/iceniddlegroup.obj";
+constexpr int spawnObjectId=30059;
+constexpr const char *warningMarkSource="passiveobject/actionobject/common/action/flamestrike_item.act";
+constexpr const char *transparentMotionSource="passiveobject/actionobject/monster/haze/action/bomb1.act";
 constexpr uint64_t generation=19;
 
 struct WorldFixture {
@@ -128,10 +133,10 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
         WorldFixture f(pvf,assets,false);const auto compiled=f.host.compile(teleportSource);
         check(!compiled.ok && diagnostic(compiled.json().at("diagnostics"),"missing_command_consumer"),
               "Localized SPEECH blocks execution until its real presentation endpoint is explicitly attached");
-        check(!f.host.hasCommandConsumer("spawn_passive_object") && !f.host.hasCommandConsumer("particle") &&
+        check(f.host.hasCommandConsumer("spawn_passive_object") && !f.host.hasCommandConsumer("particle") &&
               f.host.hasCommandConsumer("attack_rect") && f.host.hasCommandConsumer("change_attack_info") &&
               !f.host.hasCommandConsumer("trigger_control") && !f.host.hasCommandConsumer("deferred_call"),
-              "Actual attack-control consumers are registered while missing OBJ/PTL and cross-action consumers remain blocked");
+              "The scoped ACT-owned object factory is registered while PTL emission and cross-action consumers remain blocked");
         const auto attack=f.host.compile("passiveobject/actionobject/monster/new_event/action/assault_missile0.act");
         check(attack.ok && attack.program->runtimeReady,
               "Root ANI type15 is admitted only through the real registered collision and source damage host");
@@ -411,6 +416,55 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
         WorldFixture catchup(pvf,assets);catchup.bind(speedSource);catchup.world.advance(2000000000,3);
         while(catchup.world.pendingTicks())catchup.world.advance(0,3);
         check(catchup.summary()==reference,"Budgeted catch-up ticks preserve the same real World movement and ACT event results");
+    }
+    {
+        // P0-2 scoped factory. 1031 PVF [WARNING MARK] has 2 or 4 integer
+        // operands, not the zero the old catch-all assumed. After preserving
+        // those operands and emitting an explicit non-blocking consumer gap,
+        // real monster/actionobject ACTs reach full static admission. This
+        // sample's BASE ANI has no type15 attack box, so bind needs no forged
+        // paired ATK; its four CREATE PASSIVEOBJECT commands spawn object
+        // 30059, whose OBJ literal closure is ANI/ATK only.
+        WorldFixture f(pvf,assets,false);
+        const auto admitted=f.host.compile(spawnSource);
+        check(admitted.ok && admitted.program->runtimeReady &&
+              diagnostic(admitted.json().at("diagnostics"),"warning_mark_consumer_unregistered"),
+            "1031 WARNING MARK operands are retained while the unregistered warning-decal consumer stays an explicit non-blocking gap");
+        size_t marks=0;
+        for(const auto &behavior:admitted.program->behaviors)
+            for(const auto &instruction:behavior.instructions)
+                if(const auto *spawn=std::get_if<ActSpawn>(&instruction.payload))
+                    marks+=spawn->warningMark.size()==4 && spawn->objectIndex==spawnObjectId;
+        check(marks==4,"CREATE PASSIVEOBJECT keeps its four source WARNING MARK operands in the compiled instructions");
+        const auto warning=f.host.compile(warningMarkSource);
+        check(warning.ok && warning.program->runtimeReady,
+            "The 1031 [WARNING MARK] operand fix removes a real syntax misclassification");
+        const auto unpaired=f.host.bind(warning.program,f.request(42));
+        check(!unpaired.ok && unpaired.error.find("type15")!=std::string::npos,
+            "An admitted ACT whose BASE ANI has unpaired type15 boxes is still blocked at bind instead of silently losing attack identity");
+        const auto ptl=f.host.compile("passiveobject/actionobject/common/action/exsviperbullet.act");
+        check(!ptl.ok && diagnostic(ptl.json().at("diagnostics"),"missing_resource_consumer"),
+            "An OBJ with [string data] PTL references stays blocked until a particle interpreter is registered");
+        const auto transparent=f.host.compile(transparentMotionSource);
+        check(!transparent.ok && diagnostic(transparent.json().at("diagnostics"),"missing_resource_consumer"),
+            "A motion ANI with only transparent placeholder frames stays blocked instead of being counted as an admitted closure");
+        f.bind(spawnSource,41);f.ticks(60);
+        const auto &objects=f.host.spawnedObjects().instances();
+        check(!objects.empty() && objects.front().definition && objects.front().definition->id==spawnObjectId &&
+              objects.front().definition->source==spawnObjectSource &&
+              objects.front().placement.identity.run=="act-runtime" && objects.front().placement.z==0,
+            "ACT CREATE PASSIVEOBJECT publishes a real ObjectInstance with its registered OBJ definition and source coordinates");
+        check(std::any_of(objects.begin(),objects.end(),[](const auto &o){
+                return o.placement.identity.room.rfind("41:",0)==0;}),
+            "Spawned entities carry their owning ACT instance/action identity for scoped cleanup");
+        check(std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_spawn_passive_object";}),
+            "World event log records the ACT-owned object creation");
+        const auto retired=f.host.cancelAll("p0-2 ownership cleanup");
+        const auto &after=f.host.spawnedObjects().instances();
+        check(retired.ok && !after.empty() &&
+              std::all_of(after.begin(),after.end(),[](const auto &o){return o.state==ObjectState::Removed;}) &&
+              std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_spawn_retired";}),
+            "Cancelling the owning ACT instance retires its spawned entities and records the retirement event");
     }
     return {{"status","pass"},{"count",checks.size()},{"checks",checks},{"evidence","inferred World host; current-PVF source fixtures"},
         {"scope","Real World actors, status lifecycle/contact ledgers, hit-stop/external clock, entity generations/events and same-tick prepared-World ACT import; diagnostic status setup is not a normal skill chain, renderer/audio-device/controller activation/CharacterStore disk restore remain separate"}};
