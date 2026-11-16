@@ -210,7 +210,7 @@ python project/tools/act_spawn_admission.py \
 
 **真实 World fixture 证据**：`monster/newmonsters/queen_rosi/action/attack2.act` 的 BASE ANI 无 type15 攻击盒、整体静态准入通过，4 条 `CREATE PASSIVEOBJECT`（对象 30059）经 `bind` + 固定步进生成 `ObjectInstance`，验证定义源路径、`act-runtime` 身份、owner/instance 归属、坐标与 World 事件，`cancelAll` 后实体全部回收。`flamestrike_item.act` 的 BASE ANI 有 4 个未配对 type15，`bind` 被精确阻塞；PTL 与全透明占位 ANI 样本继续显式阻塞。`runActWorldHostTests` 专项 82 项通过。
 
-**边界**：预警贴花、PTL 粒子工厂、OBJ→ACT 通用递归、type15 攻击身份/配对 ATK、对象运动/命中/伤害闭环均未恢复。静态 `ok` / `runtime_ready` 不代表 World 执行或 1031 原版等价；group 3 整体仍因既存 Event.ai 基线问题失败（见 `project/reports/core-group-3-result.json`），不是本项回归。用户反馈的剑阵、觉醒、冰弓、枪手投射物缺陷未据此修复或验收。
+**边界（本节记录 2026-11-12 状态）**：预警贴花、PTL 粒子工厂、OBJ→ACT 通用递归、type15 攻击身份/配对 ATK、对象运动/命中/伤害闭环当时均未恢复；type15 的后续限定子集见 6.5。静态 `ok` / `runtime_ready` 不代表 World 执行或 1031 原版等价；group 3 整体仍因既存 Event.ai 基线问题失败（见 `project/reports/core-group-3-result.json`），不是本项回归。用户反馈的剑阵、觉醒、冰弓、枪手投射物缺陷未据此修复或验收。
 
 ## 6.3 ACT 粒子运行时子集（P0-2，2026-11-12）
 
@@ -239,6 +239,14 @@ PTL 不能只按“有标签”判断已实现。下表把**当前端闭合**与
 | `[display effect rate]`、`[layer]`、`[creation pos]`、`[create pos correct]` | 当前端未闭合或仅间接线索 | 官方注释/40JP 字段线索 | 仅诊断，不调用猜测语义 |
 
 证据入口：`rep-player-1031-pvf/docs/native-evidence/ptl-emitter/README.md`、`native-dump.json`、`static-disassembly.json`、`pvf-analysis.json`，以及 `skills/dnf-pvf-knowledge/references/07-advanced-act-ani-nut.md`。跨版本资料只解释机制，不覆盖 1031 表现。
+
+## 6.5 SUB ANI type15 攻击身份限定子集（2026-11-16）
+
+1031 源侧可作为 type15 攻击身份的 exact 路径有三类：MOB 源动作槽解析出的 `[attack info]`、OBJ 中同时 exact 指向当前 ACT 的 `[basic action]` 与 `[attack info]`、ACT 自身 `[default attackinfo]`。编译器在没有这些身份时仍静态拒绝 attack-bearing SUB ANI；编入 `collisionTracks` 的 BASE/SUB 动画各自保留源帧边界、层与 XY，并在 World 中分配独立 `attackInstance`、`hitIndex` 和 `acceptedTargets`。ATTACKRECT reset/on、snapshot/restore 与 owner remap 也按 track 同步，避免把多段 SUB 动画压成一个攻击盒时钟。
+
+`jena.mob` 的 Event.ai 返回动作在源 MOB 中没有解析出的 `[attack info]`：现在按源事实保留空静态身份，让 ACT 的攻击盒/换 ATK 命令决定碰撞，不填一个猜测 ATK；该动作仍能按源路由 bind。source action service 的 compile 与 bind 使用同一 exact MOB route，且 blocked 路径不提前抽取私有 RNG。
+
+**边界**：这只是身份与独立轨迹子集，不是原版等价。SUB ANI 的 Z 偏移在当前 1031 源数据没有字段，未伪造；视觉 renderer track 与 World collision track 的语义一致性仍需单独核对；旋转/落点/随机分布/持续发射、对象运动→命中→伤害闭环以及用户反馈技能表现仍未恢复或验收。专项 `act-world-host-tests.json` 117 项通过；group 3 整组仍因既存 Event.ai 基线失败，不据此宣称整组通过。
 
 ## 7. 历史结论（以下链为待验证模型）
 

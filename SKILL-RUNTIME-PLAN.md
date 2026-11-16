@@ -46,7 +46,7 @@
 | P0-2 | ACT结构及源保真 | 嵌套、原token/offset保留；未知显式诊断 | 部分完成：编译器已有子集；2026-11-12 按 1031 字节修正 `[WARNING MARK]` 2/4 操作数误判（303 ACT / 1580 处），操作数保留并给非阻塞缺口诊断；大量 opcode/selector 仍阻塞 |
 | P0-2 | CREATE PASSIVEOBJECT工厂 | 真实实体生成、归属、参数、碰撞及取消/换图清理 | **已完成（2026-11-12，限定范围）**：`ActWorldHost` 接通 `spawn_passive_object` 与 `ObjectCatalog`/`ObjectSystem`，受控 OBJ ANI/ATK/IMG 依赖闭包，PTL/ACT 递归精确阻塞；`queen_rosi/attack2.act` 真实 World fixture 验证实体创建、`act-runtime` 归属、z 坐标、事件与 `cancelAll` 回收。预警贴花、对象碰撞/命中/运动不在本项完成范围 |
 | P0-2 | PARTICLE工厂 | ACT实际发射PTL，验证纹理、时钟及回收 | **部分完成（2026-11-16，运行时与绘制子集）**：共享 PTL 解码器校验 `[object]` 纹理闭包并逐字段登记缺口；`ActParticleSystem` 消费寿命、数量、直线/保持末值速度、重力、透明度和确定性区域偏移；主场景把粒子按 Y-Z 深度送入现有绘制队列，隐藏 SDL 渲染实测有像素输出；`cancel`/`cancelAll`/自然过期与时钟重置回收保留。专项 112 项通过。旋转/落点/随机分布/持续发射未闭合，源语义 `equivalent=false`；OBJ 内部 PTL 仍阻塞，完整验收未通过 |
-| P0-2 | SUB ANI及攻击身份 | 源帧/层/偏移正确，XYZ及攻击子动画独立碰撞身份/时钟 | 部分完成：组合子集已有，XYZ/攻击身份仍缺 |
+| P0-2 | SUB ANI及攻击身份 | 源帧/层/偏移正确，XYZ及攻击子动画独立碰撞身份/时钟 | **部分完成（2026-11-16）**：MOB exact `[attack info]`、OBJ exact `[basic action]`+`[attack info]`、ACT `[default attackinfo]` 可作为 1031 type15 身份；BASE/SUB ANI 各有独立帧边界/层/XY、attackInstance/hitIndex/acceptedTargets 与恢复支持；无身份 SUB ANI 精确阻塞，无源 ATK 的 MOB 路由保留空身份不猜路径。Z 偏移、渲染/碰撞 track 语义一致性与原版等价仍缺 |
 | P0-2 | 位移/速度/重力 | 各标签改变真实位置，暂停/取消/恢复一致 | 部分完成：速度/传送/方向已有，通用运动和重力未齐 |
 | P0-2 | 触发/延迟/命中事件 | 实际事件→调度→消费；去重、预算、恢复及跨程序边界可测 | 部分完成：调度/怪物命中子集已有，控制/跨程序接线缺 |
 | P0-3 | OBJ状态与action选择 | 按状态选择源ACT/ANI，保留引用及未知字段 | 部分完成：元数据已有，通用状态派发未闭合 |
@@ -83,7 +83,7 @@
 4. P1各项可独立调查，正式集成按ALS→ATK→PTL，再P2。每节点分开验收源解析、命令编译、World执行与原版等价。
 5. 测试源码只证明测试存在；历史报告不证明当前版本重跑通过。整体ok与syntax/source/runtime独立旗标不可混用。
 6. **P0-2 首项「CREATE PASSIVEOBJECT 工厂」已于 2026-11-12 按验收完成**（真实 World 实体、归属、取消回收、专项 82 项通过）。准入范围只按账本已闭合的具体依赖，不因全包 ACT 标签频率扩大。
-7. **P0-2 第二项「PARTICLE 工厂」仅完成运行时/绘制子集，完整验收未通过（2026-11-16）**：共享 1031 PTL 解码器、纹理闭包、真实 World 实体与独立时钟、直线/保持末值速度、重力、透明度、确定性区域偏移、主场景 Y-Z 深度绘制及回收均已接通；隐藏 SDL 渲染实测有像素变化，World host 专项 112 项通过。未知/畸形标签和未消费字段逐项诊断，`sourceSemantics=subset` 与 `equivalent=false` 明确区分可执行子集和语义等价。旋转、落点、随机分布、持续发射及 OBJ 内部 `[string data]` 仍阻塞。**P0-2 整体仍未验收**：SUB ANI 攻击身份与 type15 配对 ATK（#75）、通用运动/重力与触发延迟命中跨程序接线（#76）、整体验收门槛（#77）仍缺。静态 `ok`/`runtime_ready` 不代表 1031 原版等价。
+7. **P0-2 第二项「PARTICLE 工厂」仅完成运行时/绘制子集，完整验收未通过（2026-11-16）**：共享 1031 PTL 解码器、纹理闭包、真实 World 实体与独立时钟、直线/保持末值速度、重力、透明度、确定性区域偏移、主场景 Y-Z 深度绘制及回收均已接通；隐藏 SDL 渲染实测有像素变化，World host 专项 112 项通过。未知/畸形标签和未消费字段逐项诊断，`sourceSemantics=subset` 与 `equivalent=false` 明确区分可执行子集和语义等价。旋转、落点、随机分布、持续发射及 OBJ 内部 `[string data]` 仍阻塞。**P0-2 整体仍未验收**：SUB ANI 攻击身份与 type15 配对 ATK（#75）已完成 exact 身份/独立轨迹子集（117 项专项通过），但 Z 偏移与语义等价仍缺；通用运动/重力与触发延迟命中跨程序接线（#76）、整体验收门槛（#77）仍缺。静态 `ok`/`runtime_ready` 不代表 1031 原版等价。
 8. group 3 整体失败的既存 Event.ai 基线问题（见 `project/reports/core-group-3-result.json`）独立记录，不计作 P0-2 回归，也不据此宣称整组通过。
 
 主要核查位置：`project/tools/{skill_closure.py,act_audit.py,inspect.cpp}`、`project/src/simulation/scripting/`、`simulation/entities/objects.cpp`、`simulation/actions/source_skill_action.cpp`、`simulation/combat/`、`presentation/effects/effect_plan.cpp`、`tools/skill_preview_particles.cpp`、`content/skill_data.cpp`及相应`project/tests/`。既有审计产物位于`checkpoints/tests/pvf-audit/`，不入库。
@@ -101,6 +101,7 @@
 - [x] 2026-11-12 技能入口与消费者账本：P0-1 已验收。查明 V3 图 ACT 边为 0 的两层原因（SKL 只含图标/传送/追加动画字面引用；真实入口为整数注册表 + NUT 状态/对象注册表 + exe setState）；补齐 3 个 `*_load_state.nut`、58 个 NUT 技能入口、104 条对象注册、95 条创建 API、1700 个 exe 绑定；1642 个 exe 派发技能、33 条动态 ID、288 未注册 SKL 与时序作为有证据的未恢复边。工具 `project/tools/skill_entry_ledger.py`。
 - [x] 2026-11-12 ACT 被动对象 World 工厂：`spawn_passive_object` 消费者、`ObjectSystem` 归属与 `cancelAll` 回收、受控 OBJ 依赖闭包；按 1031 PVF 修正 `[WARNING MARK]` 2/4 操作数；`act_spawn_admission.py` 账本；World host 专项 82 项通过。产物见 PROGRESS.md 顶部 P0-2 章节。
 - [ ] 2026-11-16 ACT 粒子 World 工厂（`PARTICLE`，运行时/绘制子集已接通，源语义完整验收待完成）：共享 `ptl_program` 解码、`ActWorldResources::particleAdmission` ANI/ALS/IMG 纹理闭包、`ActParticleSystem` 独立时钟实体、`ActWorldHost` 两类发射与回收、`act_particle_*` 事件；专项 107 项通过；73 个纯粒子阻塞样本中 32 个现已完全准入，41 个因未恢复字段精确阻塞。产物见 PROGRESS.md 顶部章节。
-- [ ] SUB ANI 攻击身份与 type15 配对 ATK、通用运动/重力、触发/延迟/命中跨程序接线仍未完成；P0-2 整体未验收。
+- [x] 2026-11-16 SUB ANI 攻击身份与 type15 配对 ATK（限定子集）：exact MOB/OBJ/ACT 默认 ATK 身份、BASE/SUB 独立碰撞轨迹与恢复、source action 同 route 编译；专项 117 项通过。Z 偏移/语义等价未恢复，不据此验收 P0-2 整体。
+- [ ] 通用运动/重力、触发/延迟/命中跨程序接线仍未完成；P0-2 整体未验收。
 - [ ] 后续 OBJ/NUT、ALS、ATK、PTL、SKL 与跨系统消费者依照上表推进。
 - [x] git 同步：2026-11-11 重试成功，`4d2a2bad7`、`69e2f5509`、`ca87cbe71`、`c16361750` 已推送；独立读取远端 `refs/heads/main` 确认为 `c163617506a9e30f503c0f447e0126ec07c82ef4`。后续增量另行提交与推送。

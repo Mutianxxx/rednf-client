@@ -2,6 +2,7 @@
 #include "dnf/axis_motion.hpp"
 #include "dnf/collision.hpp"
 #include "dnf/female_gunner_world.hpp"
+#include <algorithm>
 #include <cassert>
 #include <cmath>
 #include <limits>
@@ -23,6 +24,30 @@ uint64_t number(const Json &v) {
 double finite(const Json &v) {
     if (!v.is_number() || !std::isfinite(v.get<double>())) throw std::invalid_argument("Non-finite ACT World coordinate");
     return v.get<double>();
+}
+std::vector<size_t> actTrackFrames(const Animation &animation,uint64_t beforeUs,uint64_t afterUs,
+        uint64_t startUs,uint64_t endUs,bool loop,bool first) {
+    if(afterUs<=startUs)return {};
+    const uint64_t limit=endUs==UINT64_MAX?UINT64_MAX:endUs-startUs;
+    if(!limit)return {};
+    const uint64_t localBefore=beforeUs>startUs?std::min(beforeUs-startUs,limit):0;
+    const uint64_t localAfter=std::min(afterUs-startUs,limit);
+    if(localAfter<localBefore)return {};
+    if(!loop)return actCollisionFrames(animation,localBefore,localAfter,first&&startUs==0);
+    uint64_t duration=0;
+    for(const auto &frame:animation.frames) {
+        if(frame.duration<0)throw std::invalid_argument("Negative ACT SUB ANI duration");
+        const auto ms=uint64_t(frame.duration)*1000;
+        if(duration>UINT64_MAX-ms)throw std::overflow_error("ACT SUB ANI duration overflow");
+        duration+=ms;
+    }
+    if(!duration)return {};
+    const uint64_t from=localBefore%duration,to=localAfter%duration;
+    if(to>=from)return actCollisionFrames(animation,from,to,first&&startUs==0&&!from);
+    auto out=actCollisionFrames(animation,from,duration,first&&startUs==0&&!from);
+    for(const auto frame:actCollisionFrames(animation,0,to,false))
+        if(std::find(out.begin(),out.end(),frame)==out.end())out.push_back(frame);
+    return out;
 }
 Json vectorJson(ActVec3 v) { return Json::array({v.x,v.y,v.z}); }
 ActVec3 vectorValue(const Json &v) {
@@ -430,38 +455,33 @@ struct ActWorldHost::Batch {
         for(auto &a:monsters)if(a.handle==h && a.life!=ActorLife::Removed)return &a;return nullptr;
     }
 };
-void ActWorldHost::bindCollision(Batch &b,uint64_t id,const MonsterActionRoute *route) {
+void ActWorldHost::bindCollision(Batch &b,uint64_t id,const ActBindRequest &request,const MonsterActionRoute *route) {
     const auto &instance=b.host.instances.at(id);const auto &program=*instance.program;
     auto *owner=b.actor(instance.owner);if(!owner)throw std::invalid_argument("ACT collision owner is retired");
-    ActCollisionState state;bool boxes=false,controls=false;
+    const auto identity=resolveCollisionAttack(program,request,route);
+    ActCollisionState state;bool controls=false;
+    state.route=identity.second;state.defaultAttack=identity.first;state.currentAttack=identity.first;
     if(program.motion) {
         const auto animation=resources_.resolve({ActResourceKind::Animation,program.source,program.motion->base,-1});
         if(!animation.runtimeSupported)throw std::invalid_argument(animation.diagnostic);
         state.baseAnimation=animation.source.memberPath;
-        for(const auto &frame:assets_.animation(state.baseAnimation)->frames)for(const auto &box:frame.boxes)boxes|=box.type==15;
     }
     for(const auto &behavior:program.behaviors)for(const auto &instruction:behavior.instructions)
         controls|=std::holds_alternative<ActAttackRect>(instruction.payload)||std::holds_alternative<ActChangeAttackInfo>(instruction.payload);
-    if(route) {
-        if(owner->monsterPath.empty())throw std::invalid_argument("MOB paired ATK has no source monster binding");
-        const auto verified=selectMonsterAction(pvf_,pvf_.script(owner->monsterPath),route->state,route->sourceActionIndex);
-        if(!verified.ok||verified.engine!=MonsterActionEngine::Act||verified.json()!=route->json()||
-           verified.resolvedPath!=program.source.memberPath)throw std::invalid_argument("ACT paired MOB route/source operand mismatch");
-        state.route=verified.json();state.defaultAttack=verified.attackInfoResolvedPath;
+    for(const auto &spec:program.collisionTracks) {
+        const auto animation=resources_.resolve({ActResourceKind::Animation,spec.source,spec.animation,-1});
+        if(!animation.runtimeSupported)throw std::invalid_argument(animation.diagnostic);
+        ActCollisionTrack track;
+        track.animation=animation.source.memberPath;track.startUs=spec.startUs;track.endUs=spec.endUs;
+        track.loop=spec.loop;track.x=spec.x;track.y=spec.y;track.layer=spec.layer;
+        track.attackInstance=b.ids.attacks.next();
+        state.tracks.push_back(std::move(track));
     }
-    if(!program.defaultAttackInfo.empty()) {
-        const auto attack=resources_.resolve({ActResourceKind::AttackInfo,program.source,program.defaultAttackInfo,-1});
-        if(!attack.runtimeSupported)throw std::invalid_argument(attack.diagnostic);
-        state.defaultAttack=attack.source.memberPath;
-    }
+    const bool boxes=!state.tracks.empty();
     if(!boxes&&!controls&&state.defaultAttack.empty())return;
     if(owner==&b.player)throw std::invalid_argument("ACT character collision ownership binding is not registered");
-    if(!state.defaultAttack.empty()) {
-        const auto attack=resources_.resolve({ActResourceKind::AttackInfo,makeSourceRef(pvf_,state.defaultAttack),state.defaultAttack,-1});
-        if(!attack.runtimeSupported)throw std::invalid_argument(attack.diagnostic);
-    }
-    if(boxes&&state.defaultAttack.empty()&&!controls)throw std::invalid_argument("ACT type15 has no default or exact paired MOB active ATK");
-    state.currentAttack=state.defaultAttack;state.attackInstance=b.ids.attacks.next();
+    if(boxes&&state.defaultAttack.empty()&&!controls)throw std::invalid_argument("ACT type15 has no default, paired MOB or paired OBJ active ATK");
+    state.attackInstance=boxes?state.tracks.front().attackInstance:b.ids.attacks.next();
     b.host.collisions.emplace(id,std::move(state));
 }
 void ActWorldHost::interruptNeutralPlayer(Batch &b) {
@@ -479,169 +499,182 @@ void ActWorldHost::collide(Batch &b,uint64_t id,uint64_t beforeUs,bool first) {
     if(instance==b.host.instances.end()||instance->second.status!=ActInstanceStatus::Running)return;
     auto &collision=found->second;auto *owner=b.actor(instance->second.owner);
     if(!owner||owner->dead||owner->hitStopped||b.statuses.stunned(owner->handle,uint64_t(world_.nowMs()))||
-       !collision.enabled||collision.baseAnimation.empty()||
-       b.player.dead||b.player.life!=ActorLife::Alive||collision.acceptedTargets.count(b.player.handle))return;
-    const auto frames=actCollisionFrames(*assets_.animation(collision.baseAnimation),beforeUs,instance->second.animationUs,first);
-    const auto blocked=[&](const std::string &why,const Json &details=Json::object()) {
-        if(collision.lastBlockedReason==why)return;
-        collision.lastBlockedReason=why;
-        b.host.diagnostics.push_back({{"code",why},{"source",collision.currentAttack.empty()?instance->second.program->source.json():makeSourceRef(pvf_,collision.currentAttack).json()},
-            {"instance_id",id},{"target",b.player.handle.json()},{"details",details},{"whole_monster_complete",false}});
-        if(b.host.diagnostics.size()>256)b.host.diagnostics.erase(b.host.diagnostics.begin());
-    };
-    if(collision.currentAttack.empty()){blocked("act_active_attack_info_is_empty");return;}
-    if(frames.size()>1&&b.collisionChanged.count(id)) {
-        blocked("act_multiple_crossed_frames_need_ordered_attack_control_binding");return;
-    }
-    const auto attack=readActCollisionAttack(pvf_.script(collision.currentAttack));
-    if(!attack.enemy)return;
-    const auto path=b.player.animationPath.empty()?world_.characterSource().motionByStem(b.player.animation):b.player.animationPath;
-    const auto targetAnimation=assets_.animation(path);
-    if(targetAnimation->frames.empty())return;
-    const auto targetFrame=b.player.animationClock&&b.player.animationClockSource==path?b.player.animationClock->frame:
-        targetAnimation->frameAt(std::max<int64_t>(0,world_.nowMs()-b.player.animStart),false);
-    if(targetFrame>=targetAnimation->frames.size())throw std::invalid_argument("ACT target published ANI frame is outside its source");
-    bool contact=false;const auto sourceAnimation=assets_.animation(collision.baseAnimation);
-    for(const auto frame:frames)for(const auto &box:sourceAnimation->frames.at(frame).boxes)if(box.type==15)
-        for(const auto &hurt:targetAnimation->frames.at(targetFrame).boxes)if(hurt.type==14)
-            contact|=intersectCombatBoxes(combatBox(box,owner->x,owner->y,owner->z,owner->dir),
-                combatBox(hurt,b.player.x,b.player.y,b.player.z,b.player.dir));
-    if(!contact)return;
-    if(world_.nowMs()<b.playerGuardUntil||world_.captured_>=0||
-       (world_.active_>=0&&world_.skills.at(size_t(world_.active_)).stages.at(size_t(world_.stage_)).invincible))return;
-    if(!attack.reactionReady){blocked("act_attack_reaction_consumer_unavailable",attack.diagnostics);return;}
-    if(!world_.usesSourceGrowth()||!world_.combatAttributes_||!owner->combatAttributes) {
-        blocked("act_source_damage_combatant_binding_missing");return;
-    }
-    const auto reactionGate=world_.neutralPlayerReactionGate(b.player);
-    if(!reactionGate.empty()) {
-        blocked(reactionGate,{{"experimental",bool(world_.experimentalRuntime_)},
-            {"active_skill",world_.active_},{"animation",b.player.animation},{"recovery",b.player.recovery},{"z",b.player.z}});return;
-    }
-    // Validate the actual source reaction animation before any damage/status
-    // candidate is published. The renderer consumes this same CHR motion.
-    if(attack.reaction!="[none]") {
-        const auto reaction=world_.characterSource().motionByStem("damage1");
-        if(reaction.empty()||assets_.animation(reaction)->frames.empty()){blocked("act_player_damage_animation_missing");return;}
-    }
-    const auto policy=DamageResolutionPolicy::inferredPveDamageV1(world_.combatAttributes_->damageConstants);
-    DamageRequest request;request.attacker=owner->handle;request.target=b.player.handle;
-    request.attackInstance=collision.attackInstance;request.hitIndex=collision.hitIndex;
-    request.attackerStats=makeDamageCombatant(*owner->combatAttributes,policy);
-    request.targetStats=makeDamageCombatant(*world_.combatAttributes_);request.attack=attack.damage;
-    auto defense=world_.preparePlayerDefense(std::move(request));
-    // A preceding contact may already have retired the live action in this
-    // private batch. Do not sample its not-yet-published armor a second time.
-    if(b.playerInterrupted) {
-        defense.receipt["sampled_super_armor_before_prior_contact"]=defense.superArmor;
-        defense.superArmor=false;
-        defense.receipt["prior_contact_interrupted_action"]=true;
-        if(defense.receipt.contains("source_body_protection"))
-            defense.receipt["source_body_protection"]["super_armor"]=false;
-    }
-    if(defense.immune){blocked("act_player_source_quick_standing_immunity",defense.receipt);return;}
-    request=std::move(defense.request);
-    // Prepare resources/controller/queue/effect/ledger before randomness;
-    // discard on MISS or on any subsequent command/resource fault.
-    if(!b.playerReaction)b.playerReaction=world_.prepareNeutralPlayerReaction(b.player);
-    request.contactRange=DamageContactRange::Melee;
-    request.contactRangeSource={{"policy","inferred-act-root-body-contact-range-v1"},
-        {"classification","inferred_beta"},{"motion_source",makeSourceRef(pvf_,collision.baseAnimation).json()},
-        {"basis","root ANI type15 body contact against current CHR type14"}};
-    const auto resistance=evaluateCharacterStatusResistances(world_.combatAttributes_->pureChr,world_.characterSource(),
-        world_.combatAttributes_->equipmentSources,world_.combatAttributes_->qualificationLevel);
-    auto prepared=prepareDamageContact(request,policy,resistance,b.statuses,b.random,uint64_t(world_.nowMs()));
-    b.lastDamage=prepared.resolution.snapshot();
-    if(!prepared.ready()){blocked("act_source_damage_status_transaction_blocked",b.lastDamage);return;}
-    const auto result=prepared.resolution;const auto now=world_.nowMs();
-    const auto ownerHandle=owner->handle;const auto ownerId=owner->id;
-    publishDamageContact(std::move(prepared),b.statuses,b.random);
-    collision.lastBlockedReason.clear();
-    collision.acceptedTargets.emplace(b.player.handle,Json{{"target",b.player.handle.json()},{"tick",world_.tick},
-        {"hit_index",collision.hitIndex},{"attack_source",makeSourceRef(pvf_,collision.currentAttack).json()},
-        {"damage",result.snapshot()},{"damage_handles_are_historical_evidence",true}});
-    if(result.missed)b.events.push_back({world_.tick,"player_miss",collision.currentAttack,ownerId});
-    else {
-        if(!(world_.debugOverrides_.enabled&&world_.debugOverrides_.hpLock))b.player.hp=std::max(0,b.player.hp-*result.hpDamage);
-        b.events.push_back({world_.tick,"player_hit","act_source",ownerId,b.player.id,*result.hpDamage});
-        if(!attack.sound.empty())b.events.push_back({world_.tick,"sound",attack.sound,b.player.id});
-        if(attack.reaction!="[none]"&&!defense.superArmor) {
-            interruptNeutralPlayer(b);b.player.animation="damage1";
-            b.player.animationPath=world_.characterSource().motion("[damage motion 1]");b.player.animStart=now;
-            b.player.stunUntil=now+int64_t(std::llround(250*attack.delayRate));b.playerGuardUntil=now+180;
+       !collision.enabled||collision.tracks.empty()||
+       b.player.dead||b.player.life!=ActorLife::Alive)return;
+    for(auto &track:collision.tracks) {
+        if(!track.enabled||track.acceptedTargets.count(b.player.handle))continue;
+        const auto frames=actTrackFrames(*assets_.animation(track.animation),beforeUs,
+            instance->second.animationUs,track.startUs,track.endUs,track.loop,first);
+        if(frames.empty())continue;
+        const Json trackDetail={{"animation",makeSourceRef(pvf_,track.animation).json()},
+            {"start_us",track.startUs},{"layer",track.layer},{"x",track.x},{"y",track.y}};
+        const auto blocked=[&](const std::string &why,const Json &details=Json::object()) {
+            if(track.lastBlockedReason==why)return;
+            track.lastBlockedReason=why;collision.lastBlockedReason=why;
+            b.host.diagnostics.push_back({{"code",why},{"source",collision.currentAttack.empty()?instance->second.program->source.json():makeSourceRef(pvf_,collision.currentAttack).json()},
+                {"instance_id",id},{"target",b.player.handle.json()},{"details",details.is_null()?trackDetail:details},{"whole_monster_complete",false}});
+            if(b.host.diagnostics.size()>256)b.host.diagnostics.erase(b.host.diagnostics.begin());
+        };
+        if(collision.currentAttack.empty()){blocked("act_active_attack_info_is_empty");return;}
+        if(frames.size()>1&&b.collisionChanged.count(id)) {
+            blocked("act_multiple_crossed_frames_need_ordered_attack_control_binding");return;
         }
-        if(attack.pauseMs>0) {
-            const auto ticks=int(std::ceil(attack.pauseMs*60/1000));
-            b.player.hitStopTicks=std::max(b.player.hitStopTicks,ticks);b.player.hitStopped=true;
-            owner->hitStopTicks=std::max(owner->hitStopTicks,ticks);owner->hitStopped=true;
+        const auto attack=readActCollisionAttack(pvf_.script(collision.currentAttack));
+        if(!attack.enemy)return;
+        const auto path=b.player.animationPath.empty()?world_.characterSource().motionByStem(b.player.animation):b.player.animationPath;
+        const auto targetAnimation=assets_.animation(path);
+        if(targetAnimation->frames.empty())return;
+        const auto targetFrame=b.player.animationClock&&b.player.animationClockSource==path?b.player.animationClock->frame:
+            targetAnimation->frameAt(std::max<int64_t>(0,world_.nowMs()-b.player.animStart),false);
+        if(targetFrame>=targetAnimation->frames.size())throw std::invalid_argument("ACT target published ANI frame is outside its source");
+        bool contact=false;const auto sourceAnimation=assets_.animation(track.animation);
+        const double sourceX=owner->x+owner->dir*track.x,sourceY=owner->y+track.y;
+        for(const auto frame:frames)for(const auto &box:sourceAnimation->frames.at(frame).boxes)if(box.type==15)
+            for(const auto &hurt:targetAnimation->frames.at(targetFrame).boxes)if(hurt.type==14)
+                contact|=intersectCombatBoxes(combatBox(box,sourceX,sourceY,owner->z,owner->dir),
+                    combatBox(hurt,b.player.x,b.player.y,b.player.z,b.player.dir));
+        if(!contact)return;
+        if(world_.nowMs()<b.playerGuardUntil||world_.captured_>=0||
+           (world_.active_>=0&&world_.skills.at(size_t(world_.active_)).stages.at(size_t(world_.stage_)).invincible))return;
+        if(!attack.reactionReady){blocked("act_attack_reaction_consumer_unavailable",attack.diagnostics);return;}
+        if(!world_.usesSourceGrowth()||!world_.combatAttributes_||!owner->combatAttributes) {
+            blocked("act_source_damage_combatant_binding_missing");return;
         }
-        if(b.statuses.controlRemaining(b.player.handle,uint64_t(now))) {
-            interruptNeutralPlayer(b);b.controlInterrupted=true;
-            // Armor or [none] can suppress the ordinary damage pose, but
-            // control status still retires the action. Publish an exact
-            // validated CHR pose, never a source action with its path removed.
-            if(defense.superArmor||attack.reaction=="[none]") {
-                b.player.animation="damage1";b.player.animStart=now;
-                b.player.animationPath=world_.characterSource().motion("[damage motion 1]");
+        const auto reactionGate=world_.neutralPlayerReactionGate(b.player);
+        if(!reactionGate.empty()) {
+            Json details={{"experimental",bool(world_.experimentalRuntime_)},
+                {"active_skill",world_.active_},{"animation",b.player.animation},{"recovery",b.player.recovery},{"z",b.player.z}};
+            details.update(trackDetail);blocked(reactionGate,details);return;
+        }
+        if(attack.reaction!="[none]") {
+            const auto reaction=world_.characterSource().motionByStem("damage1");
+            if(reaction.empty()||assets_.animation(reaction)->frames.empty()){blocked("act_player_damage_animation_missing");return;}
+        }
+        const auto policy=DamageResolutionPolicy::inferredPveDamageV1(world_.combatAttributes_->damageConstants);
+        DamageRequest request;request.attacker=owner->handle;request.target=b.player.handle;
+        request.attackInstance=track.attackInstance;request.hitIndex=track.hitIndex;
+        request.attackerStats=makeDamageCombatant(*owner->combatAttributes,policy);
+        request.targetStats=makeDamageCombatant(*world_.combatAttributes_);request.attack=attack.damage;
+        auto defense=world_.preparePlayerDefense(std::move(request));
+        if(b.playerInterrupted) {
+            defense.receipt["sampled_super_armor_before_prior_contact"]=defense.superArmor;
+            defense.superArmor=false;
+            defense.receipt["prior_contact_interrupted_action"]=true;
+            if(defense.receipt.contains("source_body_protection"))
+                defense.receipt["source_body_protection"]["super_armor"]=false;
+        }
+        if(defense.immune){blocked("act_player_source_quick_standing_immunity",defense.receipt);return;}
+        request=std::move(defense.request);
+        if(!b.playerReaction)b.playerReaction=world_.prepareNeutralPlayerReaction(b.player);
+        request.contactRange=DamageContactRange::Melee;
+        request.contactRangeSource={{"policy","inferred-act-collision-v1"},
+            {"classification","inferred_beta"},{"motion_source",makeSourceRef(pvf_,track.animation).json()},
+            {"basis","actual ANI type15 against current CHR type14 in XYZ at fixed-tick endpoint"},
+            {"track",trackDetail}};
+        const auto resistance=evaluateCharacterStatusResistances(world_.combatAttributes_->pureChr,world_.characterSource(),
+            world_.combatAttributes_->equipmentSources,world_.combatAttributes_->qualificationLevel);
+        auto prepared=prepareDamageContact(request,policy,resistance,b.statuses,b.random,uint64_t(world_.nowMs()));
+        b.lastDamage=prepared.resolution.snapshot();
+        if(!prepared.ready()){blocked("act_source_damage_status_transaction_blocked",b.lastDamage);return;}
+        const auto result=prepared.resolution;const auto now=world_.nowMs();
+        const auto ownerHandle=owner->handle;const auto ownerId=owner->id;
+        publishDamageContact(std::move(prepared),b.statuses,b.random);
+        track.lastBlockedReason.clear();collision.lastBlockedReason.clear();
+        const auto receipt=Json{{"target",b.player.handle.json()},{"tick",world_.tick},
+            {"hit_index",track.hitIndex},{"attack_source",makeSourceRef(pvf_,collision.currentAttack).json()},
+            {"damage",result.snapshot()},{"damage_handles_are_historical_evidence",true},{"track",trackDetail}};
+        track.acceptedTargets.emplace(b.player.handle,receipt);
+        collision.acceptedTargets[b.player.handle]=receipt;
+        if(result.missed)b.events.push_back({world_.tick,"player_miss",collision.currentAttack,ownerId});
+        else {
+            if(!(world_.debugOverrides_.enabled&&world_.debugOverrides_.hpLock))b.player.hp=std::max(0,b.player.hp-*result.hpDamage);
+            b.events.push_back({world_.tick,"player_hit","act_source",ownerId,b.player.id,*result.hpDamage});
+            if(!attack.sound.empty())b.events.push_back({world_.tick,"sound",attack.sound,b.player.id});
+            if(attack.reaction!="[none]"&&!defense.superArmor) {
+                interruptNeutralPlayer(b);b.player.animation="damage1";
+                b.player.animationPath=world_.characterSource().motion("[damage motion 1]");b.player.animStart=now;
+                b.player.stunUntil=now+int64_t(std::llround(250*attack.delayRate));b.playerGuardUntil=now+180;
             }
-            b.events.push_back({world_.tick,b.statuses.frozen(b.player.handle,uint64_t(now))?"status_freeze":"status_stun",
-                "inferred-1031-active-status-v1",ownerId,b.player.id});
-        }
-        if(!b.player.hp) {
-            interruptNeutralPlayer(b);b.statuses.clearTarget(b.player.handle,uint64_t(now),"death");
-            if(world_.femaleGunnerWorld_) {
-                b.playerReaction->femaleDeath=world_.femaleGunnerWorld_->prepareNeutralDeath();
-                b.playerReaction->receipt["female_buff_death_cleanup"]="prepared private state; same noexcept publication";
+            if(attack.pauseMs>0) {
+                const auto ticks=int(std::ceil(attack.pauseMs*60/1000));
+                b.player.hitStopTicks=std::max(b.player.hitStopTicks,ticks);b.player.hitStopped=true;
+                owner->hitStopTicks=std::max(owner->hitStopTicks,ticks);owner->hitStopped=true;
             }
-            b.player.dead=true;b.player.life=ActorLife::Dying;b.player.deathStart=b.player.lifeStart=now;
-            b.player.deathPoseTime=std::max<int64_t>(0,now-b.player.animStart);
-            b.player.deathAnchorX=b.player.x;b.player.deathAnchorY=b.player.y;b.player.deathHeight=b.player.z;
-            b.player.deathLoop=false;b.player.independentDeath=false;b.player.deathFragments.clear();
-            b.player.capturedBy=-1;b.player.hitStopTicks=0;b.player.hitStopped=false;b.player.animation="down";b.player.animStart=now;
-            b.player.animationPath=world_.characterSource().motion("[down motion]");
-            b.playerGuardUntil=0;b.events.push_back({world_.tick,"death_phase","dying",b.player.id});
+            if(b.statuses.controlRemaining(b.player.handle,uint64_t(now))) {
+                interruptNeutralPlayer(b);b.controlInterrupted=true;
+                if(defense.superArmor||attack.reaction=="[none]") {
+                    b.player.animation="damage1";b.player.animStart=now;
+                    b.player.animationPath=world_.characterSource().motion("[damage motion 1]");
+                }
+                b.events.push_back({world_.tick,b.statuses.frozen(b.player.handle,uint64_t(now))?"status_freeze":"status_stun",
+                    "inferred-1031-active-status-v1",ownerId,b.player.id});
+            }
+            if(!b.player.hp) {
+                interruptNeutralPlayer(b);b.statuses.clearTarget(b.player.handle,uint64_t(now),"death");
+                if(world_.femaleGunnerWorld_) {
+                    b.playerReaction->femaleDeath=world_.femaleGunnerWorld_->prepareNeutralDeath();
+                    b.playerReaction->receipt["female_buff_death_cleanup"]="prepared private state; same noexcept publication";
+                }
+                b.player.dead=true;b.player.life=ActorLife::Dying;b.player.deathStart=b.player.lifeStart=now;
+                b.player.deathPoseTime=std::max<int64_t>(0,now-b.player.animStart);
+                b.player.deathAnchorX=b.player.x;b.player.deathAnchorY=b.player.y;b.player.deathHeight=b.player.z;
+                b.player.deathLoop=false;b.player.independentDeath=false;b.player.deathFragments.clear();
+                b.player.capturedBy=-1;b.player.hitStopTicks=0;b.player.hitStopped=false;b.player.animation="down";b.player.animStart=now;
+                b.player.animationPath=world_.characterSource().motion("[down motion]");
+                b.playerGuardUntil=0;b.events.push_back({world_.tick,"death_phase","dying",b.player.id});
+            }
         }
+        b.lastDamage["act_collision"]={{"policy","inferred-act-collision-v1"},{"classification","inferred_beta"},
+            {"geometry","actual ANI type15 against actual current CHR type14 in XYZ at fixed-tick endpoint"},
+            {"motion_source",makeSourceRef(pvf_,track.animation).json()},{"paired_route",collision.route},
+            {"sampled_frames",frames},{"reaction_base_ms",250},{"guard_ms",180},{"hit_visual_diagnostics",attack.diagnostics}};
+        b.lastDamage["player_defense"]=defense.receipt;
+        b.lastDamage["player_reaction_outcome"]={{"super_armor",defense.superArmor},{"invincibility",false},
+            {"interrupted",b.playerInterrupted},{"ordinary_reaction_suppressed",!result.missed&&defense.superArmor&&attack.reaction!="[none]"},
+            {"control_status_interrupt",b.controlInterrupted},{"lethal",b.player.dead},
+            {"policy","inferred-source-body-armor-preserves-action-not-hp-v1"}};
+        if(b.playerInterrupted&&b.playerReaction)b.lastDamage["player_reaction"]=b.playerReaction->receipt;
+        if(!result.missed) {
+            auto &relations=b.host.relations[ownerHandle];relations.lastAttackSuccess=b.player.handle;relations.lastAttackSuccesses={b.player.handle};
+        }
+        ActWorldRestoreGraph graph{b.player,b.monsters,b.entities,b.ids.snapshot(),
+            b.statuses.snapshot(uint64_t(now),1),uint64_t(world_.tick),world_.characterLevel,b.random.snapshot(),b.playerGuardUntil};
+        RestoreGraphView view(graph,b.host.relations);
+        ActEventContext event;event.eventId=b.ids.events.next();event.kind=ActEventKind::AttackSuccess;
+        event.subject=ownerHandle;event.other=b.player.handle;event.stuck=result.missed;
+        apply(b,id,prepareActEvent(b.host.instances.at(id),event,view));
     }
-    b.lastDamage["act_collision"]={{"policy","inferred-act-collision-v1"},{"classification","inferred_beta"},
-        {"geometry","actual root ANI type15 against actual current CHR type14 in XYZ at fixed-tick endpoint"},
-        {"motion_source",makeSourceRef(pvf_,collision.baseAnimation).json()},{"paired_route",collision.route},
-        {"sampled_frames",frames},{"reaction_base_ms",250},{"guard_ms",180},{"hit_visual_diagnostics",attack.diagnostics}};
-    b.lastDamage["player_defense"]=defense.receipt;
-    b.lastDamage["player_reaction_outcome"]={{"super_armor",defense.superArmor},{"invincibility",false},
-        {"interrupted",b.playerInterrupted},{"ordinary_reaction_suppressed",!result.missed&&defense.superArmor&&attack.reaction!="[none]"},
-        {"control_status_interrupt",b.controlInterrupted},{"lethal",b.player.dead},
-        {"policy","inferred-source-body-armor-preserves-action-not-hp-v1"}};
-    if(b.playerInterrupted&&b.playerReaction)b.lastDamage["player_reaction"]=b.playerReaction->receipt;
-    if(!result.missed) {
-        auto &relations=b.host.relations[ownerHandle];relations.lastAttackSuccess=b.player.handle;relations.lastAttackSuccesses={b.player.handle};
+    if(!collision.tracks.empty()) {
+        collision.attackInstance=collision.tracks.front().attackInstance;
+        collision.hitIndex=collision.tracks.front().hitIndex;
     }
-    ActWorldRestoreGraph graph{b.player,b.monsters,b.entities,b.ids.snapshot(),
-        b.statuses.snapshot(uint64_t(now),1),uint64_t(world_.tick),world_.characterLevel,b.random.snapshot(),b.playerGuardUntil};
-    RestoreGraphView view(graph,b.host.relations);
-    ActEventContext event;event.eventId=b.ids.events.next();event.kind=ActEventKind::AttackSuccess;
-    event.subject=ownerHandle;event.other=b.player.handle;event.stuck=result.missed;
-    // Attack source/instance/cycle and frozen damage remain in the typed host
-    // collision receipt and trace above. ACT only consumes subject/other/stuck;
-    // do not hide redundant identities in opaque metadata that cannot remap.
-    apply(b,id,prepareActEvent(b.host.instances.at(id),event,view));
 }
 Json ActWorldHost::collisionSnapshot(const State &state) const {
     Json out=Json::array();for(const auto &[id,collision]:state.collisions) {
         Json targets=Json::array();for(const auto &[handle,receipt]:collision.acceptedTargets)targets.push_back({{"target",handle.json()},{"receipt",receipt}});
+        Json trackRows=Json::array();
+        for(const auto &track:collision.tracks) {
+            Json hits=Json::array();for(const auto &[handle,receipt]:track.acceptedTargets)hits.push_back({{"target",handle.json()},{"receipt",receipt}});
+            trackRows.push_back({{"animation",track.animation},{"animation_source",makeSourceRef(pvf_,track.animation).json()},
+                {"start_us",track.startUs},{"end_us",track.endUs},{"loop",track.loop},{"x",track.x},{"y",track.y},{"layer",track.layer},
+                {"attack_instance",track.attackInstance},{"hit_index",track.hitIndex},{"enabled",track.enabled},
+                {"accepted_targets",hits},{"last_blocked_reason",track.lastBlockedReason}});
+        }
         out.push_back({{"instance_id",id},{"attack_instance",collision.attackInstance},{"hit_index",collision.hitIndex},
             {"enabled",collision.enabled},{"base_animation",collision.baseAnimation},
             {"animation_source",collision.baseAnimation.empty()?Json():makeSourceRef(pvf_,collision.baseAnimation).json()},
             {"default_attack",collision.defaultAttack},{"current_attack",collision.currentAttack},
             {"default_source",collision.defaultAttack.empty()?Json():makeSourceRef(pvf_,collision.defaultAttack).json()},
             {"current_source",collision.currentAttack.empty()?Json():makeSourceRef(pvf_,collision.currentAttack).json()},
-            {"route",collision.route},{"accepted_targets",targets},{"last_blocked_reason",collision.lastBlockedReason}});
+            {"route",collision.route},{"accepted_targets",targets},{"last_blocked_reason",collision.lastBlockedReason},
+            {"tracks",trackRows}});
     }
     return out;
 }
 void ActWorldHost::restoreCollisions(State &candidate,const Json &value,const ActWorldRestoreGraph &graph) const {
     std::set<uint64_t> required;
     for(const auto &[id,instance]:candidate.instances)if(instance.status==ActInstanceStatus::Running) {
-        bool needs=!instance.program->defaultAttackInfo.empty();
+        bool needs=!instance.program->defaultAttackInfo.empty()||!instance.program->collisionTracks.empty();
         if(instance.program->motion) {
             const auto resource=resources_.resolve({ActResourceKind::Animation,instance.program->source,instance.program->motion->base,-1});
             for(const auto &frame:assets_.animation(resource.source.memberPath)->frames)for(const auto &box:frame.boxes)needs|=box.type==15;
@@ -666,7 +699,7 @@ void ActWorldHost::restoreCollisions(State &candidate,const Json &value,const Ac
         if(instance==candidate.instances.end()||instance->second.status!=ActInstanceStatus::Running)throw std::invalid_argument("ACT collision has no running owner");
         ActCollisionState collision;collision.attackInstance=number(row.at("attack_instance"));const auto index=number(row.at("hit_index"));
         if(!collision.attackInstance||collision.attackInstance>=ids.attacks.nextValue()||index>UINT32_MAX||
-           !attacks.insert(collision.attackInstance).second||!row.at("enabled").is_boolean())throw std::invalid_argument("ACT collision ID/reset watermark conflict");
+           !row.at("enabled").is_boolean())throw std::invalid_argument("ACT collision ID/reset watermark conflict");
         collision.hitIndex=uint32_t(index);collision.enabled=row.at("enabled").get<bool>();
         collision.baseAnimation=row.at("base_animation").get<std::string>();
         collision.defaultAttack=row.at("default_attack").get<std::string>();collision.currentAttack=row.at("current_attack").get<std::string>();
@@ -675,9 +708,46 @@ void ActWorldHost::restoreCollisions(State &candidate,const Json &value,const Ac
         for(const auto &[path,source]:std::vector<std::pair<std::string,Json>>{{collision.baseAnimation,row.at("animation_source")},
             {collision.defaultAttack,row.at("default_source")},{collision.currentAttack,row.at("current_source")}})
             if(path.empty()?!source.is_null():makeSourceRef(pvf_,path).json()!=source)throw std::invalid_argument("ACT collision source changed");
+        if(row.contains("tracks")) {
+            if(!row.at("tracks").is_array()||row.at("tracks").size()>256)throw std::invalid_argument("ACT collision track collection budget exceeded");
+            for(const auto &trow:row.at("tracks")) {
+                ActCollisionTrack track;
+                track.animation=trow.at("animation").get<std::string>();
+                if(makeSourceRef(pvf_,track.animation).json()!=trow.at("animation_source"))throw std::invalid_argument("ACT collision track source changed");
+                track.startUs=number(trow.at("start_us"));track.endUs=number(trow.at("end_us"));
+                if(track.endUs<track.startUs||!trow.at("loop").is_boolean()||!trow.at("enabled").is_boolean())
+                    throw std::invalid_argument("ACT collision track clock/enable conflict");
+                track.loop=trow.at("loop").get<bool>();track.enabled=trow.at("enabled").get<bool>();
+                track.x=finite(trow.at("x"));track.y=finite(trow.at("y"));
+                if(!trow.at("layer").is_number_integer())throw std::invalid_argument("ACT collision track layer conflict");
+                track.layer=trow.at("layer").get<int>();
+                track.attackInstance=number(trow.at("attack_instance"));const auto ti=number(trow.at("hit_index"));
+                if(!track.attackInstance||track.attackInstance>=ids.attacks.nextValue()||ti>UINT32_MAX||
+                   !attacks.insert(track.attackInstance).second)throw std::invalid_argument("ACT collision track identity conflict");
+                track.hitIndex=uint32_t(ti);track.lastBlockedReason=trow.at("last_blocked_reason").get<std::string>();
+                if(track.lastBlockedReason.size()>4096)throw std::invalid_argument("ACT collision diagnostic budget exceeded");
+                if(!trow.at("accepted_targets").is_array()||trow.at("accepted_targets").size()>1024)
+                    throw std::invalid_argument("ACT collision track contact budget exceeded");
+                for(const auto &target:trow.at("accepted_targets")) {
+                    const auto handle=EntityHandle::fromJson(target.at("target"));const auto &receipt=target.at("receipt");
+                    if(!handle||handle!=graph.player.handle||receipt.at("target")!=handle.json()||
+                       number(receipt.at("tick"))>graph.tick||number(receipt.at("hit_index"))!=track.hitIndex||
+                       !track.acceptedTargets.emplace(handle,receipt).second)
+                        throw std::invalid_argument("ACT collision track contact identity mismatch");
+                }
+                collision.tracks.push_back(std::move(track));
+            }
+        }
         const auto *owner=view.actor(instance->second.owner);if(!owner||owner==&graph.player)throw std::invalid_argument("ACT collision owner kind is unsupported");
         std::string expectedDefault;
-        if(!collision.route.empty()) {
+        if(!collision.route.empty() && collision.route.value("kind",std::string())=="object_attack_info") {
+            ActBindRequest identityRequest;
+            identityRequest.sourceObject=collision.route.at("object").at("member_path").get<std::string>();
+            const auto identity=resolveCollisionAttack(*instance->second.program,identityRequest,nullptr);
+            if(identity.first!=collision.defaultAttack||identity.second!=collision.route)
+                throw std::invalid_argument("ACT saved paired OBJ action/ATK binding changed");
+            expectedDefault=identity.first;
+        } else if(!collision.route.empty()) {
             const auto fresh=selectMonsterAction(pvf_,pvf_.script(owner->monsterPath),collision.route.at("state").get<std::string>(),
                 collision.route.at("source_action_index").get<int>());
             if(!fresh.ok||fresh.json()!=collision.route||fresh.resolvedPath!=instance->second.program->source.memberPath)
@@ -689,7 +759,11 @@ void ActWorldHost::restoreCollisions(State &candidate,const Json &value,const Ac
             if(!source.runtimeSupported)throw std::invalid_argument(source.diagnostic);
             expectedDefault=source.source.memberPath;
         }
-        if(expectedDefault!=collision.defaultAttack)throw std::invalid_argument("ACT saved default ATK is not its source ACT/MOB binding");
+        if(expectedDefault!=collision.defaultAttack)throw std::invalid_argument("ACT saved default ATK is not its source ACT/MOB/OBJ binding");
+        if(collision.tracks.empty()) {
+            if(!attacks.insert(collision.attackInstance).second)
+                throw std::invalid_argument("ACT collision attack identity conflict");
+        }
         std::set<std::string> permitted{expectedDefault};
         for(const auto &behavior:instance->second.program->behaviors)for(const auto &instruction:behavior.instructions)
             if(const auto *change=std::get_if<ActChangeAttackInfo>(&instruction.payload))if(!change->useDefault) {
@@ -729,17 +803,105 @@ bool ActWorldHost::hasCommandConsumer(const std::string &kind) const {
            kind=="cleanup_owned" || kind=="set_damage_check" || kind=="attack_rect" || kind=="change_attack_info" ||
            kind=="spawn_passive_object" || kind=="particle" || (kind=="speech" && options_.enableSpeechPresentation);
 }
-ActCompileResult ActWorldHost::compile(const std::string &path,ActSemanticPolicy policy) const {
-    auto result=compileActProgram(pvf_.script(path),context(pvf_,resources_,std::move(policy),[this](const std::string &s){return hasCommandConsumer(s);}));
-    if(result.ok && result.program->motion)for(const auto &track:result.program->motion->tracks) {
-        const auto resource=resources_.resolve({ActResourceKind::Animation,result.program->source,track.path,-1});
-        if(!resource.found)continue;
-        bool attack=false;for(const auto &frame:assets_.animation(resource.source.memberPath)->frames)for(const auto &box:frame.boxes)attack|=box.type==15;
-        if(attack) {
-            auto program=std::make_shared<ActProgram>(*result.program);program->runtimeReady=false;
-            program->diagnostics.push_back({"act_sub_animation_collision_binding_missing","SUB ANI type15 needs its own attack identity/clock binding",track.source,true});
-            result.program=program;result.ok=false;
+std::pair<std::string,Json> ActWorldHost::resolveCollisionAttack(const ActProgram &program,
+        const ActBindRequest &request,const MonsterActionRoute *attackRoute) const {
+    if(attackRoute) {
+        if(!attackRoute->ok || attackRoute->engine!=MonsterActionEngine::Act ||
+           attackRoute->resolvedPath!=program.source.memberPath)
+            throw std::invalid_argument("ACT collision has no exact paired MOB attack identity");
+        const auto *owner=world_.resolveActor(request.owner);
+        if(!owner || owner->monsterPath.empty())
+            throw std::invalid_argument("MOB paired ATK has no source monster binding");
+        const auto verified=selectMonsterAction(pvf_,pvf_.script(owner->monsterPath),
+            attackRoute->state,attackRoute->sourceActionIndex);
+        if(!verified.ok || verified.engine!=MonsterActionEngine::Act || verified.json()!=attackRoute->json() ||
+           verified.resolvedPath!=program.source.memberPath || verified.attackInfoResolvedPath!=attackRoute->attackInfoResolvedPath)
+            throw std::invalid_argument("ACT paired MOB route/source operand mismatch");
+        // A source MOB action slot may have no authored [attack info]. Keep that
+        // as an empty static identity, exactly as the source route says; the ACT
+        // control commands (or a paired OBJ/ACT default) still decide whether
+        // collision binding is admissible. Inventing an ATK here would replace
+        // source evidence with a guess.
+        if(verified.attackInfoResolvedPath.empty())return {{},verified.json()};
+        const auto attack=resources_.resolve({ActResourceKind::AttackInfo,
+            makeSourceRef(pvf_,verified.attackInfoResolvedPath),verified.attackInfoResolvedPath,-1});
+        if(!attack.runtimeSupported)throw std::invalid_argument(attack.diagnostic);
+        return {attack.source.memberPath,verified.json()};
+    }
+    if(!request.sourceObject.empty()) {
+        const auto objectPath=normalize(request.sourceObject);
+        if(!pvf_.has(objectPath))throw std::invalid_argument("ACT paired OBJ source is missing: "+objectPath);
+        const auto object=pvf_.script(objectPath);
+        std::vector<std::pair<size_t,std::string>> actions,attacks;
+        for(size_t i=0;i<object.fields.size();++i) {
+            const auto tag=normalize(object.fields[i].tag);
+            if(tag!="[basic action]" && tag!="[attack info]")continue;
+            if(object.fields[i].values.size()!=1 || !object.fields[i].values[0].is_string())
+                throw std::invalid_argument("Malformed ACT paired OBJ field: "+objectPath+" "+object.fields[i].tag);
+            auto &out=tag=="[basic action]"?actions:attacks;
+            out.emplace_back(i,object.fields[i].values[0].get<std::string>());
         }
+        if(actions.size()!=1 || attacks.size()!=1)
+            throw std::invalid_argument("ACT paired OBJ needs one [basic action] and one [attack info]: "+objectPath);
+        const auto action=resources_.resolvePath(objectPath,actions[0].second);
+        if(action!=program.source.memberPath)
+            throw std::invalid_argument("ACT paired OBJ [basic action] is not this program: "+objectPath);
+        const auto origin=makeSourceRef(pvf_,objectPath,object.fields[attacks[0].first].offset);
+        const auto attack=resources_.resolve({ActResourceKind::AttackInfo,origin,attacks[0].second,-1});
+        if(!attack.runtimeSupported)throw std::invalid_argument(attack.diagnostic);
+        Json receipt={{"kind","object_attack_info"},
+            {"object",makeSourceRef(pvf_,objectPath).json()},
+            {"action_literal",actions[0].second},{"action",makeSourceRef(pvf_,action).json()},
+            {"attack_literal",attacks[0].second},{"attack",attack.source.json()}};
+        return {attack.source.memberPath,std::move(receipt)};
+    }
+    if(!program.defaultAttackInfo.empty()) {
+        const auto attack=resources_.resolve({ActResourceKind::AttackInfo,program.source,program.defaultAttackInfo,-1});
+        if(!attack.runtimeSupported)throw std::invalid_argument(attack.diagnostic);
+        return {attack.source.memberPath,Json::object()};
+    }
+    return {{},Json::object()};
+}
+ActCompileResult ActWorldHost::compile(const std::string &path,ActSemanticPolicy policy,
+        const ActBindRequest *bind,const MonsterActionRoute *attackRoute) const {
+    auto result=compileActProgram(pvf_.script(path),context(pvf_,resources_,std::move(policy),[this](const std::string &s){return hasCommandConsumer(s);}));
+    if(!result.ok || !result.program->motion)return result;
+    std::string attack;
+    if(bind) {
+        const auto identity=resolveCollisionAttack(*result.program,*bind,attackRoute);
+        attack=identity.first;
+    } else if(!result.program->defaultAttackInfo.empty()) {
+        const auto identity=resolveCollisionAttack(*result.program,ActBindRequest{},nullptr);
+        attack=identity.first;
+    }
+    const auto motion=compileMonsterAnimation(pvf_,assets_,path,"act");
+    if(!motion->valid())return result;
+    auto program=std::make_shared<ActProgram>(*result.program);
+    bool needsIdentity=false;
+    for(const auto &track:motion->tracks) {
+        if(track.role!="base" && track.role!="sub")continue;
+        bool hasBox=false;
+        for(const auto &frame:track.animation->frames)for(const auto &box:frame.boxes)hasBox|=box.type==15;
+        if(!hasBox)continue;
+        ActCollisionTrackSpec spec;
+        spec.animation=normalize(track.animation->path);spec.role=track.role;
+        spec.startUs=uint64_t(std::max(0.0,std::trunc(track.start*1000.0)));
+        spec.endUs=track.end>=1e12?UINT64_MAX:uint64_t(std::max(0.0,std::trunc(track.end*1000.0)));
+        spec.loop=track.role=="sub"?track.loop:program->motion->loop;
+        spec.x=track.x;spec.y=track.y;spec.layer=track.layer;
+        spec.source=program->motion->source;
+        if(track.role=="sub")for(const auto &authored:program->motion->tracks)
+            if(normalize(authored.path)==spec.animation && authored.layer==spec.layer) {spec.source=authored.source;break;}
+        if(track.role=="sub" && attack.empty())needsIdentity=true;
+        program->collisionTracks.push_back(std::move(spec));
+    }
+    result.program=std::move(program);
+    if(needsIdentity) {
+        auto blocked=std::make_shared<ActProgram>(*result.program);blocked->runtimeReady=false;
+        blocked->diagnostics.push_back({"act_sub_animation_collision_binding_missing",
+            "SUB ANI type15 needs an exact MOB/OBJ/DEFAULT ATTACKINFO identity and an independent clock binding",
+            blocked->motion->source,true});
+        result.program=std::move(blocked);result.ok=false;
     }
     return result;
 }
@@ -961,7 +1123,16 @@ void ActWorldHost::applyCommands(Batch &b,uint64_t id,const ActPreparedStep &ste
             if(rect->mode==ActAttackRectMode::Reset) {
                 if(collision->second.hitIndex==UINT32_MAX)throw std::overflow_error("ACT attack reset watermark exhausted");
                 ++collision->second.hitIndex;collision->second.acceptedTargets.clear();
-            } else collision->second.enabled=rect->mode==ActAttackRectMode::On;
+                for(auto &track:collision->second.tracks) {
+                    if(track.hitIndex==UINT32_MAX)throw std::overflow_error("ACT SUB ANI attack reset watermark exhausted");
+                    ++track.hitIndex;track.acceptedTargets.clear();track.lastBlockedReason.clear();
+                }
+            } else {
+                collision->second.enabled=rect->mode==ActAttackRectMode::On;
+                for(auto &track:collision->second.tracks) {
+                    track.enabled=collision->second.enabled;track.lastBlockedReason.clear();
+                }
+            }
         } else if(const auto *change=std::get_if<ActChangeAttackInfo>(&command.payload)) {
             if(command.recipient!=command.owner)throw std::invalid_argument("ACT foreign CHANGE ATTACKINFO binding is not registered");
             auto collision=b.host.collisions.find(id);if(collision==b.host.collisions.end())throw std::invalid_argument("ACT attack change has no source collision binding");
@@ -991,7 +1162,7 @@ ActWorldHostResult ActWorldHost::bind(std::shared_ptr<const ActProgram> program,
         if(!program || !program->executable() || !pvf_.has(program->source.memberPath) ||
            sha256(pvf_.read(program->source.memberPath))!=program->source.memberSha256)
             throw std::invalid_argument("ACT bind requires unchanged current PVF source");
-        const auto verified=compile(program->source.memberPath,program->policy);
+        const auto verified=compile(program->source.memberPath,program->policy,&r,attackRoute);
         if(!verified.ok || !sameSource(program->source,verified.program->source))throw std::invalid_argument("ACT bind failed production-consumer preflight");
         if(r.tick!=uint64_t(world_.tick) || r.tick!=state_.lastTick || r.simulationMs!=uint64_t(world_.nowMs()))throw std::invalid_argument("ACT bind World clock mismatch");
         if(r.instanceId<=state_.instanceWatermark || state_.instances.count(r.instanceId) || (ownsActor(r.owner) && !replaceOwner))throw std::invalid_argument("ACT owner/instance is already bound or instance ID was reused");
@@ -1021,7 +1192,7 @@ ActWorldHostResult ActWorldHost::bind(std::shared_ptr<const ActProgram> program,
             b.host.presentation.emplace(r.instanceId,Presentation{owner->animation,owner->animationPath,owner->animStart,owner->poseFrame});
             owner->animation="act";owner->animationPath=program->source.memberPath;owner->animStart=world_.nowMs();owner->poseFrame=-1;
         }
-        bindCollision(b,r.instanceId,attackRoute);
+        bindCollision(b,r.instanceId,r,attackRoute);
         ActWorldActorView bindView(world_,b.host.relations);
         ActEventContext event;event.eventId=b.ids.events.next();event.kind=ActEventKind::SetAction;event.subject=r.owner;
         apply(b,r.instanceId,prepareActEvent(b.host.instances.at(r.instanceId),event,bindView));
@@ -1397,6 +1568,14 @@ ActWorldHost::PreparedRestore ActWorldHost::prepareRemappedRestore(const Json &v
                 transformed["target"]=mapped.json();hits.emplace(mapped,std::move(transformed));
             }
             collision.acceptedTargets=std::move(hits);
+            for(auto &track:collision.tracks) {
+                std::map<EntityHandle,Json> trackHits;
+                for(const auto &[handle,receipt]:track.acceptedTargets) {
+                    auto transformed=receipt;const auto mapped=remap.handle(handle);
+                    transformed["target"]=mapped.json();trackHits.emplace(mapped,std::move(transformed));
+                }
+                track.acceptedTargets=std::move(trackHits);
+            }
         }
         for(const auto &relation:original.relations) {
             auto r=relation.second;r.target=remap.handle(r.target);r.lastAttacker=remap.handle(r.lastAttacker);

@@ -57,7 +57,8 @@ struct WorldFixture {
                                           ActClockMode clockMode=ActClockMode::SourceMilliseconds) {
         const auto compiled=host.compile(source);if(!compiled.ok)throw std::runtime_error("World ACT fixture source rejected: "+compiled.json().dump());
         auto binding=request(id);binding.clockMode=clockMode;
-        const auto result=host.bind(compiled.program,binding);if(!result.ok)throw std::runtime_error(result.error);
+        const auto result=host.bind(compiled.program,binding);
+        if(!result.ok)throw std::runtime_error("World ACT fixture bind failed for "+source+" id="+std::to_string(id)+": "+result.error);
         return compiled.program;
     }
     void ticks(size_t count){for(size_t i=0;i<count;++i)world.advanceSingleTick();}
@@ -449,9 +450,40 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
         const auto warning=f.host.compile(warningMarkSource);
         check(warning.ok && warning.program->runtimeReady,
             "The 1031 [WARNING MARK] operand fix removes a real syntax misclassification");
-        const auto unpaired=f.host.bind(warning.program,f.request(42));
+        WorldFixture attack(pvf,assets,false);
+        const auto unpaired=attack.host.bind(warning.program,attack.request(42));
         check(!unpaired.ok && unpaired.error.find("type15")!=std::string::npos,
             "An admitted ACT whose BASE ANI has unpaired type15 boxes is still blocked at bind instead of silently losing attack identity");
+        auto pairedRequest=attack.request(42);
+        pairedRequest.sourceObject="passiveobject/actionobject/common/flamebomb_item.obj";
+        const auto paired=attack.host.bind(warning.program,pairedRequest);
+        check(paired.ok,
+            "A BASE ANI type15 box binds when its exact OBJ [basic action] supplies one authored [attack info]");
+        auto forgedRequest=attack.request(43);
+        forgedRequest.sourceObject="passiveobject/actionobject/common/darkthunderbolt1.obj";
+        const auto forged=attack.host.bind(warning.program,forgedRequest);
+        check(!forged.ok && forged.error.find("[basic action]")!=std::string::npos,
+            "An unrelated OBJ attack identity cannot be borrowed for another ACT");
+        constexpr const char *subSource="passiveobject/actionobject/common/action/darkthunderbolt1.act";
+        const auto staticSub=attack.host.compile(subSource);
+        check(!staticSub.ok && diagnostic(staticSub.json().at("diagnostics"),"act_sub_animation_collision_binding_missing"),
+            "SUB ANI type15 stays a static rejection until an exact attack identity is supplied");
+        auto subRequest=attack.request(44);
+        subRequest.sourceObject="passiveobject/actionobject/common/darkthunderbolt1.obj";
+        const auto compiledSub=attack.host.compile(subSource,{},&subRequest);
+        check(compiledSub.ok && compiledSub.program->runtimeReady,
+            "The exact OBJ action/ATK context admits an attack-bearing SUB ANI World program");
+        const auto compiledSubJson=compiledSub.json();
+        bool subTrack=false,sourceFrameKept=false;
+        for(const auto &track:compiledSubJson.at("collision_tracks")) {
+            const bool isSub=track.at("role").get<std::string>()=="sub";
+            subTrack|=isSub;
+            sourceFrameKept|=isSub && track.at("start_us").is_number() &&
+                track.at("x").is_number() && track.at("y").is_number() && track.at("layer").is_number_integer();
+        }
+        const std::string trackEvidence="SUB ANI collision tracks retain authored frame boundary, layer and XY placement: "+
+            compiledSubJson.at("collision_tracks").dump();
+        check(subTrack && sourceFrameKept,trackEvidence.c_str());
         const auto ptl=f.host.compile("passiveobject/actionobject/common/action/exsviperbullet.act");
         check(!ptl.ok && diagnostic(ptl.json().at("diagnostics"),"missing_resource_consumer"),
             "OBJ-internal [string data] PTL references are not ACT-level [PARTICLE] commands and stay precisely blocked");

@@ -81,11 +81,6 @@ void World::prepareSourceActionBoundary() {
         if(request.state=="attack" && sourceActionCooldowns_.count(key) && sourceActionCooldowns_.at(key)>nowMs()) {
             blocked("source_action_cooldown");continue;
         }
-        const auto program=actHost_->compile(route.resolvedPath);
-        if(!program.ok) {blocked("source_action_dependencies",program.json());continue;}
-        if(request.state=="attack" && route.cooldownMs && *route.cooldownMs>INT64_MAX-nowMs()) {
-            blocked("source_action_cooldown_overflow");continue;
-        }
         // New identities and the source-action random stream stay private until
         // bind has accepted its complete replacement batch, including OnSet.
         auto instances=sourceActionInstanceIds_;auto actionIds=ids_.actions;auto random=random_;
@@ -98,10 +93,19 @@ void World::prepareSourceActionBoundary() {
         }
         ActBindRequest binding;binding.owner=request.owner;binding.tick=uint64_t(tick);binding.simulationMs=uint64_t(nowMs());
         binding.instanceId=instances.next();binding.actionId=actionIds.next();
-        auto &stream=random.stream(RandomDomain::Ai,binding.instanceId);
-        binding.randomSeed=uint64_t(stream.next())<<32;binding.randomSeed|=stream.next();
         binding.randomSequence=binding.instanceId;
         binding.clockMode=ActClockMode::ExternalAnimationDelta;
+        // Compile with the same exact MOB route that binds this action, so an
+        // attack-bearing SUB ANI gets its paired identity preflight instead of
+        // being rejected by a context-free static pass. Keep this ahead of the
+        // private RNG draw so a blocked source action consumes no randomness.
+        const auto program=actHost_->compile(route.resolvedPath,{},&binding,&route);
+        if(!program.ok) {blocked("source_action_dependencies",program.json());continue;}
+        if(request.state=="attack" && route.cooldownMs && *route.cooldownMs>INT64_MAX-nowMs()) {
+            blocked("source_action_cooldown_overflow");continue;
+        }
+        auto &stream=random.stream(RandomDomain::Ai,binding.instanceId);
+        binding.randomSeed=uint64_t(stream.next())<<32;binding.randomSeed|=stream.next();
         ActEntityRelations relations;relations.target=player.handle;
         const auto result=actHost_->bind(program.program,binding,relations,true,&route);
         if(!result.ok) {blocked("source_action_bind",result.diagnostics);continue;}

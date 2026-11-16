@@ -165,6 +165,17 @@ struct ActMotion {
     std::vector<ActMotionTrack> tracks;
     std::vector<ActMotionEvent> events;
 };
+// An attack-bearing BASE/SUB ANI track derived from the same compiled source
+// that the monster renderer consumes. Frame/layer/XY remain source facts; the
+// resulting clock and hit identity are World reconstructions.
+struct ActCollisionTrackSpec {
+    SourceRef source;
+    std::string animation, role;
+    uint64_t startUs = 0, endUs = UINT64_MAX;
+    bool loop = false;
+    double x = 0, y = 0;
+    int layer = 0;
+};
 struct ActProgram {
     SourceRef source;
     Script original; // Original raw bytes, ordered tokens, fields and unknowns.
@@ -174,6 +185,7 @@ struct ActProgram {
     std::vector<ActTrigger> triggers;
     std::vector<ActBehavior> behaviors;
     std::vector<ActDependency> dependencies;
+    std::vector<ActCollisionTrackSpec> collisionTracks;
     std::vector<ActDiagnostic> diagnostics;
     bool syntaxComplete = false, sourceReady = false, runtimeReady = false;
     bool executable() const { return syntaxComplete && sourceReady && runtimeReady; }
@@ -301,6 +313,11 @@ struct ActBindRequest {
     EntityHandle owner;
     uint64_t tick = 0, simulationMs = 0, randomSeed = 0, randomSequence = 1;
     ActClockMode clockMode = ActClockMode::SourceMilliseconds;
+    // Optional exact source context for a passive-object action. When set, the
+    // OBJ must author this ACT via [basic action] and exactly one [attack info];
+    // that ATK is the paired damage identity for its ANI type15 boxes. It is
+    // never inferred from a filename or another object.
+    std::string sourceObject;
 };
 struct ActBindResult {
     bool ok = false;

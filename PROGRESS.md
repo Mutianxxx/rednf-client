@@ -1,3 +1,13 @@
+# P0-2 SUB ANI 攻击身份与 type15 配对 ATK（2026-11-16）
+
+完成 #75 的限定子集：`ActWorldHost::compile/bind` 现在按同一 exact context 解析攻击身份——MOB 源路由的 `[attack info]`、OBJ 的 exact `[basic action]` + `[attack info]`、ACT 自身 `[default attackinfo]`；`darkthunderbolt1.act` 的 BASE/SUB ANI type15 都进入 `collisionTracks`，各自带源帧边界/层/XY、独立 `attackInstance`、`hitIndex` 与 `acceptedTargets`，并纳入 ATTACKRECT reset/on、snapshot/restore 与 remap。无 exact OBJ 的 `flamestrike_item.act` 仍在 bind 拒绝，无关 OBJ 不能借用 ATK；无身份的 SUB ANI 静态编译仍精确阻塞。
+
+补修一处回归边界：`jena.mob` 的 Event.ai 返回动作在源 MOB 里没有 `[attack info]`，此时保留空静态身份，由 ACT 的攻击盒/换 ATK 命令路径决定，绝不猜一个 ATK 路径；source action service 的 compile 与 bind 使用同一 route，且把私有 RNG 抽样放回准入通过之后，避免 blocked 路径偷吃随机数。修复后 `Monster damage window` 的 owner remap 与 RNG 一致性断言恢复通过。
+
+验收：group 3 中 ACT World host 专项报告 `reports/beta-act/act-world-host-tests.json` 为 `pass`，117 项通过；`Monster damage window` 全部检查通过。group 3 整组仍退出 1，失败点仍是已入库基线 `Diagnostic damage draws only its hurt-presentation stream…`，不宣称整组通过，也不把静态 `runtime_ready` 当成 World 执行或 1031 原版等价。SUB ANI 的 Z 偏移在 1031 源数据中没有字段，未伪造；渲染 track 与 collision track 的语义一致性、对象运动/命中/伤害闭环、用户反馈技能表现仍未验收。
+
+---
+
 # P0-2 ACT 粒子运动与主场景绘制（2026-11-16）
 
 在上一运行时子集上继续完成：共享 PTL 解码器对未知/畸形标签登记诊断，并把未消费字段与可执行子集分开；`ActParticleAdmission` 现在携带源速度区间、changing term、gravity、area 和 `equivalent` 标志。`ActParticleInstance::position()` 用年龄纯函数计算直线/保持末值位移与自由落体，`ActWorldHost` 的两种发射入口带入 owner 朝向。主场景把粒子按 Y-Z 深度送入既有绘制队列，新增 `Renderer::actParticle(s)`；隐藏 SDL 渲染实测像素变化，确认主场景有实际消费者，而不是仅有容器。

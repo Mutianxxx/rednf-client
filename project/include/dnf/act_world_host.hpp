@@ -6,6 +6,7 @@
 #include "dnf/combat.hpp"
 #include "dnf/objects.hpp"
 #include <memory>
+#include <utility>
 
 namespace dnf {
 // PVF references retain PVF identity; IMG/audio leaves retain their own byte
@@ -32,6 +33,9 @@ class ActWorldResources final : public ActResourceResolver {
   public:
     ActWorldResources(Pvf &, Assets &, std::string staticIdentity);
     const std::string &staticIdentity() const { return staticIdentity_; }
+    // Resolve an ACT/OBJ literal against its exact source directory. Ambiguous
+    // or missing references throw rather than being inferred from filenames.
+    std::string resolvePath(const std::string &parent,const std::string &literal) const { return path(parent,literal); }
     // Admitted PTL program or throw with a precise source-byte diagnostic.
     // The same record is used by static admission and by the World emitter.
     std::shared_ptr<const ActParticleAdmission> particleAdmission(const ActResourceRequest &) const;
@@ -146,7 +150,7 @@ class ActWorldHost {
     void retireSpawns(Batch &, uint64_t);
     void retireParticles(Batch &, uint64_t);
     void cleanup(Batch &, uint64_t);
-    void bindCollision(Batch &,uint64_t,const MonsterActionRoute *);
+    void bindCollision(Batch &,uint64_t,const ActBindRequest &,const MonsterActionRoute *);
     void collide(Batch &,uint64_t,uint64_t,bool);
     void interruptNeutralPlayer(Batch &);
     Json collisionSnapshot(const State &) const;
@@ -174,7 +178,15 @@ class ActWorldHost {
     ActWorldHost(World &, Pvf &, Assets &, std::string staticIdentity,
                  ActWorldHostOptions = {});
     bool hasCommandConsumer(const std::string &) const;
-    ActCompileResult compile(const std::string &, ActSemanticPolicy = {}) const;
+    // Without a collision identity this stays a static admission: any ACT whose
+    // BASE/SUB ANI carries type15 is rejected. Supplying the exact MOB route or
+    // OBJ action context binds a source attack identity and compiles the
+    // attack-bearing tracks; it does not claim 1031 visual/native equivalence.
+    ActCompileResult compile(const std::string &, ActSemanticPolicy = {},
+                             const ActBindRequest *bind = nullptr,
+                             const MonsterActionRoute *attackRoute = nullptr) const;
+    std::pair<std::string,Json> resolveCollisionAttack(const ActProgram &,
+        const ActBindRequest &,const MonsterActionRoute *) const;
     ActWorldHostResult bind(std::shared_ptr<const ActProgram>, const ActBindRequest &,
                             ActEntityRelations = {}, bool replaceOwner = false,
                             const MonsterActionRoute *attackRoute = nullptr);

@@ -152,15 +152,16 @@ python -X utf8 -B tools/skill-bindings/src/extract_commands.py          # 指令
 执行顺序与修改范围见 [SKILL-RUNTIME-PLAN.md](SKILL-RUNTIME-PLAN.md)：
 P0 引用闭包与现有 ACT 消费者 → OBJ/NUT 生命周期；P1 ALS、ATK、PTL；P2 SKL 与跨系统表族。
 每步区分静态候选、编译准入、实际 World 执行与基座实机核对，分别记录测试和 git 同步状态。
-现有工程已包含 ACT 编译/调度/部分 World 消费者及 PTL 解析/预览子集；P0-2 已接通 `CREATE PASSIVEOBJECT` 的受控 World 对象工厂，以及 ACT 级 PTL 单次发射、独立寿命、源速度/重力/透明度、主场景绘制和回收子集。未消费的旋转、落点、随机分布与持续发射逐字段标为非等价，PARTICLE 完整验收与 P0-2 整体验收仍未通过。
+现有工程已包含 ACT 编译/调度/部分 World 消费者及 PTL 解析/预览子集；P0-2 已接通 `CREATE PASSIVEOBJECT` 的受控 World 对象工厂、ACT 级 PTL 单次发射/独立寿命/源速度重力透明度/主场景绘制/回收子集，以及 BASE/SUB ANI type15 的 exact MOB/OBJ/默认 ATK 身份与独立碰撞轨迹。未消费的旋转、落点、随机分布、持续发射与 SUB ANI Z 偏移逐字段标为非等价；PARTICLE、SUB ANI 完整语义与 P0-2 整体验收仍未通过。
 
 ## 已知边界（不要当成已完成）
 
 - **ACT 对象工厂是受控子集**：`CREATE PASSIVEOBJECT` 已能在真实 World 生成/回收实体，
   但只有当 OBJ 的字面依赖闭包含已消费的 ANI/ATK/IMG 叶子时才准入。含 `.ptl`、
   `[basic action]` ACT 递归、注册表缺失的对象继续显式阻塞；预警贴花
-  （`[WARNING MARK]`）、PTL 旋转/落点/随机分布/持续发射、type15 攻击身份/配对 ATK 与对象的
-  运动/命中/伤害闭环**未**恢复。静态 `ok` / `runtime_ready` 只是准入旗标，
+  （`[WARNING MARK]`）、PTL 旋转/落点/随机分布/持续发射、SUB ANI 的 Z 偏移与对象的
+  运动/命中/伤害闭环**未**恢复；type15 只完成 exact 源身份与独立轨迹子集，不是原版等价。
+  静态 `ok` / `runtime_ready` 只是准入旗标，
   不等于 World 执行或 1031 原版表现一致。详见
   [`project/reports/pvf-audit/README.md`](project/reports/pvf-audit/README.md) 第 6.2 节。
 - 攻击判定选择器 `0x70213F` 位于 Themida VM 区，**立即数 → `.atk` 文件名的翻译未恢复**；

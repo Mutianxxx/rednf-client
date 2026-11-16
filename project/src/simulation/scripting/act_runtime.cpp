@@ -928,14 +928,18 @@ Json ActSemanticPolicy::json() const {
 }
 Json ActCompileResult::json() const {
     if (!program) return {{"ok", false}, {"error", "No compiled ACT program"}};
-    Json dependencies = Json::array(), diagnostics = Json::array();
+    Json dependencies = Json::array(), diagnostics = Json::array(), tracks = Json::array();
     for (const auto &dependency : program->dependencies) dependencies.push_back(dependency.json());
     for (const auto &diagnostic : program->diagnostics) diagnostics.push_back(diagnostic.json());
+    for (const auto &track : program->collisionTracks) tracks.push_back({
+        {"source", track.source.json()}, {"animation", track.animation}, {"role", track.role},
+        {"start_us", track.startUs}, {"end_us", track.endUs}, {"loop", track.loop},
+        {"x", track.x}, {"y", track.y}, {"layer", track.layer}});
     return {{"ok", ok}, {"source", program->source.json()}, {"policy", program->policy.json()},
             {"syntax_complete", program->syntaxComplete}, {"source_ready", program->sourceReady},
             {"runtime_ready", program->runtimeReady}, {"has_motion", bool(program->motion)},
             {"triggers", program->triggers.size()}, {"behaviors", program->behaviors.size()},
-            {"dependencies", dependencies}, {"diagnostics", diagnostics}};
+            {"dependencies", dependencies}, {"collision_tracks", tracks}, {"diagnostics", diagnostics}};
 }
 ActCompileResult compileActProgram(const Script &script, const ActCompileContext &context) {
     return Compiler(script, context).run();
