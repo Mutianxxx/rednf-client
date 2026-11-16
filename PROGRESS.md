@@ -1,3 +1,18 @@
+# P0-2 SEND DO BEHAVIOR 接收方形态实测（事实修正，2026-11-17）
+
+此前把 `[SEND DO BEHAVIOR]` 整体归为「跨程序投递」，并不准确。对 1031 全包 `.act` 全量扫描后，共 80 处 / 77 文件，接收方只有两种：
+
+| 接收方 | 处数 | 形态 | 性质 |
+|---|---|---|---|
+| `[ME]` | 59 | `[SEND DO BEHAVIOR] [ME] <behavior 索引> [/BEHAVIOR]` | **同一 program 内部的 behavior 自投递**，索引可判（0/1/5） |
+| `[CHECKUP OBJECT]` | 21 | `[SEND DO BEHAVIOR] [CHECKUP OBJECT] <索引> [/BEHAVIOR]` | 投递给场景 checkup 对象，身份仍未恢复 |
+
+因此「接收 program/action 身份无法唯一确定」只对 `[CHECKUP OBJECT]` 成立；`[ME]` 那 59 处是**可无猜实现**的自投递，与 `[delay do behavior]` 的差别是**时序**（即时嵌套派发）而非接收方。当前代码仍把两者都放在 `deferred_call_cross_program` 并整体 fault，这是一个已定位、可闭合的缺口，不是无源阻塞。
+
+下一项工作据此调整：`ActDeferredCall` 需要拆成「接收方（Self / CheckupObject）× 时序（Delay / Send 即时）」，先实现 `[ME]` 自投递（带递归/深度预算与同帧重入保护），`[CHECKUP OBJECT]` 继续精确阻塞。
+
+---
+
 # P0-2 共享命中接受账本（2026-11-17）
 
 #76 中唯一能在当前代码库内独立闭合的缺口：此前四个命中生产者各有一套**互不可见**的局部账本——角色 ANI 攻击盒用 `hits_`/`hitCounts_` 时间窗，职业适配器用 `sourceContactLedgers_`/`hitTargets_`，ACT type15 用每条 track 的 `acceptedTargets`，被动对象用 `ObjectInstance::hits` 的 `ObjectHitKey{owner,serial,pulse}`。因此同一次源攻击被两条路径同时观测时，没有任何机制阻止第二次提交 HP。

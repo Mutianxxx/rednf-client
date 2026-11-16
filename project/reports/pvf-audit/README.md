@@ -283,7 +283,9 @@ PTL 不能只按“有标签”判断已实现。下表把**当前端闭合**与
 - 只在 `prepared.ready()` 后提交，被阻塞的接触可在后续 tick 用同一身份重试。
 - 被动对象伤害仍用 `ObjectSystem` 的持久化 `ObjectHitKey{owner,serial,pulse}`，`resolveObjectContact` 保持纯预检，不写实体账本。
 
-证据：`act-collision-tests` 1331 项（含每个被接受的 ACT type15 接触恰好发布一个共享身份，双所有者场景覆盖已接受的 miss），damage-world 新增账本单测 7 项 + World 集成 6 项，`monster-damage-window-tests` 65 项。cross-program SEND 与 foreign recipient `trigger_control` 仍未完成。
+证据：`act-collision-tests` 1331 项（含每个被接受的 ACT type15 接触恰好发布一个共享身份，双所有者场景覆盖已接受的 miss），damage-world 新增账本单测 7 项 + World 集成 6 项，`monster-damage-window-tests` 65 项。
+
+**同轮事实修正**：`[SEND DO BEHAVIOR]` 在 1031 全包共 80 处 / 77 文件，接收方只有 `[ME]` 59 处与 `[CHECKUP OBJECT]` 21 处。`[ME]` 是同一 program 内部的 behavior 索引自投递（与 `[delay do behavior]` 的差别是即时嵌套而非接收方），属可无猜实现；只有 `[CHECKUP OBJECT]` 的接收身份未恢复。当前实现仍把两者整体按跨程序阻塞，是已定位缺口。
 
 ## 7. 历史结论（以下链为待验证模型）
 
