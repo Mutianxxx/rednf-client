@@ -248,6 +248,30 @@ int matchEffectBodyStage(const std::string &effectStem,
         break;
     }
     if (signature.empty()) return -1;
+    // A serial wider than the word match: "illusionslashmelee2" belongs to the
+    // second cut, whose stage is named "illusionslash2". Matching only on
+    // "slash" bound melee1..4 to the first stage, so all four cuts played at
+    // once. Require equal serials and a prefix that covers the stage name,
+    // which keeps an unnumbered "illusionslashwave" out of this rule.
+    const auto splitSerial = [](const std::string &stem, std::string &prefix) {
+        size_t end = stem.size();
+        while (end > 0 && std::isdigit(static_cast<unsigned char>(stem[end - 1]))) --end;
+        if (end == stem.size()) return -1;
+        prefix = stem.substr(0, end);
+        return std::atoi(stem.c_str() + end);
+    };
+    std::string bareStem = effectStem;
+    if (bareStem.size() > 3 && bareStem.compare(bareStem.size() - 3, 3, "_ds") == 0)
+        bareStem.resize(bareStem.size() - 3);
+    std::string effectPrefix;
+    const int effectSerial = splitSerial(bareStem, effectPrefix);
+    if (effectSerial > 0) {
+        for (size_t i = 0; i < stages.size(); ++i) {
+            std::string stagePrefix;
+            if (splitSerial(stemOf(stages[i]), stagePrefix) != effectSerial) continue;
+            if (effectPrefix.rfind(stagePrefix, 0) == 0) return int(i);
+        }
+    }
     for (size_t i = 0; i < stages.size(); ++i)
         if (stemOf(stages[i]).find(signature) != std::string::npos) return int(i);
     if (hasSerial)
@@ -1660,6 +1684,22 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             }
             // birthRatio stays as a consumer fallback. It now applies to the
             // nominal clock, which no longer contains input-wait spans.
+            // The _ds twin of a layer already bound to this stage is the same
+            // art in the dark-sword flavour; drawing both doubles the light.
+            const auto twinOf = [](std::string name) {
+                if (name.size() > 3 && name.compare(name.size() - 3, 3, "_ds") == 0)
+                    name.resize(name.size() - 3);
+                return name;
+            };
+            const auto clash = std::find_if(
+                layers.begin(), layers.end(), [&](const EffectLayerPlan &other) {
+                    return other.bodyStage == layer.bodyStage && other.stageBound == layer.stageBound &&
+                           twinOf(stemOf(other.path)) == twinOf(stemOf(layer.path));
+                });
+            if (clash != layers.end()) {
+                if (stemOf(layer.path) == twinOf(stemOf(layer.path))) clash->path = layer.path;
+                continue;
+            }
             layers.push_back(std::move(layer));
         }
         mapping.effectLayers = std::move(layers);
@@ -1810,13 +1850,58 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                 // layer" dropped both the visual and every hit it carries.
                 // The spawn command itself is unrecovered, so the object is
                 // repeated once per swinging body stage: a reconstruction.
-                int emitted = 0;
+                // A motion whose name ends in a serial belongs to that swing
+                // only -- illusionslashmelee1..4 are the four cuts of
+                // IllusionSlash. Copying every motion onto every stage put
+                // sixteen layers on one swing, each at its own first-frame
+                // coordinate, which is what made the effect field look random.
+                std::string serialStem = stem;
+                if (serialStem.size() > 3 &&
+                    serialStem.compare(serialStem.size() - 3, 3, "_ds") == 0)
+                    serialStem.resize(serialStem.size() - 3);
+                size_t digitBegin = serialStem.size();
+                while (digitBegin > 0 &&
+                       std::isdigit(static_cast<unsigned char>(serialStem[digitBegin - 1])))
+                    --digitBegin;
+                const int serial = digitBegin < serialStem.size()
+                                       ? std::atoi(serialStem.c_str() + digitBegin) : -1;
+                std::vector<size_t> swings;
                 for (size_t slotIndex = 0; slotIndex < mapping.chainSlots.size(); ++slotIndex) {
                     const auto &slot = mapping.chainSlots[slotIndex];
                     if (slot.role != ChainSlotRole::Triggered) continue;
                     const auto slotStem = stemOf(slot.path);
                     if (slotStem.find("slash") == std::string::npos &&
                         slotStem.find("attack") == std::string::npos) continue;
+                    swings.push_back(slotIndex);
+                }
+                // A serial wider than the swing list is a general motion, not a
+                // per-swing one; keep the old every-stage behaviour for it.
+                const bool serialMatches = serial > 0 && serial <= int(swings.size());
+                // This motion is now placed by the object that owns it. The
+                // copy seeded earlier from the file-stem order is the same
+                // animation with an estimated instant, so it has to go or the
+                // art draws twice at two different times.
+                mapping.effectLayers.erase(
+                    std::remove_if(mapping.effectLayers.begin(), mapping.effectLayers.end(),
+                                   [&](const EffectLayerPlan &other) {
+                                       return other.path == motion &&
+                                              other.evidence.find("no ALS sidecar") !=
+                                                  std::string::npos;
+                                   }),
+                    mapping.effectLayers.end());
+                // The _ds twin is the dark-sword variant of the same art. Both
+                // firing on one swing doubles the light and offsets the copy.
+                const auto twinStem = [](std::string name) {
+                    if (name.size() > 3 && name.compare(name.size() - 3, 3, "_ds") == 0)
+                        name.resize(name.size() - 3);
+                    return name;
+                };
+                int emitted = 0;
+                int swingOrdinal = 0;
+                for (size_t slotIndex : swings) {
+                    ++swingOrdinal;
+                    if (serialMatches && serial != swingOrdinal) continue;
+                    const auto &slot = mapping.chainSlots[slotIndex];
                     EffectLayerPlan layer;
                     layer.path = motion;
                     layer.source = "object";
@@ -1835,6 +1920,23 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                     layer.offsetX = firstX;
                     layer.offsetY = firstY;
                     layer.evidence = "passive object with [attack info]; type-15 boxes are its hit volume";
+                    if (serialMatches)
+                        layer.evidence += "; swing " + std::to_string(serial) + " of " +
+                                          std::to_string(swings.size()) + " from the motion serial";
+                    const auto duplicate = std::find_if(
+                        mapping.effectLayers.begin(), mapping.effectLayers.end(),
+                        [&](const EffectLayerPlan &other) {
+                            return other.bodyStage == layer.bodyStage &&
+                                   twinStem(stemOf(other.path)) == twinStem(stemOf(layer.path));
+                        });
+                    if (duplicate != mapping.effectLayers.end()) {
+                        // One twin only: the base job's plain art wins over the
+                        // dark-sword copy when both name the same visual.
+                        if (stemOf(layer.path) == twinStem(stemOf(layer.path)))
+                            duplicate->path = layer.path;
+                        ++emitted;
+                        continue;
+                    }
                     mapping.effectLayers.push_back(std::move(layer));
                     ++emitted;
                 }

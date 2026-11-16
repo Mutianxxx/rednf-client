@@ -979,3 +979,30 @@ passiveobject/character/mage/animation/atmagiccannon/00_magiccannon_fire_dodge.a
 - 验收：`dnf_skill_preview_tests` 50 项通过（新增 2 项：舞台目录只填空行、已解析链不回退）；
   `dnf_native --profile-audit` exit 0 / `frontend_started=false` / PVF 身份 `d13ce454…607d`，
   二进制 `31fca8a5…`；`--flow-smoke 25` 走完角色选择→艾尔文防线→HUD。
+
+# 展示器特效堆叠与阶段错配修复（2026-11-17 v3）
+
+用户反馈「特效位置很乱、人物动作和特效对不上」。定位到三层不同成因，本轮只修其中
+确定属实现缺陷的两项，第三项（源时间轴/骨骼锚点）仍未完成。
+
+- 缺陷 A：`consider()` 的 passive-object 分支把**每个 motion 复制到每个 Triggered 阶段**。
+  幻影剑舞 4 段挥砍 × 每个对象动作文件 = 79 层，全部同屏。修法：motion stem 末尾序号
+  对应第几次挥砍（`illusionslashmelee1..4` → 第 1..4 斩），只绑自己那一段；无序号的动作
+  （wave / wavebottom）保持每阶段一份。序号超出段数时按通用动作处理，不整段丢弃。
+- 缺陷 B：`_ds` 孪生（暗黑武士版）与普通版同播，同一视觉两份、按各自首帧坐标错开。
+  effectLayers 现在按 `bodyStage + 去掉 _ds 的 stem` 去重，普通版优先。
+- 缺陷 C（连带）：同一动画既被文件名估算（untimed）生成、又被对象接管（object）生成，
+  会以两个不同时刻各画一次。对象接管时删除同名 `no ALS sidecar` 层。
+- `matchEffectBodyStage` 新增序号规则：`illusionslashmelee2` 的数字是 2、字母前缀覆盖
+  `illusionslash2`，就绑第 2 段（1290ms）。旧规则只认 "slash" 关键词，把 melee1..4
+  全绑到第一斩（0ms），这是「动作对不上」的直接原因之一。
+- 验收：幻影剑舞 79 → 16 层，出生分布 0/350/1290/1640/1990 与 chainSlots 一致；不动明王阵
+  21 → 17；乱射仍 4 层（无 ALS sidecar，全 birth=0 属未恢复，未强改）。`dnf_skill_preview_tests`
+  52 项通过（+2：层数上限、孪生不同播）。
+
+**仍未完成（不是调参能解决）**：
+1. 源时间轴：只有 `.als` 的 `[add]` 帧能给出真实出现帧，`birthRatio` 是按文件名在时长上
+   铺开的估算。乱射、不动明王阵都没有 sidecar，因此全 birth=0。
+2. 骨骼锚点：特效画在「角色脚下 + 固定像素偏移」，不随动作帧的手/枪口位置变化。原版挂在
+   CHR 骨骼挂点上，该数据未恢复。
+3. 对象生成时机：ACT `CREATE PASSIVEOBJECT` 未恢复，「每挥砍一段生成一次」仍是重建。

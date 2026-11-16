@@ -137,6 +137,40 @@ int entry(int argc, char **argv) {
             check(kept, "a resolved effect chain never falls back to a staging folder", {});
         }
 
+        // 3d) A passive-object motion whose stem ends in a serial belongs to
+        //     that one swing, and its _ds twin is the same art in the dark-sword
+        //     flavour. Copying every motion onto every stage put 79 layers on
+        //     IllusionSlash, all at once, each at its own first-frame
+        //     coordinate; that is the "the effect field looks random" report.
+        {
+            const SkillVisualMapping *row = nullptr;
+            for (const auto &candidate : table.rows(0))
+                if (candidate.key.skillId == 73) row = table.mapping(candidate.key);
+            std::vector<std::pair<std::pair<int, std::string>, int>> copies;
+            int total = 0;
+            if (row) {
+                for (const auto &layer : row->effectLayers) {
+                    std::string stem = layer.path.substr(layer.path.find_last_of('/') + 1);
+                    stem = stem.substr(0, stem.find_last_of('.'));
+                    if (stem.size() > 3 && stem.compare(stem.size() - 3, 3, "_ds") == 0)
+                        stem.resize(stem.size() - 3);
+                    const auto key = std::make_pair(layer.bodyStage, stem);
+                    const auto found = std::find_if(copies.begin(), copies.end(),
+                                                    [&](const auto &entry) { return entry.first == key; });
+                    if (found == copies.end()) copies.push_back({key, 1});
+                    else ++found->second;
+                    ++total;
+                }
+            }
+            int maxCopies = 0;
+            for (const auto &entry : copies) maxCopies = std::max(maxCopies, entry.second);
+            check(row && total > 0 && total < 30,
+                  "IllusionSlash no longer stacks every object motion on every swing",
+                  {{"layers", total}});
+            check(maxCopies <= 1, "a _ds twin never plays beside its plain animation",
+                  {{"maxCopies", maxCopies}});
+        }
+
         // 4) A row with no resource always explains itself.
         int gradeDChecked = 0, gradeDNoReason = 0;
         for (const int jobId : {0, 2}) {
