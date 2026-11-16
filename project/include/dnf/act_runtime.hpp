@@ -175,7 +175,14 @@ struct ActAttackRect { ActAttackRectMode mode = ActAttackRectMode::Reset; };
 struct ActChangeAttackInfo { std::string path; bool useDefault = false; };
 enum class ActTriggerMode { On, Off, Reset };
 struct ActTriggerControl { size_t trigger = 0; ActTriggerMode mode = ActTriggerMode::On; };
-struct ActDeferredCall { ActBehaviorCall call; bool targetProgram = true; };
+// [DELAY DO BEHAVIOR] defers, [SEND DO BEHAVIOR] dispatches immediately; both
+// name a recipient. Only a [ME] recipient resolves to this program's own
+// action, so only that case can be delivered without a receiving identity.
+struct ActDeferredCall {
+    ActBehaviorCall call;
+    bool immediate = false;
+    bool selfTargeted() const { return call.recipient == ActRecipientKind::Me; }
+};
 struct ActCleanup { std::string reason; };
 struct ActSetDamageCheck { bool enabled=false; uint64_t intervalMs=0; };
 using ActCommandPayload = std::variant<ActSetSpeed, ActSpawn, ActParticle,

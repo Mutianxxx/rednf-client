@@ -184,7 +184,16 @@ Json payloadJson(const ActCommandPayload &payload) {
         [](const ActAttackRect &v) -> Json { return {{"kind", "attack_rect"}, {"mode", int(v.mode)}}; },
         [](const ActChangeAttackInfo &v) -> Json { return {{"kind", "change_attack_info"}, {"path", v.path}, {"default", v.useDefault}}; },
         [](const ActTriggerControl &v) -> Json { return {{"kind", "trigger_control"}, {"trigger", v.trigger}, {"mode", int(v.mode)}}; },
-        [](const ActDeferredCall &v) -> Json { return {{"kind", v.targetProgram ? "deferred_call_cross_program" : "deferred_call"}, {"target_program", v.targetProgram}, {"call", callJson(v.call)}}; },
+        [](const ActDeferredCall &v) -> Json {
+            // A [ME] recipient names this action; every other recipient name is
+            // an object/target whose receiving program/action identity is not
+            // recovered, so those stay an explicit cross-program gap.
+            const bool self = v.selfTargeted();
+            return {{"kind", self ? "deferred_call" : "deferred_call_cross_program"},
+                    {"immediate", v.immediate}, {"self_targeted", self},
+                    {"recipient", int(v.call.recipient)},
+                    {"target_program", !self}, {"call", callJson(v.call)}};
+        },
         [](const ActCleanup &v) -> Json { return {{"kind", "cleanup_owned"}, {"reason", v.reason}}; },
         [](const ActSetDamageCheck &v) -> Json { return {{"kind","set_damage_check"},{"enabled",v.enabled},{"interval_ms",v.intervalMs}}; },
         [](const ActStraightMove &v) -> Json {
@@ -940,8 +949,11 @@ class Compiler {
             if (const auto *control = std::get_if<ActTriggerControl>(&instruction.payload)) {
                 if (control->trigger >= program_->triggers.size()) report(instruction.source.ordinal, "trigger_index_bounds", "TRIGGER control references missing trigger");
             } else if (const auto *deferred = std::get_if<ActDeferredCall>(&instruction.payload)) {
-                if (!deferred->targetProgram && deferred->call.behavior >= program_->behaviors.size())
-                    report(instruction.source.ordinal, "behavior_index_bounds", "Delayed call references missing behavior");
+                // A [ME] recipient resolves inside this program, so its index is
+                // checked here. Foreign recipients name another program whose
+                // behavior table is not part of this source file.
+                if (deferred->selfTargeted() && deferred->call.behavior >= program_->behaviors.size())
+                    report(instruction.source.ordinal, "behavior_index_bounds", "Self-delivered call references missing behavior");
             }
         }
         if (!program_->motion && program_->triggers.empty() && program_->behaviors.empty())
@@ -1317,15 +1329,17 @@ struct Runner {
                     }
                     emit(target, instruction.source, instruction.payload);
                 } else if (const auto *deferred = std::get_if<ActDeferredCall>(&instruction.payload)) {
-                    if (deferred->targetProgram) {
-                        // SEND calls the recipient's program, not this program.
-                        // World must enqueue it, preserve this key and check the
-                        // receiving program/action identity at delivery.
-                        QueryResult query; query.checkup.push_back(target);
+                    QueryResult query; query.checkup.push_back(target);
+                    if (!deferred->selfTargeted()) {
+                        // The recipient is another object/target whose program and
+                        // behavior table are not recovered. Emit the unresolved
+                        // command so World rejects it by identity, never by name.
                         for (auto recipient : recipients(deferred->call, query, state(), world))
                             emit(recipient, instruction.source, *deferred);
                     } else {
-                        QueryResult query; query.checkup.push_back(target);
+                        // [SEND] dispatches immediately (nested, bounded by the
+                        // behavior depth/instruction budgets); [DELAY] schedules
+                        // to its deadline. Both stay in this program/action.
                         schedule(deferred->call, recipients(deferred->call, query, state(), world));
                     }
                 } else emit(target, instruction.source, instruction.payload);
@@ -1645,7 +1659,7 @@ ActBehaviorCall restoreCall(const ActProgram &program, const Json &value) {
         if (callJson(sourceCall) == callJson(call)) declared = true;
     for (const auto &behavior : program.behaviors) for (const auto &instruction : behavior.instructions)
         if (const auto *deferred = std::get_if<ActDeferredCall>(&instruction.payload))
-            if (!deferred->targetProgram && callJson(deferred->call) == callJson(call)) declared = true;
+            if (!deferred->immediate && deferred->selfTargeted() && callJson(deferred->call) == callJson(call)) declared = true;
     if (!declared || call.kind != ActCallKind::Delayed || call.behavior >= program.behaviors.size() || !call.delayMs)
         throw std::invalid_argument("Saved ACT continuation is not declared by the source program");
     return call;

@@ -450,10 +450,13 @@ Json runActRuntimeTests(Pvf &pvf, Assets &assets) {
             !recover(drak.program, checkpoint(normal), stale).ok);
     });
     run("delayed calls and frame policy", [&] {
+        // [ME] is the only recipient whose behavior index is guaranteed to be
+        // read from this program's table; a foreign recipient indexes the
+        // receiver's table (10 of 356 1031 call sites exceed the local table).
         const auto source = syntheticScript({
             {"[TRIGGER]", Json::array()}, {"[LIMIT]", Json::array({1})},
             {"[WHICH]", Json::array()}, {"[TARGET]", Json::array()},
-            {"[DELAY DO BEHAVIOR]", Json::array()}, {"[CHECKUP OBJECT]", Json::array({0, 50})}, {"[/TRIGGER]", Json::array()},
+            {"[DELAY DO BEHAVIOR]", Json::array()}, {"[ME]", Json::array({0, 50})}, {"[/TRIGGER]", Json::array()},
             {"[BEHAVIOR]", Json::array()}, {"[SET SPEED]", Json::array()}, {"[X AXIS]", Json::array({30})},
             {"[/SET SPEED]", Json::array()}, {"[/BEHAVIOR]", Json::array()}});
         const auto compiled = compileActProgram(source, context);

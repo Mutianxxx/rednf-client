@@ -1197,10 +1197,12 @@ void ActWorldHost::applyCommands(Batch &b,uint64_t id,const ActPreparedStep &ste
             b.events.push_back({world_.tick,"act_trigger_control",command.source.memberPath,owner->id,
                 int(control->trigger),int(control->mode)});
         } else if(const auto *deferred=std::get_if<ActDeferredCall>(&command.payload)) {
-            if(deferred->targetProgram)throw std::invalid_argument("ACT SEND DO BEHAVIOR cross-program delivery is not registered");
-            // Local DELAY DO BEHAVIOR is scheduled by the ACT runtime itself;
-            // seeing it here means an emitted command escaped that boundary.
-            throw std::invalid_argument("ACT local DELAY DO BEHAVIOR must stay inside its scheduling ACT");
+            // A [ME] recipient is consumed by the ACT runtime itself (SEND nests
+            // immediately, DELAY schedules), so seeing one here means an emitted
+            // command escaped that boundary. Any other recipient names another
+            // object whose receiving program/action identity is not recovered.
+            if(!deferred->selfTargeted())throw std::invalid_argument("ACT foreign-recipient DO BEHAVIOR delivery is not registered");
+            throw std::invalid_argument("ACT self-targeted DO BEHAVIOR must stay inside its owning ACT");
         } else if(const auto *change=std::get_if<ActChangeAttackInfo>(&command.payload)) {
             if(command.recipient!=command.owner)throw std::invalid_argument("ACT foreign CHANGE ATTACKINFO binding is not registered");
             auto collision=b.host.collisions.find(id);if(collision==b.host.collisions.end())throw std::invalid_argument("ACT attack change has no source collision binding");

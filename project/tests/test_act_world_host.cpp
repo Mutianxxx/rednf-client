@@ -148,20 +148,40 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
               f.host.hasCommandConsumer("attack_rect") && f.host.hasCommandConsumer("change_attack_info") &&
               f.host.hasCommandConsumer("deferred_call") && f.host.hasCommandConsumer("trigger_control") &&
               !f.host.hasCommandConsumer("deferred_call_cross_program"),
-              "Object/PTL/attack/local deferred/local trigger consumers are registered while cross-program SEND remains blocked");
+              "Object/PTL/attack/self-delivered behavior/local trigger consumers are registered while foreign recipients remain blocked");
         const auto attack=f.host.compile("passiveobject/actionobject/monster/new_event/action/assault_missile0.act");
         check(attack.ok && attack.program->runtimeReady,
               "Root ANI type15 is admitted only through the real registered collision and source damage host");
         auto messageHas=[](const Json &list,const std::string &needle){
             return std::any_of(list.begin(),list.end(),[&](const Json &v){
                 return v.value("message",std::string()).find(needle)!=std::string::npos;});};
-        const auto localDelay=f.host.compile("monster/newmonsters/shonan/kinshou/action/swing2.act");
-        check(diagnostic(localDelay.json().at("diagnostics"),"missing_resource_consumer") &&
-              !messageHas(localDelay.json().at("diagnostics"),"deferred_call"),
-              "1031 local DELAY DO BEHAVIOR no longer reports a missing consumer while OBJ recursion still blocks the source ACT");
-        const auto crossSend=f.host.compile("passiveobject/actionobject/monster/dimensiongate/cosmofiend/gaunis/_namgyu/action/red_success_07_tile.act");
+        // [SEND DO BEHAVIOR] [ME] is an immediate nested dispatch of this program's
+        // own behavior table; [DELAY DO BEHAVIOR] [ME] is the same dispatch on a
+        // deadline. Only the recipient name decides, so both share one consumer.
+        const auto selfSend=f.host.compile("monster/newmonsters/queen_rosi/action/command1.act");
+        check(!messageHas(selfSend.json().at("diagnostics"),"deferred_call_cross_program"),
+              "1031 SEND DO BEHAVIOR [ME] compiles as an immediate self-dispatch instead of a foreign delivery gap");
+        const auto selfDelay=f.host.compile("monster/newmonsters/shonan/gado/action/attack3.act");
+        check(!messageHas(selfDelay.json().at("diagnostics"),"deferred_call"),
+              "1031 DELAY DO BEHAVIOR [ME] is consumed by the owning ACT, not reported as a missing consumer");
+        // Trigger-level [DELAY DO BEHAVIOR] is a different construct: its
+        // recipient comes from the trigger query and its index has never been
+        // observed outside this program's table (0 of 278 sites). It keeps the
+        // existing scheduling path; only the BEHAVIOR-embedded SEND is split here.
+        const auto checkupDelay=f.host.compile("monster/newmonsters/shonan/kinshou/action/swing2.act");
+        check(diagnostic(checkupDelay.json().at("diagnostics"),"missing_resource_consumer") &&
+              !messageHas(checkupDelay.json().at("diagnostics"),"deferred_call"),
+              "1031 trigger-level DELAY DO BEHAVIOR keeps its scheduling path while OBJ recursion still blocks the source ACT");
+        // 10 of the 356 1031 call sites pass a behavior index beyond the file's
+        // own table; every one of them names CHECKUP OBJECT. That is direct
+        // evidence the index belongs to the receiving object's table, so a
+        // foreign recipient cannot be executed from this program at all.
+        const auto crossSend=f.host.compile("monster/newmonsters/risk_dungeon/noirpera/disease_spirit/action/absorption.act");
         check(messageHas(crossSend.json().at("diagnostics"),"deferred_call_cross_program"),
-              "1031 SEND DO BEHAVIOR stays an explicit cross-program consumer gap instead of inheriting the local delay path");
+              "1031 SEND DO BEHAVIOR to CHECKUP OBJECT stays an explicit consumer gap instead of inheriting the self path");
+        const auto selfSendTile=f.host.compile("passiveobject/actionobject/monster/dimensiongate/cosmofiend/gaunis/_namgyu/action/red_success_07_tile.act");
+        check(!messageHas(selfSendTile.json().at("diagnostics"),"deferred_call_cross_program"),
+              "The same construct with a [ME] recipient no longer borrows the foreign-recipient block");
     }
     {
         constexpr const char *triggerControlSource="passiveobject/actionobject/map/risk_dungeon/cartelcommand/action/xyz1.act";

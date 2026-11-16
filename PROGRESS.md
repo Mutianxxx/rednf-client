@@ -1,3 +1,21 @@
+# P0-2 DO BEHAVIOR 接收方语义：自投递实现与跨程序精确阻塞（2026-11-17）
+
+上一轮把 59 处 `[SEND DO BEHAVIOR] [ME]` 记成「同一 program 内自投递、可无猜实现」，方向对但缺一条决定性证据，本轮补上后按证据收窄。
+
+**全包实测（1031，19,087 个 `.act`）**：`[SEND]` 80 处（`[ME]` 59 / `[CHECKUP OBJECT]` 21），`[DELAY]` 278 处（`[ME]` 243 / `[CHECKUP OBJECT]` 35），合计 356。所有 DELAY 都在 TRIGGER 内，BEHAVIOR 内只有 SEND。
+
+**决定性证据**：356 处里 10 处的 behavior 索引**大于本文件的行为表长度**，且 10 处全部是 `[SEND DO BEHAVIOR] [CHECKUP OBJECT]`（例如 `monster/newmonsters/risk_dungeon/noirpera/disease_spirit/action/absorption.act` 只有 2 个 BEHAVIOR 却发送索引 2）。索引只能属于**接收方**的行为表，因此 `[CHECKUP OBJECT]` 投递不是「用我的行为表作用到别人身上」，而是「让接收对象跑它自己的表」——接收 program/action 身份未恢复时无法执行，也不能退化成发送方的表。`[ME]` 的索引全部落在本文件范围内，可无猜执行。
+
+**实现**：`ActDeferredCall` 由 `{call, targetProgram}` 改为 `{call, immediate}`，接收方唯一由 `call.recipient` 判定（`selfTargeted()` 仅 `[ME]`）。`payloadJson` 的 kind 相应二分：self → `deferred_call`（另带 `immediate`/`self_targeted` 字段，SEND 与 DELAY 共用同一消费者），foreign → `deferred_call_cross_program`。运行时 self 走 `schedule()`：SEND 立即嵌套派发（受既有 behavior 深度 64、指令/命令预算与 `failureSource` 定位保护，同帧重入有界），DELAY 按 deadline 排队；foreign 保留 `emit`，由 World 以 `ACT foreign-recipient DO BEHAVIOR delivery is not registered` 精确拒绝，绝不按同名或同路径猜接收 program。编译期行为索引校验只对 self 生效（foreign 的索引不属于本文件）。
+
+**顺带修正的旧语义**：此前 DELAY 一律按本地调度，`ActDeferredCall.targetProgram` 只对 SEND 置真；现在改为按接收方判定，`[DELAY DO BEHAVIOR] [ME]` 与 `[SEND DO BEHAVIOR] [ME]` 走同一路径，两者差异只剩时序。
+
+**诚实边界**：1031 中只有 1 处 SEND 所在 BEHAVIOR 被派发给 `[ME]`（`passiveobject/actionobject/common/action/bigboom.act` behavior 4 → `[SEND DO BEHAVIOR] [ME] 5`），而该文件因 `[TRIGGER QUESTEVENT]` 仍未编译，78/80 的 SEND 所在 BEHAVIOR 只被派发给 `[CHECKUP OBJECT]`。因此「`[SEND] [ME]` 运行时真的嵌套派发成功」在 1031 数据上**没有可绑定样本**，与 `[STRAIGHT MOVE]`/`[SET POS FORCE]` 同列「类型先建、样本后验」优先修复队列（见 `SKILL-RUNTIME-PLAN.md`）。TRIGGER 级 `[DO BEHAVIOR] [CHECKUP OBJECT]` 的索引归属同样未定：35 处 DELAY 全部是索引 0，无法用越界判据区分，本轮保持现有调度路径并登记为下一项调查，不宣称已对齐原版。
+
+**验收**：`act-world-host-tests` 133 项（原 130，新增自投递/自延迟/跨接收方三条断言并替换旧的两条）、`act-runtime-tests` 通过、`act-collision-tests` 1331、`monster-damage-window-tests` 65。group 3 整组仍因既有 Event.ai 基线退出 1（`Diagnostic damage draws only its hurt-presentation stream…`），不标整组通过。
+
+---
+
 # P0-2 SEND DO BEHAVIOR 接收方形态实测（事实修正，2026-11-17）
 
 此前把 `[SEND DO BEHAVIOR]` 整体归为「跨程序投递」，并不准确。对 1031 全包 `.act` 全量扫描后，共 80 处 / 77 文件，接收方只有两种：
