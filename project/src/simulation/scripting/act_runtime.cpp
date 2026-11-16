@@ -186,7 +186,27 @@ Json payloadJson(const ActCommandPayload &payload) {
         [](const ActTriggerControl &v) -> Json { return {{"kind", "trigger_control"}, {"trigger", v.trigger}, {"mode", int(v.mode)}}; },
         [](const ActDeferredCall &v) -> Json { return {{"kind", v.targetProgram ? "deferred_call_cross_program" : "deferred_call"}, {"target_program", v.targetProgram}, {"call", callJson(v.call)}}; },
         [](const ActCleanup &v) -> Json { return {{"kind", "cleanup_owned"}, {"reason", v.reason}}; },
-        [](const ActSetDamageCheck &v) -> Json { return {{"kind","set_damage_check"},{"enabled",v.enabled},{"interval_ms",v.intervalMs}}; }
+        [](const ActSetDamageCheck &v) -> Json { return {{"kind","set_damage_check"},{"enabled",v.enabled},{"interval_ms",v.intervalMs}}; },
+        [](const ActStraightMove &v) -> Json {
+            Json result = {{"kind", "straight_move"}, {"axis", v.axis == ActMoveAxis::Y ? "y" : "z"},
+                    {"motion", v.motion == ActMoveMotion::Jump ? "jump" : "down"},
+                    {"release_motion_down", v.releaseMotionDown}, {"damage_hp", v.damageHp}};
+            if (v.distance) result["distance"] = *v.distance;
+            if (v.accelerate) result["accelerate"] = *v.accelerate;
+            if (v.timeMs) result["time_ms"] = *v.timeMs;
+            if (v.returnPosition) result["return_position"] = vectorJson(*v.returnPosition);
+            return result;
+        },
+        [](const ActSetPositionForce &v) -> Json {
+            Json result = {{"kind", "set_position_force"}, {"start", coordinatesJson(v.start)},
+                    {"use_owner_base", v.useOwnerBase}, {"use_owner_direction", v.useOwnerDirection},
+                    {"use_map_position", v.useMapPosition}, {"not_use_object_direction", v.notUseObjectDirection},
+                    {"use_target_position", v.useTargetPosition}, {"move_uniform", v.moveUniform},
+                    {"move_reduce", v.moveReduce}, {"move_owner", v.moveOwner},
+                    {"move_target", v.moveTarget}, {"last_attack_position", v.lastAttackPosition}};
+            if (v.end) result["end"] = vectorJson(*v.end);
+            return result;
+        }
     }, payload);
 }
 bool validPolicy(const ActSemanticPolicy &policy) {
@@ -658,6 +678,119 @@ class Compiler {
                 "conflicting_coordinate_flags", "Map absolute position and owner-relative position conflict");
         return {source(begin, scope), teleport};
     }
+    // 1031 byte evidence: 38 STRAIGHT MOVE blocks across 20 ACT files. Exactly
+    // five field signatures occur, all with AXIS + MOVING MOTION + DAMAGE HP,
+    // and either TIME (14) or DISTANCE+ACCELERATE (24).
+    ActInstruction parseStraightMove(size_t &i, const std::string &scope) {
+        const auto begin = i; count(i, 0);
+        ActStraightMove move;
+        bool closed = false, axisSeen = false, motionSeen = false, damageSeen = false;
+        std::set<std::string> fields;
+        for (++i; i < script_.fields.size(); ++i) {
+            const auto name = tag(i);
+            if (name == "[/straight move]") { count(i, 0); closed = true; break; }
+            require(fields.insert(name).second, i, "repeated_straight_move_field", "Repeated STRAIGHT MOVE field");
+            if (name == "[axis]") {
+                require(i + 1 < script_.fields.size(), i, "straight_move_axis", "STRAIGHT MOVE AXIS requires a value");
+                ++i; count(i, 0); const auto value = tag(i);
+                require(value == "[y]" || value == "[z]", i, "straight_move_axis", "STRAIGHT MOVE AXIS must be Y or Z in 1031");
+                move.axis = value == "[y]" ? ActMoveAxis::Y : ActMoveAxis::Z; axisSeen = true;
+            } else if (name == "[moving motion]") {
+                require(i + 1 < script_.fields.size(), i, "straight_move_motion", "MOVING MOTION requires a value");
+                ++i; count(i, 0); const auto value = tag(i);
+                require(value == "[jump]" || value == "[down]", i, "straight_move_motion",
+                        "STRAIGHT MOVE MOVING MOTION must be JUMP or DOWN in 1031");
+                move.motion = value == "[jump]" ? ActMoveMotion::Jump : ActMoveMotion::Down; motionSeen = true;
+            } else if (name == "[release motion]") {
+                require(i + 1 < script_.fields.size(), i, "straight_move_release_motion", "RELEASE MOTION requires a value");
+                ++i; count(i, 0);
+                require(tag(i) == "[down]", i, "straight_move_release_motion", "RELEASE MOTION is DOWN in 1031");
+                move.releaseMotionDown = true;
+            } else if (name == "[time]") {
+                count(i, 1); move.timeMs = unsignedNumber(script_.fields[i].values[0], "Invalid STRAIGHT MOVE TIME");
+            } else if (name == "[distance]") {
+                count(i, 1); move.distance = finiteNumber(script_.fields[i].values[0], "Invalid STRAIGHT MOVE DISTANCE");
+            } else if (name == "[accelerate]") {
+                count(i, 1); move.accelerate = finiteNumber(script_.fields[i].values[0], "Invalid STRAIGHT MOVE ACCELERATE");
+            } else if (name == "[damage hp]") {
+                count(i, 1); move.damageHp = finiteNumber(script_.fields[i].values[0], "Invalid STRAIGHT MOVE DAMAGE HP");
+                damageSeen = true;
+            } else if (name == "[return xpos]" || name == "[return ypos]" || name == "[return zpos]") {
+                count(i, 1);
+                if (!move.returnPosition) move.returnPosition = ActVec3{};
+                const double value = finiteNumber(script_.fields[i].values[0], "Invalid STRAIGHT MOVE return position");
+                if (name == "[return xpos]") move.returnPosition->x = value;
+                else if (name == "[return ypos]") move.returnPosition->y = value;
+                else move.returnPosition->z = value;
+            } else fail(i, "unsupported_straight_move_opcode", "Unexecuted STRAIGHT MOVE tag " + script_.fields[i].tag);
+        }
+        require(closed, begin, "unclosed_straight_move", "STRAIGHT MOVE is not closed");
+        require(axisSeen && motionSeen && damageSeen, begin, "missing_straight_move_field",
+                "STRAIGHT MOVE requires AXIS, MOVING MOTION and DAMAGE HP");
+        require(move.timeMs || (move.distance && move.accelerate), begin, "straight_move_timing_missing",
+                "STRAIGHT MOVE requires TIME or DISTANCE+ACCELERATE");
+        return {source(begin, scope), move};
+    }
+    // 1031 byte evidence: 171 SET POS FORCE blocks. X/Y/Z START carry either a
+    // number or the LASTATTACK POSITION marker; END only appears in the
+    // interpolated shapes. MOVE UNIFORM/MOVE REDUCE are independent flags.
+    ActInstruction parseSetPositionForce(size_t &i, const std::string &scope) {
+        const auto begin = i; count(i, 0);
+        ActSetPositionForce force;
+        bool closed = false, xStart = false, yStart = false, zStart = false;
+        std::set<std::string> fields;
+        auto coordinate = [&](size_t at, double &out, bool &seen, const char *what) {
+            const auto &values = script_.fields[at].values;
+            if (values.empty()) {
+                require(at + 1 < script_.fields.size() && tag(at + 1) == "[lastattack position]",
+                        at, "set_pos_force_operand",
+                        std::string("SET POS FORCE ") + what + " requires a number or LASTATTACK POSITION");
+                force.lastAttackPosition = true;
+                i = at + 1; count(i, 0);
+            } else {
+                require(values.size() == 1, at, "set_pos_force_operand",
+                        std::string("SET POS FORCE ") + what + " takes one operand");
+                out = finiteNumber(values[0], "Invalid SET POS FORCE coordinate");
+            }
+            seen = true;
+        };
+        for (++i; i < script_.fields.size(); ++i) {
+            const auto name = tag(i);
+            if (name == "[/set pos force]") { count(i, 0); closed = true; break; }
+            require(fields.insert(name).second, i, "repeated_set_pos_force_field", "Repeated SET POS FORCE field");
+            if (name == "[x start]") coordinate(i, force.start.value.x, xStart, "X START");
+            else if (name == "[y start]") coordinate(i, force.start.value.y, yStart, "Y START");
+            else if (name == "[z start]") coordinate(i, force.start.value.z, zStart, "Z START");
+            else if (name == "[x end]" || name == "[y end]" || name == "[z end]") {
+                count(i, 1);
+                if (!force.end) force.end = ActVec3{};
+                const double value = finiteNumber(script_.fields[i].values[0], "Invalid SET POS FORCE END");
+                if (name == "[x end]") force.end->x = value;
+                else if (name == "[y end]") force.end->y = value;
+                else force.end->z = value;
+            } else {
+                count(i, 0);
+                if (name == "[use my basepos]") force.useOwnerBase = true;
+                else if (name == "[use my direction]") force.useOwnerDirection = true;
+                else if (name == "[use map pos]") force.useMapPosition = true;
+                else if (name == "[not use object direction]") force.notUseObjectDirection = true;
+                else if (name == "[use target pos]") force.useTargetPosition = true;
+                else if (name == "[move uniform]") force.moveUniform = true;
+                else if (name == "[move reduce]") force.moveReduce = true;
+                else if (name == "[move me]") force.moveOwner = true;
+                else if (name == "[move target]") force.moveTarget = true;
+                else fail(i, "unsupported_set_pos_force_opcode", "Unexecuted SET POS FORCE tag " + script_.fields[i].tag);
+            }
+        }
+        require(closed, begin, "unclosed_set_pos_force", "SET POS FORCE is not closed");
+        require(xStart || yStart || zStart, begin, "missing_set_pos_force_field",
+                "SET POS FORCE requires at least one START coordinate");
+        require(!(force.moveOwner && force.moveTarget), begin, "conflicting_move_flags",
+                "SET POS FORCE MOVE ME/MOVE TARGET conflict");
+        require(!(force.useMapPosition && force.useOwnerBase), begin, "conflicting_coordinate_flags",
+                "Map absolute position and owner-relative position conflict");
+        return {source(begin, scope), force};
+    }
     void parseBehavior(size_t &i) {
         const auto begin = i; count(i, 0);
         ActBehavior behavior; behavior.source = source(i, "BEHAVIOR[" + std::to_string(program_->behaviors.size()) + "]");
@@ -671,11 +804,15 @@ class Compiler {
             // Structural failures in a nested command recover at its closing
             // tag, retaining subsequent behavior declarations and diagnostics.
             const auto nestedClose = name == "[set speed]" ? "[/set speed]" :
-                name == "[create passiveobject]" ? "[/create passiveobject]" : name == "[teleport]" ? "[/teleport]" : "";
+                name == "[create passiveobject]" ? "[/create passiveobject]" : name == "[teleport]" ? "[/teleport]" :
+                name == "[straight move]" ? "[/straight move]" :
+                name == "[set pos force]" ? "[/set pos force]" : "";
             try {
                 if (name == "[set speed]") behavior.instructions.push_back(parseSpeed(i, scope));
                 else if (name == "[create passiveobject]") behavior.instructions.push_back(parseSpawn(i, scope));
                 else if (name == "[teleport]") behavior.instructions.push_back(parseTeleport(i, scope));
+                else if (name == "[straight move]") behavior.instructions.push_back(parseStraightMove(i, scope));
+                else if (name == "[set pos force]") behavior.instructions.push_back(parseSetPositionForce(i, scope));
                 else if (name == "[particle]") {
                     count(i, 4);
                     behavior.instructions.push_back({source(at, scope), ActParticle{stringValue(values[0], "Invalid PARTICLE path"),

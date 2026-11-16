@@ -802,7 +802,8 @@ bool ActWorldHost::hasCommandConsumer(const std::string &kind) const {
     return kind=="set_speed" || kind=="teleport" || kind=="set_direction" || kind=="destroy" || kind=="sound" ||
            kind=="cleanup_owned" || kind=="set_damage_check" || kind=="attack_rect" || kind=="change_attack_info" ||
            kind=="spawn_passive_object" || kind=="particle" || kind=="deferred_call" ||
-           kind=="trigger_control" || (kind=="speech" && options_.enableSpeechPresentation);
+           kind=="trigger_control" || kind=="straight_move" || kind=="set_position_force" ||
+           (kind=="speech" && options_.enableSpeechPresentation);
 }
 std::pair<std::string,Json> ActWorldHost::resolveCollisionAttack(const ActProgram &program,
         const ActBindRequest &request,const MonsterActionRoute *attackRoute) const {
@@ -1012,6 +1013,7 @@ void ActWorldHost::cleanup(Batch &b,uint64_t id) {
     // truncate its emitted burst. Explicit cancel()/cancelAll() below reclaim
     // ownership; advance() retires expired particles by their source lifetime.
     for(auto i=b.host.velocities.begin();i!=b.host.velocities.end();)if(i->second.instanceId==id)i=b.host.velocities.erase(i);else ++i;
+    for(auto i=b.host.straightMotions.begin();i!=b.host.straightMotions.end();)if(i->second.instanceId==id)i=b.host.straightMotions.erase(i);else ++i;
     auto &speech=b.host.speech;speech.erase(std::remove_if(speech.begin(),speech.end(),[&](const auto &s){return s.instanceId==id;}),speech.end());
     const auto instance=b.host.instances.find(id);
     const auto prior=b.host.presentation.find(id);
@@ -1074,6 +1076,55 @@ void ActWorldHost::applyCommands(Batch &b,uint64_t id,const ActPreparedStep &ste
             if(!std::isfinite(x) || !std::isfinite(y) || !std::isfinite(z) || z<0)throw std::invalid_argument("Invalid ACT teleport destination");
             if(!world_.canWalk(x,y))throw std::invalid_argument("ACT teleport destination is outside current World collision");
             moved->x=moved->px=x;moved->y=moved->py=y;moved->z=moved->pz=z;
+        } else if(const auto *force=std::get_if<ActSetPositionForce>(&command.payload)) {
+            Actor *moved=force->moveTarget?recipient:owner;
+            if(!force->lastAttackPosition) {
+                const auto &selfBase=force->moveTarget?rs:os;
+                const auto &base=force->useMapPosition?selfBase:
+                    force->useOwnerBase?os:force->useTargetPosition?rs:selfBase;
+                const int direction=force->notUseObjectDirection?1:
+                    force->useOwnerDirection?os.direction:selfBase.direction;
+                const auto &p=force->start;
+                const double x=(force->useMapPosition?0:base.position.x)+p.value.x*(force->useMapPosition?1:direction);
+                const double y=(force->useMapPosition?0:base.position.y)+p.value.y;
+                const double z=(force->useMapPosition?0:base.position.z)+p.value.z;
+                if(!std::isfinite(x)||!std::isfinite(y)||!std::isfinite(z)||z<0)
+                    throw std::invalid_argument("Invalid ACT SET POS FORCE destination");
+                if(!world_.canWalk(x,y))throw std::invalid_argument("ACT SET POS FORCE destination is outside current World collision");
+                moved->x=moved->px=x;moved->y=moved->py=y;moved->z=moved->pz=z;
+            }
+            // END/UNIFORM/REDUCE shapes and the LASTATTACK POSITION marker carry
+            // no authored duration or coordinate receipt in 1031. Apply the START
+            // placement and keep the gap explicit instead of inventing a path.
+            if(force->end||force->moveUniform||force->moveReduce||force->lastAttackPosition)
+                b.host.diagnostics.push_back({{"code","act_set_pos_force_unverified_shape"},
+                    {"message","SET POS FORCE END/UNIFORM/REDUCE or LASTATTACK POSITION has no 1031 duration/coordinate receipt; only the START placement is applied"},
+                    {"source",command.source.json()},{"blocking",false}});
+        } else if(const auto *straight=std::get_if<ActStraightMove>(&command.payload)) {
+            const auto note=[&](const std::string &message){
+                b.host.diagnostics.push_back({{"code","act_straight_move_unverified_shape"},
+                    {"message",message},{"source",command.source.json()},{"blocking",false}});
+            };
+            if(!straight->timeMs || !straight->returnPosition) {
+                note(straight->distance&&straight->accelerate?
+                    "STRAIGHT MOVE DISTANCE+ACCELERATE shape has no authored duration in 1031; no displacement is applied":
+                    "STRAIGHT MOVE has no authored TIME+RETURN pair in 1031; no displacement is applied");
+            } else {
+                const double seconds=double(*straight->timeMs)/1000.0;
+                if(!(seconds>0))throw std::invalid_argument("Invalid ACT STRAIGHT MOVE duration");
+                const auto &target=*straight->returnPosition;
+                auto found=b.host.velocities.find(command.owner);
+                if(found!=b.host.velocities.end()&&found->second.instanceId!=id)
+                    throw std::invalid_argument("ACT velocity ownership conflict");
+                auto &v=b.host.velocities[command.owner];v.instanceId=id;
+                auto rate=[](double value){if(!std::isfinite(value)||std::abs(value)>std::numeric_limits<float>::max())throw std::invalid_argument("Invalid ACT STRAIGHT MOVE rate");return double(float(value));};
+                v.value={rate((target.x-owner->x)/seconds),rate((target.y-owner->y)/seconds),rate((target.z-owner->z)/seconds)};
+                b.host.straightMotions[command.owner]={id,world_.nowMs()+*straight->timeMs};
+                if(straight->damageHp!=0||straight->releaseMotionDown)
+                    b.host.diagnostics.push_back({{"code","act_straight_move_payload_unverified"},
+                        {"message","STRAIGHT MOVE DAMAGE HP and RELEASE MOTION have no registered World consumer"},
+                        {"source",command.source.json()},{"blocking",false}});
+            }
         } else if(const auto *direction=std::get_if<ActSetDirection>(&command.payload)) {
             int value=recipient->dir;
             switch(direction->value) {
@@ -1107,7 +1158,7 @@ void ActWorldHost::applyCommands(Batch &b,uint64_t id,const ActPreparedStep &ste
             // private batch as its actor and generation. Other targets may
             // retain this removed actor as their historical status attacker.
             b.statuses.retireTarget(handle,uint64_t(world_.nowMs()),"act_destroy");
-            b.entities.retire(handle);b.host.velocities.erase(handle);b.damageWindows.erase(handle);
+            b.entities.retire(handle);b.host.velocities.erase(handle);b.host.straightMotions.erase(handle);b.damageWindows.erase(handle);
             b.events.push_back({world_.tick,"act_destroy",destroy->force?"force":"normal",recipient->id});
             // DESTROY is removal, not an accepted lethal attack; no killed event/reward.
         } else if(const auto *sound=std::get_if<ActSound>(&command.payload))
@@ -1222,7 +1273,7 @@ ActWorldHostResult ActWorldHost::advance(const SimulationStep &step,const std::m
         // its exact clock and publication epoch without copying every actor's
         // immutable source/stat traces on every world tick. Once any instance
         // or owned state exists the normal atomic Batch remains authoritative.
-        if (state_.instances.empty() && state_.velocities.empty() && state_.relations.empty() &&
+        if (state_.instances.empty() && state_.velocities.empty() && state_.straightMotions.empty() && state_.relations.empty() &&
             state_.presentation.empty() && state_.speech.empty() && state_.collisions.empty() &&
             spawned_.instances().empty() && particles_.instances().empty()) {
             if (!deltas.empty()) throw std::invalid_argument("Unexpected external ACT animation delta");
@@ -1257,6 +1308,15 @@ ActWorldHostResult ActWorldHost::advance(const SimulationStep &step,const std::m
         }
         // One native arithmetic integration per source tick. Event crossings
         // never subdivide movement; dt remains the recovered 16/17ms contract.
+        // A closed [STRAIGHT MOVE] window drops its own bounded velocity first,
+        // so an expired motion never keeps the actor walking.
+        for(auto i=b.host.straightMotions.begin();i!=b.host.straightMotions.end();) {
+            if(i->second.untilMs>uint64_t(world_.nowMs())){++i;continue;}
+            const auto owned=b.host.velocities.find(i->first);
+            if(owned!=b.host.velocities.end()&&owned->second.instanceId==i->second.instanceId)
+                b.host.velocities.erase(owned);
+            i=b.host.straightMotions.erase(i);
+        }
         for(auto i=b.host.velocities.begin();i!=b.host.velocities.end();) {
             auto *a=b.actor(i->first);if(!a || a->dead){i=b.host.velocities.erase(i);continue;}
             const auto animationDelta=deltas.find(i->second.instanceId);
@@ -1350,10 +1410,11 @@ bool ActWorldHost::controlsMovement(EntityHandle h) const {return state_.velocit
 void ActWorldHost::resetCancelledClock() {
     for(const auto &entry:state_.instances) if(entry.second.status==ActInstanceStatus::Running)
         throw std::logic_error("Cannot reset the clock of a running ACT host");
-    if(!state_.velocities.empty() || !state_.speech.empty())
+    if(!state_.velocities.empty() || !state_.straightMotions.empty() || !state_.speech.empty())
         throw std::logic_error("Cancelled ACT host retains owned effects");
     if(publicationEpoch_==UINT64_MAX)throw std::overflow_error("ACT host publication epoch exhausted");
     state_.instances.clear();state_.relations.clear();state_.presentation.clear();
+    state_.straightMotions.clear();
     spawned_.clear(); // Transient ACT-owned entities never survive a clock reset.
     particles_.clear(); // Transient ACT-emitted PTL bursts never survive it either.
     state_.lastTick=uint64_t(world_.tick);++publicationEpoch_;
@@ -1422,6 +1483,7 @@ Json ActWorldHost::snapshotState(const State &state,const ActWorldRestoreGraph &
     out["last_tick"]=state.lastTick;out["instance_watermark"]=state.instanceWatermark;out["instances"]=Json::array();
     for(const auto &i:state.instances)out["instances"].push_back(snapshotActInstance(i.second,generation));
     out["velocities"]=Json::array();for(const auto &v:state.velocities)out["velocities"].push_back({{"handle",v.first.json()},{"instance_id",v.second.instanceId},{"value",vectorJson(v.second.value)}});
+    out["straight_motions"]=Json::array();for(const auto &m:state.straightMotions)out["straight_motions"].push_back({{"handle",m.first.json()},{"instance_id",m.second.instanceId},{"until_ms",m.second.untilMs}});
     out["relations"]=Json::array();for(const auto &r:state.relations)out["relations"].push_back({{"handle",r.first.json()},{"value",relationsJson(r.second)}});
     out["presentation"]=Json::array();for(const auto &p:state.presentation)out["presentation"].push_back({{"instance_id",p.first},{"animation",p.second.animation},
         {"animation_path",p.second.animationPath},{"anim_start",p.second.animStart},{"pose_frame",p.second.poseFrame}});
@@ -1449,6 +1511,10 @@ ActWorldHost::State ActWorldHost::prepareState(const Json &value,const ActWorldR
         if(!value.at("instances").is_array() || value.at("instances").size()>1024 || !value.at("actor_receipts").is_array())throw std::invalid_argument("Invalid ACT host checkpoint arrays");
         for(const char *key:{"relations","velocities","presentation","speech"})
             if(!value.at(key).is_array() || value.at(key).size()>4096)throw std::invalid_argument("ACT host collection budget exceeded");
+        // straight_motions is an optional extension: older checkpoints keep
+        // their historical shape and simply restore with no bounded motion.
+        if(value.contains("straight_motions") && (!value.at("straight_motions").is_array() || value.at("straight_motions").size()>4096))
+            throw std::invalid_argument("ACT host collection budget exceeded");
         const std::map<EntityHandle,ActEntityRelations> none;RestoreGraphView oldView(g,none);
         Json receipts=Json::array();for(auto h:oldView.entities())receipts.push_back(actorReceipt(*oldView.actor(h)));
         if(receipts!=value.at("actor_receipts"))throw std::invalid_argument("ACT host requires exact actor identity/source/pose/resource receipts from the same outer generation");
@@ -1472,6 +1538,14 @@ ActWorldHost::State ActWorldHost::prepareState(const Json &value,const ActWorldR
             if(found==candidate.instances.end() || found->second.status!=ActInstanceStatus::Running || !view.actor(h) ||
                std::abs(vector.x)>std::numeric_limits<float>::max() || std::abs(vector.y)>std::numeric_limits<float>::max() || std::abs(vector.z)>std::numeric_limits<float>::max() ||
                !candidate.velocities.emplace(h,Velocity{id,vector}).second)throw std::invalid_argument("Invalid ACT velocity owner/generation");
+        }
+        if(value.contains("straight_motions")) for(const auto &m:value.at("straight_motions")) {
+            const auto h=EntityHandle::fromJson(m.at("handle"));const auto id=number(m.at("instance_id"));
+            const auto found=candidate.instances.find(id);
+            if(found==candidate.instances.end()||found->second.status!=ActInstanceStatus::Running||!view.actor(h)||
+               !candidate.velocities.count(h) ||
+               !candidate.straightMotions.emplace(h,StraightMotion{id,number(m.at("until_ms"))}).second)
+                throw std::invalid_argument("Invalid ACT straight-move owner/generation");
         }
         for(const auto &p:value.at("presentation")) {
             const auto id=number(p.at("instance_id"));const auto i=candidate.instances.find(id);
@@ -1497,7 +1571,7 @@ ActWorldHost::State ActWorldHost::prepareState(const Json &value,const ActWorldR
             candidate.speech.push_back(std::move(bubble));
         }
         candidate.diagnostics=value.at("diagnostics");if(!candidate.diagnostics.is_array() || candidate.diagnostics.size()>256)throw std::invalid_argument("Invalid ACT diagnostics history");
-        for(const char *key:{"schema","commit_generation","pvf_identity","static_identity","entity_registry","world_ids","status_receipt","policy","speech_enabled","speech_duration_ms","last_tick","instance_watermark","instances","velocities","relations","presentation","speech","diagnostics","actor_receipts"})candidate.unknown.erase(key);
+        for(const char *key:{"schema","commit_generation","pvf_identity","static_identity","entity_registry","world_ids","status_receipt","policy","speech_enabled","speech_duration_ms","last_tick","instance_watermark","instances","velocities","straight_motions","relations","presentation","speech","diagnostics","actor_receipts"})candidate.unknown.erase(key);
         if(schema==3)candidate.unknown.erase("character_level");
         else if(candidate.unknown.contains("character_level")) {
             Json preserved={{"character_level",candidate.unknown.at("character_level")}};
@@ -1607,6 +1681,9 @@ ActWorldHost::PreparedRestore ActWorldHost::prepareRemappedRestore(const Json &v
         for(const auto &velocity:original.velocities)
             if(!candidate.velocities.emplace(remap.handle(velocity.first,true),velocity.second).second)
                 throw std::invalid_argument("ACT remapped velocity owner collision");
+        for(const auto &motion:original.straightMotions)
+            if(!candidate.straightMotions.emplace(remap.handle(motion.first,true),motion.second).second)
+                throw std::invalid_argument("ACT remapped straight-move owner collision");
         for(auto bubble:original.speech){bubble.speaker=remap.handle(bubble.speaker,true);candidate.speech.push_back(std::move(bubble));}
         const auto transformed=snapshotState(candidate,prepared,generation);
         // Run the strict ordinary decoder again over the complete transformed

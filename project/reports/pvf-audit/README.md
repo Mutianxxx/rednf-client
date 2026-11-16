@@ -254,7 +254,25 @@ PTL 不能只按“有标签”判断已实现。下表把**当前端闭合**与
 
 本地 `trigger_control` 现在只接受 `recipient == owner`：运行时已修改自身候选 trigger 状态，World 端校验归属并发布 `act_trigger_control` 事件。`passiveobject/actionobject/map/risk_dungeon/cartelcommand/action/xyz1.act` 原先唯一阻塞就是该消费者缺失，现已整体准入；FRAME2 的 `[BEHAVIOR][TRIGGER 0 OFF]` 在真实绑定后关闭 trigger 0。foreign recipient 仍精确 fault，不把同一个 trigger 索引套到未知目标程序。
 
-跨 recipient 的 `trigger_control`、SEND 接收方身份投递、四个命中生产者之间的共享去重账本，以及 ACT 级 `[gravity]` / `[move uniform]` / `[straight move]` 的真实 World 执行仍缺。当前 1031 包内 `[homing]` / `[under gravity]` 零命中，不能用跨版本资料补作本端事实。专项 `act-world-host-tests` 122 项通过；P0-2 整体仍未验收。
+跨 recipient 的 `trigger_control`、SEND 接收方身份投递、四个命中生产者之间的共享去重账本仍缺。专项 `act-world-host-tests` 122 项通过；P0-2 整体仍未验收。
+
+## 6.7 通用运动命令：类型先建、样本后验（P0-2，2026-11-17）
+
+对 1031 全包 19,079 个 `.act` 逐字节枚举，修正了此前「运动标签无源」的误判：
+
+| 标签 | 1031 命中 | 性质 |
+|---|---|---|
+| `[STRAIGHT MOVE]` | 38 块 / 20 文件 | 通用运动命令，5 种字段签名 |
+| `[SET POS FORCE]` | 171 块 | 通用运动命令，21 种字段签名 |
+| `[MOVE UNIFORM]` / `[MOVE REDUCE]` | 11 / 11 | 均为 `[SET POS FORCE]` 子标志，非独立命令 |
+| `[GRAVITY]` | 4 | 全部位于 `[BOOSTER APPENDAGE]` 小游戏块内，非通用运动 |
+| `[HOMING]` / `[UNDER GRAVITY]` | 0 | 无源 |
+
+`[STRAIGHT MOVE]` 的 5 种签名全部要求 `AXIS`+`MOVING MOTION`+`DAMAGE HP`，其余字段分两支：`TIME`（14 处，Z 轴）或 `DISTANCE`+`ACCELERATE`（24 处，Y 轴，含 `RELEASE MOTION`+`DOWN`）。`[SET POS FORCE]` 的 X/Y/Z START 可带 `[LASTATTACK POSITION]` marker，END 只出现在插值形；`MOVE ME`(141)/`MOVE TARGET`(2) 互斥，默认移动自身。
+
+实现为 `ActStraightMove` / `ActSetPositionForce` 两个 typed payload，按上述实测签名逐字段校验；World 侧注册 `straight_move` / `set_position_force` 消费者，`SET POS FORCE` 立即置位（含方向补偿与 `canWalk` 校验），`STRAIGHT MOVE` 的 TIME+RETURN 子集折算限时速度并由 `State.straightMotions` 到期撤速，已接入 snapshot/restore/remap 与取消清理。
+
+**关键边界**：191 个运动块全部可解析、消费者已注册，但**没有任何一个 1031 样本能走到 bind+dispatch**——它们都被无关的 TRIGGER `[CHECKUP]`/`[IF]`/`[DISTANCE]` 谓词或缺失 ANI 闭包阻塞。因此位移未实测，按用户授权记为「类型先建、样本后验」，并列入 `SKILL-RUNTIME-PLAN.md` 的优先修复队列。DISTANCE+ACCELERATE 曲线、`DAMAGE HP` 落地伤害、`RELEASE MOTION`、END/UNIFORM/REDUCE 插值与 `[LASTATTACK POSITION]` 只保留源事实并逐项诊断。专项 `act-world-host-tests` 130 项通过；P0-2 整体仍未验收。
 
 ## 7. 历史结论（以下链为待验证模型）
 

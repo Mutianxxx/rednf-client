@@ -539,6 +539,68 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
             "Cancelling the owning ACT instance retires its spawned entities and records the retirement event");
     }
     {
+        // P0-2 general motion. 1031 authors 38 STRAIGHT MOVE and 171 SET POS
+        // FORCE blocks across 19,079 ACT files. Every field asserted here is
+        // read from those bytes. The World displacement path is implemented,
+        // but NO 1031 sample reaches bind/dispatch yet: every such ACT stays
+        // blocked by unrelated TRIGGER/IF predicates or missing ANI closures.
+        // Displacement therefore remains TYPE-FIRST, SAMPLE-LATER.
+        WorldFixture f(pvf,assets,false);
+        check(f.host.hasCommandConsumer("straight_move") && f.host.hasCommandConsumer("set_position_force"),
+            "1031 STRAIGHT MOVE and SET POS FORCE register real World consumers instead of a missing-command gap");
+        const auto stay=f.host.compile("monster/newmonsters/ranjerus/g3/action/stay1.act");
+        size_t forceBlocks=0;
+        bool uniform=false,reduce=false,useTarget=false,moveOwner=false;
+        double zStart=0;
+        if(stay.program) for(const auto &behavior:stay.program->behaviors)
+            for(const auto &instruction:behavior.instructions)
+                if(const auto *force=std::get_if<ActSetPositionForce>(&instruction.payload)) {
+                    ++forceBlocks;
+                    uniform|=force->moveUniform;reduce|=force->moveReduce;
+                    useTarget|=force->useTargetPosition;moveOwner|=force->moveOwner;
+                    zStart=force->start.value.z;
+                }
+        check(forceBlocks>0 && uniform && reduce && useTarget && moveOwner && zStart==150,
+            "1031 SET POS FORCE keeps X/Y/Z START, USE TARGET POS, MOVE UNIFORM/REDUCE and MOVE ME as typed source facts");
+        check(!diagnostic(stay.json().at("diagnostics"),"unsupported_set_pos_force_opcode"),
+            "SET POS FORCE is no longer reported as an unexecuted behavior tag");
+        // 127 of the 171 blocks use the owner-relative shape instead.
+        const auto shoot=f.host.compile("monster/newmonsters/heaven/majorcamoka/action/shoot.act");
+        bool ownerRelative=false;
+        if(shoot.program) for(const auto &behavior:shoot.program->behaviors)
+            for(const auto &instruction:behavior.instructions)
+                if(const auto *force=std::get_if<ActSetPositionForce>(&instruction.payload))
+                    ownerRelative|=force->useOwnerBase && force->useOwnerDirection;
+        check(ownerRelative,
+            "1031 SET POS FORCE keeps the owner-relative USE MY BASEPOS/USE MY DIRECTION shape as typed source facts");
+        const auto cliff=f.host.compile("passiveobject/actionobject/map/risk_dungeon/cartelcommand/action/cliff_falling.act");
+        bool timedJump=false;
+        if(cliff.program) for(const auto &behavior:cliff.program->behaviors)
+            for(const auto &instruction:behavior.instructions)
+                if(const auto *move=std::get_if<ActStraightMove>(&instruction.payload))
+                    timedJump|=move->axis==ActMoveAxis::Z && move->motion==ActMoveMotion::Jump &&
+                        move->timeMs && *move->timeMs==4000 && move->damageHp==0 && !move->distance;
+        check(timedJump,
+            "1031 STRAIGHT MOVE keeps AXIS Z, MOVING MOTION JUMP and TIME 4000 as typed source facts");
+        check(!diagnostic(cliff.json().at("diagnostics"),"unsupported_straight_move_opcode"),
+            "STRAIGHT MOVE is no longer reported as an unexecuted behavior tag");
+        const auto bridge=f.host.compile("passiveobject/actionobject/map/cartelcommand/action/bridge_up_fall.act");
+        bool acceleratedY=false;
+        if(bridge.program) for(const auto &behavior:bridge.program->behaviors)
+            for(const auto &instruction:behavior.instructions)
+                if(const auto *move=std::get_if<ActStraightMove>(&instruction.payload))
+                    acceleratedY|=move->axis==ActMoveAxis::Y && move->releaseMotionDown &&
+                        move->distance && *move->distance==850 && move->accelerate && *move->accelerate==1000 &&
+                        move->damageHp==40 && !move->timeMs;
+        check(acceleratedY,
+            "1031 STRAIGHT MOVE keeps the Y-axis DISTANCE 850 / ACCELERATE 1000 / RELEASE MOTION shape without inventing a TIME");
+        // Honest boundary: the consumer exists and the source is typed, but the
+        // reachable 1031 samples still stop at unrelated TRIGGER/IF predicates,
+        // so no World displacement is claimed from them yet.
+        check(stay.program && cliff.program && bridge.program,
+            "General motion compiles typed source instructions even when unrelated TRIGGER/IF tags still block the sample");
+    }
+    {
         // P0-2 PARTICLE factory: the same 1031 PTL bytes the previewer reads
         // now reach a real World-owned entity with a validated texture and an
         // independent [life time] clock. Anything unrecovered stays visible.

@@ -1,3 +1,19 @@
+# P0-2 通用运动命令：类型先建、样本后验（2026-11-17）
+
+按用户授权「可以接受类型先建、样本后验，但需标注，后续出问题优先修复」推进 #76 的运动部分。先修正了一次事实误判：此前记录「ACT 级 `[gravity]`/`[move uniform]`/`[straight move]` 缺类型且无样本」并不准确。对 1031 全包 19,079 个 `.act` 逐字节枚举后，真实分布是：`[STRAIGHT MOVE]` 38 块 / 20 文件、`[SET POS FORCE]` 171 块、`[SET POS FORCE]` 内的 `[MOVE UNIFORM]` 11 处与 `[MOVE REDUCE]` 11 处（二者是子标志，不是独立命令）、`[GRAVITY]` 4 处；`[HOMING]` 与 `[UNDER GRAVITY]` 才是 0。
+
+`[GRAVITY]` 的 4 处全部位于 `[BOOSTER APPENDAGE]`（cartelcommand 小游戏）块内，不是通用 ACT 运动，因此**不建通用重力类型**，避免把专用机制冒充通用能力。
+
+新增两个命令类型：`ActStraightMove`（axis/motion/releaseMotionDown/distance/accelerate/timeMs/damageHp/returnPosition）与 `ActSetPositionForce`（START/END、owner/target/map 基准、uniform/reduce、move me/target、lastAttackPosition）。解析器按 1031 实测的 5 种 STRAIGHT MOVE 签名与 21 种 SET POS FORCE 签名逐字段校验，块外标签精确报 `unsupported_*_opcode`，`[LASTATTACK POSITION]` 作为 marker 而非数值读取。
+
+World 侧：`hasCommandConsumer` 注册 `straight_move` 与 `set_position_force`；`SET POS FORCE` 立即置位（含方向补偿、`canWalk` 校验、非 owner 目标选择）；`STRAIGHT MOVE` 的 TIME+RETURN 子集折算为限时速度写入 `State.straightMotions`，`advance` 在窗口关闭时撤销该 instance 的速度；两者接入 snapshot/restore/remap 与 `cancel`/`cancelAll` 清理，`straight_motions` 为可选扩展字段，旧检查点形状不变。
+
+**诚实边界**：191 个运动块全部可解析、消费者已注册，但 1031 中**没有一个运动样本能走到 bind+dispatch**——它们都被无关的 TRIGGER `[CHECKUP]`/`[IF]`/`[DISTANCE]` 谓词或缺失 ANI 闭包阻塞。因此位移本身**未实测**，按用户要求列入「类型先建、样本后验」优先修复队列（见 `SKILL-RUNTIME-PLAN.md` 同名小节）。DISTANCE+ACCELERATE 曲线（24 处）、`[DAMAGE HP]` 落地伤害（38 处）、`[RELEASE MOTION]`（24 处）、END/UNIFORM/REDUCE 插值与 `[LASTATTACK POSITION]` 均只保留源事实并逐项诊断，不执行、不猜测。
+
+验收：专项 `act-world-host-tests` 130 项 `pass`（上轮 122）；group 3 整组仍退出 1，失败点仍是既有 Event.ai 基线，不标整组通过。
+
+---
+
 # P0-2 本地 DELAY / TRIGGER 控制消费者（2026-11-16）
 
 #76 先完成两个可验证边界。其一，`payloadJson` 把 ACT `ActDeferredCall` 分成 `deferred_call`（本地 `[delay do behavior]`）与 `deferred_call_cross_program`（`[send do behavior]`）；World host 只注册前者。1031 `monster/newmonsters/shonan/kinshou/action/swing2.act` 的本地 delay 样本不再报 `missing_command_consumer`（仍因 OBJ 递归 `missing_resource_consumer` 阻塞，未宣称整体准入）；`...gaunis/_namgyu/action/red_success_07_tile.act` 的 SEND 样本继续报 `deferred_call_cross_program` 缺口。World `applyCommands` 对任何跨程序 SEND 命令仍精确 fault，不按同名或同路径猜测接收程序/action 身份。

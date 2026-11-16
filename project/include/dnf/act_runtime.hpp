@@ -134,6 +134,36 @@ struct ActSpawn {
 };
 struct ActParticle { std::string path; ActVec3 offset; };
 struct ActTeleport { ActCoordinates position; bool moveOwner = false; };
+// [STRAIGHT MOVE] and [SET POS FORCE] are the two general ACT motion blocks
+// that 1031 actually authors (38 and 171 occurrences across 19,079 ACT files).
+// Every field below is a source fact read from those bytes. Field ORDER is
+// validated against the observed 1031 signatures, and any tag outside the
+// observed set is a precise diagnostic rather than a silent skip.
+enum class ActMoveAxis { Y, Z };
+enum class ActMoveMotion { Jump, Down };
+struct ActStraightMove {
+    ActMoveAxis axis = ActMoveAxis::Z;
+    ActMoveMotion motion = ActMoveMotion::Jump;
+    // [RELEASE MOTION] appears only with the Y-axis/JUMP shape and always
+    // carries [DOWN]; it is retained as a flag, not interpreted as a curve.
+    bool releaseMotionDown = false;
+    std::optional<double> distance;    // [DISTANCE]
+    std::optional<double> accelerate;  // [ACCELERATE]
+    std::optional<uint64_t> timeMs;    // [TIME]
+    double damageHp = 0;               // [DAMAGE HP], mandatory in 1031
+    std::optional<ActVec3> returnPosition; // [RETURN XPOS/YPOS/ZPOS]
+};
+struct ActSetPositionForce {
+    ActCoordinates start;
+    // [X END]/[Y END]/[Z END] are authored only by the interpolated shapes.
+    std::optional<ActVec3> end;
+    bool useOwnerBase = false, useOwnerDirection = false, useMapPosition = false;
+    bool notUseObjectDirection = false, useTargetPosition = false;
+    bool moveUniform = false, moveReduce = false;
+    bool moveOwner = false, moveTarget = false;
+    // [LASTATTACK POSITION] replaces a numeric X/Y/Z START operand.
+    bool lastAttackPosition = false;
+};
 enum class ActDirectionKind { Left, Right, ToTarget, Random, Reverse,
                               Owner, OppositeOwner, CurrentOwner };
 struct ActSetDirection { ActDirectionKind value = ActDirectionKind::ToTarget; };
@@ -150,7 +180,8 @@ struct ActCleanup { std::string reason; };
 struct ActSetDamageCheck { bool enabled=false; uint64_t intervalMs=0; };
 using ActCommandPayload = std::variant<ActSetSpeed, ActSpawn, ActParticle,
     ActTeleport, ActSetDirection, ActDestroy, ActSound, ActSpeech,
-    ActAttackRect, ActChangeAttackInfo, ActTriggerControl, ActDeferredCall, ActCleanup, ActSetDamageCheck>;
+    ActAttackRect, ActChangeAttackInfo, ActTriggerControl, ActDeferredCall, ActCleanup, ActSetDamageCheck,
+    ActStraightMove, ActSetPositionForce>;
 struct ActInstruction { SourceRef source; ActCommandPayload payload; };
 struct ActBehavior { SourceRef source; std::vector<ActInstruction> instructions; };
 struct ActMotionTrack { SourceRef source; std::string path; size_t frame = 0;

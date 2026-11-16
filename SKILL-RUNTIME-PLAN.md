@@ -83,8 +83,26 @@
 4. P1各项可独立调查，正式集成按ALS→ATK→PTL，再P2。每节点分开验收源解析、命令编译、World执行与原版等价。
 5. 测试源码只证明测试存在；历史报告不证明当前版本重跑通过。整体ok与syntax/source/runtime独立旗标不可混用。
 6. **P0-2 首项「CREATE PASSIVEOBJECT 工厂」已于 2026-11-12 按验收完成**（真实 World 实体、归属、取消回收、专项 82 项通过）。准入范围只按账本已闭合的具体依赖，不因全包 ACT 标签频率扩大。
-7. **P0-2 第二项「PARTICLE 工厂」仅完成运行时/绘制子集，完整验收未通过（2026-11-16）**：共享 1031 PTL 解码器、纹理闭包、真实 World 实体与独立时钟、直线/保持末值速度、重力、透明度、确定性区域偏移、主场景 Y-Z 深度绘制及回收均已接通；隐藏 SDL 渲染实测有像素变化，World host 专项 112 项通过。未知/畸形标签和未消费字段逐项诊断，`sourceSemantics=subset` 与 `equivalent=false` 明确区分可执行子集和语义等价。旋转、落点、随机分布、持续发射及 OBJ 内部 `[string data]` 仍阻塞。**P0-2 整体仍未验收**：SUB ANI 攻击身份与 type15 配对 ATK（#75）已完成 exact 身份/独立轨迹子集（117 项专项通过），但 Z 偏移与语义等价仍缺；#76 的本地 delay 与 owner-recipient trigger control 消费者已完成（122 项专项通过），但通用运动/重力、SEND/foreign trigger 跨程序身份投递与整体验收门槛（#77）仍缺。静态 `ok`/`runtime_ready` 不代表 1031 原版等价。
+7. **P0-2 第二项「PARTICLE 工厂」仅完成运行时/绘制子集，完整验收未通过（2026-11-16）**：共享 1031 PTL 解码器、纹理闭包、真实 World 实体与独立时钟、直线/保持末值速度、重力、透明度、确定性区域偏移、主场景 Y-Z 深度绘制及回收均已接通；隐藏 SDL 渲染实测有像素变化，World host 专项 112 项通过。未知/畸形标签和未消费字段逐项诊断，`sourceSemantics=subset` 与 `equivalent=false` 明确区分可执行子集和语义等价。旋转、落点、随机分布、持续发射及 OBJ 内部 `[string data]` 仍阻塞。**P0-2 整体仍未验收**：SUB ANI 攻击身份与 type15 配对 ATK（#75）已完成 exact 身份/独立轨迹子集（117 项专项通过），但 Z 偏移与语义等价仍缺；#76 的本地 delay、owner-recipient trigger control 与通用运动命令（`[STRAIGHT MOVE]`/`[SET POS FORCE]`，类型先建、样本后验，见下节）已接通（130 项专项通过），但运动位移尚无 1031 可绑定的干净样本、SEND/foreign trigger 跨程序身份投递与整体验收门槛（#77）仍缺。静态 `ok`/`runtime_ready` 不代表 1031 原版等价。
 8. group 3 整体失败的既存 Event.ai 基线问题（见 `project/reports/core-group-3-result.json`）独立记录，不计作 P0-2 回归，也不据此宣称整组通过。
+
+### 类型先建、样本后验（优先修复队列，2026-11-17 用户授权）
+
+用户明确接受「先建类型、后验样本」，但要求显式标注；**后续一旦发现问题，本节条目优先处理**。判定原则不变：类型存在、解析成功、消费者注册都不等于 World 位移或 1031 原版等价。
+
+| 项 | 已建内容 | 1031 源证据 | 当前验证层级 | 优先修复触发 |
+|---|---|---|---|---|
+| `[STRAIGHT MOVE]` | `ActStraightMove`：axis/motion/releaseMotionDown/distance/accelerate/timeMs/damageHp/returnPosition | 38 块 / 20 文件，5 种签名 | 5 种签名全部可解析，消费者已注册；**无整体准入样本可 bind+dispatch**，位移未实测 | 任一 STRAIGHT MOVE 样本解除 TRIGGER/IF 阻塞后，立即核对轴向、幅度、时长 |
+| `[SET POS FORCE]` | `ActSetPositionForce`：START/END、owner/target/map 基准、uniform/reduce、move me/target、lastAttackPosition | 171 块；127 owner-relative、122 move-me、24 END、11 uniform、11 reduce、9 lastattack | START 置位已实现（含 `canWalk` 校验与方向补偿）；同样缺整体准入样本 | 同上 |
+| DISTANCE+ACCELERATE 曲线 | 不执行位移，诊断 `act_straight_move_unverified_shape` | 24 处（占 STRAIGHT MOVE 63%） | 仅保留源事实 | 取得时长或 exe 曲线证据时 |
+| `[DAMAGE HP]` 落地伤害 | 不消费，诊断 `act_straight_move_payload_unverified` | 38 处（该字段必现） | 仅保留源事实 | 需要落地伤害消费者时 |
+| `[RELEASE MOTION]` | 保留标志，诊断同上 | 24 处，均 Y 轴 JUMP 形 | 仅保留源事实 | 需要释放段动画语义时 |
+| SET POS FORCE END/UNIFORM/REDUCE | 只应用 START，诊断 `act_set_pos_force_unverified_shape` | END 24 + uniform 11 + reduce 11 | 仅保留源事实 | 需要插值时长证据时 |
+| `[LASTATTACK POSITION]` | 不施放，诊断同上 | 9 处 | 仅保留标记 | 需要 World last-attack 坐标 receipt 时 |
+| `[GRAVITY]` | **不建类型** | 4 处全部位于 `[BOOSTER APPENDAGE]`（cartelcommand 小游戏）块内，不是通用 ACT 运动 | 明确记录为小游戏专用 | 若发现真正通用 GRAVITY 再建 |
+| `[HOMING]` / `[UNDER GRAVITY]` | **不建类型** | 1031 全包 0 命中 | 明确记录 | 无源，不得用跨版本资料补作本端事实 |
+
+World 侧实现：`ActWorldHost::State::straightMotions` 承载限时轨迹，`advance` 在窗口关闭时撤销该 instance 的速度；已接入 `snapshot`/`restore`/`prepareRemappedRestore` 与 `cancel`/`cancelAll` 清理，`straight_motions` 为可选扩展字段，旧检查点保持原有形状。
 
 主要核查位置：`project/tools/{skill_closure.py,act_audit.py,inspect.cpp}`、`project/src/simulation/scripting/`、`simulation/entities/objects.cpp`、`simulation/actions/source_skill_action.cpp`、`simulation/combat/`、`presentation/effects/effect_plan.cpp`、`tools/skill_preview_particles.cpp`、`content/skill_data.cpp`及相应`project/tests/`。既有审计产物位于`checkpoints/tests/pvf-audit/`，不入库。
 
@@ -102,6 +120,6 @@
 - [x] 2026-11-12 ACT 被动对象 World 工厂：`spawn_passive_object` 消费者、`ObjectSystem` 归属与 `cancelAll` 回收、受控 OBJ 依赖闭包；按 1031 PVF 修正 `[WARNING MARK]` 2/4 操作数；`act_spawn_admission.py` 账本；World host 专项 82 项通过。产物见 PROGRESS.md 顶部 P0-2 章节。
 - [ ] 2026-11-16 ACT 粒子 World 工厂（`PARTICLE`，运行时/绘制子集已接通，源语义完整验收待完成）：共享 `ptl_program` 解码、`ActWorldResources::particleAdmission` ANI/ALS/IMG 纹理闭包、`ActParticleSystem` 独立时钟实体、`ActWorldHost` 两类发射与回收、`act_particle_*` 事件；专项 107 项通过；73 个纯粒子阻塞样本中 32 个现已完全准入，41 个因未恢复字段精确阻塞。产物见 PROGRESS.md 顶部章节。
 - [x] 2026-11-16 SUB ANI 攻击身份与 type15 配对 ATK（限定子集）：exact MOB/OBJ/ACT 默认 ATK 身份、BASE/SUB 独立碰撞轨迹与恢复、source action 同 route 编译；专项 117 项通过。Z 偏移/语义等价未恢复，不据此验收 P0-2 整体。
-- [ ] #76 未完成：本地 `[delay do behavior]` 与 owner-recipient `trigger_control` 已接通（122 项专项通过；1031 `xyz1.act` 整体准入，SEND/foreign trigger 仍阻塞）；通用运动/重力、跨程序身份投递、共享去重账本仍缺。P0-2 整体未验收。
+- [ ] #76 进行中：本地 `[delay do behavior]`、owner-recipient `trigger_control` 已接通（1031 `xyz1.act` 整体准入，SEND/foreign trigger 仍阻塞）；通用运动 `[STRAIGHT MOVE]`/`[SET POS FORCE]` 已建类型+消费者（191 块全部可解析，130 项专项通过），但位移缺干净样本、按「类型先建、样本后验」列入优先修复队列；跨程序身份投递、共享去重账本仍缺。P0-2 整体未验收。
 - [ ] 后续 OBJ/NUT、ALS、ATK、PTL、SKL 与跨系统消费者依照上表推进。
 - [x] git 同步：2026-11-11 重试成功，`4d2a2bad7`、`69e2f5509`、`ca87cbe71`、`c16361750` 已推送；独立读取远端 `refs/heads/main` 确认为 `c163617506a9e30f503c0f447e0126ec07c82ef4`。后续增量另行提交与推送。

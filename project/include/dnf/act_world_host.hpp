@@ -103,6 +103,14 @@ class ActWorldHost {
         uint64_t instanceId = 0;
         ActVec3 value;
     };
+    // [STRAIGHT MOVE] carrying an authored [TIME] runs as a bounded constant
+    // velocity: the World writes the distance/time rate into Velocity and drops
+    // both records once the window closes. DISTANCE+ACCELERATE shapes are NOT
+    // admitted here because 1031 supplies no duration, and the curve shape is
+    // not byte-verified. This is an explicit reconstruction, not native parity.
+    struct StraightMotion {
+        uint64_t instanceId = 0, untilMs = 0;
+    };
     struct Presentation {
         std::string animation, animationPath;
         int64_t animStart = 0;
@@ -112,6 +120,7 @@ class ActWorldHost {
         uint64_t lastTick = 0, instanceWatermark = 0;
         std::map<uint64_t, ActInstanceState> instances;
         std::map<EntityHandle, Velocity> velocities;
+        std::map<EntityHandle, StraightMotion> straightMotions;
         std::map<EntityHandle, ActEntityRelations> relations;
         std::map<uint64_t, Presentation> presentation;
         std::vector<ActSpeechBubble> speech;
