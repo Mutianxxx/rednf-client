@@ -8,6 +8,22 @@ namespace dnf {
 DamageResolution World::resolveActorContact(const DamageRequest &request,const StatusResistanceSnapshot &resistance,
     const SkillStatusApplication *skill) {
     if(!combatAttributes_) throw std::runtime_error("Damage/status transaction needs prepared character attributes");
+    // Shared entity-hit ledger. Every source-identified contact must claim its
+    // (attacker, target, attack instance, hit index) identity once. A producer
+    // that observes the same authored contact a second time gets an unusable
+    // resolution instead of a second HP/status/RNG commit.
+    const HitAcceptanceKey hitKey{request.attacker,request.target,request.attackInstance,request.hitIndex};
+    if(!hitLedger_.accepted(hitKey)) {
+        DamageResolution duplicate;
+        duplicate.policy="shared-hit-acceptance-ledger-v1";
+        duplicate.attacker=request.attacker;duplicate.target=request.target;
+        duplicate.attackInstance=request.attackInstance;duplicate.hitIndex=request.hitIndex;
+        duplicate.diagnostics.push_back({{"kind","hit_already_accepted"},
+            {"policy","shared-entity-hit-acceptance-v1"},
+            {"basis","one attacker/target/attack-instance/hit-index commits at most once across producers"},
+            {"ledger_size",hitLedger_.size()},{"ledger_evictions",hitLedger_.evictions()}});
+        return duplicate;
+    }
     const auto policy=DamageResolutionPolicy::inferredPveDamageV1(combatAttributes_->damageConstants);
     auto damageRequest=request;
     if(femaleGunnerWorld_ && request.target==player.handle && identity_.jobId==5) {
@@ -21,7 +37,12 @@ DamageResolution World::resolveActorContact(const DamageRequest &request,const S
     }
     auto prepared=prepareDamageContact(damageRequest,policy,resistance,statuses_,random_,uint64_t(nowMs()),skill);
     const auto result=prepared.resolution;
-    if(prepared.ready())publishDamageContact(std::move(prepared),statuses_,random_);
+    if(prepared.ready()) {
+        publishDamageContact(std::move(prepared),statuses_,random_);
+        // Commit only after the status transaction is ready. A blocked contact
+        // must be able to retry on a later tick with the same identity.
+        hitLedger_.commit(hitKey);
+    }
     return result;
 }
 void World::interruptStatusTarget(Actor &actor) {

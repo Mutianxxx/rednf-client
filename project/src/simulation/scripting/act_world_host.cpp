@@ -508,6 +508,8 @@ void ActWorldHost::collide(Batch &b,uint64_t id,uint64_t beforeUs,bool first) {
         if(frames.empty())continue;
         const Json trackDetail={{"animation",makeSourceRef(pvf_,track.animation).json()},
             {"start_us",track.startUs},{"layer",track.layer},{"x",track.x},{"y",track.y}};
+        // Shared cross-producer identity for this authored contact.
+        const HitAcceptanceKey trackHit{owner->handle,b.player.handle,track.attackInstance,track.hitIndex};
         const auto blocked=[&](const std::string &why,const Json &details=Json::object()) {
             if(track.lastBlockedReason==why)return;
             track.lastBlockedReason=why;collision.lastBlockedReason=why;
@@ -515,6 +517,7 @@ void ActWorldHost::collide(Batch &b,uint64_t id,uint64_t beforeUs,bool first) {
                 {"instance_id",id},{"target",b.player.handle.json()},{"details",details.is_null()?trackDetail:details},{"whole_monster_complete",false}});
             if(b.host.diagnostics.size()>256)b.host.diagnostics.erase(b.host.diagnostics.begin());
         };
+        if(!world_.hitLedger().accepted(trackHit)){blocked("act_hit_already_accepted_by_shared_ledger");continue;}
         if(collision.currentAttack.empty()){blocked("act_active_attack_info_is_empty");return;}
         if(frames.size()>1&&b.collisionChanged.count(id)) {
             blocked("act_multiple_crossed_frames_need_ordered_attack_control_binding");return;
@@ -579,6 +582,7 @@ void ActWorldHost::collide(Batch &b,uint64_t id,uint64_t beforeUs,bool first) {
         const auto result=prepared.resolution;const auto now=world_.nowMs();
         const auto ownerHandle=owner->handle;const auto ownerId=owner->id;
         publishDamageContact(std::move(prepared),b.statuses,b.random);
+        world_.hitLedger().commit(trackHit);
         track.lastBlockedReason.clear();collision.lastBlockedReason.clear();
         const auto receipt=Json{{"target",b.player.handle.json()},{"tick",world_.tick},
             {"hit_index",track.hitIndex},{"attack_source",makeSourceRef(pvf_,collision.currentAttack).json()},

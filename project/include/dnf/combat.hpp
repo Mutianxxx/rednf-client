@@ -11,6 +11,7 @@
 #include "equipment_attributes.hpp"
 #include "combat_attributes.hpp"
 #include "damage_resolution.hpp"
+#include "hit_ledger.hpp"
 #include "combat_pipeline.hpp"
 #include "attack_status.hpp"
 #include "skill_learning.hpp"
@@ -483,6 +484,7 @@ class World {
     void advanceStatusEffects();
     void interruptStatusTarget(Actor &);
     uint64_t objectAttackSerial_ = 0;
+    HitAcceptanceLedger hitLedger_;
     uint64_t actionInstance_ = 0;
     CharacterSkillState skillState_;
     std::function<void(World &)> objectTick_;
@@ -700,6 +702,12 @@ class World {
     const Actor *resolveActor(EntityHandle handle) const;
     RandomStreams &randomStreams() { return random_; }
     const RandomStreams &randomStreams() const { return random_; }
+    // Shared at-most-once acceptance ledger for entity-target source contacts.
+    // The character ANI box, the job adapters and the ACT type15 tracks all
+    // publish here, so one authored attack identity can never commit damage
+    // twice through two different producers.
+    HitAcceptanceLedger &hitLedger() { return hitLedger_; }
+    const HitAcceptanceLedger &hitLedger() const { return hitLedger_; }
     bool statusStunned(EntityHandle target) const { return statuses_.controlled(target,uint64_t(nowMs())); }
     Json statusEffects(EntityHandle target) const { return statuses_.activeEffects(target,uint64_t(nowMs())); }
     Json statusCheckpoint(EntityHandle target,uint64_t generation = 1) const;

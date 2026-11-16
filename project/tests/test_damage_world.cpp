@@ -82,6 +82,50 @@ Json runDamageWorldTests(Pvf &pvf,Assets &assets) {
     };
     RegionCatalog catalog(pvf,assets);
     {
+        // Standalone ledger contract: bounded, deterministic, reject-on-repeat,
+        // and unable to silently accept a corrupted checkpoint.
+        HitAcceptanceLedger ledger;
+        const EntityHandle attacker{1,1},target{2,1};
+        const HitAcceptanceKey first{attacker,target,7,0};
+        check(ledger.accepted(first) && ledger.commit(first) && !ledger.commit(first) &&
+              ledger.size()==1,"An empty shared ledger accepts one identity then rejects the exact repeat");
+        check(ledger.accepted(HitAcceptanceKey{attacker,target,7,1}) &&
+              ledger.accepted(HitAcceptanceKey{attacker,target,8,0}) &&
+              ledger.accepted(HitAcceptanceKey{attacker,EntityHandle{3,1},7,0}),
+              "Hit index, attack instance and target each separate one contact identity");
+        check(ledger.accepted(HitAcceptanceKey{attacker,target,0,0}) &&
+              ledger.commit(HitAcceptanceKey{attacker,target,0,0}) && ledger.size()==1,
+              "An unidentified contact is admitted without being recorded");
+        uint64_t overflowed=0;
+        for(size_t i=0;i<HitAcceptanceLedger::capacity+8;i++)
+            overflowed+=ledger.commit(HitAcceptanceKey{attacker,target,1000+i,0})?0:1;
+        check(overflowed==0 && ledger.size()==HitAcceptanceLedger::capacity &&
+              ledger.evictions()==9,
+              "Past its bounded capacity the ledger evicts the oldest identity and reports the eviction count");
+        const auto checkpoint=ledger.snapshot();
+        HitAcceptanceLedger restored;
+        restored.restore(checkpoint);
+        check(restored.size()==ledger.size() && restored.evictions()==ledger.evictions() &&
+              restored.snapshot().at("entries")==checkpoint.at("entries"),
+              "A shared ledger checkpoint round-trips its identities and eviction evidence");
+        bool rejected=false;
+        try {
+            auto corrupted=checkpoint;
+            corrupted["entries"].push_back(checkpoint.at("entries").front());
+            HitAcceptanceLedger broken; broken.restore(corrupted);
+        } catch(const std::invalid_argument &) { rejected=true; }
+        check(rejected,"A checkpoint that repeats one identity is rejected instead of silently collapsing it");
+        bool unidentifiedRejected=false;
+        try {
+            auto corrupted=checkpoint;
+            auto entry=corrupted["entries"].front();
+            entry["attack_instance"]=0;
+            corrupted["entries"]=Json::array({entry});
+            HitAcceptanceLedger broken; broken.restore(corrupted);
+        } catch(const std::invalid_argument &) { unidentifiedRejected=true; }
+        check(unidentifiedRejected,"A saved ledger entry without a source identity is rejected");
+    }
+    {
         Progression progression(catalog);
         World world(pvf,assets,WorldRules::BetaFoundationV1);
         world.applyEquipment(progression); damageFloor(world); damageGoblin(world);
@@ -108,6 +152,40 @@ Json runDamageWorldTests(Pvf &pvf,Assets &assets) {
               "Live damage separates starter EQU five/five, goblin equipment attack nine and source-converted defense37");
         world.advance(1000000000);
         check(damageEvents(world,"hit")==1,"Repeated body and weapon box samples register only one hit for the ordinary swing");
+        // Shared entity-hit ledger. The character ANI box, the job adapters
+        // and the ACT type15 tracks publish the same identity contract, so one
+        // authored contact cannot commit HP twice through two producers.
+        HitAcceptanceKey acceptedKey;
+        bool acceptedFound=false;
+        const auto ledger=world.hitLedger().snapshot();
+        for(const auto &entry:ledger.at("entries")) {
+            const auto key=HitAcceptanceKey::fromJson(entry);
+            if(key.attacker==world.player.handle && key.target==world.monsters.front().handle &&
+               key.attackInstance!=0) { acceptedKey=key;acceptedFound=true; }
+        }
+        check(acceptedFound && ledger.at("policy")=="shared-entity-hit-acceptance-v1" &&
+              ledger.at("entries").size()==ledger.at("size"),
+              "The accepted ordinary contact is published once to the shared entity-hit ledger with its source attack identity");
+        check(!world.hitLedger().accepted(acceptedKey) && !world.hitLedger().commit(acceptedKey) &&
+              !world.hitLedger().record(acceptedKey),
+              "Re-offering an accepted attacker/target/attack-instance/hit-index is rejected by either entry point without growing the ledger");
+        const HitAcceptanceKey nextHit{acceptedKey.attacker,acceptedKey.target,acceptedKey.attackInstance,
+            uint32_t(acceptedKey.hitIndex+1)};
+        check(world.hitLedger().accepted(nextHit) && world.hitLedger().commit(nextHit),
+              "A distinct hit index inside the same source attack stays admissible, so authored multi-hit is never collapsed");
+        const auto unidentified=HitAcceptanceKey{acceptedKey.attacker,acceptedKey.target,0,0};
+        const auto beforeUnidentified=world.hitLedger().size();
+        check(world.hitLedger().accepted(unidentified) && world.hitLedger().commit(unidentified) &&
+              world.hitLedger().size()==beforeUnidentified,
+              "An unidentified contact carries no source identity and is never deduplicated or recorded");
+        const auto ledgerCheckpoint=world.simulationCheckpoint().at("hit_ledger");
+        check(ledgerCheckpoint.at("size")==world.hitLedger().size() &&
+              ledgerCheckpoint.at("evictions")==world.hitLedger().evictions(),
+              "The shared ledger is captured inside the World simulation checkpoint instead of living only in memory");
+        HitAcceptanceLedger replayed;
+        replayed.restore(ledgerCheckpoint);
+        check(!replayed.commit(acceptedKey) && replayed.size()==world.hitLedger().size(),
+              "A restored ledger keeps the same at-most-once decisions as the live World");
         samples["ordinary_attack"]=receipt;
     }
     {

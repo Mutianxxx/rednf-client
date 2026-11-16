@@ -277,6 +277,25 @@ Json runActCollisionTests(Pvf &pvf,Assets &assets) {
        w.randomStreams().snapshot()==(interrupted?randomAfterSecond:randomAfterFirst)&&
        f.host.collisions().at(40).acceptedTargets.size()==1,
      "Two-owner batch preserves exactly each successful contact HP/RNG receipt; later fault never rolls back earlier success: "+mode);
+    // The ACT type15 producer publishes into the same World-wide entity-hit
+    // ledger the character ANI box and job adapters use, so a second producer
+    // observing the identical source identity cannot commit HP again.
+    bool ledgerExact=true;
+    for(const auto &entry:w.hitLedger().snapshot().at("entries")) {
+     bool knownAttacker=false;
+     for(const auto &monster:w.monsters)
+      knownAttacker|=entry.at("attacker")==monster.handle.json();
+     ledgerExact&=entry.at("target")==w.player.handle.json() && knownAttacker &&
+        entry.at("attack_instance").get<uint64_t>()!=0;
+    }
+    // An accepted miss commits a ledger identity without publishing HP, and a
+    // faulted owner drops its collision state, so the ledger is matched against
+    // published contacts rather than against surviving acceptedTargets or hits.
+    const auto ledgerEntries=w.hitLedger().snapshot().at("entries");
+    const bool distinctOwners=ledgerEntries.size()<2 ||
+       ledgerEntries[0].at("attacker")!=ledgerEntries[1].at("attacker");
+    check(ledgerExact && ledgerEntries.size()>=size_t(f.hits()) && ledgerEntries.size()<=2 && distinctOwners,
+     "Each accepted ACT type15 contact publishes one shared entity-hit ledger identity per source attack and owner, and an accepted miss publishes without an HP hit: "+mode);
     check(after.at("player_reaction_outcome").at("interrupted")==interrupted&&
        after.at("player_defense").at("source_body_protection").at("super_armor")==!interrupted,
      "Private prior interruption removes stale live armor from subsequent contact: "+mode);

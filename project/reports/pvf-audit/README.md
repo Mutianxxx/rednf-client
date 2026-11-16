@@ -274,6 +274,17 @@ PTL 不能只按“有标签”判断已实现。下表把**当前端闭合**与
 
 **关键边界**：191 个运动块全部可解析、消费者已注册，但**没有任何一个 1031 样本能走到 bind+dispatch**——它们都被无关的 TRIGGER `[CHECKUP]`/`[IF]`/`[DISTANCE]` 谓词或缺失 ANI 闭包阻塞。因此位移未实测，按用户授权记为「类型先建、样本后验」，并列入 `SKILL-RUNTIME-PLAN.md` 的优先修复队列。DISTANCE+ACCELERATE 曲线、`DAMAGE HP` 落地伤害、`RELEASE MOTION`、END/UNIFORM/REDUCE 插值与 `[LASTATTACK POSITION]` 只保留源事实并逐项诊断。专项 `act-world-host-tests` 130 项通过；P0-2 整体仍未验收。
 
+### 6.7 共享命中接受账本（2026-11-17）
+
+`World::resolveActorContact`（角色 ANI 盒、职业适配器与投射物 `hurtPlayer` 的共同提交边界）与 `ActWorldHost::collide`（ACT type15）现共用 `HitAcceptanceKey{attacker,target,attackInstance,hitIndex}` 的有界（4096）账本：
+
+- 身份相同即视为同一接触，第二个生产者返回不可用结果，不写 HP/状态、不抽 RNG；已在 `hit_ledger` 检查点里可恢复。
+- `attackInstance==0` 一律放行：旧存档、诊断夹具与脚本标定命中没有源身份，补造身份会吞掉源本身重复的多段命中。
+- 只在 `prepared.ready()` 后提交，被阻塞的接触可在后续 tick 用同一身份重试。
+- 被动对象伤害仍用 `ObjectSystem` 的持久化 `ObjectHitKey{owner,serial,pulse}`，`resolveObjectContact` 保持纯预检，不写实体账本。
+
+证据：`act-collision-tests` 1331 项（含每个被接受的 ACT type15 接触恰好发布一个共享身份，双所有者场景覆盖已接受的 miss），damage-world 新增账本单测 7 项 + World 集成 6 项，`monster-damage-window-tests` 65 项。cross-program SEND 与 foreign recipient `trigger_control` 仍未完成。
+
 ## 7. 历史结论（以下链为待验证模型）
 
 你的判断是对的：之前的技能链审计主要覆盖了 `SKL → CHR ANI → ALS → 部分 OBJ/ATK`，但没有把 **ACT、OBJ action、NUT、PTL、ATK 变体标签**作为完整闭包处理。当前缺陷不是单纯“某个坐标错了”，而是调用链缺失：

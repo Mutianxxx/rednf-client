@@ -1,3 +1,20 @@
+# P0-2 共享命中接受账本（2026-11-17）
+
+#76 中唯一能在当前代码库内独立闭合的缺口：此前四个命中生产者各有一套**互不可见**的局部账本——角色 ANI 攻击盒用 `hits_`/`hitCounts_` 时间窗，职业适配器用 `sourceContactLedgers_`/`hitTargets_`，ACT type15 用每条 track 的 `acceptedTargets`，被动对象用 `ObjectInstance::hits` 的 `ObjectHitKey{owner,serial,pulse}`。因此同一次源攻击被两条路径同时观测时，没有任何机制阻止第二次提交 HP。
+
+新增 `project/include/dnf/hit_ledger.hpp`：`HitAcceptanceKey{attacker,target,attackInstance,hitIndex}` 与有界（4096 条 FIFO）的 `HitAcceptanceLedger`，语义是「同一 attacker/target/攻击实例/命中序号最多提交一次」，溢出淘汰旧条目并对外报告 `evictions`，不静默丢弃。`attackInstance==0`（旧存档、诊断夹具、脚本标定命中）**不做去重**——凭空补身份会吞掉源本身重复的多段命中。
+
+接线与提交时机：
+- `World::resolveActorContact` 是角色 ANI 盒、实验/女枪/Squirrel 适配器、投射物 `hurtPlayer` 的共同提交边界：进入时用纯读 `accepted()` 判重，重复则返回 `policy=shared-hit-acceptance-ledger-v1`、`hpDamage` 缺失的不可用结果（不写 HP/状态，不抽 RNG）；仅在 `prepared.ready()` 之后 `commit()`，被阻塞的接触仍可在后续 tick 用同一身份重试。
+- `ActWorldHost::collide` 不经该边界，因此在接触前用 `blocked("act_hit_already_accepted_by_shared_ledger")` 精确拒绝，并在 `publishDamageContact` 之后提交。
+- 检查点新增 `hit_ledger`；恢复时 `ids` 水位已还原，后续攻击实例不会重复旧键；旧检查点缺该键时按空账本恢复。存档里出现重复身份或缺身份的条目会被拒绝而不是静默折叠。
+
+**边界**：被动对象伤害是另一个目标域，`ObjectSystem` 的 `ObjectHitKey` 已是随对象状态持久化、随存档恢复的 at-most-once 集合，因此对象接触**不进**实体账本，用同一策略语义而非合并域；`resolveObjectContact` 保持纯预检，不做账本写入（现有「同一 serial 重复解析」测试依赖这一点）。跨程序 SEND、foreign recipient `trigger_control` 仍是未完成项。
+
+验收：新账本单测 7 项（容量淘汰/身份分离/未识别放行/往返/两条损坏检查点拒绝）+ World 集成 6 项（角色攻击发布身份、重复拒绝、同攻击不同 hit_index 放行、未识别不记录、检查点捕获、恢复后判定一致）全部通过；`act-collision-tests` 由 1319 增至 1331 项，新增「每个被接受的 ACT type15 接触恰好发布一个共享身份」断言（`double_control`/`double_fault` 双所有者场景）。该断言按已发布接触而非 `hits()` 或存活 `acceptedTargets` 对齐——实测 `double_fault` 中第二个所有者的接触是**已接受的 miss**（不产生 HP 事件），且故障后其 collision 状态被拆除，因此只要求「每个 HP 命中都有身份、每个所有者至多一条、两个所有者身份互不相同」。group 2 通过；group 3 的 `act-world-host-tests` 130 项、`monster-damage-window-tests` 65 项通过，整组仍因既有 Event.ai 基线退出 1，不标整组通过。
+
+---
+
 # P0-2 通用运动命令：类型先建、样本后验（2026-11-17）
 
 按用户授权「可以接受类型先建、样本后验，但需标注，后续出问题优先修复」推进 #76 的运动部分。先修正了一次事实误判：此前记录「ACT 级 `[gravity]`/`[move uniform]`/`[straight move]` 缺类型且无样本」并不准确。对 1031 全包 19,079 个 `.act` 逐字节枚举后，真实分布是：`[STRAIGHT MOVE]` 38 块 / 20 文件、`[SET POS FORCE]` 171 块、`[SET POS FORCE]` 内的 `[MOVE UNIFORM]` 11 处与 `[MOVE REDUCE]` 11 处（二者是子标志，不是独立命令）、`[GRAVITY]` 4 处；`[HOMING]` 与 `[UNDER GRAVITY]` 才是 0。

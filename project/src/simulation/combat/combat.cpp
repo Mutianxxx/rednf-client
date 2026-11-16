@@ -897,6 +897,10 @@ Json World::simulationCheckpoint() const {
         }
     }
     out["source_monster_think"]=monsterActionAiCheckpoint();
+    // Shared entity-hit ledger evidence. Bounded and deterministic; the
+    // restore path keeps it so a checkpoint taken mid-action cannot re-accept
+    // an identity that already committed HP before capture.
+    out["hit_ledger"]=hitLedger_.snapshot();
     return out;
 }
 void World::validateCharacterRestoreCapacity(const Json &checkpoint) const {
@@ -973,6 +977,10 @@ void World::restoreSimulationCheckpoint(const Json &checkpoint) {
     for(size_t i=0;i<monsters.size();++i) monsters[i].handle=monsterHandles[i];
     publishMonsterActionAiRestore(std::move(monsterThinkRestore));
     objectAttackSerial_ = 0;
+    // Restored attack identities come from the restored `ids` watermark, so
+    // they never repeat a key captured before the save. A legacy checkpoint
+    // without the ledger restores an empty one.
+    hitLedger_.restore(checkpoint.value("hit_ledger",Json()));
     player.animStart = nowMs();
 }
 int World::remainingCd(int idx) const {
