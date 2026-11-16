@@ -802,7 +802,7 @@ bool ActWorldHost::hasCommandConsumer(const std::string &kind) const {
     return kind=="set_speed" || kind=="teleport" || kind=="set_direction" || kind=="destroy" || kind=="sound" ||
            kind=="cleanup_owned" || kind=="set_damage_check" || kind=="attack_rect" || kind=="change_attack_info" ||
            kind=="spawn_passive_object" || kind=="particle" || kind=="deferred_call" ||
-           (kind=="speech" && options_.enableSpeechPresentation);
+           kind=="trigger_control" || (kind=="speech" && options_.enableSpeechPresentation);
 }
 std::pair<std::string,Json> ActWorldHost::resolveCollisionAttack(const ActProgram &program,
         const ActBindRequest &request,const MonsterActionRoute *attackRoute) const {
@@ -1134,6 +1134,13 @@ void ActWorldHost::applyCommands(Batch &b,uint64_t id,const ActPreparedStep &ste
                     track.enabled=collision->second.enabled;track.lastBlockedReason.clear();
                 }
             }
+        } else if(const auto *control=std::get_if<ActTriggerControl>(&command.payload)) {
+            // The runtime already applies local owner TRIGGER control to its own
+            // candidate state. World publication records that real transition;
+            // foreign recipients have no exact receiving program/action binding.
+            if(command.recipient!=command.owner)throw std::invalid_argument("ACT foreign TRIGGER control is not registered");
+            b.events.push_back({world_.tick,"act_trigger_control",command.source.memberPath,owner->id,
+                int(control->trigger),int(control->mode)});
         } else if(const auto *deferred=std::get_if<ActDeferredCall>(&command.payload)) {
             if(deferred->targetProgram)throw std::invalid_argument("ACT SEND DO BEHAVIOR cross-program delivery is not registered");
             // Local DELAY DO BEHAVIOR is scheduled by the ACT runtime itself;

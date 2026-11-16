@@ -146,9 +146,9 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
               "Localized SPEECH blocks execution until its real presentation endpoint is explicitly attached");
         check(f.host.hasCommandConsumer("spawn_passive_object") && f.host.hasCommandConsumer("particle") &&
               f.host.hasCommandConsumer("attack_rect") && f.host.hasCommandConsumer("change_attack_info") &&
-              f.host.hasCommandConsumer("deferred_call") && !f.host.hasCommandConsumer("deferred_call_cross_program") &&
-              !f.host.hasCommandConsumer("trigger_control"),
-              "Object/PTL/attack consumers and local deferred calls are registered while cross-action consumers remain blocked");
+              f.host.hasCommandConsumer("deferred_call") && f.host.hasCommandConsumer("trigger_control") &&
+              !f.host.hasCommandConsumer("deferred_call_cross_program"),
+              "Object/PTL/attack/local deferred/local trigger consumers are registered while cross-program SEND remains blocked");
         const auto attack=f.host.compile("passiveobject/actionobject/monster/new_event/action/assault_missile0.act");
         check(attack.ok && attack.program->runtimeReady,
               "Root ANI type15 is admitted only through the real registered collision and source damage host");
@@ -162,6 +162,20 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
         const auto crossSend=f.host.compile("passiveobject/actionobject/monster/dimensiongate/cosmofiend/gaunis/_namgyu/action/red_success_07_tile.act");
         check(messageHas(crossSend.json().at("diagnostics"),"deferred_call_cross_program"),
               "1031 SEND DO BEHAVIOR stays an explicit cross-program consumer gap instead of inheriting the local delay path");
+    }
+    {
+        constexpr const char *triggerControlSource="passiveobject/actionobject/map/risk_dungeon/cartelcommand/action/xyz1.act";
+        WorldFixture f(pvf,assets,false);
+        const auto triggerControl=f.host.compile(triggerControlSource);
+        check(triggerControl.ok && triggerControl.program->runtimeReady,
+              "A 1031 ACT whose only gap was TRIGGER control now reaches real World admission");
+        f.bind(triggerControlSource,40);
+        check(f.host.instances().at(40).triggers[0].enabled,
+              "The sourced FRAME2 trigger starts enabled before its own BEHAVIOR disables it");
+        f.ticks(60);
+        check(!f.host.instances().at(40).triggers[0].enabled &&
+              std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_trigger_control";}),
+              "Local TRIGGER OFF changes the owning ACT trigger state and publishes a real World control event");
     }
     {
         WorldFixture f(pvf,assets);

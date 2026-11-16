@@ -1,8 +1,10 @@
-# P0-2 本地 DELAY DO BEHAVIOR 消费者分类（2026-11-16）
+# P0-2 本地 DELAY / TRIGGER 控制消费者（2026-11-16）
 
-#76 先完成一个可验证边界：`payloadJson` 把 ACT `ActDeferredCall` 分成 `deferred_call`（本地 `[delay do behavior]`）与 `deferred_call_cross_program`（`[send do behavior]`）；World host 只注册前者。1031 `monster/newmonsters/shonan/kinshou/action/swing2.act` 的本地 delay 样本不再报 `missing_command_consumer`（仍因 OBJ 递归 `missing_resource_consumer` 阻塞，未宣称整体准入）；`...gaunis/_namgyu/action/red_success_07_tile.act` 的 SEND 样本继续报 `deferred_call_cross_program` 缺口。World `applyCommands` 对任何跨程序 SEND 命令仍精确 fault，不按同名或同路径猜测接收程序/action 身份。
+#76 先完成两个可验证边界。其一，`payloadJson` 把 ACT `ActDeferredCall` 分成 `deferred_call`（本地 `[delay do behavior]`）与 `deferred_call_cross_program`（`[send do behavior]`）；World host 只注册前者。1031 `monster/newmonsters/shonan/kinshou/action/swing2.act` 的本地 delay 样本不再报 `missing_command_consumer`（仍因 OBJ 递归 `missing_resource_consumer` 阻塞，未宣称整体准入）；`...gaunis/_namgyu/action/red_success_07_tile.act` 的 SEND 样本继续报 `deferred_call_cross_program` 缺口。World `applyCommands` 对任何跨程序 SEND 命令仍精确 fault，不按同名或同路径猜测接收程序/action 身份。
 
-**未完成的 #76**：`trigger_control` 的跨 recipient 消费未注册；SEND 的接收 program/action 身份投递未实现；四个命中生产者没有共享去重账本；ACT 级 `[gravity]` / `[move uniform]` / `[straight move]` 的命令类型与真实 World 执行仍缺（`ActCommandPayload` 目前没有这些类型）。当前 1031 PVF 中 `[homing]` / `[under gravity]` 零命中，不能用跨版本资料补做本端事实。专项 `act-world-host-tests` 119 项 `pass`；group 3 整组仍因既有 Event.ai 基线退出 1，不标整组通过。
+其二，`trigger_control` 只在 `recipient == owner` 时注册 World 消费者：运行时已把本地 TRIGGER ON/OFF/RESET 写进候选状态，World 端校验归属并发布 `act_trigger_control` 事件；foreign recipient 仍精确 fault。真实 1031 样本 `passiveobject/actionobject/map/risk_dungeon/cartelcommand/action/xyz1.act` 从唯一 `missing_command_consumer` 阻塞变为整体准入，绑定后 FRAME2 行为关闭 trigger 0 且事件可见。
+
+**未完成的 #76**：跨 recipient `trigger_control` 的接收 program/action 身份投递未实现；SEND 的跨程序投递未实现；四个命中生产者没有共享去重账本；ACT 级 `[gravity]` / `[move uniform]` / `[straight move]` 的命令类型与真实 World 执行仍缺（`ActCommandPayload` 目前没有这些类型）。当前 1031 PVF 中 `[homing]` / `[under gravity]` 零命中，不能用跨版本资料补做本端事实。专项 `act-world-host-tests` 122 项 `pass`；group 3 整组仍因既有 Event.ai 基线退出 1，不标整组通过。
 
 ---
 
