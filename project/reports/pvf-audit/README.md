@@ -248,6 +248,12 @@ PTL 不能只按“有标签”判断已实现。下表把**当前端闭合**与
 
 **边界**：这只是身份与独立轨迹子集，不是原版等价。SUB ANI 的 Z 偏移在当前 1031 源数据没有字段，未伪造；视觉 renderer track 与 World collision track 的语义一致性仍需单独核对；旋转/落点/随机分布/持续发射、对象运动→命中→伤害闭环以及用户反馈技能表现仍未恢复或验收。专项 `act-world-host-tests.json` 117 项通过；group 3 整组仍因既存 Event.ai 基线失败，不据此宣称整组通过。
 
+## 6.6 本地 DELAY 与跨程序 SEND 的分类（2026-11-16）
+
+1031 ACT 中 `[delay do behavior]` 与 `[send do behavior]` 现在编成不同命令身份：前者是本地延迟调度，后者是跨程序投递。World host 只注册本地 `deferred_call`；`monster/newmonsters/shonan/kinshou/action/swing2.act` 不再报 `missing_command_consumer`，但仍因被动对象递归阻塞，不能写成整体准入。`passiveobject/actionobject/monster/dimensiongate/cosmofiend/gaunis/_namgyu/action/red_success_07_tile.act` 的 SEND 继续报 `deferred_call_cross_program`，World 端遇到任何跨程序 SEND 命令仍 fault，不凭同名或路径猜接收 program/action。
+
+跨 recipient 的 `trigger_control`、SEND 接收方身份投递、四个命中生产者之间的共享去重账本，以及 ACT 级 `[gravity]` / `[move uniform]` / `[straight move]` 的真实 World 执行仍缺。当前 1031 包内 `[homing]` / `[under gravity]` 零命中，不能用跨版本资料补作本端事实。专项 `act-world-host-tests` 119 项通过；P0-2 整体仍未验收。
+
 ## 7. 历史结论（以下链为待验证模型）
 
 你的判断是对的：之前的技能链审计主要覆盖了 `SKL → CHR ANI → ALS → 部分 OBJ/ATK`，但没有把 **ACT、OBJ action、NUT、PTL、ATK 变体标签**作为完整闭包处理。当前缺陷不是单纯“某个坐标错了”，而是调用链缺失：

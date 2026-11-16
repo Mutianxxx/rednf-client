@@ -146,11 +146,22 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
               "Localized SPEECH blocks execution until its real presentation endpoint is explicitly attached");
         check(f.host.hasCommandConsumer("spawn_passive_object") && f.host.hasCommandConsumer("particle") &&
               f.host.hasCommandConsumer("attack_rect") && f.host.hasCommandConsumer("change_attack_info") &&
-              !f.host.hasCommandConsumer("trigger_control") && !f.host.hasCommandConsumer("deferred_call"),
-              "Both scoped ACT-owned object and PTL burst factories are registered while cross-action consumers remain blocked");
+              f.host.hasCommandConsumer("deferred_call") && !f.host.hasCommandConsumer("deferred_call_cross_program") &&
+              !f.host.hasCommandConsumer("trigger_control"),
+              "Object/PTL/attack consumers and local deferred calls are registered while cross-action consumers remain blocked");
         const auto attack=f.host.compile("passiveobject/actionobject/monster/new_event/action/assault_missile0.act");
         check(attack.ok && attack.program->runtimeReady,
               "Root ANI type15 is admitted only through the real registered collision and source damage host");
+        auto messageHas=[](const Json &list,const std::string &needle){
+            return std::any_of(list.begin(),list.end(),[&](const Json &v){
+                return v.value("message",std::string()).find(needle)!=std::string::npos;});};
+        const auto localDelay=f.host.compile("monster/newmonsters/shonan/kinshou/action/swing2.act");
+        check(diagnostic(localDelay.json().at("diagnostics"),"missing_resource_consumer") &&
+              !messageHas(localDelay.json().at("diagnostics"),"deferred_call"),
+              "1031 local DELAY DO BEHAVIOR no longer reports a missing consumer while OBJ recursion still blocks the source ACT");
+        const auto crossSend=f.host.compile("passiveobject/actionobject/monster/dimensiongate/cosmofiend/gaunis/_namgyu/action/red_success_07_tile.act");
+        check(messageHas(crossSend.json().at("diagnostics"),"deferred_call_cross_program"),
+              "1031 SEND DO BEHAVIOR stays an explicit cross-program consumer gap instead of inheriting the local delay path");
     }
     {
         WorldFixture f(pvf,assets);

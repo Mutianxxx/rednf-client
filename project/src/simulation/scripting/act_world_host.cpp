@@ -801,7 +801,8 @@ ActWorldHost::ActWorldHost(World &w,Pvf &p,Assets &a,std::string staticIdentity,
 bool ActWorldHost::hasCommandConsumer(const std::string &kind) const {
     return kind=="set_speed" || kind=="teleport" || kind=="set_direction" || kind=="destroy" || kind=="sound" ||
            kind=="cleanup_owned" || kind=="set_damage_check" || kind=="attack_rect" || kind=="change_attack_info" ||
-           kind=="spawn_passive_object" || kind=="particle" || (kind=="speech" && options_.enableSpeechPresentation);
+           kind=="spawn_passive_object" || kind=="particle" || kind=="deferred_call" ||
+           (kind=="speech" && options_.enableSpeechPresentation);
 }
 std::pair<std::string,Json> ActWorldHost::resolveCollisionAttack(const ActProgram &program,
         const ActBindRequest &request,const MonsterActionRoute *attackRoute) const {
@@ -1133,6 +1134,11 @@ void ActWorldHost::applyCommands(Batch &b,uint64_t id,const ActPreparedStep &ste
                     track.enabled=collision->second.enabled;track.lastBlockedReason.clear();
                 }
             }
+        } else if(const auto *deferred=std::get_if<ActDeferredCall>(&command.payload)) {
+            if(deferred->targetProgram)throw std::invalid_argument("ACT SEND DO BEHAVIOR cross-program delivery is not registered");
+            // Local DELAY DO BEHAVIOR is scheduled by the ACT runtime itself;
+            // seeing it here means an emitted command escaped that boundary.
+            throw std::invalid_argument("ACT local DELAY DO BEHAVIOR must stay inside its scheduling ACT");
         } else if(const auto *change=std::get_if<ActChangeAttackInfo>(&command.payload)) {
             if(command.recipient!=command.owner)throw std::invalid_argument("ACT foreign CHANGE ATTACKINFO binding is not registered");
             auto collision=b.host.collisions.find(id);if(collision==b.host.collisions.end())throw std::invalid_argument("ACT attack change has no source collision binding");

@@ -184,7 +184,7 @@ Json payloadJson(const ActCommandPayload &payload) {
         [](const ActAttackRect &v) -> Json { return {{"kind", "attack_rect"}, {"mode", int(v.mode)}}; },
         [](const ActChangeAttackInfo &v) -> Json { return {{"kind", "change_attack_info"}, {"path", v.path}, {"default", v.useDefault}}; },
         [](const ActTriggerControl &v) -> Json { return {{"kind", "trigger_control"}, {"trigger", v.trigger}, {"mode", int(v.mode)}}; },
-        [](const ActDeferredCall &v) -> Json { return {{"kind", "deferred_call"}, {"target_program", v.targetProgram}, {"call", callJson(v.call)}}; },
+        [](const ActDeferredCall &v) -> Json { return {{"kind", v.targetProgram ? "deferred_call_cross_program" : "deferred_call"}, {"target_program", v.targetProgram}, {"call", callJson(v.call)}}; },
         [](const ActCleanup &v) -> Json { return {{"kind", "cleanup_owned"}, {"reason", v.reason}}; },
         [](const ActSetDamageCheck &v) -> Json { return {{"kind","set_damage_check"},{"enabled",v.enabled},{"interval_ms",v.intervalMs}}; }
     }, payload);

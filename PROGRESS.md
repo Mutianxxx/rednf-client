@@ -1,3 +1,11 @@
+# P0-2 本地 DELAY DO BEHAVIOR 消费者分类（2026-11-16）
+
+#76 先完成一个可验证边界：`payloadJson` 把 ACT `ActDeferredCall` 分成 `deferred_call`（本地 `[delay do behavior]`）与 `deferred_call_cross_program`（`[send do behavior]`）；World host 只注册前者。1031 `monster/newmonsters/shonan/kinshou/action/swing2.act` 的本地 delay 样本不再报 `missing_command_consumer`（仍因 OBJ 递归 `missing_resource_consumer` 阻塞，未宣称整体准入）；`...gaunis/_namgyu/action/red_success_07_tile.act` 的 SEND 样本继续报 `deferred_call_cross_program` 缺口。World `applyCommands` 对任何跨程序 SEND 命令仍精确 fault，不按同名或同路径猜测接收程序/action 身份。
+
+**未完成的 #76**：`trigger_control` 的跨 recipient 消费未注册；SEND 的接收 program/action 身份投递未实现；四个命中生产者没有共享去重账本；ACT 级 `[gravity]` / `[move uniform]` / `[straight move]` 的命令类型与真实 World 执行仍缺（`ActCommandPayload` 目前没有这些类型）。当前 1031 PVF 中 `[homing]` / `[under gravity]` 零命中，不能用跨版本资料补做本端事实。专项 `act-world-host-tests` 119 项 `pass`；group 3 整组仍因既有 Event.ai 基线退出 1，不标整组通过。
+
+---
+
 # P0-2 SUB ANI 攻击身份与 type15 配对 ATK（2026-11-16）
 
 完成 #75 的限定子集：`ActWorldHost::compile/bind` 现在按同一 exact context 解析攻击身份——MOB 源路由的 `[attack info]`、OBJ 的 exact `[basic action]` + `[attack info]`、ACT 自身 `[default attackinfo]`；`darkthunderbolt1.act` 的 BASE/SUB ANI type15 都进入 `collisionTracks`，各自带源帧边界/层/XY、独立 `attackInstance`、`hitIndex` 与 `acceptedTargets`，并纳入 ATTACKRECT reset/on、snapshot/restore 与 remap。无 exact OBJ 的 `flamestrike_item.act` 仍在 bind 拒绝，无关 OBJ 不能借用 ATK；无身份的 SUB ANI 静态编译仍精确阻塞。
