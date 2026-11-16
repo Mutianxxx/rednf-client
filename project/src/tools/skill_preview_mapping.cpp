@@ -564,6 +564,15 @@ const SkillMappingTable::JobIndex &SkillMappingTable::index(int jobId) {
         if (!built.directory.empty()) {
             built.effectPaths = pvf_.paths(built.directory + "/effect/animation/", ".ani");
             built.particlePaths = pvf_.paths(built.directory + "/particle/", ".ptl");
+            try {
+                for (const auto &registration : catalog_.at(jobId).skills.entries)
+                    if (!registration.path.empty())
+                        built.skillStems.insert(stemOf(registration.path));
+            } catch (const std::exception &) {
+                // A job whose skill table is unreadable simply has no owned
+                // folders to protect; the staging fallback stays disabled only
+                // for the names it cannot see.
+            }
             // The CHR motion table does not register every release animation,
             // but the job's own animation directory is named after the skill.
             // Only files directly inside it are indexed, never subdirectories.
@@ -1289,6 +1298,35 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             mapping.effects.push_back(effect);
         }
         mapping.evidence += "; effects: passive object motion table";
+    }
+
+    // --- job-wide staging directory fallback --------------------------------
+    // Some jobs stage a skill's release art in a shared folder instead of the
+    // skill's own: gunner keeps randomshoot.ani in effect/animation/bullet and
+    // randomshootbody1/2 + randomshootfire in effect/animation/shooteffect. The
+    // stem still names the skill, but the folder is not the skill's family, and
+    // the strict prefix rule above refuses it on purpose
+    // (chillingpowder/upperswing1 is a different skill's branch). Consulted
+    // only when nothing else resolved, and only for folders the job's own skill
+    // table does not claim, so a staging folder can fill an empty row but never
+    // displace an already resolved effect chain.
+    if (mapping.effects.empty() && !jobIndex.effectPaths.empty()) {
+        for (const auto &candidate : {skillStem, baseStem}) {
+            if (candidate.empty()) continue;
+            for (const auto &path : jobIndex.effectPaths) {
+                if (isPvpVariant(path)) continue;
+                const auto effectStem = stemOf(path);
+                if (effectStem.size() < 5 || effectStem.rfind(candidate, 0) != 0) continue;
+                const auto parentStem = stemOf(parentOf(path));
+                if (parentStem == "animation" || parentStem == candidate) continue;
+                if (jobIndex.skillStems.count(parentStem) != 0) continue;
+                if (mapping.effects.size() >= kEffectLimit) break;
+                mapping.effects.push_back(path);
+            }
+            if (!mapping.effects.empty()) break;
+        }
+        if (!mapping.effects.empty())
+            mapping.evidence += "; effects: job-wide staging directory";
     }
 
     // --- CHR base motion fallback ------------------------------------------

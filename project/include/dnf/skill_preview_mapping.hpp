@@ -263,6 +263,11 @@ class SkillMappingTable {
         std::vector<std::string> etcMotions;                            // index -> .ani
         std::vector<std::string> effectPaths;                           // effect/animation/*.ani
         std::vector<std::string> particlePaths;                         // particle/*.ptl
+        // Every skill stem of this job. effect/animation holds both per-skill
+        // folders (guard/, rapidmoveslash/) and job-wide staging folders
+        // (bullet/, shooteffect/) that are not owned by any one skill; this set
+        // is what tells the two apart.
+        std::set<std::string> skillStems;
         // Effect families: a directory under effect/animation (or under the
         // passive-object animation tree) named after the skill. 1031 puts the
         // whole visual in there — aticesword/01_light_dodge.ani, nenshield/

@@ -782,6 +782,18 @@ Json SkillPreviewSession::report() const {
                         {"z", world.z}, {"w", world.w}, {"h", world.h}, {"d", world.d}});
     }
     result["hitLog"] = hits;
+    // The layer plan is the only place the reviewer can see *when* an effect
+    // starts: a channeled action such as 乱射 runs 62s of body clock while its
+    // muzzle flash lives 400ms, so a screenshot taken at an arbitrary instant
+    // legitimately shows nothing. Exposing birth/life per layer keeps "not
+    // drawn" and "not born yet" from looking the same.
+    Json layerPlan = Json::array();
+    if (timeline_)
+        for (const auto &layer : timeline_->layers)
+            layerPlan.push_back({{"path", layer.path}, {"birthMs", layer.birthMs},
+                                 {"lifeMs", layer.lifeMs}, {"loop", layer.loop},
+                                 {"instance", layer.instance}, {"evidence", layer.evidence}});
+    result["layerPlan"] = layerPlan;
     Json particleErrors = Json::array();
     for (const auto &program : particlePrograms_)
         if (!program.valid())

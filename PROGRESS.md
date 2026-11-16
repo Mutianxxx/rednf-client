@@ -956,3 +956,26 @@ passiveobject/character/mage/animation/atmagiccannon/00_magiccannon_fire_dodge.a
 当前 `dnf_core` 仍为共同链接归档，旧 `include/dnf` 兼容接口和 World 公开可写状态尚未全部收窄。本轮不是完整 A0–A6 或全部职业/技能完成。equipment458/459 的旧堆异常仍未解决，23 份差异只归档未合入。
 
 恢复时先读本文、`project/CURRENT_TASK.md`、节点 `manifest.json` 与验证收据，按 `project/docs/USER-TEST-CHECKLIST.md` 区分自动通过、待体验与原版对照状态；不重跑已结束构建，不把 459 差异直接合入。
+
+# 展示器特效映射：共享舞台目录回退（2026-11-17 v2 交付）
+
+- 事实：枪手的释放特效不在技能自己名字的目录，而在职业公共目录
+  `character/gunner/effect/animation/bullet/`（`randomshoot.ani`、`silverbulletparticle.ani`、
+  `advancedbullet.ani`）与 `effect/animation/shooteffect/`（`randomshootbody1/2`、`randomshootfire`、
+  `randomshootblade1/2`）。旧规则要求「文件父目录 == 技能名 或 == animation」，这两类目录全被拒绝，
+  乱射因此长期停在「0 特效 / 缺特效 ANI」。
+- 改动：`SkillMappingTable::JobIndex` 增加 `skillStems`（本职业全部技能 stem）。特效合并后若
+  `mapping.effects` 仍为空，才在每个 `effect/animation/` 子目录里按 stem 前缀回退一次；父目录若属于
+  本职业任一技能自己的目录则跳过（`chillingpowder/upperswing1` 这类不能借）。证据串标
+  `effects: job-wide staging directory`，与 `family directory` / `passive object motion table` 区分。
+- 覆盖变化（`--audit-map`）：A 264→266、B 287→282、C 170→173、D 1013 不变，共 14 行从 0 特效变为有：
+  乱射/枪舞/强化乱射各 4 层，银弹/强化银弹/弹药主宰各 1 层，服从 6 层，烈火燎原/强化烈火燎原各 2 层，
+  强化超能旋风波 5 层，强化银光落刃 4 层。幻影剑舞等既有 A 级链未变。
+- 展示器报告新增 `layerPlan[]`（`path`/`birthMs`/`lifeMs`/`loop`/`instance`/`evidence`）：
+  乱射的枪口光环 400ms、弹道光 200ms、两条身体光线 62250ms 全部 birth=0，
+  「没看到」由此可判定为「窗口外」而不是「没画」。
+- 边界：乱射仍只有一次枪口闪光，没有飞行体；真实客户端按发数生成被动对象，对象运动→命中闭环未接。
+  另新发现职业级缺口：job 5（男枪手）在展示器里没有外观/装备层，整个职业只画判定框。
+- 验收：`dnf_skill_preview_tests` 50 项通过（新增 2 项：舞台目录只填空行、已解析链不回退）；
+  `dnf_native --profile-audit` exit 0 / `frontend_started=false` / PVF 身份 `d13ce454…607d`，
+  二进制 `31fca8a5…`；`--flow-smoke 25` 走完角色选择→艾尔文防线→HUD。

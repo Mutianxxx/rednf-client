@@ -105,6 +105,38 @@ int entry(int argc, char **argv) {
                   {{"skillId", 65}});
         }
 
+        // 3c) Gunner stages a skill's release art in job-wide folders instead of
+        //     the skill's own: randomshoot.ani lives in effect/animation/bullet
+        //     and randomshootbody1/2 + randomshootfire in shooteffect/. The file
+        //     stems name the skill, so the row must resolve them, but only
+        //     through the empty-row fallback — a row that already has a chain
+        //     never borrows a staging folder.
+        {
+            const SkillVisualMapping *randomShoot = nullptr;
+            const SkillVisualMapping *resolved = nullptr;
+            for (const auto &row : table.rows(2))
+                if (row.key.skillId == 9) randomShoot = table.mapping(row.key);
+            for (const auto &row : table.rows(0))
+                if (row.key.skillId == 73) resolved = table.mapping(row.key);
+            bool stagedOnly = randomShoot && !randomShoot->effects.empty();
+            int staged = 0;
+            if (randomShoot)
+                for (const auto &path : randomShoot->effects) {
+                    const auto parent = path.substr(0, path.find_last_of('/'));
+                    const auto folder = parent.substr(parent.find_last_of('/') + 1);
+                    if (folder != "bullet" && folder != "shooteffect") {
+                        stagedOnly = false;
+                        break;
+                    }
+                    ++staged;
+                }
+            check(stagedOnly, "gunner staging folder fills a row nothing else resolved",
+                  {{"effects", staged}});
+            const bool kept = resolved && !resolved->effects.empty() &&
+                resolved->evidence.find("job-wide staging directory") == std::string::npos;
+            check(kept, "a resolved effect chain never falls back to a staging folder", {});
+        }
+
         // 4) A row with no resource always explains itself.
         int gradeDChecked = 0, gradeDNoReason = 0;
         for (const int jobId : {0, 2}) {
