@@ -1,6 +1,8 @@
 #pragma once
 #include "dnf/act_runtime.hpp"
+#include "dnf/particle_motion.hpp"
 #include "dnf/ptl_program.hpp"
+#include <array>
 #include <cstdint>
 #include <memory>
 #include <string>
@@ -25,6 +27,13 @@ struct ActParticleAdmission {
     int count = 0;
     int64_t lifeUs = 0;
     double alphaStart = 100, alphaEnd = 100;
+    std::array<std::array<double, 2>, 3> velocity{};
+    std::array<int32_t, 3> changingTermMs{};
+    std::array<double, 3> area{};
+    double gravity = 0;
+    // True only when every source PTL field has a real consumer. Runtime
+    // execution can still be a documented subset when this is false.
+    bool equivalent = false;
 };
 
 // One real World-owned particle. Transient by policy: it is NOT part of the
@@ -37,10 +46,18 @@ struct ActParticleInstance {
     int frame = -1;
     double x = 0, y = 0, z = 0;
     double offsetX = 0, offsetY = 0, offsetZ = 0; // source [PARTICLE] XYZ
+    std::array<std::array<double, 2>, 3> velocity{};
+    std::array<int32_t, 3> changingTermMs{};
+    std::array<double, 3> areaOffset{}; // deterministic spawn offset from [create area size]
+    double gravity = 0;
+    int direction = 1; // emitting owner's immutable facing receipt
     int64_t ageUs = 0, lifeUs = 0;
     double alphaStart = 100, alphaEnd = 100;
     bool alive() const { return ageUs < lifeUs; }
     double alpha() const;
+    // Pure function of the particle's own age: straight/keep-last per axis plus
+    // the reviewed free-fall term. No integration history is stored.
+    std::array<double, 3> position() const;
     Json json() const;
 };
 struct ActParticleEmit {
@@ -48,13 +65,15 @@ struct ActParticleEmit {
     std::string program;
     double x = 0, y = 0, z = 0;
     double offsetX = 0, offsetY = 0, offsetZ = 0;
+    int direction = 1;
     std::shared_ptr<const ActParticleAdmission> admission;
 };
 
 // No renderer, wall clock, World RNG or combat dependency. The outer host
 // advances this exactly once per fixed simulation tick with an already-scaled
-// delta. Emission is a one-shot burst; continuous [creation frequency],
-// velocity/gravity/area/rotation integration are NOT claimed here (P0-2 #76).
+// delta. Straight/keep-last velocity, free-fall gravity and source area are a
+// pure function of that clock; continuous emission, rotation and landing are
+// still explicit gaps (P0-2 #76).
 class ActParticleSystem {
     std::vector<ActParticleInstance> instances_;
     uint64_t nextSerial_ = 1;

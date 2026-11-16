@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <filesystem>
 #include <map>
+#include <set>
 #include <utility>
 
 namespace dnf {
@@ -18,6 +19,9 @@ bool endsWith(const std::string &value, const char *tail) {
 }
 int32_t asInt32(double value) {
     return int32_t(std::clamp(value, double(INT32_MIN), double(INT32_MAX)));
+}
+void noteUnrecovered(PtlProgram &program, const std::string &field, const std::string &reason) {
+    program.diagnostics.push_back({{"field", field}, {"reason", reason}});
 }
 
 // passiveobject/passiveobject.lst maps numeric object ids to .obj paths; the
@@ -59,6 +63,18 @@ std::string objectAnimation(Pvf &pvf, const std::map<int, std::string> &registry
 }
 } // namespace
 
+bool ptlFieldStructural(const std::string &tag) {
+    return tag == "[/object]" || tag == "[end]";
+}
+bool ptlFieldConsumed(const std::string &tag) {
+    static const std::set<std::string> consumed = {
+        "[x axis]", "[y axis]", "[z axis]", "[move type]", "[move variable 1]",
+        "[changing term]", "[changing type]", "[gravity]", "[life time]",
+        "[maximum create number]", "[transparent value]", "[create area size]",
+        "[object]", "[object type]"};
+    return consumed.find(tag) != consumed.end();
+}
+
 PtlProgram readPtl(Pvf &pvf, const std::string &path) {
     PtlProgram program;
     program.path = normalize(path);
@@ -92,9 +108,12 @@ PtlProgram readPtl(Pvf &pvf, const std::string &path) {
                 return program;
             }
             program.velocity[size_t(axis)] = {field.values[0].get<double>(), field.values[1].get<double>()};
-        } else if (tag == "[changing term]" && axis >= 0) {
-            if (!field.values.empty() && field.values[0].is_number())
-                program.changingTermMs[size_t(axis)] = asInt32(field.values[0].get<double>());
+        } else if (tag == "[changing term]") {
+            if (axis < 0 || field.values.size() != 1 || !field.values[0].is_number()) {
+                program.error = "畸形的 [changing term]（缺少轴或数值）";
+                return program;
+            }
+            program.changingTermMs[size_t(axis)] = asInt32(field.values[0].get<double>());
         } else if (tag == "[changing type]") {
             if (!(field.values.size() == 1 && field.values[0].is_string() &&
                   normalize(field.values[0].get<std::string>()) == "[keep last value]")) {
@@ -107,13 +126,20 @@ PtlProgram readPtl(Pvf &pvf, const std::string &path) {
             program.lifeMs = source.number(field.tag);
         } else if (tag == "[maximum create number]") {
             program.count = int(source.number(field.tag));
-        } else if (tag == "[transparent value]" && field.values.size() == 2 &&
-                   field.values[0].is_number() && field.values[1].is_number()) {
+        } else if (tag == "[transparent value]") {
+            if (field.values.size() != 2 || !field.values[0].is_number() || !field.values[1].is_number()) {
+                program.error = "畸形的 [transparent value]";
+                return program;
+            }
             program.alphaStart = field.values[0].get<double>();
             program.alphaEnd = field.values[1].get<double>();
-        } else if (tag == "[create area size]" && field.values.size() == 3) {
-            for (size_t i = 0; i < 3; ++i)
-                if (field.values[i].is_number()) program.area[i] = field.values[i].get<double>();
+        } else if (tag == "[create area size]") {
+            if (field.values.size() != 3 || !std::all_of(field.values.begin(), field.values.end(),
+                                                        [](const Json &v) { return v.is_number(); })) {
+                program.error = "畸形的 [create area size]";
+                return program;
+            }
+            for (size_t i = 0; i < 3; ++i) program.area[i] = field.values[i].get<double>();
         } else if (tag == "[object]") {
             if (field.values.size() % 2) {
                 objectPairsMalformed = true;
@@ -128,20 +154,30 @@ PtlProgram readPtl(Pvf &pvf, const std::string &path) {
                                          field.values[i + 1].get<int>());
             }
         } else if (tag == "[object type]") {
-            if (field.values.size() == 1 && field.values[0].is_string())
-                objectType = normalize(field.values[0].get<std::string>());
+            if (field.values.size() != 1 || !field.values[0].is_string()) {
+                program.error = "畸形的 [object type]";
+                return program;
+            }
+            objectType = normalize(field.values[0].get<std::string>());
         } else if (tag == "[creation frequency]") {
             const double frequency = source.number(field.tag, -1);
             if (frequency != -1)
-                program.diagnostics.push_back({{"field", field.tag},
-                                               {"reason", "持续发射未实现（只做一次性 burst）"}});
+                noteUnrecovered(program, field.tag, "持续发射未实现（只做一次性 burst）");
+        } else if (tag == "[maximum create time]") {
+            if (source.number(field.tag, 0) != 0)
+                noteUnrecovered(program, field.tag, "持续发射时限未实现（只做一次性 burst）");
         } else if (tag == "[rotation angle]" || tag == "[rotation angle range type]" ||
                    tag == "[rotation angle variable]" || tag == "[random range]" ||
                    tag == "[move variable 2]" || tag == "[move variable 3]" ||
                    tag == "[display effect rate]" || tag == "[landing type]" ||
-                   tag == "[destroy condition]") {
-            program.diagnostics.push_back({{"field", field.tag},
-                                           {"reason", "40JP 侧未恢复该字段的消费语义"}});
+                   tag == "[destroy condition]" || tag == "[creation pos]" ||
+                   tag == "[create pos correct]" || tag == "[create area rotation angle]") {
+            noteUnrecovered(program, field.tag, "该字段的消费语义未恢复");
+        } else if (ptlFieldStructural(tag)) {
+            // Closing tags carry no behavior; their presence is structure, not
+            // a field whose semantics could be silently dropped.
+        } else {
+            noteUnrecovered(program, field.tag, "未知 PTL 字段；无消费者，按缺口记录而非忽略");
         }
     }
     // Resolve [object] after the walk: whether a pair names an animation or a
@@ -190,6 +226,11 @@ PtlProgram readPtl(Pvf &pvf, const std::string &path) {
         program.error = "不支持的 [object type]: " + objectType;
         return program;
     }
+    // The three area numbers are source bytes, but their random distribution is
+    // not closed by current-end native evidence. The World factory applies a
+    // deterministic in-range offset; that is reconstruction, not equivalence.
+    if (std::any_of(program.area.begin(), program.area.end(), [](double v) { return v != 0; }))
+        noteUnrecovered(program, "[create area size]", "区域随机分布未恢复；仅做确定性范围内偏移");
     if (program.count > 512) program.count = 512; // bounded like the object pass
     if (program.objects.empty()) program.error = "没有 [object] 动画";
     else if (program.count <= 0) program.error = "[maximum create number] <= 0";

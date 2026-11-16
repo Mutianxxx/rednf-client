@@ -1,4 +1,5 @@
 #include "dnf/renderer.hpp"
+#include "dnf/act_particles.hpp"
 #include "dnf/boss_aura_ui.hpp"
 #include "dnf/monster_equipment.hpp"
 #include "dnf/act_world_host.hpp"
@@ -319,6 +320,18 @@ void Renderer::actionSpeech(const World &world,const std::vector<ActSpeechBubble
         const auto width=textWidth(bubble.text,14);
         text(bubble.text,float(x-width/2),float(y),14,{255,245,215,255});
     }
+}
+void Renderer::actParticle(const ActParticleInstance &particle,double cameraX,double cameraY) {
+    if(!particle.alive() || particle.animation.empty()) return;
+    const auto at=particle.position();
+    // The 1031 source offsets already place the particle in World coordinates;
+    // only the source ANI's local image offset is mirrored by the owner facing.
+    animation(particle.animation,double(particle.ageUs)/1000.0,
+              at[0]-cameraX,at[1]-at[2]-cameraY,particle.direction,false,"",particle.frame,
+              particle.alpha());
+}
+void Renderer::actParticles(const std::vector<ActParticleInstance> &particles,double cameraX,double cameraY) {
+    for(const auto &particle:particles) actParticle(particle,cameraX,cameraY);
 }
 void Renderer::tileSprite(const std::string &path, int frame, double x, double y) {
     drawImage(path, frame, x, y, 1, 1, 1, 0, 255, 0, true, {255, 255, 255, 255}, 0, 0, true);

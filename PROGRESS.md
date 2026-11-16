@@ -1,3 +1,13 @@
+# P0-2 ACT 粒子运动与主场景绘制（2026-11-16）
+
+在上一运行时子集上继续完成：共享 PTL 解码器对未知/畸形标签登记诊断，并把未消费字段与可执行子集分开；`ActParticleAdmission` 现在携带源速度区间、changing term、gravity、area 和 `equivalent` 标志。`ActParticleInstance::position()` 用年龄纯函数计算直线/保持末值位移与自由落体，`ActWorldHost` 的两种发射入口带入 owner 朝向。主场景把粒子按 Y-Z 深度送入既有绘制队列，新增 `Renderer::actParticle(s)`；隐藏 SDL 渲染实测像素变化，确认主场景有实际消费者，而不是仅有容器。
+
+**证据边界**：当前端原生静态与 PVL dump 对寿命、数量、直线速度、changing term、gravity、透明端点和对象/纹理闭合支持较强；区域随机分布、随机角度、旋转、落点、持续发射、display rate、layer 等仍只有跨版本线索或完全未恢复。确定性范围内偏移和不消耗 World RNG 的本地采样是重建策略，标为非等价。诊断已按字段写入 `unrecovered`，`sourceSemantics=subset`，`equivalent=false`，不再把未消费字段称作支持。双路径证据表见 `project/reports/pvf-audit/README.md` 6.4。
+
+专项 `act-world-host-tests` 112 项通过，新增断言覆盖位置变化、源诊断、未知标签分类、真实隐藏 SDL 绘制；重编通过。group 3 整组仍退出 1，失败仍是已入库 Event.ai 基线（Diagnostic damage draws only its hurt-presentation stream…），不能称整组通过。远端同步仍未成功：本地提交 `67f178cc4` 的推送两次遇 TLS/代理错误，后续需先核对远端再续推。PARTICLE 与 P0-2 整体仍未完整验收；用户反馈技能表现和1031实机等价未验收。
+
+---
+
 # P0-2 ACT 粒子运行时接线与验收纠正（2026-11-12）
 
 共享 `ptl_program` 解析器已加入 dnf_core，预览器复用；新增 `ActParticleSystem`，ACT `[PARTICLE]` 与 spawn 附带 PTL 接入事务化实例生成、独立寿命、源坐标/归属及回收事件。新单元已登记 `cmake/source-ownership.json`。补修自然结束后 `cancel(id)` 提前返回导致粒子残留，以及非自然取消/故障的归属回收；新增对应检查。

@@ -247,6 +247,9 @@ std::shared_ptr<const ActParticleAdmission> ActWorldResources::particleAdmission
     admission->count=program.count;
     admission->lifeUs=int64_t(program.lifeMs*1000.0);
     admission->alphaStart=program.alphaStart;admission->alphaEnd=program.alphaEnd;
+    admission->velocity=program.velocity;admission->changingTermMs=program.changingTermMs;
+    admission->area=program.area;admission->gravity=program.gravity;
+    admission->equivalent=program.fullyConsumed();
     if(admission->lifeUs<=0)throw std::invalid_argument("ACT PTL has no positive lifetime: "+member);
     std::set<std::string> visited;
     for(const auto &object:program.objects) {
@@ -266,10 +269,9 @@ std::shared_ptr<const ActParticleAdmission> ActWorldResources::particleAdmission
         d.diagnostic="PTL [object] ANI/ALS/IMG texture closure validated for the ACT World particle factory";
         admission->dependencies.push_back(std::move(d));
     }
-    // Explicit source gaps: a one-shot burst only. Velocity, gravity, create
-    // area, rotation and continuous emission are not integrated by this host.
-    admission->unrecovered={"[creation frequency] continuous emission",
-                            "velocity/gravity/area/rotation integration"};
+    // Straight/keep-last velocity and free-fall gravity are implemented as a
+    // pure function of the particle clock. Every other source gap comes from
+    // the shared decoder and is explicit; none is silently treated as support.
     for(const auto &d:program.diagnostics)if(d.is_object() && d.contains("field"))
         admission->unrecovered.push_back(d.at("field").get<std::string>());
     std::sort(admission->unrecovered.begin(),admission->unrecovered.end());
@@ -371,7 +373,8 @@ ActResolvedResource ActWorldResources::resolve(const ActResourceRequest &r) cons
                 result.diagnostic="ACT PTL one-shot burst admitted: "+std::to_string(admission->objects.size())+
                     " [object] ANI/ALS/IMG textures, "+std::to_string(admission->count)+
                     " particles, [life time] "+std::to_string(admission->lifeUs/1000)+
-                    " ms; World emits real entities with independent clocks; unrecovered: "+gaps;
+                    " ms; World emits real entities with independent clocks; sourceSemantics="+
+                    (admission->equivalent?"closed":"subset")+"; unrecovered: "+gaps;
             } else result.diagnostic="Resource retained, but ACT/object factory consumer is not registered";
         }
     } catch(const std::exception &e) {result.runtimeSupported=false;result.diagnostic=e.what();}
@@ -800,7 +803,7 @@ void ActWorldHost::spawnPassiveObject(Batch &b,uint64_t id,const ActEmittedComma
         ActParticleEmit emit;
         emit.actInstanceId=id;emit.actionId=command.actionId;emit.sequence=command.sequence;
         emit.program=admission->program;emit.x=x;emit.y=y;emit.z=z;
-        emit.admission=admission;
+        emit.direction=direction;emit.admission=admission;
         const auto created=b.particles.emit(emit);
         b.events.push_back({world_.tick,"act_particle_spawn",admission->program,owner?owner->id:0,
                             int(created),0});
@@ -820,7 +823,7 @@ void ActWorldHost::emitParticle(Batch &b,uint64_t id,const ActEmittedCommand &co
     emit.actInstanceId=id;emit.actionId=command.actionId;emit.sequence=command.sequence;
     emit.program=admission->program;emit.x=x;emit.y=y;emit.z=z;
     emit.offsetX=particle.offset.x;emit.offsetY=particle.offset.y;emit.offsetZ=particle.offset.z;
-    emit.admission=admission;
+    emit.direction=os.direction;emit.admission=admission;
     const auto created=b.particles.emit(emit);
     auto *owner=b.actor(command.owner);
     b.events.push_back({world_.tick,"act_particle_spawn",admission->program,owner?owner->id:0,int(created),0});

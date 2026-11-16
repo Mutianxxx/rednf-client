@@ -10,6 +10,7 @@
 #include <unordered_set>
 namespace dnf {
 struct ActSpeechBubble;
+struct ActParticleInstance;
 struct TexturePart {
     SDL_Texture *value=nullptr;
     int x=0,y=0,w=0,h=0;
@@ -111,6 +112,10 @@ class Renderer : private ICharacterDrawSink {
                 double cameraX = 0, double cameraY = 0);
     void actionSpeech(const World &,const std::vector<ActSpeechBubble> &,double interpolation,
                       double cameraX = 0,double cameraY = 0);
+    // ACT PTL particles are transient World instances. The renderer only reads
+    // their already-advanced source clock and position; it never advances them.
+    void actParticle(const ActParticleInstance &,double cameraX = 0,double cameraY = 0);
+    void actParticles(const std::vector<ActParticleInstance> &,double cameraX = 0,double cameraY = 0);
     void portal(Pvf &p, const std::string &object, int64_t ms, double x, double y, bool open,
                 const std::string &sceneIdentity = {}, int portalIndex = 0);
     // Compatibility only: boss selection belongs to DGN -> OBJ, never IMG filename guessing.

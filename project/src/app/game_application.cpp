@@ -2059,6 +2059,14 @@ int GameApplication::run(int argc, char **argv) {
                     if(fx.parentId==0&&!fx.groundRender)depth=world.player.py+(world.player.y-world.player.py)*a;
                     drawQueue.push_back({depth,[&,fx]{render.effect(fx,ms,a,camera,cameraY);},fx.layer});
                 }
+                // ACT particles are real transient World instances. They join the
+                // same depth-ordered queue as other effects; the renderer only
+                // reads their source clock/position and never advances them.
+                if(world.actHost()) for(const auto &particle:world.actHost()->particles().instances()) {
+                    if(!particle.alive()) continue;
+                    const auto at=particle.position();
+                    drawQueue.push_back({at[1]-at[2],[&,particle]{render.actParticle(particle,camera,cameraY);},0});
+                }
                 std::stable_sort(drawQueue.begin(), drawQueue.end(),
                                  [](auto &l, auto &r) { return l.first!=r.first?l.first<r.first:l.layer<r.layer; });
                 for (auto &q : drawQueue) q.second();

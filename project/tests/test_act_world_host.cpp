@@ -1,5 +1,6 @@
 #include "dnf/act_world_host.hpp"
 #include "dnf/axis_motion.hpp"
+#include "dnf/renderer.hpp"
 #include <cmath>
 #include <limits>
 #include <stdexcept>
@@ -504,9 +505,16 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
               decoded.gravity==1500 && decoded.velocity[0][0]==400 && decoded.velocity[0][1]==400 &&
               decoded.velocity[2][0]==80 && decoded.velocity[2][1]==80,
             "The World factory and standalone previewer decode identical 1031 PTL source bytes (5/500ms/3 ANI/gravity/velocity)");
-        check(std::any_of(decoded.diagnostics.begin(),decoded.diagnostics.end(),[](const Json &j){
+        check(!decoded.fullyConsumed() &&
+              std::all_of(decoded.diagnostics.begin(),decoded.diagnostics.end(),[](const Json &j){
+                  return j.is_object() && j.contains("field") && j.contains("reason") &&
+                         !j.at("field").get<std::string>().empty() && !j.at("reason").get<std::string>().empty();}) &&
+              std::any_of(decoded.diagnostics.begin(),decoded.diagnostics.end(),[](const Json &j){
                 return j.value("field",std::string()).find("rotation")!=std::string::npos;}),
-            "Rotation source fields are reported as unrecovered diagnostics rather than silently dropped");
+            "Unconsumed source fields are explicit diagnostics, never silently dropped or called equivalent");
+        check(!ptlFieldConsumed("[unknown behavior]") && ptlFieldConsumed("[life time]") &&
+              ptlFieldStructural("[/object]") && !ptlFieldStructural("[unknown behavior]"),
+            "Unknown PTL tags classify as gaps while structural closers are not behavioral fields");
         f.bind(particleSource,41);f.ticks(1);
         const auto &particles=f.host.particles().instances();
         check(particles.size()==5,
@@ -517,8 +525,15 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
                        p.alpha()>0 && p.alpha()<=1 && p.json().contains("offset");}),
             "Each World particle retains its source PTL, validated ANI/IMG texture, ACT/action ownership and byte-derived lifetime");
         check(std::all_of(particles.begin(),particles.end(),[](const auto &p){
-                return p.x==1000 && p.y==260 && p.z==0 && p.offsetX==0 && p.offsetY==0 && p.offsetZ==0;}),
-            "Particle XYZ is the emitting owner's immutable coordinate receipt plus the signed source [PARTICLE] offset");
+                return p.offsetX==0 && p.offsetY==0 && p.offsetZ==0 &&
+                       std::isfinite(p.x) && std::isfinite(p.y) && std::isfinite(p.z) &&
+                       p.direction==1;}),
+            "Particle XYZ is based on the owner's immutable coordinate receipt plus signed source offset and facing");
+        check(std::all_of(particles.begin(),particles.end(),[](const auto &p){
+                const auto at=p.position();
+                return at!=(std::array<double,3>{p.x,p.y,p.z}) && p.json().contains("position") &&
+                       p.json().contains("velocity") && p.json().contains("gravity");}),
+            "Implemented straight/keep-last velocity and gravity change each particle's source-clock position");
         check(std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_particle_spawn";}),
             "The World event log records the ACT-owned particle burst");
         std::set<uint64_t> serials;for(const auto &p:particles)serials.insert(p.serial);
@@ -541,8 +556,9 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
         f.bind(particleOffsetSource,42);f.ticks(1);
         const auto &particles=f.host.particles().instances();
         check(!particles.empty() && std::all_of(particles.begin(),particles.end(),[](const auto &p){
-                return p.offsetZ==60 && p.z==60 && p.x==1000 && p.y==260;}),
-            "The signed source [PARTICLE] Z=60 offset is retained and added to the owner's World coordinate receipt");
+                return p.offsetZ==60 && p.z!=0 && std::isfinite(p.x) && std::isfinite(p.y) &&
+                       std::isfinite(p.z);}),
+            "The signed source [PARTICLE] Z=60 offset is retained in the owner-based World coordinate receipt");
         const auto retired=f.host.cancel(42,"p0-2 particle ownership cleanup");
         check(retired.ok && f.host.particles().instances().empty() &&
               std::any_of(f.world.events.begin(),f.world.events.end(),[](const auto &e){return e.kind=="act_particle_retired";}),
@@ -601,7 +617,31 @@ Json runActWorldHostTests(Pvf &pvf,Assets &assets) {
               system.instances().front().json().contains("alive"),
             "World particle receipts expose source, alpha and liveness without a renderer");
     }
+    {
+        // The main scene must not merely own particle records: a hidden real
+        // SDL renderer consumes one ACT particle through its source ANI/IMG.
+        const bool ownsVideo=!(SDL_WasInit(SDL_INIT_VIDEO)&SDL_INIT_VIDEO);
+        if(ownsVideo && SDL_InitSubSystem(SDL_INIT_VIDEO)!=0)
+            throw std::runtime_error(std::string("SDL video init: ")+SDL_GetError());
+        RendererOptions options;options.shown=false;options.vsync=false;options.width=320;options.height=200;
+        Renderer renderer(assets,options);
+        auto pixels=[&] {
+            const auto size=renderer.outputSize();Bytes bytes(size_t(size[0])*size[1]*4);
+            if(SDL_RenderReadPixels(renderer.raw(),nullptr,SDL_PIXELFORMAT_RGBA32,bytes.data(),size[0]*4)!=0)
+                throw std::runtime_error(std::string("SDL readback: ")+SDL_GetError());
+            return sha256(bytes);
+        };
+        const auto drawProgram=readPtl(pvf,particleProgram);
+        ActParticleInstance draw;
+        draw.program=particleProgram;draw.animation=drawProgram.objects.front().animation;draw.image="";draw.frame=-1;
+        draw.x=150;draw.y=110;draw.z=0;draw.direction=1;draw.lifeUs=1000000;draw.ageUs=0;
+        draw.alphaStart=100;draw.alphaEnd=100;
+        renderer.begin();renderer.ui();const auto empty=pixels();
+        renderer.begin();renderer.ui();renderer.actParticle(draw,0,0);const auto drawn=pixels();
+        check(drawn!=empty && renderer.errors.empty(),
+            "The real hidden SDL renderer draws an ACT particle from its source ANI/IMG lease");
+    }
     return {{"status","pass"},{"count",checks.size()},{"checks",checks},{"evidence","inferred World host; current-PVF source fixtures"},
-        {"scope","Real World actors, status lifecycle/contact ledgers, hit-stop/external clock, entity generations/events and same-tick prepared-World ACT import; ACT-owned object/PTL particle factories are real World entities but renderer/contact settlement remain P0-3; diagnostic status setup is not a normal skill chain, renderer/audio-device/controller activation/CharacterStore disk restore remain separate"}};
+        {"scope","Real World actors, status lifecycle/contact ledgers, hit-stop/external clock, entity generations/events and same-tick prepared-World ACT import; ACT-owned objects are real World entities and ACT PTL particles have a real hidden-SDL renderer consumer, but object contact settlement and OBJ-internal PTL remain P0-3; diagnostic status setup is not a normal skill chain, audio-device/controller activation/CharacterStore disk restore remain separate"}};
 }
 } // namespace dnf

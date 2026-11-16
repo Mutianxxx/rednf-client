@@ -37,7 +37,15 @@ struct PtlProgram {
     std::string error;
     Json diagnostics = Json::array();
     bool valid() const { return error.empty() && !objects.empty() && count > 0 && lifeMs > 0; }
+    // Syntax validity is NOT runtime equivalence. Diagnostics list every source
+    // field whose behavior this build does not consume; a fully consumed PTL has
+    // no diagnostics.
+    bool fullyConsumed() const { return diagnostics.empty(); }
 };
 
+// Pure tag classification used by the shared decoder and its tests. A false
+// result never means "safe to ignore": the decoder records a diagnostic.
+bool ptlFieldConsumed(const std::string &tag);
+bool ptlFieldStructural(const std::string &tag);
 PtlProgram readPtl(Pvf &, const std::string &path);
 } // namespace dnf

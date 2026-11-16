@@ -216,9 +216,29 @@ python project/tools/act_spawn_admission.py \
 
 `ptl_program.hpp/.cpp` 把既有 PTL 解码器提升到核心共享；预览器和 ACT host 使用同一份源字段解析。`ActParticleSystem` 接收 ACT `[PARTICLE]` 及 spawn 附带的 `[PARTICLE FILENAME]`，保存源路径、动作归属、XYZ、偏移、透明度与独立寿命，纳入 host 的事务发布及取消/恢复清理。纹理依赖已通过 ANI/ALS/IMG 闭包验证。
 
-**完整验收未通过**：主场景尚无读取粒子实例的绘制消费者；速度、重力、区域、旋转和连续发射未消费，其中部分源字段仅保留诊断而非阻塞。多 `[object]` 当前轮流选择和透明度线性插值属于重建策略。OBJ 内部 `[string data]` PTL 与通用 OBJ→ACT 递归仍阻塞。运行时实例和纹理校验不能当作实际绘制或基座等价。
+**2026-11-16 更新**：主场景已按 Y-Z 深度把 ACT 粒子送入绘制队列，`Renderer::actParticle(s)` 从源 ANI/IMG 与独立时钟绘制，隐藏 SDL 渲染读回有实际像素变化。源速度区间、changing term、重力、透明度和区域偏移进入位置/透明度计算；其中区域随机分布是确定性重建，仍列诊断。未知/畸形标签和未消费字段逐项保留，`equivalent=false`；旋转、落点、持续发射、随机角度等不冒充支持。OBJ 内部 `[string data]` PTL 与通用 OBJ→ACT 递归仍阻塞。运行时绘制不等于基座等价。
 
 本轮全量静态扫描 `checkpoints/tests/p0-2-particles/passiveobject-coverage-particles.json`：5,638 文件、1,629 整体准入（前次 1,597，+32）、5 异常；syntax 2,428、source 3,475、runtime 3,051。该扫描没有 bind/dispatch/advance，不证明模拟或视觉消费；原 73 个纯粒子阻塞样本中 32 个准入、41 个继续阻塞。P0-2 仍未整体验收，PARTICLE 节点保持未完成。
+
+## 6.4 PTL 字段双路径证据表（2026-11-16）
+
+PTL 不能只按“有标签”判断已实现。下表把**当前端闭合**与**仅跨版本/语义线索**分开；后者可以用于限定性重建，但不能覆盖基座表现。
+
+| 字段 | A：清风 1031 / 当前端证据 | B：40JP / 60US / 官方注释线索 | 本工程状态 |
+| --- | --- | --- | --- |
+| `[life time]`、`[maximum create number]` | 原生静态 E581E0 与 PVL dump 均有 L4/L5 闭合 | 40JP vmt48/+104；官方注释 | 作为每实例独立时钟与 burst 数消费 |
+| `[x/y/z axis]`、`[move type]=[straight line]`、`[move variable 1]` | 三轴类型位与初始值/终值在 1031 静态链闭合 | 40JP vmt48 的 straight/keep-last 解释 | 位置作为年龄纯函数，未积分历史 |
+| `[changing term]`、`[changing type]=[keep last value]` | 1031 静态 + PVL 对 axis x/z 基本闭合 | 40JP 区间插值 | 支持 keep-last；其余 changing type 拒绝 |
+| `[gravity]` | 1031 静态 -8000、PVL +14c(0) 与 vmt48 t²/-2e6 链闭合 | 40JP vmt8 同式 | 参与 z 位置计算 |
+| `[transparent value]` | 1031 PVL 明确消费两个端点 | 官方注释为起止百分比 | 线性插值是推断策略，端点为源值 |
+| `[object]`、`[object type]=[animation]` | 1031 PVL 有对象构造与网格实例 | 40JP 解析器 + 官方注释 | 验证 ANI/ALS/IMG 纹理闭包并在主场景绘制 |
+| `[create area size]` | 1031 PVL 可读三轴宽度，但随机分布/局部基未闭合 | 官方注释仅说明“生成空间大小” | 确定性范围内偏移，标为非等价诊断 |
+| `[random range]`、`[rotation angle*]`、`[create area rotation angle]`、`[how to create object]` | 1031 dump 未出现或分布未闭合 | 40JP 初始化/角度点/随机对象顺序线索 | 仅诊断，不冒充已消费 |
+| `[landing type]`、`[destroy condition]` | 当前端零命中，未恢复 | 40JP vmt48/vmt8 行为线索 | 仅诊断；不作为原版事实 |
+| `[creation frequency]`、`[maximum create time]` | PVL 常见 `-1/0` burst，但计时实现未恢复 | 官方注释说 -1 按最大数量 | 只接受一次性 burst；其他值诊断 |
+| `[display effect rate]`、`[layer]`、`[creation pos]`、`[create pos correct]` | 当前端未闭合或仅间接线索 | 官方注释/40JP 字段线索 | 仅诊断，不调用猜测语义 |
+
+证据入口：`rep-player-1031-pvf/docs/native-evidence/ptl-emitter/README.md`、`native-dump.json`、`static-disassembly.json`、`pvf-analysis.json`，以及 `skills/dnf-pvf-knowledge/references/07-advanced-act-ani-nut.md`。跨版本资料只解释机制，不覆盖 1031 表现。
 
 ## 7. 历史结论（以下链为待验证模型）
 
