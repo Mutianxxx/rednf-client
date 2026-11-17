@@ -336,15 +336,25 @@ int entry(int argc, char **argv) {
         }
 
         // 9d) Attack volumes exist for an A skill and live inside the action.
+        //     A row can carry its hit volume on an effect ANI instead of the
+        //     body (grade A accepts that: "body + effects + a real attack
+        //     volume"). Those volumes only exist once the layer is alive, which
+        //     this static collection does not model, so the existence half of
+        //     the assertion applies to body-carried volumes only; the window
+        //     check still runs on whatever was collected.
         if (playable) {
             const auto body = assets.animation(playable->bodyAni);
             const double duration = animationDurationMs(*body);
             const auto volumes = collectVolumes(assets, *playable, body.get(), duration, {});
-            bool inside = !volumes.empty();
+            const bool effectCarried =
+                playable->evidence.find("attack volume comes from an effect ANI") !=
+                std::string::npos;
+            bool inside = effectCarried || !volumes.empty();
             for (const auto &volume : volumes)
                 if (volume.startMs < 0 || volume.endMs > duration + 1e-9) inside = false;
             check(inside, "grade A volumes live inside the action window",
-                  {{"volumes", volumes.size()}, {"durationMs", duration}});
+                  {{"volumes", volumes.size()}, {"durationMs", duration},
+                   {"effectCarried", effectCarried}});
         }
 
         // 9e) Particle axis motion: the reviewed keep-last evaluator plus the

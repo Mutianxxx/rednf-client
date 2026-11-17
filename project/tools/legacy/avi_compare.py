@@ -1,10 +1,32 @@
 """Side-by-side reference video x skill previewer comparison.
 
-The reference AVI is an independent observation of the shipping client. This
-tool never feeds a measurement back into the mapping; it only puts the two
-pictures next to each other and records the numeric gap so the review can say
-"we stop at 280ms while the client keeps going for 3070ms" instead of "looks
-wrong".
+WHAT THE REFERENCE VIDEO IS, AND IS NOT
+---------------------------------------
+The client `.avi` files under `Video/` are skill *demonstrations*: they exist so
+a player can understand what a skill looks like. Their length is decided by the
+video editor, not by the skill. A 4-second clip may show a skill whose effect
+lasts 12 seconds in game, or a 12-second clip may loop a 400ms slash three
+times. Therefore:
+
+  * the AVI is a **style / motion / trigger** reference,
+      - shape and colour of the effect,
+      - where it sits relative to the character (front, feet, target, air),
+      - layer order (what draws over what),
+      - how the character's swing connects to the effect,
+      - what the skill obviously does (a projectile flies, a field stays put);
+  * the AVI is **never** a timing reference. Its duration, its frame count and
+    any ratio against our parsed duration are not evidence of a defect and must
+    not be reported as a gap. Duration in the real client is driven by player
+    input and by engine-side scaling we have not recovered, so "we stop at 280ms
+    while the clip keeps going for 3070ms" says nothing about correctness.
+
+Consequently this tool aligns the two rows by *relative progress* by default:
+column 1 is the first tenth of the reference clip next to the first tenth of our
+parsed timeline, and so on. Each row runs on its own clock, so the pair of tiles
+in one column show the same stage of the skill, which is the only thing that can
+be judged. `--align reference` keeps the old shared-clock behaviour for the rare
+case where someone wants to see how far our parse reaches inside the clip's own
+runtime; it is a curiosity, not a check.
 
 Client videos are wrapped in the Neople container ("Neople Video Fil" + a
 running-XOR payload), so ffmpeg cannot open them directly. `decode_neople`
@@ -31,6 +53,17 @@ ROOT = Path(__file__).resolve().parents[3]
 PREVIEWER = ROOT / "checkpoints" / "build" / "dnf_skill_previewer.exe"
 PROFILE = ROOT / "project" / "content-profile.json"
 TILE_W, TILE_H = 640, 360
+
+# The review questions this comparison is allowed to answer. Kept in the JSON so
+# a report cannot silently drift back into duration comparisons.
+STYLE_CHECKLIST = [
+    "shape: does the effect silhouette match the clip",
+    "position: does it sit where the clip puts it relative to the character",
+    "layerOrder: what draws over what",
+    "bodyMotion: does the character animation connect to the effect the same way",
+    "trigger: does the same visible beat start the effect",
+    "judgement: does the clip show a hitbox extent we do not have (reach, width)",
+]
 
 
 def run(cmd: list[str], **kwargs) -> subprocess.CompletedProcess:
@@ -123,6 +156,10 @@ def main() -> int:
     ap.add_argument("--avi", required=True, help="client .avi (Neople wrapper is unwrapped here)")
     ap.add_argument("--out", required=True)
     ap.add_argument("--samples", type=int, default=4)
+    ap.add_argument("--align", choices=["progress", "reference"], default="progress",
+                    help="progress: each row on its own clock, same relative stage "
+                         "(the only style-comparable mode). reference: both rows on the "
+                         "clip's clock; diagnostic only, says nothing about correctness.")
     args = ap.parse_args()
 
     outdir = Path(args.out)
@@ -142,16 +179,30 @@ def main() -> int:
     info = probe(video)
     refs = export_frames(video, args.samples, work / "ref")
 
-    # Sample the previewer on the reference clip's own clock: if the parse is
-    # shorter than the video, the later tiles show the held last pose, which is
-    # exactly the gap the report has to state.
-    times = [int(info["durationMs"] * (i + 0.5) / args.samples) for i in range(args.samples)]
-    ours = capture_previewer(args.job, args.skill, times, work / "our")
+    # A probe capture reads the parsed duration; progress alignment needs it
+    # before the real sample points can be chosen.
+    probe_dir = work / "probe"
+    capture_previewer(args.job, args.skill, [0], probe_dir)
+    blocked = probe_dir / "skill-preview-report.json"
+    parsed = json.loads(blocked.read_text(encoding="utf-8")) if blocked.exists() else {}
+    parsed_ms = float(parsed.get("durationMs") or 0)
+    shutil.rmtree(probe_dir, ignore_errors=True)
+
+    ref_times = [int(info["durationMs"] * (i + 0.5) / args.samples)
+                 for i in range(args.samples)]
+    if args.align == "progress" and parsed_ms > 0:
+        our_times = [int(parsed_ms * (i + 0.5) / args.samples) for i in range(args.samples)]
+    else:
+        our_times = list(ref_times)
+
+    ours = capture_previewer(args.job, args.skill, our_times, work / "our")
+
     comparison = outdir / "compare.png"
     stack([refs, ours], comparison)
 
     report_path = work / "our" / "skill-preview-report.json"
-    parsed = json.loads(report_path.read_text(encoding="utf-8")) if report_path.exists() else {}
+    parsed = (json.loads(report_path.read_text(encoding="utf-8"))
+              if report_path.exists() else parsed)
     layer_plan = parsed.get("layerPlan") or []
     births: dict[str, int] = {}
     for layer in layer_plan:
@@ -162,15 +213,25 @@ def main() -> int:
         "source": str(source),
         "neopleWrapped": wrapped,
         "reference": info,
-        "samplesMsOnReferenceClock": times,
-        "parsedDurationMs": parsed.get("durationMs"),
+        "parsedDurationMs": parsed_ms,
         "parsedLayers": len(layer_plan),
         "parsedBirths": dict(sorted(births.items(), key=lambda kv: float(kv[0]))),
-        "durationRatio": (round(parsed.get("durationMs", 0) / info["durationMs"], 3)
-                          if info["durationMs"] else None),
+        "align": args.align,
+        "samples": {
+            "referenceMs": ref_times,
+            "ourMs": our_times,
+        },
+        "durations": {
+            "referenceMs": info["durationMs"],
+            "parsedMs": parsed_ms,
+            "comparable": False,
+            "note": "Clip length is editorial, not the skill's runtime. These two "
+                    "numbers must not be divided into a defect ratio.",
+        },
+        "styleChecklist": STYLE_CHECKLIST,
         "skill": (parsed.get("skill") or {}).get("name"),
-        "note": "The AVI is an observation, not a fitting target. Tiles are the "
-                "reference above and the previewer below at the same reference time.",
+        "note": "The AVI confirms style, character motion, trigger and judgement "
+                "extent only. Do not use it to fit or grade duration.",
     }
     (outdir / "compare.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2),
                                          encoding="utf-8")

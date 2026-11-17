@@ -390,319 +390,319 @@ static const ExeSkillBinding k_skill_swordman_162 = {
     "1031 DNF.exe setState: states 29; basis motion name; handlers 0x00cd9fe7"};
 
 static const char *const k_motions_demonicswordman_1[] = {
-    "character/demonicswordman/dsanimation/waveeyeattack3.ani",
-    "character/demonicswordman/dsanimation/guard.ani",
-    "character/demonicswordman/dsanimation/wave.ani",
+    "character/swordman/dsanimation/waveeyeattack3.ani",
+    "character/swordman/dsanimation/guard.ani",
+    "character/swordman/dsanimation/wave.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_1 = {
     1, k_motions_demonicswordman_1, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 8,17,19,24; basis eligibility pair; handlers 0x00cceb55,0x00ccec76,0x00cd19ec"};
 static const char *const k_motions_demonicswordman_2[] = {
-    "character/demonicswordman/dsanimation/guard.ani",
-    "character/demonicswordman/dsanimation/reflectguard.ani",
+    "character/swordman/dsanimation/guard.ani",
+    "character/swordman/dsanimation/reflectguard.ani",
 };
 static const char *const k_effects_demonicswordman_2[] = {
-    "character/demonicswordman/effect/animation/reflectguard_ds/charge.ani",
-    "character/demonicswordman/effect/animation/reflectguard_ds/slash.ani",
+    "character/swordman/effect/animation/reflectguard_ds/charge.ani",
+    "character/swordman/effect/animation/reflectguard_ds/slash.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_2 = {
     2, k_motions_demonicswordman_2, 2, k_effects_demonicswordman_2, 2, 
     "1031 DNF.exe setState: states 19,38; basis eligibility pair; handlers 0x00ccec76,0x00cda8d9"};
 static const char *const k_motions_demonicswordman_3[] = {
-    "character/demonicswordman/dsanimation/guard.ani",
-    "character/demonicswordman/dsanimation/hitback.ani",
+    "character/swordman/dsanimation/guard.ani",
+    "character/swordman/dsanimation/hitback.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_3 = {
     3, k_motions_demonicswordman_3, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 17,19,59; basis eligibility pair; handlers 0x00ccec76,0x00cd05f5,0x00cdc8a8"};
 static const char *const k_motions_demonicswordman_6[] = {
-    "character/demonicswordman/dsanimation/hardattack.ani",
-    "character/demonicswordman/dsanimation/hardattackchargeafter.ani",
+    "character/swordman/dsanimation/hardattack.ani",
+    "character/swordman/dsanimation/hardattackchargeafter.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_6 = {
     6, k_motions_demonicswordman_6, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 20; basis motion name; handlers 0x00ccf3b2"};
 static const char *const k_motions_demonicswordman_7[] = {
-    "character/demonicswordman/dsanimation/hitback.ani",
+    "character/swordman/dsanimation/hitback.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_7 = {
     7, k_motions_demonicswordman_7, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 21; basis eligibility pair; handlers 0x00cd03c0"};
 static const char *const k_motions_demonicswordman_11[] = {
-    "character/demonicswordman/dsanimation/dashattackmultihit.ani",
+    "character/swordman/dsanimation/dashattackmultihit.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_11 = {
     11, k_motions_demonicswordman_11, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 29; basis eligibility pair; handlers 0x00cd9fe7"};
 static const char *const k_motions_demonicswordman_14[] = {
-    "character/demonicswordman/dsanimation/waveeyeattack3.ani",
+    "character/swordman/dsanimation/waveeyeattack3.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_14 = {
     14, k_motions_demonicswordman_14, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 8,13,23,25; basis eligibility pair; handlers 0x00cceb55,0x00cd0fa0,0x00cd212d"};
 static const char *const k_motions_demonicswordman_15[] = {
-    "character/demonicswordman/dsanimation/chargecrashdash.ani",
-    "character/demonicswordman/dsanimation/chargecrashupper.ani",
-    "character/demonicswordman/dsanimation/chargecrashfinish.ani",
+    "character/swordman/dsanimation/chargecrashdash.ani",
+    "character/swordman/dsanimation/chargecrashupper.ani",
+    "character/swordman/dsanimation/chargecrashfinish.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_15 = {
     15, k_motions_demonicswordman_15, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 37; basis eligibility pair; handlers 0x00cd9192"};
 static const char *const k_motions_demonicswordman_17[] = {
-    "character/demonicswordman/dsanimation/jumpattackmultislash1.ani",
+    "character/swordman/dsanimation/jumpattackmultislash1.ani",
 };
 static const char *const k_effects_demonicswordman_17[] = {
-    "character/demonicswordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash1_katana_under.ani",
-    "character/demonicswordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash1_katana_upper.ani",
-    "character/demonicswordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash2_katana_under.ani",
-    "character/demonicswordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash2_katana_upper.ani",
-    "character/demonicswordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash1_under_effect.ani",
-    "character/demonicswordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash2_under_effect.ani",
-    "character/demonicswordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash1_upper_effect.ani",
-    "character/demonicswordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash2_upper_effect.ani",
-    "character/demonicswordman/effect/animation/jumpattackmulti_ds/jumpchainattacknormal_upper_effect.ani",
+    "character/swordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash1_katana_under.ani",
+    "character/swordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash1_katana_upper.ani",
+    "character/swordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash2_katana_under.ani",
+    "character/swordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash2_katana_upper.ani",
+    "character/swordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash1_under_effect.ani",
+    "character/swordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash2_under_effect.ani",
+    "character/swordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash1_upper_effect.ani",
+    "character/swordman/effect/animation/jumpattackmulti_ds/jumpchainattackslash2_upper_effect.ani",
+    "character/swordman/effect/animation/jumpattackmulti_ds/jumpchainattacknormal_upper_effect.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_17 = {
     17, k_motions_demonicswordman_17, 1, k_effects_demonicswordman_17, 9, 
     "1031 DNF.exe setState: states 69; basis motion name; handlers 0x00cdc9c9"};
 static const char *const k_motions_demonicswordman_20[] = {
-    "character/demonicswordman/dsanimation/wave.ani",
+    "character/swordman/dsanimation/wave.ani",
 };
 static const char *const k_effects_demonicswordman_20[] = {
-    "character/demonicswordman/effect/animation/normalwaveslash_ds.ani",
+    "character/swordman/effect/animation/normalwaveslash_ds.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_20 = {
     20, k_motions_demonicswordman_20, 1, k_effects_demonicswordman_20, 1, 
     "1031 DNF.exe setState: states 24; basis eligibility pair; handlers 0x00cd19ec"};
 static const char *const k_motions_demonicswordman_27[] = {
-    "character/demonicswordman/dsanimation/rapidmoveslashready1.ani",
-    "character/demonicswordman/dsanimation/rapidmoveslashmove1.ani",
-    "character/demonicswordman/dsanimation/guard.ani",
-    "character/demonicswordman/dsanimation/rapidmoveslashmove2.ani",
+    "character/swordman/dsanimation/rapidmoveslashready1.ani",
+    "character/swordman/dsanimation/rapidmoveslashmove1.ani",
+    "character/swordman/dsanimation/guard.ani",
+    "character/swordman/dsanimation/rapidmoveslashmove2.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_27 = {
     27, k_motions_demonicswordman_27, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 39; basis eligibility pair; handlers 0x00cd5323"};
 static const char *const k_motions_demonicswordman_46[] = {
-    "character/demonicswordman/dsanimation/upperslashafter.ani",
+    "character/swordman/dsanimation/upperslashafter.ani",
 };
 static const char *const k_effects_demonicswordman_46[] = {
-    "character/demonicswordman/effect/animation/upperslash1_ds.ani",
-    "character/demonicswordman/effect/animation/upperslash2_ds.ani",
+    "character/swordman/effect/animation/upperslash1_ds.ani",
+    "character/swordman/effect/animation/upperslash2_ds.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_46 = {
     46, k_motions_demonicswordman_46, 1, k_effects_demonicswordman_46, 2, 
     "1031 DNF.exe setState: states 30; basis eligibility pair; handlers 0x00cda585"};
 static const char *const k_motions_demonicswordman_51[] = {
-    "character/demonicswordman/dsanimation/hardattack.ani",
+    "character/swordman/dsanimation/hardattack.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_51 = {
     51, k_motions_demonicswordman_51, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 27; basis eligibility pair; handlers 0x00cd8c62"};
 static const char *const k_motions_demonicswordman_57[] = {
-    "character/demonicswordman/dsanimation/shockwaveareacast.ani",
-    "character/demonicswordman/dsanimation/shockwaveareasmash.ani",
+    "character/swordman/dsanimation/shockwaveareacast.ani",
+    "character/swordman/dsanimation/shockwaveareasmash.ani",
 };
 static const char *const k_effects_demonicswordman_57[] = {
-    "character/demonicswordman/effect/animation/shockwavearea_ds/cast.ani",
-    "character/demonicswordman/effect/animation/shockwavearea_ds/smash.ani",
-    "character/demonicswordman/effect/animation/shockwavearea_ds/area.ani",
+    "character/swordman/effect/animation/shockwavearea_ds/cast.ani",
+    "character/swordman/effect/animation/shockwavearea_ds/smash.ani",
+    "character/swordman/effect/animation/shockwavearea_ds/area.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_57 = {
     57, k_motions_demonicswordman_57, 2, k_effects_demonicswordman_57, 3, 
     "1031 DNF.exe setState: states 31; basis eligibility pair; handlers 0x00cd2d6b"};
 static const char *const k_motions_demonicswordman_58[] = {
-    "character/demonicswordman/dsanimation/vaneslashtry.ani",
+    "character/swordman/dsanimation/vaneslashtry.ani",
 };
 static const char *const k_effects_demonicswordman_58[] = {
-    "character/demonicswordman/effect/animation/vaneslash_ds/upper.ani",
-    "character/demonicswordman/effect/animation/vaneslash_ds/dust.ani",
-    "character/demonicswordman/effect/animation/vaneslash_ds/smash.ani",
+    "character/swordman/effect/animation/vaneslash_ds/upper.ani",
+    "character/swordman/effect/animation/vaneslash_ds/dust.ani",
+    "character/swordman/effect/animation/vaneslash_ds/smash.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_58 = {
     58, k_motions_demonicswordman_58, 1, k_effects_demonicswordman_58, 3, 
     "1031 DNF.exe setState: states 32; basis motion name; handlers 0x00cd413d"};
 static const char *const k_motions_demonicswordman_60[] = {
-    "character/demonicswordman/dsanimation/ghoststepslashready.ani",
-    "character/demonicswordman/dsanimation/ghoststepslashmove.ani",
+    "character/swordman/dsanimation/ghoststepslashready.ani",
+    "character/swordman/dsanimation/ghoststepslashmove.ani",
 };
 static const char *const k_effects_demonicswordman_60[] = {
-    "character/demonicswordman/effect/animation/ghoststepslash_ds/move.ani",
-    "character/demonicswordman/effect/animation/ghoststepslash_ds/slash1.ani",
-    "character/demonicswordman/effect/animation/ghoststepslash_ds/slash2.ani",
-    "character/demonicswordman/effect/animation/ghoststepslash_ds/skull.ani",
+    "character/swordman/effect/animation/ghoststepslash_ds/move.ani",
+    "character/swordman/effect/animation/ghoststepslash_ds/slash1.ani",
+    "character/swordman/effect/animation/ghoststepslash_ds/slash2.ani",
+    "character/swordman/effect/animation/ghoststepslash_ds/skull.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_60 = {
     60, k_motions_demonicswordman_60, 2, k_effects_demonicswordman_60, 4, 
     "1031 DNF.exe setState: states 33; basis eligibility pair; handlers 0x00cd3326"};
 static const char *const k_motions_demonicswordman_62[] = {
-    "character/demonicswordman/dsanimation/standalonewaveready.ani",
-    "character/demonicswordman/dsanimation/standalonewavebasic.ani",
+    "character/swordman/dsanimation/standalonewaveready.ani",
+    "character/swordman/dsanimation/standalonewavebasic.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_62 = {
     62, k_motions_demonicswordman_62, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 34; basis eligibility pair; handlers 0x00cd3842"};
 static const char *const k_motions_demonicswordman_64[] = {
-    "character/demonicswordman/dsanimation/gorecross.ani",
+    "character/swordman/dsanimation/gorecross.ani",
 };
 static const char *const k_effects_demonicswordman_64[] = {
-    "character/demonicswordman/effect/animation/gorecross_ds/slash1.ani",
-    "character/demonicswordman/effect/animation/gorecross_ds/slash2.ani",
-    "character/demonicswordman/effect/animation/gorecross_ds/slash3.ani",
-    "character/demonicswordman/effect/animation/gorecross_ds/slash4.ani",
+    "character/swordman/effect/animation/gorecross_ds/slash1.ani",
+    "character/swordman/effect/animation/gorecross_ds/slash2.ani",
+    "character/swordman/effect/animation/gorecross_ds/slash3.ani",
+    "character/swordman/effect/animation/gorecross_ds/slash4.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_64 = {
     64, k_motions_demonicswordman_64, 1, k_effects_demonicswordman_64, 4, 
     "1031 DNF.exe setState: states 35; basis eligibility pair; handlers 0x00cd476e"};
 static const char *const k_motions_demonicswordman_65[] = {
-    "character/demonicswordman/dsanimation/hopsmashready.ani",
-    "character/demonicswordman/dsanimation/hopsmash.ani",
+    "character/swordman/dsanimation/hopsmashready.ani",
+    "character/swordman/dsanimation/hopsmash.ani",
 };
 static const char *const k_effects_demonicswordman_65[] = {
-    "character/demonicswordman/effect/animation/hopsmash_ds/sword.ani",
-    "character/demonicswordman/effect/animation/hopsmash_ds/smash.ani",
+    "character/swordman/effect/animation/hopsmash_ds/sword.ani",
+    "character/swordman/effect/animation/hopsmash_ds/smash.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_65 = {
     65, k_motions_demonicswordman_65, 2, k_effects_demonicswordman_65, 2, 
     "1031 DNF.exe setState: states 36; basis motion name; handlers 0x00cd4e97"};
 static const char *const k_motions_demonicswordman_72[] = {
-    "character/demonicswordman/dsanimation/rapidmoveslashready1.ani",
-    "character/demonicswordman/dsanimation/rapidmoveslashmove1.ani",
-    "character/demonicswordman/dsanimation/guard.ani",
-    "character/demonicswordman/dsanimation/rapidmoveslashmove2.ani",
+    "character/swordman/dsanimation/rapidmoveslashready1.ani",
+    "character/swordman/dsanimation/rapidmoveslashmove1.ani",
+    "character/swordman/dsanimation/guard.ani",
+    "character/swordman/dsanimation/rapidmoveslashmove2.ani",
 };
 static const char *const k_effects_demonicswordman_72[] = {
-    "character/demonicswordman/effect/animation/rapidmoveslash_ds/move1.ani",
-    "character/demonicswordman/effect/animation/rapidmoveslash_ds/move2.ani",
-    "character/demonicswordman/effect/animation/rapidmoveslash_ds/slash1.ani",
-    "character/demonicswordman/effect/animation/rapidmoveslash_ds/slash2.ani",
+    "character/swordman/effect/animation/rapidmoveslash_ds/move1.ani",
+    "character/swordman/effect/animation/rapidmoveslash_ds/move2.ani",
+    "character/swordman/effect/animation/rapidmoveslash_ds/slash1.ani",
+    "character/swordman/effect/animation/rapidmoveslash_ds/slash2.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_72 = {
     72, k_motions_demonicswordman_72, 4, k_effects_demonicswordman_72, 4, 
     "1031 DNF.exe setState: states 39; basis eligibility pair; handlers 0x00cd5323"};
 static const char *const k_motions_demonicswordman_73[] = {
-    "character/demonicswordman/dsanimation/illusionslash1.ani",
-    "character/demonicswordman/dsanimation/illusionslashfinal.ani",
+    "character/swordman/dsanimation/illusionslash1.ani",
+    "character/swordman/dsanimation/illusionslashfinal.ani",
 };
 static const char *const k_effects_demonicswordman_73[] = {
-    "character/demonicswordman/effect/animation/illusionslash_ds/upper.ani",
-    "character/demonicswordman/effect/animation/illusionslash_ds/smash.ani",
+    "character/swordman/effect/animation/illusionslash_ds/upper.ani",
+    "character/swordman/effect/animation/illusionslash_ds/smash.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_73 = {
     73, k_motions_demonicswordman_73, 2, k_effects_demonicswordman_73, 2, 
     "1031 DNF.exe setState: states 40; basis eligibility pair; handlers 0x00cd607b"};
 static const char *const k_motions_demonicswordman_77[] = {
-    "character/demonicswordman/dsanimation/moonlightslash1.ani",
-    "character/demonicswordman/dsanimation/moonlightslash2.ani",
-    "character/demonicswordman/dsanimation/moonlightslashfull.ani",
+    "character/swordman/dsanimation/moonlightslash1.ani",
+    "character/swordman/dsanimation/moonlightslash2.ani",
+    "character/swordman/dsanimation/moonlightslashfull.ani",
 };
 static const char *const k_effects_demonicswordman_77[] = {
-    "character/demonicswordman/effect/animation/moonlightslash1_ds.ani",
-    "character/demonicswordman/effect/animation/moonlightslash2_ds.ani",
-    "character/demonicswordman/effect/animation/moonlightslashfull.ani",
+    "character/swordman/effect/animation/moonlightslash1_ds.ani",
+    "character/swordman/effect/animation/moonlightslash2_ds.ani",
+    "character/swordman/effect/animation/moonlightslashfull.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_77 = {
     77, k_motions_demonicswordman_77, 3, k_effects_demonicswordman_77, 3, 
     "1031 DNF.exe setState: states 42; basis eligibility pair; handlers 0x00cd9a28"};
 static const char *const k_motions_demonicswordman_81[] = {
-    "character/demonicswordman/dsanimation/outragebreakready.ani",
-    "character/demonicswordman/dsanimation/outragebreakslash.ani",
+    "character/swordman/dsanimation/outragebreakready.ani",
+    "character/swordman/dsanimation/outragebreakslash.ani",
 };
 static const char *const k_effects_demonicswordman_81[] = {
-    "character/demonicswordman/effect/animation/outragebreak_ds/sword_ready_ldodge.ani",
-    "character/demonicswordman/effect/animation/outragebreak_ds/sword_ready_none.ani",
-    "character/demonicswordman/effect/animation/outragebreak_ds/sword_slash_ldodge.ani",
-    "character/demonicswordman/effect/animation/outragebreak_ds/sword_slash_none.ani",
-    "character/demonicswordman/effect/animation/outragebreak_ds/sword_slash_impact_ldodge.ani",
-    "character/demonicswordman/effect/animation/outragebreak_ds/sword_slash_impact_none.ani",
-    "character/demonicswordman/effect/animation/outragebreak_ds/sword_slash_stone.ani",
+    "character/swordman/effect/animation/outragebreak_ds/sword_ready_ldodge.ani",
+    "character/swordman/effect/animation/outragebreak_ds/sword_ready_none.ani",
+    "character/swordman/effect/animation/outragebreak_ds/sword_slash_ldodge.ani",
+    "character/swordman/effect/animation/outragebreak_ds/sword_slash_none.ani",
+    "character/swordman/effect/animation/outragebreak_ds/sword_slash_impact_ldodge.ani",
+    "character/swordman/effect/animation/outragebreak_ds/sword_slash_impact_none.ani",
+    "character/swordman/effect/animation/outragebreak_ds/sword_slash_stone.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_81 = {
     81, k_motions_demonicswordman_81, 2, k_effects_demonicswordman_81, 7, 
     "1031 DNF.exe setState: states 45; basis eligibility pair; handlers 0x00cd4bb6"};
 static const char *const k_motions_demonicswordman_82[] = {
-    "character/demonicswordman/dsanimation/kallaland.ani",
-    "character/demonicswordman/dsanimation/kallaair.ani",
-    "character/demonicswordman/dsanimation/kallafinishready.ani",
+    "character/swordman/dsanimation/kallaland.ani",
+    "character/swordman/dsanimation/kallaair.ani",
+    "character/swordman/dsanimation/kallafinishready.ani",
 };
 static const char *const k_effects_demonicswordman_82[] = {
-    "character/demonicswordman/effect/animation/kalla_ds/finishready",
-    "character/demonicswordman/effect/animation/kalla_ds/finish",
+    "character/swordman/effect/animation/kalla_ds/finishready",
+    "character/swordman/effect/animation/kalla_ds/finish",
 };
 static const ExeSkillBinding k_skill_demonicswordman_82 = {
     82, k_motions_demonicswordman_82, 3, k_effects_demonicswordman_82, 2, 
     "1031 DNF.exe setState: states 13,44; basis eligibility pair; handlers 0x00cd8493,0x00cdc8a8"};
 static const char *const k_motions_demonicswordman_85[] = {
-    "character/demonicswordman/dsanimation/hellbenterfinish.ani",
+    "character/swordman/dsanimation/hellbenterfinish.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_85 = {
     85, k_motions_demonicswordman_85, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 46; basis eligibility pair; handlers 0x00cdaabf"};
 static const char *const k_motions_demonicswordman_86[] = {
-    "character/demonicswordman/dsanimation/hundredswordready.ani",
-    "character/demonicswordman/dsanimation/guard.ani",
-    "character/demonicswordman/dsanimation/hundredswordfinish.ani",
+    "character/swordman/dsanimation/hundredswordready.ani",
+    "character/swordman/dsanimation/guard.ani",
+    "character/swordman/dsanimation/hundredswordfinish.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_86 = {
     86, k_motions_demonicswordman_86, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 47,48,49; basis eligibility pair; handlers 0x00cdadba,0x00cdb130,0x00cdb798"};
 static const char *const k_motions_demonicswordman_87[] = {
-    "character/demonicswordman/dsanimation/blachecast.ani",
-    "character/demonicswordman/dsanimation/blachesmash.ani",
+    "character/swordman/dsanimation/blachecast.ani",
+    "character/swordman/dsanimation/blachesmash.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_87 = {
     87, k_motions_demonicswordman_87, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 50; basis eligibility pair; handlers 0x00cdbd6f"};
 static const char *const k_motions_demonicswordman_88[] = {
-    "character/demonicswordman/dsanimation/waveeyecast.ani",
-    "character/demonicswordman/dsanimation/waveeyestart.ani",
-    "character/demonicswordman/dsanimation/waveeyewing.ani",
+    "character/swordman/dsanimation/waveeyecast.ani",
+    "character/swordman/dsanimation/waveeyestart.ani",
+    "character/swordman/dsanimation/waveeyewing.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_88 = {
     88, k_motions_demonicswordman_88, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 51,53; basis eligibility pair; handlers 0x00cdc22c,0x00cdc579"};
 static const char *const k_motions_demonicswordman_102[] = {
-    "character/demonicswordman/dsanimation/grab.ani",
+    "character/swordman/dsanimation/grab.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_102 = {
     102, k_motions_demonicswordman_102, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 26; basis eligibility pair; handlers 0x00cd2438"};
 static const char *const k_motions_demonicswordman_108[] = {
-    "character/demonicswordman/dsanimation/flowmindtwojump.ani",
-    "character/demonicswordman/dsanimation/flowmindtwolanding.ani",
+    "character/swordman/dsanimation/flowmindtwojump.ani",
+    "character/swordman/dsanimation/flowmindtwolanding.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_108 = {
     108, k_motions_demonicswordman_108, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 63; basis eligibility pair; handlers 0x00cd6f7c"};
 static const char *const k_motions_demonicswordman_109[] = {
-    "character/demonicswordman/dsanimation/flowmindthreeready.ani",
+    "character/swordman/dsanimation/flowmindthreeready.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_109 = {
     109, k_motions_demonicswordman_109, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 64; basis eligibility pair; handlers 0x00cd7588"};
 static const char *const k_motions_demonicswordman_111[] = {
-    "character/demonicswordman/dsanimation/ghostsidewind.ani",
+    "character/swordman/dsanimation/ghostsidewind.ani",
 };
 static const char *const k_effects_demonicswordman_111[] = {
-    "character/demonicswordman/effect/animation/ghostsidewind_ds/00_sword_normal.ani",
+    "character/swordman/effect/animation/ghostsidewind_ds/00_sword_normal.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_111 = {
     111, k_motions_demonicswordman_111, 1, k_effects_demonicswordman_111, 1, 
     "1031 DNF.exe setState: states 65; basis eligibility pair; handlers 0x00cd7837"};
 static const char *const k_motions_demonicswordman_112[] = {
-    "character/demonicswordman/dsanimation/triplestab.ani",
+    "character/swordman/dsanimation/triplestab.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_112 = {
     112, k_motions_demonicswordman_112, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 66; basis motion name; handlers 0x00cd7ab6"};
 static const char *const k_motions_demonicswordman_117[] = {
-    "character/demonicswordman/dsanimation/darkwave.ani",
+    "character/swordman/dsanimation/darkwave.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_117 = {
     117, k_motions_demonicswordman_117, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 67; basis motion name; handlers 0x00cce9ff"};
 static const char *const k_motions_demonicswordman_162[] = {
-    "character/demonicswordman/dsanimation/dashattackmultihit.ani",
+    "character/swordman/dsanimation/dashattackmultihit.ani",
 };
 static const ExeSkillBinding k_skill_demonicswordman_162 = {
     162, k_motions_demonicswordman_162, 1, nullptr, 0, 
@@ -1125,396 +1125,396 @@ static const ExeSkillBinding k_skill_fighter_139 = {
     "1031 DNF.exe setState: states 54; basis eligibility pair; handlers 0x00beb0cc"};
 
 static const char *const k_motions_atfighter_1[] = {
-    "character/atfighter/atanimation/damagelowkick.ani",
-    "character/atfighter/atanimation/crashlowkick.ani",
-    "character/atfighter/atanimation/holduphit.ani",
-    "character/atfighter/atanimation/flamelegscast.ani",
+    "character/fighter/atanimation/damagelowkick.ani",
+    "character/fighter/atanimation/crashlowkick.ani",
+    "character/fighter/atanimation/holduphit.ani",
+    "character/fighter/atanimation/flamelegscast.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_1 = {
     1, k_motions_atfighter_1, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 21,22,43,47; basis eligibility pair; handlers 0x00be3801,0x00be3d10,0x00be94ec"};
 static const char *const k_motions_atfighter_2[] = {
-    "character/atfighter/atanimation/crouch.ani",
+    "character/fighter/atanimation/crouch.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_2 = {
     2, k_motions_atfighter_2, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 19,20; basis eligibility pair; handlers 0x00be34f2,0x00be36a0"};
 static const char *const k_motions_atfighter_4[] = {
-    "character/atfighter/atanimation/damagelowkick.ani",
-    "character/atfighter/atanimation/crashlowkick.ani",
+    "character/fighter/atanimation/damagelowkick.ani",
+    "character/fighter/atanimation/crashlowkick.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_4 = {
     4, k_motions_atfighter_4, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 21; basis eligibility pair; handlers 0x00be3801"};
 static const char *const k_motions_atfighter_5[] = {
-    "character/atfighter/atanimation/liftupper.ani",
+    "character/fighter/atanimation/liftupper.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_5 = {
     5, k_motions_atfighter_5, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 30; basis eligibility pair; handlers 0x00be6a32"};
 static const char *const k_motions_atfighter_6[] = {
-    "character/atfighter/atanimation/damagelowkick.ani",
-    "character/atfighter/atanimation/crashlowkick.ani",
+    "character/fighter/atanimation/damagelowkick.ani",
+    "character/fighter/atanimation/crashlowkick.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_6 = {
     6, k_motions_atfighter_6, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 21; basis eligibility pair; handlers 0x00be3801"};
 static const char *const k_motions_atfighter_9[] = {
-    "character/atfighter/atanimation/holduphit.ani",
-    "character/atfighter/atanimation/backsuplex.ani",
-    "character/atfighter/atanimation/crouch.ani",
-    "character/atfighter/atanimation/suplex.ani",
+    "character/fighter/atanimation/holduphit.ani",
+    "character/fighter/atanimation/backsuplex.ani",
+    "character/fighter/atanimation/crouch.ani",
+    "character/fighter/atanimation/suplex.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_9 = {
     9, k_motions_atfighter_9, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 22,23; basis eligibility pair; handlers 0x00be3d10,0x00be4410"};
 static const char *const k_motions_atfighter_10[] = {
-    "character/atfighter/atanimation/backsuplex.ani",
-    "character/atfighter/atanimation/crouch.ani",
-    "character/atfighter/atanimation/suplex.ani",
+    "character/fighter/atanimation/backsuplex.ani",
+    "character/fighter/atanimation/crouch.ani",
+    "character/fighter/atanimation/suplex.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_10 = {
     10, k_motions_atfighter_10, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 23; basis eligibility pair; handlers 0x00be4410"};
 static const char *const k_motions_atfighter_13[] = {
-    "character/atfighter/atanimation/blockbusterjump.ani",
+    "character/fighter/atanimation/blockbusterjump.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_13 = {
     13, k_motions_atfighter_13, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 63; basis eligibility pair; handlers 0x00be7d06"};
 static const char *const k_motions_atfighter_14[] = {
-    "character/atfighter/atanimation/mounttry.ani",
-    "character/atfighter/atanimation/typhoonjump.ani",
-    "character/atfighter/atanimation/mount.ani",
-    "character/atfighter/atanimation/mountpunch.ani",
-    "character/atfighter/",
-    "character/atfighter/atanimation/venommine.ani",
+    "character/fighter/atanimation/mounttry.ani",
+    "character/fighter/atanimation/typhoonjump.ani",
+    "character/fighter/atanimation/mount.ani",
+    "character/fighter/atanimation/mountpunch.ani",
+    "character/fighter/",
+    "character/fighter/atanimation/venommine.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_14 = {
     14, k_motions_atfighter_14, 6, nullptr, 0, 
     "1031 DNF.exe setState: states 26,27; basis eligibility pair; handlers 0x00be5702,0x00be5b54"};
 static const char *const k_motions_atfighter_17[] = {
-    "character/atfighter/",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_17 = {
     17, k_motions_atfighter_17, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 28; basis eligibility pair; handlers 0x00be63ce"};
 static const char *const k_motions_atfighter_18[] = {
-    "character/atfighter/atanimation/holduphit.ani",
-    "character/atfighter/atanimation/jumpsuplex.ani",
-    "character/atfighter/atanimation/jumpsupleximpresskick.ani",
+    "character/fighter/atanimation/holduphit.ani",
+    "character/fighter/atanimation/jumpsuplex.ani",
+    "character/fighter/atanimation/jumpsupleximpresskick.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_18 = {
     18, k_motions_atfighter_18, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 22,24,25; basis eligibility pair; handlers 0x00be3d10,0x00be47cd,0x00be4f3a"};
 static const char *const k_motions_atfighter_19[] = {
-    "character/atfighter/atanimation/closepunch.ani",
+    "character/fighter/atanimation/closepunch.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_19 = {
     19, k_motions_atfighter_19, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 29; basis eligibility pair; handlers 0x00be6719"};
 static const char *const k_motions_atfighter_22[] = {
-    "character/atfighter/atanimation/backsuplex.ani",
-    "character/atfighter/atanimation/crouch.ani",
-    "character/atfighter/atanimation/suplex.ani",
+    "character/fighter/atanimation/backsuplex.ani",
+    "character/fighter/atanimation/crouch.ani",
+    "character/fighter/atanimation/suplex.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_22 = {
     22, k_motions_atfighter_22, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 23; basis motion name; handlers 0x00be4410"};
 static const char *const k_motions_atfighter_41[] = {
-    "character/atfighter/atanimation/junkspinloop.ani",
+    "character/fighter/atanimation/junkspinloop.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_41 = {
     41, k_motions_atfighter_41, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 49,62; basis eligibility pair; handlers 0x00be5149,0x00be6cf9"};
 static const char *const k_motions_atfighter_46[] = {
-    "character/atfighter/atanimation/junkspinwait.ani",
+    "character/fighter/atanimation/junkspinwait.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_46 = {
     46, k_motions_atfighter_46, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 44,48; basis eligibility pair; handlers 0x00be984a,0x00befaae"};
 static const char *const k_motions_atfighter_49[] = {
-    "character/atfighter/atanimation/holduphit.ani",
-    "character/atfighter/atanimation/mountend.ani",
-    "character/atfighter/atanimation/shouldercharge.ani",
+    "character/fighter/atanimation/holduphit.ani",
+    "character/fighter/atanimation/mountend.ani",
+    "character/fighter/atanimation/shouldercharge.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_49 = {
     49, k_motions_atfighter_49, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 22,50; basis eligibility pair; handlers 0x00be3d10,0x00be5429"};
 static const char *const k_motions_atfighter_54[] = {
-    "character/atfighter/atanimation/shouldertackle.ani",
+    "character/fighter/atanimation/shouldertackle.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_54 = {
     54, k_motions_atfighter_54, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 33; basis eligibility pair; handlers 0x00be7096"};
 static const char *const k_motions_atfighter_58[] = {
-    "character/atfighter/atanimation/whirlwindkick.ani",
+    "character/fighter/atanimation/whirlwindkick.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_58 = {
     58, k_motions_atfighter_58, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 34; basis eligibility pair; handlers 0x00be7413"};
 static const char *const k_motions_atfighter_60[] = {
-    "character/atfighter/atanimation/blockbusterready.ani",
+    "character/fighter/atanimation/blockbusterready.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_60 = {
     60, k_motions_atfighter_60, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 35; basis eligibility pair; handlers 0x00be7789"};
 static const char *const k_motions_atfighter_62[] = {
-    "character/atfighter/atanimation/blockbusterjump.ani",
+    "character/fighter/atanimation/blockbusterjump.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_62 = {
     62, k_motions_atfighter_62, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 36; basis eligibility pair; handlers 0x00be7d06"};
 static const char *const k_motions_atfighter_63[] = {
-    "character/atfighter/atanimation/holduphit.ani",
-    "character/atfighter/atanimation/typhoonattack2.ani",
-    "character/atfighter/atanimation/typhoonattack3.ani",
-    "character/atfighter/atanimation/typhoonattackkickup.ani",
+    "character/fighter/atanimation/holduphit.ani",
+    "character/fighter/atanimation/typhoonattack2.ani",
+    "character/fighter/atanimation/typhoonattack3.ani",
+    "character/fighter/atanimation/typhoonattackkickup.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_63 = {
     63, k_motions_atfighter_63, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 22,61; basis eligibility pair; handlers 0x00be3d10,0x00bef4f4"};
 static const char *const k_motions_atfighter_64[] = {
-    "character/atfighter/atanimation/typhoongrab.ani",
-    "character/atfighter/atanimation/typhoonattack1.ani",
+    "character/fighter/atanimation/typhoongrab.ani",
+    "character/fighter/atanimation/typhoonattack1.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_64 = {
     64, k_motions_atfighter_64, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 40,41; basis eligibility pair; handlers 0x00be8bf7,0x00be8d5d"};
 static const char *const k_motions_atfighter_67[] = {
-    "character/atfighter/atanimation/junkspinloop.ani",
+    "character/fighter/atanimation/junkspinloop.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_67 = {
     67, k_motions_atfighter_67, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 45,49; basis eligibility pair; handlers 0x00be5149,0x00befaae"};
 static const char *const k_motions_atfighter_68[] = {
-    "character/atfighter/atanimation/legsuplexthrow.ani",
-    "character/atfighter/",
+    "character/fighter/atanimation/legsuplexthrow.ani",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_68 = {
     68, k_motions_atfighter_68, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 38,42; basis eligibility pair; handlers 0x00be850b,0x00be8eae"};
 static const char *const k_motions_atfighter_71[] = {
-    "character/atfighter/atanimation/typhoonattack2.ani",
-    "character/atfighter/atanimation/typhoonattack3.ani",
-    "character/atfighter/atanimation/typhoonattackkickup.ani",
+    "character/fighter/atanimation/typhoonattack2.ani",
+    "character/fighter/atanimation/typhoonattack3.ani",
+    "character/fighter/atanimation/typhoonattackkickup.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_71 = {
     71, k_motions_atfighter_71, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 61; basis eligibility pair; handlers 0x00bef4f4"};
 static const char *const k_motions_atfighter_75[] = {
-    "character/atfighter/atanimation/whitetigerattack3.ani",
-    "character/atfighter/atanimation/crouch.ani",
-    "character/atfighter/",
+    "character/fighter/atanimation/whitetigerattack3.ani",
+    "character/fighter/atanimation/crouch.ani",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_75 = {
     75, k_motions_atfighter_75, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 44,65; basis eligibility pair; handlers 0x00be9eb4,0x00befaae"};
 static const char *const k_motions_atfighter_76[] = {
-    "character/atfighter/atanimation/typhoonattack1.ani",
+    "character/fighter/atanimation/typhoonattack1.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_76 = {
     76, k_motions_atfighter_76, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 41; basis eligibility pair; handlers 0x00be8d5d"};
 static const char *const k_motions_atfighter_77[] = {
-    "character/atfighter/",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_77 = {
     77, k_motions_atfighter_77, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 42,46; basis eligibility pair; handlers 0x00be8eae,0x00befaae"};
 static const char *const k_motions_atfighter_80[] = {
-    "character/atfighter/atanimation/flamelegscast.ani",
-    "character/atfighter/atanimation/whitetigerattack3.ani",
-    "character/atfighter/atanimation/crouch.ani",
-    "character/atfighter/",
+    "character/fighter/atanimation/flamelegscast.ani",
+    "character/fighter/atanimation/whitetigerattack3.ani",
+    "character/fighter/atanimation/crouch.ani",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_80 = {
     80, k_motions_atfighter_80, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 47,51; basis eligibility pair; handlers 0x00be94ec,0x00be9eb4"};
 static const char *const k_motions_atfighter_81[] = {
-    "character/atfighter/atanimation/junkspinwait.ani",
-    "character/atfighter/atanimation/whitetigerattack4.ani",
+    "character/fighter/atanimation/junkspinwait.ani",
+    "character/fighter/atanimation/whitetigerattack4.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_81 = {
     81, k_motions_atfighter_81, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 48,52; basis eligibility pair; handlers 0x00be984a,0x00bea4f9"};
 static const char *const k_motions_atfighter_82[] = {
-    "character/atfighter/atanimation/whitetigerattack5.ani",
-    "character/atfighter/atanimation/whitetigerdashattack.ani",
-    "character/atfighter/atanimation/whitetigerjumpattack.ani",
-    "character/atfighter/atanimation/dashpunch.ani",
+    "character/fighter/atanimation/whitetigerattack5.ani",
+    "character/fighter/atanimation/whitetigerdashattack.ani",
+    "character/fighter/atanimation/whitetigerjumpattack.ani",
+    "character/fighter/atanimation/dashpunch.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_82 = {
     82, k_motions_atfighter_82, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 53; basis eligibility pair; handlers 0x00bea6ab"};
 static const char *const k_motions_atfighter_83[] = {
-    "character/atfighter/atanimation/mountend.ani",
-    "character/atfighter/atanimation/shouldercharge.ani",
-    "character/atfighter/atanimation/punchafterreturn.ani",
-    "character/atfighter/atanimation/randomkick1.ani",
-    "character/atfighter/atanimation/destroyearthskydroponsky.ani",
-    "character/atfighter/atanimation/destroyearthskydropfinish.ani",
+    "character/fighter/atanimation/mountend.ani",
+    "character/fighter/atanimation/shouldercharge.ani",
+    "character/fighter/atanimation/punchafterreturn.ani",
+    "character/fighter/atanimation/randomkick1.ani",
+    "character/fighter/atanimation/destroyearthskydroponsky.ani",
+    "character/fighter/atanimation/destroyearthskydropfinish.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_83 = {
     83, k_motions_atfighter_83, 6, nullptr, 0, 
     "1031 DNF.exe setState: states 50,54; basis eligibility pair; handlers 0x00be5429,0x00beb0cc"};
 static const char *const k_motions_atfighter_84[] = {
-    "character/atfighter/atanimation/whitetigerattack3.ani",
-    "character/atfighter/atanimation/crouch.ani",
-    "character/atfighter/",
-    "character/atfighter/atanimation/randomkick2.ani",
-    "character/atfighter/atanimation/randomkick3.ani",
-    "character/atfighter/atanimation/crashlowkick.ani",
-    "character/atfighter/atanimation/randomkickfinish.ani",
-    "character/atfighter/atanimation/risingupperdash.ani",
+    "character/fighter/atanimation/whitetigerattack3.ani",
+    "character/fighter/atanimation/crouch.ani",
+    "character/fighter/",
+    "character/fighter/atanimation/randomkick2.ani",
+    "character/fighter/atanimation/randomkick3.ani",
+    "character/fighter/atanimation/crashlowkick.ani",
+    "character/fighter/atanimation/randomkickfinish.ani",
+    "character/fighter/atanimation/risingupperdash.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_84 = {
     84, k_motions_atfighter_84, 8, nullptr, 0, 
     "1031 DNF.exe setState: states 51,55; basis eligibility pair; handlers 0x00be9eb4,0x00bec1bf"};
 static const char *const k_motions_atfighter_86[] = {
-    "character/atfighter/atanimation/whitetigerattack4.ani",
-    "character/atfighter/atanimation/risingupper.ani",
+    "character/fighter/atanimation/whitetigerattack4.ani",
+    "character/fighter/atanimation/risingupper.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_86 = {
     86, k_motions_atfighter_86, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 52,56; basis eligibility pair; handlers 0x00bea4f9,0x00bec7d1"};
 static const char *const k_motions_atfighter_87[] = {
-    "character/atfighter/atanimation/whitetigerattack5.ani",
-    "character/atfighter/atanimation/whitetigerdashattack.ani",
-    "character/atfighter/atanimation/whitetigerjumpattack.ani",
-    "character/atfighter/atanimation/dashpunch.ani",
-    "character/atfighter/atanimation/dashafterdashcombo1.ani",
-    "character/atfighter/atanimation/dashafterdashcombo2.ani",
-    "character/atfighter/",
+    "character/fighter/atanimation/whitetigerattack5.ani",
+    "character/fighter/atanimation/whitetigerdashattack.ani",
+    "character/fighter/atanimation/whitetigerjumpattack.ani",
+    "character/fighter/atanimation/dashpunch.ani",
+    "character/fighter/atanimation/dashafterdashcombo1.ani",
+    "character/fighter/atanimation/dashafterdashcombo2.ani",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_87 = {
     87, k_motions_atfighter_87, 7, nullptr, 0, 
     "1031 DNF.exe setState: states 53,57; basis eligibility pair; handlers 0x00bea6ab,0x00bec99f"};
 static const char *const k_motions_atfighter_88[] = {
-    "character/atfighter/atanimation/punchafterreturn.ani",
-    "character/atfighter/atanimation/randomkick1.ani",
-    "character/atfighter/atanimation/destroyearthskydroponsky.ani",
-    "character/atfighter/atanimation/destroyearthskydropfinish.ani",
-    "character/atfighter/",
-    "character/atfighter/atanimation/earthbreak.ani",
-    "character/atfighter/atanimation/holduptry.ani",
-    "character/atfighter/atanimation/holduphold.ani",
+    "character/fighter/atanimation/punchafterreturn.ani",
+    "character/fighter/atanimation/randomkick1.ani",
+    "character/fighter/atanimation/destroyearthskydroponsky.ani",
+    "character/fighter/atanimation/destroyearthskydropfinish.ani",
+    "character/fighter/",
+    "character/fighter/atanimation/earthbreak.ani",
+    "character/fighter/atanimation/holduptry.ani",
+    "character/fighter/atanimation/holduphold.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_88 = {
     88, k_motions_atfighter_88, 8, nullptr, 0, 
     "1031 DNF.exe setState: states 54,58; basis eligibility pair; handlers 0x00beb0cc,0x00becea5"};
 static const char *const k_motions_atfighter_89[] = {
-    "character/atfighter/atanimation/holduphit.ani",
+    "character/fighter/atanimation/holduphit.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_89 = {
     89, k_motions_atfighter_89, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 22; basis eligibility pair; handlers 0x00be3d10"};
 static const char *const k_motions_atfighter_90[] = {
-    "character/atfighter/atanimation/risingupper.ani",
-    "character/atfighter/atanimation/throwsanddouble.ani",
+    "character/fighter/atanimation/risingupper.ani",
+    "character/fighter/atanimation/throwsanddouble.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_90 = {
     90, k_motions_atfighter_90, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 56,60; basis eligibility pair; handlers 0x00bec7d1,0x00bef288"};
 static const char *const k_motions_atfighter_101[] = {
-    "character/atfighter/atanimation/blockbusterjump.ani",
+    "character/fighter/atanimation/blockbusterjump.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_101 = {
     101, k_motions_atfighter_101, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 63; basis eligibility pair; handlers 0x00be7d06"};
 static const char *const k_motions_atfighter_102[] = {
-    "character/atfighter/atanimation/whitetigerattack3.ani",
-    "character/atfighter/atanimation/crouch.ani",
-    "character/atfighter/",
+    "character/fighter/atanimation/whitetigerattack3.ani",
+    "character/fighter/atanimation/crouch.ani",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_102 = {
     102, k_motions_atfighter_102, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 65; basis eligibility pair; handlers 0x00be9eb4"};
 static const char *const k_motions_atfighter_103[] = {
-    "character/atfighter/atanimation/destroyearthskydropstart.ani",
-    "character/atfighter/atanimation/randomkick1.ani",
+    "character/fighter/atanimation/destroyearthskydropstart.ani",
+    "character/fighter/atanimation/randomkick1.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_103 = {
     103, k_motions_atfighter_103, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 66; basis eligibility pair; handlers 0x00bebc73"};
 static const char *const k_motions_atfighter_104[] = {
-    "character/atfighter/",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_104 = {
     104, k_motions_atfighter_104, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 67; basis eligibility pair; handlers 0x00be7b09"};
 static const char *const k_motions_atfighter_105[] = {
-    "character/atfighter/atanimation/throwsanddouble.ani",
-    "character/atfighter/atanimation/wildcannonspikecharge.ani",
-    "character/atfighter/",
-    "character/atfighter/atanimation/throwsand.ani",
+    "character/fighter/atanimation/throwsanddouble.ani",
+    "character/fighter/atanimation/wildcannonspikecharge.ani",
+    "character/fighter/",
+    "character/fighter/atanimation/throwsand.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_105 = {
     105, k_motions_atfighter_105, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 60,68; basis eligibility pair; handlers 0x00bee4d5,0x00bef288"};
 static const char *const k_motions_atfighter_106[] = {
-    "character/atfighter/",
-    "character/atfighter/atanimation/earthbreak.ani",
-    "character/atfighter/atanimation/holduptry.ani",
-    "character/atfighter/atanimation/holduphold.ani",
+    "character/fighter/",
+    "character/fighter/atanimation/earthbreak.ani",
+    "character/fighter/atanimation/holduptry.ani",
+    "character/fighter/atanimation/holduphold.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_106 = {
     106, k_motions_atfighter_106, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 58,69; basis eligibility pair; handlers 0x00be9b54,0x00becea5"};
 static const char *const k_motions_atfighter_108[] = {
-    "character/atfighter/atanimation/wildcannonspikecharge.ani",
-    "character/atfighter/atanimation/wildcannonspikefall.ani",
-    "character/atfighter/atanimation/throwsand.ani",
+    "character/fighter/atanimation/wildcannonspikecharge.ani",
+    "character/fighter/atanimation/wildcannonspikefall.ani",
+    "character/fighter/atanimation/throwsand.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_108 = {
     108, k_motions_atfighter_108, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 59; basis eligibility pair; handlers 0x00beda78"};
 static const char *const k_motions_atfighter_111[] = {
-    "character/atfighter/atanimation/whitetigerattack3.ani",
-    "character/atfighter/atanimation/crouch.ani",
-    "character/atfighter/",
+    "character/fighter/atanimation/whitetigerattack3.ani",
+    "character/fighter/atanimation/crouch.ani",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_111 = {
     111, k_motions_atfighter_111, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 65; basis eligibility pair; handlers 0x00be9eb4"};
 static const char *const k_motions_atfighter_117[] = {
-    "character/atfighter/atanimation/destroyearthskydropstart.ani",
-    "character/atfighter/atanimation/randomkick1.ani",
+    "character/fighter/atanimation/destroyearthskydropstart.ani",
+    "character/fighter/atanimation/randomkick1.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_117 = {
     117, k_motions_atfighter_117, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 66; basis eligibility pair; handlers 0x00bebc73"};
 static const char *const k_motions_atfighter_120[] = {
-    "character/atfighter/atanimation/crazymountstart.ani",
+    "character/fighter/atanimation/crazymountstart.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_120 = {
     120, k_motions_atfighter_120, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 70; basis eligibility pair; handlers 0x00be59d4"};
 static const char *const k_motions_atfighter_122[] = {
-    "character/atfighter/",
+    "character/fighter/",
 };
 static const ExeSkillBinding k_skill_atfighter_122 = {
     122, k_motions_atfighter_122, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 67; basis eligibility pair; handlers 0x00be7b09"};
 static const char *const k_motions_atfighter_123[] = {
-    "character/atfighter/atanimation/wildcannonspikecharge.ani",
-    "character/atfighter/",
-    "character/atfighter/atanimation/throwsand.ani",
+    "character/fighter/atanimation/wildcannonspikecharge.ani",
+    "character/fighter/",
+    "character/fighter/atanimation/throwsand.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_123 = {
     123, k_motions_atfighter_123, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 68; basis eligibility pair; handlers 0x00bee4d5"};
 static const char *const k_motions_atfighter_135[] = {
-    "character/atfighter/atanimation/junkspinloop.ani",
+    "character/fighter/atanimation/junkspinloop.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_135 = {
     135, k_motions_atfighter_135, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 49; basis eligibility pair; handlers 0x00be5149"};
 static const char *const k_motions_atfighter_139[] = {
-    "character/atfighter/atanimation/punchafterreturn.ani",
-    "character/atfighter/atanimation/randomkick1.ani",
-    "character/atfighter/atanimation/destroyearthskydroponsky.ani",
-    "character/atfighter/atanimation/destroyearthskydropfinish.ani",
+    "character/fighter/atanimation/punchafterreturn.ani",
+    "character/fighter/atanimation/randomkick1.ani",
+    "character/fighter/atanimation/destroyearthskydroponsky.ani",
+    "character/fighter/atanimation/destroyearthskydropfinish.ani",
 };
 static const ExeSkillBinding k_skill_atfighter_139 = {
     139, k_motions_atfighter_139, 4, nullptr, 0, 
@@ -1808,292 +1808,292 @@ static const ExeSkillBinding k_skill_gunner_164 = {
     "1031 DNF.exe setState: states 40; basis eligibility pair; handlers 0x00c25907"};
 
 static const char *const k_motions_atgunner_1[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
-    "character/atgunner/atanimation/aerialknee.ani",
-    "character/atgunner/atanimation/setrobot.ani",
-    "character/atgunner/atanimation/reloadinhand.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/aerialknee.ani",
+    "character/gunner/atanimation/setrobot.ani",
+    "character/gunner/atanimation/reloadinhand.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_1 = {
     1, k_motions_atgunner_1, 6, nullptr, 0, 
     "1031 DNF.exe setState: states 17,20,26,29,32; basis eligibility pair; handlers 0x00c1e366,0x00c203a1,0x00c23171"};
 static const char *const k_motions_atgunner_3[] = {
-    "character/atgunner/atanimation/windmillroll.ani",
-    "character/atgunner/atanimation/treadshoot.ani",
-    "character/atgunner/atanimation/twingunbladesumersault1.ani",
-    "character/atgunner/atanimation/twingunbladesumersault2.ani",
+    "character/gunner/atanimation/windmillroll.ani",
+    "character/gunner/atanimation/treadshoot.ani",
+    "character/gunner/atanimation/twingunbladesumersault1.ani",
+    "character/gunner/atanimation/twingunbladesumersault2.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_3 = {
     3, k_motions_atgunner_3, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 19,22,52; basis eligibility pair; handlers 0x00c1dd47,0x00c1eac6,0x00c27f51"};
 static const char *const k_motions_atgunner_4[] = {
-    "character/atgunner/atanimation/aerialknee.ani",
+    "character/gunner/atanimation/aerialknee.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_4 = {
     4, k_motions_atgunner_4, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 20; basis eligibility pair; handlers 0x00c1e366"};
 static const char *const k_motions_atgunner_6[] = {
-    "character/atgunner/atanimation/trytread.ani",
-    "character/atgunner/atanimation/treadshoot.ani",
-    "character/atgunner/atanimation/twingunbladethrowgun1.ani",
-    "character/atgunner/atanimation/twingunbladethrowgun2.ani",
+    "character/gunner/atanimation/trytread.ani",
+    "character/gunner/atanimation/treadshoot.ani",
+    "character/gunner/atanimation/twingunbladethrowgun1.ani",
+    "character/gunner/atanimation/twingunbladethrowgun2.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_6 = {
     6, k_motions_atgunner_6, 4, nullptr, 0, 
     "1031 DNF.exe setState: states 21,22,53; basis eligibility pair; handlers 0x00c1e826,0x00c1eac6,0x00c282b6"};
 static const char *const k_motions_atgunner_7[] = {
-    "character/atgunner/atanimation/fastknee.ani",
-    "character/atgunner/atanimation/grenadeair.ani",
+    "character/gunner/atanimation/fastknee.ani",
+    "character/gunner/atanimation/grenadeair.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_7 = {
     7, k_motions_atgunner_7, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 23,42; basis eligibility pair; handlers 0x00c1f4b0,0x00c26315"};
 static const char *const k_motions_atgunner_9[] = {
-    "character/atgunner/atanimation/randomshoot.ani",
+    "character/gunner/atanimation/randomshoot.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_9 = {
     9, k_motions_atgunner_9, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 24; basis eligibility pair; handlers 0x00c1f91b"};
 static const char *const k_motions_atgunner_10[] = {
-    "character/atgunner/atanimation/bulletguard.ani",
+    "character/gunner/atanimation/bulletguard.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_10 = {
     10, k_motions_atgunner_10, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 25; basis eligibility pair; handlers 0x00c2026f"};
 static const char *const k_motions_atgunner_11[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_11 = {
     11, k_motions_atgunner_11, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 28; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_15[] = {
-    "character/atgunner/atanimation/walkshootreadystay.ani",
+    "character/gunner/atanimation/walkshootreadystay.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_15 = {
     15, k_motions_atgunner_15, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 27; basis eligibility pair; handlers 0x00c22382"};
 static const char *const k_motions_atgunner_20[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_20 = {
     20, k_motions_atgunner_20, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 28; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_26[] = {
-    "character/atgunner/atanimation/countershootready.ani",
-    "character/atgunner/atanimation/countershootshoot.ani",
+    "character/gunner/atanimation/countershootready.ani",
+    "character/gunner/atanimation/countershootshoot.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_26 = {
     26, k_motions_atgunner_26, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 40; basis eligibility pair; handlers 0x00c25907"};
 static const char *const k_motions_atgunner_43[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_43 = {
     43, k_motions_atgunner_43, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_47[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_47 = {
     47, k_motions_atgunner_47, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13,28; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_48[] = {
-    "character/atgunner/atanimation/crossshoot.ani",
+    "character/gunner/atanimation/crossshoot.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_48 = {
     48, k_motions_atgunner_48, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 31; basis eligibility pair; handlers 0x00c23540"};
 static const char *const k_motions_atgunner_50[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_50 = {
     50, k_motions_atgunner_50, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_51[] = {
-    "character/atgunner/atanimation/doublegunhawkthrow.ani",
-    "character/atgunner/atanimation/doublegunhawkcatch.ani",
+    "character/gunner/atanimation/doublegunhawkthrow.ani",
+    "character/gunner/atanimation/doublegunhawkcatch.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_51 = {
     51, k_motions_atgunner_51, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 41; basis eligibility pair; handlers 0x00c25c39"};
 static const char *const k_motions_atgunner_53[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_53 = {
     53, k_motions_atgunner_53, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 28; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_59[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_59 = {
     59, k_motions_atgunner_59, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_64[] = {
-    "character/atgunner/",
+    "character/gunner/",
 };
 static const ExeSkillBinding k_skill_atgunner_64 = {
     64, k_motions_atgunner_64, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 33; basis eligibility pair; handlers 0x00c22735"};
 static const char *const k_motions_atgunner_67[] = {
-    "character/atgunner/",
+    "character/gunner/",
 };
 static const ExeSkillBinding k_skill_atgunner_67 = {
     67, k_motions_atgunner_67, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 34; basis eligibility pair; handlers 0x00c23037"};
 static const char *const k_motions_atgunner_70[] = {
-    "character/atgunner/",
+    "character/gunner/",
 };
 static const ExeSkillBinding k_skill_atgunner_70 = {
     70, k_motions_atgunner_70, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 33,35; basis eligibility pair; handlers 0x00c22735,0x00c23a72"};
 static const char *const k_motions_atgunner_71[] = {
-    "character/atgunner/atanimation/extruderready.ani",
-    "character/atgunner/atanimation/extrudercharge.ani",
-    "character/atgunner/atanimation/extrudershoot.ani",
+    "character/gunner/atanimation/extruderready.ani",
+    "character/gunner/atanimation/extrudercharge.ani",
+    "character/gunner/atanimation/extrudershoot.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_71 = {
     71, k_motions_atgunner_71, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 36; basis eligibility pair; handlers 0x00c23cd9"};
 static const char *const k_motions_atgunner_72[] = {
-    "character/atgunner/atanimation/multiheadshotready.ani",
-    "character/atgunner/atanimation/multiheadshotfinish.ani",
+    "character/gunner/atanimation/multiheadshotready.ani",
+    "character/gunner/atanimation/multiheadshotfinish.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_72 = {
     72, k_motions_atgunner_72, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 37; basis eligibility pair; handlers 0x00c24a23"};
 static const char *const k_motions_atgunner_73[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_73 = {
     73, k_motions_atgunner_73, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 28; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_77[] = {
-    "character/atgunner/atanimation/c4remoteready.ani",
+    "character/gunner/atanimation/c4remoteready.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_77 = {
     77, k_motions_atgunner_77, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 39; basis motion name; handlers 0x00c256f9"};
 static const char *const k_motions_atgunner_79[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_79 = {
     79, k_motions_atgunner_79, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_80[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_80 = {
     80, k_motions_atgunner_80, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_81[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_81 = {
     81, k_motions_atgunner_81, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_82[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_82 = {
     82, k_motions_atgunner_82, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_83[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_83 = {
     83, k_motions_atgunner_83, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_96[] = {
-    "character/atgunner/atanimation/g0cast.ani",
-    "character/atgunner/atanimation/g0lockon.ani",
+    "character/gunner/atanimation/g0cast.ani",
+    "character/gunner/atanimation/g0lockon.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_96 = {
     96, k_motions_atgunner_96, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 43; basis eligibility pair; handlers 0x00c264c0"};
 static const char *const k_motions_atgunner_97[] = {
-    "character/atgunner/atanimation/ancienttriggerready.ani",
-    "character/atgunner/atanimation/ancienttriggerride.ani",
+    "character/gunner/atanimation/ancienttriggerready.ani",
+    "character/gunner/atanimation/ancienttriggerride.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_97 = {
     97, k_motions_atgunner_97, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 6,44; basis eligibility pair; handlers 0x00c255ff,0x00c294e0"};
 static const char *const k_motions_atgunner_98[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_98 = {
     98, k_motions_atgunner_98, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_100[] = {
-    "character/atgunner/atanimation/twingunbladestart.ani",
-    "character/atgunner/atanimation/twingunbladedashattackknife.ani",
-    "character/atgunner/atanimation/twingunbladejumpattackknife.ani",
-    "character/atgunner/atanimation/twingunbladeattackgunreadystay.ani",
-    "character/atgunner/atanimation/twingunbladeattackgunfinish.ani",
-    "character/atgunner/atanimation/twingunbladejumpattackgun.ani",
-    "character/atgunner/atanimation/twingunbladesumersault1.ani",
-    "character/atgunner/atanimation/twingunbladesumersault2.ani",
-    "character/atgunner/atanimation/twingunbladethrowgun1.ani",
-    "character/atgunner/atanimation/twingunbladethrowgun2.ani",
-    "character/atgunner/atanimation/twingunbladefinishstart.ani",
-    "character/atgunner/atanimation/twingunbladefinishrapid.ani",
-    "character/atgunner/atanimation/twingunbladefinishfinal.ani",
+    "character/gunner/atanimation/twingunbladestart.ani",
+    "character/gunner/atanimation/twingunbladedashattackknife.ani",
+    "character/gunner/atanimation/twingunbladejumpattackknife.ani",
+    "character/gunner/atanimation/twingunbladeattackgunreadystay.ani",
+    "character/gunner/atanimation/twingunbladeattackgunfinish.ani",
+    "character/gunner/atanimation/twingunbladejumpattackgun.ani",
+    "character/gunner/atanimation/twingunbladesumersault1.ani",
+    "character/gunner/atanimation/twingunbladesumersault2.ani",
+    "character/gunner/atanimation/twingunbladethrowgun1.ani",
+    "character/gunner/atanimation/twingunbladethrowgun2.ani",
+    "character/gunner/atanimation/twingunbladefinishstart.ani",
+    "character/gunner/atanimation/twingunbladefinishrapid.ani",
+    "character/gunner/atanimation/twingunbladefinishfinal.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_100 = {
     100, k_motions_atgunner_100, 13, nullptr, 0, 
     "1031 DNF.exe setState: states 6,45,46,47,48,49 (+4 more); basis eligibility pair; handlers 0x00c255ff,0x00c267dd,0x00c26ba6"};
 static const char *const k_motions_atgunner_102[] = {
-    "character/atgunner/atanimation/attack1shootup.ani",
-    "character/atgunner/atanimation/attack2shootdown.ani",
-    "character/atgunner/atanimation/attack2shootup.ani",
+    "character/gunner/atanimation/attack1shootup.ani",
+    "character/gunner/atanimation/attack2shootdown.ani",
+    "character/gunner/atanimation/attack2shootup.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_102 = {
     102, k_motions_atgunner_102, 3, nullptr, 0, 
     "1031 DNF.exe setState: states 13; basis eligibility pair; handlers 0x00c29bf2"};
 static const char *const k_motions_atgunner_104[] = {
-    "character/atgunner/atanimation/multiheadshotready.ani",
-    "character/atgunner/atanimation/multiheadshotfinish.ani",
+    "character/gunner/atanimation/multiheadshotready.ani",
+    "character/gunner/atanimation/multiheadshotfinish.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_104 = {
     104, k_motions_atgunner_104, 2, nullptr, 0, 
     "1031 DNF.exe setState: states 58; basis eligibility pair; handlers 0x00c24a23"};
 static const char *const k_motions_atgunner_109[] = {
-    "character/atgunner/atanimation/chargebustercharge.ani",
+    "character/gunner/atanimation/chargebustercharge.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_109 = {
     109, k_motions_atgunner_109, 1, nullptr, 0, 
     "1031 DNF.exe setState: states 59; basis eligibility pair; handlers 0x00c299f0"};
 static const char *const k_motions_atgunner_164[] = {
-    "character/atgunner/atanimation/countershootready.ani",
-    "character/atgunner/atanimation/countershootshoot.ani",
+    "character/gunner/atanimation/countershootready.ani",
+    "character/gunner/atanimation/countershootshoot.ani",
 };
 static const ExeSkillBinding k_skill_atgunner_164 = {
     164, k_motions_atgunner_164, 2, nullptr, 0, 

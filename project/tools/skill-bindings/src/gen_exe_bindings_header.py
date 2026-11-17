@@ -15,6 +15,38 @@ OUT = os.path.normpath(os.path.join(BASE, "..", "..", "include", "dnf",
 CLASSES = ["swordman", "demonicswordman", "fighter", "atfighter",
            "gunner", "atgunner", "mage", "priest"]
 
+# The binding JSON is keyed by CHR stem, but the animation tree is keyed by the
+# class that owns the art. AT* and DemonicSwordman do NOT have their own
+# character/<stem>/ directory: they share the base class root and differ only in
+# the sub-directory (atanimation/ vs animation/, dsanimation/). Prefixing those
+# rows with character/<chr stem>/ produced paths that exist nowhere in the PVF,
+# so every AT/DemonicSwordman skill lost its body motion at load time.
+CLASS_ROOT = {
+    "swordman": "swordman",
+    "demonicswordman": "swordman",
+    "fighter": "fighter",
+    "atfighter": "fighter",
+    "gunner": "gunner",
+    "atgunner": "gunner",
+    "mage": "mage",
+    "atmage": "mage",
+    "priest": "priest",
+}
+
+
+def pvf_path(cls, ani):
+    """Job-relative ANI token -> full PVF path.
+
+    `ani` already carries its own sub-directory (animation/, atanimation/,
+    dsanimation/), so only the character root is prepended.
+    """
+    token = ani.lower().lstrip("/")
+    root = CLASS_ROOT.get(cls, cls)
+    if token.startswith("character/"):
+        return token
+    return f"character/{root}/{token}"
+
+
 
 def hpp_str(s):
     """Escape a string as a C++ literal (ASCII safe)."""
@@ -113,12 +145,12 @@ def main():
                     if ani in seen:
                         continue
                     seen.add(ani)
-                    motions.append(f"character/{cls}/{ani.lower()}")
+                    motions.append(pvf_path(cls, ani))
             if not motions:
                 continue
             effects = []
             for e in rec.get("effect_anis") or []:
-                effects.append(f"character/{cls}/{e.lower()}")
+                effects.append(pvf_path(cls, e))
             handlers = sorted({st["handler"] for st in states
                                if st.get("handler") and st["state"] in used_states})
             basis = {"verified": "eligibility pair", "name": "motion name",

@@ -1,3 +1,23 @@
+# AVI 定位纠正 + 预览器三处结构性绑定 bug（2026-11-18）
+
+**用户纠正（方法论，长期生效）**：客户端 `Video/**.avi` 是技能演示剪辑，只用来确认**特效样式（形状/颜色）、相对人物的方位、层次遮挡、人物动作衔接、触发时机、判定范围**。演示视频的时长不等于技能时长（可能更长也可能更短），所以**不能用「解析时长 ÷ 视频时长」当缺口等级或优先级依据**。本轮撤掉了此前 `durationRatio` 的排序结论（原「47 行 ≥10×、146 行 ≤0.2×」作废）；技能时长只按 PVF 内部事实判定（裸 `[DELAY]` 累加、驻留哨兵、未恢复的 `ratePercent`/`delayed-add` 偏移）。
+
+`project/tools/legacy/avi_compare.py` 相应重写：默认 `--align progress`，两排各自按自己的时钟等分取样，同一列＝同一相对阶段（这才是能比「样式是否准确」的对齐）；`--align reference` 只作诊断；JSON 里固定写 `durations.comparable=false` 并附 `styleChecklist`，防止报告又滑回比时长。
+
+**本轮修掉的三处绑定 bug**（症状就是「人物动作和特效对不上」）：
+
+1. **AT*/DemonicSwordman 动画路径全错**。`gen_exe_bindings_header.py` 用 `character/{chrStem}/` 拼路径，而这两个职业族没有自己的 character 目录：男格斗/男枪/男法是 `character/fighter|gunner|mage/atanimation/`，暗黑武士是 `character/swordman/dsanimation/`。281 条路径指向不存在的文件，job5/7/8/9 的动作退回基础职业姿势。新增 `CLASS_ROOT` 映射与 `pvf_path()`，重生成 `skill_exe_bindings.hpp`（8 职业 299 技能）。
+2. **同名词条动画被 `chainOrder()` 拒绝**。`junkspin.ani` 对 `junkspin.skl` 本该是 0 号基础阶段，但实现里 tail 为空就跳过所有分支返回 -1（`stageOrder("")` 明明已定义「精确同名=0」）。只有 CHR 槽能兜住，动作仅存在于 `character/<job>/animation/` 的技能永远拿不到自己。修成显式返回 0。
+3. **exe 入场动作被插到链首**。setState 按 handler+eligibility 配对，state 42 同时被 LightningDance / JunkSpin / GroundKickEx 认领，于是街头风暴被绑成 `groundkickcharge.ani`（2 帧 280ms 蓄力蹲）。现在「技能有同名词条动画 + exe 动作名与技能名无关」时丢弃该 exe 动作；`bodyAni` 取 `chain.front()` 而不是 `exe->motions[0]`。
+
+**顺带收紧**：驻留哨兵**独占**身体的姿态（格挡：2 帧 ×10000ms）不再评 A —— 它不是释放动作，没有可判定的释放窗口，降 B 并写 `missing`＝「输入等待姿态（驻留哨兵），没有独立释放动作；时长由输入决定」。测试 9d 允许「攻击框来自特效 ANI」的行（静态收集不含层实例，原断言过严）。
+
+**验收**：`dnf_skill_preview_tests` 52 项全通过。全包 `--audit-map` 对比 2026-11-17：A 266→248、B 282→300；135 行 `bodyAni` 变更、44 行等级变更（A→B 31、B→A 13）。抽样实拍：剑士鬼斩（job0/5）人物＋特效正常，格斗家背摔（job1/9）人物正常，街头风暴（job1/77）body 变为 `character/fighter/animation/junkspin.ani` 400ms 并去掉 groundkick 的两个 ALS 层。
+
+**仍未解决**（同一技能实拍暴露）：8 个可扔杂物（wagon/pipeline/box/brick/ladder/nipper/barrel1/2）**同时 0ms 出生**堆在施法者脚下、挡住人物；12 个 `front/back/up/down × normal/dodge` 旋涡层也全在 0ms。演示视频里是一层层铺开、每次只飞一件。下一项做「同一事件的多变体不应同播」的分组。
+
+---
+
 # P0-2 DO BEHAVIOR 接收方语义：自投递实现与跨程序精确阻塞（2026-11-17）
 
 上一轮把 59 处 `[SEND DO BEHAVIOR] [ME]` 记成「同一 program 内自投递、可无猜实现」，方向对但缺一条决定性证据，本轮补上后按证据收窄。

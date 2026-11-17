@@ -294,6 +294,13 @@ int chainOrder(const std::string &slotStem, const std::string &skillStem) {
         std::string tail;
         if (slotStem.compare(0, skillStem.size(), skillStem) == 0) {
             tail = slotStem.substr(skillStem.size());
+            // The skill's own motion (junkspin.ani for junkspin.skl) is the base
+            // stage. It used to fall through every rule below because the tail
+            // is empty, so an exact-stem animation was rejected even though
+            // stageOrder("") already means "exact stem". Only the CHR slot map
+            // rescued such skills, and skills whose motion lives solely in
+            // character/<job>/animation/ never got their own body back.
+            if (tail.empty()) return 0;
         } else if (slotStem.compare(slotStem.size() - skillStem.size(), skillStem.size(),
                                    skillStem) == 0) {
             // Stage word in front of the skill stem: stay + sacrifice = StaySacrifice.
@@ -1216,6 +1223,25 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                     if (std::find(chain.begin(), chain.end(), entry.second.first) == chain.end())
                         chain.push_back(entry.second.first);
                 }
+                // A skill whose own motion the PVF ships under its own name
+                // (junkspin.ani for junkspin.skl) has its base stage settled.
+                // An exe entry motion that carries no name relation to the
+                // skill cannot then be part of that release: fighter JunkSpin
+                // and LightningDance both resolve to state 42, whose immediate
+                // is GroundKickCharge, and prepending it put a 280ms charge
+                // crouch in front of the spin. Name-related entries
+                // (stompfinish for Stomp, risingupperexstart for RisingUpperEx)
+                // are still kept, in exe order, after the base.
+                const auto ownStem = jobIndex.animation.find(skillStem);
+                const std::string ownMotion =
+                    ownStem != jobIndex.animation.end() ? ownStem->second : std::string();
+                const bool ownHead = !ownMotion.empty() && !chain.empty() &&
+                                     chain.front() == ownMotion;
+                const auto nameRelated = [&](const std::string &path) {
+                    const auto stem = stemOf(path);
+                    return stem.rfind(skillStem, 0) == 0 ||
+                           (stem.size() >= 5 && skillStem.rfind(stem, 0) == 0);
+                };
                 if (chain.empty()) {
                     for (size_t i = 0; i < exe->motionCount; ++i)
                         chain.emplace_back(exe->motions[i]);
@@ -1223,6 +1249,7 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                     for (size_t i = 0; i < exe->motionCount; ++i) {
                         const std::string path(exe->motions[i]);
                         if (std::find(chain.begin(), chain.end(), path) != chain.end()) continue;
+                        if (ownHead && !nameRelated(path)) continue;
                         auto at = chain.begin();
                         for (size_t j = i; j > 0; --j) {
                             const auto found = std::find(chain.begin(), chain.end(),
@@ -1235,15 +1262,20 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                     // chain too; keep it in exe table order.
                     for (size_t i = 0; i < exe->motionCount; ++i) {
                         const std::string path(exe->motions[i]);
-                        if (std::find(chain.begin(), chain.end(), path) == chain.end())
-                            chain.push_back(path);
+                        if (std::find(chain.begin(), chain.end(), path) != chain.end()) continue;
+                        if (ownHead && !nameRelated(path)) continue;
+                        chain.push_back(path);
                     }
                 }
                 mapping.bodyChain = std::move(chain);
                 mapping.chainStages.clear();
                 for (size_t i = 0; i < mapping.bodyChain.size(); ++i)
                     mapping.chainStages.push_back(100 + static_cast<int>(i));
-                mapping.bodyAni = exe->motions[0];
+                // The chain head is the release entry; exe->motions[0] is only
+                // the immediate of the first state and can be a shared cast
+                // pose that the pool already placed elsewhere.
+                mapping.bodyAni = mapping.bodyChain.empty() ? std::string(exe->motions[0])
+                                                            : mapping.bodyChain.front();
                 mapping.bodySlotTag = "exe-setstate";
                 mapping.confidence = MappingConfidence::Manual;
                 mapping.evidence = std::string(exe->evidence);
@@ -1431,6 +1463,9 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     // the action clock used to stretch a 5.8s release into 25.8s. Those stages
     // are separated as external slots; their real length is input-driven and
     // stays UNQUANTIFIED here so an independent observation can supply it.
+    // A stance whose ONLY body is such a sentinel (格挡) is not an action at
+    // all: it has no release window to grade, so it is marked hold-only below.
+    bool holdOnlyBody = false;
     {
         const auto aniInfo = [&](const std::string &path, int &frames, int &maxDelay) {
             frames = 0;
@@ -1469,8 +1504,14 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
             }
             playback.push_back(path);
         }
-        if (playback.empty() && !mapping.bodyAni.empty())
+        if (playback.empty() && !mapping.bodyAni.empty()) {
+            // Nothing but a hold sentinel survived: keep the pose so the row
+            // still draws a character, but record that the release clock does
+            // not exist for it.
             playback.push_back(mapping.bodyAni);
+            holdOnlyBody = true;
+            mapping.evidence += "; body: input-hold sentinel only (no release window)";
+        }
         if (!mapping.externalSlots.empty() && !playback.empty()) {
             mapping.bodyChain = playback;
             mapping.chainStages.clear();
@@ -2079,6 +2120,12 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
     if (mapping.passive) {
         mapping.grade = SkillGrade::D;
         mapping.missing = mapping.missing.empty() ? "被动技能，没有释放动作" : mapping.missing;
+    } else if (holdOnlyBody) {
+        // 格挡 and friends: the body is a two-frame input-hold sentinel. There is
+        // no release window, so no attack volume can be claimed to sit inside
+        // one; A would be a fabricated claim.
+        mapping.grade = SkillGrade::B;
+        mapping.missing = "输入等待姿态（驻留哨兵），没有独立释放动作；时长由输入决定";
     } else if (hasBody && hasEffect && mapping.hasAttackBox) {
         mapping.grade = SkillGrade::A;
     } else if (hasBody) {
