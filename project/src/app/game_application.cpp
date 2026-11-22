@@ -243,7 +243,7 @@ int GameApplication::run(int argc, char **argv) {
         int flowSceneSeconds = 30;
         bool autoRun = false, audit = false, flowSmoke = false, trace = false, effectsFixture = false;
         bool unlockAllSkills = false, skillSweep = false, enterFirstCharacter = false;
-        bool combatPreview=false, fighterReview=false, femaleGunnerReview=false, previewAutoplay=false, previewPaused=false, previewStep=false;
+        bool combatPreview=false, fighterReview=false, femaleGunnerReview=false, atMageReview=false, previewAutoplay=false, previewPaused=false, previewStep=false;
         double previewSpeed=1.0,previewTargetDistance=70;
         int previewSkill=-1,previewHoldMs=17;
         auto aniRenderProfile = ani_render::RenderProfile::Legacy1031;
@@ -313,6 +313,8 @@ int GameApplication::run(int argc, char **argv) {
                 fighterReview=true;combatPreview=true;autoRun=true;
             } else if (a == "--female-gunner-review") {
                 femaleGunnerReview=true;combatPreview=true;autoRun=true;
+            } else if (a == "--atmage-review") {
+                atMageReview=true;combatPreview=true;autoRun=true;
             } else if (a == "--preview-skill" && i + 1 < argc) {
                 previewSkill=std::stoi(argv[++i]);
             } else if (a == "--preview-hold-ms" && i + 1 < argc) {
@@ -359,7 +361,7 @@ int GameApplication::run(int argc, char **argv) {
         showFatalWindow=!(autoRun||audit||profileAudit||contentAudit||effectsFixture);
         if(combatPreview&&(effectsFixture||flowSmoke||autoSeconds>0||audit||enterFirstCharacter||skillSweep))
             throw std::runtime_error("Combat preview cannot be combined with another automated mode");
-        if(fighterReview&&femaleGunnerReview)throw std::runtime_error("Select one review character");
+        if(int(fighterReview)+int(femaleGunnerReview)+int(atMageReview)>1)throw std::runtime_error("Select one review character");
         if((previewAutoplay||previewSkill>=0)&&!combatPreview)throw std::runtime_error("Preview input controls require --combat-preview");
         // The source-rate100 option stays explicit; forcing it silently
         // ignored the real actor/weapon animation speed during review.
@@ -1438,8 +1440,9 @@ int GameApplication::run(int argc, char **argv) {
             // Same source starter transaction, World and renderer as gameplay.
             const auto sourceRoomTargets=world.monsters;
             store.data={{"schema",5},{"characters",std::vector<Json>(20,nullptr)}};
-            store.data["characters"][0]={{"name","CombatPreview"},{"class",femaleGunnerReview?"atgunner":"fighter"},
-                {"identity",CharacterIdentity{femaleGunnerReview?5:1,0,0}.json()},{"level",1},{"weapon",0},
+            store.data["characters"][0]={{"name","CombatPreview"},
+                {"class",femaleGunnerReview?"atgunner":atMageReview?"atmage":"fighter"},
+                {"identity",CharacterIdentity{femaleGunnerReview?5:atMageReview?8:1,0,0}.json()},{"level",1},{"weapon",0},
                 {"skill_initialization","source-v1"}};
             store.apply(0,world,progress);
             playerAppearance=world.characterAppearance();
@@ -1453,7 +1456,7 @@ int GameApplication::run(int argc, char **argv) {
             auto &runtime=*world.experimentalRuntime();
             const char *members[]={"skill/fighter/liftupper.skl","skill/fighter/damagelowkick.skl",
                 "skill/fighter/suplex.skl","skill/fighter/energyball.skl"};
-            for(size_t slot=0;!femaleGunnerReview&&slot<std::size(members);++slot) {
+            for(size_t slot=0;!femaleGunnerReview&&!atMageReview&&slot<std::size(members);++slot) {
                 bool found=false;
                 for(const auto &[key,action]:runtime.plan().sourceSkillActions)if(action.skill.memberPath==members[slot]) {
                     runtime.configuration().configureSourceSkillAction(key,1,runtime.plan());
@@ -1479,7 +1482,7 @@ int GameApplication::run(int argc, char **argv) {
                 }
                 if(previewSkills.empty())throw std::runtime_error("Female Gunner review has no configured skills");
                 bindPreviewPage(0);
-            } else if(fighterReview) {
+            } else if(fighterReview || atMageReview) {
                 // Diagnostic admission reuses registered controllers; no guessed
                 // body/effect mapping is substituted for an absent consumer.
                 for(const auto &[key,action]:runtime.plan().sourceSkillActions) {
@@ -1528,7 +1531,7 @@ int GameApplication::run(int argc, char **argv) {
             auto &target=world.monsters.front();target.hp=target.maxHp=100000000;
             target.x=target.px=world.player.x+previewTargetDistance;target.y=target.py=world.player.y;
             previewTargets=world.monsters;resetPreview();
-            writeJson(reportPath("combat-preview-sources.json"),{{"sources",previewSources},{"unavailable",previewUnavailable},{"exe_binding_only",previewExeOnly},{"fighter_review",fighterReview},{"female_gunner_review",femaleGunnerReview},{"pages",previewPageCount()},{"seed",67},
+            writeJson(reportPath("combat-preview-sources.json"),{{"sources",previewSources},{"unavailable",previewUnavailable},{"exe_binding_only",previewExeOnly},{"fighter_review",fighterReview},{"female_gunner_review",femaleGunnerReview},{"atmage_review",atMageReview},{"pages",previewPageCount()},{"seed",67},
                 {"runtime","playable World + main renderer"},{"save_directory",saveDirectory_.u8string()},
                 {"controls","A/S/D/F/G/H/Q/W/E/R/T/Y/Space slots; F1/F2 pages; X basic; C jump; arrows move; Pause pause; period step; Home restart; minus/equals speed; F8 export; Esc quit"},
                 {"scope","source room/MOB and actual collisions; explicit high-HP diagnostic override; no original-client parity claim"}});
@@ -1719,7 +1722,7 @@ int GameApplication::run(int argc, char **argv) {
                         else if(k==SDLK_PAUSE){previewPaused=!previewPaused;world.releaseInputs();}
                         else if(k==SDLK_PERIOD){previewPaused=true;previewStep=true;}
                         else if(k==SDLK_HOME)resetPreview();
-                        else if((fighterReview||femaleGunnerReview)&&(k==SDLK_F1||k==SDLK_F2)) {
+                        else if((fighterReview||femaleGunnerReview||atMageReview)&&(k==SDLK_F1||k==SDLK_F2)) {
                             resetPreview();
                             const size_t count=previewPageCount();
                             bindPreviewPage((previewPage+count+(k==SDLK_F2?1:-1))%count);
@@ -1734,7 +1737,7 @@ int GameApplication::run(int argc, char **argv) {
                         }
                     }
                     if((e.type==SDL_KEYDOWN||e.type==SDL_KEYUP)&&
-                        !((fighterReview||femaleGunnerReview)&&(e.key.keysym.sym==SDLK_F1||e.key.keysym.sym==SDLK_F2))) {
+                        !((fighterReview||femaleGunnerReview||atMageReview)&&(e.key.keysym.sym==SDLK_F1||e.key.keysym.sym==SDLK_F2))) {
                         const SdlGameInputContext previewInput{mainWindowId,e.key.timestamp,true,false,false,false,false,
                             world.simulationNanoseconds(),0};
                         (void)dispatchSdlGameInput(world,e,previewInput);
@@ -2702,10 +2705,10 @@ int GameApplication::run(int argc, char **argv) {
                     }
             }
             if(combatPreview) {
-                render.text(femaleGunnerReview?"女枪手现有适配样本 / F1上一页 F2下一页 / X普攻 C跳跃":fighterReview?"格斗家技能审阅 / F1上一页 F2下一页 / X普攻 C跳跃":"真实战斗预览 / A上勾拳 S下段踢 D背摔 F念气波 / X普攻",12,42,14);
+                render.text(atMageReview?"男法师脚本适配样本 / F1上一页 F2下一页 / X普攻 C跳跃":femaleGunnerReview?"女枪手现有适配样本 / F1上一页 F2下一页 / X普攻 C跳跃":fighterReview?"格斗家技能审阅 / F1上一页 F2下一页 / X普攻 C跳跃":"真实战斗预览 / A上勾拳 S下段踢 D背摔 F念气波 / X普攻",12,42,14);
                 render.text(std::string(previewPaused?"暂停":"运行")+" / Pause暂停 .单步 Home重置 +/-速度 F8导出 Esc退出",12,62,13);
                 render.text("Tick "+std::to_string(world.tick)+" / "+std::to_string(previewSpeed)+"x / "+world.player.animation,12,82,13);
-                if(fighterReview||femaleGunnerReview) {
+                if(fighterReview||femaleGunnerReview||atMageReview) {
                     const auto &labels=ExperimentalSkillConfiguration::slotLabels();
                     const auto &plan=world.experimentalRuntime()->plan();
                     // Admission status comes from the same runtime policy the
