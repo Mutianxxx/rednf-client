@@ -1,6 +1,7 @@
 #pragma once
 #include "dnf/content_profile.hpp"
 #include "dnf/simulation.hpp"
+#include <array>
 #include <functional>
 #include <memory>
 #include <optional>
@@ -57,14 +58,31 @@ struct PreparedSoundBatch { virtual ~PreparedSoundBatch() = default; };
 // stays capability-rejected instead of silently returning a fabricated 0.
 // Callers pass already-validated int32 arguments; a nullopt result means the
 // source has no such cell, which the host surfaces as a script-visible null.
+// Read-only view of the owning actor's current ANI clock. `frameStartMs` is the
+// boundary of the frame the clock is currently in; a requested frame that is
+// not the current one has no recovered timeline and stays nullopt.
+struct ScriptAnimationSnapshot {
+    int frame = -1;
+    uint64_t elapsedMs = 0, frameStartMs = 0, frameSpanMs = 0;
+};
 struct ScriptWorldApi {
     std::function<int(int skill)> level;
     std::function<std::optional<double>(int skill,int column,int level)> levelData;
     std::function<std::optional<int>(int skill,int index)> intData;
     std::function<std::optional<int>(int skill,int level)> castTime;
     std::function<std::optional<double>(int skill,int state,int column,double ratio)> bonusRate;
+    // The bridge may return the actor's published ANI clock; it never derives
+    // a clock from video durations or other out-of-source timing.
+    std::function<std::optional<ScriptAnimationSnapshot>(EntityHandle owner)> animation;
+    // Current actor coordinates from the live World; scripts use these to
+    // derive target ranges. They are never substituted with video estimates.
+    std::function<std::optional<std::array<double,3>>(EntityHandle owner)> position;
+    // A recorded animation-selection request. The bridge notes which source
+    // animation id the script asked for; it does not claim a native state
+    // transition or a recovered id-to-ANI mapping.
+    std::function<bool(EntityHandle owner,int animationId)> setCurrentAnimation;
     bool any() const noexcept {
-        return level||levelData||intData||castTime||bonusRate;
+        return level||levelData||intData||castTime||bonusRate||animation||position||setCurrentAnimation;
     }
 };
 class Bridge {

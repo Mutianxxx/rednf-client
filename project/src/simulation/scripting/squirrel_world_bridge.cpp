@@ -159,6 +159,26 @@ squirrel_stage::ScriptWorldApi SquirrelWorldBridge::scriptWorldApi() const {
         if(!value||!std::isfinite(*value))return std::nullopt;
         return *value*ratio;
     };
+    api.animation=[this](EntityHandle owner)->std::optional<squirrel_stage::ScriptAnimationSnapshot> {
+        if(!valid(owner))return std::nullopt;
+        const auto *actor=static_cast<const World &>(world_).resolveActor(owner);
+        if(!actor||!actor->animationClock)return std::nullopt;
+        const auto &clock=*actor->animationClock;
+        squirrel_stage::ScriptAnimationSnapshot out;
+        out.frame=int(clock.frame);out.elapsedMs=clock.elapsedMs;
+        out.frameStartMs=clock.frameStartMs;out.frameSpanMs=clock.spanMs;
+        return out;
+    };
+    api.position=[this](EntityHandle owner)->std::optional<std::array<double,3>> {
+        if(!valid(owner))return std::nullopt;
+        const auto *actor=static_cast<const World &>(world_).resolveActor(owner);
+        if(!actor)return std::nullopt;
+        return std::array<double,3>{actor->x,actor->y,actor->z};
+    };
+    api.setCurrentAnimation=[this](EntityHandle owner,int animationId)->bool {
+        if(!valid(owner))return false;
+        animationRequests_.emplace_back(owner,animationId);return true;
+    };
     return api;
 }
 std::optional<SourceRef> SquirrelWorldBridge::resolveSound(const std::string &tag,const SourceRef &origin) const {
@@ -315,7 +335,11 @@ SquirrelContactResult SquirrelWorldBridge::applySourceContacts(const std::vector
     return result;
 }
 Json SquirrelWorldBridge::diagnostics() const {
+    Json animationRequests=Json::array();
+    for(const auto &entry:animationRequests_)
+        animationRequests.push_back({{"owner",entry.first.json()},{"animation_id",entry.second}});
     return {{"vm_policy",squirrel_stage::vmPolicyId},{"closed",closed_},{"cleanup_count",cleanupCount_},
+        {"animation_requests",animationRequests},{"animation_requests_reconstructed",false},
         {"instance_id",context_.instanceId},{"action_id",context_.actionId},{"owner",context_.owner.json()},
         {"buff_skill",context_.buffSkill?context_.buffSkill->json():Json()},{"buff_skill_source",buffSkillSource_?buffSkillSource_->json():Json()},
         {"sound_receipts",soundReceipts_},{"contact_receipts",contactReceipts_},{"source_damage_native_api_registered",false},

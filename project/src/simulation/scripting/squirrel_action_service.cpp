@@ -73,6 +73,7 @@ class DeferredBridge final : public squirrel_stage::Bridge {
     DeferredBridge(World &w,Pvf &p,Assets &a,const std::string &identity,SquirrelInvocationContext context)
         :world(w,p,a,identity,std::move(context)){}
     bool valid(EntityHandle h)const noexcept override{return world.valid(h);}
+    squirrel_stage::ScriptWorldApi scriptWorldApi()const override{return world.scriptWorldApi();}
     bool hasBuffSkillIndex()const noexcept override{return world.hasBuffSkillIndex();}
     bool hasSoundConsumer()const noexcept override{return world.hasSoundConsumer();}
     int buffSkillIndex(EntityHandle h)const override{return world.buffSkillIndex(h);}

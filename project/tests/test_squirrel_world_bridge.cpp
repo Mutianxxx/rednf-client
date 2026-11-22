@@ -227,6 +227,27 @@ Json runSquirrelWorldBridgeTests(Pvf &pvf,Assets &assets,const std::string &stat
         }
         check(invoked.ok && invoked.value.is_number() && invoked.value.get<int>()==1,
               "Skill query natives read SKILL int-data, level-info and cast cells for both call shapes ["+detail+"]");
+        // The actual 1031 chain-lightning script must clear the zero-trust
+        // admission gate now that its 30 distinct sq_ calls are implemented.
+        const auto chain=vm.inspect(bridge.source("sqr/character/atmage/chainlightning/chainlightning.nut"));
+        std::string missing;
+        for(const auto &d:chain.diagnostics)if(d.code=="unsupported_api")missing+=d.message+"; ";
+        check(chain.executable,"Actual chain-lightning NUT passes capability admission ["+
+              (chain.executable?std::string("ok"):missing.empty()?std::string("not executable"):missing)+"]");
+        // Execute the source callback to find host faults that static
+        // admission cannot see (null handles, unimplemented value shapes).
+        const auto enumLoaded=vm.load(bridge.source("sqr/dnf_enum_header.nut"));
+        const auto headerLoaded=enumLoaded.ok?vm.load(bridge.source("sqr/character/atmage/atmage_header.nut")):enumLoaded;
+        const auto bodyLoaded=headerLoaded.ok?vm.load(bridge.source("sqr/character/atmage/chainlightning/chainlightning.nut")):headerLoaded;
+        const auto stateInvoke=(headerLoaded.ok&&bodyLoaded.ok)
+            ?vm.invoke("onSetState_ChainLightning",world.player.handle,invocation.actionId,{25,Json::array(),true})
+            :bodyLoaded;
+        std::string invokeDetail="header="+(headerLoaded.ok?std::string("ok"):"fail")+
+            " body="+(bodyLoaded.ok?std::string("ok"):"fail")+
+            " callback="+(stateInvoke.ok?std::string("ok"):"fail");
+        if(!stateInvoke.ok&&!stateInvoke.diagnostics.empty())
+            invokeDetail+=" :"+stateInvoke.diagnostics.front().code+"/"+stateInvoke.diagnostics.front().message;
+        check(stateInvoke.ok,"Actual chain-lightning onSetState callback executes in the typed VM ["+invokeDetail+"]");
         samples["script_skill_queries"]=bridge.diagnostics();
     }
     return {{"status","pass"},{"checks",checks},{"count",checks.size()},{"samples",samples},{"runtime_complete",false},

@@ -65,6 +65,10 @@ class SquirrelWorldBridge final : public squirrel_stage::Bridge {
     // skill id within this instance's job; a lookup that fails stays cached as
     // null so a missing skill cannot be retried into a different answer.
     mutable std::map<int,std::shared_ptr<const SkillSourceData>> skillSourceCache_;
+    // Recorded script animation-selection requests. They are evidence of what
+    // the source script asked for, NOT a claim that a native state transition
+    // or an id-to-ANI mapping was recovered.
+    mutable std::vector<std::pair<EntityHandle,int>> animationRequests_;
     void requireContext() const;
     bool admittedScript(const SourceRef &) const;
     bool admittedAttack(const SourceRef &) const;

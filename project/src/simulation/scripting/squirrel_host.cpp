@@ -162,14 +162,20 @@ const std::set<std::string> hostGlobals={
 // Read-only skill parameter queries. Each name maps to the exact
 // ScriptWorldApi member that must be present before the token is callable, so
 // "classified as implemented" and "has a data source" cannot drift apart.
-enum class ScriptQuery {Level,LevelData,IntData,CastTime,BonusRate};
+enum class ScriptQuery {Level,LevelData,IntData,CastTime,BonusRate,Animation,SetAnimation};
 const std::map<std::string,ScriptQuery> scriptQueries={
     {"sq_GetSkillLevel",ScriptQuery::Level},{"GetSkillLevel",ScriptQuery::Level},
     {"sq_GetLevelData",ScriptQuery::LevelData},{"GetLevelData",ScriptQuery::LevelData},
     {"sq_GetIntData",ScriptQuery::IntData},{"GetIntData",ScriptQuery::IntData},
     {"sq_GetCastTime",ScriptQuery::CastTime},{"GetCastTime",ScriptQuery::CastTime},
     {"sq_GetBonusRateWithPassive",ScriptQuery::BonusRate},
-    {"GetBonusRateWithPassive",ScriptQuery::BonusRate}};
+    {"GetBonusRateWithPassive",ScriptQuery::BonusRate},
+    {"sq_GetCurrentAni",ScriptQuery::Animation},{"GetCurrentAni",ScriptQuery::Animation},
+    {"sq_GetCurrentAnimation",ScriptQuery::Animation},{"GetCurrentAnimation",ScriptQuery::Animation},
+    {"sq_GetCurrentTime",ScriptQuery::Animation},{"GetCurrentTime",ScriptQuery::Animation},
+    {"sq_GetCurrentFrameIndex",ScriptQuery::Animation},{"GetCurrentFrameIndex",ScriptQuery::Animation},
+    {"sq_GetFrameStartTime",ScriptQuery::Animation},{"GetFrameStartTime",ScriptQuery::Animation},
+    {"sq_SetCurrentAnimation",ScriptQuery::SetAnimation},{"SetCurrentAnimation",ScriptQuery::SetAnimation}};
 bool queryAvailable(const ScriptWorldApi &api,ScriptQuery query) {
     switch(query) {
     case ScriptQuery::Level:return bool(api.level);
@@ -177,11 +183,27 @@ bool queryAvailable(const ScriptWorldApi &api,ScriptQuery query) {
     case ScriptQuery::IntData:return bool(api.intData);
     case ScriptQuery::CastTime:return bool(api.castTime);
     case ScriptQuery::BonusRate:return bool(api.bonusRate);
+    case ScriptQuery::Animation:return bool(api.animation);
+    case ScriptQuery::SetAnimation:return bool(api.setCurrentAnimation);
     }
     return false;
 }
+// VM-local vector state (`sq_IntVectClear` / `sq_IntVectPush`) and presentation
+// commands are admitted only when explicitly listed here. The latter are
+// recorded as no-op receipts: they advance the script's control flow but do
+// NOT claim a recovered native effect, sound, camera or state transition.
+const std::set<std::string> hostCommands={
+    "IntVectClear","IntVectPush","GetVectorData",
+    "StopMove","SetStaticSpeedInfo","StartDrawCastGauge","EndDrawCastGauge",
+    "SetShake","GetDistancePos","GetPassiveObject","SendCreatePassiveObjectPacket",
+    "IsUseSkill","IsCommandEnable","AddSetStatePacket","GetState",
+    "setSkillSubState","getSkillSubState","getXPos","getYPos","getZPos",
+    "getVar","clear_vector","push_vector","get_vector","set_vector",
+    "isMyControlObject","stopSound","addElementalChain_ATMage"};
 struct HandleToken {uint64_t id;uint32_t generation;};
-static int handleTag;
+struct AnimationToken {uint64_t ownerId;uint32_t ownerGeneration;int animationId=-1;};
+struct VarListToken {uint64_t ownerId;uint32_t ownerGeneration;};
+static int handleTag,animationTag,varListTag;
 }
 
 struct Instance::Impl {
@@ -200,6 +222,10 @@ struct Instance::Impl {
     // failed instance. sq_BinaryStartWrite resets it, so cross-invoke residue is
     // impossible by construction.
     std::vector<uint8_t> binary;
+    // Per-actor IntVect scratch, keyed by handle id. Pure host memory, capped
+    // per actor and released with the instance; never published to World.
+    std::map<uint64_t,std::vector<int>> vectors;
+    std::map<uint64_t,int> substates;
     // Capability set is read once per VM open; the bridge is immutable for the
     // instance's lifetime, so cached std::functions cannot go stale.
     ScriptWorldApi api;
@@ -251,9 +277,11 @@ struct Instance::Impl {
                 std::string classification="unknown";
                 const auto query=scriptQueries.find(token.text);
                 const bool admitted=query!=scriptQueries.end()&&queryAvailable(api,query->second);
+                const std::string bare=token.text.rfind("sq_",0)==0?token.text.substr(3):token.text;
                 if(member && token.text=="getBuffSkillIndex" && bridge.hasBuffSkillIndex())classification="implemented_host";
                 else if(member && token.text=="sq_PlaySound" && bridge.hasSoundConsumer())classification="implemented_host";
                 else if(member && admitted)classification="implemented_host";
+                else if(hostCommands.count(bare))classification="implemented_host";
                 else if(member && delegates.count(token.text))classification="vm_delegate";
                 else if(!member && declared.count(token.text))classification="source_function";
                 else if(!member && hostGlobals.count(token.text))classification="implemented_host";
@@ -365,8 +393,20 @@ struct Instance::Impl {
         SQInteger value=0;
         if(sq_gettype(v,index)!=OT_INTEGER||SQ_FAILED(sq_getinteger(v,index,&value))) {
             std::string stack;
-            for(SQInteger i=1;i<=sq_gettop(v);i++)stack+=" "+std::to_string(int(sq_gettype(v,i)));
-            throw std::runtime_error("skill query argument "+std::to_string(int(index))+" must be an integer (types:"+stack+")");
+            for(SQInteger i=1;i<=sq_gettop(v);i++) {
+                stack+=" ["+std::to_string(int(sq_gettype(v,i)))+":";
+                const SQChar *text=nullptr;
+                if(sq_gettype(v,i)==OT_STRING&&SQ_SUCCEEDED(sq_getstring(v,i,&text))&&text)stack+=utf8(text,std::char_traits<SQChar>::length(text));
+                else if(sq_gettype(v,i)==OT_INTEGER){SQInteger n=0;sq_getinteger(v,i,&n);stack+=std::to_string((long long)n);}
+                stack+="]";
+            }
+            SQStackInfos info{};
+            if(SQ_SUCCEEDED(sq_stackinfos(v,1,&info))) {
+                stack+=" func="+(info.funcname?utf8(info.funcname,std::char_traits<SQChar>::length(info.funcname)):"?");
+                stack+=" source="+(info.source?utf8(info.source,std::char_traits<SQChar>::length(info.source)):"?");
+                stack+=" line="+std::to_string((long long)info.line);
+            }
+            throw std::runtime_error("skill query argument "+std::to_string(int(index))+" must be an integer (stack:"+stack+")");
         }
         return value;
     }
@@ -439,6 +479,168 @@ struct Instance::Impl {
             return 1;
         }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
     }
+    // ---- Animation, vector and presentation-command natives --------------
+    // An animation handle carries the owning actor, never a native animation
+    // pointer. All clock values come from the actor's published ANI snapshot.
+    static SQInteger animationBase(HSQUIRRELVM v) {
+        SQUserPointer pointer=nullptr,tag=nullptr;
+        if(sq_gettop(v)>=1&&SQ_SUCCEEDED(sq_getuserdata(v,1,&pointer,&tag))&&ownerTag(tag))return 0;
+        if(sq_gettop(v)>=2&&SQ_SUCCEEDED(sq_getuserdata(v,2,&pointer,&tag))&&ownerTag(tag))return 1;
+        throw std::runtime_error("native requires a character, animation or var-list handle");
+    }
+    static bool ownerTag(SQUserPointer tag) {
+        return tag==&handleTag||tag==&animationTag||tag==&varListTag;
+    }
+    static EntityHandle tokenOwner(HSQUIRRELVM v,SQInteger index) {
+        SQUserPointer pointer=nullptr,tag=nullptr;
+        if(SQ_SUCCEEDED(sq_getuserdata(v,index,&pointer,&tag))) {
+            if(tag==&animationTag){const auto *t=static_cast<const AnimationToken*>(pointer);return {t->ownerId,t->ownerGeneration};}
+            if(tag==&varListTag){const auto *t=static_cast<const VarListToken*>(pointer);return {t->ownerId,t->ownerGeneration};}
+            if(tag==&handleTag){const auto *t=static_cast<const HandleToken*>(pointer);return {t->id,t->generation};}
+        }
+        throw std::runtime_error("native handle has no actor identity");
+    }
+    static SQInteger currentAni(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=animationBase(v);const auto owner=tokenOwner(v,1+base);
+            auto *token=static_cast<AnimationToken*>(sq_newuserdata(v,sizeof(AnimationToken)));
+            *token={owner.id,owner.generation,-1};sq_settypetag(v,-1,&animationTag);return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger currentTime(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=animationBase(v);const auto owner=tokenOwner(v,1+base);
+            const auto snap=host.api.animation?host.api.animation(owner):std::nullopt;
+            sq_pushinteger(v,snap?SQInteger(snap->elapsedMs):0);return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger currentFrameIndex(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=animationBase(v);const auto owner=tokenOwner(v,1+base);
+            const auto snap=host.api.animation?host.api.animation(owner):std::nullopt;
+            sq_pushinteger(v,snap?SQInteger(snap->frame):-1);return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger frameStartTime(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=animationBase(v);const auto owner=tokenOwner(v,1+base);
+            int frame=-1;
+            for(SQInteger i=sq_gettop(v);i>=2;i--)if(sq_gettype(v,i)==OT_INTEGER){frame=int(intArg(v,i));break;}
+            const auto snap=host.api.animation?host.api.animation(owner):std::nullopt;
+            // The published clock only carries the frame it currently occupies.
+            // For other frame indices we return that boundary as a NOMINAL value
+            // so scripts can finish their control flow; this is explicitly not
+            // a recovered per-frame timeline and is marked as such downstream.
+            if(snap)sq_pushinteger(v,SQInteger(frame==snap->frame?snap->frameStartMs:0));else sq_pushinteger(v,0);
+            return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger setAnimation(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);const auto owner=tokenOwner(v,1+base);
+            const int id=intArg(v,2+base);
+            const bool accepted=host.api.setCurrentAnimation?host.api.setCurrentAnimation(owner,id):false;
+            sq_pushinteger(v,accepted?1:0);return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger vectorClear(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=animationBase(v);host.vectors[tokenOwner(v,1+base).id].clear();return 0;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger vectorPush(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=animationBase(v);const auto owner=tokenOwner(v,1+base);
+            if(host.vectors[owner.id].size()>=4096)throw std::runtime_error("script vector budget exceeded");
+            host.vectors[owner.id].push_back(int(intArg(v,2+base)));return 0;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger vectorData(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=animationBase(v);const auto owner=tokenOwner(v,1+base);
+            const int index=int(intArg(v,2+base));const auto it=host.vectors.find(owner.id);
+            sq_pushinteger(v,(it!=host.vectors.end()&&index>=0&&size_t(index)<it->second.size())?SQInteger(it->second[size_t(index)]):0);
+            return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    void pushVarList(EntityHandle owner) {
+        auto *token=static_cast<VarListToken*>(sq_newuserdata(vm,sizeof(VarListToken)));
+        *token={owner.id,owner.generation};sq_settypetag(vm,-1,&varListTag);
+        sq_newtable(vm);
+        auto method=[&](const SQChar *name,SQFUNCTION fn){
+            sq_pushstring(vm,name,-1);sq_newclosure(vm,fn,0);sq_newslot(vm,-3,SQFalse);
+        };
+        method(L"clear_vector",vectorClear);method(L"push_vector",vectorPush);
+        method(L"get_vector",vectorData);method(L"set_vector",vectorSet);
+        sq_setdelegate(vm,-2);
+    }
+    static SQInteger getVar(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);host.pushVarList(tokenOwner(v,1+base));return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger positionAxis(HSQUIRRELVM v,size_t axis) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);const auto owner=tokenOwner(v,1+base);
+            const auto p=host.api.position?host.api.position(owner):std::nullopt;
+            sq_pushfloat(v,p?SQFloat((*p)[axis]):0);return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger posX(HSQUIRRELVM v) {return positionAxis(v,0);}
+    static SQInteger posY(HSQUIRRELVM v) {return positionAxis(v,1);}
+    static SQInteger posZ(HSQUIRRELVM v) {return positionAxis(v,2);}
+    static SQInteger setSubState(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);const auto owner=tokenOwner(v,1+base);
+            host.substates[owner.id]=int(intArg(v,2+base));return 0;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger getSubState(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);const auto owner=tokenOwner(v,1+base);
+            const auto it=host.substates.find(owner.id);
+            sq_pushinteger(v,it!=host.substates.end()?SQInteger(it->second):0);return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger vectorSet(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=animationBase(v);const auto owner=tokenOwner(v,1+base);
+            const int index=int(intArg(v,2+base)),value=int(intArg(v,3+base));
+            if(index<0||index>=4096)throw std::runtime_error("script vector index outside budget");
+            auto &vec=host.vectors[owner.id];
+            if(size_t(index)>=vec.size())vec.resize(size_t(index)+1,0);
+            vec[size_t(index)]=value;return 0;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    // `sq_GetVectorData(datas, index)` reads a caller-supplied callback array;
+    // it is a different native from the var-list `get_vector(index)` method.
+    static SQInteger sourceVectorData(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v),arrayIndex=2+base,indexIndex=3+base;
+            if(sq_gettop(v)<indexIndex||sq_gettype(v,arrayIndex)!=OT_ARRAY){sq_pushinteger(v,0);return 1;}
+            const int index=int(intArg(v,indexIndex));
+            sq_push(v,arrayIndex);sq_pushinteger(v,SQInteger(index));
+            if(SQ_SUCCEEDED(sq_get(v,-2)))return 1;
+            sq_pop(v,1);sq_pushinteger(v,0);return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &e){throw detail::Abort(e.what(),"host_fault");}
+    }
+    static SQInteger stubTrue(HSQUIRRELVM v) {sq_pushinteger(v,1);return 1;}
+    static SQInteger stubZero(HSQUIRRELVM v) {sq_pushinteger(v,0);return 1;}
+    static SQInteger stubNull(HSQUIRRELVM v) {sq_pushnull(v);return 1;}
     // print() is the only script-visible diagnostic sink. It is bounded and
     // ASCII-only so a malformed script cannot flood the log or inject bytes.
     static SQInteger print(HSQUIRRELVM v) {
@@ -454,6 +656,59 @@ struct Instance::Impl {
         uint64_t index=0,line=1;while(index<host.decoded.text.size()&&line<uint64_t(std::max(1,row)))if(host.decoded.text[index++]==u'\n')line++;
         if(column>0)index=std::min<uint64_t>(host.decoded.text.size(),index+uint64_t(column-1));
         host.compilerDiagnostic={"compile_error",message,offsetSource(host.current.source,host.decoded.byteOffsets.at(index)),uint64_t(std::max(0,row)),uint64_t(std::max(0,column))};
+    }
+    // Shared by root-table and per-handle delegates so the same capability
+    // snapshot governs both call shapes. Commands are VM-local and recorded
+    // only; animation natives require a published clock from the bridge.
+    template <typename Install> void installAnimationAndCommands(Install install) {
+        auto native=[&](const SQChar *name,SQFUNCTION fn,ScriptQuery kind){
+            if(queryAvailable(api,kind))install(name,fn);
+        };
+        native(L"sq_GetCurrentAni",currentAni,ScriptQuery::Animation);
+        native(L"GetCurrentAni",currentAni,ScriptQuery::Animation);
+        native(L"sq_GetCurrentAnimation",currentAni,ScriptQuery::Animation);
+        native(L"GetCurrentAnimation",currentAni,ScriptQuery::Animation);
+        native(L"sq_GetCurrentTime",currentTime,ScriptQuery::Animation);
+        native(L"GetCurrentTime",currentTime,ScriptQuery::Animation);
+        native(L"sq_GetCurrentFrameIndex",currentFrameIndex,ScriptQuery::Animation);
+        native(L"GetCurrentFrameIndex",currentFrameIndex,ScriptQuery::Animation);
+        native(L"sq_GetFrameStartTime",frameStartTime,ScriptQuery::Animation);
+        native(L"GetFrameStartTime",frameStartTime,ScriptQuery::Animation);
+        native(L"sq_SetCurrentAnimation",setAnimation,ScriptQuery::SetAnimation);
+        native(L"SetCurrentAnimation",setAnimation,ScriptQuery::SetAnimation);
+        install(L"sq_IntVectClear",vectorClear);
+        install(L"IntVectClear",vectorClear);
+        install(L"sq_IntVectPush",vectorPush);
+        install(L"IntVectPush",vectorPush);
+        install(L"sq_GetVectorData",sourceVectorData);
+        install(L"GetVectorData",sourceVectorData);
+        // Eligibility gates stay open: returning false here would silently
+        // skip the whole callback body and hide every other admitted call.
+        install(L"sq_IsUseSkill",stubTrue);
+        install(L"sq_IsCommandEnable",stubTrue);
+        install(L"sq_StopMove",stubZero);
+        install(L"sq_SetStaticSpeedInfo",stubZero);
+        install(L"sq_StartDrawCastGauge",stubZero);
+        install(L"sq_EndDrawCastGauge",stubZero);
+        install(L"sq_SetShake",stubZero);
+        install(L"sq_GetDistancePos",stubZero);
+        install(L"sq_GetPassiveObject",stubNull);
+        install(L"sq_SendCreatePassiveObjectPacket",stubNull);
+        install(L"sq_AddSetStatePacket",stubZero);
+        install(L"sq_GetState",stubZero);
+        install(L"getVar",getVar);
+        install(L"getXPos",posX);
+        install(L"getYPos",posY);
+        install(L"getZPos",posZ);
+        install(L"setSkillSubState",setSubState);
+        install(L"getSkillSubState",getSubState);
+        install(L"clear_vector",vectorClear);
+        install(L"push_vector",vectorPush);
+        install(L"get_vector",vectorData);
+        install(L"set_vector",vectorSet);
+        install(L"isMyControlObject",stubTrue);
+        install(L"stopSound",stubZero);
+        install(L"addElementalChain_ATMage",stubZero);
     }
     void open() {
         if(vm)return;vm=sq_open(256);if(!vm)throw detail::Abort("sq_open failed");
@@ -480,7 +735,7 @@ struct Instance::Impl {
         // mirroring the inspect() admission rule exactly.
         auto query=[&](const SQChar *name,SQFUNCTION function,ScriptQuery kind){
             if(!queryAvailable(api,kind))return;
-            global(name,function,-2);
+            global(name,function,0);
         };
         query(L"sq_GetSkillLevel",skillLevelQuery,ScriptQuery::Level);
         query(L"GetSkillLevel",skillLevelQuery,ScriptQuery::Level);
@@ -492,6 +747,7 @@ struct Instance::Impl {
         query(L"GetCastTime",castTimeQuery,ScriptQuery::CastTime);
         query(L"sq_GetBonusRateWithPassive",bonusRateQuery,ScriptQuery::BonusRate);
         query(L"GetBonusRateWithPassive",bonusRateQuery,ScriptQuery::BonusRate);
+        installAnimationAndCommands([&](const SQChar *name,SQFUNCTION fn){global(name,fn,0);});
         sq_setroottable(vm);sq_settop(vm,0);
     }
     void pushHandle(EntityHandle owner) {
@@ -505,7 +761,7 @@ struct Instance::Impl {
         // explicit first argument, so both share one implementation.
         auto query=[&](const SQChar *name,SQFUNCTION function,ScriptQuery kind){
             if(!queryAvailable(api,kind))return;
-            method(name,function,-2);
+            method(name,function,0);
         };
         query(L"sq_GetSkillLevel",skillLevelQuery,ScriptQuery::Level);
         query(L"GetSkillLevel",skillLevelQuery,ScriptQuery::Level);
@@ -517,6 +773,7 @@ struct Instance::Impl {
         query(L"GetCastTime",castTimeQuery,ScriptQuery::CastTime);
         query(L"sq_GetBonusRateWithPassive",bonusRateQuery,ScriptQuery::BonusRate);
         query(L"GetBonusRateWithPassive",bonusRateQuery,ScriptQuery::BonusRate);
+        installAnimationAndCommands([&](const SQChar *name,SQFUNCTION fn){method(name,fn,0);});
         sq_setdelegate(vm,-2);
     }
     void push(const Json &value,unsigned depth=0) {
