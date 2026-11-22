@@ -1,0 +1,281 @@
+api	calls	files	character	passiveobject	appendage	evidence	class	declaration	70_uses	86_va
+var	234	29	69	85	80	property	CSQCommonVarlist	obj.sq_var	0	
+BinaryWriteDword	157	29	90	55	12	global		sq_BinaryWriteDword(value)	0	0x0119d290
+IntVectPush	146	27	146	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_IntVectPush(value)	0	
+GetIntData	145	39	117	19	9	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetIntData(skill, staticIndex)	0	
+AddSetStatePacket	144	40	143	0	1	method	CNRDPassiveObject	CNRDPassiveObject.addSetStatePacket()	0	
+AddFunctionName	139	23	0	0	139	none			0	
+GetLevelData	123	35	86	25	12	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetLevelData(skillId, levelDataIndex, skillLevel)	0	
+GetCurrentAttackInfo	112	54	25	86	1	global		sq_GetCurrentAttackInfo(attacker)	0	0x014c4580
+GetSkillLevel	102	44	84	10	8	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetSkillLevel(Skill_index)	0	
+PlaySound	99	49	68	27	4	method	CNFlashScreen	CNFlashScreen.playSound(xmlTag, value, int1, delay, int2)	0	
+SetCurrentAnimation	94	37	94	0	0	method	CNRDItemObject	CNRDItemObject.setCurrentAnimation(animation)	0	
+IntVectClear	82	27	82	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_IntVectClear()	0	
+SendDestroyPacketPassiveObject	81	41	2	79	0	global		sq_SendDestroyPacketPassiveObject(obj)（对齐推断）	0	0x014c44d0
+SendCreatePassiveObjectPacket	76	39	63	11	2	method	IRDSQRCharacter	IRDSQRCharacter.sq_SendCreatePassiveObjectPacket(passiveObjectIndex, level, x, y, z, direction=null)	0	
+SetCurrentAttackBonusRate	74	46	18	56	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_SetCurrentAttackBonusRate(attackInfo, attackRate)	0	
+IntVectorPush	65	16	0	56	9	none			0	
+AddStateLayerAnimation	62	4	62	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_AddStateLayerAnimation(LayerIndex, Animation, unknown1, unknown2)	0	
+CreateCNRDAnimation	62	4	62	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_CreateCNRDAnimation(path)	0	
+GetCurrentAnimation	61	36	21	37	3	method	CNRDItemObject	CNRDItemObject.getCurrentAnimation()	0	
+GetBonusRateWithPassive	58	33	47	11	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetBonusRateWithPassive(Skill, skillState, CustomValue, ratio)	0	
+GetGlobalIntVector	57	16	0	50	7	none			0	
+IsCommandEnable	56	37	56	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_IsCommandEnable(skillId)	0	
+IntVectorClear	54	16	0	50	4	none			0	
+GetYPos	52	19	6	45	1	method	CNFlashScreen	CNFlashScreen.getYPos()	0	
+BinaryStartWrite	50	33	22	19	9	global		sq_BinaryStartWrite()	0	0x02868650
+GetXPos	48	19	4	43	1	method	CNRDItemObject	CNRDItemObject.getXPos()	0	
+GetZPos	48	21	6	41	1	method	CNFlashScreen	CNFlashScreen.getZPos()	0	
+GetVectorData	44	26	38	6	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetVectorData(datas, index)	0	
+SetCurrentAttackInfo	43	20	18	25	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_SetCurrentAttackInfo(attackInfoIndex)	0	
+GetDistancePos	41	23	28	12	1	global		sq_GetDistancePos(pos, dir, dist)	0	0x014c3d40
+setCurrentAxisPos	41	12	12	29	0	global		sq_setCurrentAxisPos(obj, axis, value)	0	0x014c3d90
+GetState	40	39	39	0	1	method	CNRDItemObject	CNRDItemObject.getState()	0	
+RGB	38	21	8	20	10	global		sq_RGB(r,g,b)	0	0x014c3a00
+IsUseSkill	37	37	37	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_IsUseSkill(index)	0	
+SetStaticSpeedInfo	35	27	35	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_SetStaticSpeedInfo(speedType, basicValue, speedRate, ...)	0	
+StopMove	35	34	35	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_StopMove()	0	
+GetCurrentFrameIndex	34	23	24	8	2	method		GetCurrentFrameIndex()	0	
+GetCurrentAni	33	19	33	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetCurrentAni()	0	
+WriteDword	32	12	32	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_WriteDword(Dword)	0	
+GetCurrentTime	30	26	19	9	2	global		sq_GetCurrentTime(ani)（对齐推断）	0	0x014c6d60
+GetUniformVelocity	30	17	7	18	5	global		sq_GetUniformVelocity(from,to,currentT,fireT)	0	0x014c4030
+BinaryWriteWord	30	11	14	14	2	global		sq_BinaryWriteWord(word)	0	0x0119D270
+AddObjectParticleCreater	30	4	0	30	0	global		sq_AddObjectParticleCreater(path)	0	0x0158f590
+IsMyControlObject	29	11	27	0	2	method	CNRDItemObject	CNRDItemObject.isMyControlObject()	0	
+AppendAppendage	29	21	18	8	3	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_AppendAppendage(parent, source, skillIndex, bool1, path, Bool2)	0	
+CreateAnimation	26	13	7	17	2	none			0	
+SetMoveParticle	26	14	0	26	0	global		sq_SetMoveParticle(path,x,y)	0	0x0158ed30
+getRandom	25	12	8	17	0	global		sq_getRandom(min,max)	0	0x014C3A80
+SetMyShake	23	18	5	18	0	global		sq_SetMyShake(obj, power, time)	0	0x014c6340
+AddEffect	22	22	0	0	22	none			0	
+SetCurrentPos	22	13	4	13	5	method	CNFlashScreen	CNFlashScreen.setCurrentPos(x, y, z)	0	
+GetCNRDObjectToSQRCharacter	22	6	0	0	22	none			0	
+WriteWord	21	10	21	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_WriteWord(word)	0	
+SetStaticMoveInfo	20	8	20	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_SetStaticMoveInfo(moveDirection, chrDirection)	0	
+StartWrite	19	14	19	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_StartWrite()	0	
+BinaryWriteFloat	18	12	8	9	1	none			0	
+CreateChangeStatus	18	3	17	1	0	global		sq_CreateChangeStatus(type,bool,value,validTime)	0	0x014C4AB0
+BinaryGetReadSize	18	3	0	18	0	none			0	
+GetAnimationFrameIndex	18	9	0	17	1	none			0	
+GetSkill	17	10	9	6	2	none			0	
+flashScreen	17	13	3	14	0	global		sq_flashScreen(obj,startTime,existTime,endTime,visibility,rgba,graphicEffect,drawLayer)	0	0x014C3FC0
+Abs	15	6	8	7	0	none			0	
+AddParticleObject	15	10	5	9	1	global		sq_AddParticleObject(particleCreater)	0	0x014C8A10
+AddObject	15	10	6	9	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_AddObject(childObj, childType, bool)	0	
+SetAttackBoundingBoxSizeRate	15	12	2	13	0	method		setAttackBoundingBoxSizeRate(sizeRate, bool)	0	
+CreatePooledObject	14	9	6	8	0	none			0	
+GetDirection	14	7	11	3	0	method	CNFlashScreen	CNFlashScreen.getDirection()	0	
+GetCastTime	14	14	14	0	0	none			0	
+Append	13	7	9	3	1	freq		callers=2	0	0x014c4ab0
+RemoveAppendage	13	9	5	3	5	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_RemoveAppendage(obj = null, path = null)	0	
+WriteFloat	13	7	13	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_WriteFloat(float)	0	
+StartDrawCastGauge	13	13	13	0	0	none			0	
+EndDrawCastGauge	13	13	13	0	0	none			0	
+GetObjectHeight	13	6	2	10	1	method	CNRDItemObject	CNRDItemObject.getObjectHeight()	0	
+AddDrawOnlyAniFromParent	13	5	0	11	2	none			0	
+GetCNRDObjectToActiveObject	12	8	5	6	1	none			0	
+SendChangeSkillEffectPacket	12	7	2	3	7	global		sq_SendChangeSkillEffectPacket(obj,skillIndex)	0	0x014C4FA0
+SetChangeStatusIntoAttackInfo	12	11	3	9	0	global		sq_SetChangeStatusIntoAttackInfo(obj,info,uk1,status,rate,level,time)	0	0x014CB5A0
+GetAccel	12	7	5	7	0	none			0	
+GetOppositeDirection	12	11	5	5	2	none			0	
+ObjectToSQRCharacter	12	8	0	10	2	none			0	
+IsValidActiveStatus	12	6	1	1	10	global		sq_IsValidActiveStatus(activeStatus)	0	0x014C3E80
+IsAppendAppendage	11	5	8	0	3	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_IsAppendAppendage(obj, path)	0	
+IsKeyDown	10	4	10	0	0	none			0	
+SetValidTime	10	8	5	3	2	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_SetValidTime(time)	0	
+GetFrameStartTime	10	10	10	0	0	method		GetFrameStartTime(frame)	0	
+ToRadian	10	7	5	5	0	none			0	
+AddEffectFront	9	7	0	0	9	none			0	
+GetCustomAttackInfo	9	4	3	6	0	none			0	
+GetGroup	9	7	6	3	0	global		sq_GetGroup(obj)	0	0x014c4710
+GetUniqueId	9	7	6	3	0	global		sq_GetUniqueId(obj)	0	0x014c4730
+GetObjectTime	9	6	0	7	2	none			0	
+GetPassiveObject	8	5	6	2	0	method		sq_GetPassiveObject(obj, index)	0	
+GetShuttleValue	8	6	0	6	2	none			0	
+CreateParticle	8	5	3	5	0	global		sq_CreateParticle(path,…)	0	0x014c4750
+RemoveParticle	8	4	5	3	0	global		sq_RemoveParticle(aniRoute, obj)	0	0x014C4790
+GetSkillIndex	7	2	0	0	7	none			0	
+ALPHA	7	6	1	2	4	global		sq_ALPHA(a)	0	0x014c3a20
+IsEnd	7	4	0	6	1	method	CNSquirrelAppendage	CNSquirrelAppendage.isEnd()	0	
+RemoveMoveParticle	7	6	0	7	0	global		sq_RemoveMoveParticle()	0	0x0158ed10
+DeleteEffectFront	7	2	0	0	7	none			0	
+GetAppendage	6	5	2	0	4	method	CSQCommonVarlist	CSQCommonVarlist.getAppendage(num)	0	
+SetObjectParticlePos	6	2	0	6	0	global		sq_SetObjectParticlePos(x,y,z)	0	0x0158ee80
+GetCenterXPos	6	3	0	6	0	none			0	
+GetCenterZPos	6	3	0	6	0	none			0	
+SendCreatePassiveObjectPacketPos	6	4	0	5	1	global		sq_SendCreatePassiveObjectPacketPos(obj,index,level,X,Y,Z)	0	0x014c4e70
+GetObject	6	6	3	3	0	method	CSQCommonVarlist	CSQCommonVarlist.getObject(num)	0	
+SetfRotateAngle	6	5	2	4	0	none			0	
+GetParentState	6	4	0	6	0	global		sq_GetParentState(state)	0	0x0158eef0
+GetObjectId	6	4	0	4	2	none			0	
+SetCustomRotate	6	5	3	2	1	method	CNFlashScreen	CNFlashScreen.setCustomRotate(bool1, angle)	0	
+GetAniRealImageSize	6	3	0	6	0	global		sq_GetAniRealImageSize(ani,rect)	0	0x014C6F90
+addFlashScreen	6	5	0	6	0	none			0	
+ReleaseActiveStatus	6	3	0	2	4	none			0	
+SetZVelocity	6	3	6	0	0	global		sq_SetZVelocity(speed, acceleration)	0	0x014C3C70
+timer_	6	2	6	0	0	none			0	
+SetCurrentAttackeHitStunTime	6	5	2	4	0	global		sq_SetCurrentAttackeHitStunTime(attackInfo, time)	0	0x014c6110
+SetApplyConversionSkill	6	2	6	0	0	none			0	
+GetCurrentAttackBonusRate	5	3	2	3	0	none			0	
+getJob	5	4	4	0	1	none			0	
+AppendAppendageID	5	4	4	1	0	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_AppendAppendageID(appendage, obj, source, APID)	0	
+BinaryWriteByte	5	3	1	4	0	global		sq_BinaryWriteByte(byte)	0	0x0119D250
+FindShootingTarget	5	3	4	1	0	none			0	
+SetShake	5	5	5	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_SetShake(obj, power, time)	0	
+GetPowerWithPassive	5	5	3	0	2	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetPowerWithPassive(skillIndex, skillState, skillLevelDataIndex, dilution, ratio)	0	
+GetObjectByObjectId	5	5	1	4	0	none			0	
+moveWithParent	5	2	3	2	0	none			0	
+SendHitObjectPacket	5	4	1	3	1	global		sq_SendHitObjectPacket(obj,target,x,y,z)	0	0x014C5E50
+CreateDrawOnlyObject	5	5	2	3	0	none			0	
+SendMessage	5	2	3	0	2	none			0	
+CosTable	5	3	0	5	0	none			0	
+SinTable	5	3	0	5	0	none			0	
+SetMoveDirection	5	3	5	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_SetMoveDirection(direction, startSpeed, endSpeed, bool1, friction, bool2)	0	
+SetCurrentDirection	4	3	2	2	0	method	CNFlashScreen	CNFlashScreen.setCurrentDirection(direction)	0	
+GetCustomAni	4	2	4	0	0	freq		callers=3	0	0x01e715e0
+DeleteAppendages	4	3	3	0	1	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_DeleteAppendages()	0	
+GetShootingHorizonAngle	4	4	3	1	0	global		sq_GetShootingHorizonAngle(…)	0	0x014c59b0
+GetShootingVerticalAngle	4	4	3	1	0	global		sq_GetShootingVerticalAngle(…)	0	0x014c76a0
+GetAttackBonusRate	4	2	0	4	0	none			0	
+SetCurrentAttackPower	4	4	0	4	0	global		sq_SetCurrentAttackPower(attackInfo,power)	0	0x014c5f50
+GetParentSkillSubState	4	3	0	4	0	global		sq_GetParentSkillSubState(obj)	0	0x0158EEB0
+SendCreatePassiveObjectPacketFromPassivePos	4	2	0	4	0	global		sq_SendCreatePassiveObjectPacketFromPassivePos(obj,index,level,X,Y,Z)	0	0x014c4d70
+WriteBool	4	3	4	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_WriteBool(bool1)	0	
+SetCurrentAttackInfoFromCustomIndex	4	3	1	3	0	global		sq_SetCurrentAttackInfoFromCustomIndex(obj, index)	0	0x014c45e0
+IsFixture	4	4	2	2	0	global		sq_IsFixture(damager)	0	0x014c4850
+IsGrabable	4	4	2	2	0	global		sq_IsGrabable(obj,damager)	0	0x014c3df0
+CreateParticleByGlobal	4	2	1	3	0	none			0	
+getChangeStatus	4	3	3	1	0	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_getChangeStatus(Name)	0	
+ChangeDrawLayer	4	1	0	4	0	none			0	
+GetTeam	4	1	0	0	4	none			0	
+DeleteAni	4	1	0	0	4	none			0	
+AniLayerListSize	3	3	0	0	3	none			0	
+Atan2	3	3	2	1	0	none			0	
+GetDistanceObject	3	1	3	0	0	none			0	
+RemoveSkillLoad	3	2	2	1	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_RemoveSkillLoad(skillIndex)	0	
+isPVPMode	3	2	3	0	0	none			0	
+GetCurrentModuleType	3	2	2	0	1	none			0	
+SetAnimationSpeedRate	3	3	3	0	0	none			0	
+Cos	3	2	1	2	0	none			0	
+Sin	3	2	1	2	0	none			0	
+SetAttackInfoForceHitStunTime	3	2	0	3	0	global		sq_SetAttackInfoForceHitStunTime(attackInfo,stunTime)	0	0x014c64b0
+WriteByte	3	2	3	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_WriteByte(byte)	0	
+SetPause	3	2	0	2	1	none			0	
+IsInBattle	3	3	1	0	2	method	IRDSQRCharacter	IRDSQRCharacter.isInBattle()	0	
+SetCustomDamageType	3	2	1	0	2	none			0	
+GetStateTimer	3	2	3	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetStateTimer()	0	
+SetCurrentAttackeDamageAct	3	2	2	1	0	global		sq_SetCurrentAttackeDamageAct(attackInfo, act)	0	0x014c4560
+GetSkillSubState	3	1	3	0	0	method	IRDSQRCharacter	IRDSQRCharacter.getSkillSubState()	0	
+SetAnimationCurrentTimeByFrame	3	2	0	3	0	none			0	
+AddHitObject	3	3	1	2	0	global		sq_AddHitObject(damager)	0	0x014C3930
+SetSpeedToMoveParticle	3	3	0	3	0	none			0	
+SimpleMoveToNearMovablePos	3	3	1	0	2	none			0	
+findNearLinearMovableXPos	3	2	1	0	2	method	CNFlashScreen	CNFlashScreen.sq_findNearLinearMovableXPos(X1, Y1, X2, Y2, range)	0	
+IsHoldable	3	3	2	1	0	global		sq_IsHoldable(obj,damager)	0	0x014c3e40
+HoldAndDelayDie	3	3	2	1	0	none			0	
+SetAnimationFrameIndex	3	2	0	1	2	none			0	
+BinaryWriteBool	3	2	0	1	2	none			0	
+AddChangeStatusAppendageID	3	2	2	1	0	none			0	
+getNewAttackInfoPacket	3	2	0	1	2	none			0	
+GetInputDirection	3	2	3	0	0	freq		callers=4	0	0x01560ed0
+getAniLayerListObject	2	2	0	0	2	none			0	
+IsinMapArea	2	1	2	0	0	none			0	
+ClearKeyFrameFlag	2	1	2	0	0	none			0	
+GetGlobaludpModuleStage	2	2	1	0	1	global		sq_GetGlobaludpModuleStage()	0	0x0163E0F0
+GetDungeonByStage	2	2	1	0	1	none			0	
+GetDefaultAttackInfo	2	2	1	1	0	none			0	
+getGrowType	2	1	2	0	0	none			0	
+getSquirrelAuraMaster	2	2	1	0	1	none			0	
+AddSquirrelAuraMaster	2	2	2	0	0	none			0	
+FindTarget	2	2	2	0	0	none			0	
+GetPassiveObjectByState	2	1	2	0	0	global		sq_GetPassiveObjectByState(obj,poIndex,state)	0	0x014C56B0
+GetDistance	2	2	1	1	0	global		sq_GetDistance(x1,y1,x2,y2,bool)	0	0x014C4CE0
+IsEnterSkill	2	2	2	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_IsEnterSkill(index)	0	
+sendSetActiveStatusPacket	2	2	1	0	1	none			0	
+getAuraMaster	2	2	0	2	0	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_getAuraMaster(name)	0	
+AddAuraMaster	2	2	0	2	0	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_AddAuraMaster(name, sourceObj, targetObj, duration, param1, param2, param3)	0	
+PostDelayedMessage	2	2	1	0	1	none			0	
+SetCameraScrollPosition	2	2	2	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_SetCameraScrollPosition(Xpos, Ypos, Uk)	0	
+ZStop	2	1	2	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_ZStop()	0	
+getRandomUnique	2	1	2	0	0	none			0	
+EffectLayerAppendage	2	2	2	0	0	none			0	
+SetAttackInfoHitDelayRateDamager	2	1	2	0	0	global		sq_SetAttackInfoHitDelayRateDamager(attackInfo, rate)	0	0x014c6410
+SetFrameDelayTime	2	2	1	1	0	none			0	
+SetMaxHitCounterPerObject	2	1	0	2	0	none			0	
+GetSkillLoad	2	1	2	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetSkillLoad(skillIndex)	0	
+AddChangeStatus	2	2	1	1	0	none			0	
+IsSameAni	2	2	0	2	0	global		sq_IsSameAni(a,b)	0	0x014c75f0
+GetSourceChrTarget	2	1	0	0	2	none			0	
+SetGrabable	2	1	0	0	2	none			0	
+AddSetStatePacketActiveObject	2	2	0	0	2	none			0	
+GetAimPosX	2	1	2	0	0	none			0	
+SetAimPointMarkPosition	2	1	2	0	0	none			0	
+SetChangeStatusIntoAttackInfoWithEtc	2	2	0	2	0	none			0	
+EffectLayerAppendageOnlyBody	2	1	2	0	0	none			0	
+AnimationProc	2	1	0	0	2	none			0	
+drawCurrentFrame	2	1	0	0	2	none			0	
+SendHitObjectPacketByAttackInfo	2	1	0	0	2	none			0	
+RemovePassiveSkillAttackBonusRate	2	1	0	0	2	none			0	
+SetKeyxEnable	2	1	2	0	0	global		sq_SetKeyxEnable(obj,keynum,bool)	0	0x014C8BB0
+IsEnterCommand	2	1	2	0	0	global		sq_IsEnterCommand(obj,keynum)	0	0x014C8E20
+ToDegree	1	1	1	0	0	none			0	
+PlayMoveSound	1	1	1	0	0	none			0	
+IsKeyFrameFlag	1	1	1	0	0	none			0	
+GetDuegonIndex	1	1	1	0	0	none			0	
+GetMapIndex	1	1	1	0	0	none			0	
+GetObjectWeight	1	1	1	0	0	none			0	
+GetShadowTypeByAnimation	1	1	1	0	0	none			0	
+GetAttackAni	1	1	1	0	0	none			0	
+GetDashAttackAni	1	1	1	0	0	none			0	
+GetJumpAttackAni	1	1	1	0	0	none			0	
+GetAttackCancelStartFrameSize	1	1	1	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetAttackCancelStartFrameSize()	0	
+GetDashAttackInfo	1	1	1	0	0	none			0	
+GetJumpAttackInfo	1	1	1	0	0	none			0	
+IsItemRecover	1	1	1	0	0	none			0	
+RemoveChangeStatus	1	1	1	0	0	global		sq_RemoveChangeStatus(apId)	0	0x014C5210
+GetDelaySum	1	1	1	0	0	method		getDelaySum(startFrame, endFrame)	0	
+GetSkillPower	1	1	1	0	0	none			0	
+GetMoveParent	1	1	0	1	0	none			0	
+AddObjectTarget	1	1	0	1	0	none			0	
+FindFirstTarget	1	1	0	1	0	none			0	
+FindNextTarget	1	1	0	1	0	method		sq_FindNextTarget(obj, nextXRange, zRange)	0	
+SetObjectBounding	1	1	0	1	0	none			0	
+IsInScreenCollisionObject	1	1	1	0	0	none			0	
+IsExistObject	1	1	0	0	1	none			0	
+IsDimensionDungeon	1	1	0	0	1	none			0	
+IsDespairTower	1	1	0	0	1	none			0	
+IsAncientDungeon	1	1	0	0	1	none			0	
+GetCNChangeHp	1	1	0	0	1	none			0	
+AddCNChangeHp	1	1	0	0	1	none			0	
+isSendTimeOutPacket	1	1	0	0	1	none			0	
+SendSetHpPacket	1	1	0	0	1	none			0	
+IsEnterSkillLastKeyUnits	1	1	1	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_IsEnterSkillLastKeyUnits(skillIndex)	0	
+GetAttackInfoHitDelayRateDamager	1	1	1	0	0	global		sq_GetAttackInfoHitDelayRateDamager(attackInfo)	0	0x014c6370
+GetCurrentAttackeDamageAct	1	1	1	0	0	global		sq_GetCurrentAttackeDamageAct(attackInfo)	0	0x0048e890
+SetSkillSubState	1	1	1	0	0	method	IRDSQRCharacter	IRDSQRCharacter.setSkillSubState(substate)	0	
+Rewind	1	1	1	0	0	none			0	
+createCNRDAnimation	1	1	0	1	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_CreateCNRDAnimation(path)	0	
+SetEnumDrawLayer	1	1	1	0	0	none			0	
+GetAniFrameNumber	1	1	0	1	0	none			0	
+AddSkillLoad	1	1	1	0	0	method	IRDSQRCharacter	IRDSQRCharacter.sq_AddSkillLoad(skillIndex, imgPath, value, chargeTime)	0	
+SetBodyEffect	1	1	1	0	0	global		sq_SetBodyEffect(obj, src, bool, rgb, …, alpha)	0	0x014c8700
+AttractToMe	1	1	1	0	0	global		sq_AttractToMe(obj,capture,toMeDis,power)	0	0x014C83A0
+IsSetActiveStatus	1	1	0	0	1	none			0	
+AddAimPointMark	1	1	1	0	0	none			0	
+RemoveAimPointMark	1	1	1	0	0	none			0	
+drawCurrentFrameEffectColor	1	1	0	1	0	none			0	
+GetFrontAnimation	1	1	0	0	1	none			0	
+setCustomHitEffectFileName	1	1	1	0	0	none			0	
+SetCurrentTimeByFrame	1	1	1	0	0	none			0	
+SetAddWeaponDamage	1	1	0	1	0	none			0	
+GetCNRDObjectToCharacter	1	1	0	1	0	none			0	
+createCommonElementalAttack	1	1	0	1	0	none			0	
+AddPassiveSkillAttackBonusRate	1	1	0	0	1	none			0	
+IsInCategory	1	1	0	0	1	global		sq_IsInCategory(category)	0	0x014C4520
+SetCurrentAttacknBackForce	1	1	1	0	0	global		sq_SetCurrentAttacknBackForce(attackInfo,backForce)	0	0x014c6080
+SendHitObjectPacketWithNoStuck	1	1	1	0	0	global		sq_SendHitObjectPacketWithNoStuck(obj,target,x,y,z)	0	0x014C5DE0
+SetfindNearLinearMovablePos	1	1	1	0	0	none			0	
+GetCNRDObjectToCollisionObject	1	1	0	1	0	none			0	
+SetCurrentAttacknUpForce	1	1	0	1	0	global		sq_SetCurrentAttacknUpForce(attackInfo,upForce)	0	0x014c5ff0
+GetSkillPowerWithAttackBonusRate	1	1	1	0	0	none			0	

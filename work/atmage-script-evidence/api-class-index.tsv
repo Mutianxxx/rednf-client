@@ -1,0 +1,306 @@
+api	source	class	declaration	returns	70_uses	86_handlers	first_handlers	86_va
+addCustomAnimation	method	CNRDItemObject	CNRDItemObject.addCustomAnimation(animation)	{"type": "null", "desc": "description"}	0	1	CNAimPointMarkCustomAnimation	
+addLayerAnimation	freq		callers=4		0	0		0x02667de0
+addRapidInput	method	IRDSQRCharacter	IRDSQRCharacter.addRapidInput()	{"type": "null", "desc": ""}	0	1	onProc_MultiShot	
+addSetStatePacket	freq		callers=21		0	0		0x014c9920
+applyBasicAttackUp	method	IRDSQRCharacter	IRDSQRCharacter.applyBasicAttackUp(attackInfo, state)	{"type": "null", "desc": ""}	0	7	onKeyFrameFlag_ATMageDashAttack,onSetState_ATMageDashAttack,onSetState_Attack	
+clear_ani_vector	freq		callers=2		0	0		0x026bc260
+clear_ct_vector	freq		callers=7		0	0		0x026bbb30
+clear_obj_vector	freq		callers=11		0	0		0x026bb890
+clear_timer_vector	freq		callers=4		0	0		0x026bbc60
+clear_vector	freq		callers=4		0	0		0x014cb9e0
+endSkillCoolTime	method	IRDSQRCharacter	IRDSQRCharacter.endSkillCoolTime(skillIndex)	{"type": "null", "desc": ""}	0	1	onSetState_Awakening	
+fadeOut	freq		callers=2		0	0		0x022b70c0
+flushSetStatePacket	method	CNRDPassiveObject	CNRDPassiveObject.flushSetStatePacket()	## 86 handler	0	3	onEndCurrentAni_po_ATWindStrike,onSetState_PowerOfDarkness,setCustomData_po_ATWindStrike	
+Get	freq		callers=15		0	0		0x027c3660
+get_ani_vector	method	CSQCommonVarlist	CSQCommonVarlist.get_ani_vector(index)	{"type": "CNRDAnimation", "desc": "动画对象"}	0	1	onProc_Awakening	
+get_ct_vector	freq		callers=23		0	0		0x026bae50
+get_obj_vector	freq		callers=2		0	0		0x00b57c20
+get_obj_vector_size	freq		callers=23		0	0		0x026bae00
+get_timer_vector	freq		callers=10		0	0		0x026bae10
+get_vector	freq		callers=4		0	0		0x014c6ae0
+getAngleDistanceXPos	method	CNRDPassiveObject	CNRDPassiveObject.getAngleDistanceXPos()	## 86 handler	0	1	procSmallRingMove	
+getAngleDistanceYPos	method	CNFlashScreen	CNFlashScreen.getAngleDistanceYPos()	## 86 handler	0	1	procSmallRingMove	
+GetAnimationMap	freq		callers=22		0	0		0x004288c0
+getAppendage	method	CSQCommonVarlist	CSQCommonVarlist.getAppendage(num)	{"type": "CNSquirrelAppendage", "desc": "附属物对象"}	0	3	onEndState_IceChakram,onKeyFrameFlag_IceChakram,setState_po_ATHolongLight	
+getAppendageInfo	method	CNSquirrelAppendage	CNSquirrelAppendage.getAppendageInfo()	{"type": "CNSquirrelAppendage", "desc": "返回AP信息"}	0	3	onAfterSetState_ElementalChange,onAttack_po_ATLightningWall,onUseSkillAvengerPassiveSkill	
+getAttackIndex	method	IRDActiveObject	IRDActiveObject.getAttackIndex()	{"type": "integer", "desc": "当前攻击的索引"}	0	7	onAfterSetState_Attack,onAfterSetState_JumpAttack,onKeyFrameFlag_Attack	
+getBool	freq		callers=11		0	0		0x026bc010
+getBuffSkillIndex	method	IRDSQRCharacter	IRDSQRCharacter.getBuffSkillIndex()	{"type": "integer", "desc": "当前buff技能id"}	0	1	onAfterSetState_Buff	
+getCurrentAnimation	freq		callers=7		0	0		0x014c3d60
+GetCurrentFrame	method		GetCurrentFrame()	{"type": "IRDFrame", "desc": ""}	0	1	drawAppend_appendage_avenger_effect	
+GetCurrentFrameIndex	freq		callers=3		0	0		0x02648800
+getCustomAnimation	freq		callers=2		0	0		0x014c75f0
+getDefaultAnimation	method	CNFlashScreen	CNFlashScreen.getDefaultAnimation()	{"type": "CNRDAnimation", "desc": "动画对象"}	0	1	procAppend_po_ATHolongLight	
+getDelaySum	freq		callers=4		0	0		0x02648d20
+getDirection	freq		callers=5		0	0		0x014c3b70
+getDownState	method	IRDActiveObject	IRDActiveObject.getDownState()	{"type": "integer", "desc": "倒下状态"}	0	1	proc_appendage_PushOutExplosion	
+getFloat	freq		callers=7		0	0		0x026bc060
+GetFrameStartTime	freq		callers=3		0	0		0x0264bae0
+GetGraphicEffect	method		GetGraphicEffect()	{"type": "integer", "desc": "当前帧效果的全局变量"}	0	1	drawAppend_appendage_avenger_effect	
+getHp	method	IRDSQRCharacter	IRDSQRCharacter.getHp()	{"type": "integer", "desc": "当前hp"}	0	2	onAttack_HighSpeedSlash,sendSetHpPacket_ATMage	
+getInt	freq		callers=2		0	0		0x02c63d30
+getMyPassiveObject	freq		callers=2		0	0		0x014c46a0
+getMyPassiveObjectCount	freq		callers=3		0	0		0x018c0da0
+getObject	freq		callers=18		0	0		0x026bc080
+getObjectHeight	method	CNRDItemObject	CNRDItemObject.getObjectHeight()	{"type": "integer", "desc": "返回对象高度"}	0	5	onAttack_PowerOfDarkness,onKeyFrameFlag_PushOut,onProc_PushOut	
+getParent	freq		callers=3		0	0		0x014c39d0
+GetparticleCreaterMap	freq		callers=28		0	0		0x026bc560
+getPassiveObjectIndex	method	CNRDPassiveObject	CNRDPassiveObject.getPassiveObjectIndex()	## 86 handler	0	1	onAttack_PassiveObject	
+getRapidInputFrequency	method	IRDSQRCharacter	IRDSQRCharacter.getRapidInputFrequency()	{"type": "integer", "desc": "连续按键次数"}	0	1	onTimeEvent_MultiShot	
+getSize	freq		callers=5		0	0		0x018394a0
+getSkillSubState	freq		callers=15		0	0		0x014c6d60
+getSource	freq		callers=6		0	0		0x019ffdb0
+GetSquirrelAppendage	freq		callers=5		0	0		0x026bad50
+getState	method	CNRDItemObject	CNRDItemObject.getState()	{"type": "integer", "desc": "主状态值"}	0	41	addSetStatePacket_Avenger,checkCommandEnable_HolongLight,checkExecutableSkill_HolongLight	
+getStaticVar	freq		callers=2		0	0		0x014c7460
+getThrowElement	freq		callers=2		0	0		0x00b4fd90
+getThrowIndex	method	IRDSQRCharacter	IRDSQRCharacter.getThrowIndex()	{"type": "integer", "desc": "投掷物体的动画索引"}	0	3	changeTrhowState_ATMage,onAfterSetState_Throw,setState_Avenger	
+getThrowState	method	IRDSQRCharacter	IRDSQRCharacter.getThrowState()	{"type": "integer", "desc": "投掷物体的状态"}	0	3	onAfterSetState_ElementalChange,onAfterSetState_Throw,setState_Avenger	
+getTimer	method	CNSquirrelAppendage	CNSquirrelAppendage.getTimer()	{"type": "CNTimer", "desc": "返回一个计时器类 计时器类 可以通过appendage.getTimer().Get() 可以获取当前AP已经持续了多长时间"}	0	9	drawAppend_appendage_avenger_effect,isEnd_appendage_atdarkness_suck,isEnd_appendage_avenger_awakening	
+getTopCharacter	freq		callers=5		0	0		0x00fce2d0
+getVar	freq		callers=16		0	0		0x014c6340
+getWeaponSubType	method	IRDSQRCharacter	IRDSQRCharacter.getWeaponSubType()	{"type": "integer", "desc": "类型id"}	0	3	OnBeforeAttackAvengerPassiveSkill,ProcPassiveSkillAvenger,getAttackAni_Avenger	
+getXDistance	method	CNFlashScreen	CNFlashScreen.getXDistance(damager)	{"type": "integer", "desc": "返回对象与我的X轴距离"}	0	3	onProcCon_BrokenArrow,setCustomData_po_ATIceChakramSmallIceRing,setState_po_ATIceChakramSmallIceRing	
+getXPos	method	CNRDItemObject	CNRDItemObject.getXPos()	{"type": "integer", "desc": "对象的x轴坐标"}	0	51	checkExecutableSkill_MultiShot,getScrollBasisPos_DisasterEx,getScrollBasisPos_ElementalBuster	
+getYPos	method	CNFlashScreen	CNFlashScreen.getYPos()	{"type": "integer", "desc": "y轴坐标"}	0	51	checkExecutableSkill_MultiShot,createFireExplosion,createLightExplosion	
+getZPos	method	CNFlashScreen	CNFlashScreen.getZPos()	{"type": "integer", "desc": "Z轴位置"}	0	50	checkExecutableSkill_MultiShot,getScrollBasisPos_Teleport,getTargetZPos	
+if	freq		callers=2		0	0		0x00842100
+isCarryWeapon	method	IRDSQRCharacter	IRDSQRCharacter.isCarryWeapon()	{"type": "boolean", "desc": "是否佩带武器"}	0	1	onSetState_HighSpeedSlash	
+isCurrentAnimationIndex	method	CNRDItemObject	CNRDItemObject.isCurrentAnimationIndex(animationIndex)	## 86 handler	0	3	onEndCurrentAni_po_ATLightningWall,onTimeEvent_po_ATLightningWall,procAppend_po_ATHolongLight	
+isCurrentCutomAniIndex	method	IRDActiveObject	IRDActiveObject.isCurrentCutomAniIndex(customAnimation)	{"type": "boolean", "desc": "是否匹配"}	0	1	onProc_PushOut	
+isDead	method	IRDActiveObject	IRDActiveObject.isDead()	{"type": "boolean", "desc": "是否为死亡状态"}	0	1	proc_appendage_PushOut	
+isDownSkillLastKey	method	IRDSQRCharacter	IRDSQRCharacter.isDownSkillLastKey()	{"type": "boolean", "desc": "是否按下技能键"}	0	1	onProcCon_FirePillar	
+isEnd	method	CNSquirrelAppendage	CNSquirrelAppendage.isEnd()	{"type": "boolean", "desc": "是否结束"}	0	2	procAppend_Avenger,proc_appendage_atmage_darknessmantle_effect	
+isEnemy	method	CNRDPassiveObject	CNRDPassiveObject.isEnemy()	{"type": "boolean", "desc": "是否是敌人"}	0	2	onAllCallBack_DarkChange,onSetHp_appendage_avenger_awakening	
+isExistTimeEvent	method	CNRDPassiveObject	CNRDPassiveObject.isExistTimeEvent()	## 86 handler	0	2	onSetState_spincutter,procAppend_po_Spincutter	
+isInBattle	method	IRDSQRCharacter	IRDSQRCharacter.isInBattle()	{"type": "boolean", "desc": "是否在战斗中"}	0	1	flushCommandEnable_Avenger	
+isInCoolTime	method	CNRDSkill	CNRDSkill.isInCoolTime()	{"type": "boolean", "desc": ""}	0	1	onProcCon_AvengerAttack	
+isLoop	method		isLoop()	{"type": "boolean", "desc": ""}	0	2	setAnimationEmptyLightning,setState_po_Spincutter	
+isMeleeAttack	method	CNRDPassiveObject	CNRDPassiveObject.isMeleeAttack()	## 86 handler	0	1	onBeforeDamage_FirePillar	
+isMessage	method	IRDSQRCharacter	IRDSQRCharacter.isMessage()	{"type": "boolean", "desc": "是否可发送"}	0	2	onProcCon_AvengerAttack,procAppend_Avenger	
+isMissileObject	method	CNRDPassiveObject	CNRDPassiveObject.isMissileObject()	## 86 handler	0	1	onBeforeDamage_FirePillar	
+isMovablePos	method	IRDActiveObject	IRDActiveObject.isMovablePos(XPos, YPos)	{"type": "boolean", "desc": "是否可移动"}	0	4	onEndCurrentAni_EarthQuake,onProc_Awakening,onProc_BrokenArrow	
+isMyControlObject	freq		callers=4		0	0		0x014c4d50
+isObjectType	method	CNFlashScreen	CNFlashScreen.isObjectType(objectType)	{"type": "boolean", "desc": "是否为指定类型"}	0	2	onAttack_HighSpeedSlash,onAttack_PowerOfDarkness	
+isOnEvent	freq		callers=8		0	0		0x02747a20
+isOverSkillLevel	method	IRDSQRCharacter	IRDSQRCharacter.isOverSkillLevel(skillIndex, level)	{"type": "boolean", "desc": "是否在指定级数以上"}	0	1	onSetState_Awakening	
+isSealActiveFunction	method	CNRDSkill	CNRDSkill.isSealActiveFunction()	{"type": "boolean", "desc": ""}	0	1	resetDungeonStart_ATMage	
+isSkillClassType	method	IRDSQRCharacter	IRDSQRCharacter.isSkillClassType(skillIndex, growType)	{"type": "boolean", "desc": "是否是某系别"}	0	1	onUseSkillAvengerPassiveSkill	
+isValid	method	CNRDPassiveObject	CNRDPassiveObject.isValid()	## 86 handler	0	9	onAfterSetState_Attack,onAfterSetState_JumpAttack,onDestroyObject_po_ATChainLightning	
+playSound	method	CNFlashScreen	CNFlashScreen.playSound(xmlTag, value, int1, delay, int2)	{"type": "null", "desc": ""}	0	1	onSetState_PowerOfDarkness	
+Proc	freq		callers=4		0	0		0x026602a0
+push_ani_vector	method	CSQCommonVarlist	CSQCommonVarlist.push_ani_vector(ani)	{"type": "null", "desc": ""}	0	1	onSetState_Awakening	
+push_ct_vector	freq		callers=9		0	0		0x026bbc70
+push_obj_vector	freq		callers=10		0	0		0x00b4bff0
+push_timer_vector	freq		callers=5		0	0		0x026bbdb0
+push_vector	freq		callers=40		0	0		0x026bb520
+readByte	freq		callers=4		0	0		0x0119d1d0
+readDword	freq		callers=41		0	0		0x014c5ec0
+readFloat	freq		callers=25		0	0		0x0119d230
+readWord	freq		callers=12		0	0		0x0119d1f0
+remove_obj_vector	freq		callers=5		0	0		0x026bb230
+removeAllTimeEvent	method	CNRDPassiveObject	CNRDPassiveObject.removeAllTimeEvent()	## 86 handler	0	1	setState_po_PowerOfDarknessCircle	
+Reset	freq		callers=4		0	0		0x00b4b660
+resetHitObjectList	method	CNRDPassiveObject	CNRDPassiveObject.resetHitObjectList()	## 86 handler	0	7	onKeyFrameFlag_JumpAttack,onProc_DashAttack,onTimeEvent_IceChakram	
+resetInstant	freq		callers=9		0	0		0x02747490
+resize	freq		callers=2		0	0		0x0242fa30
+resizeWithChild	method		resizeWithChild(sizeRate)	{"type": "null", "desc": ""}	0	1	lightingWallObjAniResizeing	
+sendDestroyPacket	method	CNFlashScreen	CNFlashScreen.sendDestroyPacket(Bool)	{"type": "null", "desc": ""}	0	1	onEndCurrentAni_po_ATIceChakramLarge	
+sendStateOnlyPacket	freq		callers=8		0	0		0x014c4fe0
+sendStatePacket	method	CNRDPassiveObject	CNRDPassiveObject.sendStatePacket()	## 86 handler	0	1	onEndCurrentAni_IceChakram	
+set_vector	freq		callers=59		0	0		0x026bad10
+setAppendage	freq		callers=2		0	0		0x026bbfe0
+setAttackBoundingBoxSizeRate	freq		callers=2		0	0		0x0264c070
+setAttackXAccel	method	IRDSQRCharacter	IRDSQRCharacter.setAttackXAccel(speedValue)	{"type": "null", "desc": ""}	0	2	onSetState_Attack,onSetState_AvengerAttack	
+setAttackXAccelFast	freq		callers=5		0	0		0x014c3b50
+setAttackXVelocity	method	IRDSQRCharacter	IRDSQRCharacter.setAttackXVelocity(speed)	{"type": "null", "desc": ""}	0	2	onSetState_Attack,onSetState_AvengerAttack	
+setAttackXVelocityFast	method	IRDSQRCharacter	IRDSQRCharacter.setAttackXVelocityFast(speed)	{"type": "null", "desc": ""}	0	2	onSetState_Attack,onSetState_AvengerAttack	
+setAutoLayerWorkAnimationAddSizeRate	freq		callers=5		0	0		0x026529a0
+setBool	freq		callers=17		0	0		0x026bbf00
+setBuffIconImage	method	CNSquirrelAppendage	CNSquirrelAppendage.setBuffIconImage(ImgNum)	{"type": "null", "desc": ""}	0	1	onAfterSetState_ElementalChange	
+setCarryWeapon	method	IRDSQRCharacter	IRDSQRCharacter.setCarryWeapon()	## 86 handler	0	2	onEndState_HighSpeedSlash,onSetState_HighSpeedSlash	
+setCommandEnable	method	CNRDSkill	CNRDSkill.setCommandEnable(bool)	## 86 handler	0	1	flushCommandEnable_Avenger	
+setCurrentAnimation	freq		callers=74		0	0		0x0121d970
+setCurrentDirection	method	CNFlashScreen	CNFlashScreen.setCurrentDirection(direction)	{"type": "null", "desc": ""}	0	9	onAttack_PowerOfDarkness,onProc_Awakening,onSetState_spincutter	
+setCurrentFrameWithChildLayer	method		setCurrentFrameWithChildLayer(frameID)	{"type": "null", "desc": ""}	0	1	onTimeEvent_po_ATIceArea	
+setCurrentPos	freq		callers=10		0	0		0x02c627f3
+setCustomRotate	method	CNFlashScreen	CNFlashScreen.setCustomRotate(bool1, angle)	{"type": "null", "desc": ""}	0	1	setState_po_ATBrokenArrow	
+setDirection	method	CNFlashScreen	CNFlashScreen.setDirection(direction)	{"type": "null", "desc": ""}	0	3	onSetState_BrokenArrow,procAppend_po_ATHolongLight,setCustomData_po_ATLightningWall	
+setEffectLayer	freq		callers=2		0	0		0x02655010
+setElement	freq		callers=3		0	0		0x029b0aa0
+setEnableIsBuff	method	CNSquirrelAppendage	CNSquirrelAppendage.setEnableIsBuff(enable)	{"type": "null", "desc": ""}	0	1	onAfterSetState_ElementalChange	
+setFloat	freq		callers=8		0	0		0x026bbf70
+setFrameDelay	method		setFrameDelay(delay)	{"type": "null", "desc": ""}	0	1	setCustomData_po_PandemoniumEx	
+setHp	method	IRDActiveObject	IRDActiveObject.setHp(hp, attacker, bool1)	## 86 handler	0	1	onAttack_HighSpeedSlash	
+setImageRate	freq		callers=4		0	0		0x014c4750
+setImageRateFromOriginal	freq		callers=2		0	0		0x01c64380
+setInt	freq		callers=26		0	0		0x026bbf40
+setIsApplyAnotherPlayersEffectAlphaRate	method		setIsApplyAnotherPlayersEffectAlphaRate()	{"type": "null", "desc": ""}	0	1	setCurrentAnimation_Avenger	
+setNeverApplyAnotherPlayersEffectAlphaRate	method		setNeverApplyAnotherPlayersEffectAlphaRate()	{"type": "null", "desc": ""}	0	1	setCurrentAnimation_Avenger	
+setObject	freq		callers=4		0	0		0x00b622a0
+setObjectHeight	method	CNRDItemObject	CNRDItemObject.setObjectHeight(height)	{"type": "null", "desc": ""}	0	6	addSetStatePacket_Avenger,onEnd_appendage_avenger_awakening,onProcCon_AwakenningTurnOff	
+SetPos	freq		callers=9		0	0		0x014c8a10
+setRGBA	freq		callers=2		0	0		0x0264a120
+setSealActiveFunction	method	CNRDSkill	CNRDSkill.setSealActiveFunction(bool)	## 86 handler	0	1	resetDungeonStart_ATMage	
+setSkillCommandEnable	freq		callers=5		0	0		0x01e70890
+setSkillSubState	freq		callers=6		0	0		0x014c5490
+setSpeedRate	freq		callers=9		0	0		0x02660a10
+setThrowElement	freq		callers=2		0	0		0x01832e30
+setTimeEvent	freq		callers=5		0	0		0x014c6110
+setValid	freq		callers=11		0	0		0x01b8b900
+setValidTime	freq		callers=3		0	0		0x019fdf90
+size_vector	freq		callers=2		0	0		0x026bad90
+sq_AddAuraMaster	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_AddAuraMaster(name, sourceObj, targetObj, duration, param1, param2, param3)	{"type": "null", "desc": ""}	0	1	setState_po_ATDarknessMantle	
+sq_AddHitObject	global		sq_AddHitObject(damager)		0	0		0x014C3930
+sq_AddObject	global		sq_AddObject(x)		0	0		0x01e70860
+sq_AddObjectParticleCreater	freq		callers=15		0	0		0x0158f590
+sq_AddParticleObject	global		sq_AddParticleObject(particleCreater)		0	0		0x014C8A10
+sq_addSetStatePacket	freq		callers=20		0	0		0x01e71b40
+sq_AddSkillLoad	global		sq_AddSkillLoad(...)		0	0		0x01560a70
+sq_AddStateLayerAnimation	global		sq_AddStateLayerAnimation(layer,ani,x,y)		0	0		0x014c5510
+sq_ALPHA	global		sq_ALPHA(a)		0	0		0x014c3a20
+sq_ani_GetCurrentFrameIndex	freq		callers=18		0	0		0x01deb8a0
+sq_ani_IsEnd	freq		callers=7		0	0		0x01e71470
+sq_Append	freq		callers=2		0	0		0x014c4ab0
+sq_AppendAppendage	freq		callers=4		0	0		0x014c3df0
+sq_AppendAppendageID	freq		callers=2		0	0		0x01b8bd60
+sq_AtrractionForce	global		sq_AtrractionForce(...)（对齐推断）		0	0		0x014c9940
+sq_AttractToMe	global		sq_AttractToMe(obj,capture,toMeDis,power)		0	0		0x014C83A0
+sq_binaryData_startWrite	method	CNAvenger	CNAvenger.sq_binaryData_startWrite()	{"type": "null", "desc": ""}	0	7	onKeyFrameFlag_EarthQuake,onKeyFrameFlag_PowerOfDarkness,onProc_DisasterEx	
+sq_binaryData_writeDword	method	CNAvenger	CNAvenger.sq_binaryData_writeDword(dword)	{"type": "null", "desc": ""}	0	7	onKeyFrameFlag_EarthQuake,onKeyFrameFlag_PowerOfDarkness,onProc_DisasterEx	
+sq_binaryData_writeFloat	global		sq_binaryData_writeFloat(v)		0	0		0x0119d290
+sq_binaryData_writeWord	method	CNAvenger	CNAvenger.sq_binaryData_writeWord(word)	{"type": "null", "desc": ""}	0	1	onTimeEvent_PandemoniumEx	
+sq_BinaryStartWrite	global		sq_BinaryStartWrite()		0	0		0x02868650
+sq_BinaryWriteByte	global		sq_BinaryWriteByte(byte)		0	0		0x0119D250
+sq_BinaryWriteDword	global		sq_BinaryWriteDword(value)		0	0		0x0119d290
+sq_BinaryWriteWord	global		sq_BinaryWriteWord(word)		0	0		0x0119D270
+sq_ChangeAttackTypeToOpposite	global		sq_ChangeAttackTypeToOpposite(attackInfo)		0	0		0x014C4620
+sq_CreateChangeStatus	global		sq_CreateChangeStatus(type,bool,value,validTime)		0	0		0x014C4AB0
+sq_createCNRDAnimation	freq		callers=2		0	0		0x00dc30f0
+sq_CreateParticle	global		sq_CreateParticle(path,…)		0	0		0x014c4750
+sq_DeleteAppendages	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_DeleteAppendages()	{"type": "null", "desc": ""}	0	1	onEnd_appendage_atdarkness_suck	
+sq_findNearLinearMovableXPos	method	CNFlashScreen	CNFlashScreen.sq_findNearLinearMovableXPos(X1, Y1, X2, Y2, range)	{"type": "null", "desc": ""}	0	1	onKeyFrameFlag_PushOut	
+sq_FindNextTarget	method		sq_FindNextTarget(obj, nextXRange, zRange)	{"type": "any", "desc": "下一个目标对象"}	0	1	procAppend_po_ATChainLightning	
+sq_flashScreen	global		sq_flashScreen(obj,startTime,existTime,endTime,visibility,rgba,graphicEffect,drawLayer)		0	0		0x014C3FC0
+sq_GetAniRealImageSize	global		sq_GetAniRealImageSize(ani,rect)		0	0		0x014C6F90
+sq_GetAppendage	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_GetAppendage(obj, path)	{"type": "CNSquirrelAppendage", "desc": "返回一个apd对象"}	0	2	onVaildTimeEnd_appendage_atmage_elemental_change,setState_po_PowerOfDarknessCircle	
+sq_GetAttackCancelStartFrameSize	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetAttackCancelStartFrameSize()	{"type": "integer", "desc": "攻击取消开始帧数量"}	0	1	getAttackCancelStartFrameSize_ATMage	
+sq_GetAttackInfoHitDelayRateDamager	global		sq_GetAttackInfoHitDelayRateDamager(attackInfo)		0	0		0x014c6370
+sq_GetAttackType	global		sq_GetAttackType(attackInfo)		0	0		0x014C4650
+sq_getAttractAimPosY	freq		callers=2		0	0		0x01e70d00
+sq_getAuraMaster	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_getAuraMaster(name)	{"type": "CNSquirrelAppendage", "desc": "返回一个apd对象"}	0	1	setState_po_ATDarknessMantle	
+sq_GetBonusRateWithPassive	freq		callers=3		0	0		0x014c45e0
+sq_getChangeStatus	method	CNSquirrelAppendage	CNSquirrelAppendage.sq_getChangeStatus(Name)	{"type": "CNSquirrelAppendage", "desc": "返回一个apd对象"}	0	2	ProcPassiveSkillAvenger,onUseSkillAvengerPassiveSkill	
+sq_GetCNRDObjectToFlashScreen	global		sq_GetCNRDObjectToFlashScreen(obj)		0	0		0x014C3950
+sq_getCurrentAni	freq		callers=15		0	0		0x01e77a00
+sq_GetCurrentAttackeDamageAct	global		sq_GetCurrentAttackeDamageAct(attackInfo)		0	0		0x0048e890
+sq_GetCurrentAttackInfo	global		sq_GetCurrentAttackInfo(attacker)		0	0		0x014c4580
+sq_GetCurrentFrameIndex	global		sq_GetCurrentFrameIndex(ani)		0	0		0x01deb8a0
+sq_GetCurrentTime	global		sq_GetCurrentTime(ani)（对齐推断）		0	0		0x014c6d60
+sq_getCustomAni	freq		callers=3		0	0		0x01e715e0
+sq_getDelaySum	freq		callers=2		0	0		0x02c621d4
+sq_GetDirection	global		sq_GetDirection(obj)		0	0		0x014c3b50
+sq_GetDistance	global		sq_GetDistance(x1,y1,x2,y2,bool)		0	0		0x014C4CE0
+sq_GetDistancePos	global		sq_GetDistancePos(pos, dir, dist)		0	0		0x014c3d40
+sq_GetGlobaludpModuleStage	global		sq_GetGlobaludpModuleStage()		0	0		0x0163E0F0
+sq_GetGroup	global		sq_GetGroup(obj)		0	0		0x014c4710
+sq_GetInputDirection	freq		callers=4		0	0		0x01560ed0
+sq_GetIntData	freq		callers=6		0	0		0x014c4730
+sq_GetKeyxEnable	global		sq_GetKeyxEnable(obj,keynum)		0	0		0x014C8CE0
+sq_getLevelData	freq		callers=4		0	0		0x00dca2c0
+sq_GetParentSkillSubState	freq		callers=2		0	0		0x0158eeb0
+sq_GetParentState	freq		callers=3		0	0		0x0158eef0
+sq_GetPassiveObject	freq		callers=2		0	0		0x01560d50
+sq_GetPassiveObjectByState	global		sq_GetPassiveObjectByState(obj,poIndex,state)		0	0		0x014C56B0
+sq_GetPowerWithPassive	freq		callers=3		0	0		0x019c3b00
+sq_getRandom	global		sq_getRandom(min,max)		0	0		0x014C3A80
+sq_GetShootingHorizonAngle	global		sq_GetShootingHorizonAngle(…)		0	0		0x014c59b0
+sq_GetShootingVerticalAngle	global		sq_GetShootingVerticalAngle(…)		0	0		0x014c76a0
+sq_GetSkillLevel	freq		callers=12		0	0		0x01e709c0
+sq_GetSkillLoad	global		sq_GetSkillLoad(skillIndex)		0	0		0x01560a90
+sq_GetState	method	IRDSQRCharacter	IRDSQRCharacter.sq_GetState()	{"type": "integer", "desc": "状态id"}	0	18	checkCommandEnable_BrokenArrow,checkCommandEnable_Concentrate,checkCommandEnable_DarkChange	
+sq_GetStateTimer	freq		callers=3		0	0		0x01560f80
+sq_GetUniformVelocity	global		sq_GetUniformVelocity(from,to,currentT,fireT)		0	0		0x014c4030
+sq_GetUniqueId	global		sq_GetUniqueId(obj)		0	0		0x014c4730
+sq_GetVectorData	global		sq_GetVectorData(datas, index)		0	0		0x01561170
+sq_IntVectClear	method	IRDSQRCharacter	IRDSQRCharacter.sq_IntVectClear()	{"type": "null", "desc": ""}	0	44	addSetStatePacket_Avenger,changeTrhowState_ATMage,checkExecutableSkill_Awakening	
+sq_IntVectPush	method	IRDSQRCharacter	IRDSQRCharacter.sq_IntVectPush(value)	{"type": "null", "desc": ""}	0	44	addSetStatePacket_Avenger,changeTrhowState_ATMage,checkExecutableSkill_Awakening	
+sq_IsAppendAppendage	freq		callers=5		0	0		0x014c45a0
+sq_IsCommandEnable	freq		callers=26		0	0		0x01560af0
+sq_IsDownKey	global		sq_IsDownKey(keynum, bool)		0	0		0x014C47B0
+sq_IsEnd	global		sq_IsEnd(ani)（对齐推断）		0	0		0x014c7070
+sq_IsEnterCommand	global		sq_IsEnterCommand(obj,keynum)		0	0		0x014C8E20
+sq_IsEnterSkill	global		sq_IsEnterSkill(obj,skillIndex)		0	0		0x01E70890
+sq_IsEnterSkillLastKeyUnits	method	IRDSQRCharacter	IRDSQRCharacter.sq_IsEnterSkillLastKeyUnits(skillIndex)	{"type": "null", "desc": ""}	0	1	checkExecutableSkill_FirePillar	
+sq_IsFixture	global		sq_IsFixture(damager)		0	0		0x014c4850
+sq_IsGrabable	global		sq_IsGrabable(obj,damager)		0	0		0x014c3df0
+sq_IsHoldable	global		sq_IsHoldable(obj,damager)		0	0		0x014c3e40
+sq_IsInCategory	global		sq_IsInCategory(category)		0	0		0x014C4520
+sq_isMyControlObject	freq		callers=2		0	0		0x00dca3b0
+sq_IsSameAni	global		sq_IsSameAni(a,b)		0	0		0x014c75f0
+sq_IsUseSkill	freq		callers=31		0	0		0x01e708b0
+sq_IsValidActiveStatus	global		sq_IsValidActiveStatus(activeStatus)		0	0		0x014C3E80
+sq_LoadSkillEffectAni	method	IRDSQRCharacter	IRDSQRCharacter.sq_LoadSkillEffectAni(skillIndex, path)	{"type": "null", "desc": ""}	0	1	sq_LoadSkillEffect_Swordman	
+sq_p00_sendCreatePassiveObjectPacket	freq		callers=4		0	0		0x01560ff0
+sq_PlaySound	freq		callers=4		0	0		0x014c4000
+sq_RemoveAppendage	freq		callers=3		0	0		0x00b5a0c0
+sq_removeAttractAimPointMark	freq		callers=2		0	0		0x01e70d30
+sq_RemoveChangeStatus	global		sq_RemoveChangeStatus(apId)		0	0		0x014C5210
+sq_RemoveMoveParticle	freq		callers=2		0	0		0x014c7140
+sq_RemoveParticle	global		sq_RemoveParticle(aniRoute, obj)		0	0		0x014C4790
+sq_RemoveSkillLoad	freq		callers=3		0	0		0x01560ab0
+sq_RGB	global		sq_RGB(r,g,b)		0	0		0x014c3a00
+sq_SendChangeSkillEffectPacket	global		sq_SendChangeSkillEffectPacket(obj,skillIndex)		0	0		0x014C4FA0
+sq_SendCreatePassiveObjectPacket	freq		callers=2		0	0		0x014c76a0
+sq_SendCreatePassiveObjectPacketFromPassivePos	global		sq_SendCreatePassiveObjectPacketFromPassivePos(obj,index,level,X,Y,Z)		0	0		0x014c4d70
+sq_SendCreatePassiveObjectPacketPos	global		sq_SendCreatePassiveObjectPacketPos(obj,index,level,X,Y,Z)		0	0		0x014c4e70
+sq_SendDestroyPacketPassiveObject	global		sq_SendDestroyPacketPassiveObject(obj)（对齐推断）		0	0		0x014c44d0
+sq_SendHitObjectPacket	global		sq_SendHitObjectPacket(obj,target,x,y,z)		0	0		0x014C5E50
+sq_SendHitObjectPacketWithNoStuck	global		sq_SendHitObjectPacketWithNoStuck(obj,target,x,y,z)		0	0		0x014C5DE0
+sq_SetAttackInfoForceHitStunTime	global		sq_SetAttackInfoForceHitStunTime(attackInfo,stunTime)		0	0		0x014c64b0
+sq_SetAttackInfoHitDelayRateDamager	global		sq_SetAttackInfoHitDelayRateDamager(attackInfo, rate)		0	0		0x014c6410
+sq_setAttackPowerWithPassive	freq		callers=2		0	0		0x027bbf40
+sq_SetBodyEffect	global		sq_SetBodyEffect(obj, src, bool, rgb, …, alpha)		0	0		0x014c8700
+sq_SetCameraScrollPosition	freq		callers=2		0	0		0x01560a10
+sq_SetChangeStatusIntoAttackInfo	global		sq_SetChangeStatusIntoAttackInfo(obj,info,uk1,status,rate,level,time)		0	0		0x014CB5A0
+sq_SetCurrentAnimation	global		setCurrentAnimationFromCutomIndex(obj,idx) / sq_SetCurrentAnimation(idx)		0	0		0x01e71430
+sq_setCurrentAttackBonusRate	freq		callers=3		0	0		0x0191e450
+sq_SetCurrentAttackeDamageAct	global		sq_SetCurrentAttackeDamageAct(attackInfo, act)		0	0		0x014c4560
+sq_SetCurrentAttackeHitStunTime	global		sq_SetCurrentAttackeHitStunTime(attackInfo, time)		0	0		0x014c6110
+sq_setCurrentAttackInfo	freq		callers=19		0	0		0x019b9f50
+sq_SetCurrentAttackInfoFromCustomIndex	global		sq_SetCurrentAttackInfoFromCustomIndex(obj, index)		0	0		0x014c45e0
+sq_SetCurrentAttacknBackForce	global		sq_SetCurrentAttacknBackForce(attackInfo,backForce)		0	0		0x014c6080
+sq_SetCurrentAttacknUpForce	global		sq_SetCurrentAttacknUpForce(attackInfo,upForce)		0	0		0x014c5ff0
+sq_SetCurrentAttackPower	global		sq_SetCurrentAttackPower(attackInfo,power)		0	0		0x014c5f50
+sq_setCurrentAxisPos	global		sq_setCurrentAxisPos(obj, axis, value)		0	0		0x014c3d90
+sq_SetCustomRotate	global		sq_SetCustomRotate(angle)		0	0		0x014C4170
+sq_SetKeyxEnable	global		sq_SetKeyxEnable(obj,keynum,bool)		0	0		0x014C8BB0
+sq_SetMoveDirection	global		sq_SetMoveDirection(a,b)		0	0		0x01e707b0
+sq_SetMoveParticle	freq		callers=20		0	0		0x0158ed30
+sq_SetMyShake	global		sq_SetMyShake(obj, power, time)		0	0		0x014c6340
+sq_SetObjectParticlePos	freq		callers=5		0	0		0x0158ee80
+sq_setShake	freq		callers=13		0	0		0x01e71040
+sq_SetStaticMoveInfo	freq		callers=2		0	0		0x01560be0
+sq_setStaticSpeedInfo	freq		callers=3		0	0		0x01561100
+sq_SetValidTime	freq		callers=7		0	0		0x00b4bef0
+sq_setXScroll	freq		callers=2		0	0		0x01e70480
+sq_setXScrollStart	freq		callers=2		0	0		0x01e703a0
+sq_setXScrollStop	freq		callers=3		0	0		0x014c41a0
+sq_SetZVelocity	global		sq_SetZVelocity(speed, acceleration)		0	0		0x014C3C70
+sq_StartWrite	freq		callers=16		0	0		0x0119d270
+sq_StopMove	freq		callers=4		0	0		0x014c54e0
+sq_WriteBool	global		sq_WriteBool(v)		0	0		0x0119d250
+sq_WriteByte	method	IRDSQRCharacter	IRDSQRCharacter.sq_WriteByte(byte)	## 86 handler	0	1	onKeyFrameFlag_Concentrate	
+sq_WriteDword	method	IRDSQRCharacter	IRDSQRCharacter.sq_WriteDword(Dword)	{"type": "null", "desc": ""}	0	7	onKeyFrameFlag_Concentrate,onKeyFrameFlag_HolongLight,onKeyFrameFlag_IceFieldEx	
+sq_WriteFloat	method	IRDSQRCharacter	IRDSQRCharacter.sq_WriteFloat(float)	{"type": "null", "desc": ""}	0	3	onKeyFrameFlag_HolongLight,onKeyFrameFlag_IceFieldEx,onKeyFrameFlag_LightningWall	
+sq_WriteWord	method	IRDSQRCharacter	IRDSQRCharacter.sq_WriteWord(word)	## 86 handler	0	5	onKeyFrameFlag_ATMageDashAttack,onKeyFrameFlag_Concentrate,onKeyFrameFlag_WaterCannon	
+sq_ZStop	method	IRDSQRCharacter	IRDSQRCharacter.sq_ZStop()	{"type": "null", "desc": ""}	0	1	onSetState_Awakening	
+Start	freq		callers=14		0	0		0x027c3b60
+startCantUseSkillWarning	method	IRDSQRCharacter	IRDSQRCharacter.startCantUseSkillWarning()	{"type": "null", "desc": ""}	0	2	onProcCon_AvengerAttack,procAppend_Avenger	
+startRapidInput	method	IRDSQRCharacter	IRDSQRCharacter.startRapidInput()	{"type": "null", "desc": ""}	0	1	onKeyFrameFlag_MultiShot	
+startSkillCoolTime	method	IRDSQRCharacter	IRDSQRCharacter.startSkillCoolTime(skillIndex, skillLevel, unknown)	{"type": "null", "desc": ""}	0	2	checkExecutableSkill_HolongLight,onProcCon_AvengerAttack	
+stopSound	freq		callers=4		0	0		0x014c4790
+stopTimeEvent	method	CNRDPassiveObject	CNRDPassiveObject.stopTimeEvent()	## 86 handler	0	2	onSetState_spincutter,setState_po_ATIceChakramLarge	
+tofloat	freq		callers=34		0	0		0x014c4080
+tointeger	freq		callers=5		0	0		0x014c6270

@@ -1,0 +1,94 @@
+# 男法（atmage）技能脚本 API 证据矩阵
+
+来源：86JP 分享包（`G:/BaiduNetdiskDownload/新建文件夹/分享包`）。**全部为跨版本参考，不是 1031 事实**；
+本表只用于"某个 sq_ 名字在 86 侧对应什么"，实现语义仍以 1031 PVF 字节与实机表现为准。
+
+## 数据来源
+
+| 文件 | 行数 | 提供什么 |
+|---|---|---|
+| `rev/work/exports/research-generated/api-evidence/*.md` | 208 | 对象方法：`声明`（所属类+参数）、`70 uses`、`86 handler` 函数名 |
+| `docs/research/native-nut-api-map.tsv` | 297 | 全局函数：`86 VA` + 签名 + 70 调用点证据 |
+| `rev/work/exports/research-generated/nut86-func-to-api.tsv` | 300 | 反查：API → 86 函数地址 + callers 频次 |
+| `temp-project-dir/nut-dump/*.nut`（本地，1031 PVF 导出） | 114 个 atmage 脚本 | 真实调用点与调用次数 |
+
+产物：`atmage-api-demand.tsv`（280 行，按调用次数降序）、`api-class-index.tsv`（合并索引）。
+
+## 规模
+
+- atmage 脚本 114 个（角色 83 / 被动对象 22 / appendage 9），distinct `sq_` 名 **280**。
+- 证据覆盖：`method` 74 + `global` 62 + `freq` 3 + `property` 1 = **140（50%）**；`none` 140。
+
+## 四个必须先修正的认知
+
+1. **`obj.sq_var` 是属性，不是 API（234 次，最高频）。**
+   脚本写法是 `obj.sq_var.GetparticleCreaterMap(...)`、`obj.getVar().clear_vector()`。
+   它是 `CSQCommonVarlist` 类型的**脚本侧状态容器**，需要按对象挂一个 table，方法来自
+   `api-evidence` 的 `CSQCommonVarlist.*`：`clear_vector / push_vector / get_vector / set_vector /
+   clear_ani_vector / clear_obj_vector / clear_timer_vector / clear_ct_vector / GetAnimationMap /
+   GetparticleCreaterMap`。把它当 API 统计会虚高 234 次。
+
+2. **存在拼写别名，两套都要注册。**
+   `IntVectPush`(146) 与 `IntVectorPush`(65)；`IntVectClear`(82) 与 `IntVectorClear`(54)；
+   `GetCurrentFrameIndex` 与 `GetAnimationFrameIndex`；`CreateCNRDAnimation` 与 `CreateAnimation`。
+   只实现一种会有一半脚本过不了 `inspect()`。
+
+3. **`api-evidence` 的 `声明` 列类归属不可信，不能当类型系统用。**
+   实例：`PlaySound`(99) 被标成 `CNFlashScreen`、`GetYPos` 标 `CNFlashScreen`、
+   `SetCurrentAnimation`(94)/`GetState`(40)/`GetXPos` 标 `CNRDItemObject`。
+   实际这些都是 **SQR 游戏对象的公共方法集**（`obj.sq_XXX` / `obj.getXPos`）。
+   唯一可信的两处是写得最具体的：`CSQCommonVarlist.clear_vector()`、`CNRDPassiveObject.addSetStatePacket()`。
+   → 实现结论：**不需要按类分表**，一个统一的 handle delegate 挂全部方法 + `sq_var` 属性即可。
+
+4. **同名 API 既有全局调用也有成员调用。**
+   `sq_GetIntData` 在 `native-nut-api-map.tsv` 是全局 `0x01560f40`，
+   但脚本里普遍写 `obj.sq_GetIntData(...)`。所以同一批函数要同时注册到 root table 和对象 delegate。
+
+## 单技能最小集（实证：chainlightning.nut，384 行）
+
+一次完整施放（`checkExecutableSkill → onSetState → onProc → onEndCurrentAni`）只用 **30 个** API：
+
+| 类别 | API | 次数 |
+|---|---|---|
+| state/输入 | `IsUseSkill` `IsCommandEnable` `GetState` `AddSetStatePacket` | 1/2/1/7 |
+| 向量（substate 传参） | `IntVectClear` `IntVectPush` `GetVectorData` | 4/4/1 |
+| 取表 | `GetIntData` `GetLevelData` `GetSkillLevel` `GetBonusRateWithPassive` `GetCastTime` | 5/5/3/1/1 |
+| 动画 | `SetCurrentAnimation` `GetCurrentAnimation` `GetCurrentAni` `GetCurrentFrameIndex` `GetFrameStartTime` `GetCurrentTime` | 3/1/2/1/1/1 |
+| 位置/朝向 | `GetXPos` `GetYPos` `GetZPos` `GetDistancePos` `StopMove` `SetShake` | 由 getXPos 系列 |
+| 速度 | `SetStaticSpeedInfo` | 1 |
+| 表现 | `PlaySound` `StartDrawCastGauge` `EndDrawCastGauge` | 2/1/1 |
+| 被动对象 | `SendCreatePassiveObjectPacket` `GetPassiveObject` | 1/3 |
+| 序列化 | `BinaryStartWrite` `BinaryWriteWord` `BinaryWriteDword` | 1/9/1 |
+
+`sq_var` 属性用到 2 次（`clear_vector` / `push_vector` / `get_vector` / `set_vector`）。
+→ **30 个 API 就能让一个技能脚本真正执行**，不是 280。
+
+## 实现顺序（按"能否看到效果"排序）
+
+1. **handle delegate 统一化**：所有 `sq_*` 注册到 root + 对象 delegate，并把 `sq_var` 挂成
+   `CSQCommonVarlist` 风格 table（纯脚本侧状态，不碰 World，零风险）。
+2. **序列化组**：`BinaryStartWrite/BinaryWriteWord/BinaryWriteDword/BinaryWriteFloat/BinaryGetReadSize`
+   —— 纯内存 buffer，与 World 无关，最简单。
+3. **取数组**：`GetIntData/GetLevelData/GetSkillLevel/GetBonusRateWithPassive/GetCastTime`
+   —— 数据源已在（`.skl` 等级表、`int data`、`bonus rate`），只需 bridge 暴露静态查询。
+4. **动画组**：`SetCurrentAnimation/GetCurrentAni/GetCurrentFrameIndex/GetFrameStartTime/GetCurrentTime`
+   —— 已解析 ANI，只需让脚本能选动画、读时钟。
+5. **state 组**：`AddSetStatePacket/GetState/IsUseSkill/IsCommandEnable/IntVect*`
+   —— 依赖已有 692 条 state-skill 对，接上即可。
+6. **被动对象**：`SendCreatePassiveObjectPacket/GetPassiveObject/SendDestroyPacketPassiveObject`
+   —— 需要被动对象管理器（当前 `objects.hpp` 是呈现层，需扩成可查询实体）。
+
+## 未覆盖清单（140 个，需另行确定语义）
+
+高频且必须有的（86 包无证据，只能从 1031 脚本调用点反推）：
+
+| API | 次数 | 推断依据 |
+|---|---|---|
+| `AddFunctionName` | 139 | 回调注册名，顶层调用；语义由引擎决定，无需 86 |
+| `GetGlobalIntVector` | 57 | 全局向量容器，与 `IntVect*` 同族的全局版 |
+| `CreateAnimation` / `CreateCNRDAnimation` | 26 / 62 | 由路径创建 ANI 对象，`skill_preview_mapping.cpp` 已有字符串识别 |
+| `AddEffect` / `AddObject` / `AddParticleObject` | 22 / 15 / 15 | 特效/对象挂载，与 `object_presentation.hpp` 对接 |
+| `GetCNRDObjectToSQRCharacter` | 22 | 被动对象 → 主人的桥，需要对象双向引用 |
+| `RGB` / `SetMoveParticle` / `SetMyShake` | 38 / 26 / 23 | 纯表现参数 |
+
+这批不阻塞"技能能出招"，只影响观感，放在第 5 步之后。
