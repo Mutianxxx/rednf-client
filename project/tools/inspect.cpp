@@ -9,6 +9,7 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
 #include <algorithm>
+#include <fstream>
 #include <iostream>
 #include <map>
 using namespace dnf;
@@ -257,6 +258,22 @@ int run(int argc, char **argv) {
             j = {{"path", name}, {"fields", Json::array()}, {"tokens", s.tokens}};
             for (auto &f : s.fields)
                 j["fields"].push_back({{"tag", f.tag}, {"values", f.values}, {"offset", f.offset}});
+        } else if (mode == "--raw") {
+            // 原样导出 PVF 成员字节：明文脚本（.nut）与任何非 token5 载体的读取入口。
+            const auto bytes = p.read(name);
+            if (argc > 4 && std::string(argv[4]) != "_") {
+                std::ofstream out(argv[4], std::ios::binary);
+                if (!out) throw std::runtime_error(std::string("Cannot write ") + argv[4]);
+                out.write(reinterpret_cast<const char *>(bytes.data()), std::streamsize(bytes.size()));
+                if (!out) throw std::runtime_error(std::string("Write failed ") + argv[4]);
+            }
+            Json head = Json::array();
+            for (size_t i = 0; i < bytes.size() && i < 16; ++i) head.push_back(int(bytes[i]));
+            bool printable = !bytes.empty();
+            for (auto c : bytes)
+                if (c == 0) { printable = false; break; }
+            j = {{"path", name}, {"size", bytes.size()}, {"head_bytes", head},
+                 {"looks_text", printable}};
         } else if (mode == "--paths")
             j = p.paths(name, argc > 4 ? argv[4] : "");
         else {

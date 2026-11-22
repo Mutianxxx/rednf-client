@@ -1994,8 +1994,8 @@ void World::stageEffects(int frame) {
             events.push_back({tick, "sound", "UPPER_SLASH_01"});
             events.push_back({tick, "sound", "SM_UPPER_SLASH"});
         } else if (id == 64) {
-            // CD4A20 attaches all four sqr/common.nut bindings. Keep distinct
-            // instances and source durations; state exit releases attachments.
+            // 该技能的公共脚本登记了四个绑定，这里保持各自独立实例与
+            // 源时长；状态退出时释放全部附着。
             for (int index = 0; index < 4; ++index) {
                 add(prefix + "gorecross/slash" + std::to_string(index + 1) + ".ani");
                 effects.back().damageEnabled = false;
