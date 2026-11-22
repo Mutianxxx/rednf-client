@@ -1,5 +1,6 @@
 #pragma once
 #include "dnf/act_world_host.hpp"
+#include "dnf/skill_data.hpp"
 #include "squirrel_host.hpp"
 #include <map>
 #include <set>
@@ -60,6 +61,10 @@ class SquirrelWorldBridge final : public squirrel_stage::Bridge {
     std::map<uint64_t,AttackIdentity> attackIdentities_;
     std::set<ContactIdentity> contacts_;
     Json soundReceipts_ = Json::array(), contactReceipts_ = Json::array();
+    // Per-skill immutable source data for the script parameter queries. Keyed by
+    // skill id within this instance's job; a lookup that fails stays cached as
+    // null so a missing skill cannot be retried into a different answer.
+    mutable std::map<int,std::shared_ptr<const SkillSourceData>> skillSourceCache_;
     void requireContext() const;
     bool admittedScript(const SourceRef &) const;
     bool admittedAttack(const SourceRef &) const;
@@ -71,6 +76,7 @@ class SquirrelWorldBridge final : public squirrel_stage::Bridge {
     bool valid(EntityHandle) const noexcept override;
     bool hasBuffSkillIndex() const noexcept override { return bool(context_.buffSkill); }
     bool hasSoundConsumer() const noexcept override { return true; }
+    squirrel_stage::ScriptWorldApi scriptWorldApi() const override;
     int buffSkillIndex(EntityHandle) const override;
     std::optional<SourceRef> resolveSound(const std::string &,const SourceRef &) const override;
     std::unique_ptr<squirrel_stage::PreparedSoundBatch> prepare(

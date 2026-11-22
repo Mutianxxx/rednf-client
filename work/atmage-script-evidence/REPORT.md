@@ -92,3 +92,34 @@
 | `RGB` / `SetMoveParticle` / `SetMyShake` | 38 / 26 / 23 | 纯表现参数 |
 
 这批不阻塞"技能能出招"，只影响观感，放在第 5 步之后。
+
+## 第 3 步实测纠正（已落地，commit 随本轮）
+
+**`sq_GetIntData` 读的不是 `[int data]`，是 `[static data]`。**
+
+`chainlightning.skl` 里根本没有 `[int data]` 段（`--skill-sources source` 的 46 个字段中不存在）。而脚本里
+五个 `sq_GetIntData` 的常量名是 `SKL_CL_SD_0..4`（SD = **static data**），且该技能的
+`[static data]`（common）恰为 `[500, 0, 650, 400, 300]`，与五个访问点的注释
+（Y 轴范围 / X 起点 / X 终点 / 链式最大距离 / 目标最大高度）一一对应。
+`[level info]` 首元素是列宽 4，level 1 行为 `[7, 1200, 276, 4]`（链数 / 攻击时间 / 攻击力% / 多段次数），
+脚本的 `SKL_CL_LI_0..3` 正好是列下标。
+
+因此 `.skl` 侧映射为：
+| 脚本访问 | 数据源 |
+|---|---|
+| `sq_GetIntData(skill, i)` | `[static data][i]` |
+| `sq_GetLevelData(skill, col, level)` | `[level info]` 第 level 行第 col 列（首元素为列宽） |
+| `sq_GetSkillLevel(skill)` | 角色技能账本 `learnedLevel` |
+| `sq_GetCastTime(skill, level)` | `[casting time]`（按 level 取；无等级结构时取首值） |
+| `sq_GetBonusRateWithPassive(skill, state, col, ratio)` | `[level info]` 同列值 × ratio（被动加成链未重建，值取自源表） |
+
+**两种调用形态的参数偏移不同（实测，非猜测）**：
+- `obj.sq_GetSkillLevel(2)` → 栈 `[this=obj(userdata), 2]`
+- `sq_GetSkillLevel(obj, 2)` → 栈 `[this=roottable(table), obj(userdata), 2]`
+
+全局形态把 root table 绑成 `this`，所以真正的参数整体后移 1。宿主必须按"handle 出现在 index 1 还是 2"
+判定形态，不能假设统一偏移。
+
+实测锚点（`dnf_tests` group 4，真实 1031 PVF，`{8,2}` 等级 1）：
+`GetSkillLevel=1`、`GetIntData(0)=500`、`GetLevelData(0,1)=7`、
+`GetBonusRateWithPassive(2,25,2,1.0)=276`、`GetCastTime(1)=600`，两种形态结果一致。

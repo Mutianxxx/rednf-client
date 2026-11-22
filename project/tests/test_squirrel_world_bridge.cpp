@@ -182,6 +182,53 @@ Json runSquirrelWorldBridgeTests(Pvf &pvf,Assets &assets,const std::string &stat
             bridge.diagnostics().at("cleanup_count")==1,"Cleanup is idempotent and permanently rejects further contacts without undoing committed business events");
         samples["source_contacts"]=bridge.diagnostics();
     }
+    {
+        // Read-only parameter queries must read the same SKL cells the combat
+        // pipeline uses, and must do so for both call shapes (global and member).
+        World world(pvf,assets,WorldRules::BetaFoundationV1);
+        world.enableExperimentalCharacters();world.selectCharacter({8,0,0});
+        world.skillState().setLearnedLevel({8,2},1);
+        const auto invocation=context(world);SquirrelWorldBridge bridge(world,pvf,assets,staticIdentity,invocation);
+        squirrel_stage::Instance vm(*services,bridge,invocation.instanceId);
+        // Values are the 1031 source cells for skill/atmage/chainlightning.skl:
+        // [static data] = [500,0,650,400,300]; [level info] = width 4 then
+        // level 1 row [7,1200,276,4] (link count, attack time, rate, hit count);
+        // [casting time] = [600,600]. A PVF change must fail this check.
+        const std::string text=
+            "function probeQuery(obj) {\n"
+            "  local a=obj.sq_GetSkillLevel(2);\n"
+            "  local b=obj.sq_GetIntData(2,0);\n"
+            "  local c=obj.sq_GetLevelData(2,0,1);\n"
+            "  local d=sq_GetSkillLevel(obj,2);\n"
+            "  local e=obj.sq_GetBonusRateWithPassive(2,25,2,1.0);\n"
+            "  local f=sq_GetCastTime(obj,2,1);\n"
+            "  if(a!=1) { print(\"a=\"+a); return 0; }\n"
+            "  if(b!=500) { print(\"b=\"+b); return 0; }\n"
+            "  if(c!=7) { print(\"c=\"+c); return 0; }\n"
+            "  if(d!=a) { print(\"d=\"+d); return 0; }\n"
+            "  if(e!=276) { print(\"e=\"+e); return 0; }\n"
+            "  if(f!=600) { print(\"f=\"+f); return 0; }\n"
+            "  print(\"probe-done\");\n"
+            "  return 1;\n"
+            "}\n";
+        squirrel_stage::SourceUnit probe;
+        probe.source.packageIdentity=pvf.identity();
+        probe.source.memberPath="sqr/probe/skill-query.nut";
+        probe.original.assign(text.begin(),text.end());
+        probe.source.memberSha256=services->digest(probe.original);
+        const auto loaded=vm.load(probe);
+        const auto invoked=loaded.ok?vm.invoke("probeQuery",world.player.handle,invocation.actionId):loaded;
+        std::string detail=loaded.ok?"loaded":"load-failed";
+        if(!loaded.diagnostics.empty())detail+=":"+loaded.diagnostics.front().code+"/"+loaded.diagnostics.front().message;
+        if(loaded.ok) {
+            detail+=" invoked="+(invoked.ok?std::string("ok"):std::string("fail"));
+            if(!invoked.ok&&!invoked.diagnostics.empty())detail+=":"+invoked.diagnostics.front().code+"/"+invoked.diagnostics.front().message;
+            if(invoked.ok)detail+=" value="+invoked.value.dump();
+        }
+        check(invoked.ok && invoked.value.is_number() && invoked.value.get<int>()==1,
+              "Skill query natives read SKILL int-data, level-info and cast cells for both call shapes ["+detail+"]");
+        samples["script_skill_queries"]=bridge.diagnostics();
+    }
     return {{"status","pass"},{"checks",checks},{"count",checks.size()},{"samples",samples},{"runtime_complete",false},
         {"scope","Actual typed VM Buff/audio callbacks plus internal C++ source-contact bridge; native skill/packet callback routing remains incomplete"},
         {"vm_policy",squirrel_stage::vmPolicyId},{"frontend_started",false},{"native_dynamic_comparison","pending user"}};

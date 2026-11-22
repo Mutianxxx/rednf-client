@@ -159,6 +159,27 @@ const std::set<std::string> hostGlobals={
     "sq_BinaryStartWrite","StartWrite","sq_BinaryWriteWord","WriteWord",
     "sq_BinaryWriteDword","WriteDword","sq_BinaryWriteFloat",
     "sq_BinaryGetReadSize","print"};
+// Read-only skill parameter queries. Each name maps to the exact
+// ScriptWorldApi member that must be present before the token is callable, so
+// "classified as implemented" and "has a data source" cannot drift apart.
+enum class ScriptQuery {Level,LevelData,IntData,CastTime,BonusRate};
+const std::map<std::string,ScriptQuery> scriptQueries={
+    {"sq_GetSkillLevel",ScriptQuery::Level},{"GetSkillLevel",ScriptQuery::Level},
+    {"sq_GetLevelData",ScriptQuery::LevelData},{"GetLevelData",ScriptQuery::LevelData},
+    {"sq_GetIntData",ScriptQuery::IntData},{"GetIntData",ScriptQuery::IntData},
+    {"sq_GetCastTime",ScriptQuery::CastTime},{"GetCastTime",ScriptQuery::CastTime},
+    {"sq_GetBonusRateWithPassive",ScriptQuery::BonusRate},
+    {"GetBonusRateWithPassive",ScriptQuery::BonusRate}};
+bool queryAvailable(const ScriptWorldApi &api,ScriptQuery query) {
+    switch(query) {
+    case ScriptQuery::Level:return bool(api.level);
+    case ScriptQuery::LevelData:return bool(api.levelData);
+    case ScriptQuery::IntData:return bool(api.intData);
+    case ScriptQuery::CastTime:return bool(api.castTime);
+    case ScriptQuery::BonusRate:return bool(api.bonusRate);
+    }
+    return false;
+}
 struct HandleToken {uint64_t id;uint32_t generation;};
 static int handleTag;
 }
@@ -179,6 +200,9 @@ struct Instance::Impl {
     // failed instance. sq_BinaryStartWrite resets it, so cross-invoke residue is
     // impossible by construction.
     std::vector<uint8_t> binary;
+    // Capability set is read once per VM open; the bridge is immutable for the
+    // instance's lifetime, so cached std::functions cannot go stale.
+    ScriptWorldApi api;
     Diagnostic compilerDiagnostic;
     Impl(const SourceServices &s,Bridge &b,uint64_t instance,Limits l):services(s),bridge(b),id(instance),limits(l),arena(l),thread(std::this_thread::get_id()) {
         if(!id||!limits.instructions||!limits.nativeCalls||!limits.callDepth||!limits.heapBytes||!limits.heapBlocks||!limits.commands)
@@ -214,6 +238,9 @@ struct Instance::Impl {
         Inspection result;
         try {
             const auto text=sourceText(unit);const auto tokens=lex(text,limits);
+            // Capability snapshot: a query token is callable only when its data
+            // source is actually wired, never because the name is well known.
+            const auto api=bridge.scriptWorldApi();
             std::set<std::string> declared=functions;
             for(size_t i=0;i+2<tokens.size();i++)if(tokens[i].text=="function"&&tokens[i+2].text=="(")declared.insert(tokens[i+1].text);
             for(size_t i=0;i+1<tokens.size();i++) {
@@ -222,11 +249,15 @@ struct Instance::Impl {
                 const bool member=i&&tokens[i-1].text==".";
                 const auto &token=tokens[i];
                 std::string classification="unknown";
+                const auto query=scriptQueries.find(token.text);
+                const bool admitted=query!=scriptQueries.end()&&queryAvailable(api,query->second);
                 if(member && token.text=="getBuffSkillIndex" && bridge.hasBuffSkillIndex())classification="implemented_host";
                 else if(member && token.text=="sq_PlaySound" && bridge.hasSoundConsumer())classification="implemented_host";
+                else if(member && admitted)classification="implemented_host";
                 else if(member && delegates.count(token.text))classification="vm_delegate";
                 else if(!member && declared.count(token.text))classification="source_function";
                 else if(!member && hostGlobals.count(token.text))classification="implemented_host";
+                else if(!member && admitted)classification="implemented_host";
                 result.calls.push_back({token.text,member?"member":"global",classification,text.byteOffsets.at(token.at),token.line,token.column});
                 if(classification=="unknown")result.diagnostics.push_back({"unsupported_api","No implemented callable: "+token.text,offsetSource(unit.source,text.byteOffsets.at(token.at)),token.line,token.column});
             }
@@ -325,6 +356,89 @@ struct Instance::Impl {
         if(host.binary.size()>size_t(INT32_MAX))throw detail::Abort("binary buffer outside int32 range");
         sq_pushinteger(v,SQInteger(host.binary.size()));return 1;
     }
+    // ---- Read-only skill parameter queries -------------------------------
+    // Measured on this VM: a member call binds the userdata as `this`, while a
+    // global call binds the root table as `this` and passes the owner as
+    // argument 1. Both forms therefore have the owner at index 1 or 2 and the
+    // real arguments shifted by 0 or 1 respectively; queryBase() decides.
+    static SQInteger intArg(HSQUIRRELVM v,SQInteger index) {
+        SQInteger value=0;
+        if(sq_gettype(v,index)!=OT_INTEGER||SQ_FAILED(sq_getinteger(v,index,&value))) {
+            std::string stack;
+            for(SQInteger i=1;i<=sq_gettop(v);i++)stack+=" "+std::to_string(int(sq_gettype(v,i)));
+            throw std::runtime_error("skill query argument "+std::to_string(int(index))+" must be an integer (types:"+stack+")");
+        }
+        return value;
+    }
+    static SQFloat ratioArg(HSQUIRRELVM v,SQInteger index) {
+        SQFloat value=0;
+        if(sq_gettype(v,index)==OT_INTEGER)return SQFloat(intArg(v,index));
+        if(sq_gettype(v,index)==OT_FLOAT&&SQ_SUCCEEDED(sq_getfloat(v,index,&value))&&std::isfinite(value))return value;
+        throw std::runtime_error("skill query ratio must be a finite number");
+    }
+    // The two documented call shapes do NOT share one argument offset:
+    //   obj.sq_GetSkillLevel(skill)  -> [this=obj, skill]
+    //   sq_GetSkillLevel(obj,skill)  -> [this=roottable, obj, skill]
+    // A global call binds the root table as `this`, so its explicit owner lands
+    // at index 2 and every real argument shifts by one. Detect the shape from
+    // where the typed handle actually sits instead of assuming either layout.
+    static SQInteger queryBase(HSQUIRRELVM v) {
+        SQUserPointer pointer=nullptr,tag=nullptr;
+        if(SQ_SUCCEEDED(sq_getuserdata(v,1,&pointer,&tag))&&tag==&handleTag)return 0;
+        if(sq_gettop(v)>=2&&SQ_SUCCEEDED(sq_getuserdata(v,2,&pointer,&tag))&&tag==&handleTag)return 1;
+        throw std::runtime_error("skill query requires the owning character handle");
+    }
+    static SQInteger skillLevelQuery(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);
+            const int skill=intArg(v,2+base);
+            sq_pushinteger(v,SQInteger(host.api.level(skill)));return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
+    }
+    static SQInteger levelDataQuery(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);
+            const int skill=intArg(v,2+base),column=intArg(v,3+base);
+            const int level=sq_gettop(v)>=4+base?intArg(v,4+base):host.api.level(skill);
+            const auto value=host.api.levelData(skill,column,level);
+            if(value)sq_pushfloat(v,SQFloat(*value));else sq_pushnull(v);
+            return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
+    }
+    static SQInteger intDataQuery(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);
+            const int skill=intArg(v,2+base),index=intArg(v,3+base);
+            const auto value=host.api.intData(skill,index);
+            if(value)sq_pushinteger(v,SQInteger(*value));else sq_pushnull(v);
+            return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
+    }
+    static SQInteger castTimeQuery(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);
+            const int skill=intArg(v,2+base);
+            const int level=sq_gettop(v)>=3+base?intArg(v,3+base):host.api.level(skill);
+            const auto value=host.api.castTime(skill,level);
+            if(value)sq_pushinteger(v,SQInteger(*value));else sq_pushnull(v);
+            return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
+    }
+    static SQInteger bonusRateQuery(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const SQInteger base=queryBase(v);
+            const int skill=intArg(v,2+base),state=intArg(v,3+base),column=intArg(v,4+base);
+            const SQFloat ratio=sq_gettop(v)>=5+base?ratioArg(v,5+base):SQFloat(1);
+            const auto value=host.api.bonusRate(skill,state,column,double(ratio));
+            if(value)sq_pushfloat(v,SQFloat(*value));else sq_pushnull(v);
+            return 1;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
+    }
     // print() is the only script-visible diagnostic sink. It is bounded and
     // ASCII-only so a malformed script cannot flood the log or inject bytes.
     static SQInteger print(HSQUIRRELVM v) {
@@ -344,6 +458,7 @@ struct Instance::Impl {
     void open() {
         if(vm)return;vm=sq_open(256);if(!vm)throw detail::Abort("sq_open failed");
         sq_setforeignptr(vm,this);sq_setcompilererrorhandler(vm,compileError);
+        api=bridge.scriptWorldApi();
         // No I/O, clock, random, thread, dynamic compiler or error-hook root
         // functions are exposed. The script language/value delegates remain VM.
         sq_newtable(vm);
@@ -361,6 +476,22 @@ struct Instance::Impl {
         global(L"sq_BinaryWriteFloat",binaryWriteFloat,2);
         global(L"sq_BinaryGetReadSize",binaryReadSize,1);
         global(L"print",print,2);
+        // Skill parameter queries: registered only when a data source exists,
+        // mirroring the inspect() admission rule exactly.
+        auto query=[&](const SQChar *name,SQFUNCTION function,ScriptQuery kind){
+            if(!queryAvailable(api,kind))return;
+            global(name,function,-2);
+        };
+        query(L"sq_GetSkillLevel",skillLevelQuery,ScriptQuery::Level);
+        query(L"GetSkillLevel",skillLevelQuery,ScriptQuery::Level);
+        query(L"sq_GetLevelData",levelDataQuery,ScriptQuery::LevelData);
+        query(L"GetLevelData",levelDataQuery,ScriptQuery::LevelData);
+        query(L"sq_GetIntData",intDataQuery,ScriptQuery::IntData);
+        query(L"GetIntData",intDataQuery,ScriptQuery::IntData);
+        query(L"sq_GetCastTime",castTimeQuery,ScriptQuery::CastTime);
+        query(L"GetCastTime",castTimeQuery,ScriptQuery::CastTime);
+        query(L"sq_GetBonusRateWithPassive",bonusRateQuery,ScriptQuery::BonusRate);
+        query(L"GetBonusRateWithPassive",bonusRateQuery,ScriptQuery::BonusRate);
         sq_setroottable(vm);sq_settop(vm,0);
     }
     void pushHandle(EntityHandle owner) {
@@ -369,6 +500,23 @@ struct Instance::Impl {
         auto method=[&](const SQChar *name,SQFUNCTION function,SQInteger params){sq_pushstring(vm,name,-1);sq_newclosure(vm,function,0);sq_setparamscheck(vm,params,nullptr);sq_newslot(vm,-3,SQFalse);};
         if(bridge.hasBuffSkillIndex())method(L"getBuffSkillIndex",buff,1);
         if(bridge.hasSoundConsumer())method(L"sq_PlaySound",sound,2);
+        // Member form of the skill queries. `obj.sq_GetSkillLevel(skill)` puts
+        // obj at stack index 1 as `this`, identical to the global form's
+        // explicit first argument, so both share one implementation.
+        auto query=[&](const SQChar *name,SQFUNCTION function,ScriptQuery kind){
+            if(!queryAvailable(api,kind))return;
+            method(name,function,-2);
+        };
+        query(L"sq_GetSkillLevel",skillLevelQuery,ScriptQuery::Level);
+        query(L"GetSkillLevel",skillLevelQuery,ScriptQuery::Level);
+        query(L"sq_GetLevelData",levelDataQuery,ScriptQuery::LevelData);
+        query(L"GetLevelData",levelDataQuery,ScriptQuery::LevelData);
+        query(L"sq_GetIntData",intDataQuery,ScriptQuery::IntData);
+        query(L"GetIntData",intDataQuery,ScriptQuery::IntData);
+        query(L"sq_GetCastTime",castTimeQuery,ScriptQuery::CastTime);
+        query(L"GetCastTime",castTimeQuery,ScriptQuery::CastTime);
+        query(L"sq_GetBonusRateWithPassive",bonusRateQuery,ScriptQuery::BonusRate);
+        query(L"GetBonusRateWithPassive",bonusRateQuery,ScriptQuery::BonusRate);
         sq_setdelegate(vm,-2);
     }
     void push(const Json &value,unsigned depth=0) {

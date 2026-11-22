@@ -51,9 +51,27 @@ struct SoundCommand {
     std::string tag;
 };
 struct PreparedSoundBatch { virtual ~PreparedSoundBatch() = default; };
+// Read-only skill parameter queries behind sq_GetSkillLevel / sq_GetLevelData /
+// sq_GetIntData / sq_GetCastTime / sq_GetBonusRateWithPassive. Every member is
+// optional: an unset function means that capability is absent, so the token
+// stays capability-rejected instead of silently returning a fabricated 0.
+// Callers pass already-validated int32 arguments; a nullopt result means the
+// source has no such cell, which the host surfaces as a script-visible null.
+struct ScriptWorldApi {
+    std::function<int(int skill)> level;
+    std::function<std::optional<double>(int skill,int column,int level)> levelData;
+    std::function<std::optional<int>(int skill,int index)> intData;
+    std::function<std::optional<int>(int skill,int level)> castTime;
+    std::function<std::optional<double>(int skill,int state,int column,double ratio)> bonusRate;
+    bool any() const noexcept {
+        return level||levelData||intData||castTime||bonusRate;
+    }
+};
 class Bridge {
   public:
     virtual ~Bridge() = default;
+    // Default empty: existing bridges and test doubles keep their behaviour.
+    virtual ScriptWorldApi scriptWorldApi() const { return {}; }
     virtual bool valid(EntityHandle) const noexcept = 0;
     virtual bool hasBuffSkillIndex() const noexcept = 0;
     virtual bool hasSoundConsumer() const noexcept = 0;

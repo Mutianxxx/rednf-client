@@ -93,6 +93,74 @@ int SquirrelWorldBridge::buffSkillIndex(EntityHandle owner) const {
     requireContext();if(owner!=context_.owner||!context_.buffSkill||!buffSkillSource_)
         throw std::invalid_argument("No same-owner source Buff event context");return context_.buffSkill->skillId;
 }
+// Read-only SKL parameter access for the script query natives. Every failure is
+// reported as an absent value (0 for a level, nullopt for a cell); nothing here
+// may throw into the VM, because a throw would quarantine the whole instance for
+// what is a legitimate "this skill has no such column" answer.
+squirrel_stage::ScriptWorldApi SquirrelWorldBridge::scriptWorldApi() const {
+    squirrel_stage::ScriptWorldApi api;
+    // Resolve once per skill id. A failed lookup is cached as null so repeated
+    // calls during one skill's execution cannot produce different answers.
+    const auto source=[this](int skill)->std::shared_ptr<const SkillSourceData> {
+        const auto prior=skillSourceCache_.find(skill);
+        if(prior!=skillSourceCache_.end())return prior->second;
+        std::shared_ptr<const SkillSourceData> value;
+        try {
+            value=std::make_shared<const SkillSourceData>(
+                readSkillSourceData(world_.characterCatalog().skillDefinition(SkillKey{character_.jobId,skill}),"dungeon"));
+        } catch(const std::exception &) { value=nullptr; }
+        skillSourceCache_.emplace(skill,value);return value;
+    };
+    api.level=[this](int skill) {
+        if(skill<0)return 0;
+        return world_.skillState().learnedLevel(SkillKey{character_.jobId,skill});
+    };
+    api.levelData=[source](int skill,int column,int level)->std::optional<double> {
+        if(column<0||level<=0)return std::nullopt;
+        const auto data=source(skill);if(!data)return std::nullopt;
+        return skillLevelValue(data->values("[level info]"),level,column);
+    };
+    api.intData=[source](int skill,int index)->std::optional<int> {
+        if(index<0)return std::nullopt;
+        const auto data=source(skill);if(!data)return std::nullopt;
+        // 1031 .skl files carry no `[int data]` section; the script constant
+        // names give the mapping away: chainlightning.nut spells its five
+        // sq_GetIntData operands SKL_CL_SD_0..4 ("SD" = static data) and
+        // casts each into a target-range packet field. `[static data]` for that
+        // skill is exactly [500,0,650,400,300] (Y range, X start, X end, link
+        // range, max height), so the static-data array is the accessor's source.
+        const auto values=data->values("[static data]");
+        if(!values.is_array()||size_t(index)>=values.size())return std::nullopt;
+        const auto &cell=values[size_t(index)];
+        if(!cell.is_number_integer())return std::nullopt;
+        const auto number=cell.get<int64_t>();
+        if(number<INT32_MIN||number>INT32_MAX)return std::nullopt;
+        return int(number);
+    };
+    api.castTime=[source](int skill,int level)->std::optional<int> {
+        const auto data=source(skill);if(!data)return std::nullopt;
+        // Prefer the per-level cell; some skills author a single scalar instead.
+        std::optional<double> value;
+        if(level>0)value=skillLevelValue(data->values("[casting time]"),level,0);
+        if(!value)value=data->firstNumber("[casting time]");
+        if(!value||!std::isfinite(*value)||*value<0||*value>INT32_MAX)return std::nullopt;
+        return int(*value);
+    };
+    // The per-state passive modifier chain (state bonus, passive skill rates,
+    // equipment) is not reconstructed. This returns the authored level cell
+    // scaled by the caller's ratio, which is the part the PVF states directly.
+    // Scripts that depend on passive stacking therefore see base-rate values.
+    api.bonusRate=[this,source](int skill,int,int column,double ratio)->std::optional<double> {
+        if(column<0||!std::isfinite(ratio))return std::nullopt;
+        const int level=world_.skillState().learnedLevel(SkillKey{character_.jobId,skill});
+        if(level<=0)return std::nullopt;
+        const auto data=source(skill);if(!data)return std::nullopt;
+        const auto value=skillLevelValue(data->values("[level info]"),level,column);
+        if(!value||!std::isfinite(*value))return std::nullopt;
+        return *value*ratio;
+    };
+    return api;
+}
 std::optional<SourceRef> SquirrelWorldBridge::resolveSound(const std::string &tag,const SourceRef &origin) const {
     requireContext();if(!admittedScript(origin))throw std::invalid_argument("Sound origin was not admitted from this PVF");
     const auto resolved=resources_.resolve({ActResourceKind::Sound,origin,tag,-1});
