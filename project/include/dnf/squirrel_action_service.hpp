@@ -6,7 +6,7 @@ namespace dnf {
 // The implementation is an explicitly inferred source-state adapter. The
 // callback body is actual PVF code; dispatch from a manual experimental action
 // is not proof of the original executable's state dispatcher or Buff stats.
-inline constexpr const char *squirrelActionPolicy = "inferred-atmage-source-buff-callback-v1";
+inline constexpr const char *squirrelActionPolicy = "inferred-atmage-source-state-callback-v2";
 class SquirrelActionService {
     struct Impl;
     std::unique_ptr<Impl> impl_;

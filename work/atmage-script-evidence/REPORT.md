@@ -123,3 +123,26 @@
 实测锚点（`dnf_tests` group 4，真实 1031 PVF，`{8,2}` 等级 1）：
 `GetSkillLevel=1`、`GetIntData(0)=500`、`GetLevelData(0,1)=7`、
 `GetBonusRateWithPassive(2,25,2,1.0)=276`、`GetCastTime(1)=600`，两种形态结果一致。
+
+## 第 5 步：把源注册路由接进动作服务（已实现，2026-11-23）
+
+- `SquirrelActionService` 现在从 `sqr/character/atmage_load_state.nut` 读取全部 43 条
+  `pushState`：其中 **38 条带 `SKILL_*` 操作数**，5 条是普通攻击/投掷/Buff 等非技能入口。
+- `SKILL_`/`STATE_` 数字来自 `sqr/character/atmage/atmage_header.nut`（`dnf_enum_header.nut`
+  只含全局枚举，没有男法技能号）。注册行字节区间、技能号、state、脚本路径、回调名一起进收据。
+- 38 条里 37 条脚本定义 `onSetState_<Suffix>`；`ManaBurst` 只有 `checkExecutableSkill` /
+  `checkCommandEnable`，标记 `source_callback_missing`，不冒充可执行回调。
+- 施放时按 `skillId` 选路，VM 载入 `dnf_enum_header` → `atmage_header` → 该技能 NUT，
+  以注册 state 调用 `onSetState_<Suffix>`。脚本准入失败/运行时失败只把该次降级为
+  「仅动画」并记 `squirrel_skill_source_skipped`，**不阻断**手工配置的 CHR 动作。
+- `dnf_tests --group 4`（跳过基线 storage 失败）通过；新增用例验证 `{8,2}` 的路由、
+  真实 `chainlightning.nut` 回调执行与收据中的源引用。
+- 补充的源码别名：`sq_StartWrite/sq_WriteWord/sq_WriteDword/sq_WriteFloat/sq_WriteByte/
+  sq_WriteBool`、`sq_IsMyControlObject`、`sq_GetPowerWithPassive`。这些是 VM 本地序列化
+  与**记录式 no-op**，不改变 World，不声称被动对象/伤害原生行为；`WindStrike` 因此从
+  「整脚本拒收」变为「准入但 `source_damage_native_api_registered=false`」。
+
+**仍未闭合**：`onSetState` 只是入口回调；`onProc`/`onEndCurrentAni` 的逐帧驱动、被动对象
+实体化、`SendCreatePassiveObjectPacket` 的真实消费者仍未接上，所以画面里仍不会出现脚本
+生成的ChainLightning电链。技能 MP/CD 评估在链雷上还报 `[weapon skill info]` 行缺失
+（状态 `Malformed`），需单独处理，不能与脚本路由混为一谈。

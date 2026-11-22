@@ -127,6 +127,44 @@ Json runSquirrelActionServiceTests(Pvf &pvf,Assets &assets,const std::string &st
         check(std::any_of(out.diagnostics.begin(),out.diagnostics.end(),[](const Json &d){return d.value("code",std::string())=="experimental_skill_source_blocked";}),
             "Missing/faulting source callback is visible as a specific skill-start diagnostic");
     }
+    {
+        // Source registration routes a real character skill, not just Buff:
+        // pushState(...,"ChainLightning",STATE_CHAINLIGHTNING,SKILL_ATCHAINLIGHTNING)
+        // selects the actual NUT body and onSetState_ChainLightning callback.
+        World world(pvf,assets,WorldRules::BetaFoundationV1);
+        world.configureSquirrelActions(staticIdentity);world.enableExperimentalCharacters();
+        world.selectCharacter({8,0,0});dnf::enterExplicitSkillPreviewFixture(world);
+        world.combat=false;world.freezeAi=true;world.mapWidth=1200;world.walkRects={{0,185,1200,240}};
+        world.player.x=world.player.px=560;world.player.y=world.player.py=300;world.player.dir=1;world.player.mp=100000;
+        auto &runtime=*world.experimentalRuntime();std::string reason;
+        check(runtime.configuration().configureChrNamedSkill({8,2},1,runtime.plan(),&reason),
+            "Source ChainLightning skill can be configured from its own CHR motion slot ["+reason+"]");
+        runtime.configuration().assignSlot(0,SkillKey{8,2},runtime.plan());
+        const auto inventory=world.squirrelActionDiagnostics();
+        check(inventory.at("skill_route_entries")==38&&inventory.at("skill_routes_admitted")==37,
+            "All 38 source pushState skill entries are inventoried and 37 expose an onSetState callback");
+        const auto chain=std::find_if(inventory.at("skill_routes").begin(),inventory.at("skill_routes").end(),
+            [](const Json &row){return row.at("skill_id")==2;});
+        check(chain!=inventory.at("skill_routes").end()&&chain->at("admitted").get<bool>()&&
+              chain->at("callback")=="onSetState_ChainLightning"&&
+              chain->at("script").at("member_path")=="sqr/character/atmage/chainlightning/chainlightning.nut",
+            "ChainLightning route cites the exact source registration, state, NUT and callback");
+        // Cost evaluation for this CHR-only skill is malformed (no own
+        // [weapon skill info] row), so drive the source gate directly; this
+        // isolates callback routing from the separate unresolved MP policy.
+        const auto &row=runtime.plan().skills.at(SkillKey{8,2});
+        ExperimentalSkillActionRequest request{SkillKey{8,2},row.source,
+            runtime.configuration().binding(SkillKey{8,2})->motion.source,uint64_t(world.tick),1,1};
+        auto token=world.prepareSquirrelAction(request);
+        const std::string routeDetail="last="+world.squirrelActionDiagnostics().at("last_result").dump();
+        check(bool(token),"Registered source onSetState callback prepares through the typed VM ["+routeDetail+"]");
+        token->publish();
+        const auto accepted=world.squirrelActionDiagnostics();
+        check(accepted.at("commits")==1&&accepted.at("active_receipt").at("route").at("skill_id")==2&&
+              accepted.at("active_receipt").at("callback").at("ok").get<bool>(),
+            "Real skill source executes its registered onSetState callback with a source-cited receipt");
+        samples["skill_route"]=accepted;
+    }
     return {{"passed",true},{"checks",checks},{"samples",samples},{"full_skill_complete",false},
         {"native_dispatch_proven",false},{"frontend_started",false},{"audio_device_tested",false}};
 }

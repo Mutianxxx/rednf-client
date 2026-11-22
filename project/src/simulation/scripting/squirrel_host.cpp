@@ -158,7 +158,7 @@ const std::set<std::string> delegates={"len","append","push","pop","resize","cle
 const std::set<std::string> hostGlobals={
     "sq_BinaryStartWrite","StartWrite","sq_BinaryWriteWord","WriteWord",
     "sq_BinaryWriteDword","WriteDword","sq_BinaryWriteFloat",
-    "sq_BinaryGetReadSize","print"};
+    "sq_BinaryGetReadSize","print","getroottable"};
 // Read-only skill parameter queries. Each name maps to the exact
 // ScriptWorldApi member that must be present before the token is callable, so
 // "classified as implemented" and "has a data source" cannot drift apart.
@@ -199,7 +199,11 @@ const std::set<std::string> hostCommands={
     "IsUseSkill","IsCommandEnable","AddSetStatePacket","GetState",
     "setSkillSubState","getSkillSubState","getXPos","getYPos","getZPos",
     "getVar","clear_vector","push_vector","get_vector","set_vector",
-    "isMyControlObject","stopSound","addElementalChain_ATMage"};
+    "isMyControlObject","stopSound","addElementalChain_ATMage",
+    // Source NUT aliases for the same VM-local binary writer and recorded
+    // no-op eligibility/power reads. None claims a reconstructed native effect.
+    "StartWrite","WriteWord","WriteDword","WriteFloat","WriteByte","WriteBool",
+    "IsMyControlObject","GetPowerWithPassive"};
 struct HandleToken {uint64_t id;uint32_t generation;};
 struct AnimationToken {uint64_t ownerId;uint32_t ownerGeneration;int animationId=-1;};
 struct VarListToken {uint64_t ownerId;uint32_t ownerGeneration;};
@@ -377,6 +381,13 @@ struct Instance::Impl {
             if(!std::isfinite(value))throw std::runtime_error("binary float outside finite range");
             uint32_t bits=0;std::memcpy(&bits,&value,sizeof bits);
             appendLittleEndian(host.binary,uint64_t(bits),4,host.limits.heapBytes);return 0;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
+    }
+    static SQInteger binaryWriteByte(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const auto value=binaryNumeric(v,2);
+            appendLittleEndian(host.binary,uint64_t(uint8_t(value)),1,host.limits.heapBytes);return 0;
         }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
     }
     static SQInteger binaryReadSize(HSQUIRRELVM v) {
@@ -709,6 +720,16 @@ struct Instance::Impl {
         install(L"isMyControlObject",stubTrue);
         install(L"stopSound",stubZero);
         install(L"addElementalChain_ATMage",stubZero);
+        install(L"sq_StartWrite",binaryStartWrite);
+        install(L"sq_WriteWord",binaryWriteWord);
+        install(L"sq_WriteDword",binaryWriteDword);
+        install(L"sq_WriteFloat",binaryWriteFloat);
+        install(L"sq_WriteByte",binaryWriteByte);
+        install(L"sq_WriteBool",binaryWriteByte);
+        install(L"sq_IsMyControlObject",stubTrue);
+        install(L"IsMyControlObject",stubTrue);
+        install(L"sq_GetPowerWithPassive",stubZero);
+        install(L"GetPowerWithPassive",stubZero);
     }
     void open() {
         if(vm)return;vm=sq_open(256);if(!vm)throw detail::Abort("sq_open failed");

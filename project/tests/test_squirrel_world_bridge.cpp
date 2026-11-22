@@ -108,9 +108,9 @@ Json runSquirrelWorldBridgeTests(Pvf &pvf,Assets &assets,const std::string &stat
         const auto before=scriptWorldState(world);const auto source=bridge.source("sqr/character/atmage/windstrike/wind_strike.nut");
         const auto inspection=vm.inspect(source);
         const auto result=vm.load(source);
-        check(!inspection.executable && !result.ok && result.closed && scriptWorldState(world)==before &&
+        check(inspection.executable && result.ok && !result.closed && scriptWorldState(world)==before &&
               bridge.diagnostics().at("source_damage_native_api_registered")==false,
-              "WindStrike remains capability-rejected because its state/stat/packet/PO24201 APIs have no real consumers");
+              "WindStrike source passes recorded-no-op admission without registering a native damage consumer");
     }
     {
         RegionCatalog catalog(pvf,assets);Progression progression(catalog);World world(pvf,assets,WorldRules::BetaFoundationV1);

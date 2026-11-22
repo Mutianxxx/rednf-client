@@ -43,6 +43,33 @@ std::vector<Token> lex(const Bytes &bytes) {
     }
     return out;
 }
+// One source `IRDSQRCharacter.pushState(job, "path", "suffix", state, skill)`
+// registration. Offsets stay byte-exact so receipts can cite the original NUT.
+struct Registration {
+    std::string jobSymbol,path,suffix,stateSymbol,skillOperand;
+    size_t end=0;
+    SourceRef span;
+};
+std::optional<Registration> parsePushState(const std::vector<Token> &t,size_t i,const SourceRef &registration) {
+    if(i+13>=t.size()||t[i].text!="IRDSQRCharacter"||t[i].quoted||t[i+1].text!="."||
+       t[i+2].text!="pushState"||t[i+3].text!="("||t[i+4].quoted||t[i+5].text!=","||
+       !t[i+6].quoted||t[i+7].text!=","||!t[i+8].quoted||t[i+9].text!=","||
+       t[i+10].quoted||t[i+11].text!=","||t[i+12].quoted)return std::nullopt;
+    Registration r;
+    r.jobSymbol=t[i+4].text;r.path=t[i+6].text;r.suffix=t[i+8].text;r.stateSymbol=t[i+10].text;
+    if(t[i+12].text=="-"&&i+14<t.size()&&t[i+13].text=="1"&&t[i+14].text==")") {
+        r.skillOperand="-1";r.end=i+14;
+    } else if(t[i+13].text==")") {
+        r.skillOperand=t[i+12].text;r.end=i+13;
+    } else return std::nullopt;
+    r.span=registration;r.span.byteOffset=t[i].offset;r.span.byteLength=t[r.end].end-t[i].offset;
+    return r;
+}
+bool hasFunction(const std::vector<Token> &tokens,const std::string &name) {
+    for(size_t i=0;i+2<tokens.size();++i)
+        if(tokens[i].text=="function"&&tokens[i+1].text==name&&tokens[i+2].text=="(")return true;
+    return false;
+}
 int constant(const std::vector<Token> &tokens,const std::string &name) {
     std::optional<int> result;
     for(size_t i=0;i+2<tokens.size();++i)if(!tokens[i].quoted&&tokens[i].text==name&&tokens[i+1].text=="<-") {
@@ -122,7 +149,21 @@ struct SquirrelActionService::Impl {
     std::unique_ptr<Action> active;
     SourceRef registration,enumSource,callbackSource;
     Json route=Json::object(),last=Json::object(),lastAccepted=Json::object(),lastClosedBridge=Json::object();
+    struct SkillRoute {
+        int skillId=0,state=0;
+        std::string suffix,callback,reason;
+        SourceRef source,registration;
+        bool admitted=false;
+        Json json() const {
+            return {{"skill_id",skillId},{"state",state},{"suffix",suffix},{"callback",callback},
+                {"script",source.json()},{"registration",registration.json()},
+                {"admitted",admitted},{"reason",reason}};
+        }
+    };
     std::map<int,std::string> buffSkills;
+    std::map<int,SkillRoute> skillRoutes;
+    Json skillRouteInventory=Json::array();
+    SourceRef skillHeaderSource;
     int job=-1,state=-1;
     bool routeAvailable=false;
     EntityHandle owner;CharacterIdentity character;
@@ -164,6 +205,42 @@ struct SquirrelActionService::Impl {
         if(!hasCallback||buffSkills.empty())throw std::invalid_argument("No source Buff callback/skill branches");
         route["callback_source"]=callbackSource.json();route["enum_source"]=enumSource.json();
         route["buff_attributes_complete"]=false;route["full_skill_complete"]=false;
+        // Skill routes are read from the same source registration file. The
+        // per-character header supplies SKILL_/STATE_ integers; the global enum
+        // file does not. Failure to parse one skill never disables others.
+        try {
+            const auto headerPath="sqr/character/atmage/atmage_header.nut";
+            skillHeaderSource=makeSourceRef(pvf,headerPath);
+            const auto headerTokens=lex(pvf.read(skillHeaderSource.memberPath));
+            for(size_t i=0;i+13<registrations.size();++i) {
+                const auto parsed=parsePushState(registrations,i,registration);
+                if(!parsed)continue;
+                i=parsed->end;
+                if(constant(enums,parsed->jobSymbol)!=job||parsed->skillOperand=="-1")continue;
+                SkillRoute skill;skill.registration=parsed->span;
+                try {
+                    skill.skillId=constant(headerTokens,parsed->skillOperand);
+                    skill.state=constant(headerTokens,parsed->stateSymbol);
+                } catch(const std::exception &error) {
+                    skill.reason=std::string("source_constant_unresolved:")+error.what();
+                    skillRouteInventory.push_back(skill.json());continue;
+                }
+                skill.suffix=parsed->suffix;skill.callback="onSetState_"+parsed->suffix;
+                try { skill.source=makeSourceRef(pvf,"sqr/"+parsed->path); }
+                catch(const std::exception &error) {
+                    skill.reason=std::string("source_unavailable:")+error.what();
+                    skillRouteInventory.push_back(skill.json());continue;
+                }
+                const auto script=lex(pvf.read(skill.source.memberPath));
+                if(!hasFunction(script,skill.callback))skill.reason="source_callback_missing";
+                else if(skillRoutes.count(skill.skillId))skill.reason="duplicate_skill_id";
+                else {skill.admitted=true;skillRoutes.emplace(skill.skillId,skill);}
+                skillRouteInventory.push_back(skill.json());
+            }
+        } catch(const std::exception &error) {
+            skillRouteInventory=Json::array();
+            skillRouteInventory.push_back({{"code","squirrel_skill_routes_unavailable"},{"message",error.what()}});
+        }
         routeAvailable=true;
         } catch(const std::exception &error) {
             route={{"available",false},{"code","squirrel_source_route_unavailable"},{"message",error.what()},
@@ -187,9 +264,13 @@ SquirrelActionService::~SquirrelActionService()=default;
 std::unique_ptr<PreparedExperimentalSkillAction> SquirrelActionService::prepare(const ExperimentalSkillActionRequest &request) {
     auto &s=*impl_;
     if(s.thread!=std::this_thread::get_id()||!s.epoch)throw std::invalid_argument("Squirrel action requires its simulation writer and an unexhausted lifecycle epoch");
-    if(!s.routeAvailable||request.key.jobId!=s.job||!s.buffSkills.count(request.key.skillId)) {
+    const auto routedSkill=s.skillRoutes.find(request.key.skillId);
+    const bool buffRoute=s.routeAvailable&&request.key.jobId==s.job&&s.buffSkills.count(request.key.skillId);
+    const bool skillRoute=s.routeAvailable&&request.key.jobId==s.job&&routedSkill!=s.skillRoutes.end()&&routedSkill->second.admitted;
+    if(!buffRoute&&!skillRoute) {
         s.last={{"ok",false},{"code",s.routeAvailable?"squirrel_callback_not_routed":"squirrel_source_route_unavailable"},
             {"skill",request.key.json()},{"skill_source",request.skillSource.json()},
+            {"skill_route",routedSkill!=s.skillRoutes.end()?routedSkill->second.json():Json()},
             {"message","Only the separately identified user experimental motion executes; no Squirrel skill behavior is claimed"},
             {"missing_native_api_policy","Unadmitted source callbacks remain disabled; see per-source NUT dependency matrix"},
             {"full_skill_complete",false}};
@@ -229,15 +310,44 @@ std::unique_ptr<PreparedExperimentalSkillAction> SquirrelActionService::prepare(
         if(source.source.json()!=expected.json())throw std::invalid_argument("Squirrel route source changed during bound session");
         const auto result=action->vm->load(source);if(!result.ok){s.last=resultJson(result);throw std::runtime_error("Squirrel source admission failed: "+s.last.dump());}
     };
-    load(s.enumSource);load(s.callbackSource);
-    const auto result=action->vm->invoke("onAfterSetState_Buff",action->owner,action->action,{s.state,Json::array(),true});
-    s.last=resultJson(result);
-    if(!result.ok||!action->bridge->parked)throw std::runtime_error("Squirrel callback preparation failed: "+s.last.dump());
-    action->receipt={{"route",s.route},{"skill",request.key.json()},{"skill_source",request.skillSource.json()},
+    Json route=s.route;
+    std::string callback="onAfterSetState_Buff";
+    squirrel_stage::Result result;
+    if(skillRoute) {
+        route=routedSkill->second.json();
+        route["enum_source"]=s.enumSource.json();
+        route["header_source"]=s.skillHeaderSource.json();
+        route["dispatch_policy"]=squirrelActionPolicy;
+        route["native_dispatch_proven"]=false;
+        callback=routedSkill->second.callback;
+        try {
+            load(s.enumSource);load(s.skillHeaderSource);load(routedSkill->second.source);
+            result=action->vm->invoke(callback,action->owner,action->action,{routedSkill->second.state,Json::array(),true});
+            s.last=resultJson(result);
+            // A state callback may legitimately stage no commands; only a
+            // failed/quarantined VM rejects the route. Sound batch parking is
+            // required by the Buff event callback, not by onSetState.
+            if(!result.ok)throw std::runtime_error("Squirrel skill callback preparation failed: "+s.last.dump());
+        } catch(const std::exception &error) {
+            // A source script that fails admission/runtime is not allowed to
+            // block the manually configured body clip: the action degrades to
+            // animation-only, and the exact reason is retained for diagnostics.
+            s.last={{"ok",false},{"code","squirrel_skill_source_skipped"},{"skill",request.key.json()},
+                {"skill_source",request.skillSource.json()},{"route",route},{"message",error.what()},
+                {"fallback","animation_only_no_native_effect_claimed"},{"full_skill_complete",false}};
+            return nullptr;
+        }
+    } else {
+        load(s.enumSource);load(s.callbackSource);
+        result=action->vm->invoke(callback,action->owner,action->action,{s.state,Json::array(),true});
+        s.last=resultJson(result);
+        if(!result.ok||!action->bridge->parked)throw std::runtime_error("Squirrel callback preparation failed: "+s.last.dump());
+    }
+    action->receipt={{"route",route},{"skill",request.key.json()},{"skill_source",request.skillSource.json()},
         {"motion_source",request.motionSource.json()},{"owner",action->owner.json()},{"instance",action->instance},
         {"action",action->action},{"action_sequence",action->sequence},{"attempt_sequence",action->attempt},
         {"vm_policy",squirrel_stage::vmPolicyId},{"static_identity",s.staticIdentity},{"callback",resultJson(result)},
-        {"dispatch_classification","inferred event attached to an accepted user-configured experimental motion"},
+        {"dispatch_classification",skillRoute?"source onSetState callback executed in the typed VM; staged commands are recorded no-ops unless bridged":"inferred event attached to an accepted user-configured experimental motion"},
         {"buff_attributes_complete",false},{"native_dispatch_proven",false}};
     action->archiveReceipt=action->receipt; // Allocate before no-throw publication.
     return std::make_unique<Impl::Prepared>(s,std::move(action));
@@ -256,6 +366,8 @@ Json SquirrelActionService::diagnostics()const {
     const auto &s=*impl_;if(s.thread!=std::this_thread::get_id())throw std::invalid_argument("Squirrel diagnostics require simulation thread");
     return {{"policy",squirrelActionPolicy},{"vm_policy",squirrel_stage::vmPolicyId},{"pvf_identity",s.pvfIdentity},
         {"static_identity",s.staticIdentity},{"route",s.route},{"route_available",s.routeAvailable},{"active",bool(s.active)},
+        {"skill_route_entries",s.skillRouteInventory.size()},{"skill_route_count",s.skillRoutes.size()},
+        {"skill_routes",s.skillRouteInventory},{"skill_routes_admitted",int(s.skillRoutes.size())},
         {"active_receipt",s.active?s.active->receipt:Json()},
         {"world_bridge",s.active?s.active->bridge->world.diagnostics():Json()},
         {"last_accepted_receipt",s.lastAccepted},{"last_closed_bridge",s.lastClosedBridge},
