@@ -37,7 +37,9 @@ Json runHedgehogRuntimeTests(Pvf &pvf,Assets &assets) {
             "Real ATK retains magical type and dark element through coefficient replacement");
         check(descriptor.bodyLayers.size()==10,"Ten source ALS none-effect attachments have an actual rendering consumer");
         const auto generic=animationEffectEvents(pvf,assets,descriptor.motion.memberPath);
-        check(generic.events.empty()&&generic.diagnostics.size()==10,"Generic ALS keeps unsupported native none-effect semantics; no global alias is introduced");
+        check(generic.events.size()==10&&generic.diagnostics.empty()&&
+              std::all_of(generic.events.begin(),generic.events.end(),[](const auto &event){return event.noneEffect;}),
+              "Generic ALS uses the reviewed frame-0 none-effect attachment contract; native flag meaning stays unresolved in the dedicated descriptor");
         evidence.push_back({{"phase","descriptor"},{"clock",ani_clock::policyName(clock)},{"source",descriptor.snapshot()},
             {"generic_als_diagnostics",generic.diagnostics}});
         std::set<std::string> expectedLayers;

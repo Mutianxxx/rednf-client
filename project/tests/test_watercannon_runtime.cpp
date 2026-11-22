@@ -64,8 +64,11 @@ Json runWaterCannonRuntimeTests(Pvf &pvf,Assets &assets) {
         check(d.objectAnimation->duration==580&&d.objectAnimation->globals.value("0",false)&&program.impactClip->duration==640,
             "Source flight loop is 580ms and independent impact clip 640ms");
         const auto generic=animationEffectEvents(pvf,assets,d.animation.memberPath),reviewed=animationEffectEvents(pvf,assets,d.animation.memberPath,tree);
-        check(generic.events.size()==1&&!generic.diagnostics.empty()&&reviewed.diagnostics.empty()&&reviewed.events.size()==2&&
-            reviewed.events[1].kind==EffectEventKind::DrawOnlyFollowParent,"Follow-parent is admitted only through this exact source-tree policy; generic behavior remains diagnostic");
+        check(reviewed.diagnostics.empty()&&reviewed.events.size()==2&&
+            reviewed.events[1].kind==EffectEventKind::DrawOnlyFollowParent&&
+            std::none_of(generic.events.begin(),generic.events.end(),[](const auto &event){
+                return event.kind==EffectEventKind::DrawOnlyFollowParent;}),
+            "Follow-parent is admitted only through this exact source-tree policy; generic none-effect adds use the reviewed frame-0 child contract");
         check(source.world.runtimeSkillPolicy(water).implemented&&!source.world.runtimeSkillPolicy({8,236}).implemented&&!source.world.runtimeSkillPolicy({8,51}).implemented,
             "Independent normal base admission leaves TP/elemental-chain closed; this suite still exercises explicit preview operands");
         for(const int level:{1,10})for(const int direction:{-1,1})for(const bool opposite:{false,true}) {

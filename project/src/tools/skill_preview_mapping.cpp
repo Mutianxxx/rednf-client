@@ -401,7 +401,8 @@ Json SkillVisualMapping::audit() const {
                {"reconstructedBoxes", reconstructedBoxes.size()},
                {"bodyChain", bodyChain}, {"chainStages", chainStages},
                {"chainEvidence", chainEvidence}, {"nominalActionMs", nominalActionMs},
-               {"passive", passive}, {"grade", gradeName(grade)},
+               {"passive", passive}, {"sourceNoneEffectBodyLayer", sourceNoneEffectBodyLayer},
+               {"grade", gradeName(grade)},
                {"confidence", confidenceName(confidence)},
                {"icon", iconPath}, {"iconFrame", iconFrame},
                {"genericBody", !fallbackPose.empty()}, {"standInPose", fallbackPose},
@@ -1715,6 +1716,7 @@ const SkillVisualMapping &SkillMappingTable::resolve(int jobId, const CharacterR
                 continue;
             }
             for (const auto &event : plan.events) {
+                mapping.sourceNoneEffectBodyLayer |= event.noneEffect;
                 if (event.kind == EffectEventKind::Remove) continue;
                 const double begin = stageStart[stageIndex] + boundary(event.frame);
                 double end = -1;

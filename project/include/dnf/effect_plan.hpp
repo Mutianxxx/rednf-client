@@ -23,6 +23,10 @@ struct EffectFrameEvent {
     size_t sourceOrder = 0, sourceOffset = 0, declarationOffset = 0;
     std::string animation, instance, source, sourceHash;
     int offsetX = 0, offsetY = 0, offsetZ = 0;
+    // [none effect add] is admitted only as the reviewed frame-0 child
+    // attachment contract (local XYZ 0, native flag/layer sentinel meaning
+    // still unresolved). The flag keeps that provenance in event receipts.
+    bool noneEffect = false;
 };
 struct EffectEventPlan {
     std::string animation;

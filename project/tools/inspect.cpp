@@ -178,7 +178,8 @@ int run(int argc, char **argv) {
                             boundary += std::max(1, an->frames[i].duration);
                     } catch (const std::exception &) {
                     }
-                    const char *kind = ev.kind == EffectEventKind::Remove ? "remove"
+                    const char *kind = ev.noneEffect ? "none_effect_add"
+                        : ev.kind == EffectEventKind::Remove ? "remove"
                         : ev.kind == EffectEventKind::DrawOnly ? "draw_only"
                         : ev.kind == EffectEventKind::DrawOnlyFollowParent ? "draw_only_follow_parent"
                                                                           : "add";
@@ -189,6 +190,9 @@ int run(int argc, char **argv) {
                                    {"offset", {ev.offsetX, ev.offsetY, ev.offsetZ}},
                                    {"boundaryMs", boundary},
                                    {"actionMs", stageStart[s] + boundary}});
+                    if (ev.noneEffect)
+                        als.back().update({{"native_child_flag_render_consumer","unsupported"},
+                            {"native_layer_sentinel_interpretation","unresolved"}});
                 }
                 for (const auto &d : plan.diagnostics)
                     als.push_back({{"stage", int(s)}, {"parent", m->bodyChain[s]},

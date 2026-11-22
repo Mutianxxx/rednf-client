@@ -110,7 +110,12 @@ EffectEventPlan animationEffectEvents(Pvf &pvf, Assets &assets, const std::strin
         if (field.tag == "[use animation]") continue;
         const bool followParent=field.tag=="[create draw only object follow parent]"&&followPolicy;
         const bool drawOnly = field.tag == "[create draw only object]"||followParent;
-        if (field.tag != "[add]" && field.tag != "[remove]" && !drawOnly) {
+        // The reviewed 1031 adapters (WaterCannon/Hedgehog) admit this tag as
+        // a frame-0 child ANI attachment with local XYZ 0. Its native child
+        // flag renderer and large layer sentinel remain explicitly unresolved;
+        // this is not a claim of native none-effect flag parity.
+        const bool noneEffect = field.tag == "[none effect add]";
+        if (field.tag != "[add]" && field.tag != "[remove]" && !drawOnly && !noneEffect) {
             diagnostic("unsupported_als_command", order, &field,
                 "command has no recovered live consumer in this adapter");
             continue;
@@ -135,6 +140,11 @@ EffectEventPlan animationEffectEvents(Pvf &pvf, Assets &assets, const std::strin
             diagnostic("invalid_als_event", order, &field,
                 drawOnly ? "expected signed i16 frame, uniqueName, and signed i16 XYZ" :
                     "expected signed frame, layer and nonempty uniqueName");
+            continue;
+        }
+        if (noneEffect && frame != 0) {
+            diagnostic("unsupported_none_effect_frame", order, &field,
+                "reviewed none-effect attachment contract admits only parent frame 0");
             continue;
         }
         if (drawOnly && z <= -1000) {
@@ -173,9 +183,9 @@ EffectEventPlan animationEffectEvents(Pvf &pvf, Assets &assets, const std::strin
             }
         }
         out.events.push_back({followParent?EffectEventKind::DrawOnlyFollowParent:drawOnly ? EffectEventKind::DrawOnly :
-            field.tag == "[add]" ? EffectEventKind::Add : EffectEventKind::Remove,
+            (field.tag == "[add]" || noneEffect) ? EffectEventKind::Add : EffectEventKind::Remove,
             frame, layer, order, field.offset, declaration.field->offset, declaration.animation,
-            instance, als, out.alsSource.source.value("member_sha256", ""), x, y, z});
+            instance, als, out.alsSource.source.value("member_sha256", ""), x, y, z, noneEffect});
     }
     return out;
 }

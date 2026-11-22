@@ -195,6 +195,20 @@ void SkillPreviewSession::seedLayers(const SkillVisualMapping &mapping) {
     for (const auto &planned : mapping.effectLayers) {
         if (planned.timed) continue; // created on its own frame by dispatchFrame
         if (persistentPath(planned.path)) continue;
+        // The native world has the same rule in spawnSkillVisuals: once the
+        // body ALS supplies its cited frame-0 child, an unanchored passive
+        // object animation must not be planted at the caster's feet. Without
+        // a live target/entity its position is a reconstruction, not source.
+        if (mapping.sourceNoneEffectBodyLayer && planned.source == "object") {
+            bool projectileVisual = false;
+            if (planned.attack && planned.loop) {
+                try {
+                    projectileVisual = assets_.animation(planned.path)->frames.size() <= 1;
+                } catch (const std::exception &) {
+                }
+            }
+            if (!projectileVisual) continue;
+        }
         PreviewLayer layer;
         layer.path = planned.path;
         layer.kind = PreviewLayerKind::EffectFront;

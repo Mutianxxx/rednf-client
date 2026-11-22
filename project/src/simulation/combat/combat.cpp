@@ -2179,6 +2179,26 @@ void World::spawnSkillVisuals(const Skill &skill) {
         for (const auto &entity : mapping->persistents)
             if (entity.path == layer.path) { persistent = true; break; }
         if (persistent) continue;
+        // Source ALS already supplies the body attachment for this skill. A
+        // passive-object animation has its own target/entity anchor in the
+        // client; with no live entity to resolve, drawing it at the caster's
+        // feet invents a position. Keep only the documented single-frame
+        // projectile case, which has an explicit muzzle trajectory below.
+        if (mapping->sourceNoneEffectBodyLayer && layer.source == "object") {
+            bool projectileVisual = false;
+            if (layer.attack && layer.loop) {
+                try {
+                    projectileVisual = assets_.animation(layer.path)->frames.size() <= 1;
+                } catch (const std::exception &) {
+                }
+            }
+            if (!projectileVisual) {
+                events.push_back({tick, "mapping_diagnostic", Json{{"skill", skill.identity().json()},
+                    {"path", layer.path}, {"reason", "unanchored-passive-object-layer-skipped"},
+                    {"anchor", "no-live-target-or-entity"}}});
+                continue;
+            }
+        }
         double life = layer.lifeMs;
         if (life <= 0) {
             try {
@@ -2675,12 +2695,19 @@ void World::advanceEffectClocks() {
                 for (const auto &old : effects) if (removed.count(old.alsParentId) && removed.insert(old.id).second) changed = true;
             }
             for (auto &old : effects) if (removed.count(old.id)) old.expires = nowMs();
-            events.push_back({tick, "als_event", Json{{"source",event.source},{"source_hash",event.sourceHash},
+            Json receipt = {{"source",event.source},{"source_hash",event.sourceHash},
                 {"offset",event.sourceOffset},{"source_order",event.sourceOrder},{"frame",event.frame},
-                {"instance",event.instance},{"kind",event.kind == EffectEventKind::DrawOnlyFollowParent?"draw_only_follow_parent":event.kind == EffectEventKind::DrawOnly ? "draw_only" :
+                {"instance",event.instance},{"kind",event.noneEffect ? "none_effect_add" :
+                    event.kind == EffectEventKind::DrawOnlyFollowParent?"draw_only_follow_parent":event.kind == EffectEventKind::DrawOnly ? "draw_only" :
                     event.kind == EffectEventKind::Add ? "add" : "remove"},
                 {"offset_xyz",{event.offsetX,event.offsetY,event.offsetZ}},
-                {"visit",visit.visit},{"classification","inferred-live-parent-frame-dispatch"}}.dump(), root.id});
+                {"visit",visit.visit},{"classification","inferred-live-parent-frame-dispatch"}};
+            if (event.noneEffect) {
+                receipt["local_xyz"] = {0,0,0};
+                receipt["native_child_flag_render_consumer"] = "unsupported";
+                receipt["native_layer_sentinel_interpretation"] = "unresolved";
+            }
+            events.push_back({tick, "als_event", receipt.dump(), root.id});
             if (event.kind == EffectEventKind::Remove) continue;
             if (root.alsDepth >= 12 || effects.size() >= 4096) {
                 events.push_back({tick,"effect_diagnostic","ALS recursion/instance budget rejected",root.id});
@@ -2707,6 +2734,7 @@ void World::advanceEffectClocks() {
             child.resourceSource = event.source; child.sourceOffset = event.sourceOffset;
             child.alsParentId = root.id; child.alsInstance = event.instance; child.alsDepth = root.alsDepth + 1;
             child.layer += event.layer; child.phase += ":als-live";
+            if (event.noneEffect) child.phase += ":none-effect-frame0-unresolved-flag";
             child.playback.clear(); child.animationClock.reset(); child.clockBound = false; child.frameEvents.reset();
             child.hits.clear(); child.counts.clear(); child.animationOffset = 0;
             child.clockOffsetFallback=false;

@@ -189,29 +189,36 @@ Json runAnimationEffectEventsTests(Pvf &p, Assets &a) {
         require(legacy.diagnostics.empty() && legacy.tracks.size() == 4 &&
             legacy.tracks[1].layer == -2 && legacy.tracks[2].layer == -1 && legacy.tracks[3].layer == 1,
             "ALS precompiled legacy track behavior remains available and unchanged");
-        const auto unsupported = animationEffectEvents(p, a,
+        const auto noneEffectSource = animationEffectEvents(p, a,
             "character/common/animation/aura/chn_2020_children_package/blue_00_back_normal.ani");
-        require(std::any_of(unsupported.diagnostics.begin(), unsupported.diagnostics.end(),
-            [](const auto &issue) { return issue.value("code", "") == "unsupported_als_command" &&
-                issue.value("tag", "") == "[none effect add]" && issue.contains("values") &&
-                issue.contains("offset") && issue.contains("source_order"); }),
-            "ALS unsupported live commands retain original values offsets order and identity");
+        require(std::any_of(noneEffectSource.events.begin(), noneEffectSource.events.end(),
+            [](const auto &event) { return event.noneEffect; }) &&
+            std::none_of(noneEffectSource.diagnostics.begin(), noneEffectSource.diagnostics.end(),
+                [](const auto &issue) { return issue.value("tag", "") == "[none effect add]"; }),
+            "Real-source [none effect add] now enters the reviewed frame-0 child attachment consumer without an unsupported diagnostic");
     }
     const auto archivePath = alsFixtureArchive();
     Pvf fixture(archivePath);
     Assets assets(archivePath.parent_path(), fixture);
     const auto plan = animationEffectEvents(fixture, assets, "fixture/root.ani");
-    require(plan.events.size() == 3 && plan.events[0].kind == EffectEventKind::Remove &&
+    require(plan.events.size() == 4 && plan.events[0].kind == EffectEventKind::Remove &&
         plan.events[1].kind == EffectEventKind::Add && plan.events[0].frame == 0 &&
         plan.events[1].frame == 0 && plan.events[0].sourceOrder == 0 && plan.events[1].sourceOrder == 1,
         "ALS same-frame remove then add remains in source order with forward declarations");
+    const auto noneEffect = std::find_if(plan.events.begin(), plan.events.end(),
+        [](const auto &event) { return event.noneEffect; });
+    require(noneEffect != plan.events.end() && noneEffect->kind == EffectEventKind::Add &&
+        noneEffect->frame == 0 && noneEffect->layer == 0 && noneEffect->instance == "FX" &&
+        noneEffect->offsetX == 0 && noneEffect->offsetY == 0 && noneEffect->offsetZ == 0 &&
+        noneEffect->sourceOrder == 8,
+        "Reviewed [none effect add] is a frame-0 zero-XYZ child attachment retaining source order and layer");
     require(plan.events[1].instance == "FX" && plan.events[2].instance == "fx" &&
         plan.events[1].declarationOffset != plan.events[2].declarationOffset,
         "ALS uniqueName binding preserves case-sensitive identities");
     require(plan.events[1].animation == "fixture/child.ani" &&
         assets.animation(plan.events[1].animation)->frames.front().image.empty(),
         "ALS image-less logical child frames remain valid add instances");
-    require(plan.events.size() == 3 &&
+    require(plan.events.size() == 4 &&
         animationEffectEvents(fixture, assets, "fixture/child.ani").events.size() == 1,
         "ALS frame plans do not recursively flatten child events or convert their clocks");
     const auto has = [](const EffectEventPlan &value, const std::string &code) {
@@ -219,9 +226,9 @@ Json runAnimationEffectEventsTests(Pvf &p, Assets &a) {
             [&](const auto &issue) { return issue.value("code", "") == code; });
     };
     require(has(plan, "unresolved_als_name") && has(plan, "unsupported_als_frame") &&
-        has(plan, "invalid_als_event") && has(plan, "unsupported_als_command") &&
+        has(plan, "invalid_als_event") &&
         plan.alsSource.rawBytes == fixture.read("fixture/root.ani.als"),
-        "ALS undeclared remove invalid payload range and unsupported kind remain diagnostic with raw source");
+        "ALS undeclared remove invalid payload and out-of-range frames remain diagnostic with raw source");
     const auto duplicate = animationEffectEvents(fixture, assets, "fixture/duplicate.ani");
     require(duplicate.events.empty() && has(duplicate, "duplicate_als_name") &&
         has(duplicate, "unresolved_als_name"),

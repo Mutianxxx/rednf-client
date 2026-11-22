@@ -146,3 +146,31 @@
 实体化、`SendCreatePassiveObjectPacket` 的真实消费者仍未接上，所以画面里仍不会出现脚本
 生成的ChainLightning电链。技能 MP/CD 评估在链雷上还报 `[weapon skill info]` 行缺失
 （状态 `Malformed`），需单独处理，不能与脚本路由混为一谈。
+
+## 第 6 步：链雷特效位置——通用化 `[none effect add]` 消费者（2026-11-23）
+
+用户反馈预览器特效位置不对。逐层核对后确认不是启动问题：
+
+- `{8,2}` 的三段 body ALS 全部只有 `[none effect add]`：
+  `chainlightningcast` 的 `[0,10000,"4_charge_dodge"]`、
+  `chainlightning` 的 `[0,10000,"4_charge_dodge"]` 与 `[0,10001,"5_charge_light_dodge"]`、
+  `chainlightningend` 的 `[0,10000,"5_charge_light_dodge"]`。
+- 此前这些命令全部是 `unsupported_als_command`，所以预览里看到的圆阵/电链来自
+  目录族与 passiveobject 重建层，不是源 ALS 绑定；重建层统一落在施法者坐标，
+  `passiveobject` 层还刻意忽略 `offsetX/Y`，因此不可能落在正确父帧或目标上。
+- 依据工程内已评审的 WaterCannon/Hedgehog 口径，把通用 ALS 消费者扩展为：
+  `[none effect add]` 只接受 frame 0、保留 `layer` 数值与 `uniqueName`、local XYZ=0，
+  作为父 ANI 的子层进入运行时；收据标记 `none_effect_add`、
+  `native_child_flag_render_consumer=unsupported`、
+  `native_layer_sentinel_interpretation=unresolved`，不冒充 native flag/layer 语义。
+- 同一技能若已由 body ALS 提供源附层，则不再把没有实体/目标锚点的 `passiveobject`
+  重建层画在脚下；单帧弹道仍保留原显式轨迹。这不是删源效果，而是停止用施法者坐标
+  假扮被动对象目标位置。
+- 验证：`dnf_tests --group 9` 通过；`--group 6` 的水炮失败项在改前既有报告中出现，
+  非本批回归；`--group 4` 的 `Experimental storage Source-v1` 也是既有基线失败。
+  固定 seed `20261123` 随机抽样 12 个技能（job 5/8），其中 2 个无映射、10 个解析正常，
+  `8/24` 与 `8/13` 分别得到 3/7 条 `none_effect_add`，未出现新异常。
+- 截图：`temp-project-dir/none-effect-preview/chain60-final2.png`。脚下横向光束消失；
+  右侧蓝色矩形是预览器的第 3 类攻击框调试线（`{96,156,232,255}`），不是技能特效。
+- **仍未恢复**：`onProc`/`onEndCurrentAni` 逐帧脚本、被动对象实体化与目标锚点、
+  `[none effect add]` 的 native child flag 渲染语义、layer 10000/10001 的真实层级含义。

@@ -175,6 +175,11 @@ struct SkillVisualMapping {
     // effects, with the attach instant and the order they should be drawn in.
     // Same paths as `effects`, so a consumer can use either.
     std::vector<EffectLayerPlan> effectLayers;
+    // The body ALS sidecars admitted a [none effect add] child attachment.
+    // When true, passive-object layers without a live entity/target anchor are
+    // not drawn at the caster's feet; that placement is a reconstruction, not
+    // source behaviour. The body attachment itself remains the cited source.
+    bool sourceNoneEffectBodyLayer = false;
     // Entities that persist after the cast (nen orb, lotus field, air swords).
     std::vector<PersistentPlan> persistents;
     AttackBoxSource attackSource = AttackBoxSource::None;
