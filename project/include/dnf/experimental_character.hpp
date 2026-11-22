@@ -103,6 +103,15 @@ class ExperimentalSkillConfiguration {
     // body damage until the ATK selector is recovered.
     bool configureExeBindingSkill(SkillKey, int level, const ExperimentalCharacterPlan &,
                                   std::string *reason = nullptr);
+    // Release entry taken from this character's own CHR motion table. It is
+    // used only where no generated client state binding exists (job 8 has
+    // none), and only when the CHR carries a [etc motion] slot whose file stem
+    // equals the skill's .skl stem. That slot is the body clip the client plays
+    // for the skill; the ATK selector still lives in the executable, so the
+    // admitted skill has a body motion and no damage. No prefix, alias or
+    // neighbour clip is substituted.
+    bool configureChrNamedSkill(SkillKey, int level, const ExperimentalCharacterPlan &,
+                                std::string *reason = nullptr);
     void configureSourceActionPassive(SkillKey, int level, const ExperimentalCharacterPlan &);
     int sourceActionPassiveLevel(SkillKey) const;
     // Explicit comparison until caller/timing is reviewed for normal admission.

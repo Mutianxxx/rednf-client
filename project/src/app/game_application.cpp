@@ -1385,7 +1385,7 @@ int GameApplication::run(int argc, char **argv) {
         Json previewSources=Json::array(),previewSamples=Json::array(),previewCaptures=Json::array();
         std::set<int> previewCaptureTimes;
         std::vector<SkillKey> previewSkills;
-        Json previewUnavailable=Json::array(),previewExeOnly=Json::array();
+        Json previewUnavailable=Json::array(),previewExeOnly=Json::array(),previewChrOnly=Json::array();
         size_t previewPage=0;
         const auto previewPageCount=[&](){return std::max(size_t(1),(previewSkills.size()+12)/13);};
         const auto bindPreviewPage=[&](size_t page) {
@@ -1511,6 +1511,15 @@ int GameApplication::run(int argc, char **argv) {
                         previewSources.push_back({{"index",index},{"page",index/13},{"slot",index%13},
                             {"name",row.name},{"action",runtime.configuration().binding(key)->unknown.at("exe_binding")}});
                         previewExeOnly.push_back({{"skill",key.json()},{"name",row.name}});
+                    } else if(atMageReview&&runtime.configuration().configureChrNamedSkill(key,1,runtime.plan(),&reason)) {
+                        // No generated state binding exists for this job. The
+                        // character's own CHR table still names the body clip
+                        // the client plays, so that slot is used and recorded
+                        // as animation-only: the damage path is not claimed.
+                        const size_t index=previewSkills.size();previewSkills.push_back(key);
+                        previewSources.push_back({{"index",index},{"page",index/13},{"slot",index%13},
+                            {"name",row.name},{"action",runtime.configuration().binding(key)->unknown.at("chr_motion_release")}});
+                        previewChrOnly.push_back({{"skill",key.json()},{"name",row.name}});
                     } else previewUnavailable.push_back({{"skill",key.json()},{"name",row.name},{"reason",reason}});
                 }
                 bindPreviewPage(0);
@@ -1531,7 +1540,7 @@ int GameApplication::run(int argc, char **argv) {
             auto &target=world.monsters.front();target.hp=target.maxHp=100000000;
             target.x=target.px=world.player.x+previewTargetDistance;target.y=target.py=world.player.y;
             previewTargets=world.monsters;resetPreview();
-            writeJson(reportPath("combat-preview-sources.json"),{{"sources",previewSources},{"unavailable",previewUnavailable},{"exe_binding_only",previewExeOnly},{"fighter_review",fighterReview},{"female_gunner_review",femaleGunnerReview},{"atmage_review",atMageReview},{"pages",previewPageCount()},{"seed",67},
+            writeJson(reportPath("combat-preview-sources.json"),{{"sources",previewSources},{"unavailable",previewUnavailable},{"exe_binding_only",previewExeOnly},{"chr_motion_only",previewChrOnly},{"fighter_review",fighterReview},{"female_gunner_review",femaleGunnerReview},{"atmage_review",atMageReview},{"pages",previewPageCount()},{"seed",67},
                 {"runtime","playable World + main renderer"},{"save_directory",saveDirectory_.u8string()},
                 {"controls","A/S/D/F/G/H/Q/W/E/R/T/Y/Space slots; F1/F2 pages; X basic; C jump; arrows move; Pause pause; period step; Home restart; minus/equals speed; F8 export; Esc quit"},
                 {"scope","source room/MOB and actual collisions; explicit high-HP diagnostic override; no original-client parity claim"}});

@@ -338,6 +338,34 @@ bool ExperimentalSkillConfiguration::configureExeBindingSkill(SkillKey key,int l
         {"missing","These tables carry no ATK selector, so the skill has a body motion and no body damage until the ATK path is recovered"}};
     return true;
 }
+bool ExperimentalSkillConfiguration::configureChrNamedSkill(SkillKey key,int level,
+    const ExperimentalCharacterPlan &plan,std::string *reason) {
+    const auto reject=[&](const std::string &text){if(reason)*reason=text;return false;};
+    if(!(identity_==plan.identity)||pvfIdentity_!=plan.pvfIdentity)
+        throw std::invalid_argument("Experimental configuration/profile mismatch");
+    const auto stemOf=[](std::string path) {
+        if(const auto cut=path.find_last_of('/');cut!=std::string::npos)path.erase(0,cut+1);
+        if(const auto ext=path.rfind('.');ext!=std::string::npos)path.erase(ext);
+        return path;
+    };
+    const auto row=plan.skills.find(key);
+    if(row==plan.skills.end())return reject("skill row unavailable");
+    const std::string skillStem=stemOf(row->second.source.memberPath);
+    if(skillStem.size()<4)return reject("skill file stem too short to name a CHR slot");
+    const ExperimentalSourceBinding *entry=nullptr;
+    for(const auto &motion:plan.motions)
+        if(stemOf(motion.source.memberPath)==skillStem){entry=&motion;break;}
+    if(!entry)return reject("no CHR [etc motion] slot carries this skill's file name");
+    configureSkill(key,*entry,std::nullopt,level,plan);
+    auto &unknown=bindings_.at(key).unknown;
+    unknown["chr_motion_release"]={
+        {"source","this character's own CHR [etc motion] slot"},
+        {"skill_id",key.skillId},{"skill_file",row->second.source.memberPath},
+        {"entry_basis","chr_named_slot"},{"release_entry",entry->json()},
+        {"attack_restored",false},
+        {"missing","The CHR slot proves the body clip the client plays for this skill; the ATK selector and passive-object spawn stay in the executable, so this release animates without body damage"}};
+    return true;
+}
 void ExperimentalSkillConfiguration::setSourceBodyRecoveryPolicy(const std::string &value) {
     if(value!="after_animation"&&value!="since_activation")throw std::invalid_argument("Unknown inferred body recovery policy");
     unknown_["source_body_recovery_policy"]=value;
