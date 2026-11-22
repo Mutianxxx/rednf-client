@@ -2,6 +2,7 @@
 #include <squirrel.h>
 #include <cstddef>
 #include <cmath>
+#include <cstdio>
 #include <cstdlib>
 #include <cstring>
 #include <limits>
@@ -151,6 +152,13 @@ SourceRef offsetSource(SourceRef source,uint64_t at,uint64_t length=0){source.by
 const std::set<std::string> controls={"if","while","for","foreach","switch","catch","function"};
 // These are VM delegates actually available to values, not invented DNF APIs.
 const std::set<std::string> delegates={"len","append","push","pop","resize","clear","weakref","ref","tointeger","tofloat","tostring","slice","find","remove","insert","extend","reverse","sort","getdelegate","rawget","rawset","rawin","rawdelete","setdelegate","keys","values","filter","map","reduce","apply","call","acall","pcall","pacall","bindenv","getinfos","getclass","tolower","toupper","tochar","getroot","setroot","getstatus","getattributes","setattributes","instance","getbase","newmember","rawnewmember"};
+// Root-table natives this host actually installs (see Impl::open). Keeping the
+// list beside the installer means a name can never be classified as callable
+// without a matching registration.
+const std::set<std::string> hostGlobals={
+    "sq_BinaryStartWrite","StartWrite","sq_BinaryWriteWord","WriteWord",
+    "sq_BinaryWriteDword","WriteDword","sq_BinaryWriteFloat",
+    "sq_BinaryGetReadSize","print"};
 struct HandleToken {uint64_t id;uint32_t generation;};
 static int handleTag;
 }
@@ -165,6 +173,12 @@ struct Instance::Impl {
     std::set<std::string> functions;
     std::map<std::string,SourceUnit> functionSources,loadedSources;
     uint64_t action=0,sequence=0;
+    // Skill scripts serialize their state-vector/parameters into a small binary
+    // buffer before asking the engine to create a passive object. The buffer is
+    // pure VM-local memory: it is never exposed to World and never survives a
+    // failed instance. sq_BinaryStartWrite resets it, so cross-invoke residue is
+    // impossible by construction.
+    std::vector<uint8_t> binary;
     Diagnostic compilerDiagnostic;
     Impl(const SourceServices &s,Bridge &b,uint64_t instance,Limits l):services(s),bridge(b),id(instance),limits(l),arena(l),thread(std::this_thread::get_id()) {
         if(!id||!limits.instructions||!limits.nativeCalls||!limits.callDepth||!limits.heapBytes||!limits.heapBlocks||!limits.commands)
@@ -212,6 +226,7 @@ struct Instance::Impl {
                 else if(member && token.text=="sq_PlaySound" && bridge.hasSoundConsumer())classification="implemented_host";
                 else if(member && delegates.count(token.text))classification="vm_delegate";
                 else if(!member && declared.count(token.text))classification="source_function";
+                else if(!member && hostGlobals.count(token.text))classification="implemented_host";
                 result.calls.push_back({token.text,member?"member":"global",classification,text.byteOffsets.at(token.at),token.line,token.column});
                 if(classification=="unknown")result.diagnostics.push_back({"unsupported_api","No implemented callable: "+token.text,offsetSource(unit.source,text.byteOffsets.at(token.at)),token.line,token.column});
             }
@@ -257,6 +272,69 @@ struct Instance::Impl {
             host.pending.push_back({host.id,host.action,++host.sequence,owner,origin,*source,tag});return 0;
         }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
     }
+    // ---- Skill-script binary serialization -------------------------------
+    // Backs sq_BinaryStartWrite / sq_BinaryWriteWord / sq_BinaryWriteDword /
+    // sq_BinaryWriteFloat / sq_BinaryGetReadSize plus the short aliases that
+    // appear in the same scripts (StartWrite / WriteWord / WriteDword). The
+    // buffer is little-endian because these bytes are the argument block handed
+    // to passive-object creation, and the PVF scripts were written against the
+    // engine's packet layout. Nothing here touches World or any external state.
+    static SQInteger binaryNumeric(HSQUIRRELVM v,SQInteger index) {
+        switch(sq_gettype(v,index)) {
+        case OT_INTEGER:{SQInteger n=0;if(SQ_SUCCEEDED(sq_getinteger(v,index,&n)))return n;break;}
+        case OT_FLOAT:{SQFloat f=0;if(SQ_SUCCEEDED(sq_getfloat(v,index,&f))){if(!std::isfinite(f)||std::abs(f)>2147483647.0)throw std::runtime_error("binary scalar outside int32 range");return SQInteger(f);}break;}
+        case OT_BOOL:{SQBool b=SQFalse;if(SQ_SUCCEEDED(sq_getbool(v,index,&b)))return b?1:0;break;}
+        default:break;
+        }
+        throw std::runtime_error("binary write requires a numeric argument");
+    }
+    static SQInteger binaryStartWrite(HSQUIRRELVM v) {
+        auto &host=self(v);host.binary.clear();return 0;
+    }
+    static void appendLittleEndian(std::vector<uint8_t> &out,uint64_t value,size_t width,uint64_t limit) {
+        if(width>8||out.size()>limit||out.size()+width>limit)throw detail::Abort("binary serialization budget exceeded");
+        for(size_t i=0;i<width;i++)out.push_back(uint8_t((value>>(8*i))&0xff));
+    }
+    static SQInteger binaryWriteWord(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const auto value=binaryNumeric(v,2);
+            appendLittleEndian(host.binary,uint64_t(uint16_t(value)),2,host.limits.heapBytes);return 0;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
+    }
+    static SQInteger binaryWriteDword(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            const auto value=binaryNumeric(v,2);
+            appendLittleEndian(host.binary,uint64_t(uint32_t(value)),4,host.limits.heapBytes);return 0;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
+    }
+    static SQInteger binaryWriteFloat(HSQUIRRELVM v) {
+        auto &host=self(v);
+        try {
+            SQFloat value=0;
+            if(sq_gettype(v,2)==OT_FLOAT){if(SQ_FAILED(sq_getfloat(v,2,&value)))throw std::runtime_error("binary float unreadable");}
+            else value=SQFloat(binaryNumeric(v,2));
+            if(!std::isfinite(value))throw std::runtime_error("binary float outside finite range");
+            uint32_t bits=0;std::memcpy(&bits,&value,sizeof bits);
+            appendLittleEndian(host.binary,uint64_t(bits),4,host.limits.heapBytes);return 0;
+        }catch(const detail::Abort&){throw;}catch(const std::exception &error){throw detail::Abort(error.what(),"host_fault");}
+    }
+    static SQInteger binaryReadSize(HSQUIRRELVM v) {
+        auto &host=self(v);
+        if(host.binary.size()>size_t(INT32_MAX))throw detail::Abort("binary buffer outside int32 range");
+        sq_pushinteger(v,SQInteger(host.binary.size()));return 1;
+    }
+    // print() is the only script-visible diagnostic sink. It is bounded and
+    // ASCII-only so a malformed script cannot flood the log or inject bytes.
+    static SQInteger print(HSQUIRRELVM v) {
+        const SQChar *text=nullptr;
+        if(sq_gettype(v,2)!=OT_STRING||SQ_FAILED(sq_getstring(v,2,&text))||!text)return 0;
+        const SQInteger length=sq_getsize(v,2);
+        std::string line;line.reserve(size_t(std::min<SQInteger>(length,512)));
+        for(SQInteger i=0;i<length&&i<512;i++)line.push_back(text[i]>0&&text[i]<128?char(text[i]):'?');
+        std::fprintf(stderr,"[script] %s\n",line.c_str());return 0;
+    }
     static void compileError(HSQUIRRELVM v,const SQChar *description,const SQChar*,SQInteger row,SQInteger column) {
         auto &host=self(v);const auto message=description?utf8(description,std::char_traits<SQChar>::length(description)):std::string("compiler error");
         uint64_t index=0,line=1;while(index<host.decoded.text.size()&&line<uint64_t(std::max(1,row)))if(host.decoded.text[index++]==u'\n')line++;
@@ -268,7 +346,22 @@ struct Instance::Impl {
         sq_setforeignptr(vm,this);sq_setcompilererrorhandler(vm,compileError);
         // No I/O, clock, random, thread, dynamic compiler or error-hook root
         // functions are exposed. The script language/value delegates remain VM.
-        sq_newtable(vm);sq_setroottable(vm);sq_settop(vm,0);
+        sq_newtable(vm);
+        auto global=[&](const SQChar *name,SQFUNCTION function,SQInteger params){
+            sq_pushstring(vm,name,-1);sq_newclosure(vm,function,0);sq_setparamscheck(vm,params,nullptr);sq_newslot(vm,-3,SQFalse);
+        };
+        // Binary serialization: VM-local by construction, published only through
+        // the typed command transaction that consumes it.
+        global(L"sq_BinaryStartWrite",binaryStartWrite,1);
+        global(L"StartWrite",binaryStartWrite,1);
+        global(L"sq_BinaryWriteWord",binaryWriteWord,2);
+        global(L"WriteWord",binaryWriteWord,2);
+        global(L"sq_BinaryWriteDword",binaryWriteDword,2);
+        global(L"WriteDword",binaryWriteDword,2);
+        global(L"sq_BinaryWriteFloat",binaryWriteFloat,2);
+        global(L"sq_BinaryGetReadSize",binaryReadSize,1);
+        global(L"print",print,2);
+        sq_setroottable(vm);sq_settop(vm,0);
     }
     void pushHandle(EntityHandle owner) {
         auto *token=static_cast<HandleToken*>(sq_newuserdata(vm,sizeof(HandleToken)));
