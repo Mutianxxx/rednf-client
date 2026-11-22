@@ -2706,12 +2706,21 @@ int GameApplication::run(int argc, char **argv) {
                 render.text(std::string(previewPaused?"暂停":"运行")+" / Pause暂停 .单步 Home重置 +/-速度 F8导出 Esc退出",12,62,13);
                 render.text("Tick "+std::to_string(world.tick)+" / "+std::to_string(previewSpeed)+"x / "+world.player.animation,12,82,13);
                 if(fighterReview||femaleGunnerReview) {
-                    render.text("第 "+std::to_string(previewPage+1)+" / "+std::to_string(previewPageCount())+" 页 / "+std::to_string(previewSkills.size())+" 技能；绑定与特效待审阅",12,102,13);
                     const auto &labels=ExperimentalSkillConfiguration::slotLabels();
                     const auto &plan=world.experimentalRuntime()->plan();
+                    // Admission status comes from the same runtime policy the
+                    // gameplay gate uses. It marks what can actually be fought
+                    // with versus what only has a playback binding.
+                    size_t liveCount=0;
+                    for(const auto &key:previewSkills)if(world.runtimeSkillPolicy(key).implemented)++liveCount;
+                    render.text("第 "+std::to_string(previewPage+1)+" / "+std::to_string(previewPageCount())+" 页 / 共 "+
+                        std::to_string(previewSkills.size())+" 技能：可实战 "+std::to_string(liveCount)+
+                        "，仅动画 "+std::to_string(previewSkills.size()-liveCount),12,102,13);
                     for(size_t slot=0;slot<13&&previewPage*13+slot<previewSkills.size();++slot) {
                         const auto &key=previewSkills[previewPage*13+slot];
-                        render.text(std::string(labels[slot])+"  "+plan.skills.at(key).name,12,124+float(slot*17),12);
+                        const bool live=world.runtimeSkillPolicy(key).implemented;
+                        render.text(std::string(labels[slot])+"  "+plan.skills.at(key).name+(live?"  [可实战]":"  [仅动画]"),
+                            12,124+float(slot*17),12);
                     }
                 }
             }

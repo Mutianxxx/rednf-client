@@ -4,6 +4,7 @@
 #include "dnf/act_world_host.hpp"
 #include "dnf/effect_plan.hpp"
 #include "dnf/skill_preview_mapping.hpp"
+#include "dnf/source_skill_action.hpp"
 #define STBIW_WINDOWS_UTF8
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "stb_image_write.h"
@@ -23,7 +24,8 @@ int run(int argc, char **argv) {
                          "--act-coverage-prefix PREFIX _ OUTPUT compiles sorted PVF .act paths with one World host and exports per-file diagnostics plus counts.\n"
                          "ACT coverage uses default host options (speech presentation disabled); exit 0 means report generated, inspect JSON ok for overall admission; stage readiness flags are independent.\n"
                          "--characters summary|source exports all registered CHR/skill lists; source includes original bytes/tokens.\n"
-                         "--skill-sources summary|source exports every registered skill with ordered mode-scoped fields; this is source evidence, not runtime coverage.\n";
+                         "--skill-sources summary|source exports every registered skill with ordered mode-scoped fields; this is source evidence, not runtime coverage.\n"
+                         "--skill-actions JOBID exports the source skill descriptors this engine has reconstructed for that job; presence is not normal-path playable admission.\n";
             return 2;
         }
         auto root = std::filesystem::u8path(argv[1]);
@@ -88,6 +90,40 @@ int run(int argc, char **argv) {
             if (name != "summary" && name != "source") throw std::runtime_error("Use --skill-sources summary|source");
             CharacterCatalog characters(p);
             j = characters.skillSourceSnapshot(name == "source");
+        } else if (mode == "--skill-actions") {
+            // 引擎当前掌握的技能执行描述。条目存在只说明本工程能按源字段
+            // 重建这一招的分阶段结构，不等同于已通过正常学习路径的可玩许可。
+            const int jobId = std::stoi(name);
+            Assets a(root, p);
+            CharacterCatalog characters(p);
+            Json diagnostics = Json::array();
+            const CharacterIdentity identity{jobId, 0, 0};
+            const auto actions = loadSourceSkillActions(p, a, characters, identity, diagnostics);
+            Json rows = Json::array();
+            size_t staged = 0, grab = 0, projectile = 0, movingImpact = 0;
+            for (const auto &[key, action] : actions) {
+                const bool hasStages = !action.nativeStages.empty();
+                if (hasStages) ++staged;
+                if (action.nativeGrab) ++grab;
+                if (action.nativeProjectile) ++projectile;
+                if (action.movingImpact) ++movingImpact;
+                size_t layers = action.bodyLayers.size(), cues = 0;
+                for (const auto &stage : action.nativeStages) {
+                    layers += stage.layers.size();
+                    cues += stage.contactEffects.size();
+                }
+                rows.push_back({{"key", key.json()}, {"skill", action.skill.memberPath},
+                    {"native_body", action.inferredNativeBody}, {"reference", action.nativeReference},
+                    {"family", action.nativeFamily}, {"stages", action.nativeStages.size()},
+                    {"layers", layers}, {"contact_effects", cues},
+                    {"grab", bool(action.nativeGrab)}, {"projectile", bool(action.nativeProjectile)},
+                    {"moving_impact", bool(action.movingImpact)},
+                    {"policy", action.evidence.value("policy", std::string())}});
+            }
+            j = {{"job", jobId}, {"scope", "Loaded source skill descriptors for this job; presence is not normal-path playable admission"},
+                 {"count", rows.size()}, {"with_stages", staged}, {"with_grab", grab},
+                 {"with_projectile", projectile}, {"with_moving_impact", movingImpact},
+                 {"actions", rows}, {"diagnostics", diagnostics}};
         } else if (mode == "--characters") {
             if (name != "summary" && name != "source") throw std::runtime_error("Use --characters summary|source");
             CharacterCatalog characters(p);
